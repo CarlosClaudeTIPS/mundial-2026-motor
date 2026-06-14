@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react'
-import { TEAMS, SEDES } from '../lib/teams'
+import { useState, useMemo, useEffect } from 'react'
+import { TEAMS, SEDES, MATCHES } from '../lib/teams'
 import { calcExpectedCorners, calcExpectedShots, altitudeCorrection } from '../lib/engine'
 
 // ─── Recommendation logic ─────────────────────────────────────────────────────
@@ -76,8 +76,23 @@ export default function Analizar() {
   const [teamBId, setTeamBId] = useState('')
   const [sedeId, setSedeId]   = useState('')
 
-  const teamA  = TEAMS.find(t => t.id === teamAId)
-  const teamB  = TEAMS.find(t => t.id === teamBId)
+  const teamA = TEAMS.find(t => t.id === teamAId)
+  const teamB = TEAMS.find(t => t.id === teamBId)
+
+  // Auto-detect match from fixture when both teams are selected
+  const matchInfo = useMemo(() => {
+    if (!teamAId || !teamBId) return null
+    return MATCHES.find(m =>
+      (m.teamA === teamAId && m.teamB === teamBId) ||
+      (m.teamA === teamBId && m.teamB === teamAId)
+    ) || null
+  }, [teamAId, teamBId])
+
+  // Auto-fill sede from fixture; allow manual override
+  useEffect(() => {
+    if (matchInfo) setSedeId(matchInfo.ciudad)
+  }, [matchInfo])
+
   const sede   = SEDES.find(s => s.ciudad === sedeId)
   const altMod = sede ? altitudeCorrection(sede.altitud) : 1
 
@@ -180,7 +195,7 @@ export default function Analizar() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <label className="text-xs text-gray-400 block mb-1">Equipo Local</label>
-            <select className="input-dark w-full" value={teamAId} onChange={e => setTeamAId(e.target.value)}>
+            <select className="input-dark w-full" value={teamAId} onChange={e => { setTeamAId(e.target.value); setTeamBId('') }}>
               <option value="">Seleccionar...</option>
               {TEAMS.map(t => <option key={t.id} value={t.id}>{t.name} ({t.group})</option>)}
             </select>
@@ -193,13 +208,23 @@ export default function Analizar() {
             </select>
           </div>
           <div>
-            <label className="text-xs text-gray-400 block mb-1">Sede (opcional)</label>
+            <label className="text-xs text-gray-400 block mb-1">
+              Sede {matchInfo ? <span className="text-green-500">(auto-detectada)</span> : <span className="text-gray-600">(opcional)</span>}
+            </label>
             <select className="input-dark w-full" value={sedeId} onChange={e => setSedeId(e.target.value)}>
               <option value="">Sin sede</option>
-              {SEDES.map(s => <option key={s.ciudad} value={s.ciudad}>{s.ciudad}{s.altitud > 1800 ? ' ⛰️' : ''}</option>)}
+              {SEDES.map(s => <option key={s.ciudad} value={s.ciudad}>{s.ciudad} — {s.estadio}{s.altitud > 1800 ? ' ⛰️' : ''}</option>)}
             </select>
           </div>
         </div>
+        {matchInfo && (
+          <div className="mt-3 text-xs text-gray-400 flex gap-4 flex-wrap">
+            <span>📅 {matchInfo.date}</span>
+            <span>📍 {sede?.estadio || matchInfo.ciudad}</span>
+            <span>🏆 Grupo {matchInfo.group}</span>
+            {sede?.altitud > 1800 && <span className="text-yellow-400">⛰️ Altitud: {sede.altitud}m — corrección aplicada</span>}
+          </div>
+        )}
       </div>
 
       {!ready && (
