@@ -1,42 +1,66 @@
-// Historial de picks — localStorage (sin Supabase configurado)
-const KEY = 'mundial2026_picks'
+import { supabase } from './supabase'
 
-export function getPicks() {
-  try {
-    return JSON.parse(localStorage.getItem(KEY) || '[]')
-  } catch {
-    return []
-  }
+const KEY = 'mundial2026_picks'
+const hasSupabase = !!(import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY)
+
+// ── localStorage helpers ─────────────────────────────────
+function lsGet() {
+  try { return JSON.parse(localStorage.getItem(KEY) || '[]') } catch { return [] }
+}
+function lsSet(picks) {
+  localStorage.setItem(KEY, JSON.stringify(picks))
 }
 
-export function savePick(pick) {
-  const picks = getPicks()
+// ── Public API ───────────────────────────────────────────
+export async function getPicks() {
+  if (hasSupabase) {
+    const { data, error } = await supabase
+      .from('picks')
+      .select('*')
+      .order('created_at', { ascending: false })
+    if (!error) return data
+  }
+  return lsGet()
+}
+
+export async function savePick(pick) {
   const newPick = { ...pick, id: Date.now(), createdAt: new Date().toISOString() }
+  if (hasSupabase) {
+    const { data, error } = await supabase
+      .from('picks')
+      .insert([{ ...newPick, created_at: newPick.createdAt }])
+      .select()
+      .single()
+    if (!error) return data
+  }
+  const picks = lsGet()
   picks.unshift(newPick)
-  localStorage.setItem(KEY, JSON.stringify(picks))
+  lsSet(picks)
   return newPick
 }
 
-export function updatePickResult(id, resultado) {
-  const picks = getPicks()
+export async function updatePickResult(id, resultado) {
+  if (hasSupabase) {
+    await supabase.from('picks').update({ resultado }).eq('id', id)
+  }
+  const picks = lsGet()
   const idx = picks.findIndex(p => p.id === id)
-  if (idx === -1) return
-  picks[idx].resultado = resultado
-  localStorage.setItem(KEY, JSON.stringify(picks))
+  if (idx !== -1) { picks[idx].resultado = resultado; lsSet(picks) }
 }
 
-export function deletePick(id) {
-  const picks = getPicks().filter(p => p.id !== id)
-  localStorage.setItem(KEY, JSON.stringify(picks))
+export async function deletePick(id) {
+  if (hasSupabase) {
+    await supabase.from('picks').delete().eq('id', id)
+  }
+  lsSet(lsGet().filter(p => p.id !== id))
 }
 
+// ── Stats (síncronas, reciben array ya cargado) ──────────
 export function calcROI(picks) {
   const settled = picks.filter(p => p.resultado && p.resultado !== 'void')
   if (!settled.length) return 0
-  const profit = settled.reduce((acc, p) => {
-    if (p.resultado === 'ganado') return acc + (p.cuota - 1)
-    return acc - 1
-  }, 0)
+  const profit = settled.reduce((acc, p) =>
+    p.resultado === 'ganado' ? acc + (p.cuota - 1) : acc - 1, 0)
   return +((profit / settled.length) * 100).toFixed(2)
 }
 
