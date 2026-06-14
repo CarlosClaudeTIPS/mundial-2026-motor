@@ -22,6 +22,8 @@ export function getTacticalK(style) {
 }
 
 // ─── Expected Corners ─────────────────────────────────────────────────────────
+// Fórmula: promedio ponderado ataque(60%) + defensa rival(40%)
+// Evita explosión cuando la ratio ataque/contra-rival es muy alta
 export function calcExpectedCorners(teamA, teamB, tacticalStyle = 'mixto', situation = 'empate') {
   const goalDiff = situation === 'ganando2+' ? 2
     : situation === 'ganando1' ? 1
@@ -32,11 +34,9 @@ export function calcExpectedCorners(teamA, teamB, tacticalStyle = 'mixto', situa
   const S = getSituationS(goalDiff)
   const K = getTacticalK(tacticalStyle)
 
-  const defModA = teamA.corners_against_avg > 0 ? teamA.corners_avg / teamA.corners_against_avg : 1
-  const defModB = teamB.corners_against_avg > 0 ? teamB.corners_avg / teamB.corners_against_avg : 1
-
-  const expA = teamA.corners_avg * defModB * K * S
-  const expB = teamB.corners_avg * defModA * K * (2 - S)
+  // Promedio ponderado: ataque propio × situación + defensa rival × neutro
+  const expA = (teamA.corners_avg * 0.6 + teamB.corners_against_avg * 0.4) * K * S
+  const expB = (teamB.corners_avg * 0.6 + teamA.corners_against_avg * 0.4) * K * (2 - S)
 
   return {
     expA: +expA.toFixed(2),
@@ -46,29 +46,23 @@ export function calcExpectedCorners(teamA, teamB, tacticalStyle = 'mixto', situa
 }
 
 // ─── Expected Shots ───────────────────────────────────────────────────────────
+// Fórmula: promedio ponderado ataque(60%) + defensa rival(40%)
 export function calcExpectedShots(teamA, teamB, absenceModifier = 1.0, motivationK = 1.0) {
-  const defQualityB = teamB.shots_against_avg > 0
-    ? teamA.shots_avg / teamB.shots_against_avg
-    : 1
-
-  const expShotsA = teamA.shots_avg * defQualityB * absenceModifier * motivationK
-  const sotRatioA = teamA.shots_avg > 0 ? teamA.sot_avg / teamA.shots_avg : 0.4
+  const expShotsA = (teamA.shots_avg * 0.6 + teamB.shots_against_avg * 0.4) * absenceModifier * motivationK
+  const sotRatioA = teamA.shots_avg > 0 ? teamA.sot_avg / teamA.shots_avg : 0.38
   const expSOTA = expShotsA * sotRatioA
 
-  const defQualityA = teamA.shots_against_avg > 0
-    ? teamB.shots_avg / teamA.shots_against_avg
-    : 1
-  const expShotsB = teamB.shots_avg * defQualityA * absenceModifier * motivationK
-  const sotRatioB = teamB.shots_avg > 0 ? teamB.sot_avg / teamB.shots_avg : 0.4
+  const expShotsB = (teamB.shots_avg * 0.6 + teamA.shots_against_avg * 0.4) * absenceModifier * motivationK
+  const sotRatioB = teamB.shots_avg > 0 ? teamB.sot_avg / teamB.shots_avg : 0.38
   const expSOTB = expShotsB * sotRatioB
 
   return {
     expShotsA: +expShotsA.toFixed(2),
-    expSOTA: +expSOTA.toFixed(2),
+    expSOTA:   +expSOTA.toFixed(2),
     expShotsB: +expShotsB.toFixed(2),
-    expSOTB: +expSOTB.toFixed(2),
+    expSOTB:   +expSOTB.toFixed(2),
     totalShots: +(expShotsA + expShotsB).toFixed(2),
-    totalSOT: +(expSOTA + expSOTB).toFixed(2),
+    totalSOT:   +(expSOTA  + expSOTB).toFixed(2),
   }
 }
 
