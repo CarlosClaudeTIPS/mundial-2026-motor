@@ -535,6 +535,23 @@ export function findTeam(id) {
   return TEAMS_BY_ID[id] ?? null
 }
 
+// Standings oficiales — se actualizan manualmente tras cada jornada
+export const STANDINGS_DATA = {
+  // Grupo A — Jornada 1 jugada
+  'mexico':         { pj:1, pg:1, pe:0, pp:0, gf:2, gc:0, pts:3 },
+  'south_korea':    { pj:1, pg:1, pe:0, pp:0, gf:1, gc:0, pts:3 },
+  'czech_republic': { pj:1, pg:0, pe:0, pp:1, gf:0, gc:1, pts:0 },
+  'south_africa':   { pj:1, pg:0, pe:0, pp:1, gf:0, gc:2, pts:0 },
+  // Grupo B — Jornada 1 parcial (1 partido jugado)
+  'bosnia_and_herzegovina': { pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+  'canada':      { pj:1, pg:0, pe:1, pp:0, gf:1, gc:1, pts:1 },
+  'qatar':       { pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+  'switzerland': { pj:0, pg:0, pe:0, pp:0, gf:0, gc:0, pts:0 },
+  // Grupo D — Jornada 1 parcial (1 partido jugado)
+  'usa':      { pj:1, pg:1, pe:0, pp:0, gf:3, gc:0, pts:3 },
+  'paraguay': { pj:1, pg:0, pe:0, pp:1, gf:0, gc:3, pts:0 },
+}
+
 // Sedes del Mundial 2026
 export const SEDES = [
   { ciudad: 'Ciudad de México', estadio: 'Estadio Azteca', altitud: 2240, pais: 'México' },
