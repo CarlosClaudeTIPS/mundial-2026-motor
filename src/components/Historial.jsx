@@ -11,16 +11,16 @@ export default function Historial() {
   const [picks, setPicks] = useState([])
   const [filterMarket, setFilterMarket] = useState('ALL')
 
-  useEffect(() => { setPicks(getPicks()) }, [])
+  useEffect(() => { getPicks().then(setPicks) }, [])
 
-  function handleResult(id, resultado) {
-    updatePickResult(id, resultado)
-    setPicks(getPicks())
+  async function handleResult(id, resultado) {
+    await updatePickResult(id, resultado)
+    getPicks().then(setPicks)
   }
 
-  function handleDelete(id) {
-    deletePick(id)
-    setPicks(getPicks())
+  async function handleDelete(id) {
+    await deletePick(id)
+    getPicks().then(setPicks)
   }
 
   const markets = ['ALL', ...new Set(picks.map(p => p.mercado))]

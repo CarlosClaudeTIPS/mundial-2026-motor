@@ -1,7 +1,7 @@
 import { supabase } from './supabase'
 
 const KEY = 'mundial2026_picks'
-const hasSupabase = !!(import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY)
+const hasSupabase = supabase !== null
 
 // ── localStorage helpers ─────────────────────────────────
 function lsGet() {
