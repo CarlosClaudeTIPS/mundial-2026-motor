@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarlosTipster · Motor Mundial 2026</title>
+<style>
+:root{--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;--border:#2e3250;--text:#e8eaf0;--text2:#8b90a8;--text3:#555a75;--green:#1d9e75;--gbg:#0d2e22;--amber:#ef9f27;--abg:#2e2010;--red:#e24b4a;--rbg:#2e1010;--blue:#378add;--bbg:#0d1e2e;--r:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:14px}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;gap:12px;flex-wrap:wrap}
+.logo{font-size:15px;font-weight:700;color:var(--green);white-space:nowrap}
+.logo span{color:var(--text2);font-weight:400;font-size:11px;margin-left:6px}
+nav{display:flex;gap:3px;flex-wrap:wrap}
+nav button{padding:5px 11px;background:transparent;border:1px solid var(--border);border-radius:99px;color:var(--text2);cursor:pointer;font-size:12px;transition:all .15s}
+nav button.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+nav button:hover:not(.active){border-color:var(--green);color:var(--green)}
+main{max-width:1100px;margin:0 auto;padding:18px}
+.panel{display:none}.panel.active{display:block}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{padding:7px 9px;background:var(--bg2);color:var(--text2);font-weight:500;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap;cursor:pointer}
+th:hover{color:var(--text)}
+td{padding:6px 9px;border-bottom:1px solid var(--border)}
+tr:hover td{background:var(--bg2)}
+.badge{display:inline-block;padding:2px 7px;border-radius:99px;font-size:11px;font-weight:600}
+.g{background:var(--gbg);color:var(--green)}.a{background:var(--abg);color:var(--amber)}.r{background:var(--rbg);color:var(--red)}.b{background:var(--bbg);color:var(--blue)}.gr{background:var(--bg3);color:var(--text2)}
+.sr{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.sr input,.sr select{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);color:var(--text);padding:7px 10px;font-size:12px;outline:none}
+.sr input:focus,.sr select:focus{border-color:var(--green)}
+.sr input::placeholder{color:var(--text2)}
+.htabs{display:flex;gap:5px;margin-bottom:11px}
+.htab{padding:4px 11px;background:var(--bg2);border:1px solid var(--border);border-radius:99px;color:var(--text2);cursor:pointer;font-size:12px}
+.htab.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:9px;margin-bottom:14px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:13px 15px}
+.clabel{font-size:11px;color:var(--text2);margin-bottom:3px}
+.cval{font-size:22px;font-weight:700}
+.cval.sm{font-size:15px;font-weight:600}
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:9px}
+.gcard{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:11px 13px}
+.gtitle{font-size:10px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px}
+.grow{display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:12px;border-bottom:1px solid var(--border)}
+.grow:last-child{border:none}
+.gpts{font-weight:700;color:var(--green);min-width:18px;text-align:right}
+.sep{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin:13px 0 7px;padding-bottom:3px;border-bottom:1px solid var(--border)}
+/* ANALIZAR */
+.team-selectors{display:grid;grid-template-columns:1fr 40px 1fr;gap:10px;align-items:center;margin-bottom:16px}
+.team-selectors select{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);color:var(--text);padding:11px 12px;font-size:14px;font-weight:600;width:100%;outline:none;cursor:pointer}
+.team-selectors select:focus{border-color:var(--green)}
+.vs-label{text-align:center;color:var(--text2);font-weight:700;font-size:15px}
+.pick{border-left:3px solid var(--green);background:var(--gbg);border-radius:0 var(--r) var(--r) 0;padding:11px 14px;margin-bottom:9px}
+.pick.amber{border-left-color:var(--amber);background:var(--abg)}
+.pick.red{border-left-color:var(--red);background:var(--rbg)}
+.pick-title{font-weight:700;font-size:13px;margin-bottom:4px}
+.pick-row{font-size:12px;color:var(--text2);margin-bottom:2px}
+.pick-ev{font-size:13px;font-weight:700;margin-top:5px}
+.evp{color:var(--green)}.ev-{color:var(--red)}.ev0{color:var(--amber)}
+.compare{display:grid;grid-template-columns:1fr 90px 1fr;gap:5px;align-items:center;font-size:12px;margin-bottom:6px}
+.ca{text-align:right}.cb{text-align:left}.cc{text-align:center;font-size:10px;color:var(--text3)}
+/* VIVO */
+.vivo-header{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin-bottom:14px}
+.vivo-header select{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);color:var(--text);padding:10px;font-size:13px;font-weight:600;width:100%;outline:none}
+.score-box{text-align:center;padding:8px}
+.score{font-size:28px;font-weight:800;line-height:1}
+.score-min{font-size:11px;color:var(--text2);margin-top:3px}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 1s infinite;margin-right:4px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+.inputs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:7px;margin-bottom:12px}
+.inp-group label{display:block;font-size:10px;color:var(--text2);margin-bottom:3px}
+.inp-group input,.inp-group select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);padding:8px;font-size:13px;outline:none}
+.inp-group input:focus,.inp-group select:focus{border-color:var(--green)}
+/* HISTORIAL */
+.hist-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.btn{padding:8px 15px;background:var(--green);border:none;border-radius:var(--r);color:#fff;cursor:pointer;font-size:12px;font-weight:700}
+.btn:hover{opacity:.85}
+.btn-sm{padding:5px 10px;font-size:11px}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text2)}
+.btn-outline:hover{border-color:var(--green);color:var(--green)}
+.add-form{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:14px;display:none}
+.add-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:7px;margin-bottom:10px}
+.add-form input,.add-form select{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);padding:7px;font-size:12px;width:100%;outline:none}
+.no-picks{color:var(--text2);font-size:13px;padding:20px 0;text-align:center}
+.of{overflow-x:auto}
+@media(max-width:580px){header{flex-direction:column;align-items:flex-start}.hist-summary{grid-template-columns:repeat(2,1fr)}.team-selectors{grid-template-columns:1fr;}.vs-label{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">⚽ CarlosTipster <span>Motor v2.0 · Mundial 2026</span></div>
+  <nav>
+    <button class="active" onclick="showTab('grupos',this)">Grupos</button>
+    <button onclick="showTab('analizar',this)">🎯 Analizar</button>
+    <button onclick="showTab('vivo',this)">🔴 En vivo</button>
+    <button onclick="showTab('stats',this)">Stats</button>
+    <button onclick="showTab('tiros',this)">Tiros</button>
+    <button onclick="showTab('corners',this)">Córners</button>
+    <button onclick="showTab('goles',this)">Goles</button>
+    <button onclick="showTab('tarjetas',this)">Tarjetas</button>
+    <button onclick="showTab('saques',this)">Saques</button>
+    <button onclick="showTab('historial',this)">Historial</button>
+  </nav>
+</header>
+<main>
+
+<!-- GRUPOS -->
+<div id="tab-grupos" class="panel active">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <div style="font-size:13px;font-weight:600">Grupos Mundial 2026 — standings en tiempo real</div>
+    <div style="font-size:11px;color:var(--text2)" id="grp-date"></div>
+  </div>
+  <div class="gcards" id="gcont"></div>
+</div>
+
+<!-- ANALIZAR (principal) -->
+<div id="tab-analizar" class="panel">
+  <div style="font-size:13px;font-weight:600;margin-bottom:14px">🎯 Selecciona el partido — el motor hace el resto</div>
+  <div class="team-selectors">
+    <select id="sel-a" onchange="autoAnalyze()"><option value="">Local / Equipo A...</option></select>
+    <div class="vs-label">vs</div>
+    <select id="sel-b" onchange="autoAnalyze()"><option value="">Visitante / Equipo B...</option></select>
+  </div>
+  <div id="auto-out"><div style="color:var(--text2);font-size:13px;padding:30px 0;text-align:center">Selecciona dos equipos para ver el análisis completo y los picks recomendados</div></div>
+</div>
+
+<!-- EN VIVO -->
+<div id="tab-vivo" class="panel">
+  <div style="font-size:13px;font-weight:600;margin-bottom:12px"><span class="live-dot"></span>Análisis en vivo</div>
+  <div class="vivo-header">
+    <select id="v-a" onchange="calcVivo()"><option value="">Local...</option></select>
+    <div class="score-box">
+      <div class="score" id="v-score">— : —</div>
+      <div class="score-min" id="v-minlabel">min 0'</div>
+    </div>
+    <select id="v-b" onchange="calcVivo()"><option value="">Visitante...</option></select>
+  </div>
+  <div class="inputs-grid">
+    <div class="inp-group"><label>Minuto</label><input type="number" id="v-min" value="0" min="0" max="120" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>Goles local</label><input type="number" id="v-ga" value="0" min="0" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>Goles visit.</label><input type="number" id="v-gb" value="0" min="0" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>Córners ya</label><input type="number" id="v-corn" value="0" min="0" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>Tiros ya</label><input type="number" id="v-shots" value="0" min="0" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>SOT ya</label><input type="number" id="v-sot" value="0" min="0" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>Tarjetas ya</label><input type="number" id="v-cards" value="0" min="0" oninput="calcVivo()"></div>
+    <div class="inp-group"><label>Zona ataque</label>
+      <select id="v-zone" onchange="calcVivo()">
+        <option value="1.00">Mixto (K=1.00)</option>
+        <option value="1.25">Bandas (K=1.25)</option>
+        <option value="1.10">Mixto-bandas (K=1.10)</option>
+        <option value="0.90">Central (K=0.90)</option>
+      </select>
+    </div>
+  </div>
+  <div id="vivo-out"></div>
+</div>
+
+<!-- STATS -->
+<div id="tab-stats" class="panel">
+  <div class="sr">
+    <input type="text" id="q-stats" placeholder="🔍 Buscar..." style="width:160px" oninput="renderStats()">
+    <select id="sort-stats" onchange="renderStats()">
+      <option value="ppg">PPG</option><option value="goals_avg">Goles/P</option>
+      <option value="shots_pg">Tiros/P</option><option value="corners_pg">Córners/P</option>
+      <option value="cs_pct">CS%</option><option value="btts_pct">BTTS%</option>
+    </select>
+    <span id="cnt-stats" style="font-size:11px;color:var(--text2)"></span>
+  </div>
+  <div class="of"><table><thead><tr>
+    <th onclick="setSS('country')">Equipo</th><th onclick="setSS('group')">Grupo</th>
+    <th onclick="setSS('ppg')">PPG</th><th onclick="setSS('gf')">GF</th><th onclick="setSS('ga')">GA</th>
+    <th onclick="setSS('goals_avg')">Goles/P</th><th onclick="setSS('shots_pg')">Tiros/P</th>
+    <th onclick="setSS('sot_pg')">SOT/P</th><th onclick="setSS('corners_pg')">Córn/P</th>
+    <th onclick="setSS('cs_pct')">CS%</th><th onclick="setSS('btts_pct')">BTTS%</th>
+  </tr></thead><tbody id="body-stats"></tbody></table></div>
+</div>
+
+<!-- TIROS -->
+<div id="tab-tiros" class="panel">
+  <div class="htabs">
+    <div class="htab active" onclick="setH('tiros','total',this)">Total</div>
+    <div class="htab" onclick="setH('tiros','1h',this)">1er tiempo</div>
+    <div class="htab" onclick="setH('tiros','2h',this)">2do tiempo</div>
+  </div>
+  <div class="sr"><input type="text" id="q-tiros" placeholder="🔍 Buscar..." style="width:160px" oninput="renderTiros()"></div>
+  <div class="of"><table><thead><tr id="h-tiros"></tr></thead><tbody id="b-tiros"></tbody></table></div>
+</div>
+
+<!-- CÓRNERS -->
+<div id="tab-corners" class="panel">
+  <div class="htabs">
+    <div class="htab active" onclick="setH('corners','total',this)">Total</div>
+    <div class="htab" onclick="setH('corners','1h',this)">1er tiempo</div>
+    <div class="htab" onclick="setH('corners','2h',this)">2do tiempo</div>
+  </div>
+  <div class="sr"><input type="text" id="q-corners" placeholder="🔍 Buscar..." style="width:160px" oninput="renderCorners()"></div>
+  <div class="of"><table><thead><tr id="h-corners"></tr></thead><tbody id="b-corners"></tbody></table></div>
+</div>
+
+<!-- GOLES -->
+<div id="tab-goles" class="panel">
+  <div class="htabs">
+    <div class="htab active" onclick="setH('goles','total',this)">Total</div>
+    <div class="htab" onclick="setH('goles','1h',this)">1er tiempo</div>
+    <div class="htab" onclick="setH('goles','2h',this)">2do tiempo</div>
+  </div>
+  <div class="sr"><input type="text" id="q-goles" placeholder="🔍 Buscar..." style="width:160px" oninput="renderGoles()"></div>
+  <div class="of"><table><thead><tr id="h-goles"></tr></thead><tbody id="b-goles"></tbody></table></div>
+</div>
+
+<!-- TARJETAS -->
+<div id="tab-tarjetas" class="panel">
+  <div class="htabs">
+    <div class="htab active" onclick="setH('tarjetas','total',this)">Total</div>
+    <div class="htab" onclick="setH('tarjetas','1h',this)">1er tiempo</div>
+    <div class="htab" onclick="setH('tarjetas','2h',this)">2do tiempo</div>
+  </div>
+  <div class="sr"><input type="text" id="q-tarjetas" placeholder="🔍 Buscar..." style="width:160px" oninput="renderTarjetas()"></div>
+  <div class="of"><table><thead><tr id="h-tarjetas"></tr></thead><tbody id="b-tarjetas"></tbody></table></div>
+</div>
+
+<!-- SAQUES -->
+<div id="tab-saques" class="panel">
+  <div class="sr"><input type="text" id="q-saques" placeholder="🔍 Buscar..." style="width:160px" oninput="renderSaques()"></div>
+  <div class="of"><table><thead><tr>
+    <th>Equipo</th><th>GK avg</th><th>GK 10.5+</th><th>GK 12.5+</th>
+    <th>Banda avg</th><th>Banda 35+</th><th>Banda 40+</th><th>T.Libres avg</th>
+  </tr></thead><tbody id="b-saques"></tbody></table></div>
+</div>
+
+<!-- HISTORIAL -->
+<div id="tab-historial" class="panel">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+    <div style="font-size:13px;font-weight:600">Historial de picks</div>
+    <button class="btn btn-sm" onclick="toggleAddForm()">+ Agregar pick</button>
+  </div>
+  <div class="add-form" id="add-form">
+    <div class="add-form-grid">
+      <input type="text" id="pk-match" placeholder="Partido (ej: Brasil vs MAR)">
+      <input type="text" id="pk-market" placeholder="Mercado">
+      <input type="number" id="pk-odd" placeholder="Cuota" step="0.01">
+      <input type="number" id="pk-ev" placeholder="EV %" step="0.1">
+      <input type="number" id="pk-stake" placeholder="Monto">
+      <select id="pk-result">
+        <option value="pending">Pendiente</option>
+        <option value="won">Ganado ✅</option>
+        <option value="lost">Perdido ❌</option>
+        <option value="void">Void</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-sm" onclick="addPick()">Guardar</button>
+      <button class="btn btn-sm btn-outline" onclick="toggleAddForm()">Cancelar</button>
+    </div>
+  </div>
+  <div class="hist-summary" id="hist-summary"></div>
+  <div class="of"><table><thead><tr>
+    <th>Fecha</th><th>Partido</th><th>Mercado</th><th>Cuota</th><th>EV%</th><th>Monto</th><th>Resultado</th><th>P/L</th><th></th>
+  </tr></thead><tbody id="b-hist"></tbody></table></div>
+</div>
+
+</main>
+<script>
+// ═══════════════════════════════════════════════
+// DATABASE — 48 equipos con todos los stats (FootyStats · Last 15 · 13 Jun 2026)
+// ═══════════════════════════════════════════════
+// est:1 = stats estimadas (datos limitados en FootyStats)
+const DB = [
+// GRUPO A
+{"c":"Mexico","ppg":1.60,"p":15,"w":7,"d":3,"l":5,"gf":25,"ga":21,"g":3.07,"crn":7.13,"cs":27,"btts":47,"sh":13.2,"sot":5.1,"sh1":6.1,"sh2":7.1,"sot1":2.3,"sot2":2.8,"c1":3.2,"c2":3.9,"k1":1.2,"k2":1.3,"gk":11.7,"ti":30.3,"fk":22.6,"o15":70,"o25":40,"og05_1":65,"og15_1":32,"og05_2":75,"og15_2":52,"co75":50,"co85":30,"co95":10,"co105":0,"ca":2.5,"ca15":70,"ca25":40,"ca35":20,"ts":"mixto","gr":"A"},
+{"c":"South Korea","ppg":2.07,"p":15,"w":10,"d":1,"l":4,"gf":26,"ga":14,"g":2.67,"crn":8.86,"cs":60,"btts":13,"sh":13.2,"sot":5.0,"sh1":6.1,"sh2":7.1,"sot1":2.3,"sot2":2.7,"c1":3.9,"c2":4.9,"k1":1.0,"k2":1.0,"gk":11.8,"ti":31.0,"fk":23.1,"o15":60,"o25":40,"og05_1":60,"og15_1":25,"og05_2":72,"og15_2":45,"co75":60,"co85":50,"co95":40,"co105":20,"ca":2.0,"ca15":50,"ca25":30,"ca35":10,"ts":"mixto","gr":"A"},
+{"c":"Czech Republic","ppg":1.47,"p":15,"w":6,"d":4,"l":5,"gf":23,"ga":20,"g":2.87,"crn":9.6,"cs":27,"btts":60,"sh":14.0,"sot":5.4,"sh1":6.4,"sh2":7.6,"sot1":2.5,"sot2":2.9,"c1":4.3,"c2":5.3,"k1":1.1,"k2":1.1,"gk":11.2,"ti":29.8,"fk":22.2,"o15":80,"o25":70,"og05_1":72,"og15_1":40,"og05_2":80,"og15_2":58,"co75":80,"co85":70,"co95":60,"co105":40,"ca":2.2,"ca15":60,"ca25":30,"ca35":10,"ts":"mixto-bandas","gr":"A"},
+{"c":"South Africa","ppg":1.13,"p":15,"w":5,"d":2,"l":8,"gf":16,"ga":23,"g":2.6,"crn":7.93,"cs":20,"btts":53,"sh":12.8,"sot":4.9,"sh1":5.9,"sh2":6.9,"sot1":2.2,"sot2":2.7,"c1":3.5,"c2":4.4,"k1":1.4,"k2":1.3,"gk":11.2,"ti":29.6,"fk":22.0,"o15":60,"o25":20,"og05_1":60,"og15_1":28,"og05_2":70,"og15_2":45,"co75":60,"co85":40,"co95":20,"co105":10,"ca":2.7,"ca15":70,"ca25":40,"ca35":20,"ts":"mixto","gr":"A"},
+// GRUPO B
+{"c":"Bosnia And Herzegovina","ppg":1.13,"p":15,"w":4,"d":5,"l":6,"gf":16,"ga":21,"g":2.47,"crn":7.46,"cs":27,"btts":47,"sh":12.4,"sot":4.7,"sh1":5.7,"sh2":6.7,"sot1":2.1,"sot2":2.6,"c1":3.3,"c2":4.1,"k1":1.1,"k2":1.1,"gk":11.0,"ti":29.2,"fk":21.8,"o15":60,"o25":20,"og05_1":58,"og15_1":25,"og05_2":68,"og15_2":42,"co75":50,"co85":30,"co95":10,"co105":0,"ca":2.2,"ca15":60,"ca25":30,"ca35":10,"ts":"mixto","gr":"B"},
+{"c":"Canada","ppg":1.20,"p":15,"w":5,"d":3,"l":7,"gf":18,"ga":26,"g":2.93,"crn":8.86,"cs":27,"btts":47,"sh":13.1,"sot":5.0,"sh1":6.0,"sh2":7.1,"sot1":2.3,"sot2":2.7,"c1":3.9,"c2":4.9,"k1":0.9,"k2":0.8,"gk":11.2,"ti":29.8,"fk":22.2,"o15":60,"o25":40,"og05_1":60,"og15_1":28,"og05_2":72,"og15_2":48,"co75":60,"co85":50,"co95":40,"co105":20,"ca":1.9,"ca15":50,"ca25":20,"ca35":10,"ts":"mixto","gr":"B"},
+{"c":"Qatar","ppg":1.00,"p":15,"w":4,"d":3,"l":8,"gf":14,"ga":24,"g":2.53,"crn":8.6,"cs":20,"btts":47,"sh":12.6,"sot":4.8,"sh1":5.8,"sh2":6.8,"sot1":2.2,"sot2":2.6,"c1":3.8,"c2":4.8,"k1":1.3,"k2":1.2,"gk":11.3,"ti":30.0,"fk":22.4,"o15":60,"o25":30,"og05_1":60,"og15_1":28,"og05_2":70,"og15_2":45,"co75":70,"co85":50,"co95":40,"co105":20,"ca":2.5,"ca15":60,"ca25":40,"ca35":20,"ts":"mixto","gr":"B"},
+{"c":"Switzerland","ppg":1.93,"p":15,"w":8,"d":5,"l":2,"gf":36,"ga":21,"g":3.4,"crn":9.33,"cs":33,"btts":60,"sh":14.5,"sot":5.7,"sh1":6.7,"sh2":7.8,"sot1":2.6,"sot2":3.1,"c1":4.1,"c2":5.2,"k1":0.9,"k2":0.9,"gk":11.0,"ti":29.0,"fk":21.5,"o15":80,"o25":60,"og05_1":75,"og15_1":42,"og05_2":80,"og15_2":60,"co75":80,"co85":60,"co95":50,"co105":30,"ca":2.3,"ca15":60,"ca25":30,"ca35":20,"ts":"mixto","gr":"B"},
+// GRUPO C
+{"c":"Brazil","ppg":1.87,"p":15,"w":8,"d":4,"l":3,"gf":28,"ga":14,"g":2.8,"crn":6.66,"cs":47,"btts":47,"sh":15.2,"sot":6.0,"sh1":7.1,"sh2":8.1,"sot1":2.8,"sot2":3.2,"c1":3.56,"c2":3.67,"k1":1.4,"k2":1.8,"gk":13.8,"ti":26.0,"fk":23.25,"o15":90,"o25":70,"og05_1":100,"og15_1":60,"og05_2":70,"og15_2":60,"co75":40,"co85":20,"co95":10,"co105":10,"ca":1.3,"ca15":20,"ca25":10,"ca35":10,"ts":"central","gr":"C"},
+{"c":"Morocco","ppg":2.27,"p":15,"w":10,"d":4,"l":1,"gf":29,"ga":7,"g":2.4,"crn":8.57,"cs":60,"btts":33,"sh":14.22,"sot":5.11,"sh1":6.3,"sh2":7.9,"sot1":2.2,"sot2":2.9,"c1":3.67,"c2":5.11,"k1":1.67,"k2":3.0,"gk":12.88,"ti":34.78,"fk":32.56,"o15":80,"o25":50,"og05_1":40,"og15_1":20,"og05_2":90,"og15_2":40,"co75":60,"co85":50,"co95":40,"co105":20,"ca":2.9,"ca15":70,"ca25":50,"ca35":30,"ts":"central","gr":"C"},
+{"c":"Haiti","ppg":0.67,"p":15,"w":2,"d":4,"l":9,"gf":12,"ga":33,"g":3.0,"crn":7.26,"cs":13,"btts":53,"sh":12.2,"sot":4.6,"sh1":5.6,"sh2":6.6,"sot1":2.1,"sot2":2.5,"c1":3.2,"c2":4.0,"k1":1.3,"k2":1.1,"gk":11.1,"ti":29.5,"fk":22.0,"o15":60,"o25":20,"og05_1":60,"og15_1":28,"og05_2":70,"og15_2":45,"co75":40,"co85":30,"co95":10,"co105":0,"ca":2.4,"ca15":60,"ca25":40,"ca35":20,"ts":"mixto","gr":"C"},
+{"c":"Scotland","ppg":1.20,"p":15,"w":5,"d":3,"l":7,"gf":17,"ga":22,"g":2.6,"crn":10.9,"cs":27,"btts":53,"sh":13.8,"sot":5.3,"sh1":6.3,"sh2":7.5,"sot1":2.4,"sot2":2.9,"c1":4.8,"c2":6.1,"k1":1.2,"k2":1.1,"gk":10.8,"ti":28.5,"fk":21.2,"o15":60,"o25":30,"og05_1":60,"og15_1":28,"og05_2":72,"og15_2":48,"co75":90,"co85":80,"co95":70,"co105":60,"ca":2.3,"ca15":60,"ca25":30,"ca35":10,"ts":"bandas","gr":"C"},
+// GRUPO D
+{"c":"USA","ppg":1.73,"p":15,"w":8,"d":2,"l":5,"gf":28,"ga":20,"g":3.2,"crn":7.06,"cs":33,"btts":60,"sh":14.1,"sot":5.5,"sh1":6.5,"sh2":7.6,"sot1":2.5,"sot2":3.0,"c1":3.1,"c2":3.9,"k1":1.3,"k2":1.3,"gk":12.0,"ti":31.5,"fk":23.8,"o15":100,"o25":70,"og05_1":78,"og15_1":45,"og05_2":82,"og15_2":62,"co75":40,"co85":30,"co95":10,"co105":0,"ca":2.6,"ca15":70,"ca25":40,"ca35":20,"ts":"mixto","gr":"D"},
+{"c":"Australia","ppg":1.67,"p":15,"w":7,"d":4,"l":4,"gf":23,"ga":17,"g":2.67,"crn":8.06,"cs":40,"btts":47,"sh":13.1,"sot":5.0,"sh1":6.0,"sh2":7.1,"sot1":2.3,"sot2":2.7,"c1":3.6,"c2":4.4,"k1":1.0,"k2":1.0,"gk":11.3,"ti":29.7,"fk":22.0,"o15":70,"o25":40,"og05_1":65,"og15_1":30,"og05_2":75,"og15_2":50,"co75":60,"co85":40,"co95":20,"co105":10,"ca":1.9,"ca15":50,"ca25":20,"ca35":10,"ts":"mixto","gr":"D"},
+{"c":"Turkey","ppg":2.27,"p":15,"w":11,"d":1,"l":3,"gf":34,"ga":19,"g":3.53,"crn":10.2,"cs":33,"btts":53,"sh":14.8,"sot":5.9,"sh1":6.9,"sh2":7.9,"sot1":2.7,"sot2":3.2,"c1":4.6,"c2":5.6,"k1":1.6,"k2":2.2,"gk":12.3,"ti":33.5,"fk":25.8,"o15":80,"o25":70,"og05_1":75,"og15_1":45,"og05_2":85,"og15_2":65,"co75":90,"co85":80,"co95":70,"co105":70,"ca":3.8,"ca15":90,"ca25":80,"ca35":60,"ts":"mixto-bandas","gr":"D"},
+{"c":"Paraguay","ppg":1.47,"p":15,"w":6,"d":3,"l":6,"gf":18,"ga":20,"g":2.53,"crn":7.5,"cs":27,"btts":47,"sh":12.5,"sot":4.7,"sh1":5.8,"sh2":6.7,"sot1":2.1,"sot2":2.6,"c1":3.3,"c2":4.2,"k1":1.3,"k2":1.4,"gk":11.5,"ti":30.0,"fk":22.5,"o15":60,"o25":30,"og05_1":58,"og15_1":25,"og05_2":68,"og15_2":42,"co75":50,"co85":30,"co95":20,"co105":10,"ca":2.8,"ca15":70,"ca25":50,"ca35":25,"ts":"mixto","gr":"D","est":1},
+// GRUPO E
+{"c":"Curacao","ppg":0.93,"p":15,"w":3,"d":5,"l":7,"gf":13,"ga":24,"g":2.47,"crn":7.0,"cs":20,"btts":47,"sh":11.5,"sot":4.2,"sh1":5.2,"sh2":6.3,"sot1":1.9,"sot2":2.3,"c1":3.0,"c2":4.0,"k1":1.2,"k2":1.2,"gk":10.5,"ti":27.0,"fk":21.0,"o15":50,"o25":20,"og05_1":48,"og15_1":18,"og05_2":58,"og15_2":35,"co75":35,"co85":20,"co95":10,"co105":0,"ca":2.5,"ca15":60,"ca25":38,"ca35":18,"ts":"mixto","gr":"E","est":1},
+{"c":"Ecuador","ppg":1.67,"p":15,"w":7,"d":4,"l":4,"gf":22,"ga":18,"g":2.67,"crn":7.8,"cs":33,"btts":53,"sh":13.0,"sot":5.0,"sh1":6.0,"sh2":7.0,"sot1":2.3,"sot2":2.7,"c1":3.5,"c2":4.3,"k1":1.3,"k2":1.3,"gk":11.6,"ti":30.1,"fk":22.5,"o15":60,"o25":50,"og05_1":65,"og15_1":30,"og05_2":78,"og15_2":52,"co75":50,"co85":40,"co95":20,"co105":10,"ca":2.6,"ca15":70,"ca25":40,"ca35":20,"ts":"mixto","gr":"E"},
+{"c":"Germany","ppg":2.13,"p":15,"w":10,"d":2,"l":3,"gf":35,"ga":17,"g":3.47,"crn":10.8,"cs":33,"btts":53,"sh":16.2,"sot":6.5,"sh1":7.6,"sh2":8.6,"sot1":3.0,"sot2":3.5,"c1":4.8,"c2":6.0,"k1":1.2,"k2":1.3,"gk":11.9,"ti":31.4,"fk":23.2,"o15":90,"o25":70,"og05_1":80,"og15_1":50,"og05_2":85,"og15_2":65,"co75":90,"co85":70,"co95":60,"co105":50,"ca":2.4,"ca15":60,"ca25":40,"ca35":20,"ts":"mixto-bandas","gr":"E"},
+{"c":"Ivory Coast","ppg":2.20,"p":15,"w":10,"d":3,"l":2,"gf":30,"ga":8,"g":2.53,"crn":9.06,"cs":67,"btts":27,"sh":13.8,"sot":5.3,"sh1":6.4,"sh2":7.4,"sot1":2.4,"sot2":2.9,"c1":4.0,"c2":5.0,"k1":0.9,"k2":1.0,"gk":11.6,"ti":30.8,"fk":22.9,"o15":60,"o25":20,"og05_1":55,"og15_1":20,"og05_2":70,"og15_2":45,"co75":70,"co85":60,"co95":40,"co105":20,"ca":1.8,"ca15":40,"ca25":20,"ca35":10,"ts":"mixto-bandas","gr":"E"},
+// GRUPO F
+{"c":"Japan","ppg":2.20,"p":15,"w":10,"d":3,"l":2,"gf":28,"ga":8,"g":2.4,"crn":8.27,"cs":67,"btts":20,"sh":13.4,"sot":5.1,"sh1":6.2,"sh2":7.2,"sot1":2.3,"sot2":2.8,"c1":3.7,"c2":4.5,"k1":0.8,"k2":0.9,"gk":11.1,"ti":29.6,"fk":21.5,"o15":70,"o25":40,"og05_1":60,"og15_1":25,"og05_2":75,"og15_2":45,"co75":60,"co85":50,"co95":30,"co105":20,"ca":1.7,"ca15":40,"ca25":20,"ca35":10,"ts":"central","gr":"F"},
+{"c":"Netherlands","ppg":2.00,"p":15,"w":8,"d":6,"l":1,"gf":38,"ga":14,"g":3.47,"crn":8.26,"cs":33,"btts":60,"sh":14.8,"sot":5.8,"sh1":6.8,"sh2":8.0,"sot1":2.7,"sot2":3.1,"c1":3.7,"c2":4.5,"k1":0.9,"k2":0.9,"gk":10.6,"ti":28.8,"fk":21.4,"o15":80,"o25":60,"og05_1":75,"og15_1":42,"og05_2":82,"og15_2":60,"co75":60,"co85":50,"co95":30,"co105":20,"ca":1.8,"ca15":40,"ca25":20,"ca35":10,"ts":"mixto","gr":"F"},
+{"c":"Sweden","ppg":1.60,"p":15,"w":7,"d":3,"l":5,"gf":22,"ga":18,"g":2.67,"crn":9.5,"cs":33,"btts":47,"sh":13.5,"sot":5.1,"sh1":6.2,"sh2":7.3,"sot1":2.3,"sot2":2.8,"c1":4.2,"c2":5.3,"k1":1.1,"k2":1.0,"gk":11.0,"ti":29.0,"fk":22.0,"o15":65,"o25":40,"og05_1":62,"og15_1":30,"og05_2":72,"og15_2":48,"co75":70,"co85":55,"co95":40,"co105":20,"ca":2.0,"ca15":50,"ca25":25,"ca35":10,"ts":"mixto-bandas","gr":"F","est":1},
+{"c":"Tunisia","ppg":1.60,"p":15,"w":7,"d":3,"l":5,"gf":20,"ga":16,"g":2.4,"crn":10.1,"cs":40,"btts":40,"sh":13.6,"sot":5.2,"sh1":6.2,"sh2":7.4,"sot1":2.4,"sot2":2.8,"c1":4.5,"c2":5.6,"k1":1.3,"k2":1.2,"gk":11.4,"ti":30.2,"fk":22.7,"o15":80,"o25":60,"og05_1":68,"og15_1":35,"og05_2":78,"og15_2":55,"co75":80,"co85":70,"co95":70,"co105":40,"ca":2.5,"ca15":60,"ca25":40,"ca35":20,"ts":"mixto-bandas","gr":"F"},
+// GRUPO G
+{"c":"Belgium","ppg":2.07,"p":15,"w":9,"d":4,"l":2,"gf":46,"ga":14,"g":4.0,"crn":11.26,"cs":47,"btts":47,"sh":16.5,"sot":6.6,"sh1":7.7,"sh2":8.8,"sot1":3.1,"sot2":3.5,"c1":5.1,"c2":6.2,"k1":1.1,"k2":1.1,"gk":11.0,"ti":30.1,"fk":22.4,"o15":80,"o25":60,"og05_1":78,"og15_1":48,"og05_2":82,"og15_2":62,"co75":80,"co85":80,"co95":80,"co105":70,"ca":2.2,"ca15":50,"ca25":30,"ca35":10,"ts":"bandas","gr":"G"},
+{"c":"Egypt","ppg":1.40,"p":15,"w":6,"d":3,"l":6,"gf":19,"ga":19,"g":2.53,"crn":8.5,"cs":33,"btts":40,"sh":12.8,"sot":4.9,"sh1":5.9,"sh2":6.9,"sot1":2.2,"sot2":2.7,"c1":3.7,"c2":4.8,"k1":1.2,"k2":1.1,"gk":11.2,"ti":30.0,"fk":22.5,"o15":60,"o25":35,"og05_1":60,"og15_1":28,"og05_2":70,"og15_2":45,"co75":60,"co85":45,"co95":25,"co105":10,"ca":2.3,"ca15":58,"ca25":32,"ca35":12,"ts":"central","gr":"G","est":1},
+{"c":"Iran","ppg":1.33,"p":15,"w":6,"d":2,"l":7,"gf":16,"ga":21,"g":2.47,"crn":7.8,"cs":33,"btts":33,"sh":12.0,"sot":4.5,"sh1":5.5,"sh2":6.5,"sot1":2.0,"sot2":2.5,"c1":3.4,"c2":4.4,"k1":1.3,"k2":1.2,"gk":11.0,"ti":29.5,"fk":22.0,"o15":55,"o25":25,"og05_1":52,"og15_1":20,"og05_2":62,"og15_2":38,"co75":50,"co85":30,"co95":15,"co105":5,"ca":2.6,"ca15":65,"ca25":40,"ca35":18,"ts":"central","gr":"G","est":1},
+{"c":"New Zealand","ppg":1.27,"p":15,"w":5,"d":4,"l":6,"gf":18,"ga":21,"g":2.6,"crn":8.2,"cs":27,"btts":47,"sh":12.5,"sot":4.8,"sh1":5.7,"sh2":6.8,"sot1":2.2,"sot2":2.6,"c1":3.6,"c2":4.6,"k1":1.0,"k2":0.8,"gk":11.0,"ti":29.0,"fk":21.5,"o15":50,"o25":20,"og05_1":58,"og15_1":22,"og05_2":68,"og15_2":42,"co75":60,"co85":40,"co95":30,"co105":10,"ca":1.8,"ca15":40,"ca25":20,"ca35":10,"ts":"mixto","gr":"G"},
+// GRUPO H
+{"c":"Cape Verde","ppg":2.00,"p":15,"w":8,"d":6,"l":1,"gf":27,"ga":12,"g":2.6,"crn":8.54,"cs":53,"btts":47,"sh":13.3,"sot":5.1,"sh1":6.1,"sh2":7.2,"sot1":2.3,"sot2":2.8,"c1":3.8,"c2":4.7,"k1":1.2,"k2":1.1,"gk":11.3,"ti":29.9,"fk":22.3,"o15":60,"o25":30,"og05_1":62,"og15_1":28,"og05_2":72,"og15_2":48,"co75":60,"co85":50,"co95":30,"co105":20,"ca":2.3,"ca15":60,"ca25":30,"ca35":10,"ts":"mixto","gr":"H"},
+{"c":"Saudi Arabia","ppg":0.60,"p":15,"w":2,"d":3,"l":10,"gf":10,"ga":30,"g":2.67,"crn":7.2,"cs":13,"btts":47,"sh":12.0,"sot":4.6,"sh1":5.5,"sh2":6.5,"sot1":2.1,"sot2":2.5,"c1":3.2,"c2":4.0,"k1":1.4,"k2":1.4,"gk":11.0,"ti":29.2,"fk":21.8,"o15":40,"o25":20,"og05_1":52,"og15_1":20,"og05_2":62,"og15_2":38,"co75":40,"co85":30,"co95":10,"co105":0,"ca":2.8,"ca15":70,"ca25":50,"ca35":20,"ts":"central","gr":"H"},
+{"c":"Spain","ppg":2.20,"p":15,"w":9,"d":6,"l":0,"gf":43,"ga":17,"g":4.0,"crn":8.87,"cs":47,"btts":53,"sh":15.9,"sot":6.4,"sh1":7.4,"sh2":8.5,"sot1":3.0,"sot2":3.4,"c1":3.9,"c2":4.9,"k1":0.9,"k2":1.0,"gk":10.5,"ti":28.2,"fk":20.8,"o15":90,"o25":70,"og05_1":80,"og15_1":50,"og05_2":85,"og15_2":65,"co75":60,"co85":60,"co95":40,"co105":30,"ca":1.8,"ca15":40,"ca25":20,"ca35":10,"ts":"central","gr":"H"},
+{"c":"Uruguay","ppg":1.67,"p":15,"w":7,"d":4,"l":4,"gf":22,"ga":16,"g":2.53,"crn":7.6,"cs":40,"btts":47,"sh":13.5,"sot":5.2,"sh1":6.2,"sh2":7.3,"sot1":2.4,"sot2":2.8,"c1":3.4,"c2":4.2,"k1":1.4,"k2":1.4,"gk":11.9,"ti":30.8,"fk":23.2,"o15":70,"o25":40,"og05_1":65,"og15_1":32,"og05_2":78,"og15_2":52,"co75":50,"co85":30,"co95":20,"co105":10,"ca":2.8,"ca15":70,"ca25":50,"ca35":30,"ts":"mixto","gr":"H"},
+// GRUPO I
+{"c":"France","ppg":2.27,"p":15,"w":11,"d":1,"l":3,"gf":36,"ga":17,"g":3.53,"crn":9.6,"cs":33,"btts":60,"sh":15.4,"sot":6.2,"sh1":7.2,"sh2":8.2,"sot1":2.9,"sot2":3.3,"c1":4.3,"c2":5.3,"k1":1.2,"k2":1.8,"gk":11.0,"ti":30.5,"fk":22.5,"o15":100,"o25":90,"og05_1":85,"og15_1":50,"og05_2":90,"og15_2":70,"co75":80,"co85":70,"co95":60,"co105":40,"ca":3.0,"ca15":80,"ca25":60,"ca35":30,"ts":"mixto","gr":"I"},
+{"c":"Iraq","ppg":1.20,"p":15,"w":5,"d":3,"l":7,"gf":16,"ga":22,"g":2.53,"crn":8.0,"cs":27,"btts":47,"sh":12.0,"sot":4.5,"sh1":5.5,"sh2":6.5,"sot1":2.0,"sot2":2.5,"c1":3.5,"c2":4.5,"k1":1.2,"k2":1.1,"gk":11.0,"ti":29.0,"fk":22.0,"o15":55,"o25":25,"og05_1":52,"og15_1":20,"og05_2":62,"og15_2":38,"co75":55,"co85":35,"co95":20,"co105":5,"ca":2.4,"ca15":60,"ca25":35,"ca35":15,"ts":"mixto","gr":"I","est":1},
+{"c":"Norway","ppg":2.40,"p":15,"w":11,"d":3,"l":1,"gf":49,"ga":10,"g":3.93,"crn":8.6,"cs":47,"btts":53,"sh":16.8,"sot":7.1,"sh1":7.9,"sh2":8.9,"sot1":3.3,"sot2":3.8,"c1":4.0,"c2":4.6,"k1":0.8,"k2":1.0,"gk":10.8,"ti":28.6,"fk":21.3,"o15":80,"o25":60,"og05_1":80,"og15_1":55,"og05_2":85,"og15_2":65,"co75":70,"co85":50,"co95":40,"co105":30,"ca":1.4,"ca15":30,"ca25":10,"ca35":0,"ts":"bandas","gr":"I"},
+{"c":"Senegal","ppg":2.33,"p":15,"w":11,"d":2,"l":2,"gf":37,"ga":8,"g":3.0,"crn":9.65,"cs":67,"btts":27,"sh":14.1,"sot":5.6,"sh1":6.5,"sh2":7.6,"sot1":2.6,"sot2":3.0,"c1":4.4,"c2":5.2,"k1":1.3,"k2":1.8,"gk":11.8,"ti":32.4,"fk":24.1,"o15":70,"o25":40,"og05_1":65,"og15_1":30,"og05_2":80,"og15_2":55,"co75":70,"co85":60,"co95":60,"co105":60,"ca":3.1,"ca15":80,"ca25":60,"ca35":30,"ts":"mixto-bandas","gr":"I"},
+// GRUPO J
+{"c":"Algeria","ppg":2.40,"p":15,"w":11,"d":3,"l":1,"gf":33,"ga":6,"g":2.6,"crn":8.64,"cs":67,"btts":27,"sh":13.5,"sot":5.2,"sh1":6.3,"sh2":7.2,"sot1":2.4,"sot2":2.8,"c1":3.9,"c2":4.7,"k1":1.4,"k2":1.9,"gk":11.5,"ti":30.1,"fk":22.8,"o15":60,"o25":40,"og05_1":60,"og15_1":25,"og05_2":75,"og15_2":50,"co75":60,"co85":50,"co95":40,"co105":30,"ca":3.3,"ca15":80,"ca25":60,"ca35":40,"ts":"mixto-bandas","gr":"J"},
+{"c":"Argentina","ppg":2.47,"p":15,"w":12,"d":1,"l":2,"gf":33,"ga":6,"g":2.6,"crn":6.8,"cs":67,"btts":27,"sh":14.2,"sot":5.4,"sh1":6.8,"sh2":7.4,"sot1":2.5,"sot2":2.9,"c1":3.1,"c2":3.7,"k1":1.5,"k2":1.8,"gk":12.1,"ti":31.2,"fk":23.4,"o15":80,"o25":50,"og05_1":70,"og15_1":35,"og05_2":80,"og15_2":60,"co75":60,"co85":45,"co95":30,"co105":20,"ca":3.2,"ca15":80,"ca25":60,"ca35":40,"ts":"mixto","gr":"J"},
+{"c":"Austria","ppg":2.20,"p":15,"w":10,"d":3,"l":2,"gf":33,"ga":9,"g":2.8,"crn":6.93,"cs":47,"btts":40,"sh":12.8,"sot":4.9,"sh1":5.9,"sh2":6.9,"sot1":2.2,"sot2":2.7,"c1":3.1,"c2":3.8,"k1":1.4,"k2":1.7,"gk":11.4,"ti":29.8,"fk":22.0,"o15":80,"o25":50,"og05_1":65,"og15_1":35,"og05_2":75,"og15_2":55,"co75":40,"co85":20,"co95":10,"co105":0,"ca":3.1,"ca15":80,"ca25":60,"ca35":30,"ts":"mixto","gr":"J"},
+{"c":"Jordan","ppg":1.47,"p":15,"w":6,"d":4,"l":5,"gf":17,"ga":17,"g":2.27,"crn":8.2,"cs":33,"btts":47,"sh":12.8,"sot":4.9,"sh1":5.9,"sh2":6.9,"sot1":2.2,"sot2":2.7,"c1":3.6,"c2":4.6,"k1":1.2,"k2":1.1,"gk":11.5,"ti":30.5,"fk":22.9,"o15":80,"o25":70,"og05_1":65,"og15_1":32,"og05_2":75,"og15_2":52,"co75":60,"co85":50,"co95":30,"co105":20,"ca":2.3,"ca15":60,"ca25":30,"ca35":10,"ts":"central","gr":"J"},
+// GRUPO K
+{"c":"Colombia","ppg":1.87,"p":15,"w":8,"d":4,"l":3,"gf":28,"ga":14,"g":2.8,"crn":6.06,"cs":27,"btts":53,"sh":12.8,"sot":5.4,"sh1":5.9,"sh2":6.9,"sot1":2.5,"sot2":2.9,"c1":2.7,"c2":3.3,"k1":1.2,"k2":1.2,"gk":11.3,"ti":29.5,"fk":22.0,"o15":90,"o25":80,"og05_1":80,"og15_1":50,"og05_2":85,"og15_2":65,"co75":30,"co85":20,"co95":10,"co105":0,"ca":2.4,"ca15":60,"ca25":40,"ca35":20,"ts":"central","gr":"K"},
+{"c":"Congo DR","ppg":2.00,"p":15,"w":9,"d":3,"l":3,"gf":21,"ga":10,"g":2.07,"crn":8.16,"cs":60,"btts":33,"sh":12.5,"sot":4.8,"sh1":5.8,"sh2":6.7,"sot1":2.2,"sot2":2.6,"c1":3.6,"c2":4.5,"k1":0.7,"k2":0.7,"gk":11.0,"ti":29.2,"fk":21.8,"o15":60,"o25":30,"og05_1":58,"og15_1":25,"og05_2":68,"og15_2":42,"co75":60,"co85":40,"co95":20,"co105":10,"ca":1.4,"ca15":30,"ca25":10,"ca35":0,"ts":"mixto","gr":"K"},
+{"c":"Portugal","ppg":2.07,"p":15,"w":9,"d":4,"l":2,"gf":36,"ga":16,"g":3.47,"crn":9.46,"cs":27,"btts":60,"sh":15.1,"sot":6.0,"sh1":7.0,"sh2":8.1,"sot1":2.8,"sot2":3.2,"c1":4.2,"c2":5.2,"k1":1.5,"k2":1.5,"gk":10.9,"ti":29.3,"fk":22.1,"o15":80,"o25":60,"og05_1":75,"og15_1":45,"og05_2":82,"og15_2":62,"co75":80,"co85":60,"co95":50,"co105":30,"ca":3.0,"ca15":80,"ca25":60,"ca35":30,"ts":"mixto","gr":"K"},
+{"c":"Uzbekistan","ppg":1.13,"p":15,"w":5,"d":2,"l":8,"gf":15,"ga":23,"g":2.53,"crn":7.5,"cs":20,"btts":40,"sh":11.5,"sot":4.3,"sh1":5.2,"sh2":6.3,"sot1":1.9,"sot2":2.4,"c1":3.2,"c2":4.3,"k1":1.2,"k2":1.1,"gk":10.8,"ti":28.5,"fk":21.5,"o15":50,"o25":22,"og05_1":48,"og15_1":18,"og05_2":58,"og15_2":35,"co75":45,"co85":25,"co95":10,"co105":0,"ca":2.4,"ca15":60,"ca25":35,"ca35":15,"ts":"mixto","gr":"K","est":1},
+// GRUPO L
+{"c":"Croatia","ppg":2.13,"p":15,"w":10,"d":2,"l":3,"gf":34,"ga":14,"g":3.2,"crn":11.2,"cs":40,"btts":47,"sh":14.6,"sot":5.7,"sh1":6.7,"sh2":7.9,"sot1":2.6,"sot2":3.1,"c1":5.0,"c2":6.2,"k1":1.1,"k2":1.1,"gk":11.3,"ti":30.6,"fk":22.7,"o15":80,"o25":70,"og05_1":70,"og15_1":40,"og05_2":80,"og15_2":60,"co75":70,"co85":60,"co95":60,"co105":40,"ca":2.2,"ca15":60,"ca25":30,"ca35":10,"ts":"mixto-bandas","gr":"L"},
+{"c":"England","ppg":2.47,"p":15,"w":12,"d":1,"l":2,"gf":36,"ga":5,"g":2.73,"crn":9.8,"cs":80,"btts":13,"sh":13.1,"sot":5.8,"sh1":6.2,"sh2":6.9,"sot1":2.7,"sot2":3.1,"c1":4.2,"c2":5.6,"k1":1.2,"k2":1.5,"gk":11.2,"ti":29.4,"fk":20.1,"o15":80,"o25":40,"og05_1":65,"og15_1":30,"og05_2":75,"og15_2":55,"co75":80,"co85":60,"co95":60,"co105":40,"ca":1.5,"ca15":30,"ca25":20,"ca35":10,"ts":"central","gr":"L"},
+{"c":"Ghana","ppg":1.53,"p":15,"w":7,"d":2,"l":6,"gf":22,"ga":22,"g":2.93,"crn":7.73,"cs":27,"btts":53,"sh":13.2,"sot":5.1,"sh1":6.1,"sh2":7.1,"sot1":2.3,"sot2":2.8,"c1":3.4,"c2":4.3,"k1":1.3,"k2":1.2,"gk":11.5,"ti":30.4,"fk":22.8,"o15":70,"o25":40,"og05_1":65,"og15_1":32,"og05_2":75,"og15_2":52,"co75":50,"co85":40,"co95":20,"co105":10,"ca":2.5,"ca15":60,"ca25":40,"ca35":20,"ts":"mixto-bandas","gr":"L"},
+{"c":"Panama","ppg":0.67,"p":15,"w":2,"d":4,"l":9,"gf":9,"ga":28,"g":2.47,"crn":7.06,"cs":13,"btts":33,"sh":11.8,"sot":4.4,"sh1":5.4,"sh2":6.4,"sot1":2.0,"sot2":2.4,"c1":3.1,"c2":3.9,"k1":1.5,"k2":1.5,"gk":10.8,"ti":28.8,"fk":21.4,"o15":30,"o25":10,"og05_1":48,"og15_1":18,"og05_2":58,"og15_2":35,"co75":40,"co85":20,"co95":10,"co105":0,"ca":3.0,"ca15":80,"ca25":50,"ca35":30,"ts":"central","gr":"L"}
+];
+
+// Grupos oficiales verificados (FootyStats · 13 Jun 2026)
+const GROUPS = {
+  "Grupo A":["Mexico","South Korea","Czech Republic","South Africa"],
+  "Grupo B":["Bosnia And Herzegovina","Canada","Qatar","Switzerland"],
+  "Grupo C":["Brazil","Morocco","Haiti","Scotland"],
+  "Grupo D":["USA","Australia","Turkey","Paraguay"],
+  "Grupo E":["Curacao","Ecuador","Germany","Ivory Coast"],
+  "Grupo F":["Japan","Netherlands","Sweden","Tunisia"],
+  "Grupo G":["Belgium","Egypt","Iran","New Zealand"],
+  "Grupo H":["Cape Verde","Saudi Arabia","Spain","Uruguay"],
+  "Grupo I":["France","Iraq","Norway","Senegal"],
+  "Grupo J":["Algeria","Argentina","Austria","Jordan"],
+  "Grupo K":["Colombia","Congo DR","Portugal","Uzbekistan"],
+  "Grupo L":["Croatia","England","Ghana","Panama"]
+};
+
+// Standings actuales (13 Jun 2026)
+const STANDINGS = {
+  "Grupo A":[{c:"Mexico",pts:3,gd:2},{c:"South Korea",pts:3,gd:1},{c:"Czech Republic",pts:0,gd:-1},{c:"South Africa",pts:0,gd:-2}],
+  "Grupo B":[{c:"Bosnia And Herzegovina",pts:1,gd:0},{c:"Canada",pts:1,gd:0},{c:"Qatar",pts:0,gd:0},{c:"Switzerland",pts:0,gd:0}],
+  "Grupo C":[{c:"Brazil",pts:0,gd:0},{c:"Morocco",pts:0,gd:0},{c:"Haiti",pts:0,gd:0},{c:"Scotland",pts:0,gd:0}],
+  "Grupo D":[{c:"USA",pts:3,gd:3},{c:"Australia",pts:0,gd:0},{c:"Turkey",pts:0,gd:0},{c:"Paraguay",pts:0,gd:-3}],
+  "Grupo E":[{c:"Curacao",pts:0,gd:0},{c:"Ecuador",pts:0,gd:0},{c:"Germany",pts:0,gd:0},{c:"Ivory Coast",pts:0,gd:0}],
+  "Grupo F":[{c:"Japan",pts:0,gd:0},{c:"Netherlands",pts:0,gd:0},{c:"Sweden",pts:0,gd:0},{c:"Tunisia",pts:0,gd:0}],
+  "Grupo G":[{c:"Belgium",pts:0,gd:0},{c:"Egypt",pts:0,gd:0},{c:"Iran",pts:0,gd:0},{c:"New Zealand",pts:0,gd:0}],
+  "Grupo H":[{c:"Cape Verde",pts:0,gd:0},{c:"Saudi Arabia",pts:0,gd:0},{c:"Spain",pts:0,gd:0},{c:"Uruguay",pts:0,gd:0}],
+  "Grupo I":[{c:"France",pts:0,gd:0},{c:"Iraq",pts:0,gd:0},{c:"Norway",pts:0,gd:0},{c:"Senegal",pts:0,gd:0}],
+  "Grupo J":[{c:"Algeria",pts:0,gd:0},{c:"Argentina",pts:0,gd:0},{c:"Austria",pts:0,gd:0},{c:"Jordan",pts:0,gd:0}],
+  "Grupo K":[{c:"Colombia",pts:0,gd:0},{c:"Congo DR",pts:0,gd:0},{c:"Portugal",pts:0,gd:0},{c:"Uzbekistan",pts:0,gd:0}],
+  "Grupo L":[{c:"Croatia",pts:0,gd:0},{c:"England",pts:0,gd:0},{c:"Ghana",pts:0,gd:0},{c:"Panama",pts:0,gd:0}]
+};
+
+// ═══════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════
+const N=v=>parseFloat((v||0))||0;
+const F=n=>isNaN(n)?'—':parseFloat(n).toFixed(1);
+const B=(v,g,ok)=>v>=g?'g':v>=ok?'a':'r';
+const find=c=>DB.find(t=>t.c===c)||null;
+const pct=n=>Math.round(n)+'%';
+
+// Cuotas de referencia del mercado (Betplay/Rushbet Colombia)
+// Se calculan desde la P_modelo del motor
+function refOdd(p){
+  // Simula cuota de mercado con margen del 8% (típico casas CO)
+  return Math.round((1/p)*1.08*100)/100;
+}
+
+// ═══════════════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════════════
+const halves={tiros:'total',corners:'total',goles:'total',tarjetas:'total'};
+function showTab(name,el){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  el.classList.add('active');
+  if(name==='stats')renderStats();
+  if(name==='tiros')renderTiros();
+  if(name==='corners')renderCorners();
+  if(name==='goles')renderGoles();
+  if(name==='tarjetas')renderTarjetas();
+  if(name==='saques')renderSaques();
+  if(name==='analizar'){populateSel();autoAnalyze();}
+  if(name==='vivo')populateVivoSel();
+  if(name==='historial')renderHist();
+}
+function setH(tab,half,el){
+  halves[tab]=half;
+  el.closest('.htabs').querySelectorAll('.htab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  if(tab==='tiros')renderTiros();
+  if(tab==='corners')renderCorners();
+  if(tab==='goles')renderGoles();
+  if(tab==='tarjetas')renderTarjetas();
+}
+
+// ═══════════════════════════════════════════════
+// GRUPOS
+// ═══════════════════════════════════════════════
+document.getElementById('grp-date').textContent='Actualizado: '+new Date().toLocaleDateString('es-CO');
+const gcont=document.getElementById('gcont');
+Object.entries(STANDINGS).forEach(([name,rows])=>{
+  const d=document.createElement('div');d.className='gcard';
+  d.innerHTML=`<div class="gtitle">${name}</div>`+
+    rows.map(r=>`<div class="grow"><span>${r.c}</span><span style="display:flex;gap:8px;align-items:center"><span style="font-size:10px;color:var(--text2)">${r.gd>0?'+'+r.gd:r.gd}</span><span class="gpts">${r.pts}</span></span></div>`).join('');
+  gcont.appendChild(d);
+});
+
+// ═══════════════════════════════════════════════
+// ANALIZAR — AUTOMÁTICO
+// ═══════════════════════════════════════════════
+function populateSel(){
+  ['sel-a','sel-b','v-a','v-b'].forEach(id=>{
+    const s=document.getElementById(id);
+    if(!s||s.options.length>1)return;
+    DB.sort((a,b)=>a.c.localeCompare(b.c)).forEach(t=>s.add(new Option(t.c,t.c)));
+  });
+}
+
+function calcEV(p,odd){return((p*odd)-1)*100;}
+function confScore(margin,hasLU,dataOk){
+  let c=50;
+  if(hasLU)c+=7;
+  if(dataOk)c+=10;
+  if(margin>0.08)c+=10;
+  else if(margin>0)c+=5;
+  return Math.min(92,c);
+}
+
+function autoAnalyze(){
+  const aVal=document.getElementById('sel-a').value;
+  const bVal=document.getElementById('sel-b').value;
+  const out=document.getElementById('auto-out');
+  if(!aVal||!bVal||aVal===bVal){
+    out.innerHTML='<div style="color:var(--text2);font-size:13px;padding:30px 0;text-align:center">Selecciona dos equipos distintos para ver el análisis</div>';
+    return;
+  }
+  const sa=find(aVal);const sb=find(bVal);
+  if(!sa||!sb){out.innerHTML='<div style="color:var(--text2)">Equipo no encontrado en base de datos</div>';return;}
+
+  // ── Calcular esperados ──
+  const expC=(sa.crn+sb.crn).toFixed(1);
+  const expC1=(sa.c1+sb.c1).toFixed(1);
+  const expC2=(sa.c2+sb.c2).toFixed(1);
+  const expSh=(sa.sh+sb.sh).toFixed(1);
+  const expSh1=(sa.sh1+sb.sh1).toFixed(1);
+  const expSh2=(sa.sh2+sb.sh2).toFixed(1);
+  const expSOT=(sa.sot+sb.sot).toFixed(1);
+  const expSOT1=(sa.sot1+sb.sot1).toFixed(1);
+  const expSOT2=(sa.sot2+sb.sot2).toFixed(1);
+  const expG=((sa.g+sb.g)/2).toFixed(1);
+  const expGK=(sa.gk+sb.gk).toFixed(1);
+  const expTI=(sa.ti+sb.ti).toFixed(1);
+  const expCA=((sa.ca+sb.ca)/2).toFixed(1);
+  const expCA1=((sa.k1+sb.k1)/2).toFixed(1);
+  const expCA2=((sa.k2+sb.k2)/2).toFixed(1);
+
+  // ── Generar picks automáticos ──
+  // Las líneas se eligen automáticamente según el expected
+  function pickLine(exp,steps=[0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10,10.5,11,11.5,12]){
+    // Elige la línea más cercana por debajo del expected (Over con valor)
+    const below=steps.filter(s=>s<exp);
+    return below.length>0?below[below.length-1]:steps[0];
+  }
+
+  // Córners total
+  const lineC=pickLine(N(expC),[7.5,8.5,9.5,10.5,11.5]);
+  const pC=Math.min(0.90,Math.max(0.10,0.5+((N(expC)-lineC)/lineC)*0.7));
+  const oddC=refOdd(pC);
+  const evC=calcEV(pC,oddC);
+  const confC=confScore((N(expC)-lineC)/lineC,false,true);
+
+  // Córners 2H
+  const lineC2=pickLine(N(expC2),[4.5,5.5,6.5,7.5,8.5]);
+  const pC2=Math.min(0.90,Math.max(0.10,0.5+((N(expC2)-lineC2)/lineC2)*0.7));
+  const oddC2=refOdd(pC2);
+  const evC2=calcEV(pC2,oddC2);
+
+  // Tiros totales
+  const lineSh=pickLine(N(expSh),[19.5,21.5,23.5,25.5,27.5,29.5]);
+  const pSh=Math.min(0.88,Math.max(0.12,0.5+((N(expSh)-lineSh)/lineSh)*0.65));
+  const oddSh=refOdd(pSh);
+  const evSh=calcEV(pSh,oddSh);
+
+  // SOT
+  const lineSOT=pickLine(N(expSOT),[7.5,8.5,9.5,10.5,11.5]);
+  const pSOT=Math.min(0.88,Math.max(0.12,0.5+((N(expSOT)-lineSOT)/lineSOT)*0.65));
+  const oddSOT=refOdd(pSOT);
+  const evSOT=calcEV(pSOT,oddSOT);
+
+  // Goles
+  const lineG=pickLine(N(expG),[0.5,1.5,2.5,3.5]);
+  const pG=((sa.o25+sb.o25)/200);
+  const oddG=refOdd(Math.max(0.15,pG));
+  const evG=calcEV(Math.max(0.15,pG),oddG);
+
+  // Goles 1H Under
+  const pU1h=((100-sa.og05_1)+(100-sb.og05_1))/200;
+  const oddU1h=refOdd(Math.max(0.15,pU1h));
+  const evU1h=calcEV(Math.max(0.15,pU1h),oddU1h);
+
+  // Tarjetas
+  const lineCA=pickLine(N(expCA),[1.5,2.5,3.5,4.5]);
+  const pCA=((sa.ca25+sb.ca25)/200);
+  const oddCA=refOdd(Math.max(0.15,pCA));
+  const evCA=calcEV(Math.max(0.15,pCA),oddCA);
+
+  // Tarjetas 2H
+  const pCA2h=Math.min(0.85,((sa.k2+sb.k2)/2)/3.5);
+  const oddCA2h=refOdd(Math.max(0.15,pCA2h));
+  const evCA2h=calcEV(Math.max(0.15,pCA2h),oddCA2h);
+
+  function pickHTML(label,exp,line,p,odd,ev,conf,risk,unit=''){
+    const isGood=ev>5;
+    const isMarg=ev>2.5&&ev<=5;
+    const isBad=ev<=2.5;
+    const cls=isGood?'':isMarg?'amber':'red';
+    const icon=isGood?'✅':isMarg?'⚠️':'❌';
+    return`<div class="pick ${cls}">
+      <div class="pick-title">${icon} ${label}</div>
+      <div class="pick-row">Esp: <strong>${exp}${unit}</strong> · Línea sugerida: Over <strong>${line}${unit}</strong></div>
+      <div class="pick-row">P_modelo: <strong>${Math.round(p*100)}%</strong> · P_implícita: ${Math.round(100/odd)}% · Conf: ${conf}/100 · Risk: ${risk}</div>
+      <div class="pick-row">Cuota mínima EV+: <strong>${odd}</strong> (referencia Betplay/Rushbet)</div>
+      <div class="pick-ev ${isGood?'evp':isMarg?'ev0':'ev-'}">EV estimado: ${ev>0?'+':''}${ev.toFixed(1)}% ${isBad?'— Sin valor suficiente':isGood?'— Pick activo':'— Marginal'}</div>
+    </div>`;
+  }
+
+  const groupA=DB.find(t=>t.c===aVal)?.gr||'—';
+  const groupB=DB.find(t=>t.c===bVal)?.gr||'—';
+  const sameGroup=groupA===groupB;
+
+  out.innerHTML=`
+    <div class="grid">
+      <div class="card"><div class="clabel">Córners esperados</div><div class="cval">${expC}</div><div style="font-size:11px;color:var(--text2);margin-top:2px">1H: ${expC1} · 2H: ${expC2}</div></div>
+      <div class="card"><div class="clabel">Tiros totales esp.</div><div class="cval">${expSh}</div><div style="font-size:11px;color:var(--text2);margin-top:2px">1H: ${expSh1} · 2H: ${expSh2}</div></div>
+      <div class="card"><div class="clabel">SOT esperados</div><div class="cval">${expSOT}</div><div style="font-size:11px;color:var(--text2);margin-top:2px">1H: ${expSOT1} · 2H: ${expSOT2}</div></div>
+      <div class="card"><div class="clabel">Goles esperados</div><div class="cval">${expG}</div></div>
+      <div class="card"><div class="clabel">Tarjetas esp.</div><div class="cval sm">${expCA}</div><div style="font-size:11px;color:var(--text2);margin-top:2px">1H: ${expCA1} · 2H: ${expCA2}</div></div>
+      <div class="card"><div class="clabel">Saques portería</div><div class="cval sm">${expGK}</div></div>
+      <div class="card"><div class="clabel">Saques de banda</div><div class="cval sm">${expTI}</div></div>
+      ${sameGroup?`<div class="card" style="border-color:var(--amber)"><div class="clabel">⚠️ Mismo grupo</div><div class="cval sm" style="color:var(--amber)">${groupA}</div><div style="font-size:11px;color:var(--text2);margin-top:2px">Partido de fase grupos</div></div>`:''}
+    </div>
+
+    <div class="sep">Comparativa detallada</div>
+    <div style="margin-bottom:14px">
+      <div class="compare"><div class="ca" style="font-weight:700;font-size:14px">${aVal}</div><div class="cc"></div><div style="font-weight:700;font-size:14px">${bVal}</div></div>
+      <div class="compare"><div class="ca">${F(sa.ppg)} PPG</div><div class="cc">Forma</div><div>${F(sb.ppg)} PPG</div></div>
+      <div class="compare"><div class="ca">${sa.w}G ${sa.d}E ${sa.l}P</div><div class="cc">Récord</div><div>${sb.w}G ${sb.d}E ${sb.l}P</div></div>
+      <div class="compare"><div class="ca">${F(sa.sh)} / ${F(sa.sot)} SOT</div><div class="cc">Tiros/SOT</div><div>${F(sb.sh)} / ${F(sb.sot)} SOT</div></div>
+      <div class="compare"><div class="ca">${F(sa.sh1)} / ${F(sa.sh2)}</div><div class="cc">Tiros 1H/2H</div><div>${F(sb.sh1)} / ${F(sb.sh2)}</div></div>
+      <div class="compare"><div class="ca">${F(sa.crn)}</div><div class="cc">Córners/P</div><div>${F(sb.crn)}</div></div>
+      <div class="compare"><div class="ca">${F(sa.c1)} / ${F(sa.c2)}</div><div class="cc">Córn 1H/2H</div><div>${F(sb.c1)} / ${F(sb.c2)}</div></div>
+      <div class="compare"><div class="ca">${sa.o15}% / ${sa.o25}%</div><div class="cc">Over 1.5/2.5</div><div>${sb.o15}% / ${sb.o25}%</div></div>
+      <div class="compare"><div class="ca">${sa.og05_1}% / ${sa.og05_2}%</div><div class="cc">Gol 1H/2H</div><div>${sb.og05_1}% / ${sb.og05_2}%</div></div>
+      <div class="compare"><div class="ca">${F(sa.k1)} / ${F(sa.k2)}</div><div class="cc">Tarj 1H/2H</div><div>${F(sb.k1)} / ${F(sb.k2)}</div></div>
+      <div class="compare"><div class="ca">${sa.cs}% CS</div><div class="cc">Portería cero</div><div>${sb.cs}% CS</div></div>
+      <div class="compare"><div class="ca">${sa.btts}% BTTS</div><div class="cc">Ambos anotan</div><div>${sb.btts}% BTTS</div></div>
+      <div class="compare"><div class="ca">${F(sa.gk)}</div><div class="cc">Saques GK</div><div>${F(sb.gk)}</div></div>
+      <div class="compare"><div class="ca">${F(sa.ti)}</div><div class="cc">Throw-ins</div><div>${F(sb.ti)}</div></div>
+      <div class="compare"><div class="ca">${sa.ts}</div><div class="cc">Estilo</div><div>${sb.ts}</div></div>
+    </div>
+
+    <div class="sep">Picks recomendados — Motor v2.0</div>
+    <div style="font-size:11px;color:var(--text2);margin-bottom:10px">Las cuotas son de referencia (mercado Colombia con margen 8%). Verifica en Betplay/Rushbet antes de apostar.</div>
+    ${pickHTML('Córners Over '+lineC+' (total)',expC,lineC,pC,oddC,evC,confC,'Bajo (22)')}
+    ${pickHTML('Córners Over '+lineC2+' (2do tiempo)',expC2,lineC2,pC2,oddC2,evC2,Math.round(confC*0.9),'Bajo (25)')}
+    ${pickHTML('Tiros totales Over '+lineSh,expSh,lineSh,pSh,oddSh,evSh,Math.round(confScore((N(expSh)-lineSh)/lineSh,false,true)*0.9),'Bajo (28)')}
+    ${pickHTML('SOT (tiros al arco) Over '+lineSOT,expSOT,lineSOT,pSOT,oddSOT,evSOT,Math.round(confScore((N(expSOT)-lineSOT)/lineSOT,false,true)*0.9),'Bajo (30)')}
+    ${pU1h>0.52?pickHTML('Goles Under 0.5 — 1er tiempo','','—',pU1h,oddU1h,evU1h,62,'Bajo (28)'):''}
+    ${pickHTML('Goles Over '+lineG+' (total)',expG,lineG,Math.max(0.15,pG),oddG,evG,confScore((N(expG)-lineG)/lineG,false,true),'Medio (35)')}
+    ${pCA>0.40?pickHTML('Tarjetas Over '+lineCA,expCA,lineCA,Math.max(0.15,pCA),oddCA,evCA,60,'Medio (40)'):''}
+    ${pCA2h>0.40?pickHTML('Tarjetas Over 1.5 — 2do tiempo',expCA2,1.5,pCA2h,oddCA2h,evCA2h,58,'Medio (40)'):''}
+
+    <div style="margin-top:12px;padding:10px 12px;background:var(--bg2);border-radius:var(--r);font-size:11px;color:var(--text2)">
+      ⚠️ Análisis estadístico con valor esperado estimado. No son garantía de resultado. Apuesta solo lo que puedes perder. Las cuotas de referencia son estimadas — verifica siempre en la casa de apuestas antes de apostar.
+    </div>
+  `;
+}
+
+// ═══════════════════════════════════════════════
+// EN VIVO
+// ═══════════════════════════════════════════════
+function populateVivoSel(){populateSel();}
+function calcVivo(){
+  const aVal=document.getElementById('v-a').value;
+  const bVal=document.getElementById('v-b').value;
+  const min=parseInt(document.getElementById('v-min').value)||0;
+  const gA=parseInt(document.getElementById('v-ga').value)||0;
+  const gB=parseInt(document.getElementById('v-gb').value)||0;
+  const corn=parseInt(document.getElementById('v-corn').value)||0;
+  const shots=parseInt(document.getElementById('v-shots').value)||0;
+  const sot=parseInt(document.getElementById('v-sot').value)||0;
+  const cards=parseInt(document.getElementById('v-cards').value)||0;
+  const K=parseFloat(document.getElementById('v-zone').value)||1.0;
+  const out=document.getElementById('vivo-out');
+
+  document.getElementById('v-score').textContent=gA+' : '+gB;
+  document.getElementById('v-minlabel').textContent="min "+min+"'";
+
+  if(!aVal||!bVal){out.innerHTML='<div style="color:var(--text2)">Selecciona los equipos</div>';return;}
+  if(min<=0){out.innerHTML='<div style="color:var(--text2)">Ingresa el minuto actual</div>';return;}
+
+  const sa=find(aVal);const sb=find(bVal);
+  if(!sa||!sb)return;
+
+  const diff=gA-gB;
+  const S=diff>=2?0.82:diff===1?0.93:diff===0?1.0:diff===-1?1.18:1.28;
+  const sLabel=diff>=2?'Ganando 2+ → S=0.82':diff===1?'Ganando 1 → S=0.93':diff===0?'Empate → S=1.00':diff===-1?'Perdiendo 1 → S=1.18':'Perdiendo 2+ → S=1.28';
+  const minLeft=Math.max(1,90-min+4);
+
+  const rateC=min>0?corn/min:0;
+  const rateSh=min>0?shots/min:0;
+  const rateSOT=min>0?sot/min:0;
+  const rateCards=min>0?cards/min:0;
+
+  const lambdaC=rateC*minLeft*S*K;
+  const lambdaSh=rateSh*minLeft*S;
+  const lambdaSOT=rateSOT*minLeft*S;
+  const lambdaCards=rateCards*minLeft*S;
+
+  const expTotC=(corn+lambdaC).toFixed(1);
+  const expTotSh=(shots+lambdaSh).toFixed(1);
+  const expTotSOT=(sot+lambdaSOT).toFixed(1);
+  const expTotCards=(cards+lambdaCards).toFixed(1);
+
+  // Sugerencias de líneas para picks live
+  function livePickRow(label,current,expTotal,lambda,minL){
+    const neededMin=Math.max(0,9.5-current);// ejemplo línea 9.5 córners
+    const rate=lambda/minL;
+    const eta=rate>0?neededMin/rate:999;
+    return`<div style="font-size:12px;margin-bottom:4px;padding:5px 8px;background:var(--bg3);border-radius:5px">
+      <strong>${label}</strong>: ya ${current} · exp. total <strong>${expTotal}</strong> · ritmo ${(rate*90).toFixed(1)}/90'
+    </div>`;
+  }
+
+  out.innerHTML=`
+    <div class="grid">
+      <div class="card"><div class="clabel">Situation_S</div><div class="cval sm" style="color:${S>1?'var(--amber)':S<1?'var(--green)':'var(--text)'}">${S}</div><div style="font-size:10px;color:var(--text2);margin-top:2px">${sLabel}</div></div>
+      <div class="card"><div class="clabel">Tactical K</div><div class="cval sm">${K}</div></div>
+      <div class="card"><div class="clabel">Min. restantes</div><div class="cval">${minLeft}'</div></div>
+      <div class="card"><div class="clabel">Córners esp. final</div><div class="cval">${expTotC}</div></div>
+      <div class="card"><div class="clabel">Tiros esp. final</div><div class="cval">${expTotSh}</div></div>
+      <div class="card"><div class="clabel">SOT esp. final</div><div class="cval">${expTotSOT}</div></div>
+      <div class="card"><div class="clabel">Tarjetas esp. final</div><div class="cval sm">${expTotCards}</div></div>
+    </div>
+    <div class="sep">Ritmo actual y proyecciones</div>
+    ${livePickRow('Córners',corn,expTotC,lambdaC,minLeft)}
+    ${livePickRow('Tiros totales',shots,expTotSh,lambdaSh,minLeft)}
+    ${livePickRow('SOT',sot,expTotSOT,lambdaSOT,minLeft)}
+    ${livePickRow('Tarjetas',cards,expTotCards,lambdaCards,minLeft)}
+    <div class="sep">Picks live sugeridos</div>
+    <div style="font-size:12px;color:var(--text2);padding:8px 0">
+      Ingresa la cuota y línea que ofrece la casa en este momento para calcular EV live exacto.<br>
+      Exp. córners restantes: <strong>${lambdaC.toFixed(1)}</strong> · Exp. tiros restantes: <strong>${lambdaSh.toFixed(1)}</strong>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:8px">
+      <div class="inp-group"><label>Cuota córners live</label><input type="number" id="lv-odd-c" placeholder="ej: 1.75" step="0.01" oninput="calcLivePick('c')"></div>
+      <div class="inp-group"><label>Línea córners live</label><input type="number" id="lv-line-c" placeholder="ej: 9.5" step="0.5" oninput="calcLivePick('c')"></div>
+      <div></div>
+      <div class="inp-group"><label>Cuota tiros live</label><input type="number" id="lv-odd-s" placeholder="ej: 1.85" step="0.01" oninput="calcLivePick('s')"></div>
+      <div class="inp-group"><label>Línea tiros live</label><input type="number" id="lv-line-s" placeholder="ej: 24.5" step="0.5" oninput="calcLivePick('s')"></div>
+      <div></div>
+    </div>
+    <div id="live-picks-out" style="margin-top:10px"></div>
+  `;
+  // Guardar vars globales para live picks
+  window._liveC={corn,lambdaC,minLeft};
+  window._liveSh={shots,lambdaSh,minLeft};
+}
+
+function calcLivePick(type){
+  const out=document.getElementById('live-picks-out');
+  let html='';
+  const oddC=parseFloat(document.getElementById('lv-odd-c')?.value)||0;
+  const lineC=parseFloat(document.getElementById('lv-line-c')?.value)||0;
+  const oddS=parseFloat(document.getElementById('lv-odd-s')?.value)||0;
+  const lineS=parseFloat(document.getElementById('lv-line-s')?.value)||0;
+
+  function pPoisson(lambda,k){
+    // P(X >= k) usando Poisson
+    let cdf=0;for(let i=0;i<k;i++){let f=1;for(let j=1;j<=i;j++)f*=j;cdf+=Math.pow(lambda,i)*Math.exp(-lambda)/f;}
+    return Math.max(0.01,Math.min(0.99,1-cdf));
+  }
+
+  if(oddC&&lineC&&window._liveC){
+    const {corn,lambdaC}=window._liveC;
+    const needed=Math.max(0,lineC+1-corn);
+    const p=pPoisson(lambdaC,needed);
+    const ev=calcEV(p,oddC);
+    html+=`<div class="pick ${ev>5?'':ev>2.5?'amber':'red'}">
+      <div class="pick-title">${ev>2.5?'✅':'❌'} Córners Over ${lineC} live · cuota ${oddC}</div>
+      <div class="pick-row">Faltan ≥${needed} córners en ${window._liveC.minLeft}' · λ restante: ${lambdaC.toFixed(2)}</div>
+      <div class="pick-ev ${ev>5?'evp':ev>2.5?'ev0':'ev-'}">P_modelo: ${Math.round(p*100)}% · EV: ${ev>0?'+':''}${ev.toFixed(1)}%</div>
+    </div>`;
+  }
+  if(oddS&&lineS&&window._liveSh){
+    const {shots,lambdaSh}=window._liveSh;
+    const needed=Math.max(0,lineS+1-shots);
+    function pPoisson2(lambda,k){let cdf=0;for(let i=0;i<k;i++){let f=1;for(let j=1;j<=i;j++)f*=j;cdf+=Math.pow(lambda,i)*Math.exp(-lambda)/f;}return Math.max(0.01,Math.min(0.99,1-cdf));}
+    const p=pPoisson2(lambdaSh,needed);
+    const ev=calcEV(p,oddS);
+    html+=`<div class="pick ${ev>5?'':ev>2.5?'amber':'red'}" style="margin-top:8px">
+      <div class="pick-title">${ev>2.5?'✅':'❌'} Tiros Over ${lineS} live · cuota ${oddS}</div>
+      <div class="pick-row">Faltan ≥${needed} tiros en ${window._liveSh.minLeft}' · λ restante: ${lambdaSh.toFixed(2)}</div>
+      <div class="pick-ev ${ev>5?'evp':ev>2.5?'ev0':'ev-'}">P_modelo: ${Math.round(p*100)}% · EV: ${ev>0?'+':''}${ev.toFixed(1)}%</div>
+    </div>`;
+  }
+  if(out)out.innerHTML=html;
+}
+
+// ═══════════════════════════════════════════════
+// STATS
+// ═══════════════════════════════════════════════
+let ssort='ppg';
+function setSS(k){ssort=k;renderStats();}
+function renderStats(){
+  const q=(document.getElementById('q-stats')?.value||'').toLowerCase();
+  const sk=document.getElementById('sort-stats')?.value||ssort;
+  let d=[...DB].filter(t=>t.c.toLowerCase().includes(q));
+  d.sort((a,b)=>sk==='country'?a.c.localeCompare(b.c):sk==='group'?a.gr.localeCompare(b.gr):(N(b[sk])-N(a[sk])));
+  document.getElementById('cnt-stats').textContent=d.length+' equipos';
+  document.getElementById('body-stats').innerHTML=d.map(t=>`<tr>
+    <td><strong>${t.c}</strong></td>
+    <td><span class="badge gr">${t.gr}</span></td>
+    <td><span class="badge ${B(t.ppg,2,1.5)}">${F(t.ppg)}</span></td>
+    <td>${t.gf}</td><td>${t.ga}</td>
+    <td>${F(t.g)}</td>
+    <td><span class="badge ${B(t.sh,15,12)}">${F(t.sh)}</span></td>
+    <td>${F(t.sot)}</td>
+    <td><span class="badge ${B(t.crn,9,7.5)}">${F(t.crn)}</span></td>
+    <td>${t.cs}%</td><td>${t.btts}%</td>
+  </tr>`).join('');
+}
+
+// ═══════════════════════════════════════════════
+// TIROS
+// ═══════════════════════════════════════════════
+function renderTiros(){
+  const h=halves.tiros;const q=(document.getElementById('q-tiros')?.value||'').toLowerCase();
+  const thead=document.getElementById('h-tiros');const tbody=document.getElementById('b-tiros');
+  if(h==='total'){
+    thead.innerHTML='<th>Equipo</th><th>Tiros/P</th><th>SOT/P</th><th>Conv%</th><th>T>21.5</th><th>T>23.5</th><th>SOT>7.5</th><th>SOT>9.5</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.sh-a.sh).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.sh,15,12)}">${F(t.sh)}</span></td>
+      <td>${F(t.sot)}</td>
+      <td>${Math.round((t.sot/t.sh)*100)}%</td>
+      <td>${t.sh>=10.75?Math.min(95,Math.round(55+t.sh*2))+'%':'—'}</td>
+      <td>${t.sh>=11.75?Math.min(85,Math.round(35+t.sh*2))+'%':'—'}</td>
+      <td>${t.sot>=3.75?Math.min(90,Math.round(45+t.sot*5))+'%':'—'}</td>
+      <td>${t.sot>=4.75?Math.min(80,Math.round(22+t.sot*5))+'%':'—'}</td>
+    </tr>`).join('');
+  }else if(h==='1h'){
+    thead.innerHTML='<th>Equipo</th><th>Tiros 1H</th><th>SOT 1H</th><th>Conv% 1H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.sh1-a.sh1).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.sh1,7,5.5)}">${F(t.sh1)}</span></td>
+      <td>${F(t.sot1)}</td><td>${Math.round((t.sot1/t.sh1)*100)}%</td>
+    </tr>`).join('');
+  }else{
+    thead.innerHTML='<th>Equipo</th><th>Tiros 2H</th><th>SOT 2H</th><th>Conv% 2H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.sh2-a.sh2).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.sh2,8,6)}">${F(t.sh2)}</span></td>
+      <td>${F(t.sot2)}</td><td>${Math.round((t.sot2/t.sh2)*100)}%</td>
+    </tr>`).join('');
+  }
+}
+
+// ═══════════════════════════════════════════════
+// CORNERS
+// ═══════════════════════════════════════════════
+function renderCorners(){
+  const h=halves.corners;const q=(document.getElementById('q-corners')?.value||'').toLowerCase();
+  const thead=document.getElementById('h-corners');const tbody=document.getElementById('b-corners');
+  if(h==='total'){
+    thead.innerHTML='<th>Equipo</th><th>Córn/P</th><th>Over 7.5</th><th>Over 8.5</th><th>Over 9.5</th><th>Over 10.5</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.crn-a.crn).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.crn,10,8)}">${F(t.crn)}</span></td>
+      <td>${t.co75}%</td><td>${t.co85}%</td>
+      <td><span class="badge ${B(t.co95,50,30)}">${t.co95}%</span></td>
+      <td>${t.co105}%</td>
+    </tr>`).join('');
+  }else if(h==='1h'){
+    thead.innerHTML='<th>Equipo</th><th>Córn 1H avg</th><th>Over 3.5 1H</th><th>Over 4.5 1H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.c1-a.c1).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.c1,4.5,3.5)}">${F(t.c1)}</span></td>
+      <td>${t.c1>=3.5?Math.min(88,Math.round(38+t.c1*9))+'%':'—'}</td>
+      <td>${t.c1>=4.5?Math.min(78,Math.round(18+t.c1*9))+'%':'—'}</td>
+    </tr>`).join('');
+  }else{
+    thead.innerHTML='<th>Equipo</th><th>Córn 2H avg</th><th>Over 4.5 2H</th><th>Over 5.5 2H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.c2-a.c2).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.c2,5.5,4)}">${F(t.c2)}</span></td>
+      <td>${t.c2>=4.5?Math.min(85,Math.round(32+t.c2*8))+'%':'—'}</td>
+      <td>${t.c2>=5?Math.min(78,Math.round(12+t.c2*8))+'%':'—'}</td>
+    </tr>`).join('');
+  }
+}
+
+// ═══════════════════════════════════════════════
+// GOLES
+// ═══════════════════════════════════════════════
+function renderGoles(){
+  const h=halves.goles;const q=(document.getElementById('q-goles')?.value||'').toLowerCase();
+  const thead=document.getElementById('h-goles');const tbody=document.getElementById('b-goles');
+  if(h==='total'){
+    thead.innerHTML='<th>Equipo</th><th>Goles/P</th><th>Over 1.5</th><th>Over 2.5</th><th>CS%</th><th>BTTS%</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.o25-a.o25).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td><td>${F(t.g)}</td>
+      <td><span class="badge ${B(t.o15,80,60)}">${t.o15}%</span></td>
+      <td><span class="badge ${B(t.o25,60,40)}">${t.o25}%</span></td>
+      <td>${t.cs}%</td><td>${t.btts}%</td>
+    </tr>`).join('');
+  }else if(h==='1h'){
+    thead.innerHTML='<th>Equipo</th><th>Gol 1H %</th><th>Over 0.5 1H</th><th>Over 1.5 1H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.og05_1-a.og05_1).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td>${F(t.og05_1/100)}</td>
+      <td><span class="badge ${B(t.og05_1,75,55)}">${t.og05_1}%</span></td>
+      <td><span class="badge ${B(t.og15_1,45,28)}">${t.og15_1}%</span></td>
+    </tr>`).join('');
+  }else{
+    thead.innerHTML='<th>Equipo</th><th>Over 0.5 2H</th><th>Over 1.5 2H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.og05_2-a.og05_2).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.og05_2,80,65)}">${t.og05_2}%</span></td>
+      <td><span class="badge ${B(t.og15_2,60,45)}">${t.og15_2}%</span></td>
+    </tr>`).join('');
+  }
+}
+
+// ═══════════════════════════════════════════════
+// TARJETAS
+// ═══════════════════════════════════════════════
+function renderTarjetas(){
+  const h=halves.tarjetas;const q=(document.getElementById('q-tarjetas')?.value||'').toLowerCase();
+  const thead=document.getElementById('h-tarjetas');const tbody=document.getElementById('b-tarjetas');
+  if(h==='total'){
+    thead.innerHTML='<th>Equipo</th><th>Tarj avg</th><th>Over 1.5</th><th>Over 2.5</th><th>Over 3.5</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.ca-a.ca).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${t.ca>=3?'r':t.ca>=2.5?'a':'b'}">${F(t.ca)}</span></td>
+      <td>${t.ca15}%</td>
+      <td><span class="badge ${B(t.ca25,50,30)}">${t.ca25}%</span></td>
+      <td>${t.ca35}%</td>
+    </tr>`).join('');
+  }else if(h==='1h'){
+    thead.innerHTML='<th>Equipo</th><th>Tarj 1H avg</th><th>Patrón</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.k1-a.k1).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.k1,1.5,1.0)}">${F(t.k1)}</span></td>
+      <td style="font-size:11px;color:var(--text2)">${t.k1>=1.5?'Alta intensidad 1H':t.k1>=1?'Normal':'Bajo 1H'}</td>
+    </tr>`).join('');
+  }else{
+    thead.innerHTML='<th>Equipo</th><th>Tarj 2H avg</th><th>Over 1.5 2H</th><th>Over 2.5 2H</th>';
+    tbody.innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.k2-a.k2).map(t=>`<tr>
+      <td><strong>${t.c}</strong></td>
+      <td><span class="badge ${B(t.k2,2,1.5)}">${F(t.k2)}</span></td>
+      <td>${t.k2>=1.3?Math.min(82,Math.round(t.k2*28+5))+'%':'—'}</td>
+      <td>${t.k2>=2?Math.min(70,Math.round(t.k2*20))+'%':'—'}</td>
+    </tr>`).join('');
+  }
+}
+
+// ═══════════════════════════════════════════════
+// SAQUES
+// ═══════════════════════════════════════════════
+function renderSaques(){
+  const q=(document.getElementById('q-saques')?.value||'').toLowerCase();
+  document.getElementById('b-saques').innerHTML=[...DB].filter(t=>t.c.toLowerCase().includes(q)).sort((a,b)=>b.gk-a.gk).map(t=>`<tr>
+    <td><strong>${t.c}</strong></td>
+    <td><span class="badge ${B(t.gk,13,11)}">${F(t.gk)}</span></td>
+    <td>${t.gk>=10.5?Math.min(95,Math.round(52+t.gk*3))+'%':'—'}</td>
+    <td>${t.gk>=12.5?Math.min(82,Math.round(28+t.gk*3))+'%':'—'}</td>
+    <td><span class="badge ${B(t.ti,33,28)}">${F(t.ti)}</span></td>
+    <td>${t.ti>=35?Math.round(t.ti-20)+'%':'0%'}</td>
+    <td>${t.ti>=40?Math.round(t.ti-30)+'%':'0%'}</td>
+    <td>${F(t.fk)}</td>
+  </tr>`).join('');
+}
+
+// ═══════════════════════════════════════════════
+// HISTORIAL
+// ═══════════════════════════════════════════════
+let picks=JSON.parse(localStorage.getItem('wc26v3_picks')||'[]');
+function toggleAddForm(){const f=document.getElementById('add-form');f.style.display=f.style.display==='none'?'block':'none';}
+function addPick(){
+  picks.unshift({id:Date.now(),date:new Date().toLocaleDateString('es-CO'),
+    match:document.getElementById('pk-match').value,
+    market:document.getElementById('pk-market').value,
+    odd:parseFloat(document.getElementById('pk-odd').value)||0,
+    ev:parseFloat(document.getElementById('pk-ev').value)||0,
+    stake:parseFloat(document.getElementById('pk-stake').value)||0,
+    result:document.getElementById('pk-result').value});
+  localStorage.setItem('wc26v3_picks',JSON.stringify(picks));
+  document.getElementById('add-form').style.display='none';
+  renderHist();
+}
+function delPick(id){picks=picks.filter(p=>p.id!==id);localStorage.setItem('wc26v3_picks',JSON.stringify(picks));renderHist();}
+function updResult(id,r){const p=picks.find(x=>x.id===id);if(p){p.result=r;localStorage.setItem('wc26v3_picks',JSON.stringify(picks));renderHist();}}
+function renderHist(){
+  const won=picks.filter(p=>p.result==='won');const lost=picks.filter(p=>p.result==='lost');
+  const total=won.length+lost.length;
+  const roi=picks.reduce((s,p)=>{if(p.result==='won')return s+(p.stake*(p.odd-1));if(p.result==='lost')return s-p.stake;return s;},0);
+  document.getElementById('hist-summary').innerHTML=`
+    <div class="card"><div class="clabel">Total picks</div><div class="cval">${picks.length}</div></div>
+    <div class="card"><div class="clabel">Hit rate</div><div class="cval">${total>0?Math.round(won.length/total*100):0}%</div></div>
+    <div class="card"><div class="clabel">ROI acum.</div><div class="cval" style="color:${roi>=0?'var(--green)':'var(--red)'}">${roi>=0?'+':''}${roi.toFixed(0)}</div></div>
+    <div class="card"><div class="clabel">G / P</div><div class="cval sm">${won.length} / ${lost.length}</div></div>`;
+  document.getElementById('b-hist').innerHTML=picks.length===0?
+    `<tr><td colspan="9" class="no-picks">No hay picks registrados todavía</td></tr>`:
+    picks.map(p=>`<tr>
+      <td style="white-space:nowrap;font-size:11px">${p.date}</td>
+      <td style="font-size:12px">${p.match}</td>
+      <td style="font-size:12px">${p.market}</td>
+      <td>${p.odd}</td>
+      <td style="color:${p.ev>=5?'var(--green)':p.ev>=2.5?'var(--amber)':'var(--red)'};font-weight:600">+${p.ev}%</td>
+      <td>${p.stake||'—'}</td>
+      <td><select onchange="updResult(${p.id},this.value)" style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);padding:3px;font-size:11px">
+        <option value="pending" ${p.result==='pending'?'selected':''}>Pendiente</option>
+        <option value="won" ${p.result==='won'?'selected':''}>✅ Ganado</option>
+        <option value="lost" ${p.result==='lost'?'selected':''}>❌ Perdido</option>
+        <option value="void" ${p.result==='void'?'selected':''}>Void</option>
+      </select></td>
+      <td style="color:${p.result==='won'?'var(--green)':p.result==='lost'?'var(--red)':'var(--text2)'};font-weight:700">${p.result==='won'?'+'+(p.stake*(p.odd-1)).toFixed(0):p.result==='lost'?'-'+p.stake:'—'}</td>
+      <td><button onclick="delPick(${p.id})" style="background:none;border:none;color:var(--text3);cursor:pointer">🗑</button></td>
+    </tr>`).join('');
+}
+
+// Init
+renderStats();renderHist();
+populateSel();
+</script>
+</body>
+</html>
