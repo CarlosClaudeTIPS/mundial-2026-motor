@@ -47,46 +47,38 @@ function evalLine(expected, line, cuota) {
 }
 
 // ─── Generar candidatos de picks desde calc ───────────────────────────────────
-export function generateCandidates(calc, odds, teamA, teamB) {
+export function generateCandidates(calc, _odds, teamA, teamB) {
   if (!calc) return []
   const candidates = []
 
   const markets = [
-    { key: 'shots_totales',    expected: calc.t.shots,   lines: [19.5,21.5,23.5,25.5,27.5] },
-    { key: 'sot_totales',      expected: calc.t.sot,     lines: [6.5,7.5,8.5,9.5,10.5] },
-    { key: 'corners_totales',  expected: calc.t.corners, lines: [7.5,8.5,9.5,10.5,11.5] },
-    { key: 'goles_totales',    expected: calc.t.goals,   lines: [0.5,1.5,2.5,3.5] },
-    { key: 'tarjetas_totales', expected: calc.t.cards,   lines: [1.5,2.5,3.5,4.5,5.5] },
-    { key: 'tiros_local',      expected: calc.adj.shotsA,lines: [4.5,5.5,6.5,7.5,8.5,9.5] },
-    { key: 'tiros_visita',     expected: calc.adj.shotsB,lines: [4.5,5.5,6.5,7.5,8.5,9.5] },
-    { key: 'corners_1h',       expected: calc.t.corn1h,  lines: [3.5,4.5,5.5] },
-    { key: 'corners_2h',       expected: calc.t.corn2h,  lines: [4.5,5.5,6.5] },
-    { key: 'tiros_1h',         expected: calc.t.shots1h, lines: [5.5,7.5,9.5,11.5] },
+    { key: 'shots_totales',    expected: calc.t.shots,    lines: [19.5,21.5,23.5,25.5,27.5] },
+    { key: 'sot_totales',      expected: calc.t.sot,      lines: [6.5,7.5,8.5,9.5,10.5] },
+    { key: 'corners_totales',  expected: calc.t.corners,  lines: [7.5,8.5,9.5,10.5,11.5] },
+    { key: 'goles_totales',    expected: calc.t.goals,    lines: [0.5,1.5,2.5,3.5] },
+    { key: 'tarjetas_totales', expected: calc.t.cards,    lines: [1.5,2.5,3.5,4.5,5.5] },
+    { key: 'tiros_local',      expected: calc.adj.shotsA, lines: [4.5,5.5,6.5,7.5,8.5,9.5] },
+    { key: 'tiros_visita',     expected: calc.adj.shotsB, lines: [4.5,5.5,6.5,7.5,8.5,9.5] },
+    { key: 'corners_1h',       expected: calc.t.corn1h,   lines: [3.5,4.5,5.5] },
+    { key: 'corners_2h',       expected: calc.t.corn2h,   lines: [4.5,5.5,6.5] },
+    { key: 'tiros_1h',         expected: calc.t.shots1h,  lines: [5.5,7.5,9.5,11.5] },
   ]
 
   for (const { key, expected, lines } of markets) {
     const meta = MARKET_META[key] ?? { label: key, risk: 35, category: 'other' }
-    const oddsLines = odds?.mercados?.[key] ?? []
 
     for (const line of lines) {
       const margin = Math.abs((expected - line) / line)
       if (margin < 0.03) continue // descarta sin señal clara
 
-      const closest = oddsLines.length
-        ? oddsLines.reduce((b, l) => Math.abs(l.linea - line) < Math.abs(b.linea - line) ? l : b)
-        : null
-
-      const cuota = closest?.over ?? null
-      const result = evalLine(expected, line, cuota)
+      const result = evalLine(expected, line, null)
       if (!result) continue
 
-      // Confidence base = 50, ajustado por margen y disponibilidad de datos
       let confidence = 50
       if (margin > 0.15) confidence += 20
       else if (margin > 0.08) confidence += 12
       else if (margin > 0.03) confidence += 5
       if (teamA.est || teamB.est) confidence -= 10
-      if (!cuota) confidence -= 5
       confidence = Math.min(85, Math.max(30, confidence))
 
       candidates.push({
@@ -97,11 +89,10 @@ export function generateCandidates(calc, odds, teamA, teamB) {
         line,
         dir: result.dir,
         pMod: result.pMod,
-        pImpl: cuota ? +(100 / cuota).toFixed(1) : null,
-        ev: result.ev,
-        evNum: result.ev ?? -999,
+        ev: null,
+        evNum: -999,
         margin: result.margin,
-        cuota,
+        cuota: null,
         confidence,
         risk: meta.risk,
       })
@@ -141,15 +132,10 @@ export function suggestCombo(picks) {
   if (picks.length < 2) return null
   const [p1, p2] = picks
   const c = corr(p1.category, p2.category)
-  if (c > 0.70) return null // demasiado correlacionados
+  if (c > 0.70) return null
 
-  const cuota1 = p1.cuota ?? 1.75
-  const cuota2 = p2.cuota ?? 1.90
-  const cuotaCombo = +(cuota1 * cuota2).toFixed(2)
   const pCombo = +((p1.pMod / 100) * (p2.pMod / 100) * 100).toFixed(1)
-  const evCombo = +((pCombo / 100) * cuotaCombo * 100 - 100).toFixed(1)
-
-  return { p1, p2, cuota1, cuota2, cuotaCombo, pCombo, evCombo, correlation: +c.toFixed(2) }
+  return { p1, p2, pCombo, correlation: +c.toFixed(2) }
 }
 
 // ─── Generar explicación textual ─────────────────────────────────────────────
