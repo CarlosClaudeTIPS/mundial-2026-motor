@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const TABS = [
-  'grupos','stats','tiros','corners','goles','tarjetas','saques','analizar','vivo','historial'
+  'grupos','fixture','stats','tiros','corners','goles','tarjetas','saques','analizar','vivo','historial'
 ]
 
 export default function MobileNav({ active, onChange }) {
@@ -32,7 +32,7 @@ export default function MobileNav({ active, onChange }) {
                   : 'text-gray-400 hover:text-white hover:bg-dark-700'
               }`}
             >
-              {id === 'corners' ? 'Córners' : id === 'vivo' ? 'En Vivo' : id === 'analizar' ? 'Analizar' : id === 'historial' ? 'Historial' : id.charAt(0).toUpperCase() + id.slice(1)}
+              {id === 'corners' ? 'Córners' : id === 'vivo' ? 'En Vivo' : id === 'analizar' ? 'Analizar' : id === 'historial' ? 'Historial' : id === 'fixture' ? 'Fixture' : id.charAt(0).toUpperCase() + id.slice(1)}
             </button>
           ))}
         </div>

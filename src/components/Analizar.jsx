@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from 'react'
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { TEAMS, SEDES, MATCHES } from '../lib/teams'
 import { calcExpectedCorners, calcExpectedShots, altitudeCorrection, poissonOver } from '../lib/engine'
 import {
@@ -8,6 +8,7 @@ import {
 } from '../lib/context'
 import { fetchAllOdds, calcLineEV, findClosestLine } from '../lib/odds'
 import ContextPanel from './ContextPanel'
+import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation } from '../lib/picks'
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 function mulMod(a, b) {
@@ -167,16 +168,147 @@ const DEFAULT_CTX = {
   checks: {},
 }
 
+// ─── PickCard — muestra un pick con explicación colapsable ───────────────────
+function PickCard({ pick, rank, teamA, teamB, ctx, calc, modsA, modsB }) {
+  const [open, setOpen] = useState(false)
+  const exp = open ? generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB) : null
+
+  const rankColors = ['text-yellow-400', 'text-gray-300', 'text-orange-400']
+  const rankLabels = ['Principal', 'Secundario', 'Alternativo']
+
+  return (
+    <div className="rounded-lg border border-dark-600 bg-dark-700/60 overflow-hidden">
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="w-full flex items-center gap-3 p-3 text-left hover:bg-dark-700 transition-colors"
+      >
+        <span className={`text-xs font-bold w-20 shrink-0 ${rankColors[rank] ?? 'text-gray-400'}`}>
+          {rankLabels[rank] ?? `Pick ${rank + 1}`}
+        </span>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="text-white font-semibold text-sm">{pick.label}</span>
+            <span className={`text-xs font-bold ${pick.dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}`}>
+              {pick.dir} {pick.line}
+            </span>
+            {pick.cuota && <span className="text-xs text-gray-400">@ {pick.cuota.toFixed(2)}</span>}
+          </div>
+          <div className="flex items-center gap-3 mt-0.5 text-xs text-gray-400">
+            <span>Expected: <strong className="text-white">{pick.expected}</strong></span>
+            <span>P_mod: <strong className="text-green-300">{pick.pMod}%</strong></span>
+            {pick.ev != null && (
+              <span className={`font-bold ${pick.ev > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                EV {pick.ev > 0 ? '+' : ''}{pick.ev}%
+              </span>
+            )}
+            <span className={`${pick.confidence >= 70 ? 'text-green-400' : pick.confidence >= 55 ? 'text-yellow-400' : 'text-red-400'}`}>
+              Conf {pick.confidence}
+            </span>
+          </div>
+        </div>
+        <span className="text-gray-500 text-xs shrink-0">{open ? '▲' : '▼'} Detalle</span>
+      </button>
+
+      {open && exp && (
+        <div className="px-4 pb-4 pt-1 border-t border-dark-600 space-y-3 text-xs">
+          <p className="text-gray-300">{exp.summary}</p>
+
+          {exp.pushUp.length > 0 && (
+            <div>
+              <p className="text-green-400 font-semibold mb-1">Factores que empujan ARRIBA</p>
+              {exp.pushUp.map((f, i) => (
+                <div key={i} className="flex gap-2 items-start mb-0.5">
+                  <span>{f.icon}</span>
+                  <span className="text-gray-200 flex-1">{f.text}</span>
+                  <span className="text-gray-500 shrink-0">{f.weight}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {exp.pushDown.length > 0 && (
+            <div>
+              <p className="text-red-400 font-semibold mb-1">Factores de riesgo</p>
+              {exp.pushDown.map((f, i) => (
+                <div key={i} className="flex gap-2 items-start mb-0.5">
+                  <span>{f.icon}</span>
+                  <span className="text-gray-300 flex-1">{f.text}</span>
+                  <span className="text-gray-500 shrink-0">{f.weight}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div>
+            <p className="text-gray-500 font-semibold mb-1">Variables clave</p>
+            <div className="grid grid-cols-2 gap-1">
+              {exp.keyVars.map((v, i) => (
+                <div key={i} className="bg-dark-800 rounded p-1.5">
+                  <p className="text-gray-500">{v.label}</p>
+                  <p className="text-white font-bold">{v.value}</p>
+                  <p className="text-gray-600">{v.weight}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {exp.risks.length > 0 && (
+            <div className="bg-yellow-900/20 border border-yellow-800/30 rounded p-2">
+              <p className="text-yellow-400 font-semibold mb-1">⚠️ Riesgos a considerar</p>
+              {exp.risks.map((r, i) => <p key={i} className="text-yellow-300">• {r}</p>)}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ─── ComboCard ────────────────────────────────────────────────────────────────
+function ComboCard({ combo }) {
+  return (
+    <div className="rounded-lg border border-purple-700/40 bg-purple-900/20 p-3 text-xs">
+      <p className="text-purple-300 font-bold text-sm mb-2">🎯 Combinada sugerida</p>
+      <div className="flex items-center gap-2 flex-wrap mb-2">
+        <span className="text-white">{combo.p1.label} {combo.p1.dir} {combo.p1.line}</span>
+        <span className="text-gray-500">+</span>
+        <span className="text-white">{combo.p2.label} {combo.p2.dir} {combo.p2.line}</span>
+      </div>
+      <div className="flex gap-4 text-gray-300">
+        <span>Cuota: <strong className="text-purple-300">{combo.cuotaCombo.toFixed(2)}</strong></span>
+        <span>P_comb: <strong className="text-purple-300">{combo.pCombo}%</strong></span>
+        <span className={`font-bold ${combo.evCombo > 0 ? 'text-green-400' : 'text-red-400'}`}>
+          EV {combo.evCombo > 0 ? '+' : ''}{combo.evCombo}%
+        </span>
+        <span className="text-gray-500">Corr: {combo.correlation}</span>
+      </div>
+      <p className="text-gray-600 mt-1">Correlación baja — picks relativamente independientes</p>
+    </div>
+  )
+}
+
 // ─── Main component ───────────────────────────────────────────────────────────
-export default function Analizar() {
+export default function Analizar({ preloadTeams }) {
   const [teamAId, setTeamAId] = useState('')
   const [teamBId, setTeamBId] = useState('')
+  const preloadApplied = useRef(false)
   const [sedeId,  setSedeId]  = useState('')
   const [ctx,     setCtx]     = useState(DEFAULT_CTX)
   const [ctxOpen, setCtxOpen] = useState(false)
   const [odds,    setOdds]    = useState(null)
   const [oddsStatus, setOddsStatus] = useState('idle') // idle | loading | ok | error
   const [topPicks, setTopPicks] = useState([])
+
+  // Apply preloaded teams from Fixture → Analizar navigation
+  useEffect(() => {
+    if (!preloadTeams) return
+    if (preloadTeams.teamAId || preloadTeams.teamBId) {
+      setTeamAId(preloadTeams.teamAId ?? '')
+      setTeamBId(preloadTeams.teamBId ?? '')
+      setOdds(null)
+      setOddsStatus('idle')
+    }
+  }, [preloadTeams?.teamAId, preloadTeams?.teamBId])
 
   const teamA = TEAMS.find(t => t.id === teamAId)
   const teamB = TEAMS.find(t => t.id === teamBId)
@@ -359,6 +491,15 @@ export default function Analizar() {
       .slice(0, 10)
   , [picksMap])
 
+  // ─── Picks automáticos ────────────────────────────────────────────────────
+  const { picks, combo } = useMemo(() => {
+    if (!calc || !teamA || !teamB) return { picks: [], combo: null }
+    const candidates = generateCandidates(calc, odds, teamA, teamB)
+    const top = selectTopPicks(candidates)
+    const c   = suggestCombo(top)
+    return { picks: top, combo: c }
+  }, [calc, odds, teamA, teamB])
+
   const ready = !!calc
 
   return (
@@ -527,6 +668,31 @@ export default function Analizar() {
                   </div>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* ── Picks automáticos ── */}
+          {picks.length > 0 && (
+            <div className="card bg-dark-700 border border-green-800 space-y-3">
+              <div className="flex items-center justify-between">
+                <h2 className="font-bold text-white text-sm">🎯 Picks del Motor — {teamA.name} vs {teamB.name}</h2>
+                <span className="text-xs text-gray-500">Basado en expected + contexto</span>
+              </div>
+              {picks.map((pick, i) => (
+                <PickCard
+                  key={`${pick.marketKey}_${pick.line}`}
+                  pick={pick}
+                  rank={i}
+                  teamA={teamA}
+                  teamB={teamB}
+                  ctx={ctx}
+                  calc={calc}
+                  modsA={modsA}
+                  modsB={modsB}
+                />
+              ))}
+              {combo && <ComboCard combo={combo} />}
+              <p className="text-xs text-gray-600">⚠️ Picks generados automáticamente por el motor. Verifica contexto antes de apostar.</p>
             </div>
           )}
 

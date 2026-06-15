@@ -1,7 +1,8 @@
-import { BarChart2, Globe, Target, Zap, Clock, List, Sliders } from 'lucide-react'
+import { BarChart2, Globe, Target, Zap, Clock, List, Sliders, Calendar } from 'lucide-react'
 
 const TABS = [
   { id: 'grupos',   label: 'Grupos',    icon: Globe },
+  { id: 'fixture',  label: 'Fixture',   icon: Calendar },
   { id: 'stats',    label: 'Stats',     icon: BarChart2 },
   { id: 'tiros',    label: 'Tiros',     icon: Target },
   { id: 'corners',  label: 'Córners',   icon: Zap },
