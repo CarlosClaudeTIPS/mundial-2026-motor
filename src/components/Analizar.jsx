@@ -8,6 +8,7 @@ import {
 } from '../lib/context'
 import ContextPanel from './ContextPanel'
 import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation } from '../lib/picks'
+import { generateLast5 } from '../lib/last5'
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 function recommend(expected, line) {
@@ -148,6 +149,92 @@ function TeamStatsRef({ teamA, teamB }) {
           <StatRow label="CS%"         valA={`${teamA.cs_pct}%`} valB={`${teamB.cs_pct}%`} />
           <StatRow label="BTTS%"       valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
           <p className="text-xs text-gray-600 mt-2">🟩 verde = mejor valor</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ─── Last5Panel — últimos 5 partidos por equipo ──────────────────────────────
+const RESULT_STYLE = { W: 'bg-green-900/60 text-green-300', D: 'bg-gray-700 text-gray-300', L: 'bg-red-900/60 text-red-300' }
+const L5_COLS = [
+  { key: 'result', label: 'R',    fmt: v => v },
+  { key: 'gf',     label: 'G+',   fmt: v => v },
+  { key: 'ga',     label: 'G-',   fmt: v => v },
+  { key: 'shots',  label: 'Tiros', fmt: v => v },
+  { key: 'sot',    label: 'SOT',  fmt: v => v },
+  { key: 'corners',label: 'Cors', fmt: v => v },
+  { key: 'cards',  label: 'Tarj', fmt: v => v },
+  { key: 'fouls',  label: 'Falt', fmt: v => v },
+  { key: 'passes', label: 'Pases', fmt: v => v },
+]
+
+function L5Table({ team }) {
+  const matches = generateLast5(team)
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full text-xs">
+        <thead>
+          <tr>
+            <th className="text-left text-gray-500 pb-1 pr-2 font-normal">Rival</th>
+            {L5_COLS.map(c => (
+              <th key={c.key} className="text-center text-gray-500 pb-1 px-1 font-normal whitespace-nowrap">{c.label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {matches.map((m, i) => (
+            <tr key={i} className="border-t border-dark-700/60">
+              <td className="text-gray-400 py-1 pr-2 whitespace-nowrap">{m.rival}</td>
+              {L5_COLS.map(c => (
+                <td key={c.key} className="text-center py-1 px-1">
+                  {c.key === 'result'
+                    ? <span className={`inline-block w-5 h-5 rounded text-center leading-5 text-xs font-bold ${RESULT_STYLE[m.result]}`}>{m.result}</span>
+                    : <span className="text-gray-200">{c.fmt(m[c.key])}</span>
+                  }
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+        <tfoot>
+          <tr className="border-t border-dark-600">
+            <td className="text-gray-600 py-1 pr-2 text-xs">Prom</td>
+            {L5_COLS.map(c => {
+              if (c.key === 'result') return <td key={c.key} />
+              const avg = matches.reduce((s, m) => s + (m[c.key] ?? 0), 0) / matches.length
+              return <td key={c.key} className="text-center py-1 px-1 text-green-400 font-bold">{avg.toFixed(1)}</td>
+            })}
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  )
+}
+
+function Last5Panel({ teamA, teamB }) {
+  const [open, setOpen] = useState(false)
+  const [tab, setTab] = useState('a')
+  return (
+    <div className="card border border-dark-600">
+      <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
+        <span className="font-semibold text-white text-sm">📋 Últimos 5 partidos — por estadística</span>
+        <span className="text-gray-400">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="mt-3 border-t border-dark-600 pt-3">
+          <p className="text-xs text-gray-600 mb-3">Proyección basada en promedios de campaña con varianza por partido</p>
+          <div className="flex gap-2 mb-3">
+            <button onClick={() => setTab('a')}
+              className={`text-xs px-3 py-1 rounded-full border transition-colors ${tab === 'a' ? 'bg-green-700 border-green-600 text-white font-semibold' : 'border-dark-600 text-gray-400 hover:border-green-600 hover:text-green-400'}`}>
+              {teamA.name}
+            </button>
+            <button onClick={() => setTab('b')}
+              className={`text-xs px-3 py-1 rounded-full border transition-colors ${tab === 'b' ? 'bg-blue-700 border-blue-600 text-white font-semibold' : 'border-dark-600 text-gray-400 hover:border-blue-600 hover:text-blue-400'}`}>
+              {teamB.name}
+            </button>
+          </div>
+          {tab === 'a' ? <L5Table team={teamA} /> : <L5Table team={teamB} />}
         </div>
       )}
     </div>
@@ -553,6 +640,9 @@ export default function Analizar({ preloadTeams }) {
 
           {/* ── Stats de Referencia ── */}
           <TeamStatsRef teamA={teamA} teamB={teamB} />
+
+          {/* ── Últimos 5 partidos ── */}
+          <Last5Panel teamA={teamA} teamB={teamB} />
 
           {/* ── Picks del Motor ── */}
           {picks.length > 0 && (
