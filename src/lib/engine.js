@@ -66,6 +66,28 @@ export function calcExpectedShots(teamA, teamB, absenceModifier = 1.0, motivatio
   }
 }
 
+// ─── Expected Passes ─────────────────────────────────────────────────────────
+export function calcExpectedPasses(teamA, teamB) {
+  const expA = teamA.passes_avg * 0.65 + teamB.passes_against_avg * 0.35
+  const expB = teamB.passes_avg * 0.65 + teamA.passes_against_avg * 0.35
+  return {
+    expPassesA: +expA.toFixed(0),
+    expPassesB: +expB.toFixed(0),
+    total: +(expA + expB).toFixed(0),
+  }
+}
+
+// ─── Expected Fouls ───────────────────────────────────────────────────────────
+export function calcExpectedFouls(teamA, teamB, motivModA = 1.0, motivModB = 1.0) {
+  const expA = (teamA.fouls_avg * 0.6 + teamB.fouls_against_avg * 0.4) * motivModA
+  const expB = (teamB.fouls_avg * 0.6 + teamA.fouls_against_avg * 0.4) * motivModB
+  return {
+    expFoulsA: +expA.toFixed(1),
+    expFoulsB: +expB.toFixed(1),
+    total: +(expA + expB).toFixed(1),
+  }
+}
+
 // ─── EV y Value Score ─────────────────────────────────────────────────────────
 export function calcEV(pModelo, cuota) {
   const ev = pModelo * cuota - 1

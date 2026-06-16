@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { TEAMS, SEDES, MATCHES } from '../lib/teams'
-import { calcExpectedCorners, calcExpectedShots, altitudeCorrection } from '../lib/engine'
+import { calcExpectedCorners, calcExpectedShots, calcExpectedPasses, calcExpectedFouls, altitudeCorrection } from '../lib/engine'
 import {
   getJornadaMods, getDescansoMods, getMotivacionMods,
   getContextoMods, getMotivacionCombo, getMotivacionConfidenceDelta,
@@ -85,6 +85,71 @@ function Section({ title, children }) {
     <div className="card space-y-5">
       <h2 className="font-bold text-white border-b border-dark-600 pb-2 text-sm tracking-wide uppercase">{title}</h2>
       {children}
+    </div>
+  )
+}
+
+// ─── TeamStatsRef — tabla comparativa de stats de referencia ─────────────────
+function StatRow({ label, valA, valB, higherIsBetter = true, fmt = v => v }) {
+  const aNum = parseFloat(valA)
+  const bNum = parseFloat(valB)
+  const aWins = higherIsBetter ? aNum > bNum : aNum < bNum
+  const bWins = higherIsBetter ? bNum > aNum : bNum < aNum
+  return (
+    <div className="grid grid-cols-7 gap-1 text-xs py-1 border-b border-dark-700/60 last:border-0 items-center">
+      <span className={`col-span-2 text-right font-mono ${aWins ? 'text-green-400 font-bold' : 'text-gray-300'}`}>{fmt(valA)}</span>
+      <span className="col-span-3 text-center text-gray-500 text-xs">{label}</span>
+      <span className={`col-span-2 text-left font-mono ${bWins ? 'text-green-400 font-bold' : 'text-gray-300'}`}>{fmt(valB)}</span>
+    </div>
+  )
+}
+
+function TeamStatsRef({ teamA, teamB }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="card border border-dark-600">
+      <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
+        <span className="font-semibold text-white text-sm">📊 Stats de Referencia — últimos 15 partidos</span>
+        <span className="text-gray-400">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="mt-4 border-t border-dark-600 pt-3">
+          {/* Headers */}
+          <div className="grid grid-cols-7 gap-1 text-xs text-center mb-2">
+            <span className="col-span-2 text-green-400 font-semibold truncate">{teamA.name}</span>
+            <span className="col-span-3 text-gray-600 uppercase tracking-wide">Estadística</span>
+            <span className="col-span-2 text-blue-400 font-semibold truncate">{teamB.name}</span>
+          </div>
+          {/* Ataque */}
+          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-2">⚽ Ataque</p>
+          <StatRow label="Goles/P"        valA={teamA.gf_avg.toFixed(2)}  valB={teamB.gf_avg.toFixed(2)} />
+          <StatRow label="Tiros/P"        valA={teamA.shots_avg.toFixed(1)} valB={teamB.shots_avg.toFixed(1)} />
+          <StatRow label="SOT/P"          valA={teamA.sot_avg.toFixed(1)}  valB={teamB.sot_avg.toFixed(1)} />
+          <StatRow label="Córners/P"      valA={teamA.corners_avg.toFixed(1)} valB={teamB.corners_avg.toFixed(1)} />
+          <StatRow label="Pases/P"        valA={teamA.passes_avg} valB={teamB.passes_avg} />
+          {/* Defensa */}
+          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🛡️ Defensa</p>
+          <StatRow label="Goles en contra/P" valA={teamA.ga_avg.toFixed(2)} valB={teamB.ga_avg.toFixed(2)} higherIsBetter={false} />
+          <StatRow label="Tiros recibidos/P" valA={teamA.shots_against_avg.toFixed(1)} valB={teamB.shots_against_avg.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Córners vs/P"      valA={teamA.corners_against_avg.toFixed(1)} valB={teamB.corners_against_avg.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Pases rival/P"     valA={teamA.passes_against_avg} valB={teamB.passes_against_avg} higherIsBetter={false} />
+          {/* Disciplina */}
+          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🟨 Disciplina</p>
+          <StatRow label="Tarjetas/P"   valA={teamA.cards_avg.toFixed(1)} valB={teamB.cards_avg.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Faltas/P"     valA={teamA.fouls_avg.toFixed(1)} valB={teamB.fouls_avg.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Faltas recib/P" valA={teamA.fouls_against_avg.toFixed(1)} valB={teamB.fouls_against_avg.toFixed(1)} />
+          {/* Saques */}
+          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🔄 Saques</p>
+          <StatRow label="Saque portería/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
+          <StatRow label="Throw-ins/P"      valA={teamA.throwins_avg.toFixed(1)} valB={teamB.throwins_avg.toFixed(1)} />
+          {/* Partidos */}
+          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">📈 Historial ({teamA.matches ?? 15} partidos)</p>
+          <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
+          <StatRow label="CS%"         valA={`${teamA.cs_pct}%`} valB={`${teamB.cs_pct}%`} />
+          <StatRow label="BTTS%"       valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
+          <p className="text-xs text-gray-600 mt-2">🟩 verde = mejor valor</p>
+        </div>
+      )}
     </div>
   )
 }
@@ -271,6 +336,8 @@ export default function Analizar({ preloadTeams }) {
 
     const shots   = calcExpectedShots(teamA, teamB, altMod)
     const corners = calcExpectedCorners(teamA, teamB)
+    const passes  = calcExpectedPasses(teamA, teamB)
+    const fouls   = calcExpectedFouls(teamA, teamB, modsA.cards, modsB.cards)
 
     const base = {
       shotsA:   shots.expShotsA,    shotsB:  shots.expShotsB,
@@ -353,7 +420,7 @@ export default function Analizar({ preloadTeams }) {
     }
 
     const volumeAlert = getVolumeAlert(bTot.shots, t.shots)
-    return { base, adj, t, bTot, volumeAlert }
+    return { base, adj, t, bTot, volumeAlert, passes, fouls }
   }, [teamA, teamB, altMod, modsA, modsB])
 
   // ─── Picks ───────────────────────────────────────────────────────────────
@@ -472,8 +539,8 @@ export default function Analizar({ preloadTeams }) {
                 </span>
               )}
             </h2>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-3 text-center">
-              {[['Tiros', calc.t.shots], ['SOT', calc.t.sot], ['Córners', calc.t.corners], ['Goles', calc.t.goals], ['Tarjetas', calc.t.cards]].map(([label, val]) => (
+            <div className="grid grid-cols-3 md:grid-cols-7 gap-3 text-center">
+              {[['Tiros', calc.t.shots], ['SOT', calc.t.sot], ['Córners', calc.t.corners], ['Goles', calc.t.goals], ['Tarjetas', calc.t.cards], ['Pases', calc.passes.total], ['Faltas', calc.fouls.total]].map(([label, val]) => (
                 <div key={label} className="bg-dark-800 rounded-lg p-2">
                   <p className="text-xs text-gray-500">{label}</p>
                   <p className="text-lg font-bold text-green-400">{val}</p>
@@ -483,6 +550,9 @@ export default function Analizar({ preloadTeams }) {
             {teamA.est && <p className="text-xs text-yellow-600 mt-2">⚠️ {teamA.name}: datos estimados</p>}
             {teamB.est && <p className="text-xs text-yellow-600 mt-1">⚠️ {teamB.name}: datos estimados</p>}
           </div>
+
+          {/* ── Stats de Referencia ── */}
+          <TeamStatsRef teamA={teamA} teamB={teamB} />
 
           {/* ── Picks del Motor ── */}
           {picks.length > 0 && (
@@ -577,6 +647,30 @@ export default function Analizar({ preloadTeams }) {
               <MarketTable label="Throw-ins Totales" expected={calc.t.ti}
                 lines={[49.5, 54.5, 59.5, 64.5, 69.5]} />
             </div>
+          </Section>
+
+          {/* ── 8. PASES ── */}
+          <Section title="Pases">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <MarketTable label={`Pases ${teamA.name}`} expected={calc.passes.expPassesA}
+                lines={[350, 380, 420, 460, 500, 540]} />
+              <MarketTable label={`Pases ${teamB.name}`} expected={calc.passes.expPassesB}
+                lines={[350, 380, 420, 460, 500, 540]} />
+            </div>
+            <MarketTable label="Pases Totales" expected={calc.passes.total}
+              lines={[750, 800, 850, 900, 950, 1000]} />
+          </Section>
+
+          {/* ── 9. FALTAS ── */}
+          <Section title="Faltas">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <MarketTable label={`Faltas ${teamA.name}`} expected={calc.fouls.expFoulsA}
+                lines={[8.5, 10.5, 12.5, 14.5, 16.5]} />
+              <MarketTable label={`Faltas ${teamB.name}`} expected={calc.fouls.expFoulsB}
+                lines={[8.5, 10.5, 12.5, 14.5, 16.5]} />
+            </div>
+            <MarketTable label="Faltas Totales" expected={calc.fouls.total}
+              lines={[18.5, 20.5, 22.5, 24.5, 26.5, 28.5]} />
           </Section>
         </>
       )}
