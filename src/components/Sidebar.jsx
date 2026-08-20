@@ -1,30 +1,40 @@
-import { BarChart2, Globe, Target, Zap, Clock, List, Sliders, Calendar } from 'lucide-react'
+import { BarChart2, Clock, List, Calendar, Table, DollarSign } from 'lucide-react'
+import { LEAGUES } from '../lib/leagues'
 
 const TABS = [
-  { id: 'grupos',   label: 'Grupos',    icon: Globe },
   { id: 'fixture',  label: 'Fixture',   icon: Calendar },
-  { id: 'stats',    label: 'Stats',     icon: BarChart2 },
-  { id: 'tiros',    label: 'Tiros',     icon: Target },
-  { id: 'corners',  label: 'Córners',   icon: Zap },
-  { id: 'goles',    label: 'Goles',     icon: Target },
-  { id: 'tarjetas', label: 'Tarjetas',  icon: Sliders },
-  { id: 'saques',   label: 'Saques',    icon: List },
+  { id: 'tabla',    label: 'Tabla',     icon: Table },
   { id: 'analizar', label: 'Analizar',  icon: BarChart2 },
   { id: 'vivo',     label: 'En Vivo',   icon: Clock },
   { id: 'historial',label: 'Historial', icon: List },
+  { id: 'bankroll', label: 'Bankroll',  icon: DollarSign },
 ]
 
-export default function Sidebar({ active, onChange }) {
+export default function Sidebar({ active, onChange, leagueId, onLeagueChange }) {
   return (
-    <aside className="hidden md:flex flex-col w-52 bg-dark-800 border-r border-dark-600 min-h-screen pt-4">
-      <div className="px-4 mb-6">
+    <aside className="hidden md:flex flex-col w-56 bg-dark-800 border-r border-dark-600 min-h-screen pt-4">
+      <div className="px-4 mb-4">
         <div className="flex items-center gap-2">
           <span className="text-2xl">⚽</span>
           <div>
-            <p className="font-bold text-white text-sm leading-tight">Motor</p>
-            <p className="text-green-400 text-xs font-semibold">Mundial 2026</p>
+            <p className="font-bold text-white text-sm leading-tight">Motor de Apuestas</p>
+            <p className="text-green-400 text-xs font-semibold">Ligas 2026-27</p>
           </div>
         </div>
+      </div>
+
+      {/* Selector de liga */}
+      <div className="px-3 mb-4">
+        <label className="text-xs text-gray-500 uppercase tracking-wide block mb-1 px-1">Competición</label>
+        <select
+          value={leagueId}
+          onChange={e => onLeagueChange(e.target.value)}
+          className="w-full bg-dark-700 border border-dark-500 rounded-lg px-2 py-2 text-sm text-white focus:outline-none focus:border-green-500"
+        >
+          {LEAGUES.map(l => (
+            <option key={l.id} value={l.id}>{l.flag} {l.name}</option>
+          ))}
+        </select>
       </div>
 
       <nav className="flex flex-col gap-0.5 px-2">

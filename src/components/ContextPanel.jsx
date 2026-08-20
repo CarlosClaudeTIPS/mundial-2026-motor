@@ -31,22 +31,20 @@ function ToggleGroup({ options, value, onChange }) {
   )
 }
 
-export default function ContextPanel({ ctx, onChange, teamAName, teamBName, sameGroup }) {
+export default function ContextPanel({ ctx, onChange, teamAName, teamBName }) {
   const set = (key, val) => onChange({ ...ctx, [key]: val })
 
   return (
     <div className="space-y-5">
 
-      {/* ── Bloque 1: Jornada ── */}
-      {sameGroup && (
-        <Block title="Jornada">
-          <ToggleGroup
-            options={JORNADA_OPTIONS}
-            value={ctx.jornada}
-            onChange={v => set('jornada', v)}
-          />
-        </Block>
-      )}
+      {/* ── Bloque 1: Fase de la temporada ── */}
+      <Block title="Fase de la Temporada">
+        <ToggleGroup
+          options={JORNADA_OPTIONS}
+          value={ctx.jornada}
+          onChange={v => set('jornada', v)}
+        />
+      </Block>
 
       {/* ── Bloque 2: Días de descanso ── */}
       <Block title="Días de Descanso">

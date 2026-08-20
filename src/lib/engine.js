@@ -66,6 +66,94 @@ export function calcExpectedShots(teamA, teamB, absenceModifier = 1.0, motivatio
   }
 }
 
+// ─── Expected Goal Kicks (Saques de Portería) — spec v2 §6.3 ─────────────────
+// GK_avg × Posesion_mod_rival × Nivel_diff_mod
+// Posesión estimada desde volumen de pases (proxy: no hay possession_avg en datos)
+// Insight clave: el equipo débil siempre suma más GK; correlación GK↔posesión ≈ -0.72
+export function calcExpectedGK(teamA, teamB) {
+  const totalPasses = teamA.passes_avg + teamB.passes_avg
+  const posB = totalPasses > 0 ? teamB.passes_avg / totalPasses : 0.5
+  const posA = 1 - posB
+
+  const posesionMod = (posRival) => {
+    if (posRival >= 0.60) return 1.25
+    if (posRival >= 0.55) return 1.12
+    if (posRival >= 0.45) return 1.00
+    if (posRival >= 0.40) return 0.90
+    return 0.82
+  }
+
+  // Diferencia de nivel (PPG): el débil pasa el partido defendiendo → más GK
+  const ppgDiff = teamA.ppg - teamB.ppg
+  const nivelMod = (diff) => {
+    if (diff < -0.8) return 1.28
+    if (diff < -0.4) return 1.10
+    return 1.00
+  }
+
+  const expA = teamA.goalkicks_avg * posesionMod(posB) * nivelMod(ppgDiff)
+  const expB = teamB.goalkicks_avg * posesionMod(posA) * nivelMod(-ppgDiff)
+
+  return {
+    expA: +expA.toFixed(2),
+    expB: +expB.toFixed(2),
+    total: +(expA + expB).toFixed(2),
+    posA: +(posA * 100).toFixed(0),
+    posB: +(posB * 100).toFixed(0),
+    weakerTeam: ppgDiff < -0.4 ? 'A' : ppgDiff > 0.4 ? 'B' : null,
+  }
+}
+
+// ─── Expected Throw-ins (Saques de Banda) — spec v2 §6.4 ─────────────────────
+// TI_avg × Tactical_K_TI × K_liga_TI × Clima × Tipo_partido
+// Mundial 2026: K_liga_TI = 1.00 (neutro)
+const TACTICAL_K_TI = {
+  bandas: 1.22,
+  'mixto-bandas': 1.10,
+  mixto: 1.00,
+  central: 0.88,
+}
+
+export function calcExpectedTI(teamA, teamB, { lluvia = false, rivalidad = false, kLiga = 1.00 } = {}) {
+  const climaMod = lluvia ? 1.15 : 1.00
+  const tipoMod = rivalidad ? 1.10 : 1.00
+
+  const kA = TACTICAL_K_TI[teamA.style] ?? 1.00
+  const kB = TACTICAL_K_TI[teamB.style] ?? 1.00
+
+  const expA = teamA.throwins_avg * kA * kLiga * climaMod * tipoMod
+  const expB = teamB.throwins_avg * kB * kLiga * climaMod * tipoMod
+
+  return {
+    expA: +expA.toFixed(2),
+    expB: +expB.toFixed(2),
+    total: +(expA + expB).toFixed(2),
+    mods: { climaMod, tipoMod, kA, kB },
+  }
+}
+
+// ─── Expected Goals con interacción defensiva — spec v2 §6.6 ─────────────────
+// goals_pg_A × goals_against_mod_B — el promedio de liga normaliza la defensa rival
+const LEAGUE_AVG_GA = 1.35 // promedio goles recibidos/partido (selecciones nivel Mundial)
+
+export function calcExpectedGoals(teamA, teamB, altMod = 1.0) {
+  const gaModB = teamB.ga_avg / LEAGUE_AVG_GA
+  const gaModA = teamA.ga_avg / LEAGUE_AVG_GA
+
+  const expA = teamA.gf_avg * gaModB * altMod
+  const expB = teamB.gf_avg * gaModA * altMod
+
+  // BTTS solo si ambos marcan Y ambos conceden con frecuencia (spec: >60%/>60%)
+  const bttsViable = teamA.btts_pct > 55 && teamB.btts_pct > 55 && expA > 0.8 && expB > 0.8
+
+  return {
+    expA: +expA.toFixed(2),
+    expB: +expB.toFixed(2),
+    total: +(expA + expB).toFixed(2),
+    bttsViable,
+  }
+}
+
 // ─── Expected Passes ─────────────────────────────────────────────────────────
 export function calcExpectedPasses(teamA, teamB) {
   const expA = teamA.passes_avg * 0.65 + teamB.passes_against_avg * 0.35
@@ -137,6 +225,7 @@ export const CONFIDENCE_THRESHOLDS = {
   corners: 65,
   shots: 65,
   sot: 70,
+  gk: 60,
   throwins: 60,
   cards: 70,
   handicap: 75,
@@ -149,6 +238,8 @@ const RISK_BASE = {
   corners: 20,
   shots: 25,
   sot: 30,
+  gk: 28,
+  ti: 30,
   goals: 35,
   cards: 40,
   handicap: 45,

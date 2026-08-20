@@ -8,17 +8,20 @@
 
 export const DEFAULT_MODS = { shots: 1, sot: 1, corners: 1, cards: 1, goals: 1 }
 
-// ─── BLOQUE 1: Jornada ────────────────────────────────────────────────────────
+// ─── BLOQUE 1: Fase de la temporada (spec v2 §6.2) ───────────────────────────
+// inicio: equipos irregulares, más varianza · final: máxima presión e intensidad
 export const JORNADA_OPTIONS = [
-  { value: 'J1', label: 'J1 — Primera jornada' },
-  { value: 'J2', label: 'J2 — Segunda jornada' },
-  { value: 'J3', label: 'J3 — Última jornada' },
+  { value: 'inicio', label: '🌱 Inicio de temporada' },
+  { value: 'mitad',  label: '⚖️ Mitad de temporada' },
+  { value: 'final',  label: '🔥 Recta final' },
+  { value: 'ko',     label: '⚔️ Eliminatoria KO (copas)' },
 ]
 
-export function getJornadaMods(jornada) {
-  if (jornada === 'J1') return { shots: 0.95, sot: 0.95, corners: 0.97, cards: 0.90, goals: 0.95 }
-  if (jornada === 'J3') return { shots: 1.05, sot: 1.02, corners: 1.02, cards: 1.15, goals: 1.05 }
-  return DEFAULT_MODS // J2
+export function getJornadaMods(fase) {
+  if (fase === 'inicio') return { shots: 0.94, sot: 0.94, corners: 0.96, cards: 0.92, goals: 0.95 }
+  if (fase === 'final')  return { shots: 1.05, sot: 1.03, corners: 1.02, cards: 1.12, goals: 1.03 }
+  if (fase === 'ko')     return { shots: 0.92, sot: 0.94, corners: 0.88, cards: 1.10, goals: 0.92 }
+  return DEFAULT_MODS // mitad
 }
 
 // ─── BLOQUE 2: Descanso ───────────────────────────────────────────────────────
@@ -44,12 +47,12 @@ export function getDescansoMods(dias, viajeL = false) {
 
 // ─── BLOQUE 3: Motivación ─────────────────────────────────────────────────────
 export const MOTIVACION_OPTIONS = [
-  { value: 'necesita_ganar',   label: '🔥 Necesita ganar sí o sí' },
-  { value: 'ganar_o_empatar',  label: '⚡ Ganar o empatar clasifica' },
-  { value: 'cualquier_result', label: '🎯 Cualquier resultado clasifica' },
-  { value: 'ya_clasificado',   label: '😴 Ya clasificado, puede rotar' },
-  { value: 'ya_eliminado',     label: '💀 Ya eliminado, sin nada que perder' },
-  { value: 'incierto',         label: '❓ Situación incierta / depende de otro' },
+  { value: 'necesita_ganar',   label: '🔥 Necesita ganar sí o sí (título/descenso/clasificación)' },
+  { value: 'ganar_o_empatar',  label: '⚡ Pelea algo, un empate le sirve' },
+  { value: 'cualquier_result', label: '🎯 Partido normal, presión estándar' },
+  { value: 'ya_clasificado',   label: '😴 Sin nada en juego, puede rotar' },
+  { value: 'ya_eliminado',     label: '💀 Sin presión, juega liberado' },
+  { value: 'incierto',         label: '❓ Situación incierta' },
 ]
 
 export function getMotivacionMods(situacion) {

@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { fetchFixtures, fetchLive, formatLocalTime, formatLocalDate, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
-import { MATCHES } from '../lib/teams'
+import { fetchFixtures, fetchLive, formatLocalTime, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
 
 const FILTER_TABS = [
   { id: 'live',     label: '🔴 En Vivo' },
@@ -63,44 +62,7 @@ function FixtureCard({ fixture, onAnalizar }) {
   )
 }
 
-function StaticFixtureCard({ match, onAnalizar }) {
-  return (
-    <div className="card rounded-lg p-3 flex items-center gap-3 text-sm bg-dark-800">
-      <div className="w-12 text-center shrink-0">
-        <span className="text-xs text-gray-400">{match.date}</span>
-      </div>
-      <div className="flex-1 min-w-0">
-        <div className="font-medium text-white truncate">{match.teamA.replace(/_/g, ' ')}</div>
-        <div className="text-gray-300 truncate mt-0.5">{match.teamB.replace(/_/g, ' ')}</div>
-        <p className="text-xs text-gray-600 mt-0.5">📍 {match.ciudad} · Grupo {match.group}</p>
-      </div>
-      {onAnalizar && (
-        <button
-          onClick={() => onAnalizar(match.teamA, match.teamB)}
-          className="shrink-0 text-xs px-3 py-1.5 rounded bg-green-800/50 text-green-300 hover:bg-green-700/60 transition-colors border border-green-700/40"
-        >
-          Analizar →
-        </button>
-      )}
-    </div>
-  )
-}
-
-// Fallback estático desde MATCHES local
-function getStaticFixtures(filter) {
-  const today = todayBogota()
-  const yesterday = new Date(Date.now() - 86400000).toLocaleDateString('en-CA', { timeZone: 'America/Bogota' })
-  const in3days = new Date(Date.now() + 3 * 86400000).toLocaleDateString('en-CA', { timeZone: 'America/Bogota' })
-
-  return MATCHES.filter(m => {
-    if (filter === 'hoy')      return m.date === today
-    if (filter === 'ayer')     return m.date === yesterday
-    if (filter === 'proximos') return m.date > today && m.date <= in3days
-    return false
-  })
-}
-
-export default function Fixture({ onAnalizar }) {
+export default function Fixture({ league, onAnalizar }) {
   const [filter, setFilter]     = useState('hoy')
   const [apiData, setApiData]   = useState(null)
   const [liveData, setLiveData] = useState(null)
@@ -112,7 +74,7 @@ export default function Fixture({ onAnalizar }) {
     setLoading(true)
     setError(null)
     try {
-      const [fixtRes, liveRes] = await Promise.allSettled([fetchFixtures(), fetchLive()])
+      const [fixtRes, liveRes] = await Promise.allSettled([fetchFixtures(league.id), fetchLive(league.id)])
 
       if (fixtRes.status === 'fulfilled' && fixtRes.value?.ok) {
         setApiData(fixtRes.value.fixtures)
@@ -129,7 +91,7 @@ export default function Fixture({ onAnalizar }) {
     } finally {
       setLoading(false)
     }
-  }, [])
+  }, [league.id])
 
   useEffect(() => { loadData() }, [loadData])
 
@@ -138,12 +100,12 @@ export default function Fixture({ onAnalizar }) {
     if (!liveData?.length) return
     const id = setInterval(async () => {
       try {
-        const res = await fetchLive()
+        const res = await fetchLive(league.id)
         if (res?.ok) setLiveData(res.live)
       } catch {}
     }, 60_000)
     return () => clearInterval(id)
-  }, [liveData?.length])
+  }, [liveData?.length, league.id])
 
   // Filtrar desde API data
   const today     = todayBogota()
@@ -166,7 +128,6 @@ export default function Fixture({ onAnalizar }) {
   const liveCount = liveData?.length ?? (apiData ? apiData.filter(f => isLive(f.status)).length : 0)
 
   const apiFiltered = getApiFiltered()
-  const staticFallback = !usingApi ? getStaticFixtures(filter) : []
 
   const showLiveTab = filter === 'live'
 
@@ -174,11 +135,11 @@ export default function Fixture({ onAnalizar }) {
     <div className="p-6 space-y-5 max-w-3xl">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Fixture</h1>
+          <h1 className="text-2xl font-bold text-white">{league.flag} Fixture — {league.name}</h1>
           <p className="text-gray-400 text-xs mt-1">
             {usingApi
               ? <span className="text-green-400">✓ API-Football en vivo</span>
-              : <span className="text-yellow-400">⚠️ Datos estáticos (sin API key)</span>
+              : <span className="text-yellow-400">⚠️ Sin datos — verifica la API key</span>
             }
           </p>
         </div>
@@ -236,17 +197,8 @@ export default function Fixture({ onAnalizar }) {
             </div>
           )}
 
-          {/* Fallback estático */}
-          {!usingApi && staticFallback.length > 0 && (
-            <div className="space-y-2">
-              {staticFallback.map((m, i) => (
-                <StaticFixtureCard key={i} match={m} onAnalizar={onAnalizar} />
-              ))}
-            </div>
-          )}
-
           {/* Sin resultados */}
-          {(usingApi ? apiFiltered.length === 0 : staticFallback.length === 0) && !loading && !(showLiveTab && liveData?.length > 0) && (
+          {apiFiltered.length === 0 && !loading && !(showLiveTab && liveData?.length > 0) && (
             <div className="text-center text-gray-600 py-12 text-sm">
               {filter === 'live' ? 'No hay partidos en curso' : 'No hay partidos para este filtro'}
             </div>

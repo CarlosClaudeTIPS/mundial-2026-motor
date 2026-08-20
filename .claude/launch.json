@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fitai",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:/Users/CARLOS~1/Documents/fitai/node_modules/next/dist/bin/next",
+        "dev",
+        "C:/Users/CARLOS~1/Documents/fitai"
+      ],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

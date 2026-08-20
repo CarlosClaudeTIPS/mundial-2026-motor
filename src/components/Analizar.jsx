@@ -1,6 +1,5 @@
-import { useState, useMemo, useEffect } from 'react'
-import { TEAMS, SEDES, MATCHES } from '../lib/teams'
-import { calcExpectedCorners, calcExpectedShots, calcExpectedPasses, calcExpectedFouls, altitudeCorrection } from '../lib/engine'
+import { useState, useMemo, useEffect, useRef } from 'react'
+import { calcExpectedCorners, calcExpectedShots, calcExpectedPasses, calcExpectedFouls, calcExpectedGK, calcExpectedTI, calcExpectedGoals } from '../lib/engine'
 import {
   getJornadaMods, getDescansoMods, getMotivacionMods,
   getContextoMods, getMotivacionCombo, getMotivacionConfidenceDelta,
@@ -8,7 +7,8 @@ import {
 } from '../lib/context'
 import ContextPanel from './ContextPanel'
 import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation } from '../lib/picks'
-import { generateLast5 } from '../lib/last5'
+import { fetchStandings } from '../lib/football-api'
+import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 function recommend(expected, line) {
@@ -33,7 +33,6 @@ function ModBadge({ label, value }) {
   )
 }
 
-// ─── ModBreakdown ─────────────────────────────────────────────────────────────
 function ModBreakdown({ base, adj, modsA, modsB, statKey }) {
   const delta = adj - base
   const pct = base > 0 ? Math.round((delta / base) * 100) : 0
@@ -49,7 +48,6 @@ function ModBreakdown({ base, adj, modsA, modsB, statKey }) {
   )
 }
 
-// ─── MarketRow ───────────────────────────────────────────────────────────────
 function MarketRow({ expected, line }) {
   const { dir, conf, icon, pct } = recommend(expected, line)
   return (
@@ -62,7 +60,6 @@ function MarketRow({ expected, line }) {
   )
 }
 
-// ─── MarketTable ──────────────────────────────────────────────────────────────
 function MarketTable({ label, expected, base, modsA, modsB, statKey, lines }) {
   return (
     <div className="space-y-0.5">
@@ -90,7 +87,7 @@ function Section({ title, children }) {
   )
 }
 
-// ─── TeamStatsRef — tabla comparativa de stats de referencia ─────────────────
+// ─── TeamStatsRef — tabla comparativa ────────────────────────────────────────
 function StatRow({ label, valA, valB, higherIsBetter = true, fmt = v => v }) {
   const aNum = parseFloat(valA)
   const bNum = parseFloat(valB)
@@ -110,67 +107,57 @@ function TeamStatsRef({ teamA, teamB }) {
   return (
     <div className="card border border-dark-600">
       <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
-        <span className="font-semibold text-white text-sm">📊 Stats de Referencia — últimos 15 partidos</span>
+        <span className="font-semibold text-white text-sm">📊 Stats de Referencia — últimos {teamA.matches} partidos (ponderados)</span>
         <span className="text-gray-400">{open ? '▲' : '▼'}</span>
       </button>
       {open && (
         <div className="mt-4 border-t border-dark-600 pt-3">
-          {/* Headers */}
           <div className="grid grid-cols-7 gap-1 text-xs text-center mb-2">
             <span className="col-span-2 text-green-400 font-semibold truncate">{teamA.name}</span>
             <span className="col-span-3 text-gray-600 uppercase tracking-wide">Estadística</span>
             <span className="col-span-2 text-blue-400 font-semibold truncate">{teamB.name}</span>
           </div>
-          {/* Ataque */}
           <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-2">⚽ Ataque</p>
-          <StatRow label="Goles/P"        valA={teamA.gf_avg.toFixed(2)}  valB={teamB.gf_avg.toFixed(2)} />
-          <StatRow label="Tiros/P"        valA={teamA.shots_avg.toFixed(1)} valB={teamB.shots_avg.toFixed(1)} />
-          <StatRow label="SOT/P"          valA={teamA.sot_avg.toFixed(1)}  valB={teamB.sot_avg.toFixed(1)} />
-          <StatRow label="Córners/P"      valA={teamA.corners_avg.toFixed(1)} valB={teamB.corners_avg.toFixed(1)} />
-          <StatRow label="Pases/P"        valA={teamA.passes_avg} valB={teamB.passes_avg} />
-          {/* Defensa */}
+          <StatRow label="Goles/P"   valA={teamA.gf_avg.toFixed(2)}    valB={teamB.gf_avg.toFixed(2)} />
+          <StatRow label="Tiros/P"   valA={teamA.shots_avg.toFixed(1)} valB={teamB.shots_avg.toFixed(1)} />
+          <StatRow label="SOT/P"     valA={teamA.sot_avg.toFixed(1)}   valB={teamB.sot_avg.toFixed(1)} />
+          <StatRow label="Córners/P" valA={teamA.corners_avg.toFixed(1)} valB={teamB.corners_avg.toFixed(1)} />
+          <StatRow label="Posesión %" valA={teamA.possession_avg} valB={teamB.possession_avg} />
+          <StatRow label="Pases/P"   valA={teamA.passes_avg} valB={teamB.passes_avg} />
           <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🛡️ Defensa</p>
           <StatRow label="Goles en contra/P" valA={teamA.ga_avg.toFixed(2)} valB={teamB.ga_avg.toFixed(2)} higherIsBetter={false} />
           <StatRow label="Tiros recibidos/P" valA={teamA.shots_against_avg.toFixed(1)} valB={teamB.shots_against_avg.toFixed(1)} higherIsBetter={false} />
           <StatRow label="Córners vs/P"      valA={teamA.corners_against_avg.toFixed(1)} valB={teamB.corners_against_avg.toFixed(1)} higherIsBetter={false} />
-          <StatRow label="Pases rival/P"     valA={teamA.passes_against_avg} valB={teamB.passes_against_avg} higherIsBetter={false} />
-          {/* Disciplina */}
           <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🟨 Disciplina</p>
-          <StatRow label="Tarjetas/P"   valA={teamA.cards_avg.toFixed(1)} valB={teamB.cards_avg.toFixed(1)} higherIsBetter={false} />
-          <StatRow label="Faltas/P"     valA={teamA.fouls_avg.toFixed(1)} valB={teamB.fouls_avg.toFixed(1)} higherIsBetter={false} />
-          <StatRow label="Faltas recib/P" valA={teamA.fouls_against_avg.toFixed(1)} valB={teamB.fouls_against_avg.toFixed(1)} />
-          {/* Saques */}
-          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🔄 Saques</p>
-          <StatRow label="Saque portería/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
-          <StatRow label="Throw-ins/P"      valA={teamA.throwins_avg.toFixed(1)} valB={teamB.throwins_avg.toFixed(1)} />
-          {/* Partidos */}
-          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">📈 Historial ({teamA.matches ?? 15} partidos)</p>
+          <StatRow label="Tarjetas/P" valA={teamA.cards_avg.toFixed(1)} valB={teamB.cards_avg.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Faltas/P"   valA={teamA.fouls_avg.toFixed(1)} valB={teamB.fouls_avg.toFixed(1)} higherIsBetter={false} />
+          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">📈 Historial</p>
           <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
-          <StatRow label="CS%"         valA={`${teamA.cs_pct}%`} valB={`${teamB.cs_pct}%`} />
-          <StatRow label="BTTS%"       valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
-          <p className="text-xs text-gray-600 mt-2">🟩 verde = mejor valor</p>
+          <StatRow label="CS%"   valA={`${teamA.cs_pct}%`} valB={`${teamB.cs_pct}%`} />
+          <StatRow label="BTTS%" valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
+          <p className="text-xs text-gray-600 mt-2">🟩 verde = mejor valor · GK/TI estimados desde posesión (API no los provee)</p>
         </div>
       )}
     </div>
   )
 }
 
-// ─── Last5Panel — últimos 5 partidos por equipo ──────────────────────────────
+// ─── Last5Panel — últimos 5 partidos reales ──────────────────────────────────
 const RESULT_STYLE = { W: 'bg-green-900/60 text-green-300', D: 'bg-gray-700 text-gray-300', L: 'bg-red-900/60 text-red-300' }
 const L5_COLS = [
-  { key: 'result', label: 'R',    fmt: v => v },
-  { key: 'gf',     label: 'G+',   fmt: v => v },
-  { key: 'ga',     label: 'G-',   fmt: v => v },
-  { key: 'shots',  label: 'Tiros', fmt: v => v },
-  { key: 'sot',    label: 'SOT',  fmt: v => v },
-  { key: 'corners',label: 'Cors', fmt: v => v },
-  { key: 'cards',  label: 'Tarj', fmt: v => v },
-  { key: 'fouls',  label: 'Falt', fmt: v => v },
-  { key: 'passes', label: 'Pases', fmt: v => v },
+  { key: 'result',  label: 'R' },
+  { key: 'gf',      label: 'G+' },
+  { key: 'ga',      label: 'G-' },
+  { key: 'shots',   label: 'Tiros' },
+  { key: 'sot',     label: 'SOT' },
+  { key: 'corners', label: 'Cors' },
+  { key: 'cards',   label: 'Tarj' },
+  { key: 'fouls',   label: 'Falt' },
 ]
 
 function L5Table({ team }) {
-  const matches = generateLast5(team)
+  const matches = team.last5 ?? []
+  if (!matches.length) return <p className="text-xs text-gray-600">Sin datos de partidos recientes</p>
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-xs">
@@ -185,28 +172,20 @@ function L5Table({ team }) {
         <tbody>
           {matches.map((m, i) => (
             <tr key={i} className="border-t border-dark-700/60">
-              <td className="text-gray-400 py-1 pr-2 whitespace-nowrap">{m.rival}</td>
+              <td className="text-gray-400 py-1 pr-2 whitespace-nowrap">
+                {m.isHome ? '🏠' : '✈️'} {m.rival}
+              </td>
               {L5_COLS.map(c => (
                 <td key={c.key} className="text-center py-1 px-1">
                   {c.key === 'result'
                     ? <span className={`inline-block w-5 h-5 rounded text-center leading-5 text-xs font-bold ${RESULT_STYLE[m.result]}`}>{m.result}</span>
-                    : <span className="text-gray-200">{c.fmt(m[c.key])}</span>
+                    : <span className="text-gray-200">{m[c.key] ?? '—'}</span>
                   }
                 </td>
               ))}
             </tr>
           ))}
         </tbody>
-        <tfoot>
-          <tr className="border-t border-dark-600">
-            <td className="text-gray-600 py-1 pr-2 text-xs">Prom</td>
-            {L5_COLS.map(c => {
-              if (c.key === 'result') return <td key={c.key} />
-              const avg = matches.reduce((s, m) => s + (m[c.key] ?? 0), 0) / matches.length
-              return <td key={c.key} className="text-center py-1 px-1 text-green-400 font-bold">{avg.toFixed(1)}</td>
-            })}
-          </tr>
-        </tfoot>
       </table>
     </div>
   )
@@ -218,12 +197,11 @@ function Last5Panel({ teamA, teamB }) {
   return (
     <div className="card border border-dark-600">
       <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
-        <span className="font-semibold text-white text-sm">📋 Últimos 5 partidos — por estadística</span>
+        <span className="font-semibold text-white text-sm">📋 Últimos 5 partidos — datos reales</span>
         <span className="text-gray-400">{open ? '▲' : '▼'}</span>
       </button>
       {open && (
         <div className="mt-3 border-t border-dark-600 pt-3">
-          <p className="text-xs text-gray-600 mb-3">Proyección basada en promedios de campaña con varianza por partido</p>
           <div className="flex gap-2 mb-3">
             <button onClick={() => setTab('a')}
               className={`text-xs px-3 py-1 rounded-full border transition-colors ${tab === 'a' ? 'bg-green-700 border-green-600 text-white font-semibold' : 'border-dark-600 text-gray-400 hover:border-green-600 hover:text-green-400'}`}>
@@ -243,7 +221,7 @@ function Last5Panel({ teamA, teamB }) {
 
 // ─── Default context ──────────────────────────────────────────────────────────
 const DEFAULT_CTX = {
-  jornada: 'J1', descansoA: 5, descansoB: 5,
+  jornada: 'inicio', descansoA: 5, descansoB: 5,
   viajeA: false, viajeB: false,
   motA: 'cualquier_result', motB: 'cualquier_result',
   checks: {},
@@ -339,7 +317,6 @@ function PickCard({ pick, rank, teamA, teamB, ctx, calc, modsA, modsB }) {
   )
 }
 
-// ─── ComboCard ────────────────────────────────────────────────────────────────
 function ComboCard({ combo }) {
   return (
     <div className="rounded-lg border border-purple-700/40 bg-purple-900/20 p-3 text-xs">
@@ -359,48 +336,77 @@ function ComboCard({ combo }) {
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
-export default function Analizar({ preloadTeams }) {
+export default function Analizar({ league, preloadTeams }) {
+  const [leagueTeams, setLeagueTeams] = useState([])
+  const [teamsError, setTeamsError]   = useState(null)
   const [teamAId, setTeamAId] = useState('')
   const [teamBId, setTeamBId] = useState('')
-  const [sedeId,  setSedeId]  = useState('')
-  const [ctx,     setCtx]     = useState(DEFAULT_CTX)
+  const [teamA, setTeamA] = useState(null)
+  const [teamB, setTeamB] = useState(null)
+  const [building, setBuilding] = useState(false)
+  const [progress, setProgress] = useState('')
+  const [buildError, setBuildError] = useState(null)
+  const [ctx, setCtx] = useState(DEFAULT_CTX)
   const [ctxOpen, setCtxOpen] = useState(false)
+  const buildSeq = useRef(0)
 
-  // Apply preloaded teams from Fixture → Analizar navigation
+  // ── Cargar equipos de la liga ──
   useEffect(() => {
-    if (!preloadTeams?.teamAId && !preloadTeams?.teamBId) return
-    setTeamAId(preloadTeams.teamAId ?? '')
-    setTeamBId(preloadTeams.teamBId ?? '')
-  }, [preloadTeams?.teamAId, preloadTeams?.teamBId])
+    let alive = true
+    setLeagueTeams([])
+    setTeamAId(''); setTeamBId('')
+    setTeamA(null); setTeamB(null)
+    setTeamsError(null)
+    fetchStandings(league.id)
+      .then(res => {
+        if (!alive) return
+        if (res.ok && res.groups?.length) setLeagueTeams(teamsFromStandings(res.groups))
+        else setTeamsError(res.error || 'No se pudo cargar la lista de equipos')
+      })
+      .catch(e => alive && setTeamsError(e.message))
+    return () => { alive = false }
+  }, [league.id])
 
-  const teamA = TEAMS.find(t => t.id === teamAId)
-  const teamB = TEAMS.find(t => t.id === teamBId)
-
-  const matchInfo = useMemo(() => {
-    if (!teamAId || !teamBId) return null
-    return MATCHES.find(m =>
-      (m.teamA === teamAId && m.teamB === teamBId) ||
-      (m.teamA === teamBId && m.teamB === teamAId)
-    ) || null
-  }, [teamAId, teamBId])
-
-  const sameGroup = matchInfo != null
-
+  // ── Preload desde Fixture (por nombre) ──
   useEffect(() => {
-    if (matchInfo) setSedeId(matchInfo.ciudad)
-  }, [matchInfo])
+    if (!preloadTeams?.teamAName || !leagueTeams.length) return
+    const findByName = name => leagueTeams.find(t => t.name.toLowerCase() === name?.toLowerCase())?.id ?? ''
+    const a = findByName(preloadTeams.teamAName)
+    const b = findByName(preloadTeams.teamBName)
+    if (a) setTeamAId(String(a))
+    if (b) setTeamBId(String(b))
+  }, [preloadTeams, leagueTeams])
 
+  // ── Construir stats cuando ambos equipos están seleccionados ──
   useEffect(() => {
-    if (!matchInfo) return
-    const d = new Date(matchInfo.date)
-    const day = d.getUTCDate()
-    if      (day <= 17) setCtx(c => ({ ...c, jornada: 'J1' }))
-    else if (day <= 23) setCtx(c => ({ ...c, jornada: 'J2' }))
-    else                setCtx(c => ({ ...c, jornada: 'J3' }))
-  }, [matchInfo])
+    if (!teamAId || !teamBId) { setTeamA(null); setTeamB(null); return }
+    const seq = ++buildSeq.current
+    const nameA = leagueTeams.find(t => t.id === Number(teamAId))?.name ?? 'Equipo A'
+    const nameB = leagueTeams.find(t => t.id === Number(teamBId))?.name ?? 'Equipo B'
 
-  const sede   = SEDES.find(s => s.ciudad === sedeId)
-  const altMod = sede ? altitudeCorrection(sede.altitud) : 1
+    setBuilding(true)
+    setBuildError(null)
+    setTeamA(null); setTeamB(null)
+
+    const onProgress = (name, i, n) => {
+      if (buildSeq.current === seq) setProgress(`${name}: partido ${i}/${n}`)
+    }
+
+    ;(async () => {
+      try {
+        const a = await buildTeamStats(league, Number(teamAId), nameA, onProgress)
+        if (buildSeq.current !== seq) return
+        setTeamA(a)
+        const b = await buildTeamStats(league, Number(teamBId), nameB, onProgress)
+        if (buildSeq.current !== seq) return
+        setTeamB(b)
+      } catch (e) {
+        if (buildSeq.current === seq) setBuildError(e.message)
+      } finally {
+        if (buildSeq.current === seq) { setBuilding(false); setProgress('') }
+      }
+    })()
+  }, [teamAId, teamBId, league, leagueTeams])
 
   // ─── Modificadores situacionales ─────────────────────────────────────────
   const { modsA, modsB, comboAlerts, confidenceDelta } = useMemo(() => {
@@ -421,33 +427,43 @@ export default function Analizar({ preloadTeams }) {
   const calc = useMemo(() => {
     if (!teamA || !teamB) return null
 
-    const shots   = calcExpectedShots(teamA, teamB, altMod)
+    const kC = league.kCorners
+
+    const shots   = calcExpectedShots(teamA, teamB)
     const corners = calcExpectedCorners(teamA, teamB)
     const passes  = calcExpectedPasses(teamA, teamB)
     const fouls   = calcExpectedFouls(teamA, teamB, modsA.cards, modsB.cards)
+    const goals   = calcExpectedGoals(teamA, teamB)
+    const gk      = calcExpectedGK(teamA, teamB)
+    const ti      = calcExpectedTI(teamA, teamB, {
+      lluvia: !!ctx.checks?.lluvia,
+      rivalidad: !!ctx.checks?.rivalidad,
+      kLiga: league.kTI,
+    })
 
     const base = {
-      shotsA:   shots.expShotsA,    shotsB:  shots.expShotsB,
-      sotA:     shots.expSOTA,      sotB:    shots.expSOTB,
-      cornA:    corners.expA,       cornB:   corners.expB,
-      goalsA:   +(teamA.gf_avg * altMod).toFixed(2),
-      goalsB:   +(teamB.gf_avg * altMod).toFixed(2),
+      shotsA:   shots.expShotsA,          shotsB:  shots.expShotsB,
+      sotA:     shots.expSOTA,            sotB:    shots.expSOTB,
+      cornA:    +(corners.expA * kC).toFixed(2),
+      cornB:    +(corners.expB * kC).toFixed(2),
+      goalsA:   goals.expA,
+      goalsB:   goals.expB,
       cardsA:   +teamA.cards_avg.toFixed(2),
       cardsB:   +teamB.cards_avg.toFixed(2),
-      shots1hA: +(teamA.shots_1h * altMod).toFixed(2),
-      shots1hB: +(teamB.shots_1h * altMod).toFixed(2),
-      shots2hA: +(teamA.shots_2h * altMod).toFixed(2),
-      shots2hB: +(teamB.shots_2h * altMod).toFixed(2),
+      shots1hA: +teamA.shots_1h.toFixed(2),
+      shots1hB: +teamB.shots_1h.toFixed(2),
+      shots2hA: +teamA.shots_2h.toFixed(2),
+      shots2hB: +teamB.shots_2h.toFixed(2),
       sot1hA:   +teamA.sot_1h.toFixed(2),     sot1hB:  +teamB.sot_1h.toFixed(2),
-      corn1hA:  +teamA.corners_1h.toFixed(2), corn1hB: +teamB.corners_1h.toFixed(2),
-      corn2hA:  +teamA.corners_2h.toFixed(2), corn2hB: +teamB.corners_2h.toFixed(2),
+      corn1hA:  +(teamA.corners_1h * kC).toFixed(2), corn1hB: +(teamB.corners_1h * kC).toFixed(2),
+      corn2hA:  +(teamA.corners_2h * kC).toFixed(2), corn2hB: +(teamB.corners_2h * kC).toFixed(2),
       goals1hA: +teamA.goals_1h.toFixed(2),   goals1hB:+teamB.goals_1h.toFixed(2),
       goals2hA: +teamA.goals_2h.toFixed(2),   goals2hB:+teamB.goals_2h.toFixed(2),
       cards1hA: +teamA.cards_1h.toFixed(2),   cards1hB:+teamB.cards_1h.toFixed(2),
-      gkA:      +teamA.goalkicks_avg.toFixed(2),
-      gkB:      +teamB.goalkicks_avg.toFixed(2),
-      tiA:      +teamA.throwins_avg.toFixed(2),
-      tiB:      +teamB.throwins_avg.toFixed(2),
+      gkA:      gk.expA,
+      gkB:      gk.expB,
+      tiA:      ti.expA,
+      tiB:      ti.expB,
     }
 
     const adj = {
@@ -477,10 +493,11 @@ export default function Analizar({ preloadTeams }) {
       goals2hB: +(base.goals2hB * modsB.goals).toFixed(2),
       cards1hA: +(base.cards1hA * modsA.cards).toFixed(2),
       cards1hB: +(base.cards1hB * modsB.cards).toFixed(2),
-      gkA:      +(base.gkA * ((modsA.shots + modsA.corners) / 2)).toFixed(2),
-      gkB:      +(base.gkB * ((modsB.shots + modsB.corners) / 2)).toFixed(2),
-      tiA:      +(base.tiA * modsA.shots).toFixed(2),
-      tiB:      +(base.tiB * modsB.shots).toFixed(2),
+      // GK/TI: la fórmula v2 ya incluye interacción y contexto — sin mods genéricos
+      gkA: base.gkA,
+      gkB: base.gkB,
+      tiA: base.tiA,
+      tiB: base.tiB,
     }
 
     const t = {
@@ -507,8 +524,8 @@ export default function Analizar({ preloadTeams }) {
     }
 
     const volumeAlert = getVolumeAlert(bTot.shots, t.shots)
-    return { base, adj, t, bTot, volumeAlert, passes, fouls }
-  }, [teamA, teamB, altMod, modsA, modsB])
+    return { base, adj, t, bTot, volumeAlert, passes, fouls, goals, gkCalc: gk, tiCalc: ti }
+  }, [teamA, teamB, modsA, modsB, ctx.checks, league])
 
   // ─── Picks ───────────────────────────────────────────────────────────────
   const { picks, combo } = useMemo(() => {
@@ -526,14 +543,22 @@ export default function Analizar({ preloadTeams }) {
 
       {/* ── Selección de equipos ── */}
       <div className="card">
-        <h1 className="text-xl font-bold text-white mb-4">Analizador de Partido</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-xl font-bold text-white">Analizador de Partido</h1>
+          <span className="text-xs text-gray-500">{league.flag} {league.name} · K córners ×{league.kCorners} · K TI ×{league.kTI}</span>
+        </div>
+        {teamsError && (
+          <div className="rounded-lg bg-red-900/30 border border-red-700/40 px-4 py-3 text-sm text-red-300 mb-3">
+            {teamsError}
+          </div>
+        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="text-xs text-gray-400 block mb-1">Equipo Local</label>
             <select className="input-dark w-full" value={teamAId}
-              onChange={e => { setTeamAId(e.target.value); setTeamBId('') }}>
+              onChange={e => setTeamAId(e.target.value)}>
               <option value="">Seleccionar...</option>
-              {TEAMS.map(t => <option key={t.id} value={t.id}>{t.name} ({t.group})</option>)}
+              {leagueTeams.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
             </select>
           </div>
           <div>
@@ -541,28 +566,27 @@ export default function Analizar({ preloadTeams }) {
             <select className="input-dark w-full" value={teamBId}
               onChange={e => setTeamBId(e.target.value)}>
               <option value="">Seleccionar...</option>
-              {TEAMS.filter(t => t.id !== teamAId).map(t => <option key={t.id} value={t.id}>{t.name} ({t.group})</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="text-xs text-gray-400 block mb-1">
-              Sede {matchInfo ? <span className="text-green-500">(auto)</span> : ''}
-            </label>
-            <select className="input-dark w-full" value={sedeId} onChange={e => setSedeId(e.target.value)}>
-              <option value="">Sin sede</option>
-              {SEDES.map(s => <option key={s.ciudad} value={s.ciudad}>{s.ciudad} — {s.estadio}{s.altitud > 1800 ? ' ⛰️' : ''}</option>)}
+              {leagueTeams.filter(t => String(t.id) !== teamAId).map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
             </select>
           </div>
         </div>
-        {matchInfo && (
-          <div className="mt-3 text-xs text-gray-400 flex gap-4 flex-wrap">
-            <span>📅 {matchInfo.date}</span>
-            <span>📍 {sede?.estadio || matchInfo.ciudad}</span>
-            <span>🏆 Grupo {matchInfo.group}</span>
-            {sede?.altitud > 1800 && <span className="text-yellow-400">⛰️ Altitud {sede.altitud}m — corrección ×{altMod}</span>}
-          </div>
-        )}
       </div>
+
+      {/* ── Cargando stats ── */}
+      {building && (
+        <div className="card text-center py-10">
+          <div className="animate-spin w-8 h-8 border-2 border-green-500 border-t-transparent rounded-full mx-auto mb-3" />
+          <p className="text-white font-semibold text-sm">Construyendo stats desde API-Football...</p>
+          <p className="text-gray-500 text-xs mt-1">{progress || 'Descargando últimos 10 partidos por equipo'}</p>
+          <p className="text-gray-600 text-xs mt-2">Primera vez ~20 llamadas · después queda en cache 30 días</p>
+        </div>
+      )}
+
+      {buildError && (
+        <div className="rounded-lg bg-red-900/30 border border-red-700/40 px-4 py-3 text-sm text-red-300">
+          Error construyendo stats: {buildError}
+        </div>
+      )}
 
       {/* ── Contexto ── */}
       {ready && (
@@ -576,12 +600,12 @@ export default function Analizar({ preloadTeams }) {
           </button>
           {ctxOpen && (
             <div className="mt-4 border-t border-dark-600 pt-4">
-              <ContextPanel ctx={ctx} onChange={setCtx} teamAName={teamA?.name} teamBName={teamB?.name} sameGroup={sameGroup} />
+              <ContextPanel ctx={ctx} onChange={setCtx} teamAName={teamA?.name} teamBName={teamB?.name} sameGroup={false} />
             </div>
           )}
           {!ctxOpen && (
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
-              <span>Jornada: <strong className="text-white">{ctx.jornada}</strong></span>
+              <span>Fase: <strong className="text-white">{ctx.jornada}</strong></span>
               <span>Descanso {teamA?.name}: <strong className="text-white">{ctx.descansoA}d</strong></span>
               <span>Descanso {teamB?.name}: <strong className="text-white">{ctx.descansoB}d</strong></span>
               <span>Mot.Local: <strong className="text-white">{ctx.motA?.replace(/_/g, ' ')}</strong></span>
@@ -591,9 +615,9 @@ export default function Analizar({ preloadTeams }) {
         </div>
       )}
 
-      {!ready && (
+      {!ready && !building && !buildError && (
         <div className="card text-center text-gray-500 py-12">
-          Selecciona los dos equipos para ver el análisis completo
+          Selecciona los dos equipos — el motor descarga sus últimos 10 partidos y construye el análisis
         </div>
       )}
 
@@ -634,8 +658,8 @@ export default function Analizar({ preloadTeams }) {
                 </div>
               ))}
             </div>
-            {teamA.est && <p className="text-xs text-yellow-600 mt-2">⚠️ {teamA.name}: datos estimados</p>}
-            {teamB.est && <p className="text-xs text-yellow-600 mt-1">⚠️ {teamB.name}: datos estimados</p>}
+            {teamA.est && <p className="text-xs text-yellow-600 mt-2">⚠️ {teamA.name}: solo {teamA.statsMatches} partidos con stats — Confidence reducido</p>}
+            {teamB.est && <p className="text-xs text-yellow-600 mt-1">⚠️ {teamB.name}: solo {teamB.statsMatches} partidos con stats — Confidence reducido</p>}
           </div>
 
           {/* ── Stats de Referencia ── */}
@@ -697,6 +721,7 @@ export default function Analizar({ preloadTeams }) {
 
           {/* ── 4. CÓRNERS ── */}
           <Section title="Córners">
+            <p className="text-xs text-gray-500 -mt-2">K de liga aplicado: ×{league.kCorners} ({league.name})</p>
             <MarketTable label="Córners Totales" expected={calc.t.corners}
               base={calc.bTot.corners} modsA={modsA} modsB={modsB} statKey="corners"
               lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />
@@ -710,6 +735,12 @@ export default function Analizar({ preloadTeams }) {
 
           {/* ── 5. GOLES ── */}
           <Section title="Goles">
+            <p className="text-xs text-gray-500 -mt-2">
+              Fórmula con defensa rival (spec §6.6)
+              {calc.goals.bttsViable
+                ? <span className="text-green-400 ml-2">✅ BTTS viable — ambos marcan y conceden con frecuencia</span>
+                : <span className="text-gray-600 ml-2">BTTS no recomendado en este cruce</span>}
+            </p>
             <MarketTable label="Goles Totales" expected={calc.t.goals} lines={[0.5, 1.5, 2.5, 3.5]} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <MarketTable label="Goles 1H"  expected={calc.t.goals1h} lines={[0.5, 1.5]} />
@@ -729,17 +760,47 @@ export default function Analizar({ preloadTeams }) {
             </div>
           </Section>
 
-          {/* ── 7. SAQUES ── */}
-          <Section title="Saques de Portería y Banda">
+          {/* ── 7. SAQUES DE PORTERÍA (GK) ── */}
+          <Section title="Saques de Portería (GK)">
+            <div className="text-xs text-gray-500 -mt-2 space-y-1">
+              <p>Posesión: {teamA.name} {calc.gkCalc.posA}% · {teamB.name} {calc.gkCalc.posB}% — a más posesión rival, más GK propios</p>
+              {calc.gkCalc.weakerTeam && (
+                <p className="text-yellow-500">
+                  ⚡ {calc.gkCalc.weakerTeam === 'A' ? teamA.name : teamB.name} es claramente inferior (PPG) → más tiempo defendiendo → boost de GK
+                </p>
+              )}
+              <p className="text-orange-500">⚠️ GK estimado desde posesión — API-Football no da este dato. Verificar en Sofascore antes de apostar fuerte.</p>
+            </div>
+            <MarketTable label="GK Totales" expected={calc.t.gk}
+              lines={[14.5, 16.5, 18.5, 20.5, 22.5]} />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label="Saques de Portería Totales" expected={calc.t.gk}
-                lines={[18.5, 20.5, 22.5, 24.5, 26.5]} />
-              <MarketTable label="Throw-ins Totales" expected={calc.t.ti}
-                lines={[49.5, 54.5, 59.5, 64.5, 69.5]} />
+              <MarketTable label={`GK ${teamA.name}`} expected={calc.adj.gkA}
+                lines={[6.5, 7.5, 8.5, 9.5, 10.5, 11.5]} />
+              <MarketTable label={`GK ${teamB.name}`} expected={calc.adj.gkB}
+                lines={[6.5, 7.5, 8.5, 9.5, 10.5, 11.5]} />
             </div>
           </Section>
 
-          {/* ── 8. PASES ── */}
+          {/* ── 8. SAQUES DE BANDA (THROW-INS) ── */}
+          <Section title="Saques de Banda (Throw-ins)">
+            <div className="text-xs text-gray-500 -mt-2 space-y-1">
+              <p>K de liga: ×{league.kTI} ({league.name})</p>
+              {calc.tiCalc.mods.climaMod > 1 && <p className="text-blue-400">🌧️ Lluvia intensa → TI ×1.15</p>}
+              {calc.tiCalc.mods.tipoMod > 1 && <p className="text-orange-400">⚔️ Clásico/derby → TI ×1.10</p>}
+              <p className="text-gray-600">⚠️ No combinar TI Over con Córners Over (correlación 0.60)</p>
+              <p className="text-orange-500">⚠️ TI estimado desde baseline de liga — verificar en Sofascore.</p>
+            </div>
+            <MarketTable label="Throw-ins Totales" expected={calc.t.ti}
+              lines={[34.5, 38.5, 42.5, 46.5, 50.5]} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <MarketTable label={`TI ${teamA.name}`} expected={calc.adj.tiA}
+                lines={[15.5, 17.5, 19.5, 21.5, 23.5, 25.5]} />
+              <MarketTable label={`TI ${teamB.name}`} expected={calc.adj.tiB}
+                lines={[15.5, 17.5, 19.5, 21.5, 23.5, 25.5]} />
+            </div>
+          </Section>
+
+          {/* ── 9. PASES ── */}
           <Section title="Pases">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <MarketTable label={`Pases ${teamA.name}`} expected={calc.passes.expPassesA}
@@ -751,7 +812,7 @@ export default function Analizar({ preloadTeams }) {
               lines={[750, 800, 850, 900, 950, 1000]} />
           </Section>
 
-          {/* ── 9. FALTAS ── */}
+          {/* ── 10. FALTAS ── */}
           <Section title="Faltas">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <MarketTable label={`Faltas ${teamA.name}`} expected={calc.fouls.expFoulsA}

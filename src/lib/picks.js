@@ -11,6 +11,18 @@ const CORRELATION = {
   'corners-goals': 0.35,
   'cards-goals':   0.20,
   'corners-cards': 0.25,
+  // Saques (spec v2 §9): TI-córners 0.60 → límite, no combinar
+  'gk-shots':      0.40,
+  'gk-ti':         0.35,
+  'gk-corners':    0.30,
+  'gk-goals':      0.30,
+  'gk-cards':      0.20,
+  'corners-ti':    0.60,
+  'shots-ti':      0.35,
+  'cards-ti':      0.25,
+  'goals-ti':      0.20,
+  'sot-ti':        0.35,
+  'gk-sot':        0.40,
 }
 
 function corr(mktA, mktB) {
@@ -29,6 +41,10 @@ const MARKET_META = {
   corners_1h:      { label: 'Córners 1H',         risk: 28, category: 'corners' },
   corners_2h:      { label: 'Córners 2H',         risk: 28, category: 'corners' },
   tiros_1h:        { label: 'Tiros Totales 1H',   risk: 30, category: 'shots'   },
+  gk_totales:      { label: 'Saques Portería Tot.', risk: 28, category: 'gk'    },
+  gk_local:        { label: 'GK Local',           risk: 30, category: 'gk'      },
+  gk_visita:       { label: 'GK Visitante',       risk: 30, category: 'gk'      },
+  ti_totales:      { label: 'Throw-ins Totales',  risk: 30, category: 'ti'      },
 }
 
 // ─── Calcular P_modelo y EV para una línea ────────────────────────────────────
@@ -62,6 +78,10 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
     { key: 'corners_1h',       expected: calc.t.corn1h,   lines: [3.5,4.5,5.5] },
     { key: 'corners_2h',       expected: calc.t.corn2h,   lines: [4.5,5.5,6.5] },
     { key: 'tiros_1h',         expected: calc.t.shots1h,  lines: [5.5,7.5,9.5,11.5] },
+    { key: 'gk_totales',       expected: calc.t.gk,       lines: [16.5,18.5,20.5,22.5,24.5] },
+    { key: 'gk_local',         expected: calc.adj.gkA,    lines: [7.5,8.5,9.5,10.5,11.5,12.5] },
+    { key: 'gk_visita',        expected: calc.adj.gkB,    lines: [7.5,8.5,9.5,10.5,11.5,12.5] },
+    { key: 'ti_totales',       expected: calc.t.ti,       lines: [44.5,49.5,54.5,59.5,64.5] },
   ]
 
   for (const { key, expected, lines } of markets) {
@@ -154,7 +174,7 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
     if (modsB.shots > 1.05) factors.push({ icon: '✅', text: `${teamB.name} motivado → tiros ×${modsB.shots.toFixed(2)}`, weight: '12%', dir: 'up' })
     if (modsA.shots < 0.95) factors.push({ icon: '⚠️', text: `${teamA.name}: modificador bajo (×${modsA.shots.toFixed(2)})`, weight: '12%', dir: 'down' })
     if (modsB.shots < 0.95) factors.push({ icon: '⚠️', text: `${teamB.name}: modificador bajo (×${modsB.shots.toFixed(2)})`, weight: '12%', dir: 'down' })
-    factors.push({ icon: '⚠️', text: `Jornada ${ctx.jornada}: mod tiros ×${getJornadaMod(ctx.jornada, 'shots')}`, weight: '5%', dir: ctx.jornada === 'J1' ? 'down' : ctx.jornada === 'J3' ? 'up' : 'neutral' })
+    factors.push({ icon: '⚠️', text: `Fase ${ctx.jornada}: mod tiros ${getJornadaMod(ctx.jornada, 'shots')}`, weight: '5%', dir: ctx.jornada === 'inicio' || ctx.jornada === 'ko' ? 'down' : ctx.jornada === 'final' ? 'up' : 'neutral' })
   }
 
   if (pick.category === 'corners') {
@@ -169,6 +189,26 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
     factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.gf_avg.toFixed(2)} goles/partido`, weight: '25%', dir: 'neutral' })
     factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.gf_avg.toFixed(2)} goles/partido`, weight: '25%', dir: 'neutral' })
     factors.push({ icon: '⚠️', text: `BTTS ${teamA.name}: ${teamA.btts_pct}% · ${teamB.name}: ${teamB.btts_pct}%`, weight: '15%', dir: 'neutral' })
+  }
+
+  if (pick.category === 'gk') {
+    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.goalkicks_avg.toFixed(1)} saques de portería/partido`, weight: '30%', dir: 'neutral' })
+    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.goalkicks_avg.toFixed(1)} saques de portería/partido`, weight: '30%', dir: 'neutral' })
+    const ppgDiff = Math.abs(teamA.ppg - teamB.ppg)
+    if (ppgDiff > 0.4) {
+      const debil = teamA.ppg < teamB.ppg ? teamA.name : teamB.name
+      factors.push({ icon: '✅', text: `${debil} es claramente inferior → defenderá más → más GK (×${ppgDiff > 0.8 ? '1.28' : '1.10'})`, weight: '20%', dir: 'up' })
+    }
+    factors.push({ icon: '💡', text: 'Mercado mal calibrado por las casas — pocos apostadores lo estudian', weight: '—', dir: 'up' })
+  }
+
+  if (pick.category === 'ti') {
+    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.throwins_avg.toFixed(1)} saques de banda/partido`, weight: '30%', dir: 'neutral' })
+    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.throwins_avg.toFixed(1)} saques de banda/partido`, weight: '30%', dir: 'neutral' })
+    if (teamA.style === 'bandas' || teamA.style === 'mixto-bandas') factors.push({ icon: '✅', text: `${teamA.name} ataca por bandas → más juego lateral → más TI`, weight: '15%', dir: 'up' })
+    if (teamB.style === 'bandas' || teamB.style === 'mixto-bandas') factors.push({ icon: '✅', text: `${teamB.name} ataca por bandas → más juego lateral → más TI`, weight: '15%', dir: 'up' })
+    if (ctx.checks?.lluvia) factors.push({ icon: '🌧️', text: 'Lluvia intensa → balón resbaladizo → TI ×1.15', weight: '10%', dir: 'up' })
+    if (ctx.checks?.rivalidad) factors.push({ icon: '⚔️', text: 'Derby físico → más duelos → TI ×1.10', weight: '10%', dir: 'up' })
   }
 
   if (pick.category === 'cards') {
@@ -191,8 +231,10 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
   ]
 
   const risks = []
-  if (teamA.est || teamB.est) risks.push('Datos estimados en uno o ambos equipos (−10 Confidence)')
-  if (ctx.jornada === 'J1') risks.push('J1: equipos pueden ser más cautos de lo normal')
+  if (teamA.est || teamB.est) risks.push('Muestra de partidos pobre en uno o ambos equipos (−10 Confidence)')
+  if (ctx.jornada === 'inicio') risks.push('Inicio de temporada: equipos irregulares, más varianza')
+  if (ctx.jornada === 'ko') risks.push('Eliminatoria KO: partidos más cerrados de lo que dicen las stats')
+  if (pick.category === 'gk' || pick.category === 'ti') risks.push('GK/TI estimados (API no da el dato real) — verificar en Sofascore')
   if (!pick.cuota) risks.push('Cuota no disponible — EV no calculado')
   if (pick.confidence < 65) risks.push('Confidence bajo 65 — señal moderada')
 
@@ -204,11 +246,14 @@ function getStat(team, category) {
   if (category === 'corners') return team.corners_avg.toFixed(1)
   if (category === 'goals') return team.gf_avg.toFixed(2)
   if (category === 'cards') return team.cards_avg.toFixed(1)
+  if (category === 'gk') return team.goalkicks_avg.toFixed(1)
+  if (category === 'ti') return team.throwins_avg.toFixed(1)
   return '—'
 }
 
-function getJornadaMod(jornada, category) {
-  if (jornada === 'J1') return category === 'cards' ? '×0.90' : '×0.95'
-  if (jornada === 'J3') return category === 'cards' ? '×1.15' : '×1.05'
+function getJornadaMod(fase, category) {
+  if (fase === 'inicio') return category === 'cards' ? '×0.92' : '×0.94'
+  if (fase === 'final')  return category === 'cards' ? '×1.12' : '×1.05'
+  if (fase === 'ko')     return category === 'cards' ? '×1.10' : '×0.92'
   return '×1.00'
 }

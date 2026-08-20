@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react'
-import { TEAMS, MATCHES } from '../lib/teams'
 import { getSituationS, getTacticalK, calcLiveExpected } from '../lib/engine'
 
 function recommend(projected, line) {
@@ -49,8 +48,8 @@ function LiveMarket({ label, acum, projected, lines }) {
 }
 
 export default function EnVivo() {
-  const [teamAId,    setTeamAId]    = useState('')
-  const [teamBId,    setTeamBId]    = useState('')
+  const [teamAName,  setTeamAName]  = useState('')
+  const [teamBName,  setTeamBName]  = useState('')
   const [minuto,     setMinuto]     = useState(45)
   const [golesA,     setGolesA]     = useState(0)
   const [golesB,     setGolesB]     = useState(0)
@@ -60,21 +59,10 @@ export default function EnVivo() {
   const [tarjetasAc, setTarjetasAc] = useState(1)
   const [zona,       setZona]       = useState('mixto')
 
-  const teamA = TEAMS.find(t => t.id === teamAId)
-  const teamB = TEAMS.find(t => t.id === teamBId)
-
-  const matchInfo = useMemo(() => {
-    if (!teamAId || !teamBId) return null
-    return MATCHES.find(m =>
-      (m.teamA === teamAId && m.teamB === teamBId) ||
-      (m.teamA === teamBId && m.teamB === teamAId)
-    ) || null
-  }, [teamAId, teamBId])
-
   const minutosRestantes = Math.max(0, 90 - minuto)
 
   const calc = useMemo(() => {
-    if (!teamA || !teamB || minuto <= 0) return null
+    if (!teamAName.trim() || !teamBName.trim() || minuto <= 0) return null
 
     const goalDiff   = golesA - golesB
     const situationS = getSituationS(goalDiff)
@@ -92,7 +80,7 @@ export default function EnVivo() {
       sot:     { ...sot,     proy: +(sotAc      + sot.lambda).toFixed(1) },
       cards:   { ...cards,   proy: +(tarjetasAc + cards.lambda).toFixed(1) },
     }
-  }, [teamA, teamB, minuto, golesA, golesB, cornersAc, tirosAc, sotAc, tarjetasAc, zona])
+  }, [teamAName, teamBName, minuto, golesA, golesB, cornersAc, tirosAc, sotAc, tarjetasAc, zona])
 
   const ready = !!calc
 
@@ -104,27 +92,20 @@ export default function EnVivo() {
         <h1 className="text-2xl font-bold text-white">Análisis En Vivo</h1>
       </div>
 
-      {/* ── Selección de equipos ── */}
+      {/* ── Equipos ── */}
       <div className="card space-y-3">
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="text-xs text-gray-400 block mb-1">Equipo A</label>
-            <select className="input-dark w-full" value={teamAId} onChange={e => { setTeamAId(e.target.value); setTeamBId('') }}>
-              <option value="">Seleccionar...</option>
-              {TEAMS.map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-            </select>
+            <label className="text-xs text-gray-400 block mb-1">Equipo A (local)</label>
+            <input type="text" className="input-dark w-full" placeholder="ej. Arsenal"
+              value={teamAName} onChange={e => setTeamAName(e.target.value)} />
           </div>
           <div>
-            <label className="text-xs text-gray-400 block mb-1">Equipo B</label>
-            <select className="input-dark w-full" value={teamBId} onChange={e => setTeamBId(e.target.value)}>
-              <option value="">Seleccionar...</option>
-              {TEAMS.filter(t => t.id !== teamAId).map(t => <option key={t.id} value={t.id}>{t.name}</option>)}
-            </select>
+            <label className="text-xs text-gray-400 block mb-1">Equipo B (visitante)</label>
+            <input type="text" className="input-dark w-full" placeholder="ej. Chelsea"
+              value={teamBName} onChange={e => setTeamBName(e.target.value)} />
           </div>
         </div>
-        {matchInfo && (
-          <p className="text-xs text-gray-500">📅 {matchInfo.date} · 📍 {matchInfo.ciudad} · Grupo {matchInfo.group}</p>
-        )}
       </div>
 
       {/* ── Inputs en vivo ── */}
