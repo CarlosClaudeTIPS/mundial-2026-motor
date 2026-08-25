@@ -22,6 +22,8 @@ export const LEAGUES = [
   { id: 848, lsId: 446, main: true, name: 'Conference League', country: 'Europa',     flag: '🥉', kCorners: 1.00, kTI: 0.97, sportKey: null,                            type: 'cup' },
   // ── Más ligas (agrupadas por país en el selector) ──
   { id: 40,  lsId: 77,  main: false, name: 'Championship',       country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.06, kTI: 1.10, sportKey: 'soccer_efl_champ', type: 'league' },
+  { id: 45,  lsId: 152, main: false, name: 'FA Cup',             country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.05, kTI: 1.10, sportKey: 'soccer_fa_cup', type: 'cup' },
+  { id: 48,  lsId: 150, main: false, name: 'EFL Cup',            country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.04, kTI: 1.08, sportKey: 'soccer_england_efl_cup', type: 'cup' },
   { id: 71,  lsId: 24,  main: false, name: 'Brasileirão Serie A', country: 'Brasil',    flag: '🇧🇷', kCorners: 1.02, kTI: 1.05, sportKey: 'soccer_brazil_campeonato', type: 'league' },
   { id: 128, lsId: 23,  main: false, name: 'Liga Profesional',   country: 'Argentina',  flag: '🇦🇷', kCorners: 0.98, kTI: 1.08, sportKey: 'soccer_argentina_primera_division', type: 'league' },
   { id: 203, lsId: 6,   main: false, name: 'Süper Lig',          country: 'Turquía',    flag: '🇹🇷', kCorners: 1.02, kTI: 1.02, sportKey: 'soccer_turkey_super_league', type: 'league' },
@@ -68,6 +70,8 @@ export const LEAGUE_BASELINES = {
   3:   { gaAvg: 1.45, shotsAvg: 12.8, cornersAvg: 5.1, cardsAvg: 2.3, gkAvg: 9.0,  tiAvg: 19.5 },
   848: { gaAvg: 1.50, shotsAvg: 13.0, cornersAvg: 5.2, cardsAvg: 2.3, gkAvg: 9.0,  tiAvg: 20.0 },
   40:  { gaAvg: 1.30, shotsAvg: 12.5, cornersAvg: 5.2, cardsAvg: 2.1, gkAvg: 9.0,  tiAvg: 22.0 },
+  45:  { gaAvg: 1.55, shotsAvg: 13.0, cornersAvg: 5.2, cardsAvg: 2.0, gkAvg: 8.8,  tiAvg: 21.5 },
+  48:  { gaAvg: 1.60, shotsAvg: 13.2, cornersAvg: 5.3, cardsAvg: 2.0, gkAvg: 8.8,  tiAvg: 21.5 },
   71:  { gaAvg: 1.20, shotsAvg: 12.5, cornersAvg: 5.3, cardsAvg: 2.6, gkAvg: 9.2,  tiAvg: 21.0 },
   128: { gaAvg: 1.10, shotsAvg: 11.5, cornersAvg: 5.0, cardsAvg: 3.0, gkAvg: 9.5,  tiAvg: 22.0 },
   203: { gaAvg: 1.40, shotsAvg: 12.8, cornersAvg: 5.2, cardsAvg: 2.7, gkAvg: 9.0,  tiAvg: 20.5 },

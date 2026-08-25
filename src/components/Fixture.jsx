@@ -283,6 +283,9 @@ export default function Fixture({ league, onAnalizar }) {
   const [liveData, setLiveData] = useState([])
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState(null)
+  const [closedGroups, setClosedGroups] = useState({}) // secciones por liga cerradas por el usuario
+
+  const toggleGroup = (key) => setClosedGroups(p => ({ ...p, [key]: !p[key] }))
 
   const activeLeagueIds = mode === 'mis' ? misLigas : [league.id]
 
@@ -465,29 +468,59 @@ export default function Fixture({ league, onAnalizar }) {
 
       {!loading || apiData.length ? (
         <>
-          {/* Live desde live endpoint */}
+          {/* Live desde live endpoint — agrupado por liga, plegable */}
           {showLiveTab && liveData.length > 0 && (
             <div className="space-y-2">
               <h2 className="text-xs text-red-400 font-semibold uppercase tracking-wide">🔴 En Curso</h2>
-              {liveData.map(f => (
-                <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={multiLiga} />
-              ))}
+              {Object.entries(liveData.reduce((acc, f) => {
+                (acc[f.leagueName ?? league.name] = acc[f.leagueName ?? league.name] ?? []).push(f)
+                return acc
+              }, {})).map(([ligaName, items]) => {
+                const gkey = `live:${ligaName}`
+                const cerrado = !!closedGroups[gkey]
+                return (
+                  <div key={gkey} className="space-y-2">
+                    <button onClick={() => toggleGroup(gkey)}
+                      className="w-full flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-red-300 hover:text-white bg-dark-800/60 border border-red-900/40 rounded-lg px-3 py-2 transition-colors">
+                      <span>{cerrado ? '▸' : '▾'}</span>
+                      <span>{items[0].leagueFlag ?? ''} {ligaName}</span>
+                      <span className="ml-auto bg-red-600 text-white rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
+                    </button>
+                    {!cerrado && items.map(f => (
+                      <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
+                    ))}
+                  </div>
+                )
+              })}
             </div>
           )}
 
-          {/* Agrupado por liga */}
-          {grouped.map(([ligaName, items]) => items.length > 0 && (
-            <div key={ligaName ?? 'única'} className="space-y-2">
-              {ligaName && (
-                <h2 className="text-xs text-purple-400 font-semibold uppercase tracking-wide pt-2">
-                  {items[0].leagueFlag} {ligaName}
-                </h2>
-              )}
-              {items.map(f => (
-                <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
-              ))}
-            </div>
-          ))}
+          {/* Agrupado por liga — plegable */}
+          {grouped.map(([ligaName, items]) => {
+            if (!items.length) return null
+            if (!ligaName) return (
+              <div key="única" className="space-y-2">
+                {items.map(f => (
+                  <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
+                ))}
+              </div>
+            )
+            const gkey = `fix:${ligaName}`
+            const cerrado = !!closedGroups[gkey]
+            return (
+              <div key={gkey} className="space-y-2">
+                <button onClick={() => toggleGroup(gkey)}
+                  className="w-full flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-purple-300 hover:text-white bg-dark-800/60 border border-dark-600 rounded-lg px-3 py-2 mt-2 transition-colors">
+                  <span>{cerrado ? '▸' : '▾'}</span>
+                  <span>{items[0].leagueFlag} {ligaName}</span>
+                  <span className="ml-auto bg-dark-600 text-gray-200 rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
+                </button>
+                {!cerrado && items.map(f => (
+                  <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
+                ))}
+              </div>
+            )
+          })}
 
           {filtered.length === 0 && !loading && !(showLiveTab && liveData.length > 0) && (
             <div className="text-center text-gray-600 py-12 text-sm">
