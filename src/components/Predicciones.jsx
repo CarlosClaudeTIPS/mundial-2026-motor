@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { getAllPredicciones, getEvaluaciones, saveEvaluacion } from '../lib/predicciones'
+import { getAllPredicciones, getEvaluaciones, saveEvaluacion, setPickResult, evaluarManual } from '../lib/predicciones'
 import { fetchFixtures } from '../lib/football-api'
 import { fetchFixtureStats } from '../lib/livescore-api'
 import { getLeague } from '../lib/leagues'
@@ -192,16 +192,29 @@ export default function Predicciones() {
               <div key={e.key} className="card space-y-2">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs text-gray-500">{lg.flag}</span>
-                  <span className="text-white font-medium text-sm">{e.home} <strong className="text-green-400">{e.score}</strong> {e.away}</span>
+                  <span className="text-white font-medium text-sm">{e.home} <strong className="text-green-400">{e.score ?? 'vs'}</strong> {e.away}</span>
                   <span className="text-xs text-gray-600 ml-auto">{e.date?.slice(0, 10) ?? new Date(e.ts).toLocaleDateString('es-CO')}</span>
                 </div>
                 <div className="space-y-1">
                   {(e.picks ?? []).map((p, i) => (
-                    <div key={i} className={`flex items-center gap-2 text-xs rounded-lg border px-3 py-1.5 ${RES_STYLE[p.res]}`}>
-                      <span className="font-bold">{RES_LABEL[p.res]}</span>
+                    <div key={i} className={`flex items-center gap-2 text-xs rounded-lg border px-3 py-1.5 flex-wrap ${RES_STYLE[p.res]}`}>
+                      <span className="font-bold">{RES_LABEL[p.res]}{p.manual && ' ✍️'}</span>
                       <span className="text-gray-300">{p.label} {p.dir} {p.line}</span>
-                      {p.actual != null && <span className="ml-auto font-mono">real: <strong>{p.actual}</strong></span>}
-                      {p.res === 'sin_dato' && <span className="ml-auto">la API no reportó este stat</span>}
+                      {p.actual != null && <span className="font-mono">· real: <strong>{p.actual}</strong></span>}
+                      {p.res === 'sin_dato' && !p.manual && <span className="text-gray-500">· sin dato de la API — márcalo tú:</span>}
+                      {/* Marcar / corregir a mano */}
+                      <span className="ml-auto flex gap-1">
+                        {[['ganada', '✅'], ['perdida', '❌'], ['push', '➖']].map(([res, icon]) => (
+                          <button key={res}
+                            onClick={() => { setPickResult(e.key, i, res); reload() }}
+                            title={`Marcar como ${res}`}
+                            className={`px-1.5 py-0.5 rounded border text-xs transition-colors ${
+                              p.res === res ? 'border-white/50 bg-white/10' : 'border-transparent opacity-40 hover:opacity-100 hover:border-gray-500'
+                            }`}>
+                            {icon}
+                          </button>
+                        ))}
+                      </span>
                     </div>
                   ))}
                   {(e.picks ?? []).length === 0 && (
@@ -226,6 +239,11 @@ export default function Predicciones() {
                   <span className="text-xs text-gray-500">{lg.flag}</span>
                   <span className="text-white font-medium text-sm">{p.home} vs {p.away}</span>
                   <span className="text-xs text-gray-600 ml-auto">analizado {new Date(p.ts).toLocaleDateString('es-CO')} {new Date(p.ts).toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' })}</span>
+                  <button onClick={() => { evaluarManual(p.key); reload() }}
+                    title="El partido ya terminó y quiero calificar los picks yo mismo"
+                    className="text-xs px-2 py-1 rounded bg-dark-700 text-gray-400 hover:text-white border border-dark-500">
+                    ✍️ Marcar a mano
+                  </button>
                 </div>
                 <div className="flex gap-2 flex-wrap">
                   {(p.picks ?? []).map((pk, i) => (

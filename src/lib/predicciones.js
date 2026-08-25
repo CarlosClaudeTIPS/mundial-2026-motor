@@ -64,6 +64,30 @@ export function getEvaluaciones() {
   } catch { return [] }
 }
 
+// Marcar/corregir a mano el resultado de un pick evaluado
+export function setPickResult(evalKey, idx, res) {
+  try {
+    const all = getEvaluaciones()
+    const e = all.find(x => x.key === evalKey)
+    if (!e?.picks?.[idx]) return
+    e.picks[idx].res = res
+    e.picks[idx].manual = true
+    localStorage.setItem(EVAL_KEY, JSON.stringify(all))
+  } catch {}
+}
+
+// Pasar una predicción pendiente a evaluada SIN datos de la API (para marcarla a mano)
+export function evaluarManual(pendKey) {
+  const p = loadAll()[pendKey]
+  if (!p) return
+  saveEvaluacion({
+    key: pendKey, ts: p.ts, evalTs: Date.now(),
+    leagueId: p.leagueId, home: p.home, away: p.away,
+    score: null, manual: true,
+    picks: (p.picks ?? []).map(pk => ({ ...pk, res: 'sin_dato' })),
+  })
+}
+
 export function saveEvaluacion(ev) {
   try {
     const all = getEvaluaciones()
