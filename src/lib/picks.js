@@ -1,5 +1,41 @@
-// ─── Generador de Picks — Motor Mundial 2026 ─────────────────────────────────
+// ─── Generador de Picks — Motor de Apuestas Ligas ────────────────────────────
 import { poissonOver } from './engine'
+
+// ─── Líneas realistas ────────────────────────────────────────────────────────
+// Las casas ponen las líneas CERCA del expected del mercado, no en 4.5 tiros.
+// Genera 5 líneas .5 centradas en el expected con el paso típico del mercado.
+export function linesAround(expected, step = 1, count = 5) {
+  if (expected == null || expected <= 0) return []
+  // Ancla en la media línea (X.5) más cercana al expected — como las casas
+  const c = Math.floor(expected) + 0.5
+  const half = Math.floor(count / 2)
+  const out = []
+  for (let i = -half; i <= half; i++) {
+    const l = +(c + i * step).toFixed(2)
+    if (l > 0) out.push(l)
+  }
+  return out
+}
+
+// Margen creíble: las casas no dejan value de +70% — si el margen es absurdo,
+// la línea no existiría. Solo recomendamos entre 4% y 15% de edge.
+export const MARGIN_MIN = 0.04
+export const MARGIN_MAX = 0.15
+
+// Mejor línea recomendable dentro del rango creíble (o null).
+// Usa las MISMAS 5 líneas que se muestran en la tarjeta.
+export function bestRealisticLine(expected, step = 1) {
+  let best = null
+  for (const line of linesAround(expected, step, 5)) {
+    const margin = (expected - line) / line
+    const abs = Math.abs(margin)
+    if (abs < MARGIN_MIN || abs > MARGIN_MAX) continue
+    if (!best || abs > Math.abs(best.margin)) {
+      best = { line, dir: margin > 0 ? 'OVER' : 'UNDER', margin, pct: Math.round(margin * 100) }
+    }
+  }
+  return best
+}
 
 const CORRELATION = {
   'shots-sot':     0.85,
@@ -67,29 +103,31 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
   if (!calc) return []
   const candidates = []
 
+  // Líneas dinámicas alrededor del expected con el paso típico de cada mercado
   const markets = [
-    { key: 'shots_totales',    expected: calc.t.shots,    lines: [19.5,21.5,23.5,25.5,27.5] },
-    { key: 'sot_totales',      expected: calc.t.sot,      lines: [6.5,7.5,8.5,9.5,10.5] },
-    { key: 'corners_totales',  expected: calc.t.corners,  lines: [7.5,8.5,9.5,10.5,11.5] },
-    { key: 'goles_totales',    expected: calc.t.goals,    lines: [0.5,1.5,2.5,3.5] },
-    { key: 'tarjetas_totales', expected: calc.t.cards,    lines: [1.5,2.5,3.5,4.5,5.5] },
-    { key: 'tiros_local',      expected: calc.adj.shotsA, lines: [4.5,5.5,6.5,7.5,8.5,9.5] },
-    { key: 'tiros_visita',     expected: calc.adj.shotsB, lines: [4.5,5.5,6.5,7.5,8.5,9.5] },
-    { key: 'corners_1h',       expected: calc.t.corn1h,   lines: [3.5,4.5,5.5] },
-    { key: 'corners_2h',       expected: calc.t.corn2h,   lines: [4.5,5.5,6.5] },
-    { key: 'tiros_1h',         expected: calc.t.shots1h,  lines: [5.5,7.5,9.5,11.5] },
-    { key: 'gk_totales',       expected: calc.t.gk,       lines: [16.5,18.5,20.5,22.5,24.5] },
-    { key: 'gk_local',         expected: calc.adj.gkA,    lines: [7.5,8.5,9.5,10.5,11.5,12.5] },
-    { key: 'gk_visita',        expected: calc.adj.gkB,    lines: [7.5,8.5,9.5,10.5,11.5,12.5] },
-    { key: 'ti_totales',       expected: calc.t.ti,       lines: [44.5,49.5,54.5,59.5,64.5] },
+    { key: 'shots_totales',    expected: calc.t.shots,    step: 2 },
+    { key: 'sot_totales',      expected: calc.t.sot,      step: 1 },
+    { key: 'corners_totales',  expected: calc.t.corners,  step: 1 },
+    { key: 'goles_totales',    expected: calc.t.goals,    step: 0.5 },
+    { key: 'tarjetas_totales', expected: calc.t.cards,    step: 1 },
+    { key: 'tiros_local',      expected: calc.adj.shotsA, step: 1 },
+    { key: 'tiros_visita',     expected: calc.adj.shotsB, step: 1 },
+    { key: 'corners_1h',       expected: calc.t.corn1h,   step: 1 },
+    { key: 'corners_2h',       expected: calc.t.corn2h,   step: 1 },
+    { key: 'tiros_1h',         expected: calc.t.shots1h,  step: 1 },
+    { key: 'gk_totales',       expected: calc.t.gk,       step: 1 },
+    { key: 'gk_local',         expected: calc.adj.gkA,    step: 1 },
+    { key: 'gk_visita',        expected: calc.adj.gkB,    step: 1 },
+    { key: 'ti_totales',       expected: calc.t.ti,       step: 2 },
   ]
 
-  for (const { key, expected, lines } of markets) {
+  for (const { key, expected, step } of markets) {
     const meta = MARKET_META[key] ?? { label: key, risk: 35, category: 'other' }
 
-    for (const line of lines) {
+    for (const line of linesAround(expected, step, 7)) {
       const margin = Math.abs((expected - line) / line)
-      if (margin < 0.03) continue // descarta sin señal clara
+      // Solo margen creíble: ni ruido (<4%) ni líneas que ninguna casa ofrecería (>22%)
+      if (margin < MARGIN_MIN || margin > MARGIN_MAX) continue
 
       const result = evalLine(expected, line, null)
       if (!result) continue
@@ -124,13 +162,13 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
   return candidates
 }
 
-// ─── Seleccionar top 3 (distintos mercados, baja correlación) ────────────────
-export function selectTopPicks(candidates) {
+// ─── Seleccionar top N (distintos mercados, baja correlación) ────────────────
+export function selectTopPicks(candidates, max = 3) {
   const picks = []
   const usedCategories = new Set()
 
   for (const c of candidates) {
-    if (picks.length >= 3) break
+    if (picks.length >= max) break
     if (c.confidence < 55) continue
 
     // No repetir misma categoría para picks principales

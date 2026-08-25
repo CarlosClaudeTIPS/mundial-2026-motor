@@ -1,7 +1,10 @@
-// Cliente API-Football multi-liga con cache en localStorage.
-// Dos modos:
-//  - Producción (Vercel): via /api/football-data (la key vive en el servidor)
-//  - Dev local: directo a v3.football.api-sports.io si VITE_API_FOOTBALL_KEY está en .env.local
+// Cliente de datos multi-liga con cache en localStorage.
+// Prioridad de proveedores:
+//  1. Live-Score API (VITE_LIVESCORE_API_KEY + SECRET) — incluye throw-ins y goal kicks reales
+//  2. API-Football directo (VITE_API_FOOTBALL_KEY)
+//  3. Proxy Vercel /api/football-data (API_FOOTBALL_KEY en el servidor)
+
+import * as ls from './livescore-api'
 
 const CACHE_KEY   = 'motor_api_cache_v2'
 const TTL_LIVE    = 60_000            // 1 min si hay partido en curso
@@ -89,6 +92,7 @@ function dateStr(offsetDays) {
 
 // ─── Standings ────────────────────────────────────────────────────────────────
 export async function fetchStandings(league, season = defaultSeason()) {
+  if (ls.hasLivescore()) return ls.fetchStandings(league)
   const key = `standings_${league}_${season}`
   const cached = getCache(key)
   if (cached) return cached
@@ -114,6 +118,7 @@ export async function fetchStandings(league, season = defaultSeason()) {
 
 // ─── Fixtures (ventana ±7 días) ───────────────────────────────────────────────
 export async function fetchFixtures(league, season = defaultSeason()) {
+  if (ls.hasLivescore()) return ls.fetchFixtures(league)
   const key = `fixtures_${league}_${season}`
   const cached = getCache(key)
   if (cached) return cached
@@ -131,6 +136,7 @@ export async function fetchFixtures(league, season = defaultSeason()) {
 
 // ─── Live ─────────────────────────────────────────────────────────────────────
 export async function fetchLive(league) {
+  if (ls.hasLivescore()) return ls.fetchLive(league)
   const key = `live_${league}`
   const cached = getCache(key)
   if (cached) return cached
@@ -148,6 +154,7 @@ export async function fetchLive(league) {
 
 // ─── Últimos N partidos de un equipo (cross-season, para ponderación §4) ─────
 export async function fetchTeamLast(league, teamId, last = 10) {
+  if (ls.hasLivescore()) return ls.fetchTeamLast(league, teamId, last)
   const key = `teamlast_${league}_${teamId}_${last}`
   const cached = getCache(key)
   if (cached) return cached
@@ -164,7 +171,8 @@ export async function fetchTeamLast(league, teamId, last = 10) {
 }
 
 // ─── Stats detalladas de un partido terminado (cache 30 días) ────────────────
-export async function fetchFixtureStats(fixtureId) {
+export async function fetchFixtureStats(fixtureId, homeId, awayId) {
+  if (ls.hasLivescore()) return ls.fetchFixtureStats(fixtureId, homeId, awayId)
   const key = `fixstats_${fixtureId}`
   const cached = getCache(key)
   if (cached) return cached

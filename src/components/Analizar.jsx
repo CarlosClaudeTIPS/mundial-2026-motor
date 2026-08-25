@@ -1,103 +1,32 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
-import { calcExpectedCorners, calcExpectedShots, calcExpectedPasses, calcExpectedFouls, calcExpectedGK, calcExpectedTI, calcExpectedGoals } from '../lib/engine'
+import { calcExpectedCorners, calcExpectedShots, calcExpectedPasses, calcExpectedFouls, calcExpectedGK, calcExpectedTI, calcExpectedGoals, calcExpectedCards } from '../lib/engine'
 import {
   getJornadaMods, getDescansoMods, getMotivacionMods,
   getContextoMods, getMotivacionCombo, getMotivacionConfidenceDelta,
   getVolumeAlert, applyMods, DEFAULT_MODS,
 } from '../lib/context'
 import ContextPanel from './ContextPanel'
-import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation } from '../lib/picks'
+import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation, linesAround, bestRealisticLine } from '../lib/picks'
+import { poissonOver } from '../lib/engine'
+import { getBaseline, compAbbr } from '../lib/leagues'
 import { fetchStandings } from '../lib/football-api'
 import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
+import { fetchH2H, fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
+import RecentResults from './RecentResults'
+import { informePrePartido, hasIA } from '../lib/ia'
+import { savePrediccion, getPrediccion } from '../lib/predicciones'
 
-// ─── Helpers ─────────────────────────────────────────────────────────────────
-function recommend(expected, line) {
-  const m = (expected - line) / line
-  if (m > 0.08)  return { dir: 'OVER',  conf: 'alta',  icon: '✅', pct: Math.round(m * 100) }
-  if (m > 0.03)  return { dir: 'OVER',  conf: 'media', icon: '⚠️', pct: Math.round(m * 100) }
-  if (m < -0.08) return { dir: 'UNDER', conf: 'alta',  icon: '✅', pct: Math.round(m * 100) }
-  if (m < -0.03) return { dir: 'UNDER', conf: 'media', icon: '⚠️', pct: Math.round(m * 100) }
-  return { dir: null, conf: null, icon: '❌', pct: Math.round(m * 100) }
-}
-
-// ─── ModBadge ────────────────────────────────────────────────────────────────
-function ModBadge({ label, value }) {
-  const isNeutral = Math.abs(value - 1) < 0.005
-  const isUp = value > 1
-  return (
-    <span className={`text-xs px-2 py-0.5 rounded font-mono ${
-      isNeutral ? 'text-gray-600' : isUp ? 'text-green-400' : 'text-red-400'
-    }`}>
-      {label}: ×{value.toFixed(2)}
-    </span>
-  )
-}
-
-function ModBreakdown({ base, adj, modsA, modsB, statKey }) {
-  const delta = adj - base
-  const pct = base > 0 ? Math.round((delta / base) * 100) : 0
-  return (
-    <p className="text-xs text-gray-600 mt-1">
-      Base: {base.toFixed(1)} →{' '}
-      <ModBadge label="ModA" value={modsA[statKey]} />
-      <ModBadge label="ModB" value={modsB[statKey]} />
-      {' '}→ <span className={`font-bold ${delta > 0 ? 'text-green-400' : delta < 0 ? 'text-red-400' : 'text-gray-500'}`}>
-        {adj.toFixed(1)} ({pct > 0 ? '+' : ''}{pct}%)
-      </span>
-    </p>
-  )
-}
-
-function MarketRow({ expected, line }) {
-  const { dir, conf, icon, pct } = recommend(expected, line)
-  return (
-    <div className="flex items-center gap-3 text-xs py-1 border-b border-dark-700 last:border-0">
-      <span className="text-gray-500 w-16">O/U {line}</span>
-      <span className={`flex-1 ${conf === 'alta' ? 'text-green-400' : conf === 'media' ? 'text-yellow-400' : 'text-gray-500'}`}>
-        {icon} {dir ?? 'Sin rec.'} {dir ? `${pct > 0 ? '+' : ''}${pct}%` : ''}
-      </span>
-    </div>
-  )
-}
-
-function MarketTable({ label, expected, base, modsA, modsB, statKey, lines }) {
-  return (
-    <div className="space-y-0.5">
-      <p className="text-xs font-semibold text-white">{label}
-        <span className="ml-2 text-green-400 font-bold">{expected}</span>
-      </p>
-      {base !== undefined && modsA && (
-        <ModBreakdown base={base} adj={expected} modsA={modsA} modsB={modsB} statKey={statKey} />
-      )}
-      <div className="flex items-center gap-3 text-xs text-gray-500 pb-1 border-b border-dark-600 uppercase tracking-wide mt-1">
-        <span className="w-16">Línea</span>
-        <span>Motor</span>
-      </div>
-      {lines.map(line => <MarketRow key={line} expected={expected} line={line} />)}
-    </div>
-  )
-}
-
-function Section({ title, children }) {
-  return (
-    <div className="card space-y-5">
-      <h2 className="font-bold text-white border-b border-dark-600 pb-2 text-sm tracking-wide uppercase">{title}</h2>
-      {children}
-    </div>
-  )
-}
-
-// ─── TeamStatsRef — tabla comparativa ────────────────────────────────────────
-function StatRow({ label, valA, valB, higherIsBetter = true, fmt = v => v }) {
+// ─── TeamStatsRef — tabla comparativa (colapsable) ───────────────────────────
+function StatRow({ label, valA, valB, higherIsBetter = true }) {
   const aNum = parseFloat(valA)
   const bNum = parseFloat(valB)
   const aWins = higherIsBetter ? aNum > bNum : aNum < bNum
   const bWins = higherIsBetter ? bNum > aNum : bNum < aNum
   return (
     <div className="grid grid-cols-7 gap-1 text-xs py-1 border-b border-dark-700/60 last:border-0 items-center">
-      <span className={`col-span-2 text-right font-mono ${aWins ? 'text-green-400 font-bold' : 'text-gray-300'}`}>{fmt(valA)}</span>
+      <span className={`col-span-2 text-right font-mono ${aWins ? 'text-green-400 font-bold' : 'text-gray-300'}`}>{valA}</span>
       <span className="col-span-3 text-center text-gray-500 text-xs">{label}</span>
-      <span className={`col-span-2 text-left font-mono ${bWins ? 'text-green-400 font-bold' : 'text-gray-300'}`}>{fmt(valB)}</span>
+      <span className={`col-span-2 text-left font-mono ${bWins ? 'text-green-400 font-bold' : 'text-gray-300'}`}>{valB}</span>
     </div>
   )
 }
@@ -107,7 +36,7 @@ function TeamStatsRef({ teamA, teamB }) {
   return (
     <div className="card border border-dark-600">
       <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
-        <span className="font-semibold text-white text-sm">📊 Stats de Referencia — últimos {teamA.matches} partidos (ponderados)</span>
+        <span className="font-semibold text-white text-sm">📊 Promedios ponderados — últimos {teamA.matches} partidos</span>
         <span className="text-gray-400">{open ? '▲' : '▼'}</span>
       </button>
       {open && (
@@ -117,114 +46,370 @@ function TeamStatsRef({ teamA, teamB }) {
             <span className="col-span-3 text-gray-600 uppercase tracking-wide">Estadística</span>
             <span className="col-span-2 text-blue-400 font-semibold truncate">{teamB.name}</span>
           </div>
-          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-2">⚽ Ataque</p>
           <StatRow label="Goles/P"   valA={teamA.gf_avg.toFixed(2)}    valB={teamB.gf_avg.toFixed(2)} />
           <StatRow label="Tiros/P"   valA={teamA.shots_avg.toFixed(1)} valB={teamB.shots_avg.toFixed(1)} />
           <StatRow label="SOT/P"     valA={teamA.sot_avg.toFixed(1)}   valB={teamB.sot_avg.toFixed(1)} />
           <StatRow label="Córners/P" valA={teamA.corners_avg.toFixed(1)} valB={teamB.corners_avg.toFixed(1)} />
           <StatRow label="Posesión %" valA={teamA.possession_avg} valB={teamB.possession_avg} />
-          <StatRow label="Pases/P"   valA={teamA.passes_avg} valB={teamB.passes_avg} />
-          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🛡️ Defensa</p>
-          <StatRow label="Goles en contra/P" valA={teamA.ga_avg.toFixed(2)} valB={teamB.ga_avg.toFixed(2)} higherIsBetter={false} />
-          <StatRow label="Tiros recibidos/P" valA={teamA.shots_against_avg.toFixed(1)} valB={teamB.shots_against_avg.toFixed(1)} higherIsBetter={false} />
-          <StatRow label="Córners vs/P"      valA={teamA.corners_against_avg.toFixed(1)} valB={teamB.corners_against_avg.toFixed(1)} higherIsBetter={false} />
-          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">🟨 Disciplina</p>
           <StatRow label="Tarjetas/P" valA={teamA.cards_avg.toFixed(1)} valB={teamB.cards_avg.toFixed(1)} higherIsBetter={false} />
-          <StatRow label="Faltas/P"   valA={teamA.fouls_avg.toFixed(1)} valB={teamB.fouls_avg.toFixed(1)} higherIsBetter={false} />
-          <p className="text-xs text-gray-600 uppercase tracking-wide mb-1 mt-3">📈 Historial</p>
+          <StatRow label="Goles contra/P" valA={teamA.ga_avg.toFixed(2)} valB={teamB.ga_avg.toFixed(2)} higherIsBetter={false} />
+          <StatRow label="Throw-ins/P" valA={teamA.throwins_avg.toFixed(1)} valB={teamB.throwins_avg.toFixed(1)} />
+          <StatRow label="GK/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
           <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
-          <StatRow label="CS%"   valA={`${teamA.cs_pct}%`} valB={`${teamB.cs_pct}%`} />
           <StatRow label="BTTS%" valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
-          <p className="text-xs text-gray-600 mt-2">🟩 verde = mejor valor · GK/TI estimados desde posesión (API no los provee)</p>
         </div>
       )}
     </div>
   )
 }
 
-// ─── Last5Panel — últimos 5 partidos reales ──────────────────────────────────
-const RESULT_STYLE = { W: 'bg-green-900/60 text-green-300', D: 'bg-gray-700 text-gray-300', L: 'bg-red-900/60 text-red-300' }
-const L5_COLS = [
-  { key: 'result',  label: 'R' },
-  { key: 'gf',      label: 'G+' },
-  { key: 'ga',      label: 'G-' },
-  { key: 'shots',   label: 'Tiros' },
-  { key: 'sot',     label: 'SOT' },
-  { key: 'corners', label: 'Cors' },
-  { key: 'cards',   label: 'Tarj' },
-  { key: 'fouls',   label: 'Falt' },
-]
+// ─── MatchColumn — estilo adamchoi: fila verde si Over, roja si Under ────────
+const RESULT_DOT = { W: 'bg-green-500', D: 'bg-gray-500', L: 'bg-red-500' }
 
-function L5Table({ team }) {
-  const matches = team.last5 ?? []
-  if (!matches.length) return <p className="text-xs text-gray-600">Sin datos de partidos recientes</p>
+function MatchColumn({ title, rows, getVal, getSplit, line, accent }) {
+  const vals = (rows ?? []).map(getVal)
+  const valid = vals.filter(v => v != null)
+  const overs = valid.filter(v => v > line).length
+  const pct = valid.length ? Math.round((overs / valid.length) * 100) : null
+
   return (
-    <div className="overflow-x-auto">
-      <table className="w-full text-xs">
-        <thead>
-          <tr>
-            <th className="text-left text-gray-500 pb-1 pr-2 font-normal">Rival</th>
-            {L5_COLS.map(c => (
-              <th key={c.key} className="text-center text-gray-500 pb-1 px-1 font-normal whitespace-nowrap">{c.label}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {matches.map((m, i) => (
-            <tr key={i} className="border-t border-dark-700/60">
-              <td className="text-gray-400 py-1 pr-2 whitespace-nowrap">
-                {m.isHome ? '🏠' : '✈️'} {m.rival}
-              </td>
-              {L5_COLS.map(c => (
-                <td key={c.key} className="text-center py-1 px-1">
-                  {c.key === 'result'
-                    ? <span className={`inline-block w-5 h-5 rounded text-center leading-5 text-xs font-bold ${RESULT_STYLE[m.result]}`}>{m.result}</span>
-                    : <span className="text-gray-200">{m[c.key] ?? '—'}</span>
-                  }
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="min-w-0">
+      <p className={`text-xs font-bold mb-1.5 truncate ${accent}`}>{title}</p>
+      <div className="space-y-1">
+        {(rows ?? []).map((r, i) => {
+          const v = vals[i]
+          const over = v != null && v > line
+          const bg = v == null
+            ? 'bg-dark-700/40'
+            : over ? 'bg-green-900/50' : 'bg-red-900/45'
+          // Desglose propio · rival (solo variante Total)
+          let split = null
+          if (getSplit && v != null) {
+            const [own, ag] = getSplit(r)
+            if (own != null || ag != null) split = `${own ?? '—'}·${ag ?? '—'}`
+          }
+          return (
+            <div key={i} className={`flex items-center gap-1.5 px-2 py-1 rounded ${bg}`}>
+              <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${RESULT_DOT[r.result] ?? 'bg-gray-600'}`} />
+              <span className="text-gray-500 text-[10px] w-8 shrink-0">{r.date?.slice(5)}</span>
+              <span className="text-purple-400/80 text-[9px] w-11 shrink-0 truncate" title={r.comp}>{compAbbr(r.comp)}</span>
+              <span className="text-[10px] shrink-0">{r.isHome ? '🏠' : '✈️'}</span>
+              <span className="flex-1 truncate text-gray-200 text-[11px]">{r.rival}</span>
+              {split && <span className="text-gray-500 text-[10px] font-mono shrink-0" title="propio · rival">{split}</span>}
+              <span className={`w-8 text-right font-bold text-xs shrink-0 ${
+                v == null ? 'text-gray-600' : over ? 'text-green-300' : 'text-red-300'
+              }`}>{v ?? '—'}</span>
+            </div>
+          )
+        })}
+        {(rows ?? []).length === 0 && <p className="text-xs text-gray-600 py-2">Sin historial</p>}
+      </div>
+      {pct != null && (
+        <p className="text-[11px] mt-1.5 text-gray-400">
+          Over {line}: <span className={`font-bold ${pct >= 70 ? 'text-green-400' : pct >= 50 ? 'text-yellow-400' : 'text-red-400'}`}>
+            {overs}/{valid.length} ({pct}%)
+          </span>
+        </p>
+      )}
     </div>
   )
 }
 
-function Last5Panel({ teamA, teamB }) {
+// Líneas que admiten negativos (hándicap)
+function signedLines(expected, step = 1, count = 5) {
+  const c = Math.floor(expected) + 0.5
+  const half = Math.floor(count / 2)
+  const out = []
+  for (let i = -half; i <= half; i++) out.push(+(c + i * step).toFixed(2))
+  return out
+}
+
+// ─── LadderRow — línea clickeable con P del modelo ───────────────────────────
+function LadderRow({ line, expected, isHandicap, onClick, active }) {
+  const diff = expected - line
+  const margin = isHandicap ? null : diff / line
+  const dir = diff > 0 ? 'OVER' : 'UNDER'
+  const pOver = isHandicap ? null : Math.round(poissonOver(expected, line) * 100)
+  const p = dir === 'OVER' ? pOver : pOver != null ? 100 - pOver : null
+  const strong = isHandicap ? Math.abs(diff) >= 1 : Math.abs(margin) >= 0.08
+  const weak = isHandicap ? Math.abs(diff) < 0.4 : Math.abs(margin) < 0.04
+
+  return (
+    <button onClick={onClick}
+      className={`w-full flex items-center gap-2 px-2 py-1.5 rounded text-xs transition-colors text-left ${
+        active ? 'bg-dark-600 ring-1 ring-green-600' : 'hover:bg-dark-700'
+      }`}>
+      <span className="text-gray-400 font-mono w-12 shrink-0">{line > 0 || isHandicap ? line : line}</span>
+      {weak ? (
+        <span className="text-gray-600 flex-1">❌ Sin señal — expected pegado a la línea</span>
+      ) : (
+        <>
+          <span className={`font-bold w-14 shrink-0 ${dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}`}>
+            {strong ? '✅' : '⚠️'} {dir}
+          </span>
+          {margin != null && (
+            <span className={margin > 0 ? 'text-green-500' : 'text-blue-500'}>
+              {margin > 0 ? '+' : ''}{Math.round(margin * 100)}%
+            </span>
+          )}
+          {p != null && <span className="text-gray-500 ml-auto">P≈{p}%</span>}
+          {isHandicap && <span className="text-gray-500 ml-auto">dif {diff > 0 ? '+' : ''}{diff.toFixed(1)}</span>}
+        </>
+      )}
+      <span className="text-gray-600 shrink-0">{active ? '▲' : '¿por qué?'}</span>
+    </button>
+  )
+}
+
+// ─── MarketCard v2 — acordeón con variantes y explicación ────────────────────
+function MarketCard({ icon, title, teamA, teamB, cfg, notes = [], explain }) {
   const [open, setOpen] = useState(false)
-  const [tab, setTab] = useState('a')
+  const [variantKey, setVariantKey] = useState('total')
+  const [selLine, setSelLine] = useState(null)
+  const [explLine, setExplLine] = useState(null) // línea con explicación abierta
+
+  const rec = useMemo(() => bestRealisticLine(cfg.expTotal, cfg.stepTotal), [cfg.expTotal, cfg.stepTotal])
+
+  // Lectura del motor en prosa — el porqué del expected, siempre visible al desplegar
+  const lectura = useMemo(() => {
+    try {
+      const bullets = explain('total', cfg.expTotal, cfg.expTotal, false) ?? []
+      return bullets
+        .filter(b => typeof b === 'string' && !/^Expected |^El motor proyecta|^🔎/.test(b))
+        .slice(0, 4)
+        .join(' ')
+    } catch { return '' }
+  }, [explain, cfg.expTotal])
+
+  const VARIANTS = useMemo(() => {
+    const v = [
+      { key: 'total', label: 'Total' },
+      { key: 'teamA', label: teamA.name.slice(0, 14) },
+      { key: 'teamB', label: teamB.name.slice(0, 14) },
+    ]
+    if (cfg.handicap) v.push({ key: 'handicap', label: 'Hándicap' })
+    return v
+  }, [teamA.name, teamB.name, cfg.handicap])
+
+  // Construir la variante activa
+  const v = useMemo(() => {
+    const { statKey, agKey, expTotal, expA, expB, stepTotal, stepTeam } = cfg
+    const own = r => r[statKey]
+    const ag = r => r[agKey]
+    const total = r => (r[statKey] != null && r[agKey] != null) ? r[statKey] + r[agKey] : null
+    const diffVal = r => (r[statKey] != null && r[agKey] != null) ? +(r[statKey] - r[agKey]).toFixed(1) : null
+
+    if (variantKey === 'teamA') return {
+      expected: expA, lines: linesAround(expA, stepTeam, 5), isHandicap: false,
+      colA: { title: `${teamA.name} — a favor`, rows: teamA.last10, getVal: own, accent: 'text-green-400' },
+      colB: { title: `${teamA.name} — en contra`, rows: teamA.last10, getVal: ag, accent: 'text-orange-400' },
+      hint: `Escalera sobre lo que genera ${teamA.name}. La columna "en contra" muestra lo que le hacen — úsala para el mercado "${title} en contra".`,
+    }
+    if (variantKey === 'teamB') return {
+      expected: expB, lines: linesAround(expB, stepTeam, 5), isHandicap: false,
+      colA: { title: `${teamB.name} — a favor`, rows: teamB.last10, getVal: own, accent: 'text-blue-400' },
+      colB: { title: `${teamB.name} — en contra`, rows: teamB.last10, getVal: ag, accent: 'text-orange-400' },
+      hint: `Escalera sobre lo que genera ${teamB.name}.`,
+    }
+    if (variantKey === 'handicap') {
+      const expDiff = +(expA - expB).toFixed(2)
+      return {
+        expected: expDiff, lines: signedLines(expDiff, cfg.stepTeam, 5), isHandicap: true,
+        colA: { title: `${teamA.name} (dif propio-rival)`, rows: teamA.last10, getVal: diffVal, accent: 'text-green-400' },
+        colB: { title: `${teamB.name} (dif propio-rival)`, rows: teamB.last10, getVal: diffVal, accent: 'text-blue-400' },
+        hint: `Hándicap desde ${teamA.name}: Over de la línea = ${teamA.name} supera a ${teamB.name} por más de esa diferencia.`,
+      }
+    }
+    const split = r => [r[statKey], r[agKey]]
+    return {
+      expected: expTotal, lines: linesAround(expTotal, stepTotal, 5), isHandicap: false,
+      colA: { title: teamA.name, rows: teamA.last10, getVal: total, getSplit: split, accent: 'text-green-400' },
+      colB: { title: teamB.name, rows: teamB.last10, getVal: total, getSplit: split, accent: 'text-blue-400' },
+      hint: 'Valor = total del partido · el número pequeño es el desglose propio·rival',
+    }
+  }, [variantKey, cfg, teamA, teamB, title])
+
+  const line = selLine != null && v.lines.includes(selLine) ? selLine : (v.lines[Math.floor(v.lines.length / 2)] ?? null)
+
   return (
-    <div className="card border border-dark-600">
-      <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
-        <span className="font-semibold text-white text-sm">📋 Últimos 5 partidos — datos reales</span>
-        <span className="text-gray-400">{open ? '▲' : '▼'}</span>
+    <div className="card border border-dark-600 !p-0 overflow-hidden self-start">
+      {/* Header acordeón */}
+      <button onClick={() => setOpen(o => !o)} className="w-full flex items-center gap-3 p-4 text-left hover:bg-dark-700/50 transition-colors">
+        <span className="text-lg shrink-0">{icon}</span>
+        <div className="flex-1 min-w-0">
+          <p className="font-bold text-white text-sm">{title}</p>
+          <p className="text-xs text-gray-500">Expected: <span className="text-green-400 font-bold">{cfg.expTotal}</span>
+            <span className="ml-2 text-gray-600">{teamA.name.slice(0, 10)} {cfg.expA} · {teamB.name.slice(0, 10)} {cfg.expB}</span>
+          </p>
+        </div>
+        {rec && (
+          <span className={`text-xs font-bold px-2 py-1 rounded shrink-0 ${
+            rec.dir === 'OVER' ? 'bg-green-900/50 text-green-300' : 'bg-blue-900/50 text-blue-300'
+          }`}>{rec.dir} {rec.line}</span>
+        )}
+        <span className="text-gray-500 shrink-0">{open ? '▲' : '▼'}</span>
       </button>
+
       {open && (
-        <div className="mt-3 border-t border-dark-600 pt-3">
-          <div className="flex gap-2 mb-3">
-            <button onClick={() => setTab('a')}
-              className={`text-xs px-3 py-1 rounded-full border transition-colors ${tab === 'a' ? 'bg-green-700 border-green-600 text-white font-semibold' : 'border-dark-600 text-gray-400 hover:border-green-600 hover:text-green-400'}`}>
-              {teamA.name}
-            </button>
-            <button onClick={() => setTab('b')}
-              className={`text-xs px-3 py-1 rounded-full border transition-colors ${tab === 'b' ? 'bg-blue-700 border-blue-600 text-white font-semibold' : 'border-dark-600 text-gray-400 hover:border-blue-600 hover:text-blue-400'}`}>
-              {teamB.name}
-            </button>
+        <div className="px-4 pb-4 space-y-3 border-t border-dark-600 pt-3">
+          {/* Lectura del motor — el porqué en palabras */}
+          {lectura && (
+            <div className="bg-purple-950/30 border border-purple-800/30 rounded-lg p-3">
+              <p className="text-xs text-gray-200 leading-relaxed">📝 <span className="text-purple-300 font-semibold">Lectura del motor:</span> {lectura}</p>
+            </div>
+          )}
+
+          {notes.map((n, i) => <p key={i} className="text-[11px] text-gray-500">{n}</p>)}
+
+          {/* Variantes */}
+          <div className="flex gap-1.5 flex-wrap">
+            {VARIANTS.map(vt => (
+              <button key={vt.key}
+                onClick={() => { setVariantKey(vt.key); setSelLine(null); setExplLine(null) }}
+                className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                  variantKey === vt.key ? 'bg-green-700 text-white' : 'bg-dark-700 text-gray-400 hover:text-white'
+                }`}>
+                {vt.label}
+              </button>
+            ))}
           </div>
-          {tab === 'a' ? <L5Table team={teamA} /> : <L5Table team={teamB} />}
+
+          {/* Escalera de líneas */}
+          <div className="bg-dark-800/60 rounded-lg p-1.5 space-y-0.5">
+            <p className="text-[10px] text-gray-600 uppercase tracking-wide px-2 pt-1">
+              Expected {v.isHandicap ? 'diferencia' : ''}: <span className="text-green-400 font-bold">{v.expected}</span> — toca una línea para ver el porqué
+            </p>
+            {v.lines.map(l => (
+              <div key={l}>
+                <LadderRow line={l} expected={v.expected} isHandicap={v.isHandicap}
+                  active={explLine === l}
+                  onClick={() => { setSelLine(l); setExplLine(explLine === l ? null : l) }} />
+                {explLine === l && (
+                  <div className="mx-2 my-1 p-3 bg-dark-900/80 border border-green-900/40 rounded-lg space-y-1">
+                    {explain(variantKey, l, v.expected, v.isHandicap).map((b, i) => (
+                      <p key={i} className="text-[11px] text-gray-300">• {b}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Historial */}
+          <div className="grid grid-cols-2 gap-3">
+            <MatchColumn {...v.colA} line={line} />
+            <MatchColumn {...v.colB} line={line} />
+          </div>
+          <p className="text-[10px] text-gray-600">{v.hint} · 🟢 Over {line} · 🔴 Under · punto = W/D/L</p>
         </div>
       )}
     </div>
   )
 }
 
-// ─── Default context ──────────────────────────────────────────────────────────
-const DEFAULT_CTX = {
-  jornada: 'inicio', descansoA: 5, descansoB: 5,
-  viajeA: false, viajeB: false,
-  motA: 'cualquier_result', motB: 'cualquier_result',
-  checks: {},
+// ─── H2HCard — enfrentamientos directos ──────────────────────────────────────
+function FormBadges({ form }) {
+  return (
+    <div className="flex gap-0.5">
+      {(form ?? []).slice(0, 6).map((r, i) => (
+        <span key={i} className={`w-4 h-4 rounded-sm text-[10px] leading-4 text-center text-white font-bold ${
+          r === 'W' ? 'bg-green-600' : r === 'D' ? 'bg-gray-600' : 'bg-red-600'
+        }`}>{r}</span>
+      ))}
+    </div>
+  )
+}
+
+function H2HCard({ teamA, teamB }) {
+  const [h2h, setH2h] = useState(null)
+  const [meetingStats, setMeetingStats] = useState({})
+  const [statsOpen, setStatsOpen] = useState(false)
+
+  useEffect(() => {
+    let alive = true
+    if (!hasLivescore()) return
+    fetchH2H(teamA.id, teamB.id).then(res => { if (alive && res.ok) setH2h(res) })
+    return () => { alive = false }
+  }, [teamA.id, teamB.id])
+
+  // Stats de los cruces al expandir (cacheadas para siempre)
+  useEffect(() => {
+    if (!statsOpen || !h2h?.meetings?.length) return
+    let alive = true
+    ;(async () => {
+      const acc = {}
+      for (const m of h2h.meetings) {
+        try {
+          const res = await fetchFixtureStats(m.id, m.homeId, m.awayId)
+          const sum = name => {
+            const h = res.stats?.[0]?.stats?.[name]
+            const a = res.stats?.[1]?.stats?.[name]
+            const hn = typeof h === 'string' ? parseFloat(h) : h
+            const an = typeof a === 'string' ? parseFloat(a) : a
+            return hn != null && an != null ? hn + an : null
+          }
+          acc[m.id] = {
+            corners: sum('Corner Kicks'),
+            shots: sum('Total Shots'),
+            cards: (() => { const y = sum('Yellow Cards'); const r = sum('Red Cards'); return y != null ? y + (r ?? 0) : null })(),
+            ti: sum('Throw Ins'),
+          }
+          if (alive) setMeetingStats({ ...acc })
+        } catch {}
+      }
+    })()
+    return () => { alive = false }
+  }, [statsOpen, h2h])
+
+  if (!h2h) return null
+
+  return (
+    <div className="card border border-purple-800/40 space-y-3">
+      <div className="flex items-center justify-between flex-wrap gap-2">
+        <p className="font-bold text-white text-sm">⚔️ Head to Head — últimos {h2h.meetings.length} cruces</p>
+        <button onClick={() => setStatsOpen(o => !o)} className="text-xs text-purple-400 hover:text-purple-300">
+          {statsOpen ? '▲ ocultar stats' : '▼ ver stats de los cruces'}
+        </button>
+      </div>
+
+      {/* Forma */}
+      <div className="grid grid-cols-2 gap-3 text-xs">
+        <div className="space-y-1.5">
+          <p className="text-green-400 font-semibold truncate">{h2h.team1.name}</p>
+          <div className="flex items-center gap-2"><span className="text-gray-600 w-14">General</span><FormBadges form={h2h.team1.overallForm} /></div>
+          <div className="flex items-center gap-2"><span className="text-gray-600 w-14">vs rival</span><FormBadges form={h2h.team1.h2hForm} /></div>
+        </div>
+        <div className="space-y-1.5">
+          <p className="text-blue-400 font-semibold truncate">{h2h.team2.name}</p>
+          <div className="flex items-center gap-2"><span className="text-gray-600 w-14">General</span><FormBadges form={h2h.team2.overallForm} /></div>
+          <div className="flex items-center gap-2"><span className="text-gray-600 w-14">vs rival</span><FormBadges form={h2h.team2.h2hForm} /></div>
+        </div>
+      </div>
+
+      {/* Cruces */}
+      <div className="space-y-1">
+        {h2h.meetings.map(m => {
+          const st = meetingStats[m.id]
+          return (
+            <div key={m.id} className="flex items-center gap-2 px-2 py-1.5 rounded bg-dark-700/60 text-xs">
+              <span className="text-gray-500 text-[10px] w-16 shrink-0">{m.date}</span>
+              <span className={`flex-1 text-right truncate ${m.homeGoals > m.awayGoals ? 'text-green-300 font-bold' : 'text-gray-300'}`}>{m.homeTeam}</span>
+              <span className="text-white font-bold shrink-0 px-1">{m.homeGoals} - {m.awayGoals}</span>
+              <span className={`flex-1 truncate ${m.awayGoals > m.homeGoals ? 'text-green-300 font-bold' : 'text-gray-300'}`}>{m.awayTeam}</span>
+              {statsOpen && (
+                <span className="text-[10px] text-gray-500 shrink-0 w-40 text-right">
+                  {st
+                    ? <>C:{st.corners ?? '—'} T:{st.shots ?? '—'} Tj:{st.cards ?? '—'} TI:{st.ti ?? '—'}</>
+                    : 'cargando...'}
+                </span>
+              )}
+            </div>
+          )
+        })}
+      </div>
+      {statsOpen && <p className="text-[10px] text-gray-600">C = córners · T = tiros · Tj = tarjetas · TI = throw-ins (totales del cruce)</p>}
+    </div>
+  )
 }
 
 // ─── PickCard ─────────────────────────────────────────────────────────────────
@@ -265,7 +450,6 @@ function PickCard({ pick, rank, teamA, teamB, ctx, calc, modsA, modsB }) {
       {open && exp && (
         <div className="px-4 pb-4 pt-1 border-t border-dark-600 space-y-3 text-xs">
           <p className="text-gray-300">{exp.summary}</p>
-
           {exp.pushUp.length > 0 && (
             <div>
               <p className="text-green-400 font-semibold mb-1">Factores que empujan ARRIBA</p>
@@ -278,7 +462,6 @@ function PickCard({ pick, rank, teamA, teamB, ctx, calc, modsA, modsB }) {
               ))}
             </div>
           )}
-
           {exp.pushDown.length > 0 && (
             <div>
               <p className="text-red-400 font-semibold mb-1">Factores de riesgo</p>
@@ -291,26 +474,95 @@ function PickCard({ pick, rank, teamA, teamB, ctx, calc, modsA, modsB }) {
               ))}
             </div>
           )}
-
-          <div>
-            <p className="text-gray-500 font-semibold mb-1">Variables clave</p>
-            <div className="grid grid-cols-2 gap-1">
-              {exp.keyVars.map((v, i) => (
-                <div key={i} className="bg-dark-800 rounded p-1.5">
-                  <p className="text-gray-500">{v.label}</p>
-                  <p className="text-white font-bold">{v.value}</p>
-                  <p className="text-gray-600">{v.weight}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {exp.risks.length > 0 && (
             <div className="bg-yellow-900/20 border border-yellow-800/30 rounded p-2">
               <p className="text-yellow-400 font-semibold mb-1">⚠️ Riesgos a considerar</p>
               {exp.risks.map((r, i) => <p key={i} className="text-yellow-300">• {r}</p>)}
             </div>
           )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ─── InformeIA — Claude busca en internet: noticias, alineaciones, clima ─────
+function InformeIA({ teamA, teamB, league, calc }) {
+  const [estado, setEstado] = useState('idle') // idle | loading | done | error
+  const [informe, setInforme] = useState(null)
+  const [error, setError] = useState(null)
+
+  // Reset al cambiar de cruce
+  useEffect(() => {
+    setEstado('idle'); setInforme(null); setError(null)
+  }, [teamA.id, teamB.id])
+
+  async function generar() {
+    setEstado('loading')
+    setError(null)
+    try {
+      const res = await informePrePartido({ teamA, teamB, league, calc })
+      setInforme(res)
+      setEstado('done')
+    } catch (e) {
+      setError(e.message)
+      setEstado('error')
+    }
+  }
+
+  if (!hasIA()) {
+    return (
+      <div className="card border border-purple-800/40">
+        <p className="font-bold text-white text-sm mb-2">🧠 Informe IA — busca en internet lo que las stats no ven</p>
+        <p className="text-xs text-gray-400 mb-2">
+          Noticias, alineaciones probables, bajas de última hora y clima — Claude los busca en la web y los contrasta con los números del motor.
+        </p>
+        <div className="bg-dark-700 rounded-lg p-3 text-xs text-gray-400 space-y-1">
+          <p className="text-yellow-500 font-semibold">Para activarlo:</p>
+          <p>1. Crea una API key en <span className="text-white">console.anthropic.com</span> → API Keys</p>
+          <p>2. Pégala en <span className="text-white font-mono">.env.local</span> → <span className="font-mono">VITE_ANTHROPIC_API_KEY=sk-ant-...</span></p>
+          <p>3. Reinicia el servidor</p>
+          <p className="text-gray-600 pt-1">Costo aproximado: $0.10–0.30 USD por informe (modelo + búsquedas web). Se cachea 6 horas.</p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="card border-2 border-purple-700/60 bg-gradient-to-b from-purple-950/40 to-dark-800 space-y-3">
+      <div className="flex items-center justify-between flex-wrap gap-2">
+        <p className="font-bold text-purple-200 text-base">🧠 Informe IA — {teamA.name} vs {teamB.name}</p>
+        {estado !== 'loading' && (
+          <button onClick={generar}
+            className="px-4 py-2 rounded-xl bg-purple-700 hover:bg-purple-600 text-white text-sm font-bold transition-colors">
+            {estado === 'done' ? '🔄 Regenerar' : '🔍 Buscar en internet'}
+          </button>
+        )}
+      </div>
+      <p className="text-xs text-gray-500 -mt-1">
+        Claude busca noticias, alineaciones probables, bajas y clima de las últimas 48-72h, y los contrasta con los números del motor.
+      </p>
+
+      {estado === 'loading' && (
+        <div className="text-center py-8">
+          <div className="animate-spin w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full mx-auto mb-3" />
+          <p className="text-purple-300 text-sm font-semibold">Buscando en internet...</p>
+          <p className="text-gray-500 text-xs mt-1">Alineaciones, bajas, noticias, clima — tarda 30-90 segundos</p>
+        </div>
+      )}
+
+      {estado === 'error' && (
+        <div className="bg-red-900/30 border border-red-800 rounded-xl px-4 py-3 text-sm text-red-300">
+          Error: {error}
+        </div>
+      )}
+
+      {estado === 'done' && informe && (
+        <div className="bg-dark-900/70 rounded-xl p-4">
+          <div className="text-sm text-gray-200 whitespace-pre-wrap leading-relaxed">{informe.texto}</div>
+          <p className="text-[10px] text-gray-600 mt-3 pt-2 border-t border-dark-700">
+            {informe.busquedas ?? '?'} búsquedas web · {informe.fromCache ? 'informe cacheado (máx 6h de antigüedad) — usa Regenerar para uno fresco' : 'generado ahora'}
+          </p>
         </div>
       )}
     </div>
@@ -330,9 +582,16 @@ function ComboCard({ combo }) {
         <span>P_comb: <strong className="text-purple-300">{combo.pCombo}%</strong></span>
         <span className="text-gray-500">Correlación: {combo.correlation}</span>
       </div>
-      <p className="text-gray-600 mt-1">Picks relativamente independientes — correlación baja</p>
     </div>
   )
+}
+
+// ─── Default context ──────────────────────────────────────────────────────────
+const DEFAULT_CTX = {
+  jornada: 'inicio', descansoA: 5, descansoB: 5,
+  viajeA: false, viajeB: false,
+  motA: 'cualquier_result', motB: 'cualquier_result',
+  checks: {},
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
@@ -377,7 +636,7 @@ export default function Analizar({ league, preloadTeams }) {
     if (b) setTeamBId(String(b))
   }, [preloadTeams, leagueTeams])
 
-  // ── Construir stats cuando ambos equipos están seleccionados ──
+  // ── Construir stats ──
   useEffect(() => {
     if (!teamAId || !teamBId) { setTeamA(null); setTeamB(null); return }
     const seq = ++buildSeq.current
@@ -434,6 +693,7 @@ export default function Analizar({ league, preloadTeams }) {
     const passes  = calcExpectedPasses(teamA, teamB)
     const fouls   = calcExpectedFouls(teamA, teamB, modsA.cards, modsB.cards)
     const goals   = calcExpectedGoals(teamA, teamB)
+    const cardsCausal = calcExpectedCards(teamA, teamB, fouls.expFoulsA, fouls.expFoulsB)
     const gk      = calcExpectedGK(teamA, teamB)
     const ti      = calcExpectedTI(teamA, teamB, {
       lluvia: !!ctx.checks?.lluvia,
@@ -448,8 +708,8 @@ export default function Analizar({ league, preloadTeams }) {
       cornB:    +(corners.expB * kC).toFixed(2),
       goalsA:   goals.expA,
       goalsB:   goals.expB,
-      cardsA:   +teamA.cards_avg.toFixed(2),
-      cardsB:   +teamB.cards_avg.toFixed(2),
+      cardsA:   cardsCausal.expA,
+      cardsB:   cardsCausal.expB,
       shots1hA: +teamA.shots_1h.toFixed(2),
       shots1hB: +teamB.shots_1h.toFixed(2),
       shots2hA: +teamA.shots_2h.toFixed(2),
@@ -493,7 +753,6 @@ export default function Analizar({ league, preloadTeams }) {
       goals2hB: +(base.goals2hB * modsB.goals).toFixed(2),
       cards1hA: +(base.cards1hA * modsA.cards).toFixed(2),
       cards1hB: +(base.cards1hB * modsB.cards).toFixed(2),
-      // GK/TI: la fórmula v2 ya incluye interacción y contexto — sin mods genéricos
       gkA: base.gkA,
       gkB: base.gkB,
       tiA: base.tiA,
@@ -524,26 +783,184 @@ export default function Analizar({ league, preloadTeams }) {
     }
 
     const volumeAlert = getVolumeAlert(bTot.shots, t.shots)
-    return { base, adj, t, bTot, volumeAlert, passes, fouls, goals, gkCalc: gk, tiCalc: ti }
+    return { base, adj, t, bTot, volumeAlert, passes, fouls, goals, gkCalc: gk, tiCalc: ti, cardsCausal, cornersCalc: corners }
   }, [teamA, teamB, modsA, modsB, ctx.checks, league])
 
-  // ─── Picks ───────────────────────────────────────────────────────────────
+  // ─── Picks — top 5 ordenados por confianza ───────────────────────────────
   const { picks, combo } = useMemo(() => {
     if (!calc || !teamA || !teamB) return { picks: [], combo: null }
     const candidates = generateCandidates(calc, null, teamA, teamB)
-    const top  = selectTopPicks(candidates)
-    const c    = suggestCombo(top)
+    const top = selectTopPicks(candidates, 5)
+      .sort((a, b) => b.confidence - a.confidence || Math.abs(b.margin) - Math.abs(a.margin))
+    const c = suggestCombo(top)
     return { picks: top, combo: c }
   }, [calc, teamA, teamB])
 
   const ready = !!calc
 
+  // ─── Guardar snapshot de la predicción (7 días) para comparar post-partido ──
+  const [snapshotPrevio, setSnapshotPrevio] = useState(null)
+  useEffect(() => {
+    if (!calc || !teamA || !teamB) return
+    // Detectar si ya había una predicción guardada de ANTES (para mostrar su fecha)
+    const previa = getPrediccion(league.id, teamA.name, teamB.name)
+    if (previa && Date.now() - previa.ts > 5 * 60_000) setSnapshotPrevio(previa)
+    else if (!previa) setSnapshotPrevio(null)
+    // NO pisar una predicción histórica (>24h): es el registro pre-partido.
+    // Re-analizar un partido ya jugado no debe borrar lo que se predijo.
+    if (previa && Date.now() - previa.ts > 24 * 3600_000) return
+    savePrediccion({
+      leagueId: league.id,
+      teamAName: teamA.name,
+      teamBName: teamB.name,
+      expected: {
+        goals: calc.t.goals, shots: calc.t.shots, sot: calc.t.sot,
+        corners: calc.t.corners, cards: calc.t.cards, fouls: calc.fouls.total,
+        ti: calc.t.ti, gk: calc.t.gk,
+        goalsA: calc.adj.goalsA, goalsB: calc.adj.goalsB,
+        shotsA: calc.adj.shotsA, shotsB: calc.adj.shotsB,
+      },
+      picks,
+    })
+  }, [calc, teamA, teamB, league.id, picks])
+
+  // ─── Explicaciones por mercado — el "porqué" de cada recomendación ───────
+  const explainFor = useMemo(() => {
+    if (!teamA || !teamB || !calc) return () => () => []
+    const A = teamA, B = teamB
+    const base = getBaseline(league.id)
+    const f1 = n => n?.toFixed?.(1) ?? n
+
+    const commonLine = (line, expected, isHandicap) => {
+      if (isHandicap) {
+        const d = expected - line
+        return `El motor proyecta una diferencia de ${expected > 0 ? '+' : ''}${f1(expected)} a favor de ${expected >= 0 ? A.name : B.name}; contra la línea ${line} el colchón es de ${d > 0 ? '+' : ''}${f1(d)}.`
+      }
+      const m = Math.round(((expected - line) / line) * 100)
+      const p = Math.round(poissonOver(expected, line) * 100)
+      return `Expected ${f1(expected)} vs línea ${line}: margen ${m > 0 ? '+' : ''}${m}%. Poisson da ${p}% de probabilidad al Over (${100 - p}% al Under).`
+    }
+
+    const modNote = (statMod, label) => {
+      const a = modsA[statMod], b = modsB[statMod]
+      const out = []
+      if (Math.abs(a - 1) > 0.02) out.push(`Contexto de ${A.name} (motivación/descanso/fase) aplica ×${a.toFixed(2)} a ${label}`)
+      if (Math.abs(b - 1) > 0.02) out.push(`Contexto de ${B.name} aplica ×${b.toFixed(2)} a ${label}`)
+      return out
+    }
+
+    // Lectura de estilo desde posesión real (no hay dato táctico directo en la API)
+    const posDiff = A.possession_avg - B.possession_avg
+    const dominio = Math.abs(posDiff) >= 8
+      ? `${posDiff > 0 ? A.name : B.name} domina el balón (${Math.max(A.possession_avg, B.possession_avg)}% vs ${Math.min(A.possession_avg, B.possession_avg)}%): el rival se replegará, cede volumen pero congestiona el área.`
+      : `Posesión pareja (${A.possession_avg}% vs ${B.possession_avg}%) — partido de ida y vuelta, sin dominador claro.`
+    const estiloB = B.possession_avg <= 44
+      ? `${B.name} juega replegado (posesión ${B.possession_avg}%): concede tiros de volumen pero bloquea los de calidad.`
+      : B.possession_avg >= 56
+        ? `${B.name} propone con balón (${B.possession_avg}%): deja espacios a la contra.`
+        : null
+    const contexto = [
+      ctx.jornada === 'inicio' ? 'Inicio de temporada: rodaje irregular, la varianza sube y el expected se recorta ×0.94.' : null,
+      A.tierAdj || B.tierAdj ? `${(A.tierAdj ? A : B).name} viene de división inferior — todas sus stats ya llegan descontadas a este análisis.` : null,
+      '🔎 Lo que la API NO da: alineaciones confirmadas y clima. Decláralos tú en el panel "Contexto" (lluvia, motivación, descanso, derby) y el expected se ajusta al instante.',
+    ].filter(Boolean)
+
+    const REASONS = {
+      goles: () => [
+        (A.xg_avg != null || B.xg_avg != null)
+          ? `xG real (Sofascore): ${A.name} genera ${A.xg_avg ?? '?'} xG/partido${A.xg_avg != null && Math.abs(A.xg_avg - A.gf_avg) > 0.3 ? (A.xg_avg > A.gf_avg ? ` — genera MÁS de lo que anota (${A.gf_avg}): definición fría, regresión al alza esperable` : ` — anota MÁS de lo que genera (${A.gf_avg}): sobre-rendimiento, cuidado`) : ''}. ${B.name}: ${B.xg_avg ?? '?'} xG.`
+          : null,
+        dominio,
+        `${A.name} promedia ${A.gf_avg} goles/partido y enfrenta una defensa que concede ${B.ga_avg} (media de la liga: ${base.gaAvg}) → su expected ${B.ga_avg > base.gaAvg ? 'sube' : 'baja'}.`,
+        `${B.name} promedia ${B.gf_avg} y ataca contra una defensa que concede ${A.ga_avg}.`,
+        A.tierAdj ? `⬇️ ${A.name} recién llegado de división inferior — sus goles ya vienen descontados ×0.68.` : null,
+        B.tierAdj ? `⬇️ ${B.name} recién llegado de división inferior — sus goles ya vienen descontados ×0.68.` : null,
+        calc.goals.bttsViable
+          ? `BTTS viable: ambos marcan y conceden con frecuencia (BTTS ${A.btts_pct}% y ${B.btts_pct}%).`
+          : `BTTS débil (${A.btts_pct}% y ${B.btts_pct}%) — al menos uno suele quedarse en cero o dejar en cero.`,
+        ...modNote('goals', 'goles'),
+        ...contexto,
+      ],
+      corners: () => [
+        A.styleReal
+          ? `${A.name} lanza ${A.crosses_avg} centros/partido (Sofascore) → estilo "${A.style}" ${A.style === 'bandas' ? '— cada centro despejado es un córner en potencia: ×1.25' : A.style === 'central' ? '— juego interior, pocos córners: ×0.90' : ''}.`
+          : null,
+        B.styleReal
+          ? `${B.name}: ${B.crosses_avg} centros/partido → estilo "${B.style}".`
+          : null,
+        `${A.name} genera ${A.corners_avg} córners/partido y ${B.name} concede ${B.corners_against_avg} — la interacción define el expected.`,
+        `${B.name} genera ${B.corners_avg} y ${A.name} concede ${A.corners_against_avg}.`,
+        `K de ${league.name} ×${league.kCorners}: ${league.kCorners > 1 ? 'liga de ritmo alto, más córners' : league.kCorners < 1 ? 'liga más pausada, menos córners' : 'factor neutro'}.`,
+        ...modNote('corners', 'córners'),
+      ].filter(Boolean),
+      shots: () => [
+        dominio,
+        estiloB,
+        `${A.name} remata ${A.shots_avg} veces/partido; ${B.name} concede ${B.shots_against_avg} tiros (media liga ~${base.shotsAvg}) — ${B.shots_against_avg > base.shotsAvg ? 'se deja rematar más que el promedio: sube el volumen' : 'concede menos que el promedio: recorta el volumen'}.`,
+        `${B.name} remata ${B.shots_avg}; ${A.name} concede ${A.shots_against_avg}.`,
+        A.tierAdj ? `⬇️ Los promedios de ${A.name} ya vienen descontados: ${A.tierAdj.lowerTierCount} partidos son de división inferior (tiros ×0.80).` : null,
+        B.tierAdj ? `⬇️ Los promedios de ${B.name} ya vienen descontados: ${B.tierAdj.lowerTierCount} partidos son de división inferior (tiros ×0.80).` : null,
+        `Reparto por tiempos: 1H ${calc.t.shots1h} · 2H ${calc.t.shots2h} — el 2H siempre carga más volumen.`,
+        ...modNote('shots', 'tiros'),
+        ...contexto,
+      ].filter(Boolean),
+      sot: () => [
+        `Precisión de ${A.name}: ${A.sot_avg} SOT de ${A.shots_avg} tiros (${Math.round((A.sot_avg / A.shots_avg) * 100)}% a puerta).`,
+        `Precisión de ${B.name}: ${B.sot_avg} de ${B.shots_avg} (${Math.round((B.sot_avg / B.shots_avg) * 100)}%).`,
+        `El SOT hereda el volumen de tiros — no lo combines con Tiros Over (correlación 0.85).`,
+      ],
+      cards: () => [
+        `Modelo causal: fricción → faltas → tarjetas. El cruce proyecta ${calc.fouls.total} faltas, y de ahí salen las tarjetas — no de un promedio pelado.`,
+        `${A.name}: 1 tarjeta cada ${calc.cardsCausal.rateA > 0 ? Math.round(1 / calc.cardsCausal.rateA) : '?'} faltas (tasa ${calc.cardsCausal.rateA}) — ${calc.cardsCausal.rateA > 0.22 ? 'equipo que comete faltas "de tarjeta": tácticas o violentas' : calc.cardsCausal.rateA < 0.14 ? 'faltea suave, los árbitros le perdonan' : 'disciplina normal'}.`,
+        `${B.name}: 1 cada ${calc.cardsCausal.rateB > 0 ? Math.round(1 / calc.cardsCausal.rateB) : '?'} faltas (tasa ${calc.cardsCausal.rateB}).`,
+        `${A.name} recibe ${A.cards_avg} tarjetas/partido con ${A.fouls_avg} faltas; ${B.name} ${B.cards_avg} con ${B.fouls_avg} faltas.`,
+        ctx.checks?.rivalidad ? `Clásico/derby marcado → tarjetas ×1.20.` : `Sin rivalidad especial marcada — si es un clásico, actívalo en Contexto.`,
+        ctx.jornada === 'final' ? 'Recta final: la presión sube las tarjetas ×1.12.' : ctx.jornada === 'ko' ? 'Eliminatoria: fricción alta, tarjetas ×1.10.' : null,
+        ...modNote('cards', 'tarjetas'),
+      ].filter(Boolean),
+      fouls: () => [
+        `${A.name} comete ${A.fouls_avg} faltas/partido y recibe ${A.fouls_against_avg}; ${B.name} comete ${B.fouls_avg}.`,
+        `Las faltas anticipan tarjetas y tiros libres — partidos trabados suben ambos.`,
+      ],
+      ti: () => [
+        A.estTi ? `TI de ${A.name} ESTIMADO desde baseline de liga (${base.tiAvg}) — la API aún no trae su dato.` : `TI de ${A.name} REAL: ${A.throwins_avg}/partido (muestra: ${A.tiSample} partidos, incluye amistosos recientes).`,
+        B.estTi ? `TI de ${B.name} ESTIMADO (${base.tiAvg}).` : `TI de ${B.name} REAL: ${B.throwins_avg}/partido (muestra: ${B.tiSample}).`,
+        A.styleReal ? `Estilo real de ${A.name}: "${A.style}" (${A.crosses_avg} centros/partido) → ${A.style === 'bandas' ? 'mucho juego lateral, TI ×1.22' : A.style === 'central' ? 'juego interior, TI ×0.88' : A.style === 'mixto-bandas' ? 'TI ×1.10' : 'neutro'}.` : null,
+        B.styleReal ? `Estilo de ${B.name}: "${B.style}" (${B.crosses_avg} centros/partido).` : null,
+        `K de ${league.name} para TI ×${league.kTI}: ${league.kTI > 1 ? 'liga física con mucho juego lateral' : league.kTI < 1 ? 'liga de posesión, menos banda' : 'neutro'}.`,
+        ctx.checks?.lluvia ? 'Lluvia intensa marcada → balón resbaladizo, TI ×1.15.' : null,
+        ctx.checks?.rivalidad ? 'Derby físico → más duelos y pelotas divididas, TI ×1.10.' : null,
+        `La posesión casi no afecta los TI (correlación -0.15) — lo que importa es el juego por bandas y la fricción.`,
+        `⚠️ No combinar con Córners Over del mismo partido (correlación 0.60).`,
+      ].filter(Boolean),
+      gk: () => [
+        `Posesión estimada: ${A.name} ${calc.gkCalc.posA}% · ${B.name} ${calc.gkCalc.posB}% — el que menos tiene el balón despeja y saca más de portería (correlación -0.72).`,
+        Math.abs(A.ppg - B.ppg) > 0.4
+          ? `${A.ppg < B.ppg ? A.name : B.name} es claramente inferior (PPG ${f1(Math.min(A.ppg, B.ppg))} vs ${f1(Math.max(A.ppg, B.ppg))}) → pasará el partido defendiendo → boost de GK ×${Math.abs(A.ppg - B.ppg) > 0.8 ? '1.28' : '1.10'}.`
+          : `Equipos parejos en nivel (PPG ${f1(A.ppg)} vs ${f1(B.ppg)}) — sin boost por diferencia de nivel.`,
+        `Un rival que remata mucho y desviado infla los GK: ${B.name} tira ${B.shots_avg}/partido hacia la portería de ${A.name}.`,
+        (A.estGk || B.estGk) ? `⚠️ GK estimados — la API aún no reporta goal kicks. Verifica en la casa antes de apostar fuerte.` : `✓ GK con datos reales.`,
+      ],
+    }
+
+    return (marketId) => (variantKey, line, expected, isHandicap) => {
+      const bullets = []
+      if (variantKey === 'teamA') bullets.push(`Mercado individual de ${A.name} — su generación propia, ajustada por lo que concede ${B.name}.`)
+      if (variantKey === 'teamB') bullets.push(`Mercado individual de ${B.name} — su generación propia, ajustada por lo que concede ${A.name}.`)
+      if (variantKey === 'handicap') bullets.push(`Duelo directo: PPG ${f1(A.ppg)} (${A.name}) vs ${f1(B.ppg)} (${B.name}).`)
+      bullets.push(...(REASONS[marketId]?.() ?? []).filter(Boolean))
+      bullets.push(commonLine(line, expected, isHandicap))
+      if (A.est || B.est) bullets.push(`⚠️ Muestra de stats reducida — trata la señal con cautela.`)
+      return bullets
+    }
+  }, [teamA, teamB, calc, league, ctx, modsA, modsB])
+
   return (
-    <div className="p-6 space-y-6 max-w-5xl">
+    <div className="p-6 space-y-5 max-w-7xl mx-auto">
 
       {/* ── Selección de equipos ── */}
       <div className="card">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <h1 className="text-xl font-bold text-white">Analizador de Partido</h1>
           <span className="text-xs text-gray-500">{league.flag} {league.name} · K córners ×{league.kCorners} · K TI ×{league.kTI}</span>
         </div>
@@ -572,13 +989,11 @@ export default function Analizar({ league, preloadTeams }) {
         </div>
       </div>
 
-      {/* ── Cargando stats ── */}
       {building && (
         <div className="card text-center py-10">
           <div className="animate-spin w-8 h-8 border-2 border-green-500 border-t-transparent rounded-full mx-auto mb-3" />
-          <p className="text-white font-semibold text-sm">Construyendo stats desde API-Football...</p>
+          <p className="text-white font-semibold text-sm">Construyendo stats desde la API...</p>
           <p className="text-gray-500 text-xs mt-1">{progress || 'Descargando últimos 10 partidos por equipo'}</p>
-          <p className="text-gray-600 text-xs mt-2">Primera vez ~20 llamadas · después queda en cache 30 días</p>
         </div>
       )}
 
@@ -591,25 +1006,13 @@ export default function Analizar({ league, preloadTeams }) {
       {/* ── Contexto ── */}
       {ready && (
         <div className="card border border-dark-600">
-          <button
-            onClick={() => setCtxOpen(o => !o)}
-            className="w-full flex items-center justify-between text-left"
-          >
+          <button onClick={() => setCtxOpen(o => !o)} className="w-full flex items-center justify-between text-left">
             <span className="font-semibold text-white text-sm">⚙️ Contexto del partido — ajusta el análisis</span>
             <span className="text-gray-400 text-lg">{ctxOpen ? '▲' : '▼'}</span>
           </button>
           {ctxOpen && (
             <div className="mt-4 border-t border-dark-600 pt-4">
-              <ContextPanel ctx={ctx} onChange={setCtx} teamAName={teamA?.name} teamBName={teamB?.name} sameGroup={false} />
-            </div>
-          )}
-          {!ctxOpen && (
-            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-500">
-              <span>Fase: <strong className="text-white">{ctx.jornada}</strong></span>
-              <span>Descanso {teamA?.name}: <strong className="text-white">{ctx.descansoA}d</strong></span>
-              <span>Descanso {teamB?.name}: <strong className="text-white">{ctx.descansoB}d</strong></span>
-              <span>Mot.Local: <strong className="text-white">{ctx.motA?.replace(/_/g, ' ')}</strong></span>
-              <span>Mot.Visit: <strong className="text-white">{ctx.motB?.replace(/_/g, ' ')}</strong></span>
+              <ContextPanel ctx={ctx} onChange={setCtx} teamAName={teamA?.name} teamBName={teamB?.name} />
             </div>
           )}
         </div>
@@ -623,7 +1026,7 @@ export default function Analizar({ league, preloadTeams }) {
 
       {ready && (
         <>
-          {/* ── Alertas motivacionales ── */}
+          {/* ── Alertas ── */}
           {comboAlerts.map((a, i) => (
             <div key={i} className={`rounded-lg px-4 py-3 text-sm font-medium ${
               a.type === 'success' ? 'bg-green-900/40 text-green-300 border border-green-700' :
@@ -650,179 +1053,146 @@ export default function Analizar({ league, preloadTeams }) {
                 </span>
               )}
             </h2>
-            <div className="grid grid-cols-3 md:grid-cols-7 gap-3 text-center">
-              {[['Tiros', calc.t.shots], ['SOT', calc.t.sot], ['Córners', calc.t.corners], ['Goles', calc.t.goals], ['Tarjetas', calc.t.cards], ['Pases', calc.passes.total], ['Faltas', calc.fouls.total]].map(([label, val]) => (
+            <div className="grid grid-cols-4 md:grid-cols-8 gap-3 text-center">
+              {[['Goles', calc.t.goals], ['Tiros', calc.t.shots], ['SOT', calc.t.sot], ['Córners', calc.t.corners], ['Tarjetas', calc.t.cards], ['Faltas', calc.fouls.total], ['TI', calc.t.ti], ['GK', calc.t.gk]].map(([label, val]) => (
                 <div key={label} className="bg-dark-800 rounded-lg p-2">
                   <p className="text-xs text-gray-500">{label}</p>
                   <p className="text-lg font-bold text-green-400">{val}</p>
                 </div>
               ))}
             </div>
-            {teamA.est && <p className="text-xs text-yellow-600 mt-2">⚠️ {teamA.name}: solo {teamA.statsMatches} partidos con stats — Confidence reducido</p>}
-            {teamB.est && <p className="text-xs text-yellow-600 mt-1">⚠️ {teamB.name}: solo {teamB.statsMatches} partidos con stats — Confidence reducido</p>}
+            {(teamA.est || teamB.est) && (
+              <p className="text-xs text-yellow-600 mt-2">⚠️ Muestra de stats reducida en {teamA.est ? teamA.name : ''}{teamA.est && teamB.est ? ' y ' : ''}{teamB.est ? teamB.name : ''} — Confidence reducido</p>
+            )}
+            {[teamA, teamB].filter(t => t.tierAdj).map(t => (
+              <p key={t.id} className="text-xs text-orange-500 mt-1">
+                ⬇️ {t.name}: {t.tierAdj.lowerTierCount} de sus últimos {t.matches} partidos son de división inferior — stats ajustadas a la baja (goles ×0.68, tiros ×0.80) y PPG descontado. Recién ascendido: trátalo con cautela.
+              </p>
+            ))}
           </div>
 
-          {/* ── Stats de Referencia ── */}
-          <TeamStatsRef teamA={teamA} teamB={teamB} />
-
-          {/* ── Últimos 5 partidos ── */}
-          <Last5Panel teamA={teamA} teamB={teamB} />
-
-          {/* ── Picks del Motor ── */}
-          {picks.length > 0 && (
-            <div className="card bg-dark-700 border border-green-800 space-y-3">
-              <div className="flex items-center justify-between">
-                <h2 className="font-bold text-white text-sm">🎯 Picks del Motor — {teamA.name} vs {teamB.name}</h2>
-                <span className="text-xs text-gray-500">basado en expected + contexto</span>
-              </div>
-              {picks.map((pick, i) => (
-                <PickCard key={`${pick.marketKey}_${pick.line}`} pick={pick} rank={i}
-                  teamA={teamA} teamB={teamB} ctx={ctx} calc={calc} modsA={modsA} modsB={modsB} />
-              ))}
-              {combo && <ComboCard combo={combo} />}
-              <p className="text-xs text-gray-600">⚠️ Picks generados por el motor. Verifica el contexto antes de apostar.</p>
+          {/* ── Predicción previa guardada (registro pre-partido) ── */}
+          {snapshotPrevio && (
+            <div className="rounded-lg px-4 py-3 bg-purple-900/30 border border-purple-700/50 text-sm">
+              <p className="text-purple-300 font-semibold">
+                🔮 Predicción guardada del {new Date(snapshotPrevio.ts).toLocaleString('es-CO', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })} (se conserva 7 días)
+              </p>
+              <p className="text-xs text-gray-400 mt-1">
+                Goles {snapshotPrevio.expected?.goals} · Tiros {snapshotPrevio.expected?.shots} · Córners {snapshotPrevio.expected?.corners} · TI {snapshotPrevio.expected?.ti} · GK {snapshotPrevio.expected?.gk}
+                {snapshotPrevio.picks?.length > 0 && <span className="text-purple-400"> — Picks: {snapshotPrevio.picks.slice(0, 3).map(p => `${p.label} ${p.dir} ${p.line}`).join(' · ')}</span>}
+              </p>
+              <p className="text-[11px] text-gray-600 mt-1">Si el partido ya se jugó, compárala contra la realidad en Fixture → ⏪ Últimos 3 días → 📊 Stats</p>
             </div>
           )}
 
-          {/* ── 1. TIROS ── */}
-          <Section title="Tiros — Partido Completo">
-            <MarketTable label="Tiros Totales" expected={calc.t.shots}
-              base={calc.bTot.shots} modsA={modsA} modsB={modsB} statKey="shots"
-              lines={[19.5, 21.5, 23.5, 25.5, 27.5]} />
-            <MarketTable label="SOT Totales" expected={calc.t.sot}
-              lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />
-          </Section>
+          {/* ── Informe IA: busca noticias, alineaciones, clima en internet ── */}
+          <InformeIA teamA={teamA} teamB={teamB} league={league} calc={calc} />
 
-          {/* ── 2. TIROS POR EQUIPO ── */}
-          <Section title="Tiros — Por Equipo">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label={`Tiros ${teamA.name}`} expected={calc.adj.shotsA}
-                lines={[4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5]} />
-              <MarketTable label={`Tiros ${teamB.name}`} expected={calc.adj.shotsB}
-                lines={[4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5]} />
-            </div>
-          </Section>
+          {/* ── RECOMENDADOS — ordenados por confianza ── */}
+          {picks.length > 0 && (
+            <div className="rounded-2xl border-2 border-green-600/60 bg-gradient-to-b from-green-950/60 to-dark-800 p-5 space-y-4">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <h2 className="text-xl font-black text-green-300 tracking-wide">🏆 RECOMENDADOS — {teamA.name} vs {teamB.name}</h2>
+                <span className="text-xs text-gray-500">orden: confianza · solo líneas realistas (margen 4-15%)</span>
+              </div>
 
-          {/* ── 3. TIROS POR TIEMPO ── */}
-          <Section title="Tiros — Por Tiempo">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label="Tiros Totales 1H" expected={calc.t.shots1h}
-                lines={[5.5, 7.5, 9.5, 11.5, 13.5]} />
-              <MarketTable label="Tiros Totales 2H" expected={calc.t.shots2h}
-                lines={[5.5, 7.5, 9.5, 11.5, 13.5]} />
-              <MarketTable label="SOT 1H" expected={calc.t.sot1h}
-                lines={[2.5, 3.5, 4.5, 5.5]} />
-              <MarketTable label={`Tiros ${teamA.name} 1H`} expected={calc.adj.shots1hA}
-                lines={[2.5, 3.5, 4.5, 5.5, 6.5, 7.5]} />
-              <MarketTable label={`Tiros ${teamB.name} 1H`} expected={calc.adj.shots1hB}
-                lines={[2.5, 3.5, 4.5, 5.5, 6.5, 7.5]} />
-            </div>
-          </Section>
+              {picks.map((pick, i) => {
+                const exp = generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
+                const reasons = exp.pushUp.slice(0, 2)
+                return (
+                  <div key={`${pick.marketKey}_${pick.line}`}
+                    className={`rounded-xl p-4 border ${i === 0 ? 'bg-green-900/30 border-green-600/60' : 'bg-dark-800/80 border-dark-600'}`}>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <span className={`text-2xl font-black w-8 ${i === 0 ? 'text-yellow-400' : i === 1 ? 'text-gray-300' : 'text-gray-600'}`}>
+                        {i + 1}
+                      </span>
+                      <span className={`text-lg font-black px-3 py-1 rounded-lg ${
+                        pick.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
+                      }`}>
+                        {pick.dir} {pick.line}
+                      </span>
+                      <span className="text-white font-bold text-lg">{pick.label}</span>
+                      <div className="ml-auto flex items-center gap-3 text-sm">
+                        <span className={`font-bold px-2 py-0.5 rounded ${
+                          pick.confidence >= 70 ? 'bg-green-800 text-green-200' :
+                          pick.confidence >= 60 ? 'bg-yellow-800 text-yellow-200' : 'bg-orange-900 text-orange-300'
+                        }`}>
+                          Confianza {pick.confidence}
+                        </span>
+                        <span className="text-green-300 font-semibold">P {pick.pMod}%</span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-300 mt-2">{exp.summary}</p>
+                    {reasons.length > 0 && (
+                      <div className="mt-1.5 space-y-0.5">
+                        {reasons.map((f, k) => (
+                          <p key={k} className="text-xs text-gray-400">• {f.text}</p>
+                        ))}
+                      </div>
+                    )}
+                    {exp.risks.length > 0 && (
+                      <p className="text-xs text-yellow-600/90 mt-1.5">⚠️ {exp.risks[0]}</p>
+                    )}
+                    {(() => {
+                      const p = pick.pMod / 100
+                      if (!p || p <= 0.05) return null
+                      const min = (1.025 / p).toFixed(2)
+                      const max = (1.25 / p).toFixed(2)
+                      return (
+                        <p className="text-sm font-bold text-green-300 mt-2 bg-green-950/60 border border-green-800/50 rounded-lg px-3 py-1.5 inline-block">
+                          💰 Apuesta si la cuota está entre <span className="text-white">{min}</span> y <span className="text-white">{max}</span>
+                          <span className="text-gray-500 font-normal ml-2 text-xs">menos de {min} = sin valor · más de {max} = sospechoso, la casa sabe algo</span>
+                        </p>
+                      )
+                    })()}
+                  </div>
+                )
+              })}
 
-          {/* ── 4. CÓRNERS ── */}
-          <Section title="Córners">
-            <p className="text-xs text-gray-500 -mt-2">K de liga aplicado: ×{league.kCorners} ({league.name})</p>
-            <MarketTable label="Córners Totales" expected={calc.t.corners}
-              base={calc.bTot.corners} modsA={modsA} modsB={modsB} statKey="corners"
-              lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label="Córners 1H" expected={calc.t.corn1h} lines={[3.5, 4.5, 5.5]} />
-              <MarketTable label="Córners 2H" expected={calc.t.corn2h} lines={[4.5, 5.5, 6.5]} />
-              <MarketTable label={`Córners ${teamA.name}`} expected={calc.adj.cornA} lines={[3.5, 4.5, 5.5, 6.5]} />
-              <MarketTable label={`Córners ${teamB.name}`} expected={calc.adj.cornB} lines={[3.5, 4.5, 5.5, 6.5]} />
+              {combo && <ComboCard combo={combo} />}
+              <p className="text-xs text-gray-500">⚠️ Compara siempre con la cuota real de tu casa antes de apostar — sin cuota no hay EV.</p>
             </div>
-          </Section>
+          )}
 
-          {/* ── 5. GOLES ── */}
-          <Section title="Goles">
-            <p className="text-xs text-gray-500 -mt-2">
-              Fórmula con defensa rival (spec §6.6)
-              {calc.goals.bttsViable
-                ? <span className="text-green-400 ml-2">✅ BTTS viable — ambos marcan y conceden con frecuencia</span>
-                : <span className="text-gray-600 ml-2">BTTS no recomendado en este cruce</span>}
-            </p>
-            <MarketTable label="Goles Totales" expected={calc.t.goals} lines={[0.5, 1.5, 2.5, 3.5]} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label="Goles 1H"  expected={calc.t.goals1h} lines={[0.5, 1.5]} />
-              <MarketTable label="Goles 2H"  expected={calc.t.goals2h} lines={[0.5, 1.5]} />
-              <MarketTable label={`Goles ${teamA.name}`} expected={calc.adj.goalsA} lines={[0.5, 1.5]} />
-              <MarketTable label={`Goles ${teamB.name}`} expected={calc.adj.goalsB} lines={[0.5, 1.5]} />
-            </div>
-          </Section>
+          {/* ── Resultados recientes estilo adamchoi ── */}
+          <RecentResults teamA={teamA} teamB={teamB} />
 
-          {/* ── 6. TARJETAS ── */}
-          <Section title="Tarjetas">
-            <MarketTable label="Tarjetas Totales" expected={calc.t.cards} lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label="Tarjetas 1H" expected={calc.t.cards1h} lines={[0.5, 1.5, 2.5]} />
-              <MarketTable label={`Tarjetas ${teamA.name}`} expected={calc.adj.cardsA} lines={[0.5, 1.5, 2.5, 3.5]} />
-              <MarketTable label={`Tarjetas ${teamB.name}`} expected={calc.adj.cardsB} lines={[0.5, 1.5, 2.5, 3.5]} />
-            </div>
-          </Section>
+          {/* ── H2H ── */}
+          <H2HCard teamA={teamA} teamB={teamB} />
 
-          {/* ── 7. SAQUES DE PORTERÍA (GK) ── */}
-          <Section title="Saques de Portería (GK)">
-            <div className="text-xs text-gray-500 -mt-2 space-y-1">
-              <p>Posesión: {teamA.name} {calc.gkCalc.posA}% · {teamB.name} {calc.gkCalc.posB}% — a más posesión rival, más GK propios</p>
-              {calc.gkCalc.weakerTeam && (
-                <p className="text-yellow-500">
-                  ⚡ {calc.gkCalc.weakerTeam === 'A' ? teamA.name : teamB.name} es claramente inferior (PPG) → más tiempo defendiendo → boost de GK
-                </p>
-              )}
-              <p className="text-orange-500">⚠️ GK estimado desde posesión — API-Football no da este dato. Verificar en Sofascore antes de apostar fuerte.</p>
-            </div>
-            <MarketTable label="GK Totales" expected={calc.t.gk}
-              lines={[14.5, 16.5, 18.5, 20.5, 22.5]} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label={`GK ${teamA.name}`} expected={calc.adj.gkA}
-                lines={[6.5, 7.5, 8.5, 9.5, 10.5, 11.5]} />
-              <MarketTable label={`GK ${teamB.name}`} expected={calc.adj.gkB}
-                lines={[6.5, 7.5, 8.5, 9.5, 10.5, 11.5]} />
-            </div>
-          </Section>
+          {/* ── Promedios ── */}
+          <TeamStatsRef teamA={teamA} teamB={teamB} />
 
-          {/* ── 8. SAQUES DE BANDA (THROW-INS) ── */}
-          <Section title="Saques de Banda (Throw-ins)">
-            <div className="text-xs text-gray-500 -mt-2 space-y-1">
-              <p>K de liga: ×{league.kTI} ({league.name})</p>
-              {calc.tiCalc.mods.climaMod > 1 && <p className="text-blue-400">🌧️ Lluvia intensa → TI ×1.15</p>}
-              {calc.tiCalc.mods.tipoMod > 1 && <p className="text-orange-400">⚔️ Clásico/derby → TI ×1.10</p>}
-              <p className="text-gray-600">⚠️ No combinar TI Over con Córners Over (correlación 0.60)</p>
-              <p className="text-orange-500">⚠️ TI estimado desde baseline de liga — verificar en Sofascore.</p>
-            </div>
-            <MarketTable label="Throw-ins Totales" expected={calc.t.ti}
-              lines={[34.5, 38.5, 42.5, 46.5, 50.5]} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label={`TI ${teamA.name}`} expected={calc.adj.tiA}
-                lines={[15.5, 17.5, 19.5, 21.5, 23.5, 25.5]} />
-              <MarketTable label={`TI ${teamB.name}`} expected={calc.adj.tiB}
-                lines={[15.5, 17.5, 19.5, 21.5, 23.5, 25.5]} />
-            </div>
-          </Section>
-
-          {/* ── 9. PASES ── */}
-          <Section title="Pases">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label={`Pases ${teamA.name}`} expected={calc.passes.expPassesA}
-                lines={[350, 380, 420, 460, 500, 540]} />
-              <MarketTable label={`Pases ${teamB.name}`} expected={calc.passes.expPassesB}
-                lines={[350, 380, 420, 460, 500, 540]} />
-            </div>
-            <MarketTable label="Pases Totales" expected={calc.passes.total}
-              lines={[750, 800, 850, 900, 950, 1000]} />
-          </Section>
-
-          {/* ── 10. FALTAS ── */}
-          <Section title="Faltas">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <MarketTable label={`Faltas ${teamA.name}`} expected={calc.fouls.expFoulsA}
-                lines={[8.5, 10.5, 12.5, 14.5, 16.5]} />
-              <MarketTable label={`Faltas ${teamB.name}`} expected={calc.fouls.expFoulsB}
-                lines={[8.5, 10.5, 12.5, 14.5, 16.5]} />
-            </div>
-            <MarketTable label="Faltas Totales" expected={calc.fouls.total}
-              lines={[18.5, 20.5, 22.5, 24.5, 26.5, 28.5]} />
-          </Section>
+          {/* ── Mercados — acordeones con variantes, 2 columnas ── */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+            {[
+              { id: 'goles', icon: '⚽', title: 'Goles',
+                cfg: { statKey: 'gf', agKey: 'ga', expTotal: calc.t.goals, expA: calc.adj.goalsA, expB: calc.adj.goalsB, stepTotal: 0.5, stepTeam: 0.5, handicap: true } },
+              { id: 'corners', icon: '🚩', title: 'Córners',
+                cfg: { statKey: 'corners', agKey: 'cornersAg', expTotal: calc.t.corners, expA: calc.adj.cornA, expB: calc.adj.cornB, stepTotal: 1, stepTeam: 1, handicap: true } },
+              { id: 'shots', icon: '🎯', title: 'Tiros Totales',
+                cfg: { statKey: 'shots', agKey: 'shotsAg', expTotal: calc.t.shots, expA: calc.adj.shotsA, expB: calc.adj.shotsB, stepTotal: 2, stepTeam: 1, handicap: true },
+                notes: [`1H: ${calc.t.shots1h} · 2H: ${calc.t.shots2h}`] },
+              { id: 'sot', icon: '🥅', title: 'Tiros a Puerta (SOT)',
+                cfg: { statKey: 'sot', agKey: 'sotAg', expTotal: calc.t.sot, expA: calc.adj.sotA, expB: calc.adj.sotB, stepTotal: 1, stepTeam: 1, handicap: false } },
+              { id: 'cards', icon: '🟨', title: 'Tarjetas',
+                cfg: { statKey: 'cards', agKey: 'cardsAg', expTotal: calc.t.cards, expA: calc.adj.cardsA, expB: calc.adj.cardsB, stepTotal: 1, stepTeam: 0.5, handicap: false } },
+              { id: 'fouls', icon: '⚠️', title: 'Faltas',
+                cfg: { statKey: 'fouls', agKey: 'foulsAg', expTotal: calc.fouls.total, expA: calc.fouls.expFoulsA, expB: calc.fouls.expFoulsB, stepTotal: 2, stepTeam: 1, handicap: false } },
+              { id: 'ti', icon: '🔄', title: 'Saques de Banda (TI)',
+                cfg: { statKey: 'ti', agKey: 'tiAg', expTotal: calc.t.ti, expA: calc.adj.tiA, expB: calc.adj.tiB, stepTotal: 2, stepTeam: 1, handicap: false },
+                notes: [(teamA.estTi || teamB.estTi)
+                  ? `⚠️ ${teamA.estTi ? teamA.name + ' estimado' : teamA.name + ' ✓ real'} · ${teamB.estTi ? teamB.name + ' estimado' : teamB.name + ' ✓ real'}`
+                  : '✓ Throw-ins reales de ambos equipos'] },
+              { id: 'gk', icon: '🧤', title: 'Saques de Portería (GK)',
+                cfg: { statKey: 'gk', agKey: 'gkAg', expTotal: calc.t.gk, expA: calc.adj.gkA, expB: calc.adj.gkB, stepTotal: 1, stepTeam: 1, handicap: false },
+                notes: [(teamA.estGk || teamB.estGk) ? '⚠️ GK estimado desde posesión' : '✓ Goal kicks reales'] },
+            ].map(m => (
+              <MarketCard key={`${m.id}_${teamA.id}_${teamB.id}`} icon={m.icon} title={m.title}
+                teamA={teamA} teamB={teamB} cfg={m.cfg} notes={m.notes ?? []}
+                explain={explainFor(m.id)} />
+            ))}
+          </div>
         </>
       )}
     </div>

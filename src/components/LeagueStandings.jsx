@@ -1,11 +1,113 @@
-import { useState, useEffect, useCallback } from 'react'
-import { fetchStandings, parseForm } from '../lib/football-api'
+import { useState, useEffect, useCallback, Fragment } from 'react'
+import { fetchStandings, fetchFixtures, parseForm, formatLocalDate, formatLocalTime } from '../lib/football-api'
+import { buildTeamStats } from '../lib/league-stats'
 
-export default function LeagueStandings({ league }) {
+// ─── Detalle de equipo: stats + próximo partido ──────────────────────────────
+const RESULT_DOT = { W: 'bg-green-600', D: 'bg-gray-600', L: 'bg-red-600' }
+
+function TeamDetail({ league, team, onAnalizar }) {
+  const [stats, setStats] = useState(null)
+  const [progress, setProgress] = useState('')
+  const [error, setError] = useState(null)
+  const [nextMatch, setNextMatch] = useState(null)
+
+  useEffect(() => {
+    let alive = true
+    setStats(null); setError(null)
+
+    buildTeamStats(league, team.id, team.name, (msg, i, n) => alive && setProgress(`${msg}`))
+      .then(s => alive && setStats(s))
+      .catch(e => alive && setError(e.message))
+
+    fetchFixtures(league.id).then(res => {
+      if (!alive || !res.ok) return
+      const next = (res.fixtures ?? [])
+        .filter(f => f.status === 'NS' && (f.homeId === team.id || f.awayId === team.id))
+        .sort((a, b) => new Date(a.date) - new Date(b.date))[0]
+      setNextMatch(next ?? null)
+    }).catch(() => {})
+
+    return () => { alive = false }
+  }, [league.id, team.id])
+
+  if (error) return <div className="p-3 text-xs text-red-400">{error}</div>
+  if (!stats) return (
+    <div className="p-4 text-center">
+      <div className="animate-spin w-5 h-5 border-2 border-green-500 border-t-transparent rounded-full mx-auto mb-2" />
+      <p className="text-xs text-gray-500">{progress || 'Cargando últimos 10 partidos...'}</p>
+    </div>
+  )
+
+  const KPIS = [
+    ['Goles/P', stats.gf_avg], ['Recibe/P', stats.ga_avg],
+    ['Tiros/P', stats.shots_avg], ['SOT/P', stats.sot_avg],
+    ['Córners/P', stats.corners_avg], ['Tarjetas/P', stats.cards_avg],
+    ['Posesión', stats.possession_avg + '%'], ['Faltas/P', stats.fouls_avg],
+    ['TI/P' + (stats.estTi ? '*' : ''), stats.throwins_avg],
+    ['GK/P' + (stats.estGk ? '*' : ''), stats.goalkicks_avg],
+    ['PPG', stats.ppg], ['BTTS', stats.btts_pct + '%'],
+  ]
+
+  return (
+    <div className="p-3 space-y-3 bg-dark-900/60">
+      {/* Forma */}
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className="text-xs text-gray-500">Últimos 10:</span>
+        <div className="flex gap-0.5">
+          {(stats.last10 ?? []).map((r, i) => (
+            <span key={i} title={`${r.rival} ${r.gf}-${r.ga}`}
+              className={`w-4 h-4 rounded-sm text-[10px] leading-4 text-center text-white font-bold ${RESULT_DOT[r.result] ?? 'bg-gray-700'}`}>
+              {r.result}
+            </span>
+          ))}
+        </div>
+        {stats.tierAdj && <span className="text-[10px] text-orange-500">⬇️ incluye {stats.tierAdj.lowerTierCount} partidos de división inferior</span>}
+      </div>
+
+      {/* KPIs */}
+      <div className="grid grid-cols-4 md:grid-cols-6 gap-1.5">
+        {KPIS.map(([label, val]) => (
+          <div key={label} className="bg-dark-800 rounded-lg p-1.5 text-center">
+            <p className="text-[10px] text-gray-500">{label}</p>
+            <p className="text-sm font-bold text-green-400">{val}</p>
+          </div>
+        ))}
+      </div>
+      {(stats.estTi || stats.estGk) && <p className="text-[10px] text-gray-600">* estimado — la API aún no trae ese dato para sus partidos</p>}
+
+      {/* Próximo partido */}
+      {nextMatch ? (
+        <div className="flex items-center gap-3 bg-dark-800 border border-green-900/40 rounded-lg p-2.5">
+          <div className="flex-1 min-w-0">
+            <p className="text-[10px] text-gray-500 uppercase tracking-wide">Próximo partido</p>
+            <p className="text-sm text-white font-semibold truncate">
+              {nextMatch.homeTeam} vs {nextMatch.awayTeam}
+            </p>
+            <p className="text-xs text-gray-500">{formatLocalDate(nextMatch.date)} · {formatLocalTime(nextMatch.date)} (Bogotá)</p>
+          </div>
+          {onAnalizar && (
+            <button
+              onClick={() => onAnalizar(nextMatch.homeTeam, nextMatch.awayTeam, league.id)}
+              className="shrink-0 text-xs px-3 py-2 rounded-lg bg-green-700 hover:bg-green-600 text-white font-bold transition-colors">
+              Analizar →
+            </button>
+          )}
+        </div>
+      ) : (
+        <p className="text-xs text-gray-600">Sin próximo partido en los siguientes 7 días</p>
+      )}
+    </div>
+  )
+}
+
+export default function LeagueStandings({ league, onAnalizar }) {
   const [groups, setGroups] = useState(null)
   const [season, setSeason] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [selectedTeam, setSelectedTeam] = useState(null)
+
+  useEffect(() => { setSelectedTeam(null) }, [league.id])
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -75,7 +177,10 @@ export default function LeagueStandings({ league }) {
             </thead>
             <tbody>
               {group.map(t => (
-                <tr key={t.id} className="border-t border-dark-700/60 hover:bg-dark-700/40">
+                <Fragment key={t.id}>
+                <tr
+                  onClick={() => setSelectedTeam(selectedTeam === t.id ? null : t.id)}
+                  className="border-t border-dark-700/60 hover:bg-dark-700/40 cursor-pointer">
                   <td className={`py-2 pr-2 font-bold ${t.rank <= 4 ? 'text-green-400' : t.rank >= group.length - 2 ? 'text-red-400' : 'text-gray-500'}`}>
                     {t.rank}
                   </td>
@@ -83,6 +188,7 @@ export default function LeagueStandings({ league }) {
                     <div className="flex items-center gap-2">
                       {t.logo && <img src={t.logo} alt="" className="w-5 h-5 object-contain" loading="lazy" />}
                       <span className="text-white font-medium truncate">{t.name}</span>
+                      <span className="text-gray-600 text-[10px]">{selectedTeam === t.id ? '▲' : '▼'}</span>
                     </div>
                   </td>
                   <td className="text-center text-gray-300 px-1">{t.pj}</td>
@@ -103,6 +209,14 @@ export default function LeagueStandings({ league }) {
                     </div>
                   </td>
                 </tr>
+                {selectedTeam === t.id && (
+                  <tr>
+                    <td colSpan={11} className="p-0 border-t border-green-900/40">
+                      <TeamDetail league={league} team={t} onAnalizar={onAnalizar} />
+                    </td>
+                  </tr>
+                )}
+                </Fragment>
               ))}
             </tbody>
           </table>

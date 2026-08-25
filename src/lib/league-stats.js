@@ -7,9 +7,11 @@
 //   porque a inicio de temporada la muestra cross-season ES la base estructural)
 
 import { fetchTeamLast, fetchFixtureStats } from './football-api'
+import { fetchSofaSaques } from './sofascore'
 import { getBaseline } from './leagues'
 
-// Nombres de stats de API-Football
+// Nombres de stats normalizados (formato API-Football; el adaptador
+// de Live-Score API traduce a estos mismos nombres)
 const S = {
   shots:      'Total Shots',
   sot:        'Shots on Goal',
@@ -20,6 +22,9 @@ const S = {
   red:        'Red Cards',
   possession: 'Ball Possession',
   passes:     'Total passes',
+  offsides:   'Offsides',
+  gk:         'Goal Kicks',   // solo Live-Score API
+  ti:         'Throw Ins',    // solo Live-Score API
 }
 
 function num(v) {
@@ -61,7 +66,7 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
     const f = fixtures[i]
     onProgress?.(teamName, i + 1, fixtures.length)
     try {
-      const statsRes = await fetchFixtureStats(f.id)
+      const statsRes = await fetchFixtureStats(f.id, f.homeId, f.awayId)
       const own   = statsRes.stats?.find(t => t.teamId === teamId)?.stats ?? {}
       const rival = statsRes.stats?.find(t => t.teamId !== teamId)?.stats ?? {}
       const isHome = f.homeId === teamId
@@ -76,12 +81,22 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
         blocked: num(own[S.blocked]), blockedAg: num(rival[S.blocked]),
         corners: num(own[S.corners]), cornersAg: num(rival[S.corners]),
         fouls:  num(own[S.fouls]),  foulsAg:  num(rival[S.fouls]),
-        cards:  (num(own[S.yellow]) ?? 0) + (num(own[S.red]) ?? 0),
+        cards:  num(own[S.yellow]) != null || num(own[S.red]) != null
+          ? (num(own[S.yellow]) ?? 0) + (num(own[S.red]) ?? 0) : null,
+        cardsAg: num(rival[S.yellow]) != null || num(rival[S.red]) != null
+          ? (num(rival[S.yellow]) ?? 0) + (num(rival[S.red]) ?? 0) : null,
+        yellow: num(own[S.yellow]),   red: num(own[S.red]),
+        yellowAg: num(rival[S.yellow]), redAg: num(rival[S.red]),
+        offsides: num(own[S.offsides]), offsidesAg: num(rival[S.offsides]),
         possession: num(own[S.possession]),
         passes: num(own[S.passes]), passesAg: num(rival[S.passes]),
+        gk: num(own[S.gk]),  gkAg: num(rival[S.gk]),
+        ti: num(own[S.ti]),  tiAg: num(rival[S.ti]),
         rival: isHome ? f.awayTeam : f.homeTeam,
         date: f.date,
         isHome,
+        tier: f.tier ?? 0,
+        comp: f.competition ?? '',
       })
     } catch {
       // partido sin stats → solo goles
@@ -92,18 +107,113 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
         ga: isHome ? f.awayGoals : f.homeGoals,
         rival: isHome ? f.awayTeam : f.homeTeam,
         date: f.date, isHome,
+        tier: f.tier ?? 0,
+        comp: f.competition ?? '',
       })
     }
   }
 
+  // ── Saques extra desde amistosos recientes ──────────────────────────────
+  // La API solo trae TI/GK en partidos nuevos; los amistosos de pretemporada
+  // suelen ser los únicos con el dato al inicio de temporada.
+  const saquesExtra = []
+  for (const f of (lastRes.friendlies ?? [])) {
+    try {
+      const sr = await fetchFixtureStats(f.id, f.homeId, f.awayId)
+      const own   = sr.stats?.find(t => t.teamId === teamId)?.stats ?? {}
+      const rival = sr.stats?.find(t => t.teamId !== teamId)?.stats ?? {}
+      const ti = num(own[S.ti]); const tiAg = num(rival[S.ti])
+      const gk = num(own[S.gk]); const gkAg = num(rival[S.gk])
+      if (ti != null || gk != null) saquesExtra.push({ ti, tiAg, gk, gkAg })
+    } catch {}
+  }
+
+  // ── Sofascore: saques reales + variables de flujo (centros, xG) ─────────
+  // Rellena las filas por fecha; lo que no matchea entra igual al promedio.
+  let sofaOk = false
+  const sofaEntries = [] // únicas, para promedios de centros/xG
+  try {
+    const sofa = await fetchSofaSaques(teamName, 14, (i, nn) => onProgress?.(`${teamName} · Sofascore (${i}/${nn})`, i, nn))
+    const usedDates = new Set()
+    const seen = new Set()
+    for (const [d, s] of Object.entries(sofa.byDate)) {
+      const sig = `${s.rival}_${s.ti}_${s.gk}_${s.crosses}`
+      if (seen.has(sig)) continue // el índice doble por zona horaria duplica entradas
+      seen.add(sig)
+      sofaEntries.push(s)
+    }
+    for (const r of rows) {
+      const s = sofa.byDate[r.date]
+      if (s) {
+        usedDates.add(r.date)
+        if (r.ti == null && s.ti != null) { r.ti = s.ti; r.tiAg = s.tiAg; sofaOk = true }
+        if (r.gk == null && s.gk != null) { r.gk = s.gk; r.gkAg = s.gkAg; sofaOk = true }
+        if (s.crosses != null) r.crosses = s.crosses
+      }
+    }
+    // fechas de sofa sin fila correspondiente → solo para el promedio de saques
+    const seen2 = new Set()
+    for (const [d, s] of Object.entries(sofa.byDate)) {
+      if (usedDates.has(d)) continue
+      const sig = `${s.rival}_${s.ti}_${s.gk}`
+      if (seen2.has(sig)) continue
+      seen2.add(sig)
+      saquesExtra.push({ ti: s.ti, tiAg: s.tiAg, gk: s.gk, gkAg: s.gkAg })
+      sofaOk = true
+    }
+  } catch {}
+
+  // ── Variables de flujo desde Sofascore ──────────────────────────────────
+  const avgOf = arr => {
+    const v = arr.filter(x => x != null)
+    return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null
+  }
+  const crosses_avg = avgOf(sofaEntries.map(e => e.crosses))
+  const xg_avg = avgOf(sofaEntries.map(e => e.xg))
+  const xga_avg = avgOf(sofaEntries.map(e => e.xgAg))
+  const bigch_avg = avgOf(sofaEntries.map(e => e.bigch))
+
+  // Estilo de juego inferido desde centros reales (spec: Tactical_K)
+  // >=20 centros/partido = ataque por bandas · <=8 = juego interior
+  const style = crosses_avg == null ? 'mixto'
+    : crosses_avg >= 20 ? 'bandas'
+    : crosses_avg >= 15 ? 'mixto-bandas'
+    : crosses_avg <= 8 ? 'central'
+    : 'mixto'
+
+  // ── Ajuste por división (spec §4: cambio de contexto) ───────────────────
+  // Un recién ascendido trae stats infladas de su división anterior:
+  // Championship ≠ Premier. Se descuenta ataque y se infla lo concedido.
+  const leagueTier = league.id === 40 ? 2 : 1 // Championship es tier 2; el resto tier 1
+  const mul = (v, k) => v != null ? v * k : null
+  const scaleRow = r => {
+    if (!r.tier || r.tier === 0 || r.tier === leagueTier) return r
+    if (r.tier > leagueTier) {
+      // partido jugado en división INFERIOR a la analizada
+      return {
+        ...r,
+        gf: mul(r.gf, 0.68), ga: mul(r.ga, 1.35),
+        shots: mul(r.shots, 0.80), sot: mul(r.sot, 0.78),
+        shotsAg: mul(r.shotsAg, 1.25), sotAg: mul(r.sotAg, 1.25),
+        corners: mul(r.corners, 0.88), cornersAg: mul(r.cornersAg, 1.12),
+        passes: mul(r.passes, 0.90),
+      }
+    }
+    // jugó contra tier superior (raro): leve crédito
+    return { ...r, gf: mul(r.gf, 1.08), shots: mul(r.shots, 1.06) }
+  }
+  const aRows = rows.map(scaleRow)
+  const lowerTierCount = rows.filter(r => r.tier > leagueTier).length
+
   const withStats = rows.filter(r => r.shots != null)
   const matches = rows.length
 
-  // PPG desde resultados
+  // PPG desde resultados — descontado si vienen de división inferior
   const pts = rows.reduce((s, r) => s + (r.result === 'W' ? 3 : r.result === 'D' ? 1 : 0), 0)
-  const ppg = matches ? pts / matches : 1.3
+  const lowerFrac = matches ? lowerTierCount / matches : 0
+  const ppg = (matches ? pts / matches : 1.3) * (1 - 0.40 * lowerFrac)
 
-  const w = key => weighted(rows.map(r => r[key]))
+  const w = key => weighted(aRows.map(r => r[key]))
   const goals1hShare = (() => {
     const withHt = rows.filter(r => r.gf1h != null && r.gf != null && r.gf > 0)
     if (!withHt.length) return 0.42
@@ -116,14 +226,29 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
   const sot_avg     = w('sot')     ?? shots_avg * 0.36
   const corners_avg = w('corners') ?? base.cornersAvg
   const possession  = w('possession') ?? 50
-  const passes_avg  = w('passes')  ?? 430
+
+  // Pases: Live-Score API no los da → estimar desde posesión (~870 pases totales/partido)
+  const passesReal  = w('passes')
+  const passes_avg  = passesReal ?? 870 * (possession / 100)
   const gf_avg      = w('gf') ?? 1.3
   const ga_avg      = w('ga') ?? base.gaAvg
 
-  // GK/TI: API-Football no los da (spec §3) → estimación por posesión y baseline.
-  // Correlación GK↔posesión ≈ -0.72: menos posesión → más saques de portería.
-  const gkEst = base.gkAvg * (1 + (50 - possession) * 0.022)
-  const tiEst = base.tiAvg
+  // GK/TI: usar dato REAL si existe — de los partidos de liga recientes O de
+  // los amistosos de pretemporada (única fuente al inicio de temporada).
+  // Si no hay nada, estimar por posesión (correlación GK↔posesión ≈ -0.72).
+  const combineReal = (key) => {
+    const vals = [
+      ...rows.map(r => r[key]).filter(v => v != null),
+      ...saquesExtra.map(s => s[key]).filter(v => v != null),
+    ]
+    return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null
+  }
+  const gkReal = combineReal('gk')
+  const tiReal = combineReal('ti')
+  const tiSample = rows.filter(r => r.ti != null).length + saquesExtra.filter(s => s.ti != null).length
+  const gkSample = rows.filter(r => r.gk != null).length + saquesExtra.filter(s => s.gk != null).length
+  const gkEst = gkReal ?? base.gkAvg * (1 + (50 - possession) * 0.022)
+  const tiEst = tiReal ?? base.tiAvg
 
   const cs = rows.filter(r => r.ga === 0).length
   const btts = rows.filter(r => r.gf > 0 && r.ga > 0).length
@@ -132,8 +257,15 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
     id: teamId,
     name: teamName,
     apiId: teamId,
-    est: withStats.length < 7,       // muestra pobre → -10 Confidence (§8)
-    estGkTi: true,                    // GK/TI siempre estimados en modo liga
+    est: withStats.length < 7 || lowerFrac > 0.5, // muestra pobre o de otra división → -10 Confidence
+    estGkTi: gkReal == null && tiReal == null,
+    estGk: gkReal == null,
+    estTi: tiReal == null,
+    tiSample,
+    gkSample,
+    saquesSource: sofaOk ? 'Sofascore' : (saquesExtra.length ? 'amistosos' : null),
+    estPasses: passesReal == null,
+    tierAdj: lowerTierCount > 0 ? { lowerTierCount, lowerFrac: +lowerFrac.toFixed(2) } : null,
     matches,
     statsMatches: withStats.length,
     ppg: +ppg.toFixed(2),
@@ -155,6 +287,13 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
     goalkicks_avg: +gkEst.toFixed(1),
     throwins_avg: +tiEst.toFixed(1),
     freekicks_avg: +(w('foulsAg') ?? 12).toFixed(1),
+    // Variables de flujo (Sofascore) — el "más allá del promedio"
+    crosses_avg: crosses_avg != null ? +crosses_avg.toFixed(1) : null,
+    xg_avg: xg_avg != null ? +xg_avg.toFixed(2) : null,
+    xga_avg: xga_avg != null ? +xga_avg.toFixed(2) : null,
+    bigch_avg: bigch_avg != null ? +bigch_avg.toFixed(1) : null,
+    // Disciplina: cuántas faltas necesita este equipo para ver una tarjeta
+    cardsPerFoul: (w('cards') != null && w('fouls') > 0) ? +(w('cards') / w('fouls')).toFixed(3) : null,
     // Splits 1H/2H: goles reales desde halftime score; resto ~45/55 típico
     goals_1h: +(gf_avg * goals1hShare).toFixed(2),
     goals_2h: +(gf_avg * (1 - goals1hShare)).toFixed(2),
@@ -166,16 +305,32 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
     corners_2h: +(corners_avg * 0.56).toFixed(1),
     cards_1h: +((w('cards') ?? base.cardsAvg) * 0.38).toFixed(1),
     cards_2h: +((w('cards') ?? base.cardsAvg) * 0.62).toFixed(1),
-    style: 'mixto', // sin dato táctico desde API — neutro
-    last5: rows.slice(0, 5).map(r => ({
-      rival: r.rival,
-      result: r.result,
-      gf: r.gf, ga: r.ga,
-      shots: r.shots, sot: r.sot, corners: r.corners,
-      cards: r.cards, fouls: r.fouls, passes: r.passes,
-      isHome: r.isHome,
-      date: r.date?.slice(0, 10),
-    })),
+    style, // inferido desde centros reales de Sofascore ('mixto' si no hay dato)
+    styleReal: crosses_avg != null,
+    last5: rows.slice(0, 5).map(mapHistoryRow),
+    last10: rows.slice(0, 10).map(mapHistoryRow),
+  }
+}
+
+function mapHistoryRow(r) {
+  return {
+    rival: r.rival,
+    result: r.result,
+    gf: r.gf, ga: r.ga,
+    shots: r.shots, shotsAg: r.shotsAg,
+    sot: r.sot, sotAg: r.sotAg,
+    corners: r.corners, cornersAg: r.cornersAg,
+    cards: r.cards, cardsAg: r.cardsAg,
+    yellow: r.yellow, red: r.red, yellowAg: r.yellowAg, redAg: r.redAg,
+    offsides: r.offsides, offsidesAg: r.offsidesAg,
+    fouls: r.fouls, foulsAg: r.foulsAg,
+    passes: r.passes,
+    gk: r.gk, gkAg: r.gkAg,
+    ti: r.ti, tiAg: r.tiAg,
+    possession: r.possession,
+    isHome: r.isHome,
+    date: r.date?.slice(0, 10),
+    comp: r.comp ?? '',
   }
 }
 

@@ -34,8 +34,20 @@ export default function MobileNav({ active, onChange, leagueId, onLeagueChange }
             onChange={e => { onLeagueChange(e.target.value) }}
             className="w-full bg-dark-700 border border-dark-500 rounded-lg px-2 py-2 text-sm text-white focus:outline-none focus:border-green-500"
           >
-            {LEAGUES.map(l => (
+            {LEAGUES.filter(l => l.main).map(l => (
               <option key={l.id} value={l.id}>{l.flag} {l.name}</option>
+            ))}
+            {Object.entries(
+              LEAGUES.filter(l => !l.main).reduce((acc, l) => {
+                (acc[l.country] = acc[l.country] ?? []).push(l)
+                return acc
+              }, {})
+            ).sort(([a], [b]) => a.localeCompare(b)).map(([country, leagues]) => (
+              <optgroup key={country} label={`▾ ${country}`}>
+                {leagues.map(l => (
+                  <option key={l.id} value={l.id}>{l.flag} {l.name}</option>
+                ))}
+              </optgroup>
             ))}
           </select>
           <div className="grid grid-cols-2 gap-1">

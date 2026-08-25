@@ -24,24 +24,21 @@ export function getTacticalK(style) {
 // ─── Expected Corners ─────────────────────────────────────────────────────────
 // Fórmula: promedio ponderado ataque(60%) + defensa rival(40%)
 // Evita explosión cuando la ratio ataque/contra-rival es muy alta
-export function calcExpectedCorners(teamA, teamB, tacticalStyle = 'mixto', situation = 'empate') {
-  const goalDiff = situation === 'ganando2+' ? 2
-    : situation === 'ganando1' ? 1
-    : situation === 'empate' ? 0
-    : situation === 'perdiendo1' ? -1
-    : -2
+export function calcExpectedCorners(teamA, teamB) {
+  // Estilo REAL por equipo (inferido de centros/partido en Sofascore):
+  // el que ataca por bandas centra más → más despejes al córner (spec Tactical_K)
+  const KA = getTacticalK(teamA.style)
+  const KB = getTacticalK(teamB.style)
 
-  const S = getSituationS(goalDiff)
-  const K = getTacticalK(tacticalStyle)
-
-  // Promedio ponderado: ataque propio × situación + defensa rival × neutro
-  const expA = (teamA.corners_avg * 0.6 + teamB.corners_against_avg * 0.4) * K * S
-  const expB = (teamB.corners_avg * 0.6 + teamA.corners_against_avg * 0.4) * K * (2 - S)
+  // Promedio ponderado: ataque propio 60% + lo que concede el rival 40%
+  const expA = (teamA.corners_avg * 0.6 + teamB.corners_against_avg * 0.4) * KA
+  const expB = (teamB.corners_avg * 0.6 + teamA.corners_against_avg * 0.4) * KB
 
   return {
     expA: +expA.toFixed(2),
     expB: +expB.toFixed(2),
     total: +(expA + expB).toFixed(2),
+    KA, KB,
   }
 }
 
@@ -140,8 +137,17 @@ export function calcExpectedGoals(teamA, teamB, altMod = 1.0) {
   const gaModB = teamB.ga_avg / LEAGUE_AVG_GA
   const gaModA = teamA.ga_avg / LEAGUE_AVG_GA
 
-  const expA = teamA.gf_avg * gaModB * altMod
-  const expB = teamB.gf_avg * gaModA * altMod
+  // Ataque real = mezcla de goles anotados y xG (spec §6.6: usar xG cuando exista).
+  // El xG corrige rachas: un equipo que generó mucho pero definió mal NO es un
+  // equipo que no ataca — y viceversa con el que vive de pegadas.
+  const atkA = teamA.xg_avg != null ? teamA.gf_avg * 0.5 + teamA.xg_avg * 0.5 : teamA.gf_avg
+  const atkB = teamB.xg_avg != null ? teamB.gf_avg * 0.5 + teamB.xg_avg * 0.5 : teamB.gf_avg
+  // Defensa real = mezcla de goles recibidos y xG concedido
+  const defB = teamB.xga_avg != null ? (teamB.ga_avg * 0.5 + teamB.xga_avg * 0.5) / LEAGUE_AVG_GA : gaModB
+  const defA = teamA.xga_avg != null ? (teamA.ga_avg * 0.5 + teamA.xga_avg * 0.5) / LEAGUE_AVG_GA : gaModA
+
+  const expA = atkA * defB * altMod
+  const expB = atkB * defA * altMod
 
   // BTTS solo si ambos marcan Y ambos conceden con frecuencia (spec: >60%/>60%)
   const bttsViable = teamA.btts_pct > 55 && teamB.btts_pct > 55 && expA > 0.8 && expB > 0.8
@@ -151,6 +157,33 @@ export function calcExpectedGoals(teamA, teamB, altMod = 1.0) {
     expB: +expB.toFixed(2),
     total: +(expA + expB).toFixed(2),
     bttsViable,
+    usaXG: teamA.xg_avg != null || teamB.xg_avg != null,
+  }
+}
+
+// ─── Expected Tarjetas — modelo causal desde faltas (no promedio pelado) ─────
+// Cadena real: fricción → faltas → tarjetas. El expected de faltas del cruce
+// (que ya incluye la interacción entre equipos) se convierte a tarjetas con la
+// tasa tarjeta-por-falta propia de cada equipo, y se mezcla 50/50 con su
+// promedio directo para no perder la señal disciplinaria pura.
+export function calcExpectedCards(teamA, teamB, expFoulsA, expFoulsB) {
+  const RATE_DEFAULT = 0.18 // tasa típica: ~1 tarjeta cada 5.5 faltas
+
+  const rateA = teamA.cardsPerFoul ?? RATE_DEFAULT
+  const rateB = teamB.cardsPerFoul ?? RATE_DEFAULT
+
+  const causalA = expFoulsA * rateA
+  const causalB = expFoulsB * rateB
+
+  const expA = causalA * 0.5 + teamA.cards_avg * 0.5
+  const expB = causalB * 0.5 + teamB.cards_avg * 0.5
+
+  return {
+    expA: +expA.toFixed(2),
+    expB: +expB.toFixed(2),
+    total: +(expA + expB).toFixed(2),
+    rateA: +rateA.toFixed(3),
+    rateB: +rateB.toFixed(3),
   }
 }
 

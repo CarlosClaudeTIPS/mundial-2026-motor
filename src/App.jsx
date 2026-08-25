@@ -27,17 +27,20 @@ export default function App() {
     try { localStorage.setItem(LEAGUE_STORAGE_KEY, String(id)) } catch {}
   }, [])
 
-  // Fixture → Analizar: pasa nombres, Analizar los resuelve contra la liga
-  const handleAnalizar = useCallback((homeTeamName, awayTeamName) => {
+  // Fixture → Analizar: pasa nombres (y liga si el partido es de otra competición)
+  const handleAnalizar = useCallback((homeTeamName, awayTeamName, matchLeagueId) => {
+    if (matchLeagueId && Number(matchLeagueId) !== leagueId) {
+      handleLeagueChange(matchLeagueId)
+    }
     setAnalyzeTeams({ teamAName: homeTeamName, teamBName: awayTeamName })
     setTab('analizar')
-  }, [])
+  }, [leagueId, handleLeagueChange])
 
   function renderContent() {
     if (tab === 'fixture')   return <Fixture league={league} onAnalizar={handleAnalizar} />
-    if (tab === 'tabla')     return <LeagueStandings league={league} />
+    if (tab === 'tabla')     return <LeagueStandings league={league} onAnalizar={handleAnalizar} />
     if (tab === 'analizar')  return <Analizar league={league} preloadTeams={analyzeTeams} />
-    if (tab === 'vivo')      return <EnVivo />
+    if (tab === 'vivo')      return <EnVivo league={league} />
     if (tab === 'historial') return <Historial />
     if (tab === 'bankroll')  return <BankrollTracker />
     return null
