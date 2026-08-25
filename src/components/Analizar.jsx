@@ -31,7 +31,7 @@ function StatRow({ label, valA, valB, higherIsBetter = true }) {
   )
 }
 
-function TeamStatsRef({ teamA, teamB }) {
+export function TeamStatsRef({ teamA, teamB }) {
   const [open, setOpen] = useState(false)
   return (
     <div className="card border border-dark-600">

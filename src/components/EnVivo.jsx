@@ -1,9 +1,12 @@
-import { useState, useMemo, useEffect, useCallback } from 'react'
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { getSituationS, getTacticalK, calcLiveExpected, poissonOver } from '../lib/engine'
 import { bestRealisticLine } from '../lib/picks'
 import { fetchLive } from '../lib/football-api'
 import { fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
+import { buildTeamStats } from '../lib/league-stats'
+import { TeamStatsRef } from './Analizar'
+import RecentResults from './RecentResults'
 
 // Misma lista de ligas seguidas que usa el Fixture
 const MIS_LIGAS_KEY = 'motor_mis_ligas'
@@ -157,6 +160,41 @@ export default function EnVivo({ league }) {
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
 
+  // Prepartido: promedios de los últimos 10 por equipo (como en Analizar)
+  const [preA, setPreA] = useState(null)
+  const [preB, setPreB] = useState(null)
+  const [preLoading, setPreLoading] = useState(false)
+  const [preProgress, setPreProgress] = useState('')
+  const [preError, setPreError] = useState(null)
+  const prematchFor = useRef(null)
+
+  const loadPrematch = useCallback(async (match) => {
+    if (prematchFor.current === match.id) return // ya cargado o cargando para este partido
+    prematchFor.current = match.id
+    setPreA(null); setPreB(null); setPreError(null); setPreProgress('')
+    if (!match.homeId || !match.awayId) {
+      setPreError('Este partido no trae IDs de equipos para buscar su historial')
+      return
+    }
+    const lg = LEAGUES.find(l => l.id === match.leagueId) ?? league
+    setPreLoading(true)
+    const onProgress = (name, i, n) => {
+      if (prematchFor.current === match.id) setPreProgress(`${name}: partido ${i}/${n}`)
+    }
+    try {
+      const a = await buildTeamStats(lg, match.homeId, match.homeTeam, onProgress)
+      if (prematchFor.current !== match.id) return
+      setPreA(a)
+      const b = await buildTeamStats(lg, match.awayId, match.awayTeam, onProgress)
+      if (prematchFor.current !== match.id) return
+      setPreB(b)
+    } catch (e) {
+      if (prematchFor.current === match.id) setPreError(e.message)
+    } finally {
+      if (prematchFor.current === match.id) { setPreLoading(false); setPreProgress('') }
+    }
+  }, [league])
+
   // ── Cargar partidos en vivo de todas las ligas seguidas ──
   const loadLive = useCallback(async () => {
     setLoadingLive(true)
@@ -193,9 +231,12 @@ export default function EnVivo({ league }) {
       setSelectedId(null)
       setLiveStatsRaw(null)
       setStatsInfo('')
+      prematchFor.current = null
+      setPreA(null); setPreB(null); setPreError(null)
       return
     }
     setSelectedId(match.id)
+    loadPrematch(match) // corre en paralelo; no bloquea las stats en vivo
     setTeamAName(match.homeTeam)
     setTeamBName(match.awayTeam)
     if (match.elapsed) setMinuto(match.elapsed)
@@ -243,7 +284,7 @@ export default function EnVivo({ league }) {
     } catch {
       setStatsInfo('No se pudieron cargar las stats — llena los acumulados a mano')
     }
-  }, [selectedId])
+  }, [selectedId, loadPrematch])
 
   // ── Auto-refresh cada 60s (lista completa + partido seleccionado) ──
   useEffect(() => {
@@ -414,6 +455,24 @@ export default function EnVivo({ league }) {
             </div>
           </div>
         </div>
+
+        {/* ── Prepartido: promedios últimos 10 + detalle partido a partido ── */}
+        {selectedId && (
+          <div className="space-y-3">
+            {preLoading && (
+              <p className="text-xs text-blue-300">📚 Cargando prepartido (promedios de los últimos 10 por equipo)... <span className="text-gray-500">{preProgress}</span></p>
+            )}
+            {preError && (
+              <p className="text-xs text-yellow-500">Prepartido no disponible: {preError}</p>
+            )}
+            {preA && preB && (
+              <>
+                <TeamStatsRef teamA={preA} teamB={preB} />
+                <RecentResults teamA={preA} teamB={preB} />
+              </>
+            )}
+          </div>
+        )}
 
         {!ready && (
           <div className="card text-center text-gray-500 py-10">
