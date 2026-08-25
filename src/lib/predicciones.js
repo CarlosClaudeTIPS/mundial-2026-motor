@@ -38,6 +38,7 @@ export function savePrediccion({ leagueId, teamAName, teamBName, expected, picks
       picks: (picks ?? []).map(p => ({
         label: p.label, marketKey: p.marketKey, dir: p.dir,
         line: p.line, pMod: p.pMod, confidence: p.confidence,
+        expected: p.expected, // lo proyectado — clave para medir el sesgo después
       })),
     }
     localStorage.setItem(KEY, JSON.stringify(all))
@@ -62,6 +63,54 @@ export function getEvaluaciones() {
   try {
     return JSON.parse(localStorage.getItem(EVAL_KEY) || '[]')
   } catch { return [] }
+}
+
+// ─── Valor REAL de cada mercado desde las stats finales del partido ──────────
+const numv = v => {
+  const n = typeof v === 'string' ? parseFloat(v) : v
+  return (n == null || isNaN(n)) ? null : n
+}
+
+export function actualValue(marketKey, fixture, homeStats, awayStats) {
+  const h = k => numv(homeStats?.[k])
+  const a = k => numv(awayStats?.[k])
+  const t = k => (h(k) != null || a(k) != null) ? (h(k) ?? 0) + (a(k) ?? 0) : null
+  const cards = s => {
+    const y = numv(s?.['Yellow Cards']); const r = numv(s?.['Red Cards'])
+    return (y != null || r != null) ? (y ?? 0) + (r ?? 0) : null
+  }
+  switch (marketKey) {
+    case 'goles_totales':    return (fixture.homeGoals ?? 0) + (fixture.awayGoals ?? 0)
+    case 'goles_local':      return fixture.homeGoals
+    case 'goles_visita':     return fixture.awayGoals
+    case 'shots_totales':    return t('Total Shots')
+    case 'tiros_local':      return h('Total Shots')
+    case 'tiros_visita':     return a('Total Shots')
+    case 'sot_totales':      return t('Shots on Goal')
+    case 'sot_local':        return h('Shots on Goal')
+    case 'sot_visita':       return a('Shots on Goal')
+    case 'corners_totales':  return t('Corner Kicks')
+    case 'corners_local':    return h('Corner Kicks')
+    case 'corners_visita':   return a('Corner Kicks')
+    case 'tarjetas_totales': return (cards(homeStats) != null || cards(awayStats) != null) ? (cards(homeStats) ?? 0) + (cards(awayStats) ?? 0) : null
+    case 'tarjetas_local':   return cards(homeStats)
+    case 'tarjetas_visita':  return cards(awayStats)
+    case 'ti_totales':       return t('Throw Ins')
+    case 'ti_local':         return h('Throw Ins')
+    case 'ti_visita':        return a('Throw Ins')
+    case 'gk_totales':       return t('Goal Kicks')
+    case 'gk_local':         return h('Goal Kicks')
+    case 'gk_visita':        return a('Goal Kicks')
+    default:                 return null // corners_1h, tiros_1h... sin dato de tiempos
+  }
+}
+
+export function judge(pick, actual) {
+  if (actual == null) return { res: 'sin_dato' }
+  if (actual === pick.line) return { res: 'push' }
+  const over = actual > pick.line
+  const won = (pick.dir === 'OVER') === over
+  return { res: won ? 'ganada' : 'perdida', actual }
 }
 
 // Marcar/corregir a mano el resultado de un pick evaluado

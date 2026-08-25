@@ -104,3 +104,38 @@ Sé concreto y honesto: si no encuentras algo, dilo en una línea y sigue. No in
   setCache(cacheKey, out)
   return out
 }
+
+// ─── Diagnóstico de calibración — analiza los aciertos/fallos del motor ──────
+export async function diagnosticoCalibracion(resumen) {
+  if (!KEY) throw new Error('Falta VITE_ANTHROPIC_API_KEY en .env.local')
+
+  const client = new Anthropic({ apiKey: KEY, dangerouslyAllowBrowser: true })
+
+  const prompt = `Eres el auditor de un motor estadístico de apuestas deportivas (proyecta tiros, córners, tarjetas, goles, saques con Poisson sobre promedios ponderados de los últimos 10 partidos, ajustados por localía, división y contexto).
+
+Estos son los resultados REALES de sus predicciones recientes (picks evaluados contra lo que pasó en la cancha):
+
+${resumen}
+
+ENTREGA EN ESPAÑOL, conciso y accionable:
+
+📊 LECTURA
+(2-3 líneas: cómo viene el motor en general)
+
+🔍 POR QUÉ SE PERDIERON
+(para los mercados con fallos: la causa más probable — ¿sobreestima el volumen? ¿la línea elegida era muy justa? ¿mercado demasiado volátil? sé específico con los números del resumen)
+
+✅ QUÉ ESTÁ FUNCIONANDO
+(mercados/direcciones donde el motor acierta y por qué conviene seguir ahí)
+
+🔧 AJUSTES CONCRETOS
+(máximo 4, priorizados: qué factor recalibrar y en qué dirección, ej. "bajar el expected de córners ~10% en ligas X" o "solo tomar OVER de tiros cuando el margen supere 12%")`
+
+  const response = await client.messages.create({
+    model: 'claude-opus-5',
+    max_tokens: 4000,
+    messages: [{ role: 'user', content: prompt }],
+  })
+
+  return response.content.filter(b => b.type === 'text').map(b => b.text).join('\n').trim()
+}

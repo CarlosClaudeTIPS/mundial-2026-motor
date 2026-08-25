@@ -43,7 +43,7 @@ export default function App() {
     if (tab === 'analizar')  return <Analizar league={league} preloadTeams={analyzeTeams} />
     if (tab === 'vivo')      return <EnVivo league={league} />
     if (tab === 'historial') return <Historial />
-    if (tab === 'predicciones') return <Predicciones />
+    if (tab === 'predicciones') return <Predicciones league={league} />
     if (tab === 'bankroll')  return <BankrollTracker />
     return null
   }

@@ -49,7 +49,7 @@ function weighted(values) {
 
 // ─── Cargar y agregar los últimos partidos de un equipo ──────────────────────
 // Devuelve objeto compatible con el motor + metadata de calidad de datos.
-export async function buildTeamStats(league, teamId, teamName, onProgress) {
+export async function buildTeamStats(league, teamId, teamName, onProgress, opts = {}) {
   const base = getBaseline(league.id)
 
   const lastRes = await fetchTeamLast(league.id, teamId, 10)
@@ -57,8 +57,12 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
     throw new Error(`Sin partidos recientes para ${teamName}`)
   }
 
-  // Más reciente primero
-  const fixtures = [...lastRes.fixtures].sort((a, b) => new Date(b.date) - new Date(a.date))
+  // Más reciente primero. excludeFixtureId: para backtest — el partido que se
+  // quiere "predecir" no puede formar parte de su propio historial.
+  const fixtures = [...lastRes.fixtures]
+    .filter(f => !opts.excludeFixtureId || f.id !== opts.excludeFixtureId)
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+  if (!fixtures.length) throw new Error(`Sin partidos recientes para ${teamName}`)
 
   // Stats por partido (secuencial para respetar rate limit del plan gratuito)
   const rows = []
