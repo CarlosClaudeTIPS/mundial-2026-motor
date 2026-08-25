@@ -7,7 +7,7 @@ export const config = { runtime: 'edge' }
 const API_KEY  = process.env.API_FOOTBALL_KEY
 const BASE_URL = 'https://v3.football.api-sports.io'
 
-const VALID_LEAGUES = new Set([39, 140, 78, 135, 61, 94, 88, 253, 262, 239, 13, 11, 2, 3, 848, 40, 71, 128, 203, 307, 179, 144, 197, 207, 218])
+const VALID_LEAGUES = new Set([39, 140, 78, 135, 61, 94, 88, 253, 262, 239, 13, 11, 2, 3, 848, 40, 71, 128, 203, 307, 179, 144, 197, 207, 218, 235])
 
 function defaultSeason() {
   const now = new Date()
