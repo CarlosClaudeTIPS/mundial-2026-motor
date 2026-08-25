@@ -7,6 +7,7 @@ import EnVivo from './components/EnVivo'
 import Historial from './components/Historial'
 import Fixture from './components/Fixture'
 import BankrollTracker from './components/bankroll/BankrollTracker'
+import Predicciones from './components/Predicciones'
 import { getLeague, DEFAULT_LEAGUE_ID } from './lib/leagues'
 
 const LEAGUE_STORAGE_KEY = 'motor_selected_league'
@@ -42,6 +43,7 @@ export default function App() {
     if (tab === 'analizar')  return <Analizar league={league} preloadTeams={analyzeTeams} />
     if (tab === 'vivo')      return <EnVivo league={league} />
     if (tab === 'historial') return <Historial />
+    if (tab === 'predicciones') return <Predicciones />
     if (tab === 'bankroll')  return <BankrollTracker />
     return null
   }

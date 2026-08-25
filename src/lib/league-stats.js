@@ -309,6 +309,29 @@ export async function buildTeamStats(league, teamId, teamName, onProgress) {
     styleReal: crosses_avg != null,
     last5: rows.slice(0, 5).map(mapHistoryRow),
     last10: rows.slice(0, 10).map(mapHistoryRow),
+    // ── Splits de localía y racha (para el factor casa/visita del análisis) ──
+    split: (() => {
+      const mkSplit = rs => {
+        const a = key => {
+          const v = rs.map(r => r[key]).filter(x => x != null && !isNaN(x))
+          return v.length ? +(v.reduce((s, b) => s + b, 0) / v.length).toFixed(2) : null
+        }
+        const p = rs.reduce((s, r) => s + (r.result === 'W' ? 3 : r.result === 'D' ? 1 : 0), 0)
+        return rs.length ? {
+          n: rs.length, ppg: +(p / rs.length).toFixed(2),
+          gf: a('gf'), ga: a('ga'), shots: a('shots'), sot: a('sot'),
+          corners: a('corners'), cards: a('cards'),
+        } : null
+      }
+      return { home: mkSplit(rows.filter(r => r.isHome)), away: mkSplit(rows.filter(r => !r.isHome)) }
+    })(),
+    racha: (() => {
+      if (!rows.length) return null
+      const first = rows[0].result
+      let n = 0
+      for (const r of rows) { if (r.result === first) n++; else break }
+      return { tipo: first, n } // ej: { tipo: 'W', n: 3 } = 3 victorias seguidas
+    })(),
   }
 }
 

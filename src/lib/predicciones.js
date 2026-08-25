@@ -3,7 +3,8 @@
 // 7 días. Después del partido se compara contra las stats reales → calibración.
 
 const KEY = 'motor_predicciones_v1'
-const TTL = 7 * 24 * 3600_000
+const EVAL_KEY = 'motor_predicciones_eval_v1' // evaluadas contra resultado real — permanentes
+const TTL = 30 * 24 * 3600_000
 
 const norm = s => (s ?? '').toLowerCase().trim()
 
@@ -46,4 +47,33 @@ export function savePrediccion({ leagueId, teamAName, teamBName, expected, picks
 export function getPrediccion(leagueId, homeName, awayName) {
   const all = loadAll()
   return all[matchKey(leagueId, homeName, awayName)] ?? null
+}
+
+// ── Todas las predicciones pendientes (para la pestaña de calibración) ──
+export function getAllPredicciones() {
+  const all = loadAll()
+  return Object.entries(all)
+    .map(([key, p]) => ({ key, ...p }))
+    .sort((a, b) => b.ts - a.ts)
+}
+
+// ── Evaluaciones guardadas (predicción vs resultado real) — permanentes ──
+export function getEvaluaciones() {
+  try {
+    return JSON.parse(localStorage.getItem(EVAL_KEY) || '[]')
+  } catch { return [] }
+}
+
+export function saveEvaluacion(ev) {
+  try {
+    const all = getEvaluaciones()
+    // no duplicar el mismo partido
+    if (all.some(e => e.key === ev.key)) return
+    all.unshift(ev)
+    localStorage.setItem(EVAL_KEY, JSON.stringify(all.slice(0, 300)))
+    // sacar de pendientes
+    const pend = loadAll()
+    delete pend[ev.key]
+    localStorage.setItem(KEY, JSON.stringify(pend))
+  } catch {}
 }

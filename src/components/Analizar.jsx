@@ -57,6 +57,25 @@ export function TeamStatsRef({ teamA, teamB }) {
           <StatRow label="GK/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
           <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
           <StatRow label="BTTS%" valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
+
+          {/* Racha y localía */}
+          {(teamA.racha || teamB.racha || teamA.split || teamB.split) && (
+            <div className="mt-3 pt-2 border-t border-dark-700 text-xs text-gray-400 space-y-1">
+              <p className="text-gray-600 uppercase tracking-wide text-[10px]">Racha y localía (últimos {teamA.matches})</p>
+              {teamA.racha && (
+                <p>{teamA.racha.tipo === 'W' ? '🔥' : teamA.racha.tipo === 'L' ? '🥶' : '➖'} <span className="text-green-400">{teamA.name}</span>: {teamA.racha.n} {teamA.racha.tipo === 'W' ? 'victoria(s)' : teamA.racha.tipo === 'L' ? 'derrota(s)' : 'empate(s)'} seguida(s)</p>
+              )}
+              {teamB.racha && (
+                <p>{teamB.racha.tipo === 'W' ? '🔥' : teamB.racha.tipo === 'L' ? '🥶' : '➖'} <span className="text-blue-400">{teamB.name}</span>: {teamB.racha.n} {teamB.racha.tipo === 'W' ? 'victoria(s)' : teamB.racha.tipo === 'L' ? 'derrota(s)' : 'empate(s)'} seguida(s)</p>
+              )}
+              {teamA.split?.home && (
+                <p>🏠 <span className="text-green-400">{teamA.name}</span> en casa ({teamA.split.home.n} PJ): {teamA.split.home.ppg} pts · {teamA.split.home.gf ?? '—'} goles · {teamA.split.home.shots ?? '—'} tiros · {teamA.split.home.corners ?? '—'} córners</p>
+              )}
+              {teamB.split?.away && (
+                <p>✈️ <span className="text-blue-400">{teamB.name}</span> de visita ({teamB.split.away.n} PJ): {teamB.split.away.ppg} pts · {teamB.split.away.gf ?? '—'} goles · {teamB.split.away.shots ?? '—'} tiros · {teamB.split.away.corners ?? '—'} córners</p>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -607,7 +626,45 @@ export default function Analizar({ league, preloadTeams }) {
   const [buildError, setBuildError] = useState(null)
   const [ctx, setCtx] = useState(DEFAULT_CTX)
   const [ctxOpen, setCtxOpen] = useState(false)
+  const [clima, setClima] = useState(null) // pronóstico automático del estadio
   const buildSeq = useRef(0)
+
+  // ── Clima automático: busca el fixture de estos equipos y trae el pronóstico ──
+  useEffect(() => {
+    setClima(null)
+    if (!teamAId || !teamBId || !leagueTeams.length) return
+    let alive = true
+    const nameA = (leagueTeams.find(t => t.id === Number(teamAId))?.name ?? '').toLowerCase()
+    const nameB = (leagueTeams.find(t => t.id === Number(teamBId))?.name ?? '').toLowerCase()
+    ;(async () => {
+      try {
+        const fx = await fetchFixtures(league.id)
+        if (!alive || !fx?.ok) return
+        const norm = s => (s ?? '').toLowerCase()
+        const f = (fx.fixtures ?? []).find(f =>
+          (norm(f.homeTeam) === nameA && norm(f.awayTeam) === nameB) ||
+          (norm(f.homeTeam) === nameB && norm(f.awayTeam) === nameA)
+        )
+        if (!f?.venue || !f?.date) return
+        const { fetchClima } = await import('../lib/clima')
+        const c = await fetchClima(f.venue, f.date)
+        if (!alive || !c) return
+        setClima(c)
+        // Auto-activar checks de calor/lluvia (el usuario puede desmarcarlos)
+        if (c.sugiereCalor || c.sugiereLluvia) {
+          setCtx(prev => ({
+            ...prev,
+            checks: {
+              ...prev.checks,
+              ...(c.sugiereCalor ? { calor: true } : {}),
+              ...(c.sugiereLluvia ? { lluvia: true } : {}),
+            },
+          }))
+        }
+      } catch {}
+    })()
+    return () => { alive = false }
+  }, [teamAId, teamBId, leagueTeams, league.id])
 
   // ── Cargar equipos de la liga ──
   useEffect(() => {
@@ -1013,6 +1070,18 @@ export default function Analizar({ league, preloadTeams }) {
       )}
 
       {/* ── Contexto ── */}
+      {clima && (
+        <div className="rounded-lg bg-blue-950/40 border border-blue-800/40 px-4 py-2.5 text-xs text-blue-200 flex items-center gap-2 flex-wrap">
+          <span className="font-semibold">🌦️ Clima en {clima.city} a la hora del partido:</span>
+          <span>{clima.resumen}</span>
+          {(clima.sugiereCalor || clima.sugiereLluvia) && (
+            <span className="text-yellow-400 font-semibold">
+              → auto-activado: {[clima.sugiereCalor && 'calor extremo', clima.sugiereLluvia && 'lluvia'].filter(Boolean).join(' + ')} en el contexto
+            </span>
+          )}
+        </div>
+      )}
+
       {ready && (
         <div className="card border border-dark-600">
           <button onClick={() => setCtxOpen(o => !o)} className="w-full flex items-center justify-between text-left">

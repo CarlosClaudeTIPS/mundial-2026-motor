@@ -8,6 +8,7 @@ const TABS = [
   { id: 'analizar', label: 'Analizar' },
   { id: 'vivo',     label: 'En Vivo' },
   { id: 'historial',label: 'Historial' },
+  { id: 'predicciones', label: 'Predicciones' },
   { id: 'bankroll', label: 'Bankroll' },
 ]
 

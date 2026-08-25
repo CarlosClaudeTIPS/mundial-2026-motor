@@ -1,4 +1,4 @@
-import { BarChart2, Clock, List, Calendar, Table, DollarSign } from 'lucide-react'
+import { BarChart2, Clock, List, Calendar, Table, DollarSign, Target } from 'lucide-react'
 import { LEAGUES } from '../lib/leagues'
 
 const TABS = [
@@ -7,6 +7,7 @@ const TABS = [
   { id: 'analizar', label: 'Analizar',  icon: BarChart2 },
   { id: 'vivo',     label: 'En Vivo',   icon: Clock },
   { id: 'historial',label: 'Historial', icon: List },
+  { id: 'predicciones', label: 'Predicciones', icon: Target },
   { id: 'bankroll', label: 'Bankroll',  icon: DollarSign },
 ]
 

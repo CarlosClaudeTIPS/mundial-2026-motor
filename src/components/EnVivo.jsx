@@ -87,6 +87,11 @@ function LiveStatsBoard({ raw, homeName, awayName, minuto }) {
     .map(([key, label]) => ({ label, h: num(raw.home[key]), a: num(raw.away[key]) }))
     .filter(r => r.h != null || r.a != null)
 
+  // Qué stats NO reporta la API en este partido — el usuario debe saberlo
+  const missing = LIVE_STAT_ROWS
+    .filter(([key]) => num(raw.home[key]) == null && num(raw.away[key]) == null)
+    .map(([, label]) => label)
+
   if (!rows.length) return null
 
   return (
@@ -117,6 +122,11 @@ function LiveStatsBoard({ raw, homeName, awayName, minuto }) {
           </div>
         )
       })}
+      {missing.length > 0 && (
+        <p className="text-[11px] text-yellow-600/90 pt-1 border-t border-dark-700">
+          ⚠️ La API no reporta en este partido: {missing.join(', ')} — los mercados sin dato no se recomiendan
+        </p>
+      )}
     </div>
   )
 }
@@ -130,6 +140,53 @@ function sumStat(stats, name) {
   const an = typeof a === 'string' ? parseFloat(a) : a
   if (hn == null && an == null) return null
   return (hn ?? 0) + (an ?? 0)
+}
+
+const numv = v => {
+  const n = typeof v === 'string' ? parseFloat(v) : v
+  return (n == null || isNaN(n)) ? null : n
+}
+
+// Stats por equipo desde el tablero crudo
+function perTeamFromRaw(raw) {
+  if (!raw) return null
+  const g = (side, key) => numv(raw[side]?.[key])
+  const cards = side => {
+    const y = g(side, 'Yellow Cards'); const r = g(side, 'Red Cards')
+    return (y != null || r != null) ? (y ?? 0) + (r ?? 0) : null
+  }
+  const mk = side => ({
+    shots:   g(side, 'Total Shots'),
+    sot:     g(side, 'Shots on Goal'),
+    corners: g(side, 'Corner Kicks'),
+    cards:   cards(side),
+    ti:      g(side, 'Throw Ins'),
+    gk:      g(side, 'Goal Kicks'),
+    da:      g(side, 'Dangerous Attacks'),
+    att:     g(side, 'Attacks'),
+  })
+  return { h: mk('home'), a: mk('away') }
+}
+
+// ─── Drive de ataque por equipo: estado del partido × perfil prepartido ──────
+// La proyección NO es lineal: un equipo que va ganando 2-0 y no acostumbra
+// golear suele frenar; un dominante que va perdiendo sigue empujando.
+function attackDrive({ diff, minuto, pre, preRival }) {
+  let f = 1
+  if (diff < 0)       f = diff <= -2 ? 1.14 : 1.10   // perdiendo → empuja
+  else if (diff > 0)  f = diff >= 2 ? 0.85 : 0.94    // ganando → administra
+  // Tramo final amplifica el estado
+  if (minuto >= 70) f = diff < 0 ? f * 1.05 : diff > 0 ? f * 0.95 : f
+  // Perfil prepartido (si ya cargó):
+  if (pre) {
+    // Equipo ganando que NO acostumbra ganar/golear → asegura el resultado
+    if (diff > 0 && (pre.ppg < 1.2 || pre.gf_avg < 1.2)) f *= 0.92
+    // Equipo perdiendo que es dominante (genera mucho volumen) → sigue pateando
+    if (diff < 0 && preRival && pre.shots_avg >= preRival.shots_avg + 2) f *= 1.06
+    // Equipo perdiendo con poca pólvora histórica → no esperes avalancha
+    if (diff < 0 && pre.shots_avg < 10) f *= 0.94
+  }
+  return Math.min(1.25, Math.max(0.78, f))
 }
 
 export default function EnVivo({ league }) {
@@ -159,6 +216,9 @@ export default function EnVivo({ league }) {
   const [dangAtk,    setDangAtk]    = useState(null) // { h, a } ataques peligrosos si la API los da
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
+
+  // Historial de snapshots del partido seleccionado → momentum (¿se calienta o se enfría?)
+  const snapsRef = useRef([])
 
   // Prepartido: promedios de los últimos 10 por equipo (como en Analizar)
   const [preA, setPreA] = useState(null)
@@ -232,9 +292,11 @@ export default function EnVivo({ league }) {
       setLiveStatsRaw(null)
       setStatsInfo('')
       prematchFor.current = null
+      snapsRef.current = []
       setPreA(null); setPreB(null); setPreError(null)
       return
     }
+    if (selectedId !== match.id) snapsRef.current = [] // partido nuevo → historial limpio
     setSelectedId(match.id)
     loadPrematch(match) // corre en paralelo; no bloquea las stats en vivo
     setTeamAName(match.homeTeam)
@@ -271,12 +333,22 @@ export default function EnVivo({ league }) {
       setDangAtk(daH != null || daA != null ? { h: daH ?? '—', a: daA ?? '—' } : null)
 
       // Tablero de stats actuales por equipo
-      setLiveStatsRaw({
+      const raw = {
         home: res.stats?.[0]?.stats ?? {},
         away: res.stats?.[1]?.stats ?? {},
         homeName: match.homeTeam,
         awayName: match.awayTeam,
-      })
+      }
+      setLiveStatsRaw(raw)
+
+      // Snapshot para el momentum (solo si avanzó el minuto)
+      const min = match.elapsed ?? 0
+      const pt = perTeamFromRaw(raw)
+      const last = snapsRef.current[snapsRef.current.length - 1]
+      if (min > 0 && (!last || min > last.min)) {
+        snapsRef.current.push({ min, h: pt.h, a: pt.a })
+        if (snapsRef.current.length > 30) snapsRef.current.shift()
+      }
 
       setStatsInfo(filled.length
         ? `✓ Auto-llenado: ${filled.join(', ')}${ti != null ? ', throw-ins' : ''}`
@@ -301,6 +373,42 @@ export default function EnVivo({ league }) {
 
   const minutosRestantes = Math.max(0, 90 - minuto)
 
+  // Stats por equipo del partido en vivo (null si la API no las da)
+  const perTeam = useMemo(() => perTeamFromRaw(liveStatsRaw), [liveStatsRaw])
+
+  // ── MOMENTUM: ¿el partido se calienta o se enfría? ──
+  // Compara el ritmo reciente (ventana ~12 min) contra el ritmo promedio del
+  // partido, usando ataques peligrosos (o tiros si no hay). Esto corrige la
+  // extrapolación lineal ingenua: 5 tiros en 20 min NO son "1 cada 4 min para
+  // siempre" — depende de cómo viene evolucionando el juego.
+  const momentum = useMemo(() => {
+    const snaps = snapsRef.current
+    if (snaps.length < 2) return { global: 1, h: 1, a: 1, base: null }
+    const last = snaps[snaps.length - 1]
+    // snapshot ~12 min atrás (el más cercano)
+    let past = snaps[0]
+    for (const s of snaps) { if (last.min - s.min >= 8) past = s }
+    const span = last.min - past.min
+    if (span < 5) return { global: 1, h: 1, a: 1, base: null }
+
+    const rate = (side) => {
+      const key = last[side].da != null ? 'da' : (last[side].shots != null ? 'shots' : null)
+      if (!key) return null
+      const total = last[side][key]; const prev = past[side][key]
+      if (total == null || prev == null || last.min <= 0) return null
+      const recent = (total - prev) / span
+      const avg = total / last.min
+      if (avg <= 0) return null
+      return { f: recent / avg, key }
+    }
+    const rh = rate('h'); const ra = rate('a')
+    const clamp = f => Math.min(1.30, Math.max(0.75, f))
+    const h = rh ? clamp(rh.f) : 1
+    const a = ra ? clamp(ra.f) : 1
+    const global = rh || ra ? clamp(((rh?.f ?? 1) + (ra?.f ?? 1)) / 2) : 1
+    return { global, h, a, base: rh?.key ?? ra?.key ?? null, span }
+  }, [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const calc = useMemo(() => {
     if (!teamAName.trim() || !teamBName.trim() || minuto <= 0) return null
 
@@ -308,57 +416,110 @@ export default function EnVivo({ league }) {
     const situationS = getSituationS(goalDiff)
     const tacticalK  = getTacticalK(zona)
 
-    // ── Intensidad real de ataque (ataques peligrosos/minuto) ──
-    // Ritmo típico combinado: ~1.1 ataques peligrosos por minuto.
-    // Un partido caliente (1.4/min) proyecta MÁS córners/tiros que su ritmo
-    // pasado; un partido dormido (0.7/min) proyecta menos. Esto corrige el
-    // "un córner cada 20 min" ingenuo con lo que REALMENTE pasa en la cancha.
+    // Intensidad global (ataques peligrosos/min vs ritmo típico 1.1/min)
     const daTotal = dangAtk ? (parseFloat(dangAtk.h) || 0) + (parseFloat(dangAtk.a) || 0) : null
     const intensity = (daTotal && minuto >= 15)
       ? Math.min(1.20, Math.max(0.85, (daTotal / minuto) / 1.1))
       : 1
 
-    const corners = calcLiveExpected({ statAcumulada: cornersAc, minutos: minuto, minutosRestantes, situationS, tacticalK: tacticalK * intensity })
-    const shots   = calcLiveExpected({ statAcumulada: tirosAc,   minutos: minuto, minutosRestantes, situationS, tacticalK: intensity })
-    const sot     = calcLiveExpected({ statAcumulada: sotAc,     minutos: minuto, minutosRestantes, situationS, tacticalK: intensity })
-    const cards   = calcLiveExpected({ statAcumulada: tarjetasAc,minutos: minuto, minutosRestantes, situationS, tacticalK: 1 })
-    // TI en vivo: ritmo estable (no depende del marcador) pero sí de la intensidad física
-    const ti = tiAc != null
-      ? calcLiveExpected({ statAcumulada: tiAc, minutos: minuto, minutosRestantes, situationS: 1, tacticalK: intensity })
-      : null
+    // Drives por equipo: estado del partido × perfil prepartido × momentum propio
+    const driveH = attackDrive({ diff: goalDiff,  minuto, pre: preA, preRival: preB }) * momentum.h
+    const driveA = attackDrive({ diff: -goalDiff, minuto, pre: preB, preRival: preA }) * momentum.a
+
+    // ── Proyección por equipo cuando hay dato de la API ──
+    const projTeam = (acum, drive, k = 1) => {
+      if (acum == null) return null
+      const r = calcLiveExpected({ statAcumulada: acum, minutos: minuto, minutosRestantes, situationS: 1, tacticalK: drive * k })
+      return { acum, proy: +(acum + r.lambda).toFixed(1) }
+    }
+
+    const team = perTeam ? {
+      h: {
+        shots:   projTeam(perTeam.h.shots,   driveH, intensity),
+        sot:     projTeam(perTeam.h.sot,     driveH, intensity),
+        corners: projTeam(perTeam.h.corners, driveH, tacticalK * intensity),
+        cards:   projTeam(perTeam.h.cards,   goalDiff < 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
+        ti:      projTeam(perTeam.h.ti,      1, intensity),
+        gk:      projTeam(perTeam.h.gk,      1, 1),
+      },
+      a: {
+        shots:   projTeam(perTeam.a.shots,   driveA, intensity),
+        sot:     projTeam(perTeam.a.sot,     driveA, intensity),
+        corners: projTeam(perTeam.a.corners, driveA, tacticalK * intensity),
+        cards:   projTeam(perTeam.a.cards,   goalDiff > 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
+        ti:      projTeam(perTeam.a.ti,      1, intensity),
+        gk:      projTeam(perTeam.a.gk,      1, 1),
+      },
+    } : null
+
+    // ── Totales: si hay per-equipo, el total = suma de las dos proyecciones
+    //    (cada una con SU drive); si no, extrapolación clásica con factores globales
+    const totalFrom = (key, acumTotal, fallbackK) => {
+      const th = team?.h?.[key]; const ta = team?.a?.[key]
+      if (th && ta) return { proy: +(th.proy + ta.proy).toFixed(1) }
+      if (acumTotal == null) return null
+      const r = calcLiveExpected({ statAcumulada: acumTotal, minutos: minuto, minutosRestantes, situationS, tacticalK: fallbackK })
+      return { proy: +(acumTotal + r.lambda).toFixed(1) }
+    }
+
+    const corners = totalFrom('corners', cornersAc, tacticalK * intensity * momentum.global)
+    const shots   = totalFrom('shots',   tirosAc,   intensity * momentum.global)
+    const sot     = totalFrom('sot',     sotAc,     intensity * momentum.global)
+    const cards   = totalFrom('cards',   tarjetasAc, 1)
+    const ti      = totalFrom('ti',      tiAc,      intensity)
 
     return {
       situationS, tacticalK, intensity: +intensity.toFixed(2), daTotal,
-      corners: { ...corners, proy: +(cornersAc + corners.lambda).toFixed(1) },
-      shots:   { ...shots,   proy: +(tirosAc   + shots.lambda).toFixed(1) },
-      sot:     { ...sot,     proy: +(sotAc      + sot.lambda).toFixed(1) },
-      cards:   { ...cards,   proy: +(tarjetasAc + cards.lambda).toFixed(1) },
-      ti:      ti ? { ...ti, proy: +(tiAc + ti.lambda).toFixed(1) } : null,
+      driveH: +driveH.toFixed(2), driveA: +driveA.toFixed(2),
+      momentum,
+      team,
+      corners: corners ? { proy: corners.proy } : null,
+      shots:   shots   ? { proy: shots.proy } : null,
+      sot:     sot     ? { proy: sot.proy } : null,
+      cards:   cards   ? { proy: cards.proy } : null,
+      ti:      ti      ? { proy: ti.proy } : null,
     }
-  }, [teamAName, teamBName, minuto, golesA, golesB, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, zona, dangAtk])
+  }, [teamAName, teamBName, minuto, golesA, golesB, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, zona, dangAtk, perTeam, preA, preB, momentum, minutosRestantes])
 
   const ready = !!calc
 
-  // ─── RECOMENDADOS EN VIVO — ordenados por confianza ──────────────────────
+  // ─── RECOMENDADOS EN VIVO — totales Y por equipo, solo con dato real ──────
   const liveRecs = useMemo(() => {
     if (!calc) return []
-    const mkts = [
-      { label: 'Córners',   proy: calc.corners.proy, acum: cornersAc, step: 1, extra: `Situation S ×${calc.situationS} por el marcador ${golesA}-${golesB}` },
-      { label: 'Tiros',     proy: calc.shots.proy,   acum: tirosAc,   step: 2, extra: null },
-      { label: 'SOT',       proy: calc.sot.proy,     acum: sotAc,     step: 1, extra: null },
-      { label: 'Tarjetas',  proy: calc.cards.proy,   acum: tarjetasAc, step: 1, extra: minuto >= 60 ? 'Tramo 60-90: donde más tarjetas caen' : null },
-      ...(calc.ti ? [{ label: 'Throw-ins', proy: calc.ti.proy, acum: tiAc, step: 2, extra: 'Dato real en vivo de la API' }] : []),
-    ]
+    const mkts = []
+    const push = (label, proyObj, acum, step, extra) => {
+      if (!proyObj || acum == null) return
+      mkts.push({ label, proy: proyObj.proy, acum, step, extra })
+    }
+    // Totales
+    push('Córners',  calc.corners, cornersAc, 1, `Situation S ×${calc.situationS} por el marcador ${golesA}-${golesB}`)
+    push('Tiros',    calc.shots,   tirosAc,   2, null)
+    push('SOT',      calc.sot,     sotAc,     1, null)
+    push('Tarjetas', calc.cards,   tarjetasAc, 1, minuto >= 60 ? 'Tramo 60-90: donde más tarjetas caen' : null)
+    push('Throw-ins', calc.ti,     tiAc,      2, 'Dato real en vivo de la API')
+    // Por equipo (solo si la API da el dato de ese equipo)
+    const tn = { h: teamAName || 'Local', a: teamBName || 'Visitante' }
+    for (const side of ['h', 'a']) {
+      const t = calc.team?.[side]
+      if (!t) continue
+      const drive = side === 'h' ? calc.driveH : calc.driveA
+      const dtxt = drive > 1.04 ? `Drive ×${drive}: empujando` : drive < 0.96 ? `Drive ×${drive}: administrando` : null
+      push(`Córners ${tn[side]}`,  t.corners, t.corners?.acum, 1, dtxt)
+      push(`Tiros ${tn[side]}`,    t.shots,   t.shots?.acum,   1, dtxt)
+      push(`SOT ${tn[side]}`,      t.sot,     t.sot?.acum,     1, dtxt)
+      push(`Tarjetas ${tn[side]}`, t.cards,   t.cards?.acum,   1, null)
+      push(`Throw-ins ${tn[side]}`, t.ti,     t.ti?.acum,      1, null)
+      push(`Saques puerta ${tn[side]}`, t.gk, t.gk?.acum,      1, null)
+    }
+
     const recs = []
     for (const m of mkts) {
       const rec = bestRealisticLine(m.proy, m.step)
       if (!rec) continue
-      // Línea ya superada → solo tiene sentido el OVER cumplido, no recomendar
       if (rec.dir === 'OVER' && m.acum > rec.line) continue
       const ritmo = minuto > 0 ? m.acum / minuto : 0
       const pOver = poissonOver(m.proy, rec.line)
       const p = rec.dir === 'OVER' ? pOver : 1 - pOver
-      // Confianza: crece con los minutos jugados (ritmo más fiable) y el margen
       const confidence = Math.min(90, Math.round(
         30 + (minuto / 90) * 35 + Math.min(15, Math.abs(rec.margin) * 100) + (p > 0.7 ? 8 : 0)
       ))
@@ -368,10 +529,11 @@ export default function EnVivo({ league }) {
       })
     }
     return recs.sort((a, b) => b.confidence - a.confidence)
-  }, [calc, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, minuto, golesA, golesB])
+  }, [calc, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, minuto, golesA, golesB, teamAName, teamBName])
 
   // ─── Panel de análisis (se renderiza inline debajo del partido elegido) ───
   function renderAnalysis() {
+    const tn = { h: teamAName || 'Local', a: teamBName || 'Visitante' }
     return (
       <div className="space-y-4 rounded-xl border border-red-800/40 bg-dark-900/50 p-4">
         {statsInfo && (
@@ -379,6 +541,12 @@ export default function EnVivo({ league }) {
         )}
         {dangAtk && (
           <p className="text-xs text-orange-300">⚔️ Ataques peligrosos: {teamAName} {dangAtk.h} · {teamBName} {dangAtk.a} — quien acumula más presiona el próximo córner/gol</p>
+        )}
+        {calc?.momentum?.base && calc.momentum.global !== 1 && (
+          <p className="text-xs text-blue-300">
+            📈 Momentum (últimos ~{calc.momentum.span ?? 10} min vs promedio del partido): {tn.h} ×{calc.momentum.h.toFixed(2)} · {tn.a} ×{calc.momentum.a.toFixed(2)}
+            <span className="text-gray-500"> — medido con {calc.momentum.base === 'da' ? 'ataques peligrosos' : 'tiros'}; el partido {calc.momentum.global > 1.05 ? 'se está calentando 🔥' : calc.momentum.global < 0.95 ? 'se está enfriando ❄️' : 'mantiene el ritmo'}</span>
+          </p>
         )}
         {selectedId && (
           <p className="text-xs text-gray-600">Marcador, minuto y stats se actualizan solos cada 60 segundos</p>
@@ -488,7 +656,7 @@ export default function EnVivo({ league }) {
               <div className="rounded-2xl border-2 border-red-700/60 bg-gradient-to-b from-red-950/50 to-dark-800 p-5 space-y-3">
                 <div className="flex items-center justify-between flex-wrap gap-2">
                   <h2 className="text-xl font-black text-red-300 tracking-wide">🏆 RECOMENDADOS EN VIVO — min {minuto}'</h2>
-                  <span className="text-xs text-gray-500">orden: confianza · la confianza sube con los minutos jugados</span>
+                  <span className="text-xs text-gray-500">orden: confianza · incluye mercados por equipo · solo mercados con dato real</span>
                 </div>
                 {liveRecs.map((r, i) => (
                   <div key={r.label}
@@ -527,15 +695,15 @@ export default function EnVivo({ league }) {
           </div>
 
           <div className="space-y-5">
-            {/* ── Resumen proyecciones ── */}
+            {/* ── Resumen proyecciones (totales y por equipo) ── */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-center">
               {[
-                ['Córners proy.', calc.corners.proy, cornersAc],
-                ['Tiros proy.',   calc.shots.proy,   tirosAc],
-                ['SOT proy.',     calc.sot.proy,     sotAc],
-                ['Tarjetas proy.',calc.cards.proy,   tarjetasAc],
+                ['Córners proy.', calc.corners?.proy, cornersAc],
+                ['Tiros proy.',   calc.shots?.proy,   tirosAc],
+                ['SOT proy.',     calc.sot?.proy,     sotAc],
+                ['Tarjetas proy.',calc.cards?.proy,   tarjetasAc],
                 ...(calc.ti ? [['Throw-ins proy.', calc.ti.proy, tiAc]] : []),
-              ].map(([label, proy, acum]) => (
+              ].filter(([, proy]) => proy != null).map(([label, proy, acum]) => (
                 <div key={label} className="card text-center bg-dark-700">
                   <p className="text-xs text-gray-400">{label}</p>
                   <p className="text-2xl font-bold text-blue-400">{proy}</p>
@@ -543,6 +711,32 @@ export default function EnVivo({ league }) {
                 </div>
               ))}
             </div>
+
+            {/* Desglose por equipo */}
+            {calc.team && (
+              <div className="card space-y-1">
+                <p className="font-semibold text-white text-sm mb-2">🆚 Proyección por equipo <span className="text-gray-500 font-normal text-xs">— actual → proyectado</span></p>
+                <div className="grid grid-cols-3 text-[10px] text-gray-600 uppercase tracking-wide mb-1">
+                  <span className="truncate">{tn.h} <span className="text-gray-700">(drive ×{calc.driveH})</span></span>
+                  <span className="text-center">Stat</span>
+                  <span className="text-right truncate">{tn.a} <span className="text-gray-700">(drive ×{calc.driveA})</span></span>
+                </div>
+                {[
+                  ['shots', 'Tiros'], ['sot', 'SOT'], ['corners', 'Córners'],
+                  ['cards', 'Tarjetas'], ['ti', 'Saques banda'], ['gk', 'Saques puerta'],
+                ].map(([key, label]) => {
+                  const th = calc.team.h[key]; const ta = calc.team.a[key]
+                  if (!th && !ta) return null
+                  return (
+                    <div key={key} className="grid grid-cols-3 text-xs items-center py-0.5 border-b border-dark-700/50 last:border-0">
+                      <span className="font-mono text-gray-200">{th ? `${th.acum} → ` : '—'}<strong className="text-blue-400">{th?.proy ?? ''}</strong></span>
+                      <span className="text-center text-gray-500">{label}</span>
+                      <span className="font-mono text-right text-gray-200">{ta ? `${ta.acum} → ` : '—'}<strong className="text-blue-400">{ta?.proy ?? ''}</strong></span>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
 
             <div className="flex flex-wrap gap-4 text-xs text-gray-500">
               <span>Min. restantes: <strong className="text-white">{minutosRestantes}'</strong></span>
@@ -555,13 +749,13 @@ export default function EnVivo({ league }) {
               )}
             </div>
 
-            {/* ── Recomendaciones por mercado ── */}
+            {/* ── Recomendaciones por mercado (totales) ── */}
             <div className="card space-y-5">
               <h2 className="font-bold text-white border-b border-dark-600 pb-2 text-sm tracking-wide uppercase">Recomendaciones En Vivo</h2>
-              <LiveMarket label="Córners"  acum={cornersAc}  projected={calc.corners.proy} lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />
-              <LiveMarket label="Tiros"    acum={tirosAc}    projected={calc.shots.proy}   lines={[19.5, 21.5, 23.5, 25.5, 27.5]} />
-              <LiveMarket label="SOT"      acum={sotAc}      projected={calc.sot.proy}     lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />
-              <LiveMarket label="Tarjetas" acum={tarjetasAc} projected={calc.cards.proy}   lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />
+              {calc.corners && <LiveMarket label="Córners"  acum={cornersAc}  projected={calc.corners.proy} lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />}
+              {calc.shots && <LiveMarket label="Tiros"    acum={tirosAc}    projected={calc.shots.proy}   lines={[19.5, 21.5, 23.5, 25.5, 27.5]} />}
+              {calc.sot && <LiveMarket label="SOT"      acum={sotAc}      projected={calc.sot.proy}     lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />}
+              {calc.cards && <LiveMarket label="Tarjetas" acum={tarjetasAc} projected={calc.cards.proy}   lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />}
               {calc.ti && (
                 <LiveMarket label="Throw-ins" acum={tiAc} projected={calc.ti.proy} lines={[28.5, 32.5, 36.5, 40.5, 44.5]} />
               )}
