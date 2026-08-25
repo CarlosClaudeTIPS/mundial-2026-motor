@@ -52,6 +52,9 @@ export default function Predicciones({ league }) {
   const [iaTexto, setIaTexto] = useState(null)
   const [iaLoading, setIaLoading] = useState(false)
 
+  const [closedLeagues, setClosedLeagues] = useState({})
+  const [openMatches, setOpenMatches] = useState({})
+
   const reload = useCallback(() => {
     setPendientes(getAllPredicciones())
     setEvaluadas(getEvaluaciones())
@@ -229,11 +232,97 @@ export default function Predicciones({ league }) {
         </div>
       )}
 
-      {/* ── Diagnóstico: qué ajustar ── */}
+      {/* ── Evaluadas — agrupadas por liga, partidos desplegables ── */}
+      {evaluadas.length > 0 && (
+        <div className="space-y-3">
+          <h2 className="text-xs text-green-400 font-semibold uppercase tracking-wide">✅ Evaluadas contra el resultado real — toca un partido para revisarlo</h2>
+          {Object.entries(evaluadas.reduce((acc, e) => {
+            const lg = getLeague(e.leagueId)
+            const k = `${lg.flag} ${lg.name}`
+            ;(acc[k] = acc[k] ?? []).push(e)
+            return acc
+          }, {})).map(([ligaLabel, items]) => {
+            const cerrada = !!closedLeagues[ligaLabel]
+            const lgPicks = items.flatMap(e => (e.picks ?? []).filter(p => p.res === 'ganada' || p.res === 'perdida'))
+            const lgG = lgPicks.filter(p => p.res === 'ganada').length
+            const lgPct = lgPicks.length ? Math.round((lgG / lgPicks.length) * 100) : null
+            return (
+              <div key={ligaLabel} className="space-y-2">
+                <button onClick={() => setClosedLeagues(p => ({ ...p, [ligaLabel]: !p[ligaLabel] }))}
+                  className="w-full flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-green-300 hover:text-white bg-dark-800/60 border border-green-900/40 rounded-lg px-3 py-2 transition-colors">
+                  <span>{cerrada ? '▸' : '▾'}</span>
+                  <span>{ligaLabel}</span>
+                  <span className="text-gray-500 normal-case">· {items.length} partido(s)</span>
+                  {lgPct != null && (
+                    <span className={`ml-auto font-bold normal-case ${lgPct >= 60 ? 'text-green-400' : lgPct >= 45 ? 'text-yellow-400' : 'text-red-400'}`}>
+                      {lgG}/{lgPicks.length} ({lgPct}%)
+                    </span>
+                  )}
+                </button>
+
+                {!cerrada && items.map(e => {
+                  const abierto = !!openMatches[e.key]
+                  const g = (e.picks ?? []).filter(p => p.res === 'ganada').length
+                  const pd = (e.picks ?? []).filter(p => p.res === 'perdida').length
+                  const push = (e.picks ?? []).filter(p => p.res === 'push').length
+                  const sd = (e.picks ?? []).filter(p => p.res === 'sin_dato').length
+                  return (
+                    <div key={e.key} className="card !p-0 overflow-hidden">
+                      <button onClick={() => setOpenMatches(p => ({ ...p, [e.key]: !p[e.key] }))}
+                        className="w-full flex items-center gap-2 flex-wrap text-left px-4 py-3 hover:bg-dark-700/40 transition-colors">
+                        <span className="text-gray-500 text-xs">{abierto ? '▾' : '▸'}</span>
+                        <span className="text-white font-medium text-sm">{e.home} <strong className="text-green-400">{e.score ?? 'vs'}</strong> {e.away}</span>
+                        {e.backtest && <span className="text-[10px] bg-purple-900/60 text-purple-300 rounded px-1.5 py-0.5 font-semibold">🧪 BACKTEST</span>}
+                        <span className="ml-auto flex items-center gap-1.5 text-xs">
+                          {g > 0 && <span className="bg-green-900/60 text-green-300 rounded px-1.5 py-0.5 font-bold">✅ {g}</span>}
+                          {pd > 0 && <span className="bg-red-900/60 text-red-300 rounded px-1.5 py-0.5 font-bold">❌ {pd}</span>}
+                          {push > 0 && <span className="bg-yellow-900/50 text-yellow-300 rounded px-1.5 py-0.5 font-bold">➖ {push}</span>}
+                          {sd > 0 && <span className="bg-dark-600 text-gray-400 rounded px-1.5 py-0.5">? {sd}</span>}
+                          <span className="text-gray-600">{e.date?.slice(0, 10) ?? new Date(e.ts).toLocaleDateString('es-CO')}</span>
+                        </span>
+                      </button>
+
+                      {abierto && (
+                        <div className="space-y-1 px-4 pb-3">
+                          {(e.picks ?? []).map((p, i) => (
+                            <div key={i} className={`flex items-center gap-2 text-xs rounded-lg border px-3 py-1.5 flex-wrap ${RES_STYLE[p.res]}`}>
+                              <span className="font-bold">{RES_LABEL[p.res]}{p.manual && ' ✍️'}</span>
+                              <span className="text-gray-300">{p.label} {p.dir} {p.line}</span>
+                              {p.actual != null && <span className="font-mono">· real: <strong>{p.actual}</strong>{p.expected != null && <span className="text-gray-500"> (proy: {p.expected})</span>}</span>}
+                              {p.res === 'sin_dato' && !p.manual && <span className="text-gray-500">· sin dato de la API — márcalo tú:</span>}
+                              <span className="ml-auto flex gap-1">
+                                {[['ganada', '✅'], ['perdida', '❌'], ['push', '➖']].map(([res, icon]) => (
+                                  <button key={res}
+                                    onClick={() => { setPickResult(e.key, i, res); reload() }}
+                                    title={`Marcar como ${res}`}
+                                    className={`px-1.5 py-0.5 rounded border text-xs transition-colors ${
+                                      p.res === res ? 'border-white/50 bg-white/10' : 'border-transparent opacity-40 hover:opacity-100 hover:border-gray-500'
+                                    }`}>
+                                    {icon}
+                                  </button>
+                                ))}
+                              </span>
+                            </div>
+                          ))}
+                          {(e.picks ?? []).length === 0 && (
+                            <p className="text-xs text-gray-600">El análisis no dejó picks guardados (márgenes fuera de rango o sin stats verificables)</p>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+      )}
+
+      {/* ── Diagnóstico al final: análisis por línea de qué está fallando ── */}
       {diagnostico.length > 0 && (
         <div className="card border border-purple-800/40 space-y-2">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <h2 className="font-semibold text-white text-sm">🔧 Diagnóstico — ¿qué ajustamos?</h2>
+            <h2 className="font-semibold text-white text-sm">🔧 Análisis por línea — qué está fallando y qué ajustamos</h2>
             {hasIA() && (
               <button onClick={runIA} disabled={iaLoading}
                 className="text-xs px-3 py-1.5 rounded bg-blue-800/50 text-blue-300 hover:bg-blue-700/60 border border-blue-700/40 disabled:opacity-50">
@@ -257,51 +346,6 @@ export default function Predicciones({ league }) {
           {iaTexto && (
             <div className="mt-2 bg-dark-900/70 rounded-xl p-4 text-sm text-gray-200 whitespace-pre-wrap leading-relaxed">{iaTexto}</div>
           )}
-        </div>
-      )}
-
-      {/* ── Evaluadas ── */}
-      {evaluadas.length > 0 && (
-        <div className="space-y-2">
-          <h2 className="text-xs text-green-400 font-semibold uppercase tracking-wide">✅ Evaluadas contra el resultado real</h2>
-          {evaluadas.map(e => {
-            const lg = getLeague(e.leagueId)
-            return (
-              <div key={e.key} className="card space-y-2">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-xs text-gray-500">{lg.flag}</span>
-                  <span className="text-white font-medium text-sm">{e.home} <strong className="text-green-400">{e.score ?? 'vs'}</strong> {e.away}</span>
-                  {e.backtest && <span className="text-[10px] bg-purple-900/60 text-purple-300 rounded px-1.5 py-0.5 font-semibold">🧪 BACKTEST</span>}
-                  <span className="text-xs text-gray-600 ml-auto">{e.date?.slice(0, 10) ?? new Date(e.ts).toLocaleDateString('es-CO')}</span>
-                </div>
-                <div className="space-y-1">
-                  {(e.picks ?? []).map((p, i) => (
-                    <div key={i} className={`flex items-center gap-2 text-xs rounded-lg border px-3 py-1.5 flex-wrap ${RES_STYLE[p.res]}`}>
-                      <span className="font-bold">{RES_LABEL[p.res]}{p.manual && ' ✍️'}</span>
-                      <span className="text-gray-300">{p.label} {p.dir} {p.line}</span>
-                      {p.actual != null && <span className="font-mono">· real: <strong>{p.actual}</strong>{p.expected != null && <span className="text-gray-500"> (proy: {p.expected})</span>}</span>}
-                      {p.res === 'sin_dato' && !p.manual && <span className="text-gray-500">· sin dato de la API — márcalo tú:</span>}
-                      <span className="ml-auto flex gap-1">
-                        {[['ganada', '✅'], ['perdida', '❌'], ['push', '➖']].map(([res, icon]) => (
-                          <button key={res}
-                            onClick={() => { setPickResult(e.key, i, res); reload() }}
-                            title={`Marcar como ${res}`}
-                            className={`px-1.5 py-0.5 rounded border text-xs transition-colors ${
-                              p.res === res ? 'border-white/50 bg-white/10' : 'border-transparent opacity-40 hover:opacity-100 hover:border-gray-500'
-                            }`}>
-                            {icon}
-                          </button>
-                        ))}
-                      </span>
-                    </div>
-                  ))}
-                  {(e.picks ?? []).length === 0 && (
-                    <p className="text-xs text-gray-600">El análisis no dejó picks guardados</p>
-                  )}
-                </div>
-              </div>
-            )
-          })}
         </div>
       )}
 

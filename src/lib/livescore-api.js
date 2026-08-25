@@ -357,6 +357,7 @@ const LS_STAT_MAP = {
   saves:             'Goalkeeper Saves',
   attacks:           'Attacks',
   dangerous_attacks: 'Dangerous Attacks',
+  expected_goals:    'Expected Goals',
 }
 
 // ─── Head to Head ─────────────────────────────────────────────────────────────

@@ -75,14 +75,17 @@ export async function backtestMatch(league, fixture, onProgress) {
   const teamB = await buildTeamStats(league, fixture.awayId, fixture.awayTeam, onProgress, { excludeFixtureId: fixture.id })
 
   const calc = computePrematchCalc(teamA, teamB, league)
-  const candidates = generateCandidates(calc, null, teamA, teamB)
-  const top = selectTopPicks(candidates, 5)
-    .sort((a, b) => b.confidence - a.confidence || Math.abs(b.margin) - Math.abs(a.margin))
 
-  // Stats reales del partido (cacheadas 30 días)
+  // Stats reales del partido (cacheadas 30 días) — se cargan ANTES para
+  // elegir solo picks de mercados verificables con lo que la API sí reportó
   const st = await fetchFixtureStats(fixture.id, fixture.homeId, fixture.awayId).catch(() => null)
   const homeStats = st?.stats?.[0]?.stats ?? {}
   const awayStats = st?.stats?.[1]?.stats ?? {}
+
+  const candidates = generateCandidates(calc, null, teamA, teamB)
+    .filter(c => actualValue(c.marketKey, fixture, homeStats, awayStats) != null)
+  const top = selectTopPicks(candidates, 5)
+    .sort((a, b) => b.confidence - a.confidence || Math.abs(b.margin) - Math.abs(a.margin))
 
   const picks = top.map(pk => {
     const actual = actualValue(pk.marketKey, fixture, homeStats, awayStats)

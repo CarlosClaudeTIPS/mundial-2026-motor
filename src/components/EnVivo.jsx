@@ -68,6 +68,7 @@ function LiveMarket({ label, acum, projected, lines }) {
 // ─── Tablero de stats ACTUALES del partido en vivo ───────────────────────────
 const LIVE_STAT_ROWS = [
   ['Ball Possession', 'Posesión %'],
+  ['Expected Goals', 'xG'],
   ['Total Shots', 'Tiros'],
   ['Shots on Goal', 'A puerta'],
   ['Corner Kicks', 'Córners'],
