@@ -3,6 +3,18 @@ import { getSituationS, getTacticalK, calcLiveExpected, poissonOver } from '../l
 import { bestRealisticLine } from '../lib/picks'
 import { fetchLive } from '../lib/football-api'
 import { fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
+import { LEAGUES } from '../lib/leagues'
+
+// Misma lista de ligas seguidas que usa el Fixture
+const MIS_LIGAS_KEY = 'motor_mis_ligas'
+const DEFAULT_MIS_LIGAS = [39, 140, 78, 135, 61]
+
+function loadMisLigas() {
+  try {
+    const v = JSON.parse(localStorage.getItem(MIS_LIGAS_KEY))
+    return Array.isArray(v) && v.length ? v : DEFAULT_MIS_LIGAS
+  } catch { return DEFAULT_MIS_LIGAS }
+}
 
 function recommend(projected, line) {
   const margin = (projected - line) / line
@@ -118,12 +130,17 @@ function sumStat(stats, name) {
 }
 
 export default function EnVivo({ league }) {
-  // Partidos en vivo de la liga
+  // Partidos en vivo de TODAS las ligas seguidas (misma lista que el Fixture)
+  const [misLigas] = useState(loadMisLigas)
   const [liveMatches, setLiveMatches] = useState([])
   const [loadingLive, setLoadingLive] = useState(false)
   const [liveError, setLiveError] = useState(null)
   const [selectedId, setSelectedId] = useState(null)
+  const [closedGroups, setClosedGroups] = useState({}) // secciones por liga cerradas
+  const [manualOpen, setManualOpen] = useState(false)
   const [statsInfo, setStatsInfo] = useState('') // feedback de auto-fill
+
+  const toggleGroup = (key) => setClosedGroups(p => ({ ...p, [key]: !p[key] }))
 
   // Datos del análisis (auto-llenados al seleccionar, editables)
   const [teamAName,  setTeamAName]  = useState('')
@@ -140,28 +157,44 @@ export default function EnVivo({ league }) {
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
 
-  // ── Cargar partidos en vivo de la liga ──
+  // ── Cargar partidos en vivo de todas las ligas seguidas ──
   const loadLive = useCallback(async () => {
     setLoadingLive(true)
     setLiveError(null)
     try {
-      const res = await fetchLive(league.id)
-      if (res.ok) setLiveMatches(res.live ?? [])
-      else setLiveError(res.error)
+      const ligas = misLigas.map(id => LEAGUES.find(l => l.id === id)).filter(Boolean)
+      const results = await Promise.allSettled(
+        ligas.map(l => fetchLive(l.id).then(r => ({ liga: l, r })))
+      )
+      const all = []
+      for (const res of results) {
+        if (res.status !== 'fulfilled') continue
+        const { liga, r } = res.value
+        if (!r?.ok) continue
+        for (const m of r.live ?? []) {
+          all.push({ ...m, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+        }
+      }
+      setLiveMatches(all)
+      return all
     } catch (e) {
       setLiveError(e.message)
+      return []
     } finally {
       setLoadingLive(false)
     }
-  }, [league.id])
+  }, [misLigas])
 
-  useEffect(() => {
-    setSelectedId(null)
-    loadLive()
-  }, [loadLive])
+  useEffect(() => { loadLive() }, [loadLive])
 
-  // ── Auto-llenar al seleccionar un partido ──
-  const fillFromMatch = useCallback(async (match) => {
+  // ── Auto-llenar al seleccionar un partido (clic de nuevo = contraer) ──
+  const fillFromMatch = useCallback(async (match, toggle = true) => {
+    if (toggle && selectedId === match.id) {
+      setSelectedId(null)
+      setLiveStatsRaw(null)
+      setStatsInfo('')
+      return
+    }
     setSelectedId(match.id)
     setTeamAName(match.homeTeam)
     setTeamBName(match.awayTeam)
@@ -210,22 +243,20 @@ export default function EnVivo({ league }) {
     } catch {
       setStatsInfo('No se pudieron cargar las stats — llena los acumulados a mano')
     }
-  }, [])
+  }, [selectedId])
 
-  // ── Auto-refresh cada 60s del partido seleccionado ──
+  // ── Auto-refresh cada 60s (lista completa + partido seleccionado) ──
   useEffect(() => {
-    if (!selectedId) return
+    if (!liveMatches.length && !selectedId) return
     const id = setInterval(async () => {
-      try {
-        const res = await fetchLive(league.id)
-        if (!res.ok) return
-        setLiveMatches(res.live ?? [])
-        const m = res.live?.find(x => x.id === selectedId)
-        if (m) fillFromMatch(m)
-      } catch {}
+      const all = await loadLive()
+      if (selectedId) {
+        const m = all.find(x => x.id === selectedId)
+        if (m) fillFromMatch(m, false)
+      }
     }, 60_000)
     return () => clearInterval(id)
-  }, [selectedId, league.id, fillFromMatch])
+  }, [selectedId, liveMatches.length, loadLive, fillFromMatch])
 
   const minutosRestantes = Math.max(0, 90 - minuto)
 
@@ -298,69 +329,10 @@ export default function EnVivo({ league }) {
     return recs.sort((a, b) => b.confidence - a.confidence)
   }, [calc, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, minuto, golesA, golesB])
 
-  return (
-    <div className="p-6 space-y-5 max-w-7xl mx-auto">
-      {/* Header */}
-      <div className="flex items-center gap-3">
-        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-        <h1 className="text-2xl font-bold text-white">Análisis En Vivo — {league.flag} {league.name}</h1>
-      </div>
-
-      {/* ── Fila superior: partidos en vivo | stats actuales ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-      <div className="card space-y-3">
-        <div className="flex items-center justify-between">
-          <h2 className="font-semibold text-white text-sm">🔴 Partidos en curso ahora</h2>
-          <button onClick={loadLive} disabled={loadingLive}
-            className="text-xs px-3 py-1.5 rounded bg-dark-700 text-gray-300 hover:bg-dark-600 transition-colors disabled:opacity-50">
-            {loadingLive ? '⏳' : '🔄'} Actualizar
-          </button>
-        </div>
-
-        {liveError && (
-          <p className="text-xs text-red-400">{liveError}</p>
-        )}
-
-        {!loadingLive && liveMatches.length === 0 && !liveError && (
-          <p className="text-sm text-gray-500 py-3 text-center">
-            No hay partidos de {league.name} en juego ahora.<br />
-            <span className="text-xs text-gray-600">Cambia de liga en el menú lateral o vuelve cuando haya jornada. También puedes llenar los datos a mano abajo.</span>
-          </p>
-        )}
-
-        {liveMatches.length > 0 && (
-          <div className="space-y-2">
-            {liveMatches.map(m => (
-              <button
-                key={m.id}
-                onClick={() => fillFromMatch(m)}
-                className={`w-full flex items-center gap-3 p-3 rounded-lg border text-left transition-colors ${
-                  selectedId === m.id
-                    ? 'border-red-600 bg-red-900/20'
-                    : 'border-dark-600 bg-dark-800 hover:border-red-800'
-                }`}
-              >
-                <span className="text-xs font-bold text-red-400 animate-pulse w-10 shrink-0">
-                  {m.status === 'HT' ? 'HT' : `${m.elapsed ?? '?'}'`}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <div className="flex justify-between items-center">
-                    <span className="text-white text-sm font-medium truncate">{m.homeTeam}</span>
-                    <span className="text-white font-bold">{m.homeGoals ?? 0}</span>
-                  </div>
-                  <div className="flex justify-between items-center mt-0.5">
-                    <span className="text-gray-300 text-sm truncate">{m.awayTeam}</span>
-                    <span className="text-white font-bold">{m.awayGoals ?? 0}</span>
-                  </div>
-                </div>
-                <span className="text-xs text-gray-500 shrink-0">
-                  {selectedId === m.id ? '✓ analizando' : 'Analizar →'}
-                </span>
-              </button>
-            ))}
-          </div>
-        )}
-
+  // ─── Panel de análisis (se renderiza inline debajo del partido elegido) ───
+  function renderAnalysis() {
+    return (
+      <div className="space-y-4 rounded-xl border border-red-800/40 bg-dark-900/50 p-4">
         {statsInfo && (
           <p className={`text-xs ${statsInfo.startsWith('✓') ? 'text-green-400' : 'text-yellow-500'}`}>{statsInfo}</p>
         )}
@@ -370,176 +342,275 @@ export default function EnVivo({ league }) {
         {selectedId && (
           <p className="text-xs text-gray-600">Marcador, minuto y stats se actualizan solos cada 60 segundos</p>
         )}
-      </div>
 
-      {/* Stats actuales del partido seleccionado */}
-      {liveStatsRaw && (
-        <LiveStatsBoard raw={liveStatsRaw} homeName={liveStatsRaw.homeName} awayName={liveStatsRaw.awayName} minuto={minuto} />
-      )}
-      </div>
+        {/* Stats actuales del partido seleccionado */}
+        {liveStatsRaw && (
+          <LiveStatsBoard raw={liveStatsRaw} homeName={liveStatsRaw.homeName} awayName={liveStatsRaw.awayName} minuto={minuto} />
+        )}
 
-      {/* ── Datos del partido (auto-llenados, editables) ── */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="card space-y-3">
-          <h2 className="font-semibold text-white text-sm">Marcador y Minuto</h2>
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-xs text-gray-400 block mb-1">Equipo A (local)</label>
-              <input type="text" className="input-dark w-full" placeholder="ej. Arsenal"
-                value={teamAName} onChange={e => setTeamAName(e.target.value)} />
-            </div>
-            <div>
-              <label className="text-xs text-gray-400 block mb-1">Equipo B (visitante)</label>
-              <input type="text" className="input-dark w-full" placeholder="ej. Chelsea"
-                value={teamBName} onChange={e => setTeamBName(e.target.value)} />
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="flex-1">
-              <label className="text-xs text-gray-400">Goles A</label>
-              <input type="number" min="0" className="input-dark w-full mt-1" value={golesA} onChange={e => setGolesA(+e.target.value)} />
-            </div>
-            <span className="text-gray-500 text-xl mt-4">–</span>
-            <div className="flex-1">
-              <label className="text-xs text-gray-400">Goles B</label>
-              <input type="number" min="0" className="input-dark w-full mt-1" value={golesB} onChange={e => setGolesB(+e.target.value)} />
-            </div>
-            <div className="flex-1">
-              <label className="text-xs text-gray-400">Minuto</label>
-              <input type="number" min="1" max="90" className="input-dark w-full mt-1" value={minuto} onChange={e => setMinuto(+e.target.value)} />
-            </div>
-          </div>
-          <div>
-            <label className="text-xs text-gray-400">Zona de ataque dominante</label>
-            <select className="input-dark w-full mt-1" value={zona} onChange={e => setZona(e.target.value)}>
-              <option value="bandas">Bandas</option>
-              <option value="mixto-bandas">Mixto-Bandas</option>
-              <option value="mixto">Mixto</option>
-              <option value="central">Central</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Stats acumuladas */}
-        <div className="card space-y-3">
-          <h2 className="font-semibold text-white text-sm">Stats Acumuladas</h2>
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              ['Córners', cornersAc, setCornersAc],
-              ['Tiros totales', tirosAc, setTirosAc],
-              ['SOT', sotAc, setSotAc],
-              ['Tarjetas', tarjetasAc, setTarjetasAc],
-            ].map(([label, val, setter]) => (
-              <div key={label}>
-                <label className="text-xs text-gray-400">{label}</label>
-                <input type="number" min="0" className="input-dark w-full mt-1" value={val} onChange={e => setter(+e.target.value)} />
+        {/* ── Datos del partido (auto-llenados, editables) ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="card space-y-3">
+            <h2 className="font-semibold text-white text-sm">Marcador y Minuto</h2>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs text-gray-400 block mb-1">Equipo A (local)</label>
+                <input type="text" className="input-dark w-full" placeholder="ej. Arsenal"
+                  value={teamAName} onChange={e => setTeamAName(e.target.value)} />
               </div>
-            ))}
+              <div>
+                <label className="text-xs text-gray-400 block mb-1">Equipo B (visitante)</label>
+                <input type="text" className="input-dark w-full" placeholder="ej. Chelsea"
+                  value={teamBName} onChange={e => setTeamBName(e.target.value)} />
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex-1">
+                <label className="text-xs text-gray-400">Goles A</label>
+                <input type="number" min="0" className="input-dark w-full mt-1" value={golesA} onChange={e => setGolesA(+e.target.value)} />
+              </div>
+              <span className="text-gray-500 text-xl mt-4">–</span>
+              <div className="flex-1">
+                <label className="text-xs text-gray-400">Goles B</label>
+                <input type="number" min="0" className="input-dark w-full mt-1" value={golesB} onChange={e => setGolesB(+e.target.value)} />
+              </div>
+              <div className="flex-1">
+                <label className="text-xs text-gray-400">Minuto</label>
+                <input type="number" min="1" max="90" className="input-dark w-full mt-1" value={minuto} onChange={e => setMinuto(+e.target.value)} />
+              </div>
+            </div>
             <div>
-              <label className="text-xs text-gray-400">Throw-ins {tiAc == null && <span className="text-gray-600">(sin dato)</span>}</label>
-              <input type="number" min="0" className="input-dark w-full mt-1" value={tiAc ?? ''}
-                placeholder="—"
-                onChange={e => setTiAc(e.target.value === '' ? null : +e.target.value)} />
+              <label className="text-xs text-gray-400">Zona de ataque dominante</label>
+              <select className="input-dark w-full mt-1" value={zona} onChange={e => setZona(e.target.value)}>
+                <option value="bandas">Bandas</option>
+                <option value="mixto-bandas">Mixto-Bandas</option>
+                <option value="mixto">Mixto</option>
+                <option value="central">Central</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Stats acumuladas */}
+          <div className="card space-y-3">
+            <h2 className="font-semibold text-white text-sm">Stats Acumuladas</h2>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                ['Córners', cornersAc, setCornersAc],
+                ['Tiros totales', tirosAc, setTirosAc],
+                ['SOT', sotAc, setSotAc],
+                ['Tarjetas', tarjetasAc, setTarjetasAc],
+              ].map(([label, val, setter]) => (
+                <div key={label}>
+                  <label className="text-xs text-gray-400">{label}</label>
+                  <input type="number" min="0" className="input-dark w-full mt-1" value={val} onChange={e => setter(+e.target.value)} />
+                </div>
+              ))}
+              <div>
+                <label className="text-xs text-gray-400">Throw-ins {tiAc == null && <span className="text-gray-600">(sin dato)</span>}</label>
+                <input type="number" min="0" className="input-dark w-full mt-1" value={tiAc ?? ''}
+                  placeholder="—"
+                  onChange={e => setTiAc(e.target.value === '' ? null : +e.target.value)} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {!ready && (
-        <div className="card text-center text-gray-500 py-10">
-          Selecciona un partido en vivo arriba, o escribe los equipos y datos a mano
-        </div>
-      )}
+        {!ready && (
+          <div className="card text-center text-gray-500 py-10">
+            Escribe los equipos y datos del partido para ver el análisis
+          </div>
+        )}
 
-      {ready && (
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 items-start">
-        <div className="space-y-5">
-          {/* ── RECOMENDADOS EN VIVO ── */}
-          {liveRecs.length > 0 && (
-            <div className="rounded-2xl border-2 border-red-700/60 bg-gradient-to-b from-red-950/50 to-dark-800 p-5 space-y-3">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <h2 className="text-xl font-black text-red-300 tracking-wide">🏆 RECOMENDADOS EN VIVO — min {minuto}'</h2>
-                <span className="text-xs text-gray-500">orden: confianza · la confianza sube con los minutos jugados</span>
-              </div>
-              {liveRecs.map((r, i) => (
-                <div key={r.label}
-                  className={`rounded-xl p-4 border ${i === 0 ? 'bg-red-900/30 border-red-600/60' : 'bg-dark-800/80 border-dark-600'}`}>
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <span className={`text-2xl font-black w-8 ${i === 0 ? 'text-yellow-400' : i === 1 ? 'text-gray-300' : 'text-gray-600'}`}>{i + 1}</span>
-                    <span className={`text-lg font-black px-3 py-1 rounded-lg ${
-                      r.rec.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
-                    }`}>{r.rec.dir} {r.rec.line}</span>
-                    <span className="text-white font-bold text-lg">{r.label}</span>
-                    <div className="ml-auto flex items-center gap-3 text-sm">
-                      <span className={`font-bold px-2 py-0.5 rounded ${
-                        r.confidence >= 70 ? 'bg-green-800 text-green-200' :
-                        r.confidence >= 55 ? 'bg-yellow-800 text-yellow-200' : 'bg-orange-900 text-orange-300'
-                      }`}>Confianza {r.confidence}</span>
-                      <span className="text-green-300 font-semibold">P {r.p}%</span>
+        {ready && (
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 items-start">
+          <div className="space-y-5">
+            {/* ── RECOMENDADOS EN VIVO ── */}
+            {liveRecs.length > 0 && (
+              <div className="rounded-2xl border-2 border-red-700/60 bg-gradient-to-b from-red-950/50 to-dark-800 p-5 space-y-3">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <h2 className="text-xl font-black text-red-300 tracking-wide">🏆 RECOMENDADOS EN VIVO — min {minuto}'</h2>
+                  <span className="text-xs text-gray-500">orden: confianza · la confianza sube con los minutos jugados</span>
+                </div>
+                {liveRecs.map((r, i) => (
+                  <div key={r.label}
+                    className={`rounded-xl p-4 border ${i === 0 ? 'bg-red-900/30 border-red-600/60' : 'bg-dark-800/80 border-dark-600'}`}>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <span className={`text-2xl font-black w-8 ${i === 0 ? 'text-yellow-400' : i === 1 ? 'text-gray-300' : 'text-gray-600'}`}>{i + 1}</span>
+                      <span className={`text-lg font-black px-3 py-1 rounded-lg ${
+                        r.rec.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
+                      }`}>{r.rec.dir} {r.rec.line}</span>
+                      <span className="text-white font-bold text-lg">{r.label}</span>
+                      <div className="ml-auto flex items-center gap-3 text-sm">
+                        <span className={`font-bold px-2 py-0.5 rounded ${
+                          r.confidence >= 70 ? 'bg-green-800 text-green-200' :
+                          r.confidence >= 55 ? 'bg-yellow-800 text-yellow-200' : 'bg-orange-900 text-orange-300'
+                        }`}>Confianza {r.confidence}</span>
+                        <span className="text-green-300 font-semibold">P {r.p}%</span>
+                      </div>
                     </div>
-                  </div>
-                  <p className="text-sm text-gray-300 mt-2">
-                    Ya van {r.acum} ({r.ritmo}/min) → proyección final {r.proy}. {r.rec.dir === 'OVER'
-                      ? `Faltan ${(r.rec.line - r.acum).toFixed(1)} para pasar la línea y el ritmo proyecta ${r.faltan} más.`
-                      : `El ritmo proyecta solo ${r.faltan} más — la línea ${r.rec.line} queda lejos.`}
-                  </p>
-                  {r.extra && <p className="text-xs text-gray-400 mt-1">• {r.extra}</p>}
-                  {minuto < 30 && <p className="text-xs text-yellow-600 mt-1">⚠️ Pocos minutos jugados — el ritmo aún es poco fiable</p>}
-                  {r.p > 5 && (
-                    <p className="text-sm font-bold text-green-300 mt-2 bg-green-950/60 border border-green-800/50 rounded-lg px-3 py-1.5 inline-block">
-                      💰 Apuesta si la cuota en vivo está entre <span className="text-white">{(1.025 / (r.p / 100)).toFixed(2)}</span> y <span className="text-white">{(1.25 / (r.p / 100)).toFixed(2)}</span>
+                    <p className="text-sm text-gray-300 mt-2">
+                      Ya van {r.acum} ({r.ritmo}/min) → proyección final {r.proy}. {r.rec.dir === 'OVER'
+                        ? `Faltan ${(r.rec.line - r.acum).toFixed(1)} para pasar la línea y el ritmo proyecta ${r.faltan} más.`
+                        : `El ritmo proyecta solo ${r.faltan} más — la línea ${r.rec.line} queda lejos.`}
                     </p>
-                  )}
+                    {r.extra && <p className="text-xs text-gray-400 mt-1">• {r.extra}</p>}
+                    {minuto < 30 && <p className="text-xs text-yellow-600 mt-1">⚠️ Pocos minutos jugados — el ritmo aún es poco fiable</p>}
+                    {r.p > 5 && (
+                      <p className="text-sm font-bold text-green-300 mt-2 bg-green-950/60 border border-green-800/50 rounded-lg px-3 py-1.5 inline-block">
+                        💰 Apuesta si la cuota en vivo está entre <span className="text-white">{(1.025 / (r.p / 100)).toFixed(2)}</span> y <span className="text-white">{(1.25 / (r.p / 100)).toFixed(2)}</span>
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+          </div>
+
+          <div className="space-y-5">
+            {/* ── Resumen proyecciones ── */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-center">
+              {[
+                ['Córners proy.', calc.corners.proy, cornersAc],
+                ['Tiros proy.',   calc.shots.proy,   tirosAc],
+                ['SOT proy.',     calc.sot.proy,     sotAc],
+                ['Tarjetas proy.',calc.cards.proy,   tarjetasAc],
+                ...(calc.ti ? [['Throw-ins proy.', calc.ti.proy, tiAc]] : []),
+              ].map(([label, proy, acum]) => (
+                <div key={label} className="card text-center bg-dark-700">
+                  <p className="text-xs text-gray-400">{label}</p>
+                  <p className="text-2xl font-bold text-blue-400">{proy}</p>
+                  <p className="text-xs text-gray-600">actual: {acum} · restante: {+(proy - acum).toFixed(1)}</p>
                 </div>
               ))}
             </div>
-          )}
 
+            <div className="flex flex-wrap gap-4 text-xs text-gray-500">
+              <span>Min. restantes: <strong className="text-white">{minutosRestantes}'</strong></span>
+              <span>Situation S: <strong className={calc.situationS > 1 ? 'text-green-400' : calc.situationS < 1 ? 'text-red-400' : 'text-white'}>{calc.situationS}</strong></span>
+              <span>Tactical K: <strong className="text-white">{calc.tacticalK}</strong></span>
+              {calc.daTotal != null && (
+                <span>Intensidad de ataque: <strong className={calc.intensity > 1.05 ? 'text-orange-400' : calc.intensity < 0.95 ? 'text-blue-400' : 'text-white'}>
+                  ×{calc.intensity}</strong> <span className="text-gray-600">({calc.daTotal} at. peligrosos en {minuto}')</span>
+                </span>
+              )}
+            </div>
+
+            {/* ── Recomendaciones por mercado ── */}
+            <div className="card space-y-5">
+              <h2 className="font-bold text-white border-b border-dark-600 pb-2 text-sm tracking-wide uppercase">Recomendaciones En Vivo</h2>
+              <LiveMarket label="Córners"  acum={cornersAc}  projected={calc.corners.proy} lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />
+              <LiveMarket label="Tiros"    acum={tirosAc}    projected={calc.shots.proy}   lines={[19.5, 21.5, 23.5, 25.5, 27.5]} />
+              <LiveMarket label="SOT"      acum={sotAc}      projected={calc.sot.proy}     lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />
+              <LiveMarket label="Tarjetas" acum={tarjetasAc} projected={calc.cards.proy}   lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />
+              {calc.ti && (
+                <LiveMarket label="Throw-ins" acum={tiAc} projected={calc.ti.proy} lines={[28.5, 32.5, 36.5, 40.5, 44.5]} />
+              )}
+            </div>
+          </div>
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // Agrupar partidos en vivo por liga
+  const grouped = Object.entries(liveMatches.reduce((acc, m) => {
+    (acc[m.leagueName] = acc[m.leagueName] ?? []).push(m)
+    return acc
+  }, {}))
+
+  return (
+    <div className="p-6 space-y-5 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="flex items-center justify-between flex-wrap gap-2">
+        <div className="flex items-center gap-3">
+          <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+          <h1 className="text-2xl font-bold text-white">Análisis En Vivo — ⭐ Mis Ligas</h1>
         </div>
+        <button onClick={loadLive} disabled={loadingLive}
+          className="text-xs px-3 py-1.5 rounded bg-dark-700 text-gray-300 hover:bg-dark-600 transition-colors disabled:opacity-50">
+          {loadingLive ? '⏳' : '🔄'} Actualizar
+        </button>
+      </div>
+      <p className="text-gray-400 text-xs -mt-3">
+        Partidos en curso de tus {misLigas.length} ligas seguidas (las eliges en Fixture → ⚙️ Elegir ligas) · toca un partido para analizarlo ahí mismo, tócalo de nuevo para contraerlo
+      </p>
 
-        <div className="space-y-5">
-          {/* ── Resumen proyecciones ── */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-center">
-            {[
-              ['Córners proy.', calc.corners.proy, cornersAc],
-              ['Tiros proy.',   calc.shots.proy,   tirosAc],
-              ['SOT proy.',     calc.sot.proy,     sotAc],
-              ['Tarjetas proy.',calc.cards.proy,   tarjetasAc],
-              ...(calc.ti ? [['Throw-ins proy.', calc.ti.proy, tiAc]] : []),
-            ].map(([label, proy, acum]) => (
-              <div key={label} className="card text-center bg-dark-700">
-                <p className="text-xs text-gray-400">{label}</p>
-                <p className="text-2xl font-bold text-blue-400">{proy}</p>
-                <p className="text-xs text-gray-600">actual: {acum} · restante: {+(proy - acum).toFixed(1)}</p>
+      {liveError && (
+        <p className="text-xs text-red-400">{liveError}</p>
+      )}
+
+      {loadingLive && !liveMatches.length && (
+        <p className="text-sm text-gray-500 py-6 text-center">Buscando partidos en vivo en {misLigas.length} ligas...</p>
+      )}
+
+      {!loadingLive && liveMatches.length === 0 && !liveError && (
+        <div className="card text-center py-8">
+          <p className="text-sm text-gray-500">
+            No hay partidos en juego ahora en tus ligas seguidas.
+          </p>
+          <p className="text-xs text-gray-600 mt-1">Agrega más ligas en Fixture → ⚙️ Elegir ligas, o usa el modo manual abajo.</p>
+        </div>
+      )}
+
+      {/* ── Partidos agrupados por competición, plegables ── */}
+      {grouped.map(([ligaName, items]) => {
+        const cerrado = !!closedGroups[ligaName]
+        return (
+          <div key={ligaName} className="space-y-2">
+            <button onClick={() => toggleGroup(ligaName)}
+              className="w-full flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-red-300 hover:text-white bg-dark-800/60 border border-red-900/40 rounded-lg px-3 py-2 transition-colors">
+              <span>{cerrado ? '▸' : '▾'}</span>
+              <span>{items[0].leagueFlag} {ligaName}</span>
+              <span className="ml-auto bg-red-600 text-white rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
+            </button>
+            {!cerrado && items.map(m => (
+              <div key={m.id} className="space-y-2">
+                <button
+                  onClick={() => fillFromMatch(m)}
+                  className={`w-full flex items-center gap-3 p-3 rounded-lg border text-left transition-colors ${
+                    selectedId === m.id
+                      ? 'border-red-600 bg-red-900/20'
+                      : 'border-dark-600 bg-dark-800 hover:border-red-800'
+                  }`}
+                >
+                  <span className="text-xs font-bold text-red-400 animate-pulse w-10 shrink-0">
+                    {m.status === 'HT' ? 'HT' : `${m.elapsed ?? '?'}'`}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex justify-between items-center">
+                      <span className="text-white text-sm font-medium truncate">{m.homeTeam}</span>
+                      <span className="text-white font-bold">{m.homeGoals ?? 0}</span>
+                    </div>
+                    <div className="flex justify-between items-center mt-0.5">
+                      <span className="text-gray-300 text-sm truncate">{m.awayTeam}</span>
+                      <span className="text-white font-bold">{m.awayGoals ?? 0}</span>
+                    </div>
+                  </div>
+                  <span className="text-xs text-gray-500 shrink-0">
+                    {selectedId === m.id ? '▴ Contraer' : 'Analizar ▾'}
+                  </span>
+                </button>
+
+                {/* Análisis inline debajo del partido elegido */}
+                {selectedId === m.id && renderAnalysis()}
               </div>
             ))}
           </div>
+        )
+      })}
 
-          <div className="flex flex-wrap gap-4 text-xs text-gray-500">
-            <span>Min. restantes: <strong className="text-white">{minutosRestantes}'</strong></span>
-            <span>Situation S: <strong className={calc.situationS > 1 ? 'text-green-400' : calc.situationS < 1 ? 'text-red-400' : 'text-white'}>{calc.situationS}</strong></span>
-            <span>Tactical K: <strong className="text-white">{calc.tacticalK}</strong></span>
-            {calc.daTotal != null && (
-              <span>Intensidad de ataque: <strong className={calc.intensity > 1.05 ? 'text-orange-400' : calc.intensity < 0.95 ? 'text-blue-400' : 'text-white'}>
-                ×{calc.intensity}</strong> <span className="text-gray-600">({calc.daTotal} at. peligrosos en {minuto}')</span>
-              </span>
-            )}
-          </div>
-
-          {/* ── Recomendaciones por mercado ── */}
-          <div className="card space-y-5">
-            <h2 className="font-bold text-white border-b border-dark-600 pb-2 text-sm tracking-wide uppercase">Recomendaciones En Vivo</h2>
-            <LiveMarket label="Córners"  acum={cornersAc}  projected={calc.corners.proy} lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />
-            <LiveMarket label="Tiros"    acum={tirosAc}    projected={calc.shots.proy}   lines={[19.5, 21.5, 23.5, 25.5, 27.5]} />
-            <LiveMarket label="SOT"      acum={sotAc}      projected={calc.sot.proy}     lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />
-            <LiveMarket label="Tarjetas" acum={tarjetasAc} projected={calc.cards.proy}   lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />
-            {calc.ti && (
-              <LiveMarket label="Throw-ins" acum={tiAc} projected={calc.ti.proy} lines={[28.5, 32.5, 36.5, 40.5, 44.5]} />
-            )}
-          </div>
-        </div>
-        </div>
-      )}
+      {/* ── Modo manual (partido que no está en la lista) ── */}
+      <div className="pt-2">
+        <button onClick={() => { setManualOpen(o => !o); setSelectedId(null); setLiveStatsRaw(null); setStatsInfo('') }}
+          className="text-xs px-3 py-1.5 rounded-lg bg-dark-700 text-gray-400 hover:text-white border border-dark-500">
+          {manualOpen ? '▴ Cerrar modo manual' : '✍️ Modo manual — analizar un partido a mano'}
+        </button>
+        {manualOpen && !selectedId && (
+          <div className="mt-3">{renderAnalysis()}</div>
+        )}
+      </div>
     </div>
   )
 }

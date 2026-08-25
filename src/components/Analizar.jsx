@@ -9,7 +9,7 @@ import ContextPanel from './ContextPanel'
 import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation, linesAround, bestRealisticLine } from '../lib/picks'
 import { poissonOver } from '../lib/engine'
 import { getBaseline, compAbbr } from '../lib/leagues'
-import { fetchStandings } from '../lib/football-api'
+import { fetchStandings, fetchFixtures } from '../lib/football-api'
 import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
 import { fetchH2H, fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
 import RecentResults from './RecentResults'
@@ -617,9 +617,18 @@ export default function Analizar({ league, preloadTeams }) {
     setTeamA(null); setTeamB(null)
     setTeamsError(null)
     fetchStandings(league.id)
-      .then(res => {
+      .then(async res => {
         if (!alive) return
-        if (res.ok && res.groups?.length) setLeagueTeams(teamsFromStandings(res.groups))
+        if (res.ok && res.groups?.length) { setLeagueTeams(teamsFromStandings(res.groups)); return }
+        // Copas sin tabla (FA Cup, EFL Cup, etc.) → equipos desde el fixture
+        const fx = await fetchFixtures(league.id).catch(() => null)
+        if (!alive) return
+        const map = new Map()
+        for (const f of fx?.fixtures ?? []) {
+          if (f.homeId) map.set(f.homeId, { id: f.homeId, name: f.homeTeam })
+          if (f.awayId) map.set(f.awayId, { id: f.awayId, name: f.awayTeam })
+        }
+        if (map.size) setLeagueTeams([...map.values()].sort((a, b) => a.name.localeCompare(b.name)))
         else setTeamsError(res.error || 'No se pudo cargar la lista de equipos')
       })
       .catch(e => alive && setTeamsError(e.message))
