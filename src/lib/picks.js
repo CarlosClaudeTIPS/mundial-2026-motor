@@ -185,24 +185,31 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
 
 // ─── Seleccionar top N (distintos mercados, baja correlación) ────────────────
 export function selectTopPicks(candidates, max = 3) {
-  const picks = []
-  const usedCategories = new Set()
+  const run = (minConf) => {
+    const picks = []
+    const usedCategories = new Set()
+    for (const c of candidates) {
+      if (picks.length >= max) break
+      if (c.confidence < minConf) continue
 
-  for (const c of candidates) {
-    if (picks.length >= max) break
-    if (c.confidence < 55) continue
+      // No repetir misma categoría para picks principales
+      if (picks.length < 2 && usedCategories.has(c.category)) continue
 
-    // No repetir misma categoría para picks principales
-    if (picks.length < 2 && usedCategories.has(c.category)) continue
+      // Verificar correlación con picks ya elegidos
+      const maxCorr = picks.reduce((max, p) => Math.max(max, corr(p.category, c.category)), 0)
+      if (maxCorr > 0.80) continue
 
-    // Verificar correlación con picks ya elegidos
-    const maxCorr = picks.reduce((max, p) => Math.max(max, corr(p.category, c.category)), 0)
-    if (maxCorr > 0.80) continue
-
-    picks.push(c)
-    usedCategories.add(c.category)
+      picks.push(c)
+      usedCategories.add(c.category)
+    }
+    return picks
   }
 
+  // Umbral estricto; si nada pasa (equipos con muestra pobre pierden -10 de
+  // confianza — típico en fases previas, copas y recién ascendidos), relajar:
+  // mejor mostrar los mejores picks con su confianza real que no mostrar nada.
+  let picks = run(55)
+  if (!picks.length) picks = run(45)
   return picks
 }
 

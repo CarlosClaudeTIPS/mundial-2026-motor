@@ -676,14 +676,15 @@ export default function Analizar({ league, preloadTeams }) {
     fetchStandings(league.id)
       .then(async res => {
         if (!alive) return
-        if (res.ok && res.groups?.length) { setLeagueTeams(teamsFromStandings(res.groups)); return }
-        // Copas sin tabla (FA Cup, EFL Cup, etc.) → equipos desde el fixture
+        const base = (res.ok && res.groups?.length) ? teamsFromStandings(res.groups) : []
+        // SIEMPRE mezclar los equipos del fixture (±7 días): las copas y fases
+        // previas (playoffs de Champions, EFL Cup...) no aparecen en la tabla
         const fx = await fetchFixtures(league.id).catch(() => null)
         if (!alive) return
-        const map = new Map()
+        const map = new Map(base.map(t => [t.id, t]))
         for (const f of fx?.fixtures ?? []) {
-          if (f.homeId) map.set(f.homeId, { id: f.homeId, name: f.homeTeam })
-          if (f.awayId) map.set(f.awayId, { id: f.awayId, name: f.awayTeam })
+          if (f.homeId && !map.has(f.homeId)) map.set(f.homeId, { id: f.homeId, name: f.homeTeam })
+          if (f.awayId && !map.has(f.awayId)) map.set(f.awayId, { id: f.awayId, name: f.awayTeam })
         }
         if (map.size) setLeagueTeams([...map.values()].sort((a, b) => a.name.localeCompare(b.name)))
         else setTeamsError(res.error || 'No se pudo cargar la lista de equipos')
@@ -692,12 +693,13 @@ export default function Analizar({ league, preloadTeams }) {
     return () => { alive = false }
   }, [league.id])
 
-  // ── Preload desde Fixture (por nombre) ──
+  // ── Preload desde Fixture (por ID directo; nombre como respaldo) ──
   useEffect(() => {
     if (!preloadTeams?.teamAName || !leagueTeams.length) return
-    const findByName = name => leagueTeams.find(t => t.name.toLowerCase() === name?.toLowerCase())?.id ?? ''
-    const a = findByName(preloadTeams.teamAName)
-    const b = findByName(preloadTeams.teamBName)
+    const byId = id => id && leagueTeams.some(t => t.id === Number(id)) ? Number(id) : null
+    const byName = name => leagueTeams.find(t => t.name.toLowerCase() === name?.toLowerCase())?.id ?? null
+    const a = byId(preloadTeams.teamAId) ?? byName(preloadTeams.teamAName)
+    const b = byId(preloadTeams.teamBId) ?? byName(preloadTeams.teamBName)
     if (a) setTeamAId(String(a))
     if (b) setTeamBId(String(b))
   }, [preloadTeams, leagueTeams])
