@@ -231,57 +231,111 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
 
   const summary = `El motor espera ${pick.expected} ${pick.label.toLowerCase()} en este partido. La línea es ${pick.line}. El expected está ${pctStr} ${dir}.`
 
+  // ── Mercado por equipo vs total, y dirección del pick ──
+  // Cada razón debe hablar DEL EQUIPO del pick y APOYAR su dirección; lo que
+  // vaya en contra se muestra como advertencia, nunca como argumento a favor.
+  const isLocal  = /_local$/.test(pick.marketKey)
+  const isVisita = /_visita$/.test(pick.marketKey)
+  const target   = isLocal ? teamA : isVisita ? teamB : null
+  const rival    = isLocal ? teamB : isVisita ? teamA : null
+  const over     = pick.dir === 'OVER'
+  const cat      = pick.category
+
+  const statName = { shots: 'tiros', sot: 'tiros a puerta', corners: 'córners', goals: 'goles', cards: 'tarjetas', gk: 'saques de portería', ti: 'saques de banda' }[cat] ?? cat
+  const avgOf = t => parseFloat(getStat(t, cat))
+  const againstOf = t => cat === 'shots' ? t.shots_against_avg
+    : cat === 'corners' ? t.corners_against_avg
+    : cat === 'goals' ? t.ga_avg
+    : null // sot: no hay dato de SOT concedidos — no inventar
+
   const factors = []
-
-  if (pick.category === 'shots' || pick.category === 'sot') {
-    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.shots_avg.toFixed(1)} tiros/partido (últimos 15)`, weight: '28%', dir: pick.dir === 'OVER' && calc.adj.shotsA > calc.base?.shotsA ? 'up' : 'neutral' })
-    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.shots_avg.toFixed(1)} tiros/partido (últimos 15)`, weight: '28%', dir: 'neutral' })
-    if (modsA.shots > 1.05) factors.push({ icon: '✅', text: `${teamA.name} motivado → tiros ×${modsA.shots.toFixed(2)}`, weight: '12%', dir: 'up' })
-    if (modsB.shots > 1.05) factors.push({ icon: '✅', text: `${teamB.name} motivado → tiros ×${modsB.shots.toFixed(2)}`, weight: '12%', dir: 'up' })
-    if (modsA.shots < 0.95) factors.push({ icon: '⚠️', text: `${teamA.name}: modificador bajo (×${modsA.shots.toFixed(2)})`, weight: '12%', dir: 'down' })
-    if (modsB.shots < 0.95) factors.push({ icon: '⚠️', text: `${teamB.name}: modificador bajo (×${modsB.shots.toFixed(2)})`, weight: '12%', dir: 'down' })
-    factors.push({ icon: '⚠️', text: `Fase ${ctx.jornada}: mod tiros ${getJornadaMod(ctx.jornada, 'shots')}`, weight: '5%', dir: ctx.jornada === 'inicio' || ctx.jornada === 'ko' ? 'down' : ctx.jornada === 'final' ? 'up' : 'neutral' })
+  // supports: el dato apoya la dirección del pick → 'up'; si la contradice → 'down'
+  const add = (value, textUp, textDown) => {
+    if (value == null || isNaN(value)) return
+    const apoya = (value > pick.line) === over || Math.abs(value - pick.line) < 0.01
+    factors.push(apoya
+      ? { icon: '✅', text: textUp, dir: 'up' }
+      : { icon: '⚠️', text: textDown, dir: 'down' })
   }
 
-  if (pick.category === 'corners') {
-    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.corners_avg.toFixed(1)} córners/partido`, weight: '30%', dir: 'neutral' })
-    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.corners_avg.toFixed(1)} córners/partido`, weight: '30%', dir: 'neutral' })
-    if (teamA.style === 'bandas' || teamA.style === 'mixto-bandas') factors.push({ icon: '✅', text: `${teamA.name} juega por bandas → genera más córners`, weight: '15%', dir: 'up' })
-    if (teamB.style === 'bandas' || teamB.style === 'mixto-bandas') factors.push({ icon: '✅', text: `${teamB.name} juega por bandas → genera más córners`, weight: '15%', dir: 'up' })
-    if (modsA.corners > 1.05) factors.push({ icon: '✅', text: `Situación motivacional → córners ${teamA.name} ×${modsA.corners.toFixed(2)}`, weight: '8%', dir: 'up' })
-  }
-
-  if (pick.category === 'goals') {
-    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.gf_avg.toFixed(2)} goles/partido`, weight: '25%', dir: 'neutral' })
-    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.gf_avg.toFixed(2)} goles/partido`, weight: '25%', dir: 'neutral' })
-    factors.push({ icon: '⚠️', text: `BTTS ${teamA.name}: ${teamA.btts_pct}% · ${teamB.name}: ${teamB.btts_pct}%`, weight: '15%', dir: 'neutral' })
-  }
-
-  if (pick.category === 'gk') {
-    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.goalkicks_avg.toFixed(1)} saques de portería/partido`, weight: '30%', dir: 'neutral' })
-    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.goalkicks_avg.toFixed(1)} saques de portería/partido`, weight: '30%', dir: 'neutral' })
-    const ppgDiff = Math.abs(teamA.ppg - teamB.ppg)
-    if (ppgDiff > 0.4) {
-      const debil = teamA.ppg < teamB.ppg ? teamA.name : teamB.name
-      factors.push({ icon: '✅', text: `${debil} es claramente inferior → defenderá más → más GK (×${ppgDiff > 0.8 ? '1.28' : '1.10'})`, weight: '20%', dir: 'up' })
+  if (target) {
+    // ── Pick de UN equipo: hablar SOLO de ese equipo y su rival directo ──
+    const avg = avgOf(target)
+    add(avg,
+      `${target.name} promedia ${avg} ${statName}/partido — ${over ? 'por encima' : 'por debajo'} de la línea ${pick.line}`,
+      `OJO: ${target.name} promedia ${avg} ${statName}/partido, que contradice el ${pick.dir} ${pick.line} — el motor lo ajustó por el rival y el contexto`)
+    const ag = rival ? againstOf(rival) : null
+    if (ag != null) add(ag,
+      `${rival.name} concede ${ag.toFixed(1)} ${statName}/partido a sus rivales — apoya el ${pick.dir}`,
+      `OJO: ${rival.name} concede ${ag.toFixed(1)} ${statName}/partido — factor en contra del ${pick.dir}`)
+    // Localía del equipo del pick
+    const split = isLocal ? target.split?.home : target.split?.away
+    const splitVal = split ? (cat === 'shots' || cat === 'sot' ? split.shots : cat === 'corners' ? split.corners : cat === 'goals' ? split.gf : cat === 'cards' ? split.cards : null) : null
+    if (splitVal != null) add(splitVal,
+      `${isLocal ? 'En casa' : 'De visita'} promedia ${splitVal} (${split.n} PJ) — apoya el ${pick.dir}`,
+      `OJO: ${isLocal ? 'en casa' : 'de visita'} promedia ${splitVal} (${split.n} PJ) — no acompaña el ${pick.dir}`)
+    // Estilo bandas del equipo del pick (solo córners/TI)
+    if ((cat === 'corners' || cat === 'ti') && (target.style === 'bandas' || target.style === 'mixto-bandas')) {
+      factors.push(over
+        ? { icon: '✅', text: `${target.name} ataca por bandas → genera más ${statName}`, dir: 'up' }
+        : { icon: '⚠️', text: `OJO: ${target.name} ataca por bandas (empuja los ${statName}) — factor en contra del UNDER; el motor igual proyecta ${pick.expected} por su volumen y el rival`, dir: 'down' })
     }
-    factors.push({ icon: '💡', text: 'Mercado mal calibrado por las casas — pocos apostadores lo estudian', weight: '—', dir: 'up' })
+    // Modificadores del equipo del pick
+    const modsT = isLocal ? modsA : modsB
+    const modKey = cat === 'sot' ? 'sot' : cat === 'ti' || cat === 'gk' ? null : cat
+    const m = modKey ? modsT[modKey] : null
+    if (m != null && Math.abs(m - 1) > 0.05) {
+      const sube = m > 1
+      factors.push((sube === over)
+        ? { icon: '✅', text: `Contexto de ${target.name}: ${statName} ×${m.toFixed(2)} — empuja hacia el ${pick.dir}`, dir: 'up' }
+        : { icon: '⚠️', text: `Contexto de ${target.name}: ${statName} ×${m.toFixed(2)} — va en contra del ${pick.dir}`, dir: 'down' })
+    }
+  } else {
+    // ── Pick de TOTALES: la suma de ambos ──
+    const sumAvg = +(avgOf(teamA) + avgOf(teamB)).toFixed(1)
+    add(sumAvg,
+      `Entre los dos suman ${sumAvg} ${statName}/partido de promedio — ${over ? 'por encima' : 'por debajo'} de la línea ${pick.line}`,
+      `OJO: entre los dos suman ${sumAvg} ${statName}/partido, que contradice el ${pick.dir} ${pick.line} — el ajuste viene del contexto (defensas, ritmo de liga, copa)`)
+    if (cat === 'corners' || cat === 'ti') {
+      for (const t of [teamA, teamB]) {
+        if (t.style === 'bandas' || t.style === 'mixto-bandas') {
+          factors.push(over
+            ? { icon: '✅', text: `${t.name} ataca por bandas → más ${statName}`, dir: 'up' }
+            : { icon: '⚠️', text: `OJO: ${t.name} ataca por bandas (empuja los ${statName}) — factor en contra del UNDER`, dir: 'down' })
+        }
+      }
+    }
+    if (cat === 'goals') {
+      factors.push({ icon: 'ℹ️', text: `BTTS: ${teamA.name} ${teamA.btts_pct}% · ${teamB.name} ${teamB.btts_pct}%`, dir: 'neutral' })
+    }
+    if (cat === 'gk') {
+      const ppgDiff = Math.abs(teamA.ppg - teamB.ppg)
+      if (ppgDiff > 0.4) {
+        const debil = teamA.ppg < teamB.ppg ? teamA.name : teamB.name
+        factors.push(over
+          ? { icon: '✅', text: `${debil} es claramente inferior → defenderá más → más GK`, dir: 'up' }
+          : { icon: '⚠️', text: `OJO: ${debil} es muy inferior y defenderá mucho (más GK) — factor en contra del UNDER`, dir: 'down' })
+      }
+    }
+    if (cat === 'cards' && ctx.checks?.rivalidad) {
+      factors.push(over
+        ? { icon: '✅', text: 'Clásico/rivalidad → tarjetas ×1.20', dir: 'up' }
+        : { icon: '⚠️', text: 'OJO: es un clásico (tarjetas ×1.20) — factor en contra del UNDER', dir: 'down' })
+    }
+    if (cat === 'ti' && ctx.checks?.lluvia) {
+      factors.push(over
+        ? { icon: '🌧️', text: 'Lluvia → balón resbaladizo → más saques de banda', dir: 'up' }
+        : { icon: '⚠️', text: 'OJO: lluvia prevista (sube los saques de banda) — en contra del UNDER', dir: 'down' })
+    }
   }
 
-  if (pick.category === 'ti') {
-    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.throwins_avg.toFixed(1)} saques de banda/partido`, weight: '30%', dir: 'neutral' })
-    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.throwins_avg.toFixed(1)} saques de banda/partido`, weight: '30%', dir: 'neutral' })
-    if (teamA.style === 'bandas' || teamA.style === 'mixto-bandas') factors.push({ icon: '✅', text: `${teamA.name} ataca por bandas → más juego lateral → más TI`, weight: '15%', dir: 'up' })
-    if (teamB.style === 'bandas' || teamB.style === 'mixto-bandas') factors.push({ icon: '✅', text: `${teamB.name} ataca por bandas → más juego lateral → más TI`, weight: '15%', dir: 'up' })
-    if (ctx.checks?.lluvia) factors.push({ icon: '🌧️', text: 'Lluvia intensa → balón resbaladizo → TI ×1.15', weight: '10%', dir: 'up' })
-    if (ctx.checks?.rivalidad) factors.push({ icon: '⚔️', text: 'Derby físico → más duelos → TI ×1.10', weight: '10%', dir: 'up' })
-  }
-
-  if (pick.category === 'cards') {
-    factors.push({ icon: '✅', text: `${teamA.name} promedia ${teamA.cards_avg.toFixed(1)} tarjetas/partido`, weight: '25%', dir: 'neutral' })
-    factors.push({ icon: '✅', text: `${teamB.name} promedia ${teamB.cards_avg.toFixed(1)} tarjetas/partido`, weight: '25%', dir: 'neutral' })
-    if (modsA.cards > 1.10 || modsB.cards > 1.10) factors.push({ icon: '✅', text: 'Alta motivación → más agresividad esperada', weight: '20%', dir: 'up' })
-    if (ctx.checks?.rivalidad) factors.push({ icon: '✅', text: 'Clásico regional → tarjetas ×1.20', weight: '12%', dir: 'up' })
+  // Eliminación directa apoya los UNDER de volumen y los OVER de tarjetas
+  if (ctx.checks?.eliminacion && ['shots', 'sot', 'goals', 'corners', 'cards'].includes(cat)) {
+    const favoreceUnder = cat !== 'cards'
+    const apoya = favoreceUnder ? !over : over
+    factors.push(apoya
+      ? { icon: '⚔️', text: `Eliminación directa: partidos más cerrados → apoya el ${pick.dir}`, dir: 'up' }
+      : { icon: '⚠️', text: `OJO: en eliminación directa ${favoreceUnder ? 'suele haber MENOS volumen' : 'suele haber MÁS tarjetas'} — factor en contra del ${pick.dir}`, dir: 'down' })
   }
 
   const pushUp   = factors.filter(f => f.dir === 'up')
@@ -296,7 +350,8 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
     { label: 'Expected final', value: pick.expected, weight: '—' },
   ]
 
-  const risks = []
+  // Los factores en contra van de primeros en los riesgos — el usuario debe verlos
+  const risks = pushDown.map(f => f.text.replace(/^OJO: /, ''))
   if (teamA.est || teamB.est) risks.push('Muestra de partidos pobre en uno o ambos equipos (−10 Confidence)')
   if (ctx.jornada === 'inicio') risks.push('Inicio de temporada: equipos irregulares, más varianza')
   if (ctx.jornada === 'ko') risks.push('Eliminatoria KO: partidos más cerrados de lo que dicen las stats')
@@ -308,7 +363,8 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
 }
 
 function getStat(team, category) {
-  if (category === 'shots' || category === 'sot') return team.shots_avg.toFixed(1)
+  if (category === 'sot') return team.sot_avg.toFixed(1)
+  if (category === 'shots') return team.shots_avg.toFixed(1)
   if (category === 'corners') return team.corners_avg.toFixed(1)
   if (category === 'goals') return team.gf_avg.toFixed(2)
   if (category === 'cards') return team.cards_avg.toFixed(1)

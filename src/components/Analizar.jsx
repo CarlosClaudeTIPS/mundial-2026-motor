@@ -1296,9 +1296,9 @@ export default function Analizar({ league, preloadTeams }) {
                         ))}
                       </div>
                     )}
-                    {exp.risks.length > 0 && (
-                      <p className="text-xs text-yellow-600/90 mt-1.5">⚠️ {exp.risks[0]}</p>
-                    )}
+                    {exp.risks.slice(0, 2).map((r, k) => (
+                      <p key={k} className="text-xs text-yellow-600/90 mt-1.5">⚠️ {r}</p>
+                    ))}
                     {(() => {
                       const p = pick.pMod / 100
                       if (!p || p <= 0.05) return null
