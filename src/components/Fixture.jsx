@@ -276,7 +276,9 @@ function FixtureCard({ fixture, onAnalizar, showLeague }) {
 
 export default function Fixture({ league, onAnalizar }) {
   const [filter, setFilter]     = useState('hoy')
-  const [mode, setMode]         = useState(() => localStorage.getItem(MODE_KEY) || 'mis')
+  // Siempre abrir en "Mis ligas" (todas las competiciones del día);
+  // "Solo X" es un filtro temporal de la sesión, no una preferencia
+  const [mode, setMode]         = useState('mis')
   const [misLigas, setMisLigas] = useState(loadMisLigas)
   const [configOpen, setConfigOpen] = useState(false)
   const [apiData, setApiData]   = useState([])   // fixtures con leagueId/leagueName
