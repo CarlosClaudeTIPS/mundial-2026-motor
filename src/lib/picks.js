@@ -77,10 +77,10 @@ const MARKET_META = {
   corners_1h:      { label: 'Córners 1H',         risk: 28, category: 'corners' },
   corners_2h:      { label: 'Córners 2H',         risk: 28, category: 'corners' },
   tiros_1h:        { label: 'Tiros Totales 1H',   risk: 30, category: 'shots'   },
-  gk_totales:      { label: 'Saques Portería Tot.', risk: 28, category: 'gk'    },
-  gk_local:        { label: 'GK Local',           risk: 30, category: 'gk'      },
-  gk_visita:       { label: 'GK Visitante',       risk: 30, category: 'gk'      },
-  ti_totales:      { label: 'Throw-ins Totales',  risk: 30, category: 'ti'      },
+  gk_totales:      { label: 'Saques Portería Totales', risk: 28, category: 'gk' },
+  gk_local:        { label: 'Saques Portería Local',   risk: 30, category: 'gk' },
+  gk_visita:       { label: 'Saques Portería Visitante', risk: 30, category: 'gk' },
+  ti_totales:      { label: 'Saques Banda Totales', risk: 30, category: 'ti'    },
   // ── Mercados por equipo ──
   corners_local:   { label: 'Córners Local',      risk: 28, category: 'corners' },
   corners_visita:  { label: 'Córners Visitante',  risk: 28, category: 'corners' },
@@ -88,8 +88,8 @@ const MARKET_META = {
   sot_visita:      { label: 'SOT Visitante',      risk: 32, category: 'sot'     },
   tarjetas_local:  { label: 'Tarjetas Local',     risk: 45, category: 'cards'   },
   tarjetas_visita: { label: 'Tarjetas Visitante', risk: 45, category: 'cards'   },
-  ti_local:        { label: 'Throw-ins Local',    risk: 32, category: 'ti'      },
-  ti_visita:       { label: 'Throw-ins Visitante', risk: 32, category: 'ti'     },
+  ti_local:        { label: 'Saques Banda Local',    risk: 32, category: 'ti'   },
+  ti_visita:       { label: 'Saques Banda Visitante', risk: 32, category: 'ti'  },
   goles_local:     { label: 'Goles Local',        risk: 42, category: 'goals'   },
   goles_visita:    { label: 'Goles Visitante',    risk: 42, category: 'goals'   },
 }
@@ -246,6 +246,8 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
   const againstOf = t => cat === 'shots' ? t.shots_against_avg
     : cat === 'corners' ? t.corners_against_avg
     : cat === 'goals' ? t.ga_avg
+    : cat === 'ti' ? t.ti_against_avg
+    : cat === 'gk' ? t.gk_against_avg
     : null // sot: no hay dato de SOT concedidos — no inventar
 
   const factors = []

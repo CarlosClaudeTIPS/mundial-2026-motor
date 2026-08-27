@@ -43,8 +43,8 @@ function TeamDetail({ league, team, onAnalizar }) {
     ['Tiros/P', stats.shots_avg], ['SOT/P', stats.sot_avg],
     ['Córners/P', stats.corners_avg], ['Tarjetas/P', stats.cards_avg],
     ['Posesión', stats.possession_avg + '%'], ['Faltas/P', stats.fouls_avg],
-    ['TI/P' + (stats.estTi ? '*' : ''), stats.throwins_avg],
-    ['GK/P' + (stats.estGk ? '*' : ''), stats.goalkicks_avg],
+    ['S.Banda/P' + (stats.estTi ? '*' : ''), stats.throwins_avg],
+    ['S.Puerta/P' + (stats.estGk ? '*' : ''), stats.goalkicks_avg],
     ['PPG', stats.ppg], ['BTTS', stats.btts_pct + '%'],
   ]
 

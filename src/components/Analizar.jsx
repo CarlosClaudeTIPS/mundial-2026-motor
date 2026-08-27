@@ -53,8 +53,8 @@ export function TeamStatsRef({ teamA, teamB }) {
           <StatRow label="Posesión %" valA={teamA.possession_avg} valB={teamB.possession_avg} />
           <StatRow label="Tarjetas/P" valA={teamA.cards_avg.toFixed(1)} valB={teamB.cards_avg.toFixed(1)} higherIsBetter={false} />
           <StatRow label="Goles contra/P" valA={teamA.ga_avg.toFixed(2)} valB={teamB.ga_avg.toFixed(2)} higherIsBetter={false} />
-          <StatRow label="Throw-ins/P" valA={teamA.throwins_avg.toFixed(1)} valB={teamB.throwins_avg.toFixed(1)} />
-          <StatRow label="GK/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
+          <StatRow label="Saques banda/P" valA={teamA.throwins_avg.toFixed(1)} valB={teamB.throwins_avg.toFixed(1)} />
+          <StatRow label="Saques puerta/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
           <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
           <StatRow label="BTTS%" valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
 
@@ -1144,7 +1144,7 @@ export default function Analizar({ league, preloadTeams }) {
               )}
             </h2>
             <div className="grid grid-cols-4 md:grid-cols-8 gap-3 text-center">
-              {[['Goles', calc.t.goals], ['Tiros', calc.t.shots], ['SOT', calc.t.sot], ['Córners', calc.t.corners], ['Tarjetas', calc.t.cards], ['Faltas', calc.fouls.total], ['TI', calc.t.ti], ['GK', calc.t.gk]].map(([label, val]) => (
+              {[['Goles', calc.t.goals], ['Tiros', calc.t.shots], ['SOT', calc.t.sot], ['Córners', calc.t.corners], ['Tarjetas', calc.t.cards], ['Faltas', calc.fouls.total], ['S. Banda', calc.t.ti], ['S. Puerta', calc.t.gk]].map(([label, val]) => (
                 <div key={label} className="bg-dark-800 rounded-lg p-2">
                   <p className="text-xs text-gray-500">{label}</p>
                   <p className="text-lg font-bold text-green-400">{val}</p>
@@ -1349,7 +1349,7 @@ export default function Analizar({ league, preloadTeams }) {
                 cfg: { statKey: 'ti', agKey: 'tiAg', expTotal: calc.t.ti, expA: calc.adj.tiA, expB: calc.adj.tiB, stepTotal: 2, stepTeam: 1, handicap: false },
                 notes: [(teamA.estTi || teamB.estTi)
                   ? `⚠️ ${teamA.estTi ? teamA.name + ' estimado' : teamA.name + ' ✓ real'} · ${teamB.estTi ? teamB.name + ' estimado' : teamB.name + ' ✓ real'}`
-                  : '✓ Throw-ins reales de ambos equipos'] },
+                  : '✓ Saques de banda reales de ambos equipos'] },
               { id: 'gk', icon: '🧤', title: 'Saques de Portería (GK)',
                 cfg: { statKey: 'gk', agKey: 'gkAg', expTotal: calc.t.gk, expA: calc.adj.gkA, expB: calc.adj.gkB, stepTotal: 1, stepTeam: 1, handicap: false },
                 notes: [(teamA.estGk || teamB.estGk) ? '⚠️ GK estimado desde posesión' : '✓ Goal kicks reales'] },

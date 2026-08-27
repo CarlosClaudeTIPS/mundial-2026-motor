@@ -339,7 +339,7 @@ export default function Buscar() {
             <p className="font-bold text-white text-sm">📋 {teamCard.name} — últimos partidos (Sofascore)</p>
             <div className="flex gap-3 text-xs text-gray-400">
               {teamCard.ti != null && <span>TI/P: <strong className="text-green-400">{teamCard.ti}</strong></span>}
-              {teamCard.gk != null && <span>GK/P: <strong className="text-green-400">{teamCard.gk}</strong></span>}
+              {teamCard.gk != null && <span>S. puerta/P: <strong className="text-green-400">{teamCard.gk}</strong></span>}
               {teamCard.crosses != null && <span>Centros/P: <strong className="text-green-400">{teamCard.crosses}</strong></span>}
               {teamCard.xg != null && <span>xG/P: <strong className="text-green-400">{teamCard.xg}</strong></span>}
             </div>

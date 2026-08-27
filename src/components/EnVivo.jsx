@@ -498,7 +498,7 @@ export default function EnVivo({ league }) {
     push('Tiros',    calc.shots,   tirosAc,   2, null)
     push('SOT',      calc.sot,     sotAc,     1, null)
     push('Tarjetas', calc.cards,   tarjetasAc, 1, minuto >= 60 ? 'Tramo 60-90: donde más tarjetas caen' : null)
-    push('Throw-ins', calc.ti,     tiAc,      2, 'Dato real en vivo de la API')
+    push('Saques banda', calc.ti,     tiAc,      2, 'Dato real en vivo de la API')
     // Por equipo (solo si la API da el dato de ese equipo)
     const tn = { h: teamAName || 'Local', a: teamBName || 'Visitante' }
     for (const side of ['h', 'a']) {
@@ -510,7 +510,7 @@ export default function EnVivo({ league }) {
       push(`Tiros ${tn[side]}`,    t.shots,   t.shots?.acum,   1, dtxt)
       push(`SOT ${tn[side]}`,      t.sot,     t.sot?.acum,     1, dtxt)
       push(`Tarjetas ${tn[side]}`, t.cards,   t.cards?.acum,   1, null)
-      push(`Throw-ins ${tn[side]}`, t.ti,     t.ti?.acum,      1, null)
+      push(`Saques banda ${tn[side]}`, t.ti,     t.ti?.acum,      1, null)
       push(`Saques puerta ${tn[side]}`, t.gk, t.gk?.acum,      1, null)
     }
 
@@ -617,7 +617,7 @@ export default function EnVivo({ league }) {
                 </div>
               ))}
               <div>
-                <label className="text-xs text-gray-400">Throw-ins {tiAc == null && <span className="text-gray-600">(sin dato)</span>}</label>
+                <label className="text-xs text-gray-400">Saques de banda {tiAc == null && <span className="text-gray-600">(sin dato)</span>}</label>
                 <input type="number" min="0" className="input-dark w-full mt-1" value={tiAc ?? ''}
                   placeholder="—"
                   onChange={e => setTiAc(e.target.value === '' ? null : +e.target.value)} />
@@ -704,7 +704,7 @@ export default function EnVivo({ league }) {
                 ['Tiros proy.',   calc.shots?.proy,   tirosAc],
                 ['SOT proy.',     calc.sot?.proy,     sotAc],
                 ['Tarjetas proy.',calc.cards?.proy,   tarjetasAc],
-                ...(calc.ti ? [['Throw-ins proy.', calc.ti.proy, tiAc]] : []),
+                ...(calc.ti ? [['S. banda proy.', calc.ti.proy, tiAc]] : []),
               ].filter(([, proy]) => proy != null).map(([label, proy, acum]) => (
                 <div key={label} className="card text-center bg-dark-700">
                   <p className="text-xs text-gray-400">{label}</p>
@@ -759,7 +759,7 @@ export default function EnVivo({ league }) {
               {calc.sot && <LiveMarket label="SOT"      acum={sotAc}      projected={calc.sot.proy}     lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />}
               {calc.cards && <LiveMarket label="Tarjetas" acum={tarjetasAc} projected={calc.cards.proy}   lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />}
               {calc.ti && (
-                <LiveMarket label="Throw-ins" acum={tiAc} projected={calc.ti.proy} lines={[28.5, 32.5, 36.5, 40.5, 44.5]} />
+                <LiveMarket label="Saques banda" acum={tiAc} projected={calc.ti.proy} lines={[28.5, 32.5, 36.5, 40.5, 44.5]} />
               )}
             </div>
           </div>

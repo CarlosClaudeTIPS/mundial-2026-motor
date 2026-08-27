@@ -123,7 +123,7 @@ function PrediccionVsReal({ fixture, home, away }) {
 
   const MERCADOS = [
     ['goals', 'Goles'], ['shots', 'Tiros'], ['sot', 'SOT'], ['corners', 'Córners'],
-    ['cards', 'Tarjetas'], ['fouls', 'Faltas'], ['ti', 'TI'], ['gk', 'GK'],
+    ['cards', 'Tarjetas'], ['fouls', 'Faltas'], ['ti', 'S. Banda'], ['gk', 'S. Puerta'],
   ]
 
   // Resolver los picks guardados contra la realidad

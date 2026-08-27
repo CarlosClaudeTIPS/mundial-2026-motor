@@ -244,7 +244,7 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
   // (TI de 3-8 en un partido completo es dato roto) que arrastran la media
   // hacia abajo y generan UNDERs falsos. La mediana es inmune a esos outliers.
   const combineReal = (key) => {
-    const minPlausible = key === 'ti' ? 8 : 3 // TI real de un partido completo: 12-30 · GK: 4-14
+    const minPlausible = key.startsWith('ti') ? 8 : 3 // TI real de un partido completo: 12-30 · GK: 4-14
     const vals = [
       ...rows.map(r => r[key]).filter(v => v != null),
       ...saquesExtra.map(s => s[key]).filter(v => v != null),
@@ -256,6 +256,8 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
   }
   const gkReal = combineReal('gk')
   const tiReal = combineReal('ti')
+  const gkAgReal = combineReal('gkAg') // saques de portería que PROVOCA en el rival
+  const tiAgReal = combineReal('tiAg') // saques de banda que CONCEDE al rival
   const tiSample = rows.filter(r => r.ti != null).length + saquesExtra.filter(s => s.ti != null).length
   const gkSample = rows.filter(r => r.gk != null).length + saquesExtra.filter(s => s.gk != null).length
   const gkEst = gkReal ?? base.gkAvg * (1 + (50 - possession) * 0.022)
@@ -297,6 +299,8 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
     possession_avg: +possession.toFixed(0),
     goalkicks_avg: +gkEst.toFixed(1),
     throwins_avg: +tiEst.toFixed(1),
+    ti_against_avg: tiAgReal != null ? +tiAgReal.toFixed(1) : null,
+    gk_against_avg: gkAgReal != null ? +gkAgReal.toFixed(1) : null,
     freekicks_avg: +(w('foulsAg') ?? 12).toFixed(1),
     // Variables de flujo (Sofascore) — el "más allá del promedio"
     crosses_avg: crosses_avg != null ? +crosses_avg.toFixed(1) : null,

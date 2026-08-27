@@ -88,8 +88,17 @@ export function calcExpectedGK(teamA, teamB) {
     return 1.00
   }
 
-  const expA = teamA.goalkicks_avg * posesionMod(posB) * nivelMod(ppgDiff)
-  const expB = teamB.goalkicks_avg * posesionMod(posA) * nivelMod(-ppgDiff)
+  // Interacción propio × rival: los saques de portería de A también dependen de
+  // cuántos PROVOCA B con sus tiros desviados (60% propio + 40% lo que B provoca)
+  const gkBaseA = teamB.gk_against_avg != null
+    ? teamA.goalkicks_avg * 0.6 + teamB.gk_against_avg * 0.4
+    : teamA.goalkicks_avg
+  const gkBaseB = teamA.gk_against_avg != null
+    ? teamB.goalkicks_avg * 0.6 + teamA.gk_against_avg * 0.4
+    : teamB.goalkicks_avg
+
+  const expA = gkBaseA * posesionMod(posB) * nivelMod(ppgDiff)
+  const expB = gkBaseB * posesionMod(posA) * nivelMod(-ppgDiff)
 
   return {
     expA: +expA.toFixed(2),
@@ -118,8 +127,24 @@ export function calcExpectedTI(teamA, teamB, { lluvia = false, rivalidad = false
   const kA = TACTICAL_K_TI[teamA.style] ?? 1.00
   const kB = TACTICAL_K_TI[teamB.style] ?? 1.00
 
-  const expA = teamA.throwins_avg * kA * kLiga * climaMod * tipoMod
-  const expB = teamB.throwins_avg * kB * kLiga * climaMod * tipoMod
+  // Interacción propio × rival: los saques de banda de A también dependen de
+  // cuántos CONCEDE B a sus rivales (presión en banda, despejes laterales).
+  // 60% lo que A genera + 40% lo que B suele conceder.
+  const baseA = teamB.ti_against_avg != null
+    ? teamA.throwins_avg * 0.6 + teamB.ti_against_avg * 0.4
+    : teamA.throwins_avg
+  const baseB = teamA.ti_against_avg != null
+    ? teamB.throwins_avg * 0.6 + teamA.ti_against_avg * 0.4
+    : teamB.throwins_avg
+
+  // Posesión: el equipo que domina el balón saca más de banda en campo rival
+  const posMod = (own, rival) => {
+    const diff = (own.possession_avg ?? 50) - (rival.possession_avg ?? 50)
+    return Math.min(1.10, Math.max(0.92, 1 + diff * 0.004))
+  }
+
+  const expA = baseA * kA * kLiga * climaMod * tipoMod * posMod(teamA, teamB)
+  const expB = baseB * kB * kLiga * climaMod * tipoMod * posMod(teamB, teamA)
 
   return {
     expA: +expA.toFixed(2),

@@ -12,7 +12,7 @@ const norm = s => (s ?? '').toLowerCase().trim()
 
 const MERCADOS = [
   ['goals', 'Goles'], ['shots', 'Tiros'], ['sot', 'SOT'], ['corners', 'Córners'],
-  ['cards', 'Tarjetas'], ['fouls', 'Faltas'], ['ti', 'TI'], ['gk', 'GK'],
+  ['cards', 'Tarjetas'], ['fouls', 'Faltas'], ['ti', 'S. Banda'], ['gk', 'S. Puerta'],
 ]
 
 export default function Rendimiento() {
