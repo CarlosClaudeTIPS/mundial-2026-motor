@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { getAllPredicciones, getEvaluaciones, saveEvaluacion, setPickResult, evaluarManual, actualValue, judge } from '../lib/predicciones'
-import { fetchFixtures } from '../lib/football-api'
+import { fetchFixtures, getLocalDateStr } from '../lib/football-api'
 import { fetchFixtureStats } from '../lib/livescore-api'
 import { getLeague } from '../lib/leagues'
 import { backtestMatch } from '../lib/prematch'
@@ -159,6 +159,51 @@ export default function Predicciones({ league }) {
     }
   }, [league, reload])
 
+  // ── BACKTEST TOP 5: los partidos de ayer/hoy de las 5 grandes, un solo clic ──
+  const runBacktestTop5 = useCallback(async () => {
+    setBtLoading(true)
+    setBtInfo('')
+    const TOP5 = [39, 140, 78, 135, 61] // Premier, La Liga, Bundesliga, Serie A, Ligue 1
+    const hoy = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Bogota' })
+    const ayer = new Date(Date.now() - 86400000).toLocaleDateString('en-CA', { timeZone: 'America/Bogota' })
+    let done = 0, encontrados = 0
+    try {
+      const yaHechos = new Set(getEvaluaciones().map(e => e.key))
+      for (const lid of TOP5) {
+        const lg = getLeague(lid)
+        let fx
+        try { fx = await fetchFixtures(lid) } catch { continue }
+        if (!fx?.ok) continue
+        const targets = (fx.fixtures ?? [])
+          .filter(f => ['FT', 'AET', 'PEN'].includes(f.status) && f.homeId && f.awayId)
+          .filter(f => { const d = getLocalDateStr(f.date); return d === ayer || d === hoy })
+          .filter(f => !yaHechos.has(`backtest_${f.id}`))
+          .slice(0, 5) // tope por liga para no reventar la API
+        encontrados += targets.length
+        for (const f of targets) {
+          try {
+            const ev = await backtestMatch(lg, f, (name, i, n) =>
+              setBtInfo(`${lg.flag} ${f.homeTeam} vs ${f.awayTeam} — ${name} (${i}/${n})...`))
+            saveEvaluacion(ev)
+            done++
+            setBtInfo(`✓ ${done}/${encontrados}: ${lg.flag} ${f.homeTeam} ${f.homeGoals}-${f.awayGoals} ${f.awayTeam}`)
+            reload()
+          } catch (e) {
+            setBtInfo(`⚠️ ${f.homeTeam} vs ${f.awayTeam}: ${e.message} — sigo`)
+          }
+        }
+      }
+      setBtInfo(encontrados
+        ? `✓ Top 5 de ayer/hoy: ${done} de ${encontrados} partido(s) analizados y calificados por el motor`
+        : 'No hay partidos terminados nuevos de ayer/hoy en las 5 grandes (o ya fueron evaluados)')
+      reload()
+    } catch (e) {
+      setBtInfo(`Error: ${e.message}`)
+    } finally {
+      setBtLoading(false)
+    }
+  }, [reload])
+
   // ── Informe IA sobre la calibración ──
   const runIA = useCallback(async () => {
     setIaLoading(true)
@@ -196,6 +241,10 @@ export default function Predicciones({ league }) {
           </p>
         </div>
         <div className="flex gap-2 flex-wrap">
+          <button onClick={runBacktestTop5} disabled={btLoading}
+            className="text-xs px-3 py-1.5 rounded bg-orange-800/60 text-orange-200 hover:bg-orange-700/60 border border-orange-600/50 font-bold transition-colors disabled:opacity-50">
+            {btLoading ? '⏳ Corriendo...' : '🤖 Top 5 de ayer — automático'}
+          </button>
           <button onClick={runBacktest} disabled={btLoading}
             className="text-xs px-3 py-1.5 rounded bg-purple-800/50 text-purple-300 hover:bg-purple-700/60 border border-purple-700/40 transition-colors disabled:opacity-50">
             {btLoading ? '⏳ Corriendo...' : `🧪 Backtest ${league.flag} últimos jugados`}

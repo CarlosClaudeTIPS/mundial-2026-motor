@@ -6,6 +6,8 @@ const TABS = [
   { id: 'tabla',    label: 'Tabla',     icon: Table },
   { id: 'analizar', label: 'Analizar',  icon: BarChart2 },
   { id: 'vivo',     label: 'En Vivo',   icon: Clock },
+  { id: 'buscar',   label: 'Buscar',    icon: Target },
+  { id: 'rendimiento', label: 'Rendimiento', icon: BarChart2 },
   { id: 'historial',label: 'Historial', icon: List },
   { id: 'predicciones', label: 'Predicciones', icon: Target },
   { id: 'bankroll', label: 'Bankroll',  icon: DollarSign },

@@ -146,6 +146,7 @@ export async function fetchFixtures(leagueId) {
 
   try {
     const fixtures = []
+    let lastErr = null
 
     // Próximos partidos
     try {
@@ -167,7 +168,7 @@ export async function fetchFixtures(leagueId) {
           awayWinner: null,
         })
       }
-    } catch {}
+    } catch (e) { lastErr = e }
 
     // Terminados de HOY: el historial va con retraso, pero el feed live los
     // trae como FINISHED — rescatarlos de ahí para verlos apenas acaban
@@ -193,7 +194,7 @@ export async function fetchFixtures(leagueId) {
           awayWinner: ag > hg ? true : ag < hg ? false : null,
         })
       }
-    } catch {}
+    } catch (e) { lastErr = e }
 
     // Resultados últimos 7 días
     try {
@@ -219,10 +220,14 @@ export async function fetchFixtures(leagueId) {
           awayWinner: ag > hg ? true : ag < hg ? false : null,
         })
       }
-    } catch {}
+    } catch (e) { lastErr = e }
 
+    if (!fixtures.length && lastErr) {
+      // NO cachear el fallo — que el próximo intento vuelva a pegar a la API
+      return { ok: false, error: `Live-Score no respondió (${lastErr.message}) — suele ser el límite diario del trial; reintenta en un rato` }
+    }
     const out = { ok: true, fixtures }
-    setCache(key, out, TTL_NORMAL)
+    if (fixtures.length) setCache(key, out, TTL_NORMAL)
     return out
   } catch (e) {
     return { ok: false, error: e.message }
@@ -260,6 +265,41 @@ export async function fetchLive(leagueId) {
         stats: [],
       }
     })
+    const out = { ok: true, live }
+    setCache(key, out, TTL_LIVE)
+    return out
+  } catch (e) {
+    return { ok: false, error: e.message }
+  }
+}
+
+// ─── Live GLOBAL: todos los partidos en juego ahora, de cualquier liga ───────
+export async function fetchLiveGlobal() {
+  const key = 'ls_live_global'
+  const cached = getCache(key)
+  if (cached) return cached
+
+  try {
+    const data = await lsFetch('scores/live.json', {})
+    const NOT_LIVE = new Set(['FINISHED', 'NOT STARTED', 'CANCELLED', 'POSTPONED', 'ABANDONED', 'SUSPENDED'])
+    const live = (data?.match ?? [])
+      .filter(m => !NOT_LIVE.has((m.status ?? '').toUpperCase()) && !['FT', 'AET', 'PS'].includes(m.time))
+      .map(m => {
+        const [hg, ag] = parseScore(m.score)
+        return {
+          id: Number(m.id),
+          status: mapStatus(m.time, m.status),
+          elapsed: elapsedFrom(m.time),
+          homeId: Number(m.home_id),
+          awayId: Number(m.away_id),
+          homeTeam: m.home_name,
+          awayTeam: m.away_name,
+          homeGoals: hg,
+          awayGoals: ag,
+          competition: m.competition_name ?? m.competition?.name ?? '',
+          country: m.country?.name ?? '',
+        }
+      })
     const out = { ok: true, live }
     setCache(key, out, TTL_LIVE)
     return out
@@ -426,4 +466,4 @@ export async function fetchFixtureStats(fixtureId, homeId, awayId, opts = {}) {
   } catch (e) {
     return { ok: false, error: e.message, stats: [] }
   }
-}
+}// ─── Live ─────────────────────────────────────────────────────────────────────

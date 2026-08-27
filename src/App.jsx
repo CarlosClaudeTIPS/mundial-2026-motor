@@ -7,6 +7,8 @@ import EnVivo from './components/EnVivo'
 import Historial from './components/Historial'
 import Fixture from './components/Fixture'
 import BankrollTracker from './components/bankroll/BankrollTracker'
+import Rendimiento from './components/Rendimiento'
+import Buscar from './components/Buscar'
 import Predicciones from './components/Predicciones'
 import { getLeague, DEFAULT_LEAGUE_ID } from './lib/leagues'
 
@@ -42,6 +44,8 @@ export default function App() {
     if (tab === 'tabla')     return <LeagueStandings league={league} onAnalizar={handleAnalizar} />
     if (tab === 'analizar')  return <Analizar league={league} preloadTeams={analyzeTeams} />
     if (tab === 'vivo')      return <EnVivo league={league} />
+    if (tab === 'buscar')    return <Buscar />
+    if (tab === 'rendimiento') return <Rendimiento />
     if (tab === 'historial') return <Historial />
     if (tab === 'predicciones') return <Predicciones league={league} />
     if (tab === 'bankroll')  return <BankrollTracker />

@@ -50,6 +50,108 @@ export function getPrediccion(leagueId, homeName, awayName) {
   return all[matchKey(leagueId, homeName, awayName)] ?? null
 }
 
+export function listPredicciones() {
+  return Object.entries(loadAll()).map(([k, v]) => ({ key: k, ...v }))
+}
+
+// ─── Resultados resueltos (permanentes — el historial de calibración) ────────
+// A diferencia de las predicciones (7 días), los resultados resueltos se
+// guardan PARA SIEMPRE: son el registro de "cómo vamos" por liga y mercado.
+const RES_KEY = 'motor_resultados_v1'
+
+function loadResultados() {
+  try { return JSON.parse(localStorage.getItem(RES_KEY) || '{}') } catch { return {} }
+}
+
+export function listResultados() {
+  return Object.values(loadResultados()).sort((a, b) => (b.matchTs ?? 0) - (a.matchTs ?? 0))
+}
+
+export function yaResuelto(leagueId, homeName, awayName) {
+  return !!loadResultados()[matchKey(leagueId, homeName, awayName)]
+}
+
+export function saveResultado(entry) {
+  try {
+    const all = loadResultados()
+    all[matchKey(entry.leagueId, entry.home, entry.away)] = entry
+    localStorage.setItem(RES_KEY, JSON.stringify(all))
+  } catch {}
+}
+
+// ─── Resolver una predicción contra las stats finales (Live-Score) ───────────
+// (usa numv declarado más abajo — const module-level, mismo archivo)
+
+// homeStats/awayStats: objetos de stats normalizados del partido REAL.
+// pred.home puede no coincidir con el local real (análisis con equipos volteados).
+export function resolverPrediccion(pred, fixture, homeStats, awayStats) {
+  const sum = key => {
+    const h = numv(homeStats[key]); const a = numv(awayStats[key])
+    return h != null && a != null ? h + a : null
+  }
+  const cardsSum = () => {
+    const y = sum('Yellow Cards'); const r = sum('Red Cards')
+    return y != null ? y + (r ?? 0) : null
+  }
+
+  const reales = {
+    goals: (fixture.homeGoals != null && fixture.awayGoals != null) ? fixture.homeGoals + fixture.awayGoals : null,
+    shots: sum('Total Shots'),
+    sot: sum('Shots on Goal'),
+    corners: sum('Corner Kicks'),
+    cards: cardsSum(),
+    fouls: sum('Fouls'),
+    ti: sum('Throw Ins'),
+    gk: sum('Goal Kicks'),
+  }
+
+  // Orientación: stats del equipo que la predicción llamó "local"
+  const predHomeEsLocal = norm(fixture.homeTeam) === norm(pred.home)
+  const statsPredHome = predHomeEsLocal ? homeStats : awayStats
+  const statsPredAway = predHomeEsLocal ? awayStats : homeStats
+
+  const REAL_POR_MARKET = {
+    goles_totales: reales.goals, shots_totales: reales.shots, sot_totales: reales.sot,
+    corners_totales: reales.corners, tarjetas_totales: reales.cards,
+    gk_totales: reales.gk, ti_totales: reales.ti,
+    tiros_local: numv(statsPredHome['Total Shots']),
+    tiros_visita: numv(statsPredAway['Total Shots']),
+    gk_local: numv(statsPredHome['Goal Kicks']),
+    gk_visita: numv(statsPredAway['Goal Kicks']),
+  }
+
+  const picks = (pred.picks ?? []).map(p => {
+    const real = REAL_POR_MARKET[p.marketKey] ?? null
+    let result = null
+    if (real != null) {
+      if (real === p.line) result = 'PUSH'
+      else result = ((p.dir === 'OVER') === (real > p.line)) ? 'W' : 'L'
+    }
+    return { ...p, real, result }
+  })
+
+  // Error por mercado del expected
+  const errores = {}
+  for (const k of Object.keys(reales)) {
+    const p = pred.expected?.[k]; const r = reales[k]
+    if (p != null && r != null && p > 0) errores[k] = +((r - p) / p).toFixed(3)
+  }
+
+  return {
+    leagueId: pred.leagueId,
+    home: fixture.homeTeam,
+    away: fixture.awayTeam,
+    score: `${fixture.homeGoals ?? '?'} - ${fixture.awayGoals ?? '?'}`,
+    matchTs: fixture.date ? new Date(fixture.date).getTime() : Date.now(),
+    predTs: pred.ts,
+    resolvedTs: Date.now(),
+    expected: pred.expected,
+    reales,
+    errores,
+    picks,
+  }
+}
+
 // ── Todas las predicciones pendientes (para la pestaña de calibración) ──
 export function getAllPredicciones() {
   const all = loadAll()

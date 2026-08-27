@@ -94,6 +94,71 @@ async function getEventSaques(eventId) {
   return out
 }
 
+// ─── Partido actual (o de hoy) de un equipo — con stats en vivo ──────────────
+// Cubre lo que Live-Score no: torneos exóticos (ASEAN, amistosos, etc.).
+// Sin cache: si está en juego, las stats cambian minuto a minuto.
+const SOFA_LIVE_ROWS = [
+  ['Ball possession', 'Posesión %'],
+  ['Expected goals', 'xG'],
+  ['Big chances', 'Grandes ocasiones'],
+  ['Total shots', 'Tiros'],
+  ['Shots on target', 'A puerta'],
+  ['Corner kicks', 'Córners'],
+  ['Throw-ins', 'Saques banda'],
+  ['Goal kicks', 'Saques portería'],
+  ['Fouls', 'Faltas'],
+  ['Yellow cards', 'Amarillas'],
+  ['Red cards', 'Rojas'],
+  ['Offsides', 'Offsides'],
+]
+
+export async function fetchSofaPartidoActual(teamName) {
+  const team = await getTeamId(teamName)
+
+  const [lastData, nextData] = await Promise.all([
+    sofaFetch(`/team/${team.id}/events/last/0`).catch(() => null),
+    sofaFetch(`/team/${team.id}/events/next/0`).catch(() => null),
+  ])
+  const all = [...(lastData?.events ?? []), ...(nextData?.events ?? [])]
+
+  const now = Date.now()
+  const enJuego = all.find(e => e.status?.type === 'inprogress')
+  const reciente = [...all]
+    .filter(e => e.status?.type === 'finished' && now - e.startTimestamp * 1000 < 36 * 3600_000)
+    .sort((a, b) => b.startTimestamp - a.startTimestamp)[0]
+  const proximo = [...all]
+    .filter(e => e.status?.type === 'notstarted' && e.startTimestamp * 1000 - now < 24 * 3600_000 && e.startTimestamp * 1000 > now)
+    .sort((a, b) => a.startTimestamp - b.startTimestamp)[0]
+
+  const ev = enJuego ?? reciente ?? proximo
+  if (!ev) return null
+
+  let rows = []
+  if (ev.status?.type !== 'notstarted') {
+    try {
+      const data = await sofaFetch(`/event/${ev.id}/statistics`)
+      const allP = data.statistics?.find(s => s.period === 'ALL')
+      const items = (allP?.groups ?? []).flatMap(g => g.statisticsItems ?? [])
+      rows = SOFA_LIVE_ROWS.map(([name, label]) => {
+        const it = items.find(i => i.name === name)
+        return it ? { label, h: it.home, a: it.away } : null
+      }).filter(Boolean)
+    } catch {}
+  }
+
+  return {
+    id: ev.id,
+    homeTeam: ev.homeTeam?.name,
+    awayTeam: ev.awayTeam?.name,
+    torneo: ev.tournament?.name ?? '',
+    inicio: ev.startTimestamp * 1000,
+    estado: ev.status?.type, // inprogress | finished | notstarted
+    estadoTxt: ev.status?.description ?? '',
+    marcador: `${ev.homeScore?.current ?? '?'} - ${ev.awayScore?.current ?? '?'}`,
+    rows,
+  }
+}
+
 // ─── Saques de los últimos N partidos de un equipo, indexados por fecha ──────
 // Devuelve { byDate: { 'YYYY-MM-DD': { ti, tiAg, gk, gkAg, rival } }, teamId }
 export async function fetchSofaSaques(teamName, n = 12, onProgress) {
