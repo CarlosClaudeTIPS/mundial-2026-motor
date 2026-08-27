@@ -69,6 +69,7 @@ function LiveMarket({ label, acum, projected, lines }) {
 const LIVE_STAT_ROWS = [
   ['Ball Possession', 'Posesión %'],
   ['Expected Goals', 'xG'],
+  ['Big Chances', 'Grandes ocasiones'],
   ['Total Shots', 'Tiros'],
   ['Shots on Goal', 'A puerta'],
   ['Corner Kicks', 'Córners'],
@@ -340,7 +341,35 @@ export default function EnVivo({ league }) {
         homeName: match.homeTeam,
         awayName: match.awayTeam,
       }
+
+      // Live-Score casi nunca trae saques EN VIVO → completar con Sofascore
+      let sofaSaques = false
+      if (raw.home['Goal Kicks'] == null || raw.home['Throw Ins'] == null) {
+        try {
+          const { fetchSofaPartidoActual } = await import('../lib/sofascore')
+          const sofa = await fetchSofaPartidoActual(match.homeTeam)
+          if (sofa?.rows?.length && sofa.estado === 'inprogress') {
+            const take = (label, key) => {
+              const r = sofa.rows.find(x => x.label === label)
+              if (!r) return
+              const h = parseFloat(r.h); const a = parseFloat(r.a)
+              if (!isNaN(h) && raw.home[key] == null) { raw.home[key] = h; sofaSaques = true }
+              if (!isNaN(a) && raw.away[key] == null) { raw.away[key] = a; sofaSaques = true }
+            }
+            take('Saques banda', 'Throw Ins')
+            take('Saques portería', 'Goal Kicks')
+            take('xG', 'Expected Goals')
+            take('Grandes ocasiones', 'Big Chances')
+          }
+        } catch {}
+      }
       setLiveStatsRaw(raw)
+
+      // Si Sofascore trajo los saques de banda, alimentar también el acumulado total
+      if (ti == null && sofaSaques) {
+        const th = parseFloat(raw.home['Throw Ins']); const ta = parseFloat(raw.away['Throw Ins'])
+        if (!isNaN(th) && !isNaN(ta)) { setTiAc(th + ta); filled.push('saques banda (Sofascore)') }
+      }
 
       // Snapshot para el momentum (solo si avanzó el minuto)
       const min = match.elapsed ?? 0
