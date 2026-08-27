@@ -240,12 +240,19 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
   // GK/TI: usar dato REAL si existe — de los partidos de liga recientes O de
   // los amistosos de pretemporada (única fuente al inicio de temporada).
   // Si no hay nada, estimar por posesión (correlación GK↔posesión ≈ -0.72).
+  // MEDIANA + filtro de plausibilidad: la API a veces reporta datos parciales
+  // (TI de 3-8 en un partido completo es dato roto) que arrastran la media
+  // hacia abajo y generan UNDERs falsos. La mediana es inmune a esos outliers.
   const combineReal = (key) => {
+    const minPlausible = key === 'ti' ? 8 : 3 // TI real de un partido completo: 12-30 · GK: 4-14
     const vals = [
       ...rows.map(r => r[key]).filter(v => v != null),
       ...saquesExtra.map(s => s[key]).filter(v => v != null),
-    ]
-    return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null
+    ].filter(v => v >= minPlausible)
+    if (!vals.length) return null
+    const sorted = [...vals].sort((a, b) => a - b)
+    const mid = Math.floor(sorted.length / 2)
+    return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
   }
   const gkReal = combineReal('gk')
   const tiReal = combineReal('ti')

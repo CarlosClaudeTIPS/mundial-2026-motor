@@ -629,6 +629,16 @@ export default function Analizar({ league, preloadTeams }) {
   const [clima, setClima] = useState(null) // pronóstico automático del estadio
   const buildSeq = useRef(0)
 
+  // ── Copas = eliminación directa: partidos más cerrados y volátiles ──
+  // Se auto-activa el check (goles ×0.90, tiros ×0.95, tarjetas ×1.12);
+  // el usuario puede desmarcarlo en el contexto si es fase de grupos/liga.
+  useEffect(() => {
+    setCtx(prev => ({
+      ...prev,
+      checks: { ...prev.checks, eliminacion: league.type === 'cup' },
+    }))
+  }, [league.id, league.type])
+
   // ── Clima automático: busca el fixture de estos equipos y trae el pronóstico ──
   useEffect(() => {
     setClima(null)
@@ -676,14 +686,15 @@ export default function Analizar({ league, preloadTeams }) {
     fetchStandings(league.id)
       .then(async res => {
         if (!alive) return
-        if (res.ok && res.groups?.length) { setLeagueTeams(teamsFromStandings(res.groups)); return }
-        // Copas sin tabla (FA Cup, EFL Cup, etc.) → equipos desde el fixture
+        const base = (res.ok && res.groups?.length) ? teamsFromStandings(res.groups) : []
+        // SIEMPRE mezclar los equipos del fixture (±7 días): las copas y fases
+        // previas (playoffs de Champions, EFL Cup...) no aparecen en la tabla
         const fx = await fetchFixtures(league.id).catch(() => null)
         if (!alive) return
-        const map = new Map()
+        const map = new Map(base.map(t => [t.id, t]))
         for (const f of fx?.fixtures ?? []) {
-          if (f.homeId) map.set(f.homeId, { id: f.homeId, name: f.homeTeam })
-          if (f.awayId) map.set(f.awayId, { id: f.awayId, name: f.awayTeam })
+          if (f.homeId && !map.has(f.homeId)) map.set(f.homeId, { id: f.homeId, name: f.homeTeam })
+          if (f.awayId && !map.has(f.awayId)) map.set(f.awayId, { id: f.awayId, name: f.awayTeam })
         }
         if (map.size) setLeagueTeams([...map.values()].sort((a, b) => a.name.localeCompare(b.name)))
         else setTeamsError(res.error || 'No se pudo cargar la lista de equipos')
@@ -692,12 +703,13 @@ export default function Analizar({ league, preloadTeams }) {
     return () => { alive = false }
   }, [league.id])
 
-  // ── Preload desde Fixture (por nombre) ──
+  // ── Preload desde Fixture (por ID directo; nombre como respaldo) ──
   useEffect(() => {
     if (!preloadTeams?.teamAName || !leagueTeams.length) return
-    const findByName = name => leagueTeams.find(t => t.name.toLowerCase() === name?.toLowerCase())?.id ?? ''
-    const a = findByName(preloadTeams.teamAName)
-    const b = findByName(preloadTeams.teamBName)
+    const byId = id => id && leagueTeams.some(t => t.id === Number(id)) ? Number(id) : null
+    const byName = name => leagueTeams.find(t => t.name.toLowerCase() === name?.toLowerCase())?.id ?? null
+    const a = byId(preloadTeams.teamAId) ?? byName(preloadTeams.teamAName)
+    const b = byId(preloadTeams.teamBId) ?? byName(preloadTeams.teamBName)
     if (a) setTeamAId(String(a))
     if (b) setTeamBId(String(b))
   }, [preloadTeams, leagueTeams])
@@ -1147,6 +1159,82 @@ export default function Analizar({ league, preloadTeams }) {
                 ⬇️ {t.name}: {t.tierAdj.lowerTierCount} de sus últimos {t.matches} partidos son de división inferior — stats ajustadas a la baja (goles ×0.68, tiros ×0.80) y PPG descontado. Recién ascendido: trátalo con cautela.
               </p>
             ))}
+
+            {/* ── ¿Por qué estos números? — variables aplicadas más allá del promedio ── */}
+            <div className="mt-3 pt-3 border-t border-dark-600 space-y-1.5">
+              <p className="text-xs text-gray-400 font-semibold uppercase tracking-wide">🧠 Por qué este expected — variables aplicadas</p>
+
+              <p className="text-xs text-gray-400">
+                📐 <span className="text-gray-300">Base:</span> promedios ponderados de los últimos {teamA.matches} partidos (los 5 más recientes pesan 30% extra), cruzados con lo que CONCEDE el rival, normalizado contra el promedio de {league.name}.
+              </p>
+
+              {teamA.split?.home && teamA.split?.away && (
+                <p className="text-xs text-gray-400">
+                  🏠 <span className="text-gray-300">Localía real:</span> {teamA.name} en casa promedia {teamA.split.home.gf ?? '—'} goles y {teamA.split.home.shots ?? '—'} tiros ({teamA.split.home.n} PJ) vs {teamA.split.away.gf ?? '—'} y {teamA.split.away.shots ?? '—'} fuera — el motor pondera su condición de local.
+                </p>
+              )}
+
+              {ctx.checks?.eliminacion && (
+                <p className="text-xs text-orange-300">
+                  ⚔️ <span className="font-semibold">Eliminación directa detectada</span> ({league.name} es formato copa): estos partidos son más cerrados y volátiles — se aplicó goles ×0.90, tiros ×0.95, tarjetas ×1.12. El que gana la ida suele especular en la vuelta. Considera stakes menores: la varianza es más alta que en liga.
+                </p>
+              )}
+
+              {(league.kCorners !== 1 || league.kTI !== 1) && (
+                <p className="text-xs text-gray-400">
+                  ⚙️ <span className="text-gray-300">Ritmo de la competición:</span> córners ×{league.kCorners} · saques de banda ×{league.kTI} (calibrado por el estilo típico de {league.name}).
+                </p>
+              )}
+
+              {clima && (
+                <p className="text-xs text-gray-400">
+                  🌦️ <span className="text-gray-300">Clima en {clima.city}:</span> {clima.resumen}{(clima.sugiereCalor || clima.sugiereLluvia) ? ' — se auto-aplicó el ajuste correspondiente' : ' — sin impacto relevante'}.
+                </p>
+              )}
+
+              {[['bandas', 'juega por bandas → genera más córners y centros'], ['mixto-bandas', 'ataca cargado a las bandas → empuja los córners']].map(([st, txt]) => (
+                [teamA, teamB].filter(t => t.style === st && t.styleReal).map(t => (
+                  <p key={t.id + st} className="text-xs text-gray-400">
+                    🎯 <span className="text-gray-300">{t.name}</span> {txt} (medido con centros reales de Sofascore).
+                  </p>
+                ))
+              ))}
+
+              {(teamA.racha?.n >= 3 || teamB.racha?.n >= 3) && (
+                <p className="text-xs text-gray-400">
+                  {[teamA, teamB].filter(t => t.racha?.n >= 3).map(t =>
+                    `${t.racha.tipo === 'W' ? '🔥' : t.racha.tipo === 'L' ? '🥶' : '➖'} ${t.name} llega con ${t.racha.n} ${t.racha.tipo === 'W' ? 'victorias' : t.racha.tipo === 'L' ? 'derrotas' : 'empates'} seguidas`
+                  ).join(' · ')} — la racha ya está reflejada en la ponderación de los últimos 5.
+                </p>
+              )}
+
+              {(() => {
+                const activos = Object.entries(ctx.checks ?? {}).filter(([k, v]) => v && k !== 'eliminacion')
+                const modNeto = (m) => ['shots', 'goals', 'cards', 'corners'].filter(k => Math.abs((m[k] ?? 1) - 1) > 0.02)
+                  .map(k => `${k === 'shots' ? 'tiros' : k === 'goals' ? 'goles' : k === 'cards' ? 'tarjetas' : 'córners'} ×${m[k].toFixed(2)}`).join(' · ')
+                const netoA = modNeto(modsA); const netoB = modNeto(modsB)
+                return (
+                  <>
+                    {activos.length > 0 && (
+                      <p className="text-xs text-gray-400">
+                        ⚙️ <span className="text-gray-300">Contexto activo:</span> {activos.map(([k]) => k).join(', ')} (ajustable abajo en "Contexto del partido").
+                      </p>
+                    )}
+                    {(netoA || netoB) && (
+                      <p className="text-xs text-gray-400">
+                        🧮 <span className="text-gray-300">Modificadores netos:</span> {netoA && `${teamA.name}: ${netoA}`}{netoA && netoB && ' · '}{netoB && `${teamB.name}: ${netoB}`}
+                      </p>
+                    )}
+                  </>
+                )
+              })()}
+
+              {(teamA.est || teamB.est) && (
+                <p className="text-xs text-yellow-600">
+                  ⚠️ <span className="font-semibold">Volatilidad extra:</span> muestra de datos reducida — el expected es menos preciso de lo normal y la confianza de los picks ya viene descontada (−10). En fases previas y copas esto es común: los rivales vienen de ligas con poca cobertura de stats.
+                </p>
+              )}
+            </div>
           </div>
 
           {/* ── Predicción previa guardada (registro pre-partido) ── */}
@@ -1208,9 +1296,9 @@ export default function Analizar({ league, preloadTeams }) {
                         ))}
                       </div>
                     )}
-                    {exp.risks.length > 0 && (
-                      <p className="text-xs text-yellow-600/90 mt-1.5">⚠️ {exp.risks[0]}</p>
-                    )}
+                    {exp.risks.slice(0, 2).map((r, k) => (
+                      <p key={k} className="text-xs text-yellow-600/90 mt-1.5">⚠️ {r}</p>
+                    ))}
                     {(() => {
                       const p = pick.pMod / 100
                       if (!p || p <= 0.05) return null

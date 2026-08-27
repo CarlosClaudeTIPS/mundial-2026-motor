@@ -30,12 +30,12 @@ export default function App() {
     try { localStorage.setItem(LEAGUE_STORAGE_KEY, String(id)) } catch {}
   }, [])
 
-  // Fixture → Analizar: pasa nombres (y liga si el partido es de otra competición)
-  const handleAnalizar = useCallback((homeTeamName, awayTeamName, matchLeagueId) => {
+  // Fixture → Analizar: pasa nombres + IDs (y liga si el partido es de otra competición)
+  const handleAnalizar = useCallback((homeTeamName, awayTeamName, matchLeagueId, ids) => {
     if (matchLeagueId && Number(matchLeagueId) !== leagueId) {
       handleLeagueChange(matchLeagueId)
     }
-    setAnalyzeTeams({ teamAName: homeTeamName, teamBName: awayTeamName })
+    setAnalyzeTeams({ teamAName: homeTeamName, teamBName: awayTeamName, teamAId: ids?.homeId, teamBId: ids?.awayId })
     setTab('analizar')
   }, [leagueId, handleLeagueChange])
 

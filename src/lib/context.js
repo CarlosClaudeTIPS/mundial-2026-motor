@@ -120,6 +120,7 @@ export function getMotivacionConfidenceDelta(sitA, sitB) {
 
 // ─── BLOQUE 4: Contexto adicional ─────────────────────────────────────────────
 export const CONTEXTO_CHECKS = [
+  { key: 'eliminacion',  label: 'Eliminación directa / partido decisivo',      mods: { shots: 0.95, sot: 0.95, corners: 1.02, cards: 1.12, goals: 0.90 } },
   { key: 'rivalidad',    label: 'Clásico regional o rivalidad histórica',     mods: { shots: 1, sot: 1, corners: 1, cards: 1.20, goals: 1 } },
   { key: 'calor',        label: 'Calor extremo pronosticado (>32°C)',          mods: { shots: 0.94, sot: 0.94, corners: 0.95, cards: 1.05, goals: 0.94 } },
   { key: 'lluvia',       label: 'Lluvia intensa pronosticada',                 mods: { shots: 0.90, sot: 0.90, corners: 0.92, cards: 1.00, goals: 0.95 } },
