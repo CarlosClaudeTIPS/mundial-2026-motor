@@ -372,7 +372,8 @@ export default function EnVivo({ league }) {
     return () => clearInterval(id)
   }, [selectedId, liveMatches.length, loadLive, fillFromMatch])
 
-  const minutosRestantes = Math.max(0, 90 - minuto)
+  // Prórroga (copas/playoffs): si va más allá del 90', el partido termina al 120'
+  const minutosRestantes = minuto > 90 ? Math.max(0, 120 - minuto) : Math.max(0, 90 - minuto)
 
   // Stats por equipo del partido en vivo (null si la API no las da)
   const perTeam = useMemo(() => perTeamFromRaw(liveStatsRaw), [liveStatsRaw])
@@ -536,7 +537,7 @@ export default function EnVivo({ league }) {
   function renderAnalysis() {
     const tn = { h: teamAName || 'Local', a: teamBName || 'Visitante' }
     return (
-      <div className="space-y-4 rounded-xl border border-red-800/40 bg-dark-900/50 p-4">
+      <div className="flex flex-col gap-4 rounded-xl border border-red-800/40 bg-dark-900/50 p-4">
         {statsInfo && (
           <p className={`text-xs ${statsInfo.startsWith('✓') ? 'text-green-400' : 'text-yellow-500'}`}>{statsInfo}</p>
         )}
@@ -558,8 +559,8 @@ export default function EnVivo({ league }) {
           <LiveStatsBoard raw={liveStatsRaw} homeName={liveStatsRaw.homeName} awayName={liveStatsRaw.awayName} minuto={minuto} />
         )}
 
-        {/* ── Datos del partido (auto-llenados, editables) ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* ── Datos del partido (editables) — va DESPUÉS de los recomendados ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 order-1">
           <div className="card space-y-3">
             <h2 className="font-semibold text-white text-sm">Marcador y Minuto</h2>
             <div className="grid grid-cols-2 gap-3">
@@ -625,9 +626,9 @@ export default function EnVivo({ league }) {
           </div>
         </div>
 
-        {/* ── Prepartido: promedios últimos 10 + detalle partido a partido ── */}
+        {/* ── Prepartido (el ANTES): promedios últimos 10 + detalle por partido — al final ── */}
         {selectedId && (
-          <div className="space-y-3">
+          <div className="space-y-3 order-2">
             {preLoading && (
               <p className="text-xs text-blue-300">📚 Cargando prepartido (promedios de los últimos 10 por equipo)... <span className="text-gray-500">{preProgress}</span></p>
             )}
