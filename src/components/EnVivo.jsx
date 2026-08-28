@@ -7,6 +7,8 @@ import { LEAGUES } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
 import { TeamStatsRef } from './Analizar'
 import RecentResults from './RecentResults'
+import TiQuant from './TiQuant'
+import { tiLogPending, resolveTiLog } from '../lib/throwins'
 
 // Misma lista de ligas seguidas que usa el Fixture
 const MIS_LIGAS_KEY = 'motor_mis_ligas'
@@ -215,6 +217,7 @@ export default function EnVivo({ league }) {
   const [sotAc,      setSotAc]      = useState(3)
   const [tarjetasAc, setTarjetasAc] = useState(1)
   const [tiAc,       setTiAc]       = useState(null) // null = sin dato en vivo
+  const [tiFuente,   setTiFuente]   = useState(null) // 'api' | 'sofa' | 'manual'
   const [dangAtk,    setDangAtk]    = useState(null) // { h, a } ataques peligrosos si la API los da
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
@@ -285,7 +288,28 @@ export default function EnVivo({ league }) {
     }
   }, [misLigas])
 
-  useEffect(() => { loadLive() }, [loadLive])
+  // ── Resolver logs de TI de partidos que ya terminaron (live-backtest) ──
+  // Solo se intenta cuando el partido salió de la lista en vivo; máx 2 llamadas
+  // por ciclo y reintento cada 10 min para no gastar el límite del trial.
+  const resolveAttempts = useRef({})
+  const resolverTiPendientes = useCallback(async (liveNow) => {
+    let done = 0
+    for (const p of tiLogPending()) {
+      if (done >= 2) break
+      if ((liveNow ?? []).some(m => String(m.id) === String(p.id))) continue
+      const lastTry = resolveAttempts.current[p.id] ?? 0
+      if (Date.now() - lastTry < 10 * 60_000) continue
+      resolveAttempts.current[p.id] = Date.now()
+      try {
+        const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
+        const h = numv(r.stats?.[0]?.stats?.['Throw Ins'])
+        const a = numv(r.stats?.[1]?.stats?.['Throw Ins'])
+        if (h != null || a != null) { resolveTiLog(p.id, (h ?? 0) + (a ?? 0)); done++ }
+      } catch {}
+    }
+  }, [])
+
+  useEffect(() => { loadLive().then(resolverTiPendientes) }, [loadLive, resolverTiPendientes])
 
   // ── Auto-llenar al seleccionar un partido (clic de nuevo = contraer) ──
   const fillFromMatch = useCallback(async (match, toggle = true) => {
@@ -328,6 +352,7 @@ export default function EnVivo({ league }) {
       if (sot != null)     { setSotAc(sot);         filled.push('SOT') }
       if (yellow != null || red != null) { setTarjetasAc((yellow ?? 0) + (red ?? 0)); filled.push('tarjetas') }
       setTiAc(ti) // null si no hay dato
+      setTiFuente(ti != null ? 'api' : null)
 
       // Ataques peligrosos por equipo (si la API los reporta en este partido)
       const daH = res.stats?.[0]?.stats?.['Dangerous Attacks']
@@ -368,7 +393,7 @@ export default function EnVivo({ league }) {
       // Si Sofascore trajo los saques de banda, alimentar también el acumulado total
       if (ti == null && sofaSaques) {
         const th = parseFloat(raw.home['Throw Ins']); const ta = parseFloat(raw.away['Throw Ins'])
-        if (!isNaN(th) && !isNaN(ta)) { setTiAc(th + ta); filled.push('saques banda (Sofascore)') }
+        if (!isNaN(th) && !isNaN(ta)) { setTiAc(th + ta); setTiFuente('sofa'); filled.push('saques banda (Sofascore)') }
       }
 
       // Snapshot para el momentum (solo si avanzó el minuto)
@@ -397,15 +422,24 @@ export default function EnVivo({ league }) {
         const m = all.find(x => x.id === selectedId)
         if (m) fillFromMatch(m, false)
       }
+      resolverTiPendientes(all)
     }, 60_000)
     return () => clearInterval(id)
-  }, [selectedId, liveMatches.length, loadLive, fillFromMatch])
+  }, [selectedId, liveMatches.length, loadLive, fillFromMatch, resolverTiPendientes])
 
   // Prórroga (copas/playoffs): si va más allá del 90', el partido termina al 120'
   const minutosRestantes = minuto > 90 ? Math.max(0, 120 - minuto) : Math.max(0, 90 - minuto)
 
   // Stats por equipo del partido en vivo (null si la API no las da)
   const perTeam = useMemo(() => perTeamFromRaw(liveStatsRaw), [liveStatsRaw])
+
+  // ── Datos para el módulo cuantitativo de saques de banda ──
+  const selMatch = liveMatches.find(m => m.id === selectedId) ?? null
+  const selLeague = selMatch ? (LEAGUES.find(l => l.id === selMatch.leagueId) ?? league) : league
+  const tiSnaps = useMemo(() => snapsRef.current.map(s => {
+    const h = s.h?.ti; const a = s.a?.ti
+    return (h != null || a != null) ? { min: s.min, ti: (h ?? 0) + (a ?? 0) } : null
+  }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── MOMENTUM: ¿el partido se calienta o se enfría? ──
   // Compara el ritmo reciente (ventana ~12 min) contra el ritmo promedio del
@@ -588,6 +622,23 @@ export default function EnVivo({ league }) {
           <LiveStatsBoard raw={liveStatsRaw} homeName={liveStatsRaw.homeName} awayName={liveStatsRaw.awayName} minuto={minuto} />
         )}
 
+        {/* ── Módulo cuantitativo de SAQUES DE BANDA ── */}
+        <TiQuant
+          minuto={minuto}
+          goalDiff={golesA - golesB}
+          tiAc={tiAc}
+          tiH={perTeam?.h?.ti} tiA={perTeam?.a?.ti}
+          fuente={tiFuente}
+          snaps={tiSnaps}
+          preA={preA} preB={preB}
+          league={selLeague}
+          matchInfo={selMatch ? {
+            id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
+            homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
+          } : null}
+          homeName={teamAName} awayName={teamBName}
+        />
+
         {/* ── Datos del partido (editables) — va DESPUÉS de los recomendados ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 order-1">
           <div className="card space-y-3">
@@ -649,7 +700,7 @@ export default function EnVivo({ league }) {
                 <label className="text-xs text-gray-400">Saques de banda {tiAc == null && <span className="text-gray-600">(sin dato)</span>}</label>
                 <input type="number" min="0" className="input-dark w-full mt-1" value={tiAc ?? ''}
                   placeholder="—"
-                  onChange={e => setTiAc(e.target.value === '' ? null : +e.target.value)} />
+                  onChange={e => { setTiAc(e.target.value === '' ? null : +e.target.value); setTiFuente('manual') }} />
               </div>
             </div>
           </div>
