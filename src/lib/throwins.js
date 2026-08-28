@@ -339,6 +339,11 @@ export function makeLiveLog(storageKey, opts = {}) {
       const log = load()
       return Object.values(log).filter(m => m.final != null && m.snaps.length).length
     },
+    // Todos los partidos del registro (para el módulo Histórico)
+    all() {
+      const log = load()
+      return Object.entries(log).map(([id, m]) => ({ id, ...m }))
+    },
     // Mapa matchId → total final (para ROI PAPER del audit log)
     finalsMap() {
       const log = load()
@@ -511,3 +516,4 @@ export const tiLogPending = () => tiLog.pending()
 export const tiBacktestSummary = () => tiLog.summary()
 export const tiResolvedCount = () => tiLog.resolvedCount()
 export const tiFinalsMap = () => tiLog.finalsMap()
+export const tiLogAll = () => tiLog.all()
