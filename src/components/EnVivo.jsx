@@ -735,21 +735,55 @@ export default function EnVivo({ league }) {
       push(`Saques puerta ${tn[side]}`, t.gk, t.gk?.acum,      1, null, { side, statKey: 'gk' })
     }
 
-    const recs = []
-    for (const m of mkts) {
-      const rec = bestRealisticLine(m.proy, m.step)
-      if (!rec) continue
-      if (rec.dir === 'OVER' && m.acum > rec.line) continue
+    // Mejor línea del mercado dentro de un rango de margen dado
+    const pickLine = (m, minM, maxM) => {
+      let best = null
+      const c = Math.floor(m.proy) + 0.5
+      for (let i = -2; i <= 2; i++) {
+        const line = +(c + i * m.step).toFixed(2)
+        if (line <= 0) continue
+        const margin = (m.proy - line) / line
+        const abs = Math.abs(margin)
+        if (abs < minM || abs > maxM) continue
+        const dir = margin > 0 ? 'OVER' : 'UNDER'
+        if (dir === 'OVER' && m.acum > line) continue
+        if (!best || abs > Math.abs(best.margin)) best = { line, dir, margin }
+      }
+      return best
+    }
+
+    const mkRec = (m, rec, soft) => {
       const ritmo = minuto > 0 ? m.acum / minuto : 0
       const pOver = poissonOver(m.proy, rec.line)
       const p = rec.dir === 'OVER' ? pOver : 1 - pOver
-      const confidence = Math.min(90, Math.round(
+      let confidence = Math.min(90, Math.round(
         30 + (minuto / 90) * 35 + Math.min(15, Math.abs(rec.margin) * 100) + (p > 0.7 ? 8 : 0)
       ))
-      recs.push({
-        ...m, rec, p: Math.round(p * 100), confidence, ritmo: +ritmo.toFixed(2),
+      if (soft) confidence = Math.min(confidence, 55)
+      return {
+        ...m, rec, soft, p: Math.round(p * 100), confidence, ritmo: +ritmo.toFixed(2),
         faltan: +(m.proy - m.acum).toFixed(1),
-      })
+      }
+    }
+
+    // Pase estricto (margen 4-15%, el ideal)
+    const recs = []
+    const conRec = new Set()
+    for (const m of mkts) {
+      const rec = pickLine(m, 0.04, 0.15)
+      if (!rec) continue
+      conRec.add(m.label)
+      recs.push(mkRec(m, rec, false))
+    }
+    // Si hay pocos picks fuertes → completar con señales débiles (margen 1.5-35%),
+    // marcadas como tales. NUNCA dejar la sección vacía sin explicación.
+    if (recs.length < 3) {
+      for (const m of mkts) {
+        if (conRec.has(m.label)) continue
+        const rec = pickLine(m, 0.015, 0.35)
+        if (!rec) continue
+        recs.push(mkRec(m, rec, true))
+      }
     }
     return recs.sort((a, b) => b.confidence - a.confidence)
   }, [calc, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, minuto, golesA, golesB, teamAName, teamBName])
@@ -979,13 +1013,17 @@ export default function EnVivo({ league }) {
         {ready && (
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 items-start">
           <div className="space-y-5">
-            {/* ── RECOMENDADOS EN VIVO ── */}
-            {liveRecs.length > 0 && (
-              <div className="rounded-2xl border-2 border-red-700/60 bg-gradient-to-b from-red-950/50 to-dark-800 p-5 space-y-3">
+            {/* ── RECOMENDADOS EN VIVO — siempre visible ── */}
+            <div className="rounded-2xl border-2 border-red-700/60 bg-gradient-to-b from-red-950/50 to-dark-800 p-5 space-y-3">
                 <div className="flex items-center justify-between flex-wrap gap-2">
                   <h2 className="text-xl font-black text-red-300 tracking-wide">🏆 RECOMENDADOS EN VIVO — min {minuto}'</h2>
                   <span className="text-xs text-gray-500">orden: confianza · incluye mercados por equipo · solo mercados con dato real</span>
                 </div>
+                {liveRecs.length === 0 && (
+                  <p className="text-sm text-gray-400 py-3">
+                    ⚖️ Ahora mismo las proyecciones caen justo sobre las líneas — no hay desviación que aprovechar. Es información útil: <strong className="text-gray-300">no apostar también es una decisión</strong>. Se recalcula solo cada 60 segundos.
+                  </p>
+                )}
                 {liveRecs.map((r, i) => (
                   <div key={r.label}
                     className={`rounded-xl p-4 border ${i === 0 ? 'bg-red-900/30 border-red-600/60' : 'bg-dark-800/80 border-dark-600'}`}>
@@ -1034,6 +1072,9 @@ export default function EnVivo({ league }) {
                       )
                     })()}
                     {minuto < 30 && <p className="text-xs text-yellow-600 mt-1">⚠️ Pocos minutos jugados — el ritmo aún es poco fiable</p>}
+                    {r.soft && (
+                      <p className="text-xs text-orange-400 mt-1">🔸 Señal débil: el margen está fuera del rango ideal (4-15%) — si apuestas, hazlo con stake mínimo</p>
+                    )}
                     {r.p > 5 && (
                       <p className="text-sm font-bold text-green-300 mt-2 bg-green-950/60 border border-green-800/50 rounded-lg px-3 py-1.5 inline-block">
                         💰 Apuesta si la cuota en vivo está entre <span className="text-white">{(1.025 / (r.p / 100)).toFixed(2)}</span> y <span className="text-white">{(1.25 / (r.p / 100)).toFixed(2)}</span>
@@ -1041,8 +1082,7 @@ export default function EnVivo({ league }) {
                     )}
                   </div>
                 ))}
-              </div>
-            )}
+            </div>
 
           </div>
 
