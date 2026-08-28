@@ -320,81 +320,84 @@ export function tiFactores({ model, prior, goalDiff }) {
   return { up, down }
 }
 
-// ─── LIVE-BACKTEST LOCAL ─────────────────────────────────────────────────────
-// Cada refresco guarda un snapshot {min, ti, proj, pCentral, lineCentral}.
-// Al terminar el partido se resuelve con el TI final real y se puede medir
-// el error del modelo POR MINUTO (¿desde qué minuto es confiable?).
-const TI_LOG_KEY = 'motor_ti_livelog_v1'
-const TI_LOG_MAX = 50
+// ─── LIVE-BACKTEST LOCAL (fábrica compartida TI/GK) ──────────────────────────
+// Cada refresco guarda un snapshot {min, acum, proj, pCentral, lineCentral}
+// usando SOLO información disponible en ese minuto. Al terminar el partido se
+// resuelve con el total final real y se mide el error POR MINUTO.
+const LOG_MAX = 50
 
-function loadLog() {
-  try { return JSON.parse(localStorage.getItem(TI_LOG_KEY)) ?? {} } catch { return {} }
-}
-function saveLog(log) {
-  const ids = Object.keys(log)
-  if (ids.length > TI_LOG_MAX) {
-    // borrar los más viejos
-    ids.sort((a, b) => (log[a].ts ?? 0) - (log[b].ts ?? 0))
-    for (const id of ids.slice(0, ids.length - TI_LOG_MAX)) delete log[id]
+export function makeLiveLog(storageKey) {
+  const load = () => {
+    try { return JSON.parse(localStorage.getItem(storageKey)) ?? {} } catch { return {} }
   }
-  try { localStorage.setItem(TI_LOG_KEY, JSON.stringify(log)) } catch {}
-}
-
-export function logTiSnapshot(matchId, info, model) {
-  if (!model || model.minuto < 5) return
-  const log = loadLog()
-  const m = log[matchId] ?? { ...info, ts: Date.now(), snaps: [], final: null }
-  const last = m.snaps[m.snaps.length - 1]
-  if (last && model.minuto <= last.min) return // solo si avanzó el minuto
-  const lineCentral = Math.floor(model.expectedFinal) + 0.5
-  m.snaps.push({
-    min: model.minuto,
-    ti: model.acum,
-    proj: model.expectedFinal,
-    lineCentral,
-    pCentral: model.pOver(lineCentral),
-  })
-  log[matchId] = m
-  saveLog(log)
-}
-
-export function resolveTiLog(matchId, finalTi) {
-  if (finalTi == null) return
-  const log = loadLog()
-  if (!log[matchId] || log[matchId].final != null) return
-  log[matchId].final = finalTi
-  saveLog(log)
-}
-
-export function tiLogPending() {
-  const log = loadLog()
-  return Object.entries(log).filter(([, m]) => m.final == null && m.snaps.length)
-    .map(([id, m]) => ({ id, ...m }))
-}
-
-// Resumen del live-backtest: error absoluto medio y calibración por tramo
-export function tiBacktestSummary() {
-  const log = loadLog()
-  const resolved = Object.values(log).filter(m => m.final != null && m.snaps.length)
-  if (!resolved.length) return null
-
-  const BUCKETS = [[5, 20], [20, 35], [35, 50], [50, 65], [65, 80], [80, 95]]
-  const rows = BUCKETS.map(([lo, hi]) => {
-    const pts = []
-    for (const m of resolved) {
-      for (const s of m.snaps) {
-        if (s.min >= lo && s.min < hi) pts.push({ err: Math.abs(s.proj - m.final), hit: (m.final > s.lineCentral) === (s.pCentral > 0.5), brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2 })
-      }
+  const save = (log) => {
+    const ids = Object.keys(log)
+    if (ids.length > LOG_MAX) {
+      ids.sort((a, b) => (log[a].ts ?? 0) - (log[b].ts ?? 0))
+      for (const id of ids.slice(0, ids.length - LOG_MAX)) delete log[id]
     }
-    if (!pts.length) return null
-    return {
-      bucket: `${lo}-${hi}'`,
-      n: pts.length,
-      mae: +(pts.reduce((s, p) => s + p.err, 0) / pts.length).toFixed(1),
-      hit: Math.round(pts.reduce((s, p) => s + (p.hit ? 1 : 0), 0) / pts.length * 100),
-      brier: +(pts.reduce((s, p) => s + p.brier, 0) / pts.length).toFixed(3),
-    }
-  }).filter(Boolean)
+    try { localStorage.setItem(storageKey, JSON.stringify(log)) } catch {}
+  }
 
-  return { matches: resolved.length, rows }
+  return {
+    logSnapshot(matchId, info, model) {
+      if (!model || model.minuto < 5) return
+      const log = load()
+      const m = log[matchId] ?? { ...info, ts: Date.now(), snaps: [], final: null }
+      const last = m.snaps[m.snaps.length - 1]
+      if (last && model.minuto <= last.min) return // solo si avanzó el minuto
+      const lineCentral = Math.floor(model.expectedFinal) + 0.5
+      m.snaps.push({
+        min: model.minuto,
+        acum: model.acum,
+        proj: model.expectedFinal,
+        lineCentral,
+        pCentral: model.pOver(lineCentral),
+      })
+      log[matchId] = m
+      save(log)
+    },
+    resolve(matchId, finalTotal) {
+      if (finalTotal == null) return
+      const log = load()
+      if (!log[matchId] || log[matchId].final != null) return
+      log[matchId].final = finalTotal
+      save(log)
+    },
+    pending() {
+      const log = load()
+      return Object.entries(log).filter(([, m]) => m.final == null && m.snaps.length)
+        .map(([id, m]) => ({ id, ...m }))
+    },
+    // Resumen: error absoluto medio, acierto y Brier por tramo de minuto
+    summary() {
+      const log = load()
+      const resolved = Object.values(log).filter(m => m.final != null && m.snaps.length)
+      if (!resolved.length) return null
+      const BUCKETS = [[5, 20], [20, 35], [35, 50], [50, 65], [65, 80], [80, 95]]
+      const rows = BUCKETS.map(([lo, hi]) => {
+        const pts = []
+        for (const m of resolved) {
+          for (const s of m.snaps) {
+            if (s.min >= lo && s.min < hi) pts.push({ err: Math.abs(s.proj - m.final), hit: (m.final > s.lineCentral) === (s.pCentral > 0.5), brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2 })
+          }
+        }
+        if (!pts.length) return null
+        return {
+          bucket: `${lo}-${hi}'`,
+          n: pts.length,
+          mae: +(pts.reduce((s, p) => s + p.err, 0) / pts.length).toFixed(1),
+          hit: Math.round(pts.reduce((s, p) => s + (p.hit ? 1 : 0), 0) / pts.length * 100),
+          brier: +(pts.reduce((s, p) => s + p.brier, 0) / pts.length).toFixed(3),
+        }
+      }).filter(Boolean)
+      return { matches: resolved.length, rows }
+    },
+  }
 }
+
+const tiLog = makeLiveLog('motor_ti_livelog_v1')
+export const logTiSnapshot = (matchId, info, model) => tiLog.logSnapshot(matchId, info, model)
+export const resolveTiLog = (matchId, finalTi) => tiLog.resolve(matchId, finalTi)
+export const tiLogPending = () => tiLog.pending()
+export const tiBacktestSummary = () => tiLog.summary()

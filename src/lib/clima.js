@@ -1,28 +1,28 @@
-// ─── Clima del partido — Open-Meteo (gratis, sin API key) ────────────────────
-// Geocodifica la ciudad del estadio y trae el pronóstico de la hora del partido.
-// Auto-sugiere los checks de contexto 'calor' y 'lluvia' del motor.
+// ─── Clima del partido — Open-Meteo (gratis, sin API key, CORS abierto) ──────
+// Se usa como CONTEXTO VISIBLE: lluvia/viento se muestran pero NO pesan en los
+// modelos hasta que el live-backtest demuestre utilidad (spec: variables
+// secundarias sin peso arbitrario). La lluvia fuerte es candidata a factor TI.
 
-const CACHE_KEY = 'motor_clima_cache_v1'
-const TTL_GEO = 90 * 24 * 3600_000  // coordenadas de una ciudad no cambian
-const TTL_FC  = 3 * 3600_000        // pronóstico: 3h
+const CACHE_KEY = 'motor_clima_v1'
+const TTL = 2 * 3600_000 // 2 horas
 
 function getCache(key) {
   try {
     const raw = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}')
     const e = raw[key]
-    if (!e || Date.now() - e.ts > e.ttl) return null
+    if (!e || Date.now() - e.ts > TTL) return null
     return e.data
   } catch { return null }
 }
-
-function setCache(key, data, ttl) {
+function setCache(key, data) {
   try {
     const raw = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}')
-    raw[key] = { data, ts: Date.now(), ttl }
+    raw[key] = { data, ts: Date.now() }
     localStorage.setItem(CACHE_KEY, JSON.stringify(raw))
   } catch {}
 }
 
+// Geocodificar ciudad → lat/lon (Open-Meteo geocoding, gratis)
 async function geocode(city) {
   const key = `geo_${city.toLowerCase()}`
   const cached = getCache(key)
@@ -31,68 +31,56 @@ async function geocode(city) {
     `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1&language=es`,
     { signal: AbortSignal.timeout(8000) }
   )
+  if (!res.ok) throw new Error(`geocoding ${res.status}`)
   const data = await res.json()
-  const hit = data?.results?.[0]
-  if (!hit) return null
-  const out = { lat: hit.latitude, lon: hit.longitude, name: hit.name, country: hit.country_code }
-  setCache(key, out, TTL_GEO)
+  const hit = data.results?.[0]
+  if (!hit) throw new Error(`ciudad "${city}" no encontrada`)
+  const out = { lat: hit.latitude, lon: hit.longitude, name: hit.name }
+  setCache(key, out)
   return out
 }
 
-// city: ciudad del estadio (fixture.venue) · isoDate: fecha-hora del partido
-export async function fetchClima(city, isoDate) {
-  if (!city || !isoDate) return null
-  const clean = city.split(',')[0].trim()
-  if (!clean) return null
-
-  const geo = await geocode(clean)
-  if (!geo) return null
-
-  const matchDate = new Date(isoDate)
-  const dateStr = matchDate.toISOString().slice(0, 10)
-  const fcKey = `fc_${geo.lat}_${geo.lon}_${dateStr}`
-  let fc = getCache(fcKey)
-  if (!fc) {
-    const res = await fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=${geo.lat}&longitude=${geo.lon}` +
-      `&hourly=temperature_2m,precipitation,precipitation_probability,wind_speed_10m,is_day` +
-      `&start_date=${dateStr}&end_date=${dateStr}&timezone=auto`,
-      { signal: AbortSignal.timeout(8000) }
-    )
-    fc = await res.json()
-    if (!fc?.hourly?.time?.length) return null
-    setCache(fcKey, fc, TTL_FC)
+// Clima en el estadio a la hora del partido (o ahora, si ya está en juego)
+// Acepta lat/lon directos (de Sofascore) o nombre de ciudad como fallback.
+export async function fetchClima({ lat = null, lon = null, city = null, whenTs = Date.now() }) {
+  if (lat == null || lon == null) {
+    if (!city) return null
+    const g = await geocode(city)
+    lat = g.lat; lon = g.lon
   }
 
-  // Hora del pronóstico más cercana a la hora del partido (en la zona del estadio)
-  const target = matchDate.getTime()
+  const key = `wx_${lat.toFixed(2)}_${lon.toFixed(2)}_${new Date(whenTs).toISOString().slice(0, 13)}`
+  const cached = getCache(key)
+  if (cached) return cached
+
+  const res = await fetch(
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
+    `&hourly=temperature_2m,precipitation,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=2&past_hours=6`,
+    { signal: AbortSignal.timeout(8000) }
+  )
+  if (!res.ok) throw new Error(`open-meteo ${res.status}`)
+  const data = await res.json()
+  const h = data.hourly
+  if (!h?.time?.length) return null
+
+  // Hora más cercana al inicio del partido
+  const target = whenTs
   let best = 0; let bestDiff = Infinity
-  fc.hourly.time.forEach((t, i) => {
-    const diff = Math.abs(new Date(t).getTime() - target)
+  for (let i = 0; i < h.time.length; i++) {
+    const diff = Math.abs(new Date(h.time[i] + 'Z').getTime() - target)
     if (diff < bestDiff) { bestDiff = diff; best = i }
-  })
-
-  const tempC     = fc.hourly.temperature_2m?.[best]
-  const precipMm  = fc.hourly.precipitation?.[best]
-  const precipPct = fc.hourly.precipitation_probability?.[best]
-  const windKmh   = fc.hourly.wind_speed_10m?.[best]
-  const isNight   = fc.hourly.is_day?.[best] === 0
-
-  return {
-    city: geo.name,
-    tempC:     tempC != null ? Math.round(tempC) : null,
-    precipMm:  precipMm ?? null,
-    precipPct: precipPct ?? null,
-    windKmh:   windKmh != null ? Math.round(windKmh) : null,
-    isNight,
-    // Sugerencias automáticas para los checks del motor
-    sugiereCalor:  tempC != null && tempC >= 32,
-    sugiereLluvia: (precipMm != null && precipMm >= 1.5) || (precipPct != null && precipPct >= 70),
-    resumen: [
-      tempC != null ? `${Math.round(tempC)}°C` : null,
-      precipPct != null ? `lluvia ${precipPct}%` : null,
-      windKmh != null && windKmh >= 25 ? `viento ${Math.round(windKmh)} km/h` : null,
-      isNight ? 'nocturno 🌙' : 'diurno ☀️',
-    ].filter(Boolean).join(' · '),
   }
+
+  const out = {
+    temp: h.temperature_2m?.[best] ?? null,
+    lluviaMm: h.precipitation?.[best] ?? null,
+    probLluvia: h.precipitation_probability?.[best] ?? null,
+    vientoKmh: h.wind_speed_10m?.[best] ?? null,
+    // banderas interpretadas
+    lluvia: (h.precipitation?.[best] ?? 0) >= 0.3 || (h.precipitation_probability?.[best] ?? 0) >= 60,
+    vientoFuerte: (h.wind_speed_10m?.[best] ?? 0) >= 30,
+    hora: h.time[best],
+  }
+  setCache(key, out)
+  return out
 }

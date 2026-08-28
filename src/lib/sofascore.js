@@ -159,6 +159,74 @@ export async function fetchSofaPartidoActual(teamName) {
   }
 }
 
+// ─── Contexto del partido actual/próximo: alineaciones, árbitro, estadio ─────
+// Gratis, misma API. Las alineaciones cambian el perfil esperado (extremos
+// abiertos vs mediocampo estrecho) — por ahora se MUESTRAN sin peso en el
+// modelo (no hay backtest que soporte un coeficiente; ver docs).
+export async function fetchSofaContexto(teamName) {
+  const team = await getTeamId(teamName)
+
+  const [lastData, nextData] = await Promise.all([
+    sofaFetch(`/team/${team.id}/events/last/0`).catch(() => null),
+    sofaFetch(`/team/${team.id}/events/next/0`).catch(() => null),
+  ])
+  const all = [...(lastData?.events ?? []), ...(nextData?.events ?? [])]
+  const now = Date.now()
+  const ev = all.find(e => e.status?.type === 'inprogress')
+    ?? all.filter(e => e.status?.type === 'notstarted' && e.startTimestamp * 1000 - now < 30 * 3600_000 && e.startTimestamp * 1000 > now)
+      .sort((a, b) => a.startTimestamp - b.startTimestamp)[0]
+  if (!ev) return null
+
+  const out = {
+    eventId: ev.id,
+    homeTeam: ev.homeTeam?.name,
+    awayTeam: ev.awayTeam?.name,
+    inicio: ev.startTimestamp * 1000,
+    estado: ev.status?.type,
+    referee: null, venue: null, lineups: null,
+  }
+
+  // Detalles: árbitro y estadio (con coordenadas si vienen — para el clima)
+  try {
+    const det = await sofaFetch(`/event/${ev.id}`)
+    const e = det.event ?? {}
+    if (e.referee?.name) {
+      out.referee = {
+        name: e.referee.name,
+        yellowPerGame: e.referee.games ? +( (e.referee.yellowCards ?? 0) / e.referee.games ).toFixed(1) : null,
+      }
+    }
+    const v = e.venue ?? {}
+    out.venue = {
+      stadium: v.stadium?.name ?? v.name ?? null,
+      city: v.city?.name ?? null,
+      lat: v.venueCoordinates?.latitude ?? null,
+      lon: v.venueCoordinates?.longitude ?? null,
+    }
+  } catch {}
+
+  // Alineaciones (confirmadas o probables) + bajas
+  try {
+    const lu = await sofaFetch(`/event/${ev.id}/lineups`)
+    const side = s => s ? {
+      formation: s.formation ?? null,
+      starters: (s.players ?? []).filter(p => !p.substitute).map(p => p.player?.shortName ?? p.player?.name).filter(Boolean),
+      missing: (s.missingPlayers ?? []).map(p => ({
+        name: p.player?.shortName ?? p.player?.name,
+        // type 'missing' = lesión/baja · reason codes de Sofascore
+        reason: p.reason === 1 ? 'lesión' : p.reason === 2 ? 'rojo' : p.reason === 3 ? 'amarillas' : 'duda/baja',
+      })),
+    } : null
+    out.lineups = {
+      confirmed: !!lu.confirmed,
+      home: side(lu.home),
+      away: side(lu.away),
+    }
+  } catch {}
+
+  return out
+}
+
 // ─── Saques de los últimos N partidos de un equipo, indexados por fecha ──────
 // Devuelve { byDate: { 'YYYY-MM-DD': { ti, tiAg, gk, gkAg, rival } }, teamId }
 export async function fetchSofaSaques(teamName, n = 12, onProgress) {

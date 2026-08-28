@@ -8,7 +8,11 @@ import { buildTeamStats } from '../lib/league-stats'
 import { TeamStatsRef } from './Analizar'
 import RecentResults from './RecentResults'
 import TiQuant from './TiQuant'
+import GkQuant from './GkQuant'
+import ContextoPartido from './ContextoPartido'
 import { tiLogPending, resolveTiLog } from '../lib/throwins'
+import { gkLogPending, resolveGkLog } from '../lib/goalkicks'
+import { fetchSofaSaques } from '../lib/sofascore'
 
 // Misma lista de ligas seguidas que usa el Fixture
 const MIS_LIGAS_KEY = 'motor_mis_ligas'
@@ -218,6 +222,8 @@ export default function EnVivo({ league }) {
   const [tarjetasAc, setTarjetasAc] = useState(1)
   const [tiAc,       setTiAc]       = useState(null) // null = sin dato en vivo
   const [tiFuente,   setTiFuente]   = useState(null) // 'api' | 'sofa' | 'manual'
+  const [gkAc,       setGkAc]       = useState(null) // saques de portería acumulados
+  const [gkFuente,   setGkFuente]   = useState(null)
   const [dangAtk,    setDangAtk]    = useState(null) // { h, a } ataques peligrosos si la API los da
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
@@ -294,17 +300,36 @@ export default function EnVivo({ league }) {
   const resolveAttempts = useRef({})
   const resolverTiPendientes = useCallback(async (liveNow) => {
     let done = 0
+    const enVivoAhora = (id) => (liveNow ?? []).some(m => String(m.id) === String(id))
+    const intentado = (key) => {
+      const lastTry = resolveAttempts.current[key] ?? 0
+      if (Date.now() - lastTry < 10 * 60_000) return true
+      resolveAttempts.current[key] = Date.now()
+      return false
+    }
+
+    // TI: Live-Score trae el dato final en el historial
     for (const p of tiLogPending()) {
       if (done >= 2) break
-      if ((liveNow ?? []).some(m => String(m.id) === String(p.id))) continue
-      const lastTry = resolveAttempts.current[p.id] ?? 0
-      if (Date.now() - lastTry < 10 * 60_000) continue
-      resolveAttempts.current[p.id] = Date.now()
+      if (enVivoAhora(p.id) || intentado(`ti_${p.id}`)) continue
       try {
         const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
         const h = numv(r.stats?.[0]?.stats?.['Throw Ins'])
         const a = numv(r.stats?.[1]?.stats?.['Throw Ins'])
         if (h != null || a != null) { resolveTiLog(p.id, (h ?? 0) + (a ?? 0)); done++ }
+      } catch {}
+    }
+
+    // GK: Live-Score nunca lo trae → resolver con Sofascore por fecha
+    for (const p of gkLogPending()) {
+      if (done >= 2) break
+      if (enVivoAhora(p.id) || intentado(`gk_${p.id}`)) continue
+      try {
+        const sofa = await fetchSofaSaques(p.home, 8)
+        const dUtc = new Date(p.ts).toISOString().slice(0, 10)
+        const dBog = new Date(p.ts - 5 * 3600_000).toISOString().slice(0, 10)
+        const s = sofa.byDate[dUtc] ?? sofa.byDate[dBog]
+        if (s && s.gk != null && s.gkAg != null) { resolveGkLog(p.id, s.gk + s.gkAg); done++ }
       } catch {}
     }
   }, [])
@@ -345,6 +370,7 @@ export default function EnVivo({ league }) {
       const yellow  = sumStat(res.stats, 'Yellow Cards')
       const red     = sumStat(res.stats, 'Red Cards')
       const ti      = sumStat(res.stats, 'Throw Ins')
+      const gk      = sumStat(res.stats, 'Goal Kicks')
 
       let filled = []
       if (corners != null) { setCornersAc(corners); filled.push('córners') }
@@ -353,6 +379,8 @@ export default function EnVivo({ league }) {
       if (yellow != null || red != null) { setTarjetasAc((yellow ?? 0) + (red ?? 0)); filled.push('tarjetas') }
       setTiAc(ti) // null si no hay dato
       setTiFuente(ti != null ? 'api' : null)
+      setGkAc(gk)
+      setGkFuente(gk != null ? 'api' : null)
 
       // Ataques peligrosos por equipo (si la API los reporta en este partido)
       const daH = res.stats?.[0]?.stats?.['Dangerous Attacks']
@@ -390,10 +418,14 @@ export default function EnVivo({ league }) {
       }
       setLiveStatsRaw(raw)
 
-      // Si Sofascore trajo los saques de banda, alimentar también el acumulado total
+      // Si Sofascore trajo los saques, alimentar también los acumulados totales
       if (ti == null && sofaSaques) {
         const th = parseFloat(raw.home['Throw Ins']); const ta = parseFloat(raw.away['Throw Ins'])
         if (!isNaN(th) && !isNaN(ta)) { setTiAc(th + ta); setTiFuente('sofa'); filled.push('saques banda (Sofascore)') }
+      }
+      if (gk == null && sofaSaques) {
+        const gh = parseFloat(raw.home['Goal Kicks']); const ga = parseFloat(raw.away['Goal Kicks'])
+        if (!isNaN(gh) && !isNaN(ga)) { setGkAc(gh + ga); setGkFuente('sofa'); filled.push('saques portería (Sofascore)') }
       }
 
       // Snapshot para el momentum (solo si avanzó el minuto)
@@ -440,6 +472,23 @@ export default function EnVivo({ league }) {
     const h = s.h?.ti; const a = s.a?.ti
     return (h != null || a != null) ? { min: s.min, ti: (h ?? 0) + (a ?? 0) } : null
   }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const gkSnaps = useMemo(() => snapsRef.current.map(s => {
+    const h = s.h?.gk; const a = s.a?.gk
+    return (h != null || a != null) ? { min: s.min, gk: (h ?? 0) + (a ?? 0) } : null
+  }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Tiros desviados acumulados (driver causal de los GK): tiros − a puerta.
+  // Con datos de la API por equipo, o con los acumulados manuales como fallback.
+  const offAcum = useMemo(() => {
+    if (perTeam && (perTeam.h.shots != null || perTeam.a.shots != null)) {
+      const off = side => (side.shots != null && side.sot != null) ? side.shots - side.sot : null
+      const oh = off(perTeam.h); const oa = off(perTeam.a)
+      if (oh != null || oa != null) return (oh ?? 0) + (oa ?? 0)
+    }
+    if (tirosAc != null && sotAc != null && tirosAc >= sotAc) return tirosAc - sotAc
+    return null
+  }, [perTeam, tirosAc, sotAc])
 
   // ── MOMENTUM: ¿el partido se calienta o se enfría? ──
   // Compara el ritmo reciente (ventana ~12 min) contra el ritmo promedio del
@@ -639,6 +688,27 @@ export default function EnVivo({ league }) {
           homeName={teamAName} awayName={teamBName}
         />
 
+        {/* ── Módulo cuantitativo de SAQUES DE PORTERÍA ── */}
+        <GkQuant
+          minuto={minuto}
+          goalDiff={golesA - golesB}
+          gkAc={gkAc}
+          gkH={perTeam?.h?.gk} gkA={perTeam?.a?.gk}
+          offAcum={offAcum}
+          fuente={gkFuente}
+          snaps={gkSnaps}
+          preA={preA} preB={preB}
+          league={selLeague}
+          matchInfo={selMatch ? {
+            id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
+            homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
+          } : null}
+          homeName={teamAName} awayName={teamBName}
+        />
+
+        {/* ── Contexto: alineaciones, árbitro, estadio, clima (fuentes gratis) ── */}
+        {selectedId && <ContextoPartido homeTeam={teamAName} awayTeam={teamBName} />}
+
         {/* ── Datos del partido (editables) — va DESPUÉS de los recomendados ── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 order-1">
           <div className="card space-y-3">
@@ -701,6 +771,12 @@ export default function EnVivo({ league }) {
                 <input type="number" min="0" className="input-dark w-full mt-1" value={tiAc ?? ''}
                   placeholder="—"
                   onChange={e => { setTiAc(e.target.value === '' ? null : +e.target.value); setTiFuente('manual') }} />
+              </div>
+              <div>
+                <label className="text-xs text-gray-400">Saques de portería {gkAc == null && <span className="text-gray-600">(sin dato)</span>}</label>
+                <input type="number" min="0" className="input-dark w-full mt-1" value={gkAc ?? ''}
+                  placeholder="—"
+                  onChange={e => { setGkAc(e.target.value === '' ? null : +e.target.value); setGkFuente('manual') }} />
               </div>
             </div>
           </div>
