@@ -288,6 +288,7 @@ export function makeLiveLog(storageKey) {
         min: model.minuto,
         acum: model.acum,
         proj: model.expectedFinal,
+        naive: model.naiveFinal ?? null, // benchmark: extrapolación lineal
         lineCentral,
         pCentral: model.pOver(lineCentral),
       })
@@ -326,19 +327,50 @@ export function makeLiveLog(storageKey) {
         const pts = []
         for (const m of resolved) {
           for (const s of m.snaps) {
-            if (s.min >= lo && s.min < hi) pts.push({ err: Math.abs(s.proj - m.final), hit: (m.final > s.lineCentral) === (s.pCentral > 0.5), brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2 })
+            if (s.min >= lo && s.min < hi) pts.push({
+              err: Math.abs(s.proj - m.final),
+              errNaive: s.naive != null ? Math.abs(s.naive - m.final) : null,
+              hit: (m.final > s.lineCentral) === (s.pCentral > 0.5),
+              brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2,
+            })
           }
         }
         if (!pts.length) return null
+        const conNaive = pts.filter(p => p.errNaive != null)
         return {
           bucket: `${lo}-${hi}'`,
           n: pts.length,
           mae: +(pts.reduce((s, p) => s + p.err, 0) / pts.length).toFixed(1),
+          // BENCHMARK obligatorio: si el modelo no le gana al ritmo lineal,
+          // la complejidad es decorativa (revisión §20)
+          maeNaive: conNaive.length ? +(conNaive.reduce((s, p) => s + p.errNaive, 0) / conNaive.length).toFixed(1) : null,
           hit: Math.round(pts.reduce((s, p) => s + (p.hit ? 1 : 0), 0) / pts.length * 100),
           brier: +(pts.reduce((s, p) => s + p.brier, 0) / pts.length).toFixed(3),
         }
       }).filter(Boolean)
-      return { matches: resolved.length, rows, pre, conRoja: resolved.filter(m => m.hayRoja).length }
+
+      // CALIBRACIÓN por bucket de probabilidad (revisión §19, §22): si el
+      // modelo dice 70%, ¿ocurre ~70% de las veces? OJO: snapshots del mismo
+      // partido NO son independientes — n efectivo ≈ nº de partidos.
+      const CAL_BUCKETS = [[0.5, 0.6], [0.6, 0.7], [0.7, 0.8], [0.8, 0.9], [0.9, 1.01]]
+      const calib = CAL_BUCKETS.map(([lo, hi]) => {
+        const pts = []
+        for (const m of resolved) {
+          for (const s of m.snaps) {
+            const p = s.pCentral >= 0.5 ? s.pCentral : 1 - s.pCentral
+            const ok = s.pCentral >= 0.5 ? (m.final > s.lineCentral) : (m.final <= s.lineCentral)
+            if (p >= lo && p < hi) pts.push(ok ? 1 : 0)
+          }
+        }
+        if (pts.length < 5) return null
+        return {
+          rango: `${Math.round(lo * 100)}-${Math.round(Math.min(hi, 1) * 100)}%`,
+          n: pts.length,
+          real: Math.round(pts.reduce((s, v) => s + v, 0) / pts.length * 100),
+        }
+      }).filter(Boolean)
+
+      return { matches: resolved.length, rows, pre, calib, conRoja: resolved.filter(m => m.hayRoja).length }
     },
   }
 }

@@ -598,21 +598,22 @@ function ComboCard({ combo }) {
         <span className="text-white font-semibold">{combo.p2.label} {combo.p2.dir} {combo.p2.line}</span>
       </div>
       <div className="flex gap-4 text-gray-300 flex-wrap">
-        <span>P conjunta: <strong className="text-purple-300">{combo.pCombo}%</strong></span>
+        <span>Independencia (benchmark): <strong className="text-gray-400">{combo.pIndep}%</strong></span>
+        <span>P conjunta (con dependencia): <strong className="text-purple-300">{combo.pJoint}%</strong></span>
+        <span>Ajuste por dependencia: <strong className={combo.ajusteDep > 0 ? 'text-green-400' : 'text-blue-400'}>{combo.ajusteDep > 0 ? '+' : ''}{combo.ajusteDep} pp</strong></span>
         <span>Cuota justa: <strong className="text-white">{combo.cuotaJusta}</strong></span>
-        <span>Hay valor desde: <strong className="text-white">{combo.cuotaMinValor}</strong></span>
         <span className="text-gray-500">Correlación: {combo.correlation}</span>
       </div>
       {combo.valeAlTarget ? (
         <p className="text-green-300 font-bold bg-green-950/50 border border-green-800/50 rounded-lg px-3 py-1.5">
-          ✅ SIRVE para tu meta: con P {combo.pCombo}%, cualquier cuota combinada ≥ {combo.cuotaMinValor} tiene valor — y {combo.targetOdds} lo supera de sobra
+          📝 PAPER BET a cuota {combo.targetOdds}: EV conjunto {combo.evAlTarget > 0 ? '+' : ''}{combo.evAlTarget}% (P conjunta {combo.pJoint}% vs implícita {combo.impTarget}%) — registrar y seguir; la ventaja se confirma con la calibración
         </p>
       ) : (
         <p className="text-yellow-400 bg-yellow-950/40 border border-yellow-900/50 rounded-lg px-3 py-1.5">
-          ⚠️ Para que una combinada a cuota {combo.targetOdds} tenga valor necesitas P conjunta ≥ {combo.pNecesaria}% — esta tiene {combo.pCombo}%. Solo vale si la casa te paga ≥ {combo.cuotaMinValor}; si te ofrecen menos, NO BET
+          ⚠️ A cuota {combo.targetOdds} el EV conjunto es {combo.evAlTarget}% — insuficiente. Necesitarías cuota ≥ {combo.cuotaJusta} para que el par tenga valor. NO BET
         </p>
       )}
-      <p className="text-[10px] text-gray-600">La P conjunta es el producto de las dos patas — con correlación positiva la P real es algo MAYOR (cálculo conservador a tu favor)</p>
+      <p className="text-[10px] text-gray-600">P conjunta ≠ producto: los dos picks comparten el estado del partido (tempo latente de 3 estados, heurístico sin calibrar). El producto queda solo como benchmark de independencia.</p>
     </div>
   )
 }

@@ -25,7 +25,7 @@ export default function Oportunidades({ matchId }) {
   void tick
   if (!ops.length) return null
 
-  const bets = ops.filter(o => o.signal === 'BET')
+  const bets = ops.filter(o => o.signal === 'BET' || o.signal === 'PAPER BET')
   const avisos = avisosCorrelacion(bets)
 
   return (
@@ -37,11 +37,11 @@ export default function Oportunidades({ matchId }) {
 
       {ops.map((o, i) => (
         <div key={o.label + o.line} className={`flex items-center gap-3 flex-wrap rounded-lg px-3 py-2 border ${
-          o.signal === 'BET' ? 'bg-dark-800/80 border-emerald-800/50' : 'bg-dark-800/40 border-dark-700 opacity-70'
+          o.signal !== 'NO BET' ? 'bg-dark-800/80 border-emerald-800/50' : 'bg-dark-800/40 border-dark-700 opacity-70'
         }`}>
           <span className="text-lg font-black text-gray-600 w-5">{i + 1}</span>
-          {o.signal === 'BET'
-            ? <span className={`text-xs font-black px-2 py-0.5 rounded ${Q_STYLE[o.quality] ?? 'bg-dark-600'}`}>Calidad {o.quality}</span>
+          {o.signal !== 'NO BET'
+            ? <span className={`text-xs font-black px-2 py-0.5 rounded ${Q_STYLE[o.quality] ?? 'bg-dark-600'}`}>{o.signal === 'PAPER BET' ? '📝 ' : ''}Calidad {o.quality}</span>
             : <span className="text-xs font-bold px-2 py-0.5 rounded bg-dark-600 text-gray-400">NO BET</span>}
           <span className="text-white font-bold text-sm">{o.label}</span>
           <div className="ml-auto flex items-center gap-3 text-xs">
@@ -56,7 +56,7 @@ export default function Oportunidades({ matchId }) {
       {avisos.map((a, i) => (
         <p key={i} className="text-[11px] text-yellow-500/90 bg-yellow-950/30 border border-yellow-900/40 rounded-lg px-3 py-2">{a}</p>
       ))}
-      <p className="text-[10px] text-gray-600">La calidad A/B/C es provisional hasta calibrarla con el live-backtest — y recuerda las reglas del bankroll: máx $25k por apuesta, 4 al día.</p>
+      <p className="text-[10px] text-gray-600">📝 = modo PAPER (sistema sin calibrar: registrar y seguir, no es ventaja demostrada). Calidad A/B/C provisional. Reglas de bankroll: máx $25k por apuesta, 4 al día.</p>
     </div>
   )
 }

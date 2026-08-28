@@ -213,9 +213,43 @@ export function selectTopPicks(candidates, max = 3) {
   return picks
 }
 
-// ─── Combinada — pensada para la meta del usuario: cuota total ≥ 1.50 ────────
-// Elige el PAR con mayor probabilidad conjunta (no simplemente los 2 primeros)
-// entre los picks con correlación aceptable, y evalúa si sirve para el target.
+// ─── PROBABILIDAD CONJUNTA de dos picks (revisión metodológica §7-§11) ───────
+// P(A)×P(B) exige independencia — FALSA para picks del mismo partido que
+// comparten estado (tempo). Aproximación: MATCH TEMPO latente de 3 estados
+// (frío/normal/caliente) que escala los expecteds de los mercados sensibles
+// al ritmo; los picks son condicionalmente independientes DADO el tempo.
+// P(A∩B) = Σ_T w(T) · P(A|T) · P(B|T). El producto queda solo como benchmark.
+// HEURÍSTICO (magnitudes ±12%, pesos 25/50/25) — marcado como no validado.
+const TEMPO_CATS = new Set(['shots', 'sot', 'corners', 'goals', 'cards'])
+const TEMPO_STATES = [[0.88, 0.25], [1.00, 0.50], [1.12, 0.25]]
+
+function pPickDadoTempo(pick, T) {
+  const sensible = TEMPO_CATS.has(pick.category)
+  const exp = sensible ? pick.expected * T : pick.expected
+  const pOver = poissonOver(exp, pick.line)
+  return pick.dir === 'OVER' ? pOver : 1 - pOver
+}
+
+export function jointProbability(pickA, pickB) {
+  // IMPORTANTE: marginales y conjunta salen del MISMO modelo de tempo — así el
+  // ajuste por dependencia es solo el efecto covarianza (comparable de verdad).
+  let margA = 0; let margB = 0; let pJoint = 0
+  for (const [T, w] of TEMPO_STATES) {
+    const a = pPickDadoTempo(pickA, T); const b = pPickDadoTempo(pickB, T)
+    margA += w * a; margB += w * b; pJoint += w * a * b
+  }
+  const pIndep = margA * margB
+  return {
+    pIndep: +(pIndep * 100).toFixed(1),
+    pJoint: +(pJoint * 100).toFixed(1),
+    ajusteDep: +((pJoint - pIndep) * 100).toFixed(1), // pp por dependencia (covarianza del tempo)
+  }
+}
+
+// ─── Combinada — meta del usuario: cuota total ≥ 1.50 ────────────────────────
+// Corrección de la revisión: implícita de 1.50 = 1/1.50 = 66.7% (SIN el 1.025
+// mal aplicado). Se elige el par por MEJOR EV CONJUNTO al target (pair-level,
+// no los dos mejores individuales), usando P conjunta con dependencia.
 export function suggestCombo(picks, targetOdds = 1.50) {
   if (picks.length < 2) return null
   let best = null
@@ -223,21 +257,26 @@ export function suggestCombo(picks, targetOdds = 1.50) {
     for (let j = i + 1; j < picks.length; j++) {
       const c = corr(picks[i].category, picks[j].category)
       if (c > 0.70) continue
-      const p = (picks[i].pMod / 100) * (picks[j].pMod / 100)
-      if (!best || p > best.p) best = { p1: picks[i], p2: picks[j], p, correlation: c }
+      const jp = jointProbability(picks[i], picks[j])
+      const evTarget = (jp.pJoint / 100) * targetOdds - 1
+      if (!best || evTarget > best.evTarget) best = { p1: picks[i], p2: picks[j], ...jp, evTarget, correlation: c }
     }
   }
   if (!best) return null
 
-  const pCombo = +(best.p * 100).toFixed(1)
-  const cuotaJusta = +(1 / best.p).toFixed(2)          // cuota sin margen
-  const cuotaMinValor = +(1.025 / best.p).toFixed(2)   // desde aquí hay valor
-  const pNecesaria = +((1.025 / targetOdds) * 100).toFixed(1) // P mínima para que el target tenga valor
+  const pJ = best.pJoint / 100
+  const impTarget = +((1 / targetOdds) * 100).toFixed(1) // 66.7% para 1.50 — implícita bruta
   return {
-    p1: best.p1, p2: best.p2, pCombo,
+    p1: best.p1, p2: best.p2,
+    pIndep: best.pIndep,           // benchmark de independencia
+    pJoint: best.pJoint,           // con dependencia por tempo (heurística)
+    ajusteDep: best.ajusteDep,
+    pCombo: best.pJoint,           // compat
     correlation: +best.correlation.toFixed(2),
-    cuotaJusta, cuotaMinValor, targetOdds, pNecesaria,
-    valeAlTarget: pCombo >= pNecesaria,
+    cuotaJusta: +(1 / pJ).toFixed(2),
+    targetOdds, impTarget,
+    evAlTarget: +(best.evTarget * 100).toFixed(1),
+    valeAlTarget: best.evTarget > 0.02, // EV conjunto ≥ +2% al target (provisional)
   }
 }
 

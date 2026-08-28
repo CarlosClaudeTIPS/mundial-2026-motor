@@ -68,10 +68,19 @@ export function pressureFactor(daTotal, minuto, { base = 1.1, clamp = [0.88, 1.1
 // RECALIBRABLE: los logs marcan partidos con roja para validar estas magnitudes.
 export const RED_CARD = { OWN_GEN: 0.80, RIVAL_GEN: 1.08, OWN_GK: 1.12, RIVAL_GK: 0.92 }
 
-export function redCardFactor(ownReds = 0, rivalReds = 0) {
+// RED CARD BASELINE (revisión §17): factor fijo como FALLBACK declarado.
+// La firma acepta contexto (minuto, marcador) para que el reemplazo dinámico
+// red_effect = f(score, minute, strength, home, market) entre aquí SIN tocar
+// a los consumidores — hoy el contexto solo modula levemente y está acotado:
+// una roja tarde con ventaja amplia pesa menos (el partido ya estaba definido).
+export function redCardFactor(ownReds = 0, rivalReds = 0, ctx = null) {
   let f = 1
   if (ownReds > 0) f *= Math.pow(RED_CARD.OWN_GEN, Math.min(2, ownReds))
   if (rivalReds > 0) f *= Math.pow(RED_CARD.RIVAL_GEN, Math.min(2, rivalReds))
+  if (ctx && f !== 1) {
+    // Roja con el partido ya resuelto (≥2 de diferencia, min ≥70): efecto atenuado
+    if (Math.abs(ctx.goalDiff ?? 0) >= 2 && (ctx.minuto ?? 0) >= 70) f = 1 + (f - 1) * 0.5
+  }
   return +f.toFixed(3)
 }
 

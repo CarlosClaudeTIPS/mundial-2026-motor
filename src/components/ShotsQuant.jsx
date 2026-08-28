@@ -122,6 +122,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
         <h2 className="text-lg font-black text-sky-300 tracking-wide">🎯 TIROS — módulo cuantitativo</h2>
         <span className="text-[10px] text-gray-500">fuente: {FUENTE_LABEL[fuente] ?? '—'}</span>
       </div>
+      <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo BASELINE (heurístico, sin calibrar) · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
 
       {/* ── Estado actual (total) ── */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">
@@ -261,15 +262,17 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
             </div>
 
             <div className={`rounded-xl px-4 py-3 text-center font-black text-xl ${
-              edge.signal === 'BET'
+              edge.signal !== 'NO BET'
                 ? (edge.lado === 'OVER' ? 'bg-green-800/70 text-green-100 border-2 border-green-500' : 'bg-blue-800/70 text-blue-100 border-2 border-blue-500')
                 : 'bg-dark-700 text-gray-400 border border-dark-500'
             }`}>
-              {edge.signal === 'BET' ? `✅ BET ${edge.lado} ${edge.line} (${MARKETS.find(m => m[0] === market)?.[1]}) · Calidad ${edge.quality} · EV ${edge.evPct > 0 ? '+' : ''}${edge.evPct}%` : '⛔ NO BET'}
+              {edge.signal !== 'NO BET' ? `${edge.signal === 'BET' ? '✅ BET' : '📝 PAPER BET'} ${edge.lado} ${edge.line} (${MARKETS.find(m => m[0] === market)?.[1]}) · Calidad ${edge.quality} · EV ${edge.evPct > 0 ? '+' : ''}${edge.evPct}%` : '⛔ NO BET'}
               <p className="text-[11px] font-normal mt-0.5 opacity-80">
-                {edge.signal === 'BET'
-                  ? `edge ${edge.lado === 'OVER' ? edge.edgeOver : edge.edgeUnder} pp supera el umbral de ${edge.minEdge} pp con confianza ${conf.score}`
-                  : `sin ventaja robusta: el mejor edge no supera ${edge.minEdge} pp (o la confianza es baja) — no apostar también es una decisión`}
+                {edge.abstencion
+                  ? `abstención: ${edge.abstencion}`
+                  : edge.signal !== 'NO BET'
+                    ? `edge ${edge.lado === 'OVER' ? edge.edgeOver : edge.edgeUnder} pp supera el umbral de ${edge.minEdge} pp con confianza ${conf.score}${edge.signal === 'PAPER BET' ? ' · modo PAPER: registrar — la ventaja se confirma con la calibración' : ''}`
+                    : `sin ventaja robusta: el mejor edge no supera ${edge.minEdge} pp (o la confianza es baja) — no apostar también es una decisión`}
               </p>
             </div>
           </div>
@@ -322,10 +325,23 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
                   <div key={r.bucket} className="bg-dark-700 rounded p-1.5 text-center">
                     <p className="text-gray-500">{r.bucket}</p>
                     <p className={`font-bold ${r.mae <= 3 ? 'text-green-400' : r.mae <= 6 ? 'text-yellow-400' : 'text-red-400'}`}>±{r.mae}</p>
+                    {r.maeNaive != null && <p className={r.mae <= r.maeNaive ? 'text-green-600' : 'text-red-500'}>naive ±{r.maeNaive}</p>}
                     <p className="text-gray-600">acierto {r.hit}% · n={r.n}</p>
                   </div>
                 ))}
               </div>
+              {bt.shots.calib?.length > 0 && (
+                <div className="mt-1.5">
+                  <p className="text-gray-500 mb-1">Calibración — el modelo dice% → ocurre%:</p>
+                  <div className="flex gap-1.5 flex-wrap">
+                    {bt.shots.calib.map(c => (
+                      <span key={c.rango} className="bg-dark-700 rounded px-1.5 py-0.5">
+                        {c.rango} → <strong className={Math.abs(c.real - (parseInt(c.rango) + 5)) <= 10 ? 'text-green-400' : 'text-red-400'}>{c.real}%</strong> <span className="text-gray-600">(n={c.n})</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
           {bt?.sot && (

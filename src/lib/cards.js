@@ -284,7 +284,11 @@ export function cardsEdge({ model, market = 'total', line, oddsOver, oddsUnder =
     extras: [
       { cond: model.minuto < 25, pp: 0.02, why: "antes del 25' → +2pp (tarjetas señalizan tarde)" },
       { cond: market !== 'total', pp: 0.015, why: 'mercado por equipo → +1.5pp' },
-      { cond: model.hayRoja, pp: 0.01, why: 'roja en cancha → +1pp' },
+    ],
+    // ABSTENCIÓN (revisión §14): con roja el partido cambió de naturaleza y el
+    // modelo de tarjetas no tiene datos para ese régimen → no confiar
+    abstenciones: [
+      { cond: model.hayRoja, why: 'roja en cancha — el modelo no está validado para partidos con expulsión' },
     ],
   })
   return res ? { ...res, market } : null
