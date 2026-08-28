@@ -706,9 +706,9 @@ export default function EnVivo({ league }) {
   const liveRecs = useMemo(() => {
     if (!calc) return []
     const mkts = []
-    const push = (label, proyObj, acum, step, extra) => {
+    const push = (label, proyObj, acum, step, extra, meta = {}) => {
       if (!proyObj || acum == null) return
-      mkts.push({ label, proy: proyObj.proy, acum, step, extra })
+      mkts.push({ label, proy: proyObj.proy, acum, step, extra, ...meta })
     }
     // Totales
     push('Córners',  calc.corners, cornersAc, 1, `Situation S ×${calc.situationS} por el marcador ${golesA}-${golesB}`)
@@ -723,12 +723,12 @@ export default function EnVivo({ league }) {
       if (!t) continue
       const drive = side === 'h' ? calc.driveH : calc.driveA
       const dtxt = drive > 1.04 ? `Drive ×${drive}: empujando` : drive < 0.96 ? `Drive ×${drive}: administrando` : null
-      push(`Córners ${tn[side]}`,  t.corners, t.corners?.acum, 1, dtxt)
-      push(`Tiros ${tn[side]}`,    t.shots,   t.shots?.acum,   1, dtxt)
-      push(`SOT ${tn[side]}`,      t.sot,     t.sot?.acum,     1, dtxt)
-      push(`Tarjetas ${tn[side]}`, t.cards,   t.cards?.acum,   1, null)
-      push(`Saques banda ${tn[side]}`, t.ti,     t.ti?.acum,      1, null)
-      push(`Saques puerta ${tn[side]}`, t.gk, t.gk?.acum,      1, null)
+      push(`Córners ${tn[side]}`,  t.corners, t.corners?.acum, 1, dtxt, { side, statKey: 'corners' })
+      push(`Tiros ${tn[side]}`,    t.shots,   t.shots?.acum,   1, dtxt, { side, statKey: 'shots' })
+      push(`SOT ${tn[side]}`,      t.sot,     t.sot?.acum,     1, dtxt, { side, statKey: 'sot' })
+      push(`Tarjetas ${tn[side]}`, t.cards,   t.cards?.acum,   1, null, { side, statKey: 'cards' })
+      push(`Saques banda ${tn[side]}`, t.ti,     t.ti?.acum,      1, null, { side, statKey: 'ti' })
+      push(`Saques puerta ${tn[side]}`, t.gk, t.gk?.acum,      1, null, { side, statKey: 'gk' })
     }
 
     const recs = []
@@ -1005,6 +1005,30 @@ export default function EnVivo({ league }) {
                         : `El ritmo proyecta solo ${r.faltan} más — la línea ${r.rec.line} queda lejos.`}
                     </p>
                     {r.extra && <p className="text-xs text-gray-400 mt-1">• {r.extra}</p>}
+                    {/* Contexto prepartido del pick: promedio propio, rival y nivel */}
+                    {preA && preB && r.side && (() => {
+                      const t = r.side === 'h' ? preA : preB
+                      const riv = r.side === 'h' ? preB : preA
+                      const SK = {
+                        corners: ['corners_avg', 'corners_against_avg', 'córners'],
+                        shots:   ['shots_avg', 'shots_against_avg', 'tiros'],
+                        sot:     ['sot_avg', 'sot_against_avg', 'SOT'],
+                        cards:   ['cards_avg', null, 'tarjetas'],
+                        ti:      ['throwins_avg', 'ti_against_avg', 'saques de banda'],
+                        gk:      ['goalkicks_avg', 'gk_against_avg', 'saques de portería'],
+                      }[r.statKey]
+                      if (!SK) return null
+                      const own = t[SK[0]]; const ag = SK[1] ? riv[SK[1]] : null
+                      const dif = (t.ppg ?? 1.3) - (riv.ppg ?? 1.3)
+                      return (
+                        <p className="text-xs text-blue-200/80 mt-1">
+                          📊 {t.name} promedia <strong>{own}</strong> {SK[2]}/partido en sus últimos 10
+                          {ag != null && <> · {riv.name} concede <strong>{ag}</strong> a sus rivales</>}
+                          {' '}· nivel: PPG {t.ppg} vs {riv.ppg}
+                          {dif <= -0.5 ? ' — rival claramente superior: le cuesta más generar' : dif >= 0.5 ? ' — rival inferior: línea más alcanzable' : ' — nivel parejo'}
+                        </p>
+                      )
+                    })()}
                     {minuto < 30 && <p className="text-xs text-yellow-600 mt-1">⚠️ Pocos minutos jugados — el ritmo aún es poco fiable</p>}
                     {r.p > 5 && (
                       <p className="text-sm font-bold text-green-300 mt-2 bg-green-950/60 border border-green-800/50 rounded-lg px-3 py-1.5 inline-block">

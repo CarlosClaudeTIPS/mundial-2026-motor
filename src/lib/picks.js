@@ -225,7 +225,9 @@ export function suggestCombo(picks) {
 }
 
 // ─── Generar explicación textual ─────────────────────────────────────────────
-export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB) {
+// base (opcional): baseline de la liga (getBaseline) — habilita la lectura de
+// DIFICULTAD DEL RIVAL: no es lo mismo patearle al Racing que al Real Madrid.
+export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB, base = null) {
   const dir    = pick.dir === 'OVER' ? 'por encima' : 'por debajo'
   const pctStr = `${Math.abs(Math.round(pick.margin * 100))}%`
 
@@ -244,11 +246,28 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
   const statName = { shots: 'tiros', sot: 'tiros a puerta', corners: 'córners', goals: 'goles', cards: 'tarjetas', gk: 'saques de portería', ti: 'saques de banda' }[cat] ?? cat
   const avgOf = t => parseFloat(getStat(t, cat))
   const againstOf = t => cat === 'shots' ? t.shots_against_avg
+    : cat === 'sot' ? (t.sot_against_avg ?? null)
     : cat === 'corners' ? t.corners_against_avg
     : cat === 'goals' ? t.ga_avg
     : cat === 'ti' ? t.ti_against_avg
     : cat === 'gk' ? t.gk_against_avg
-    : null // sot: no hay dato de SOT concedidos — no inventar
+    : null
+
+  // Valor por partido de la categoría en una fila del historial
+  const rowVal = r => cat === 'sot' ? r.sot : cat === 'shots' ? r.shots
+    : cat === 'corners' ? r.corners : cat === 'cards' ? r.cards
+    : cat === 'goals' ? r.gf : cat === 'ti' ? r.ti : cat === 'gk' ? r.gk : null
+
+  // Promedio de la liga para esta categoría (para medir si el rival es blando/duro)
+  const baseAvg = base == null ? null
+    : cat === 'shots' ? base.shotsAvg
+    : cat === 'sot' ? +(base.shotsAvg * 0.36).toFixed(1)
+    : cat === 'corners' ? base.cornersAvg
+    : cat === 'cards' ? base.cardsAvg
+    : cat === 'gk' ? base.gkAvg
+    : cat === 'ti' ? base.tiAvg
+    : cat === 'goals' ? base.gaAvg
+    : null
 
   const factors = []
   // supports: el dato apoya la dirección del pick → 'up'; si la contradice → 'down'
@@ -264,15 +283,52 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
     // ── Pick de UN equipo: hablar SOLO de ese equipo y su rival directo ──
     const avg = avgOf(target)
     add(avg,
-      `${target.name} promedia ${avg} ${statName}/partido — ${over ? 'por encima' : 'por debajo'} de la línea ${pick.line}`,
+      `${target.name} promedia ${avg} ${statName}/partido en sus últimos ${target.matches ?? 10} — ${over ? 'por encima' : 'por debajo'} de la línea ${pick.line}`,
       `OJO: ${target.name} promedia ${avg} ${statName}/partido, que contradice el ${pick.dir} ${pick.line} — el motor lo ajustó por el rival y el contexto`)
+
+    // Forma reciente: últimos 5 con los valores partido a partido
+    const l5 = (target.last5 ?? []).map(rowVal).filter(v => v != null && !isNaN(v))
+    if (l5.length >= 3) {
+      const a5 = +(l5.reduce((s, v) => s + v, 0) / l5.length).toFixed(1)
+      add(a5,
+        `Forma reciente: ${a5} ${statName}/partido en los últimos ${l5.length} (${l5.join(', ')}) — acompaña el ${pick.dir}`,
+        `OJO: forma reciente de ${a5} ${statName}/partido (${l5.join(', ')}) — los últimos partidos no acompañan el ${pick.dir}`)
+    }
+
     const ag = rival ? againstOf(rival) : null
     if (ag != null) add(ag,
       `${rival.name} concede ${ag.toFixed(1)} ${statName}/partido a sus rivales — apoya el ${pick.dir}`,
       `OJO: ${rival.name} concede ${ag.toFixed(1)} ${statName}/partido — factor en contra del ${pick.dir}`)
+
+    // ── DIFICULTAD DEL RIVAL: no es lo mismo el Racing que el Real Madrid ──
+    // (a) Su defensa vs la media de la liga en esta categoría
+    if (rival && ag != null && baseAvg) {
+      const ratio = ag / baseAvg
+      if (ratio >= 1.08) {
+        factors.push(over
+          ? { icon: '✅', text: `Rival blando en esto: ${rival.name} concede un ${Math.round((ratio - 1) * 100)}% MÁS ${statName} que la media de la liga (${ag.toFixed(1)} vs ${baseAvg}) — la línea es más alcanzable`, dir: 'up' }
+          : { icon: '⚠️', text: `OJO: ${rival.name} concede un ${Math.round((ratio - 1) * 100)}% más ${statName} que la media de la liga — rival blando, factor en contra del UNDER`, dir: 'down' })
+      } else if (ratio <= 0.92) {
+        factors.push(!over
+          ? { icon: '✅', text: `Rival duro en esto: ${rival.name} concede un ${Math.round((1 - ratio) * 100)}% MENOS ${statName} que la media de la liga (${ag.toFixed(1)} vs ${baseAvg}) — apoya el UNDER`, dir: 'up' }
+          : { icon: '⚠️', text: `OJO: ${rival.name} es de las defensas que menos ${statName} conceden en la liga (${ag.toFixed(1)} vs media ${baseAvg}) — no es lo mismo que jugar contra un rival blando; factor en contra del OVER`, dir: 'down' })
+      } else {
+        factors.push({ icon: 'ℹ️', text: `Dificultad del rival: ${rival.name} concede ${ag.toFixed(1)} ${statName}/partido, en línea con la media de la liga (${baseAvg}) — rival estándar`, dir: 'neutral' })
+      }
+    }
+    // (b) Diferencia de nivel (PPG): el superior domina y genera más volumen
+    if (rival && ['shots', 'sot', 'corners', 'goals'].includes(cat)) {
+      const dif = (target.ppg ?? 1.3) - (rival.ppg ?? 1.3)
+      if (Math.abs(dif) >= 0.5) {
+        const superior = dif > 0
+        factors.push((superior === over)
+          ? { icon: '✅', text: `Nivel: ${target.name} (PPG ${target.ppg}) es claramente ${superior ? 'superior' : 'inferior'} a ${rival.name} (PPG ${rival.ppg}) — ${superior ? 'debería dominar y generar volumen' : 'le costará generar'}, apoya el ${pick.dir}`, dir: 'up' }
+          : { icon: '⚠️', text: `OJO: ${target.name} (PPG ${target.ppg}) es ${superior ? 'muy superior' : 'claramente inferior'} a ${rival.name} (PPG ${rival.ppg}) — factor en contra del ${pick.dir}`, dir: 'down' })
+      }
+    }
     // Localía del equipo del pick
     const split = isLocal ? target.split?.home : target.split?.away
-    const splitVal = split ? (cat === 'shots' || cat === 'sot' ? split.shots : cat === 'corners' ? split.corners : cat === 'goals' ? split.gf : cat === 'cards' ? split.cards : null) : null
+    const splitVal = split ? (cat === 'shots' ? split.shots : cat === 'sot' ? split.sot : cat === 'corners' ? split.corners : cat === 'goals' ? split.gf : cat === 'cards' ? split.cards : null) : null
     if (splitVal != null) add(splitVal,
       `${isLocal ? 'En casa' : 'De visita'} promedia ${splitVal} (${split.n} PJ) — apoya el ${pick.dir}`,
       `OJO: ${isLocal ? 'en casa' : 'de visita'} promedia ${splitVal} (${split.n} PJ) — no acompaña el ${pick.dir}`)
@@ -298,6 +354,7 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
     add(sumAvg,
       `Entre los dos suman ${sumAvg} ${statName}/partido de promedio — ${over ? 'por encima' : 'por debajo'} de la línea ${pick.line}`,
       `OJO: entre los dos suman ${sumAvg} ${statName}/partido, que contradice el ${pick.dir} ${pick.line} — el ajuste viene del contexto (defensas, ritmo de liga, copa)`)
+    factors.push({ icon: 'ℹ️', text: `Desglose: ${teamA.name} ${avgOf(teamA)} + ${teamB.name} ${avgOf(teamB)} ${statName}/partido${baseAvg ? ` · media de la liga por equipo: ${baseAvg}` : ''}`, dir: 'neutral' })
     if (cat === 'corners' || cat === 'ti') {
       for (const t of [teamA, teamB]) {
         if (t.style === 'bandas' || t.style === 'mixto-bandas') {

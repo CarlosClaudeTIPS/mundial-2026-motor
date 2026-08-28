@@ -1263,8 +1263,8 @@ export default function Analizar({ league, preloadTeams }) {
               </div>
 
               {picks.map((pick, i) => {
-                const exp = generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB)
-                const reasons = exp.pushUp.slice(0, 2)
+                const exp = generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB, getBaseline(league.id))
+                const reasons = [...exp.pushUp, ...exp.neutral].slice(0, 5)
                 return (
                   <div key={`${pick.marketKey}_${pick.line}`}
                     className={`rounded-xl p-4 border ${i === 0 ? 'bg-green-900/30 border-green-600/60' : 'bg-dark-800/80 border-dark-600'}`}>

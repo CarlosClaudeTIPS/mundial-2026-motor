@@ -289,6 +289,7 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
     shots_avg: +shots_avg.toFixed(1),
     sot_avg: +sot_avg.toFixed(1),
     shots_against_avg: +(w('shotsAg') ?? base.shotsAvg).toFixed(1),
+    sot_against_avg: w('sotAg') != null ? +w('sotAg').toFixed(1) : null,
     corners_avg: +corners_avg.toFixed(1),
     corners_against_avg: +(w('cornersAg') ?? base.cornersAvg).toFixed(1),
     cards_avg: +(w('cards') ?? base.cardsAvg).toFixed(1),
