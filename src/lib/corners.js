@@ -288,8 +288,9 @@ export function cornersFactores({ model, prior, goalDiff, homeName = 'Local', aw
 }
 
 // ─── LIVE-BACKTEST (registro por minuto, resolución vía Live-Score) ──────────
-const cornersLog = makeLiveLog('motor_corners_livelog_v1')
+const cornersLog = makeLiveLog('motor_corners_livelog_v1', { phi: CORNER_MODEL.PHI })
 export const logCornersSnapshot = (matchId, info, model) => cornersLog.logSnapshot(matchId, info, model)
-export const resolveCornersLog = (matchId, finalTotal) => cornersLog.resolve(matchId, finalTotal)
+export const resolveCornersLog = (matchId, finalTotal, sides) => cornersLog.resolve(matchId, finalTotal, sides)
 export const cornersLogPending = () => cornersLog.pending()
 export const cornersBacktestSummary = () => cornersLog.summary()
+export const cornersResolvedCount = () => cornersLog.resolvedCount()

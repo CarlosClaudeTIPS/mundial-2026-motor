@@ -606,11 +606,11 @@ function ComboCard({ combo }) {
       </div>
       {combo.valeAlTarget ? (
         <p className="text-green-300 font-bold bg-green-950/50 border border-green-800/50 rounded-lg px-3 py-1.5">
-          📝 PAPER BET a cuota {combo.targetOdds}: EV conjunto {combo.evAlTarget > 0 ? '+' : ''}{combo.evAlTarget}% ±{combo.evUnc} (P conjunta {combo.pJoint}% vs implícita {combo.impTarget}%) — registrar y seguir; la ventaja se confirma con la calibración
+          📝 PAPER BET a cuota {combo.targetOdds}: EV esperado {combo.evAlTarget > 0 ? '+' : ''}{combo.evAlTarget}% · P(EV&gt;0) {combo.pEVpos}% · rango P10-P90 [{combo.evP10}%, {combo.evP90}%] — registrar y seguir; la ventaja se confirma con la calibración
         </p>
       ) : (
         <p className="text-yellow-400 bg-yellow-950/40 border border-yellow-900/50 rounded-lg px-3 py-1.5">
-          ⚠️ A cuota {combo.targetOdds}: EV conjunto {combo.evAlTarget}% ±{combo.evUnc} — {combo.evAlTarget > 2 ? `el peor caso de tempo cae a ${combo.evLow}%: demasiado sensible a la parametrización` : `insuficiente (necesitarías cuota ≥ ${combo.cuotaJusta})`}. NO BET
+          ⚠️ A cuota {combo.targetOdds}: EV esperado {combo.evAlTarget}% · P(EV&gt;0) {combo.pEVpos}% — {combo.evAlTarget > 2 ? 'demasiada probabilidad de EV negativo' : `insuficiente (necesitarías cuota ≥ ${combo.cuotaJusta})`}. NO BET
         </p>
       )}
       <p className="text-[10px] text-gray-600">P conjunta ≠ producto: los dos picks comparten el estado del partido (tempo latente de 3 estados, heurístico sin calibrar). El producto queda solo como benchmark de independencia.</p>

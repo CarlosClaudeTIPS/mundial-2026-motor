@@ -4,9 +4,9 @@
 // falla tras un cambio, el cambio rompió una garantía del sistema.
 import { describe, it, expect } from 'vitest'
 
-import { nbOver } from '../src/lib/throwins'
-import { jointProbability, jointProbabilityMC, suggestCombo } from '../src/lib/picks'
-import { evaluarMercado, avisosCorrelacion } from '../src/lib/market-engine'
+import { nbOver, crpsNB } from '../src/lib/throwins'
+import { jointProbability, jointProbabilityMC, suggestCombo, marginalTempo, PHI_CAT } from '../src/lib/picks'
+import { evaluarMercado, avisosCorrelacion, estadoPorMuestra } from '../src/lib/market-engine'
 import { redCardFactor, redCardFactorGk, restanteEfectivo } from '../src/lib/match-state'
 import { shotsLiveModel } from '../src/lib/shots'
 import { cardsLiveModel, hazardShare } from '../src/lib/cards'
@@ -58,6 +58,17 @@ describe('Probabilidad conjunta', () => {
     const jp = jointProbability(A, ti)
     expect(Math.abs(jp.ajusteDep)).toBeLessThan(0.15)
   })
+  it('cotas de Fréchet: max(0, pA+pB−1) ≤ P(A∩B) ≤ min(pA, pB)', () => {
+    const jp = jointProbability(A, B)
+    const mA = marginalTempo(A); const mB = marginalTempo(B)
+    expect(jp.pJoint).toBeLessThanOrEqual(Math.min(mA, mB) + 0.05)
+    expect(jp.pJoint).toBeGreaterThanOrEqual(Math.max(0, mA + mB - 100) - 0.05)
+  })
+  it('COHERENCIA v4: la combinada usa la MISMA familia NB del mercado individual — para un mercado insensible al tempo (TI), la marginal del proceso conjunto = NB individual exacta', () => {
+    const ti = { category: 'ti', expected: 34, line: 32.5, dir: 'OVER' }
+    const individual = +(nbOver(34, 32.5, PHI_CAT.ti) * 100).toFixed(1)
+    expect(Math.abs(marginalTempo(ti) - individual)).toBeLessThan(0.1)
+  })
   it('Monte Carlo del MISMO proceso generativo reproduce marginales y conjunta (±2pp)', () => {
     // rng determinista de calidad (mulberry32) — un LCG simple sesga los
     // productos de uniformes del muestreador de Poisson
@@ -70,10 +81,18 @@ describe('Probabilidad conjunta', () => {
     }
     const jp = jointProbability(A, B)
     const mc = jointProbabilityMC(A, B, 40000, rng)
-    expect(Math.abs(mc.pJoint - jp.pJoint)).toBeLessThan(2)
-    // marginales del MC vs marginales analíticas implícitas en pIndep
-    const margProd = (mc.margA / 100) * (mc.margB / 100) * 100
-    expect(Math.abs(margProd - jp.pIndep)).toBeLessThan(2.5)
+    expect(Math.abs(mc.pJoint - jp.pJoint)).toBeLessThan(2.5)
+    // marginales del MC (NB muestreada) vs marginales analíticas (NB mixtura)
+    expect(Math.abs(mc.margA - marginalTempo(A))).toBeLessThan(2)
+    expect(Math.abs(mc.margB - marginalTempo(B))).toBeLessThan(2)
+  })
+  it('EV probabilístico: suggestCombo expone P(EV>0), P10, P90 y el peor caso solo como diagnóstico', () => {
+    const picks = [{ ...A, pMod: 75, marketKey: 'shots_totales' }, { ...B, pMod: 80, marketKey: 'corners_totales' }]
+    const c = suggestCombo(picks, 1.50)
+    expect(c.pEVpos).toBeGreaterThanOrEqual(0)
+    expect(c.pEVpos).toBeLessThanOrEqual(100)
+    expect(c.evP10).toBeLessThanOrEqual(c.evP90)
+    expect(c.evPeor).toBeLessThanOrEqual(c.evP10 + 0.01)
   })
   it('la implícita del target 1.50 es 1/1.50 (no 1.025/1.50)', () => {
     const picks = [{ ...A, pMod: 75, marketKey: 'shots_totales' }, { ...B, pMod: 80, marketKey: 'corners_totales' }]
@@ -148,6 +167,21 @@ describe('Hazard temporal', () => {
   })
   it('las tarjetas se concentran al final: H(45) < 45/95', () => {
     expect(hazardShare(45)).toBeLessThan(45 / 95)
+  })
+})
+
+// ── CRPS y sample-size gating (v4 §9-10) ─────────────────────────────────────
+describe('CRPS y gating', () => {
+  it('CRPS es menor cuando la distribución está centrada en el resultado real', () => {
+    const bueno = crpsNB(10, 1.3, 5, 15)  // proyecta 5+10=15, salió 15
+    const malo = crpsNB(10, 1.3, 5, 30)   // salió 30 — lejos
+    expect(bueno).toBeGreaterThan(0)
+    expect(malo).toBeGreaterThan(bueno)
+  })
+  it('estadoPorMuestra: <10 INSUFFICIENT_DATA, ≥10 BASELINE con nota de hito', () => {
+    expect(estadoPorMuestra(3).estado).toBe('INSUFFICIENT_DATA')
+    expect(estadoPorMuestra(25).estado).toBe('BASELINE')
+    expect(estadoPorMuestra(60).nota).toContain('FASE 1')
   })
 })
 

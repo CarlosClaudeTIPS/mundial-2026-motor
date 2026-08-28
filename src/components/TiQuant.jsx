@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
   tiLiveModel, tiPrior, tiConfidence, tiEdge, tiFactores,
-  logTiSnapshot, tiBacktestSummary, TI_MODEL,
+  logTiSnapshot, tiBacktestSummary, tiResolvedCount, TI_MODEL,
 } from '../lib/throwins'
 import { ensureBaseline } from '../lib/baseline'
-import { reportarOportunidad, logDecision } from '../lib/market-engine'
+import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
 
 // ─── Panel cuantitativo de SAQUES DE BANDA en vivo ───────────────────────────
 // Datos → Modelo → Probabilidad → Incertidumbre → Línea → Edge → Decisión.
@@ -108,7 +108,9 @@ export default function TiQuant({ minuto, goalDiff, tiAc, tiH, tiA, fuente, snap
         <h2 className="text-lg font-black text-purple-300 tracking-wide">🧮 SAQUES DE BANDA — módulo cuantitativo</h2>
         <span className="text-[10px] text-gray-500">fuente: {FUENTE_LABEL[fuente] ?? '—'}</span>
       </div>
-      <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo BASELINE (heurístico, sin calibrar) · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      {(() => { const g = estadoPorMuestra(tiResolvedCount()); return (
+        <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo {g.estado} · {g.nota} · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      )})()}
 
       {/* ── Estado actual ── */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">

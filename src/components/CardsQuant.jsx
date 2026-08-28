@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
   cardsLiveModel, cardsPrior, cardsConfidence, cardsEdge, cardsFactores,
-  logCardsSnapshot, cardsBacktestSummary,
+  logCardsSnapshot, cardsBacktestSummary, cardsResolvedCount,
 } from '../lib/cards'
 import { ensureBaseline } from '../lib/baseline'
-import { reportarOportunidad, logDecision } from '../lib/market-engine'
+import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
 import { fetchSofaContexto, fetchSofaAmonestados } from '../lib/sofascore'
 
 // ─── Panel cuantitativo de TARJETAS en vivo ──────────────────────────────────
@@ -126,7 +126,9 @@ export default function CardsQuant({ minuto, goalDiff, cH, cA, yH, yA, rH, rA, f
         <h2 className="text-lg font-black text-rose-300 tracking-wide">🟨 TARJETAS — módulo cuantitativo</h2>
         <span className="text-[10px] text-gray-500">fuente: {FUENTE_LABEL[fuente] ?? '—'}</span>
       </div>
-      <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo BASELINE (heurístico, sin calibrar) · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      {(() => { const g = estadoPorMuestra(cardsResolvedCount()); return (
+        <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo {g.estado} · {g.nota} · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      )})()}
 
       {/* ── Estado actual ── */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">

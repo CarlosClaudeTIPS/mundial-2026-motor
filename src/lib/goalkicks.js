@@ -250,8 +250,9 @@ export function gkFactores({ model, prior, goalDiff }) {
 }
 
 // ─── LIVE-BACKTEST (mismo registro por minuto que TI, storage propio) ────────
-const gkLog = makeLiveLog('motor_gk_livelog_v1')
+const gkLog = makeLiveLog('motor_gk_livelog_v1', { phi: GK_MODEL.PHI })
 export const logGkSnapshot = (matchId, info, model) => gkLog.logSnapshot(matchId, info, model)
-export const resolveGkLog = (matchId, finalGk) => gkLog.resolve(matchId, finalGk)
+export const resolveGkLog = (matchId, finalGk, sides) => gkLog.resolve(matchId, finalGk, sides)
 export const gkLogPending = () => gkLog.pending()
 export const gkBacktestSummary = () => gkLog.summary()
+export const gkResolvedCount = () => gkLog.resolvedCount()

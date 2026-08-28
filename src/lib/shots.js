@@ -329,13 +329,14 @@ export function shotsFactores({ model, prior, goalDiff, homeName = 'Local', away
 }
 
 // ─── LIVE-BACKTEST (dos registros: tiros y SOT, resueltos vía Live-Score) ────
-const shotsLog = makeLiveLog('motor_shots_livelog_v1')
+const shotsLog = makeLiveLog('motor_shots_livelog_v1', { phi: SHOTS_MODEL.PHI_TOTAL })
 export const logShotsSnapshot = (matchId, info, model) => shotsLog.logSnapshot(matchId, info, model)
-export const resolveShotsLog = (matchId, finalTotal) => shotsLog.resolve(matchId, finalTotal)
+export const resolveShotsLog = (matchId, finalTotal, sides) => shotsLog.resolve(matchId, finalTotal, sides)
 export const shotsLogPending = () => shotsLog.pending()
 export const shotsBacktestSummary = () => shotsLog.summary()
+export const shotsResolvedCount = () => shotsLog.resolvedCount()
 
-const sotLog = makeLiveLog('motor_sot_livelog_v1')
+const sotLog = makeLiveLog('motor_sot_livelog_v1', { phi: SHOTS_MODEL.PHI_SOT })
 // Adapter: el log genérico espera {minuto, acum, expectedFinal, pOver}
 export const logSotSnapshot = (matchId, info, model) => {
   if (!model || model.sotAcum == null) return
@@ -346,6 +347,7 @@ export const logSotSnapshot = (matchId, info, model) => {
     pOver: model.pOverSot,
   })
 }
-export const resolveSotLog = (matchId, finalSot) => sotLog.resolve(matchId, finalSot)
+export const resolveSotLog = (matchId, finalSot, sides) => sotLog.resolve(matchId, finalSot, sides)
 export const sotLogPending = () => sotLog.pending()
 export const sotBacktestSummary = () => sotLog.summary()
+export const sotResolvedCount = () => sotLog.resolvedCount()

@@ -326,8 +326,9 @@ export function cardsFactores({ model, prior, goalDiff, homeName = 'Local', away
 }
 
 // ─── LIVE-BACKTEST ───────────────────────────────────────────────────────────
-const cardsLog = makeLiveLog('motor_cards_livelog_v1')
+const cardsLog = makeLiveLog('motor_cards_livelog_v1', { phi: CARDS_MODEL.PHI })
 export const logCardsSnapshot = (matchId, info, model) => cardsLog.logSnapshot(matchId, info, model)
-export const resolveCardsLog = (matchId, finalTotal) => cardsLog.resolve(matchId, finalTotal)
+export const resolveCardsLog = (matchId, finalTotal, sides) => cardsLog.resolve(matchId, finalTotal, sides)
 export const cardsLogPending = () => cardsLog.pending()
 export const cardsBacktestSummary = () => cardsLog.summary()
+export const cardsResolvedCount = () => cardsLog.resolvedCount()

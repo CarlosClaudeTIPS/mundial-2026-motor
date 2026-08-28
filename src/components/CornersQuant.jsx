@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
   cornersLiveModel, cornersPrior, cornersConfidence, cornersEdge, cornersFactores,
-  logCornersSnapshot, cornersBacktestSummary,
+  logCornersSnapshot, cornersBacktestSummary, cornersResolvedCount,
 } from '../lib/corners'
 import { ensureBaseline } from '../lib/baseline'
-import { reportarOportunidad, logDecision } from '../lib/market-engine'
+import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
 
 // ─── Panel cuantitativo de CÓRNERS en vivo ───────────────────────────────────
 // Modela POR EQUIPO (local/visitante) y suma el total → habilita mercados de
@@ -95,7 +95,9 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
         <h2 className="text-lg font-black text-amber-300 tracking-wide">🚩 CÓRNERS — módulo cuantitativo</h2>
         <span className="text-[10px] text-gray-500">fuente: {FUENTE_LABEL[fuente] ?? '—'}</span>
       </div>
-      <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo BASELINE (heurístico, sin calibrar) · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      {(() => { const g = estadoPorMuestra(cornersResolvedCount()); return (
+        <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo {g.estado} · {g.nota} · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      )})()}
 
       {/* ── Estado actual ── */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">

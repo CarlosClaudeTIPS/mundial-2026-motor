@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
   shotsLiveModel, shotsPrior, shotsConfidence, shotsEdge, shotsFactores,
-  logShotsSnapshot, logSotSnapshot, shotsBacktestSummary, sotBacktestSummary,
+  logShotsSnapshot, logSotSnapshot, shotsBacktestSummary, sotBacktestSummary, shotsResolvedCount,
 } from '../lib/shots'
 import { ensureBaseline } from '../lib/baseline'
-import { reportarOportunidad, logDecision } from '../lib/market-engine'
+import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
 
 // ─── Panel cuantitativo de TIROS en vivo ─────────────────────────────────────
 // Total por equipo repartido coherentemente en a puerta / fuera / bloqueados
@@ -122,7 +122,9 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
         <h2 className="text-lg font-black text-sky-300 tracking-wide">🎯 TIROS — módulo cuantitativo</h2>
         <span className="text-[10px] text-gray-500">fuente: {FUENTE_LABEL[fuente] ?? '—'}</span>
       </div>
-      <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo BASELINE (heurístico, sin calibrar) · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      {(() => { const g = estadoPorMuestra(shotsResolvedCount()); return (
+        <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo {g.estado} · {g.nota} · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      )})()}
 
       {/* ── Estado actual (total) ── */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">

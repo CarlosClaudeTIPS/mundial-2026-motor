@@ -1,10 +1,10 @@
 import { useState, useMemo, useEffect } from 'react'
 import {
   gkLiveModel, gkPrior, gkConfidence, gkEdge, gkFactores,
-  logGkSnapshot, gkBacktestSummary,
+  logGkSnapshot, gkBacktestSummary, gkResolvedCount,
 } from '../lib/goalkicks'
 import { ensureBaseline } from '../lib/baseline'
-import { reportarOportunidad, logDecision } from '../lib/market-engine'
+import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
 
 // ─── Panel cuantitativo de SAQUES DE PORTERÍA en vivo ────────────────────────
 // Espejo del panel de saques de banda, con la causalidad propia de los GK:
@@ -104,7 +104,9 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
         <h2 className="text-lg font-black text-teal-300 tracking-wide">🥅 SAQUES DE PORTERÍA — módulo cuantitativo</h2>
         <span className="text-[10px] text-gray-500">fuente: {FUENTE_LABEL[fuente] ?? '—'}</span>
       </div>
-      <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo BASELINE (heurístico, sin calibrar) · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      {(() => { const g = estadoPorMuestra(gkResolvedCount()); return (
+        <p className="text-[10px] text-yellow-600/80 -mt-1">Modelo {g.estado} · {g.nota} · señales en modo 📝 PAPER: registrar y validar, no es ventaja demostrada</p>
+      )})()}
 
       {/* ── Estado actual ── */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center">

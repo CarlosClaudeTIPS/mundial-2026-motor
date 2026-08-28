@@ -261,7 +261,23 @@ export function tiFactores({ model, prior, goalDiff }) {
 // resuelve con el total final real y se mide el error POR MINUTO.
 const LOG_MAX = 50
 
-export function makeLiveLog(storageKey) {
+// CRPS para la distribución del TOTAL final = acum + NB(mu, phi) contra el
+// resultado real y (v4 §10): proper scoring rule de la distribución completa.
+// CRPS = Σ_k (F(k) − 1{k≥y})² sobre el soporte relevante.
+export function crpsNB(mu, phi, acum, y) {
+  if (mu == null || y == null) return null
+  const kMax = Math.ceil(acum + mu + 6 * Math.sqrt(Math.max(1, phi * mu))) + 2
+  let s = 0
+  for (let k = 0; k <= kMax; k++) {
+    const F = k < acum ? 0 : 1 - nbOver(mu, k + 0.5 - acum, phi)
+    const H = k >= y ? 1 : 0
+    s += (F - H) ** 2
+  }
+  return s
+}
+
+export function makeLiveLog(storageKey, opts = {}) {
+  const phi = opts.phi ?? 1.3
   const load = () => {
     try { return JSON.parse(localStorage.getItem(storageKey)) ?? {} } catch { return {} }
   }
@@ -296,23 +312,32 @@ export function makeLiveLog(storageKey) {
         naive: model.naiveFinal ?? null, // benchmark: extrapolación lineal
         i10: model.interval?.[0] ?? null, // para medir cobertura del intervalo 10-90
         i90: model.interval?.[1] ?? null,
+        mu: model.muRest ?? null,        // permite CRPS de la distribución completa
         lineCentral,
         pCentral: model.pOver(lineCentral),
       })
       log[matchId] = m
       save(log)
     },
-    resolve(matchId, finalTotal) {
+    // sides opcional {h, a}: finales por lado — registro para el estudio futuro
+    // de dependencia residual entre equipos (v4 §15)
+    resolve(matchId, finalTotal, sides = null) {
       if (finalTotal == null) return
       const log = load()
       if (!log[matchId] || log[matchId].final != null) return
       log[matchId].final = finalTotal
+      if (sides && sides.h != null) { log[matchId].finalH = sides.h; log[matchId].finalA = sides.a }
       save(log)
     },
     pending() {
       const log = load()
       return Object.entries(log).filter(([, m]) => m.final == null && m.snaps.length)
         .map(([id, m]) => ({ id, ...m }))
+    },
+    // Nº de partidos RESUELTOS — alimenta el sample-size gating (v4 §9)
+    resolvedCount() {
+      const log = load()
+      return Object.values(log).filter(m => m.final != null && m.snaps.length).length
     },
     // Resumen: error absoluto medio, acierto y Brier por tramo de minuto.
     // Incluye la comparación PREMATCH vs LIVE (§14): si el live no mejora el
@@ -383,19 +408,38 @@ export function makeLiveLog(storageKey) {
       //   siempre en 50-55% = inútil para apostar)
       // - coverage: el intervalo 10-90 pretende contener ~80% de los finales
       let ll = 0; let llN = 0; let sharp = 0; let cov = 0; let covN = 0
+      let width = 0; let iScore = 0; let crpsSum = 0; let crpsN = 0
+      const ALPHA = 0.2 // intervalo 10-90
       for (const m of resolved) {
         for (const s of m.snaps) {
           const y = m.final > s.lineCentral ? 1 : 0
           const p = Math.min(0.999, Math.max(0.001, s.pCentral))
           ll += -(y * Math.log(p) + (1 - y) * Math.log(1 - p)); llN++
           sharp += Math.abs(s.pCentral - 0.5) * 2
-          if (s.i10 != null && s.i90 != null) { covN++; if (m.final >= s.i10 && m.final <= s.i90) cov++ }
+          if (s.i10 != null && s.i90 != null) {
+            covN++
+            if (m.final >= s.i10 && m.final <= s.i90) cov++
+            width += s.i90 - s.i10
+            // Interval score (v4 §11): penaliza intervalos anchos Y fallos de cobertura
+            let is = (s.i90 - s.i10)
+            if (m.final < s.i10) is += (2 / ALPHA) * (s.i10 - m.final)
+            if (m.final > s.i90) is += (2 / ALPHA) * (m.final - s.i90)
+            iScore += is
+          }
+          // CRPS de la distribución completa (v4 §10)
+          if (s.mu != null) {
+            const c = crpsNB(s.mu, phi, s.acum, m.final)
+            if (c != null) { crpsSum += c; crpsN++ }
+          }
         }
       }
       const dist = llN ? {
         logloss: +(ll / llN).toFixed(3),      // referencia: 0.693 = moneda al aire
         sharpness: +(sharp / llN).toFixed(2), // 0 = siempre 50/50 · 1 = siempre seguro
         coverage: covN ? Math.round(cov / covN * 100) : null, // objetivo ~80%
+        width: covN ? +(width / covN).toFixed(1) : null,      // ancho medio del intervalo
+        intScore: covN ? +(iScore / covN).toFixed(1) : null,  // menor = mejor (ancho + cobertura)
+        crps: crpsN ? +(crpsSum / crpsN).toFixed(2) : null,   // menor = mejor distribución
       } : null
 
       return { matches: resolved.length, rows, pre, calib, dist, conRoja: resolved.filter(m => m.hayRoja).length }
@@ -403,8 +447,9 @@ export function makeLiveLog(storageKey) {
   }
 }
 
-const tiLog = makeLiveLog('motor_ti_livelog_v1')
+const tiLog = makeLiveLog('motor_ti_livelog_v1', { phi: TI_MODEL.PHI })
 export const logTiSnapshot = (matchId, info, model) => tiLog.logSnapshot(matchId, info, model)
-export const resolveTiLog = (matchId, finalTi) => tiLog.resolve(matchId, finalTi)
+export const resolveTiLog = (matchId, finalTi, sides) => tiLog.resolve(matchId, finalTi, sides)
 export const tiLogPending = () => tiLog.pending()
 export const tiBacktestSummary = () => tiLog.summary()
+export const tiResolvedCount = () => tiLog.resolvedCount()

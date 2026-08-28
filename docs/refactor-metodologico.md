@@ -1,4 +1,18 @@
-# Informe de refactorización metodológica (v2 y v3)
+# Informe de refactorización metodológica (v2, v3 y v4)
+
+## RONDA v4 (2026-08-28, tercera auditoría externa)
+
+**Prioridad 1 — COHERENCIA NB (implementada):** las combinadas ya NO usan Poisson: `pPickDadoTempo` usa **NB con el PHI de cada mercado** (`PHI_CAT`), y el Monte Carlo muestrea NB vía mezcla **Gamma-Poisson** (Marsaglia-Tsang + Knuth/aprox normal). Test de coherencia: para mercados insensibles al tempo la marginal del proceso conjunto = NB individual EXACTA (±0.1pp); para sensibles, MC ≈ analítico ±2pp. **Nota residual honesta:** en mercados sensibles al tempo, la marginal de la mixtura tiene algo más de dispersión que la NB(μ,φ) plana que muestra el panel individual — coherencia total exigiría que los paneles también usaran la mixtura; pendiente de decidir cuando se valide el tempo (la diferencia es pequeña y en la dirección conservadora).
+**Prioridad 2 — Sample-size gating (implementado):** `estadoPorMuestra(n)` por mercado (INSUFFICIENT_DATA <10, BASELINE, nota de hito a 50); cada panel muestra su estado y su n de partidos resueltos (`resolvedCount()` por log). EXPERIMENTAL/CALIBRATED/DISABLED son promociones manuales documentadas (v4 §24-25), no automáticas por n.
+**Prioridad 3 — CRPS + interval score (implementados):** snapshots guardan `mu`; `crpsNB(mu, phi, acum, y)` evalúa la distribución completa por snapshot (test: CRPS menor cuando la distribución está centrada en el resultado). Interval score con α=0.2 + ancho medio del intervalo junto a la cobertura — un intervalo ancho ya no se premia.
+**Prioridad 4 — EV probabilístico (implementado):** el peor-caso quedó SOLO como diagnóstico (`evPeor`); el criterio es **EV esperado > +2% Y P(EV>0) ≥ 70%**, con `evP10/evP90` mostrados. Corrige el rechazo excesivo que señalaste (estado de baja probabilidad con EV negativo ya no veta un EV esperado claramente positivo).
+**Prioridad 5 — Residuales (parcial):** los resolvers guardan `finalH/finalA` por lado en los 6 registros — la materia prima para estudiar dependencia residual. El residual condicionado (vs predicción por lado por snapshot) queda pendiente porque los snapshots genéricos no guardan proyección por lado.
+**Tempo por mercado (§6):** `TEMPO_SENS` por mercado (estructura lista; hoy binaria 1/0 heurística) — deja de ser un multiplicador idéntico implícito.
+**Tests:** 20 → **25** (Fréchet bounds, coherencia NB marginal, EV probabilístico, CRPS, gating).
+**Aceptado sin implementar (espera datos):** market-aware A/B/C, walk-forward, tempo continuo (β), Diebold-Mariano/bootstrap por partido (protocolo escrito para n=50), dashboard §23 completo, cópulas, backend, Kelly. **Y su advertencia queda registrada:** el hito "500 → hazard" NO es automático — si a 250 NB+tempo+calibración explica bien, la complejidad no se agrega.
+
+---
+
 
 ## RONDA v3 (2026-08-28, tras la segunda auditoría externa) — informe §48
 

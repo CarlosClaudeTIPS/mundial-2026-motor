@@ -36,6 +36,16 @@ export const MODEL_STATUS = {
   cards: 'BASELINE', ti: 'BASELINE', gk: 'BASELINE',
 }
 
+// ─── SAMPLE-SIZE GATING (v4 §9): estado por mercado según muestra resuelta ───
+// El status NO depende solo de n: alcanzar n habilita EVALUAR, no calibra.
+// La promoción a CALIBRATED exige además benchmark superado, calibración,
+// estabilidad y calidad de datos (v4 §24) — decisión manual documentada.
+export function estadoPorMuestra(n) {
+  if (n == null || n < 10) return { estado: 'INSUFFICIENT_DATA', nota: `n=${n ?? 0} — aún sin muestra mínima para diagnosticar` }
+  if (n < 50) return { estado: 'BASELINE', nota: `n=${n} — heurístico; diagnóstico formal a partir de 50` }
+  return { estado: 'BASELINE', nota: `n=${n} — muestra suficiente para el diagnóstico de FASE 1 (¿NB > naive?)` }
+}
+
 // ── Evaluación unificada ─────────────────────────────────────────────────────
 // pOverFn: línea → P(Over) del modelo. extras: [{cond, pp, why}] castigos
 // específicos del mercado. abstenciones: [{cond, why}] — ABSTENTION ENGINE:

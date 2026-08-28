@@ -1,5 +1,6 @@
 // ─── Generador de Picks — Motor de Apuestas Ligas ────────────────────────────
 import { poissonOver } from './engine'
+import { nbOver } from './throwins'
 
 // ─── Líneas realistas ────────────────────────────────────────────────────────
 // Las casas ponen las líneas CERCA del expected del mercado, no en 4.5 tiros.
@@ -220,29 +221,81 @@ export function selectTopPicks(candidates, max = 3) {
 // al ritmo; los picks son condicionalmente independientes DADO el tempo.
 // P(A∩B) = Σ_T w(T) · P(A|T) · P(B|T). El producto queda solo como benchmark.
 // HEURÍSTICO (magnitudes ±12%, pesos 25/50/25) — marcado como no validado.
-const TEMPO_CATS = new Set(['shots', 'sot', 'corners', 'goals', 'cards'])
 const TEMPO_STATES = [[0.88, 0.25], [1.00, 0.50], [1.12, 0.25]]
 
+// P(pick | estado de tempo) con la MISMA familia del mercado individual:
+// NB con su PHI (v4 §2 — coherencia entre individual y combinada).
 function pPickDadoTempo(pick, T) {
-  const sensible = TEMPO_CATS.has(pick.category)
-  const exp = sensible ? pick.expected * T : pick.expected
-  const pOver = poissonOver(exp, pick.line)
+  const sens = TEMPO_SENS[pick.category] ?? 0
+  const exp = pick.expected * Math.pow(T, sens)
+  const pOver = nbOver(exp, pick.line, PHI_CAT[pick.category] ?? 1.3)
   return pick.dir === 'OVER' ? pOver : 1 - pOver
 }
 
-// Validador MONTE CARLO (auditoría v3 §17): mismo proceso generativo —
-// muestrear estado de tempo → Poisson de cada mercado condicionado al MISMO
-// estado → evaluar A, B y A∩B. Las marginales DEBEN coincidir con las del
-// cálculo analítico (misma mixtura); si no coinciden → BUG MODEL.
-// Uso: tests y verificación, no producción (el analítico es exacto y rápido).
-export function jointProbabilityMC(pickA, pickB, n = 30000, rng = Math.random) {
-  const samplePoisson = (lambda) => {
-    // Knuth para lambdas moderadas; suficiente para conteos de fútbol
-    const L = Math.exp(-lambda)
-    let k = 0; let p = 1
-    do { k++; p *= rng() } while (p > L)
-    return k - 1
+// ─── Familia de distribución por mercado (auditoría v4 §2: COHERENCIA) ───────
+// Las combinadas usan la MISMA familia que los mercados individuales:
+// Negative Binomial con el PHI de cada mercado, condicionada al tempo.
+// (Antes usaban Poisson — el individual decía una probabilidad y la combinada
+// otra: incoherencia corregida.)
+export const PHI_CAT = {
+  shots: 1.45, sot: 1.25, corners: 1.30, cards: 1.20,
+  goals: 1.10, ti: 1.40, gk: 1.35,
+}
+// Sensibilidad al tempo POR MERCADO (v4 §6): estructura para que cada mercado
+// tenga su propia respuesta. Hoy heurística binaria (1 = sensible, 0 = no);
+// el registro de respuesta observada permitirá estimarla después.
+export const TEMPO_SENS = {
+  shots: 1, sot: 1, corners: 1, goals: 1, cards: 1,
+  ti: 0, gk: 0,
+}
+
+// ─── Muestreadores para el MC (NB = mezcla Gamma-Poisson) ────────────────────
+function gauss(rng) {
+  let u = 0; let v = 0
+  while (u === 0) u = rng()
+  while (v === 0) v = rng()
+  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v)
+}
+function sampleGamma(shape, rng) { // scale 1, Marsaglia-Tsang
+  if (shape < 1) {
+    const u = rng()
+    return sampleGamma(shape + 1, rng) * Math.pow(u, 1 / shape)
   }
+  const d = shape - 1 / 3
+  const c = 1 / Math.sqrt(9 * d)
+  for (;;) {
+    let x; let v
+    do { x = gauss(rng); v = 1 + c * x } while (v <= 0)
+    v = v * v * v
+    const u = rng()
+    if (u < 1 - 0.0331 * x * x * x * x) return d * v
+    if (Math.log(u) < 0.5 * x * x + d * (1 - v + Math.log(v))) return d * v
+  }
+}
+function samplePoisson(lambda, rng) {
+  if (lambda > 60) { // aproximación normal para lambdas grandes (evita underflow)
+    return Math.max(0, Math.round(lambda + Math.sqrt(lambda) * gauss(rng)))
+  }
+  const L = Math.exp(-lambda)
+  let k = 0; let p = 1
+  do { k++; p *= rng() } while (p > L)
+  return k - 1
+}
+function sampleNB(mean, phi, rng) {
+  if (mean <= 0) return 0
+  if (phi <= 1.001) return samplePoisson(mean, rng)
+  // NB(mean, var=phi·mean) = Poisson(λ), λ ~ Gamma(r, scale=phi−1), r = mean/(phi−1)
+  const scale = phi - 1
+  const r = mean / scale
+  const lambda = sampleGamma(r, rng) * scale
+  return samplePoisson(lambda, rng)
+}
+
+// Validador MONTE CARLO (v3 §17 + v4 §3): mismo proceso generativo —
+// muestrear tempo → NB de cada mercado (SU familia y SU phi) condicionada al
+// MISMO estado → evaluar A, B y A∩B. Las marginales DEBEN coincidir con el
+// analítico y con la probabilidad individual del mercado; si no → BUG MODEL.
+export function jointProbabilityMC(pickA, pickB, n = 30000, rng = Math.random) {
   const cumW = []
   let acc = 0
   for (const [T, w] of TEMPO_STATES) { acc += w; cumW.push([T, acc]) }
@@ -250,9 +303,10 @@ export function jointProbabilityMC(pickA, pickB, n = 30000, rng = Math.random) {
   for (let i = 0; i < n; i++) {
     const u = rng()
     const T = cumW.find(([, c]) => u <= c)[0]
-    const expA = TEMPO_CATS.has(pickA.category) ? pickA.expected * T : pickA.expected
-    const expB = TEMPO_CATS.has(pickB.category) ? pickB.expected * T : pickB.expected
-    const xA = samplePoisson(expA); const xB = samplePoisson(expB)
+    const expA = pickA.expected * Math.pow(T, TEMPO_SENS[pickA.category] ?? 0)
+    const expB = pickB.expected * Math.pow(T, TEMPO_SENS[pickB.category] ?? 0)
+    const xA = sampleNB(expA, PHI_CAT[pickA.category] ?? 1.3, rng)
+    const xB = sampleNB(expB, PHI_CAT[pickB.category] ?? 1.3, rng)
     const okA = pickA.dir === 'OVER' ? xA > pickA.line : xA < pickA.line
     const okB = pickB.dir === 'OVER' ? xB > pickB.line : xB < pickB.line
     if (okA) cA++
@@ -264,6 +318,14 @@ export function jointProbabilityMC(pickA, pickB, n = 30000, rng = Math.random) {
     margB: +(cB / n * 100).toFixed(1),
     pJoint: +(cAB / n * 100).toFixed(1),
   }
+}
+
+// Marginal de un pick bajo el MISMO proceso generativo de las combinadas
+// (mixtura de tempo sobre NB) — para tests de coherencia MC vs analítico.
+export function marginalTempo(pick) {
+  let m = 0
+  for (const [T, w] of TEMPO_STATES) m += w * pPickDadoTempo(pick, T)
+  return +(m * 100).toFixed(1)
 }
 
 export function jointProbability(pickA, pickB) {
@@ -303,15 +365,24 @@ export function suggestCombo(picks, targetOdds = 1.50) {
   const pJ = best.pJoint / 100
   const impTarget = +((1 / targetOdds) * 100).toFixed(1) // 66.7% para 1.50 — implícita bruta
 
-  // INCERTIDUMBRE del EV conjunto (auditoría v3 §22): el EV cambia según el
-  // estado de tempo — la dispersión entre estados es una cota honesta de la
-  // sensibilidad del EV a la parametrización heurística del tempo.
-  const evPorEstado = TEMPO_STATES.map(([T]) => {
-    const pA = pPickDadoTempo(best.p1, T); const pB = pPickDadoTempo(best.p2, T)
-    return pA * pB * targetOdds - 1
-  })
-  const evUnc = +(((Math.max(...evPorEstado) - Math.min(...evPorEstado)) / 2) * 100).toFixed(1)
-  const evLow = +(best.evTarget * 100 - evUnc).toFixed(1)
+  // INCERTIDUMBRE PROBABILÍSTICA del EV (v4 §7-8): el peor-caso YA NO es el
+  // criterio principal (un estado de baja probabilidad con EV negativo no
+  // invalida un EV esperado claramente positivo). Se calcula la distribución
+  // del EV sobre los estados de tempo: P(EV>0), P10, P90; el peor caso queda
+  // solo como diagnóstico.
+  const evEstados = TEMPO_STATES.map(([T, w]) => ({
+    ev: pPickDadoTempo(best.p1, T) * pPickDadoTempo(best.p2, T) * targetOdds - 1,
+    w,
+  })).sort((a, b) => a.ev - b.ev)
+  const pEVpos = +(evEstados.filter(e => e.ev > 0).reduce((s, e) => s + e.w, 0) * 100).toFixed(0)
+  const cuantil = (q) => {
+    let acc = 0
+    for (const e of evEstados) { acc += e.w; if (acc >= q) return +(e.ev * 100).toFixed(1) }
+    return +(evEstados[evEstados.length - 1].ev * 100).toFixed(1)
+  }
+  const evP10 = cuantil(0.10)
+  const evP90 = cuantil(0.90)
+  const evPeor = +(evEstados[0].ev * 100).toFixed(1) // diagnóstico, no criterio
 
   return {
     p1: best.p1, p2: best.p2,
@@ -322,10 +393,10 @@ export function suggestCombo(picks, targetOdds = 1.50) {
     correlation: +best.correlation.toFixed(2),
     cuotaJusta: +(1 / pJ).toFixed(2),
     targetOdds, impTarget,
-    evAlTarget: +(best.evTarget * 100).toFixed(1),
-    evUnc, evLow,                  // EV ± incertidumbre del tempo; evLow = peor caso
-    // PROVISIONAL SAFETY FLOOR: EV ≥ +2% Y el peor caso de tempo no negativo fuerte
-    valeAlTarget: best.evTarget > 0.02 && evLow > -2,
+    evAlTarget: +(best.evTarget * 100).toFixed(1), // EV ESPERADO
+    pEVpos, evP10, evP90, evPeor,
+    // SAFETY FLOOR provisional: EV esperado > +2% y P(EV>0) mayoritaria
+    valeAlTarget: best.evTarget > 0.02 && pEVpos >= 70,
   }
 }
 

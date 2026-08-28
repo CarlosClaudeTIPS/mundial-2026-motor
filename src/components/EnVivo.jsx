@@ -326,7 +326,7 @@ export default function EnVivo({ league }) {
         const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
         const h = numv(r.stats?.[0]?.stats?.['Throw Ins'])
         const a = numv(r.stats?.[1]?.stats?.['Throw Ins'])
-        if (h != null || a != null) { resolveTiLog(p.id, (h ?? 0) + (a ?? 0)); done++ }
+        if (h != null || a != null) { resolveTiLog(p.id, (h ?? 0) + (a ?? 0), { h, a }); done++ }
       } catch {}
     }
 
@@ -338,7 +338,7 @@ export default function EnVivo({ league }) {
         const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
         const h = numv(r.stats?.[0]?.stats?.['Corner Kicks'])
         const a = numv(r.stats?.[1]?.stats?.['Corner Kicks'])
-        if (h != null || a != null) { resolveCornersLog(p.id, (h ?? 0) + (a ?? 0)); done++ }
+        if (h != null || a != null) { resolveCornersLog(p.id, (h ?? 0) + (a ?? 0), { h, a }); done++ }
       } catch {}
     }
 
@@ -350,10 +350,10 @@ export default function EnVivo({ league }) {
         const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
         const h = numv(r.stats?.[0]?.stats?.['Total Shots'])
         const a = numv(r.stats?.[1]?.stats?.['Total Shots'])
-        if (h != null || a != null) { resolveShotsLog(p.id, (h ?? 0) + (a ?? 0)); done++ }
+        if (h != null || a != null) { resolveShotsLog(p.id, (h ?? 0) + (a ?? 0), { h, a }); done++ }
         const sh = numv(r.stats?.[0]?.stats?.['Shots on Goal'])
         const sa = numv(r.stats?.[1]?.stats?.['Shots on Goal'])
-        if (sh != null || sa != null) resolveSotLog(p.id, (sh ?? 0) + (sa ?? 0))
+        if (sh != null || sa != null) resolveSotLog(p.id, (sh ?? 0) + (sa ?? 0), { h: sh, a: sa })
       } catch {}
     }
     // Tarjetas: amarillas + rojas finales por equipo en el historial de LS
@@ -364,7 +364,11 @@ export default function EnVivo({ league }) {
         const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
         const g = (i, k) => numv(r.stats?.[i]?.stats?.[k])
         const tot = [g(0, 'Yellow Cards'), g(1, 'Yellow Cards'), g(0, 'Red Cards'), g(1, 'Red Cards')]
-        if (tot.some(v => v != null)) { resolveCardsLog(p.id, tot.reduce((s, v) => s + (v ?? 0), 0)); done++ }
+        if (tot.some(v => v != null)) {
+          const hSide = (g(0, 'Yellow Cards') ?? 0) + (g(0, 'Red Cards') ?? 0)
+          const aSide = (g(1, 'Yellow Cards') ?? 0) + (g(1, 'Red Cards') ?? 0)
+          resolveCardsLog(p.id, tot.reduce((s, v) => s + (v ?? 0), 0), { h: hSide, a: aSide }); done++
+        }
       } catch {}
     }
 
@@ -375,7 +379,7 @@ export default function EnVivo({ league }) {
         const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
         const sh = numv(r.stats?.[0]?.stats?.['Shots on Goal'])
         const sa = numv(r.stats?.[1]?.stats?.['Shots on Goal'])
-        if (sh != null || sa != null) { resolveSotLog(p.id, (sh ?? 0) + (sa ?? 0)); done++ }
+        if (sh != null || sa != null) { resolveSotLog(p.id, (sh ?? 0) + (sa ?? 0), { h: sh, a: sa }); done++ }
       } catch {}
     }
 
@@ -388,7 +392,7 @@ export default function EnVivo({ league }) {
         const dUtc = new Date(p.ts).toISOString().slice(0, 10)
         const dBog = new Date(p.ts - 5 * 3600_000).toISOString().slice(0, 10)
         const s = sofa.byDate[dUtc] ?? sofa.byDate[dBog]
-        if (s && s.gk != null && s.gkAg != null) { resolveGkLog(p.id, s.gk + s.gkAg); done++ }
+        if (s && s.gk != null && s.gkAg != null) { resolveGkLog(p.id, s.gk + s.gkAg, { h: s.gk, a: s.gkAg }); done++ }
       } catch {}
     }
   }, [])
