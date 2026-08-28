@@ -537,6 +537,14 @@ export default function EnVivo({ league }) {
   }, [liveStatsRaw])
   const blkTotal = blkSides.total
 
+  // Rojas por lado (cambio estructural para los módulos cuantitativos)
+  const reds = useMemo(() => {
+    if (!liveStatsRaw) return null
+    const h = numv(liveStatsRaw.home?.['Red Cards'])
+    const a = numv(liveStatsRaw.away?.['Red Cards'])
+    return (h != null || a != null) ? { h: h ?? 0, a: a ?? 0 } : null
+  }, [liveStatsRaw])
+
   const shotsSnaps = useMemo(() => snapsRef.current.map(s => {
     const h = s.h?.shots; const a = s.a?.shots
     return (h != null || a != null) ? { min: s.min, sh: h ?? 0, sa: a ?? 0 } : null
@@ -743,6 +751,7 @@ export default function EnVivo({ league }) {
           cTotal={cornersAc}
           daTotal={dangAtk ? (parseFloat(dangAtk.h) || 0) + (parseFloat(dangAtk.a) || 0) : null}
           blkTotal={blkTotal}
+          reds={reds}
           fuente={cornersFuente}
           snaps={cornersSnaps}
           preA={preA} preB={preB}
@@ -762,6 +771,7 @@ export default function EnVivo({ league }) {
           sotH={perTeam?.h?.sot} sotA={perTeam?.a?.sot}
           blkH={blkSides.h} blkA={blkSides.a}
           daTotal={dangAtk ? (parseFloat(dangAtk.h) || 0) + (parseFloat(dangAtk.a) || 0) : null}
+          reds={reds}
           fuente={shotsFuente}
           snaps={shotsSnaps}
           preA={preA} preB={preB}
@@ -796,6 +806,7 @@ export default function EnVivo({ league }) {
           gkAc={gkAc}
           gkH={perTeam?.h?.gk} gkA={perTeam?.a?.gk}
           offAcum={offAcum}
+          reds={reds}
           fuente={gkFuente}
           snaps={gkSnaps}
           preA={preA} preB={preB}

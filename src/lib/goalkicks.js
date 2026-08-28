@@ -28,6 +28,7 @@
 
 import { poissonOver, calcExpectedGK } from './engine'
 import { nbOver, makeLiveLog } from './throwins'
+import { restanteEfectivo, regimeOf, redCardFactorGk } from './match-state'
 
 // ── Constantes del modelo (recalibrables con el live-backtest) ───────────────
 export const GK_MODEL = {
@@ -124,39 +125,13 @@ function offTargetFactor(offAcum, minuto, prior) {
   return { factor: Math.pow(clamped, 0.5), obs: +obs.toFixed(3), exp: prior.offRate, raw: +raw.toFixed(2) }
 }
 
-// ─── CAMBIO DE RÉGIMEN (ritmo reciente de GK vs ritmo del partido) ───────────
-function regimeFrom(snaps, acum, minuto) {
-  if (!snaps || snaps.length < 2 || !minuto) return { factor: 1, detected: false }
-  const last = snaps[snaps.length - 1]
-  let past = null
-  for (const s of snaps) {
-    if (s.gk == null) continue
-    if (last.min - s.min >= GK_MODEL.REGIME_MIN_SPAN) past = s
-  }
-  if (!past || last.gk == null) return { factor: 1, detected: false }
-  const span = last.min - past.min
-  if (span < GK_MODEL.REGIME_MIN_SPAN) return { factor: 1, detected: false }
-  const recentRate = (last.gk - past.gk) / span
-  const matchRate = acum / minuto
-  if (matchRate <= 0) return { factor: 1, detected: false }
-  const [lo, hi] = GK_MODEL.REGIME_CLAMP
-  const raw = Math.min(hi, Math.max(lo, recentRate / matchRate))
-  return {
-    factor: Math.pow(raw, GK_MODEL.REGIME_SOFT),
-    detected: raw <= 0.90 || raw >= 1.10,
-    dir: raw >= 1.10 ? 'up' : raw <= 0.90 ? 'down' : 'flat',
-    recentRate: +recentRate.toFixed(3),
-    matchRate: +matchRate.toFixed(3),
-    span,
-  }
-}
-
 // ─── MODELO LIVE ─────────────────────────────────────────────────────────────
-export function gkLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = null, offAcum = null }) {
+// Régimen/restante del MATCH STATE ENGINE. reds {h,a}: la roja mueve el GK
+// total poco (el de 10 saca MÁS, el dominante MENOS → efecto neto chico).
+export function gkLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = null, offAcum = null, reds = null }) {
   if (minuto == null || acum == null || minuto < 1) return null
 
-  const addedLeft = minuto <= 45 ? 5 : minuto <= 90 ? Math.max(0, 5 - Math.max(0, minuto - 90)) : 0
-  const restEff = Math.max(0, (minuto > 90 ? 120 - minuto : 90 - minuto) + addedLeft)
+  const restEff = restanteEfectivo(minuto)
 
   const rateObs = acum / minuto
   const ratePrior = prior?.perMin ?? null
@@ -168,10 +143,14 @@ export function gkLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = nu
     : rateObs
 
   const state = stateFactor(goalDiff, minuto)
-  const regime = regimeFrom(snaps, acum, minuto)
+  const regime = regimeOf(snaps, 'gk', acum, minuto, {
+    span: GK_MODEL.REGIME_MIN_SPAN, clamp: GK_MODEL.REGIME_CLAMP, soft: GK_MODEL.REGIME_SOFT,
+  })
   const off = offTargetFactor(offAcum, minuto, prior)
+  // Roja: efecto NETO sobre el total (promedio de ambos lados; una roja ≈ +2%)
+  const redFactor = reds ? +(((redCardFactorGk(reds.h ?? 0, reds.a ?? 0) + redCardFactorGk(reds.a ?? 0, reds.h ?? 0)) / 2)).toFixed(3) : 1
 
-  const muRest = rateBlend * restEff * state * regime.factor * off.factor
+  const muRest = rateBlend * restEff * state * regime.factor * off.factor * redFactor
   const expectedFinal = acum + muRest
   const naiveFinal = acum + rateObs * restEff
 
@@ -190,7 +169,7 @@ export function gkLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = nu
     wObs: +wObs.toFixed(2),
     rateBlend: +rateBlend.toFixed(3),
     state: +state.toFixed(3),
-    regime, off,
+    regime, off, redFactor,
     muRest: +muRest.toFixed(2),
     expectedFinal: +expectedFinal.toFixed(1),
     naiveFinal: +naiveFinal.toFixed(1),

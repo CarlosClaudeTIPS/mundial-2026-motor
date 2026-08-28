@@ -3,6 +3,7 @@ import {
   shotsLiveModel, shotsPrior, shotsConfidence, shotsEdge, shotsFactores,
   logShotsSnapshot, logSotSnapshot, shotsBacktestSummary, sotBacktestSummary,
 } from '../lib/shots'
+import { ensureBaseline } from '../lib/baseline'
 
 // ─── Panel cuantitativo de TIROS en vivo ─────────────────────────────────────
 // Total por equipo repartido coherentemente en a puerta / fuera / bloqueados
@@ -22,7 +23,7 @@ const MARKETS = [
   ['sot_visitante', 'SOT Visita'],
 ]
 
-export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH, blkA, daTotal, fuente, snaps, preA, preB, matchInfo, homeName, awayName, homeIsA = true }) {
+export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH, blkA, daTotal, fuente, snaps, preA, preB, matchInfo, homeName, awayName, homeIsA = true, reds = null }) {
   const [market, setMarket] = useState('shots_total')
   const [line, setLine] = useState('')
   const [oddsOver, setOddsOver] = useState('')
@@ -32,9 +33,17 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
 
   const prior = useMemo(() => shotsPrior(preA, preB, { homeA: homeIsA }), [preA, preB, homeIsA])
 
+  // PREMATCH BASELINES congelados: uno para tiros totales, otro para SOT
+  const baseline = useMemo(() => (matchInfo?.id && prior)
+    ? ensureBaseline(matchInfo.id, 'shots', { expected: prior.total, sd: prior.sd })
+    : null, [matchInfo?.id, prior]) // eslint-disable-line react-hooks/exhaustive-deps
+  const baselineSot = useMemo(() => (matchInfo?.id && prior)
+    ? ensureBaseline(matchInfo.id, 'sot', { expected: prior.sotTotal, sd: +(prior.sd * 0.5).toFixed(1) })
+    : null, [matchInfo?.id, prior]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const model = useMemo(() => shotsLiveModel({
-    minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal,
-  }), [minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal])
+    minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal, reds,
+  }), [minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal, reds])
 
   const conf = useMemo(() => shotsConfidence({
     model, prior, fuente, snapsN: snaps?.length ?? 0,
@@ -69,10 +78,11 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
 
   useEffect(() => {
     if (model && matchInfo?.id) {
-      logShotsSnapshot(matchInfo.id, matchInfo, model)
-      logSotSnapshot(matchInfo.id, matchInfo, model)
+      const extra = { hayRoja: model.hayRoja || undefined }
+      logShotsSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baseline?.expected }, model)
+      logSotSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baselineSot?.expected }, model)
     }
-  }, [model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [model?.minuto, baseline?.expected, baselineSot?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const bt = useMemo(() => showBt ? { shots: shotsBacktestSummary(), sot: sotBacktestSummary() } : null, [showBt, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -109,6 +119,21 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
           </div>
         ))}
       </div>
+
+      {/* ── PREMATCH baseline → LIVE ── */}
+      {baseline && (
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] bg-dark-800/50 rounded-lg px-2 py-1.5 border border-dark-600">
+          <span className="text-gray-500 uppercase tracking-wide text-[9px] font-bold">Prematch → Live</span>
+          <span className="text-gray-300">Tiros: <strong className="text-white">{baseline.expected}</strong> → <strong className="text-sky-300">{model.expectedFinal}</strong>
+            {(() => { const d = Math.round((model.expectedFinal - baseline.expected) / baseline.expected * 100); return (
+              <span className={d > 5 ? 'text-orange-300' : d < -5 ? 'text-blue-300' : 'text-gray-500'}> ({d > 0 ? '+' : ''}{d}%)</span>
+            )})()}
+          </span>
+          {baselineSot && <span className="text-gray-300">SOT: <strong className="text-white">{baselineSot.expected}</strong> → <strong className="text-green-300">{model.sotFinal}</strong></span>}
+          {model.hayRoja && <span className="text-red-400 font-bold">🟥 roja en cancha — cambio estructural aplicado</span>}
+          <span className="text-gray-600">— el porqué del cambio está en los factores de abajo</span>
+        </div>
+      )}
 
       {/* ── Desglose coherente: total = a puerta + fuera + bloqueados ── */}
       <div className="bg-dark-800/60 rounded-xl p-2 overflow-x-auto">
@@ -206,6 +231,13 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
                 {edge.edgeUnder != null && <> · Edge Under: <strong className={edge.edgeUnder > 0 ? 'text-green-400' : 'text-red-400'}>{edge.edgeUnder > 0 ? '+' : ''}{edge.edgeUnder} pp</strong></>}
               </span>
               <span className="text-gray-500">umbral mínimo: {edge.minEdge} pp{edge.razonesUmbral.length ? ` (${edge.razonesUmbral.join(' · ')})` : ''}</span>
+              {(() => {
+                const b = market === 'shots_total' ? baseline : market === 'sot_total' ? baselineSot : null
+                if (!b) return null
+                const pPre = +(b.pOver(edge.line) * 100).toFixed(1)
+                const ePre = +(pPre - edge.impOver).toFixed(2)
+                return <span className="text-gray-500">Prematch: P(Over) {pPre}% · edge {ePre > 0 ? '+' : ''}{ePre} pp <span className="text-gray-600">(vs live {edge.edgeOver > 0 ? '+' : ''}{edge.edgeOver})</span></span>
+              })()}
             </div>
 
             <div className={`rounded-xl px-4 py-3 text-center font-black text-xl ${
@@ -264,6 +296,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
           {bt?.shots && (
             <div>
               <p className="text-gray-400 mb-1">Tiros totales — {bt.shots.matches} partido(s), error por minuto:</p>
+              {bt.shots.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.shots.pre.mae} ({bt.shots.pre.n}p)</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">
                 {bt.shots.rows.map(r => (
                   <div key={r.bucket} className="bg-dark-700 rounded p-1.5 text-center">

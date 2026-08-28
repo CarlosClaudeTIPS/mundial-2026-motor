@@ -3,6 +3,7 @@ import {
   gkLiveModel, gkPrior, gkConfidence, gkEdge, gkFactores,
   logGkSnapshot, gkBacktestSummary,
 } from '../lib/goalkicks'
+import { ensureBaseline } from '../lib/baseline'
 
 // ─── Panel cuantitativo de SAQUES DE PORTERÍA en vivo ────────────────────────
 // Espejo del panel de saques de banda, con la causalidad propia de los GK:
@@ -23,7 +24,7 @@ function nivel(ratio) {
   return ['Muy bajo', 'text-blue-400']
 }
 
-export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fuente, snaps, preA, preB, league, matchInfo, homeName, awayName }) {
+export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fuente, snaps, preA, preB, league, matchInfo, homeName, awayName, reds = null }) {
   const [line, setLine] = useState('')
   const [oddsOver, setOddsOver] = useState('')
   const [oddsUnder, setOddsUnder] = useState('')
@@ -32,9 +33,14 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
 
   const prior = useMemo(() => gkPrior(preA, preB, league), [preA, preB, league])
 
+  // PREMATCH BASELINE congelado (solo info prepartido — sin leakage)
+  const baseline = useMemo(() => (matchInfo?.id && prior)
+    ? ensureBaseline(matchInfo.id, 'gk', { expected: prior.total, sd: prior.sd })
+    : null, [matchInfo?.id, prior]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const model = useMemo(() => gkLiveModel({
-    minuto, acum: gkAc, goalDiff, snaps, prior, offAcum,
-  }), [minuto, gkAc, goalDiff, snaps, prior, offAcum])
+    minuto, acum: gkAc, goalDiff, snaps, prior, offAcum, reds,
+  }), [minuto, gkAc, goalDiff, snaps, prior, offAcum, reds])
 
   const conf = useMemo(() => gkConfidence({
     model, prior, fuente, snapsN: snaps?.length ?? 0,
@@ -57,8 +63,8 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
   }, [model])
 
   useEffect(() => {
-    if (model && matchInfo?.id) logGkSnapshot(matchInfo.id, matchInfo, model)
-  }, [model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
+    if (model && matchInfo?.id) logGkSnapshot(matchInfo.id, { ...matchInfo, baseline: baseline?.expected, hayRoja: (reds?.h ?? 0) + (reds?.a ?? 0) > 0 || undefined }, model)
+  }, [model?.minuto, baseline?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const bt = useMemo(() => showBt ? gkBacktestSummary() : null, [showBt, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -97,6 +103,21 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
           </div>
         ))}
       </div>
+
+      {/* ── PREMATCH baseline → LIVE ── */}
+      {baseline && (
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] bg-dark-800/50 rounded-lg px-2 py-1.5 border border-dark-600">
+          <span className="text-gray-500 uppercase tracking-wide text-[9px] font-bold">Prematch → Live</span>
+          <span className="text-gray-300">Baseline prepartido: <strong className="text-white">{baseline.expected}</strong></span>
+          <span className="text-gray-300">→ Live ahora: <strong className="text-teal-300">{model.expectedFinal}</strong>
+            {(() => { const d = Math.round((model.expectedFinal - baseline.expected) / baseline.expected * 100); return (
+              <span className={d > 5 ? 'text-orange-300' : d < -5 ? 'text-blue-300' : 'text-gray-500'}> ({d > 0 ? '+' : ''}{d}%)</span>
+            )})()}
+          </span>
+          {model.redFactor !== 1 && <span className="text-red-400 font-bold">🟥 roja en cancha (factor ×{model.redFactor})</span>}
+          <span className="text-gray-600">— el porqué del cambio está en los factores de abajo</span>
+        </div>
+      )}
 
       {/* ── Diagnóstico ── */}
       <div className="flex flex-wrap gap-x-4 gap-y-1 text-[11px]">
@@ -156,6 +177,11 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
                 {edge.edgeUnder != null && <> · Edge Under: <strong className={edge.edgeUnder > 0 ? 'text-green-400' : 'text-red-400'}>{edge.edgeUnder > 0 ? '+' : ''}{edge.edgeUnder} pp</strong></>}
               </span>
               <span className="text-gray-500">umbral mínimo: {edge.minEdge} pp{edge.razonesUmbral.length ? ` (${edge.razonesUmbral.join(' · ')})` : ''}</span>
+              {baseline && (() => {
+                const pPre = +(baseline.pOver(edge.line) * 100).toFixed(1)
+                const ePre = +(pPre - edge.impOver).toFixed(2)
+                return <span className="text-gray-500">Prematch: P(Over) {pPre}% · edge {ePre > 0 ? '+' : ''}{ePre} pp <span className="text-gray-600">(vs live {edge.edgeOver > 0 ? '+' : ''}{edge.edgeOver})</span></span>
+              })()}
             </div>
 
             <div className={`rounded-xl px-4 py-3 text-center font-black text-xl ${
@@ -214,6 +240,7 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
           {bt && (
             <>
               <p className="text-gray-400 mb-1">{bt.matches} partido(s) resuelto(s) — error del modelo según el minuto de la predicción:</p>
+              {bt.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.pre.mae} ({bt.pre.n}p) — el live debe mejorar este error conforme avanza el partido</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">
                 {bt.rows.map(r => (
                   <div key={r.bucket} className="bg-dark-700 rounded p-1.5 text-center">

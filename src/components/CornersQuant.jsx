@@ -3,6 +3,7 @@ import {
   cornersLiveModel, cornersPrior, cornersConfidence, cornersEdge, cornersFactores,
   logCornersSnapshot, cornersBacktestSummary,
 } from '../lib/corners'
+import { ensureBaseline } from '../lib/baseline'
 
 // ─── Panel cuantitativo de CÓRNERS en vivo ───────────────────────────────────
 // Modela POR EQUIPO (local/visitante) y suma el total → habilita mercados de
@@ -13,7 +14,7 @@ const FUENTE_LABEL = {
   manual: '✍️ manual',
 }
 
-export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal, blkTotal, fuente, snaps, preA, preB, league, matchInfo, homeName, awayName }) {
+export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal, blkTotal, fuente, snaps, preA, preB, league, matchInfo, homeName, awayName, reds = null }) {
   const [market, setMarket] = useState('total')
   const [line, setLine] = useState('')
   const [oddsOver, setOddsOver] = useState('')
@@ -23,9 +24,14 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
 
   const prior = useMemo(() => cornersPrior(preA, preB, league), [preA, preB, league])
 
+  // PREMATCH BASELINE congelado (solo info prepartido — sin leakage)
+  const baseline = useMemo(() => (matchInfo?.id && prior)
+    ? ensureBaseline(matchInfo.id, 'corners', { expected: prior.total, sd: prior.sd })
+    : null, [matchInfo?.id, prior]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const model = useMemo(() => cornersLiveModel({
-    minuto, acumH: cH, acumA: cA, acumTotal: cTotal, goalDiff, snaps, prior, daTotal, blkTotal,
-  }), [minuto, cH, cA, cTotal, goalDiff, snaps, prior, daTotal, blkTotal])
+    minuto, acumH: cH, acumA: cA, acumTotal: cTotal, goalDiff, snaps, prior, daTotal, blkTotal, reds,
+  }), [minuto, cH, cA, cTotal, goalDiff, snaps, prior, daTotal, blkTotal, reds])
 
   const conf = useMemo(() => cornersConfidence({
     model, prior, fuente, snapsN: snaps?.length ?? 0,
@@ -57,8 +63,8 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
   }, [model, market])
 
   useEffect(() => {
-    if (model && matchInfo?.id) logCornersSnapshot(matchInfo.id, matchInfo, model)
-  }, [model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
+    if (model && matchInfo?.id) logCornersSnapshot(matchInfo.id, { ...matchInfo, baseline: baseline?.expected, hayRoja: model.hayRoja || undefined }, model)
+  }, [model?.minuto, baseline?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const bt = useMemo(() => showBt ? cornersBacktestSummary() : null, [showBt, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -87,6 +93,21 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
           </div>
         ))}
       </div>
+
+      {/* ── PREMATCH baseline → LIVE ── */}
+      {baseline && (
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] bg-dark-800/50 rounded-lg px-2 py-1.5 border border-dark-600">
+          <span className="text-gray-500 uppercase tracking-wide text-[9px] font-bold">Prematch → Live</span>
+          <span className="text-gray-300">Baseline prepartido: <strong className="text-white">{baseline.expected}</strong></span>
+          <span className="text-gray-300">→ Live ahora: <strong className="text-amber-300">{model.expectedFinal}</strong>
+            {(() => { const d = Math.round((model.expectedFinal - baseline.expected) / baseline.expected * 100); return (
+              <span className={d > 5 ? 'text-orange-300' : d < -5 ? 'text-blue-300' : 'text-gray-500'}> ({d > 0 ? '+' : ''}{d}%)</span>
+            )})()}
+          </span>
+          {model.hayRoja && <span className="text-red-400 font-bold">🟥 roja en cancha — cambio estructural aplicado</span>}
+          <span className="text-gray-600">— el porqué del cambio está en los factores de abajo</span>
+        </div>
+      )}
 
       {/* ── Por equipo + próximo córner ── */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 text-[11px]">
@@ -172,6 +193,11 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
                 {edge.edgeUnder != null && <> · Edge Under: <strong className={edge.edgeUnder > 0 ? 'text-green-400' : 'text-red-400'}>{edge.edgeUnder > 0 ? '+' : ''}{edge.edgeUnder} pp</strong></>}
               </span>
               <span className="text-gray-500">umbral mínimo: {edge.minEdge} pp{edge.razonesUmbral.length ? ` (${edge.razonesUmbral.join(' · ')})` : ''}</span>
+              {baseline && market === 'total' && (() => {
+                const pPre = +(baseline.pOver(edge.line) * 100).toFixed(1)
+                const ePre = +(pPre - edge.impOver).toFixed(2)
+                return <span className="text-gray-500">Prematch: P(Over) {pPre}% · edge {ePre > 0 ? '+' : ''}{ePre} pp <span className="text-gray-600">(vs live {edge.edgeOver > 0 ? '+' : ''}{edge.edgeOver})</span></span>
+              })()}
             </div>
 
             <div className={`rounded-xl px-4 py-3 text-center font-black text-xl ${
@@ -230,6 +256,7 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
           {bt && (
             <>
               <p className="text-gray-400 mb-1">{bt.matches} partido(s) resuelto(s) — error del modelo según el minuto de la predicción:</p>
+              {bt.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.pre.mae} ({bt.pre.n}p) — el live debe mejorar este error conforme avanza el partido</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">
                 {bt.rows.map(r => (
                   <div key={r.bucket} className="bg-dark-700 rounded p-1.5 text-center">

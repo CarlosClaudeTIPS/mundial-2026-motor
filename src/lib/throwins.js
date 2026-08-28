@@ -23,6 +23,7 @@
 // partido). PHI es recalibrable con los datos del live-backtest local.
 
 import { poissonOver } from './engine'
+import { restanteEfectivo, regimeOf } from './match-state'
 
 // ── Constantes del modelo (recalibrables) ────────────────────────────────────
 export const TI_MODEL = {
@@ -137,42 +138,13 @@ function stateFactor(goalDiff, minuto) {
   return Math.min(hi, Math.max(lo, f))
 }
 
-// ─── CAMBIO DE RÉGIMEN: ritmo reciente vs ritmo del partido ──────────────────
-// snaps: [{min, ti}] acumulados. Devuelve {factor, recentRate, matchRate, span}
-function regimeFrom(snaps, acum, minuto) {
-  if (!snaps || snaps.length < 2 || !minuto) return { factor: 1, detected: false }
-  const last = snaps[snaps.length - 1]
-  let past = null
-  for (const s of snaps) {
-    if (s.ti == null) continue
-    if (last.min - s.min >= TI_MODEL.REGIME_MIN_SPAN) past = s
-  }
-  if (!past || last.ti == null) return { factor: 1, detected: false }
-  const span = last.min - past.min
-  if (span < TI_MODEL.REGIME_MIN_SPAN) return { factor: 1, detected: false }
-  const recentRate = (last.ti - past.ti) / span
-  const matchRate = acum / minuto
-  if (matchRate <= 0) return { factor: 1, detected: false }
-  const [lo, hi] = TI_MODEL.REGIME_CLAMP
-  const raw = Math.min(hi, Math.max(lo, recentRate / matchRate))
-  return {
-    factor: Math.pow(raw, TI_MODEL.REGIME_SOFT), // medio peso: evidencia media
-    detected: raw <= 0.90 || raw >= 1.10,
-    dir: raw >= 1.10 ? 'up' : raw <= 0.90 ? 'down' : 'flat',
-    recentRate: +recentRate.toFixed(3),
-    matchRate: +matchRate.toFixed(3),
-    span,
-  }
-}
-
 // ─── MODELO LIVE ─────────────────────────────────────────────────────────────
 // Devuelve proyección + distribución de probabilidad del total final.
+// Régimen y minutos restantes vienen del MATCH STATE ENGINE (match-state.js).
 export function tiLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = null }) {
   if (minuto == null || acum == null || minuto < 1) return null
 
-  // Minutos efectivos restantes (añadido incluido)
-  const addedLeft = minuto <= 45 ? 5 : minuto <= 90 ? Math.max(0, 5 - Math.max(0, minuto - 90)) : 0
-  const restEff = Math.max(0, (minuto > 90 ? 120 - minuto : 90 - minuto) + addedLeft)
+  const restEff = restanteEfectivo(minuto)
 
   const rateObs = acum / minuto
   const ratePrior = prior?.perMin ?? null
@@ -186,7 +158,9 @@ export function tiLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = nu
     : rateObs
 
   const state = stateFactor(goalDiff, minuto)
-  const regime = regimeFrom(snaps, acum, minuto)
+  const regime = regimeOf(snaps, 'ti', acum, minuto, {
+    span: TI_MODEL.REGIME_MIN_SPAN, clamp: TI_MODEL.REGIME_CLAMP, soft: TI_MODEL.REGIME_SOFT,
+  })
 
   const muRest = rateBlend * restEff * state * regime.factor
   const expectedFinal = acum + muRest
@@ -343,7 +317,9 @@ export function makeLiveLog(storageKey) {
     logSnapshot(matchId, info, model) {
       if (!model || model.minuto < 5) return
       const log = load()
-      const m = log[matchId] ?? { ...info, ts: Date.now(), snaps: [], final: null }
+      const m = log[matchId] ?? { ts: Date.now(), snaps: [], final: null }
+      // Actualizar metadata en cada llamada (el baseline/rojas pueden llegar tarde)
+      for (const [k, v] of Object.entries(info ?? {})) if (v != null) m[k] = v
       const last = m.snaps[m.snaps.length - 1]
       if (last && model.minuto <= last.min) return // solo si avanzó el minuto
       const lineCentral = Math.floor(model.expectedFinal) + 0.5
@@ -369,11 +345,21 @@ export function makeLiveLog(storageKey) {
       return Object.entries(log).filter(([, m]) => m.final == null && m.snaps.length)
         .map(([id, m]) => ({ id, ...m }))
     },
-    // Resumen: error absoluto medio, acierto y Brier por tramo de minuto
+    // Resumen: error absoluto medio, acierto y Brier por tramo de minuto.
+    // Incluye la comparación PREMATCH vs LIVE (§14): si el live no mejora el
+    // error del baseline conforme avanza el partido, algo anda mal.
     summary() {
       const log = load()
       const resolved = Object.values(log).filter(m => m.final != null && m.snaps.length)
       if (!resolved.length) return null
+
+      // Error del baseline prematch (solo partidos que lo tienen guardado)
+      const conBase = resolved.filter(m => m.baseline != null)
+      const pre = conBase.length ? {
+        n: conBase.length,
+        mae: +(conBase.reduce((s, m) => s + Math.abs(m.baseline - m.final), 0) / conBase.length).toFixed(1),
+      } : null
+
       const BUCKETS = [[5, 20], [20, 35], [35, 50], [50, 65], [65, 80], [80, 95]]
       const rows = BUCKETS.map(([lo, hi]) => {
         const pts = []
@@ -391,7 +377,7 @@ export function makeLiveLog(storageKey) {
           brier: +(pts.reduce((s, p) => s + p.brier, 0) / pts.length).toFixed(3),
         }
       }).filter(Boolean)
-      return { matches: resolved.length, rows }
+      return { matches: resolved.length, rows, pre, conRoja: resolved.filter(m => m.hayRoja).length }
     },
   }
 }

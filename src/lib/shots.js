@@ -25,6 +25,7 @@
 
 import { getSituationS } from './engine'
 import { nbOver, makeLiveLog } from './throwins'
+import { restanteEfectivo, regimeOf, pressureFactor, redCardFactor } from './match-state'
 
 // ── Constantes (recalibrables con el live-backtest) ──────────────────────────
 export const SHOTS_MODEL = {
@@ -129,58 +130,31 @@ export function shotsPrior(preA, preB, { homeA = true } = {}) {
   }
 }
 
-// ─── Régimen por lado ────────────────────────────────────────────────────────
-function regimeSide(snaps, key, acum, minuto) {
-  if (!snaps || snaps.length < 2 || !minuto || acum == null) return { factor: 1, detected: false }
-  const last = snaps[snaps.length - 1]
-  let past = null
-  for (const s of snaps) {
-    if (s[key] == null) continue
-    if (last.min - s.min >= SHOTS_MODEL.REGIME_MIN_SPAN) past = s
-  }
-  if (!past || last[key] == null) return { factor: 1, detected: false }
-  const span = last.min - past.min
-  if (span < SHOTS_MODEL.REGIME_MIN_SPAN) return { factor: 1, detected: false }
-  const recentRate = (last[key] - past[key]) / span
-  const matchRate = acum / minuto
-  if (matchRate <= 0) return { factor: 1, detected: false }
-  const [lo, hi] = SHOTS_MODEL.REGIME_CLAMP
-  const raw = Math.min(hi, Math.max(lo, recentRate / matchRate))
-  return {
-    factor: Math.pow(raw, SHOTS_MODEL.REGIME_SOFT),
-    detected: raw <= 0.90 || raw >= 1.10,
-    dir: raw >= 1.10 ? 'up' : raw <= 0.90 ? 'down' : 'flat',
-    recentRate: +recentRate.toFixed(3),
-    matchRate: +matchRate.toFixed(3),
-    span,
-  }
-}
-
 // ─── MODELO LIVE ─────────────────────────────────────────────────────────────
 // Por lado: total como conteo principal; SOT como conteo "adelgazado" por la
 // proporción en vivo mezclada con la del prior (coherencia garantizada).
-export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA = null, blkH = null, blkA = null, goalDiff = 0, snaps = [], prior = null, daTotal = null }) {
+// Régimen/presión/restante del MATCH STATE ENGINE. reds {h,a}: roja = cambio
+// estructural (el de 10 genera ×0.80, el rival ×1.08).
+export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA = null, blkH = null, blkA = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, reds = null }) {
   if (minuto == null || minuto < 1 || sH == null || sA == null) return null
 
-  const addedLeft = minuto <= 45 ? 5 : minuto <= 90 ? Math.max(0, 5 - Math.max(0, minuto - 90)) : 0
-  const restEff = Math.max(0, (minuto > 90 ? 120 - minuto : 90 - minuto) + addedLeft)
+  const restEff = restanteEfectivo(minuto)
 
-  let daFactor = 1; let daObs = null
-  if (daTotal != null && minuto >= 12) {
-    daObs = daTotal / minuto
-    const [lo, hi] = SHOTS_MODEL.DA_CLAMP
-    daFactor = Math.pow(Math.min(hi, Math.max(lo, daObs / SHOTS_MODEL.DA_BASE)), 0.5)
-  }
+  const press = pressureFactor(daTotal, minuto, { base: SHOTS_MODEL.DA_BASE, clamp: SHOTS_MODEL.DA_CLAMP })
+  const daFactor = press.factor
+  const daObs = press.obs
 
-  const mkSide = (acum, sotAcum, blkAcum, pr, diffSide, key) => {
+  const mkSide = (acum, sotAcum, blkAcum, pr, diffSide, key, redF) => {
     const rateObs = acum / minuto
     const ratePrior = pr?.perMin ?? null
     const K = ratePrior != null ? SHOTS_MODEL.K_CRED : SHOTS_MODEL.K_CRED / 2
     const wObs = minuto / (minuto + K)
     const rateBlend = ratePrior != null ? wObs * rateObs + (1 - wObs) * ratePrior : rateObs
     const state = Math.pow(getSituationS(diffSide), SHOTS_MODEL.STATE_SOFT)
-    const regime = regimeSide(snaps, key, acum, minuto)
-    const muRest = rateBlend * restEff * state * regime.factor * daFactor
+    const regime = regimeOf(snaps, key, acum, minuto, {
+      span: SHOTS_MODEL.REGIME_MIN_SPAN, clamp: SHOTS_MODEL.REGIME_CLAMP, soft: SHOTS_MODEL.REGIME_SOFT,
+    })
+    const muRest = rateBlend * restEff * state * regime.factor * daFactor * redF
     const expectedFinal = acum + muRest
 
     // Proporción a puerta EN VIVO mezclada con el prior (mismo peso bayesiano)
@@ -200,7 +174,7 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
     const offFinal = Math.max(0, expectedFinal - sotFinal - blkFinal)
 
     return {
-      acum, sotAcum, blkAcum,
+      acum, sotAcum, blkAcum, redF,
       rateObs: +rateObs.toFixed(3),
       ratePrior, wObs: +wObs.toFixed(2),
       state: +state.toFixed(3),
@@ -220,8 +194,10 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
     }
   }
 
-  const home = mkSide(sH, sotH, blkH, prior?.A ?? null, goalDiff, 'sh')
-  const away = mkSide(sA, sotA, blkA, prior?.B ?? null, -goalDiff, 'sa')
+  const redFH = redCardFactor(reds?.h ?? 0, reds?.a ?? 0)
+  const redFA = redCardFactor(reds?.a ?? 0, reds?.h ?? 0)
+  const home = mkSide(sH, sotH, blkH, prior?.A ?? null, goalDiff, 'sh', redFH)
+  const away = mkSide(sA, sotA, blkA, prior?.B ?? null, -goalDiff, 'sa', redFA)
 
   const acum = sH + sA
   const sotAcum = (sotH != null || sotA != null) ? (sotH ?? 0) + (sotA ?? 0) : null
@@ -240,6 +216,8 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
   return {
     minuto, acum, sotAcum, restEff,
     rateObs: +(acum / minuto).toFixed(3),
+    hayRoja: (reds?.h ?? 0) + (reds?.a ?? 0) > 0,
+    reds,
     home, away,
     daFactor: +daFactor.toFixed(3), daObs: daObs != null ? +daObs.toFixed(2) : null,
     muRest: +muRest.toFixed(2),
@@ -357,6 +335,10 @@ export function shotsFactores({ model, prior, goalDiff, homeName = 'Local', away
       if (side.regime.dir === 'up') up.push(`${name}: ritmo de tiros subiendo (últimos ${side.regime.span}')`)
       else if (side.regime.dir === 'down') down.push(`${name}: ritmo de tiros bajando (últimos ${side.regime.span}')`)
     }
+  }
+  if (model.hayRoja) {
+    if ((model.reds?.h ?? 0) > 0) { down.push(`⚠️ ROJA a ${homeName} — con 10 genera ×${model.home.redF}`); up.push(`${awayName} domina contra 10 → generación ×${model.away.redF}`) }
+    if ((model.reds?.a ?? 0) > 0) { down.push(`⚠️ ROJA a ${awayName} — con 10 genera ×${model.away.redF}`); up.push(`${homeName} domina contra 10 → generación ×${model.home.redF}`) }
   }
   if (model.daFactor > 1.03) up.push(`Presión sostenida alta: ${model.daObs} ataques peligrosos/min`)
   else if (model.daFactor < 0.97) down.push(`Partido frío: ${model.daObs} ataques peligrosos/min`)

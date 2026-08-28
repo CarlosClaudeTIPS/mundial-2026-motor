@@ -29,6 +29,7 @@
 
 import { poissonOver, getSituationS } from './engine'
 import { nbOver, makeLiveLog } from './throwins'
+import { restanteEfectivo, regimeOf, pressureFactor, redCardFactor } from './match-state'
 
 // ── Constantes (recalibrables con el live-backtest local) ────────────────────
 export const CORNER_MODEL = {
@@ -101,40 +102,12 @@ export function cornersPrior(preA, preB, league) {
   }
 }
 
-// ─── Régimen por lado: ritmo reciente de córners vs ritmo del partido ────────
-function regimeSide(snaps, key, acum, minuto) {
-  if (!snaps || snaps.length < 2 || !minuto || acum == null) return { factor: 1, detected: false }
-  const last = snaps[snaps.length - 1]
-  let past = null
-  for (const s of snaps) {
-    if (s[key] == null) continue
-    if (last.min - s.min >= CORNER_MODEL.REGIME_MIN_SPAN) past = s
-  }
-  if (!past || last[key] == null) return { factor: 1, detected: false }
-  const span = last.min - past.min
-  if (span < CORNER_MODEL.REGIME_MIN_SPAN) return { factor: 1, detected: false }
-  const recentRate = (last[key] - past[key]) / span
-  const matchRate = acum / minuto
-  if (matchRate <= 0) {
-    // 0 córners en todo el partido pero ¿reciente sube? sin base — neutro
-    return { factor: 1, detected: false }
-  }
-  const [lo, hi] = CORNER_MODEL.REGIME_CLAMP
-  const raw = Math.min(hi, Math.max(lo, recentRate / matchRate))
-  return {
-    factor: Math.pow(raw, CORNER_MODEL.REGIME_SOFT),
-    detected: raw <= 0.90 || raw >= 1.10,
-    dir: raw >= 1.10 ? 'up' : raw <= 0.90 ? 'down' : 'flat',
-    recentRate: +recentRate.toFixed(3),
-    matchRate: +matchRate.toFixed(3),
-    span,
-  }
-}
-
 // ─── MODELO LIVE (por equipo → total) ────────────────────────────────────────
 // acumH/acumA: córners por lado (si solo hay total, se reparte por el prior).
-// daTotal: ataques peligrosos acumulados. blkTotal: tiros bloqueados.
-export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, blkTotal = null }) {
+// daTotal: ataques peligrosos. blkTotal: tiros bloqueados. reds {h,a}: rojas →
+// cambio ESTRUCTURAL: el lado con 10 genera ×0.80, su rival ×1.08 (match-state).
+// Régimen/presión/restante vienen del MATCH STATE ENGINE.
+export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, blkTotal = null, reds = null }) {
   if (minuto == null || minuto < 1) return null
   // Resolver acumulados: por lado o repartiendo el total según el prior
   let h = acumH; let a = acumA
@@ -145,16 +118,12 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
   }
   const acum = h + a
 
-  const addedLeft = minuto <= 45 ? 5 : minuto <= 90 ? Math.max(0, 5 - Math.max(0, minuto - 90)) : 0
-  const restEff = Math.max(0, (minuto > 90 ? 120 - minuto : 90 - minuto) + addedLeft)
+  const restEff = restanteEfectivo(minuto)
 
-  // Presión sostenida: ataques peligrosos/min vs baseline (compartida)
-  let daFactor = 1; let daObs = null
-  if (daTotal != null && minuto >= 12) {
-    daObs = daTotal / minuto
-    const [lo, hi] = CORNER_MODEL.DA_CLAMP
-    daFactor = Math.pow(Math.min(hi, Math.max(lo, daObs / CORNER_MODEL.DA_BASE)), 0.5)
-  }
+  // Presión sostenida: ataques peligrosos/min vs baseline (Match State Engine)
+  const press = pressureFactor(daTotal, minuto, { base: CORNER_MODEL.DA_BASE, clamp: CORNER_MODEL.DA_CLAMP })
+  const daFactor = press.factor
+  const daObs = press.obs
   // Tiros bloqueados: generador mecánico (centro/tiro bloqueado → córner).
   // Baseline ~0.09/min (≈8.5 bloqueados/95min en un partido típico).
   let blkFactor = 1; let blkObs = null
@@ -164,7 +133,7 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
     blkFactor = Math.pow(Math.min(hi, Math.max(lo, blkObs / 0.09)), 0.5)
   }
 
-  const mkSide = (acumSide, ratePriorSide, diffSide, key) => {
+  const mkSide = (acumSide, ratePriorSide, diffSide, key, redF) => {
     const rateObs = acumSide / minuto
     const K = ratePriorSide != null ? CORNER_MODEL.K_CRED : CORNER_MODEL.K_CRED / 2
     const wObs = minuto / (minuto + K)
@@ -172,9 +141,12 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
     // Situation S del motor (evidencia fuerte en córners), suavizada al 70%
     const S = getSituationS(diffSide)
     const state = Math.pow(S, CORNER_MODEL.STATE_SOFT)
-    const regime = regimeSide(snaps, key, acumSide, minuto)
-    const muRest = rateBlend * restEff * state * regime.factor * daFactor * blkFactor
+    const regime = regimeOf(snaps, key, acumSide, minuto, {
+      span: CORNER_MODEL.REGIME_MIN_SPAN, clamp: CORNER_MODEL.REGIME_CLAMP, soft: CORNER_MODEL.REGIME_SOFT,
+    })
+    const muRest = rateBlend * restEff * state * regime.factor * daFactor * blkFactor * redF
     return {
+      redF,
       acum: acumSide,
       rateObs: +rateObs.toFixed(3),
       ratePrior: ratePriorSide,
@@ -187,9 +159,12 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
     }
   }
 
-  // goalDiff visto desde el local: local pierde → su S sube; visita al revés
-  const home = mkSide(h, prior?.perMinA ?? null, goalDiff, 'ch')
-  const away = mkSide(a, prior?.perMinB ?? null, -goalDiff, 'ca')
+  // goalDiff visto desde el local: local pierde → su S sube; visita al revés.
+  // Rojas: factor estructural de generación por lado.
+  const redH = redCardFactor(reds?.h ?? 0, reds?.a ?? 0)
+  const redA = redCardFactor(reds?.a ?? 0, reds?.h ?? 0)
+  const home = mkSide(h, prior?.perMinA ?? null, goalDiff, 'ch', redH)
+  const away = mkSide(a, prior?.perMinB ?? null, -goalDiff, 'ca', redA)
 
   const muRest = home.muRest + away.muRest
   const expectedFinal = acum + muRest
@@ -213,6 +188,8 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
   return {
     minuto, acum, acumH: h, acumA: a, restEff,
     rateObs: +(acum / minuto).toFixed(3),
+    hayRoja: (reds?.h ?? 0) + (reds?.a ?? 0) > 0,
+    reds,
     home, away,
     daFactor: +daFactor.toFixed(3), daObs: daObs != null ? +daObs.toFixed(2) : null,
     blkFactor: +blkFactor.toFixed(3), blkObs: blkObs != null ? +blkObs.toFixed(2) : null,
@@ -316,6 +293,10 @@ export function cornersFactores({ model, prior, goalDiff, homeName = 'Local', aw
       if (side.regime.dir === 'up') up.push(`${name}: ritmo reciente de córners subiendo (últimos ${side.regime.span}')`)
       else if (side.regime.dir === 'down') down.push(`${name}: ritmo reciente de córners bajando (últimos ${side.regime.span}')`)
     }
+  }
+  if (model.hayRoja) {
+    if ((model.reds?.h ?? 0) > 0) { down.push(`⚠️ ROJA a ${homeName} — con 10 genera ×${model.home.redF}`); up.push(`${awayName} domina contra 10 → generación ×${model.away.redF}`) }
+    if ((model.reds?.a ?? 0) > 0) { down.push(`⚠️ ROJA a ${awayName} — con 10 genera ×${model.away.redF}`); up.push(`${homeName} domina contra 10 → generación ×${model.home.redF}`) }
   }
   if (model.daFactor > 1.03) up.push(`Presión sostenida alta: ${model.daObs} ataques peligrosos/min (baseline ${CORNER_MODEL.DA_BASE})`)
   else if (model.daFactor < 0.97) down.push(`Partido frío: ${model.daObs} ataques peligrosos/min (baseline ${CORNER_MODEL.DA_BASE})`)
