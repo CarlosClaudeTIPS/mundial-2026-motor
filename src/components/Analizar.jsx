@@ -590,17 +590,29 @@ function InformeIA({ teamA, teamB, league, calc }) {
 
 function ComboCard({ combo }) {
   return (
-    <div className="rounded-lg border border-purple-700/40 bg-purple-900/20 p-3 text-xs">
-      <p className="text-purple-300 font-bold text-sm mb-2">🎯 Combinada sugerida</p>
-      <div className="flex items-center gap-2 flex-wrap mb-2">
-        <span className="text-white">{combo.p1.label} {combo.p1.dir} {combo.p1.line}</span>
+    <div className="rounded-lg border border-purple-700/40 bg-purple-900/20 p-3 text-xs space-y-2">
+      <p className="text-purple-300 font-bold text-sm">🎯 Combinada sugerida — meta: cuota ≥ {combo.targetOdds}</p>
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className="text-white font-semibold">{combo.p1.label} {combo.p1.dir} {combo.p1.line}</span>
         <span className="text-gray-500">+</span>
-        <span className="text-white">{combo.p2.label} {combo.p2.dir} {combo.p2.line}</span>
+        <span className="text-white font-semibold">{combo.p2.label} {combo.p2.dir} {combo.p2.line}</span>
       </div>
-      <div className="flex gap-4 text-gray-300">
-        <span>P_comb: <strong className="text-purple-300">{combo.pCombo}%</strong></span>
+      <div className="flex gap-4 text-gray-300 flex-wrap">
+        <span>P conjunta: <strong className="text-purple-300">{combo.pCombo}%</strong></span>
+        <span>Cuota justa: <strong className="text-white">{combo.cuotaJusta}</strong></span>
+        <span>Hay valor desde: <strong className="text-white">{combo.cuotaMinValor}</strong></span>
         <span className="text-gray-500">Correlación: {combo.correlation}</span>
       </div>
+      {combo.valeAlTarget ? (
+        <p className="text-green-300 font-bold bg-green-950/50 border border-green-800/50 rounded-lg px-3 py-1.5">
+          ✅ SIRVE para tu meta: con P {combo.pCombo}%, cualquier cuota combinada ≥ {combo.cuotaMinValor} tiene valor — y {combo.targetOdds} lo supera de sobra
+        </p>
+      ) : (
+        <p className="text-yellow-400 bg-yellow-950/40 border border-yellow-900/50 rounded-lg px-3 py-1.5">
+          ⚠️ Para que una combinada a cuota {combo.targetOdds} tenga valor necesitas P conjunta ≥ {combo.pNecesaria}% — esta tiene {combo.pCombo}%. Solo vale si la casa te paga ≥ {combo.cuotaMinValor}; si te ofrecen menos, NO BET
+        </p>
+      )}
+      <p className="text-[10px] text-gray-600">La P conjunta es el producto de las dos patas — con correlación positiva la P real es algo MAYOR (cálculo conservador a tu favor)</p>
     </div>
   )
 }

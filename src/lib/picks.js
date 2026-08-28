@@ -213,15 +213,32 @@ export function selectTopPicks(candidates, max = 3) {
   return picks
 }
 
-// ─── Combinada ───────────────────────────────────────────────────────────────
-export function suggestCombo(picks) {
+// ─── Combinada — pensada para la meta del usuario: cuota total ≥ 1.50 ────────
+// Elige el PAR con mayor probabilidad conjunta (no simplemente los 2 primeros)
+// entre los picks con correlación aceptable, y evalúa si sirve para el target.
+export function suggestCombo(picks, targetOdds = 1.50) {
   if (picks.length < 2) return null
-  const [p1, p2] = picks
-  const c = corr(p1.category, p2.category)
-  if (c > 0.70) return null
+  let best = null
+  for (let i = 0; i < picks.length; i++) {
+    for (let j = i + 1; j < picks.length; j++) {
+      const c = corr(picks[i].category, picks[j].category)
+      if (c > 0.70) continue
+      const p = (picks[i].pMod / 100) * (picks[j].pMod / 100)
+      if (!best || p > best.p) best = { p1: picks[i], p2: picks[j], p, correlation: c }
+    }
+  }
+  if (!best) return null
 
-  const pCombo = +((p1.pMod / 100) * (p2.pMod / 100) * 100).toFixed(1)
-  return { p1, p2, pCombo, correlation: +c.toFixed(2) }
+  const pCombo = +(best.p * 100).toFixed(1)
+  const cuotaJusta = +(1 / best.p).toFixed(2)          // cuota sin margen
+  const cuotaMinValor = +(1.025 / best.p).toFixed(2)   // desde aquí hay valor
+  const pNecesaria = +((1.025 / targetOdds) * 100).toFixed(1) // P mínima para que el target tenga valor
+  return {
+    p1: best.p1, p2: best.p2, pCombo,
+    correlation: +best.correlation.toFixed(2),
+    cuotaJusta, cuotaMinValor, targetOdds, pNecesaria,
+    valeAlTarget: pCombo >= pNecesaria,
+  }
 }
 
 // ─── Generar explicación textual ─────────────────────────────────────────────
@@ -270,10 +287,17 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB,
     : null
 
   const factors = []
-  // supports: el dato apoya la dirección del pick → 'up'; si la contradice → 'down'
+  // supports: el dato apoya la dirección del pick → 'up'; si la contradice → 'down'.
+  // Si el dato está PRÁCTICAMENTE EN la línea (±0.3), no es argumento ni a favor
+  // ni en contra: decirlo honesto — "promedia 3.5 y la línea es 3.5" NO apoya un OVER.
   const add = (value, textUp, textDown) => {
     if (value == null || isNaN(value)) return
-    const apoya = (value > pick.line) === over || Math.abs(value - pick.line) < 0.01
+    if (Math.abs(value - pick.line) < 0.3) {
+      const dato = textUp.split(' — ')[0]
+      factors.push({ icon: 'ℹ️', text: `${dato} — prácticamente EN la línea ${pick.line}: este dato NO decide; el ${pick.dir} se apoya en el rival y el contexto`, dir: 'neutral' })
+      return
+    }
+    const apoya = (value > pick.line) === over
     factors.push(apoya
       ? { icon: '✅', text: textUp, dir: 'up' }
       : { icon: '⚠️', text: textDown, dir: 'down' })
@@ -411,7 +435,15 @@ export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB,
 
   // Los factores en contra van de primeros en los riesgos — el usuario debe verlos
   const risks = pushDown.map(f => f.text.replace(/^OJO: /, ''))
-  if (teamA.est || teamB.est) risks.push('Muestra de partidos pobre en uno o ambos equipos (−10 Confidence)')
+  // Muestra pobre: decir CUÁL equipo y POR QUÉ (no un aviso genérico)
+  for (const t of [teamA, teamB]) {
+    if (t.est) {
+      const razon = (t.statsMatches ?? 0) < 7
+        ? `la API solo trae stats completas en ${t.statsMatches ?? '?'} de sus últimos ${t.matches ?? 10} partidos (los viejos o de copa vienen sin detalle)`
+        : 'la mayoría de su muestra viene de otra división (recién ascendido — stats descontadas por tier)'
+      risks.push(`Muestra pobre de ${t.name}: ${razon} — promedios menos fiables (−10 Confidence)`)
+    }
+  }
   if (ctx.jornada === 'inicio') risks.push('Inicio de temporada: equipos irregulares, más varianza')
   if (ctx.jornada === 'ko') risks.push('Eliminatoria KO: partidos más cerrados de lo que dicen las stats')
   if (pick.category === 'gk' || pick.category === 'ti') risks.push('GK/TI estimados (API no da el dato real) — verificar en Sofascore')
