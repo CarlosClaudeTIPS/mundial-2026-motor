@@ -64,7 +64,7 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
   }, [model, market])
 
   useEffect(() => {
-    if (model && matchInfo?.id) logCornersSnapshot(matchInfo.id, { ...matchInfo, baseline: baseline?.expected, hayRoja: model.hayRoja || undefined, goalDiff: model.hayRoja ? goalDiff : undefined }, model)
+    if (model && matchInfo?.id) logCornersSnapshot(matchInfo.id, { ...matchInfo, baseline: baseline?.expected, hayRoja: model.hayRoja || undefined, goalDiff: model.hayRoja ? goalDiff : undefined, predH: model.home.expectedFinal, predA: model.away.expectedFinal }, model)
   }, [model?.minuto, baseline?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const bt = useMemo(() => showBt ? cornersBacktestSummary() : null, [showBt, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -288,6 +288,7 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
                     <p className="text-gray-500">{r.bucket}</p>
                     <p className={`font-bold ${r.mae <= 1.5 ? 'text-green-400' : r.mae <= 3 ? 'text-yellow-400' : 'text-red-400'}`}>±{r.mae}</p>
                     {r.maeNaive != null && <p className={r.mae <= r.maeNaive ? 'text-green-600' : 'text-red-500'}>naive ±{r.maeNaive}</p>}
+                    {r.crps != null && <p className="text-gray-600">CRPS {r.crps}{r.intScore != null ? ` · IS ${r.intScore}` : ''}</p>}
                     <p className="text-gray-600">acierto {r.hit}% · n={r.n}</p>
                   </div>
                 ))}

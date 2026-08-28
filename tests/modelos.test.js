@@ -86,13 +86,27 @@ describe('Probabilidad conjunta', () => {
     expect(Math.abs(mc.margA - marginalTempo(A))).toBeLessThan(2)
     expect(Math.abs(mc.margB - marginalTempo(B))).toBeLessThan(2)
   })
-  it('EV probabilístico: suggestCombo expone P(EV>0), P10, P90 y el peor caso solo como diagnóstico', () => {
+  it('v5: UNA probabilidad oficial — las patas del combo usan la MISMA NB plana del panel individual', () => {
     const picks = [{ ...A, pMod: 75, marketKey: 'shots_totales' }, { ...B, pMod: 80, marketKey: 'corners_totales' }]
     const c = suggestCombo(picks, 1.50)
-    expect(c.pEVpos).toBeGreaterThanOrEqual(0)
-    expect(c.pEVpos).toBeLessThanOrEqual(100)
-    expect(c.evP10).toBeLessThanOrEqual(c.evP90)
-    expect(c.evPeor).toBeLessThanOrEqual(c.evP10 + 0.01)
+    const pAOficial = +(nbOver(A.expected, A.line, PHI_CAT.shots) * 100).toFixed(1)
+    expect(Math.abs(c.pA - pAOficial)).toBeLessThan(0.1)
+  })
+  it('v5: el gate es CONSERVADOR — nunca mayor que el producto oficial ni que la conjunta-tempo', () => {
+    const picks = [{ ...A, pMod: 75, marketKey: 'shots_totales' }, { ...B, pMod: 80, marketKey: 'corners_totales' }]
+    const c = suggestCombo(picks, 1.50)
+    expect(c.pGate).toBeLessThanOrEqual(c.pIndep + 0.05)
+    expect(c.pGate).toBeLessThanOrEqual(c.pJointTempo + 0.05)
+    expect(c.tempoStatus).toBe('EXPERIMENTAL')
+  })
+  it('v5: EV Uncertainty Engine por escenarios (81), marcado PROVISIONAL, sin falsa precisión de 3 estados', () => {
+    const picks = [{ ...A, pMod: 75, marketKey: 'shots_totales' }, { ...B, pMod: 80, marketKey: 'corners_totales' }]
+    const c = suggestCombo(picks, 1.50)
+    expect(c.unc.n).toBe(81)
+    expect(c.unc.status).toBe('PROVISIONAL')
+    expect(c.unc.fraccionPos).toBeGreaterThanOrEqual(0)
+    expect(c.unc.fraccionPos).toBeLessThanOrEqual(1)
+    expect(c.unc.evP10).toBeLessThanOrEqual(c.unc.evP90)
   })
   it('la implícita del target 1.50 es 1/1.50 (no 1.025/1.50)', () => {
     const picks = [{ ...A, pMod: 75, marketKey: 'shots_totales' }, { ...B, pMod: 80, marketKey: 'corners_totales' }]

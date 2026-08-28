@@ -1,4 +1,8 @@
-# SISTEMA CUANTITATIVO DE APUESTAS DE FÚTBOL — Documento maestro v4
+# SISTEMA CUANTITATIVO DE APUESTAS DE FÚTBOL — Documento maestro v5 (ARQUITECTURA CERRADA)
+
+> **v5 = ronda de cierre.** Cambios implementados de tu cuarta auditoría: (1) UNA probabilidad oficial — TEMPO_STATUS=EXPERIMENTAL, la P oficial de todo pick es la NB plana del panel; la conjunta-tempo solo puede RECORTAR el gate de combinadas (pGate = min(producto oficial, conjunta-tempo) — el supuesto no validado nunca infla, test lo garantiza). (2) EV Uncertainty Engine: 81 escenarios explícitos (pesos × amplitud tempo × PHI± × μ±), salida "X de 81 con EV>0" + P10/P90, status PROVISIONAL, criterio renombrado PROVISIONAL_RISK_GATE (adiós falsa precisión de 3 estados). (3) UI declara paramétrica ≠ estructural. (4) CRPS e interval score POR TRAMO en los 5 paneles. (5) Residuales completos: predH/predA por snapshot + finalH/finalA por resolución. (6) Sin gates por régimen (n_roja solo diagnóstico). (7) Roadmap CONDICIONAL (abajo). (8) Tests 25→27. **Compromiso §34: no más capas hasta que los datos indiquen qué modificar.**
+
+## (v4, histórico — lo siguiente describe la base sobre la que se aplicó v5)
 
 > Para revisión externa. Rondas previas: v1→refactor metodológico (PAPER, Match State, baselines), v2→v3 (MC, tests, métricas, roja por mercado), v3→v4 (esta). Describe el sistema DESPUÉS de implementar tu auditoría v4.
 
@@ -51,9 +55,13 @@ Por mercado: MAE modelo vs **naive lineal** vs baseline prematch por tramo · ca
 
 K 26-38 · PHI 1.20-1.45 (= PHI_CAT en combinadas) · hazard tarjetas · Situation S ^0.5-0.8 · clamps · roja 0.80/1.08/1.12/0.92 + atenuación · árbitro ÷4.2 · umbral 4pp + castigos · calidad A/B/C · tempo ±12% 25/50/25 y TEMPO_SENS binaria · EV floor +2% / P(EV>0) ≥70% · mezclas 60/40, 50/50 · shares 0.34/0.17 · gating <10/<50.
 
-## 8. Plan por hitos
+## 8. Roadmap CONDICIONAL (v5 §29: n es necesario, NUNCA suficiente)
 
-50 → diagnóstico FASE 1 (¿NB > naive por partido? sesgo, cobertura, sharpness, CRPS) · 100 → PHI + candidatos a DISABLED (simplificar antes de eliminar) · 250 → K, estado, magnitud/sensibilidad del tempo · 500 → hazard córners/tiros SOLO SI a 250 el baseline no basta; walk-forward · 1000 → dependencia residual, market-aware, umbrales por mercado.
+- n≈50 **+ nada más** → solo DIAGNÓSTICO FASE 1: diferencia de loss POR PARTIDO vs naive (media/mediana/bootstrap/proporción), sesgo, cobertura vs ancho, sharpness, CRPS por tramo. Sin promociones.
+- n≈100 **+ diagnóstico estable** → evaluar PHI; mercados que pierdan contra naive de forma consistente y estable → simplificar, y si persiste → DISABLED.
+- n≈250 **+ evidencia de efecto multi-mercado en los residuos** → magnitud/sensibilidad del tempo, K, factores de estado.
+- **hazard córners/tiros SOLO SI**: muestra suficiente + evidencia de estructura temporal en los datos + baseline estable + mejora experimental fuera de muestra. No por alcanzar un n.
+- **cópula/bivariada SOLO SI**: correlación residual clara tras controlar tempo. **market-aware SOLO SI**: hay odds data suficiente (key pendiente). **Kelly SOLO SI**: calibración demostrada.
 
 ## 9. Preguntas para esta ronda
 

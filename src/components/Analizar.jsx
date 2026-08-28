@@ -598,22 +598,21 @@ function ComboCard({ combo }) {
         <span className="text-white font-semibold">{combo.p2.label} {combo.p2.dir} {combo.p2.line}</span>
       </div>
       <div className="flex gap-4 text-gray-300 flex-wrap">
-        <span>Independencia (benchmark): <strong className="text-gray-400">{combo.pIndep}%</strong></span>
-        <span>P conjunta (con dependencia): <strong className="text-purple-300">{combo.pJoint}%</strong></span>
-        <span>Ajuste por dependencia: <strong className={combo.ajusteDep > 0 ? 'text-green-400' : 'text-blue-400'}>{combo.ajusteDep > 0 ? '+' : ''}{combo.ajusteDep} pp</strong></span>
+        <span>P oficial: <strong className="text-white">{combo.pA}%</strong> × <strong className="text-white">{combo.pB}%</strong> = <strong className="text-purple-300">{combo.pIndep}%</strong></span>
+        <span className="text-gray-500">Conjunta-tempo ({combo.tempoStatus}): {combo.pJointTempo}% ({combo.ajusteDep > 0 ? '+' : ''}{combo.ajusteDep} pp)</span>
+        <span>Gate conservador: <strong className="text-purple-300">{combo.pGate}%</strong></span>
         <span>Cuota justa: <strong className="text-white">{combo.cuotaJusta}</strong></span>
-        <span className="text-gray-500">Correlación: {combo.correlation}</span>
       </div>
       {combo.valeAlTarget ? (
         <p className="text-green-300 font-bold bg-green-950/50 border border-green-800/50 rounded-lg px-3 py-1.5">
-          📝 PAPER BET a cuota {combo.targetOdds}: EV esperado {combo.evAlTarget > 0 ? '+' : ''}{combo.evAlTarget}% · P(EV&gt;0) {combo.pEVpos}% · rango P10-P90 [{combo.evP10}%, {combo.evP90}%] — registrar y seguir; la ventaja se confirma con la calibración
+          📝 PAPER BET a cuota {combo.targetOdds}: EV {combo.evAlTarget > 0 ? '+' : ''}{combo.evAlTarget}% · {combo.unc.nPos} de {combo.unc.n} escenarios con EV&gt;0 · rango P10-P90 [{combo.unc.evP10}%, {combo.unc.evP90}%] — registrar y seguir
         </p>
       ) : (
         <p className="text-yellow-400 bg-yellow-950/40 border border-yellow-900/50 rounded-lg px-3 py-1.5">
-          ⚠️ A cuota {combo.targetOdds}: EV esperado {combo.evAlTarget}% · P(EV&gt;0) {combo.pEVpos}% — {combo.evAlTarget > 2 ? 'demasiada probabilidad de EV negativo' : `insuficiente (necesitarías cuota ≥ ${combo.cuotaJusta})`}. NO BET
+          ⚠️ A cuota {combo.targetOdds}: EV {combo.evAlTarget}% · solo {combo.unc.nPos} de {combo.unc.n} escenarios con EV&gt;0 — {combo.evAlTarget > 2 ? 'demasiado sensible a los parámetros' : `insuficiente (necesitarías cuota ≥ ${combo.cuotaJusta})`}. NO BET
         </p>
       )}
-      <p className="text-[10px] text-gray-600">P conjunta ≠ producto: los dos picks comparten el estado del partido (tempo latente de 3 estados, heurístico sin calibrar). El producto queda solo como benchmark de independencia.</p>
+      <p className="text-[10px] text-gray-600">Las P oficiales son las MISMAS NB de los paneles individuales. La conjunta-tempo es EXPERIMENTAL y solo puede recortar el gate, nunca inflarlo. Los escenarios miden incertidumbre PARAMÉTRICA (PROVISIONAL) — la incertidumbre estructural (¿es NB la distribución correcta? ¿existe el tempo?) NO está incluida.</p>
     </div>
   )
 }

@@ -271,6 +271,7 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
                     <p className="text-gray-500">{r.bucket}</p>
                     <p className={`font-bold ${r.mae <= 2.5 ? 'text-green-400' : r.mae <= 5 ? 'text-yellow-400' : 'text-red-400'}`}>±{r.mae}</p>
                     {r.maeNaive != null && <p className={r.mae <= r.maeNaive ? 'text-green-600' : 'text-red-500'}>naive ±{r.maeNaive}</p>}
+                    {r.crps != null && <p className="text-gray-600">CRPS {r.crps}{r.intScore != null ? ` · IS ${r.intScore}` : ''}</p>}
                     <p className="text-gray-600">acierto {r.hit}% · n={r.n}</p>
                   </div>
                 ))}

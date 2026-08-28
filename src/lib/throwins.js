@@ -355,20 +355,33 @@ export function makeLiveLog(storageKey, opts = {}) {
       } : null
 
       const BUCKETS = [[5, 20], [20, 35], [35, 50], [50, 65], [65, 80], [80, 95]]
+      const ALPHA_B = 0.2
       const rows = BUCKETS.map(([lo, hi]) => {
         const pts = []
         for (const m of resolved) {
           for (const s of m.snaps) {
-            if (s.min >= lo && s.min < hi) pts.push({
-              err: Math.abs(s.proj - m.final),
-              errNaive: s.naive != null ? Math.abs(s.naive - m.final) : null,
-              hit: (m.final > s.lineCentral) === (s.pCentral > 0.5),
-              brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2,
-            })
+            if (s.min >= lo && s.min < hi) {
+              let is = null
+              if (s.i10 != null && s.i90 != null) {
+                is = s.i90 - s.i10
+                if (m.final < s.i10) is += (2 / ALPHA_B) * (s.i10 - m.final)
+                if (m.final > s.i90) is += (2 / ALPHA_B) * (m.final - s.i90)
+              }
+              pts.push({
+                err: Math.abs(s.proj - m.final),
+                errNaive: s.naive != null ? Math.abs(s.naive - m.final) : null,
+                hit: (m.final > s.lineCentral) === (s.pCentral > 0.5),
+                brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2,
+                crps: s.mu != null ? crpsNB(s.mu, phi, s.acum, m.final) : null,
+                is,
+              })
+            }
           }
         }
         if (!pts.length) return null
         const conNaive = pts.filter(p => p.errNaive != null)
+        const conCrps = pts.filter(p => p.crps != null)
+        const conIs = pts.filter(p => p.is != null)
         return {
           bucket: `${lo}-${hi}'`,
           n: pts.length,
@@ -378,6 +391,10 @@ export function makeLiveLog(storageKey, opts = {}) {
           maeNaive: conNaive.length ? +(conNaive.reduce((s, p) => s + p.errNaive, 0) / conNaive.length).toFixed(1) : null,
           hit: Math.round(pts.reduce((s, p) => s + (p.hit ? 1 : 0), 0) / pts.length * 100),
           brier: +(pts.reduce((s, p) => s + p.brier, 0) / pts.length).toFixed(3),
+          // v5 §16-17: distribución e intervalos POR TRAMO — el agregado puede
+          // ocultar que el modelo sirve al 20' y se rompe al 70'
+          crps: conCrps.length ? +(conCrps.reduce((s, p) => s + p.crps, 0) / conCrps.length).toFixed(2) : null,
+          intScore: conIs.length ? +(conIs.reduce((s, p) => s + p.is, 0) / conIs.length).toFixed(1) : null,
         }
       }).filter(Boolean)
 

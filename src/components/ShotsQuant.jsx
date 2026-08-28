@@ -80,8 +80,8 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
   useEffect(() => {
     if (model && matchInfo?.id) {
       const extra = { hayRoja: model.hayRoja || undefined, goalDiff: model.hayRoja ? goalDiff : undefined }
-      logShotsSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baseline?.expected }, model)
-      logSotSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baselineSot?.expected }, model)
+      logShotsSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baseline?.expected, predH: model.home.expectedFinal, predA: model.away.expectedFinal }, model)
+      logSotSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baselineSot?.expected, predH: model.home.sotFinal, predA: model.away.sotFinal }, model)
     }
   }, [model?.minuto, baseline?.expected, baselineSot?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -329,6 +329,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
                     <p className="text-gray-500">{r.bucket}</p>
                     <p className={`font-bold ${r.mae <= 3 ? 'text-green-400' : r.mae <= 6 ? 'text-yellow-400' : 'text-red-400'}`}>±{r.mae}</p>
                     {r.maeNaive != null && <p className={r.mae <= r.maeNaive ? 'text-green-600' : 'text-red-500'}>naive ±{r.maeNaive}</p>}
+                    {r.crps != null && <p className="text-gray-600">CRPS {r.crps}{r.intScore != null ? ` · IS ${r.intScore}` : ''}</p>}
                     <p className="text-gray-600">acierto {r.hit}% · n={r.n}</p>
                   </div>
                 ))}

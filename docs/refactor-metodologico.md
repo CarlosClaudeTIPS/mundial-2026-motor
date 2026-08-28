@@ -1,4 +1,19 @@
-# Informe de refactorización metodológica (v2, v3 y v4)
+# Informe de refactorización metodológica (v2, v3, v4 y v5)
+
+## RONDA v5 (2026-08-28, cuarta auditoría — CIERRE DE ARQUITECTURA)
+
+**§2-3 UNA sola probabilidad oficial (implementado):** decisión tomada por la vía que el revisor indicó para tempo no validado: **TEMPO = EXPERIMENTAL** (`TEMPO_STATUS`), la probabilidad OFICIAL de cada pick es la NB plana — LA MISMA del panel individual (test lo verifica al ±0.1pp). La conjunta-tempo NO desapareció: quedó como modelo experimental de dependencia cuyo único poder es **RECORTAR** el gate de combinadas (`pGate = min(producto oficial, conjunta-tempo)`) — el supuesto no validado nunca puede inflar el EV, solo protegerlo (OVER+UNDER con dependencia negativa queda cubierto). Test: gate ≤ ambos.
+**§9-11 EV Uncertainty Engine (implementado):** eliminada la falsa precisión del "P(EV>0)=70%" con 3 estados. Ahora: malla EXPLÍCITA de **81 escenarios** (3 juegos de pesos × 3 amplitudes de tempo × 3 corrimientos de PHI × 3 escalas de μ — sensibilidad/escenarios, NO distribuciones inventadas, tal como pidió el §11). Salida: "X de 81 escenarios con EV>0", mediana, P10/P90, `status: PROVISIONAL`. El criterio es `PROVISIONAL_RISK_GATE`: EV del gate > +2% y fracción de escenarios positivos ≥ 0.7.
+**§6-7 Incertidumbres separadas (documentado en UI):** la ComboCard declara explícitamente que los escenarios miden incertidumbre PARAMÉTRICA y que la ESTRUCTURAL (¿NB correcta? ¿el tempo existe?) NO está incluida.
+**§16-17 CRPS + interval score POR TRAMO (implementado):** cada bucket de minuto reporta ahora CRPS e IS junto a MAE/naive/acierto — visible en los 5 paneles.
+**§24 Residuales completos (implementado):** los snapshots guardan `predH/predA` por lado (córners, tiros, SOT, tarjetas) y la resolución guarda `finalH/finalA` → residuales estandarizados y correlación residual calculables cuando haya muestra.
+**§14 Gates por régimen NO creados** (como pidió): `n_roja` ya se registra como diagnóstico (conRoja + rojaMin/rojaDiff), sin fragmentar gates.
+**§29 Roadmap CONDICIONAL:** los hitos dejan de activar técnicas por sí solos — ver doc maestro §8: n es condición necesaria, nunca suficiente.
+**Tests:** 25 → **27** (probabilidad oficial única, gate conservador, engine de escenarios).
+**Cierre declarado (§34):** a partir de aquí NO se agregan capas nuevas. La etapa siguiente es ACUMULAR → VALIDAR → COMPARAR → CALIBRAR → DOCUMENTAR, y solo después modificar el modelo.
+
+---
+
 
 ## RONDA v4 (2026-08-28, tercera auditoría externa)
 

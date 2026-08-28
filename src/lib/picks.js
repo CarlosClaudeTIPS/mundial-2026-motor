@@ -344,10 +344,72 @@ export function jointProbability(pickA, pickB) {
   }
 }
 
+// ─── UNA SOLA PROBABILIDAD OFICIAL (v5 §2-3) ─────────────────────────────────
+// El TEMPO es EXPERIMENTAL (no ha demostrado mejora sobre el baseline), así
+// que NO contamina el modelo oficial: la probabilidad OFICIAL de cada pick es
+// la MISMA NB plana que muestra su panel individual. La mixtura de tempo se
+// usa solo como (a) modelo experimental de dependencia y (b) recorte
+// conservador del gate de combinadas.
+export const TEMPO_STATUS = 'EXPERIMENTAL'
+
+export function pOficial(pick) { // NB plana — idéntica a la del panel individual
+  const p = nbOver(pick.expected, pick.line, PHI_CAT[pick.category] ?? 1.3)
+  return pick.dir === 'OVER' ? p : 1 - p
+}
+
+// ─── EV UNCERTAINTY ENGINE (v5 §9-§11) — escenarios, no distribuciones ───────
+// Mientras los parámetros sean heurísticos NO se finge una distribución
+// estadística: se recorre una malla EXPLÍCITA de escenarios (pesos del tempo ×
+// magnitud del tempo × PHI ± × μ ±) y se reporta cuántos escenarios dan EV>0.
+// Resultado marcado PROVISIONAL: es incertidumbre PARAMÉTRICA — NO incluye la
+// incertidumbre ESTRUCTURAL (¿NB correcta? ¿el tempo existe?), que sigue ahí.
+const ESC_PESOS = [[0.15, 0.70, 0.15], [0.25, 0.50, 0.25], [0.35, 0.30, 0.35]]
+const ESC_MAG = [0.08, 0.12, 0.16]     // amplitud del tempo (baseline 0.12)
+const ESC_PHI = [-0.15, 0, 0.15]       // corrimiento de PHI
+const ESC_MU = [0.95, 1.00, 1.05]      // escala de μ
+
+function pPickEscenario(pick, T, phiShift, muScale) {
+  const sens = TEMPO_SENS[pick.category] ?? 0
+  const exp = pick.expected * muScale * Math.pow(T, sens)
+  const phi = Math.max(1.02, (PHI_CAT[pick.category] ?? 1.3) + phiShift)
+  const p = nbOver(exp, pick.line, phi)
+  return pick.dir === 'OVER' ? p : 1 - p
+}
+
+export function evUncertaintyEngine(pickA, pickB, odds) {
+  const evs = []
+  for (const pesos of ESC_PESOS) {
+    for (const mag of ESC_MAG) {
+      const estados = [[1 - mag, pesos[0]], [1.00, pesos[1]], [1 + mag, pesos[2]]]
+      for (const phiShift of ESC_PHI) {
+        for (const muScale of ESC_MU) {
+          let pJoint = 0
+          for (const [T, w] of estados) {
+            pJoint += w * pPickEscenario(pickA, T, phiShift, muScale) * pPickEscenario(pickB, T, phiShift, muScale)
+          }
+          evs.push(pJoint * odds - 1)
+        }
+      }
+    }
+  }
+  evs.sort((a, b) => a - b)
+  const q = (p) => +(evs[Math.min(evs.length - 1, Math.floor(p * evs.length))] * 100).toFixed(1)
+  const nPos = evs.filter(e => e > 0).length
+  return {
+    n: evs.length,
+    nPos,
+    fraccionPos: +(nPos / evs.length).toFixed(2),
+    evMediana: q(0.5),
+    evP10: q(0.10),
+    evP90: q(0.90),
+    status: 'PROVISIONAL', // incertidumbre paramétrica; la estructural NO está incluida
+  }
+}
+
 // ─── Combinada — meta del usuario: cuota total ≥ 1.50 ────────────────────────
-// Corrección de la revisión: implícita de 1.50 = 1/1.50 = 66.7% (SIN el 1.025
-// mal aplicado). Se elige el par por MEJOR EV CONJUNTO al target (pair-level,
-// no los dos mejores individuales), usando P conjunta con dependencia.
+// v5: probabilidad OFICIAL = producto de las NB planas individuales (mismo
+// número que ven los paneles). La conjunta-tempo es EXPERIMENTAL y solo puede
+// RECORTAR el gate (min de ambas): el supuesto no validado nunca infla el EV.
 export function suggestCombo(picks, targetOdds = 1.50) {
   if (picks.length < 2) return null
   let best = null
@@ -355,48 +417,44 @@ export function suggestCombo(picks, targetOdds = 1.50) {
     for (let j = i + 1; j < picks.length; j++) {
       const c = corr(picks[i].category, picks[j].category)
       if (c > 0.70) continue
-      const jp = jointProbability(picks[i], picks[j])
-      const evTarget = (jp.pJoint / 100) * targetOdds - 1
-      if (!best || evTarget > best.evTarget) best = { p1: picks[i], p2: picks[j], ...jp, evTarget, correlation: c }
+      const pA = pOficial(picks[i]); const pB = pOficial(picks[j])
+      const pIndepOficial = pA * pB
+      const jp = jointProbability(picks[i], picks[j]) // EXPERIMENTAL (mixtura)
+      const pGate = Math.min(pIndepOficial, jp.pJoint / 100) // conservador
+      const evGate = pGate * targetOdds - 1
+      if (!best) best = null
+      if (!best || evGate > best.evGate) {
+        best = { p1: picks[i], p2: picks[j], pA, pB, pIndepOficial, jp, pGate, evGate, correlation: c }
+      }
     }
   }
   if (!best) return null
 
-  const pJ = best.pJoint / 100
-  const impTarget = +((1 / targetOdds) * 100).toFixed(1) // 66.7% para 1.50 — implícita bruta
-
-  // INCERTIDUMBRE PROBABILÍSTICA del EV (v4 §7-8): el peor-caso YA NO es el
-  // criterio principal (un estado de baja probabilidad con EV negativo no
-  // invalida un EV esperado claramente positivo). Se calcula la distribución
-  // del EV sobre los estados de tempo: P(EV>0), P10, P90; el peor caso queda
-  // solo como diagnóstico.
-  const evEstados = TEMPO_STATES.map(([T, w]) => ({
-    ev: pPickDadoTempo(best.p1, T) * pPickDadoTempo(best.p2, T) * targetOdds - 1,
-    w,
-  })).sort((a, b) => a.ev - b.ev)
-  const pEVpos = +(evEstados.filter(e => e.ev > 0).reduce((s, e) => s + e.w, 0) * 100).toFixed(0)
-  const cuantil = (q) => {
-    let acc = 0
-    for (const e of evEstados) { acc += e.w; if (acc >= q) return +(e.ev * 100).toFixed(1) }
-    return +(evEstados[evEstados.length - 1].ev * 100).toFixed(1)
-  }
-  const evP10 = cuantil(0.10)
-  const evP90 = cuantil(0.90)
-  const evPeor = +(evEstados[0].ev * 100).toFixed(1) // diagnóstico, no criterio
+  const impTarget = +((1 / targetOdds) * 100).toFixed(1)
+  const unc = evUncertaintyEngine(best.p1, best.p2, targetOdds)
 
   return {
     p1: best.p1, p2: best.p2,
-    pIndep: best.pIndep,           // benchmark de independencia
-    pJoint: best.pJoint,           // con dependencia por tempo (heurística)
-    ajusteDep: best.ajusteDep,
-    pCombo: best.pJoint,           // compat
+    // OFICIAL: mismas probabilidades que los paneles individuales
+    pA: +(best.pA * 100).toFixed(1),
+    pB: +(best.pB * 100).toFixed(1),
+    pIndep: +(best.pIndepOficial * 100).toFixed(1),
+    // EXPERIMENTAL: conjunta con tempo (solo diagnóstico/recorte)
+    pJointTempo: best.jp.pJoint,
+    ajusteDep: best.jp.ajusteDep,
+    tempoStatus: TEMPO_STATUS,
+    // GATE conservador (min) — el que decide
+    pGate: +(best.pGate * 100).toFixed(1),
+    pCombo: +(best.pGate * 100).toFixed(1), // compat
     correlation: +best.correlation.toFixed(2),
-    cuotaJusta: +(1 / pJ).toFixed(2),
+    cuotaJusta: +(1 / best.pGate).toFixed(2),
     targetOdds, impTarget,
-    evAlTarget: +(best.evTarget * 100).toFixed(1), // EV ESPERADO
-    pEVpos, evP10, evP90, evPeor,
-    // SAFETY FLOOR provisional: EV esperado > +2% y P(EV>0) mayoritaria
-    valeAlTarget: best.evTarget > 0.02 && pEVpos >= 70,
+    evAlTarget: +(best.evGate * 100).toFixed(1),
+    // Incertidumbre PARAMÉTRICA por escenarios (PROVISIONAL, no estructural)
+    unc,
+    // PROVISIONAL_RISK_GATE (no es un umbral estadístico calibrado):
+    // EV del gate > +2% y la mayoría amplia de escenarios con EV positivo
+    valeAlTarget: best.evGate > 0.02 && unc.fraccionPos >= 0.7,
   }
 }
 
