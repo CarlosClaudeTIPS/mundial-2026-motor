@@ -1051,10 +1051,11 @@ export default function EnVivo({ league }) {
                 {/* ── EL PICK, literal y sin rodeos ── */}
                 {liveRecs[0] && (
                   <div className={`rounded-xl px-4 py-3 border-2 ${liveRecs[0].soft ? 'bg-orange-950/40 border-orange-700/60' : 'bg-green-950/50 border-green-600/70'}`}>
-                    <p className="text-lg font-black text-white">
-                      🎯 PICK RECOMENDADO: <span className={liveRecs[0].rec.dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}>
+                    <p className="text-xs font-bold text-green-300/80 uppercase tracking-widest mb-1">🎯 Te recomiendo esta apuesta:</p>
+                    <p className="text-xl font-black text-white">
+                      <span className={liveRecs[0].rec.dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}>
                         {liveRecs[0].rec.dir === 'OVER' ? 'MÁS' : 'MENOS'} de {liveRecs[0].rec.line}
-                      </span> — {liveRecs[0].label}
+                      </span> {liveRecs[0].label}
                       <span className="text-sm font-semibold text-gray-400 ml-2">P {liveRecs[0].p}% · Confianza {liveRecs[0].confidence}{liveRecs[0].soft ? ' · 🔸 señal débil, stake mínimo' : ''}</span>
                     </p>
                   </div>

@@ -1294,6 +1294,17 @@ export default function Analizar({ league, preloadTeams }) {
                 <span className="text-xs text-gray-500">orden: confianza · solo líneas realistas (margen 4-15%)</span>
               </div>
 
+              {/* ── EL PICK, literal y sin rodeos ── */}
+              <div className="rounded-xl px-4 py-3 border-2 bg-green-950/60 border-green-600/70">
+                <p className="text-xs font-bold text-green-300/80 uppercase tracking-widest mb-1">🎯 Te recomiendo esta apuesta:</p>
+                <p className="text-xl font-black text-white">
+                  <span className={picks[0].dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}>
+                    {picks[0].dir === 'OVER' ? 'MÁS' : 'MENOS'} de {picks[0].line}
+                  </span> {picks[0].label}
+                  <span className="text-sm font-semibold text-gray-400 ml-2">P {picks[0].pMod}% · Confianza {picks[0].confidence}</span>
+                </p>
+              </div>
+
               {picks.map((pick, i) => {
                 const exp = generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB, getBaseline(league.id))
                 const reasons = [...exp.pushUp, ...exp.neutral].slice(0, 5)
