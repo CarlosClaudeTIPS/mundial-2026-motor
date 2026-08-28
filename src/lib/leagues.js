@@ -34,6 +34,14 @@ export const LEAGUES = [
   { id: 197, lsId: 9,   main: false, name: 'Super League',       country: 'Grecia',     flag: '🇬🇷', kCorners: 0.95, kTI: 1.00, sportKey: 'soccer_greece_super_league', type: 'league' },
   { id: 207, lsId: 15,  main: false, name: 'Super League',       country: 'Suiza',      flag: '🇨🇭', kCorners: 1.04, kTI: 1.02, sportKey: 'soccer_switzerland_superleague', type: 'league' },
   { id: 218, lsId: 43,  main: false, name: 'Bundesliga',         country: 'Austria',    flag: '🇦🇹', kCorners: 1.06, kTI: 1.04, sportKey: 'soccer_austria_bundesliga', type: 'league' },
+  // ── Segundas divisiones y copas con buen mercado (2026-08-29) ──
+  // kCorners/kTI = 1.00 NEUTRO: sin muestra propia no se inventan factores
+  // (arquitectura congelada). Se ajustarán solo con evidencia del backtest.
+  { id: 95,  lsId: 95,  main: false, name: 'Brasileirão Serie B', country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_brazil_serie_b', type: 'league' },
+  { id: 256, lsId: 256, main: false, name: 'Copa do Brasil',      country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
+  { id: 136, lsId: 87,  main: false, name: 'Serie B',             country: 'Italia',    flag: '🇮🇹', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_italy_serie_b', type: 'league' },
+  { id: 141, lsId: 79,  main: false, name: 'Segunda División',    country: 'España',    flag: '🇪🇸', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_spain_segunda_division', type: 'league' },
+  { id: 258, lsId: 258, main: false, name: 'Premier League',      country: 'Canadá',    flag: '🇨🇦', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
 ]
 
 export const DEFAULT_LEAGUE_ID = 39

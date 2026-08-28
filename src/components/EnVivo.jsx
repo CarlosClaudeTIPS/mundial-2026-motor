@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { getSituationS, getTacticalK, calcLiveExpected, poissonOver } from '../lib/engine'
 import { bestRealisticLine } from '../lib/picks'
 import { fetchLive } from '../lib/football-api'
-import { fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
+import { fetchFixtureStats, hasLivescore, fetchLiveGlobal } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
 import { TeamStatsRef } from './Analizar'
@@ -207,6 +207,7 @@ function attackDrive({ diff, minuto, pre, preRival }) {
 export default function EnVivo({ league }) {
   // Partidos en vivo de TODAS las ligas seguidas (misma lista que el Fixture)
   const [misLigas] = useState(loadMisLigas)
+  const [vista, setVista] = useState('mis') // 'mis' = ligas seguidas · 'otras' = el resto de la app
   const [liveMatches, setLiveMatches] = useState([])
   const [loadingLive, setLoadingLive] = useState(false)
   const [liveError, setLiveError] = useState(null)
@@ -276,22 +277,36 @@ export default function EnVivo({ league }) {
     }
   }, [league])
 
-  // ── Cargar partidos en vivo de todas las ligas seguidas ──
+  // ── Cargar partidos en vivo ──
+  // vista 'mis' = tus ligas seguidas (una llamada por liga)
+  // vista 'otras' = TODAS las demás ligas de la app vía el feed GLOBAL (1 sola
+  // llamada, filtrada por competition_id → no gasta el trial)
   const loadLive = useCallback(async () => {
     setLoadingLive(true)
     setLiveError(null)
     try {
-      const ligas = misLigas.map(id => LEAGUES.find(l => l.id === id)).filter(Boolean)
-      const results = await Promise.allSettled(
-        ligas.map(l => fetchLive(l.id).then(r => ({ liga: l, r })))
-      )
       const all = []
-      for (const res of results) {
-        if (res.status !== 'fulfilled') continue
-        const { liga, r } = res.value
-        if (!r?.ok) continue
-        for (const m of r.live ?? []) {
-          all.push({ ...m, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+      if (vista === 'otras') {
+        const r = await fetchLiveGlobal()
+        if (r?.ok) {
+          const porLsId = Object.fromEntries(LEAGUES.filter(l => !misLigas.includes(l.id) && l.lsId).map(l => [l.lsId, l]))
+          for (const m of r.live ?? []) {
+            const liga = porLsId[m.competitionId]
+            if (liga) all.push({ ...m, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+          }
+        } else if (r?.error) setLiveError(r.error)
+      } else {
+        const ligas = misLigas.map(id => LEAGUES.find(l => l.id === id)).filter(Boolean)
+        const results = await Promise.allSettled(
+          ligas.map(l => fetchLive(l.id).then(r => ({ liga: l, r })))
+        )
+        for (const res of results) {
+          if (res.status !== 'fulfilled') continue
+          const { liga, r } = res.value
+          if (!r?.ok) continue
+          for (const m of r.live ?? []) {
+            all.push({ ...m, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+          }
         }
       }
       setLiveMatches(all)
@@ -302,7 +317,7 @@ export default function EnVivo({ league }) {
     } finally {
       setLoadingLive(false)
     }
-  }, [misLigas])
+  }, [misLigas, vista])
 
   // ── Resolver logs de TI de partidos que ya terminaron (live-backtest) ──
   // Solo se intenta cuando el partido salió de la lista en vivo; máx 2 llamadas
@@ -1207,15 +1222,32 @@ export default function EnVivo({ league }) {
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-3">
           <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-          <h1 className="text-2xl font-bold text-white">Análisis En Vivo — ⭐ Mis Ligas</h1>
+          <h1 className="text-2xl font-bold text-white">Análisis En Vivo — {vista === 'mis' ? '⭐ Mis Ligas' : '🌍 Las demás'}</h1>
         </div>
         <button onClick={loadLive} disabled={loadingLive}
           className="text-xs px-3 py-1.5 rounded bg-dark-700 text-gray-300 hover:bg-dark-600 transition-colors disabled:opacity-50">
           {loadingLive ? '⏳' : '🔄'} Actualizar
         </button>
       </div>
-      <p className="text-gray-400 text-xs -mt-3">
-        Partidos en curso de tus {misLigas.length} ligas seguidas (las eliges en Fixture → ⚙️ Elegir ligas) · toca un partido para analizarlo ahí mismo, tócalo de nuevo para contraerlo
+
+      {/* Pestañas: mis ligas vs todas las demás de la app */}
+      <div className="flex items-center gap-2 -mt-2">
+        <div className="flex rounded-lg overflow-hidden border border-dark-500">
+          <button onClick={() => { setVista('mis'); setSelectedId(null) }}
+            className={`px-3 py-1.5 text-xs font-medium ${vista === 'mis' ? 'bg-red-700 text-white' : 'bg-dark-700 text-gray-400'}`}>
+            ⭐ Mis ligas ({misLigas.length})
+          </button>
+          <button onClick={() => { setVista('otras'); setSelectedId(null) }}
+            className={`px-3 py-1.5 text-xs font-medium ${vista === 'otras' ? 'bg-red-700 text-white' : 'bg-dark-700 text-gray-400'}`}>
+            🌍 Las demás ({LEAGUES.filter(l => !misLigas.includes(l.id)).length})
+          </button>
+        </div>
+      </div>
+      <p className="text-gray-400 text-xs -mt-2">
+        {vista === 'mis'
+          ? `Partidos en curso de tus ${misLigas.length} ligas seguidas (las eliges en Fixture → ⚙️ Elegir ligas)`
+          : 'Partidos en curso del RESTO de ligas de la app (feed global, 1 sola llamada — no gasta el trial)'}
+        {' '}· toca un partido para analizarlo ahí mismo, tócalo de nuevo para contraerlo
       </p>
 
       {liveError && (

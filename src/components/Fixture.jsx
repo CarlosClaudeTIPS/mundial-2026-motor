@@ -289,7 +289,9 @@ export default function Fixture({ league, onAnalizar }) {
 
   const toggleGroup = (key) => setClosedGroups(p => ({ ...p, [key]: !p[key] }))
 
-  const activeLeagueIds = mode === 'mis' ? misLigas : [league.id]
+  const activeLeagueIds = mode === 'mis' ? misLigas
+    : mode === 'otras' ? LEAGUES.filter(l => !misLigas.includes(l.id)).map(l => l.id)
+    : [league.id]
 
   const loadData = useCallback(async () => {
     setLoading(true)
@@ -299,10 +301,15 @@ export default function Fixture({ league, onAnalizar }) {
         .map(id => LEAGUES.find(l => l.id === id))
         .filter(Boolean)
 
+      // En "Las demás" (muchas ligas) solo fixtures — el live por liga
+      // duplicaría las llamadas; el estado en vivo igual se ve en el status
+      const conLive = mode !== 'otras'
       const results = await Promise.allSettled(
-        ligas.flatMap(l => [
+        ligas.flatMap(l => conLive ? [
           fetchFixtures(l.id).then(r => ({ tipo: 'fix', liga: l, r })),
           fetchLive(l.id).then(r => ({ tipo: 'live', liga: l, r })),
+        ] : [
+          fetchFixtures(l.id).then(r => ({ tipo: 'fix', liga: l, r })),
         ])
       )
 
@@ -326,7 +333,7 @@ export default function Fixture({ league, onAnalizar }) {
     } finally {
       setLoading(false)
     }
-  }, [activeLeagueIds.join(',')])
+  }, [activeLeagueIds.join(','), mode])
 
   useEffect(() => { loadData() }, [loadData])
 
@@ -392,12 +399,14 @@ export default function Fixture({ league, onAnalizar }) {
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div>
           <h1 className="text-2xl font-bold text-white">
-            {mode === 'mis' ? '⭐ Fixture — Mis Ligas' : `${league.flag} Fixture — ${league.name}`}
+            {mode === 'mis' ? '⭐ Fixture — Mis Ligas' : mode === 'otras' ? '🌍 Fixture — Las demás ligas' : `${league.flag} Fixture — ${league.name}`}
           </h1>
           <p className="text-gray-400 text-xs mt-1">
             {mode === 'mis'
               ? `${misLigas.length} ligas seguidas · partidos ordenados por hora`
-              : 'Solo la competición seleccionada en el menú'}
+              : mode === 'otras'
+                ? `Las ${activeLeagueIds.length} ligas de la app que NO sigues · consume más llamadas del trial (1 por liga, con caché)`
+                : 'Solo la competición seleccionada en el menú'}
           </p>
         </div>
         <button onClick={loadData} disabled={loading}
@@ -412,6 +421,10 @@ export default function Fixture({ league, onAnalizar }) {
           <button onClick={() => setModePersist('mis')}
             className={`px-3 py-1.5 text-xs font-medium ${mode === 'mis' ? 'bg-green-700 text-white' : 'bg-dark-700 text-gray-400'}`}>
             ⭐ Mis ligas
+          </button>
+          <button onClick={() => setModePersist('otras')}
+            className={`px-3 py-1.5 text-xs font-medium ${mode === 'otras' ? 'bg-green-700 text-white' : 'bg-dark-700 text-gray-400'}`}>
+            🌍 Las demás ({LEAGUES.filter(l => !misLigas.includes(l.id)).length})
           </button>
           <button onClick={() => setModePersist('liga')}
             className={`px-3 py-1.5 text-xs font-medium ${mode === 'liga' ? 'bg-green-700 text-white' : 'bg-dark-700 text-gray-400'}`}>
