@@ -339,6 +339,13 @@ export function makeLiveLog(storageKey, opts = {}) {
       const log = load()
       return Object.values(log).filter(m => m.final != null && m.snaps.length).length
     },
+    // Mapa matchId → total final (para ROI PAPER del audit log)
+    finalsMap() {
+      const log = load()
+      const out = {}
+      for (const [id, m] of Object.entries(log)) if (m.final != null) out[id] = m.final
+      return out
+    },
     // Resumen: error absoluto medio, acierto y Brier por tramo de minuto.
     // Incluye la comparación PREMATCH vs LIVE (§14): si el live no mejora el
     // error del baseline conforme avanza el partido, algo anda mal.
@@ -459,7 +466,40 @@ export function makeLiveLog(storageKey, opts = {}) {
         crps: crpsN ? +(crpsSum / crpsN).toFixed(2) : null,   // menor = mejor distribución
       } : null
 
-      return { matches: resolved.length, rows, pre, calib, dist, conRoja: resolved.filter(m => m.hayRoja).length }
+      // Unidad estadística = PARTIDO (v5.1 §12): snapshots solo diagnóstico
+      const snapsTotal = resolved.reduce((s, m) => s + m.snaps.length, 0)
+
+      // Sesgo global (proj − final, promedio por partido usando su último snapshot pre-80')
+      const biasVals = resolved.map(m => {
+        const s = [...m.snaps].filter(x => x.min < 80).pop() ?? m.snaps[m.snaps.length - 1]
+        return s ? s.proj - m.final : null
+      }).filter(v => v != null)
+      const bias = biasVals.length ? +(biasVals.reduce((a, b) => a + b, 0) / biasVals.length).toFixed(2) : null
+
+      // ALERTAS DE INVESTIGACIÓN (v5.1 §15): dicen INVESTIGATE, nunca auto-ajustan
+      const alertas = []
+      if (resolved.length >= 15) {
+        const mediaFinal = resolved.reduce((s, m) => s + m.final, 0) / resolved.length
+        if (bias != null && Math.abs(bias) > 0.15 * Math.max(1, mediaFinal)) {
+          alertas.push(`INVESTIGAR: sesgo persistente ${bias > 0 ? '+' : ''}${bias} (media real ${mediaFinal.toFixed(1)}) — el modelo ${bias > 0 ? 'sobreestima' : 'subestima'} sistemáticamente`)
+        }
+        const peorQueNaive = rows.filter(r => r.maeNaive != null && r.mae > r.maeNaive).length
+        const comparables = rows.filter(r => r.maeNaive != null).length
+        if (comparables >= 3 && peorQueNaive >= Math.ceil(comparables * 0.7)) {
+          alertas.push(`INVESTIGAR: el modelo pierde contra el naive lineal en ${peorQueNaive}/${comparables} tramos — candidato a simplificación`)
+        }
+        if (dist?.coverage != null && Math.abs(dist.coverage - 80) > 15) {
+          alertas.push(`INVESTIGAR: cobertura del intervalo 10-90 en ${dist.coverage}% (objetivo ~80%) — distribución mal ${dist.coverage < 80 ? 'estrecha' : 'ancha'}`)
+        }
+        for (const c of (calib ?? [])) {
+          const mid = parseInt(c.rango) + 5
+          if (c.n >= 20 && Math.abs(c.real - mid) > 15) {
+            alertas.push(`INVESTIGAR: calibración desviada en el rango ${c.rango} (dice ~${mid}%, ocurre ${c.real}%)`)
+          }
+        }
+      }
+
+      return { matches: resolved.length, snapsTotal, rows, pre, calib, dist, bias, alertas, conRoja: resolved.filter(m => m.hayRoja).length }
     },
   }
 }
@@ -470,3 +510,4 @@ export const resolveTiLog = (matchId, finalTi, sides) => tiLog.resolve(matchId, 
 export const tiLogPending = () => tiLog.pending()
 export const tiBacktestSummary = () => tiLog.summary()
 export const tiResolvedCount = () => tiLog.resolvedCount()
+export const tiFinalsMap = () => tiLog.finalsMap()

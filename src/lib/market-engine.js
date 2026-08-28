@@ -29,6 +29,15 @@ export const MARKET_ENGINE = {
 // SOLO cuando las curvas de calibración por mercado lo respalden.
 export const CALIBRACION = 'sin-calibrar' // 'sin-calibrar' | 'calibrado'
 
+// ─── ARQUITECTURA CONGELADA (v5.1) ───────────────────────────────────────────
+// Fase actual: DATA COLLECTION / VALIDATION. PROHIBIDO modificar PHI, K, tempo,
+// mezclas 60/40 y 50/50, Situation S, clamps, factores de roja, árbitro,
+// shares, umbrales y sensibilidades — manual O automáticamente — hasta que una
+// MODEL CHANGE PROPOSAL con evidencia (patrón consistente + muestra + benchmark
+// + hipótesis + experimento + validación fuera de muestra) lo justifique.
+// Las alertas de los registros dicen INVESTIGATE, nunca AUTO-ADJUST.
+export const ARQUITECTURA = 'CONGELADA-v5.1'
+
 // Estado metodológico por modelo (visible para el sistema y el usuario):
 // BASELINE = heurística razonada, provisional, sin validar. Ninguno es CALIBRATED aún.
 export const MODEL_STATUS = {
@@ -199,6 +208,35 @@ export function logDecision(entry) {
     }
     localStorage.setItem(AUDIT_KEY, JSON.stringify(all))
   } catch {}
+}
+
+// ─── Registro de COMBINADAS (v5.1 §9): cada evaluación de par, con sus picks ─
+// Guarda pIndep oficial, conjunta-tempo experimental, pGate (risk gate, NO es
+// la P(A∩B) oficial) y la incertidumbre por escenarios. Nunca borra los picks.
+const COMBO_KEY = 'motor_combo_log_v1'
+const COMBO_MAX = 200
+
+export function logCombo(entry) {
+  if (!entry?.matchKey) return
+  try {
+    const all = JSON.parse(localStorage.getItem(COMBO_KEY)) ?? {}
+    const k = `${entry.matchKey}_${entry.labelA}_${entry.labelB}`
+    const prev = all[k]
+    all[k] = { ...entry, ts: prev?.ts ?? Date.now(), tsUltimo: Date.now() }
+    const ids = Object.keys(all)
+    if (ids.length > COMBO_MAX) {
+      ids.sort((a, b) => (all[a].tsUltimo ?? 0) - (all[b].tsUltimo ?? 0))
+      for (const id of ids.slice(0, ids.length - COMBO_MAX)) delete all[id]
+    }
+    localStorage.setItem(COMBO_KEY, JSON.stringify(all))
+  } catch {}
+}
+
+export function listCombos() {
+  try {
+    return Object.values(JSON.parse(localStorage.getItem(COMBO_KEY)) ?? {})
+      .sort((a, b) => (b.tsUltimo ?? 0) - (a.tsUltimo ?? 0))
+  } catch { return [] }
 }
 
 export function listDecisiones() {

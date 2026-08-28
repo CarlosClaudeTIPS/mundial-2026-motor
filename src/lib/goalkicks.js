@@ -256,3 +256,4 @@ export const resolveGkLog = (matchId, finalGk, sides) => gkLog.resolve(matchId, 
 export const gkLogPending = () => gkLog.pending()
 export const gkBacktestSummary = () => gkLog.summary()
 export const gkResolvedCount = () => gkLog.resolvedCount()
+export const gkFinalsMap = () => gkLog.finalsMap()

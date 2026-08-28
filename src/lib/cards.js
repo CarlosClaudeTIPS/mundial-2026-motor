@@ -332,3 +332,4 @@ export const resolveCardsLog = (matchId, finalTotal, sides) => cardsLog.resolve(
 export const cardsLogPending = () => cardsLog.pending()
 export const cardsBacktestSummary = () => cardsLog.summary()
 export const cardsResolvedCount = () => cardsLog.resolvedCount()
+export const cardsFinalsMap = () => cardsLog.finalsMap()

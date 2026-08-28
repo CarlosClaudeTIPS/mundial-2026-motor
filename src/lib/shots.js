@@ -335,6 +335,7 @@ export const resolveShotsLog = (matchId, finalTotal, sides) => shotsLog.resolve(
 export const shotsLogPending = () => shotsLog.pending()
 export const shotsBacktestSummary = () => shotsLog.summary()
 export const shotsResolvedCount = () => shotsLog.resolvedCount()
+export const shotsFinalsMap = () => shotsLog.finalsMap()
 
 const sotLog = makeLiveLog('motor_sot_livelog_v1', { phi: SHOTS_MODEL.PHI_SOT })
 // Adapter: el log genérico espera {minuto, acum, expectedFinal, pOver}
@@ -351,3 +352,4 @@ export const resolveSotLog = (matchId, finalSot, sides) => sotLog.resolve(matchI
 export const sotLogPending = () => sotLog.pending()
 export const sotBacktestSummary = () => sotLog.summary()
 export const sotResolvedCount = () => sotLog.resolvedCount()
+export const sotFinalsMap = () => sotLog.finalsMap()

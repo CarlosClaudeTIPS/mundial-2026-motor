@@ -103,6 +103,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
       baseline: baseline?.expected, live: model?.expectedFinal,
       pModelo: edge.pOver, pImplicita: edge.impOver, edge: edge.edgeOver,
       ev: edge.evPct, confidence: conf.score, signal: edge.signal, quality: edge.quality, minuto,
+      lado: edge.lado, razon: edge.abstencion ?? (edge.signal === 'NO BET' ? 'edge insuficiente o elegibilidad' : null),
     })
   }, [edge, conf.score, market]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -320,7 +321,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
           {(!bt?.shots && !bt?.sot) && <p className="text-gray-500">Aún no hay partidos resueltos. Cada partido guarda snapshots minuto a minuto (tiros Y a puerta por separado) y se resuelve solo con las stats finales de Live-Score.</p>}
           {bt?.shots && (
             <div>
-              <p className="text-gray-400 mb-1">Tiros totales — {bt.shots.matches} partido(s), error por minuto:</p>
+              <p className="text-gray-400 mb-1">Tiros totales — {bt.shots.matches} partido(s) único(s) · {bt.shots.snapsTotal} snapshots (unidad = PARTIDO), error por minuto:</p>
               {bt.shots.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.shots.pre.mae} ({bt.shots.pre.n}p)</p>}
               {bt.shots.dist && <p className="text-gray-500 mb-1">Distribución: log-loss {bt.shots.dist.logloss} (0.693 = moneda) · sharpness {bt.shots.dist.sharpness} · cobertura 10-90: {bt.shots.dist.coverage != null ? `${bt.shots.dist.coverage}% (objetivo ~80%)` : '—'}</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">

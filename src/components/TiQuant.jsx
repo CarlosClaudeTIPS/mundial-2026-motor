@@ -88,6 +88,7 @@ export default function TiQuant({ minuto, goalDiff, tiAc, tiH, tiA, fuente, snap
       baseline: baseline?.expected, live: model?.expectedFinal,
       pModelo: edge.pOver, pImplicita: edge.impOver, edge: edge.edgeOver,
       ev: edge.evPct, confidence: conf.score, signal: edge.signal, quality: edge.quality, minuto,
+      lado: edge.lado, razon: edge.abstencion ?? (edge.signal === 'NO BET' ? 'edge insuficiente o elegibilidad' : null),
     })
   }, [edge, conf.score]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -258,7 +259,7 @@ export default function TiQuant({ minuto, goalDiff, tiAc, tiH, tiA, fuente, snap
           {!bt && <p className="text-gray-500">Aún no hay partidos resueltos en el registro. Cada partido que analices aquí guarda sus snapshots minuto a minuto; al terminar se resuelve solo y este panel mostrará el error del modelo por tramo (para saber DESDE QUÉ MINUTO es confiable).</p>}
           {bt && (
             <>
-              <p className="text-gray-400 mb-1">{bt.matches} partido(s) resuelto(s) — error del modelo según el minuto de la predicción:</p>
+              <p className="text-gray-400 mb-1">{bt.matches} partido(s) único(s) · {bt.snapsTotal} snapshots (unidad estadística = PARTIDO) — error por minuto:</p>
               {bt.dist && <p className="text-gray-500 mb-1">Distribución: log-loss {bt.dist.logloss} (0.693 = moneda al aire) · sharpness {bt.dist.sharpness} (0 = siempre 50/50) · cobertura 10-90: {bt.dist.coverage != null ? `${bt.dist.coverage}% (objetivo ~80%)` : '—'}</p>}
               {bt.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.pre.mae} ({bt.pre.n}p) — el live debe mejorar este error conforme avanza el partido</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">

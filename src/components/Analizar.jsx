@@ -7,6 +7,7 @@ import {
 } from '../lib/context'
 import ContextPanel from './ContextPanel'
 import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation, linesAround, bestRealisticLine } from '../lib/picks'
+import { logCombo } from '../lib/market-engine'
 import { poissonOver } from '../lib/engine'
 import { getBaseline, compAbbr } from '../lib/leagues'
 import { fetchStandings, fetchFixtures } from '../lib/football-api'
@@ -600,8 +601,8 @@ function ComboCard({ combo }) {
       <div className="flex gap-4 text-gray-300 flex-wrap">
         <span>P oficial: <strong className="text-white">{combo.pA}%</strong> × <strong className="text-white">{combo.pB}%</strong> = <strong className="text-purple-300">{combo.pIndep}%</strong></span>
         <span className="text-gray-500">Conjunta-tempo ({combo.tempoStatus}): {combo.pJointTempo}% ({combo.ajusteDep > 0 ? '+' : ''}{combo.ajusteDep} pp)</span>
-        <span>Gate conservador: <strong className="text-purple-300">{combo.pGate}%</strong></span>
-        <span>Cuota justa: <strong className="text-white">{combo.cuotaJusta}</strong></span>
+        <span>Risk gate (NO es la P conjunta oficial): <strong className="text-purple-300">{combo.pGate}%</strong></span>
+        <span>Cuota justa del gate: <strong className="text-white">{combo.cuotaJusta}</strong></span>
       </div>
       {combo.valeAlTarget ? (
         <p className="text-green-300 font-bold bg-green-950/50 border border-green-800/50 rounded-lg px-3 py-1.5">
@@ -885,6 +886,25 @@ export default function Analizar({ league, preloadTeams }) {
     const c = suggestCombo(top)
     return { picks: top, combo: c }
   }, [calc, teamA, teamB])
+
+  // v5.1 §9: registrar CADA evaluación de combinada (con sus picks, el gate y
+  // la incertidumbre) — la selección humana no decide qué entra en la muestra
+  useEffect(() => {
+    if (!combo || !teamA || !teamB) return
+    logCombo({
+      matchKey: `${league.id}_${teamA.name}_${teamB.name}`,
+      leagueId: league.id, home: teamA.name, away: teamB.name,
+      labelA: `${combo.p1.label} ${combo.p1.dir} ${combo.p1.line}`,
+      labelB: `${combo.p2.label} ${combo.p2.dir} ${combo.p2.line}`,
+      pA: combo.pA, pB: combo.pB,
+      pIndep: combo.pIndep, pJointTempo: combo.pJointTempo, pGate: combo.pGate,
+      targetOdds: combo.targetOdds, ev: combo.evAlTarget,
+      escenariosPos: `${combo.unc.nPos}/${combo.unc.n}`, evP10: combo.unc.evP10, evP90: combo.unc.evP90,
+      decision: combo.valeAlTarget ? 'PAPER BET' : 'NO BET',
+      marketKeyA: combo.p1.marketKey, lineA: combo.p1.line, dirA: combo.p1.dir,
+      marketKeyB: combo.p2.marketKey, lineB: combo.p2.line, dirB: combo.p2.dir,
+    })
+  }, [combo, teamA, teamB, league.id])
 
   const ready = !!calc
 

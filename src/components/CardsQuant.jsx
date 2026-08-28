@@ -106,6 +106,7 @@ export default function CardsQuant({ minuto, goalDiff, cH, cA, yH, yA, rH, rA, f
       baseline: baseline?.expected, live: model?.expectedFinal,
       pModelo: edge.pOver, pImplicita: edge.impOver, edge: edge.edgeOver,
       ev: edge.evPct, confidence: conf.score, signal: edge.signal, quality: edge.quality, minuto,
+      lado: edge.lado, razon: edge.abstencion ?? (edge.signal === 'NO BET' ? 'edge insuficiente o elegibilidad' : null),
     })
   }, [edge, conf.score, market]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -316,7 +317,7 @@ export default function CardsQuant({ minuto, goalDiff, cH, cA, yH, yA, rH, rA, f
           {!bt && <p className="text-gray-500">Aún no hay partidos resueltos. Cada partido guarda snapshots por minuto y se resuelve solo con las tarjetas finales de Live-Score.</p>}
           {bt && (
             <>
-              <p className="text-gray-400 mb-1">{bt.matches} partido(s) resuelto(s){bt.conRoja ? ` (${bt.conRoja} con roja)` : ''} — error por minuto:</p>
+              <p className="text-gray-400 mb-1">{bt.matches} partido(s) único(s) · {bt.snapsTotal} snapshots{bt.conRoja ? ` · ${bt.conRoja} con roja` : ''} (unidad = PARTIDO) — error por minuto:</p>
               {bt.dist && <p className="text-gray-500 mb-1">Distribución: log-loss {bt.dist.logloss} (0.693 = moneda) · sharpness {bt.dist.sharpness} · cobertura 10-90: {bt.dist.coverage != null ? `${bt.dist.coverage}% (objetivo ~80%)` : '—'}</p>}
               {bt.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.pre.mae} ({bt.pre.n}p) — el live debe mejorar este error conforme avanza</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">

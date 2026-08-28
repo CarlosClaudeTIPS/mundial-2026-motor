@@ -294,3 +294,4 @@ export const resolveCornersLog = (matchId, finalTotal, sides) => cornersLog.reso
 export const cornersLogPending = () => cornersLog.pending()
 export const cornersBacktestSummary = () => cornersLog.summary()
 export const cornersResolvedCount = () => cornersLog.resolvedCount()
+export const cornersFinalsMap = () => cornersLog.finalsMap()

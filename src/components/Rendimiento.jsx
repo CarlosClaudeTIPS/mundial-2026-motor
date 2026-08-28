@@ -3,6 +3,7 @@ import { fetchFixtures, fetchFixtureStats, isDone } from '../lib/football-api'
 import { fetchSofaSaques } from '../lib/sofascore'
 import { listPredicciones, listResultados, yaResuelto, saveResultado, resolverPrediccion } from '../lib/predicciones'
 import { LEAGUES, getLeague } from '../lib/leagues'
+import ModelHealth from './ModelHealth'
 
 // ─── Rendimiento del Motor — calibración automática ──────────────────────────
 // Toma cada predicción guardada, busca el partido TERMINADO en Live-Score,
@@ -120,6 +121,9 @@ export default function Rendimiento() {
       </div>
 
       {msg && <p className="text-xs text-gray-500">{msg}</p>}
+
+      {/* ── MODEL HEALTH: salud de los modelos cuantitativos (v5.1) ── */}
+      <ModelHealth />
 
       {/* ── Resumen global ── */}
       {resultados.length > 0 && (
