@@ -64,7 +64,7 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
   }, [model])
 
   useEffect(() => {
-    if (model && matchInfo?.id) logGkSnapshot(matchInfo.id, { ...matchInfo, baseline: baseline?.expected, hayRoja: (reds?.h ?? 0) + (reds?.a ?? 0) > 0 || undefined }, model)
+    if (model && matchInfo?.id) logGkSnapshot(matchInfo.id, { ...matchInfo, baseline: baseline?.expected, hayRoja: model.hayRoja || undefined, goalDiff: model.hayRoja ? goalDiff : undefined }, model)
   }, [model?.minuto, baseline?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const bt = useMemo(() => showBt ? gkBacktestSummary() : null, [showBt, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -261,6 +261,7 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
           {bt && (
             <>
               <p className="text-gray-400 mb-1">{bt.matches} partido(s) resuelto(s) — error del modelo según el minuto de la predicción:</p>
+              {bt.dist && <p className="text-gray-500 mb-1">Distribución: log-loss {bt.dist.logloss} (0.693 = moneda) · sharpness {bt.dist.sharpness} · cobertura 10-90: {bt.dist.coverage != null ? `${bt.dist.coverage}% (objetivo ~80%)` : '—'}</p>}
               {bt.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.pre.mae} ({bt.pre.n}p) — el live debe mejorar este error conforme avanza el partido</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">
                 {bt.rows.map(r => (

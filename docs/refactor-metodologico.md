@@ -1,4 +1,19 @@
-# Informe de refactorización metodológica (respuesta al prompt de revisión externa)
+# Informe de refactorización metodológica (v2 y v3)
+
+## RONDA v3 (2026-08-28, tras la segunda auditoría externa) — informe §48
+
+**1-2. Qué cambió / qué quedó igual:** arquitectura intacta; cambios: (a) **Monte Carlo validador** de las combinadas (`jointProbabilityMC`) — mismo proceso generativo (muestrear tempo → Poisson condicionado → evaluar A∩B); test automático confirma que marginales y conjunta coinciden con el analítico ±2pp → NO hay bug de coherencia (§16-17). (b) **Incertidumbre del EV conjunto**: EV por estado de tempo → EV ±unc; el par se rechaza si el peor caso cae < −2% aunque el EV central sea positivo (§22). (c) **Log-loss, sharpness y cobertura del intervalo 10-90** en todos los live-logs (§6-7, §38). (d) **Red Card Regime por mercado** (§25): tarjetas = abstención dura (el modelo SIGUE prediciendo, solo se silencia la señal); córners/tiros/GK = +2pp umbral y −5 confianza, sin bloquear; TI sin efecto (sin modelo de roja). (e) **Registro de rojas** para estimación futura: minuto y marcador al momento de la roja en cada log (§26). (f) **20 tests unitarios** (vitest, `npm test`): distribución válida y monótona, coherencia contable de tiros, dependencia +/− según dirección, independencia de TI vs tempo, MC vs analítico, PAPER BET, abstención, vig, factores de roja coherentes e inversos en GK, atenuación contextual, hazard creciente y concentrado al final, restante ≥0 (§44).
+**3. Heurísticos:** los mismos de la lista §7 del doc maestro + tempo (±12%, 25/50/25) — NINGUNO recalibrado (regla n<50 respetada).
+**4-6. Estados:** todos BASELINE; experimentales: tempo latente, atenuación de roja, MC; calibrados: ninguno.
+**7-18. Benchmarks/calibración/CLV:** instrumentos completos (naive por snapshot, calib buckets, log-loss/sharpness/coverage, registrarCierre) — NOT ENOUGH DATA para conclusiones.
+**19-20. PAPER/DISABLED:** todos los mercados siguen en PAPER; ninguno DISABLED aún (se decidirá contra el naive con muestra).
+**21. Información más valiosa:** cuotas reales (key The Odds API pendiente) y más partidos analizados.
+**22. Plan por hitos:** 50 partidos/mercado → diagnóstico (¿NB > naive? ¿sesgo? ¿cobertura ~80%?); 100 → PHI + decisión de mercados DISABLED; 250 → K, factores de estado, tempo (magnitud); 500 → hazard córners/tiros experimental vs baseline, walk-forward; 1000 → dependencia residual entre lados, market-aware, umbrales por mercado.
+**Pendiente aceptado sin implementar** (espera datos o decisión): tempo continuo (β estimado), descomposición del árbitro, w live por eventos (features ya guardados), A/B/C de GK y TI, market-aware, walk-forward, interfaz de persistencia para backend, CRPS completo (log-loss como primer paso).
+
+---
+
+# Informe v2 (primera auditoría)
 
 Fecha: 2026-08-28. Implementa las prioridades de la auditoría externa SIN destruir la arquitectura.
 

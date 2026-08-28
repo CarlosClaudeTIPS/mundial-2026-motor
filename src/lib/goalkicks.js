@@ -170,6 +170,7 @@ export function gkLiveModel({ minuto, acum, goalDiff = 0, snaps = [], prior = nu
     wObs: +wObs.toFixed(2),
     rateBlend: +rateBlend.toFixed(3),
     state: +state.toFixed(3),
+    hayRoja: (reds?.h ?? 0) + (reds?.a ?? 0) > 0,
     regime, off, redFactor,
     muRest: +muRest.toFixed(2),
     expectedFinal: +expectedFinal.toFixed(1),
@@ -214,7 +215,10 @@ export function gkEdge({ model, line, oddsOver, oddsUnder = null, confidence }) 
   return evaluarMercado({
     pOverFn: model.pOver, line, oddsOver, oddsUnder, confidence,
     minuto: model.minuto, minMinuto: GK_MODEL.MIN_MINUTO,
-    extras: [{ cond: model.minuto < 20, pp: 0.02, why: "antes del 20' → +2pp" }],
+    extras: [
+      { cond: model.minuto < 20, pp: 0.02, why: "antes del 20' → +2pp" },
+      { cond: model.hayRoja, pp: 0.02, why: 'roja: régimen sin validar → +2pp' },
+    ],
   })
 }
 

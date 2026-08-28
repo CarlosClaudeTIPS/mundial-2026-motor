@@ -228,6 +228,8 @@ export function cornersConfidence({ model, prior, fuente, snapsN = 0 }) {
   if (model.daObs != null) { score += 4; parts.push(['+4', 'presión medible por ataques peligrosos']) }
   if (model.blkObs != null) { score += 3; parts.push(['+3', 'tiros bloqueados disponibles (generador directo)']) }
 
+  if (model.hayRoja) { score -= 5; parts.push(['-5', 'roja en cancha — régimen menos predecible (sin validar)']) }
+
   const dis = Math.abs(model.expectedFinal - model.naiveFinal) / Math.max(1, model.expectedFinal)
   if (dis < 0.06) { score += 8; parts.push(['+8', 'modelo y ritmo puro coinciden (predicción estable)']) }
   else if (dis > 0.18) { score -= 6; parts.push(['-6', 'modelo y ritmo puro difieren >18% (situación ambigua)']) }
@@ -245,6 +247,9 @@ export function cornersEdge({ model, market = 'total', line, oddsOver, oddsUnder
     extras: [
       { cond: model.minuto < 20, pp: 0.02, why: "antes del 20' → +2pp" },
       { cond: market !== 'total', pp: 0.01, why: 'mercado por equipo (más varianza) → +1pp' },
+      // Red Card Regime (v3 §25): recalcula estructural + sube exigencia,
+      // sin bloquear — el efecto en córners aún no está validado con datos
+      { cond: model.hayRoja, pp: 0.02, why: 'roja: régimen sin validar → +2pp' },
     ],
   })
   return res ? { ...res, market } : null

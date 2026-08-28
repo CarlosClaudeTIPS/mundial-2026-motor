@@ -79,7 +79,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
 
   useEffect(() => {
     if (model && matchInfo?.id) {
-      const extra = { hayRoja: model.hayRoja || undefined }
+      const extra = { hayRoja: model.hayRoja || undefined, goalDiff: model.hayRoja ? goalDiff : undefined }
       logShotsSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baseline?.expected }, model)
       logSotSnapshot(matchInfo.id, { ...matchInfo, ...extra, baseline: baselineSot?.expected }, model)
     }
@@ -320,6 +320,7 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
             <div>
               <p className="text-gray-400 mb-1">Tiros totales — {bt.shots.matches} partido(s), error por minuto:</p>
               {bt.shots.pre && <p className="text-gray-500 mb-1">📌 Baseline PREMATCH: ±{bt.shots.pre.mae} ({bt.shots.pre.n}p)</p>}
+              {bt.shots.dist && <p className="text-gray-500 mb-1">Distribución: log-loss {bt.shots.dist.logloss} (0.693 = moneda) · sharpness {bt.shots.dist.sharpness} · cobertura 10-90: {bt.shots.dist.coverage != null ? `${bt.shots.dist.coverage}% (objetivo ~80%)` : '—'}</p>}
               <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5">
                 {bt.shots.rows.map(r => (
                   <div key={r.bucket} className="bg-dark-700 rounded p-1.5 text-center">

@@ -230,6 +230,42 @@ function pPickDadoTempo(pick, T) {
   return pick.dir === 'OVER' ? pOver : 1 - pOver
 }
 
+// Validador MONTE CARLO (auditoría v3 §17): mismo proceso generativo —
+// muestrear estado de tempo → Poisson de cada mercado condicionado al MISMO
+// estado → evaluar A, B y A∩B. Las marginales DEBEN coincidir con las del
+// cálculo analítico (misma mixtura); si no coinciden → BUG MODEL.
+// Uso: tests y verificación, no producción (el analítico es exacto y rápido).
+export function jointProbabilityMC(pickA, pickB, n = 30000, rng = Math.random) {
+  const samplePoisson = (lambda) => {
+    // Knuth para lambdas moderadas; suficiente para conteos de fútbol
+    const L = Math.exp(-lambda)
+    let k = 0; let p = 1
+    do { k++; p *= rng() } while (p > L)
+    return k - 1
+  }
+  const cumW = []
+  let acc = 0
+  for (const [T, w] of TEMPO_STATES) { acc += w; cumW.push([T, acc]) }
+  let cA = 0; let cB = 0; let cAB = 0
+  for (let i = 0; i < n; i++) {
+    const u = rng()
+    const T = cumW.find(([, c]) => u <= c)[0]
+    const expA = TEMPO_CATS.has(pickA.category) ? pickA.expected * T : pickA.expected
+    const expB = TEMPO_CATS.has(pickB.category) ? pickB.expected * T : pickB.expected
+    const xA = samplePoisson(expA); const xB = samplePoisson(expB)
+    const okA = pickA.dir === 'OVER' ? xA > pickA.line : xA < pickA.line
+    const okB = pickB.dir === 'OVER' ? xB > pickB.line : xB < pickB.line
+    if (okA) cA++
+    if (okB) cB++
+    if (okA && okB) cAB++
+  }
+  return {
+    margA: +(cA / n * 100).toFixed(1),
+    margB: +(cB / n * 100).toFixed(1),
+    pJoint: +(cAB / n * 100).toFixed(1),
+  }
+}
+
 export function jointProbability(pickA, pickB) {
   // IMPORTANTE: marginales y conjunta salen del MISMO modelo de tempo — así el
   // ajuste por dependencia es solo el efecto covarianza (comparable de verdad).
@@ -266,6 +302,17 @@ export function suggestCombo(picks, targetOdds = 1.50) {
 
   const pJ = best.pJoint / 100
   const impTarget = +((1 / targetOdds) * 100).toFixed(1) // 66.7% para 1.50 — implícita bruta
+
+  // INCERTIDUMBRE del EV conjunto (auditoría v3 §22): el EV cambia según el
+  // estado de tempo — la dispersión entre estados es una cota honesta de la
+  // sensibilidad del EV a la parametrización heurística del tempo.
+  const evPorEstado = TEMPO_STATES.map(([T]) => {
+    const pA = pPickDadoTempo(best.p1, T); const pB = pPickDadoTempo(best.p2, T)
+    return pA * pB * targetOdds - 1
+  })
+  const evUnc = +(((Math.max(...evPorEstado) - Math.min(...evPorEstado)) / 2) * 100).toFixed(1)
+  const evLow = +(best.evTarget * 100 - evUnc).toFixed(1)
+
   return {
     p1: best.p1, p2: best.p2,
     pIndep: best.pIndep,           // benchmark de independencia
@@ -276,7 +323,9 @@ export function suggestCombo(picks, targetOdds = 1.50) {
     cuotaJusta: +(1 / pJ).toFixed(2),
     targetOdds, impTarget,
     evAlTarget: +(best.evTarget * 100).toFixed(1),
-    valeAlTarget: best.evTarget > 0.02, // EV conjunto ≥ +2% al target (provisional)
+    evUnc, evLow,                  // EV ± incertidumbre del tempo; evLow = peor caso
+    // PROVISIONAL SAFETY FLOOR: EV ≥ +2% Y el peor caso de tempo no negativo fuerte
+    valeAlTarget: best.evTarget > 0.02 && evLow > -2,
   }
 }
 

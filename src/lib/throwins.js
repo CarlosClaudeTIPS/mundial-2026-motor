@@ -283,12 +283,19 @@ export function makeLiveLog(storageKey) {
       for (const [k, v] of Object.entries(info ?? {})) if (v != null) m[k] = v
       const last = m.snaps[m.snaps.length - 1]
       if (last && model.minuto <= last.min) return // solo si avanzó el minuto
+      // Registro de roja para el análisis futuro del efecto real (v3 §26)
+      if (info?.hayRoja && m.rojaMin == null) {
+        m.rojaMin = model.minuto
+        if (info.goalDiff != null) m.rojaDiff = info.goalDiff
+      }
       const lineCentral = Math.floor(model.expectedFinal) + 0.5
       m.snaps.push({
         min: model.minuto,
         acum: model.acum,
         proj: model.expectedFinal,
         naive: model.naiveFinal ?? null, // benchmark: extrapolación lineal
+        i10: model.interval?.[0] ?? null, // para medir cobertura del intervalo 10-90
+        i90: model.interval?.[1] ?? null,
         lineCentral,
         pCentral: model.pOver(lineCentral),
       })
@@ -370,7 +377,28 @@ export function makeLiveLog(storageKey) {
         }
       }).filter(Boolean)
 
-      return { matches: resolved.length, rows, pre, calib, conRoja: resolved.filter(m => m.hayRoja).length }
+      // Métricas de distribución completa (v3 §6, §7, §38):
+      // - logloss: calidad de la probabilidad de la línea central (no solo acierto)
+      // - sharpness: qué tan lejos de 50/50 se atreve el modelo (calibrado pero
+      //   siempre en 50-55% = inútil para apostar)
+      // - coverage: el intervalo 10-90 pretende contener ~80% de los finales
+      let ll = 0; let llN = 0; let sharp = 0; let cov = 0; let covN = 0
+      for (const m of resolved) {
+        for (const s of m.snaps) {
+          const y = m.final > s.lineCentral ? 1 : 0
+          const p = Math.min(0.999, Math.max(0.001, s.pCentral))
+          ll += -(y * Math.log(p) + (1 - y) * Math.log(1 - p)); llN++
+          sharp += Math.abs(s.pCentral - 0.5) * 2
+          if (s.i10 != null && s.i90 != null) { covN++; if (m.final >= s.i10 && m.final <= s.i90) cov++ }
+        }
+      }
+      const dist = llN ? {
+        logloss: +(ll / llN).toFixed(3),      // referencia: 0.693 = moneda al aire
+        sharpness: +(sharp / llN).toFixed(2), // 0 = siempre 50/50 · 1 = siempre seguro
+        coverage: covN ? Math.round(cov / covN * 100) : null, // objetivo ~80%
+      } : null
+
+      return { matches: resolved.length, rows, pre, calib, dist, conRoja: resolved.filter(m => m.hayRoja).length }
     },
   }
 }
