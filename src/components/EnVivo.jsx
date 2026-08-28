@@ -9,9 +9,11 @@ import { TeamStatsRef } from './Analizar'
 import RecentResults from './RecentResults'
 import TiQuant from './TiQuant'
 import GkQuant from './GkQuant'
+import CornersQuant from './CornersQuant'
 import ContextoPartido from './ContextoPartido'
 import { tiLogPending, resolveTiLog } from '../lib/throwins'
 import { gkLogPending, resolveGkLog } from '../lib/goalkicks'
+import { cornersLogPending, resolveCornersLog } from '../lib/corners'
 import { fetchSofaSaques } from '../lib/sofascore'
 
 // Misma lista de ligas seguidas que usa el Fixture
@@ -224,6 +226,7 @@ export default function EnVivo({ league }) {
   const [tiFuente,   setTiFuente]   = useState(null) // 'api' | 'sofa' | 'manual'
   const [gkAc,       setGkAc]       = useState(null) // saques de portería acumulados
   const [gkFuente,   setGkFuente]   = useState(null)
+  const [cornersFuente, setCornersFuente] = useState('manual') // córners: 'api' | 'manual'
   const [dangAtk,    setDangAtk]    = useState(null) // { h, a } ataques peligrosos si la API los da
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
@@ -320,6 +323,18 @@ export default function EnVivo({ league }) {
       } catch {}
     }
 
+    // Córners: Live-Score trae el dato final por equipo en el historial
+    for (const p of cornersLogPending()) {
+      if (done >= 2) break
+      if (enVivoAhora(p.id) || intentado(`c_${p.id}`)) continue
+      try {
+        const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
+        const h = numv(r.stats?.[0]?.stats?.['Corner Kicks'])
+        const a = numv(r.stats?.[1]?.stats?.['Corner Kicks'])
+        if (h != null || a != null) { resolveCornersLog(p.id, (h ?? 0) + (a ?? 0)); done++ }
+      } catch {}
+    }
+
     // GK: Live-Score nunca lo trae → resolver con Sofascore por fecha
     for (const p of gkLogPending()) {
       if (done >= 2) break
@@ -373,7 +388,8 @@ export default function EnVivo({ league }) {
       const gk      = sumStat(res.stats, 'Goal Kicks')
 
       let filled = []
-      if (corners != null) { setCornersAc(corners); filled.push('córners') }
+      if (corners != null) { setCornersAc(corners); setCornersFuente('api'); filled.push('córners') }
+      else setCornersFuente('manual')
       if (shots != null)   { setTirosAc(shots);     filled.push('tiros') }
       if (sot != null)     { setSotAc(sot);         filled.push('SOT') }
       if (yellow != null || red != null) { setTarjetasAc((yellow ?? 0) + (red ?? 0)); filled.push('tarjetas') }
@@ -477,6 +493,19 @@ export default function EnVivo({ league }) {
     const h = s.h?.gk; const a = s.a?.gk
     return (h != null || a != null) ? { min: s.min, gk: (h ?? 0) + (a ?? 0) } : null
   }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const cornersSnaps = useMemo(() => snapsRef.current.map(s => {
+    const h = s.h?.corners; const a = s.a?.corners
+    return (h != null || a != null) ? { min: s.min, ch: h ?? 0, ca: a ?? 0 } : null
+  }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Tiros bloqueados totales (generador mecánico del córner) si la API los da
+  const blkTotal = useMemo(() => {
+    if (!liveStatsRaw) return null
+    const h = numv(liveStatsRaw.home?.['Blocked Shots'])
+    const a = numv(liveStatsRaw.away?.['Blocked Shots'])
+    return (h != null || a != null) ? (h ?? 0) + (a ?? 0) : null
+  }, [liveStatsRaw])
 
   // Tiros desviados acumulados (driver causal de los GK): tiros − a puerta.
   // Con datos de la API por equipo, o con los acumulados manuales como fallback.
@@ -671,6 +700,25 @@ export default function EnVivo({ league }) {
           <LiveStatsBoard raw={liveStatsRaw} homeName={liveStatsRaw.homeName} awayName={liveStatsRaw.awayName} minuto={minuto} />
         )}
 
+        {/* ── Módulo cuantitativo de CÓRNERS ── */}
+        <CornersQuant
+          minuto={minuto}
+          goalDiff={golesA - golesB}
+          cH={perTeam?.h?.corners} cA={perTeam?.a?.corners}
+          cTotal={cornersAc}
+          daTotal={dangAtk ? (parseFloat(dangAtk.h) || 0) + (parseFloat(dangAtk.a) || 0) : null}
+          blkTotal={blkTotal}
+          fuente={cornersFuente}
+          snaps={cornersSnaps}
+          preA={preA} preB={preB}
+          league={selLeague}
+          matchInfo={selMatch ? {
+            id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
+            homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
+          } : null}
+          homeName={teamAName} awayName={teamBName}
+        />
+
         {/* ── Módulo cuantitativo de SAQUES DE BANDA ── */}
         <TiQuant
           minuto={minuto}
@@ -756,7 +804,7 @@ export default function EnVivo({ league }) {
             <h2 className="font-semibold text-white text-sm">Stats Acumuladas</h2>
             <div className="grid grid-cols-2 gap-3">
               {[
-                ['Córners', cornersAc, setCornersAc],
+                ['Córners', cornersAc, v => { setCornersAc(v); setCornersFuente('manual') }],
                 ['Tiros totales', tirosAc, setTirosAc],
                 ['SOT', sotAc, setSotAc],
                 ['Tarjetas', tarjetasAc, setTarjetasAc],
