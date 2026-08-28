@@ -163,7 +163,17 @@ export async function fetchSofaPartidoActual(teamName) {
 // Gratis, misma API. Las alineaciones cambian el perfil esperado (extremos
 // abiertos vs mediocampo estrecho) — por ahora se MUESTRAN sin peso en el
 // modelo (no hay backtest que soporte un coeficiente; ver docs).
+const ctxCache = new Map() // teamName → { ts, data } — evita repetir llamadas (10 min)
+
 export async function fetchSofaContexto(teamName) {
+  const hit = ctxCache.get(teamName)
+  if (hit && Date.now() - hit.ts < 10 * 60_000) return hit.data
+  const data = await fetchSofaContextoRaw(teamName)
+  ctxCache.set(teamName, { ts: Date.now(), data })
+  return data
+}
+
+async function fetchSofaContextoRaw(teamName) {
   const team = await getTeamId(teamName)
 
   const [lastData, nextData] = await Promise.all([
@@ -225,6 +235,29 @@ export async function fetchSofaContexto(teamName) {
   } catch {}
 
   return out
+}
+
+// ─── Amonestados del partido EN CURSO de un equipo (incidentes Sofascore) ────
+// Para el módulo de tarjetas: quiénes ya tienen amarilla (riesgo de segunda),
+// con minuto y tipo. Sin cache: cambia durante el partido.
+export async function fetchSofaAmonestados(teamName) {
+  const team = await getTeamId(teamName)
+  const lastData = await sofaFetch(`/team/${team.id}/events/last/0`).catch(() => null)
+  const nextData = await sofaFetch(`/team/${team.id}/events/next/0`).catch(() => null)
+  const all = [...(lastData?.events ?? []), ...(nextData?.events ?? [])]
+  const ev = all.find(e => e.status?.type === 'inprogress')
+  if (!ev) return null
+
+  const inc = await sofaFetch(`/event/${ev.id}/incidents`)
+  const cards = (inc.incidents ?? []).filter(i => i.incidentType === 'card')
+  const side = isHome => cards
+    .filter(i => i.isHome === isHome)
+    .map(i => ({
+      name: i.player?.shortName ?? i.player?.name ?? i.playerName ?? '?',
+      min: i.time ?? null,
+      type: i.incidentClass ?? 'yellow', // yellow | red | yellowRed
+    }))
+  return { eventId: ev.id, home: side(true), away: side(false) }
 }
 
 // ─── Saques de los últimos N partidos de un equipo, indexados por fecha ──────

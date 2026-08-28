@@ -16,6 +16,8 @@ import { tiLogPending, resolveTiLog } from '../lib/throwins'
 import { gkLogPending, resolveGkLog } from '../lib/goalkicks'
 import { cornersLogPending, resolveCornersLog } from '../lib/corners'
 import { shotsLogPending, resolveShotsLog, sotLogPending, resolveSotLog } from '../lib/shots'
+import CardsQuant from './CardsQuant'
+import { cardsLogPending, resolveCardsLog } from '../lib/cards'
 import { fetchSofaSaques } from '../lib/sofascore'
 
 // Misma lista de ligas seguidas que usa el Fixture
@@ -230,6 +232,7 @@ export default function EnVivo({ league }) {
   const [gkFuente,   setGkFuente]   = useState(null)
   const [cornersFuente, setCornersFuente] = useState('manual') // córners: 'api' | 'manual'
   const [shotsFuente,   setShotsFuente]   = useState('manual') // tiros: 'api' | 'manual'
+  const [cardsFuente,   setCardsFuente]   = useState('manual') // tarjetas: 'api' | 'manual'
   const [dangAtk,    setDangAtk]    = useState(null) // { h, a } ataques peligrosos si la API los da
   const [liveStatsRaw, setLiveStatsRaw] = useState(null) // stats actuales crudas por equipo
   const [zona,       setZona]       = useState('mixto')
@@ -352,6 +355,18 @@ export default function EnVivo({ league }) {
         if (sh != null || sa != null) resolveSotLog(p.id, (sh ?? 0) + (sa ?? 0))
       } catch {}
     }
+    // Tarjetas: amarillas + rojas finales por equipo en el historial de LS
+    for (const p of cardsLogPending()) {
+      if (done >= 2) break
+      if (enVivoAhora(p.id) || intentado(`crd_${p.id}`)) continue
+      try {
+        const r = await fetchFixtureStats(p.id, p.homeId, p.awayId)
+        const g = (i, k) => numv(r.stats?.[i]?.stats?.[k])
+        const tot = [g(0, 'Yellow Cards'), g(1, 'Yellow Cards'), g(0, 'Red Cards'), g(1, 'Red Cards')]
+        if (tot.some(v => v != null)) { resolveCardsLog(p.id, tot.reduce((s, v) => s + (v ?? 0), 0)); done++ }
+      } catch {}
+    }
+
     for (const p of sotLogPending()) {
       if (done >= 2) break
       if (enVivoAhora(p.id) || intentado(`sot_${p.id}`)) continue
@@ -421,7 +436,8 @@ export default function EnVivo({ league }) {
       if (shots != null)   { setTirosAc(shots); setShotsFuente('api'); filled.push('tiros') }
       else setShotsFuente('manual')
       if (sot != null)     { setSotAc(sot);         filled.push('SOT') }
-      if (yellow != null || red != null) { setTarjetasAc((yellow ?? 0) + (red ?? 0)); filled.push('tarjetas') }
+      if (yellow != null || red != null) { setTarjetasAc((yellow ?? 0) + (red ?? 0)); setCardsFuente('api'); filled.push('tarjetas') }
+      else setCardsFuente('manual')
       setTiAc(ti) // null si no hay dato
       setTiFuente(ti != null ? 'api' : null)
       setGkAc(gk)
@@ -549,6 +565,22 @@ export default function EnVivo({ league }) {
     const h = s.h?.shots; const a = s.a?.shots
     return (h != null || a != null) ? { min: s.min, sh: h ?? 0, sa: a ?? 0 } : null
   }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const cardsSnaps = useMemo(() => snapsRef.current.map(s => {
+    const h = s.h?.cards; const a = s.a?.cards
+    return (h != null || a != null) ? { min: s.min, c: (h ?? 0) + (a ?? 0) } : null
+  }).filter(Boolean), [liveStatsRaw]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Amarillas/rojas/faltas por lado (para el módulo de tarjetas)
+  const cardsSides = useMemo(() => {
+    if (!liveStatsRaw) return null
+    const g = (side, key) => numv(liveStatsRaw[side]?.[key])
+    return {
+      yH: g('home', 'Yellow Cards'), yA: g('away', 'Yellow Cards'),
+      rH: g('home', 'Red Cards') ?? 0, rA: g('away', 'Red Cards') ?? 0,
+      foulsH: g('home', 'Fouls'), foulsA: g('away', 'Fouls'),
+    }
+  }, [liveStatsRaw])
 
   // Tiros desviados acumulados (driver causal de los GK): tiros − a puerta.
   // Con datos de la API por equipo, o con los acumulados manuales como fallback.
@@ -774,6 +806,24 @@ export default function EnVivo({ league }) {
           reds={reds}
           fuente={shotsFuente}
           snaps={shotsSnaps}
+          preA={preA} preB={preB}
+          matchInfo={selMatch ? {
+            id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
+            homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
+          } : null}
+          homeName={teamAName} awayName={teamBName}
+        />
+
+        {/* ── Módulo cuantitativo de TARJETAS ── */}
+        <CardsQuant
+          minuto={minuto}
+          goalDiff={golesA - golesB}
+          cH={perTeam?.h?.cards} cA={perTeam?.a?.cards}
+          yH={cardsSides?.yH} yA={cardsSides?.yA}
+          rH={cardsSides?.rH ?? 0} rA={cardsSides?.rA ?? 0}
+          foulsH={cardsSides?.foulsH} foulsA={cardsSides?.foulsA}
+          fuente={cardsFuente}
+          snaps={cardsSnaps}
           preA={preA} preB={preB}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
