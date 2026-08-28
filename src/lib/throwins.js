@@ -24,6 +24,7 @@
 
 import { poissonOver } from './engine'
 import { restanteEfectivo, regimeOf } from './match-state'
+import { evaluarMercado } from './market-engine'
 
 // ── Constantes del modelo (recalibrables) ────────────────────────────────────
 export const TI_MODEL = {
@@ -222,54 +223,14 @@ export function tiConfidence({ model, prior, fuente, snapsN = 0 }) {
   return { score: Math.min(92, Math.max(5, Math.round(score))), parts }
 }
 
-// ─── EDGE vs LÍNEA DE LA CASA ────────────────────────────────────────────────
-// oddsUnder opcional: con ambas cuotas se quita el margen (probabilidad
-// implícita SIN vig); con una sola, la implícita bruta sobreestima a la casa.
+// ─── EDGE vs LÍNEA DE LA CASA — delega en el MARKET ENGINE unificado ─────────
 export function tiEdge({ model, line, oddsOver, oddsUnder = null, confidence }) {
-  if (!model || !line || !oddsOver || oddsOver <= 1) return null
-  const pOver = model.pOver(line)
-  const pUnder = +(1 - pOver).toFixed(4)
-
-  let impOver
-  let sinVig = false
-  if (oddsUnder && oddsUnder > 1) {
-    const a = 1 / oddsOver; const b = 1 / oddsUnder
-    impOver = a / (a + b)
-    sinVig = true
-  } else {
-    impOver = 1 / oddsOver
-  }
-
-  const edgeOver = pOver - impOver
-  const edgeUnder = (1 - pOver) - (sinVig ? 1 - impOver : null)
-
-  // Umbral dinámico: base 4pp + castigos por confianza baja / partido temprano / sin quitar vig
-  let minEdge = TI_MODEL.EDGE_MIN
-  const razonesUmbral = []
-  if (confidence < 65) { minEdge += 0.02; razonesUmbral.push('confianza <65 → +2pp') }
-  if (model.minuto < 20) { minEdge += 0.02; razonesUmbral.push('antes del 20\' → +2pp') }
-  if (!sinVig) { minEdge += 0.01; razonesUmbral.push('sin cuota Under (no se quitó el vig) → +1pp') }
-
-  // Señal
-  let signal = 'NO BET'
-  let lado = null
-  if (confidence >= 50 && model.minuto >= TI_MODEL.MIN_MINUTO) {
-    if (edgeOver >= minEdge) { signal = 'BET'; lado = 'OVER' }
-    else if (sinVig && edgeUnder >= minEdge) { signal = 'BET'; lado = 'UNDER' }
-  }
-
-  return {
-    line, oddsOver, oddsUnder,
-    pOver: +(pOver * 100).toFixed(1),
-    pUnder: +(pUnder * 100).toFixed(1),
-    impOver: +(impOver * 100).toFixed(2),
-    sinVig,
-    edgeOver: +(edgeOver * 100).toFixed(2),
-    edgeUnder: sinVig ? +(edgeUnder * 100).toFixed(2) : null,
-    minEdge: +(minEdge * 100).toFixed(1),
-    razonesUmbral,
-    signal, lado,
-  }
+  if (!model) return null
+  return evaluarMercado({
+    pOverFn: model.pOver, line, oddsOver, oddsUnder, confidence,
+    minuto: model.minuto, minMinuto: TI_MODEL.MIN_MINUTO,
+    extras: [{ cond: model.minuto < 20, pp: 0.02, why: "antes del 20' → +2pp" }],
+  })
 }
 
 // ─── EXPLICABILIDAD: solo los factores que de verdad mueven ESTA predicción ──

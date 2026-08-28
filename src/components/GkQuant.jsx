@@ -4,6 +4,7 @@ import {
   logGkSnapshot, gkBacktestSummary,
 } from '../lib/goalkicks'
 import { ensureBaseline } from '../lib/baseline'
+import { reportarOportunidad, logDecision } from '../lib/market-engine'
 
 // ─── Panel cuantitativo de SAQUES DE PORTERÍA en vivo ────────────────────────
 // Espejo del panel de saques de banda, con la causalidad propia de los GK:
@@ -67,6 +68,23 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
   }, [model?.minuto, baseline?.expected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const bt = useMemo(() => showBt ? gkBacktestSummary() : null, [showBt, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (!matchInfo?.id) return
+    const edgeLado = edge ? (edge.lado === 'UNDER' ? edge.edgeUnder : edge.edgeOver) : null
+    reportarOportunidad(matchInfo.id, 'gk', edge ? {
+      marketBase: 'gk', label: `Saques portería ${edge.lado ? edge.lado + ' ' : 'O/U '}${edge.line}`,
+      signal: edge.signal, quality: edge.quality, edgeLado, evPct: edge.evPct,
+      conf: conf.score, line: edge.line, minuto,
+    } : null)
+    if (edge) logDecision({
+      matchId: matchInfo.id, match: `${matchInfo.home} vs ${matchInfo.away}`,
+      market: 'gk', line: edge.line, odds: edge.oddsOver,
+      baseline: baseline?.expected, live: model?.expectedFinal,
+      pModelo: edge.pOver, pImplicita: edge.impOver, edge: edge.edgeOver,
+      ev: edge.evPct, confidence: conf.score, signal: edge.signal, quality: edge.quality, minuto,
+    })
+  }, [edge, conf.score]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (gkAc == null) return (
     <div className="card border border-teal-800/40">
@@ -189,7 +207,7 @@ export default function GkQuant({ minuto, goalDiff, gkAc, gkH, gkA, offAcum, fue
                 ? (edge.lado === 'OVER' ? 'bg-green-800/70 text-green-100 border-2 border-green-500' : 'bg-blue-800/70 text-blue-100 border-2 border-blue-500')
                 : 'bg-dark-700 text-gray-400 border border-dark-500'
             }`}>
-              {edge.signal === 'BET' ? `✅ BET ${edge.lado} ${edge.line}` : '⛔ NO BET'}
+              {edge.signal === 'BET' ? `✅ BET ${edge.lado} ${edge.line} · Calidad ${edge.quality} · EV ${edge.evPct > 0 ? '+' : ''}${edge.evPct}%` : '⛔ NO BET'}
               <p className="text-[11px] font-normal mt-0.5 opacity-80">
                 {edge.signal === 'BET'
                   ? `edge ${edge.lado === 'OVER' ? edge.edgeOver : edge.edgeUnder} pp supera el umbral de ${edge.minEdge} pp con confianza ${conf.score}`

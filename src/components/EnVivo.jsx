@@ -18,6 +18,7 @@ import { cornersLogPending, resolveCornersLog } from '../lib/corners'
 import { shotsLogPending, resolveShotsLog, sotLogPending, resolveSotLog } from '../lib/shots'
 import CardsQuant from './CardsQuant'
 import { cardsLogPending, resolveCardsLog } from '../lib/cards'
+import Oportunidades from './Oportunidades'
 import { fetchSofaSaques } from '../lib/sofascore'
 
 // Misma lista de ligas seguidas que usa el Fixture
@@ -774,6 +775,9 @@ export default function EnVivo({ league }) {
         {liveStatsRaw && (
           <LiveStatsBoard raw={liveStatsRaw} homeName={liveStatsRaw.homeName} awayName={liveStatsRaw.awayName} minuto={minuto} />
         )}
+
+        {/* ── OPORTUNIDADES DEL PARTIDO (ranking cross-mercado + correlación) ── */}
+        {selectedId && <Oportunidades matchId={selectedId} />}
 
         {/* ── Módulo cuantitativo de CÓRNERS ── */}
         <CornersQuant

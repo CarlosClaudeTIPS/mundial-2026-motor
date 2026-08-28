@@ -30,6 +30,7 @@
 import { poissonOver, getSituationS } from './engine'
 import { nbOver, makeLiveLog } from './throwins'
 import { restanteEfectivo, regimeOf, pressureFactor, redCardFactor } from './match-state'
+import { evaluarMercado } from './market-engine'
 
 // ── Constantes (recalibrables con el live-backtest local) ────────────────────
 export const CORNER_MODEL = {
@@ -234,46 +235,19 @@ export function cornersConfidence({ model, prior, fuente, snapsN = 0 }) {
   return { score: Math.min(92, Math.max(5, Math.round(score))), parts }
 }
 
-// ─── EDGE vs LÍNEA (mercado: total | local | visitante) ──────────────────────
+// ─── EDGE vs LÍNEA — delega en el MARKET ENGINE unificado ────────────────────
 export function cornersEdge({ model, market = 'total', line, oddsOver, oddsUnder = null, confidence }) {
-  if (!model || !line || !oddsOver || oddsOver <= 1) return null
+  if (!model) return null
   const pFn = market === 'local' ? model.pOverHome : market === 'visitante' ? model.pOverAway : model.pOver
-  const pOver = pFn(line)
-
-  let impOver; let sinVig = false
-  if (oddsUnder && oddsUnder > 1) {
-    const x = 1 / oddsOver; const y = 1 / oddsUnder
-    impOver = x / (x + y); sinVig = true
-  } else impOver = 1 / oddsOver
-
-  const edgeOver = pOver - impOver
-  const edgeUnder = sinVig ? (1 - pOver) - (1 - impOver) : null
-
-  let minEdge = CORNER_MODEL.EDGE_MIN
-  const razonesUmbral = []
-  if (confidence < 65) { minEdge += 0.02; razonesUmbral.push('confianza <65 → +2pp') }
-  if (model.minuto < 20) { minEdge += 0.02; razonesUmbral.push('antes del 20\' → +2pp') }
-  if (!sinVig) { minEdge += 0.01; razonesUmbral.push('sin cuota Under (no se quitó el vig) → +1pp') }
-  if (market !== 'total') { minEdge += 0.01; razonesUmbral.push('mercado por equipo (más varianza) → +1pp') }
-
-  let signal = 'NO BET'; let lado = null
-  if (confidence >= 50 && model.minuto >= CORNER_MODEL.MIN_MINUTO) {
-    if (edgeOver >= minEdge) { signal = 'BET'; lado = 'OVER' }
-    else if (sinVig && edgeUnder >= minEdge) { signal = 'BET'; lado = 'UNDER' }
-  }
-
-  return {
-    market, line, oddsOver, oddsUnder,
-    pOver: +(pOver * 100).toFixed(1),
-    pUnder: +((1 - pOver) * 100).toFixed(1),
-    impOver: +(impOver * 100).toFixed(2),
-    sinVig,
-    edgeOver: +(edgeOver * 100).toFixed(2),
-    edgeUnder: sinVig ? +(edgeUnder * 100).toFixed(2) : null,
-    minEdge: +(minEdge * 100).toFixed(1),
-    razonesUmbral,
-    signal, lado,
-  }
+  const res = evaluarMercado({
+    pOverFn: pFn, line, oddsOver, oddsUnder, confidence,
+    minuto: model.minuto, minMinuto: CORNER_MODEL.MIN_MINUTO,
+    extras: [
+      { cond: model.minuto < 20, pp: 0.02, why: "antes del 20' → +2pp" },
+      { cond: market !== 'total', pp: 0.01, why: 'mercado por equipo (más varianza) → +1pp' },
+    ],
+  })
+  return res ? { ...res, market } : null
 }
 
 // ─── EXPLICABILIDAD ──────────────────────────────────────────────────────────

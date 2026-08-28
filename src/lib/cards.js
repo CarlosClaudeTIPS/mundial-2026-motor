@@ -34,6 +34,7 @@
 import { calcExpectedFouls } from './engine'
 import { nbOver, makeLiveLog } from './throwins'
 import { restanteEfectivo, regimeOf } from './match-state'
+import { evaluarMercado } from './market-engine'
 
 export const CARDS_MODEL = {
   K_CRED: 38,        // ~5 tarjetas/partido → el conteo observado es ruidoso; el prior aguanta
@@ -272,48 +273,21 @@ export function cardsConfidence({ model, prior, fuente, snapsN = 0 }) {
   return { score: Math.min(90, Math.max(5, Math.round(score))), parts }
 }
 
-// ─── EDGE (mercados: total | local | visitante) ──────────────────────────────
+// ─── EDGE — delega en el MARKET ENGINE unificado ─────────────────────────────
 export function cardsEdge({ model, market = 'total', line, oddsOver, oddsUnder = null, confidence }) {
-  if (!model || !line || !oddsOver || oddsOver <= 1) return null
+  if (!model) return null
   const P = { total: model.pOver, local: model.pOverHome, visitante: model.pOverAway }[market]
   if (!P) return null
-  const pOver = P(line)
-
-  let impOver; let sinVig = false
-  if (oddsUnder && oddsUnder > 1) {
-    const x = 1 / oddsOver; const y = 1 / oddsUnder
-    impOver = x / (x + y); sinVig = true
-  } else impOver = 1 / oddsOver
-
-  const edgeOver = pOver - impOver
-  const edgeUnder = sinVig ? (1 - pOver) - (1 - impOver) : null
-
-  let minEdge = CARDS_MODEL.EDGE_MIN
-  const razonesUmbral = []
-  if (confidence < 65) { minEdge += 0.02; razonesUmbral.push('confianza <65 → +2pp') }
-  if (model.minuto < 25) { minEdge += 0.02; razonesUmbral.push('antes del 25\' → +2pp (tarjetas señalizan tarde)') }
-  if (!sinVig) { minEdge += 0.01; razonesUmbral.push('sin cuota Under → +1pp') }
-  if (market !== 'total') { minEdge += 0.015; razonesUmbral.push('mercado por equipo → +1.5pp') }
-  if (model.hayRoja) { minEdge += 0.01; razonesUmbral.push('roja en cancha → +1pp') }
-
-  let signal = 'NO BET'; let lado = null
-  if (confidence >= 50 && model.minuto >= CARDS_MODEL.MIN_MINUTO) {
-    if (edgeOver >= minEdge) { signal = 'BET'; lado = 'OVER' }
-    else if (sinVig && edgeUnder >= minEdge) { signal = 'BET'; lado = 'UNDER' }
-  }
-
-  return {
-    market, line, oddsOver, oddsUnder,
-    pOver: +(pOver * 100).toFixed(1),
-    pUnder: +((1 - pOver) * 100).toFixed(1),
-    impOver: +(impOver * 100).toFixed(2),
-    sinVig,
-    edgeOver: +(edgeOver * 100).toFixed(2),
-    edgeUnder: sinVig ? +(edgeUnder * 100).toFixed(2) : null,
-    minEdge: +(minEdge * 100).toFixed(1),
-    razonesUmbral,
-    signal, lado,
-  }
+  const res = evaluarMercado({
+    pOverFn: P, line, oddsOver, oddsUnder, confidence,
+    minuto: model.minuto, minMinuto: CARDS_MODEL.MIN_MINUTO,
+    extras: [
+      { cond: model.minuto < 25, pp: 0.02, why: "antes del 25' → +2pp (tarjetas señalizan tarde)" },
+      { cond: market !== 'total', pp: 0.015, why: 'mercado por equipo → +1.5pp' },
+      { cond: model.hayRoja, pp: 0.01, why: 'roja en cancha → +1pp' },
+    ],
+  })
+  return res ? { ...res, market } : null
 }
 
 // ─── EXPLICABILIDAD ──────────────────────────────────────────────────────────

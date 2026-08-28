@@ -26,6 +26,7 @@
 import { getSituationS } from './engine'
 import { nbOver, makeLiveLog } from './throwins'
 import { restanteEfectivo, regimeOf, pressureFactor, redCardFactor } from './match-state'
+import { evaluarMercado } from './market-engine'
 
 // ── Constantes (recalibrables con el live-backtest) ──────────────────────────
 export const SHOTS_MODEL = {
@@ -267,9 +268,9 @@ export function shotsConfidence({ model, prior, fuente, snapsN = 0 }) {
   return { score: Math.min(92, Math.max(5, Math.round(score))), parts }
 }
 
-// ─── EDGE (mercados: tiros/SOT × total/local/visitante) ──────────────────────
+// ─── EDGE — delega en el MARKET ENGINE unificado ─────────────────────────────
 export function shotsEdge({ model, market = 'shots_total', line, oddsOver, oddsUnder = null, confidence }) {
-  if (!model || !line || !oddsOver || oddsOver <= 1) return null
+  if (!model) return null
   const P = {
     shots_total: model.pOver,
     shots_local: model.home.pOverShots,
@@ -279,43 +280,16 @@ export function shotsEdge({ model, market = 'shots_total', line, oddsOver, oddsU
     sot_visitante: model.away.pOverSot,
   }[market]
   if (!P) return null
-  const pOver = P(line)
-
-  let impOver; let sinVig = false
-  if (oddsUnder && oddsUnder > 1) {
-    const x = 1 / oddsOver; const y = 1 / oddsUnder
-    impOver = x / (x + y); sinVig = true
-  } else impOver = 1 / oddsOver
-
-  const edgeOver = pOver - impOver
-  const edgeUnder = sinVig ? (1 - pOver) - (1 - impOver) : null
-
-  let minEdge = SHOTS_MODEL.EDGE_MIN
-  const razonesUmbral = []
-  if (confidence < 65) { minEdge += 0.02; razonesUmbral.push('confianza <65 → +2pp') }
-  if (model.minuto < 20) { minEdge += 0.02; razonesUmbral.push('antes del 20\' → +2pp') }
-  if (!sinVig) { minEdge += 0.01; razonesUmbral.push('sin cuota Under → +1pp') }
-  if (market.endsWith('local') || market.endsWith('visitante')) { minEdge += 0.01; razonesUmbral.push('mercado por equipo → +1pp') }
-  if (market.startsWith('sot') && model.sotAcum == null) { minEdge += 0.02; razonesUmbral.push('SOT sin dato en vivo (estimado) → +2pp') }
-
-  let signal = 'NO BET'; let lado = null
-  if (confidence >= 50 && model.minuto >= SHOTS_MODEL.MIN_MINUTO) {
-    if (edgeOver >= minEdge) { signal = 'BET'; lado = 'OVER' }
-    else if (sinVig && edgeUnder >= minEdge) { signal = 'BET'; lado = 'UNDER' }
-  }
-
-  return {
-    market, line, oddsOver, oddsUnder,
-    pOver: +(pOver * 100).toFixed(1),
-    pUnder: +((1 - pOver) * 100).toFixed(1),
-    impOver: +(impOver * 100).toFixed(2),
-    sinVig,
-    edgeOver: +(edgeOver * 100).toFixed(2),
-    edgeUnder: sinVig ? +(edgeUnder * 100).toFixed(2) : null,
-    minEdge: +(minEdge * 100).toFixed(1),
-    razonesUmbral,
-    signal, lado,
-  }
+  const res = evaluarMercado({
+    pOverFn: P, line, oddsOver, oddsUnder, confidence,
+    minuto: model.minuto, minMinuto: SHOTS_MODEL.MIN_MINUTO,
+    extras: [
+      { cond: model.minuto < 20, pp: 0.02, why: "antes del 20' → +2pp" },
+      { cond: market.endsWith('local') || market.endsWith('visitante'), pp: 0.01, why: 'mercado por equipo → +1pp' },
+      { cond: market.startsWith('sot') && model.sotAcum == null, pp: 0.02, why: 'SOT sin dato en vivo (estimado) → +2pp' },
+    ],
+  })
+  return res ? { ...res, market } : null
 }
 
 // ─── EXPLICABILIDAD ──────────────────────────────────────────────────────────
