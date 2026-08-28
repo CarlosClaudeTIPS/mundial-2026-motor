@@ -656,11 +656,30 @@ export default function EnVivo({ league }) {
       return { acum, proy: +(acum + r.lambda).toFixed(1) }
     }
 
+    // ── Córners: NO es solo ritmo/minuto ──
+    // Mezcla (a) el ritmo de córners del propio partido con (b) los córners
+    // IMPLÍCITOS en la presión real: quien acumula tiros genera córners aunque
+    // todavía no le hayan salido (≈0.38 córners por tiro en fútbol de élite).
+    // Un equipo con 9 tiros y 1 córner está "debiendo" córners → regresión al alza.
+    const projCorners = (side, drive) => {
+      const c = perTeam?.[side]?.corners
+      if (c == null) return null
+      const rateProj = c + calcLiveExpected({ statAcumulada: c, minutos: minuto, minutosRestantes, situationS: 1, tacticalK: drive * tacticalK * intensity }).lambda
+      const sh = perTeam[side].shots
+      let proy = rateProj
+      if (sh != null && minuto >= 20) {
+        const pressureRate = (sh / minuto) * 0.38 // córners/min que implica su volumen de tiros
+        const pressureProj = c + pressureRate * minutosRestantes * drive * tacticalK
+        proy = rateProj * 0.55 + pressureProj * 0.45
+      }
+      return { acum: c, proy: +proy.toFixed(1) }
+    }
+
     const team = perTeam ? {
       h: {
         shots:   projTeam(perTeam.h.shots,   driveH, intensity),
         sot:     projTeam(perTeam.h.sot,     driveH, intensity),
-        corners: projTeam(perTeam.h.corners, driveH, tacticalK * intensity),
+        corners: projCorners('h', driveH),
         cards:   projTeam(perTeam.h.cards,   goalDiff < 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
         ti:      projTeam(perTeam.h.ti,      1, intensity),
         gk:      projTeam(perTeam.h.gk,      1, 1),
@@ -668,7 +687,7 @@ export default function EnVivo({ league }) {
       a: {
         shots:   projTeam(perTeam.a.shots,   driveA, intensity),
         sot:     projTeam(perTeam.a.sot,     driveA, intensity),
-        corners: projTeam(perTeam.a.corners, driveA, tacticalK * intensity),
+        corners: projCorners('a', driveA),
         cards:   projTeam(perTeam.a.cards,   goalDiff > 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
         ti:      projTeam(perTeam.a.ti,      1, intensity),
         gk:      projTeam(perTeam.a.gk,      1, 1),
@@ -727,7 +746,11 @@ export default function EnVivo({ league }) {
       if (!t) continue
       const drive = side === 'h' ? calc.driveH : calc.driveA
       const dtxt = drive > 1.04 ? `Drive ×${drive}: empujando` : drive < 0.96 ? `Drive ×${drive}: administrando` : null
-      push(`Córners ${tn[side]}`,  t.corners, t.corners?.acum, 1, dtxt, { side, statKey: 'corners' })
+      const shSide = perTeam?.[side]?.shots
+      const cornPresion = shSide != null && t.corners
+        ? `Proyección = ritmo de córners + presión por tiros (${shSide} tiros → córners implícitos)${dtxt ? ` · ${dtxt}` : ''}`
+        : dtxt
+      push(`Córners ${tn[side]}`,  t.corners, t.corners?.acum, 1, cornPresion, { side, statKey: 'corners' })
       push(`Tiros ${tn[side]}`,    t.shots,   t.shots?.acum,   1, dtxt, { side, statKey: 'shots' })
       push(`SOT ${tn[side]}`,      t.sot,     t.sot?.acum,     1, dtxt, { side, statKey: 'sot' })
       push(`Tarjetas ${tn[side]}`, t.cards,   t.cards?.acum,   1, null, { side, statKey: 'cards' })
@@ -1023,6 +1046,18 @@ export default function EnVivo({ league }) {
                   <p className="text-sm text-gray-400 py-3">
                     ⚖️ Ahora mismo las proyecciones caen justo sobre las líneas — no hay desviación que aprovechar. Es información útil: <strong className="text-gray-300">no apostar también es una decisión</strong>. Se recalcula solo cada 60 segundos.
                   </p>
+                )}
+
+                {/* ── EL PICK, literal y sin rodeos ── */}
+                {liveRecs[0] && (
+                  <div className={`rounded-xl px-4 py-3 border-2 ${liveRecs[0].soft ? 'bg-orange-950/40 border-orange-700/60' : 'bg-green-950/50 border-green-600/70'}`}>
+                    <p className="text-lg font-black text-white">
+                      🎯 PICK RECOMENDADO: <span className={liveRecs[0].rec.dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}>
+                        {liveRecs[0].rec.dir === 'OVER' ? 'MÁS' : 'MENOS'} de {liveRecs[0].rec.line}
+                      </span> — {liveRecs[0].label}
+                      <span className="text-sm font-semibold text-gray-400 ml-2">P {liveRecs[0].p}% · Confianza {liveRecs[0].confidence}{liveRecs[0].soft ? ' · 🔸 señal débil, stake mínimo' : ''}</span>
+                    </p>
+                  </div>
                 )}
                 {liveRecs.map((r, i) => (
                   <div key={r.label}
