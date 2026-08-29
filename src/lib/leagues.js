@@ -42,6 +42,18 @@ export const LEAGUES = [
   { id: 136, lsId: 87,  main: false, name: 'Serie B',             country: 'Italia',    flag: '🇮🇹', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_italy_serie_b', type: 'league' },
   { id: 141, lsId: 79,  main: false, name: 'Segunda División',    country: 'España',    flag: '🇪🇸', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_spain_segunda_division', type: 'league' },
   { id: 258, lsId: 258, main: false, name: 'Premier League',      country: 'Canadá',    flag: '🇨🇦', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  // ── Latinoamérica y segundas divisiones (2026-08-29) ──
+  { id: 131, lsId: 96,  main: false, name: 'Primera Nacional',    country: 'Argentina', flag: '🇦🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 130, lsId: 230, main: false, name: 'Copa Argentina',      country: 'Argentina', flag: '🇦🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
+  { id: 263, lsId: 98,  main: false, name: 'Liga de Expansión',   country: 'México',    flag: '🇲🇽', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 265, lsId: 25,  main: false, name: 'Primera División',    country: 'Chile',     flag: '🇨🇱', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 242, lsId: 50,  main: false, name: 'Liga Pro',            country: 'Ecuador',   flag: '🇪🇨', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 268, lsId: 48,  main: false, name: 'Primera División',    country: 'Uruguay',   flag: '🇺🇾', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 250, lsId: 49,  main: false, name: 'División Profesional', country: 'Paraguay', flag: '🇵🇾', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 281, lsId: 47,  main: false, name: 'Primera División',    country: 'Perú',      flag: '🇵🇪', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 255, lsId: 383, main: false, name: 'USL Championship',    country: 'USA',       flag: '🇺🇸', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 240, lsId: 265, main: false, name: 'Primera B',           country: 'Colombia',  flag: '🇨🇴', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 241, lsId: 116, main: false, name: 'Copa Colombia',       country: 'Colombia',  flag: '🇨🇴', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
 ]
 
 export const DEFAULT_LEAGUE_ID = 39

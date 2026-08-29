@@ -258,6 +258,12 @@ export default function EnVivo({ league }) {
       setPreError('Este partido no trae IDs de equipos para buscar su historial')
       return
     }
+    if (match.sinConfigurar) {
+      // Sin liga configurada no hay baseline ni tier: un prematch con la liga
+      // equivocada daría priors falsos. Mejor decirlo que inventarlo.
+      setPreError('Liga no configurada en la app: el análisis EN VIVO (ritmo, proyecciones) funciona, pero no hay historial ni prior prepartido para este partido')
+      return
+    }
     const lg = LEAGUES.find(l => l.id === match.leagueId) ?? league
     setPreLoading(true)
     const onProgress = (name, i, n) => {
@@ -289,10 +295,24 @@ export default function EnVivo({ league }) {
       if (vista === 'otras') {
         const r = await fetchLiveGlobal()
         if (r?.ok) {
-          const porLsId = Object.fromEntries(LEAGUES.filter(l => !misLigas.includes(l.id) && l.lsId).map(l => [l.lsId, l]))
+          const porLsId = Object.fromEntries(LEAGUES.filter(l => l.lsId).map(l => [l.lsId, l]))
+          const misLsIds = new Set(LEAGUES.filter(l => misLigas.includes(l.id)).map(l => l.lsId))
           for (const m of r.live ?? []) {
+            if (misLsIds.has(m.competitionId)) continue // esos están en "Mis ligas"
             const liga = porLsId[m.competitionId]
-            if (liga) all.push({ ...m, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+            if (liga) {
+              all.push({ ...m, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+            } else {
+              // Liga NO configurada en la app: se muestra igual para no perder
+              // partidos, pero sin prior prepartido (no hay baseline de liga)
+              all.push({
+                ...m,
+                leagueId: null,
+                leagueName: m.competition || m.country || `Competición ${m.competitionId}`,
+                leagueFlag: '🌐',
+                sinConfigurar: true,
+              })
+            }
           }
         } else if (r?.error) setLiveError(r.error)
       } else {
