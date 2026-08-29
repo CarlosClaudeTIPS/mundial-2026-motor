@@ -5,10 +5,16 @@
 // deja pasar a un Chrome real (curl/Node dan 403 — por eso no va por proxy).
 
 const BASE = 'https://api.sofascore.com/api/v1'
-const CACHE_KEY = 'motor_sofa_cache_v1'
+// v2: la caché guarda su propio TTL, así que las entradas viejas con stats
+// VACÍAS cacheadas 30 días no expirarían solas — se sube la versión para
+// invalidarlas de una vez (bug de los saques de portería que no aparecían).
+const CACHE_KEY = 'motor_sofa_cache_v2'
 const TTL_TEAMID = 90 * 24 * 3600_000  // el id de un equipo no cambia
-const TTL_EVENTS = 3 * 3600_000        // lista de partidos: 3h
-const TTL_STATS  = 30 * 24 * 3600_000  // stats de partido terminado: 30 días
+const TTL_EVENTS = 20 * 60_000         // lista de partidos: 20 min (un partido
+                                       // recién terminado debe entrar pronto)
+const TTL_STATS  = 30 * 24 * 3600_000  // stats de partido TERMINADO: 30 días
+const TTL_STATS_VACIO = 15 * 60_000    // stats aún no publicadas: reintentar
+                                       // pronto (no contaminar 30 días con null)
 
 function getCache(key) {
   try {
@@ -89,8 +95,11 @@ async function getEventSaques(eventId) {
     xgHome: num(xgItem?.home), xgAway: num(xgItem?.away),
     bcHome: num(bcItem?.home), bcAway: num(bcItem?.away),
   }
-  // cachear siempre (aunque venga vacío) — el partido ya terminó, no va a cambiar
-  setCache(key, out, TTL_STATS)
+  // OJO: si el partido acaba de terminar (o sigue en juego), Sofascore todavía
+  // puede no publicar saques/centros. Cachear ESO 30 días dejaba el dato en
+  // null durante un mes — por eso los vacíos se cachean solo 15 min.
+  const vacio = out.tiHome == null && out.gkHome == null && out.crHome == null && out.xgHome == null
+  setCache(key, out, vacio ? TTL_STATS_VACIO : TTL_STATS)
   return out
 }
 
@@ -258,6 +267,29 @@ export async function fetchSofaAmonestados(teamName) {
       type: i.incidentClass ?? 'yellow', // yellow | red | yellowRed
     }))
   return { eventId: ev.id, home: side(true), away: side(false) }
+}
+
+// ─── Buscar el partido en el índice por fecha, tolerando ±1 día ──────────────
+// Live-Score y Sofascore pueden fechar distinto un mismo partido (kickoff
+// nocturno, husos). Se busca la fecha exacta y, si no está, el día anterior y
+// el siguiente — verificando el nombre del rival para no cruzar partidos.
+const normNombre = s => (s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '')
+
+export function buscarSaquesPorFecha(byDate, fecha, rivalNombre = null) {
+  if (!byDate || !fecha) return null
+  const exacto = byDate[fecha]
+  if (exacto) return exacto
+  const base = new Date(fecha + 'T12:00:00Z').getTime()
+  for (const delta of [-1, 1]) {
+    const d = new Date(base + delta * 86400000).toISOString().slice(0, 10)
+    const cand = byDate[d]
+    if (!cand) continue
+    // Sin nombre de rival no se arriesga el cruce; con él, debe coincidir
+    if (!rivalNombre) continue
+    const a = normNombre(cand.rival); const b = normNombre(rivalNombre)
+    if (a && b && (a.includes(b) || b.includes(a))) return cand
+  }
+  return null
 }
 
 // ─── Saques de los últimos N partidos de un equipo, indexados por fecha ──────

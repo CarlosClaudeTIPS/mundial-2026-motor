@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { fetchFixtures, fetchFixtureStats, isDone } from '../lib/football-api'
-import { fetchSofaSaques } from '../lib/sofascore'
+import { fetchSofaSaques, buscarSaquesPorFecha } from '../lib/sofascore'
 import { listPredicciones, listResultados, yaResuelto, saveResultado, resolverPrediccion } from '../lib/predicciones'
 import { LEAGUES, getLeague } from '../lib/leagues'
 import ModelHealth from './ModelHealth'
@@ -61,7 +61,7 @@ export default function Rendimiento() {
             if (home['Goal Kicks'] == null || home['Throw Ins'] == null) {
               try {
                 const sofa = await fetchSofaSaques(match.homeTeam, 12)
-                const s = sofa.byDate[(match.date ?? '').slice(0, 10)]
+                const s = buscarSaquesPorFecha(sofa.byDate, (match.date ?? '').slice(0, 10), match.awayTeam)
                 if (s) {
                   if (home['Goal Kicks'] == null && s.gk != null) { home['Goal Kicks'] = s.gk; away['Goal Kicks'] = s.gkAg }
                   if (home['Throw Ins'] == null && s.ti != null) { home['Throw Ins'] = s.ti; away['Throw Ins'] = s.tiAg }

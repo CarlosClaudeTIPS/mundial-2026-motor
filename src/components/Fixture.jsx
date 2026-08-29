@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { fetchFixtures, fetchLive, fetchFixtureStats, formatLocalTime, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
 import { LEAGUES } from '../lib/leagues'
 import { getPrediccion } from '../lib/predicciones'
-import { fetchSofaSaques } from '../lib/sofascore'
+import { fetchSofaSaques, buscarSaquesPorFecha } from '../lib/sofascore'
 
 // ─── Stats finales de un partido terminado ───────────────────────────────────
 const STAT_ROWS = [
@@ -24,6 +24,7 @@ function MatchStatsPanel({ fixture }) {
   const [stats, setStats] = useState(null)
   const [err, setErr] = useState(null)
   const [sofaUsed, setSofaUsed] = useState(false)
+  const [sinSaques, setSinSaques] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -48,14 +49,15 @@ function MatchStatsPanel({ fixture }) {
             const sofa = await fetchSofaSaques(fixture.homeTeam, 12)
             if (!alive) return
             const d = (fixture.date ?? '').slice(0, 10)
-            const s = sofa.byDate[d]
+            const s = buscarSaquesPorFecha(sofa.byDate, d, fixture.awayTeam)
             if (s) {
               let touched = false
               if (home['Goal Kicks'] == null && s.gk != null) { home['Goal Kicks'] = s.gk; away['Goal Kicks'] = s.gkAg; touched = true }
               if (home['Throw Ins'] == null && s.ti != null) { home['Throw Ins'] = s.ti; away['Throw Ins'] = s.tiAg; touched = true }
               if (touched) { setSofaUsed(true); setStats([...r.stats]) }
-            }
-          } catch {}
+              else if (alive) setSinSaques(true)
+            } else if (alive) setSinSaques(true)
+          } catch { if (alive) setSinSaques(true) }
         }
       } catch (e) {
         if (alive) setErr(e.message)
@@ -92,6 +94,11 @@ function MatchStatsPanel({ fixture }) {
         )
       })}
       {sofaUsed && <p className="text-[10px] text-gray-600 mt-1">Saques completados con Sofascore</p>}
+      {sinSaques && !sofaUsed && (
+        <p className="text-[10px] text-yellow-600/90 mt-1">
+          Live-Score no reporta saques de portería en este partido y Sofascore aún no los publica — vuelve a abrir en un rato (se reintenta cada 15 min)
+        </p>
+      )}
       <PrediccionVsReal fixture={fixture} home={home} away={away} />
     </div>
   )

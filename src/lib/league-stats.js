@@ -7,7 +7,7 @@
 //   porque a inicio de temporada la muestra cross-season ES la base estructural)
 
 import { fetchTeamLast, fetchFixtureStats } from './football-api'
-import { fetchSofaSaques } from './sofascore'
+import { fetchSofaSaques, buscarSaquesPorFecha } from './sofascore'
 import { getBaseline } from './leagues'
 
 // Nombres de stats normalizados (formato API-Football; el adaptador
@@ -147,7 +147,9 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
       sofaEntries.push(s)
     }
     for (const r of rows) {
-      const s = sofa.byDate[r.date]
+      // Cruce tolerante a ±1 día (los proveedores fechan distinto los
+      // partidos nocturnos), verificando el rival para no cruzar partidos
+      const s = buscarSaquesPorFecha(sofa.byDate, r.date, r.rival)
       if (s) {
         usedDates.add(r.date)
         if (r.ti == null && s.ti != null) { r.ti = s.ti; r.tiAg = s.tiAg; sofaOk = true }
