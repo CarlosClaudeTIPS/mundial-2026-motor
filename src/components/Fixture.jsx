@@ -3,6 +3,7 @@ import { fetchFixtures, fetchLive, fetchFixtureStats, formatLocalTime, getLocalD
 import { LEAGUES } from '../lib/leagues'
 import { getPrediccion } from '../lib/predicciones'
 import { fetchSofaSaques, buscarSaquesPorFecha } from '../lib/sofascore'
+import PickDelPartido from './PickDelPartido'
 
 // ─── Stats finales de un partido terminado ───────────────────────────────────
 const STAT_ROWS = [
@@ -275,6 +276,9 @@ function FixtureCard({ fixture, onAnalizar, showLeague }) {
           )}
         </div>
       </div>
+
+      {/* Un solo pick recomendado, de los 5 mercados que se juegan */}
+      {(ns || live) && <PickDelPartido fixture={fixture} />}
 
       {statsOpen && <MatchStatsPanel fixture={fixture} />}
     </div>
