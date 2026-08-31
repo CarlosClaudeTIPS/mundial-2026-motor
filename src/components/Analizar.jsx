@@ -6,7 +6,7 @@ import {
   getVolumeAlert, applyMods, DEFAULT_MODS,
 } from '../lib/context'
 import ContextPanel from './ContextPanel'
-import { generateCandidates, selectTopPicks, pickUnoPorMercado, suggestCombo, generateExplanation, linesAround, bestRealisticLine } from '../lib/picks'
+import { generateCandidates, selectTopPicks, pickUnoPorMercado, suggestCombo, generateExplanation, explicacionCorta, linesAround, bestRealisticLine } from '../lib/picks'
 import { logCombo } from '../lib/market-engine'
 import { mercadosDeLiga, resumenLiga } from '../lib/mercados-liga'
 import { poissonOver } from '../lib/engine'
@@ -883,10 +883,14 @@ export default function Analizar({ league, preloadTeams }) {
     if (!calc || !teamA || !teamB) return { picks: [], combo: null }
     // UN pick por mercado, solo de los que la casa ofrece en esta competición.
     // Evita el absurdo de recomendar "X más de 8.5 tiros" y "X menos de 13.5".
+    const base = getBaseline(league.id)
     const top = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(league.id))
+      // El porqué viaja CON el pick: al guardarse, la tarjeta del Fixture
+      // muestra EXACTAMENTE estos picks (Analizar es la fuente de verdad)
+      .map(p => ({ ...p, porque: explicacionCorta(p, teamA, teamB, ctx, calc, modsA, modsB, base) }))
     const c = suggestCombo(top)
     return { picks: top, combo: c }
-  }, [calc, teamA, teamB, league.id])
+  }, [calc, teamA, teamB, league.id, ctx, modsA, modsB])
 
   // v5.1 §9: registrar CADA evaluación de combinada (con sus picks, el gate y
   // la incertidumbre) — la selección humana no decide qué entra en la muestra
