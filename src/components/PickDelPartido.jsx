@@ -56,6 +56,9 @@ export default function PickDelPartido({ fixture }) {
     const pred = getPrediccion(fixture.leagueId, fixture.homeTeam, fixture.awayTeam)
     if (!pred) { setEstado('sin-analizar'); return }
     const lista = unoPorMercado(pred.picks, permitidos)
+    // Predicción de una versión vieja (sin el porqué guardado): mejor pedir
+    // reanálisis — las stats están cacheadas, así que cuesta casi 0 llamadas
+    if (lista.length && !lista.some(p => p.porque?.length)) { setEstado('sin-analizar'); return }
     if (lista.length) { setPicks(lista); setEstado('listo') } else setEstado('vacio')
   }, [fixture.leagueId, fixture.homeTeam, fixture.awayTeam]) // eslint-disable-line react-hooks/exhaustive-deps
 

@@ -280,7 +280,10 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
 const ORDEN_MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
 
 export function pickUnoPorMercado(candidates, mercadosPermitidos = null, objetivo = 5) {
-  const permitido = (c) => !mercadosPermitidos || mercadosPermitidos.includes(c.category)
+  // Solo variables de PARTIDO COMPLETO: las líneas 1H/2H se quedan para el
+  // análisis profundo — aquí confunden (promedios de 90' vs línea de 45')
+  const permitido = (c) => !/_(1h|2h)$/.test(c.marketKey ?? '')
+    && (!mercadosPermitidos || mercadosPermitidos.includes(c.category))
   const mejorQue = (c, prev) => !prev
     || (c.confidence ?? 0) > (prev.confidence ?? 0)
     || ((c.confidence ?? 0) === (prev.confidence ?? 0) && Math.abs(c.margin ?? 0) > Math.abs(prev.margin ?? 0))
@@ -675,7 +678,9 @@ export function explicacionCorta(pick, teamA, teamB, ctx = {}, calc = null, mods
       if (lineas.length >= 4) break
       lineas.push(f.text)
     }
-    if (e.risks.length) lineas.push(`⚠️ ${e.risks[0]}`)
+    // El primer riesgo, sin repetir lo que ya se dijo (risks nace de pushDown)
+    const riesgo = e.risks.find(r => !lineas.some(l => l.includes(r.slice(0, 40))))
+    if (riesgo) lineas.push(`⚠️ ${riesgo}`)
     return lineas
   } catch {
     return [`El motor proyecta ${pick.expected} y la línea está en ${pick.line}.`]
