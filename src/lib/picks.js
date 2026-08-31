@@ -194,6 +194,10 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
       else if (margin > 0.08) confidence += 12
       else if (margin > 0.03) confidence += 5
       if (teamA.est || teamB.est) confidence -= 10
+      // Saques ESTIMADOS (Sofascore caído/bloqueado → estimación por posesión):
+      // un pick de TI/GK sin dato real no puede competir con uno de datos reales
+      if (meta.category === 'ti' && (teamA.estTi || teamB.estTi)) confidence -= 12
+      if (meta.category === 'gk' && (teamA.estGk || teamB.estGk)) confidence -= 12
       confidence = Math.min(85, Math.max(30, confidence))
 
       candidates.push({

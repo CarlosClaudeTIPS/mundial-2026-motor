@@ -40,8 +40,14 @@ function setCache(key, data, ttl) {
 
 const sleep = ms => new Promise(r => setTimeout(r, ms))
 
-async function sofaFetch(path) {
+async function sofaFetch(path, reintento = true) {
   const res = await fetch(`${BASE}${path}`, { signal: AbortSignal.timeout(12_000) })
+  // 403/429 = Cloudflare limitando por ráfaga — un solo reintento con pausa
+  // larga suele pasar; si persiste, el caller degrada a estimación (by design)
+  if ((res.status === 403 || res.status === 429) && reintento) {
+    await sleep(2500)
+    return sofaFetch(path, false)
+  }
   if (!res.ok) throw new Error(`Sofascore ${res.status}`)
   return res.json()
 }

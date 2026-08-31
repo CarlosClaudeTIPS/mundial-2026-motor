@@ -29,7 +29,12 @@ const S = {
 
 function num(v) {
   if (v == null) return null
-  if (typeof v === 'string') return parseFloat(v.replace('%', '')) || 0
+  if (typeof v === 'string') {
+    const n = parseFloat(v.replace('%', ''))
+    // Un dato faltante ("", "-", "?") debe quedar FUERA del promedio (null),
+    // no entrar como 0 — un cero falso arrastra la media y fabrica UNDERs
+    return isNaN(n) ? null : n
+  }
   return v
 }
 
