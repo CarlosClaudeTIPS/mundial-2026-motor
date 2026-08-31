@@ -4,16 +4,20 @@
 // de decenas de casas. NO da tiros/córners/saques en el plan gratis — para
 // esos mercados la app sigue mostrando la cuota mínima estimada (1.025/p).
 //
-// Se activa con la clave en .env:  VITE_ODDS_API_KEY=xxxx
-// (crear cuenta gratis en https://the-odds-api.com → API key al correo)
+// PRODUCCIÓN: llama a /api/odds (Edge Function) — la clave vive en Vercel
+// (ODDS_API_KEY, privada) y el CDN cachea 30 min, así los créditos rinden.
+// DESARROLLO: usa VITE_ODDS_API_KEY del .env local y llama directo.
 //
 // Créditos: 1 región × 2 mercados = 2 créditos por llamada de liga. Con caché
 // de 30 min, un día normal gasta <20 créditos.
 
-const API_KEY = import.meta.env.VITE_ODDS_API_KEY ?? null
+const DEV_KEY = import.meta.env.VITE_ODDS_API_KEY ?? null
+const ES_DEV = !!import.meta.env.DEV
 const BASE = 'https://api.the-odds-api.com/v4'
 
-export const ODDS_DISPONIBLE = !!API_KEY
+// En prod se asume que el proxy está configurado; si no, responde 503 y se
+// cae con gracia a la cuota estimada.
+export const ODDS_DISPONIBLE = ES_DEV ? !!DEV_KEY : true
 
 // liga interna → sport key de The Odds API
 const SPORT_KEY = {
@@ -52,17 +56,21 @@ function setCache(k, data) {
 
 // ─── Cuotas de una liga: goles (totals) y hándicap (spreads) ─────────────────
 export async function fetchOddsLiga(leagueId) {
-  if (!API_KEY) return null
   const sport = SPORT_KEY[leagueId]
   if (!sport) return null
+  if (ES_DEV && !DEV_KEY) return null
 
   const cached = getCache(sport)
   if (cached) return cached
 
-  const url = `${BASE}/sports/${sport}/odds/?apiKey=${API_KEY}&regions=eu&markets=totals,spreads&oddsFormat=decimal`
+  const url = ES_DEV
+    ? `${BASE}/sports/${sport}/odds/?apiKey=${DEV_KEY}&regions=eu&markets=totals,spreads&oddsFormat=decimal`
+    : `/api/odds?sport=${sport}`
   const r = await fetch(url)
   if (!r.ok) return null
-  const eventos = await r.json()
+  const data = await r.json()
+  const eventos = ES_DEV ? data : (data.ok ? data.eventos : null)
+  if (!eventos) return null
   setCache(sport, eventos)
   return eventos
 }
