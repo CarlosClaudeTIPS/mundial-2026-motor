@@ -15,12 +15,10 @@
 import { fetchFixtures, getLocalDateStr } from './football-api'
 import { buildTeamStats } from './league-stats'
 import { computePrematchCalc } from './prematch'
-import { generateCandidates, selectTopPicks, suggestCombo } from './picks'
+import { generateCandidates, pickUnoPorMercado, suggestCombo } from './picks'
 import { savePrediccion, getPrediccion } from './predicciones'
 import { getLeague } from './leagues'
-import { tieneMercado, resumenLiga } from './mercados-liga'
-
-const CAT_A_MERCADO = { shots: 'shots', sot: 'sot', corners: 'corners', ti: 'ti', gk: 'gk', cards: 'cards' }
+import { mercadosDeLiga, resumenLiga } from './mercados-liga'
 
 // Llamadas aproximadas por partido (2 equipos × ~10 partidos de historial + Sofascore)
 export const COSTO_APROX_POR_PARTIDO = 22
@@ -49,12 +47,8 @@ async function analizarPartido(liga, fixture, onProgress) {
   const teamB = await buildTeamStats(liga, fixture.awayId, fixture.awayTeam, (n, i, t) => prog(`historial ${n} ${i}/${t}`))
 
   const calc = computePrematchCalc(teamA, teamB, liga)
-  const candidates = generateCandidates(calc, null, teamA, teamB)
-    .filter(c => {
-      const m = CAT_A_MERCADO[c.category]
-      return m ? tieneMercado(liga.id, m) : true
-    })
-  const picks = selectTopPicks(candidates, 5)
+  // UN pick por mercado, solo de los que la casa ofrece en esta liga
+  const picks = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(liga.id))
   const combo = suggestCombo(picks, 1.50)
 
   savePrediccion({

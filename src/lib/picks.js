@@ -60,11 +60,44 @@ const CORRELATION = {
   'goals-ti':      0.20,
   'sot-ti':        0.35,
   'gk-sot':        0.40,
+  // Hándicap: lo mueve la DIFERENCIA de goles, no el volumen. Por eso correla
+  // fuerte con goles del equipo pero flojo con los mercados de ritmo.
+  'goals-handicap':   0.55,
+  'handicap-shots':   0.35,
+  'handicap-sot':     0.35,
+  'corners-handicap': 0.30,
+  'gk-handicap':      0.25,
+  'cards-handicap':   0.20,
+  'handicap-ti':      0.20,
 }
 
 function corr(mktA, mktB) {
   const key = [mktA, mktB].sort().join('-')
   return CORRELATION[key] ?? 0.30
+}
+
+// ─── HÁNDICAP DE GOLES (diferencia entre dos Poisson, por convolución) ───────
+// P(golesA − golesB = k) = Σ_j P(A = j+k)·P(B = j). Con conteos de fútbol
+// (≤10 goles) la suma directa es exacta y barata — no hace falta Skellam.
+function poissonPmf(lambda, k) {
+  if (lambda <= 0) return k === 0 ? 1 : 0
+  let p = Math.exp(-lambda)
+  for (let i = 1; i <= k; i++) p *= lambda / i
+  return p
+}
+
+// P(diferencia de goles > línea). Línea negativa = el local da hándicap.
+export function pHandicap(expA, expB, line) {
+  const MAX = 12
+  let p = 0
+  for (let a = 0; a <= MAX; a++) {
+    const pa = poissonPmf(expA, a)
+    if (pa < 1e-9) continue
+    for (let b = 0; b <= MAX; b++) {
+      if (a - b > line) p += pa * poissonPmf(expB, b)
+    }
+  }
+  return Math.min(1, Math.max(0, p))
 }
 
 const MARKET_META = {
@@ -93,6 +126,8 @@ const MARKET_META = {
   ti_visita:       { label: 'Saques Banda Visitante', risk: 32, category: 'ti'  },
   goles_local:     { label: 'Goles Local',        risk: 42, category: 'goals'   },
   goles_visita:    { label: 'Goles Visitante',    risk: 42, category: 'goals'   },
+  handicap_local:  { label: 'Hándicap Local',     risk: 45, category: 'handicap' },
+  handicap_visita: { label: 'Hándicap Visitante', risk: 45, category: 'handicap' },
 }
 
 // ─── Calcular P_modelo y EV para una línea ────────────────────────────────────
@@ -179,9 +214,77 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
     }
   }
 
+  // ── HÁNDICAP DE GOLES (para ligas sin mercados de saques) ──
+  // Se evalúa la diferencia de goles esperada con la convolución de Poisson.
+  const gA = calc.adj?.goalsA; const gB = calc.adj?.goalsB
+  if (gA > 0 && gB > 0) {
+    for (const line of [-2.5, -1.5, -0.5, 0.5, 1.5]) {
+      // Local cubre el hándicap si (golesA − golesB) > line
+      const pLocal = pHandicap(gA, gB, line)
+      // Visitante cubre el contrario: (golesB − golesA) > −line ⇔ diff < line
+      const pVisita = 1 - pHandicap(gA, gB, line - 0.0001)
+
+      // OJO con el signo: el hándicap H es lo que se SUMA a los goles del
+      // equipo. El local cubre si diff + H > 0 ⟺ diff > −H, y aquí pLocal es
+      // P(diff > line) ⟹ H_local = −line. El visitante cubre si diff < H ⟹
+      // H_visita = line. (Estaban al revés: mostraba −0.5 con la probabilidad
+      // de +0.5, o sea recomendaba el lado contrario.)
+      const fmtH = (h) => (h > 0 ? `+${h}` : `${h}`)
+      for (const [key, p, etiqueta] of [
+        ['handicap_local', pLocal, fmtH(-line)],
+        ['handicap_visita', pVisita, fmtH(line)],
+      ]) {
+        // Solo líneas con probabilidad jugable (ni obvias ni imposibles)
+        if (p < 0.35 || p > 0.80) continue
+        const meta = MARKET_META[key]
+        let confidence = 50
+        if (p >= 0.68) confidence += 12
+        else if (p >= 0.58) confidence += 6
+        if (teamA.est || teamB.est) confidence -= 10
+        candidates.push({
+          marketKey: key,
+          label: meta.label, // la línea va aparte en `line` — no duplicarla aquí
+          category: 'handicap',
+          expected: +(gA - gB).toFixed(2),
+          line: etiqueta,
+          dir: 'CUBRE',
+          // Probabilidad ya calculada por convolución de Poisson: NO es un
+          // OVER/UNDER de una NB, así que el resto del motor debe usar ESTA.
+          pFija: p,
+          gA, gB, hLine: line, hSide: key === 'handicap_local' ? 'local' : 'visita',
+          pMod: +(p * 100).toFixed(1),
+          ev: null, evNum: -999,
+          margin: p - 0.5,
+          cuota: null,
+          confidence: Math.min(85, Math.max(30, confidence)),
+          risk: meta.risk,
+        })
+      }
+    }
+  }
+
   // Ordenar por EV desc (si hay cuota), si no por margen abs desc
   candidates.sort((a, b) => b.evNum - a.evNum || Math.abs(b.margin) - Math.abs(a.margin))
   return candidates
+}
+
+// ─── UN PICK POR MERCADO (lo que pidió el usuario) ───────────────────────────
+// Evita el absurdo de recomendar "X más de 8.5 tiros" Y "X menos de 13.5" a la
+// vez: de cada mercado sale UNO solo, el de mayor confianza. Da igual si es
+// total, del local o del visitante — es un pick por mercado, no por variante.
+export function pickUnoPorMercado(candidates, mercadosPermitidos = null) {
+  const mejorPorCat = {}
+  for (const c of candidates) {
+    if (mercadosPermitidos && !mercadosPermitidos.includes(c.category)) continue
+    const prev = mejorPorCat[c.category]
+    const mejor = !prev
+      || (c.confidence ?? 0) > (prev.confidence ?? 0)
+      || ((c.confidence ?? 0) === (prev.confidence ?? 0) && Math.abs(c.margin ?? 0) > Math.abs(prev.margin ?? 0))
+    if (mejor) mejorPorCat[c.category] = c
+  }
+  // Orden de presentación estable
+  const ORDEN = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
+  return ORDEN.map(cat => mejorPorCat[cat]).filter(Boolean)
 }
 
 // ─── Seleccionar top N (distintos mercados, baja correlación) ────────────────
@@ -226,6 +329,9 @@ const TEMPO_STATES = [[0.88, 0.25], [1.00, 0.50], [1.12, 0.25]]
 // P(pick | estado de tempo) con la MISMA familia del mercado individual:
 // NB con su PHI (v4 §2 — coherencia entre individual y combinada).
 function pPickDadoTempo(pick, T) {
+  // Hándicap: el tempo escala los goles de LOS DOS equipos casi por igual, así
+  // que la DIFERENCIA apenas se mueve → se trata como insensible al tempo.
+  if (pick.pFija != null) return pick.pFija
   const sens = TEMPO_SENS[pick.category] ?? 0
   const exp = pick.expected * Math.pow(T, sens)
   const pOver = nbOver(exp, pick.line, PHI_CAT[pick.category] ?? 1.3)
@@ -291,6 +397,18 @@ function sampleNB(mean, phi, rng) {
   return samplePoisson(lambda, rng)
 }
 
+// Un sorteo del pick dado el tempo. El hándicap se simula con sus DOS Poisson
+// de goles (el tempo no toca la diferencia), el resto con su NB y su PHI.
+function simulaPick(pick, T, rng) {
+  if (pick.pFija != null) {
+    const diff = samplePoisson(pick.gA, rng) - samplePoisson(pick.gB, rng)
+    return pick.hSide === 'visita' ? diff < pick.hLine : diff > pick.hLine
+  }
+  const exp = pick.expected * Math.pow(T, TEMPO_SENS[pick.category] ?? 0)
+  const x = sampleNB(exp, PHI_CAT[pick.category] ?? 1.3, rng)
+  return pick.dir === 'OVER' ? x > pick.line : x < pick.line
+}
+
 // Validador MONTE CARLO (v3 §17 + v4 §3): mismo proceso generativo —
 // muestrear tempo → NB de cada mercado (SU familia y SU phi) condicionada al
 // MISMO estado → evaluar A, B y A∩B. Las marginales DEBEN coincidir con el
@@ -303,12 +421,8 @@ export function jointProbabilityMC(pickA, pickB, n = 30000, rng = Math.random) {
   for (let i = 0; i < n; i++) {
     const u = rng()
     const T = cumW.find(([, c]) => u <= c)[0]
-    const expA = pickA.expected * Math.pow(T, TEMPO_SENS[pickA.category] ?? 0)
-    const expB = pickB.expected * Math.pow(T, TEMPO_SENS[pickB.category] ?? 0)
-    const xA = sampleNB(expA, PHI_CAT[pickA.category] ?? 1.3, rng)
-    const xB = sampleNB(expB, PHI_CAT[pickB.category] ?? 1.3, rng)
-    const okA = pickA.dir === 'OVER' ? xA > pickA.line : xA < pickA.line
-    const okB = pickB.dir === 'OVER' ? xB > pickB.line : xB < pickB.line
+    const okA = simulaPick(pickA, T, rng)
+    const okB = simulaPick(pickB, T, rng)
     if (okA) cA++
     if (okB) cB++
     if (okA && okB) cAB++
@@ -353,6 +467,7 @@ export function jointProbability(pickA, pickB) {
 export const TEMPO_STATUS = 'EXPERIMENTAL'
 
 export function pOficial(pick) { // NB plana — idéntica a la del panel individual
+  if (pick.pFija != null) return pick.pFija // hándicap: convolución de Poisson
   const p = nbOver(pick.expected, pick.line, PHI_CAT[pick.category] ?? 1.3)
   return pick.dir === 'OVER' ? p : 1 - p
 }
@@ -369,6 +484,12 @@ const ESC_PHI = [-0.15, 0, 0.15]       // corrimiento de PHI
 const ESC_MU = [0.95, 1.00, 1.05]      // escala de μ
 
 function pPickEscenario(pick, T, phiShift, muScale) {
+  // Hándicap: la incertidumbre se recorre moviendo los dos μ de goles, no PHI
+  if (pick.pFija != null) {
+    const esVisita = pick.hSide === 'visita'
+    const pLocal = pHandicap(pick.gA * muScale, pick.gB * muScale, pick.hLine - (esVisita ? 0.0001 : 0))
+    return esVisita ? 1 - pLocal : pLocal
+  }
   const sens = TEMPO_SENS[pick.category] ?? 0
   const exp = pick.expected * muScale * Math.pow(T, sens)
   const phi = Math.max(1.02, (PHI_CAT[pick.category] ?? 1.3) + phiShift)

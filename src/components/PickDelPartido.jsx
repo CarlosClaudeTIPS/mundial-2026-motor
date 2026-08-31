@@ -1,51 +1,61 @@
 import { useState, useEffect, useCallback } from 'react'
-import { getPrediccion } from '../lib/predicciones'
+import { getPrediccion, savePrediccion } from '../lib/predicciones'
 import { getLeague } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
 import { computePrematchCalc } from '../lib/prematch'
-import { generateCandidates, selectTopPicks } from '../lib/picks'
-import { savePrediccion } from '../lib/predicciones'
-import { tieneMercado } from '../lib/mercados-liga'
+import { generateCandidates, pickUnoPorMercado } from '../lib/picks'
+import { mercadosDeLiga, MERCADO_LABEL } from '../lib/mercados-liga'
 
-// ─── UN SOLO PICK por partido, dentro del Fixture ────────────────────────────
-// Solo los mercados que el usuario juega: tiros, tiros al arco, córners,
-// saques de banda y saques de portería. Nada de tarjetas ni goles.
-// Si el partido ya fue analizado (análisis del día), sale al instante.
-// Si no, un botón lo calcula con los datos que ya están en las fuentes.
+// ─── PICKS DEL PARTIDO, UNO POR MERCADO ──────────────────────────────────────
+// Regla del usuario: un pick de tiros, uno de córners, uno de tiros al arco,
+// uno de saques de banda y uno de portería. NUNCA dos del mismo mercado (nada
+// de "X más de 8.5 tiros" y "X menos de 13.5" a la vez). Donde la casa no
+// ofrece saques, esos huecos los llenan goles totales y hándicap de goles.
 
-const CATS = new Set(['shots', 'sot', 'corners', 'ti', 'gk'])
-const CAT_MERCADO = { shots: 'shots', sot: 'sot', corners: 'corners', ti: 'ti', gk: 'gk' }
-
-// De los picks guardados, el MEJOR de esos mercados (mayor confianza)
-export function mejorPick(picks) {
-  return (picks ?? [])
-    .filter(p => CATS.has(catDe(p.marketKey)))
-    .sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0) || Math.abs(b.margin ?? 0) - Math.abs(a.margin ?? 0))[0] ?? null
+const ICONO = {
+  shots: '🎯', sot: '🥅', corners: '🚩', ti: '🧮', gk: '🧤',
+  goals: '⚽', handicap: '⚖️', cards: '🟨',
 }
 
 function catDe(marketKey = '') {
+  if (marketKey.startsWith('handicap')) return 'handicap'
+  if (marketKey.startsWith('goles')) return 'goals'
   if (marketKey.startsWith('shots') || marketKey.startsWith('tiros')) return 'shots'
   if (marketKey.startsWith('sot')) return 'sot'
   if (marketKey.startsWith('corners')) return 'corners'
   if (marketKey.startsWith('ti_')) return 'ti'
   if (marketKey.startsWith('gk_')) return 'gk'
+  if (marketKey.startsWith('tarjetas')) return 'cards'
   return 'otro'
 }
 
-const ICONO = { shots: '🎯', sot: '🥅', corners: '🚩', ti: '🧮', gk: '🧤' }
+// De unos picks guardados, deja UNO por mercado (por si venían de antes)
+export function unoPorMercado(picks, permitidos) {
+  const best = {}
+  for (const p of picks ?? []) {
+    const cat = p.category ?? catDe(p.marketKey)
+    if (permitidos && !permitidos.includes(cat)) continue
+    const prev = best[cat]
+    if (!prev || (p.confidence ?? 0) > (prev.confidence ?? 0)) best[cat] = p
+  }
+  const ORDEN = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
+  return ORDEN.map(c => best[c]).filter(Boolean)
+}
 
 export default function PickDelPartido({ fixture }) {
-  const [pick, setPick] = useState(null)
-  const [estado, setEstado] = useState('cargando') // cargando | listo | vacio | sin-analizar
+  const [picks, setPicks] = useState([])
+  const [estado, setEstado] = useState('cargando') // cargando|listo|vacio|sin-analizar
   const [calculando, setCalculando] = useState(false)
   const [progreso, setProgreso] = useState('')
+
+  const permitidos = mercadosDeLiga(fixture.leagueId)
 
   const leer = useCallback(() => {
     const pred = getPrediccion(fixture.leagueId, fixture.homeTeam, fixture.awayTeam)
     if (!pred) { setEstado('sin-analizar'); return }
-    const m = mejorPick(pred.picks)
-    if (m) { setPick(m); setEstado('listo') } else setEstado('vacio')
-  }, [fixture.leagueId, fixture.homeTeam, fixture.awayTeam])
+    const lista = unoPorMercado(pred.picks, permitidos)
+    if (lista.length) { setPicks(lista); setEstado('listo') } else setEstado('vacio')
+  }, [fixture.leagueId, fixture.homeTeam, fixture.awayTeam]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { leer() }, [leer])
 
@@ -57,49 +67,47 @@ export default function PickDelPartido({ fixture }) {
       const A = await buildTeamStats(liga, fixture.homeId, fixture.homeTeam, onProg)
       const B = await buildTeamStats(liga, fixture.awayId, fixture.awayTeam, onProg)
       const calc = computePrematchCalc(A, B, liga)
-      const cands = generateCandidates(calc, null, A, B).filter(c => {
-        const m = CAT_MERCADO[c.category]
-        return m ? tieneMercado(liga.id, m) : false   // solo los 5 mercados
-      })
-      const top = selectTopPicks(cands, 5)
+      const lista = pickUnoPorMercado(generateCandidates(calc, null, A, B), permitidos)
       savePrediccion({
         leagueId: liga.id, teamAName: A.name, teamBName: B.name,
         expected: {
           goals: calc.t.goals, shots: calc.t.shots, sot: calc.t.sot,
           corners: calc.t.corners, cards: calc.t.cards, fouls: calc.fouls.total,
           ti: calc.t.ti, gk: calc.t.gk,
+          goalsA: calc.adj.goalsA, goalsB: calc.adj.goalsB,
         },
-        picks: top,
+        picks: lista,
       })
-      const m = mejorPick(top)
-      if (m) { setPick(m); setEstado('listo') } else setEstado('vacio')
+      if (lista.length) { setPicks(lista); setEstado('listo') } else setEstado('vacio')
     } catch (e) {
       setProgreso(e.message || 'error')
       setEstado('sin-analizar')
-    } finally {
-      setCalculando(false)
-    }
+    } finally { setCalculando(false) }
   }
 
-  if (estado === 'listo' && pick) {
-    const cat = catDe(pick.marketKey)
-    const cuotaMin = pick.pMod > 5 ? (1.025 / (pick.pMod / 100)).toFixed(2) : null
+  if (estado === 'listo') {
     return (
-      <div className="px-3 pb-2.5 -mt-1">
-        <div className="flex items-center gap-2 flex-wrap bg-green-950/40 border border-green-800/40 rounded-lg px-2.5 py-1.5">
-          <span className="text-[10px] text-green-400 font-bold uppercase tracking-wide">Pick</span>
-          <span className="text-base">{ICONO[cat] ?? '🎯'}</span>
-          <span className={`text-sm font-black px-2 py-0.5 rounded ${pick.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'}`}>
-            {pick.dir} {pick.line}
-          </span>
-          <span className="text-white text-xs font-semibold">{pick.label}</span>
-          <span className="text-[11px] text-gray-400 ml-auto">
-            proy <strong className="text-green-300">{pick.expected}</strong> · P {pick.pMod}% · conf {pick.confidence}
-          </span>
-        </div>
-        {cuotaMin && (
-          <p className="text-[10px] text-gray-500 mt-1 px-1">💰 Vale desde cuota {cuotaMin}</p>
-        )}
+      <div className="px-3 pb-2.5 -mt-1 space-y-1">
+        {picks.map((p, i) => {
+          const cat = p.category ?? catDe(p.marketKey)
+          const cuotaMin = p.pMod > 5 ? (1.025 / (p.pMod / 100)).toFixed(2) : null
+          const esHand = cat === 'handicap'
+          return (
+            <div key={i} className="flex items-center gap-2 flex-wrap bg-green-950/30 border border-green-900/40 rounded-lg px-2.5 py-1">
+              <span className="text-sm w-5 text-center">{ICONO[cat] ?? '🎯'}</span>
+              <span className="text-[9px] text-gray-500 uppercase w-16 shrink-0">{MERCADO_LABEL[cat] ?? cat}</span>
+              <span className={`text-xs font-black px-1.5 py-0.5 rounded ${
+                esHand ? 'bg-purple-700 text-white' : p.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
+              }`}>
+                {esHand ? p.line : `${p.dir} ${p.line}`}
+              </span>
+              <span className="text-white text-[11px] font-medium truncate">{p.label}</span>
+              <span className="text-[10px] text-gray-500 ml-auto shrink-0">
+                proy {p.expected} · P {p.pMod}%{cuotaMin ? ` · desde ${cuotaMin}` : ''}
+              </span>
+            </div>
+          )
+        })}
       </div>
     )
   }
@@ -108,7 +116,7 @@ export default function PickDelPartido({ fixture }) {
     return (
       <div className="px-3 pb-2.5 -mt-1">
         <p className="text-[11px] text-gray-500 bg-dark-700/50 rounded-lg px-2.5 py-1.5">
-          Sin pick con margen creíble en este partido — no siempre hay valor, y eso también es una respuesta
+          Sin picks con margen creíble aquí — no siempre hay valor, y eso también es una respuesta
         </p>
       </div>
     )
@@ -118,7 +126,7 @@ export default function PickDelPartido({ fixture }) {
     <div className="px-3 pb-2.5 -mt-1">
       <button onClick={calcular} disabled={calculando}
         className="w-full text-[11px] px-2.5 py-1.5 rounded-lg bg-dark-700 text-gray-400 hover:text-white border border-dark-500 disabled:opacity-60">
-        {calculando ? `⏳ ${progreso}` : '🎯 Ver pick recomendado'}
+        {calculando ? `⏳ ${progreso}` : `🎯 Ver picks (${permitidos.map(m => MERCADO_LABEL[m]).join(', ')})`}
       </button>
     </div>
   )
