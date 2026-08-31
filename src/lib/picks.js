@@ -272,19 +272,48 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
 // Evita el absurdo de recomendar "X más de 8.5 tiros" Y "X menos de 13.5" a la
 // vez: de cada mercado sale UNO solo, el de mayor confianza. Da igual si es
 // total, del local o del visitante — es un pick por mercado, no por variante.
-export function pickUnoPorMercado(candidates, mercadosPermitidos = null) {
+// Orden de presentación estable
+const ORDEN_MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
+
+export function pickUnoPorMercado(candidates, mercadosPermitidos = null, objetivo = 5) {
+  const permitido = (c) => !mercadosPermitidos || mercadosPermitidos.includes(c.category)
+  const mejorQue = (c, prev) => !prev
+    || (c.confidence ?? 0) > (prev.confidence ?? 0)
+    || ((c.confidence ?? 0) === (prev.confidence ?? 0) && Math.abs(c.margin ?? 0) > Math.abs(prev.margin ?? 0))
+
   const mejorPorCat = {}
   for (const c of candidates) {
-    if (mercadosPermitidos && !mercadosPermitidos.includes(c.category)) continue
-    const prev = mejorPorCat[c.category]
-    const mejor = !prev
-      || (c.confidence ?? 0) > (prev.confidence ?? 0)
-      || ((c.confidence ?? 0) === (prev.confidence ?? 0) && Math.abs(c.margin ?? 0) > Math.abs(prev.margin ?? 0))
-    if (mejor) mejorPorCat[c.category] = c
+    if (!permitido(c)) continue
+    if (mejorQue(c, mejorPorCat[c.category])) mejorPorCat[c.category] = c
   }
-  // Orden de presentación estable
-  const ORDEN = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
-  return ORDEN.map(cat => mejorPorCat[cat]).filter(Boolean)
+  const elegidos = ORDEN_MERCADOS.map(cat => mejorPorCat[cat]).filter(Boolean)
+
+  // ── Relleno hasta `objetivo` picks ──
+  // Las ligas con pocos mercados (córners + goles + hándicap) solo dan 3. Para
+  // llegar a 5 se admite una SEGUNDA línea del mismo mercado, pero solo si es
+  // otra variable (total vs equipo) y va en la MISMA dirección — así nunca
+  // aparece el "más de 8.5 Y menos de 13.5" del mismo equipo.
+  if (elegidos.length < objetivo) {
+    const usadas = new Set(elegidos.map(p => p.marketKey))
+    const porCat = {}
+    for (const p of elegidos) porCat[p.category] = [p]
+    const orden = [...candidates].sort((a, b) =>
+      (b.confidence ?? 0) - (a.confidence ?? 0) || Math.abs(b.margin ?? 0) - Math.abs(a.margin ?? 0))
+
+    for (const c of orden) {
+      if (elegidos.length >= objetivo) break
+      if (!permitido(c) || usadas.has(c.marketKey)) continue
+      if (c.category === 'handicap') continue // dos hándicaps del mismo partido se pisan
+      const enCat = porCat[c.category] ?? []
+      if (enCat.length >= 2) continue
+      if (enCat.length && enCat[0].dir !== c.dir) continue
+      elegidos.push(c)
+      usadas.add(c.marketKey)
+      porCat[c.category] = [...enCat, c]
+    }
+  }
+
+  return ORDEN_MERCADOS.flatMap(cat => elegidos.filter(p => p.category === cat))
 }
 
 // ─── Seleccionar top N (distintos mercados, baja correlación) ────────────────
@@ -582,7 +611,76 @@ export function suggestCombo(picks, targetOdds = 1.50) {
 // ─── Generar explicación textual ─────────────────────────────────────────────
 // base (opcional): baseline de la liga (getBaseline) — habilita la lectura de
 // DIFICULTAD DEL RIVAL: no es lo mismo patearle al Racing que al Real Madrid.
-export function generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB, base = null) {
+// ─── Explicación del HÁNDICAP ────────────────────────────────────────────────
+// No es un mercado de volumen: lo decide la DIFERENCIA de goles. Por eso sus
+// razones son nivel, goles a favor/en contra y localía — no promedios de tiros.
+function explicarHandicap(pick, teamA, teamB) {
+  const esLocal = pick.hSide === 'local'
+  const equipo = esLocal ? teamA : teamB
+  const rival  = esLocal ? teamB : teamA
+  const dif = +(pick.gA - pick.gB).toFixed(2)
+  const factors = []
+
+  const summary = `El motor proyecta ${pick.gA.toFixed(2)} goles del local y ${pick.gB.toFixed(2)} del visitante — diferencia esperada ${dif > 0 ? '+' : ''}${dif} a favor del ${dif > 0 ? 'local' : 'visitante'}. Con hándicap ${pick.line}, ${equipo.name} cubre en el ${pick.pMod}% de los escenarios.`
+
+  factors.push({ icon: 'ℹ️', text: `Hándicap ${pick.line} significa que a ${equipo.name} se le ${parseFloat(pick.line) > 0 ? 'REGALAN' : 'RESTAN'} ${Math.abs(parseFloat(pick.line))} goles antes de empezar`, dir: 'neutral' })
+
+  const dppg = +((equipo.ppg ?? 1.3) - (rival.ppg ?? 1.3)).toFixed(2)
+  factors.push(Math.abs(dppg) < 0.25
+    ? { icon: 'ℹ️', text: `Nivel parejo: ${equipo.name} PPG ${equipo.ppg} vs ${rival.name} PPG ${rival.ppg} — partido de pronóstico abierto, el hándicap corto es el que tiene sentido`, dir: 'neutral' }
+    : dppg > 0
+      ? { icon: '✅', text: `${equipo.name} es superior: PPG ${equipo.ppg} contra ${rival.ppg} de ${rival.name} (+${dppg}) — apoya que cubra`, dir: 'up' }
+      : { icon: '⚠️', text: `${equipo.name} es inferior: PPG ${equipo.ppg} contra ${rival.ppg} de ${rival.name} (${dppg}) — depende del hándicap que recibe`, dir: 'down' })
+
+  factors.push({ icon: 'ℹ️', text: `Ataque y defensa: ${equipo.name} marca ${equipo.gf_avg?.toFixed(2)} y encaja ${equipo.ga_avg?.toFixed(2)} por partido; ${rival.name} marca ${rival.gf_avg?.toFixed(2)} y encaja ${rival.ga_avg?.toFixed(2)}`, dir: 'neutral' })
+
+  const split = esLocal ? equipo.split?.home : equipo.split?.away
+  if (split?.n) {
+    factors.push({ icon: 'ℹ️', text: `${esLocal ? 'En casa' : 'De visita'} ${equipo.name} marca ${split.gf} por partido en ${split.n} PJ — la localía ya está dentro de la proyección`, dir: 'neutral' })
+  }
+
+  const risks = []
+  if (pick.pMod > 75) risks.push('Probabilidad alta = cuota baja: solo sirve como pata de combinada, no en solitario')
+  if (pick.pMod < 45) risks.push('Por debajo del 50%: necesita cuota alta para tener valor')
+  risks.push('El hándicap lo decide la diferencia de goles, no el volumen: un gol tardío lo cambia todo')
+  for (const t of [teamA, teamB]) if (t.est) risks.push(`Muestra pobre de ${t.name} — proyección de goles menos fiable`)
+
+  return {
+    summary,
+    pushUp: factors.filter(f => f.dir === 'up'),
+    pushDown: factors.filter(f => f.dir === 'down'),
+    neutral: factors.filter(f => f.dir === 'neutral'),
+    keyVars: [],
+    risks,
+  }
+}
+
+// ─── Resumen corto para la tarjeta del fixture (mínimo 3 líneas) ─────────────
+// Se guarda con el pick para que la tarjeta lo muestre sin recalcular nada.
+export function explicacionCorta(pick, teamA, teamB, ctx = {}, calc = null, modsA = {}, modsB = {}, base = null) {
+  try {
+    const e = generateExplanation(pick, teamA, teamB, ctx, calc, modsA, modsB, base)
+    const lineas = [e.summary]
+    for (const f of [...e.pushUp, ...e.neutral]) {
+      if (lineas.length >= 4) break
+      lineas.push(f.text)
+    }
+    // Si faltan razones a favor, se completa con las que están EN CONTRA:
+    // mejor una advertencia honesta que una tarjeta de 2 líneas.
+    for (const f of e.pushDown) {
+      if (lineas.length >= 4) break
+      lineas.push(f.text)
+    }
+    if (e.risks.length) lineas.push(`⚠️ ${e.risks[0]}`)
+    return lineas
+  } catch {
+    return [`El motor proyecta ${pick.expected} y la línea está en ${pick.line}.`]
+  }
+}
+
+export function generateExplanation(pick, teamA, teamB, ctx = {}, calc = null, modsA = {}, modsB = {}, base = null) {
+  if (pick.category === 'handicap') return explicarHandicap(pick, teamA, teamB, base)
+
   const dir    = pick.dir === 'OVER' ? 'por encima' : 'por debajo'
   const pctStr = `${Math.abs(Math.round(pick.margin * 100))}%`
 

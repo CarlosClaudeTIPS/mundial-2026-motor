@@ -162,19 +162,52 @@ export default function AnalisisDia({ onVerPartido }) {
                   {p.picks.length === 0 ? (
                     <p className="text-[10px] text-gray-600">Sin picks con margen creíble — correcto, no siempre hay valor</p>
                   ) : p.picks.map((pk, j) => (
-                    <p key={j} className="text-[11px] flex items-center gap-2 flex-wrap">
-                      <span className={`font-bold ${pk.dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}`}>{pk.dir} {pk.line}</span>
-                      <span className="text-white">{pk.label}</span>
-                      <span className="text-gray-500">proy {pk.expected} · P {pk.pMod}% · conf {pk.confidence}</span>
-                    </p>
+                    <div key={j} className="mb-1">
+                      <p className="text-[11px] flex items-center gap-2 flex-wrap">
+                        <span className={`font-bold ${pk.dir === 'CUBRE' ? 'text-purple-300' : pk.dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}`}>
+                          {pk.dir === 'CUBRE' ? `HÁNDICAP ${pk.line}` : `${pk.dir} ${pk.line}`}
+                        </span>
+                        <span className="text-white">{pk.label}</span>
+                        <span className="text-gray-500">proy {pk.expected} · P {pk.pMod}% · conf {pk.confidence}</span>
+                      </p>
+                      {pk.porque?.length > 0 && (
+                        <p className="text-[10px] text-gray-500 pl-2 leading-snug">{pk.porque.slice(1, 3).join(' · ') || pk.porque[0]}</p>
+                      )}
+                    </div>
                   ))}
-                  {p.combo?.valeAlTarget && (
-                    <p className="text-[10px] text-purple-300">🎯 Combinada: {p.combo.p1.label} {p.combo.p1.dir} {p.combo.p1.line} + {p.combo.p2.label} {p.combo.p2.dir} {p.combo.p2.line} · EV {p.combo.evAlTarget}% a cuota {p.combo.targetOdds}</p>
-                  )}
                 </div>
               ))}
             </div>
           ))}
+
+          {/* ── COMBINADAS DEL DÍA: dos partidos distintos → cuota ≥ 1.50 ── */}
+          {resultado.combinadas?.length > 0 && (
+            <div className="bg-purple-950/30 border border-purple-800/40 rounded-lg p-2.5 space-y-2">
+              <p className="text-xs font-bold text-purple-300">
+                🎯 COMBINADAS DEL DÍA — dos partidos distintos (tu casa no deja el mismo partido)
+              </p>
+              {resultado.combinadas.map((c, i) => (
+                <div key={i} className="border-t border-purple-900/40 pt-1.5 text-[11px] space-y-0.5">
+                  <p className="text-white">
+                    <span className="font-bold text-purple-200">{i + 1}.</span>{' '}
+                    {c.a.label} {c.a.dir === 'CUBRE' ? c.a.line : `${c.a.dir} ${c.a.line}`}
+                    <span className="text-gray-500"> ({c.a.partido} · ~{c.a.cuota})</span>
+                  </p>
+                  <p className="text-white pl-4">
+                    + {c.b.label} {c.b.dir === 'CUBRE' ? c.b.line : `${c.b.dir} ${c.b.line}`}
+                    <span className="text-gray-500"> ({c.b.partido} · ~{c.b.cuota})</span>
+                  </p>
+                  <p className="text-[10px] text-purple-300/90 pl-4">
+                    cuota total ~{c.cuotaTotal} · P conjunta {c.pJoint}% (independencia real: partidos distintos) · cuota justa {c.cuotaJusta}
+                    {c.estimada && <span className="text-yellow-600/90"> · cuotas ESTIMADAS — confirma en tu casa</span>}
+                  </p>
+                </div>
+              ))}
+              <p className="text-[10px] text-gray-500">
+                La cuota ~X es la mínima que hace jugable la pata (margen de casa ~2.5%). Si tu casa paga MENOS que eso, la pata pierde valor: no la juegues.
+              </p>
+            </div>
+          )}
 
           {resultado.omitidos.length > 0 && (
             <p className="text-[10px] text-gray-600">

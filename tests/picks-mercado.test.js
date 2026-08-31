@@ -30,12 +30,20 @@ describe('un pick por mercado', () => {
     it(`${liga}: nunca dos del mismo mercado, y solo los que ofrece la casa`, () => {
       const permitidos = mercadosDeLiga(id)
       const picks = pickUnoPorMercado(cands, permitidos)
-      const cats = picks.map(p => p.category)
-      expect(cats.length).toBeGreaterThan(0)
-      expect(new Set(cats).size).toBe(cats.length)
-      expect(cats.every(c => permitidos.includes(c))).toBe(true)
-      // ni dos variantes de la misma línea (el "over 8.5 y under 13.5" que molestaba)
+      expect(picks.length).toBeGreaterThan(0)
+      expect(picks.length).toBeLessThanOrEqual(5)
+      expect(picks.every(p => permitidos.includes(p.category))).toBe(true)
+      // nunca la misma variable dos veces (el "over 8.5 y under 13.5" que molestaba)
       expect(new Set(picks.map(p => p.marketKey)).size).toBe(picks.length)
+      // si el relleno mete una 2ª línea del mismo mercado: misma dirección SIEMPRE
+      const porCat = {}
+      for (const p of picks) (porCat[p.category] ??= []).push(p)
+      for (const grupo of Object.values(porCat)) {
+        expect(grupo.length).toBeLessThanOrEqual(2)
+        expect(new Set(grupo.map(p => p.dir)).size).toBe(1)
+      }
+      // los hándicaps nunca se duplican (dos líneas del mismo partido se pisan)
+      expect((porCat.handicap ?? []).length).toBeLessThanOrEqual(1)
     })
   }
 

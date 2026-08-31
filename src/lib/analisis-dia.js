@@ -15,9 +15,11 @@
 import { fetchFixtures, getLocalDateStr } from './football-api'
 import { buildTeamStats } from './league-stats'
 import { computePrematchCalc } from './prematch'
-import { generateCandidates, pickUnoPorMercado, suggestCombo } from './picks'
+import { generateCandidates, pickUnoPorMercado, explicacionCorta } from './picks'
+import { sugerirCombinadasDia } from './combinadas-dia'
+import { anotarCuotas } from './odds'
 import { savePrediccion, getPrediccion } from './predicciones'
-import { getLeague } from './leagues'
+import { getLeague, getBaseline } from './leagues'
 import { mercadosDeLiga, resumenLiga } from './mercados-liga'
 
 // Llamadas aproximadas por partido (2 equipos × ~10 partidos de historial + Sofascore)
@@ -47,9 +49,14 @@ async function analizarPartido(liga, fixture, onProgress) {
   const teamB = await buildTeamStats(liga, fixture.awayId, fixture.awayTeam, (n, i, t) => prog(`historial ${n} ${i}/${t}`))
 
   const calc = computePrematchCalc(teamA, teamB, liga)
-  // UN pick por mercado, solo de los que la casa ofrece en esta liga
-  const picks = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(liga.id))
-  const combo = suggestCombo(picks, 1.50)
+  // UN pick por mercado (hasta 5), solo de los que la casa ofrece en esta liga,
+  // cada uno con su porqué guardado para que la tarjeta lo muestre directo
+  const base = getBaseline(liga.id)
+  let picks = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(liga.id))
+    .map(p => ({ ...p, porque: explicacionCorta(p, teamA, teamB, {}, calc, {}, {}, base) }))
+  // Cuotas REALES para goles/hándicap si hay VITE_ODDS_API_KEY (odds.js);
+  // sin clave o sin cobertura, el pick queda con la estimada de siempre
+  picks = await anotarCuotas(liga.id, teamA.name, teamB.name, picks)
 
   savePrediccion({
     leagueId: liga.id,
@@ -66,7 +73,7 @@ async function analizarPartido(liga, fixture, onProgress) {
   })
 
   return {
-    fixture, picks, combo,
+    fixture, picks,
     muestraPobre: teamA.est || teamB.est,
     equipos: { a: teamA.name, b: teamB.name },
   }
@@ -125,12 +132,24 @@ export async function analizarDia({
   }
 
   const totalPicks = resultados.reduce((s, r) => s + r.picks.length, 0)
+
+  // ── COMBINADAS DEL DÍA: patas de PARTIDOS DISTINTOS (regla de su casa) ──
+  // Independencia real → P(A∩B) = P(A)×P(B) sin heurísticas de tempo.
+  const combinadas = sugerirCombinadasDia(
+    resultados.map(r => ({
+      partido: `${r.equipos.a} vs ${r.equipos.b}`,
+      leagueId: r.liga.id,
+      matchKey: `${r.liga.id}_${r.equipos.a}_${r.equipos.b}`,
+      picks: r.picks,
+    })), 1.50, 5)
+
   return {
     fecha,
     analizados: resultados.length,
     enCola: cola.length,
     disponibles: porLiga.reduce((s, l) => s + l.fixtures.length, 0),
     totalPicks,
+    combinadas,
     omitidos,
     porLiga: Object.values(porLigaRes),
   }

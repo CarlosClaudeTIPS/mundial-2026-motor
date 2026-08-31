@@ -3,8 +3,10 @@ import { getPrediccion, savePrediccion } from '../lib/predicciones'
 import { getLeague } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
 import { computePrematchCalc } from '../lib/prematch'
-import { generateCandidates, pickUnoPorMercado } from '../lib/picks'
+import { generateCandidates, pickUnoPorMercado, explicacionCorta } from '../lib/picks'
 import { mercadosDeLiga, MERCADO_LABEL } from '../lib/mercados-liga'
+import { getBaseline } from '../lib/leagues'
+import { anotarCuotas } from '../lib/odds'
 
 // ─── PICKS DEL PARTIDO, UNO POR MERCADO ──────────────────────────────────────
 // Regla del usuario: un pick de tiros, uno de córners, uno de tiros al arco,
@@ -67,7 +69,12 @@ export default function PickDelPartido({ fixture }) {
       const A = await buildTeamStats(liga, fixture.homeId, fixture.homeTeam, onProg)
       const B = await buildTeamStats(liga, fixture.awayId, fixture.awayTeam, onProg)
       const calc = computePrematchCalc(A, B, liga)
-      const lista = pickUnoPorMercado(generateCandidates(calc, null, A, B), permitidos)
+      const base = getBaseline(liga.id)
+      let lista = pickUnoPorMercado(generateCandidates(calc, null, A, B), permitidos)
+        // El porqué se guarda CON el pick: la tarjeta lo muestra después sin
+        // volver a pedir el historial de los equipos.
+        .map(p => ({ ...p, porque: explicacionCorta(p, A, B, {}, calc, {}, {}, base) }))
+      lista = await anotarCuotas(liga.id, A.name, B.name, lista) // cuota real si hay API key
       savePrediccion({
         leagueId: liga.id, teamAName: A.name, teamBName: B.name,
         expected: {
@@ -87,24 +94,38 @@ export default function PickDelPartido({ fixture }) {
 
   if (estado === 'listo') {
     return (
-      <div className="px-3 pb-2.5 -mt-1 space-y-1">
+      <div className="px-3 pb-2.5 -mt-1 space-y-1.5">
         {picks.map((p, i) => {
           const cat = p.category ?? catDe(p.marketKey)
           const cuotaMin = p.pMod > 5 ? (1.025 / (p.pMod / 100)).toFixed(2) : null
           const esHand = cat === 'handicap'
           return (
-            <div key={i} className="flex items-center gap-2 flex-wrap bg-green-950/30 border border-green-900/40 rounded-lg px-2.5 py-1">
-              <span className="text-sm w-5 text-center">{ICONO[cat] ?? '🎯'}</span>
-              <span className="text-[9px] text-gray-500 uppercase w-16 shrink-0">{MERCADO_LABEL[cat] ?? cat}</span>
-              <span className={`text-xs font-black px-1.5 py-0.5 rounded ${
-                esHand ? 'bg-purple-700 text-white' : p.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
-              }`}>
-                {esHand ? p.line : `${p.dir} ${p.line}`}
-              </span>
-              <span className="text-white text-[11px] font-medium truncate">{p.label}</span>
-              <span className="text-[10px] text-gray-500 ml-auto shrink-0">
-                proy {p.expected} · P {p.pMod}%{cuotaMin ? ` · desde ${cuotaMin}` : ''}
-              </span>
+            <div key={i} className="bg-green-950/30 border border-green-900/40 rounded-lg px-2.5 py-1.5">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-sm w-5 text-center">{ICONO[cat] ?? '🎯'}</span>
+                <span className="text-[9px] text-gray-500 uppercase w-16 shrink-0">{MERCADO_LABEL[cat] ?? cat}</span>
+                <span className={`text-xs font-black px-1.5 py-0.5 rounded ${
+                  esHand ? 'bg-purple-700 text-white' : p.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
+                }`}>
+                  {esHand ? p.line : `${p.dir} ${p.line}`}
+                </span>
+                <span className="text-white text-[11px] font-medium truncate">{p.label}</span>
+                <span className="text-[10px] text-gray-500 ml-auto shrink-0">
+                  proy {p.expected} · P {p.pMod}%
+                  {p.cuota
+                    ? <span className="text-emerald-400 font-semibold"> · cuota {p.cuota}{p.casaCuota ? ` (${p.casaCuota})` : ''}</span>
+                    : cuotaMin ? ` · desde ${cuotaMin}` : ''}
+                </span>
+              </div>
+              {p.porque?.length > 0 && (
+                <div className="mt-1 pl-7 space-y-0.5">
+                  {p.porque.map((linea, k) => (
+                    <p key={k} className={`text-[10px] leading-snug ${k === 0 ? 'text-gray-300' : linea.startsWith('⚠️') ? 'text-yellow-600/90' : 'text-gray-500'}`}>
+                      {k === 0 ? linea : `• ${linea}`}
+                    </p>
+                  ))}
+                </div>
+              )}
             </div>
           )
         })}
