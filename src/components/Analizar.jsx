@@ -8,6 +8,7 @@ import {
 import ContextPanel from './ContextPanel'
 import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation, linesAround, bestRealisticLine } from '../lib/picks'
 import { logCombo } from '../lib/market-engine'
+import { tieneMercado, resumenLiga } from '../lib/mercados-liga'
 import { poissonOver } from '../lib/engine'
 import { getBaseline, compAbbr } from '../lib/leagues'
 import { fetchStandings, fetchFixtures } from '../lib/football-api'
@@ -880,12 +881,19 @@ export default function Analizar({ league, preloadTeams }) {
   // ─── Picks — top 5 ordenados por confianza ───────────────────────────────
   const { picks, combo } = useMemo(() => {
     if (!calc || !teamA || !teamB) return { picks: [], combo: null }
+    // Solo mercados que la casa ofrece en esta competición (mercados-liga.js):
+    // no tiene sentido recomendar saques donde no se pueden apostar.
+    const CAT_A_MERCADO = { shots: 'shots', sot: 'sot', corners: 'corners', ti: 'ti', gk: 'gk', cards: 'cards' }
     const candidates = generateCandidates(calc, null, teamA, teamB)
+      .filter(c => {
+        const m = CAT_A_MERCADO[c.category]
+        return m ? tieneMercado(league.id, m) : true // goles y otros: siempre
+      })
     const top = selectTopPicks(candidates, 5)
       .sort((a, b) => b.confidence - a.confidence || Math.abs(b.margin) - Math.abs(a.margin))
     const c = suggestCombo(top)
     return { picks: top, combo: c }
-  }, [calc, teamA, teamB])
+  }, [calc, teamA, teamB, league.id])
 
   // v5.1 §9: registrar CADA evaluación de combinada (con sus picks, el gate y
   // la incertidumbre) — la selección humana no decide qué entra en la muestra
@@ -1291,7 +1299,9 @@ export default function Analizar({ league, preloadTeams }) {
             <div className="rounded-2xl border-2 border-green-600/60 bg-gradient-to-b from-green-950/60 to-dark-800 p-5 space-y-4">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <h2 className="text-xl font-black text-green-300 tracking-wide">🏆 RECOMENDADOS — {teamA.name} vs {teamB.name}</h2>
-                <span className="text-xs text-gray-500">orden: confianza · solo líneas realistas (margen 4-15%)</span>
+                <span className="text-xs text-gray-500">
+                  orden: confianza · solo líneas realistas (margen 4-15%) · mercados de {league.name}: {resumenLiga(league.id).etiquetas.join(', ')}
+                </span>
               </div>
 
               {/* ── EL PICK, literal y sin rodeos ── */}

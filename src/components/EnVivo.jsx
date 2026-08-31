@@ -20,6 +20,7 @@ import CardsQuant from './CardsQuant'
 import { cardsLogPending, resolveCardsLog } from '../lib/cards'
 import Oportunidades from './Oportunidades'
 import GameStatePanel from './GameStatePanel'
+import { tieneMercado, resumenLiga } from '../lib/mercados-liga'
 import { fetchSofaSaques } from '../lib/sofascore'
 
 // Misma lista de ligas seguidas que usa el Fixture
@@ -884,8 +885,19 @@ export default function EnVivo({ league }) {
         {/* ── OPORTUNIDADES DEL PARTIDO (ranking cross-mercado + correlación) ── */}
         {selectedId && <Oportunidades matchId={selectedId} />}
 
+        {/* Qué mercados ofrece la casa en esta liga (configurable) */}
+        {(() => {
+          const rl = resumenLiga(selMatch?.leagueId)
+          return (
+            <p className="text-[10px] text-gray-500">
+              📋 Mercados de esta competición: <strong className="text-gray-300">{rl.etiquetas.join(' · ')}</strong>
+              <span className="text-gray-600"> ({rl.label}{rl.personalizado ? ', personalizado' : ''}) — se ocultan los que tu casa no ofrece</span>
+            </p>
+          )
+        })()}
+
         {/* ── Módulo cuantitativo de CÓRNERS ── */}
-        <CornersQuant
+        {tieneMercado(selMatch?.leagueId, 'corners') && <CornersQuant
           minuto={minuto}
           goalDiff={golesA - golesB}
           cH={perTeam?.h?.corners} cA={perTeam?.a?.corners}
@@ -902,10 +914,10 @@ export default function EnVivo({ league }) {
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
           } : null}
           homeName={teamAName} awayName={teamBName}
-        />
+        />}
 
         {/* ── Módulo cuantitativo de TIROS ── */}
-        <ShotsQuant
+        {tieneMercado(selMatch?.leagueId, 'shots') && <ShotsQuant
           minuto={minuto}
           goalDiff={golesA - golesB}
           sH={perTeam?.h?.shots} sA={perTeam?.a?.shots}
@@ -921,10 +933,10 @@ export default function EnVivo({ league }) {
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
           } : null}
           homeName={teamAName} awayName={teamBName}
-        />
+        />}
 
         {/* ── Módulo cuantitativo de TARJETAS ── */}
-        <CardsQuant
+        {tieneMercado(selMatch?.leagueId, 'cards') && <CardsQuant
           minuto={minuto}
           goalDiff={golesA - golesB}
           cH={perTeam?.h?.cards} cA={perTeam?.a?.cards}
@@ -939,10 +951,10 @@ export default function EnVivo({ league }) {
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
           } : null}
           homeName={teamAName} awayName={teamBName}
-        />
+        />}
 
         {/* ── Módulo cuantitativo de SAQUES DE BANDA ── */}
-        <TiQuant
+        {tieneMercado(selMatch?.leagueId, 'ti') && <TiQuant
           minuto={minuto}
           goalDiff={golesA - golesB}
           tiAc={tiAc}
@@ -956,10 +968,10 @@ export default function EnVivo({ league }) {
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
           } : null}
           homeName={teamAName} awayName={teamBName}
-        />
+        />}
 
         {/* ── Módulo cuantitativo de SAQUES DE PORTERÍA ── */}
-        <GkQuant
+        {tieneMercado(selMatch?.leagueId, 'gk') && <GkQuant
           minuto={minuto}
           goalDiff={golesA - golesB}
           gkAc={gkAc}
@@ -975,7 +987,7 @@ export default function EnVivo({ league }) {
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
           } : null}
           homeName={teamAName} awayName={teamBName}
-        />
+        />}
 
         {/* ── Contexto: alineaciones, árbitro, estadio, clima (fuentes gratis) ── */}
         {selectedId && <ContextoPartido homeTeam={teamAName} awayTeam={teamBName} />}

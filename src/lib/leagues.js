@@ -24,11 +24,14 @@ export const LEAGUES = [
   { id: 40,  lsId: 77,  main: false, name: 'Championship',       country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.06, kTI: 1.10, sportKey: 'soccer_efl_champ', type: 'league' },
   { id: 45,  lsId: 152, main: false, name: 'FA Cup',             country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.05, kTI: 1.10, sportKey: 'soccer_fa_cup', type: 'cup' },
   { id: 48,  lsId: 150, main: false, name: 'EFL Cup',            country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.04, kTI: 1.08, sportKey: 'soccer_england_efl_cup', type: 'cup' },
-  { id: 71,  lsId: 24,  main: false, name: 'Brasileirão Serie A', country: 'Brasil',    flag: '🇧🇷', kCorners: 1.02, kTI: 1.05, sportKey: 'soccer_brazil_campeonato', type: 'league' },
+  { id: 71,  lsId: 24,  main: true,  name: 'Brasileirão Serie A', country: 'Brasil',    flag: '🇧🇷', kCorners: 1.02, kTI: 1.05, sportKey: 'soccer_brazil_campeonato', type: 'league' },
   { id: 128, lsId: 23,  main: false, name: 'Liga Profesional',   country: 'Argentina',  flag: '🇦🇷', kCorners: 0.98, kTI: 1.08, sportKey: 'soccer_argentina_primera_division', type: 'league' },
   { id: 203, lsId: 6,   main: false, name: 'Süper Lig',          country: 'Turquía',    flag: '🇹🇷', kCorners: 1.02, kTI: 1.02, sportKey: 'soccer_turkey_super_league', type: 'league' },
   { id: 307, lsId: 313, main: false, name: 'Saudi Pro League',   country: 'Arabia Saudita', flag: '🇸🇦', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
-  { id: 235, lsId: 7,   main: false, name: 'Premier Liga',       country: 'Rusia',      flag: '🇷🇺', kCorners: 1.00, kTI: 1.03, sportKey: null, type: 'league' },
+  { id: 235, lsId: 7,   main: true,  name: 'Premier Liga',       country: 'Rusia',      flag: '🇷🇺', kCorners: 1.00, kTI: 1.03, sportKey: null, type: 'league' },
+  // Rusia: cobertura completa de stats (banda + portería) — principales
+  { id: 309, lsId: 309, main: true,  name: 'Primera División',   country: 'Rusia',      flag: '🇷🇺', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
+  { id: 311, lsId: 311, main: true,  name: 'Copa de Rusia',      country: 'Rusia',      flag: '🇷🇺', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
   { id: 179, lsId: 75,  main: false, name: 'Premiership',        country: 'Escocia',    flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿', kCorners: 1.05, kTI: 1.10, sportKey: 'soccer_spl', type: 'league' },
   { id: 144, lsId: 68,  main: false, name: 'Pro League',         country: 'Bélgica',    flag: '🇧🇪', kCorners: 1.05, kTI: 1.04, sportKey: 'soccer_belgium_first_div', type: 'league' },
   { id: 197, lsId: 9,   main: false, name: 'Super League',       country: 'Grecia',     flag: '🇬🇷', kCorners: 0.95, kTI: 1.00, sportKey: 'soccer_greece_super_league', type: 'league' },
@@ -38,7 +41,7 @@ export const LEAGUES = [
   // kCorners/kTI = 1.00 NEUTRO: sin muestra propia no se inventan factores
   // (arquitectura congelada). Se ajustarán solo con evidencia del backtest.
   { id: 95,  lsId: 95,  main: false, name: 'Brasileirão Serie B', country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_brazil_serie_b', type: 'league' },
-  { id: 256, lsId: 256, main: false, name: 'Copa do Brasil',      country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
+  { id: 256, lsId: 256, main: true,  name: 'Copa do Brasil',      country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
   { id: 136, lsId: 87,  main: false, name: 'Serie B',             country: 'Italia',    flag: '🇮🇹', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_italy_serie_b', type: 'league' },
   { id: 141, lsId: 79,  main: false, name: 'Segunda División',    country: 'España',    flag: '🇪🇸', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_spain_segunda_division', type: 'league' },
   { id: 258, lsId: 258, main: false, name: 'Premier League',      country: 'Canadá',    flag: '🇨🇦', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },

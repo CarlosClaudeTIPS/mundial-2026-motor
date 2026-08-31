@@ -17,6 +17,7 @@ import { cornersLogAll } from './corners'
 import { shotsLogAll, sotLogAll } from './shots'
 import { cardsLogAll } from './cards'
 import { listDecisiones, listCombos } from './market-engine'
+import { listPredicciones, listResultados } from './predicciones'
 
 export const MERCADOS_HIST = [
   { base: 'corners', label: 'Córners', all: cornersLogAll, marketKeys: ['corners_total', 'corners_local', 'corners_visitante'] },
@@ -38,8 +39,36 @@ export function fechasConDatos() {
   const set = new Set()
   for (const d of listDecisiones()) { const f = fechaDe(d.ts); if (f) set.add(f) }
   for (const c of listCombos()) { const f = fechaDe(c.ts); if (f) set.add(f) }
+  for (const p of listPredicciones()) { const f = fechaDe(p.ts); if (f) set.add(f) }
   for (const m of MERCADOS_HIST) for (const e of m.all()) { const f = fechaDe(e.ts); if (f) set.add(f) }
   return [...set].sort()
+}
+
+// ─── PICKS PREPARTIDO del día (se guardan SOLOS al analizar en Analizar) ─────
+// Esta es la fuente principal para el usuario: no requiere ingresar cuotas.
+// Se resuelven contra los resultados reales que ya calcula Rendimiento.
+export function picksPrematchDelDia(fecha) {
+  const resueltos = {}
+  for (const r of listResultados()) {
+    const k = `${r.leagueId}_${(r.home ?? '').toLowerCase()}_${(r.away ?? '').toLowerCase()}`
+    resueltos[k] = r
+  }
+  return listPredicciones()
+    .filter(p => fechaDe(p.ts) === fecha)
+    .map(p => {
+      const k = `${p.leagueId}_${(p.home ?? '').toLowerCase()}_${(p.away ?? '').toLowerCase()}`
+      const res = resueltos[k] ?? null
+      const picks = (p.picks ?? []).map(pick => {
+        // El resultado real de ese pick, si el partido ya se resolvió
+        const resuelto = res?.picks?.find(x => x.label === pick.label && x.line === pick.line)
+        return { ...pick, resultado: resuelto?.result ?? null, real: resuelto?.real ?? null }
+      })
+      return {
+        ...p, picks, resuelto: !!res,
+        marcador: res?.score ?? null,
+        expectedVsReal: res ? { expected: p.expected, reales: res.reales, errores: res.errores } : null,
+      }
+    })
 }
 
 // ─── Evaluar un pick contra el final real ────────────────────────────────────

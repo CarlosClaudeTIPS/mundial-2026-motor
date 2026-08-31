@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { fechasConDatos, picksDelDia, resumenDia, leccionesDia, descomponerError, turningPoint, MERCADOS_HIST } from '../lib/rendimiento'
+import { fechasConDatos, picksDelDia, picksPrematchDelDia, resumenDia, leccionesDia, descomponerError, turningPoint, MERCADOS_HIST } from '../lib/rendimiento'
 
 // ─── HISTÓRICO — navegación por fecha, match review y lecciones ──────────────
 // Análisis y aprendizaje. NO modifica ningún parámetro del modelo.
@@ -130,6 +130,7 @@ export default function Historico() {
   const fechas = useMemo(() => fechasConDatos(), [])
   const r = useMemo(() => resumenDia(fecha), [fecha])
   const { picks, combos } = useMemo(() => picksDelDia(fecha), [fecha])
+  const prematch = useMemo(() => picksPrematchDelDia(fecha), [fecha])
   const lecciones = useMemo(() => leccionesDia(fecha), [fecha])
 
   const idx = fechas.indexOf(fecha)
@@ -160,9 +161,48 @@ export default function Historico() {
       </div>
       {fechas.length > 0 && <p className="text-[10px] text-gray-600">Fechas con registros: {fechas.join(' · ')}</p>}
 
-      {r.evaluaciones === 0 ? (
-        <p className="text-xs text-gray-500 py-4 text-center">Sin evaluaciones registradas el {fecha}. Se registran solas cuando analizas partidos e ingresas línea+cuota en los módulos (BET y NO BET por igual).</p>
-      ) : (
+      {/* ── PICKS PREPARTIDO: se guardan SOLOS al analizar un partido ── */}
+      {prematch.length > 0 && (
+        <div className="space-y-2">
+          <p className="text-[11px] text-gray-400 uppercase tracking-wide font-bold">🔮 Picks prepartido ({prematch.length} partido{prematch.length > 1 ? 's' : ''} analizado{prematch.length > 1 ? 's' : ''})</p>
+          {prematch.map((p, i) => (
+            <div key={i} className="bg-dark-800/70 rounded-lg p-2.5 space-y-1">
+              <div className="flex items-center gap-2 flex-wrap text-xs">
+                <span className="text-white font-semibold">{p.home} vs {p.away}</span>
+                {p.marcador && <span className="text-green-400 font-black">{p.marcador}</span>}
+                <span className={`text-[10px] px-1.5 py-0.5 rounded ${p.resuelto ? 'bg-green-900 text-green-300' : 'bg-dark-600 text-gray-400'}`}>
+                  {p.resuelto ? 'resuelto' : 'esperando el partido'}
+                </span>
+                <span className="text-gray-500 text-[10px] ml-auto">{new Date(p.ts).toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' })}</span>
+              </div>
+              {p.picks.map((pk, j) => (
+                <p key={j} className="text-[11px] flex items-center gap-2 flex-wrap">
+                  <span className={
+                    pk.resultado === 'W' ? 'text-green-400 font-bold' :
+                    pk.resultado === 'L' ? 'text-red-400 font-bold' :
+                    pk.resultado === 'PUSH' ? 'text-yellow-400' : 'text-gray-600'
+                  }>
+                    {pk.resultado === 'W' ? '✅ ACERTÓ' : pk.resultado === 'L' ? '❌ FALLÓ' : pk.resultado === 'PUSH' ? '🟡 PUSH' : '⏳ pendiente'}
+                  </span>
+                  <span className="text-white">{pk.label} {pk.dir} {pk.line}</span>
+                  <span className="text-gray-500">proyectó {pk.expected}{pk.real != null ? ` · salió ${pk.real}` : ''} · P {pk.pMod}% · conf {pk.confidence}</span>
+                </p>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {r.evaluaciones === 0 && prematch.length === 0 ? (
+        <div className="text-xs text-gray-400 py-4 space-y-2">
+          <p className="text-center text-gray-300 font-semibold">Todavía no hay nada registrado el {fecha}. Así se llena:</p>
+          <div className="bg-dark-800/60 rounded-lg p-3 space-y-1.5">
+            <p><strong className="text-green-400">1. Prepartido (lo más fácil, se guarda solo):</strong> ve a <strong className="text-white">Analizar</strong>, elige un partido de hoy o mañana y espera a que cargue. Los picks recomendados quedan guardados automáticamente y aparecerán aquí. Cuando el partido termine, se marcan solos ✅/❌.</p>
+            <p><strong className="text-emerald-400">2. Con cuota (opcional, para medir el edge):</strong> en <strong className="text-white">En Vivo</strong> abre un partido y en cualquier módulo (córners, tiros, tarjetas…) escribe la <strong>línea y la cuota</strong> de tu casa. Eso registra la evaluación completa, sea PAPER BET o NO BET.</p>
+            <p className="text-gray-500">Ojo: los registros viven en el navegador de cada dispositivo. Lo que analices en el PC no aparece en el celular ni al revés.</p>
+          </div>
+        </div>
+      ) : r.evaluaciones === 0 ? null : (
         <>
           {/* Resumen del día */}
           <div className="grid grid-cols-3 md:grid-cols-6 gap-2 text-center text-xs">
