@@ -297,6 +297,7 @@ export async function fetchLiveGlobal() {
           homeGoals: hg,
           awayGoals: ag,
           competition: m.competition_name ?? m.competition?.name ?? '',
+          competitionId: Number(m.competition_id ?? m.competition?.id ?? 0) || 0,
           country: m.country?.name ?? '',
         }
       })

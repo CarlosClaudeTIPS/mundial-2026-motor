@@ -6,6 +6,7 @@ import { getLeague } from '../lib/leagues'
 import { backtestMatch } from '../lib/prematch'
 import { diagnosticoCalibracion } from '../lib/ia'
 import { hasIA } from '../lib/ia'
+import AnalisisDia from './AnalisisDia'
 
 const RES_STYLE = {
   ganada:   'bg-green-800/50 text-green-300 border-green-700/50',
@@ -255,6 +256,9 @@ export default function Predicciones({ league }) {
           </button>
         </div>
       </div>
+
+      {/* ── ANÁLISIS AUTOMÁTICO DEL DÍA (genera y guarda los picks solo) ── */}
+      <AnalisisDia />
 
       {checkInfo && (
         <p className={`text-xs ${checkInfo.startsWith('✓') ? 'text-green-400' : checkInfo.startsWith('Error') ? 'text-red-400' : 'text-gray-400'}`}>{checkInfo}</p>

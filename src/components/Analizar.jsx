@@ -6,8 +6,9 @@ import {
   getVolumeAlert, applyMods, DEFAULT_MODS,
 } from '../lib/context'
 import ContextPanel from './ContextPanel'
-import { generateCandidates, selectTopPicks, suggestCombo, generateExplanation, linesAround, bestRealisticLine } from '../lib/picks'
+import { generateCandidates, selectTopPicks, pickUnoPorMercado, suggestCombo, generateExplanation, explicacionCorta, linesAround, bestRealisticLine } from '../lib/picks'
 import { logCombo } from '../lib/market-engine'
+import { mercadosDeLiga, resumenLiga } from '../lib/mercados-liga'
 import { poissonOver } from '../lib/engine'
 import { getBaseline, compAbbr } from '../lib/leagues'
 import { fetchStandings, fetchFixtures } from '../lib/football-api'
@@ -890,12 +891,16 @@ export default function Analizar({ league, preloadTeams }) {
   // ─── Picks — top 5 ordenados por confianza ───────────────────────────────
   const { picks, combo } = useMemo(() => {
     if (!calc || !teamA || !teamB) return { picks: [], combo: null }
-    const candidates = generateCandidates(calc, null, teamA, teamB)
-    const top = selectTopPicks(candidates, 5)
-      .sort((a, b) => b.confidence - a.confidence || Math.abs(b.margin) - Math.abs(a.margin))
+    // UN pick por mercado, solo de los que la casa ofrece en esta competición.
+    // Evita el absurdo de recomendar "X más de 8.5 tiros" y "X menos de 13.5".
+    const base = getBaseline(league.id)
+    const top = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(league.id))
+      // El porqué viaja CON el pick: al guardarse, la tarjeta del Fixture
+      // muestra EXACTAMENTE estos picks (Analizar es la fuente de verdad)
+      .map(p => ({ ...p, porque: explicacionCorta(p, teamA, teamB, ctx, calc, modsA, modsB, base) }))
     const c = suggestCombo(top)
     return { picks: top, combo: c }
-  }, [calc, teamA, teamB])
+  }, [calc, teamA, teamB, league.id, ctx, modsA, modsB])
 
   // v5.1 §9: registrar CADA evaluación de combinada (con sus picks, el gate y
   // la incertidumbre) — la selección humana no decide qué entra en la muestra
@@ -1301,15 +1306,19 @@ export default function Analizar({ league, preloadTeams }) {
             <div className="rounded-2xl border-2 border-green-600/60 bg-gradient-to-b from-green-950/60 to-dark-800 p-5 space-y-4">
               <div className="flex items-center justify-between flex-wrap gap-2">
                 <h2 className="text-xl font-black text-green-300 tracking-wide">🏆 RECOMENDADOS — {teamA.name} vs {teamB.name}</h2>
-                <span className="text-xs text-gray-500">orden: confianza · solo líneas realistas (margen 4-15%)</span>
+                <span className="text-xs text-gray-500">
+                  UN pick por mercado (nunca dos del mismo) · solo líneas realistas · mercados de {league.name}: {resumenLiga(league.id).etiquetas.join(', ')}
+                </span>
               </div>
 
               {/* ── EL PICK, literal y sin rodeos ── */}
               <div className="rounded-xl px-4 py-3 border-2 bg-green-950/60 border-green-600/70">
                 <p className="text-xs font-bold text-green-300/80 uppercase tracking-widest mb-1">🎯 Te recomiendo esta apuesta:</p>
                 <p className="text-xl font-black text-white">
-                  <span className={picks[0].dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}>
-                    {picks[0].dir === 'OVER' ? 'MÁS' : 'MENOS'} de {picks[0].line}
+                  <span className={picks[0].dir === 'CUBRE' ? 'text-purple-300' : picks[0].dir === 'OVER' ? 'text-green-400' : 'text-blue-400'}>
+                    {picks[0].dir === 'CUBRE'
+                      ? `${picks[0].line} de hándicap`
+                      : `${picks[0].dir === 'OVER' ? 'MÁS' : 'MENOS'} de ${picks[0].line}`}
                   </span> {picks[0].label}
                   <span className="text-sm font-semibold text-gray-400 ml-2">P {picks[0].pMod}% · Confianza {picks[0].confidence}</span>
                 </p>
@@ -1326,9 +1335,10 @@ export default function Analizar({ league, preloadTeams }) {
                         {i + 1}
                       </span>
                       <span className={`text-lg font-black px-3 py-1 rounded-lg ${
-                        pick.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
+                        pick.dir === 'CUBRE' ? 'bg-purple-700 text-white'
+                          : pick.dir === 'OVER' ? 'bg-green-700 text-white' : 'bg-blue-700 text-white'
                       }`}>
-                        {pick.dir} {pick.line}
+                        {pick.dir === 'CUBRE' ? pick.line : `${pick.dir} ${pick.line}`}
                       </span>
                       <span className="text-white font-bold text-lg">{pick.label}</span>
                       <div className="ml-auto flex items-center gap-3 text-sm">

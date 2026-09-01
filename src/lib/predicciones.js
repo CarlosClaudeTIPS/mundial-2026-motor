@@ -36,9 +36,13 @@ export function savePrediccion({ leagueId, teamAName, teamBName, expected, picks
       away: teamBName,
       expected,
       picks: (picks ?? []).map(p => ({
-        label: p.label, marketKey: p.marketKey, dir: p.dir,
+        label: p.label, marketKey: p.marketKey, category: p.category, dir: p.dir,
         line: p.line, pMod: p.pMod, confidence: p.confidence,
         expected: p.expected, // lo proyectado — clave para medir el sesgo después
+        porque: p.porque,     // las líneas de justificación, para la tarjeta
+        ...(p.cuota != null ? { cuota: p.cuota, casaCuota: p.casaCuota } : {}),
+        // hándicap: lo necesario para resolverlo contra el marcador final
+        ...(p.hLine != null ? { hLine: p.hLine, hSide: p.hSide } : {}),
       })),
     }
     localStorage.setItem(KEY, JSON.stringify(all))
@@ -121,6 +125,17 @@ export function resolverPrediccion(pred, fixture, homeStats, awayStats) {
   }
 
   const picks = (pred.picks ?? []).map(p => {
+    // Hándicap: se resuelve con la DIFERENCIA de goles + la línea del equipo
+    if (p.hLine != null && fixture.homeGoals != null && fixture.awayGoals != null) {
+      const diffPredHome = predHomeEsLocal
+        ? fixture.homeGoals - fixture.awayGoals
+        : fixture.awayGoals - fixture.homeGoals
+      const ajustado = p.hSide === 'local' ? diffPredHome + p.hLine * -1 : -diffPredHome + p.hLine
+      // hLine guarda la línea interna (diff > hLine para el local); el ajuste
+      // de arriba deja: >0 cubre, <0 no cubre, 0 push
+      const result = ajustado > 0 ? 'W' : ajustado < 0 ? 'L' : 'PUSH'
+      return { ...p, real: diffPredHome, result }
+    }
     const real = REAL_POR_MARKET[p.marketKey] ?? null
     let result = null
     if (real != null) {
