@@ -59,6 +59,16 @@ export function TeamStatsRef({ teamA, teamB }) {
           <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
           <StatRow label="BTTS%" valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
 
+          {/* 1er tiempo — real de Sofascore cuando hay muestra */}
+          <p className="text-[10px] text-gray-600 uppercase tracking-wide pt-2">
+            1er tiempo {teamA.real1h || teamB.real1h ? '· medido partido a partido (Sofascore)' : '· estimado por reparto típico'}
+          </p>
+          <StatRow label="Córners 1H/P" valA={teamA.corners_1h.toFixed(1)} valB={teamB.corners_1h.toFixed(1)} />
+          <StatRow label="Tiros 1H/P" valA={teamA.shots_1h.toFixed(1)} valB={teamB.shots_1h.toFixed(1)} />
+          <StatRow label="SOT 1H/P" valA={teamA.sot_1h.toFixed(1)} valB={teamB.sot_1h.toFixed(1)} />
+          <StatRow label="Tarjetas 1H/P" valA={teamA.cards_1h.toFixed(1)} valB={teamB.cards_1h.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Goles 1H/P" valA={teamA.goals_1h.toFixed(2)} valB={teamB.goals_1h.toFixed(2)} />
+
           {/* Racha y localía */}
           {(teamA.racha || teamB.racha || teamA.split || teamB.split) && (
             <div className="mt-3 pt-2 border-t border-dark-700 text-xs text-gray-400 space-y-1">

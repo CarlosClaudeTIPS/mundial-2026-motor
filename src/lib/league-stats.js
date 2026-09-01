@@ -153,6 +153,12 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
         if (r.ti == null && s.ti != null) { r.ti = s.ti; r.tiAg = s.tiAg; sofaOk = true }
         if (r.gk == null && s.gk != null) { r.gk = s.gk; r.gkAg = s.gkAg; sofaOk = true }
         if (s.crosses != null) r.crosses = s.crosses
+        // 1er tiempo REAL (Sofascore period 1ST)
+        if (s.corners1h != null) r.corners1hReal = s.corners1h
+        if (s.shots1h != null) r.shots1hReal = s.shots1h
+        if (s.sot1h != null) r.sot1hReal = s.sot1h
+        if (s.yellow1h != null) r.cards1hReal = s.yellow1h
+        if (s.fouls1h != null) r.fouls1hReal = s.fouls1h
       }
     }
     // fechas de sofa sin fila correspondiente → solo para el promedio de saques
@@ -313,14 +319,30 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
     // Splits 1H/2H: goles reales desde halftime score; resto ~45/55 típico
     goals_1h: +(gf_avg * goals1hShare).toFixed(2),
     goals_2h: +(gf_avg * (1 - goals1hShare)).toFixed(2),
-    shots_1h: +(shots_avg * 0.45).toFixed(1),
-    shots_2h: +(shots_avg * 0.55).toFixed(1),
-    sot_1h: +(sot_avg * 0.44).toFixed(1),
-    sot_2h: +(sot_avg * 0.56).toFixed(1),
-    corners_1h: +(corners_avg * 0.44).toFixed(1),
-    corners_2h: +(corners_avg * 0.56).toFixed(1),
-    cards_1h: +((w('cards') ?? base.cardsAvg) * 0.38).toFixed(1),
-    cards_2h: +((w('cards') ?? base.cardsAvg) * 0.62).toFixed(1),
+    // 1H: promedio REAL de Sofascore si hay muestra (≥3 partidos); si no, reparto típico
+    ...(() => {
+      const real1h = key => {
+        const v = rows.map(r => r[key]).filter(x => x != null && !isNaN(x))
+        return v.length >= 3 ? v.reduce((a, b) => a + b, 0) / v.length : null
+      }
+      const s1 = real1h('shots1hReal'); const c1 = real1h('corners1hReal')
+      const so1 = real1h('sot1hReal'); const ca1 = real1h('cards1hReal')
+      const shots1h = s1 ?? shots_avg * 0.45
+      const corners1h = c1 ?? corners_avg * 0.44
+      const sot1h = so1 ?? sot_avg * 0.44
+      const cards1h = ca1 ?? (w('cards') ?? base.cardsAvg) * 0.38
+      return {
+        real1h: s1 != null || c1 != null, // bandera: 1H medido, no estimado
+        shots_1h: +shots1h.toFixed(1),
+        shots_2h: +(Math.max(0, shots_avg - shots1h)).toFixed(1),
+        sot_1h: +sot1h.toFixed(1),
+        sot_2h: +(Math.max(0, sot_avg - sot1h)).toFixed(1),
+        corners_1h: +corners1h.toFixed(1),
+        corners_2h: +(Math.max(0, corners_avg - corners1h)).toFixed(1),
+        cards_1h: +cards1h.toFixed(1),
+        cards_2h: +(Math.max(0, (w('cards') ?? base.cardsAvg) - cards1h)).toFixed(1),
+      }
+    })(),
     style, // inferido desde centros reales de Sofascore ('mixto' si no hay dato)
     styleReal: crosses_avg != null,
     last5: rows.slice(0, 5).map(mapHistoryRow),

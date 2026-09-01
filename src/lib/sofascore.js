@@ -61,7 +61,7 @@ async function getTeamId(teamName) {
 // Además de TI/GK extrae: centros (para inferir estilo por bandas), xG y
 // grandes ocasiones — las variables que van "más allá del promedio".
 async function getEventSaques(eventId) {
-  const key = `sofa_stats2_${eventId}`
+  const key = `sofa_stats3_${eventId}` // v3: incluye stats del 1er tiempo
   const cached = getCache(key)
   if (cached) return cached
 
@@ -70,6 +70,18 @@ async function getEventSaques(eventId) {
   const items = (all?.groups ?? []).flatMap(g => g.statisticsItems ?? [])
   const find = re => items.find(it => re.test(it.name))
   const num = v => { const n = parseFloat(v); return isNaN(n) ? null : n }
+
+  // ── 1er tiempo REAL (period '1ST') — córners, tiros, SOT, amarillas, faltas ──
+  const p1 = data.statistics?.find(s => s.period === '1ST')
+  const items1 = (p1?.groups ?? []).flatMap(g => g.statisticsItems ?? [])
+  const find1 = re => items1.find(it => re.test(it.name))
+  const p1out = {
+    corners1hHome: num(find1(/^corner kicks$/i)?.home), corners1hAway: num(find1(/^corner kicks$/i)?.away),
+    shots1hHome:   num(find1(/^total shots$/i)?.home),  shots1hAway:   num(find1(/^total shots$/i)?.away),
+    sot1hHome:     num(find1(/^shots on target$/i)?.home), sot1hAway:  num(find1(/^shots on target$/i)?.away),
+    yellow1hHome:  num(find1(/^yellow cards$/i)?.home), yellow1hAway:  num(find1(/^yellow cards$/i)?.away),
+    fouls1hHome:   num(find1(/^fouls$/i)?.home),        fouls1hAway:   num(find1(/^fouls$/i)?.away),
+  }
   // "Accurate crosses" viene como "8/24 (33%)" → el total es lo que importa
   const cross = v => {
     if (v == null) return null
@@ -88,6 +100,7 @@ async function getEventSaques(eventId) {
     crHome: cross(crItem?.home), crAway: cross(crItem?.away),
     xgHome: num(xgItem?.home), xgAway: num(xgItem?.away),
     bcHome: num(bcItem?.home), bcAway: num(bcItem?.away),
+    ...p1out,
   }
   // cachear siempre (aunque venga vacío) — el partido ya terminó, no va a cambiar
   setCache(key, out, TTL_STATS)
@@ -300,9 +313,15 @@ export async function fetchSofaSaques(teamName, n = 12, onProgress) {
         xg: isHome ? s.xgHome : s.xgAway,
         xgAg: isHome ? s.xgAway : s.xgHome,
         bigch: isHome ? s.bcHome : s.bcAway,
+        // 1er tiempo REAL por partido
+        corners1h: isHome ? s.corners1hHome : s.corners1hAway,
+        shots1h:   isHome ? s.shots1hHome : s.shots1hAway,
+        sot1h:     isHome ? s.sot1hHome : s.sot1hAway,
+        yellow1h:  isHome ? s.yellow1hHome : s.yellow1hAway,
+        fouls1h:   isHome ? s.fouls1hHome : s.fouls1hAway,
         rival: isHome ? ev.awayName : ev.homeName,
       }
-      if (entry.ti != null || entry.gk != null || entry.crosses != null || entry.xg != null) {
+      if (entry.ti != null || entry.gk != null || entry.crosses != null || entry.xg != null || entry.corners1h != null) {
         // Indexar por fecha UTC y por fecha UTC-5 (partidos nocturnos de América
         // caen "al día siguiente" en UTC y no matchearían con Live-Score)
         const dUtc = new Date(ev.ts * 1000).toISOString().slice(0, 10)
