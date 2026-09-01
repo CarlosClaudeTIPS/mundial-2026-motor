@@ -686,48 +686,67 @@ export default function EnVivo({ league }) {
     const driveH = attackDrive({ diff: goalDiff,  minuto, pre: preA, preRival: preB }) * momentum.h
     const driveA = attackDrive({ diff: -goalDiff, minuto, pre: preB, preRival: preA }) * momentum.a
 
-    // ── Proyección por equipo cuando hay dato de la API ──
-    const projTeam = (acum, drive, k = 1) => {
-      if (acum == null) return null
-      const r = calcLiveExpected({ statAcumulada: acum, minutos: minuto, minutosRestantes, situationS: 1, tacticalK: drive * k })
-      return { acum, proy: +(acum + r.lambda).toFixed(1) }
-    }
+    // ── PROYECCIÓN BAYESIANA: el ANCLA es el modelo prepartido ──
+    // Lo que falta del partido NO se proyecta con el ritmo observado a secas:
+    // E[final] = acumulado + E[restante], donde E[restante] mezcla
+    //   (a) lo que el PREPARTIDO esperaba por minuto (perfil propio × lo que
+    //       concede el rival — el modelo profundo), y
+    //   (b) el ritmo REAL del partido,
+    // con peso del partido creciente según los minutos: al 15' manda el
+    // prepartido (el ritmo observado es ruido); al 75' manda la cancha.
+    const wLive = Math.min(0.75, minuto / (minuto + 40))
 
-    // ── Córners: NO es solo ritmo/minuto ──
-    // Mezcla (a) el ritmo de córners del propio partido con (b) los córners
-    // IMPLÍCITOS en la presión real: quien acumula tiros genera córners aunque
-    // todavía no le hayan salido (≈0.38 córners por tiro en fútbol de élite).
-    // Un equipo con 9 tiros y 1 córner está "debiendo" córners → regresión al alza.
-    const projCorners = (side, drive) => {
-      const c = perTeam?.[side]?.corners
-      if (c == null) return null
-      const rateProj = c + calcLiveExpected({ statAcumulada: c, minutos: minuto, minutosRestantes, situationS: 1, tacticalK: drive * tacticalK * intensity }).lambda
-      const sh = perTeam[side].shots
-      let proy = rateProj
-      if (sh != null && minuto >= 20) {
-        const pressureRate = (sh / minuto) * 0.38 // córners/min que implica su volumen de tiros
-        const pressureProj = c + pressureRate * minutosRestantes * drive * tacticalK
-        proy = rateProj * 0.55 + pressureProj * 0.45
+    // Expected prepartido POR EQUIPO y stat (propio 60% + concedido del rival 40%)
+    const preExp = (side, key) => {
+      const pre = side === 'h' ? preA : preB
+      const riv = side === 'h' ? preB : preA
+      if (!pre) return null
+      const blend = (own, ag) => own == null ? null : (ag != null ? own * 0.6 + ag * 0.4 : own)
+      switch (key) {
+        case 'shots':   return blend(pre.shots_avg, riv?.shots_against_avg)
+        case 'sot':     return pre.sot_avg
+        case 'corners': return blend(pre.corners_avg, riv?.corners_against_avg)
+        case 'cards':   return pre.cards_avg
+        case 'ti':      return blend(pre.throwins_avg, riv?.ti_against_avg)
+        case 'gk':      return blend(pre.goalkicks_avg, riv?.gk_against_avg)
+        default: return null
       }
-      return { acum: c, proy: +proy.toFixed(1) }
     }
 
+    const projStat = (side, key, drive, k = 1) => {
+      const acum = perTeam?.[side]?.[key]
+      if (acum == null) return null
+      let liveRate = minuto > 0 ? acum / minuto : 0
+      // Córners: el ritmo vivo incluye la PRESIÓN por tiros (córners implícitos
+      // ≈0.38 por tiro) — un equipo que patea mucho "debe" córners
+      if (key === 'corners' && perTeam[side].shots != null && minuto >= 15) {
+        liveRate = liveRate * 0.55 + (perTeam[side].shots / minuto) * 0.38 * 0.45
+      }
+      const preTotal = preExp(side, key)
+      const preRate = preTotal != null ? preTotal / 90 : null
+      // Mezcla bayesiana: prepartido ancla, la cancha actualiza
+      const rate = preRate != null ? liveRate * wLive + preRate * (1 - wLive) : liveRate
+      const proy = acum + rate * minutosRestantes * drive * k
+      return { acum, proy: +proy.toFixed(1), preTotal: preTotal != null ? +preTotal.toFixed(1) : null }
+    }
+
+    const kCorn = tacticalK * intensity
     const team = perTeam ? {
       h: {
-        shots:   projTeam(perTeam.h.shots,   driveH, intensity),
-        sot:     projTeam(perTeam.h.sot,     driveH, intensity),
-        corners: projCorners('h', driveH),
-        cards:   projTeam(perTeam.h.cards,   goalDiff < 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
-        ti:      projTeam(perTeam.h.ti,      1, intensity),
-        gk:      projTeam(perTeam.h.gk,      1, 1),
+        shots:   projStat('h', 'shots',   driveH, intensity),
+        sot:     projStat('h', 'sot',     driveH, intensity),
+        corners: projStat('h', 'corners', driveH, kCorn),
+        cards:   projStat('h', 'cards',   goalDiff < 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
+        ti:      projStat('h', 'ti',      1, intensity),
+        gk:      projStat('h', 'gk',      1, 1),
       },
       a: {
-        shots:   projTeam(perTeam.a.shots,   driveA, intensity),
-        sot:     projTeam(perTeam.a.sot,     driveA, intensity),
-        corners: projCorners('a', driveA),
-        cards:   projTeam(perTeam.a.cards,   goalDiff > 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
-        ti:      projTeam(perTeam.a.ti,      1, intensity),
-        gk:      projTeam(perTeam.a.gk,      1, 1),
+        shots:   projStat('a', 'shots',   driveA, intensity),
+        sot:     projStat('a', 'sot',     driveA, intensity),
+        corners: projStat('a', 'corners', driveA, kCorn),
+        cards:   projStat('a', 'cards',   goalDiff > 0 ? 1.08 : 1, minuto >= 60 ? 1.1 : 1),
+        ti:      projStat('a', 'ti',      1, intensity),
+        gk:      projStat('a', 'gk',      1, 1),
       },
     } : null
 
@@ -735,10 +754,17 @@ export default function EnVivo({ league }) {
     //    (cada una con SU drive); si no, extrapolación clásica con factores globales
     const totalFrom = (key, acumTotal, fallbackK) => {
       const th = team?.h?.[key]; const ta = team?.a?.[key]
-      if (th && ta) return { proy: +(th.proy + ta.proy).toFixed(1) }
+      if (th && ta) return { proy: +(th.proy + ta.proy).toFixed(1), preTotal: th.preTotal != null && ta.preTotal != null ? +(th.preTotal + ta.preTotal).toFixed(1) : null }
       if (acumTotal == null) return null
-      const r = calcLiveExpected({ statAcumulada: acumTotal, minutos: minuto, minutosRestantes, situationS, tacticalK: fallbackK })
-      return { proy: +(acumTotal + r.lambda).toFixed(1) }
+      // Sin datos por equipo: misma mezcla bayesiana con el prepartido TOTAL
+      const liveRate = minuto > 0 ? acumTotal / minuto : 0
+      const preH = preExp('h', key); const preA2 = preExp('a', key)
+      const preTotal = preH != null && preA2 != null ? preH + preA2 : null
+      const rate = preTotal != null ? liveRate * wLive + (preTotal / 90) * (1 - wLive) : liveRate
+      const proy = preTotal != null
+        ? acumTotal + rate * minutosRestantes * fallbackK * situationS
+        : acumTotal + calcLiveExpected({ statAcumulada: acumTotal, minutos: minuto, minutosRestantes, situationS, tacticalK: fallbackK }).lambda
+      return { proy: +proy.toFixed(1), preTotal: preTotal != null ? +preTotal.toFixed(1) : null }
     }
 
     const corners = totalFrom('corners', cornersAc, tacticalK * intensity * momentum.global)
@@ -751,12 +777,9 @@ export default function EnVivo({ league }) {
       situationS, tacticalK, intensity: +intensity.toFixed(2), daTotal,
       driveH: +driveH.toFixed(2), driveA: +driveA.toFixed(2),
       momentum,
+      wLive: +wLive.toFixed(2), anclado: !!(preA && preB),
       team,
-      corners: corners ? { proy: corners.proy } : null,
-      shots:   shots   ? { proy: shots.proy } : null,
-      sot:     sot     ? { proy: sot.proy } : null,
-      cards:   cards   ? { proy: cards.proy } : null,
-      ti:      ti      ? { proy: ti.proy } : null,
+      corners, shots, sot, cards, ti,
     }
   }, [teamAName, teamBName, minuto, golesA, golesB, cornersAc, tirosAc, sotAc, tarjetasAc, tiAc, zona, dangAtk, perTeam, preA, preB, momentum, minutosRestantes])
 
@@ -820,18 +843,32 @@ export default function EnVivo({ league }) {
         30 + (minuto / 90) * 35 + Math.min(15, Math.abs(rec.margin) * 100) + (p > 0.7 ? 8 : 0)
       ))
       if (soft) confidence = Math.min(confidence, 55)
+      // Sin ancla prepartido, un conteo en 0 es RUIDO, no señal — jamás 90 de
+      // confianza porque "no ha pasado nada": techo duro y advertencia
+      if (!calc.anclado) confidence = Math.min(confidence, 60)
+      if (m.acum === 0) confidence = Math.min(confidence, calc.anclado ? 65 : 45)
       return {
         ...m, rec, soft, p: Math.round(p * 100), confidence, ritmo: +ritmo.toFixed(2),
         faltan: +(m.proy - m.acum).toFixed(1),
+        extra: m.acum === 0
+          ? `⚠️ Aún no hay registros de este stat — ${calc.anclado ? 'proyección anclada al prepartido, no al conteo en cero' : 'espera a que empiece a contar antes de apostarlo'}${m.extra ? ` · ${m.extra}` : ''}`
+          : m.extra,
       }
     }
+
+    // Regla anti-ruido: SIN ancla prepartido, un stat sin registros (o con muy
+    // pocos minutos) no genera recomendación — "no ha pasado nada" no es señal
+    const apto = m => calc.anclado || (minuto >= 30 && m.acum > 0)
 
     // Pase estricto (margen 4-15%, el ideal)
     const recs = []
     const conRec = new Set()
     for (const m of mkts) {
+      if (!apto(m)) continue
       const rec = pickLine(m, 0.04, 0.15)
       if (!rec) continue
+      // UNDER con conteo en 0 y sin ancla = trampa clásica — nunca
+      if (rec.dir === 'UNDER' && m.acum === 0 && !calc.anclado) continue
       conRec.add(m.label)
       recs.push(mkRec(m, rec, false))
     }
@@ -839,9 +876,10 @@ export default function EnVivo({ league }) {
     // marcadas como tales. NUNCA dejar la sección vacía sin explicación.
     if (recs.length < 3) {
       for (const m of mkts) {
-        if (conRec.has(m.label)) continue
+        if (conRec.has(m.label) || !apto(m)) continue
         const rec = pickLine(m, 0.015, 0.35)
         if (!rec) continue
+        if (rec.dir === 'UNDER' && m.acum === 0 && !calc.anclado) continue
         recs.push(mkRec(m, rec, true))
       }
     }
@@ -863,6 +901,13 @@ export default function EnVivo({ league }) {
           <p className="text-xs text-blue-300">
             📈 Momentum (últimos ~{calc.momentum.span ?? 10} min vs promedio del partido): {tn.h} ×{calc.momentum.h.toFixed(2)} · {tn.a} ×{calc.momentum.a.toFixed(2)}
             <span className="text-gray-500"> — medido con {calc.momentum.base === 'da' ? 'ataques peligrosos' : 'tiros'}; el partido {calc.momentum.global > 1.05 ? 'se está calentando 🔥' : calc.momentum.global < 0.95 ? 'se está enfriando ❄️' : 'mantiene el ritmo'}</span>
+          </p>
+        )}
+        {calc && (
+          <p className="text-xs text-purple-300">
+            🧠 Proyección: {calc.anclado
+              ? <>anclada al <strong>modelo prepartido</strong> (perfiles + rival) y actualizada por la cancha — peso de lo ocurrido: <strong>{Math.round(calc.wLive * 100)}%</strong> (crece con los minutos)</>
+              : <>cargando el ancla prepartido... mientras tanto solo se recomiendan stats con registros reales y confianza limitada</>}
           </p>
         )}
         {selectedId && (
