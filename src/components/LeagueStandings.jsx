@@ -86,11 +86,13 @@ function TeamDetail({ league, team, onAnalizar }) {
             <p className="text-xs text-gray-500">{formatLocalDate(nextMatch.date)} · {formatLocalTime(nextMatch.date)} (Bogotá)</p>
           </div>
           {onAnalizar && (
-            <button
-              onClick={() => onAnalizar(nextMatch.homeTeam, nextMatch.awayTeam, league.id)}
+            <a
+              href={`#analizar?${new URLSearchParams({ league: league.id, h: nextMatch.homeTeam, a: nextMatch.awayTeam }).toString()}`}
+              target="_blank" rel="noopener"
+              title="Se abre en una pestaña nueva — no pierdes donde vas"
               className="shrink-0 text-xs px-3 py-2 rounded-lg bg-green-700 hover:bg-green-600 text-white font-bold transition-colors">
-              Analizar →
-            </button>
+              Analizar ↗
+            </a>
           )}
         </div>
       ) : (

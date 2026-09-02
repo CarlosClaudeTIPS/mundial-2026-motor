@@ -24,10 +24,32 @@ function loadTab() {
   try { return localStorage.getItem(TAB_STORAGE_KEY) || 'fixture' } catch { return 'fixture' }
 }
 
+// URL con partido incluido: #analizar?league=140&h=Barcelona&a=Levante&hid=1&aid=2
+// (permite abrir un análisis en una pestaña nueva sin perder donde ibas)
+function parseHashInicial() {
+  try {
+    const h = (window.location.hash || '').slice(1)
+    if (!h) return {}
+    const [tab, qs] = h.split('?')
+    const p = new URLSearchParams(qs || '')
+    const out = { tab: tab || null }
+    if (p.get('league')) out.league = Number(p.get('league'))
+    if (p.get('h') && p.get('a')) {
+      out.teams = {
+        teamAName: p.get('h'), teamBName: p.get('a'),
+        teamAId: p.get('hid') ? Number(p.get('hid')) : undefined,
+        teamBId: p.get('aid') ? Number(p.get('aid')) : undefined,
+      }
+    }
+    return out
+  } catch { return {} }
+}
+const NAV_INICIAL = parseHashInicial()
+
 export default function App() {
-  const [tab, setTabRaw] = useState(loadTab)
-  const [leagueId, setLeagueId] = useState(loadLeagueId)
-  const [analyzeTeams, setAnalyzeTeams] = useState({ teamAName: '', teamBName: '' })
+  const [tab, setTabRaw] = useState(() => NAV_INICIAL.tab || loadTab())
+  const [leagueId, setLeagueId] = useState(() => NAV_INICIAL.league ?? loadLeagueId())
+  const [analyzeTeams, setAnalyzeTeams] = useState(() => NAV_INICIAL.teams ?? { teamAName: '', teamBName: '' })
   // Petición de abrir el Fixture en modo "Solo esta liga" (clic en el nombre de la liga)
   const [soloLigaReq, setSoloLigaReq] = useState(null)
   const desdePop = useRef(false)

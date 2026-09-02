@@ -259,12 +259,19 @@ function FixtureCard({ fixture, onAnalizar, showLeague }) {
 
         <div className="flex flex-col gap-1.5 shrink-0">
           {onAnalizar && (
-            <button
-              onClick={() => onAnalizar(fixture.homeTeam, fixture.awayTeam, fixture.leagueId, { homeId: fixture.homeId, awayId: fixture.awayId })}
-              className="text-xs px-3 py-1.5 rounded bg-green-800/50 text-green-300 hover:bg-green-700/60 transition-colors border border-green-700/40"
+            <a
+              href={`#analizar?${new URLSearchParams({
+                ...(fixture.leagueId ? { league: fixture.leagueId } : {}),
+                h: fixture.homeTeam, a: fixture.awayTeam,
+                ...(fixture.homeId ? { hid: fixture.homeId } : {}),
+                ...(fixture.awayId ? { aid: fixture.awayId } : {}),
+              }).toString()}`}
+              target="_blank" rel="noopener"
+              title="Se abre en una pestaña nueva — no pierdes donde vas"
+              className="text-xs px-3 py-1.5 rounded bg-green-800/50 text-green-300 hover:bg-green-700/60 transition-colors border border-green-700/40 text-center"
             >
-              Analizar →
-            </button>
+              Analizar ↗
+            </a>
           )}
           {(done || live) && (
             <button
