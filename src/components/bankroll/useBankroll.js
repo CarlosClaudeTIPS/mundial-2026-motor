@@ -81,9 +81,12 @@ export function useBankroll() {
   const bankActual = useCallback(() => {
     const { apuestas, configuracion } = state
     return apuestas.reduce((acc, a) => {
-      if (a.resultado === 'ganada') return acc + (a.ganancia_real ?? 0)
+      // Ganada: solo se suma la GANANCIA NETA (pago total − lo apostado), porque
+      // el monto apostado nunca se descontó del bank al registrar la apuesta.
+      // Sumar el pago completo contaría tu propia plata como ganancia (bug).
+      if (a.resultado === 'ganada') return acc + ((a.ganancia_real ?? 0) - a.monto)
       if (a.resultado === 'perdida') return acc - a.monto
-      return acc
+      return acc // pendiente / devuelta: sin efecto en el bank
     }, configuracion.bank_inicial)
   }, [state])
 
