@@ -1,4 +1,5 @@
 import { TrendingUp, TrendingDown, Shield, AlertTriangle, CheckCircle, XCircle, Clock } from 'lucide-react'
+import Cuenta from '../Cuenta'
 
 function fmt(n) {
   return '$' + Math.abs(n).toLocaleString('es-CO')
@@ -30,6 +31,11 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
 
   return (
     <div className="p-4 space-y-4 max-w-2xl mx-auto">
+
+      {/* Sesión: aquí es donde más duele perder los datos (visible en móvil) */}
+      <div className="rounded-xl border border-dark-600 bg-dark-800 md:hidden">
+        <Cuenta compacto />
+      </div>
 
       {/* Bank card */}
       <div className={`rounded-2xl p-5 border ${critico ? 'bg-red-950 border-red-800' : peligro ? 'bg-orange-950 border-orange-800' : 'bg-dark-800 border-dark-600'}`}>

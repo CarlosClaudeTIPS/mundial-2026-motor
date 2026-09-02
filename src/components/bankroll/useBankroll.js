@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
+import { NUBE_DISPONIBLE, getSesion, onSesion, sincronizarClave, subirConCalma } from '../../lib/nube'
 
 const STORAGE_KEY = 'bankroll_tracker_v1'
+const TS_KEY = 'bankroll_tracker_v1_ts' // cuándo cambió por última vez (para el merge)
 
 const DEFAULT_STATE = {
   apuestas: [],
@@ -28,6 +30,7 @@ function load() {
 
 function save(state) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+  try { localStorage.setItem(TS_KEY, String(Date.now())) } catch {}
 }
 
 function hoy() {
@@ -36,8 +39,32 @@ function hoy() {
 
 export function useBankroll() {
   const [state, setState] = useState(load)
+  const [sincronizado, setSincronizado] = useState(false)
 
-  useEffect(() => { save(state) }, [state])
+  useEffect(() => {
+    save(state)
+    // Con sesión activa: cada cambio se sube a la nube (debounce 2 s)
+    if (NUBE_DISPONIBLE && sincronizado) subirConCalma(STORAGE_KEY, state)
+  }, [state]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Al iniciar sesión (o al abrir la app con sesión guardada): merge ──
+  // Gana el estado COMPLETO más reciente entre este dispositivo y la nube.
+  useEffect(() => {
+    if (!NUBE_DISPONIBLE) return
+    let vivo = true
+    const sync = async () => {
+      const s = await getSesion()
+      if (!s || !vivo) { setSincronizado(false); return }
+      const localTs = Number(localStorage.getItem(TS_KEY)) || null
+      const r = await sincronizarClave(STORAGE_KEY, load(), localTs)
+      if (!vivo) return
+      if (r.origen === 'nube' && r.data) setState({ ...DEFAULT_STATE, ...r.data })
+      setSincronizado(true)
+    }
+    sync()
+    const off = onSesion(() => sync())
+    return () => { vivo = false; off() }
+  }, [])
 
   // Desbloquear automáticamente si ya pasó el tiempo
   useEffect(() => {

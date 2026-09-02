@@ -1,5 +1,6 @@
 import { BarChart2, Clock, List, Calendar, Table, DollarSign, Target } from 'lucide-react'
 import { LEAGUES } from '../lib/leagues'
+import Cuenta from './Cuenta'
 
 const TABS = [
   { id: 'fixture',  label: 'Fixture',   icon: Calendar },
@@ -68,6 +69,9 @@ export default function Sidebar({ active, onChange, leagueId, onLeagueChange }) 
           </button>
         ))}
       </nav>
+
+      {/* Sesión / sincronización en la nube — pegado abajo */}
+      <Cuenta />
     </aside>
   )
 }
