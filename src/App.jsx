@@ -64,6 +64,9 @@ export default function App() {
   const handleLeagueChange = useCallback((id) => {
     setLeagueId(Number(id))
     try { localStorage.setItem(LEAGUE_STORAGE_KEY, String(id)) } catch {}
+    // Elegir una liga en el selector = quiero VER esa liga → el Fixture pasa
+    // a "Solo esa liga" (antes se quedaba en "Mis ligas" y parecía vacío)
+    setSoloLigaReq({ ts: Date.now() })
   }, [])
 
   // Clic en el nombre de una liga → Fixture en modo "Solo esa liga"

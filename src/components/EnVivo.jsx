@@ -318,7 +318,10 @@ export default function EnVivo({ league, onVerLiga }) {
           }
         } else if (r?.error) setLiveError(r.error)
       } else {
-        const ligas = misLigas.map(id => LEAGUES.find(l => l.id === id)).filter(Boolean)
+        // Mis ligas + SIEMPRE la liga elegida en el selector (aunque no esté
+        // seguida) — elegir una liga y no ver sus partidos en vivo era absurdo
+        const ids = misLigas.includes(league?.id) ? misLigas : [...misLigas, league?.id].filter(Boolean)
+        const ligas = ids.map(id => LEAGUES.find(l => l.id === id)).filter(Boolean)
         const results = await Promise.allSettled(
           ligas.map(l => fetchLive(l.id).then(r => ({ liga: l, r })))
         )
@@ -339,7 +342,7 @@ export default function EnVivo({ league, onVerLiga }) {
     } finally {
       setLoadingLive(false)
     }
-  }, [misLigas, vista])
+  }, [misLigas, vista, league?.id])
 
   // ── Resolver logs de TI de partidos que ya terminaron (live-backtest) ──
   // Solo se intenta cuando el partido salió de la lista en vivo; máx 2 llamadas
