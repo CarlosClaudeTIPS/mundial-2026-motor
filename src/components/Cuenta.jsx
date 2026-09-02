@@ -70,13 +70,15 @@ export default function Cuenta({ compacto = false }) {
         </button>
       ) : paso === 'codigo' ? (
         <div className="space-y-1.5">
-          <p className="text-[11px] text-gray-400">Código enviado a <span className="text-white">{email}</span> (revisa spam)</p>
+          <p className="text-[11px] text-gray-400">Correo enviado a <span className="text-white">{email}</span> (revisa spam).</p>
+          <p className="text-[11px] text-green-400 font-semibold">👉 Dale clic al enlace del correo — vuelves aquí ya con la sesión iniciada.</p>
+          <p className="text-[10px] text-gray-500">¿El correo trae un código de 6 dígitos? Escríbelo aquí:</p>
           <input value={codigo} onChange={e => setCodigo(e.target.value)} placeholder="123456"
-            inputMode="numeric" maxLength={6} autoFocus
+            inputMode="numeric" maxLength={6}
             onKeyDown={e => e.key === 'Enter' && confirmar()}
             className="w-full bg-dark-700 border border-dark-500 rounded-lg px-2 py-1.5 text-sm text-white text-center tracking-[0.3em] focus:outline-none focus:border-green-500" />
-          <button onClick={confirmar} className="w-full text-xs py-1.5 rounded-lg bg-green-700 hover:bg-green-600 text-white font-semibold">Entrar</button>
-          <button onClick={() => { setPaso('inicio'); setCodigo(''); setError('') }} className="w-full text-[10px] text-gray-600 hover:text-gray-400">otro correo / pedir código de nuevo</button>
+          <button onClick={confirmar} className="w-full text-xs py-1.5 rounded-lg bg-green-700 hover:bg-green-600 text-white font-semibold">Entrar con código</button>
+          <button onClick={() => { setPaso('inicio'); setCodigo(''); setError('') }} className="w-full text-[10px] text-gray-600 hover:text-gray-400">otro correo / pedir de nuevo</button>
           {error && <p className="text-[10px] text-red-400">{error}</p>}
         </div>
       ) : (
