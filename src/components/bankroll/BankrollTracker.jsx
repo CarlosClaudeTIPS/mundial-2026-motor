@@ -16,12 +16,52 @@ const TABS = [
 ]
 
 function ConfigPanel({ hook }) {
-  const { state, resetearTodo } = hook
+  const { state, resetearTodo, guardarConfig } = hook
   const [confirm, setConfirm] = useState(false)
+  const c = state.configuracion
+  const [min, setMin] = useState(c.meta_diaria_min ?? 40000)
+  const [max, setMax] = useState(c.meta_diaria_max ?? 60000)
+  const [guardado, setGuardado] = useState(false)
+
+  const guardarMetas = () => {
+    const mn = Math.max(0, Number(min) || 0)
+    const mx = Math.max(mn, Number(max) || 0) // el techo nunca por debajo del piso
+    guardarConfig({ meta_diaria_min: mn, meta_diaria_max: mx })
+    setMax(mx)
+    setGuardado(true); setTimeout(() => setGuardado(false), 1500)
+  }
 
   return (
     <div className="p-4 max-w-lg mx-auto space-y-4">
       <h2 className="text-xl font-black text-white">Configuración</h2>
+
+      {/* Objetivo diario — editable */}
+      <div className="bg-dark-800 border border-dark-600 rounded-xl p-4 space-y-3">
+        <p className="text-xs text-gray-500 uppercase tracking-widest">🎯 Objetivo diario (ganancia neta)</p>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="text-xs text-gray-500 block mb-1">Piso (mínimo)</label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+              <input type="number" value={min} onChange={e => setMin(e.target.value)} step="5000" min="0"
+                className="w-full bg-dark-700 border border-dark-500 rounded-lg px-3 py-2 pl-7 text-white text-sm focus:outline-none focus:border-green-500" />
+            </div>
+          </div>
+          <div>
+            <label className="text-xs text-gray-500 block mb-1">Techo (máximo)</label>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+              <input type="number" value={max} onChange={e => setMax(e.target.value)} step="5000" min="0"
+                className="w-full bg-dark-700 border border-dark-500 rounded-lg px-3 py-2 pl-7 text-white text-sm focus:outline-none focus:border-green-500" />
+            </div>
+          </div>
+        </div>
+        <button onClick={guardarMetas}
+          className="w-full py-2 rounded-lg bg-green-700 hover:bg-green-600 text-white text-sm font-bold transition-colors">
+          {guardado ? '✅ Guardado' : 'Guardar objetivo'}
+        </button>
+        <p className="text-[11px] text-gray-600">Al llegar al techo, el dashboard te avisa que pares por hoy.</p>
+      </div>
 
       <div className="bg-dark-800 border border-dark-600 rounded-xl p-4 space-y-3">
         <p className="text-xs text-gray-500 uppercase tracking-widest">Reglas activas</p>

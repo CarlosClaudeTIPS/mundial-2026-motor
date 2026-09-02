@@ -11,6 +11,8 @@ const DEFAULT_STATE = {
     apuesta_maxima: 25000,
     max_dia: 4,
     max_perdidas_consecutivas: 2,
+    meta_diaria_min: 40000, // objetivo del día: piso
+    meta_diaria_max: 60000, // objetivo del día: techo → hora de parar
   },
   bloqueo: { activo: false, hasta: null, nivel: 0, motivo: '' },
   violaciones: [],
@@ -92,6 +94,17 @@ export function useBankroll() {
 
   const apuestasHoy = useCallback(() => {
     return state.apuestas.filter(a => a.fecha === hoy() && a.resultado !== 'devuelta')
+  }, [state])
+
+  // Ganancia NETA de hoy (solo apuestas ya resueltas de la fecha de hoy)
+  const gananciaHoy = useCallback(() => {
+    return state.apuestas
+      .filter(a => a.fecha === hoy())
+      .reduce((acc, a) => {
+        if (a.resultado === 'ganada') return acc + ((a.ganancia_real ?? 0) - a.monto)
+        if (a.resultado === 'perdida') return acc - a.monto
+        return acc
+      }, 0)
   }, [state])
 
   const perdidasConsecutivas = useCallback(() => {
@@ -193,11 +206,18 @@ export function useBankroll() {
     setState(DEFAULT_STATE)
   }
 
+  // Guardar cambios de configuración (metas, límites) sin tocar el resto
+  function guardarConfig(parcial) {
+    setState(s => ({ ...s, configuracion: { ...s.configuracion, ...parcial } }))
+  }
+
   return {
     state,
     bankActual: bankActual(),
     apuestasHoy: apuestasHoy(),
+    gananciaHoy: gananciaHoy(),
     perdidasConsecutivas: perdidasConsecutivas(),
+    guardarConfig,
     validarApuesta,
     aplicarConsecuencia,
     agregarApuesta,

@@ -6,7 +6,7 @@ function fmt(n) {
 }
 
 export default function BankrollDashboard({ hook, onNuevaApuesta }) {
-  const { state, bankActual, apuestasHoy, perdidasConsecutivas } = hook
+  const { state, bankActual, apuestasHoy, gananciaHoy, perdidasConsecutivas } = hook
   const { configuracion } = state
 
   const pct = Math.min(100, (bankActual / (configuracion.bank_inicial * 2)) * 100)
@@ -14,6 +14,13 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
   const ganPct = ((ganancia / configuracion.bank_inicial) * 100).toFixed(1)
   const peligro = bankActual < 700000
   const critico = bankActual < 500000
+
+  // ── Objetivo diario (piso y techo) ──
+  const metaMin = configuracion.meta_diaria_min ?? 40000
+  const metaMax = configuracion.meta_diaria_max ?? 60000
+  const metaPct = Math.max(0, Math.min(100, (gananciaHoy / metaMax) * 100))
+  const cumpliMin = gananciaHoy >= metaMin
+  const cumpliMax = gananciaHoy >= metaMax
 
   const pendientes = state.apuestas.filter(a => a.resultado === 'pendiente')
   const resueltas = state.apuestas.filter(a => a.resultado !== 'pendiente')
@@ -74,6 +81,44 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
             </p>
           )}
         </div>
+      </div>
+
+      {/* Objetivo diario */}
+      <div className={`rounded-2xl p-4 border ${
+        cumpliMax ? 'bg-yellow-950/40 border-yellow-700/60'
+          : cumpliMin ? 'bg-green-950/40 border-green-700/50'
+          : 'bg-dark-800 border-dark-600'
+      }`}>
+        <div className="flex items-center justify-between mb-2">
+          <p className="text-xs text-gray-400 uppercase tracking-widest font-semibold">🎯 Objetivo de hoy</p>
+          <p className={`text-lg font-black ${gananciaHoy > 0 ? 'text-green-400' : gananciaHoy < 0 ? 'text-red-400' : 'text-gray-400'}`}>
+            {gananciaHoy >= 0 ? '+' : '−'}{fmt(gananciaHoy)}
+          </p>
+        </div>
+
+        {/* Barra con piso y techo marcados */}
+        <div className="relative h-3 bg-dark-600 rounded-full overflow-hidden">
+          <div className={`h-full rounded-full transition-all ${
+            gananciaHoy < 0 ? 'bg-red-500' : cumpliMax ? 'bg-yellow-500' : cumpliMin ? 'bg-green-500' : 'bg-green-600/70'
+          }`} style={{ width: `${metaPct}%` }} />
+          {/* marca del piso (min) sobre la barra */}
+          <div className="absolute top-0 bottom-0 w-0.5 bg-white/60"
+            style={{ left: `${Math.min(100, (metaMin / metaMax) * 100)}%` }} />
+        </div>
+        <div className="flex justify-between text-[11px] mt-1.5">
+          <span className="text-gray-500">Piso {fmt(metaMin)}</span>
+          <span className="text-gray-500">Techo {fmt(metaMax)}</span>
+        </div>
+
+        <p className={`text-xs mt-2 font-medium ${
+          cumpliMax ? 'text-yellow-300' : cumpliMin ? 'text-green-300' : 'text-gray-400'
+        }`}>
+          {cumpliMax ? '🛑 Llegaste al techo — hora de parar por hoy, no lo devuelvas'
+            : cumpliMin ? `✅ Meta mínima cumplida — vas ${fmt(metaMax - gananciaHoy)} del techo`
+            : gananciaHoy > 0 ? `Te faltan ${fmt(metaMin - gananciaHoy)} para el piso`
+            : gananciaHoy < 0 ? `Vas en rojo — recupera con cabeza, no persigas`
+            : 'Aún sin resolver apuestas hoy'}
+        </p>
       </div>
 
       {/* Hoy */}
