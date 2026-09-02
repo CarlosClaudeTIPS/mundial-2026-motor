@@ -55,17 +55,24 @@ export default function MobileNav({ active, onChange, leagueId, onLeagueChange }
           </select>
           <div className="grid grid-cols-2 gap-1">
             {TABS.map(({ id, label }) => (
-              <button
+              // Enlace real: toque normal navega aquí; mantener presionado (móvil)
+              // o Ctrl+clic abren la pestaña en otra ventana del navegador
+              <a
                 key={id}
-                onClick={() => { onChange(id); setOpen(false) }}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                href={`#${id}`}
+                onClick={(e) => {
+                  if (e.ctrlKey || e.metaKey || e.shiftKey) return
+                  e.preventDefault()
+                  onChange(id); setOpen(false)
+                }}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors text-center ${
                   active === id
                     ? 'bg-green-600/20 text-green-400'
                     : 'text-gray-400 hover:text-white hover:bg-dark-700'
                 }`}
               >
                 {label}
-              </button>
+              </a>
             ))}
           </div>
         </div>

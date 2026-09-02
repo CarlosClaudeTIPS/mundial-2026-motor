@@ -55,9 +55,16 @@ export default function Sidebar({ active, onChange, leagueId, onLeagueChange }) 
 
       <nav className="flex flex-col gap-0.5 px-2">
         {TABS.map(({ id, label, icon: Icon }) => (
-          <button
+          // Enlace real: clic normal navega aquí mismo; Ctrl+clic, clic con la
+          // rueda o "Abrir en pestaña nueva" abren otra pestaña del navegador
+          <a
             key={id}
-            onClick={() => onChange(id)}
+            href={`#${id}`}
+            onClick={(e) => {
+              if (e.ctrlKey || e.metaKey || e.shiftKey) return
+              e.preventDefault()
+              onChange(id)
+            }}
             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors w-full text-left ${
               active === id
                 ? 'bg-green-600/20 text-green-400 border border-green-600/30'
@@ -66,7 +73,7 @@ export default function Sidebar({ active, onChange, leagueId, onLeagueChange }) 
           >
             <Icon size={16} />
             {label}
-          </button>
+          </a>
         ))}
       </nav>
 
