@@ -21,6 +21,8 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
   const metaPct = Math.max(0, Math.min(100, (gananciaHoy / metaMax) * 100))
   const cumpliMin = gananciaHoy >= metaMin
   const cumpliMax = gananciaHoy >= metaMax
+  // Tope de pérdidas seguidas alcanzado → señal de parar por hoy
+  const pararPorPerdidas = perdidasConsecutivas >= configuracion.max_perdidas_consecutivas
 
   const pendientes = state.apuestas.filter(a => a.resultado === 'pendiente')
   const resueltas = state.apuestas.filter(a => a.resultado !== 'pendiente')
@@ -39,8 +41,10 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
   return (
     <div className="p-4 space-y-4 max-w-2xl mx-auto">
 
-      {/* Sesión: aquí es donde más duele perder los datos (visible en móvil) */}
-      <div className="rounded-xl border border-dark-600 bg-dark-800 md:hidden">
+      {/* Sesión: aquí es donde más duele perder los datos (visible en móvil).
+          Borde verde para que se note — el bankroll SIN login vive solo en este
+          teléfono; con login viaja a la nube y aparece en cualquier dispositivo. */}
+      <div className="rounded-xl border-2 border-green-800/50 bg-green-950/20 md:hidden">
         <Cuenta compacto />
       </div>
 
@@ -95,9 +99,19 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
         </div>
       </div>
 
+      {/* Alerta de parar tras N pérdidas seguidas */}
+      {pararPorPerdidas && (
+        <div className="rounded-2xl p-4 border-2 bg-red-950/70 border-red-600 text-center">
+          <p className="text-2xl mb-1">🛑</p>
+          <p className="text-red-200 font-black text-lg">{perdidasConsecutivas} pérdidas seguidas — PARA POR HOY</p>
+          <p className="text-red-400/90 text-sm mt-1">Esta es tu regla. Perseguir la pérdida es como se revienta el bank. Mañana con la cabeza fría.</p>
+        </div>
+      )}
+
       {/* Objetivo diario */}
       <div className={`rounded-2xl p-4 border ${
-        cumpliMax ? 'bg-yellow-950/40 border-yellow-700/60'
+        pararPorPerdidas ? 'bg-red-950/40 border-red-800/60'
+          : cumpliMax ? 'bg-yellow-950/40 border-yellow-700/60'
           : cumpliMin ? 'bg-green-950/40 border-green-700/50'
           : 'bg-dark-800 border-dark-600'
       }`}>
@@ -123,12 +137,12 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
         </div>
 
         <p className={`text-xs mt-2 font-medium ${
-          cumpliMax ? 'text-yellow-300' : cumpliMin ? 'text-green-300' : 'text-gray-400'
+          cumpliMax ? 'text-yellow-300' : cumpliMin ? 'text-green-300' : gananciaHoy < 0 ? 'text-red-400' : 'text-gray-400'
         }`}>
           {cumpliMax ? '🛑 Llegaste al techo — hora de parar por hoy, no lo devuelvas'
             : cumpliMin ? `✅ Meta mínima cumplida — vas ${fmt(metaMax - gananciaHoy)} del techo`
             : gananciaHoy > 0 ? `Te faltan ${fmt(metaMin - gananciaHoy)} para el piso`
-            : gananciaHoy < 0 ? `Vas en rojo — recupera con cabeza, no persigas`
+            : gananciaHoy < 0 ? `Vas ${fmt(gananciaHoy)} en rojo hoy — recupera con cabeza, no persigas`
             : 'Aún sin resolver apuestas hoy'}
         </p>
       </div>

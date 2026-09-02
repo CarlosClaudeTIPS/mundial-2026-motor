@@ -6,6 +6,7 @@ import NuevaApuesta from './NuevaApuesta'
 import HistorialApuestas from './HistorialApuestas'
 import BankrollStats from './BankrollStats'
 import BloqueoScreen from './BloqueoScreen'
+import Cuenta from '../Cuenta'
 import { LayoutDashboard, List, BarChart2, Settings } from 'lucide-react'
 
 const TABS = [
@@ -34,6 +35,15 @@ function ConfigPanel({ hook }) {
   return (
     <div className="p-4 max-w-lg mx-auto space-y-4">
       <h2 className="text-xl font-black text-white">Configuración</h2>
+
+      {/* Cuenta / sincronización — visible en todos los tamaños */}
+      <div className="bg-dark-800 border border-dark-600 rounded-xl overflow-hidden">
+        <div className="px-4 pt-3">
+          <p className="text-xs text-gray-500 uppercase tracking-widest">☁️ Guardar mis datos (nube)</p>
+          <p className="text-[11px] text-gray-600 mt-1">Sin login, el bankroll vive solo en este dispositivo. Con login viaja a la nube y lo ves en el celular y el PC.</p>
+        </div>
+        <Cuenta compacto />
+      </div>
 
       {/* Objetivo diario — editable */}
       <div className="bg-dark-800 border border-dark-600 rounded-xl p-4 space-y-3">
