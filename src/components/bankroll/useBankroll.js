@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'
-import { NUBE_DISPONIBLE, getSesion, onSesion, sincronizarClave, subirConCalma } from '../../lib/nube'
+import { useState, useEffect, useCallback, useRef } from 'react'
+import { NUBE_DISPONIBLE, getSesion, onSesion, bajarEstado, subirEstado, subirConCalma } from '../../lib/nube'
 
 const STORAGE_KEY = 'bankroll_tracker_v1'
 const TS_KEY = 'bankroll_tracker_v1_ts' // cuándo cambió por última vez (para el merge)
@@ -39,28 +39,51 @@ function hoy() {
   return new Date().toISOString().slice(0, 10)
 }
 
+// Un estado "virgen" (sin onboarding ni apuestas) no puede ganarle a uno con
+// datos — ni al bajar ni al subir. Abrir la app en un PC nuevo NO borra nada.
+function esVirgen(d) {
+  return !d?.onboarding_completo && (d?.apuestas?.length ?? 0) === 0
+}
+
 export function useBankroll() {
   const [state, setState] = useState(load)
   const [sincronizado, setSincronizado] = useState(false)
+  const primeraCarga = useRef(true)
 
   useEffect(() => {
+    // El primer render NO es un cambio del usuario: no re-sellar el timestamp
+    // (ese sello falso hacía que un estado vacío "recién abierto" pareciera
+    // más nuevo que el bankroll real de la nube y lo pisara)
+    if (primeraCarga.current) { primeraCarga.current = false; return }
     save(state)
     // Con sesión activa: cada cambio se sube a la nube (debounce 2 s)
-    if (NUBE_DISPONIBLE && sincronizado) subirConCalma(STORAGE_KEY, state)
+    if (NUBE_DISPONIBLE && sincronizado && !esVirgen(state)) subirConCalma(STORAGE_KEY, state)
   }, [state]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Al iniciar sesión (o al abrir la app con sesión guardada): merge ──
-  // Gana el estado COMPLETO más reciente entre este dispositivo y la nube.
+  // Regla: el que tenga DATOS gana sobre el virgen; entre dos con datos,
+  // gana el más reciente.
   useEffect(() => {
     if (!NUBE_DISPONIBLE) return
     let vivo = true
     const sync = async () => {
       const s = await getSesion()
       if (!s || !vivo) { setSincronizado(false); return }
+      const local = load()
       const localTs = Number(localStorage.getItem(TS_KEY)) || null
-      const r = await sincronizarClave(STORAGE_KEY, load(), localTs)
+      const remoto = await bajarEstado(STORAGE_KEY)
       if (!vivo) return
-      if (r.origen === 'nube' && r.data) setState({ ...DEFAULT_STATE, ...r.data })
+
+      const nubeGana = remoto?.data && !esVirgen(remoto.data) &&
+        (esVirgen(local) || remoto.updatedAt > (localTs ?? 0))
+
+      if (nubeGana) {
+        setState({ ...DEFAULT_STATE, ...remoto.data })
+        save({ ...DEFAULT_STATE, ...remoto.data })
+      } else if (!esVirgen(local)) {
+        // Lo local tiene datos y es lo más completo/reciente → a la nube
+        await subirEstado(STORAGE_KEY, local)
+      }
       setSincronizado(true)
     }
     sync()
