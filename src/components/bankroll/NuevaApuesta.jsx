@@ -3,58 +3,28 @@ import { ArrowLeft, Upload, Loader2, AlertTriangle, XCircle, CheckCircle, ImageI
 
 const CASAS = ['BetWinner', 'Betplay', 'Rushbet', 'Codere', 'Wplay', 'Zamba', 'Otra']
 const MERCADOS = ['Tiros totales Over', 'Tiros totales Under', 'Córners Over', 'Córners Under', 'Over 2.5 goles', 'Under 2.5 goles', 'Over 1.5 goles', 'BTTS Sí', 'BTTS No', 'Ganador local', 'Ganador visitante', 'Empate', 'Tarjetas Over', 'Tarjetas Under', 'Otro']
+const DEPORTES = ['Fútbol', 'Baloncesto', 'Tenis', 'Béisbol', 'Otro']
 
-const EMPTY = { casa: 'BetWinner', partido: '', mercado: 'Tiros totales Over', seleccion: '', cuota: '', monto: '' }
+const EMPTY = { deporte: 'Fútbol', casa: 'BetWinner', partido: '', mercado: 'Tiros totales Over', seleccion: '', cuota: '', monto: '' }
+
+// La lectura del pantallazo pasa SIEMPRE por /api/vision (Edge Function): la
+// clave de Claude vive en el servidor y nunca se expone en el navegador.
+// En dev local /api no existe → si no responde, se cae al formulario manual.
+const ES_DEV = !!import.meta.env.DEV
 
 async function analizarImagen(base64, mimeType) {
-  const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY
-  if (!apiKey) throw new Error('NO_KEY')
-
-  const prompt = `Analiza este pantallazo de una apuesta deportiva y extrae la información en JSON.
-Si un dato no está visible usa null.
-Responde SOLO con JSON válido, sin texto adicional:
-
-{
-  "casa": "nombre de la casa (BetWinner/Betplay/Rushbet/etc)",
-  "partido": "Equipo A vs Equipo B",
-  "mercado": "descripción del mercado (ej: Tiros totales Over 23.5, Córners Over 9.5, etc)",
-  "seleccion": "selección exacta (ej: Over, Under, Local, etc)",
-  "cuota": 1.75,
-  "monto": 25000,
-  "ganancia_potencial": 43750
-}`
-
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
+  const res = await fetch('/api/vision', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': apiKey,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
-    body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 512,
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'image', source: { type: 'base64', media_type: mimeType, data: base64 } },
-          { type: 'text', text: prompt },
-        ],
-      }],
-    }),
-  })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ base64, mimeType }),
+  }).catch(() => null)
 
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}))
-    throw new Error(err?.error?.message || `Error ${res.status}`)
-  }
-
-  const data = await res.json()
-  const texto = data.content?.[0]?.text ?? ''
-  const match = texto.match(/\{[\s\S]*\}/)
-  if (!match) throw new Error('No se pudo extraer JSON de la respuesta')
-  return JSON.parse(match[0])
+  if (!res) throw new Error(ES_DEV ? 'NO_KEY' : 'Sin conexión')
+  if (res.status === 503) throw new Error('NO_KEY') // clave no configurada
+  const data = await res.json().catch(() => null)
+  if (!res.ok || !data) throw new Error(`Error ${res?.status ?? ''}`)
+  if (!data.ok) throw new Error(data.error || 'No se pudo leer la imagen')
+  return data.datos
 }
 
 function fileToBase64(file) {
@@ -120,7 +90,9 @@ export default function NuevaApuesta({ hook, onVolver }) {
 
   const { validarApuesta, aplicarConsecuencia, agregarApuesta, bankActual, state } = hook
   const apuestaMax = bankActual < 700000 ? 15000 : state.configuracion.apuesta_maxima
-  const tieneKey = !!import.meta.env.VITE_ANTHROPIC_API_KEY
+  // En prod se asume que el proxy /api/vision está; en dev depende de la clave.
+  // Si no está, se detecta al analizar (error NO_KEY → formulario manual).
+  const tieneKey = !ES_DEV || !!import.meta.env.VITE_ANTHROPIC_API_KEY
 
   async function handleImagen(file) {
     if (!file) return
@@ -144,6 +116,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
       setExtraido(datos)
       // Pre-llenar form con lo extraído para si quiere editar
       setForm({
+        deporte: datos.deporte || 'Fútbol',
         casa: datos.casa || 'BetWinner',
         partido: datos.partido || '',
         mercado: datos.mercado || 'Otro',
@@ -178,6 +151,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
   function datosParaRegistrar() {
     if (editando || !extraido) return form
     return {
+      deporte: extraido.deporte || form.deporte,
       casa: extraido.casa || form.casa,
       partido: extraido.partido || form.partido,
       mercado: extraido.mercado || form.mercado,
@@ -212,6 +186,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
     }
 
     agregarApuesta({
+      deporte: d.deporte || 'Fútbol',
       casa: d.casa,
       partido: d.partido?.trim(),
       mercado: d.mercado,
@@ -347,6 +322,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
 
           <div className="space-y-2">
             {[
+              { label: 'Deporte', val: extraido.deporte },
               { label: 'Casa', val: extraido.casa },
               { label: 'Partido', val: extraido.partido },
               { label: 'Mercado', val: extraido.mercado },
@@ -418,12 +394,21 @@ export default function NuevaApuesta({ hook, onVolver }) {
             )}
           </div>
 
-          <div>
-            <label className="text-xs text-gray-500 uppercase tracking-widest block mb-2">Casa</label>
-            <select value={form.casa} onChange={e => set('casa', e.target.value)}
-              className="w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-green-500">
-              {CASAS.map(c => <option key={c}>{c}</option>)}
-            </select>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-xs text-gray-500 uppercase tracking-widest block mb-2">Deporte</label>
+              <select value={form.deporte} onChange={e => set('deporte', e.target.value)}
+                className="w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-green-500">
+                {DEPORTES.map(x => <option key={x}>{x}</option>)}
+              </select>
+            </div>
+            <div>
+              <label className="text-xs text-gray-500 uppercase tracking-widest block mb-2">Casa</label>
+              <select value={form.casa} onChange={e => set('casa', e.target.value)}
+                className="w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-green-500">
+                {CASAS.map(c => <option key={c}>{c}</option>)}
+              </select>
+            </div>
           </div>
 
           <div>
