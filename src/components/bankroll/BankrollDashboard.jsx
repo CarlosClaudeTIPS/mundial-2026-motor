@@ -6,7 +6,7 @@ function fmt(n) {
 }
 
 export default function BankrollDashboard({ hook, onNuevaApuesta }) {
-  const { state, bankActual, apuestasHoy, gananciaHoy, perdidasConsecutivas } = hook
+  const { state, bankActual, enJuego, apuestasHoy, gananciaHoy, perdidasConsecutivas } = hook
   const { configuracion } = state
 
   const pct = Math.min(100, (bankActual / (configuracion.bank_inicial * 2)) * 100)
@@ -60,8 +60,20 @@ export default function BankrollDashboard({ hook, onNuevaApuesta }) {
           <div className="text-right">
             <p className="text-xs text-gray-500 mb-1">Inicial</p>
             <p className="text-sm text-gray-400 font-mono">{fmt(configuracion.bank_inicial)}</p>
+            {enJuego > 0 && (
+              <>
+                <p className="text-xs text-yellow-600 mt-2">En juego</p>
+                <p className="text-sm text-yellow-400 font-mono">{fmt(enJuego)}</p>
+              </>
+            )}
           </div>
         </div>
+
+        {enJuego > 0 && (
+          <p className="text-[11px] text-yellow-600/90 mb-2">
+            🎲 Tienes {fmt(enJuego)} en apuestas sin resolver — ya salieron del bank; si ganan, vuelven con la ganancia.
+          </p>
+        )}
 
         {/* Progress bar */}
         <div className="space-y-1">

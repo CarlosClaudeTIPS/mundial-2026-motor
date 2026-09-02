@@ -80,16 +80,28 @@ export function useBankroll() {
     }
   })
 
+  // Bank DISPONIBLE, como en la casa real: la plata sale al apostar y solo
+  // vuelve (con ganancia) si se gana.
+  //   pendiente → −monto  (está en juego, ya no lo tienes disponible)
+  //   ganada    → −monto + pago total  = ganancia neta
+  //   perdida   → −monto               (se perdió el stake)
+  //   devuelta  → 0                     (te devuelven lo apostado)
   const bankActual = useCallback(() => {
     const { apuestas, configuracion } = state
     return apuestas.reduce((acc, a) => {
-      // Ganada: solo se suma la GANANCIA NETA (pago total − lo apostado), porque
-      // el monto apostado nunca se descontó del bank al registrar la apuesta.
-      // Sumar el pago completo contaría tu propia plata como ganancia (bug).
-      if (a.resultado === 'ganada') return acc + ((a.ganancia_real ?? 0) - a.monto)
-      if (a.resultado === 'perdida') return acc - a.monto
-      return acc // pendiente / devuelta: sin efecto en el bank
+      const monto = a.monto ?? 0
+      if (a.resultado === 'pendiente') return acc - monto
+      if (a.resultado === 'ganada')    return acc - monto + (a.ganancia_real ?? 0)
+      if (a.resultado === 'perdida')   return acc - monto
+      return acc // devuelta: entra y sale el mismo monto → sin efecto neto
     }, configuracion.bank_inicial)
+  }, [state])
+
+  // Plata comprometida en apuestas sin resolver (para mostrar "en juego")
+  const enJuego = useCallback(() => {
+    return state.apuestas
+      .filter(a => a.resultado === 'pendiente')
+      .reduce((s, a) => s + (a.monto ?? 0), 0)
   }, [state])
 
   const apuestasHoy = useCallback(() => {
@@ -214,6 +226,7 @@ export function useBankroll() {
   return {
     state,
     bankActual: bankActual(),
+    enJuego: enJuego(),
     apuestasHoy: apuestasHoy(),
     gananciaHoy: gananciaHoy(),
     perdidasConsecutivas: perdidasConsecutivas(),
