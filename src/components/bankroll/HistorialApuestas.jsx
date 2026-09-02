@@ -63,10 +63,19 @@ export default function HistorialApuestas({ hook }) {
               {/* Header */}
               <div className="flex items-start justify-between gap-2 mb-3">
                 <div className="flex-1 min-w-0">
-                  <p className="text-white font-bold truncate">{a.partido}</p>
-                  {a.competicion && <p className="text-gray-400 text-xs truncate">{a.competicion}</p>}
+                  <div className="flex items-center gap-2">
+                    {a.tipo === 'multiple' && (
+                      <span className="text-[9px] font-bold bg-purple-700 text-white px-1.5 py-0.5 rounded shrink-0">
+                        COMBINADA {a.selecciones?.length ?? ''}
+                      </span>
+                    )}
+                    <p className="text-white font-bold truncate">
+                      {a.tipo === 'multiple' ? `Combinada de ${a.selecciones?.length ?? '?'}` : a.partido}
+                    </p>
+                  </div>
+                  {a.tipo !== 'multiple' && a.competicion && <p className="text-gray-400 text-xs truncate">{a.competicion}</p>}
                   <p className="text-gray-500 text-xs">
-                    {a.deporte && <span className="text-gray-400">{a.deporte} · </span>}
+                    {a.deporte && a.tipo !== 'multiple' && <span className="text-gray-400">{a.deporte} · </span>}
                     {a.fecha} · {a.casa}
                   </p>
                 </div>
@@ -76,14 +85,33 @@ export default function HistorialApuestas({ hook }) {
                 </div>
               </div>
 
+              {/* Selecciones de la combinada */}
+              {a.tipo === 'multiple' && a.selecciones?.length > 0 && (
+                <div className="space-y-1.5 mb-3">
+                  {a.selecciones.map((s, i) => (
+                    <div key={i} className="bg-dark-900/40 rounded-lg px-2.5 py-1.5 border border-dark-600/60">
+                      <div className="flex justify-between items-baseline gap-2">
+                        <p className="text-xs text-white font-medium truncate">{s.partido}</p>
+                        {s.cuota && <span className="text-xs text-gray-400 shrink-0">{s.cuota}</span>}
+                      </div>
+                      <p className="text-[11px] text-gray-500 truncate">
+                        {[s.deporte, s.mercado, s.seleccion].filter(Boolean).join(' · ')}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {/* Datos */}
               <div className="grid grid-cols-3 gap-2 mb-3">
                 <div>
-                  <p className="text-xs text-gray-600 mb-0.5">Mercado</p>
-                  <p className="text-xs text-gray-300 font-medium leading-tight">{a.mercado}</p>
+                  <p className="text-xs text-gray-600 mb-0.5">{a.tipo === 'multiple' ? 'Mercado' : 'Mercado'}</p>
+                  <p className="text-xs text-gray-300 font-medium leading-tight truncate">
+                    {a.tipo === 'multiple' ? `${a.selecciones?.length ?? 0} selecciones` : a.mercado}
+                  </p>
                 </div>
                 <div>
-                  <p className="text-xs text-gray-600 mb-0.5">Cuota</p>
+                  <p className="text-xs text-gray-600 mb-0.5">{a.tipo === 'multiple' ? 'Cuota total' : 'Cuota'}</p>
                   <p className="text-sm font-bold text-white">{a.cuota}</p>
                 </div>
                 <div>

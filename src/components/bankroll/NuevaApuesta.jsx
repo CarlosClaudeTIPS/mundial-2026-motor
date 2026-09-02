@@ -27,6 +27,40 @@ async function analizarImagen(base64, mimeType) {
   return data.datos
 }
 
+// Unifica lo que devuelve el lector (formato nuevo con selecciones, o el viejo
+// plano) en UNA sola forma: boleto + arreglo de selecciones. Una simple es un
+// boleto con 1 selección.
+function normalizar(datos) {
+  if (!datos) return null
+  const selecciones = Array.isArray(datos.selecciones) && datos.selecciones.length
+    ? datos.selecciones
+    : [{ // formato viejo (plano) → una sola selección
+        deporte: datos.deporte, competicion: datos.competicion, partido: datos.partido,
+        mercado: datos.mercado, seleccion: datos.seleccion, cuota: datos.cuota,
+      }]
+  const cuotaTotal = datos.cuota_total
+    ?? datos.cuota
+    ?? +(selecciones.reduce((p, s) => p * (Number(s.cuota) || 1), 1)).toFixed(2)
+  return {
+    tipo: datos.tipo || (selecciones.length > 1 ? 'multiple' : 'simple'),
+    casa: datos.casa ?? null,
+    monto: datos.monto ?? null,
+    cuota: cuotaTotal,
+    ganancia_potencial: datos.ganancia_potencial ?? null,
+    selecciones,
+  }
+}
+
+// Resumen de una sola línea para guardar como "partido"/"mercado" del boleto
+function resumenPartido(sel) {
+  if (sel.length === 1) return sel[0].partido || ''
+  return `Combinada (${sel.length}): ${sel.map(s => s.partido).filter(Boolean).join(' + ')}`
+}
+function resumenMercado(sel) {
+  if (sel.length === 1) return sel[0].mercado || ''
+  return sel.map(s => `${s.partido}: ${s.mercado}${s.seleccion ? ' — ' + s.seleccion : ''}`).join(' | ')
+}
+
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
@@ -112,16 +146,18 @@ export default function NuevaApuesta({ hook, onVolver }) {
 
     setAnalizando(true)
     try {
-      const datos = await analizarImagen(base64, mimeType)
+      const datos = normalizar(await analizarImagen(base64, mimeType))
       setExtraido(datos)
-      // Pre-llenar form con lo extraído para si quiere editar
+      const s0 = datos.selecciones[0] ?? {}
+      // El form manual edita a nivel de boleto (para múltiples, un solo pick por
+      // pata se edita mejor desde la casa; aquí se ajusta monto/cuota total).
       setForm({
-        deporte: datos.deporte || 'Fútbol',
-        competicion: datos.competicion || '',
+        deporte: s0.deporte || 'Fútbol',
+        competicion: s0.competicion || '',
         casa: datos.casa || 'BetWinner',
-        partido: datos.partido || '',
-        mercado: datos.mercado || 'Otro',
-        seleccion: datos.seleccion || '',
+        partido: datos.tipo === 'multiple' ? resumenPartido(datos.selecciones) : (s0.partido || ''),
+        mercado: datos.tipo === 'multiple' ? resumenMercado(datos.selecciones) : (s0.mercado || ''),
+        seleccion: s0.seleccion || '',
         cuota: datos.cuota ?? '',
         monto: datos.monto ?? '',
       })
@@ -150,14 +186,24 @@ export default function NuevaApuesta({ hook, onVolver }) {
   }
 
   function datosParaRegistrar() {
-    if (editando || !extraido) return form
+    // Editando a mano, o sin extracción: el form manda (apuesta simple)
+    if (editando || !extraido) {
+      return { ...form, tipo: 'simple', selecciones: [{
+        deporte: form.deporte, competicion: form.competicion, partido: form.partido,
+        mercado: form.mercado, seleccion: form.seleccion, cuota: Number(form.cuota) || null,
+      }] }
+    }
+    const sel = extraido.selecciones
+    const s0 = sel[0] ?? {}
     return {
-      deporte: extraido.deporte || form.deporte,
-      competicion: extraido.competicion || form.competicion,
+      tipo: extraido.tipo,
+      selecciones: sel,
+      deporte: s0.deporte || form.deporte,
+      competicion: s0.competicion || form.competicion,
       casa: extraido.casa || form.casa,
-      partido: extraido.partido || form.partido,
-      mercado: extraido.mercado || form.mercado,
-      seleccion: extraido.seleccion || form.seleccion,
+      partido: extraido.tipo === 'multiple' ? resumenPartido(sel) : (s0.partido || form.partido),
+      mercado: extraido.tipo === 'multiple' ? resumenMercado(sel) : (s0.mercado || form.mercado),
+      seleccion: s0.seleccion || form.seleccion,
       cuota: extraido.cuota ?? form.cuota,
       monto: extraido.monto ?? form.monto,
     }
@@ -176,7 +222,10 @@ export default function NuevaApuesta({ hook, onVolver }) {
     const monto = Number(d.monto)
     const cuota = Number(d.cuota)
 
-    if (!d.partido?.trim()) return setErrorForm('Falta el partido')
+    const faltaPartido = d.tipo === 'multiple'
+      ? !(d.selecciones?.length >= 2)
+      : !d.partido?.trim()
+    if (faltaPartido) return setErrorForm(d.tipo === 'multiple' ? 'La combinada necesita al menos 2 selecciones' : 'Falta el partido')
     if (!monto || monto < 100) return setErrorForm('Monto inválido')
     if (!cuota || cuota < 1.01) return setErrorForm('Cuota inválida')
 
@@ -188,6 +237,8 @@ export default function NuevaApuesta({ hook, onVolver }) {
     }
 
     agregarApuesta({
+      tipo: d.tipo || 'simple',
+      selecciones: d.selecciones ?? null,
       deporte: d.deporte || 'Fútbol',
       competicion: d.competicion || null,
       casa: d.casa,
@@ -314,6 +365,11 @@ export default function NuevaApuesta({ hook, onVolver }) {
             <div className="flex items-center gap-2">
               <CheckCircle size={16} className="text-green-400" />
               <span className="text-green-400 font-semibold text-sm">Datos extraídos</span>
+              {extraido.tipo === 'multiple' && (
+                <span className="text-[10px] font-bold bg-purple-700 text-white px-1.5 py-0.5 rounded">
+                  COMBINADA · {extraido.selecciones.length}
+                </span>
+              )}
             </div>
             <button
               onClick={() => setEditando(true)}
@@ -323,15 +379,29 @@ export default function NuevaApuesta({ hook, onVolver }) {
             </button>
           </div>
 
-          <div className="space-y-2">
+          {/* Selecciones (1 en simple, varias en combinada) */}
+          <div className="space-y-2 mb-3">
+            {extraido.selecciones.map((s, i) => (
+              <div key={i} className="bg-dark-900/50 rounded-xl p-3 border border-dark-600">
+                {extraido.selecciones.length > 1 && (
+                  <p className="text-[10px] text-purple-400 font-bold mb-1">Selección {i + 1}</p>
+                )}
+                <p className="text-white text-sm font-semibold">{s.partido ?? <span className="text-gray-700 italic">partido no detectado</span>}</p>
+                <p className="text-gray-400 text-xs mt-0.5">
+                  {[s.deporte, s.competicion].filter(Boolean).join(' · ')}
+                </p>
+                <div className="flex justify-between items-baseline mt-1.5">
+                  <span className="text-gray-300 text-xs">{s.mercado}{s.seleccion ? ` — ${s.seleccion}` : ''}</span>
+                  {s.cuota && <span className="text-white text-sm font-bold ml-2 shrink-0">{s.cuota}</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-2 pt-3 border-t border-dark-600">
             {[
-              { label: 'Deporte', val: extraido.deporte },
-              { label: 'Competición', val: extraido.competicion },
               { label: 'Casa', val: extraido.casa },
-              { label: 'Partido', val: extraido.partido },
-              { label: 'Mercado', val: extraido.mercado },
-              { label: 'Selección', val: extraido.seleccion },
-              { label: 'Cuota', val: extraido.cuota },
+              { label: extraido.tipo === 'multiple' ? 'Cuota total' : 'Cuota', val: extraido.cuota },
               { label: 'Monto', val: extraido.monto ? '$' + Number(extraido.monto).toLocaleString('es-CO') : null },
             ].map(({ label, val }) => (
               <div key={label} className="flex justify-between items-baseline">
@@ -356,17 +426,17 @@ export default function NuevaApuesta({ hook, onVolver }) {
             </div>
           )}
 
-          {/* Campos null — pedir al usuario que los llene */}
-          {[extraido.partido, extraido.cuota, extraido.monto].some(v => !v) && (
+          {/* Campos null — pedir al usuario que los llene (a nivel de boleto) */}
+          {[extraido.selecciones[0]?.partido, extraido.cuota, extraido.monto].some(v => !v) && (
             <div className="mt-4 space-y-3 pt-4 border-t border-dark-600">
               <p className="text-xs text-orange-400">Algunos datos no se detectaron — complétalos:</p>
-              {!extraido.partido && (
+              {extraido.tipo !== 'multiple' && !extraido.selecciones[0]?.partido && (
                 <input type="text" placeholder="Partido (Equipo A vs Equipo B)" value={form.partido}
                   onChange={e => set('partido', e.target.value)}
                   className="w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-2.5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-green-500" />
               )}
               {!extraido.cuota && (
-                <input type="number" placeholder="Cuota (ej: 1.75)" value={form.cuota} step="0.01" min="1.01"
+                <input type="number" placeholder={extraido.tipo === 'multiple' ? 'Cuota total' : 'Cuota (ej: 1.75)'} value={form.cuota} step="0.01" min="1.01"
                   onChange={e => set('cuota', e.target.value)}
                   className="w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-2.5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-green-500" />
               )}
