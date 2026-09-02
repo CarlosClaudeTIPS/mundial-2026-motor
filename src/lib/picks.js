@@ -69,6 +69,12 @@ const CORRELATION = {
   'gk-handicap':      0.25,
   'cards-handicap':   0.20,
   'handicap-ti':      0.20,
+  // Hándicap de córners: se mueve con el volumen de córners, no con los goles
+  'corners-handicap_corners': 0.75, // mismo mercado subyacente → no combinar
+  'handicap-handicap_corners': 0.30,
+  'goals-handicap_corners':    0.30,
+  'handicap_corners-shots':    0.40,
+  'gk-handicap_corners':       0.25,
 }
 
 function corr(mktA, mktB) {
@@ -130,6 +136,8 @@ const MARKET_META = {
   goles_visita:    { label: 'Goles Visitante',    risk: 42, category: 'goals'   },
   handicap_local:  { label: 'Hándicap Local',     risk: 45, category: 'handicap' },
   handicap_visita: { label: 'Hándicap Visitante', risk: 45, category: 'handicap' },
+  handicap_corners_local:  { label: 'Hándicap Córners Local',     risk: 40, category: 'handicap_corners' },
+  handicap_corners_visita: { label: 'Hándicap Córners Visitante', risk: 40, category: 'handicap_corners' },
 }
 
 // ─── Calcular P_modelo y EV para una línea ────────────────────────────────────
@@ -222,28 +230,21 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
     }
   }
 
-  // ── HÁNDICAP DE GOLES (para ligas sin mercados de saques) ──
-  // Se evalúa la diferencia de goles esperada con la convolución de Poisson.
-  const gA = calc.adj?.goalsA; const gB = calc.adj?.goalsB
-  if (gA > 0 && gB > 0) {
-    for (const line of [-2.5, -1.5, -0.5, 0.5, 1.5]) {
-      // Local cubre el hándicap si (golesA − golesB) > line
-      const pLocal = pHandicap(gA, gB, line)
-      // Visitante cubre el contrario: (golesB − golesA) > −line ⇔ diff < line
-      const pVisita = 1 - pHandicap(gA, gB, line - 0.0001)
-
-      // OJO con el signo: el hándicap H es lo que se SUMA a los goles del
-      // equipo. El local cubre si diff + H > 0 ⟺ diff > −H, y aquí pLocal es
-      // P(diff > line) ⟹ H_local = −line. El visitante cubre si diff < H ⟹
-      // H_visita = line. (Estaban al revés: mostraba −0.5 con la probabilidad
-      // de +0.5, o sea recomendaba el lado contrario.)
+  // ── HÁNDICAP (diferencia entre los dos equipos, por convolución de Poisson) ──
+  // Mismo motor para goles y córners: la única diferencia son las medias de
+  // cada equipo, las líneas típicas y la etiqueta. El signo del hándicap H es
+  // lo que se SUMA al equipo: el local cubre si diff + H > 0 ⟺ diff > −H.
+  const pushHandicap = (mediaA, mediaB, lines, category, keyLocal, keyVisita, tipo) => {
+    if (!(mediaA > 0 && mediaB > 0)) return
+    for (const line of lines) {
+      const pLocal = pHandicap(mediaA, mediaB, line)          // P(diff > line) → H_local = −line
+      const pVisita = 1 - pHandicap(mediaA, mediaB, line - 0.0001) // H_visita = line
       const fmtH = (h) => (h > 0 ? `+${h}` : `${h}`)
       for (const [key, p, etiqueta] of [
-        ['handicap_local', pLocal, fmtH(-line)],
-        ['handicap_visita', pVisita, fmtH(line)],
+        [keyLocal, pLocal, fmtH(-line)],
+        [keyVisita, pVisita, fmtH(line)],
       ]) {
-        // Solo líneas con probabilidad jugable (ni obvias ni imposibles)
-        if (p < 0.35 || p > 0.80) continue
+        if (p < 0.35 || p > 0.80) continue // ni obvio ni imposible
         const meta = MARKET_META[key]
         let confidence = 50
         if (p >= 0.68) confidence += 12
@@ -251,15 +252,15 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
         if (teamA.est || teamB.est) confidence -= 10
         candidates.push({
           marketKey: key,
-          label: meta.label, // la línea va aparte en `line` — no duplicarla aquí
-          category: 'handicap',
-          expected: +(gA - gB).toFixed(2),
+          label: meta.label,
+          category,
+          hTipo: tipo, // 'goles' | 'corners' — para la explicación
+          expected: +(mediaA - mediaB).toFixed(2),
           line: etiqueta,
           dir: 'CUBRE',
-          // Probabilidad ya calculada por convolución de Poisson: NO es un
-          // OVER/UNDER de una NB, así que el resto del motor debe usar ESTA.
-          pFija: p,
-          gA, gB, hLine: line, hSide: key === 'handicap_local' ? 'local' : 'visita',
+          pFija: p, // prob ya calculada por convolución: el motor usa ESTA
+          gA: mediaA, gB: mediaB, hLine: line,
+          hSide: key === keyLocal ? 'local' : 'visita',
           pMod: +(p * 100).toFixed(1),
           ev: null, evNum: -999,
           margin: p - 0.5,
@@ -270,6 +271,12 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
       }
     }
   }
+  // Hándicap de GOLES: líneas cerradas (0.5–2.5). Hándicap de CÓRNERS: el
+  // volumen es mayor, así que las líneas van más abiertas (1.5–3.5).
+  pushHandicap(calc.adj?.goalsA, calc.adj?.goalsB, [-2.5, -1.5, -0.5, 0.5, 1.5],
+    'handicap', 'handicap_local', 'handicap_visita', 'goles')
+  pushHandicap(calc.adj?.cornA, calc.adj?.cornB, [-3.5, -2.5, -1.5, 1.5, 2.5, 3.5],
+    'handicap_corners', 'handicap_corners_local', 'handicap_corners_visita', 'corners')
 
   // Ordenar por EV desc (si hay cuota), si no por margen abs desc
   candidates.sort((a, b) => b.evNum - a.evNum || Math.abs(b.margin) - Math.abs(a.margin))
@@ -281,7 +288,7 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
 // vez: de cada mercado sale UNO solo, el de mayor confianza. Da igual si es
 // total, del local o del visitante — es un pick por mercado, no por variante.
 // Orden de presentación estable
-const ORDEN_MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
+const ORDEN_MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'handicap_corners', 'cards']
 
 export function pickUnoPorMercado(candidates, mercadosPermitidos = null, objetivo = 5) {
   // Solo variables de PARTIDO COMPLETO: las líneas 1H/2H se quedan para el
@@ -666,6 +673,51 @@ function explicarHandicap(pick, teamA, teamB) {
   }
 }
 
+// ─── Explicación del HÁNDICAP DE CÓRNERS ─────────────────────────────────────
+// Lo decide la diferencia de córners esperada (volumen de ataque por bandas,
+// dominio territorial). No mira goles: un equipo puede perder el partido y
+// ganar el córner por hándicap si empuja mucho sin concretar.
+function explicarHandicapCorners(pick, teamA, teamB) {
+  const esLocal = pick.hSide === 'local'
+  const equipo = esLocal ? teamA : teamB
+  const rival = esLocal ? teamB : teamA
+  const dif = +(pick.gA - pick.gB).toFixed(2) // aquí gA/gB son córners esperados
+  const factors = []
+
+  const summary = `El motor proyecta ${pick.gA.toFixed(1)} córners del local y ${pick.gB.toFixed(1)} del visitante — diferencia esperada ${dif > 0 ? '+' : ''}${dif} a favor del ${dif > 0 ? 'local' : 'visitante'}. Con hándicap ${pick.line}, ${equipo.name} cubre en el ${pick.pMod}% de los escenarios.`
+
+  factors.push({ icon: 'ℹ️', text: `Hándicap ${pick.line} de córners: a ${equipo.name} se le ${parseFloat(pick.line) > 0 ? 'SUMAN' : 'RESTAN'} ${Math.abs(parseFloat(pick.line))} córners antes de contar`, dir: 'neutral' })
+
+  factors.push({ icon: 'ℹ️', text: `Córners por partido: ${equipo.name} ${(esLocal ? equipo.corners_avg : equipo.corners_avg)?.toFixed(1)} a favor y ${equipo.corners_against_avg?.toFixed(1)} en contra; ${rival.name} ${rival.corners_avg?.toFixed(1)} a favor`, dir: 'neutral' })
+
+  if (equipo.style === 'bandas' || equipo.style === 'mixto-bandas') {
+    factors.push({ icon: '✅', text: `${equipo.name} ataca por bandas → genera muchos córners, empuja el hándicap a su favor`, dir: 'up' })
+  }
+  if (rival.style === 'central') {
+    factors.push({ icon: '✅', text: `${rival.name} juega por el centro → concede pocos córners de contra`, dir: 'up' })
+  }
+
+  const dppg = +((equipo.ppg ?? 1.3) - (rival.ppg ?? 1.3)).toFixed(2)
+  if (Math.abs(dppg) >= 0.3) {
+    factors.push(dppg > 0
+      ? { icon: '✅', text: `${equipo.name} es superior (PPG ${equipo.ppg} vs ${rival.ppg}) → suele dominar y sacar más córners`, dir: 'up' }
+      : { icon: '⚠️', text: `${equipo.name} es inferior (PPG ${equipo.ppg} vs ${rival.ppg}) → depende del hándicap que recibe`, dir: 'down' })
+  }
+
+  const risks = ['El córner por hándicap lo decide el dominio territorial, no el marcador: vigila expulsiones y si el partido se cierra']
+  if (pick.pMod > 75) risks.push('Probabilidad alta = cuota baja: mejor como pata de combinada')
+  for (const t of [teamA, teamB]) if (t.est) risks.push(`Muestra pobre de ${t.name} — proyección de córners menos fiable`)
+
+  return {
+    summary,
+    pushUp: factors.filter(f => f.dir === 'up'),
+    pushDown: factors.filter(f => f.dir === 'down'),
+    neutral: factors.filter(f => f.dir === 'neutral'),
+    keyVars: [],
+    risks,
+  }
+}
+
 // ─── Resumen corto para la tarjeta del fixture (mínimo 3 líneas) ─────────────
 // Se guarda con el pick para que la tarjeta lo muestre sin recalcular nada.
 export function explicacionCorta(pick, teamA, teamB, ctx = {}, calc = null, modsA = {}, modsB = {}, base = null) {
@@ -692,7 +744,8 @@ export function explicacionCorta(pick, teamA, teamB, ctx = {}, calc = null, mods
 }
 
 export function generateExplanation(pick, teamA, teamB, ctx = {}, calc = null, modsA = {}, modsB = {}, base = null) {
-  if (pick.category === 'handicap') return explicarHandicap(pick, teamA, teamB, base)
+  if (pick.category === 'handicap') return explicarHandicap(pick, teamA, teamB)
+  if (pick.category === 'handicap_corners') return explicarHandicapCorners(pick, teamA, teamB)
 
   const dir    = pick.dir === 'OVER' ? 'por encima' : 'por debajo'
   const pctStr = `${Math.abs(Math.round(pick.margin * 100))}%`

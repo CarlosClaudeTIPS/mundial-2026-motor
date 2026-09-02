@@ -15,12 +15,12 @@
 const KEY = 'motor_mercados_liga_v1'
 
 // Mercados cuantitativos del motor
-export const MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'cards']
+export const MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'handicap_corners', 'cards']
 
 export const MERCADO_LABEL = {
   shots: 'Tiros', sot: 'Tiros al arco', corners: 'Córners',
   ti: 'Saques de banda', gk: 'Saques de portería',
-  goals: 'Goles', handicap: 'Hándicap', cards: 'Tarjetas',
+  goals: 'Goles', handicap: 'Hándicap goles', handicap_corners: 'Hándicap córners', cards: 'Tarjetas',
 }
 
 // Perfiles de oferta. Regla del usuario: donde NO hay saques (banda/portería),
@@ -30,7 +30,7 @@ export const PERFILES = {
   completo: { label: 'Completo', mercados: ['shots', 'sot', 'corners', 'ti', 'gk'] },
   tiros:    { label: 'Tiros + córners + goles', mercados: ['shots', 'sot', 'corners', 'goals', 'handicap'] },
   sot:      { label: 'Tiros al arco + córners + goles', mercados: ['sot', 'corners', 'goals', 'handicap'] },
-  basico:   { label: 'Córners + goles', mercados: ['corners', 'goals', 'handicap'] },
+  basico:   { label: 'Córners + goles + hándicaps', mercados: ['corners', 'goals', 'handicap', 'handicap_corners'] },
 }
 
 // Configuración por defecto (la que indicó el usuario según su casa).

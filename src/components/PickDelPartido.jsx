@@ -16,10 +16,11 @@ import { anotarCuotas } from '../lib/odds'
 
 const ICONO = {
   shots: '🎯', sot: '🥅', corners: '🚩', ti: '🧮', gk: '🧤',
-  goals: '⚽', handicap: '⚖️', cards: '🟨',
+  goals: '⚽', handicap: '⚖️', handicap_corners: '🚩', cards: '🟨',
 }
 
 function catDe(marketKey = '') {
+  if (marketKey.startsWith('handicap_corners')) return 'handicap_corners'
   if (marketKey.startsWith('handicap')) return 'handicap'
   if (marketKey.startsWith('goles')) return 'goals'
   if (marketKey.startsWith('shots') || marketKey.startsWith('tiros')) return 'shots'
@@ -101,7 +102,7 @@ export default function PickDelPartido({ fixture }) {
         {picks.map((p, i) => {
           const cat = p.category ?? catDe(p.marketKey)
           const cuotaMin = p.pMod > 5 ? (1.025 / (p.pMod / 100)).toFixed(2) : null
-          const esHand = cat === 'handicap'
+          const esHand = cat === 'handicap' || cat === 'handicap_corners'
           return (
             <div key={i} className="bg-green-950/30 border border-green-900/40 rounded-lg px-2.5 py-1.5">
               <div className="flex items-center gap-2 flex-wrap">
