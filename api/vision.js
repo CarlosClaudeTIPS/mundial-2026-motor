@@ -6,18 +6,29 @@ export const config = { runtime: 'edge' }
 
 const API_KEY = process.env.ANTHROPIC_API_KEY
 
-const PROMPT = `Analiza este pantallazo de una apuesta deportiva y extrae la información en JSON.
-Si un dato no está visible usa null. Responde SOLO con JSON válido, sin texto adicional:
+const PROMPT = `Analiza este pantallazo de un cupón/boleto de apuesta deportiva y extrae la información en JSON.
+
+REGLAS IMPORTANTES para no confundir los campos:
+- "partido": son los DOS EQUIPOS que se enfrentan. Casi siempre están en NEGRILLA y con formato "Equipo A - Equipo B" o "Equipo A vs Equipo B" (ej: "Destroyer - Green Salvador"). Cópialos tal cual, cambiando el "-" por "vs". ESTO NO ES LA CASA.
+- "casa": es la MARCA de la casa de apuestas (BetPlay, BetWinner, Rushbet, Codere, Wplay, Bwin, 1xBet, etc.), normalmente por su logo o color de marca. Si no se ve ninguna marca, usa null. NUNCA pongas los equipos aquí.
+- "deporte": dedúcelo del contexto. Si menciona "cuarto"/"1er cuarto"/"3.er cuarto" o tiene ícono de balón de básquet 🏀 → "Baloncesto". Si dice "set"/"juego" o ícono de tenis → "Tenis". Si dice "gol"/"córner"/"tiempo"/"medio tiempo" o balón de fútbol → "Fútbol". Si dice "entrada"/"inning" → "Béisbol".
+- "mercado": la descripción del mercado apostado (ej: "Total 3er cuarto: menos de 37.5", "Más de 2.5 goles").
+- "seleccion": "Over" si dice "más de"/"over"/"+", "Under" si dice "menos de"/"under"/"-". Si es 1X2 usa "Local"/"Empate"/"Visitante".
+- "cuota": el número decimal de la cuota (ej: 1.72).
+- "monto": lo apostado. Ignora "COP"/"$"/puntos de miles (35.041,91 COP → 35041.91). Devuelve solo el número.
+- "ganancia_potencial": las "ganancias posibles". Mismo formato numérico.
+
+Si un dato realmente no está visible usa null. Responde SOLO con JSON válido, sin texto adicional:
 
 {
-  "deporte": "deporte (Fútbol/Baloncesto/Tenis/etc)",
-  "casa": "nombre de la casa (BetWinner/Betplay/Rushbet/etc)",
-  "partido": "Equipo A vs Equipo B",
-  "mercado": "descripción del mercado (ej: Tiros totales Over 23.5, Córners Over 9.5)",
-  "seleccion": "selección exacta (ej: Over, Under, Local)",
-  "cuota": 1.75,
-  "monto": 25000,
-  "ganancia_potencial": 43750
+  "deporte": "Baloncesto",
+  "casa": null,
+  "partido": "Destroyer vs Green Salvador",
+  "mercado": "Total 3er cuarto: menos de 37.5",
+  "seleccion": "Under",
+  "cuota": 1.72,
+  "monto": 35041.91,
+  "ganancia_potencial": 60272.09
 }`
 
 export default async function handler(req) {
