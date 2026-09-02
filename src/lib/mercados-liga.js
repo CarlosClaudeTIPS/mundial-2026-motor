@@ -51,6 +51,9 @@ export const PERFIL_POR_LIGA_DEFAULT = {
 
   // Solo tiros al arco + córners (sin tiros totales ni saques)
   61:  'sot',       // Francia — Ligue 1
+
+  // Córners + goles + hándicap de goles (lo que Carlos juega allá)
+  98:  'basico',    // Japón — J.League
 }
 
 // Todo lo no listado usa 'basico' — así las ligas secundarias no gastan
