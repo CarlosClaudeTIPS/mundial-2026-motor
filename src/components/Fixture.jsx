@@ -285,11 +285,16 @@ function FixtureCard({ fixture, onAnalizar, showLeague }) {
   )
 }
 
-export default function Fixture({ league, onAnalizar }) {
+export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) {
   const [filter, setFilter]     = useState('hoy')
   // Siempre abrir en "Mis ligas" (todas las competiciones del día);
-  // "Solo X" es un filtro temporal de la sesión, no una preferencia
-  const [mode, setMode]         = useState('mis')
+  // "Solo X" es un filtro temporal de la sesión, no una preferencia.
+  // soloLigaReq: clic en el nombre de una liga → abrir directo en "Solo esa liga"
+  const [mode, setMode]         = useState(() => soloLigaReq && Date.now() - soloLigaReq.ts < 3000 ? 'liga' : 'mis')
+
+  useEffect(() => {
+    if (soloLigaReq && Date.now() - soloLigaReq.ts < 3000) setMode('liga')
+  }, [soloLigaReq])
   const [misLigas, setMisLigas] = useState(loadMisLigas)
   const [configOpen, setConfigOpen] = useState(false)
   const [apiData, setApiData]   = useState([])   // fixtures con leagueId/leagueName
@@ -538,7 +543,12 @@ export default function Fixture({ league, onAnalizar }) {
                 <button onClick={() => toggleGroup(gkey)}
                   className="w-full flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-purple-300 hover:text-white bg-dark-800/60 border border-dark-600 rounded-lg px-3 py-2 mt-2 transition-colors">
                   <span>{cerrado ? '▸' : '▾'}</span>
-                  <span>{items[0].leagueFlag} {ligaName}</span>
+                  <span
+                    title="Ver todos los partidos de esta liga"
+                    className="underline decoration-dotted underline-offset-2 hover:text-white"
+                    onClick={(e) => { if (onVerLiga && items[0].leagueId) { e.stopPropagation(); onVerLiga(items[0].leagueId) } }}>
+                    {items[0].leagueFlag} {ligaName}
+                  </span>
                   <span className="ml-auto bg-dark-600 text-gray-200 rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
                 </button>
                 {!cerrado && items.map(f => (

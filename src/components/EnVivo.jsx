@@ -206,7 +206,7 @@ function attackDrive({ diff, minuto, pre, preRival }) {
   return Math.min(1.25, Math.max(0.78, f))
 }
 
-export default function EnVivo({ league }) {
+export default function EnVivo({ league, onVerLiga }) {
   // Partidos en vivo de TODAS las ligas seguidas (misma lista que el Fixture)
   const [misLigas] = useState(loadMisLigas)
   const [vista, setVista] = useState('mis') // 'mis' = ligas seguidas · 'otras' = el resto de la app
@@ -1361,7 +1361,12 @@ export default function EnVivo({ league }) {
             <button onClick={() => toggleGroup(ligaName)}
               className="w-full flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-red-300 hover:text-white bg-dark-800/60 border border-red-900/40 rounded-lg px-3 py-2 transition-colors">
               <span>{cerrado ? '▸' : '▾'}</span>
-              <span>{items[0].leagueFlag} {ligaName}</span>
+              <span
+                title="Ver todos los partidos de esta liga"
+                className="underline decoration-dotted underline-offset-2 hover:text-white"
+                onClick={(e) => { if (onVerLiga && items[0].leagueId) { e.stopPropagation(); onVerLiga(items[0].leagueId) } }}>
+                {items[0].leagueFlag} {ligaName}
+              </span>
               <span className="ml-auto bg-red-600 text-white rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
             </button>
             {!cerrado && items.map(m => (

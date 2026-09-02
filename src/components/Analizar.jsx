@@ -638,7 +638,7 @@ const DEFAULT_CTX = {
 }
 
 // ─── Main component ───────────────────────────────────────────────────────────
-export default function Analizar({ league, preloadTeams }) {
+export default function Analizar({ league, preloadTeams, onVerLiga }) {
   const [leagueTeams, setLeagueTeams] = useState([])
   const [teamsError, setTeamsError]   = useState(null)
   const [teamAId, setTeamAId] = useState('')
@@ -1087,7 +1087,14 @@ export default function Analizar({ league, preloadTeams }) {
       <div className="card">
         <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <h1 className="text-xl font-bold text-white">Analizador de Partido</h1>
-          <span className="text-xs text-gray-500">{league.flag} {league.name} · K córners ×{league.kCorners} · K TI ×{league.kTI}</span>
+          <span className="text-xs text-gray-500">
+            <button onClick={() => onVerLiga?.(league.id)}
+              title="Ver todos los partidos de esta liga"
+              className="text-purple-300 hover:text-white underline decoration-dotted underline-offset-2">
+              {league.flag} {league.name} →
+            </button>
+            {' '}· K córners ×{league.kCorners} · K TI ×{league.kTI}
+          </span>
         </div>
         {teamsError && (
           <div className="rounded-lg bg-red-900/30 border border-red-700/40 px-4 py-3 text-sm text-red-300 mb-3">
