@@ -64,6 +64,7 @@ export default function HistorialApuestas({ hook }) {
               <div className="flex items-start justify-between gap-2 mb-3">
                 <div className="flex-1 min-w-0">
                   <p className="text-white font-bold truncate">{a.partido}</p>
+                  {a.competicion && <p className="text-gray-400 text-xs truncate">{a.competicion}</p>}
                   <p className="text-gray-500 text-xs">
                     {a.deporte && <span className="text-gray-400">{a.deporte} · </span>}
                     {a.fecha} · {a.casa}

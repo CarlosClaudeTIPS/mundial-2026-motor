@@ -5,7 +5,7 @@ const CASAS = ['BetWinner', 'Betplay', 'Rushbet', 'Codere', 'Wplay', 'Zamba', 'O
 const MERCADOS = ['Tiros totales Over', 'Tiros totales Under', 'Córners Over', 'Córners Under', 'Over 2.5 goles', 'Under 2.5 goles', 'Over 1.5 goles', 'BTTS Sí', 'BTTS No', 'Ganador local', 'Ganador visitante', 'Empate', 'Tarjetas Over', 'Tarjetas Under', 'Otro']
 const DEPORTES = ['Fútbol', 'Baloncesto', 'Tenis', 'Béisbol', 'Otro']
 
-const EMPTY = { deporte: 'Fútbol', casa: 'BetWinner', partido: '', mercado: 'Tiros totales Over', seleccion: '', cuota: '', monto: '' }
+const EMPTY = { deporte: 'Fútbol', competicion: '', casa: 'BetWinner', partido: '', mercado: 'Tiros totales Over', seleccion: '', cuota: '', monto: '' }
 
 // La lectura del pantallazo pasa SIEMPRE por /api/vision (Edge Function): la
 // clave de Claude vive en el servidor y nunca se expone en el navegador.
@@ -117,6 +117,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
       // Pre-llenar form con lo extraído para si quiere editar
       setForm({
         deporte: datos.deporte || 'Fútbol',
+        competicion: datos.competicion || '',
         casa: datos.casa || 'BetWinner',
         partido: datos.partido || '',
         mercado: datos.mercado || 'Otro',
@@ -152,6 +153,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
     if (editando || !extraido) return form
     return {
       deporte: extraido.deporte || form.deporte,
+      competicion: extraido.competicion || form.competicion,
       casa: extraido.casa || form.casa,
       partido: extraido.partido || form.partido,
       mercado: extraido.mercado || form.mercado,
@@ -187,6 +189,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
 
     agregarApuesta({
       deporte: d.deporte || 'Fútbol',
+      competicion: d.competicion || null,
       casa: d.casa,
       partido: d.partido?.trim(),
       mercado: d.mercado,
@@ -323,6 +326,7 @@ export default function NuevaApuesta({ hook, onVolver }) {
           <div className="space-y-2">
             {[
               { label: 'Deporte', val: extraido.deporte },
+              { label: 'Competición', val: extraido.competicion },
               { label: 'Casa', val: extraido.casa },
               { label: 'Partido', val: extraido.partido },
               { label: 'Mercado', val: extraido.mercado },
@@ -409,6 +413,13 @@ export default function NuevaApuesta({ hook, onVolver }) {
                 {CASAS.map(c => <option key={c}>{c}</option>)}
               </select>
             </div>
+          </div>
+
+          <div>
+            <label className="text-xs text-gray-500 uppercase tracking-widest block mb-2">Competición</label>
+            <input type="text" value={form.competicion} onChange={e => set('competicion', e.target.value)}
+              placeholder="España. LaLiga"
+              className="w-full bg-dark-700 border border-dark-500 rounded-xl px-4 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-green-500" />
           </div>
 
           <div>

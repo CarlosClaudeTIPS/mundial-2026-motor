@@ -10,6 +10,7 @@ const PROMPT = `Analiza este pantallazo de un cupón/boleto de apuesta deportiva
 
 REGLAS IMPORTANTES para no confundir los campos:
 - "partido": son los DOS EQUIPOS que se enfrentan. Casi siempre están en NEGRILLA y con formato "Equipo A - Equipo B" o "Equipo A vs Equipo B" (ej: "Destroyer - Green Salvador"). Cópialos tal cual, cambiando el "-" por "vs". ESTO NO ES LA CASA.
+- "competicion": el torneo/liga, normalmente JUSTO ARRIBA de los equipos (ej: "El Salvador. LNB Segunda", "España. LaLiga"). Quita códigos numéricos al inicio (ej: "192159. El Salvador. LNB Segunda" → "El Salvador. LNB Segunda"). Si no se ve, usa null.
 - "casa": es la MARCA de la casa de apuestas (BetPlay, BetWinner, Rushbet, Codere, Wplay, Bwin, 1xBet, etc.), normalmente por su logo o color de marca. Si no se ve ninguna marca, usa null. NUNCA pongas los equipos aquí.
 - "deporte": dedúcelo del contexto. Si menciona "cuarto"/"1er cuarto"/"3.er cuarto" o tiene ícono de balón de básquet 🏀 → "Baloncesto". Si dice "set"/"juego" o ícono de tenis → "Tenis". Si dice "gol"/"córner"/"tiempo"/"medio tiempo" o balón de fútbol → "Fútbol". Si dice "entrada"/"inning" → "Béisbol".
 - "mercado": la descripción del mercado apostado (ej: "Total 3er cuarto: menos de 37.5", "Más de 2.5 goles").
@@ -22,6 +23,7 @@ Si un dato realmente no está visible usa null. Responde SOLO con JSON válido, 
 
 {
   "deporte": "Baloncesto",
+  "competicion": "El Salvador. LNB Segunda",
   "casa": null,
   "partido": "Destroyer vs Green Salvador",
   "mercado": "Total 3er cuarto: menos de 37.5",
