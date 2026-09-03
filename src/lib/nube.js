@@ -75,10 +75,23 @@ export async function bajarEstado(clave) {
 }
 
 // ─── Sincronizar una clave de localStorage completa ──────────────────────────
-// Devuelve el estado ganador (el más reciente) y lo deja igual en ambos lados.
-// localTs: cuándo cambió por última vez el estado local (guardado junto a él).
-export async function sincronizarClave(clave, localData, localTs) {
+// REGLA SEGURA (2026-09-03): gana el estado con MÁS registros. Solo si empatan
+// en cantidad se usa el más reciente. Así un dispositivo vacío NUNCA pisa los
+// datos buenos de otro — el bug que borró el bankroll de Carlos.
+// `contar(data)` devuelve cuántos registros tiene un estado (0 si vacío/null).
+export async function sincronizarClave(clave, localData, localTs, contar = () => 0) {
   const remoto = await bajarEstado(clave)
+  const nLocal = contar(localData)
+  const nRemoto = remoto ? contar(remoto.data) : 0
+
+  // Nube vacía o con MENOS que local → sube local (y lo conserva)
+  if (nRemoto < nLocal || (!remoto && nLocal > 0)) {
+    if (localData != null) await subirEstado(clave, localData)
+    return { data: localData, origen: 'local' }
+  }
+  // Nube con MÁS registros → gana la nube
+  if (nRemoto > nLocal) return { data: remoto.data, origen: 'nube' }
+  // Empate en cantidad → el más reciente (y si local no tiene TS, gana la nube)
   if (remoto && (!localTs || remoto.updatedAt > localTs)) {
     return { data: remoto.data, origen: 'nube' }
   }

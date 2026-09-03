@@ -71,17 +71,35 @@ export function useBankroll() {
       if (!s || !vivo) { setSincronizado(false); return }
       const local = load()
       const localTs = Number(localStorage.getItem(TS_KEY)) || null
+
+      // Red de seguridad: respaldar el estado local si tiene apuestas, ANTES
+      // de tocar nada. Así ninguna sincronización puede borrar sin dejar rastro.
+      try {
+        if ((local.apuestas?.length ?? 0) > 0) {
+          localStorage.setItem(STORAGE_KEY + '_backup', JSON.stringify({ ts: Date.now(), data: local }))
+        }
+      } catch {}
+
       const remoto = await bajarEstado(STORAGE_KEY)
       if (!vivo) return
 
-      const nubeGana = remoto?.data && !esVirgen(remoto.data) &&
-        (esVirgen(local) || remoto.updatedAt > (localTs ?? 0))
+      const nLocal = local?.apuestas?.length ?? 0
+      const nRemoto = remoto?.data?.apuestas?.length ?? 0
+
+      // Gana quien tenga MÁS apuestas. Un estado virgen (sin onboarding ni
+      // apuestas) nunca gana. Si empatan en cantidad, el más reciente. Así un
+      // dispositivo vacío NUNCA pisa el bankroll bueno de otro.
+      const nubeGana = remoto?.data && !esVirgen(remoto.data) && (
+        nRemoto > nLocal ||
+        esVirgen(local) ||
+        (nRemoto === nLocal && remoto.updatedAt > (localTs ?? 0))
+      )
 
       if (nubeGana) {
         setState({ ...DEFAULT_STATE, ...remoto.data })
         save({ ...DEFAULT_STATE, ...remoto.data })
       } else if (!esVirgen(local)) {
-        // Lo local tiene datos y es lo más completo/reciente → a la nube
+        // Lo local tiene datos y es lo más completo → súbelo (restaura la nube)
         await subirEstado(STORAGE_KEY, local)
       }
       setSincronizado(true)
