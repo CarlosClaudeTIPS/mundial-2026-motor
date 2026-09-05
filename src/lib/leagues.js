@@ -46,6 +46,9 @@ export const LEAGUES = [
   { id: 141, lsId: 79,  main: false, name: 'Segunda División',    country: 'España',    flag: '🇪🇸', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_spain_segunda_division', type: 'league' },
   { id: 258, lsId: 258, main: false, name: 'Premier League',      country: 'Canadá',    flag: '🇨🇦', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
   { id: 98,  lsId: 28,  main: false, name: 'J. League',           country: 'Japón',     flag: '🇯🇵', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_japan_j_league', type: 'league' },
+  // 2026-09-03: pedidas por Carlos. lsId verificados en el catálogo de Live-Score
+  { id: 169, lsId: 26,  main: false, name: 'Super League',        country: 'China',     flag: '🇨🇳', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_china_superleague', type: 'league' },
+  { id: 41,  lsId: 82,  main: false, name: 'League One',          country: 'Inglaterra', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_england_league1', type: 'league' },
   // ── Latinoamérica y segundas divisiones (2026-08-29) ──
   { id: 131, lsId: 96,  main: false, name: 'Primera Nacional',    country: 'Argentina', flag: '🇦🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
   { id: 130, lsId: 230, main: false, name: 'Copa Argentina',      country: 'Argentina', flag: '🇦🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
@@ -107,6 +110,8 @@ export const LEAGUE_BASELINES = {
   207: { gaAvg: 1.50, shotsAvg: 13.0, cornersAvg: 5.2, cardsAvg: 2.2, gkAvg: 8.8,  tiAvg: 20.5 },
   218: { gaAvg: 1.50, shotsAvg: 13.2, cornersAvg: 5.3, cardsAvg: 2.3, gkAvg: 8.8,  tiAvg: 20.5 },
   98:  { gaAvg: 1.35, shotsAvg: 12.5, cornersAvg: 5.0, cardsAvg: 1.7, gkAvg: 9.0,  tiAvg: 20.0 }, // J.League: goleo moderado, MUY pocas tarjetas
+  169: { gaAvg: 1.45, shotsAvg: 12.5, cornersAvg: 5.0, cardsAvg: 2.4, gkAvg: 9.0,  tiAvg: 20.5 }, // China Super League
+  41:  { gaAvg: 1.35, shotsAvg: 12.0, cornersAvg: 5.2, cardsAvg: 2.2, gkAvg: 9.2,  tiAvg: 21.5 }, // League One: juego directo, muchos saques
 }
 
 // Abreviatura de competición para las filas de historial

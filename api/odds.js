@@ -14,6 +14,7 @@ const VALID_SPORTS = new Set([
   'soccer_brazil_campeonato', 'soccer_russia_premier_league',
   'soccer_argentina_primera_division', 'soccer_mexico_ligamx',
   'soccer_netherlands_eredivisie', 'soccer_portugal_primeira_liga',
+  'soccer_japan_j_league', 'soccer_china_superleague', 'soccer_england_league1',
 ])
 
 export default async function handler(req) {
