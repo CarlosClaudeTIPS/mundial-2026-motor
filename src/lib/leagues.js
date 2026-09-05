@@ -43,7 +43,9 @@ export const LEAGUES = [
   { id: 95,  lsId: 95,  main: false, name: 'Brasileirão Serie B', country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_brazil_serie_b', type: 'league' },
   { id: 256, lsId: 256, main: true,  name: 'Copa do Brasil',      country: 'Brasil',    flag: '🇧🇷', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
   { id: 136, lsId: 87,  main: false, name: 'Serie B',             country: 'Italia',    flag: '🇮🇹', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_italy_serie_b', type: 'league' },
-  { id: 141, lsId: 79,  main: false, name: 'Segunda División',    country: 'España',    flag: '🇪🇸', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_spain_segunda_division', type: 'league' },
+  // 2026-09-03: Segunda pasa a preferidas + perfil completo (su casa da banda y portería)
+  { id: 141, lsId: 79,  main: true,  name: 'Segunda División',    country: 'España',    flag: '🇪🇸', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_spain_segunda_division', type: 'league' },
+  { id: 137, lsId: 179, main: true,  name: 'Coppa Italia',        country: 'Italia',    flag: '🇮🇹', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'cup' },
   { id: 258, lsId: 258, main: false, name: 'Premier League',      country: 'Canadá',    flag: '🇨🇦', kCorners: 1.00, kTI: 1.00, sportKey: null, type: 'league' },
   { id: 98,  lsId: 28,  main: false, name: 'J. League',           country: 'Japón',     flag: '🇯🇵', kCorners: 1.00, kTI: 1.00, sportKey: 'soccer_japan_j_league', type: 'league' },
   // 2026-09-03: pedidas por Carlos. lsId verificados en el catálogo de Live-Score
@@ -112,6 +114,8 @@ export const LEAGUE_BASELINES = {
   98:  { gaAvg: 1.35, shotsAvg: 12.5, cornersAvg: 5.0, cardsAvg: 1.7, gkAvg: 9.0,  tiAvg: 20.0 }, // J.League: goleo moderado, MUY pocas tarjetas
   169: { gaAvg: 1.45, shotsAvg: 12.5, cornersAvg: 5.0, cardsAvg: 2.4, gkAvg: 9.0,  tiAvg: 20.5 }, // China Super League
   41:  { gaAvg: 1.35, shotsAvg: 12.0, cornersAvg: 5.2, cardsAvg: 2.2, gkAvg: 9.2,  tiAvg: 21.5 }, // League One: juego directo, muchos saques
+  141: { gaAvg: 1.15, shotsAvg: 11.5, cornersAvg: 4.8, cardsAvg: 2.7, gkAvg: 9.5,  tiAvg: 20.5 }, // Segunda España: cerrada, pocos goles, muchas tarjetas
+  137: { gaAvg: 1.35, shotsAvg: 12.5, cornersAvg: 5.0, cardsAvg: 2.4, gkAvg: 9.2,  tiAvg: 19.5 }, // Coppa Italia
 }
 
 // Abreviatura de competición para las filas de historial

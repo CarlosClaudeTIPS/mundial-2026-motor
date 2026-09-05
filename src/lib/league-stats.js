@@ -58,8 +58,13 @@ export async function buildTeamStats(league, teamId, teamName, onProgress, opts 
   const base = getBaseline(league.id)
 
   const lastRes = await fetchTeamLast(league.id, teamId, 10)
-  if (!lastRes.ok || !lastRes.fixtures?.length) {
-    throw new Error(`Sin partidos recientes para ${teamName}`)
+  // Distinguir "el proveedor falló" (claves, red, cuota) de "de verdad no hay
+  // historial": antes todo salía como "Sin partidos recientes" y despistaba.
+  if (!lastRes.ok) {
+    throw new Error(`No pude pedir el historial de ${teamName}: ${lastRes.error || 'proveedor sin respuesta'}. Recarga la app (Ctrl+Shift+R) y reintenta.`)
+  }
+  if (!lastRes.fixtures?.length) {
+    throw new Error(`Sin partidos recientes para ${teamName} (el proveedor no devolvió historial terminado)`)
   }
 
   // Más reciente primero. excludeFixtureId: para backtest — el partido que se

@@ -204,12 +204,25 @@ const FILTER_TABS = [
 
 const MIS_LIGAS_KEY = 'motor_mis_ligas'
 const MODE_KEY = 'motor_fixture_mode'
-const DEFAULT_MIS_LIGAS = [39, 140, 78, 135, 61] // las 5 grandes
+// Promociones a "Mis ligas" (2026-09-03, pedido de Carlos): se SUMAN una sola
+// vez a la lista guardada de cada dispositivo (sin quitar lo que ya eligió).
+// Subir PROMO_VERSION cuando se agreguen más.
+const PROMO_KEY = 'motor_mis_ligas_promo'
+const PROMO_VERSION = 1
+const PROMOVIDAS = [141, 137, 235, 309, 311] // Segunda ESP, Coppa Italia, Premier Liga RUS, Primera RUS, Copa RUS
+const DEFAULT_MIS_LIGAS = [39, 140, 78, 135, 61, ...PROMOVIDAS] // las 5 grandes + promovidas
 
 function loadMisLigas() {
   try {
     const v = JSON.parse(localStorage.getItem(MIS_LIGAS_KEY))
-    return Array.isArray(v) && v.length ? v : DEFAULT_MIS_LIGAS
+    let lista = Array.isArray(v) && v.length ? v : DEFAULT_MIS_LIGAS
+    const promoHecha = Number(localStorage.getItem(PROMO_KEY)) || 0
+    if (promoHecha < PROMO_VERSION) {
+      lista = [...new Set([...lista, ...PROMOVIDAS])]
+      localStorage.setItem(MIS_LIGAS_KEY, JSON.stringify(lista))
+      localStorage.setItem(PROMO_KEY, String(PROMO_VERSION))
+    }
+    return lista
   } catch { return DEFAULT_MIS_LIGAS }
 }
 

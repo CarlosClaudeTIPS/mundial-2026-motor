@@ -50,6 +50,11 @@ function setCache(key, data, ttl) {
 async function lsFetch(path, params = {}) {
   const qs = new URLSearchParams({ ...params, key: KEY, secret: SECRET }).toString()
   const res = await fetch(`${BASE}/${path}?${qs}`, { signal: AbortSignal.timeout(15_000) })
+  // Mensajes claros para los dos fallos reales del proveedor (2026-09-03):
+  //   402 = cuota diaria del trial agotada (se reinicia al día siguiente)
+  //   401 = claves sin acceso (rotaron en el panel) o endpoint fuera del plan
+  if (res.status === 402) throw new Error('Cuota diaria de Live-Score agotada (paquete trial). Vuelve mañana o pasa a plan pago en live-score-api.com')
+  if (res.status === 401) throw new Error('Live-Score rechaza las claves (401): revisa en live-score-api.com que la key/secret sean las actuales y que este dato esté en tu plan')
   if (!res.ok) throw new Error(`Live-Score API HTTP ${res.status}`)
   const json = await res.json()
   if (!json.success) throw new Error(json.error || 'Live-Score API error')

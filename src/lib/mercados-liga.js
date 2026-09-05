@@ -43,6 +43,8 @@ export const PERFIL_POR_LIGA_DEFAULT = {
   235: 'completo',  // Rusia — Premier League
   309: 'completo',  // Rusia — Football National League
   311: 'completo',  // Rusia — Copa
+  141: 'completo',  // España — Segunda División (2026-09-03)
+  137: 'completo',  // Italia — Coppa Italia (2026-09-03)
 
   // Tiros + córners (sin saques)
   78:  'tiros',     // Alemania — Bundesliga
