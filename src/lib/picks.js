@@ -162,7 +162,9 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
 
   // Líneas dinámicas alrededor del expected con el paso típico de cada mercado
   const markets = [
-    { key: 'shots_totales',    expected: calc.t.shots,    step: 2 },
+    // Tiros totales de a 1 (6.5, 7.5, 8.5…) como las ofrece la casa de Carlos
+    // (2026-09-03); antes iban de a 2 y se saltaban líneas jugables
+    { key: 'shots_totales',    expected: calc.t.shots,    step: 1 },
     { key: 'sot_totales',      expected: calc.t.sot,      step: 1 },
     { key: 'corners_totales',  expected: calc.t.corners,  step: 1 },
     { key: 'goles_totales',    expected: calc.t.goals,    step: 0.5 },

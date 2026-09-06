@@ -1407,7 +1407,7 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
               { id: 'corners', icon: '🚩', title: 'Córners',
                 cfg: { statKey: 'corners', agKey: 'cornersAg', expTotal: calc.t.corners, expA: calc.adj.cornA, expB: calc.adj.cornB, stepTotal: 1, stepTeam: 1, handicap: true } },
               { id: 'shots', icon: '🎯', title: 'Tiros Totales',
-                cfg: { statKey: 'shots', agKey: 'shotsAg', expTotal: calc.t.shots, expA: calc.adj.shotsA, expB: calc.adj.shotsB, stepTotal: 2, stepTeam: 1, handicap: true },
+                cfg: { statKey: 'shots', agKey: 'shotsAg', expTotal: calc.t.shots, expA: calc.adj.shotsA, expB: calc.adj.shotsB, stepTotal: 1, stepTeam: 1, handicap: true },
                 notes: [`1H: ${calc.t.shots1h} · 2H: ${calc.t.shots2h}`] },
               { id: 'sot', icon: '🥅', title: 'Tiros a Puerta (SOT)',
                 cfg: { statKey: 'sot', agKey: 'sotAg', expTotal: calc.t.sot, expA: calc.adj.sotA, expB: calc.adj.sotB, stepTotal: 1, stepTeam: 1, handicap: false } },
