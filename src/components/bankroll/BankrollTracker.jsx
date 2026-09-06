@@ -24,6 +24,15 @@ function ConfigPanel({ hook }) {
   const [max, setMax] = useState(c.meta_diaria_max ?? 60000)
   const [guardado, setGuardado] = useState(false)
 
+  const [maxDia, setMaxDia] = useState(c.max_dia ?? 4)
+  const [maxDiaGuardado, setMaxDiaGuardado] = useState(false)
+  const guardarMaxDia = () => {
+    const n = Math.min(30, Math.max(1, Math.round(Number(maxDia)) || 1))
+    guardarConfig({ max_dia: n })
+    setMaxDia(n)
+    setMaxDiaGuardado(true); setTimeout(() => setMaxDiaGuardado(false), 1500)
+  }
+
   const guardarMetas = () => {
     const mn = Math.max(0, Number(min) || 0)
     const mx = Math.max(mn, Number(max) || 0) // el techo nunca por debajo del piso
@@ -75,10 +84,29 @@ function ConfigPanel({ hook }) {
 
       <div className="bg-dark-800 border border-dark-600 rounded-xl p-4 space-y-3">
         <p className="text-xs text-gray-500 uppercase tracking-widest">Reglas activas</p>
+
+        {/* Apuestas por día — editable (pedido 2026-09-03) */}
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-sm text-gray-400">Apuestas por día</span>
+          <div className="flex items-center gap-2">
+            <button onClick={() => setMaxDia(m => Math.max(1, Number(m) - 1))}
+              className="w-8 h-8 rounded-lg bg-dark-700 border border-dark-500 text-white font-bold hover:bg-dark-600">−</button>
+            <input type="number" min="1" max="30" value={maxDia} onChange={e => setMaxDia(e.target.value)}
+              className="w-14 bg-dark-700 border border-dark-500 rounded-lg px-2 py-1.5 text-white text-sm text-center focus:outline-none focus:border-green-500" />
+            <button onClick={() => setMaxDia(m => Math.min(30, Number(m) + 1))}
+              className="w-8 h-8 rounded-lg bg-dark-700 border border-dark-500 text-white font-bold hover:bg-dark-600">+</button>
+            <button onClick={guardarMaxDia}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+                Number(maxDia) === c.max_dia ? 'bg-dark-700 text-gray-500' : 'bg-green-700 hover:bg-green-600 text-white'
+              }`}>
+              {maxDiaGuardado ? '✅' : 'Guardar'}
+            </button>
+          </div>
+        </div>
+
         {[
           ['Bank inicial', '$' + state.configuracion.bank_inicial.toLocaleString('es-CO')],
           ['Apuesta máxima', '$' + state.configuracion.apuesta_maxima.toLocaleString('es-CO')],
-          ['Apuestas por día', state.configuracion.max_dia],
           ['Pérdidas consecutivas máx', state.configuracion.max_perdidas_consecutivas],
         ].map(([k, v]) => (
           <div key={k} className="flex justify-between">
