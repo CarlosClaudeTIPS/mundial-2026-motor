@@ -189,7 +189,7 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
     { key: 'gk_totales',       expected: calc.t.gk,       step: 1 },
     { key: 'gk_local',         expected: calc.adj.gkA,    step: 1 },
     { key: 'gk_visita',        expected: calc.adj.gkB,    step: 1 },
-    { key: 'ti_totales',       expected: calc.t.ti,       step: 2 },
+    { key: 'ti_totales',       expected: calc.t.ti,       step: 1 }, // de a 1 (2026-09-03)
   ]
 
   for (const { key, expected, step } of markets) {

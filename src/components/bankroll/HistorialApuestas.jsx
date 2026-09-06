@@ -11,10 +11,18 @@ const ESTADO_CONFIG = {
 }
 
 export default function HistorialApuestas({ hook }) {
-  const { state, actualizarResultado, eliminarApuesta } = hook
+  const { state, actualizarResultado, editarApuesta, eliminarApuesta } = hook
   const [filtro, setFiltro] = useState('todo')
   const [confirmDelete, setConfirmDelete] = useState(null)
   const [corrigiendo, setCorrigiendo] = useState(null) // id de la apuesta cuyo resultado se está corrigiendo
+  const [editando, setEditando] = useState(null)       // { id, monto, cuota } — edición de monto/cuota
+
+  const guardarEdicion = () => {
+    const monto = Number(editando.monto); const cuota = Number(editando.cuota)
+    if (!monto || monto < 100 || !cuota || cuota < 1.01) return
+    editarApuesta(editando.id, { monto, cuota })
+    setEditando(null)
+  }
 
   const apuestas = [...state.apuestas].reverse()
 
@@ -120,6 +128,45 @@ export default function HistorialApuestas({ hook }) {
                   <p className="text-sm font-bold text-white">{fmt(a.monto)}</p>
                 </div>
               </div>
+
+              {/* Editar monto / cuota (el pantallazo a veces se lee mal) */}
+              {editando?.id === a.id ? (
+                <div className="bg-dark-900/50 border border-yellow-800/50 rounded-xl p-3 mb-3 space-y-2">
+                  <p className="text-[11px] text-yellow-400">✏️ Corrige lo que se leyó mal. La ganancia se recalcula sola.</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <label className="text-[10px] text-gray-500 block mb-1">Monto</label>
+                      <div className="relative">
+                        <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 text-xs">$</span>
+                        <input type="number" value={editando.monto} min="100" step="1000" autoFocus
+                          onChange={e => setEditando(ed => ({ ...ed, monto: e.target.value }))}
+                          onKeyDown={e => e.key === 'Enter' && guardarEdicion()}
+                          className="w-full bg-dark-700 border border-dark-500 rounded-lg px-2 pl-5 py-1.5 text-white text-sm focus:outline-none focus:border-yellow-500" />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="text-[10px] text-gray-500 block mb-1">Cuota</label>
+                      <input type="number" value={editando.cuota} min="1.01" step="0.01"
+                        onChange={e => setEditando(ed => ({ ...ed, cuota: e.target.value }))}
+                        onKeyDown={e => e.key === 'Enter' && guardarEdicion()}
+                        className="w-full bg-dark-700 border border-dark-500 rounded-lg px-2 py-1.5 text-white text-sm focus:outline-none focus:border-yellow-500" />
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button onClick={guardarEdicion}
+                      className="flex-1 py-1.5 rounded-lg bg-yellow-700 hover:bg-yellow-600 text-white text-xs font-bold">Guardar</button>
+                    <button onClick={() => setEditando(null)}
+                      className="px-4 py-1.5 border border-dark-500 text-gray-400 text-xs rounded-lg hover:text-white">Cancelar</button>
+                  </div>
+                </div>
+              ) : (
+                <button
+                  onClick={() => { setEditando({ id: a.id, monto: a.monto, cuota: a.cuota }); setCorrigiendo(null) }}
+                  className="mb-2 flex items-center gap-1 text-xs text-gray-500 hover:text-yellow-400 transition-colors"
+                >
+                  ✏️ Editar monto / cuota
+                </button>
+              )}
 
               {/* Resultado económico */}
               {!isPendiente && a.resultado !== 'pendiente' && (

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { fetchFixtures, fetchLive, fetchFixtureStats, formatLocalTime, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
+import { fetchFixtures, fetchLive, fetchFixtureStats, fetchStandings, formatLocalTime, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
 import { LEAGUES } from '../lib/leagues'
 import { getPrediccion } from '../lib/predicciones'
 import { fetchSofaSaques, buscarSaquesPorFecha } from '../lib/sofascore'
@@ -235,7 +235,21 @@ function statusBadge(status, elapsed) {
   return <span className="text-xs text-gray-500">NS</span>
 }
 
-function FixtureCard({ fixture, onAnalizar, showLeague }) {
+// Posición en la tabla junto al nombre (pedido 2026-09-03). Por id y, si el
+// id no cuadra (copas, mezclas), por nombre. Sin tabla → no se muestra nada.
+function Pos({ pos, id, name }) {
+  const p = pos?.porId?.[id] ?? pos?.porNombre?.[String(name ?? '').toLowerCase()]
+  if (!p) return null
+  const top = p.rank <= 4, bottom = pos.total && p.rank > pos.total - 3
+  return (
+    <span className={`text-[10px] font-mono shrink-0 w-7 text-right mr-1 ${top ? 'text-green-500' : bottom ? 'text-red-400' : 'text-gray-500'}`}
+      title={`${p.rank}º de ${pos.total} · ${p.pts} pts en ${p.pj} PJ`}>
+      {p.rank}º
+    </span>
+  )
+}
+
+function FixtureCard({ fixture, onAnalizar, showLeague, pos }) {
   const [statsOpen, setStatsOpen] = useState(false)
   const live = isLive(fixture.status)
   const done = isDone(fixture.status)
@@ -253,13 +267,13 @@ function FixtureCard({ fixture, onAnalizar, showLeague }) {
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 justify-between">
-            <span className={`font-medium truncate ${fixture.homeWinner ? 'text-green-400' : 'text-white'}`}>{fixture.homeTeam}</span>
+            <span className="flex items-center min-w-0"><Pos pos={pos} id={fixture.homeId} name={fixture.homeTeam} /><span className={`font-medium truncate ${fixture.homeWinner ? 'text-green-400' : 'text-white'}`}>{fixture.homeTeam}</span></span>
             {(live || done) ? (
               <span className="text-white font-bold text-base shrink-0">{fixture.homeGoals ?? 0}</span>
             ) : null}
           </div>
           <div className="flex items-center gap-2 justify-between mt-0.5">
-            <span className={`text-gray-300 truncate ${fixture.awayWinner ? 'text-green-400' : ''}`}>{fixture.awayTeam}</span>
+            <span className="flex items-center min-w-0"><Pos pos={pos} id={fixture.awayId} name={fixture.awayTeam} /><span className={`text-gray-300 truncate ${fixture.awayWinner ? 'text-green-400' : ''}`}>{fixture.awayTeam}</span></span>
             {(live || done) ? (
               <span className="text-white font-bold text-base shrink-0">{fixture.awayGoals ?? 0}</span>
             ) : null}
@@ -319,6 +333,7 @@ export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) 
   const [configOpen, setConfigOpen] = useState(false)
   const [apiData, setApiData]   = useState([])   // fixtures con leagueId/leagueName
   const [liveData, setLiveData] = useState([])
+  const [posiciones, setPosiciones] = useState({}) // leagueId → { porId, porNombre, total }
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState(null)
   const [closedGroups, setClosedGroups] = useState({}) // secciones por liga cerradas por el usuario
@@ -538,7 +553,7 @@ export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) 
                       <span className="ml-auto bg-red-600 text-white rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
                     </button>
                     {!cerrado && items.map(f => (
-                      <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
+                      <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} pos={posiciones[f.leagueId]} />
                     ))}
                   </div>
                 )
@@ -552,7 +567,7 @@ export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) 
             if (!ligaName) return (
               <div key="única" className="space-y-2">
                 {items.map(f => (
-                  <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
+                  <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} pos={posiciones[f.leagueId]} />
                 ))}
               </div>
             )
@@ -572,7 +587,7 @@ export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) 
                   <span className="ml-auto bg-dark-600 text-gray-200 rounded-full px-1.5 py-0.5 font-bold normal-case">{items.length}</span>
                 </button>
                 {!cerrado && items.map(f => (
-                  <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} />
+                  <FixtureCard key={f.id} fixture={f} onAnalizar={onAnalizar} showLeague={false} pos={posiciones[f.leagueId]} />
                 ))}
               </div>
             )

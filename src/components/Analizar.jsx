@@ -1414,9 +1414,9 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
               { id: 'cards', icon: '🟨', title: 'Tarjetas',
                 cfg: { statKey: 'cards', agKey: 'cardsAg', expTotal: calc.t.cards, expA: calc.adj.cardsA, expB: calc.adj.cardsB, stepTotal: 1, stepTeam: 0.5, handicap: false } },
               { id: 'fouls', icon: '⚠️', title: 'Faltas',
-                cfg: { statKey: 'fouls', agKey: 'foulsAg', expTotal: calc.fouls.total, expA: calc.fouls.expFoulsA, expB: calc.fouls.expFoulsB, stepTotal: 2, stepTeam: 1, handicap: false } },
+                cfg: { statKey: 'fouls', agKey: 'foulsAg', expTotal: calc.fouls.total, expA: calc.fouls.expFoulsA, expB: calc.fouls.expFoulsB, stepTotal: 1, stepTeam: 1, handicap: false } },
               { id: 'ti', icon: '🔄', title: 'Saques de Banda (TI)',
-                cfg: { statKey: 'ti', agKey: 'tiAg', expTotal: calc.t.ti, expA: calc.adj.tiA, expB: calc.adj.tiB, stepTotal: 2, stepTeam: 1, handicap: false },
+                cfg: { statKey: 'ti', agKey: 'tiAg', expTotal: calc.t.ti, expA: calc.adj.tiA, expB: calc.adj.tiB, stepTotal: 1, stepTeam: 1, handicap: false },
                 notes: [(teamA.estTi || teamB.estTi)
                   ? `⚠️ ${teamA.estTi ? teamA.name + ' estimado' : teamA.name + ' ✓ real'} · ${teamB.estTi ? teamB.name + ' estimado' : teamB.name + ' ✓ real'}`
                   : '✓ Saques de banda reales de ambos equipos'] },

@@ -247,6 +247,24 @@ export function useBankroll() {
     }))
   }
 
+  // Editar monto/cuota de una apuesta ya registrada (a veces el pantallazo se
+  // lee mal). La ganancia real se recalcula según el resultado que ya tenga.
+  function editarApuesta(id, cambios) {
+    setState(s => ({
+      ...s,
+      apuestas: s.apuestas.map(a => {
+        if (a.id !== id) return a
+        const monto = cambios.monto != null ? Number(cambios.monto) : a.monto
+        const cuota = cambios.cuota != null ? Number(cambios.cuota) : a.cuota
+        let ganancia_real = a.ganancia_real ?? 0
+        if (a.resultado === 'ganada') ganancia_real = Math.round(monto * cuota)
+        else if (a.resultado === 'devuelta') ganancia_real = monto
+        else ganancia_real = 0
+        return { ...a, monto, cuota, ganancia_potencial: Math.round(monto * cuota), ganancia_real }
+      }),
+    }))
+  }
+
   function eliminarApuesta(id) {
     setState(s => ({ ...s, apuestas: s.apuestas.filter(a => a.id !== id) }))
   }
@@ -276,6 +294,7 @@ export function useBankroll() {
     aplicarConsecuencia,
     agregarApuesta,
     actualizarResultado,
+    editarApuesta,
     eliminarApuesta,
     completarOnboarding,
     resetearTodo,
