@@ -14,6 +14,7 @@ export default function HistorialApuestas({ hook }) {
   const { state, actualizarResultado, eliminarApuesta } = hook
   const [filtro, setFiltro] = useState('todo')
   const [confirmDelete, setConfirmDelete] = useState(null)
+  const [corrigiendo, setCorrigiendo] = useState(null) // id de la apuesta cuyo resultado se está corrigiendo
 
   const apuestas = [...state.apuestas].reverse()
 
@@ -134,28 +135,62 @@ export default function HistorialApuestas({ hook }) {
                 </div>
               )}
 
-              {/* Botones de resultado si está pendiente */}
-              {isPendiente && (
-                <div className="grid grid-cols-3 gap-2">
-                  <button
-                    onClick={() => actualizarResultado(a.id, 'ganada')}
-                    className="py-2 rounded-xl bg-green-700 hover:bg-green-600 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1"
-                  >
-                    <CheckCircle size={12} /> Ganada
-                  </button>
-                  <button
-                    onClick={() => actualizarResultado(a.id, 'perdida')}
-                    className="py-2 rounded-xl bg-red-700 hover:bg-red-600 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1"
-                  >
-                    <XCircle size={12} /> Perdida
-                  </button>
-                  <button
-                    onClick={() => actualizarResultado(a.id, 'devuelta')}
-                    className="py-2 rounded-xl bg-blue-700 hover:bg-blue-600 text-white text-xs font-bold transition-colors flex items-center justify-center gap-1"
-                  >
-                    <RefreshCw size={12} /> Devuelta
-                  </button>
+              {/* Botones de resultado: siempre si está pendiente; en las ya
+                  resueltas, al pulsar "Corregir" (las casas se equivocan y a
+                  veces cambian el resultado días después). El bank se recalcula
+                  solo porque se deriva del estado actual de cada apuesta. */}
+              {(isPendiente || corrigiendo === a.id) && (
+                <div className="space-y-2">
+                  {!isPendiente && (
+                    <p className="text-[11px] text-yellow-400">✏️ Corrigiendo — el resultado actual es <b>{cfg.label}</b>. Elige el correcto:</p>
+                  )}
+                  <div className="grid grid-cols-3 gap-2">
+                    <button
+                      onClick={() => { actualizarResultado(a.id, 'ganada'); setCorrigiendo(null) }}
+                      className={`py-2 rounded-xl text-white text-xs font-bold transition-colors flex items-center justify-center gap-1 ${a.resultado === 'ganada' ? 'bg-green-900 opacity-50' : 'bg-green-700 hover:bg-green-600'}`}
+                      disabled={a.resultado === 'ganada'}
+                    >
+                      <CheckCircle size={12} /> Ganada
+                    </button>
+                    <button
+                      onClick={() => { actualizarResultado(a.id, 'perdida'); setCorrigiendo(null) }}
+                      className={`py-2 rounded-xl text-white text-xs font-bold transition-colors flex items-center justify-center gap-1 ${a.resultado === 'perdida' ? 'bg-red-900 opacity-50' : 'bg-red-700 hover:bg-red-600'}`}
+                      disabled={a.resultado === 'perdida'}
+                    >
+                      <XCircle size={12} /> Perdida
+                    </button>
+                    <button
+                      onClick={() => { actualizarResultado(a.id, 'devuelta'); setCorrigiendo(null) }}
+                      className={`py-2 rounded-xl text-white text-xs font-bold transition-colors flex items-center justify-center gap-1 ${a.resultado === 'devuelta' ? 'bg-blue-900 opacity-50' : 'bg-blue-700 hover:bg-blue-600'}`}
+                      disabled={a.resultado === 'devuelta'}
+                    >
+                      <RefreshCw size={12} /> Devuelta
+                    </button>
+                  </div>
+                  {!isPendiente && (
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => { actualizarResultado(a.id, 'pendiente'); setCorrigiendo(null) }}
+                        className="flex-1 py-1.5 rounded-lg border border-yellow-800 text-yellow-400 text-xs hover:bg-yellow-900/20 flex items-center justify-center gap-1"
+                      >
+                        <Clock size={11} /> Volver a pendiente
+                      </button>
+                      <button onClick={() => setCorrigiendo(null)} className="px-4 py-1.5 border border-dark-500 text-gray-400 text-xs rounded-lg hover:text-white">
+                        Cancelar
+                      </button>
+                    </div>
+                  )}
                 </div>
+              )}
+
+              {/* Acceso a corregir en las ya resueltas */}
+              {!isPendiente && corrigiendo !== a.id && (
+                <button
+                  onClick={() => setCorrigiendo(a.id)}
+                  className="mt-1 flex items-center gap-1 text-xs text-gray-500 hover:text-yellow-400 transition-colors"
+                >
+                  ✏️ Corregir resultado
+                </button>
               )}
 
               {/* Delete */}
