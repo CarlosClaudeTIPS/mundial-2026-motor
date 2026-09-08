@@ -637,9 +637,74 @@ const DEFAULT_CTX = {
   checks: {},
 }
 
+// ─── Clasificación de la liga con los dos equipos resaltados ─────────────────
+// Pedido de Carlos (2026-09-03): al entrar a analizar, ver de qué posición va
+// cada equipo. Se muestra la tabla completa (compacta) con las filas del local
+// y visitante marcadas; el rank también va junto al nombre en el resumen.
+export function posicionDe(tabla, team) {
+  if (!tabla?.length || !team) return null
+  const norm = s => (s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '')
+  const fila = tabla.find(t => t.id === team.id || t.id === team.apiId)
+    ?? tabla.find(t => norm(t.name) === norm(team.name))
+    ?? tabla.find(t => norm(t.name).includes(norm(team.name)) || norm(team.name).includes(norm(t.name)))
+  return fila ? { rank: fila.rank, total: tabla.length, pts: fila.pts, pj: fila.pj, fila } : null
+}
+
+function Clasificacion({ tabla, teamA, teamB, leagueName }) {
+  const [open, setOpen] = useState(true)
+  if (!tabla?.length) return null
+  const pA = posicionDe(tabla, teamA); const pB = posicionDe(tabla, teamB)
+  const esA = t => pA && t.id === pA.fila.id
+  const esB = t => pB && t.id === pB.fila.id
+  const grupos = [...new Set(tabla.map(t => t.group).filter(Boolean))]
+  return (
+    <div className="card border border-dark-600">
+      <button onClick={() => setOpen(o => !o)} className="w-full flex items-center justify-between text-left">
+        <span className="font-semibold text-white text-sm">
+          📋 Clasificación {leagueName} —{' '}
+          <span className="text-green-400">{teamA?.name} {pA ? `${pA.rank}º` : '(no está en la tabla)'}</span>
+          {' · '}
+          <span className="text-blue-400">{teamB?.name} {pB ? `${pB.rank}º` : '(no está en la tabla)'}</span>
+        </span>
+        <span className="text-gray-400">{open ? '▲' : '▼'}</span>
+      </button>
+      {open && (
+        <div className="mt-3 border-t border-dark-600 pt-2 max-h-80 overflow-auto">
+          <div className="grid grid-cols-[2rem_1fr_2rem_2rem_2rem_2rem_2.5rem_2.5rem_2.5rem] gap-x-2 text-[10px] text-gray-600 uppercase tracking-wide px-1 mb-1">
+            <span>#</span><span>Equipo</span><span className="text-center">PJ</span><span className="text-center">G</span><span className="text-center">E</span><span className="text-center">P</span><span className="text-center">GF·GC</span><span className="text-center">DG</span><span className="text-right">Pts</span>
+          </div>
+          {tabla.map((t, i) => (
+            <div key={`${t.group ?? ''}-${t.id}`}>
+              {grupos.length > 1 && (i === 0 || tabla[i - 1].group !== t.group) && (
+                <p className="text-[10px] text-purple-400 font-semibold px-1 mt-1">{t.group}</p>
+              )}
+              <div className={`grid grid-cols-[2rem_1fr_2rem_2rem_2rem_2rem_2.5rem_2.5rem_2.5rem] gap-x-2 text-xs px-1 py-0.5 rounded ${
+                esA(t) ? 'bg-green-900/40 text-green-200 font-semibold'
+                  : esB(t) ? 'bg-blue-900/40 text-blue-200 font-semibold'
+                  : 'text-gray-300'
+              }`}>
+                <span className="font-mono">{t.rank}</span>
+                <span className="truncate">{t.name}</span>
+                <span className="text-center">{t.pj}</span>
+                <span className="text-center">{t.pg}</span>
+                <span className="text-center">{t.pe}</span>
+                <span className="text-center">{t.pp}</span>
+                <span className="text-center font-mono">{t.gf}·{t.gc}</span>
+                <span className={`text-center font-mono ${t.gd > 0 ? 'text-green-400' : t.gd < 0 ? 'text-red-400' : ''}`}>{t.gd > 0 ? '+' : ''}{t.gd}</span>
+                <span className="text-right font-bold">{t.pts}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function Analizar({ league, preloadTeams, onVerLiga }) {
   const [leagueTeams, setLeagueTeams] = useState([])
+  const [tabla, setTabla] = useState([]) // clasificación de la liga (filas con rank) para ver de qué posición va cada equipo
   const [teamsError, setTeamsError]   = useState(null)
   const [teamAId, setTeamAId] = useState('')
   const [teamBId, setTeamBId] = useState('')
@@ -711,6 +776,7 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
       .then(async res => {
         if (!alive) return
         const base = (res.ok && res.groups?.length) ? teamsFromStandings(res.groups) : []
+        setTabla(res.ok ? (res.groups ?? []).flat() : [])
         // SIEMPRE mezclar los equipos del fixture (±7 días): las copas y fases
         // previas (playoffs de Champions, EFL Cup...) no aparecen en la tabla
         const fx = await fetchFixtures(league.id).catch(() => null)
@@ -1187,10 +1253,13 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
             }`}>{calc.volumeAlert.msg}</div>
           )}
 
+          {/* ── Clasificación: de qué posición va cada equipo ── */}
+          <Clasificacion tabla={tabla} teamA={teamA} teamB={teamB} leagueName={league.name} />
+
           {/* ── Resumen Expected ── */}
           <div className="card bg-dark-700">
             <h2 className="text-xs text-gray-400 uppercase tracking-wide mb-3">
-              Expected Ajustado — {teamA.name} vs {teamB.name}
+              Expected Ajustado — {teamA.name}{posicionDe(tabla, teamA) ? ` (${posicionDe(tabla, teamA).rank}º)` : ''} vs {teamB.name}{posicionDe(tabla, teamB) ? ` (${posicionDe(tabla, teamB).rank}º)` : ''}
               {confidenceDelta !== 0 && (
                 <span className={`ml-3 font-bold ${confidenceDelta > 0 ? 'text-green-400' : 'text-red-400'}`}>
                   Confianza: {confidenceDelta > 0 ? '+' : ''}{confidenceDelta} pts

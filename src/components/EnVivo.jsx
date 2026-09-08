@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { getSituationS, getTacticalK, calcLiveExpected, poissonOver } from '../lib/engine'
-import { bestRealisticLine } from '../lib/picks'
+import { bestRealisticLine, linesAround } from '../lib/picks'
 import { fetchLive } from '../lib/football-api'
 import { fetchFixtureStats, hasLivescore, fetchLiveGlobal } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
@@ -1285,11 +1285,12 @@ export default function EnVivo({ league, onVerLiga }) {
             <div className="card space-y-5">
               <h2 className="font-bold text-white border-b border-dark-600 pb-2 text-sm tracking-wide uppercase">Recomendaciones En Vivo</h2>
               {calc.corners && <LiveMarket label="Córners"  acum={cornersAc}  projected={calc.corners.proy} lines={[7.5, 8.5, 9.5, 10.5, 11.5]} />}
-              {calc.shots && <LiveMarket label="Tiros"    acum={tirosAc}    projected={calc.shots.proy}   lines={[19.5, 21.5, 23.5, 25.5, 27.5]} />}
+              {/* Líneas de a 1 alrededor de la proyección (pedido 2026-09-03: TODO de uno en uno) */}
+              {calc.shots && <LiveMarket label="Tiros"    acum={tirosAc}    projected={calc.shots.proy}   lines={linesAround(calc.shots.proy, 1, 7)} />}
               {calc.sot && <LiveMarket label="SOT"      acum={sotAc}      projected={calc.sot.proy}     lines={[6.5, 7.5, 8.5, 9.5, 10.5]} />}
               {calc.cards && <LiveMarket label="Tarjetas" acum={tarjetasAc} projected={calc.cards.proy}   lines={[1.5, 2.5, 3.5, 4.5, 5.5]} />}
               {calc.ti && (
-                <LiveMarket label="Saques banda" acum={tiAc} projected={calc.ti.proy} lines={[28.5, 32.5, 36.5, 40.5, 44.5]} />
+                <LiveMarket label="Saques banda" acum={tiAc} projected={calc.ti.proy} lines={linesAround(calc.ti.proy, 1, 9)} />
               )}
             </div>
           </div>

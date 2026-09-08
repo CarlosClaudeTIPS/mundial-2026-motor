@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
-import { fetchFixtures, fetchLive, fetchFixtureStats, fetchStandings, formatLocalTime, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
+import { fetchFixtures, fetchFixtureStats, fetchStandings, formatLocalTime, getLocalDateStr, todayBogota, isLive, isDone } from '../lib/football-api'
+import { fetchLiveGlobal } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
 import { getPrediccion } from '../lib/predicciones'
 import { fetchSofaSaques, buscarSaquesPorFecha } from '../lib/sofascore'
@@ -352,33 +353,66 @@ export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) 
         .map(id => LEAGUES.find(l => l.id === id))
         .filter(Boolean)
 
-      // En "Las demás" (muchas ligas) solo fixtures — el live por liga
-      // duplicaría las llamadas; el estado en vivo igual se ve en el status
+      // CONSUMO MÍNIMO (2026-09-03): 1 llamada de fixtures por liga (caché 30
+      // min) + UNA sola llamada global de en vivo para todas (antes era una por
+      // liga). Lo caro (historial/stats) solo se pide al entrar a un partido.
       const conLive = mode !== 'otras'
-      const results = await Promise.allSettled(
-        ligas.flatMap(l => conLive ? [
-          fetchFixtures(l.id).then(r => ({ tipo: 'fix', liga: l, r })),
-          fetchLive(l.id).then(r => ({ tipo: 'live', liga: l, r })),
-        ] : [
-          fetchFixtures(l.id).then(r => ({ tipo: 'fix', liga: l, r })),
-        ])
-      )
+      const results = await Promise.allSettled([
+        ...ligas.map(l => fetchFixtures(l.id).then(r => ({ tipo: 'fix', liga: l, r }))),
+        ...(conLive ? [fetchLiveGlobal().then(r => ({ tipo: 'liveGlobal', r }))] : []),
+      ])
 
       const fixtures = []
       const live = []
+      const porLsId = new Map(ligas.map(l => [l.lsId, l]))
       for (const res of results) {
         if (res.status !== 'fulfilled') continue
         const { tipo, liga, r } = res.value
         if (!r?.ok) continue
-        const tag = f => ({ ...f, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
-        if (tipo === 'fix') fixtures.push(...(r.fixtures ?? []).map(tag))
-        else live.push(...(r.live ?? []).map(tag))
+        if (tipo === 'fix') {
+          const tag = f => ({ ...f, leagueId: liga.id, leagueName: liga.name, leagueFlag: liga.flag })
+          fixtures.push(...(r.fixtures ?? []).map(tag))
+        } else {
+          // Del feed global nos quedamos solo con las ligas activas
+          for (const m of r.live ?? []) {
+            const lg = porLsId.get(m.competitionId)
+            if (!lg) continue
+            const fx = fixtures.find(f => f.id === m.id)
+            live.push({ ...m, date: fx?.date ?? new Date().toISOString(), venue: fx?.venue ?? m.venue ?? '',
+              leagueId: lg.id, leagueName: lg.name, leagueFlag: lg.flag })
+          }
+          // Terminados de hoy que el historial aún no trae (sin pedir live por liga)
+          for (const m of r.terminadosHoy ?? []) {
+            const lg = porLsId.get(m.competitionId)
+            if (!lg || fixtures.some(f => f.id === m.id)) continue
+            fixtures.push({ ...m, leagueId: lg.id, leagueName: lg.name, leagueFlag: lg.flag })
+          }
+        }
       }
 
       fixtures.sort((a, b) => new Date(a.date) - new Date(b.date))
       setApiData(fixtures)
       setLiveData(live)
       if (!fixtures.length && !live.length) setError('Sin datos — verifica la API key o el trial de Live-Score')
+
+      // Posición en la tabla de cada equipo (pedido 2026-09-03). Va aparte y
+      // sin bloquear el fixture: si la tabla no responde, simplemente no sale.
+      Promise.allSettled(ligas.map(l => fetchStandings(l.id).then(r => ({ liga: l, r }))))
+        .then(rs => {
+          const pos = {}
+          for (const res of rs) {
+            if (res.status !== 'fulfilled' || !res.value.r?.ok) continue
+            const { liga, r } = res.value
+            const filas = (r.groups ?? []).flat()
+            const dato = t => ({ rank: t.rank, pts: t.pts, pj: t.pj })
+            pos[liga.id] = {
+              total: filas.length,
+              porId: Object.fromEntries(filas.map(t => [t.id, dato(t)])),
+              porNombre: Object.fromEntries(filas.map(t => [String(t.name ?? '').toLowerCase(), dato(t)])),
+            }
+          }
+          setPosiciones(pos)
+        })
     } catch (e) {
       setError(e.message)
     } finally {
@@ -388,12 +422,10 @@ export default function Fixture({ league, onAnalizar, soloLigaReq, onVerLiga }) 
 
   useEffect(() => { loadData() }, [loadData])
 
-  // Auto-refresh live cada 60s si hay partidos en curso
-  useEffect(() => {
-    if (!liveData.length) return
-    const id = setInterval(loadData, 60_000)
-    return () => clearInterval(id)
-  }, [liveData.length, loadData])
+  // Regla de consumo (Carlos, 2026-09-03): el Fixture NO se refresca solo.
+  // La lista se pide una vez (con caché) y lo caro solo ocurre al entrar a un
+  // partido. Para ver marcadores al minuto está la pestaña En Vivo o el botón
+  // 🔄 Actualizar. (Antes: 14 llamadas cada 60 s con la pestaña abierta.)
 
   function setModePersist(m) {
     setMode(m)

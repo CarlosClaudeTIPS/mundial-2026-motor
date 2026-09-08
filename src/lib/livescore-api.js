@@ -12,6 +12,10 @@ const BASE   = 'https://livescore-api.com/api-client'
 const CACHE_KEY  = 'motor_ls_cache_v1'
 const TTL_LIVE   = 60_000
 const TTL_NORMAL = 10 * 60_000
+// Ahorro de cuota (2026-09-03): la lista de partidos y la tabla cambian poco.
+// Recargar la página dentro de estas ventanas cuesta 0 llamadas.
+const TTL_FIXTURES = 30 * 60_000
+const TTL_TABLA    = 60 * 60_000
 const TTL_TEAM   = 3 * 3600_000
 const TTL_STATS  = 30 * 24 * 3600_000 // partidos terminados no cambian
 
@@ -134,7 +138,7 @@ export async function fetchStandings(leagueId) {
     }
     const groups = Object.values(byGroup).map(g => g.sort((a, b) => a.rank - b.rank))
     const out = { ok: true, groups, season: new Date().getFullYear() }
-    setCache(key, out, TTL_NORMAL)
+    setCache(key, out, TTL_TABLA)
     return out
   } catch (e) {
     return { ok: false, error: e.message }
@@ -175,31 +179,9 @@ export async function fetchFixtures(leagueId) {
       }
     } catch (e) { lastErr = e }
 
-    // Terminados de HOY: el historial va con retraso, pero el feed live los
-    // trae como FINISHED — rescatarlos de ahí para verlos apenas acaban
-    try {
-      const liveData = await lsFetch('scores/live.json', { competition_id: compId })
-      const hoy = new Date().toISOString().slice(0, 10)
-      for (const m of liveData?.match ?? []) {
-        if ((m.status ?? '').toUpperCase() !== 'FINISHED' && m.time !== 'FT') continue
-        const [hg, ag] = parseScore(m.score)
-        fixtures.push({
-          id: Number(m.id),
-          date: `${hoy}T${(m.scheduled ?? '12:00').slice(0, 5)}:00Z`,
-          status: 'FT',
-          elapsed: 90,
-          venue: m.location ?? '',
-          homeId: Number(m.home_id),
-          awayId: Number(m.away_id),
-          homeTeam: m.home_name,
-          awayTeam: m.away_name,
-          homeGoals: hg,
-          awayGoals: ag,
-          homeWinner: hg > ag ? true : hg < ag ? false : null,
-          awayWinner: ag > hg ? true : ag < hg ? false : null,
-        })
-      }
-    } catch (e) { lastErr = e }
+    // (2026-09-03) Ya NO se pide scores/live.json POR LIGA aquí: los terminados
+    // de hoy los trae la única llamada global fetchLiveGlobal().terminadosHoy
+    // y el Fixture los mezcla. Ahorro: 1 llamada por liga en cada carga.
 
     // Resultados últimos 7 días
     try {
@@ -232,7 +214,7 @@ export async function fetchFixtures(leagueId) {
       return { ok: false, error: `Live-Score no respondió (${lastErr.message}) — suele ser el límite diario del trial; reintenta en un rato` }
     }
     const out = { ok: true, fixtures }
-    if (fixtures.length) setCache(key, out, TTL_NORMAL)
+    if (fixtures.length) setCache(key, out, TTL_FIXTURES)
     return out
   } catch (e) {
     return { ok: false, error: e.message }
@@ -287,6 +269,25 @@ export async function fetchLiveGlobal() {
   try {
     const data = await lsFetch('scores/live.json', {})
     const NOT_LIVE = new Set(['FINISHED', 'NOT STARTED', 'CANCELLED', 'POSTPONED', 'ABANDONED', 'SUSPENDED'])
+    // Terminados de HOY (el feed live los deja como FINISHED un rato): el
+    // Fixture los mezcla para verlos apenas acaban, sin pedir live por liga
+    const hoyIso = new Date().toISOString().slice(0, 10)
+    const terminadosHoy = (data?.match ?? [])
+      .filter(m => (m.status ?? '').toUpperCase() === 'FINISHED' || m.time === 'FT')
+      .map(m => {
+        const [hg, ag] = parseScore(m.score)
+        return {
+          id: Number(m.id),
+          date: `${hoyIso}T${(m.scheduled ?? '12:00').slice(0, 5)}:00Z`,
+          status: 'FT', elapsed: 90, venue: m.location ?? '',
+          homeId: Number(m.home_id), awayId: Number(m.away_id),
+          homeTeam: m.home_name, awayTeam: m.away_name,
+          homeGoals: hg, awayGoals: ag,
+          homeWinner: hg > ag ? true : hg < ag ? false : null,
+          awayWinner: ag > hg ? true : ag < hg ? false : null,
+          competitionId: Number(m.competition_id ?? m.competition?.id ?? 0) || 0,
+        }
+      })
     const live = (data?.match ?? [])
       .filter(m => !NOT_LIVE.has((m.status ?? '').toUpperCase()) && !['FT', 'AET', 'PS'].includes(m.time))
       .map(m => {
@@ -306,7 +307,7 @@ export async function fetchLiveGlobal() {
           country: m.country?.name ?? '',
         }
       })
-    const out = { ok: true, live }
+    const out = { ok: true, live, terminadosHoy }
     setCache(key, out, TTL_LIVE)
     return out
   } catch (e) {

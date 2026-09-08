@@ -64,7 +64,8 @@ function LiveMatchStats({ match }) {
 
   useEffect(() => {
     load()
-    const id = setInterval(load, 60_000)
+    // Solo refresca si la pestaña está visible — en segundo plano no gasta cuota
+    const id = setInterval(() => { if (!document.hidden) load() }, 60_000)
     return () => clearInterval(id)
   }, [load])
 
