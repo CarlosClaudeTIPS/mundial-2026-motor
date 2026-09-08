@@ -10,52 +10,54 @@ import { compAbbr } from '../lib/leagues'
 const t2 = (a, b) => (a != null && b != null) ? a + b : null
 const bpts = (y, r) => (y != null || r != null) ? (y ?? 0) * 10 + (r ?? 0) * 25 : null
 
+// Lista PODADA a lo que Carlos juega (2026-09-03). Todo se calcula con las
+// mismas stats por partido ya descargadas — quitar o poner filas aquí NO
+// cambia el consumo de la API. `split` = los valores de CADA equipo, que se
+// muestran siempre (también en el H2H), no solo el total.
 export const STAT_TYPES = [
   { key: 'result',        label: 'Match Result',              kind: 'result' },
-  { key: 'btts',          label: 'Both Teams To Score',       kind: 'btts' },
   { key: 'goals_total',   label: 'Total Match Goals',         kind: 'value', getVal: r => t2(r.gf, r.ga), split: r => [r.gf, r.ga] },
-  { key: 'goals_for',     label: 'Team Goals For',            kind: 'value', getVal: r => r.gf },
-  { key: 'goals_ag',      label: 'Team Goals Against',        kind: 'value', getVal: r => r.ga },
+  { key: 'goals_for',     label: 'Team Goals For',            kind: 'value', getVal: r => r.gf, split: r => [r.gf, r.ga] },
+  { key: 'goals_ag',      label: 'Team Goals Against',        kind: 'value', getVal: r => r.ga, split: r => [r.gf, r.ga] },
   { key: 'corners_total', label: 'Total Match Corners',       kind: 'value', getVal: r => t2(r.corners, r.cornersAg), split: r => [r.corners, r.cornersAg] },
-  { key: 'corners_for',   label: 'Team Corners For',          kind: 'value', getVal: r => r.corners },
-  { key: 'corners_ag',    label: 'Team Corners Against',      kind: 'value', getVal: r => r.cornersAg },
-  { key: 'corners_hc',    label: 'Corners Handicap',          kind: 'handicap', getVal: r => (r.corners != null && r.cornersAg != null) ? r.corners - r.cornersAg : null },
-  { key: 'bp_total',      label: 'Total Booking Points',      kind: 'value', getVal: r => t2(bpts(r.yellow, r.red), bpts(r.yellowAg, r.redAg)), split: r => [bpts(r.yellow, r.red), bpts(r.yellowAg, r.redAg)] },
-  { key: 'bp_for',        label: 'Team Booking Points For',   kind: 'value', getVal: r => bpts(r.yellow, r.red) },
-  { key: 'bp_ag',         label: 'Team Booking Points Against', kind: 'value', getVal: r => bpts(r.yellowAg, r.redAg) },
-  { key: 'bp_each',       label: 'Each Team Booking Points',  kind: 'each', getVals: r => [bpts(r.yellow, r.red), bpts(r.yellowAg, r.redAg)] },
-  { key: 'most_cards',    label: 'Most Cards',                kind: 'most', getVals: r => [r.cards, r.cardsAg] },
+  { key: 'corners_for',   label: 'Team Corners For',          kind: 'value', getVal: r => r.corners, split: r => [r.corners, r.cornersAg] },
+  { key: 'corners_ag',    label: 'Team Corners Against',      kind: 'value', getVal: r => r.cornersAg, split: r => [r.corners, r.cornersAg] },
+  { key: 'corners_hc',    label: 'Corners Handicap (equipo − rival)', kind: 'handicap', getVal: r => (r.corners != null && r.cornersAg != null) ? r.corners - r.cornersAg : null, split: r => [r.corners, r.cornersAg] },
   { key: 'cards_total',   label: 'Total Cards',               kind: 'value', getVal: r => t2(r.cards, r.cardsAg), split: r => [r.cards, r.cardsAg] },
-  { key: 'cards_for',     label: 'Team Cards For',            kind: 'value', getVal: r => r.cards },
-  { key: 'cards_ag',      label: 'Team Cards Against',        kind: 'value', getVal: r => r.cardsAg },
-  { key: 'cards_each',    label: 'Each Team Cards',           kind: 'each', getVals: r => [r.cards, r.cardsAg] },
   { key: 'shots_total',   label: 'Match Total Shots',         kind: 'value', getVal: r => t2(r.shots, r.shotsAg), split: r => [r.shots, r.shotsAg] },
-  { key: 'shots_for',     label: 'Team Total Shots For',      kind: 'value', getVal: r => r.shots },
-  { key: 'shots_ag',      label: 'Team Total Shots Ag',       kind: 'value', getVal: r => r.shotsAg },
+  { key: 'shots_for',     label: 'Team Total Shots For',      kind: 'value', getVal: r => r.shots, split: r => [r.shots, r.shotsAg] },
+  { key: 'shots_ag',      label: 'Team Total Shots Against',  kind: 'value', getVal: r => r.shotsAg, split: r => [r.shots, r.shotsAg] },
   { key: 'sot_total',     label: 'Match Shots On Target',     kind: 'value', getVal: r => t2(r.sot, r.sotAg), split: r => [r.sot, r.sotAg] },
-  { key: 'sot_for',       label: 'Shots On Target For',       kind: 'value', getVal: r => r.sot },
-  { key: 'sot_ag',        label: 'Shots On Target Ag',        kind: 'value', getVal: r => r.sotAg },
-  { key: 'sot_each',      label: 'Shots On Target Each Team', kind: 'each', getVals: r => [r.sot, r.sotAg] },
-  { key: 'offs_total',    label: 'Match Offsides',            kind: 'value', getVal: r => t2(r.offsides, r.offsidesAg), split: r => [r.offsides, r.offsidesAg] },
-  { key: 'offs_for',      label: 'Offsides For',              kind: 'value', getVal: r => r.offsides },
-  { key: 'offs_ag',       label: 'Offsides Against',          kind: 'value', getVal: r => r.offsidesAg },
+  { key: 'sot_for',       label: 'Shots On Target For',       kind: 'value', getVal: r => r.sot, split: r => [r.sot, r.sotAg] },
+  { key: 'sot_ag',        label: 'Shots On Target Against',   kind: 'value', getVal: r => r.sotAg, split: r => [r.sot, r.sotAg] },
   { key: 'fouls_total',   label: 'Match Total Fouls',         kind: 'value', getVal: r => t2(r.fouls, r.foulsAg), split: r => [r.fouls, r.foulsAg] },
-  { key: 'fouls_for',     label: 'Fouls For',                 kind: 'value', getVal: r => r.fouls },
-  { key: 'fouls_ag',      label: 'Fouls Against',             kind: 'value', getVal: r => r.foulsAg },
+  { key: 'fouls_for',     label: 'Fouls For',                 kind: 'value', getVal: r => r.fouls, split: r => [r.fouls, r.foulsAg] },
+  { key: 'fouls_ag',      label: 'Fouls Against',             kind: 'value', getVal: r => r.foulsAg, split: r => [r.fouls, r.foulsAg] },
+  // Saques: solo tienen sentido con dato real (Live-Score reciente o Sofascore)
   { key: 'gk_total',      label: 'Match Goal Kicks',          kind: 'value', getVal: r => t2(r.gk, r.gkAg), split: r => [r.gk, r.gkAg] },
-  { key: 'gk_for',        label: 'Goal Kicks For',            kind: 'value', getVal: r => r.gk },
-  { key: 'gk_ag',         label: 'Goal Kicks Against',        kind: 'value', getVal: r => r.gkAg },
+  { key: 'gk_for',        label: 'Goal Kicks For',            kind: 'value', getVal: r => r.gk, split: r => [r.gk, r.gkAg] },
+  { key: 'gk_ag',         label: 'Goal Kicks Against',        kind: 'value', getVal: r => r.gkAg, split: r => [r.gk, r.gkAg] },
   { key: 'ti_total',      label: 'Match Throw Ins',           kind: 'value', getVal: r => t2(r.ti, r.tiAg), split: r => [r.ti, r.tiAg] },
-  { key: 'ti_for',        label: 'Throw Ins For',             kind: 'value', getVal: r => r.ti },
-  { key: 'ti_ag',         label: 'Throw Ins Against',         kind: 'value', getVal: r => r.tiAg },
+  { key: 'ti_for',        label: 'Throw Ins For',             kind: 'value', getVal: r => r.ti, split: r => [r.ti, r.tiAg] },
+  { key: 'ti_ag',         label: 'Throw Ins Against',         kind: 'value', getVal: r => r.tiAg, split: r => [r.ti, r.tiAg] },
 ]
+
+// Fecha completa día/mes/año (pedido 2026-09-03: que se vea el año)
+export const fechaDMY = d => {
+  if (!d) return ''
+  const s = String(d).slice(0, 10)
+  const [y, m, day] = s.split('-')
+  return y && m && day ? `${day}/${m}/${y}` : s
+}
 
 function makeLines(values, isHandicap) {
   const valid = values.filter(v => v != null)
   if (!valid.length) return []
   const sorted = [...valid].sort((a, b) => a - b)
   const med = sorted[Math.floor(sorted.length / 2)]
-  const step = Math.abs(med) > 30 ? 5 : Math.abs(med) > 12 ? 2 : Math.abs(med) >= 3 ? 1 : isHandicap ? 1 : 0.5
+  // Líneas de a 1 SIEMPRE (pedido: "de a uno TODO"); solo goles/valores
+  // chicos van de a 0.5
+  const step = isHandicap ? 1 : Math.abs(med) >= 3 ? 1 : 0.5
   const c = Math.floor(med) + 0.5
   const out = []
   for (let i = -3; i <= 3; i++) {
@@ -87,7 +89,16 @@ function marketOptsFor(stat, rows) {
   const values = stat.kind === 'each'
     ? rows.flatMap(r => stat.getVals(r))
     : rows.map(r => stat.getVal(r))
-  return makeLines(values, stat.kind === 'handicap').map(l => ({ key: l, label: `Over ${l}` }))
+  if (stat.kind === 'handicap') {
+    // Hándicap de córners = (córners del equipo) − (córners del rival).
+    // "Dif > −1.5" cumple si el equipo pierde por 1 córner o mejor;
+    // "Dif > +1.5" cumple si saca 2 o más córners que el rival.
+    return makeLines(values, true).map(l => ({
+      key: l,
+      label: l < 0 ? `Cubre ${l} (pierde por ≤${Math.ceil(-l) - 1} o mejor)` : `Cubre +${l} (gana por ≥${Math.ceil(l)})`,
+    }))
+  }
+  return makeLines(values, false).map(l => ({ key: l, label: `Over ${l}` }))
 }
 
 function judge(stat, r, market) {
@@ -149,17 +160,20 @@ function ResultRow({ stat, r, j, boldName }) {
       splitDisplay = r.isHome ? `${own ?? '—'} · ${ag ?? '—'}` : `${ag ?? '—'} · ${own ?? '—'}`
     }
   }
+  // Hándicap: mostrar la diferencia con signo
+  const valShown = stat.kind === 'handicap' && typeof val === 'number' ? (val > 0 ? `+${val}` : `${val}`) : val
   return (
     <div className="flex items-center gap-1.5 text-[11px]">
-      <span className="text-gray-600 w-9 shrink-0">{r.date?.slice(5)}</span>
+      <span className="text-gray-500 w-[4.6rem] shrink-0 font-mono text-[10px]">{fechaDMY(r.date)}</span>
       <span className="text-purple-400/80 text-[9px] w-12 shrink-0 truncate" title={r.comp}>{compAbbr(r.comp)}</span>
       <span className={`flex-1 text-right truncate ${homeName === boldName ? 'text-white font-semibold' : 'text-gray-400'}`}>{homeName}</span>
       <span className={`w-12 text-center rounded px-1 py-0.5 font-bold shrink-0 ${CELL_BG[j ?? 'null']}`}>
-        {showScore ? scoreDisplay : val}
+        {showScore ? scoreDisplay : valShown}
       </span>
       <span className={`flex-1 truncate ${awayName === boldName ? 'text-white font-semibold' : 'text-gray-400'}`}>{awayName}</span>
+      {/* Valor de CADA equipo (local · visitante), siempre visible */}
       {splitDisplay && (
-        <span className="text-gray-500 w-14 text-right shrink-0 font-mono" title="desglose local · visitante">{splitDisplay}</span>
+        <span className="text-gray-300 w-16 text-right shrink-0 font-mono text-[11px]" title="local · visitante">{splitDisplay}</span>
       )}
     </div>
   )

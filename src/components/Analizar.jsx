@@ -14,7 +14,7 @@ import { getBaseline, compAbbr } from '../lib/leagues'
 import { fetchStandings, fetchFixtures } from '../lib/football-api'
 import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
 import { fetchH2H, fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
-import RecentResults from './RecentResults'
+import RecentResults, { fechaDMY } from './RecentResults'
 import { informePrePartido, hasIA } from '../lib/ia'
 import { savePrediccion, getPrediccion } from '../lib/predicciones'
 
@@ -52,23 +52,14 @@ export function TeamStatsRef({ teamA, teamB }) {
           <StatRow label="Tiros/P"   valA={teamA.shots_avg.toFixed(1)} valB={teamB.shots_avg.toFixed(1)} />
           <StatRow label="SOT/P"     valA={teamA.sot_avg.toFixed(1)}   valB={teamB.sot_avg.toFixed(1)} />
           <StatRow label="Córners/P" valA={teamA.corners_avg.toFixed(1)} valB={teamB.corners_avg.toFixed(1)} />
-          <StatRow label="Posesión %" valA={teamA.possession_avg} valB={teamB.possession_avg} />
           <StatRow label="Tarjetas/P" valA={teamA.cards_avg.toFixed(1)} valB={teamB.cards_avg.toFixed(1)} higherIsBetter={false} />
+          <StatRow label="Faltas/P" valA={teamA.fouls_avg.toFixed(1)} valB={teamB.fouls_avg.toFixed(1)} higherIsBetter={false} />
           <StatRow label="Goles contra/P" valA={teamA.ga_avg.toFixed(2)} valB={teamB.ga_avg.toFixed(2)} higherIsBetter={false} />
           <StatRow label="Saques banda/P" valA={teamA.throwins_avg.toFixed(1)} valB={teamB.throwins_avg.toFixed(1)} />
           <StatRow label="Saques puerta/P" valA={teamA.goalkicks_avg.toFixed(1)} valB={teamB.goalkicks_avg.toFixed(1)} />
           <StatRow label="Pts/partido" valA={teamA.ppg.toFixed(2)} valB={teamB.ppg.toFixed(2)} />
-          <StatRow label="BTTS%" valA={`${teamA.btts_pct}%`} valB={`${teamB.btts_pct}%`} />
-
-          {/* 1er tiempo — real de Sofascore cuando hay muestra */}
-          <p className="text-[10px] text-gray-600 uppercase tracking-wide pt-2">
-            1er tiempo {teamA.real1h || teamB.real1h ? '· medido partido a partido (Sofascore)' : '· estimado por reparto típico'}
-          </p>
-          <StatRow label="Córners 1H/P" valA={teamA.corners_1h.toFixed(1)} valB={teamB.corners_1h.toFixed(1)} />
-          <StatRow label="Tiros 1H/P" valA={teamA.shots_1h.toFixed(1)} valB={teamB.shots_1h.toFixed(1)} />
-          <StatRow label="SOT 1H/P" valA={teamA.sot_1h.toFixed(1)} valB={teamB.sot_1h.toFixed(1)} />
-          <StatRow label="Tarjetas 1H/P" valA={teamA.cards_1h.toFixed(1)} valB={teamB.cards_1h.toFixed(1)} higherIsBetter={false} />
-          <StatRow label="Goles 1H/P" valA={teamA.goals_1h.toFixed(2)} valB={teamB.goals_1h.toFixed(2)} />
+          {/* (2026-09-03) Posesión, BTTS y bloque 1er tiempo retirados a pedido de
+              Carlos: solo los mercados que juega. No afecta el consumo de API. */}
 
           {/* Racha y localía */}
           {(teamA.racha || teamB.racha || teamA.split || teamB.split) && (
@@ -122,7 +113,7 @@ function MatchColumn({ title, rows, getVal, getSplit, line, accent }) {
           return (
             <div key={i} className={`flex items-center gap-1.5 px-2 py-1 rounded ${bg}`}>
               <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${RESULT_DOT[r.result] ?? 'bg-gray-600'}`} />
-              <span className="text-gray-500 text-[10px] w-8 shrink-0">{r.date?.slice(5)}</span>
+              <span className="text-gray-500 text-[10px] w-[4.4rem] shrink-0 font-mono">{fechaDMY(r.date)}</span>
               <span className="text-purple-400/80 text-[9px] w-11 shrink-0 truncate" title={r.comp}>{compAbbr(r.comp)}</span>
               <span className="text-[10px] shrink-0">{r.isHome ? '🏠' : '✈️'}</span>
               <span className="flex-1 truncate text-gray-200 text-[11px]">{r.rival}</span>
@@ -1476,8 +1467,7 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
               { id: 'corners', icon: '🚩', title: 'Córners',
                 cfg: { statKey: 'corners', agKey: 'cornersAg', expTotal: calc.t.corners, expA: calc.adj.cornA, expB: calc.adj.cornB, stepTotal: 1, stepTeam: 1, handicap: true } },
               { id: 'shots', icon: '🎯', title: 'Tiros Totales',
-                cfg: { statKey: 'shots', agKey: 'shotsAg', expTotal: calc.t.shots, expA: calc.adj.shotsA, expB: calc.adj.shotsB, stepTotal: 1, stepTeam: 1, handicap: true },
-                notes: [`1H: ${calc.t.shots1h} · 2H: ${calc.t.shots2h}`] },
+                cfg: { statKey: 'shots', agKey: 'shotsAg', expTotal: calc.t.shots, expA: calc.adj.shotsA, expB: calc.adj.shotsB, stepTotal: 1, stepTeam: 1, handicap: false } },
               { id: 'sot', icon: '🥅', title: 'Tiros a Puerta (SOT)',
                 cfg: { statKey: 'sot', agKey: 'sotAg', expTotal: calc.t.sot, expA: calc.adj.sotA, expB: calc.adj.sotB, stepTotal: 1, stepTeam: 1, handicap: false } },
               { id: 'cards', icon: '🟨', title: 'Tarjetas',

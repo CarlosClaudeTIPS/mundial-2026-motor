@@ -351,7 +351,7 @@ export default function Buscar() {
           </div>
           {teamCard.rows.map((r, i) => (
             <div key={i} className="grid grid-cols-6 text-xs py-0.5 border-b border-dark-700/50 last:border-0">
-              <span className="text-gray-500">{r.date?.slice(5)}</span>
+              <span className="text-gray-500 font-mono text-[10px]">{r.date ? `${r.date.slice(8, 10)}/${r.date.slice(5, 7)}/${r.date.slice(0, 4)}` : ''}</span>
               <span className="col-span-2 text-gray-200 truncate">{r.rival}</span>
               <span className="text-center font-mono text-white">{r.ti ?? '—'}<span className="text-gray-600">·{r.tiAg ?? '—'}</span></span>
               <span className="text-center font-mono text-white">{r.gk ?? '—'}<span className="text-gray-600">·{r.gkAg ?? '—'}</span></span>
