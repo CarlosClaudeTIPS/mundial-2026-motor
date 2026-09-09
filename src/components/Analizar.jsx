@@ -16,6 +16,7 @@ import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
 import { fetchH2H, fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
 import RecentResults, { fechaDMY } from './RecentResults'
 import { situacionTabla, jornadaDe } from '../lib/motivacion'
+import { ascendidosDeLiga, esAscendido } from '../lib/ascendidos'
 import { informePrePartido, hasIA } from '../lib/ia'
 import { savePrediccion, getPrediccion } from '../lib/predicciones'
 
@@ -642,11 +643,13 @@ export function posicionDe(tabla, team) {
   return fila ? { rank: fila.rank, total: tabla.length, pts: fila.pts, pj: fila.pj, fila } : null
 }
 
-function Clasificacion({ tabla, teamA, teamB, leagueName, tipo = 'league' }) {
+function Clasificacion({ tabla, teamA, teamB, leagueName, tipo = 'league', ascendidos = null }) {
   const [open, setOpen] = useState(true)
   if (!tabla?.length) return null
   const pA = posicionDe(tabla, teamA); const pB = posicionDe(tabla, teamB)
-  const sA = situacionTabla(tabla, teamA, { type: tipo }); const sB = situacionTabla(tabla, teamB, { type: tipo })
+  const sA = situacionTabla(tabla, teamA, { type: tipo, ascendido: esAscendido(ascendidos, teamA) })
+  const sB = situacionTabla(tabla, teamB, { type: tipo, ascendido: esAscendido(ascendidos, teamB) })
+  const esAsc = t => ascendidos?.disponible && (ascendidos.ids.includes(t.id))
   const MOT_LBL = { necesita_ganar: '🔥 necesita ganar', ganar_o_empatar: '⚡ pelea algo', cualquier_result: '🎯 presión normal', ya_clasificado: '😴 sin nada en juego' }
   const esA = t => pA && t.id === pA.fila.id
   const esB = t => pB && t.id === pB.fila.id
@@ -689,7 +692,7 @@ function Clasificacion({ tabla, teamA, teamB, leagueName, tipo = 'league' }) {
                   : 'text-gray-300'
               }`}>
                 <span className="font-mono">{t.rank}</span>
-                <span className="truncate">{t.name}</span>
+                <span className="truncate">{t.name}{esAsc(t) && <span className="text-yellow-500 ml-1" title={`Recién ascendido (no estaba en ${ascendidos.temporadaAnterior ?? 'la temporada pasada'})`}>⬆️</span>}</span>
                 <span className="text-center">{t.pj}</span>
                 <span className="text-center">{t.pg}</span>
                 <span className="text-center">{t.pe}</span>
@@ -737,17 +740,27 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
   // Lee posición, puntos al descenso/Europa/líder y partidos restantes, y
   // pre-llena motA/motB/jornada del contexto. El usuario puede sobrescribirlo
   // en el panel; se recalcula solo cuando cambian los equipos o la tabla.
+  // Recién ascendidos de la liga (tabla actual vs temporada anterior, caché 7 días)
+  const [ascendidos, setAscendidos] = useState(null)
+  useEffect(() => {
+    setAscendidos(null)
+    if (!tabla.length || league.type === 'cup') return
+    let alive = true
+    ascendidosDeLiga(league.id, tabla).then(a => { if (alive) setAscendidos(a) }).catch(() => {})
+    return () => { alive = false }
+  }, [league.id, tabla]) // eslint-disable-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     if (!teamA || !teamB) return
-    const sA = situacionTabla(tabla, teamA, { type: league.type })
-    const sB = situacionTabla(tabla, teamB, { type: league.type })
+    const sA = situacionTabla(tabla, teamA, { type: league.type, ascendido: esAscendido(ascendidos, teamA) })
+    const sB = situacionTabla(tabla, teamB, { type: league.type, ascendido: esAscendido(ascendidos, teamB) })
     setCtx(prev => ({
       ...prev,
       ...(sA.disponible ? { motA: sA.motivacion } : {}),
       ...(sB.disponible ? { motB: sB.motivacion } : {}),
       jornada: jornadaDe(sA, sB, league.type),
     }))
-  }, [teamA?.id, teamB?.id, tabla, league.type]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [teamA?.id, teamB?.id, tabla, league.type, ascendidos]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Clima automático: busca el fixture de estos equipos y trae el pronóstico ──
   useEffect(() => {
@@ -1275,7 +1288,7 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
           )}
 
           {/* ── Clasificación: de qué posición va cada equipo ── */}
-          <Clasificacion tabla={tabla} teamA={teamA} teamB={teamB} leagueName={league.name} tipo={league.type} />
+          <Clasificacion tabla={tabla} teamA={teamA} teamB={teamB} leagueName={league.name} tipo={league.type} ascendidos={ascendidos} />
 
           {/* ── Resumen Expected ── */}
           <div className="card bg-dark-700">

@@ -3,6 +3,7 @@ import { getSituationS, getTacticalK, calcLiveExpected, poissonOver } from '../l
 import { bestRealisticLine, linesAround } from '../lib/picks'
 import { fetchLive, fetchStandings } from '../lib/football-api'
 import { situacionTabla } from '../lib/motivacion'
+import { ascendidosDeLiga, esAscendido } from '../lib/ascendidos'
 import { fetchFixtureStats, hasLivescore, fetchLiveGlobal } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
@@ -251,12 +252,16 @@ export default function EnVivo({ league, onVerLiga }) {
   const [preB, setPreB] = useState(null)
   // Tabla de la liga del partido seleccionado → motivación automática (urgencia)
   // para el estado LIVE experimental. Caché de 60 min: cuesta casi nada.
-  const [tablaLive, setTablaLive] = useState({ leagueId: null, filas: [] })
+  const [tablaLive, setTablaLive] = useState({ leagueId: null, filas: [], asc: null })
   useEffect(() => {
     const lid = liveMatches.find(m => m.id === selectedId)?.leagueId ?? null
     if (!lid || tablaLive.leagueId === lid) return
     let alive = true
-    fetchStandings(lid).then(r => { if (alive) setTablaLive({ leagueId: lid, filas: r?.ok ? (r.groups ?? []).flat() : [] }) }).catch(() => {})
+    fetchStandings(lid).then(async r => {
+      const filas = r?.ok ? (r.groups ?? []).flat() : []
+      const asc = filas.length ? await ascendidosDeLiga(lid, filas).catch(() => null) : null
+      if (alive) setTablaLive({ leagueId: lid, filas, asc })
+    }).catch(() => {})
     return () => { alive = false }
   }, [selectedId]) // eslint-disable-line react-hooks/exhaustive-deps
   const [preLoading, setPreLoading] = useState(false)
@@ -969,8 +974,8 @@ export default function EnVivo({ league, onVerLiga }) {
           snaps={cornersSnaps}
           preA={preA} preB={preB}
           gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0,
-            motivH: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.homeId, name: selMatch.homeTeam }, { type: selLeague?.type }) : null,
-            motivA: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.awayId, name: selMatch.awayTeam }, { type: selLeague?.type }) : null })}
+            motivH: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.homeId, name: selMatch.homeTeam }, { type: selLeague?.type, ascendido: esAscendido(tablaLive.asc, { id: selMatch.homeId, name: selMatch.homeTeam }) }) : null,
+            motivA: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.awayId, name: selMatch.awayTeam }, { type: selLeague?.type, ascendido: esAscendido(tablaLive.asc, { id: selMatch.awayId, name: selMatch.awayTeam }) }) : null })}
           league={selLeague}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
@@ -992,8 +997,8 @@ export default function EnVivo({ league, onVerLiga }) {
           snaps={shotsSnaps}
           preA={preA} preB={preB}
           gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0,
-            motivH: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.homeId, name: selMatch.homeTeam }, { type: selLeague?.type }) : null,
-            motivA: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.awayId, name: selMatch.awayTeam }, { type: selLeague?.type }) : null })}
+            motivH: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.homeId, name: selMatch.homeTeam }, { type: selLeague?.type, ascendido: esAscendido(tablaLive.asc, { id: selMatch.homeId, name: selMatch.homeTeam }) }) : null,
+            motivA: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.awayId, name: selMatch.awayTeam }, { type: selLeague?.type, ascendido: esAscendido(tablaLive.asc, { id: selMatch.awayId, name: selMatch.awayTeam }) }) : null })}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,

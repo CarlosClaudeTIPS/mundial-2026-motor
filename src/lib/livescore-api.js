@@ -134,11 +134,54 @@ export async function fetchStandings(leagueId) {
         gc:   Number(t.goals_conceded),
         gd:   Number(t.goal_diff),
         form: '',
+        seasonId: Number(t.season_id) || null, // para ubicar la temporada anterior
       })
     }
     const groups = Object.values(byGroup).map(g => g.sort((a, b) => a.rank - b.rank))
     const out = { ok: true, groups, season: new Date().getFullYear() }
     setCache(key, out, TTL_TABLA)
+    return out
+  } catch (e) {
+    return { ok: false, error: e.message }
+  }
+}
+
+// ─── Tabla de la TEMPORADA ANTERIOR (para detectar recién ascendidos) ────────
+// Live-Score: seasons/list.json da ids y nombres ("2026/2027", "2026"); la
+// tabla acepta ?season=<id>. La temporada anterior se deduce restando un año
+// al nombre de la actual. Caché 7 días: no cambia nunca dentro de la temporada.
+const TTL_SEMANA = 7 * 24 * 3600_000
+
+function nombreTemporadaAnterior(nombre) {
+  const m = String(nombre ?? '').match(/^(\d{4})(?:\/(\d{4}))?$/)
+  if (!m) return null
+  return m[2] ? `${+m[1] - 1}/${+m[2] - 1}` : `${+m[1] - 1}`
+}
+
+export async function fetchStandingsPrevSeason(leagueId) {
+  const compId = lsCompId(leagueId)
+  if (!compId) return { ok: false, error: 'Liga no mapeada' }
+  const key = `ls_standings_prev_${compId}`
+  const cached = getCache(key)
+  if (cached) return cached
+  try {
+    // Leer season_id de la tabla actual DIRECTO del proveedor (la caché de
+    // 60 min puede ser de antes de que guardáramos seasonId). Es 1 llamada
+    // extra por liga cada 7 días.
+    let seasonIdActual = Number((await fetchStandings(leagueId))?.groups?.[0]?.[0]?.seasonId ?? 0) || null
+    if (!seasonIdActual) {
+      const raw = await lsFetch('competitions/standings.json', { competition_id: compId })
+      seasonIdActual = Number(raw?.table?.[0]?.season_id ?? 0) || null
+    }
+    const seasons = (await lsFetch('seasons/list.json', {}))?.seasons ?? []
+    const act = seasons.find(s => Number(s.id) === seasonIdActual)
+    const prevName = nombreTemporadaAnterior(act?.name)
+    const prev = prevName ? seasons.find(s => s.name === prevName) : null
+    if (!prev) return { ok: false, error: 'temporada anterior no identificada' }
+    const data = await lsFetch('competitions/standings.json', { competition_id: compId, season: prev.id })
+    const table = (data?.table ?? []).map(t => ({ rank: Number(t.rank), id: Number(t.team_id), name: t.name, pts: Number(t.points), pj: Number(t.matches) }))
+    const out = { ok: true, table, temporada: prev.name }
+    if (table.length) setCache(key, out, TTL_SEMANA)
     return out
   } catch (e) {
     return { ok: false, error: e.message }

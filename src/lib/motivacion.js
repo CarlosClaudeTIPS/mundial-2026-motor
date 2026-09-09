@@ -31,9 +31,26 @@ function zonasDe(n) {
   }
 }
 
-export function situacionTabla(tabla, team, { type = 'league' } = {}) {
+// ascendido (opcional): true si el equipo NO estaba en la categoría la
+// temporada pasada (ascendidos.js). Un recién ascendido se juega la
+// permanencia desde la jornada 1: más urgencia, y nunca "sin nada en juego".
+// Su menor calidad ya la descuenta league-stats (tier ×0.68 goles/×0.80 tiros).
+export function situacionTabla(tabla, team, { type = 'league', ascendido = false } = {}) {
   const fila = filaDe(tabla, team)
   if (!fila || !tabla?.length) return { disponible: false, motivacion: null, urgencia: 0.5, nota: 'sin tabla' }
+  const base = situacionBase(tabla, fila, type)
+  if (!ascendido || type === 'cup') return base
+  const escalar = { cualquier_result: 'ganar_o_empatar', ya_clasificado: 'ganar_o_empatar', ganar_o_empatar: 'ganar_o_empatar', necesita_ganar: 'necesita_ganar' }
+  return {
+    ...base,
+    ascendido: true,
+    motivacion: escalar[base.motivacion] ?? base.motivacion,
+    urgencia: +Math.min(1, base.urgencia + 0.15).toFixed(2),
+    nota: `Recién ascendido (no estaba en la categoría la temporada pasada): ${base.nota}`,
+  }
+}
+
+function situacionBase(tabla, fila, type) {
 
   const n = tabla.length
   const pj = fila.pj ?? 0
