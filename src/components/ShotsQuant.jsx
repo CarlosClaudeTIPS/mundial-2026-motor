@@ -1,10 +1,11 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import {
   shotsLiveModel, shotsPrior, shotsConfidence, shotsEdge, shotsFactores,
-  logShotsSnapshot, logSotSnapshot, shotsBacktestSummary, sotBacktestSummary, shotsResolvedCount,
+  logShotsSnapshot, logSotSnapshot, shotsBacktestSummary, sotBacktestSummary, shotsResolvedCount, shotsLogAll,
 } from '../lib/shots'
 import { ensureBaseline } from '../lib/baseline'
 import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
+import GameStateExp from './GameStateExp'
 
 // ─── Panel cuantitativo de TIROS en vivo ─────────────────────────────────────
 // Total por equipo repartido coherentemente en a puerta / fuera / bloqueados
@@ -24,7 +25,7 @@ const MARKETS = [
   ['sot_visitante', 'SOT Visita'],
 ]
 
-export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH, blkA, daTotal, fuente, snaps, preA, preB, matchInfo, homeName, awayName, homeIsA = true, reds = null }) {
+export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH, blkA, daTotal, fuente, snaps, preA, preB, matchInfo, homeName, awayName, homeIsA = true, reds = null, gs = null }) {
   const [market, setMarket] = useState('shots_total')
   const [line, setLine] = useState('')
   const [oddsOver, setOddsOver] = useState('')
@@ -42,9 +43,25 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
     ? ensureBaseline(matchInfo.id, 'sot', { expected: prior.sotTotal, sd: +(prior.sd * 0.5).toFixed(1) })
     : null, [matchInfo?.id, prior]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // gs = vector de estado (game-state.js): activa la proyección EXPERIMENTAL en
+  // paralelo. La decisión sigue saliendo del baseline.
   const model = useMemo(() => shotsLiveModel({
-    minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal, reds,
-  }), [minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal, reds])
+    minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal, reds, gs,
+  }), [minuto, sH, sA, sotH, sotA, blkH, blkA, goalDiff, snaps, prior, daTotal, reds, gs])
+
+  // Snapshot anterior (del live-log) y gs anterior, para "qué cambió" (§43).
+  // Se lee en render ANTES de que el efecto registre el minuto actual.
+  const prevSnap = useMemo(() => {
+    if (!matchInfo?.id || !model) return null
+    const m = shotsLogAll().find(x => x.id === String(matchInfo.id) || x.id === matchInfo.id)
+    const s = m?.snaps?.filter(x => x.min < model.minuto).slice(-1)[0]
+    return s ?? null
+  }, [matchInfo?.id, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
+  const prevGsRef = useRef({ min: null, gs: null })
+  const prevGs = prevGsRef.current.min != null && prevGsRef.current.min < (model?.minuto ?? 0) ? prevGsRef.current.gs : null
+  useEffect(() => {
+    if (model && gs && prevGsRef.current.min !== model.minuto) prevGsRef.current = { min: model.minuto, gs }
+  }, [model?.minuto, gs]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const conf = useMemo(() => shotsConfidence({
     model, prior, fuente, snapsN: snaps?.length ?? 0,
@@ -282,6 +299,14 @@ export default function ShotsQuant({ minuto, goalDiff, sH, sA, sotH, sotA, blkH,
         )}
         {!edge && <p className="text-[11px] text-gray-600">Ingresa línea y cuota Over para calcular el edge — con la cuota Under también, se quita el margen de la casa (más preciso)</p>}
       </div>
+
+      {/* ── ESTADO DEL PARTIDO — proyección experimental + explicación + qué cambió ── */}
+      <GameStateExp
+        gs={gs} model={model} mercado={market.startsWith('sot') ? 'tiros a puerta' : 'tiros'}
+        lado={market.endsWith('local') ? 'H' : market.endsWith('visitante') ? 'A' : 'T'}
+        nombres={tn} edge={edge} baseline={baseline?.expected ?? null}
+        prevSnap={prevSnap} prevGs={prevGs}
+      />
 
       {/* ── Factores ── */}
       {(factores.up.length > 0 || factores.down.length > 0) && (

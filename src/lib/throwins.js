@@ -315,6 +315,11 @@ export function makeLiveLog(storageKey, opts = {}) {
         mu: model.muRest ?? null,        // permite CRPS de la distribución completa
         lineCentral,
         pCentral: model.pOver(lineCentral),
+        // Modelo EXPERIMENTAL (game state) en paralelo — misma línea central,
+        // para comparar MAE/Brier baseline vs experimental sin fuga de futuro
+        projExp: model.expectedFinalExp ?? null,
+        muExp: model.muRestExp ?? null,
+        pCentralExp: (model.expectedFinalExp != null && model.pOverExp) ? model.pOverExp(lineCentral) : null,
       })
       log[matchId] = m
       save(log)
@@ -382,6 +387,8 @@ export function makeLiveLog(storageKey, opts = {}) {
               pts.push({
                 err: Math.abs(s.proj - m.final),
                 errNaive: s.naive != null ? Math.abs(s.naive - m.final) : null,
+                errExp: s.projExp != null ? Math.abs(s.projExp - m.final) : null,
+                brierExp: s.pCentralExp != null ? (s.pCentralExp - (m.final > s.lineCentral ? 1 : 0)) ** 2 : null,
                 hit: (m.final > s.lineCentral) === (s.pCentral > 0.5),
                 brier: (s.pCentral - (m.final > s.lineCentral ? 1 : 0)) ** 2,
                 crps: s.mu != null ? crpsNB(s.mu, phi, s.acum, m.final) : null,
@@ -394,10 +401,18 @@ export function makeLiveLog(storageKey, opts = {}) {
         const conNaive = pts.filter(p => p.errNaive != null)
         const conCrps = pts.filter(p => p.crps != null)
         const conIs = pts.filter(p => p.is != null)
+        const conExp = pts.filter(p => p.errExp != null)
         return {
           bucket: `${lo}-${hi}'`,
           n: pts.length,
           mae: +(pts.reduce((s, p) => s + p.err, 0) / pts.length).toFixed(1),
+          // GAME STATE EXPERIMENTAL vs baseline, mismo snapshot, mismo final
+          // (§55-57): solo se promueve si gana fuera de muestra
+          nExp: conExp.length,
+          maeExp: conExp.length ? +(conExp.reduce((s, p) => s + p.errExp, 0) / conExp.length).toFixed(1) : null,
+          maeBaseVsExp: conExp.length ? +(conExp.reduce((s, p) => s + p.err, 0) / conExp.length).toFixed(1) : null,
+          brierExp: conExp.filter(p => p.brierExp != null).length
+            ? +(conExp.filter(p => p.brierExp != null).reduce((s, p) => s + p.brierExp, 0) / conExp.filter(p => p.brierExp != null).length).toFixed(3) : null,
           // BENCHMARK obligatorio: si el modelo no le gana al ritmo lineal,
           // la complejidad es decorativa (revisión §20)
           maeNaive: conNaive.length ? +(conNaive.reduce((s, p) => s + p.errNaive, 0) / conNaive.length).toFixed(1) : null,

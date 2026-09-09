@@ -136,7 +136,13 @@ export function shotsPrior(preA, preB, { homeA = true } = {}) {
 // proporción en vivo mezclada con la del prior (coherencia garantizada).
 // Régimen/presión/restante del MATCH STATE ENGINE. reds {h,a}: roja = cambio
 // estructural (el de 10 genera ×0.80, el rival ×1.08).
-export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA = null, blkH = null, blkA = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, reds = null }) {
+// gs (opcional): vector de estado de game-state.js (buildGameState). Si viene,
+// se calcula EN PARALELO una segunda proyección EXPERIMENTAL en la que el
+// ajuste plano por marcador (getSituationS) se reemplaza por
+// stateResponseExp = marcador × tiempo restante × fuerza relativa × respuesta
+// observada. La decisión (pOver, edge, señal) SIGUE saliendo del baseline;
+// la experimental solo se muestra y se registra para el backtest comparado.
+export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA = null, blkH = null, blkA = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, reds = null, gs = null }) {
   if (minuto == null || minuto < 1 || sH == null || sA == null) return null
 
   const restEff = restanteEfectivo(minuto)
@@ -145,7 +151,7 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
   const daFactor = press.factor
   const daObs = press.obs
 
-  const mkSide = (acum, sotAcum, blkAcum, pr, diffSide, key, redF) => {
+  const mkSide = (acum, sotAcum, blkAcum, pr, diffSide, key, redF, stateExpF = null) => {
     const rateObs = acum / minuto
     const ratePrior = pr?.perMin ?? null
     const K = ratePrior != null ? SHOTS_MODEL.K_CRED : SHOTS_MODEL.K_CRED / 2
@@ -157,6 +163,9 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
     })
     const muRest = rateBlend * restEff * state * regime.factor * daFactor * redF
     const expectedFinal = acum + muRest
+    // EXPERIMENTAL: mismo pipeline, solo cambia el factor de estado
+    const stateExp = stateExpF != null ? Math.pow(stateExpF, SHOTS_MODEL.STATE_SOFT) : null
+    const muRestExp = stateExp != null ? rateBlend * restEff * stateExp * regime.factor * daFactor * redF : null
 
     // Proporción a puerta EN VIVO mezclada con el prior (mismo peso bayesiano)
     const pSotPrior = pr?.pSot ?? SHOTS_MODEL.SOT_SHARE_DEFAULT
@@ -174,6 +183,7 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
     const blkFinal = (blkAcum ?? acum * pBlk) + muRest * pBlk
     const offFinal = Math.max(0, expectedFinal - sotFinal - blkFinal)
 
+    const muSotRestExp = muRestExp != null ? muRestExp * pSot : null
     return {
       acum, sotAcum, blkAcum, redF,
       rateObs: +rateObs.toFixed(3),
@@ -192,13 +202,20 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
         const base = sotAcum ?? 0
         return line <= base ? 1 : nbOver(muSotRest, line - base, SHOTS_MODEL.PHI_SOT)
       },
+      // ── EXPERIMENTAL (game state) — solo diagnóstico/backtest ──
+      stateExp: stateExp != null ? +stateExp.toFixed(3) : null,
+      muRestExp: muRestExp != null ? +muRestExp.toFixed(2) : null,
+      expectedFinalExp: muRestExp != null ? +(acum + muRestExp).toFixed(1) : null,
+      sotFinalExp: muSotRestExp != null ? +((sotAcum ?? Math.round(acum * pSot)) + muSotRestExp).toFixed(1) : null,
+      muSotRestExp: muSotRestExp != null ? +muSotRestExp.toFixed(2) : null,
+      pOverShotsExp: muRestExp == null ? null : (line => line <= acum ? 1 : nbOver(muRestExp, line - acum, SHOTS_MODEL.PHI_TEAM)),
     }
   }
 
   const redFH = redCardFactor(reds?.h ?? 0, reds?.a ?? 0)
   const redFA = redCardFactor(reds?.a ?? 0, reds?.h ?? 0)
-  const home = mkSide(sH, sotH, blkH, prior?.A ?? null, goalDiff, 'sh', redFH)
-  const away = mkSide(sA, sotA, blkA, prior?.B ?? null, -goalDiff, 'sa', redFA)
+  const home = mkSide(sH, sotH, blkH, prior?.A ?? null, goalDiff, 'sh', redFH, gs?.stateExpH?.factor ?? null)
+  const away = mkSide(sA, sotA, blkA, prior?.B ?? null, -goalDiff, 'sa', redFA, gs?.stateExpA?.factor ?? null)
 
   const acum = sH + sA
   const sotAcum = (sotH != null || sotA != null) ? (sotH ?? 0) + (sotA ?? 0) : null
@@ -206,6 +223,9 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
   const muSotRest = home.muSotRest + away.muSotRest
   const expectedFinal = acum + muRest
   const naiveFinal = acum + (acum / minuto) * restEff
+  const hayExp = home.muRestExp != null && away.muRestExp != null
+  const muRestExp = hayExp ? home.muRestExp + away.muRestExp : null
+  const muSotRestExp = hayExp ? home.muSotRestExp + away.muSotRestExp : null
 
   const q = (mu, phi, base, p) => {
     let k = 0
@@ -236,6 +256,14 @@ export function shotsLiveModel({ minuto, sH = null, sA = null, sotH = null, sotA
       const base = sotAcum ?? 0
       return line <= base ? 1 : nbOver(muSotRest, line - base, SHOTS_MODEL.PHI_SOT)
     },
+    // ── EXPERIMENTAL (game state), en paralelo: NO decide señales ──
+    gsUsado: hayExp,
+    muRestExp: hayExp ? +muRestExp.toFixed(2) : null,
+    expectedFinalExp: hayExp ? +(acum + muRestExp).toFixed(1) : null,
+    sotFinalExp: hayExp ? +(home.sotFinalExp + away.sotFinalExp).toFixed(1) : null,
+    muSotRestExp: hayExp ? +muSotRestExp.toFixed(2) : null,
+    pOverExp: hayExp ? (line => line <= acum ? 1 : nbOver(muRestExp, line - acum, SHOTS_MODEL.PHI_TOTAL)) : null,
+    pOverSotExp: hayExp ? (line => { const base = sotAcum ?? 0; return line <= base ? 1 : nbOver(muSotRestExp, line - base, SHOTS_MODEL.PHI_SOT) }) : null,
   }
 }
 
@@ -347,6 +375,10 @@ export const logSotSnapshot = (matchId, info, model) => {
     acum: model.sotAcum,
     expectedFinal: model.sotFinal,
     pOver: model.pOverSot,
+    // experimental en paralelo (game state)
+    expectedFinalExp: model.sotFinalExp,
+    muRestExp: model.muSotRestExp,
+    pOverExp: model.pOverSotExp,
   })
 }
 export const resolveSotLog = (matchId, finalSot, sides) => sotLog.resolve(matchId, finalSot, sides)

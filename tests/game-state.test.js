@@ -2,6 +2,79 @@
 import { describe, it, expect } from 'vitest'
 import { stateResponseExp, effectiveChasing, matchClosure, multiScalePace, dominance, buildGameState, explicarEstado } from '../src/lib/game-state'
 import { getSituationS } from '../src/lib/engine'
+import { shotsLiveModel } from '../src/lib/shots'
+import { cornersLiveModel } from '../src/lib/corners'
+import { explicacionLive, queCambio } from '../src/lib/live-explain'
+
+// ─── Integración EXPERIMENTAL en los módulos live (2026-09-09) ────────────────
+// El game state entra a shots/corners como SEGUNDA proyección. Invariantes:
+//  1) el baseline (pOver, expectedFinal) es IDÉNTICO con o sin gs → no decide
+//  2) favorito perdiendo Y respondiendo → experimental > baseline
+//  3) colista perdiendo SIN responder → experimental < baseline
+//  4) la explicación sale de contribuciones reales y "qué cambió" compara snaps
+describe('Integración experimental en tiros y córners', () => {
+  const fuerte = { ppg: 2.3, shots_avg: 16 }
+  const debil  = { ppg: 0.8, shots_avg: 9 }
+  const snapsSubiendo = [{ min: 50, sh: 8, sa: 4 }, { min: 55, sh: 10, sa: 4 }, { min: 60, sh: 12, sa: 5 }]
+  const snapsPlanos   = [{ min: 50, sh: 3, sa: 6 }, { min: 55, sh: 3, sa: 7 }, { min: 60, sh: 3, sa: 8 }]
+
+  const gsFavPierdeResponde = buildGameState({ minuto: 65, golesH: 0, golesA: 1, priorH: fuerte, priorA: debil,
+    shotsH: 14, shotsA: 5, priorShotsH: 16, priorShotsA: 9, snaps: snapsSubiendo })
+  const gsColistaPierdeNoResponde = buildGameState({ minuto: 65, golesH: 0, golesA: 1, priorH: debil, priorA: fuerte,
+    shotsH: 3, shotsA: 9, priorShotsH: 9, priorShotsA: 16, snaps: snapsPlanos })
+
+  const base = { minuto: 65, sotH: 5, sotA: 2, goalDiff: -1, snaps: snapsSubiendo }
+
+  it('el baseline no cambia por pasar gs (el experimental no decide)', () => {
+    const sin = shotsLiveModel({ ...base, sH: 14, sA: 5 })
+    const con = shotsLiveModel({ ...base, sH: 14, sA: 5, gs: gsFavPierdeResponde })
+    expect(con.expectedFinal).toBe(sin.expectedFinal)
+    expect(con.pOver(24.5)).toBeCloseTo(sin.pOver(24.5), 10)
+    expect(sin.gsUsado).toBe(false)
+    expect(con.gsUsado).toBe(true)
+  })
+
+  it('favorito perdiendo y respondiendo: el experimental sube sobre el baseline', () => {
+    const m = shotsLiveModel({ ...base, sH: 14, sA: 5, gs: gsFavPierdeResponde })
+    expect(m.home.expectedFinalExp).toBeGreaterThan(m.home.expectedFinal)
+    expect(m.expectedFinalExp).toBeGreaterThan(m.expectedFinal)
+  })
+
+  it('colista perdiendo sin responder: el experimental baja sobre el baseline', () => {
+    const m = shotsLiveModel({ ...base, sH: 3, sA: 9, sotH: 1, sotA: 4, snaps: snapsPlanos, gs: gsColistaPierdeNoResponde })
+    expect(m.home.expectedFinalExp).toBeLessThan(m.home.expectedFinal)
+  })
+
+  it('córners: misma invariante (baseline intacto, experimental distinto)', () => {
+    const sin = cornersLiveModel({ minuto: 65, acumH: 6, acumA: 2, goalDiff: -1, snaps: [] })
+    const con = cornersLiveModel({ minuto: 65, acumH: 6, acumA: 2, goalDiff: -1, snaps: [], gs: gsFavPierdeResponde })
+    expect(con.expectedFinal).toBe(sin.expectedFinal)
+    expect(con.expectedFinalExp).not.toBe(con.expectedFinal)
+    expect(con.gsUsado).toBe(true)
+  })
+
+  it('la explicación estructurada usa las contribuciones reales y no inventa', () => {
+    const m = shotsLiveModel({ ...base, sH: 14, sA: 5, gs: gsFavPierdeResponde })
+    const sinLinea = explicacionLive({ gs: gsFavPierdeResponde, model: m, lado: 'H', mercado: 'tiros', nombres: { h: 'Fav', a: 'Col' } })
+    expect(sinLinea.decision).toMatch(/Sin línea/) // sin cuota no hay decisión que explicar
+    const ex = explicacionLive({ gs: gsFavPierdeResponde, model: m, lado: 'H', mercado: 'tiros', nombres: { h: 'Fav', a: 'Col' },
+      edge: { signal: 'PAPER BET', lado: 'OVER', line: 24.5 } })
+    expect(ex.foco).toBe('Fav')
+    expect(ex.contribuciones.map(c => c.factor)).toEqual(['Marcador', 'Tiempo restante', 'Fuerza relativa', 'Respuesta observada'])
+    expect(ex.proyExp).toBe(m.home.expectedFinalExp)
+    expect(ex.decision).toMatch(/BASELINE/) // el experimental NO decide
+    expect(ex.respuesta).toMatch(/SÍ está respondiendo/)
+  })
+
+  it('qué cambió: compara snapshot anterior con el actual', () => {
+    const prev = { min: 55, acum: 10, proj: 22.1, projExp: 23.0, lineCentral: 22.5, pCentral: 0.51, pCentralExp: 0.58 }
+    const now  = { min: 65, acum: 19, proj: 27.3, projExp: 29.0, lineCentral: 22.5, pCentral: 0.85, pCentralExp: 0.92, gs: gsFavPierdeResponde }
+    const c = queCambio(prev, now)
+    expect(c.items.find(i => i.label === 'Minuto').ahora).toBe("65'")
+    expect(c.items.find(i => i.label === 'Proyección experimental').ahora).toBe(29)
+    expect(queCambio(now, prev)).toBeNull() // no retrocede en el tiempo
+  })
+})
 
 // Priors sintéticos: FUERTE (favorito) vs DEBIL (underdog)
 const FUERTE = { ppg: 2.3, shots_avg: 17 }

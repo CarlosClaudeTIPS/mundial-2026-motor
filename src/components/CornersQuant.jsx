@@ -1,10 +1,11 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import {
   cornersLiveModel, cornersPrior, cornersConfidence, cornersEdge, cornersFactores,
-  logCornersSnapshot, cornersBacktestSummary, cornersResolvedCount,
+  logCornersSnapshot, cornersBacktestSummary, cornersResolvedCount, cornersLogAll,
 } from '../lib/corners'
 import { ensureBaseline } from '../lib/baseline'
 import { reportarOportunidad, logDecision, estadoPorMuestra } from '../lib/market-engine'
+import GameStateExp from './GameStateExp'
 
 // ─── Panel cuantitativo de CÓRNERS en vivo ───────────────────────────────────
 // Modela POR EQUIPO (local/visitante) y suma el total → habilita mercados de
@@ -15,7 +16,7 @@ const FUENTE_LABEL = {
   manual: '✍️ manual',
 }
 
-export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal, blkTotal, fuente, snaps, preA, preB, league, matchInfo, homeName, awayName, reds = null }) {
+export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal, blkTotal, fuente, snaps, preA, preB, league, matchInfo, homeName, awayName, reds = null, gs = null }) {
   const [market, setMarket] = useState('total')
   const [line, setLine] = useState('')
   const [oddsOver, setOddsOver] = useState('')
@@ -30,9 +31,21 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
     ? ensureBaseline(matchInfo.id, 'corners', { expected: prior.total, sd: prior.sd })
     : null, [matchInfo?.id, prior]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // gs = vector de estado: activa la proyección EXPERIMENTAL en paralelo
   const model = useMemo(() => cornersLiveModel({
-    minuto, acumH: cH, acumA: cA, acumTotal: cTotal, goalDiff, snaps, prior, daTotal, blkTotal, reds,
-  }), [minuto, cH, cA, cTotal, goalDiff, snaps, prior, daTotal, blkTotal, reds])
+    minuto, acumH: cH, acumA: cA, acumTotal: cTotal, goalDiff, snaps, prior, daTotal, blkTotal, reds, gs,
+  }), [minuto, cH, cA, cTotal, goalDiff, snaps, prior, daTotal, blkTotal, reds, gs])
+
+  const prevSnap = useMemo(() => {
+    if (!matchInfo?.id || !model) return null
+    const m = cornersLogAll().find(x => x.id === String(matchInfo.id) || x.id === matchInfo.id)
+    return m?.snaps?.filter(x => x.min < model.minuto).slice(-1)[0] ?? null
+  }, [matchInfo?.id, model?.minuto]) // eslint-disable-line react-hooks/exhaustive-deps
+  const prevGsRef = useRef({ min: null, gs: null })
+  const prevGs = prevGsRef.current.min != null && prevGsRef.current.min < (model?.minuto ?? 0) ? prevGsRef.current.gs : null
+  useEffect(() => {
+    if (model && gs && prevGsRef.current.min !== model.minuto) prevGsRef.current = { min: model.minuto, gs }
+  }, [model?.minuto, gs]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const conf = useMemo(() => cornersConfidence({
     model, prior, fuente, snapsN: snaps?.length ?? 0,
@@ -241,6 +254,15 @@ export default function CornersQuant({ minuto, goalDiff, cH, cA, cTotal, daTotal
         )}
         {!edge && <p className="text-[11px] text-gray-600">Ingresa línea y cuota Over para calcular el edge — con la cuota Under también, se quita el margen de la casa (más preciso)</p>}
       </div>
+
+      {/* ── ESTADO DEL PARTIDO — proyección experimental + explicación + qué cambió ── */}
+      <GameStateExp
+        gs={gs} model={model} mercado="córners"
+        lado={market === 'local' ? 'H' : market === 'visitante' ? 'A' : 'T'}
+        nombres={{ h: homeName?.trim() || 'Local', a: awayName?.trim() || 'Visitante' }}
+        edge={edge} baseline={baseline?.expected ?? null}
+        prevSnap={prevSnap} prevGs={prevGs}
+      />
 
       {/* ── Factores ── */}
       {(factores.up.length > 0 || factores.down.length > 0) && (

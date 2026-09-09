@@ -108,7 +108,11 @@ export function cornersPrior(preA, preB, league) {
 // daTotal: ataques peligrosos. blkTotal: tiros bloqueados. reds {h,a}: rojas →
 // cambio ESTRUCTURAL: el lado con 10 genera ×0.80, su rival ×1.08 (match-state).
 // Régimen/presión/restante vienen del MATCH STATE ENGINE.
-export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, blkTotal = null, reds = null }) {
+// gs (opcional): vector de estado (game-state.js). Genera EN PARALELO una
+// proyección EXPERIMENTAL con stateResponseExp en lugar del marcador plano.
+// OJO: la "respuesta observada" del game state se mide con TIROS (producción
+// ofensiva); se usa como proxy para córners — declarado, no validado.
+export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal = null, goalDiff = 0, snaps = [], prior = null, daTotal = null, blkTotal = null, reds = null, gs = null }) {
   if (minuto == null || minuto < 1) return null
   // Resolver acumulados: por lado o repartiendo el total según el prior
   let h = acumH; let a = acumA
@@ -134,7 +138,7 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
     blkFactor = Math.pow(Math.min(hi, Math.max(lo, blkObs / 0.09)), 0.5)
   }
 
-  const mkSide = (acumSide, ratePriorSide, diffSide, key, redF) => {
+  const mkSide = (acumSide, ratePriorSide, diffSide, key, redF, stateExpF = null) => {
     const rateObs = acumSide / minuto
     const K = ratePriorSide != null ? CORNER_MODEL.K_CRED : CORNER_MODEL.K_CRED / 2
     const wObs = minuto / (minuto + K)
@@ -146,6 +150,9 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
       span: CORNER_MODEL.REGIME_MIN_SPAN, clamp: CORNER_MODEL.REGIME_CLAMP, soft: CORNER_MODEL.REGIME_SOFT,
     })
     const muRest = rateBlend * restEff * state * regime.factor * daFactor * blkFactor * redF
+    // EXPERIMENTAL: mismo pipeline con el factor de estado del game state
+    const stateExp = stateExpF != null ? Math.pow(stateExpF, CORNER_MODEL.STATE_SOFT) : null
+    const muRestExp = stateExp != null ? rateBlend * restEff * stateExp * regime.factor * daFactor * blkFactor * redF : null
     return {
       redF,
       acum: acumSide,
@@ -157,6 +164,10 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
       muRest: +muRest.toFixed(2),
       expectedFinal: +(acumSide + muRest).toFixed(1),
       pOver: line => line <= acumSide ? 1 : nbOver(muRest, line - acumSide, CORNER_MODEL.PHI_TEAM),
+      stateExp: stateExp != null ? +stateExp.toFixed(3) : null,
+      muRestExp: muRestExp != null ? +muRestExp.toFixed(2) : null,
+      expectedFinalExp: muRestExp != null ? +(acumSide + muRestExp).toFixed(1) : null,
+      pOverExp: muRestExp == null ? null : (line => line <= acumSide ? 1 : nbOver(muRestExp, line - acumSide, CORNER_MODEL.PHI_TEAM)),
     }
   }
 
@@ -164,12 +175,14 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
   // Rojas: factor estructural de generación por lado.
   const redH = redCardFactor(reds?.h ?? 0, reds?.a ?? 0)
   const redA = redCardFactor(reds?.a ?? 0, reds?.h ?? 0)
-  const home = mkSide(h, prior?.perMinA ?? null, goalDiff, 'ch', redH)
-  const away = mkSide(a, prior?.perMinB ?? null, -goalDiff, 'ca', redA)
+  const home = mkSide(h, prior?.perMinA ?? null, goalDiff, 'ch', redH, gs?.stateExpH?.factor ?? null)
+  const away = mkSide(a, prior?.perMinB ?? null, -goalDiff, 'ca', redA, gs?.stateExpA?.factor ?? null)
 
   const muRest = home.muRest + away.muRest
   const expectedFinal = acum + muRest
   const naiveFinal = acum + (acum / minuto) * restEff
+  const hayExp = home.muRestExp != null && away.muRestExp != null
+  const muRestExp = hayExp ? home.muRestExp + away.muRestExp : null
 
   const q = (p) => {
     let k = 0
@@ -203,6 +216,11 @@ export function cornersLiveModel({ minuto, acumH = null, acumA = null, acumTotal
     pOverHome: home.pOver,
     pOverAway: away.pOver,
     nextCorner,
+    // ── EXPERIMENTAL (game state), en paralelo: NO decide señales ──
+    gsUsado: hayExp,
+    muRestExp: hayExp ? +muRestExp.toFixed(2) : null,
+    expectedFinalExp: hayExp ? +(acum + muRestExp).toFixed(1) : null,
+    pOverExp: hayExp ? (line => line <= acum ? 1 : nbOver(muRestExp, line - acum, CORNER_MODEL.PHI)) : null,
   }
 }
 

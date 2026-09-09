@@ -56,7 +56,12 @@ export default function ModelHealth() {
         ? +(s.rows.filter(r => r.maeNaive != null).reduce((a, r) => a + r.maeNaive * r.n, 0) /
             s.rows.filter(r => r.maeNaive != null).reduce((a, r) => a + r.n, 0)).toFixed(1)
         : null
-      return { ...m, s, gate, roi, maeW, naiveW }
+      // GAME STATE experimental vs baseline sobre los MISMOS snapshots
+      const expRows = s?.rows?.filter(r => r.maeExp != null && r.nExp > 0) ?? []
+      const nExp = expRows.reduce((a, r) => a + r.nExp, 0)
+      const maeExpW = nExp ? +(expRows.reduce((a, r) => a + r.maeExp * r.nExp, 0) / nExp).toFixed(1) : null
+      const maeBaseVsExpW = nExp ? +(expRows.reduce((a, r) => a + r.maeBaseVsExp * r.nExp, 0) / nExp).toFixed(1) : null
+      return { ...m, s, gate, roi, maeW, naiveW, maeExpW, maeBaseVsExpW, nExp }
     })
     return { rows, decisiones: decisiones.length, combos: combos.length }
   }, [open])
@@ -85,6 +90,7 @@ export default function ModelHealth() {
                   <th className="text-center px-1.5">Snaps</th>
                   <th className="text-center px-1.5">MAE</th>
                   <th className="text-center px-1.5">Naive</th>
+                  <th className="text-center px-1.5" title="Game state EXPERIMENTAL vs baseline en los mismos snapshots">GS exp</th>
                   <th className="text-center px-1.5">Bias</th>
                   <th className="text-center px-1.5">CRPS</th>
                   <th className="text-center px-1.5">LogLoss</th>
@@ -107,6 +113,10 @@ export default function ModelHealth() {
                     <td className="text-center px-1.5 font-mono text-gray-500">{r.s?.snapsTotal ?? 0}</td>
                     <td className="text-center px-1.5 font-mono">{r.maeW != null ? `±${r.maeW}` : '—'}</td>
                     <td className={`text-center px-1.5 font-mono ${r.maeW != null && r.naiveW != null ? (r.maeW <= r.naiveW ? 'text-green-400' : 'text-red-400') : 'text-gray-600'}`}>{r.naiveW != null ? `±${r.naiveW}` : '—'}</td>
+                    <td className={`text-center px-1.5 font-mono ${r.maeExpW != null ? (r.maeExpW < r.maeBaseVsExpW ? 'text-green-400' : r.maeExpW > r.maeBaseVsExpW ? 'text-red-400' : 'text-gray-300') : 'text-gray-600'}`}
+                      title={r.maeExpW != null ? `experimental ±${r.maeExpW} vs baseline ±${r.maeBaseVsExpW} en ${r.nExp} snapshots` : 'sin snapshots con game state'}>
+                      {r.maeExpW != null ? `±${r.maeExpW} vs ±${r.maeBaseVsExpW}` : '—'}
+                    </td>
                     <td className="text-center px-1.5 font-mono">{r.s?.bias != null ? (r.s.bias > 0 ? '+' : '') + r.s.bias : '—'}</td>
                     <td className="text-center px-1.5 font-mono">{r.s?.dist?.crps ?? '—'}</td>
                     <td className="text-center px-1.5 font-mono">{r.s?.dist?.logloss ?? '—'}</td>

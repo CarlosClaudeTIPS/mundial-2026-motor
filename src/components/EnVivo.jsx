@@ -20,6 +20,7 @@ import CardsQuant from './CardsQuant'
 import { cardsLogPending, resolveCardsLog } from '../lib/cards'
 import Oportunidades from './Oportunidades'
 import GameStatePanel from './GameStatePanel'
+import { buildGameState } from '../lib/game-state'
 import { tieneMercado, resumenLiga } from '../lib/mercados-liga'
 import { fetchSofaSaques } from '../lib/sofascore'
 
@@ -956,6 +957,7 @@ export default function EnVivo({ league, onVerLiga }) {
           fuente={cornersFuente}
           snaps={cornersSnaps}
           preA={preA} preB={preB}
+          gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0 })}
           league={selLeague}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
@@ -976,6 +978,7 @@ export default function EnVivo({ league, onVerLiga }) {
           fuente={shotsFuente}
           snaps={shotsSnaps}
           preA={preA} preB={preB}
+          gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0 })}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,
