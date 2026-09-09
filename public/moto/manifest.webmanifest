@@ -1,0 +1,15 @@
+{
+  "name": "MotoLog · Mantenimiento y aprendizaje",
+  "short_name": "MotoLog",
+  "description": "Lleva el mantenimiento de tu moto, registra revisiones y repostajes, y aprende a cuidarla.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "lang": "es",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

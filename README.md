@@ -139,3 +139,7 @@ Las fórmulas están en `src/lib/engine.js`:
 ## Licencia
 
 MIT
+
+## MotoLog 🏍️
+
+En `public/moto/` vive **MotoLog**, una PWA independiente para llevar el mantenimiento de una moto (revisiones, historial, repostajes, checklist pre-ruta y lecciones para aprender). Se sirve en `/moto/` junto con el resto de la app. Ver [public/moto/README.md](public/moto/README.md).

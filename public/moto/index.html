@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f1117">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MotoLog">
+<title>MotoLog · Mantenimiento y aprendizaje</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
+<link rel="apple-touch-icon" href="icon.svg">
+<style>
+:root{--bg:#0f1117;--bg2:#1a1d27;--bg3:#22263a;--border:#2e3250;--text:#e8eaf0;--text2:#8b90a8;--text3:#555a75;--green:#1d9e75;--gbg:#0d2e22;--amber:#ef9f27;--abg:#2e2010;--red:#e24b4a;--rbg:#2e1010;--blue:#378add;--bbg:#0d1e2e;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:dark}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;line-height:1.45;padding-bottom:env(safe-area-inset-bottom)}
+header{background:var(--bg2);border-bottom:1px solid var(--border);padding:10px 16px;position:sticky;top:0;z-index:100;padding-top:calc(10px + env(safe-area-inset-top))}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1000px;margin:0 auto}
+.logo{font-size:16px;font-weight:700;color:var(--green);white-space:nowrap}
+.logo small{color:var(--text2);font-weight:400;font-size:11px;margin-left:6px}
+.kmbadge{font-size:12px;color:var(--text2);background:var(--bg3);border:1px solid var(--border);padding:4px 10px;border-radius:99px;white-space:nowrap;cursor:pointer}
+.kmbadge b{color:var(--text)}
+nav{display:flex;gap:4px;overflow-x:auto;padding:8px 0 0;max-width:1000px;margin:0 auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{flex:0 0 auto;padding:6px 12px;background:transparent;border:1px solid var(--border);border-radius:99px;color:var(--text2);cursor:pointer;font-size:12px;transition:all .15s;position:relative}
+nav button.active{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+nav button .dot{position:absolute;top:-3px;right:-3px;width:9px;height:9px;border-radius:50%;background:var(--red);border:2px solid var(--bg2)}
+main{max-width:1000px;margin:0 auto;padding:16px}
+.panel{display:none}.panel.active{display:block}
+h2{font-size:18px;margin-bottom:12px}
+h3{font-size:14px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin:18px 0 8px;font-weight:600}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px;margin-bottom:10px}
+.card.ok{border-left:4px solid var(--green)}.card.soon{border-left:4px solid var(--amber)}.card.due{border-left:4px solid var(--red)}.card.none{border-left:4px solid var(--text3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.grid .card{margin:0}
+.row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.row>div:first-child{flex:1;min-width:0}
+.row .badge,.row .btn{flex:0 0 auto}
+.muted{color:var(--text2);font-size:12px}
+.tiny{color:var(--text3);font-size:11px}
+.badge{display:inline-block;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600;white-space:nowrap}
+.badge.ok{background:var(--gbg);color:var(--green)}.badge.soon{background:var(--abg);color:var(--amber)}.badge.due{background:var(--rbg);color:var(--red)}.badge.none{background:var(--bg3);color:var(--text2)}.badge.blue{background:var(--bbg);color:var(--blue)}
+.btn{padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--bg3);color:var(--text);cursor:pointer;font-size:13px;font-weight:500}
+.btn:hover{border-color:var(--green)}
+.btn.primary{background:var(--green);border-color:var(--green);color:#fff}
+.btn.danger{color:var(--red)}
+.btn.sm{padding:5px 10px;font-size:12px}
+.btn.link{background:transparent;border:none;color:var(--blue);padding:4px 0}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.stat{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:12px;text-align:center}
+.stat .v{font-size:22px;font-weight:700}.stat .l{font-size:11px;color:var(--text2);margin-top:2px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:12px}
+.bar{height:6px;background:var(--bg3);border-radius:99px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;background:var(--green);border-radius:99px}
+.bar.soon i{background:var(--amber)}.bar.due i{background:var(--red)}
+label{display:block;font-size:12px;color:var(--text2);margin-bottom:10px}
+input,select,textarea{width:100%;margin-top:4px;padding:9px 10px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:15px;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
+textarea{min-height:70px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.check{display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:8px;cursor:pointer}
+.check input{width:22px;height:22px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--green)}
+.check.done{opacity:.55}
+.check b{display:block;font-size:14px}
+.check span{font-size:12px;color:var(--text2)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--text2);font-size:11px;text-transform:uppercase;font-weight:600}
+td.num,th.num{text-align:right;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.empty{text-align:center;padding:30px 12px;color:var(--text2)}
+.empty .big{font-size:36px;margin-bottom:8px}
+.lesson{cursor:pointer}
+.lesson:hover{border-color:var(--green)}
+.lesson.read{opacity:.75}
+.lessonbody h4{margin:16px 0 6px;font-size:15px;color:var(--green)}
+.lessonbody p{margin-bottom:10px}
+.lessonbody ul,.lessonbody ol{margin:0 0 10px 20px}
+.lessonbody li{margin-bottom:4px}
+.lessonbody .note{background:var(--bbg);border-left:3px solid var(--blue);padding:10px 12px;border-radius:6px;margin:10px 0;font-size:13px}
+.lessonbody .warn{background:var(--abg);border-left:3px solid var(--amber);padding:10px 12px;border-radius:6px;margin:10px 0;font-size:13px}
+.quiz .opt{display:block;width:100%;text-align:left;padding:10px 12px;margin-bottom:6px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);cursor:pointer;font-size:14px}
+.quiz .opt.right{border-color:var(--green);background:var(--gbg)}
+.quiz .opt.wrong{border-color:var(--red);background:var(--rbg)}
+.quiz .opt:disabled{cursor:default}
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{padding:5px 10px;border-radius:99px;border:1px solid var(--border);background:transparent;color:var(--text2);font-size:12px;cursor:pointer}
+.tabs button.active{background:var(--bg3);color:var(--text);border-color:var(--text3)}
+.modalbg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:flex-end;justify-content:center}
+.modalbg.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:16px 16px 0 0;width:100%;max-width:560px;max-height:92vh;overflow-y:auto;padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
+@media(min-width:600px){.modalbg{align-items:center}.modal{border-radius:16px}}
+.modal h2{display:flex;justify-content:space-between;align-items:center}
+.modal .x{background:none;border:none;color:var(--text2);font-size:22px;cursor:pointer}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid var(--green);color:var(--text);padding:10px 16px;border-radius:99px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:300;white-space:nowrap}
+#toast.show{opacity:1}
+.tipbox{background:linear-gradient(135deg,#12261f,#1a1d27);border:1px solid var(--green);border-radius:var(--r);padding:14px;margin-bottom:12px}
+.tipbox .t{font-size:11px;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+kbd{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1px 5px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="hrow">
+    <div class="logo">🏍️ MotoLog <small id="hdrBike"></small></div>
+    <div class="kmbadge" onclick="updateKm()">📍 <b id="hdrKm">0 km</b> · actualizar</div>
+  </div>
+  <nav id="nav">
+    <button data-p="home">Inicio</button>
+    <button data-p="maint">Mantenimiento</button>
+    <button data-p="history">Historial</button>
+    <button data-p="fuel">Combustible</button>
+    <button data-p="check">Checklist</button>
+    <button data-p="learn">Aprender</button>
+    <button data-p="settings">Ajustes</button>
+  </nav>
+</header>
+
+<main>
+  <section class="panel" id="p-home"></section>
+  <section class="panel" id="p-maint"></section>
+  <section class="panel" id="p-history"></section>
+  <section class="panel" id="p-fuel"></section>
+  <section class="panel" id="p-check"></section>
+  <section class="panel" id="p-learn"></section>
+  <section class="panel" id="p-settings"></section>
+</main>
+
+<div class="modalbg" id="modalbg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h2><span id="modalTitle"></span><button class="x" onclick="closeModal()">×</button></h2>
+    <form id="modalForm" onsubmit="return submitModal(event)">
+      <div id="modalBody"></div>
+      <div class="btnrow" id="modalBtns"></div>
+    </form>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script>
+'use strict';
+/* ==================== UTILIDADES ==================== */
+const KEY='motolog_v1';
+const $=s=>document.querySelector(s);
+const uid=()=>Math.random().toString(36).slice(2,8)+Date.now().toString(36);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function today(){const d=new Date();return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10)}
+function parseD(s){return new Date(s+'T00:00:00')}
+function fmtD(s){if(!s)return '—';const [y,m,d]=s.split('-');return `${d}/${m}/${y}`}
+function fmtKm(n){return (Number(n)||0).toLocaleString('es-ES')+' km'}
+function fmtMoney(n){return (Number(n)||0).toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' '+(state.settings.currency||'€')}
+function addMonths(s,months){const d=parseD(s);const w=Math.floor(months);d.setMonth(d.getMonth()+w);d.setDate(d.getDate()+Math.round((months-w)*30.44));return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10)}
+function daysUntil(s){return Math.round((parseD(s)-parseD(today()))/86400000)}
+function daysAgo(s){return -daysUntil(s)}
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200)}
+function relDays(n){if(n===0)return 'hoy';if(n===1)return 'mañana';if(n===-1)return 'ayer';if(n>0)return `en ${n} días`;return `hace ${-n} días`}
+
+/* ==================== DATOS POR DEFECTO ==================== */
+const DEFAULT_ITEMS=[
+ {id:'oil',name:'Aceite de motor',km:5000,months:12,cat:'Motor',tip:'Cambia también la arandela del tapón de vaciado. Usa aceite con norma JASO MA/MA2 si tu moto tiene embrague en baño de aceite (la mayoría).'},
+ {id:'oilfilter',name:'Filtro de aceite',km:10000,months:12,cat:'Motor',tip:'Muchos fabricantes lo cambian en cada cambio de aceite o cada dos. Consulta tu manual.'},
+ {id:'airfilter',name:'Filtro de aire',km:12000,months:24,cat:'Motor',tip:'Si ruedas por polvo o caminos de tierra, revísalo mucho antes.'},
+ {id:'plugs',name:'Bujías',km:12000,months:null,cat:'Motor',tip:'Color marrón claro en el electrodo = combustión correcta. Negro = mezcla rica; blanco = mezcla pobre o exceso de temperatura.'},
+ {id:'valves',name:'Holgura de válvulas',km:24000,months:null,cat:'Motor',tip:'Trabajo de taller. Un castañeteo metálico en frío puede indicar holgura excesiva.'},
+ {id:'coolant',name:'Líquido refrigerante',km:24000,months:24,cat:'Motor',tip:'Solo en motos refrigeradas por líquido. Nunca abras el tapón del radiador con el motor caliente.'},
+ {id:'chainlube',name:'Lubricar cadena',km:500,months:null,cat:'Transmisión',tip:'Mejor con la cadena caliente tras rodar. Aplica en la parte interior de la cadena y deja reposar antes de rodar.'},
+ {id:'chaintension',name:'Revisar tensión de cadena',km:1000,months:1,cat:'Transmisión',tip:'Holgura típica 25-35 mm en el punto medio, con la moto sobre el caballete lateral. El valor exacto está en tu manual.'},
+ {id:'chainkit',name:'Kit de arrastre (cadena, piñón y corona)',km:25000,months:null,cat:'Transmisión',tip:'Se cambian los tres a la vez. Dientes con forma de aleta de tiburón = corona gastada.'},
+ {id:'pads',name:'Revisar pastillas de freno',km:5000,months:6,cat:'Frenos',tip:'Cambia cuando queden unos 2 mm de material o al llegar a la ranura indicadora de desgaste.'},
+ {id:'brakefluid',name:'Líquido de frenos',km:null,months:24,cat:'Frenos',tip:'Absorbe humedad con el tiempo. Si está oscuro o la maneta se siente esponjosa, cámbialo antes.'},
+ {id:'tirepressure',name:'Presión de neumáticos',km:null,months:0.5,cat:'Neumáticos',tip:'Mide siempre con el neumático frío. Los valores están en el manual o en una pegatina del basculante.'},
+ {id:'tires',name:'Revisar desgaste de neumáticos',km:3000,months:6,cat:'Neumáticos',tip:'Mínimo legal habitual 1,6 mm. Los testigos TWI marcan el límite. Con más de 5-6 años conviene cambiarlos aunque tengan dibujo.'},
+ {id:'battery',name:'Revisar batería',km:null,months:6,cat:'Eléctrico',tip:'12,6 V en reposo = cargada. Menos de 12,2 V = cárgala. Limpia y aprieta los bornes.'},
+ {id:'fork',name:'Aceite de horquilla',km:30000,months:36,cat:'Suspensión',tip:'Si ves aceite en las barras de la horquilla, los retenes están dañados.'},
+ {id:'itv',name:'Inspección técnica (ITV / revisión oficial)',km:null,months:24,cat:'Legal',tip:'Ajusta el intervalo según tu país y la antigüedad de la moto.'}
+];
+
+const CHECKLIST=[
+ {id:'t',k:'T',t:'Neumáticos y ruedas',d:'Presión correcta, dibujo suficiente, sin cortes ni objetos clavados. Radios y llantas sin golpes.'},
+ {id:'c',k:'C',t:'Controles',d:'Manetas de freno y embrague con tacto firme. El acelerador vuelve solo al soltarlo. Cables sin roces.'},
+ {id:'l',k:'L',t:'Luces y eléctrico',d:'Faro (corta y larga), luz de freno con ambos frenos, intermitentes, claxon.'},
+ {id:'o',k:'O',t:'Aceite y líquidos',d:'Nivel de aceite en la mirilla, refrigerante y líquido de frenos entre MIN y MAX. Sin manchas de fugas bajo la moto.'},
+ {id:'ch',k:'C',t:'Chasis y transmisión',d:'Cadena tensada y lubricada. Suspensión sin fugas. Tornillería de ejes y frenos a la vista sin aflojar.'},
+ {id:'s',k:'S',t:'Caballetes',d:'El caballete lateral y central se retraen bien y los muelles los mantienen recogidos.'},
+ {id:'e',k:'+',t:'Equipación y documentación',d:'Casco, guantes y chaqueta. Documentación y seguro en la moto. Combustible suficiente.'}
+];
+
+const TIPS=[
+ 'El aceite se comprueba con la moto en vertical (no sobre el caballete lateral) y tras dejarla reposar unos minutos con el motor caliente.',
+ 'Una cadena demasiado tensa desgasta rodamientos y piñón mucho más rápido que una ligeramente floja.',
+ 'La presión de los neumáticos se mide en frío. Rodar 2 km ya la sube varias décimas.',
+ 'El líquido de frenos absorbe humedad del aire: por eso se cambia por tiempo (cada 2 años), no por kilómetros.',
+ 'Si la maneta de freno se siente esponjosa, hay aire en el circuito. Purga o lleva la moto al taller.',
+ 'Apunta siempre los kilómetros de cada intervención: es la única forma de saber cuándo toca la siguiente.',
+ 'Un neumático con más de 5-6 años puede estar duro y agrietado aunque tenga dibujo. Mira el código DOT.',
+ 'Un cargador-mantenedor de batería alarga su vida si la moto pasa semanas parada.',
+ 'Frena antes de la curva, no dentro. En la salida, acelera de forma progresiva.',
+ 'Mira hacia donde quieres ir: la moto sigue a tu mirada.',
+ 'El 70 % de la capacidad de frenada está en el freno delantero. Úsalo con progresividad.',
+ 'En los primeros 100-150 km de un neumático nuevo, evita inclinaciones fuertes: la goma aún tiene restos del desmoldeante.',
+ 'Lubrica la cadena con ella caliente y deja que el lubricante asiente 10-15 minutos antes de rodar.',
+ 'Revisa la luz de freno de ambos mandos: es la que avisa al coche de detrás.',
+ 'Un motor en frío quiere marcha suave los primeros minutos, no revoluciones altas.'
+];
+
+/* ==================== ESTADO ==================== */
+function freshState(){return {v:1,bike:{name:'',brand:'',model:'',year:'',plate:'',km:0,notes:''},items:JSON.parse(JSON.stringify(DEFAULT_ITEMS)),logs:[],fuel:[],checklist:{date:'',done:[]},learn:{read:[],quiz:{}},settings:{currency:'€'},createdAt:today()}}
+let state=load();
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.v===1){const f=freshState();return Object.assign(f,s,{bike:Object.assign(f.bike,s.bike),settings:Object.assign(f.settings,s.settings),learn:Object.assign(f.learn,s.learn),checklist:Object.assign(f.checklist,s.checklist)})}}catch(e){}return freshState()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){toast('No se pudo guardar (almacenamiento lleno o bloqueado)')}}
+
+/* ==================== LÓGICA DE MANTENIMIENTO ==================== */
+function lastLog(itemId){return state.logs.filter(l=>l.itemId===itemId).sort((a,b)=>(b.km-a.km)||(b.date<a.date?-1:1))[0]}
+function itemStatus(it){
+  const last=lastLog(it.id);
+  if(!last)return {code:'none',label:'Sin registro',last:null,kmLeft:null,daysLeft:null,dueKm:null,dueDate:null,pct:0};
+  const cur=Number(state.bike.km)||0;
+  const r={code:'ok',last,kmLeft:null,daysLeft:null,dueKm:null,dueDate:null,pct:0};
+  let pct=0;
+  if(it.km){r.dueKm=Number(last.km)+Number(it.km);r.kmLeft=r.dueKm-cur;pct=Math.max(pct,(cur-last.km)/it.km)}
+  if(it.months){r.dueDate=addMonths(last.date,it.months);r.daysLeft=daysUntil(r.dueDate);pct=Math.max(pct,daysAgo(last.date)/(it.months*30.44))}
+  r.pct=Math.min(1,Math.max(0,pct));
+  const kmSoon=it.km?Math.min(500,Math.max(100,it.km*0.1)):0;
+  const daySoon=it.months?Math.min(30,Math.max(2,Math.round(it.months*30*0.15))):0;
+  if((r.kmLeft!==null&&r.kmLeft<0)||(r.daysLeft!==null&&r.daysLeft<0))r.code='due';
+  else if((r.kmLeft!==null&&r.kmLeft<=kmSoon)||(r.daysLeft!==null&&r.daysLeft<=daySoon))r.code='soon';
+  r.label={ok:'Al día',soon:'Pronto',due:'Vencido'}[r.code];
+  return r;
+}
+function statusText(st){
+  const parts=[];
+  if(st.kmLeft!==null)parts.push(st.kmLeft<0?`pasado por ${fmtKm(-st.kmLeft)}`:`faltan ${fmtKm(st.kmLeft)}`);
+  if(st.daysLeft!==null)parts.push(st.daysLeft<0?`vencido ${relDays(st.daysLeft)}`:relDays(st.daysLeft));
+  return parts.join(' · ');
+}
+function sortedItems(){
+  const order={due:0,soon:1,ok:2,none:3};
+  return state.items.map(it=>({it,st:itemStatus(it)})).sort((a,b)=>(order[a.st.code]-order[b.st.code])||(b.st.pct-a.st.pct)||a.it.name.localeCompare(b.it.name));
+}
+function intervalText(it){const p=[];if(it.km)p.push(`cada ${fmtKm(it.km)}`);if(it.months)p.push(it.months<1?`cada ${Math.round(it.months*30)} días`:`cada ${it.months} ${it.months===1?'mes':'meses'}`);return p.join(' o ')||'sin intervalo'}
+
+/* ==================== NAVEGACIÓN ==================== */
+let current='home';
+function go(p){current=p;document.querySelectorAll('.panel').forEach(e=>e.classList.toggle('active',e.id==='p-'+p));document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.p===p));render();window.scrollTo(0,0);try{location.hash=p}catch(e){}}
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.p));
+
+function render(){
+  $('#hdrBike').textContent=state.bike.name||state.bike.model||'';
+  $('#hdrKm').textContent=fmtKm(state.bike.km);
+  const alerts=sortedItems().filter(x=>x.st.code==='due').length;
+  const nb=document.querySelector('#nav button[data-p="maint"]');nb.innerHTML='Mantenimiento'+(alerts?'<span class="dot"></span>':'');
+  ({home:renderHome,maint:renderMaint,history:renderHistory,fuel:renderFuel,check:renderCheck,learn:renderLearn,settings:renderSettings})[current]();
+}
+
+/* ==================== INICIO ==================== */
+function renderHome(){
+  const el=$('#p-home');
+  const items=sortedItems();
+  const due=items.filter(x=>x.st.code==='due'),soon=items.filter(x=>x.st.code==='soon'),none=items.filter(x=>x.st.code==='none');
+  const next=items.filter(x=>x.st.code==='ok').slice(0,3);
+  const tip=TIPS[(daysAgo(state.createdAt||today())+new Date().getDate())%TIPS.length];
+  const chk=state.checklist.date===today()?state.checklist.done.length:0;
+  const readN=state.learn.read.length;
+  let h='';
+  if(!state.bike.model&&!state.bike.name){
+    h+=`<div class="card"><b>👋 Bienvenido a MotoLog</b><p class="muted" style="margin:6px 0 10px">Empieza configurando tu moto. Luego registra cuándo hiciste la última revisión de cada punto y la app te avisará cuando toque la siguiente.</p><button class="btn primary" onclick="editBike()">Configurar mi moto</button></div>`;
+  }
+  h+=`<div class="tipbox"><div class="t">💡 Consejo del día</div>${esc(tip)}</div>`;
+  h+=`<div class="stats">
+    <div class="stat"><div class="v" style="color:var(--red)">${due.length}</div><div class="l">Vencidos</div></div>
+    <div class="stat"><div class="v" style="color:var(--amber)">${soon.length}</div><div class="l">Pronto</div></div>
+    <div class="stat"><div class="v">${chk}/${CHECKLIST.length}</div><div class="l">Checklist hoy</div></div>
+    <div class="stat"><div class="v" style="color:var(--blue)">${readN}/${LESSONS.length}</div><div class="l">Lecciones leídas</div></div>
+  </div>`;
+  if(due.length){h+='<h3>⚠️ Vencido</h3>'+due.map(x=>itemCard(x.it,x.st,true)).join('')}
+  if(soon.length){h+='<h3>⏳ Toca pronto</h3>'+soon.map(x=>itemCard(x.it,x.st,true)).join('')}
+  if(next.length){h+='<h3>📅 Próximos</h3>'+next.map(x=>itemCard(x.it,x.st,true)).join('')}
+  if(none.length){h+=`<h3>❓ Sin registro</h3><div class="card"><p class="muted">Hay ${none.length} puntos de mantenimiento sin fecha de última revisión. Regístralos para que la app pueda avisarte.</p><div class="btnrow"><button class="btn sm" onclick="go('maint')">Ver puntos</button><button class="btn sm" onclick="bulkInit()">Marcar todos como hechos hoy</button></div></div>`}
+  h+=`<h3>Acciones rápidas</h3><div class="btnrow"><button class="btn primary" onclick="addLog()">＋ Registrar intervención</button><button class="btn" onclick="addFuel()">⛽ Repostaje</button><button class="btn" onclick="updateKm()">📍 Actualizar km</button><button class="btn" onclick="go('check')">✅ Checklist pre-ruta</button></div>`;
+  el.innerHTML=h;
+}
+function itemCard(it,st,compact){
+  return `<div class="card ${st.code}"><div class="row"><div><b>${esc(it.name)}</b><div class="muted">${st.last?`Último: ${fmtD(st.last.date)} a ${fmtKm(st.last.km)}`:'Sin registro'} · ${intervalText(it)}</div>${st.code!=='none'?`<div class="muted">${statusText(st)}</div>`:''}</div><div style="text-align:right"><span class="badge ${st.code}">${st.label}</span></div></div>
+  ${st.code!=='none'?`<div class="bar ${st.code}"><i style="width:${Math.round(st.pct*100)}%"></i></div>`:''}
+  ${compact?`<div class="btnrow"><button class="btn sm primary" onclick="addLog('${it.id}')">Registrar hecho</button></div>`:''}</div>`;
+}
+
+/* ==================== MANTENIMIENTO ==================== */
+let maintFilter='all';
+function renderMaint(){
+  const el=$('#p-maint');
+  const cats=['all',...new Set(state.items.map(i=>i.cat))];
+  const items=sortedItems().filter(x=>maintFilter==='all'||x.it.cat===maintFilter);
+  let h=`<div class="row"><h2>Plan de mantenimiento</h2><button class="btn sm" onclick="editItem()">＋ Añadir punto</button></div>
+  <div class="tabs">${cats.map(c=>`<button class="${maintFilter===c?'active':''}" onclick="maintFilter='${c}';render()">${c==='all'?'Todos':esc(c)}</button>`).join('')}</div>`;
+  if(!items.length)h+='<div class="empty"><div class="big">🔧</div>No hay puntos de mantenimiento. Añade uno.</div>';
+  h+=items.map(({it,st})=>`<div class="card ${st.code}">
+    <div class="row"><div><b>${esc(it.name)}</b> <span class="tiny">${esc(it.cat)}</span><div class="muted">${intervalText(it)}</div></div><span class="badge ${st.code}">${st.label}</span></div>
+    <div class="muted" style="margin-top:6px">${st.last?`Último: ${fmtD(st.last.date)} · ${fmtKm(st.last.km)}`:'Sin registro: pulsa "Registrar hecho" e indica cuándo fue la última vez.'}</div>
+    ${st.code!=='none'?`<div class="muted">Próximo: ${st.dueKm?fmtKm(st.dueKm):''}${st.dueKm&&st.dueDate?' o ':''}${st.dueDate?fmtD(st.dueDate):''} · ${statusText(st)}</div><div class="bar ${st.code}"><i style="width:${Math.round(st.pct*100)}%"></i></div>`:''}
+    ${it.tip?`<div class="tiny" style="margin-top:8px">💡 ${esc(it.tip)}</div>`:''}
+    <div class="btnrow"><button class="btn sm primary" onclick="addLog('${it.id}')">Registrar hecho</button><button class="btn sm" onclick="editItem('${it.id}')">Editar</button></div>
+  </div>`).join('');
+  h+=`<p class="tiny" style="margin-top:14px">Los intervalos por defecto son orientativos. Ajústalos a la tabla de mantenimiento del manual de tu moto (Ajustes → Editar cada punto).</p>`;
+  el.innerHTML=h;
+}
+function editItem(id){
+  const it=id?state.items.find(i=>i.id===id):{name:'',km:'',months:'',cat:'Motor',tip:''};
+  const cats=[...new Set([...DEFAULT_ITEMS.map(i=>i.cat),...state.items.map(i=>i.cat)])];
+  openModal(id?'Editar punto':'Nuevo punto de mantenimiento',`
+    <label>Nombre<input name="name" required value="${esc(it.name)}" placeholder="Ej. Cambio de aceite"></label>
+    <div class="frow"><label>Cada X km <span class="tiny">(vacío = no aplica)</span><input name="km" type="number" min="0" step="1" value="${it.km??''}"></label>
+    <label>Cada X meses <span class="tiny">(0.5 = 15 días)</span><input name="months" type="number" min="0" step="0.5" value="${it.months??''}"></label></div>
+    <label>Categoría<input name="cat" list="cats" value="${esc(it.cat)}"><datalist id="cats">${cats.map(c=>`<option value="${esc(c)}">`).join('')}</datalist></label>
+    <label>Consejo / nota<textarea name="tip">${esc(it.tip||'')}</textarea></label>`,
+    d=>{
+      if(!Number(d.km)&&!Number(d.months)){toast('Indica km o meses');return false}
+      const o={name:d.name.trim(),km:Number(d.km)||null,months:Number(d.months)||null,cat:d.cat.trim()||'Otros',tip:d.tip.trim()};
+      if(id)Object.assign(it,o);else state.items.push(Object.assign({id:uid()},o));
+      save();render();toast('Guardado');
+    },id?[{label:'Eliminar',cls:'danger',fn:()=>{if(confirm('¿Eliminar este punto y su historial?')){state.items=state.items.filter(i=>i.id!==id);state.logs=state.logs.filter(l=>l.itemId!==id);save();closeModal();render()}}}]:[]);
+}
+function addLog(itemId,editId){
+  const log=editId?state.logs.find(l=>l.id===editId):null;
+  const sel=log?log.itemId:(itemId||'');
+  openModal(editId?'Editar intervención':'Registrar intervención',`
+    <label>Punto de mantenimiento<select name="itemId"><option value="">— Otro (describir abajo) —</option>${state.items.map(i=>`<option value="${i.id}" ${i.id===sel?'selected':''}>${esc(i.name)}</option>`).join('')}</select></label>
+    <label>Descripción <span class="tiny">(si es "Otro", o para detallar)</span><input name="title" value="${esc(log?.title||'')}" placeholder="Ej. Cambio de bombilla trasera"></label>
+    <div class="frow"><label>Fecha<input name="date" type="date" required value="${log?log.date:today()}"></label>
+    <label>Kilómetros<input name="km" type="number" min="0" required value="${log?log.km:state.bike.km}"></label></div>
+    <div class="frow"><label>Coste (${esc(state.settings.currency)})<input name="cost" type="number" min="0" step="0.01" value="${log?.cost??''}"></label>
+    <label>Dónde<input name="place" value="${esc(log?.place||'')}" placeholder="Taller / yo mismo"></label></div>
+    <label>Notas<textarea name="notes" placeholder="Marca de aceite, referencias de piezas, observaciones...">${esc(log?.notes||'')}</textarea></label>`,
+    d=>{
+      if(!d.itemId&&!d.title.trim()){toast('Elige un punto o escribe una descripción');return false}
+      const o={itemId:d.itemId||null,title:d.title.trim(),date:d.date,km:Number(d.km),cost:Number(d.cost)||0,place:d.place.trim(),notes:d.notes.trim()};
+      if(log)Object.assign(log,o);else state.logs.push(Object.assign({id:uid()},o));
+      if(o.km>Number(state.bike.km))state.bike.km=o.km;
+      save();render();toast('Intervención guardada');
+    },editId?[{label:'Eliminar',cls:'danger',fn:()=>{if(confirm('¿Eliminar esta intervención?')){state.logs=state.logs.filter(l=>l.id!==editId);save();closeModal();render()}}}]:[]);
+}
+function bulkInit(){
+  const none=state.items.filter(i=>!lastLog(i.id));
+  openModal('Marcar como hechos',`<p class="muted" style="margin-bottom:10px">Se creará un registro para los ${none.length} puntos sin historial. Útil si acabas de hacer una revisión completa o quieres empezar a contar desde hoy.</p>
+    <div class="frow"><label>Fecha<input name="date" type="date" value="${today()}" required></label><label>Kilómetros<input name="km" type="number" min="0" value="${state.bike.km}" required></label></div>`,
+    d=>{none.forEach(i=>state.logs.push({id:uid(),itemId:i.id,title:'',date:d.date,km:Number(d.km),cost:0,place:'',notes:'Registro inicial'}));if(Number(d.km)>state.bike.km)state.bike.km=Number(d.km);save();render();toast(`${none.length} puntos registrados`)});
+}
+function updateKm(){
+  openModal('Actualizar kilómetros',`<label>Kilómetros actuales del cuentakilómetros<input name="km" type="number" min="0" required value="${state.bike.km}" autofocus></label>`,
+    d=>{state.bike.km=Number(d.km);save();render();toast('Kilómetros actualizados')});
+}
+
+/* ==================== HISTORIAL ==================== */
+function renderHistory(){
+  const el=$('#p-history');
+  const logs=[...state.logs].sort((a,b)=>(b.date<a.date?-1:b.date>a.date?1:0)||(b.km-a.km));
+  const total=logs.reduce((s,l)=>s+(Number(l.cost)||0),0);
+  const yr=today().slice(0,4);const totalYr=logs.filter(l=>l.date.startsWith(yr)).reduce((s,l)=>s+(Number(l.cost)||0),0);
+  let h=`<div class="row"><h2>Historial</h2><button class="btn sm primary" onclick="addLog()">＋ Registrar</button></div>
+  <div class="stats"><div class="stat"><div class="v">${logs.length}</div><div class="l">Intervenciones</div></div><div class="stat"><div class="v">${fmtMoney(totalYr)}</div><div class="l">Gasto en ${yr}</div></div><div class="stat"><div class="v">${fmtMoney(total)}</div><div class="l">Gasto total</div></div></div>`;
+  if(!logs.length)h+='<div class="empty"><div class="big">📒</div>Aún no hay intervenciones registradas.<br><span class="tiny">Registra cambios de aceite, revisiones, reparaciones... con sus km y coste.</span></div>';
+  h+=logs.map(l=>{const it=state.items.find(i=>i.id===l.itemId);return `<div class="card" style="cursor:pointer" onclick="addLog(null,'${l.id}')"><div class="row"><div><b>${esc(it?it.name:l.title||'Intervención')}</b>${it&&l.title?`<div class="muted">${esc(l.title)}</div>`:''}<div class="muted">${fmtD(l.date)} · ${fmtKm(l.km)}${l.place?' · '+esc(l.place):''}</div>${l.notes?`<div class="tiny">${esc(l.notes)}</div>`:''}</div><div style="text-align:right"><b>${l.cost?fmtMoney(l.cost):''}</b></div></div></div>`}).join('');
+  el.innerHTML=h;
+}
+
+/* ==================== COMBUSTIBLE ==================== */
+function fuelStats(){
+  const f=[...state.fuel].sort((a,b)=>a.km-b.km);
+  const cons=[];
+  for(let i=1;i<f.length;i++){if(f[i].full&&f[i].km>f[i-1].km){cons.push({l100:f[i].liters/(f[i].km-f[i-1].km)*100,km:f[i].km})}}
+  const avg=cons.length?cons.reduce((s,c)=>s+c.l100,0)/cons.length:null;
+  const last=cons.length?cons[cons.length-1].l100:null;
+  const totalCost=f.reduce((s,x)=>s+(Number(x.cost)||0),0),totalL=f.reduce((s,x)=>s+(Number(x.liters)||0),0);
+  const dist=f.length>1?f[f.length-1].km-f[0].km:0;
+  return {avg,last,totalCost,totalL,dist,costKm:dist>0?totalCost/dist:null,priceL:totalL>0?totalCost/totalL:null};
+}
+function renderFuel(){
+  const el=$('#p-fuel');const s=fuelStats();
+  const list=[...state.fuel].sort((a,b)=>b.km-a.km);
+  let h=`<div class="row"><h2>Combustible</h2><button class="btn sm primary" onclick="addFuel()">＋ Repostaje</button></div>
+  <div class="stats">
+    <div class="stat"><div class="v">${s.avg?s.avg.toFixed(2):'—'}</div><div class="l">L/100 km medio</div></div>
+    <div class="stat"><div class="v">${s.avg?(100/s.avg).toFixed(1):'—'}</div><div class="l">km por litro</div></div>
+    <div class="stat"><div class="v">${s.costKm?(s.costKm*100).toFixed(2):'—'}</div><div class="l">${esc(state.settings.currency)} / 100 km</div></div>
+    <div class="stat"><div class="v">${fmtMoney(s.totalCost)}</div><div class="l">Gasto total</div></div>
+  </div>
+  <p class="tiny" style="margin-bottom:12px">El consumo se calcula entre repostajes con depósito lleno. Marca "lleno" cada vez que llenes hasta arriba para obtener datos fiables.</p>`;
+  if(!list.length)h+='<div class="empty"><div class="big">⛽</div>Sin repostajes todavía.</div>';
+  else h+=`<div class="tablewrap"><table><tr><th>Fecha</th><th class="num">Km</th><th class="num">Litros</th><th class="num">Coste</th><th></th></tr>${list.map(x=>`<tr style="cursor:pointer" onclick="addFuel('${x.id}')"><td>${fmtD(x.date)}</td><td class="num">${fmtKm(x.km)}</td><td class="num">${Number(x.liters).toFixed(2)}</td><td class="num">${fmtMoney(x.cost)}</td><td>${x.full?'<span class="badge blue">lleno</span>':''}</td></tr>`).join('')}</table></div>`;
+  el.innerHTML=h;
+}
+function addFuel(editId){
+  const f=editId?state.fuel.find(x=>x.id===editId):null;
+  openModal(f?'Editar repostaje':'Nuevo repostaje',`
+    <div class="frow"><label>Fecha<input name="date" type="date" required value="${f?f.date:today()}"></label><label>Kilómetros<input name="km" type="number" min="0" required value="${f?f.km:state.bike.km}"></label></div>
+    <div class="frow"><label>Litros<input name="liters" type="number" min="0" step="0.01" required value="${f?.liters??''}"></label><label>Coste total (${esc(state.settings.currency)})<input name="cost" type="number" min="0" step="0.01" value="${f?.cost??''}"></label></div>
+    <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" name="full" style="width:20px;height:20px;margin:0" ${!f||f.full?'checked':''}> Depósito lleno</label>`,
+    d=>{const o={date:d.date,km:Number(d.km),liters:Number(d.liters),cost:Number(d.cost)||0,full:!!d.full};if(f)Object.assign(f,o);else state.fuel.push(Object.assign({id:uid()},o));if(o.km>Number(state.bike.km))state.bike.km=o.km;save();render();toast('Repostaje guardado')},
+    f?[{label:'Eliminar',cls:'danger',fn:()=>{state.fuel=state.fuel.filter(x=>x.id!==editId);save();closeModal();render()}}]:[]);
+}
+
+/* ==================== CHECKLIST ==================== */
+function renderCheck(){
+  const el=$('#p-check');
+  if(state.checklist.date!==today()){state.checklist={date:today(),done:[]}}
+  const done=state.checklist.done;const all=done.length===CHECKLIST.length;
+  let h=`<h2>Checklist pre-ruta</h2><p class="muted" style="margin-bottom:12px">Revisión de 2 minutos antes de salir, basada en el método <b>T-CLOCS</b>. Se reinicia cada día.</p>
+  ${all?'<div class="card ok"><b>✅ Todo revisado. ¡Buena ruta!</b></div>':''}
+  ${CHECKLIST.map(c=>`<label class="check ${done.includes(c.id)?'done':''}"><input type="checkbox" ${done.includes(c.id)?'checked':''} onchange="toggleCheck('${c.id}',this.checked)"><div><b>${c.k} · ${esc(c.t)}</b><span>${esc(c.d)}</span></div></label>`).join('')}
+  <div class="btnrow"><button class="btn" onclick="state.checklist.done=CHECKLIST.map(c=>c.id);save();render()">Marcar todo</button><button class="btn" onclick="state.checklist.done=[];save();render()">Reiniciar</button></div>
+  <p class="tiny" style="margin-top:14px">¿Quieres saber qué mirar exactamente en cada punto? Lee la lección "Checklist T-CLOCS" en Aprender.</p>`;
+  el.innerHTML=h;
+}
+function toggleCheck(id,on){const d=state.checklist.done;if(on&&!d.includes(id))d.push(id);if(!on)state.checklist.done=d.filter(x=>x!==id);save();render()}
+
+/* ==================== APRENDER ==================== */
+const LESSONS=[
+{id:'motor',cat:'Cómo funciona',title:'Cómo funciona un motor de 4 tiempos',min:5,body:`
+<p>Casi todas las motos actuales llevan un motor de <b>cuatro tiempos</b>. Cada ciclo completo son dos vueltas de cigüeñal y cuatro fases:</p>
+<ol><li><b>Admisión:</b> el pistón baja y entra aire y gasolina por la válvula de admisión.</li>
+<li><b>Compresión:</b> el pistón sube con las válvulas cerradas y comprime la mezcla.</li>
+<li><b>Explosión (o expansión):</b> la bujía enciende la mezcla y la presión empuja el pistón hacia abajo. Aquí se genera la fuerza.</li>
+<li><b>Escape:</b> el pistón sube y expulsa los gases quemados por la válvula de escape.</li></ol>
+<h4>Piezas que te interesa conocer</h4>
+<ul><li><b>Cilindro y pistón:</b> "monocilíndrica" o "bicilíndrica" indica cuántos hay. Los cc (centímetros cúbicos) son el volumen total de los cilindros.</li>
+<li><b>Válvulas:</b> las abre el árbol de levas. Con el uso su holgura cambia y por eso se ajusta cada cierto kilometraje.</li>
+<li><b>Bujía:</b> produce la chispa. Su color cuenta cómo está quemando el motor.</li>
+<li><b>Embrague:</b> conecta o desconecta el motor de la caja de cambios. En la mayoría de motos va bañado en el aceite del motor (por eso el aceite debe ser JASO MA).</li></ul>
+<h4>Refrigeración</h4>
+<p><b>Por aire:</b> las aletas del cilindro disipan el calor; simple y sin mantenimiento. <b>Por líquido:</b> un radiador y una bomba mueven refrigerante; es más estable, pero hay que vigilar nivel y estado del líquido.</p>
+<div class="note">Un motor frío está más desprotegido: el aceite aún es espeso. Los primeros minutos, rueda suave sin subir mucho de vueltas.</div>`,
+quiz:[{q:'¿En qué fase se genera la fuerza que mueve la moto?',o:['Admisión','Compresión','Explosión','Escape'],a:2},{q:'¿Por qué el aceite de moto suele necesitar la norma JASO MA?',o:['Porque el motor gira más rápido','Porque el embrague va bañado en el mismo aceite','Porque las motos no tienen filtro','Porque es más barato'],a:1}]},
+
+{id:'aceite',cat:'Mantenimiento',title:'El aceite del motor: revisar y cambiar',min:5,body:`
+<p>El aceite lubrica, refrigera, limpia y protege. Es el mantenimiento más importante y el más barato de hacer a tiempo.</p>
+<h4>Cómo comprobar el nivel</h4>
+<ol><li>Calienta el motor unos minutos (o tras rodar) y apágalo.</li>
+<li>Espera 2-3 minutos para que el aceite baje al cárter.</li>
+<li>Pon la moto <b>completamente vertical</b>, nunca sobre el caballete lateral.</li>
+<li>Mira la <b>mirilla</b> (ventanita en el motor) o la <b>varilla</b> (en algunas motos se apoya sin roscar; en otras se rosca. Lo dice el manual).</li>
+<li>El nivel debe estar entre las marcas MIN y MAX. Si falta, añade poco a poco.</li></ol>
+<h4>Qué aceite comprar</h4>
+<ul><li><b>Viscosidad:</b> por ejemplo 10W-40. El primer número es el comportamiento en frío (W = winter); el segundo, en caliente. Usa la que indica tu manual.</li>
+<li><b>Norma JASO MA / MA2:</b> imprescindible si el embrague va en baño de aceite. Un aceite de coche puede hacer patinar el embrague.</li>
+<li><b>Mineral, semisintético o sintético:</b> el sintético aguanta más y protege mejor; el manual dice cuál es el mínimo.</li></ul>
+<h4>Cuándo cambiarlo</h4>
+<p>Lo típico son <b>5.000-10.000 km o una vez al año</b>, lo que llegue antes. El aceite se degrada también con el tiempo aunque no ruedes. Cambia el filtro de aceite cada uno o dos cambios y siempre la arandela del tapón de vaciado.</p>
+<div class="warn">Aceite muy oscuro y con olor a quemado, o nivel que baja rápido: revísalo cuanto antes. Rodar sin aceite destruye el motor en minutos.</div>`,
+quiz:[{q:'¿Cómo se comprueba correctamente el nivel de aceite?',o:['Con la moto en el caballete lateral y motor en marcha','Con la moto vertical, motor caliente apagado tras unos minutos','En frío y sobre el caballete lateral','Da igual la posición'],a:1},{q:'En "10W-40", el 10W indica...',o:['La calidad del aceite','El comportamiento en frío','El comportamiento en caliente','El precio'],a:1}]},
+
+{id:'cadena',cat:'Mantenimiento',title:'La cadena: limpiar, lubricar y tensar',min:6,body:`
+<p>La cadena transmite la fuerza del motor a la rueda trasera. Bien cuidada dura 20.000-30.000 km; descuidada, la mitad.</p>
+<h4>Lubricar (cada 300-500 km, o tras lluvia)</h4>
+<ol><li>Con la cadena caliente tras rodar y la moto en caballete central (o girando la rueda a mano con cuidado).</li>
+<li>Aplica lubricante para cadena en la <b>parte interior</b> (la que toca la corona) mientras giras la rueda.</li>
+<li>Deja reposar 10-15 minutos antes de rodar para que asiente y no salpique.</li></ol>
+<h4>Limpiar (cada 1.000-2.000 km)</h4>
+<p>Usa un limpiador específico de cadena o queroseno y un cepillo suave. Nunca uses disolventes agresivos ni una hidrolimpiadora a presión: dañan las juntas tóricas (retenes) de la cadena.</p>
+<h4>Tensión</h4>
+<p>Mide la <b>holgura</b> en el punto medio del tramo inferior, moviendo la cadena arriba y abajo. Lo habitual son <b>25-35 mm</b> con la moto sobre el caballete lateral, pero mira tu manual: hay una pegatina en el basculante con el valor exacto.</p>
+<ul><li><b>Muy floja:</b> golpea, salta y puede salirse.</li><li><b>Muy tensa:</b> es peor. Fuerza el rodamiento de la rueda y el eje de salida del motor.</li></ul>
+<p>Gira la rueda y mide en varios puntos: si la holgura varía mucho, la cadena tiene tramos estirados y toca cambiarla.</p>
+<h4>Señales de que hay que cambiar el kit de arrastre</h4>
+<ul><li>Eslabones que quedan rígidos o "tiesos".</li><li>Dientes de la corona afilados, en forma de aleta de tiburón.</li><li>Puedes separar la cadena de la corona tirando en la parte trasera y ver medio diente.</li><li>Ya no queda recorrido en los tensores.</li></ul>
+<div class="note">Se cambian cadena, piñón y corona <b>a la vez</b>. Poner cadena nueva sobre piñones gastados la destroza en pocos miles de km.</div>`,
+quiz:[{q:'¿Qué es peor para la moto?',o:['Cadena ligeramente floja','Cadena demasiado tensa','Ambas son iguales','Ninguna importa'],a:1},{q:'¿Dónde se aplica el lubricante de cadena?',o:['En la parte exterior','En la parte interior, la que toca la corona','En el piñón','En la llanta'],a:1},{q:'¿Qué indica una corona con dientes en forma de aleta de tiburón?',o:['Que es nueva','Que está bien tensada','Que está gastada','Que le falta lubricante'],a:2}]},
+
+{id:'neumaticos',cat:'Mantenimiento',title:'Neumáticos: presión, desgaste y edad',min:5,body:`
+<p>Dos parches del tamaño de una tarjeta de crédito son todo lo que te une al asfalto. Son la pieza de seguridad número uno.</p>
+<h4>Presión (revisar cada 15 días)</h4>
+<ul><li>Mide <b>en frío</b>, antes de rodar. Al rodar la presión sube.</li><li>Los valores están en el manual o en una pegatina de la moto. Suele haber valores distintos para ir solo o con pasajero.</li><li>Poca presión: la moto se siente pesada, gasta más y desgasta los flancos. Mucha: menos agarre y desgaste en el centro.</li></ul>
+<h4>Desgaste</h4>
+<ul><li>Busca los <b>testigos TWI</b> (pequeños resaltes dentro de las ranuras). Cuando el dibujo llega a ellos, el neumático está al límite.</li><li>Mínimo legal habitual: <b>1,6 mm</b> de profundidad. En lluvia, por debajo de 2-3 mm ya se nota mucho.</li><li>Desgaste solo en el centro (típico de mucha autopista) o desgaste "a escalones" también son motivo de cambio.</li></ul>
+<h4>Edad</h4>
+<p>En el flanco hay un código <b>DOT</b> con 4 cifras al final: semana y año de fabricación (por ejemplo 2223 = semana 22 de 2023). Con más de 5-6 años la goma endurece y pierde agarre aunque tenga dibujo.</p>
+<h4>Neumáticos nuevos</h4>
+<p>Los primeros 100-150 km, evita frenadas fuertes e inclinaciones grandes: la superficie tiene restos de desmoldeante y aún está lisa.</p>
+<div class="warn">Un clavo o tornillo clavado: no lo saques en carretera. Rueda despacio hasta un taller o usa un kit de reparación provisional.</div>`,
+quiz:[{q:'¿Cuándo se mide la presión?',o:['Después de rodar 20 km','En frío, antes de rodar','Con el motor en marcha','Solo en verano'],a:1},{q:'¿Qué significan las cifras 2223 en el código DOT?',o:['22 mm de ancho, 23 de alto','Semana 22 del año 2023','22 PSI delante, 23 detrás','Es el número de serie'],a:1}]},
+
+{id:'frenos',cat:'Mantenimiento',title:'Frenos: pastillas, discos y líquido',min:5,body:`
+<h4>Pastillas</h4>
+<p>Mira por el lateral de la pinza: el material de fricción debe tener al menos <b>2 mm</b>. Muchas pastillas llevan una ranura indicadora; si desaparece, toca cambiar. Un chirrido metálico constante puede ser el testigo de desgaste tocando el disco.</p>
+<h4>Discos</h4>
+<p>Cada disco lleva grabado su <b>espesor mínimo</b> (MIN TH). Un disco con un "escalón" en el borde o que hace vibrar la maneta al frenar (alabeado) hay que cambiarlo.</p>
+<h4>Líquido de frenos</h4>
+<ul><li>Es <b>higroscópico</b>: absorbe humedad del aire. Con agua dentro, hierve antes y el freno "desaparece" en bajadas largas.</li><li>Por eso se cambia por <b>tiempo</b>: cada 2 años, aunque hayas rodado poco.</li><li>Comprueba el nivel en el depósito de la maneta (entre MIN y MAX). Si baja, normalmente es porque las pastillas se han gastado, no por fuga. Pero revísalo.</li><li>Usa el tipo indicado en el tapón (normalmente <b>DOT 4</b>). No mezcles tipos.</li></ul>
+<h4>Síntomas para actuar ya</h4>
+<ul><li>Maneta esponjosa o que se va hasta el puño: aire en el circuito o pastillas acabadas.</li><li>La moto tira hacia un lado al frenar.</li><li>Ruido de roce continuo sin frenar: pinza agarrotada.</li></ul>
+<div class="warn">El líquido de frenos ataca la pintura. Si cae, límpialo enseguida con agua.</div>`,
+quiz:[{q:'¿Por qué se cambia el líquido de frenos por tiempo y no por km?',o:['Porque es caro','Porque absorbe humedad del aire','Porque se evapora','Porque lo dice el taller'],a:1},{q:'Maneta de freno esponjosa suele indicar...',o:['Pastillas nuevas','Aire en el circuito','Disco nuevo','Neumático desinflado'],a:1}]},
+
+{id:'electrico',cat:'Mantenimiento',title:'Batería y sistema eléctrico',min:4,body:`
+<h4>La batería</h4>
+<ul><li>Con un polímetro, mide en los bornes con la moto apagada: <b>12,6-12,8 V</b> = cargada; 12,4 V = al 75 %; menos de <b>12,2 V</b> = cárgala.</li><li>Con el motor a 3.000 rpm debería marcar <b>13,5-14,5 V</b>. Si no sube, falla el regulador o el alternador. Si pasa de 15 V, el regulador está estropeado y se cargará la batería.</li><li>Si la moto pasa semanas parada, usa un <b>cargador-mantenedor</b>. Las baterías que se descargan del todo pierden vida.</li><li>Limpia los bornes con un cepillo si ves polvo blanco o verdoso y comprueba que estén bien apretados.</li></ul>
+<h4>Fusibles</h4>
+<p>Están en una caja bajo el asiento o cerca de la batería. Si algo deja de funcionar de golpe (luz, claxon, arranque), mira primero los fusibles. Lleva repuestos del amperaje correcto: nunca pongas uno mayor.</p>
+<h4>Luces</h4>
+<p>Revisa cada semana faro, luz de freno con cada mando por separado, intermitentes y matrícula. Ten a mano una bombilla de repuesto si tu moto las usa halógenas.</p>
+<div class="note">Arranca cuesta: si el motor de arranque gira lento y las luces bajan de intensidad, es la batería. Si hace clic pero no gira, suele ser batería muy baja o relé de arranque.</div>`,
+quiz:[{q:'¿Qué voltaje tiene una batería de 12 V bien cargada en reposo?',o:['10 V','11,5 V','12,6-12,8 V','14,5 V'],a:2},{q:'Si un fusible salta, ¿qué haces?',o:['Poner uno de más amperios para que aguante','Puentearlo con un cable','Cambiarlo por otro del mismo amperaje y buscar la causa si vuelve a saltar','Ignorarlo'],a:2}]},
+
+{id:'liquidos',cat:'Mantenimiento',title:'Refrigerante, filtro de aire y otros líquidos',min:4,body:`
+<h4>Refrigerante (motos refrigeradas por líquido)</h4>
+<ul><li>Mira el nivel en el <b>vaso de expansión</b> (depósito translúcido) con el motor <b>frío</b> y la moto vertical. Debe estar entre MIN y MAX.</li><li>Nunca abras el tapón del radiador en caliente: sale a presión y quema.</li><li>Rellena con el mismo tipo de anticongelante (color/base). En emergencia vale agua destilada, pero cambia después.</li><li>Se sustituye cada <b>2 años</b> porque pierde sus aditivos anticorrosión.</li><li>Si el ventilador se activa a menudo en ciudad es normal. Si la temperatura sube en carretera o ves fugas verdes/rosas, revisa.</li></ul>
+<h4>Filtro de aire</h4>
+<p>Impide que entre polvo al motor. Sucio, la moto pierde potencia y gasta más. Los de <b>papel</b> se sustituyen; los de <b>espuma</b> se lavan, secan y se impregnan de aceite específico. Si ruedas por tierra, revísalo cada pocos cientos de km.</p>
+<h4>Aceite de horquilla y retenes</h4>
+<p>Si ves una línea de aceite en las barras de la horquilla o gotas en la parte inferior, los retenes están dañados. Además de perder amortiguación, el aceite puede llegar al disco de freno delantero.</p>
+<h4>Cables y mandos</h4>
+<p>Lubrica los cables de embrague y acelerador si van duros. El puño del acelerador debe tener 2-3 mm de juego libre y volver solo.</p>`,
+quiz:[{q:'¿Cuándo se comprueba el nivel de refrigerante?',o:['Con el motor caliente','Con el motor frío, en el vaso de expansión','Abriendo el radiador tras rodar','No hace falta'],a:1},{q:'Una línea de aceite en las barras de la horquilla indica...',o:['Que le sobra aceite','Retenes dañados','Que está bien lubricada','Nada importante'],a:1}]},
+
+{id:'tclocs',cat:'Seguridad',title:'Checklist T-CLOCS antes de salir',min:4,body:`
+<p>Es el método de la Motorcycle Safety Foundation para revisar la moto en 2 minutos. Cada letra es un grupo de cosas que mirar:</p>
+<ul><li><b>T – Tires & wheels (neumáticos y ruedas):</b> presión, dibujo, cortes, objetos clavados. Radios flojos o llantas golpeadas.</li>
+<li><b>C – Controls (controles):</b> manetas, puños, cables, acelerador que vuelve solo, pedales de freno y cambio.</li>
+<li><b>L – Lights (luces y eléctrico):</b> faro, luz de freno con cada mando, intermitentes, claxon, batería.</li>
+<li><b>O – Oil & fluids (aceite y líquidos):</b> niveles de aceite, refrigerante, líquido de frenos. Sin manchas bajo la moto.</li>
+<li><b>C – Chassis (chasis):</b> cadena tensada y lubricada, suspensión sin fugas, tornillería a la vista.</li>
+<li><b>S – Stands (caballetes):</b> se retraen bien y los muelles los mantienen recogidos.</li></ul>
+<p>No hace falta hacer toda la lista al detalle cada día. Lo diario: <b>neumáticos a ojo, luces, frenos y una mirada bajo la moto</b>. Lo semanal: presión, cadena y niveles.</p>
+<div class="note">La pestaña Checklist de esta app te guía por estos puntos y se reinicia cada día.</div>`,
+quiz:[{q:'¿Qué representa la "O" en T-CLOCS?',o:['Ojos','Aceite y líquidos','Óptica','Orden'],a:1}]},
+
+{id:'conduccion',cat:'Seguridad',title:'Conducción segura: frenar, mirar y trazar',min:6,body:`
+<h4>La mirada</h4>
+<p>La moto va a donde miras. En una curva, mira la salida, no el borde de la carretera ni el obstáculo. Mantén la mirada lejos y amplia.</p>
+<h4>Frenar</h4>
+<ul><li>Alrededor del <b>70 % de la frenada</b> la hace el freno delantero. Úsalo siempre, pero con progresividad: primero suave, luego más fuerte a medida que la horquilla se comprime.</li><li>Frena <b>con la moto recta</b>. En curva, el neumático no puede frenar e inclinar a la vez.</li><li>Practica frenadas de emergencia en un sitio seguro para saber cómo responde tu moto (y su ABS, si lo tiene).</li></ul>
+<h4>Curvas</h4>
+<ol><li><b>Reduce antes</b> de entrar: velocidad y marcha adecuadas.</li><li><b>Mira</b> la salida.</li><li><b>Inclina</b> con el contramanillar: empuja suavemente el puño del lado hacia el que quieres girar.</li><li><b>Acelera suave</b> desde el vértice hacia la salida: estabiliza la moto.</li></ol>
+<h4>Lluvia y frío</h4>
+<ul><li>Todo más suave: frenos, gas, inclinación. Los primeros minutos de lluvia son los peores (el aceite del asfalto flota).</li><li>Evita pintura, tapas de alcantarilla y hojas: son hielo.</li><li>Los neumáticos fríos agarran mucho menos. Dales unos km.</li></ul>
+<h4>Tráfico</h4>
+<ul><li>Asume que no te ven. Colócate donde el conductor te vea por el retrovisor, nunca en su punto ciego.</li><li>Mantén distancia: 2 segundos como mínimo, más en lluvia.</li><li>En cruces, cubre el freno (dos dedos sobre la maneta) para ganar tiempo de reacción.</li></ul>
+<h4>Equipación</h4>
+<p>Casco homologado bien ajustado, guantes siempre, chaqueta con protecciones y calzado que cubra el tobillo. La mayoría de caídas urbanas ocurren a menos de 50 km/h, y las manos son lo primero que toca el suelo.</p>`,
+quiz:[{q:'¿Cuándo se frena en una curva?',o:['En el vértice','Antes de entrar, con la moto recta','A la salida','Nunca'],a:1},{q:'¿Qué freno aporta más capacidad de frenada?',o:['El trasero','El delantero','Los dos por igual','El motor'],a:1},{q:'Para inclinar la moto a la derecha con el contramanillar...',o:['Tiras del puño derecho','Empujas el puño derecho','Empujas el puño izquierdo','Te inclinas sin tocar el manillar'],a:1}]},
+
+{id:'manual',cat:'Cómo funciona',title:'Cómo leer el manual y la tabla de mantenimiento',min:3,body:`
+<p>El manual del propietario es la fuente de verdad para tu moto concreta. Lo que más te interesa:</p>
+<ul><li><b>Tabla de mantenimiento periódico:</b> una tabla con filas (aceite, bujías, válvulas, etc.) y columnas por kilometraje (1.000, 6.000, 12.000...). Marca I = inspeccionar, R = reemplazar, L = lubricar. Copia estos intervalos en la pestaña Mantenimiento de esta app.</li>
+<li><b>Especificaciones:</b> tipo y cantidad de aceite, viscosidad, presión de neumáticos, holgura de cadena, tipo de bujía, líquido de frenos, capacidad del depósito.</li>
+<li><b>Pares de apriete:</b> si vas a aflojar tornillos importantes (ejes, pinzas de freno, tapón de aceite), aprieta al par indicado con una llave dinamométrica.</li>
+<li><b>Ubicación de fusibles, mirilla, tornillos de tensado.</b></li></ul>
+<h4>Si no tienes el manual</h4>
+<p>Busca "[marca modelo año] owner's manual pdf" o "manual de usuario". Muchos fabricantes los publican gratis. El manual de taller (service manual) es más completo y explica cada procedimiento paso a paso.</p>
+<h4>Cuando vayas al taller</h4>
+<ul><li>Di los km y qué notas (ruidos, vibraciones, cuándo aparecen).</li><li>Pide que anoten en la factura qué se ha hecho y a qué km. Apúntalo en Historial.</li><li>Pregunta qué toca en la próxima revisión.</li></ul>
+<div class="note">Un historial de mantenimiento completo sube el valor de la moto cuando la vendas.</div>`,
+quiz:[{q:'En una tabla de mantenimiento, la letra "I" suele significar...',o:['Ignorar','Inspeccionar','Instalar','Importante'],a:1}]},
+
+{id:'kit',cat:'Seguridad',title:'Qué llevar siempre en la moto',min:3,body:`
+<ul><li><b>Documentación:</b> permiso de conducir, permiso de circulación, seguro, ficha técnica (o versión digital según tu país).</li>
+<li><b>Manómetro de bolsillo:</b> pequeño y barato; el de la gasolinera suele estar descalibrado.</li>
+<li><b>Kit de reparación de pinchazos</b> con mechas o espray, y un mini compresor o cartuchos de CO2. Un pinchazo en el trasero es de lo más común.</li>
+<li><b>Herramientas básicas:</b> el kit de la moto más una llave para el eje trasero, llaves Allen y Torx, alicates, cinta americana, bridas.</li>
+<li><b>Fusibles de repuesto</b> y, si lleva halógenas, una bombilla.</li>
+<li><b>Cables de arranque finos</b> o un arrancador de litio compacto.</li>
+<li><b>Chaleco reflectante</b> (obligatorio en muchos países) y guantes de látex para trabajar con cadena o aceite.</li>
+<li><b>Candado de disco</b> y un candado de cadena si aparcas en la calle.</li></ul>
+<h4>Antes de un viaje largo</h4>
+<p>Cadena limpia y tensada, presión, revisión del nivel de aceite y de las pastillas, luces. Si estás a menos de 500 km de un cambio de aceite, hazlo antes de salir.</p>`,
+quiz:[{q:'¿Por qué llevar tu propio manómetro?',o:['Porque es obligatorio','Porque los de gasolinera suelen estar descalibrados','Para inflar','Para tensar la cadena'],a:1}]},
+
+{id:'parada',cat:'Mantenimiento',title:'Invierno y paradas largas',min:3,body:`
+<p>Si vas a dejar la moto parada más de un mes:</p>
+<ol><li><b>Depósito lleno</b> y, si puedes, con estabilizador de gasolina. Un depósito vacío se oxida por dentro y la gasolina vieja atasca inyectores y carburadores.</li>
+<li><b>Batería:</b> conéctala a un mantenedor, o desconéctala y cárgala una vez al mes.</li>
+<li><b>Neumáticos:</b> presión al máximo recomendado y, si es posible, moto sobre caballete central para no deformarlos.</li>
+<li><b>Cadena limpia y lubricada</b>; una capa de lubricante protege del óxido.</li>
+<li><b>Lavar y secar</b> antes de guardar. Cera o protector sobre metales expuestos.</li>
+<li><b>Funda transpirable</b> en interior. Evita plásticos que condensen humedad.</li></ol>
+<h4>Al volver a rodar</h4>
+<p>Presión de neumáticos, frenos (pueden estar pegados por el óxido del disco), luces, nivel de aceite. Arranca y deja calentar. Frena varias veces suave para limpiar los discos.</p>
+<div class="note">Arrancar la moto 5 minutos cada semana sin rodar es peor que no arrancarla: no llega a temperatura y genera condensación en el aceite y el escape.</div>`,
+quiz:[{q:'Antes de una parada larga, el depósito debe estar...',o:['Vacío','Lleno','A la mitad','Da igual'],a:1}]},
+
+{id:'glosario',cat:'Glosario',title:'Glosario motero',min:4,body:`
+<ul>
+<li><b>ABS:</b> sistema que evita que la rueda se bloquee al frenar.</li>
+<li><b>Basculante:</b> brazo que une la rueda trasera al chasis y permite que la suspensión trabaje.</li>
+<li><b>Caballete central / lateral:</b> soportes para aparcar. El central deja la rueda trasera en el aire (ideal para la cadena).</li>
+<li><b>Cárter:</b> parte inferior del motor donde se acumula el aceite.</li>
+<li><b>Corona y piñón:</b> ruedas dentadas de la transmisión (trasera y del motor). Con la cadena forman el kit de arrastre.</li>
+<li><b>Culata:</b> parte superior del motor donde están las válvulas y la bujía.</li>
+<li><b>DOT (líquido):</b> clasificación del líquido de frenos (DOT 3, 4, 5.1). En el flanco del neumático, indica su fecha de fabricación.</li>
+<li><b>Embrague en baño de aceite:</b> discos del embrague sumergidos en el aceite del motor.</li>
+<li><b>Horquilla:</b> suspensión delantera. "Invertida" cuando la parte gruesa va arriba.</li>
+<li><b>Juntas tóricas (O-ring, X-ring):</b> pequeños retenes de goma en la cadena que retienen la grasa interna.</li>
+<li><b>Mirilla:</b> ventana en el motor para ver el nivel de aceite.</li>
+<li><b>Par de apriete:</b> fuerza con la que se aprieta un tornillo, en Nm. Se mide con llave dinamométrica.</li>
+<li><b>Pinza de freno:</b> pieza que aloja las pastillas y aprieta el disco.</li>
+<li><b>Purgar frenos:</b> sacar el aire del circuito hidráulico.</li>
+<li><b>Regulador-rectificador:</b> convierte la corriente del alternador para cargar la batería.</li>
+<li><b>Retén:</b> junta que evita fugas de aceite (horquilla, motor).</li>
+<li><b>Rodaje:</b> primeros 500-1.000 km de un motor nuevo, con uso suave.</li>
+<li><b>TWI:</b> Tread Wear Indicator, testigo de desgaste del neumático.</li>
+<li><b>Vaso de expansión:</b> depósito del refrigerante donde se mira el nivel.</li>
+</ul>`,
+quiz:[{q:'¿Qué es el kit de arrastre?',o:['Los frenos','Cadena, piñón y corona','La suspensión','El embrague'],a:1}]}
+];
+
+let learnCat='all',openLesson=null,quizState=null;
+function renderLearn(){
+  const el=$('#p-learn');
+  if(openLesson){return renderLesson(el)}
+  const cats=['all',...new Set(LESSONS.map(l=>l.cat))];
+  const list=LESSONS.filter(l=>learnCat==='all'||l.cat===learnCat);
+  const done=state.learn.read.length;
+  el.innerHTML=`<h2>Aprender</h2><p class="muted" style="margin-bottom:10px">Lecciones cortas para entender tu moto y cuidarla tú mismo. Cada una termina con un mini test.</p>
+  <div class="bar"><i style="width:${Math.round(done/LESSONS.length*100)}%"></i></div><div class="tiny" style="margin:4px 0 12px">${done} de ${LESSONS.length} lecciones leídas</div>
+  <div class="tabs">${cats.map(c=>`<button class="${learnCat===c?'active':''}" onclick="learnCat='${c}';render()">${c==='all'?'Todas':esc(c)}</button>`).join('')}</div>
+  <div class="grid">${list.map(l=>{const read=state.learn.read.includes(l.id);const q=state.learn.quiz[l.id];return `<div class="card lesson ${read?'read':''}" onclick="openLesson='${l.id}';quizState=null;render()"><div class="row"><b>${esc(l.title)}</b>${read?'<span class="badge ok">✓ leída</span>':''}</div><div class="muted">${esc(l.cat)} · ${l.min} min${q?` · test ${q.score}/${q.total}`:''}</div></div>`}).join('')}</div>`;
+}
+function renderLesson(el){
+  const l=LESSONS.find(x=>x.id===openLesson);
+  const read=state.learn.read.includes(l.id);
+  let quiz='';
+  if(l.quiz&&l.quiz.length){
+    if(!quizState)quiz=`<div class="card"><b>🧠 Mini test (${l.quiz.length} pregunta${l.quiz.length>1?'s':''})</b><div class="btnrow"><button class="btn primary" onclick="quizState={i:0,score:0,answered:null};render()">Empezar</button></div></div>`;
+    else if(quizState.i>=l.quiz.length){quiz=`<div class="card ok"><b>Resultado: ${quizState.score}/${l.quiz.length}</b><p class="muted">${quizState.score===l.quiz.length?'¡Perfecto!':'Repasa la lección y vuelve a intentarlo cuando quieras.'}</p><div class="btnrow"><button class="btn" onclick="quizState={i:0,score:0,answered:null};render()">Repetir</button></div></div>`}
+    else{const q=l.quiz[quizState.i];quiz=`<div class="card quiz"><div class="tiny">Pregunta ${quizState.i+1} de ${l.quiz.length}</div><b style="display:block;margin:6px 0 10px">${esc(q.q)}</b>${q.o.map((o,i)=>`<button type="button" class="opt ${quizState.answered!==null?(i===q.a?'right':(i===quizState.answered?'wrong':'')):''}" ${quizState.answered!==null?'disabled':''} onclick="answer(${i})">${esc(o)}</button>`).join('')}${quizState.answered!==null?`<div class="btnrow"><button class="btn primary" onclick="quizState.i++;quizState.answered=null;render()">${quizState.i+1<l.quiz.length?'Siguiente':'Ver resultado'}</button></div>`:''}</div>`}
+  }
+  el.innerHTML=`<button class="btn link" onclick="openLesson=null;render()">← Todas las lecciones</button>
+  <h2 style="margin-top:8px">${esc(l.title)}</h2><div class="muted" style="margin-bottom:8px">${esc(l.cat)} · ${l.min} min de lectura</div>
+  <div class="card lessonbody">${l.body}</div>
+  ${quiz}
+  <div class="btnrow">${read?'<span class="badge ok">✓ Marcada como leída</span>':`<button class="btn primary" onclick="markRead('${l.id}')">Marcar como leída</button>`}</div>`;
+}
+function answer(i){const l=LESSONS.find(x=>x.id===openLesson);const q=l.quiz[quizState.i];quizState.answered=i;if(i===q.a)quizState.score++;if(quizState.i+1>=l.quiz.length){const prev=state.learn.quiz[l.id];if(!prev||quizState.score>=prev.score)state.learn.quiz[l.id]={score:quizState.score,total:l.quiz.length};save()}render()}
+function markRead(id){if(!state.learn.read.includes(id))state.learn.read.push(id);save();render();toast('Lección completada')}
+
+/* ==================== AJUSTES ==================== */
+function renderSettings(){
+  const el=$('#p-settings');const b=state.bike;
+  el.innerHTML=`<h2>Ajustes</h2>
+  <div class="card"><div class="row"><div><b>${esc(b.name||'Mi moto')}</b><div class="muted">${esc([b.brand,b.model,b.year].filter(Boolean).join(' '))||'Sin datos'}${b.plate?' · '+esc(b.plate):''}</div><div class="muted">${fmtKm(b.km)}</div>${b.notes?`<div class="tiny">${esc(b.notes)}</div>`:''}</div><button class="btn sm" onclick="editBike()">Editar</button></div></div>
+  <h3>Datos</h3>
+  <div class="card"><p class="muted">Tus datos se guardan solo en este dispositivo. Exporta una copia de seguridad de vez en cuando (o antes de cambiar de móvil).</p>
+  <div class="btnrow"><button class="btn" onclick="exportData()">⬇️ Exportar copia</button><label class="btn" style="display:inline-block;margin:0">⬆️ Importar copia<input type="file" accept="application/json" style="display:none" onchange="importData(this)"></label><button class="btn" onclick="copyData()">📋 Copiar al portapapeles</button></div>
+  <div class="btnrow"><button class="btn sm danger" onclick="resetItems()">Restaurar plan de mantenimiento por defecto</button><button class="btn sm danger" onclick="resetAll()">Borrar todo</button></div></div>
+  <h3>Preferencias</h3>
+  <div class="card"><label>Moneda<input value="${esc(state.settings.currency)}" maxlength="4" onchange="state.settings.currency=this.value||'€';save();render()"></label></div>
+  <h3>Instalar como app</h3>
+  <div class="card"><p class="muted"><b>Android (Chrome):</b> menú ⋮ → "Añadir a pantalla de inicio" o "Instalar aplicación".<br><b>iPhone (Safari):</b> botón compartir → "Añadir a pantalla de inicio".</p><p class="tiny" style="margin-top:6px">Una vez instalada funciona sin conexión y se abre como cualquier otra app.</p>
+  <div class="btnrow" id="installRow"></div></div>
+  <p class="tiny" style="margin-top:14px">MotoLog v1 · Los consejos son orientativos y no sustituyen el manual del fabricante ni a un mecánico.</p>`;
+  if(deferredInstall){$('#installRow').innerHTML='<button class="btn primary" onclick="doInstall()">Instalar MotoLog</button>'}
+}
+function editBike(){
+  const b=state.bike;
+  openModal('Mi moto',`
+    <label>Nombre (apodo)<input name="name" value="${esc(b.name)}" placeholder="Ej. La Roja"></label>
+    <div class="frow"><label>Marca<input name="brand" value="${esc(b.brand)}" placeholder="Honda, Yamaha..."></label><label>Modelo<input name="model" value="${esc(b.model)}" placeholder="CB500F"></label></div>
+    <div class="frow"><label>Año<input name="year" type="number" min="1900" max="2100" value="${esc(b.year)}"></label><label>Matrícula<input name="plate" value="${esc(b.plate)}"></label></div>
+    <label>Kilómetros actuales<input name="km" type="number" min="0" required value="${b.km}"></label>
+    <label>Notas <span class="tiny">(aceite que usa, presiones, referencias...)</span><textarea name="notes">${esc(b.notes)}</textarea></label>`,
+    d=>{Object.assign(state.bike,{name:d.name.trim(),brand:d.brand.trim(),model:d.model.trim(),year:d.year,plate:d.plate.trim(),km:Number(d.km)||0,notes:d.notes.trim()});save();render();toast('Moto guardada')});
+}
+function exportData(){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`motolog-${today()}.json`;document.body.appendChild(a);a.click();a.remove();
+}
+function copyData(){navigator.clipboard?.writeText(JSON.stringify(state)).then(()=>toast('Copiado')).catch(()=>toast('No se pudo copiar'))}
+function importData(input){
+  const f=input.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{const s=JSON.parse(r.result);if(!s||s.v!==1||!Array.isArray(s.items))throw 0;if(confirm('Esto reemplazará los datos actuales. ¿Continuar?')){localStorage.setItem(KEY,JSON.stringify(s));state=load();render();toast('Datos importados')}}catch(e){toast('Archivo no válido')}input.value=''};
+  r.readAsText(f);
+}
+function resetItems(){if(confirm('Se restaurarán los puntos e intervalos por defecto. El historial se conserva. ¿Continuar?')){const custom=state.items.filter(i=>!DEFAULT_ITEMS.some(d=>d.id===i.id));state.items=[...JSON.parse(JSON.stringify(DEFAULT_ITEMS)),...custom];save();render();toast('Plan restaurado')}}
+function resetAll(){if(confirm('¿Borrar TODOS los datos? Esta acción no se puede deshacer.')&&confirm('¿Seguro? Exporta una copia antes si tienes dudas.')){localStorage.removeItem(KEY);state=freshState();save();go('home')}}
+
+/* ==================== MODAL ==================== */
+let modalCb=null;
+function openModal(title,body,onSave,extra=[]){
+  modalCb=onSave;$('#modalTitle').textContent=title;$('#modalBody').innerHTML=body;
+  const btns=$('#modalBtns');btns.innerHTML=`<button type="submit" class="btn primary">Guardar</button><button type="button" class="btn" onclick="closeModal()">Cancelar</button>`;
+  extra.forEach(b=>{const x=document.createElement('button');x.type='button';x.className='btn '+(b.cls||'');x.textContent=b.label;x.onclick=b.fn;btns.appendChild(x)});
+  $('#modalbg').classList.add('open');
+  const first=$('#modalBody').querySelector('input:not([type=date]):not([type=checkbox]),select,textarea');if(first&&window.innerWidth>600)first.focus();
+}
+function closeModal(){$('#modalbg').classList.remove('open');modalCb=null}
+function submitModal(e){e.preventDefault();const d={};new FormData(e.target).forEach((v,k)=>d[k]=v);e.target.querySelectorAll('input[type=checkbox]').forEach(c=>d[c.name]=c.checked);if(modalCb&&modalCb(d)!==false)closeModal();return false}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+/* ==================== PWA ==================== */
+let deferredInstall=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;if(current==='settings')render()});
+function doInstall(){if(!deferredInstall)return;deferredInstall.prompt();deferredInstall.userChoice.then(()=>{deferredInstall=null;render()})}
+/*SW*/if('serviceWorker' in navigator&&location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+
+/* ==================== ARRANQUE ==================== */
+const initial=(location.hash||'').slice(1);
+go(['home','maint','history','fuel','check','learn','settings'].includes(initial)?initial:'home');
+</script>
+</body>
+</html>
