@@ -137,11 +137,21 @@ export const STATE_EXP = {
   MOD_CLAMP: [0.25, 1.60],   // techo/piso conjunto (anti sobrerreacción, §50)
 }
 
-export function stateResponseExp({ scoreDiff, minuto, gap = 0, responseRatio = null }) {
+// urgencia (opcional, 0..1, desde la tabla — motivacion.js): un equipo que se
+// juega el descenso/título empuja más cuando el resultado no le sirve; uno sin
+// nada en juego, menos. Acotado a ±8% sobre el EFECTO del marcador (no sobre
+// el total), y solo cuando no va ganando. Sin dato → neutro.
+export function stateResponseExp({ scoreDiff, minuto, gap = 0, responseRatio = null, urgencia = null, motivNota = null }) {
   const sBase = getSituationS(scoreDiff)          // efecto base del marcador
   const efecto = sBase - 1                        // desviación respecto a neutro
   if (Math.abs(efecto) < 0.001) {
-    return { factor: 1, sBase, modTiempo: 1, modFuerza: 1, modRespuesta: 1, contribuciones: [] }
+    // Empate: el marcador no empuja, pero la urgencia sí puede (poco): el que
+    // necesita ganar no se conforma con el 0-0
+    const modUrg0 = urgencia != null ? 1 + (urgencia - 0.5) * 0.10 : 1
+    return {
+      factor: +modUrg0.toFixed(3), sBase, modTiempo: 1, modFuerza: 1, modRespuesta: 1, modUrgencia: +modUrg0.toFixed(2),
+      contribuciones: urgencia != null ? [{ factor: 'Motivación (tabla)', valor: +(modUrg0 - 1).toFixed(3), nota: motivNota ?? `urgencia ${urgencia}` }] : [],
+    }
   }
 
   // 1) Tiempo: urgencia creciente
@@ -164,10 +174,14 @@ export function stateResponseExp({ scoreDiff, minuto, gap = 0, responseRatio = n
     modRespuesta = clamp(Math.pow(responseRatio, 1.3), ...STATE_EXP.R_CLAMP)
   }
 
-  // Los tres modificadores se acotan EN CONJUNTO: sin este techo, tiempo y
+  // 4) Motivación desde la tabla (solo si no va ganando: el que gana y se juega
+  //    algo, administra igual). Acotado ±8% sobre el efecto.
+  const modUrgencia = (urgencia != null && !(scoreDiff > 0)) ? clamp(1 + (urgencia - 0.5) * 0.16, 0.92, 1.08) : 1
+
+  // Los modificadores se acotan EN CONJUNTO: sin este techo, tiempo y
   // fuerza podrían multiplicarse y disparar la proyección (el error inverso
   // que el propio usuario pidió evitar en §50).
-  const mod = clamp(modTiempo * modFuerza * modRespuesta, 0.25, 1.60)
+  const mod = clamp(modTiempo * modFuerza * modRespuesta * modUrgencia, 0.25, 1.60)
   const factor = 1 + efecto * mod
   const contribuciones = [
     { factor: 'Marcador', valor: +(sBase - 1).toFixed(3), nota: `diferencia ${scoreDiff > 0 ? '+' : ''}${scoreDiff}` },
@@ -175,7 +189,8 @@ export function stateResponseExp({ scoreDiff, minuto, gap = 0, responseRatio = n
     { factor: 'Fuerza relativa', valor: +(modFuerza - 1).toFixed(3), nota: gap > 0.15 ? 'superior al rival' : gap < -0.15 ? 'inferior al rival' : 'parejos' },
     { factor: 'Respuesta observada', valor: +(modRespuesta - 1).toFixed(3), nota: responseRatio == null ? 'sin dato' : responseRatio >= 1.15 ? `respondiendo (${responseRatio}× su baseline)` : responseRatio <= 0.85 ? `SIN respuesta (${responseRatio}× su baseline)` : `en su nivel (${responseRatio}×)` },
   ]
-  return { factor: +factor.toFixed(3), sBase, modTiempo: +modTiempo.toFixed(2), modFuerza: +modFuerza.toFixed(2), modRespuesta: +modRespuesta.toFixed(2), contribuciones }
+  if (urgencia != null) contribuciones.push({ factor: 'Motivación (tabla)', valor: +(modUrgencia - 1).toFixed(3), nota: motivNota ?? `urgencia ${urgencia}` })
+  return { factor: +factor.toFixed(3), sBase, modTiempo: +modTiempo.toFixed(2), modFuerza: +modFuerza.toFixed(2), modRespuesta: +modRespuesta.toFixed(2), modUrgencia: +modUrgencia.toFixed(2), contribuciones }
 }
 
 // ─── Chasing efectivo: ¿persigue de verdad o solo va perdiendo? ──────────────
@@ -212,12 +227,14 @@ export function matchClosure({ scoreDiff, minuto, responseRatioPerdedor, pace })
 }
 
 // ─── VECTOR DE ESTADO COMPLETO ───────────────────────────────────────────────
+// motivH / motivA (opcional): salida de situacionTabla() — urgencia y nota
 export function buildGameState({
   minuto, golesH = 0, golesA = 0,
   priorH = null, priorA = null,
   shotsH = null, shotsA = null,
   priorShotsH = null, priorShotsA = null,
   snaps = [], redH = 0, redA = 0,
+  motivH = null, motivA = null,
 }) {
   const diffH = golesH - golesA
   const gapH = strengthGap(priorH, priorA)
@@ -245,9 +262,14 @@ export function buildGameState({
     chasingA: effectiveChasing({ scoreDiff: -diffH, minuto, responseRatio: respA.ratio, pace: paceA }),
     cierre: matchClosure({ scoreDiff: diffH, minuto, responseRatioPerdedor: perdedorResp, pace: paceComb }),
     rojas: { h: redH, a: redA },
+    // Motivación desde la tabla (si se pasó)
+    motivH: motivH?.disponible ? motivH : null,
+    motivA: motivA?.disponible ? motivA : null,
     // Factores experimentales por lado (para comparar con el baseline)
-    stateExpH: stateResponseExp({ scoreDiff: diffH, minuto, gap: gapH.gap, responseRatio: respH.ratio }),
-    stateExpA: stateResponseExp({ scoreDiff: -diffH, minuto, gap: gapA.gap, responseRatio: respA.ratio }),
+    stateExpH: stateResponseExp({ scoreDiff: diffH, minuto, gap: gapH.gap, responseRatio: respH.ratio,
+      urgencia: motivH?.disponible ? motivH.urgencia : null, motivNota: motivH?.disponible ? motivH.nota : null }),
+    stateExpA: stateResponseExp({ scoreDiff: -diffH, minuto, gap: gapA.gap, responseRatio: respA.ratio,
+      urgencia: motivA?.disponible ? motivA.urgencia : null, motivNota: motivA?.disponible ? motivA.nota : null }),
     // Baseline actual, para ver la diferencia
     stateBaseH: getSituationS(diffH),
     stateBaseA: getSituationS(-diffH),

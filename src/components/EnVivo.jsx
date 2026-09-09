@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react'
 import { getSituationS, getTacticalK, calcLiveExpected, poissonOver } from '../lib/engine'
 import { bestRealisticLine, linesAround } from '../lib/picks'
-import { fetchLive } from '../lib/football-api'
+import { fetchLive, fetchStandings } from '../lib/football-api'
+import { situacionTabla } from '../lib/motivacion'
 import { fetchFixtureStats, hasLivescore, fetchLiveGlobal } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
@@ -248,6 +249,16 @@ export default function EnVivo({ league, onVerLiga }) {
   // Prepartido: promedios de los últimos 10 por equipo (como en Analizar)
   const [preA, setPreA] = useState(null)
   const [preB, setPreB] = useState(null)
+  // Tabla de la liga del partido seleccionado → motivación automática (urgencia)
+  // para el estado LIVE experimental. Caché de 60 min: cuesta casi nada.
+  const [tablaLive, setTablaLive] = useState({ leagueId: null, filas: [] })
+  useEffect(() => {
+    const lid = liveMatches.find(m => m.id === selectedId)?.leagueId ?? null
+    if (!lid || tablaLive.leagueId === lid) return
+    let alive = true
+    fetchStandings(lid).then(r => { if (alive) setTablaLive({ leagueId: lid, filas: r?.ok ? (r.groups ?? []).flat() : [] }) }).catch(() => {})
+    return () => { alive = false }
+  }, [selectedId]) // eslint-disable-line react-hooks/exhaustive-deps
   const [preLoading, setPreLoading] = useState(false)
   const [preProgress, setPreProgress] = useState('')
   const [preError, setPreError] = useState(null)
@@ -957,7 +968,9 @@ export default function EnVivo({ league, onVerLiga }) {
           fuente={cornersFuente}
           snaps={cornersSnaps}
           preA={preA} preB={preB}
-          gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0 })}
+          gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0,
+            motivH: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.homeId, name: selMatch.homeTeam }, { type: selLeague?.type }) : null,
+            motivA: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.awayId, name: selMatch.awayTeam }, { type: selLeague?.type }) : null })}
           league={selLeague}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
@@ -978,7 +991,9 @@ export default function EnVivo({ league, onVerLiga }) {
           fuente={shotsFuente}
           snaps={shotsSnaps}
           preA={preA} preB={preB}
-          gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0 })}
+          gs={buildGameState({ minuto, golesH: golesA, golesA: golesB, priorH: preA, priorA: preB, shotsH: perTeam?.h?.shots, shotsA: perTeam?.a?.shots, priorShotsH: preA?.shots_avg ?? null, priorShotsA: preB?.shots_avg ?? null, snaps: shotsSnaps ?? [], redH: reds?.h ?? 0, redA: reds?.a ?? 0,
+            motivH: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.homeId, name: selMatch.homeTeam }, { type: selLeague?.type }) : null,
+            motivA: selMatch && tablaLive.leagueId === selMatch.leagueId ? situacionTabla(tablaLive.filas, { id: selMatch.awayId, name: selMatch.awayTeam }, { type: selLeague?.type }) : null })}
           matchInfo={selMatch ? {
             id: selMatch.id, home: selMatch.homeTeam, away: selMatch.awayTeam,
             homeId: selMatch.homeId, awayId: selMatch.awayId, leagueId: selMatch.leagueId,

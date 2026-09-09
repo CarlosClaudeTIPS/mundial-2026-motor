@@ -54,6 +54,7 @@ export default function GameStateExp({ gs, model, lado = 'T', mercado, nombres, 
         <p><b className="text-gray-500">RITMO</b> · {ex.ritmo}</p>
         <p><b className="text-gray-500">TIEMPO</b> · {ex.tiempo}{ex.chasing?.chasing ? ` Persecución efectiva: ${ex.chasing.nivel} (${ex.chasing.score}/100).` : ''} Cierre: {ex.cierre?.nivel}.</p>
         <p><b className="text-gray-500">OPONENTE</b> · {ex.oponente}</p>
+        <p><b className="text-gray-500">MOTIVACIÓN</b> · {ex.motivacion}</p>
         <p className="text-violet-300"><b className="text-gray-500">PROYECCIÓN</b> · {ex.proyeccion}</p>
         <p className="text-yellow-500/90"><b className="text-gray-500">RIESGO</b> · {ex.riesgo}</p>
         <p><b className="text-gray-500">DECISIÓN</b> · {ex.decision}</p>

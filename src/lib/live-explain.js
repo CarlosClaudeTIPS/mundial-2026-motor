@@ -40,6 +40,10 @@ export function explicacionLive({ gs, model, lado = 'T', mercado = 'tiros', nomb
     ? `Ritmo de ${nomFoco}: ${pace.trend}${pace.corto != null ? ` (últimos 5': ${pace.corto}/min · partido: ${pace.partido}/min)` : ''}${pace.spike ? ' — pico corto, no sostenido' : ''}.`
     : 'Ritmo reciente: sin ventanas suficientes para medirlo.'
   const tiempo = `Quedan ~${gs.restante} minutos efectivos.`
+  const motiv = foco === 'H' ? gs.motivH : gs.motivA
+  const motivacion = motiv
+    ? `${motiv.nota}${motiv.motivacion === 'necesita_ganar' ? ' → necesita ganar' : motiv.motivacion === 'ya_clasificado' ? ' → sin nada en juego' : motiv.motivacion === 'ganar_o_empatar' ? ' → pelea algo' : ''}.`
+    : 'Motivación (tabla): sin dato.'
   const oponente = rivalResp?.disponible
     ? `${nomRival} produce ${rivalResp.ratio}× lo que le correspondería a esta altura${gs.dominio?.disponible ? ` · reparto de tiros ${Math.round(gs.dominio.shareLocal * 100)}% local (${gs.dominio.tipo})` : ''}.`
     : 'Oponente: sin muestra suficiente para juzgar su producción.'
@@ -61,7 +65,7 @@ export function explicacionLive({ gs, model, lado = 'T', mercado = 'tiros', nomb
 
   return {
     foco: nomFoco,
-    situacion, respuesta, ritmo, tiempo, oponente, proyeccion, riesgo, decision,
+    situacion, respuesta, ritmo, tiempo, oponente, motivacion, proyeccion, riesgo, decision,
     contribuciones: st.contribuciones,          // factor · valor · nota (reales)
     factorBase: base, factorExp: st.factor,
     proyBase, proyExp, difPct: dif,

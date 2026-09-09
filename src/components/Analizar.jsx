@@ -15,6 +15,7 @@ import { fetchStandings, fetchFixtures } from '../lib/football-api'
 import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
 import { fetchH2H, fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
 import RecentResults, { fechaDMY } from './RecentResults'
+import { situacionTabla, jornadaDe } from '../lib/motivacion'
 import { informePrePartido, hasIA } from '../lib/ia'
 import { savePrediccion, getPrediccion } from '../lib/predicciones'
 
@@ -641,10 +642,12 @@ export function posicionDe(tabla, team) {
   return fila ? { rank: fila.rank, total: tabla.length, pts: fila.pts, pj: fila.pj, fila } : null
 }
 
-function Clasificacion({ tabla, teamA, teamB, leagueName }) {
+function Clasificacion({ tabla, teamA, teamB, leagueName, tipo = 'league' }) {
   const [open, setOpen] = useState(true)
   if (!tabla?.length) return null
   const pA = posicionDe(tabla, teamA); const pB = posicionDe(tabla, teamB)
+  const sA = situacionTabla(tabla, teamA, { type: tipo }); const sB = situacionTabla(tabla, teamB, { type: tipo })
+  const MOT_LBL = { necesita_ganar: '🔥 necesita ganar', ganar_o_empatar: '⚡ pelea algo', cualquier_result: '🎯 presión normal', ya_clasificado: '😴 sin nada en juego' }
   const esA = t => pA && t.id === pA.fila.id
   const esB = t => pB && t.id === pB.fila.id
   const grupos = [...new Set(tabla.map(t => t.group).filter(Boolean))]
@@ -659,6 +662,17 @@ function Clasificacion({ tabla, teamA, teamB, leagueName }) {
         </span>
         <span className="text-gray-400">{open ? '▲' : '▼'}</span>
       </button>
+      {/* Lo que la tabla dice de cada uno → alimenta la motivación del contexto */}
+      {(sA.disponible || sB.disponible) && (
+        <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-1.5 text-[11px]">
+          {[[sA, teamA, 'text-green-400'], [sB, teamB, 'text-blue-400']].map(([s, t, cls]) => s.disponible && (
+            <p key={t.name} className="bg-dark-800/60 rounded-lg px-2 py-1 text-gray-300">
+              <span className={`font-semibold ${cls}`}>{t.name}</span>: {s.nota} → <span className="text-white">{MOT_LBL[s.motivacion] ?? s.motivacion}</span>
+              <span className="text-gray-600"> (auto desde la tabla; edítalo en Contexto)</span>
+            </p>
+          ))}
+        </div>
+      )}
       {open && (
         <div className="mt-3 border-t border-dark-600 pt-2 max-h-80 overflow-auto">
           <div className="grid grid-cols-[2rem_1fr_2rem_2rem_2rem_2rem_2.5rem_2.5rem_2.5rem] gap-x-2 text-[10px] text-gray-600 uppercase tracking-wide px-1 mb-1">
@@ -718,6 +732,22 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
       checks: { ...prev.checks, eliminacion: league.type === 'cup' },
     }))
   }, [league.id, league.type])
+
+  // ── Motivación AUTOMÁTICA desde la tabla (2026-09-09) ──
+  // Lee posición, puntos al descenso/Europa/líder y partidos restantes, y
+  // pre-llena motA/motB/jornada del contexto. El usuario puede sobrescribirlo
+  // en el panel; se recalcula solo cuando cambian los equipos o la tabla.
+  useEffect(() => {
+    if (!teamA || !teamB) return
+    const sA = situacionTabla(tabla, teamA, { type: league.type })
+    const sB = situacionTabla(tabla, teamB, { type: league.type })
+    setCtx(prev => ({
+      ...prev,
+      ...(sA.disponible ? { motA: sA.motivacion } : {}),
+      ...(sB.disponible ? { motB: sB.motivacion } : {}),
+      jornada: jornadaDe(sA, sB, league.type),
+    }))
+  }, [teamA?.id, teamB?.id, tabla, league.type]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Clima automático: busca el fixture de estos equipos y trae el pronóstico ──
   useEffect(() => {
@@ -1245,7 +1275,7 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
           )}
 
           {/* ── Clasificación: de qué posición va cada equipo ── */}
-          <Clasificacion tabla={tabla} teamA={teamA} teamB={teamB} leagueName={league.name} />
+          <Clasificacion tabla={tabla} teamA={teamA} teamB={teamB} leagueName={league.name} tipo={league.type} />
 
           {/* ── Resumen Expected ── */}
           <div className="card bg-dark-700">
