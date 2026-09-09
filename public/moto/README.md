@@ -1,6 +1,7 @@
-# MotoLog 🏍️
+# MotoLog 🏍️ · Suzuki Gixxer 155 FI ABS 2024
 
-App web (PWA) para llevar el mantenimiento de tu moto y aprender a cuidarla.
+App web (PWA) para llevar el mantenimiento de una Suzuki Gixxer 155 FI ABS 2024
+(uso personal, Colombia) y aprender a cuidarla.
 Un solo archivo HTML, sin backend ni dependencias: se instala en el móvil,
 funciona sin conexión y los datos se guardan en el propio dispositivo.
 
@@ -9,12 +10,12 @@ funciona sin conexión y los datos se guardan en el propio dispositivo.
 | Pestaña | Función |
 |---------|---------|
 | Inicio | Consejo del día, puntos vencidos / próximos, acciones rápidas |
-| Mantenimiento | Plan con 16 puntos por defecto (aceite, cadena, frenos, neumáticos, ITV...). Cada uno con intervalo en km y/o meses, estado (al día / pronto / vencido) y barra de progreso. Editable. |
+| Mantenimiento | Plan de 19 puntos basado en el programa Suzuki de la Gixxer (servicio a 1.000 km y luego cada 3.000 km): aceite, filtros, bujía, válvulas, cadena, frenos, mangueras, llantas, cables, batería, tornillería, horquilla, más SOAT y revisión técnico-mecánica. Cada uno con intervalo en km y/o meses, estado (al día / pronto / vencido) y barra de progreso. Editable. |
 | Historial | Registro de cada intervención con fecha, km, coste, taller y notas. Gasto anual y total. |
-| Combustible | Repostajes con cálculo de L/100 km, km/L y coste por 100 km. |
+| Combustible | Tanqueadas con cálculo de L/100 km, km/L y costo por 100 km (referencia Gixxer: 40-50 km/L). |
 | Checklist | Revisión pre-ruta T-CLOCS que se reinicia cada día. |
-| Aprender | 13 lecciones (motor, aceite, cadena, neumáticos, frenos, eléctrico, conducción segura, glosario...) con mini test al final de cada una. |
-| Ajustes | Datos de la moto, copia de seguridad (exportar / importar JSON), moneda, instalación. |
+| Aprender | 14 lecciones, la primera dedicada a la Gixxer (refrigeración por aire y aceite, ABS, valores clave, plan Suzuki, trámites en Colombia), más motor, aceite, cadena, llantas, frenos, eléctrico, conducción segura y glosario. Mini test al final de cada una. |
+| Ajustes | Ficha técnica de la Gixxer (aceite, bujía, presiones, cadena, frenos, tanque...), datos de la moto, copia de seguridad (exportar / importar JSON), moneda (pesos por defecto), instalación. |
 
 ## Usarla
 
@@ -42,5 +43,9 @@ public/moto/
 └── icon.svg             # Icono
 ```
 
-Los intervalos de mantenimiento por defecto son orientativos: ajústalos a la
-tabla del manual de tu moto desde la propia app.
+## Adaptar a otra moto
+
+Los datos específicos están en dos constantes al inicio del script de `index.html`:
+`BIKE` (ficha técnica) y `DEFAULT_ITEMS` (plan de mantenimiento). `PLAN_VERSION`
+controla la migración: al cambiarla, los dispositivos con datos guardados actualizan
+el plan conservando historial y puntos personalizados.

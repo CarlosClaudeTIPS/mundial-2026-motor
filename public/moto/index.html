@@ -7,7 +7,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="MotoLog">
-<title>MotoLog · Mantenimiento y aprendizaje</title>
+<meta name="description" content="Mantenimiento, historial, combustible y lecciones para una Suzuki Gixxer 155 FI ABS 2024.">
+<title>MotoLog · Gixxer 155</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏍️</text></svg>">
 <link rel="apple-touch-icon" href="icon.svg">
@@ -150,7 +151,7 @@ function today(){const d=new Date();return new Date(d.getTime()-d.getTimezoneOff
 function parseD(s){return new Date(s+'T00:00:00')}
 function fmtD(s){if(!s)return '—';const [y,m,d]=s.split('-');return `${d}/${m}/${y}`}
 function fmtKm(n){return (Number(n)||0).toLocaleString('es-ES')+' km'}
-function fmtMoney(n){return (Number(n)||0).toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' '+(state.settings.currency||'€')}
+function fmtMoney(n){const c=state.settings.currency||'$';const noDec=c==='$'||/COP/i.test(c);const v=(Number(n)||0).toLocaleString('es-CO',{minimumFractionDigits:noDec?0:2,maximumFractionDigits:noDec?0:2});return c==='$'?'$ '+v:v+' '+c}
 function addMonths(s,months){const d=parseD(s);const w=Math.floor(months);d.setMonth(d.getMonth()+w);d.setDate(d.getDate()+Math.round((months-w)*30.44));return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10)}
 function daysUntil(s){return Math.round((parseD(s)-parseD(today()))/86400000)}
 function daysAgo(s){return -daysUntil(s)}
@@ -158,33 +159,38 @@ function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show'
 function relDays(n){if(n===0)return 'hoy';if(n===1)return 'mañana';if(n===-1)return 'ayer';if(n>0)return `en ${n} días`;return `hace ${-n} días`}
 
 /* ==================== DATOS POR DEFECTO ==================== */
+const PLAN_VERSION='gixxer155-2024-v1';
+const BIKE=Object.freeze({brand:'Suzuki',model:'Gixxer 155 FI ABS',year:'2024',engine:'154,9 cc monocilíndrico SOHC 2 válvulas, 4 tiempos, inyección electrónica (FI)',cooling:'Aire + radiador de aceite (SOCS). No lleva refrigerante.',oil:'10W-40, JASO MA2, API SL o superior (Suzuki Ecstar o equivalente)',oilQty:'≈ 1,0 L en cambio normal · ≈ 1,1 L con filtro (verifica en la mirilla)',plug:'NGK CPR8EA-9 (separación 0,8-0,9 mm)',tireF:'100/80-17 · 25 psi',tireR:'140/60R-17 · 33 psi solo · 36 psi con pasajero',chain:'Holgura 20-30 mm en el centro del tramo inferior',brakes:'Disco 266 mm delante · 240 mm detrás · ABS · líquido DOT 4',tank:'12 L (reserva 2,4 L) · gasolina corriente o extra',battery:'12 V sellada, sin mantenimiento',throttle:'Juego libre del acelerador 2-4 mm',weight:'135 kg · asiento 780 mm',service:'Servicio inicial a 1.000 km, luego cada 3.000 km o 6 meses'});
 const DEFAULT_ITEMS=[
- {id:'oil',name:'Aceite de motor',km:5000,months:12,cat:'Motor',tip:'Cambia también la arandela del tapón de vaciado. Usa aceite con norma JASO MA/MA2 si tu moto tiene embrague en baño de aceite (la mayoría).'},
- {id:'oilfilter',name:'Filtro de aceite',km:10000,months:12,cat:'Motor',tip:'Muchos fabricantes lo cambian en cada cambio de aceite o cada dos. Consulta tu manual.'},
- {id:'airfilter',name:'Filtro de aire',km:12000,months:24,cat:'Motor',tip:'Si ruedas por polvo o caminos de tierra, revísalo mucho antes.'},
- {id:'plugs',name:'Bujías',km:12000,months:null,cat:'Motor',tip:'Color marrón claro en el electrodo = combustión correcta. Negro = mezcla rica; blanco = mezcla pobre o exceso de temperatura.'},
- {id:'valves',name:'Holgura de válvulas',km:24000,months:null,cat:'Motor',tip:'Trabajo de taller. Un castañeteo metálico en frío puede indicar holgura excesiva.'},
- {id:'coolant',name:'Líquido refrigerante',km:24000,months:24,cat:'Motor',tip:'Solo en motos refrigeradas por líquido. Nunca abras el tapón del radiador con el motor caliente.'},
- {id:'chainlube',name:'Lubricar cadena',km:500,months:null,cat:'Transmisión',tip:'Mejor con la cadena caliente tras rodar. Aplica en la parte interior de la cadena y deja reposar antes de rodar.'},
- {id:'chaintension',name:'Revisar tensión de cadena',km:1000,months:1,cat:'Transmisión',tip:'Holgura típica 25-35 mm en el punto medio, con la moto sobre el caballete lateral. El valor exacto está en tu manual.'},
- {id:'chainkit',name:'Kit de arrastre (cadena, piñón y corona)',km:25000,months:null,cat:'Transmisión',tip:'Se cambian los tres a la vez. Dientes con forma de aleta de tiburón = corona gastada.'},
- {id:'pads',name:'Revisar pastillas de freno',km:5000,months:6,cat:'Frenos',tip:'Cambia cuando queden unos 2 mm de material o al llegar a la ranura indicadora de desgaste.'},
- {id:'brakefluid',name:'Líquido de frenos',km:null,months:24,cat:'Frenos',tip:'Absorbe humedad con el tiempo. Si está oscuro o la maneta se siente esponjosa, cámbialo antes.'},
- {id:'tirepressure',name:'Presión de neumáticos',km:null,months:0.5,cat:'Neumáticos',tip:'Mide siempre con el neumático frío. Los valores están en el manual o en una pegatina del basculante.'},
- {id:'tires',name:'Revisar desgaste de neumáticos',km:3000,months:6,cat:'Neumáticos',tip:'Mínimo legal habitual 1,6 mm. Los testigos TWI marcan el límite. Con más de 5-6 años conviene cambiarlos aunque tengan dibujo.'},
- {id:'battery',name:'Revisar batería',km:null,months:6,cat:'Eléctrico',tip:'12,6 V en reposo = cargada. Menos de 12,2 V = cárgala. Limpia y aprieta los bornes.'},
- {id:'fork',name:'Aceite de horquilla',km:30000,months:36,cat:'Suspensión',tip:'Si ves aceite en las barras de la horquilla, los retenes están dañados.'},
- {id:'itv',name:'Inspección técnica (ITV / revisión oficial)',km:null,months:24,cat:'Legal',tip:'Ajusta el intervalo según tu país y la antigüedad de la moto.'}
+ {id:'oil',name:'Aceite de motor',km:3000,months:6,cat:'Motor',tip:'10W-40 JASO MA2. Aprox. 1,0 L (1,1 L si cambias el filtro). Suzuki lo cambia a los 1.000 km y luego cada 3.000 km. Cambia la arandela del tapón.'},
+ {id:'oilfilter',name:'Filtro de aceite',km:6000,months:12,cat:'Motor',tip:'El manual permite cada dos cambios de aceite; muchos talleres Suzuki lo cambian en cada uno. Es barato: si dudas, cámbialo.'},
+ {id:'airfilter',name:'Filtro de aire',km:12000,months:24,cat:'Motor',tip:'Se revisa y limpia en cada servicio de 3.000 km y se sustituye a los 12.000 km. Con polvo o trocha, antes.'},
+ {id:'plugs',name:'Bujía',km:12000,months:null,cat:'Motor',tip:'NGK CPR8EA-9. Se inspecciona a los 6.000 km y se cambia a los 12.000 km. Electrodo marrón claro = combustión correcta.'},
+ {id:'valves',name:'Holgura de válvulas',km:6000,months:null,cat:'Motor',tip:'Trabajo de taller. Suzuki la revisa en el servicio de 1.000 km y luego cada 6.000 km. Un castañeteo metálico en frío indica holgura excesiva.'},
+ {id:'chainlube',name:'Lubricar cadena',km:500,months:null,cat:'Transmisión',tip:'El manual dice cada 1.000 km; con lluvia o polvo, cada 500 km. Con la cadena caliente, por la parte interior, y deja asentar 10 min.'},
+ {id:'chaintension',name:'Revisar tensión de cadena',km:1000,months:1,cat:'Transmisión',tip:'Holgura 20-30 mm en el centro del tramo inferior, con la moto sobre el caballete lateral. Gira la rueda y mide en varios puntos.'},
+ {id:'chainkit',name:'Kit de arrastre (cadena, piñón y sprocket)',km:20000,months:null,cat:'Transmisión',tip:'En la Gixxer suele durar 18.000-25.000 km según cuidado. Se cambian los tres a la vez. Dientes en forma de aleta de tiburón = gastado.'},
+ {id:'pads',name:'Revisar pastillas de freno',km:3000,months:6,cat:'Frenos',tip:'Se revisan en cada servicio. Cambia con 2 mm de material o al llegar a la ranura indicadora. Discos: 266 mm delante, 240 mm detrás.'},
+ {id:'brakefluid',name:'Líquido de frenos (DOT 4)',km:null,months:24,cat:'Frenos',tip:'Cada 2 años. Absorbe humedad: si está oscuro o la maneta se siente esponjosa, cámbialo antes. Circuito con ABS: mejor en taller.'},
+ {id:'hoses',name:'Mangueras de freno y de gasolina',km:null,months:48,cat:'Frenos',tip:'Suzuki indica sustituirlas cada 4 años. Revisa grietas y sudoración en cada servicio.'},
+ {id:'tirepressure',name:'Presión de llantas',km:null,months:0.5,cat:'Llantas',tip:'En frío: 25 psi delante, 33 psi detrás (36 psi con pasajero). Cada 15 días o antes de una salida larga.'},
+ {id:'tires',name:'Revisar desgaste de llantas',km:3000,months:6,cat:'Llantas',tip:'100/80-17 delante y 140/60R-17 detrás. Cambia al llegar a los testigos TWI (1,6 mm) o con más de 5 años.'},
+ {id:'cables',name:'Cables de acelerador y embrague',km:3000,months:6,cat:'Controles',tip:'Juego libre del acelerador 2-4 mm; el puño debe volver solo. Lubrica los cables si van duros.'},
+ {id:'battery',name:'Revisar batería',km:null,months:6,cat:'Eléctrico',tip:'Batería sellada de 12 V. 12,6 V en reposo = cargada; menos de 12,2 V = cárgala. Limpia y aprieta los bornes.'},
+ {id:'bolts',name:'Apriete de tornillería (ejes, chasis, escape)',km:6000,months:12,cat:'Chasis',tip:'Se comprueba en el servicio de 1.000 km y luego cada 6.000 km. Con llave dinamométrica y los pares del manual.'},
+ {id:'fork',name:'Aceite de horquilla y retenes',km:30000,months:36,cat:'Suspensión',tip:'Si ves aceite en las barras, los retenes están dañados. Revisa las barras en cada servicio.'},
+ {id:'soat',name:'SOAT',km:null,months:12,cat:'Legal',tip:'Obligatorio desde el primer día. Renuévalo antes de que venza: sin SOAT hay inmovilización y multa.'},
+ {id:'rtm',name:'Revisión técnico-mecánica',km:null,months:12,cat:'Legal',tip:'Moto matriculada en 2024: la primera se hace al cumplir 2 años desde la matrícula (2026) y luego cada año. Registra la fecha de matrícula como "último" para que la app cuente desde ahí.'}
 ];
 
 const CHECKLIST=[
- {id:'t',k:'T',t:'Neumáticos y ruedas',d:'Presión correcta, dibujo suficiente, sin cortes ni objetos clavados. Radios y llantas sin golpes.'},
+ {id:'t',k:'T',t:'Neumáticos y ruedas',d:'25 psi delante / 33 psi detrás en frío. Dibujo suficiente, sin cortes ni objetos clavados. Rines sin golpes.'},
  {id:'c',k:'C',t:'Controles',d:'Manetas de freno y embrague con tacto firme. El acelerador vuelve solo al soltarlo. Cables sin roces.'},
  {id:'l',k:'L',t:'Luces y eléctrico',d:'Faro (corta y larga), luz de freno con ambos frenos, intermitentes, claxon.'},
- {id:'o',k:'O',t:'Aceite y líquidos',d:'Nivel de aceite en la mirilla, refrigerante y líquido de frenos entre MIN y MAX. Sin manchas de fugas bajo la moto.'},
- {id:'ch',k:'C',t:'Chasis y transmisión',d:'Cadena tensada y lubricada. Suspensión sin fugas. Tornillería de ejes y frenos a la vista sin aflojar.'},
+ {id:'o',k:'O',t:'Aceite y líquidos',d:'Nivel de aceite en la mirilla (moto vertical) y líquido de frenos entre MIN y MAX. Sin manchas de fugas bajo la moto.'},
+ {id:'ch',k:'C',t:'Chasis y transmisión',d:'Cadena con 20-30 mm de holgura y lubricada. Horquilla sin fugas. Tornillería de ejes y frenos a la vista sin aflojar.'},
  {id:'s',k:'S',t:'Caballetes',d:'El caballete lateral y central se retraen bien y los muelles los mantienen recogidos.'},
- {id:'e',k:'+',t:'Equipación y documentación',d:'Casco, guantes y chaqueta. Documentación y seguro en la moto. Combustible suficiente.'}
+ {id:'e',k:'+',t:'Equipación y documentación',d:'Casco, guantes y chaqueta. Licencia, tarjeta de propiedad y SOAT. Gasolina suficiente (tanque 12 L, reserva 2,4 L).'}
 ];
 
 const TIPS=[
@@ -202,13 +208,32 @@ const TIPS=[
  'En los primeros 100-150 km de un neumático nuevo, evita inclinaciones fuertes: la goma aún tiene restos del desmoldeante.',
  'Lubrica la cadena con ella caliente y deja que el lubricante asiente 10-15 minutos antes de rodar.',
  'Revisa la luz de freno de ambos mandos: es la que avisa al coche de detrás.',
- 'Un motor en frío quiere marcha suave los primeros minutos, no revoluciones altas.'
+ 'Un motor en frío quiere marcha suave los primeros minutos, no revoluciones altas.',
+ 'Tu Gixxer no lleva refrigerante: la enfrían el aire y el radiador de aceite. Por eso el nivel y la calidad del aceite importan el doble.',
+ 'Gixxer 155: 25 psi delante y 33 psi detrás en frío. Con pasajero, 36 psi detrás.',
+ 'La cadena de la Gixxer va con 20-30 mm de holgura. Más tensa no es mejor.',
+ 'Aceite 10W-40 JASO MA2 cada 3.000 km o 6 meses. En Bogotá y trancones, mejor no estirarlo.',
+ 'La tecnomecánica de una moto 2024 empieza en 2026 y después es anual. El SOAT, siempre al día.'
 ];
 
 /* ==================== ESTADO ==================== */
-function freshState(){return {v:1,bike:{name:'',brand:'',model:'',year:'',plate:'',km:0,notes:''},items:JSON.parse(JSON.stringify(DEFAULT_ITEMS)),logs:[],fuel:[],checklist:{date:'',done:[]},learn:{read:[],quiz:{}},settings:{currency:'€'},createdAt:today()}}
+function freshState(){return {v:1,plan:PLAN_VERSION,bike:{name:'Mi Gixxer',brand:BIKE.brand,model:BIKE.model,year:BIKE.year,plate:'',km:0,notes:''},items:JSON.parse(JSON.stringify(DEFAULT_ITEMS)),logs:[],fuel:[],checklist:{date:'',done:[]},learn:{read:[],quiz:{}},settings:{currency:'$'},createdAt:today()}}
 let state=load();
-function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.v===1){const f=freshState();return Object.assign(f,s,{bike:Object.assign(f.bike,s.bike),settings:Object.assign(f.settings,s.settings),learn:Object.assign(f.learn,s.learn),checklist:Object.assign(f.checklist,s.checklist)})}}catch(e){}return freshState()}
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.v===1){const f=freshState();const st=Object.assign(f,s,{bike:Object.assign(f.bike,s.bike),settings:Object.assign(f.settings,s.settings),learn:Object.assign(f.learn,s.learn),checklist:Object.assign(f.checklist,s.checklist)});st.plan=s.plan||null;return migrate(st)}}catch(e){}return freshState()}
+// Actualiza un estado guardado con una versión anterior del plan al plan de la Gixxer, conservando historial y puntos personalizados.
+function migrate(st){
+  if(st.plan===PLAN_VERSION)return st;
+  const custom=st.items.filter(i=>!DEFAULT_ITEMS.some(d=>d.id===i.id)&&i.id!=='coolant'&&i.id!=='itv');
+  const hasLogs=id=>st.logs.some(l=>l.itemId===id);
+  const legacy=st.items.filter(i=>(i.id==='coolant'||i.id==='itv')&&hasLogs(i.id));
+  st.logs.forEach(l=>{if(l.itemId==='itv')l.itemId='rtm'});
+  st.items=[...JSON.parse(JSON.stringify(DEFAULT_ITEMS)),...custom,...legacy.filter(i=>i.id==='coolant')];
+  if(!st.bike.brand&&!st.bike.model){st.bike.brand=BIKE.brand;st.bike.model=BIKE.model;st.bike.year=BIKE.year;if(!st.bike.name)st.bike.name='Mi Gixxer'}
+  if(st.settings.currency==='€')st.settings.currency='$';
+  st.plan=PLAN_VERSION;
+  try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}
+  return st;
+}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){toast('No se pudo guardar (almacenamiento lleno o bloqueado)')}}
 
 /* ==================== LÓGICA DE MANTENIMIENTO ==================== */
@@ -264,8 +289,8 @@ function renderHome(){
   const chk=state.checklist.date===today()?state.checklist.done.length:0;
   const readN=state.learn.read.length;
   let h='';
-  if(!state.bike.model&&!state.bike.name){
-    h+=`<div class="card"><b>👋 Bienvenido a MotoLog</b><p class="muted" style="margin:6px 0 10px">Empieza configurando tu moto. Luego registra cuándo hiciste la última revisión de cada punto y la app te avisará cuando toque la siguiente.</p><button class="btn primary" onclick="editBike()">Configurar mi moto</button></div>`;
+  if(!Number(state.bike.km)){
+    h+=`<div class="card"><b>👋 Bienvenido a MotoLog</b><p class="muted" style="margin:6px 0 10px">La app ya viene configurada para tu <b>Suzuki Gixxer 155 FI ABS 2024</b>. Empieza poniendo los kilómetros actuales y, en cada punto, cuándo fue la última vez que se hizo. A partir de ahí te avisa cuando toque.</p><div class="btnrow"><button class="btn primary" onclick="editBike()">Poner kilómetros y placa</button></div></div>`;
   }
   h+=`<div class="tipbox"><div class="t">💡 Consejo del día</div>${esc(tip)}</div>`;
   h+=`<div class="stats">
@@ -278,7 +303,15 @@ function renderHome(){
   if(soon.length){h+='<h3>⏳ Toca pronto</h3>'+soon.map(x=>itemCard(x.it,x.st,true)).join('')}
   if(next.length){h+='<h3>📅 Próximos</h3>'+next.map(x=>itemCard(x.it,x.st,true)).join('')}
   if(none.length){h+=`<h3>❓ Sin registro</h3><div class="card"><p class="muted">Hay ${none.length} puntos de mantenimiento sin fecha de última revisión. Regístralos para que la app pueda avisarte.</p><div class="btnrow"><button class="btn sm" onclick="go('maint')">Ver puntos</button><button class="btn sm" onclick="bulkInit()">Marcar todos como hechos hoy</button></div></div>`}
-  h+=`<h3>Acciones rápidas</h3><div class="btnrow"><button class="btn primary" onclick="addLog()">＋ Registrar intervención</button><button class="btn" onclick="addFuel()">⛽ Repostaje</button><button class="btn" onclick="updateKm()">📍 Actualizar km</button><button class="btn" onclick="go('check')">✅ Checklist pre-ruta</button></div>`;
+  h+=`<h3>Referencia rápida · Gixxer 155</h3><div class="card"><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px">
+    <div><div class="tiny">Llantas (frío)</div><b>25 / 33 psi</b><div class="tiny">36 psi detrás con pasajero</div></div>
+    <div><div class="tiny">Cadena</div><b>20-30 mm</b><div class="tiny">holgura tramo inferior</div></div>
+    <div><div class="tiny">Aceite</div><b>10W-40 MA2</b><div class="tiny">≈ 1,0 L · 1,1 L con filtro</div></div>
+    <div><div class="tiny">Bujía</div><b>NGK CPR8EA-9</b><div class="tiny">0,8-0,9 mm</div></div>
+    <div><div class="tiny">Tanque</div><b>12 L</b><div class="tiny">reserva 2,4 L</div></div>
+    <div><div class="tiny">Servicio Suzuki</div><b>cada 3.000 km</b><div class="tiny">o 6 meses</div></div>
+  </div><div class="btnrow"><button class="btn sm" onclick="go('settings')">Ficha técnica completa</button></div></div>`;
+  h+=`<h3>Acciones rápidas</h3><div class="btnrow"><button class="btn primary" onclick="addLog()">＋ Registrar intervención</button><button class="btn" onclick="addFuel()">⛽ Tanqueada</button><button class="btn" onclick="updateKm()">📍 Actualizar km</button><button class="btn" onclick="go('check')">✅ Checklist pre-ruta</button></div>`;
   el.innerHTML=h;
 }
 function itemCard(it,st,compact){
@@ -303,7 +336,7 @@ function renderMaint(){
     ${it.tip?`<div class="tiny" style="margin-top:8px">💡 ${esc(it.tip)}</div>`:''}
     <div class="btnrow"><button class="btn sm primary" onclick="addLog('${it.id}')">Registrar hecho</button><button class="btn sm" onclick="editItem('${it.id}')">Editar</button></div>
   </div>`).join('');
-  h+=`<p class="tiny" style="margin-top:14px">Los intervalos por defecto son orientativos. Ajústalos a la tabla de mantenimiento del manual de tu moto (Ajustes → Editar cada punto).</p>`;
+  h+=`<p class="tiny" style="margin-top:14px">Plan basado en el programa de mantenimiento Suzuki para la Gixxer 155 FI (servicio a 1.000 km y luego cada 3.000 km) más los trámites legales en Colombia. Si tu manual o tu taller indican otro intervalo, edita el punto.</p>`;
   el.innerHTML=h;
 }
 function editItem(id){
@@ -379,25 +412,25 @@ function fuelStats(){
 function renderFuel(){
   const el=$('#p-fuel');const s=fuelStats();
   const list=[...state.fuel].sort((a,b)=>b.km-a.km);
-  let h=`<div class="row"><h2>Combustible</h2><button class="btn sm primary" onclick="addFuel()">＋ Repostaje</button></div>
+  let h=`<div class="row"><h2>Combustible</h2><button class="btn sm primary" onclick="addFuel()">＋ Tanqueada</button></div>
   <div class="stats">
     <div class="stat"><div class="v">${s.avg?s.avg.toFixed(2):'—'}</div><div class="l">L/100 km medio</div></div>
     <div class="stat"><div class="v">${s.avg?(100/s.avg).toFixed(1):'—'}</div><div class="l">km por litro</div></div>
     <div class="stat"><div class="v">${s.costKm?(s.costKm*100).toFixed(2):'—'}</div><div class="l">${esc(state.settings.currency)} / 100 km</div></div>
     <div class="stat"><div class="v">${fmtMoney(s.totalCost)}</div><div class="l">Gasto total</div></div>
   </div>
-  <p class="tiny" style="margin-bottom:12px">El consumo se calcula entre repostajes con depósito lleno. Marca "lleno" cada vez que llenes hasta arriba para obtener datos fiables.</p>`;
-  if(!list.length)h+='<div class="empty"><div class="big">⛽</div>Sin repostajes todavía.</div>';
+  <p class="tiny" style="margin-bottom:12px">El consumo se calcula entre tanqueadas con tanque lleno. Marca "lleno" cada vez que llenes hasta arriba para obtener datos fiables. Referencia Gixxer 155 FI: entre 40 y 50 km por litro según uso; muy por debajo, revisa presión de llantas, filtro de aire y bujía.</p>`;
+  if(!list.length)h+='<div class="empty"><div class="big">⛽</div>Sin tanqueadas todavía.</div>';
   else h+=`<div class="tablewrap"><table><tr><th>Fecha</th><th class="num">Km</th><th class="num">Litros</th><th class="num">Coste</th><th></th></tr>${list.map(x=>`<tr style="cursor:pointer" onclick="addFuel('${x.id}')"><td>${fmtD(x.date)}</td><td class="num">${fmtKm(x.km)}</td><td class="num">${Number(x.liters).toFixed(2)}</td><td class="num">${fmtMoney(x.cost)}</td><td>${x.full?'<span class="badge blue">lleno</span>':''}</td></tr>`).join('')}</table></div>`;
   el.innerHTML=h;
 }
 function addFuel(editId){
   const f=editId?state.fuel.find(x=>x.id===editId):null;
-  openModal(f?'Editar repostaje':'Nuevo repostaje',`
+  openModal(f?'Editar tanqueada':'Nueva tanqueada',`
     <div class="frow"><label>Fecha<input name="date" type="date" required value="${f?f.date:today()}"></label><label>Kilómetros<input name="km" type="number" min="0" required value="${f?f.km:state.bike.km}"></label></div>
     <div class="frow"><label>Litros<input name="liters" type="number" min="0" step="0.01" required value="${f?.liters??''}"></label><label>Coste total (${esc(state.settings.currency)})<input name="cost" type="number" min="0" step="0.01" value="${f?.cost??''}"></label></div>
-    <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" name="full" style="width:20px;height:20px;margin:0" ${!f||f.full?'checked':''}> Depósito lleno</label>`,
-    d=>{const o={date:d.date,km:Number(d.km),liters:Number(d.liters),cost:Number(d.cost)||0,full:!!d.full};if(f)Object.assign(f,o);else state.fuel.push(Object.assign({id:uid()},o));if(o.km>Number(state.bike.km))state.bike.km=o.km;save();render();toast('Repostaje guardado')},
+    <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" name="full" style="width:20px;height:20px;margin:0" ${!f||f.full?'checked':''}> Tanque lleno</label>`,
+    d=>{const o={date:d.date,km:Number(d.km),liters:Number(d.liters),cost:Number(d.cost)||0,full:!!d.full};if(f)Object.assign(f,o);else state.fuel.push(Object.assign({id:uid()},o));if(o.km>Number(state.bike.km))state.bike.km=o.km;save();render();toast('Tanqueada guardada')},
     f?[{label:'Eliminar',cls:'danger',fn:()=>{state.fuel=state.fuel.filter(x=>x.id!==editId);save();closeModal();render()}}]:[]);
 }
 
@@ -417,6 +450,32 @@ function toggleCheck(id,on){const d=state.checklist.done;if(on&&!d.includes(id))
 
 /* ==================== APRENDER ==================== */
 const LESSONS=[
+{id:'gixxer',cat:'Mi Gixxer',title:'Conoce tu Gixxer 155 FI ABS',min:6,body:`
+<p>La Gixxer 155 es una naked de 154,9 cc con un motor <b>monocilíndrico SOHC de 2 válvulas</b>, inyección electrónica y 5 velocidades. Es sencilla, fiable y barata de mantener si respetas tres cosas: aceite, cadena y llantas.</p>
+<h4>Refrigeración por aire y aceite</h4>
+<p>No tiene radiador de agua ni refrigerante. El motor se enfría con el aire que pasa por las aletas del cilindro y con un pequeño <b>radiador de aceite</b> (SOCS, Suzuki Oil Cooling System). Consecuencia: el aceite hace también de refrigerante, así que <b>el nivel y el cambio a tiempo son aún más importantes</b> que en una moto con agua. En trancones largos el motor se calienta más; evita mantenerla mucho tiempo en ralentí parada al sol.</p>
+<h4>Motor SEP e inyección (FI)</h4>
+<p>SEP (Suzuki Eco Performance) es el diseño del motor para gastar poco: espera entre 40 y 50 km por litro. La inyección electrónica se autorregula: no hay carburador que sincronizar ni ahogador que usar. Si el consumo sube o el ralentí se vuelve irregular, lo primero es filtro de aire, bujía y presión de llantas; luego, limpieza del cuerpo de aceleración en taller.</p>
+<h4>Los frenos con ABS</h4>
+<ul><li>El ABS evita que la rueda se bloquee en una frenada fuerte. Notarás una <b>vibración en la maneta</b> cuando actúa: es normal, no sueltes el freno.</li>
+<li>El ABS no acorta la frenada por sí mismo; permite frenar fuerte sin caerte. Sigue frenando progresivo y con la moto recta.</li>
+<li>Al encender la moto el testigo ABS se enciende y debe apagarse al superar unos 5-10 km/h. Si se queda encendido rodando, el ABS está desactivado (sensor sucio, batería baja): los frenos funcionan, pero sin ABS. Lleva a revisar.</li>
+<li>Cambio de líquido de frenos (DOT 4) cada 2 años; con ABS, mejor purgar en taller con la herramienta adecuada.</li></ul>
+<h4>Los números que te interesan</h4>
+<ul><li><b>Aceite:</b> 10W-40 JASO MA2, aprox. 1,0 L (1,1 L con filtro). Nivel en la mirilla con la moto vertical.</li>
+<li><b>Llantas:</b> 100/80-17 delante a 25 psi; 140/60R-17 detrás a 33 psi (36 con pasajero). Siempre en frío.</li>
+<li><b>Cadena:</b> 20-30 mm de holgura.</li>
+<li><b>Bujía:</b> NGK CPR8EA-9.</li>
+<li><b>Tanque:</b> 12 L con 2,4 L de reserva. El testigo de reserva te da unos 80-100 km de margen.</li>
+<li><b>Acelerador:</b> 2-4 mm de juego libre en el puño.</li></ul>
+<h4>Plan de mantenimiento Suzuki</h4>
+<p>Primer servicio a los <b>1.000 km</b> y después <b>cada 3.000 km o 6 meses</b>: aceite (y filtro según servicio), limpieza del filtro de aire, revisión de frenos, cadena, cables, llantas y tornillería. Cada 6.000 km, holgura de válvulas e inspección de bujía. A los 12.000 km, servicio mayor: filtro de aire nuevo, bujía nueva. Hacer los servicios en la red Suzuki mantiene la garantía; si lo haces por fuera, guarda facturas y apúntalo todo en Historial.</p>
+<h4>Trámites en Colombia</h4>
+<ul><li><b>SOAT:</b> anual y obligatorio siempre.</li>
+<li><b>Revisión técnico-mecánica:</b> la primera al cumplir 2 años desde la matrícula (una moto de 2024 empieza en 2026) y luego cada año. Antes de ir: luces, pito, frenos, llantas, sin fugas y sin ruidos de escape.</li></ul>
+<div class="note">Todos estos valores ya están cargados en el plan de mantenimiento y en la ficha técnica de esta app.</div>`,
+quiz:[{q:'¿Cómo se refrigera el motor de la Gixxer 155?',o:['Con refrigerante y radiador de agua','Con aire y un radiador de aceite','Solo con agua','No necesita refrigeración'],a:1},{q:'¿Qué presión lleva la llanta trasera yendo solo?',o:['25 psi','29 psi','33 psi','40 psi'],a:2},{q:'Si el testigo ABS sigue encendido rodando...',o:['Los frenos no funcionan','Es normal, siempre está encendido','Los frenos funcionan pero sin ABS; hay que revisarlo','Hay que apagar la moto de inmediato'],a:2},{q:'¿Cuándo es la primera revisión técnico-mecánica de una moto matriculada en 2024?',o:['En 2025','En 2026','En 2027','Nunca'],a:1}]},
+
 {id:'motor',cat:'Cómo funciona',title:'Cómo funciona un motor de 4 tiempos',min:5,body:`
 <p>Casi todas las motos actuales llevan un motor de <b>cuatro tiempos</b>. Cada ciclo completo son dos vueltas de cigüeñal y cuatro fases:</p>
 <ol><li><b>Admisión:</b> el pistón baja y entra aire y gasolina por la válvula de admisión.</li>
@@ -429,7 +488,7 @@ const LESSONS=[
 <li><b>Bujía:</b> produce la chispa. Su color cuenta cómo está quemando el motor.</li>
 <li><b>Embrague:</b> conecta o desconecta el motor de la caja de cambios. En la mayoría de motos va bañado en el aceite del motor (por eso el aceite debe ser JASO MA).</li></ul>
 <h4>Refrigeración</h4>
-<p><b>Por aire:</b> las aletas del cilindro disipan el calor; simple y sin mantenimiento. <b>Por líquido:</b> un radiador y una bomba mueven refrigerante; es más estable, pero hay que vigilar nivel y estado del líquido.</p>
+<p><b>Por aire:</b> las aletas del cilindro disipan el calor; simple y sin mantenimiento. <b>Por líquido:</b> un radiador y una bomba mueven refrigerante; es más estable, pero hay que vigilar nivel y estado del líquido. <b>Tu Gixxer</b> es por aire con un radiador de aceite de apoyo: no lleva refrigerante.</p>
 <div class="note">Un motor frío está más desprotegido: el aceite aún es espeso. Los primeros minutos, rueda suave sin subir mucho de vueltas.</div>`,
 quiz:[{q:'¿En qué fase se genera la fuerza que mueve la moto?',o:['Admisión','Compresión','Explosión','Escape'],a:2},{q:'¿Por qué el aceite de moto suele necesitar la norma JASO MA?',o:['Porque el motor gira más rápido','Porque el embrague va bañado en el mismo aceite','Porque las motos no tienen filtro','Porque es más barato'],a:1}]},
 
@@ -442,11 +501,12 @@ quiz:[{q:'¿En qué fase se genera la fuerza que mueve la moto?',o:['Admisión',
 <li>Mira la <b>mirilla</b> (ventanita en el motor) o la <b>varilla</b> (en algunas motos se apoya sin roscar; en otras se rosca. Lo dice el manual).</li>
 <li>El nivel debe estar entre las marcas MIN y MAX. Si falta, añade poco a poco.</li></ol>
 <h4>Qué aceite comprar</h4>
-<ul><li><b>Viscosidad:</b> por ejemplo 10W-40. El primer número es el comportamiento en frío (W = winter); el segundo, en caliente. Usa la que indica tu manual.</li>
+<ul><li><b>Viscosidad:</b> la Gixxer usa <b>10W-40</b>. El primer número es el comportamiento en frío (W = winter); el segundo, en caliente.</li>
 <li><b>Norma JASO MA / MA2:</b> imprescindible si el embrague va en baño de aceite. Un aceite de coche puede hacer patinar el embrague.</li>
-<li><b>Mineral, semisintético o sintético:</b> el sintético aguanta más y protege mejor; el manual dice cuál es el mínimo.</li></ul>
+<li><b>Mineral, semisintético o sintético:</b> el sintético aguanta más y protege mejor. Para la Gixxer, un semisintético 10W-40 MA2 (Suzuki Ecstar, Motul 5100 o similar) es más que suficiente.</li>
+<li><b>Cantidad:</b> aprox. 1,0 L en un cambio normal y 1,1 L si cambias el filtro. Rellena hasta la mitad de la mirilla, no hasta arriba.</li></ul>
 <h4>Cuándo cambiarlo</h4>
-<p>Lo típico son <b>5.000-10.000 km o una vez al año</b>, lo que llegue antes. El aceite se degrada también con el tiempo aunque no ruedes. Cambia el filtro de aceite cada uno o dos cambios y siempre la arandela del tapón de vaciado.</p>
+<p>En la <b>Gixxer 155</b>, Suzuki indica <b>cada 3.000 km o 6 meses</b> (el primer cambio a los 1.000 km). Es un intervalo corto porque el aceite también refrigera el motor. El aceite se degrada además con el tiempo aunque no ruedes. Cambia el filtro cada uno o dos cambios y siempre la arandela del tapón de vaciado.</p>
 <div class="warn">Aceite muy oscuro y con olor a quemado, o nivel que baja rápido: revísalo cuanto antes. Rodar sin aceite destruye el motor en minutos.</div>`,
 quiz:[{q:'¿Cómo se comprueba correctamente el nivel de aceite?',o:['Con la moto en el caballete lateral y motor en marcha','Con la moto vertical, motor caliente apagado tras unos minutos','En frío y sobre el caballete lateral','Da igual la posición'],a:1},{q:'En "10W-40", el 10W indica...',o:['La calidad del aceite','El comportamiento en frío','El comportamiento en caliente','El precio'],a:1}]},
 
@@ -459,7 +519,7 @@ quiz:[{q:'¿Cómo se comprueba correctamente el nivel de aceite?',o:['Con la mot
 <h4>Limpiar (cada 1.000-2.000 km)</h4>
 <p>Usa un limpiador específico de cadena o queroseno y un cepillo suave. Nunca uses disolventes agresivos ni una hidrolimpiadora a presión: dañan las juntas tóricas (retenes) de la cadena.</p>
 <h4>Tensión</h4>
-<p>Mide la <b>holgura</b> en el punto medio del tramo inferior, moviendo la cadena arriba y abajo. Lo habitual son <b>25-35 mm</b> con la moto sobre el caballete lateral, pero mira tu manual: hay una pegatina en el basculante con el valor exacto.</p>
+<p>Mide la <b>holgura</b> en el punto medio del tramo inferior, moviendo la cadena arriba y abajo. En la <b>Gixxer 155 son 20-30 mm</b> con la moto sobre el caballete lateral (hay una pegatina en el basculante que lo recuerda).</p>
 <ul><li><b>Muy floja:</b> golpea, salta y puede salirse.</li><li><b>Muy tensa:</b> es peor. Fuerza el rodamiento de la rueda y el eje de salida del motor.</li></ul>
 <p>Gira la rueda y mide en varios puntos: si la holgura varía mucho, la cadena tiene tramos estirados y toca cambiarla.</p>
 <h4>Señales de que hay que cambiar el kit de arrastre</h4>
@@ -470,7 +530,7 @@ quiz:[{q:'¿Qué es peor para la moto?',o:['Cadena ligeramente floja','Cadena de
 {id:'neumaticos',cat:'Mantenimiento',title:'Neumáticos: presión, desgaste y edad',min:5,body:`
 <p>Dos parches del tamaño de una tarjeta de crédito son todo lo que te une al asfalto. Son la pieza de seguridad número uno.</p>
 <h4>Presión (revisar cada 15 días)</h4>
-<ul><li>Mide <b>en frío</b>, antes de rodar. Al rodar la presión sube.</li><li>Los valores están en el manual o en una pegatina de la moto. Suele haber valores distintos para ir solo o con pasajero.</li><li>Poca presión: la moto se siente pesada, gasta más y desgasta los flancos. Mucha: menos agarre y desgaste en el centro.</li></ul>
+<ul><li>Mide <b>en frío</b>, antes de rodar. Al rodar la presión sube.</li><li><b>Gixxer 155:</b> 25 psi delante y 33 psi detrás yendo solo; 36 psi detrás con pasajero.</li><li>Poca presión: la moto se siente pesada, gasta más y desgasta los flancos. Mucha: menos agarre y desgaste en el centro.</li></ul>
 <h4>Desgaste</h4>
 <ul><li>Busca los <b>testigos TWI</b> (pequeños resaltes dentro de las ranuras). Cuando el dibujo llega a ellos, el neumático está al límite.</li><li>Mínimo legal habitual: <b>1,6 mm</b> de profundidad. En lluvia, por debajo de 2-3 mm ya se nota mucho.</li><li>Desgaste solo en el centro (típico de mucha autopista) o desgaste "a escalones" también son motivo de cambio.</li></ul>
 <h4>Edad</h4>
@@ -503,7 +563,8 @@ quiz:[{q:'¿Por qué se cambia el líquido de frenos por tiempo y no por km?',o:
 quiz:[{q:'¿Qué voltaje tiene una batería de 12 V bien cargada en reposo?',o:['10 V','11,5 V','12,6-12,8 V','14,5 V'],a:2},{q:'Si un fusible salta, ¿qué haces?',o:['Poner uno de más amperios para que aguante','Puentearlo con un cable','Cambiarlo por otro del mismo amperaje y buscar la causa si vuelve a saltar','Ignorarlo'],a:2}]},
 
 {id:'liquidos',cat:'Mantenimiento',title:'Refrigerante, filtro de aire y otros líquidos',min:4,body:`
-<h4>Refrigerante (motos refrigeradas por líquido)</h4>
+<h4>Refrigerante (no aplica a la Gixxer)</h4>
+<p class="muted">Tu Gixxer se refrigera por aire y aceite, así que puedes saltarte este apartado. Lo dejamos por si algún día tienes otra moto.</p>
 <ul><li>Mira el nivel en el <b>vaso de expansión</b> (depósito translúcido) con el motor <b>frío</b> y la moto vertical. Debe estar entre MIN y MAX.</li><li>Nunca abras el tapón del radiador en caliente: sale a presión y quema.</li><li>Rellena con el mismo tipo de anticongelante (color/base). En emergencia vale agua destilada, pero cambia después.</li><li>Se sustituye cada <b>2 años</b> porque pierde sus aditivos anticorrosión.</li><li>Si el ventilador se activa a menudo en ciudad es normal. Si la temperatura sube en carretera o ves fugas verdes/rosas, revisa.</li></ul>
 <h4>Filtro de aire</h4>
 <p>Impide que entre polvo al motor. Sucio, la moto pierde potencia y gasta más. Los de <b>papel</b> se sustituyen; los de <b>espuma</b> se lavan, secan y se impregnan de aceite específico. Si ruedas por tierra, revísalo cada pocos cientos de km.</p>
@@ -554,16 +615,16 @@ quiz:[{q:'¿Cuándo se frena en una curva?',o:['En el vértice','Antes de entrar
 quiz:[{q:'En una tabla de mantenimiento, la letra "I" suele significar...',o:['Ignorar','Inspeccionar','Instalar','Importante'],a:1}]},
 
 {id:'kit',cat:'Seguridad',title:'Qué llevar siempre en la moto',min:3,body:`
-<ul><li><b>Documentación:</b> permiso de conducir, permiso de circulación, seguro, ficha técnica (o versión digital según tu país).</li>
+<ul><li><b>Documentación:</b> licencia de conducción, tarjeta de propiedad, SOAT vigente y, cuando aplique, certificado de la técnico-mecánica.</li>
 <li><b>Manómetro de bolsillo:</b> pequeño y barato; el de la gasolinera suele estar descalibrado.</li>
 <li><b>Kit de reparación de pinchazos</b> con mechas o espray, y un mini compresor o cartuchos de CO2. Un pinchazo en el trasero es de lo más común.</li>
 <li><b>Herramientas básicas:</b> el kit de la moto más una llave para el eje trasero, llaves Allen y Torx, alicates, cinta americana, bridas.</li>
 <li><b>Fusibles de repuesto</b> y, si lleva halógenas, una bombilla.</li>
 <li><b>Cables de arranque finos</b> o un arrancador de litio compacto.</li>
-<li><b>Chaleco reflectante</b> (obligatorio en muchos países) y guantes de látex para trabajar con cadena o aceite.</li>
+<li><b>Chaleco reflectante</b> y guantes de látex para trabajar con cadena o aceite.</li>
 <li><b>Candado de disco</b> y un candado de cadena si aparcas en la calle.</li></ul>
 <h4>Antes de un viaje largo</h4>
-<p>Cadena limpia y tensada, presión, revisión del nivel de aceite y de las pastillas, luces. Si estás a menos de 500 km de un cambio de aceite, hazlo antes de salir.</p>`,
+<p>Cadena limpia y tensada, presión, revisión del nivel de aceite y de las pastillas, luces. Si estás a menos de 500 km de un cambio de aceite, hazlo antes de salir. Con 12 L de tanque tienes unos 450-500 km de autonomía; no apures la reserva en carretera.</p>`,
 quiz:[{q:'¿Por qué llevar tu propio manómetro?',o:['Porque es obligatorio','Porque los de gasolinera suelen estar descalibrados','Para inflar','Para tensar la cadena'],a:1}]},
 
 {id:'parada',cat:'Mantenimiento',title:'Invierno y paradas largas',min:3,body:`
@@ -639,24 +700,40 @@ function renderSettings(){
   const el=$('#p-settings');const b=state.bike;
   el.innerHTML=`<h2>Ajustes</h2>
   <div class="card"><div class="row"><div><b>${esc(b.name||'Mi moto')}</b><div class="muted">${esc([b.brand,b.model,b.year].filter(Boolean).join(' '))||'Sin datos'}${b.plate?' · '+esc(b.plate):''}</div><div class="muted">${fmtKm(b.km)}</div>${b.notes?`<div class="tiny">${esc(b.notes)}</div>`:''}</div><button class="btn sm" onclick="editBike()">Editar</button></div></div>
+  <h3>Ficha técnica · Suzuki Gixxer 155 FI ABS 2024</h3>
+  <div class="card"><div class="tablewrap"><table>
+    <tr><th>Motor</th><td>${esc(BIKE.engine)}</td></tr>
+    <tr><th>Refrigeración</th><td>${esc(BIKE.cooling)}</td></tr>
+    <tr><th>Aceite</th><td>${esc(BIKE.oil)}<br><span class="muted">${esc(BIKE.oilQty)}</span></td></tr>
+    <tr><th>Bujía</th><td>${esc(BIKE.plug)}</td></tr>
+    <tr><th>Llanta delantera</th><td>${esc(BIKE.tireF)}</td></tr>
+    <tr><th>Llanta trasera</th><td>${esc(BIKE.tireR)}</td></tr>
+    <tr><th>Cadena</th><td>${esc(BIKE.chain)}</td></tr>
+    <tr><th>Frenos</th><td>${esc(BIKE.brakes)}</td></tr>
+    <tr><th>Acelerador</th><td>${esc(BIKE.throttle)}</td></tr>
+    <tr><th>Tanque</th><td>${esc(BIKE.tank)}</td></tr>
+    <tr><th>Batería</th><td>${esc(BIKE.battery)}</td></tr>
+    <tr><th>Peso / asiento</th><td>${esc(BIKE.weight)}</td></tr>
+    <tr><th>Servicio</th><td>${esc(BIKE.service)}</td></tr>
+  </table></div><p class="tiny" style="margin-top:8px">Valores del manual del propietario y de Suzuki Colombia. Si tu manual indica otro dato, manda el manual.</p></div>
   <h3>Datos</h3>
   <div class="card"><p class="muted">Tus datos se guardan solo en este dispositivo. Exporta una copia de seguridad de vez en cuando (o antes de cambiar de móvil).</p>
   <div class="btnrow"><button class="btn" onclick="exportData()">⬇️ Exportar copia</button><label class="btn" style="display:inline-block;margin:0">⬆️ Importar copia<input type="file" accept="application/json" style="display:none" onchange="importData(this)"></label><button class="btn" onclick="copyData()">📋 Copiar al portapapeles</button></div>
   <div class="btnrow"><button class="btn sm danger" onclick="resetItems()">Restaurar plan de mantenimiento por defecto</button><button class="btn sm danger" onclick="resetAll()">Borrar todo</button></div></div>
   <h3>Preferencias</h3>
-  <div class="card"><label>Moneda<input value="${esc(state.settings.currency)}" maxlength="4" onchange="state.settings.currency=this.value||'€';save();render()"></label></div>
+  <div class="card"><label>Moneda <span class="tiny">($ = pesos colombianos, sin decimales)</span><input value="${esc(state.settings.currency)}" maxlength="4" onchange="state.settings.currency=this.value||'$';save();render()"></label></div>
   <h3>Instalar como app</h3>
   <div class="card"><p class="muted"><b>Android (Chrome):</b> menú ⋮ → "Añadir a pantalla de inicio" o "Instalar aplicación".<br><b>iPhone (Safari):</b> botón compartir → "Añadir a pantalla de inicio".</p><p class="tiny" style="margin-top:6px">Una vez instalada funciona sin conexión y se abre como cualquier otra app.</p>
   <div class="btnrow" id="installRow"></div></div>
-  <p class="tiny" style="margin-top:14px">MotoLog v1 · Los consejos son orientativos y no sustituyen el manual del fabricante ni a un mecánico.</p>`;
+  <p class="tiny" style="margin-top:14px">MotoLog v2 · Gixxer 155 FI ABS 2024 · Los consejos son orientativos y no sustituyen el manual del fabricante ni a un mecánico.</p>`;
   if(deferredInstall){$('#installRow').innerHTML='<button class="btn primary" onclick="doInstall()">Instalar MotoLog</button>'}
 }
 function editBike(){
   const b=state.bike;
   openModal('Mi moto',`
-    <label>Nombre (apodo)<input name="name" value="${esc(b.name)}" placeholder="Ej. La Roja"></label>
+    <label>Nombre (apodo)<input name="name" value="${esc(b.name)}" placeholder="Ej. Mi Gixxer"></label>
     <div class="frow"><label>Marca<input name="brand" value="${esc(b.brand)}" placeholder="Honda, Yamaha..."></label><label>Modelo<input name="model" value="${esc(b.model)}" placeholder="CB500F"></label></div>
-    <div class="frow"><label>Año<input name="year" type="number" min="1900" max="2100" value="${esc(b.year)}"></label><label>Matrícula<input name="plate" value="${esc(b.plate)}"></label></div>
+    <div class="frow"><label>Año<input name="year" type="number" min="1900" max="2100" value="${esc(b.year)}"></label><label>Placa<input name="plate" value="${esc(b.plate)}" placeholder="ABC12D"></label></div>
     <label>Kilómetros actuales<input name="km" type="number" min="0" required value="${b.km}"></label>
     <label>Notas <span class="tiny">(aceite que usa, presiones, referencias...)</span><textarea name="notes">${esc(b.notes)}</textarea></label>`,
     d=>{Object.assign(state.bike,{name:d.name.trim(),brand:d.brand.trim(),model:d.model.trim(),year:d.year,plate:d.plate.trim(),km:Number(d.km)||0,notes:d.notes.trim()});save();render();toast('Moto guardada')});
