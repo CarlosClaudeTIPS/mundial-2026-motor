@@ -31,6 +31,14 @@ Dónde entra:
 - **Live (experimental)**: `stateResponseExp` recibe `urgencia`; modula el EFECTO del marcador ±8 % solo cuando el equipo no va ganando (el que gana y se juega algo, administra igual). Aparece como contribución "Motivación (tabla)" y en la línea MOTIVACIÓN de la explicación.
 - Tarjetas: no se tocó el modelo validado; la relación "pierde → más faltas → más tarjetas" queda como hipótesis a medir con los logs (marcador y urgencia ya se registran).
 
+## 2c. Recién ascendidos (dato del proveedor, no a mano)
+
+`src/lib/ascendidos.js` — `ascendidosDeLiga(leagueId, tablaActual)`: Live-Score da `seasons/list.json` (ids y nombres) y `competitions/standings.json?season=<id>`; se pide la tabla de la temporada anterior (1 llamada por liga cada 7 días, caché) y un equipo es "recién ascendido" si está en la tabla actual y no estaba en la anterior (por id, con respaldo por nombre). Verificado 9/9 con datos reales: LaLiga 26/27 → Deportivo, Racing Santander, Málaga; Premier → Hull, Ipswich, Coventry; Serie A → Frosinone, Monza, Venezia.
+
+Efecto: en `situacionTabla` el ascendido sube su urgencia (+0.15) y nunca queda "sin nada en juego" (mínimo `ganar_o_empatar`, incluso a inicio de temporada). Su menor calidad ya la descontaba `league-stats` por el tier de sus partidos recientes; ahora además queda marcado toda la temporada (⬆️ en la clasificación) y entra en la explicación live.
+
+Todo esto está en el trial de Live-Score: pagar no añade datos para esta función, solo cuota diaria.
+
 ## 3. Lo que NO se hizo (a propósito) y por qué
 
 - No se cambió el baseline ni se promovió el experimental: falta el backtest comparado (§55-57). Criterio: `maeExp < maeBaseVsExp` de forma consistente por tramo, fuera de muestra, con ≥50 partidos por mercado.
