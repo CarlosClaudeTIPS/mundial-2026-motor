@@ -22,6 +22,15 @@ Conclusión: la intuición del usuario era correcta. El motor proyectaba "promed
 - `GameStateExp.jsx` dentro de los paneles de tiros y córners.
 - Tests nuevos: baseline idéntico con/sin gs; favorito-perdiendo-respondiendo sube; colista-perdiendo-sin-responder baja; córners misma invariante; explicación desde contribuciones reales; "qué cambió".
 
+## 2b. Motivación automática desde la tabla (mismo día)
+
+`src/lib/motivacion.js` — `situacionTabla(tabla, equipo, {type})` lee la clasificación ya cargada y deduce por equipo: posición, puntos al descenso / a salvarse / a Europa / al líder, partidos restantes (2·(n−1) − pj), fase por partidos jugados (<20 % inicio, >80 % final), y una **motivación** en la escala que ya usaba `context.js` (`necesita_ganar`, `ganar_o_empatar`, `cualquier_result`, `ya_clasificado`) más una **urgencia 0..1**. Zonas: descenso (3 bajan en ligas de 20, 2 en ligas menores), riesgo (≤3 pts del descenso), título (líder o ≤3 del líder), Europa (≤3 de los puestos de arriba), nada en juego (solo en recta final, ≥8 pts de ambos), media tabla. Inicio de temporada y copas → neutro (el check de eliminación ya pesa).
+
+Dónde entra:
+- **Prematch (Analizar)**: pre-llena `motA`/`motB`/`jornada` del contexto → los modificadores existentes (necesita ganar: tiros ×1.20, córners ×1.18, tarjetas ×1.25; sin nada en juego: ×0.85/×0.88/×0.80) se aplican solos. Se muestra bajo la clasificación con la razón ("16º, a 2 pts del descenso, 6 partidos por jugar → necesita ganar") y el usuario puede cambiarlo en Contexto.
+- **Live (experimental)**: `stateResponseExp` recibe `urgencia`; modula el EFECTO del marcador ±8 % solo cuando el equipo no va ganando (el que gana y se juega algo, administra igual). Aparece como contribución "Motivación (tabla)" y en la línea MOTIVACIÓN de la explicación.
+- Tarjetas: no se tocó el modelo validado; la relación "pierde → más faltas → más tarjetas" queda como hipótesis a medir con los logs (marcador y urgencia ya se registran).
+
 ## 3. Lo que NO se hizo (a propósito) y por qué
 
 - No se cambió el baseline ni se promovió el experimental: falta el backtest comparado (§55-57). Criterio: `maeExp < maeBaseVsExp` de forma consistente por tramo, fuera de muestra, con ≥50 partidos por mercado.
