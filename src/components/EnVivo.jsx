@@ -7,7 +7,7 @@ import { ascendidosDeLiga, esAscendido } from '../lib/ascendidos'
 import { fetchFixtureStats, hasLivescore, fetchLiveGlobal } from '../lib/livescore-api'
 import { LEAGUES } from '../lib/leagues'
 import { buildTeamStats } from '../lib/league-stats'
-import { TeamStatsRef } from './Analizar'
+import { TeamStatsRef, Clasificacion } from './Analizar'
 import RecentResults from './RecentResults'
 import TiQuant from './TiQuant'
 import GkQuant from './GkQuant'
@@ -1150,6 +1150,19 @@ export default function EnVivo({ league, onVerLiga }) {
                 <TeamStatsRef teamA={preA} teamB={preB} />
                 <RecentResults teamA={preA} teamB={preB} />
               </>
+            )}
+            {/* Clasificación de la liga del partido — la misma que en Analizar,
+                cerrada por defecto para no tapar lo del vivo */}
+            {selMatch && tablaLive.leagueId === selMatch.leagueId && tablaLive.filas.length > 0 && (
+              <Clasificacion
+                tabla={tablaLive.filas}
+                teamA={{ id: selMatch.homeId, name: selMatch.homeTeam }}
+                teamB={{ id: selMatch.awayId, name: selMatch.awayTeam }}
+                leagueName={selLeague?.name ?? ''}
+                tipo={selLeague?.type}
+                ascendidos={tablaLive.asc}
+                defaultOpen={false}
+              />
             )}
           </div>
         )}

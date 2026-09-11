@@ -643,8 +643,8 @@ export function posicionDe(tabla, team) {
   return fila ? { rank: fila.rank, total: tabla.length, pts: fila.pts, pj: fila.pj, fila } : null
 }
 
-function Clasificacion({ tabla, teamA, teamB, leagueName, tipo = 'league', ascendidos = null }) {
-  const [open, setOpen] = useState(true)
+export function Clasificacion({ tabla, teamA, teamB, leagueName, tipo = 'league', ascendidos = null, defaultOpen = true }) {
+  const [open, setOpen] = useState(defaultOpen)
   if (!tabla?.length) return null
   const pA = posicionDe(tabla, teamA); const pB = posicionDe(tabla, teamB)
   const sA = situacionTabla(tabla, teamA, { type: tipo, ascendido: esAscendido(ascendidos, teamA) })
