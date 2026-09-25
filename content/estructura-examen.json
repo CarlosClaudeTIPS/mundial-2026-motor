@@ -1,0 +1,81 @@
+{
+  "_estado": "Según la Guía de orientación Saber 11 2026-2 (ver docs/01-investigacion-saber11.md): 2 sesiones de 4 h 30 min, 254 preguntas calificables + 48 de cuestionarios (socioeconómico y clima escolar, no puntúan). El orden de las pruebas dentro de cada sesión puede variar según el cuadernillo. Editable desde Administración.",
+  "duracion_sesion_min": 270,
+  "sesiones": [
+    {
+      "numero": 1,
+      "nombre": "Sesión 1 (mañana)",
+      "bloques": [
+        {
+          "prueba": "lectura_critica",
+          "preguntas": 41
+        },
+        {
+          "prueba": "matematicas",
+          "preguntas": 25
+        },
+        {
+          "prueba": "sociales_ciudadanas",
+          "preguntas": 25
+        },
+        {
+          "prueba": "ciencias_naturales",
+          "preguntas": 29
+        }
+      ],
+      "cuestionario_socioeconomico": 11,
+      "cuestionario_clima_escolar": 12
+    },
+    {
+      "numero": 2,
+      "nombre": "Sesión 2 (tarde)",
+      "bloques": [
+        {
+          "prueba": "matematicas",
+          "preguntas": 25
+        },
+        {
+          "prueba": "sociales_ciudadanas",
+          "preguntas": 25
+        },
+        {
+          "prueba": "ciencias_naturales",
+          "preguntas": 29
+        },
+        {
+          "prueba": "ingles",
+          "preguntas": 55
+        }
+      ],
+      "cuestionario_socioeconomico": 13,
+      "cuestionario_clima_escolar": 12
+    }
+  ],
+  "totales_por_prueba": {
+    "lectura_critica": 41,
+    "matematicas": 50,
+    "sociales_ciudadanas": 50,
+    "ciencias_naturales": 58,
+    "ingles": 55
+  },
+  "puntaje": {
+    "escala_prueba": [
+      0,
+      100
+    ],
+    "escala_global": [
+      0,
+      500
+    ],
+    "ponderacion_global": {
+      "lectura_critica": 3,
+      "matematicas": 3,
+      "sociales_ciudadanas": 3,
+      "ciencias_naturales": 3,
+      "ingles": 1
+    },
+    "_nota": "Ponderación 3-3-3-3-1 y fórmula (suma ponderada / 13 × 5) reportadas por prensa citando al ICFES; documento oficial no accesible el 25-sep-2026 (icfes.gov.co devolvía 404). Ver docs/01."
+  },
+  "total_preguntas": 302,
+  "total_calificables": 254
+}
