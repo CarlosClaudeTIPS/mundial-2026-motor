@@ -58,4 +58,4 @@ scripts/        validador del banco
 
 ## Estado
 
-MVP funcional en modo local (25-sep-2026). Fechas del examen 2027 **provisionales** hasta que el ICFES publique el cronograma; se editan en Administración → Ciclos. Ver `docs/04-mvp.md` para el detalle de lo hecho y lo pendiente.
+MVP funcional en modo local (26-sep-2026, 120 preguntas). Fechas del examen 2027 **provisionales** hasta que el ICFES publique el cronograma; se editan en Administración → Ciclos. Ver `docs/04-mvp.md` para el detalle de lo hecho y lo pendiente.

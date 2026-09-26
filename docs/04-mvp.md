@@ -58,8 +58,8 @@ Extra no pedido en la lista pero sí en el prompt (sección 35): **modo papel** 
 - **IA de ingesta de documentos, generación de preguntas o "buscar nuevo material"** (secciones 21 y 51). El campo `origen: 'generada'` y el estado `pendiente` ya dejan el sitio, pero no hay ninguna llamada a un modelo.
 - **Búsqueda semántica** (sección 52). Solo búsqueda por texto en id/enunciado/tema del banco.
 - **Biblioteca de videos / YouTube** (sección 23). El tipo `video` existe como valor del selector, sin integración ni filtro de calidad.
-- **Simulacro completo de dos sesiones automático.** Se hacen sesión 1 y sesión 2 por separado, a escala 10–100 %; la app lo explica en pantalla. El banco (66 preguntas) no cubre una sesión real de 120 preguntas.
-- **Sesiones del docente cada 21 días** (sección 36). No hay entidad "sesión docente"; el panel del grupo cumple parte del propósito.
+- **Banco pequeño para simulacros a escala real.** Existe el simulacro completo (sesión 1 → descanso → sesión 2 con resultado global, `crearSimulacroCompleto`), pero el banco inicial no cubre una sesión real de 120 preguntas sin repetir; por eso se ofrecen escalas del 10 al 100 %.
+- **Sesiones del docente: solo registro y resumen.** Existe la entidad `sesiones_docente` (Grupo → Sesiones: preparar con los datos del periodo, notas, próxima fecha sugerida a 21 días), pero no hay recordatorios ni calendario compartido.
 - **Importación CSV/Excel/formulario** (sección 50). Solo JSON.
 - **API REST propia** (sección 45). La app habla directamente con Supabase bajo RLS; la única función de servidor es `api/estudiantes.js`.
 - **Pantallas públicas** (inicio/información). Solo el acceso.
