@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSesion, iniciarSesionGuardada } from './lib/sesion'
 import { sembrarBanco } from './lib/banco'
+import { sembrarRecursos } from './lib/recursos'
 import { asegurarCiclos } from './lib/ciclo'
 import { asegurarDatosIniciales } from './lib/demo'
 import { iniciarSync, descargarDeNube } from './lib/sync'
@@ -31,6 +32,7 @@ function arrancar() {
   arranque ??= (async () => {
     aplicarExtension(await getConfig('taxonomia_extension'))
     await sembrarBanco()
+    await sembrarRecursos()
     await asegurarCiclos()
     await asegurarDatosIniciales()
     await iniciarSesionGuardada()

@@ -139,7 +139,7 @@ export async function asignacionesPendientes(estudiante) {
 
 // ── Recursos (biblioteca) ─────────────────────────────────────────────────────
 export async function guardarRecurso(r) {
-  const rec = { id: r.id ?? uuid(), estado: 'pendiente', version: 1, categoria: 'refuerzo', habilidades: [], tipos_error: [], ...r, actualizado: ahora(), sincronizado: 0 }
+  const rec = { id: r.id ?? uuid(), estado: 'pendiente', version: 1, categoria: 'refuerzo', habilidades: [], tipos_error: [], ...r, editado_local: true, actualizado: ahora(), sincronizado: 0 }
   await db.recursos.put(rec)
   await encolar('recursos', rec)
   return rec
@@ -148,7 +148,7 @@ export async function guardarRecurso(r) {
 export async function cambiarEstadoRecurso(id, estado, usuario_id) {
   const r = await db.recursos.get(id)
   if (!r) return
-  const nuevo = { ...r, estado, aprobado_por: estado === 'aprobado' ? usuario_id : r.aprobado_por, fecha_incorporacion: estado === 'aprobado' ? ahora() : r.fecha_incorporacion, version: (r.version ?? 1) + 1, sincronizado: 0 }
+  const nuevo = { ...r, estado, aprobado_por: estado === 'aprobado' ? usuario_id : r.aprobado_por, fecha_incorporacion: estado === 'aprobado' ? ahora() : r.fecha_incorporacion, version: (r.version ?? 1) + 1, editado_local: true, sincronizado: 0 }
   await db.recursos.put(nuevo)
   await encolar('recursos', nuevo)
 }

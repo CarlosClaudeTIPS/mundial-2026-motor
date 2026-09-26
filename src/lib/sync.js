@@ -74,6 +74,7 @@ function aFilaNube(tabla, d) {
   const { sincronizado, semilla, ...resto } = d
   if (tabla === 'usuarios') { const { pin_hash, demo, ...u } = resto; return u }
   if (tabla === 'preguntas') { const { editada_local, fecha_carga, fecha_edicion, ...p } = resto; return { ...p, actualizado: fecha_edicion ?? ahora() } }
+  if (tabla === 'recursos') { const { editado_local, ...r } = resto; return r }
   return resto
 }
 

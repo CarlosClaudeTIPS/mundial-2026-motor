@@ -103,6 +103,7 @@ export default function Banco({ usuario }) {
                 {p.origen !== 'estilo' && <Badge tono={p.origen === 'oficial' ? 'verde' : 'ambar'}>{p.origen}</Badge>}
                 {p.editada_local && <Badge>editada</Badge>}
                 {(p.etiquetas ?? []).includes('afirmacion_por_verificar') && <Badge tono="ambar">afirmación por verificar</Badge>}
+                {(p.etiquetas ?? []).includes('revisar') && <Badge tono="rojo">revisar (ver docs/13)</Badge>}
               </div>
               <p className="text-sm text-gray-200 line-clamp-2">{p.enunciado}</p>
               <p className="text-xs text-gray-500">{p.tema}{p.subtema ? ` · ${p.subtema}` : ''}</p>

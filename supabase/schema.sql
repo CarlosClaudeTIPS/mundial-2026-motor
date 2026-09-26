@@ -132,7 +132,7 @@ create table if not exists asignaciones (
 );
 
 create table if not exists recursos (
-  id uuid primary key,
+  id text primary key,
   titulo text not null,
   tipo text,
   url text,

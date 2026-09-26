@@ -16,5 +16,6 @@
 | [10-roadmap.md](10-roadmap.md) | 10 | Fases 0–5 con prioridad, dependencias, dificultad, riesgos y criterios de éxito; datos necesarios y propuesta simple para el motor adaptativo; cuestionamientos a supuestos del prompt. |
 | [11-calendario-y-normativa.md](11-calendario-y-normativa.md) | Anexo | Fechas de aplicación Saber 11 (2025–2027, oficiales y provisionales) y normativa colombiana de datos personales aplicable a menores. |
 | [12-evidencia-academica.md](12-evidencia-academica.md) | Anexo | Referencias académicas verificadas que sustentan el programa (práctica distribuida, retroalimentación, metacognición, simulacros). |
+| [13-revision-banco.md](13-revision-banco.md) | Anexo | Revisión de calidad de las 120 preguntas del banco: método, tabla por prueba, correcciones aplicadas y dudas marcadas con la etiqueta `revisar`. |
 
 Otros archivos de referencia: `content/ESQUEMA-PREGUNTA.md` (formato de pregunta), `content/taxonomia.json`, `content/estructura-examen.json`, `content/programa.json`, `supabase/schema.sql`, `.env.example`, `INICIAR-SABER11.bat`.
