@@ -1,4 +1,4 @@
-import { db, ahora } from './db'
+import { db, ahora, encolar } from './db'
 
 // ─── Banco de preguntas ──────────────────────────────────────────────────────
 // Los archivos content/banco/*.json se empaquetan con la app y se cargan en
@@ -60,7 +60,9 @@ export async function listarPreguntas(f = {}) {
 export const obtenerPregunta = (id) => db.preguntas.get(id)
 
 export async function guardarPregunta(p) {
-  await db.preguntas.put({ ...p, editada_local: true, fecha_edicion: ahora() })
+  const fila = { ...p, editada_local: true, fecha_edicion: ahora() }
+  await db.preguntas.put(fila)
+  await encolar('preguntas', fila)
 }
 
 export function mezclar(arr, semilla = Date.now()) {

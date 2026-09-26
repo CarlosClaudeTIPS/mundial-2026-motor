@@ -31,7 +31,16 @@ export async function contarPendientes() {
   return n
 }
 
-const TABLAS = { intentos: 'uid', usuarios: 'id', grupos: 'id', asignaciones: 'id', sesiones: 'id', recursos: 'id' }
+// tabla local → { tabla en Supabase, clave de conflicto }
+const TABLAS = {
+  intentos: { destino: 'intentos', clave: 'uid' },
+  usuarios: { destino: 'perfiles', clave: 'id' },
+  grupos: { destino: 'grupos', clave: 'id' },
+  asignaciones: { destino: 'asignaciones', clave: 'id' },
+  sesiones: { destino: 'sesiones', clave: 'id' },
+  recursos: { destino: 'recursos', clave: 'id' },
+  preguntas: { destino: 'preguntas', clave: 'id' },
+}
 
 export async function sincronizar() {
   await contarPendientes()
@@ -42,10 +51,10 @@ export async function sincronizar() {
   try {
     const cola = await db.cola.orderBy('id').toArray()
     for (const item of cola) {
-      const clave = TABLAS[item.tabla]
-      if (!clave) { await db.cola.delete(item.id); continue }
+      const destino = TABLAS[item.tabla]
+      if (!destino) { await db.cola.delete(item.id); continue }
       const fila = aFilaNube(item.tabla, item.datos)
-      const { error } = await supabase.from(item.tabla).upsert(fila, { onConflict: clave })
+      const { error } = await supabase.from(destino.destino).upsert(fila, { onConflict: destino.clave })
       if (error) throw new Error(`${item.tabla}: ${error.message}`)
       await db.cola.delete(item.id)
       if (item.tabla === 'intentos') await db.intentos.update(item.datos.uid, { sincronizado: 1 })
@@ -62,7 +71,8 @@ export async function sincronizar() {
 // Campos que no van a la nube o que cambian de forma.
 function aFilaNube(tabla, d) {
   const { sincronizado, semilla, ...resto } = d
-  if (tabla === 'usuarios') { const { pin_hash, ...u } = resto; return u }
+  if (tabla === 'usuarios') { const { pin_hash, demo, ...u } = resto; return u }
+  if (tabla === 'preguntas') { const { editada_local, fecha_carga, fecha_edicion, ...p } = resto; return { ...p, actualizado: fecha_edicion ?? ahora() } }
   return resto
 }
 

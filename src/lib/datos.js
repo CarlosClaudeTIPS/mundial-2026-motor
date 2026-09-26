@@ -1,6 +1,7 @@
 import { db, uuid, ahora, encolar } from './db'
 import { evaluar } from './feedback'
 import { crearUsuario } from './sesion'
+import { supabase, NUBE_DISPONIBLE } from './supabase'
 
 // ─── Capa de datos: intentos, grupos, asignaciones, recursos ────────────────
 // Todo se escribe primero en IndexedDB y se encola para sincronizar (sync.js).
@@ -70,7 +71,28 @@ export const todosLosGrupos = () => db.grupos.toArray()
 export const miembrosDe = (grupo_id) => db.usuarios.where('grupo_id').equals(grupo_id).toArray()
 
 export async function agregarEstudiante(grupo, { nombre, usuario, pin }) {
+  if (NUBE_DISPONIBLE) {
+    const { creados, errores } = await inscribirEnNube(grupo, [{ nombre, usuario, pin }])
+    if (errores.length) throw new Error(errores[0])
+    return creados[0]
+  }
   return crearUsuario({ nombre, usuario, pin, rol: 'estudiante', grupo_id: grupo.id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id })
+}
+
+// Con nube: la función de servidor api/estudiantes.js crea las cuentas de Auth
+// (correo sintético + PIN como contraseña) y las filas en `perfiles`.
+async function inscribirEnNube(grupo, estudiantes) {
+  const { data } = await supabase.auth.getSession()
+  const token = data.session?.access_token
+  if (!token) throw new Error('Inicia sesión en la nube para inscribir estudiantes')
+  const res = await fetch('/api/estudiantes', {
+    method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+    body: JSON.stringify({ grupo_id: grupo.id, estudiantes }),
+  })
+  const json = await res.json().catch(() => ({}))
+  if (!res.ok) throw new Error(json.error ?? `Error ${res.status} al inscribir`)
+  for (const u of json.creados ?? []) await db.usuarios.put({ ...u, sincronizado: 1 })
+  return { creados: (json.creados ?? []).map((u, i) => ({ ...u, pin: estudiantes.find(e => e.usuario === u.usuario)?.pin })), errores: json.errores ?? [] }
 }
 
 // Importación por texto: una línea por estudiante "Nombre Apellido; usuario; pin"

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { CheckCircle2, XCircle, BookOpen, RotateCcw } from 'lucide-react'
 import { razonesPosibles, textoDiagnostico } from '../lib/feedback'
-import { explicarIntento, recursoParaError } from '../lib/datos'
+import { explicarIntento, recursoParaError, actualizarIntento } from '../lib/datos'
 import { Md, Badge } from './ui'
 import { nombreDiagnostico } from '../lib/taxonomia'
 
@@ -16,6 +16,8 @@ export default function Retro({ pregunta, evaluacion, intento = null, onRefuerzo
   const [recurso, setRecurso] = useState(null)
   const [otro, setOtro] = useState('')
   useEffect(() => { setEv(ev0); setRazon(intento?.razon ?? null) }, [ev0, intento?.uid])
+  // Registrar que el estudiante vio la explicación (sirve para el seguimiento del docente)
+  useEffect(() => { if (intento?.uid && !intento.vio_explicacion) actualizarIntento(intento.uid, { vio_explicacion: true }) }, [intento?.uid])
   useEffect(() => {
     if (ev.esCorrecta) { setRecurso(null); return }
     recursoParaError({ prueba: pregunta.prueba, tipo_error: ev.tipoError, habilidad: pregunta.habilidad }).then(setRecurso)
