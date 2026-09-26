@@ -171,6 +171,39 @@ export async function recursoParaError({ prueba, tipo_error, habilidad }) {
     ?? null
 }
 
+// ── Sesiones del docente (cada ~21 días) ──────────────────────────────────────
+// Snapshot del periodo desde la sesión anterior: errores frecuentes, habilidades
+// débiles, acciones sugeridas, preguntas más falladas y recursos relacionados.
+export const sesionesDocenteDe = (grupo_id) => db.sesiones_docente.where('grupo_id').equals(grupo_id).reverse().sortBy('fecha')
+
+export async function prepararSesionDocente({ grupo, docente_id, resumenGrupoFn, estadisticasPreguntasFn, preguntasPorId }) {
+  const previas = await sesionesDocenteDe(grupo.id)
+  const desde = previas[0]?.fecha ? new Date(previas[0].fecha + 'T00:00:00') : new Date(Date.now() - 21 * 86400000)
+  const { miembros, intentos } = await intentosDeGrupo(grupo.id)
+  const periodo = intentos.filter(i => new Date(i.fecha) >= desde)
+  const r = resumenGrupoFn(miembros, periodo, preguntasPorId)
+  const preguntas = estadisticasPreguntasFn(periodo, preguntasPorId).filter(q => q.total >= 2 && (q.precision ?? 100) < 60).slice(0, 5)
+  const tiposTop = r.erroresFrecuentes.slice(0, 3).map(e => e.id)
+  const recursos = (await listarRecursos({ estado: 'aprobado' })).filter(rec => (rec.tipos_error ?? []).some(t => tiposTop.includes(t))).slice(0, 4)
+  return {
+    id: uuid(), grupo_id: grupo.id, docente_id, fecha: new Date().toISOString().slice(0, 10),
+    titulo: `Sesión ${previas.length + 1} · ${grupo.nombre}`, notas: '',
+    resumen: {
+      periodo_inicio: desde.toISOString().slice(0, 10), n_intentos: periodo.length, n_activos: r.n_activos, promedio: r.promedio,
+      errores_frecuentes: r.erroresFrecuentes.slice(0, 5), habilidades_debiles: r.habilidades.filter(h => h.total >= 5 && h.precision < 60).slice(0, 3),
+      acciones: r.acciones, preguntas_recomendadas: preguntas.map(q => ({ id: q.id, precision: q.precision, distractor: q.distractor })),
+      recursos: recursos.map(x => ({ id: x.id, titulo: x.titulo })), con_dificultad: r.conDificultad.map(e => e.nombre),
+    },
+    creada: ahora(), sincronizado: 0,
+  }
+}
+
+export async function guardarSesionDocente(s) {
+  await db.sesiones_docente.put(s)
+  await encolar('sesiones_docente', s)
+  return s
+}
+
 // ── Resultados en papel ───────────────────────────────────────────────────────
 // El docente registra las respuestas de una prueba impresa: "usuario: A B C D ..."
 export async function registrarPapel({ estudiante_id, preguntas, claves, sesion_id = null }) {

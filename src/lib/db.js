@@ -22,6 +22,11 @@ db.version(1).stores({
   cola:         '++id, tabla, fecha',
 })
 
+// v2: sesiones del docente (una cada ~21 días por grupo, con el resumen del periodo)
+db.version(2).stores({
+  sesiones_docente: 'id, grupo_id, fecha',
+})
+
 export const ahora = () => new Date().toISOString()
 
 export function uuid() {

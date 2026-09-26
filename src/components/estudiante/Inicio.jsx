@@ -7,7 +7,7 @@ import { listarPreguntas } from '../../lib/banco'
 import { resumen } from '../../lib/analitica'
 import { ir } from '../../lib/nav'
 import { Barra, Badge } from '../ui'
-import { crearMiniPrueba, crearSimulacro } from '../../lib/pruebas'
+import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto } from '../../lib/pruebas'
 
 export default function Inicio({ usuario }) {
   const [datos, setDatos] = useState(null)
@@ -34,7 +34,9 @@ export default function Inicio({ usuario }) {
   const abrirAsignacion = async (a) => {
     try {
       const s = a.tipo === 'simulacro'
-        ? await crearSimulacro({ estudiante: usuario, ...a.config, asignacion_id: a.id, titulo: a.titulo })
+        ? (a.config.sesion_examen === 'completo'
+          ? await crearSimulacroCompleto({ estudiante: usuario, escala: a.config.escala, asignacion_id: a.id })
+          : await crearSimulacro({ estudiante: usuario, ...a.config, asignacion_id: a.id, titulo: a.titulo }))
         : await crearMiniPrueba({ estudiante: usuario, ...a.config, asignacion_id: a.id, titulo: a.titulo })
       ir('sesion', { id: s.id })
     } catch (e) { alert(e.message) }
@@ -48,6 +50,7 @@ export default function Inicio({ usuario }) {
           <p className="text-sm text-gray-400 mt-1">
             {estado.estado === 'no_iniciado' && `El ciclo ${ciclo.nombre} empieza el ${formatoFecha(ciclo.fecha_inicio)}.`}
             {estado.estado === 'en_curso' && <>Semana {estado.semanaActual} de {estado.semanasTotales} · {estado.fase?.nombre} · faltan {estado.diasRestantes} días para el examen</>}
+            {estado.estado === 'pausa' && <>{estado.pausaActual}: semana de pausa. Si quieres, practica corto (5 preguntas) para no perder el ritmo · faltan {estado.diasRestantes} días para el examen</>}
             {estado.estado === 'dia_examen' && '¡Hoy es el examen! Lee con calma y verifica cada respuesta.'}
             {estado.estado === 'terminado' && `El ciclo ${ciclo.nombre} ya terminó.`}
             {ciclo.fecha_provisional && <Badge tono="ambar">fecha provisional</Badge>}

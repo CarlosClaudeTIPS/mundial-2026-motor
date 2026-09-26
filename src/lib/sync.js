@@ -40,6 +40,7 @@ const TABLAS = {
   sesiones: { destino: 'sesiones', clave: 'id' },
   recursos: { destino: 'recursos', clave: 'id' },
   preguntas: { destino: 'preguntas', clave: 'id' },
+  sesiones_docente: { destino: 'sesiones_docente', clave: 'id' },
 }
 
 export async function sincronizar() {

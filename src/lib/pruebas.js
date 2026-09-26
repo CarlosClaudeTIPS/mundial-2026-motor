@@ -51,6 +51,33 @@ export async function crearSimulacro({ estudiante, sesion_examen = 1, escala = 0
   return s
 }
 
+// Simulacro completo = sesión 1 y sesión 2 el mismo día con un descanso. Se crea
+// la sesión 1 con un `completo_id`; al terminarla, la pantalla de resultados
+// ofrece iniciar la sesión 2 con el mismo `completo_id` (ver sesion2DeCompleto).
+export async function crearSimulacroCompleto({ estudiante, escala = 0.25, asignacion_id = null }) {
+  const completo_id = uuid()
+  const s = await crearSimulacro({ estudiante, sesion_examen: 1, escala, asignacion_id, titulo: 'Simulacro completo · Sesión 1' })
+  const nuevo = { ...s, config: { ...s.config, completo_id } }
+  await db.sesiones.put(nuevo)
+  return nuevo
+}
+
+export async function sesion2DeCompleto(sesion1) {
+  const completo_id = sesion1.config.completo_id
+  const existente = (await db.sesiones.where('estudiante_id').equals(sesion1.estudiante_id).toArray()).find(s => s.config?.completo_id === completo_id && s.config?.sesion_examen === 2)
+  if (existente) return existente
+  const estudiante = await db.usuarios.get(sesion1.estudiante_id)
+  const s = await crearSimulacro({ estudiante, sesion_examen: 2, escala: sesion1.config.escala, asignacion_id: sesion1.asignacion_id, titulo: 'Simulacro completo · Sesión 2' })
+  const nuevo = { ...s, config: { ...s.config, completo_id } }
+  await db.sesiones.put(nuevo)
+  return nuevo
+}
+
+export async function sesionesDeCompleto(completo_id, estudiante_id) {
+  const todas = await db.sesiones.where('estudiante_id').equals(estudiante_id).toArray()
+  return todas.filter(s => s.config?.completo_id === completo_id).sort((a, b) => (a.config.sesion_examen ?? 0) - (b.config.sesion_examen ?? 0))
+}
+
 export const obtenerSesion = (id) => db.sesiones.get(id)
 export const sesionesDe = (estudiante_id) => db.sesiones.where('estudiante_id').equals(estudiante_id).reverse().sortBy('fecha_inicio')
 

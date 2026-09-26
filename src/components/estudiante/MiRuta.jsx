@@ -27,6 +27,8 @@ export default function MiRuta({ usuario }) {
         <Barra valor={estado.progreso * 100} />
         <p className="text-xs text-gray-400 mt-2">
           {estado.estado === 'no_iniciado' ? `Empieza el ${formatoFecha(ciclo.fecha_inicio)}.` : `Semana ${estado.semanaActual} de ${estado.semanasTotales} · ${estado.diasRestantes} días para el examen.`}
+          {estado.enPausa && ` Ahora: ${estado.pausaActual}.`}
+          {(ciclo.pausas ?? []).length > 0 && ` Pausas: ${ciclo.pausas.map(p => `${p.nombre} (${formatoFecha(p.inicio)} – ${formatoFecha(p.fin)})`).join('; ')}.`}
           {' '}Dedicación sugerida: {prog.horas_estudiante_semana.clase} h de clase + {prog.horas_estudiante_semana.autonomo} h de práctica autónoma por semana.
         </p>
       </div>

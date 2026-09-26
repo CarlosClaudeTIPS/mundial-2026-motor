@@ -34,8 +34,36 @@ export function ciclosPorDefecto() {
       fecha_provisional: !f.oficial,
       semanas: programaBase.semanas_totales,
       activo: f.calendario === 'B',
+      // Pausas: semanas que no cuentan para el programa (vacaciones). Ajustar al calendario del colegio.
+      pausas: f.calendario === 'B'
+        ? [{ nombre: 'Vacaciones de fin de año (ajustar al calendario del colegio)', inicio: `${f.anio - 1}-12-18`, fin: `${f.anio}-01-10` }]
+        : [],
     }
   })
+}
+
+const fechaLocal = (iso) => new Date(iso + 'T00:00:00')
+
+// Semanas del ciclo (lunes a domingo desde la fecha de inicio) marcando cuáles caen en pausa.
+export function semanasDelCiclo(ciclo) {
+  const inicio = fechaLocal(ciclo.fecha_inicio)
+  const examen = fechaLocal(ciclo.fecha_examen)
+  const pausas = (ciclo.pausas ?? []).map(p => ({ ...p, ini: fechaLocal(p.inicio), fin: fechaLocal(p.fin) }))
+  const semanas = []
+  let numero = 0
+  for (let t = inicio.getTime(); t < examen.getTime() + DIA; t += 7 * DIA) {
+    const desde = new Date(t), hasta = new Date(t + 6 * DIA)
+    // Una semana es de pausa si al menos 4 de sus 7 días caen dentro de alguna pausa.
+    let diasPausa = 0
+    for (let d = 0; d < 7; d++) {
+      const dia = t + d * DIA
+      if (pausas.some(p => dia >= p.ini.getTime() && dia <= p.fin.getTime())) diasPausa++
+    }
+    const pausa = diasPausa >= 4 ? pausas.find(p => hasta >= p.ini && desde <= p.fin) : null
+    if (!pausa) numero++
+    semanas.push({ desde, hasta, pausa: pausa ? pausa.nombre : null, numero: pausa ? null : numero })
+  }
+  return semanas
 }
 
 export async function asegurarCiclos() {
@@ -64,11 +92,19 @@ export function estadoCiclo(ciclo, prog = programaBase, hoy = new Date()) {
   const inicio = new Date(ciclo.fecha_inicio + 'T00:00:00')
   const examen = new Date(ciclo.fecha_examen + 'T00:00:00')
   const h = new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate())
-  const semanasTotales = Math.max(1, Math.round((examen - inicio) / (7 * DIA)))
+  const semanas = semanasDelCiclo(ciclo)
+  const semanasTotales = Math.max(1, semanas.filter(s => !s.pausa).length)
   const diasTranscurridos = Math.floor((h - inicio) / DIA)
-  const semanaActual = Math.min(semanasTotales, Math.max(0, Math.floor(diasTranscurridos / 7) + 1))
+  const semanaHoy = semanas.find(s => h >= s.desde && h <= s.hasta) ?? null
+  const enPausa = !!semanaHoy?.pausa
+  // Semana del programa: cuenta solo semanas sin pausa; durante una pausa se mantiene la última cumplida.
+  let semanaActual = 0
+  if (diasTranscurridos >= 0) {
+    const cumplidas = semanas.filter(s => !s.pausa && s.desde <= h)
+    semanaActual = Math.min(semanasTotales, cumplidas.length)
+  }
   const diasRestantes = Math.ceil((examen - h) / DIA)
-  const semanasRestantes = Math.max(0, Math.ceil(diasRestantes / 7))
+  const semanasRestantes = Math.max(0, semanas.filter(s => !s.pausa && s.hasta >= h).length)
 
   // Las fases del programa se escalan proporcionalmente si el ciclo no dura exactamente 24 semanas.
   const factor = semanasTotales / prog.semanas_totales
@@ -84,9 +120,11 @@ export function estadoCiclo(ciclo, prog = programaBase, hoy = new Date()) {
   if (diasTranscurridos < 0) estado = 'no_iniciado'
   else if (diasRestantes < 0) estado = 'terminado'
   else if (diasRestantes === 0) estado = 'dia_examen'
+  else if (enPausa) estado = 'pausa'
 
   return {
     estado, semanaActual, semanasTotales, semanasRestantes, diasRestantes, diasTranscurridos,
+    enPausa, pausaActual: semanaHoy?.pausa ?? null, semanas,
     fase, fases,
     progreso: Math.min(1, Math.max(0, diasTranscurridos / Math.max(1, (examen - inicio) / DIA))),
     simulacrosRecomendados: fases.filter(f => f.simulacro).map(f => ({ fase: f.nombre, semana_fin: f.semana_fin, ...f.simulacro })),

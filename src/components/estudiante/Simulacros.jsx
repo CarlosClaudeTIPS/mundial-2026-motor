@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Timer, Play } from 'lucide-react'
-import { crearMiniPrueba, crearSimulacro, sesionesDe } from '../../lib/pruebas'
+import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto, sesionesDe } from '../../lib/pruebas'
 import { estructuraExamen, cicloActivo, programa, estadoCiclo } from '../../lib/ciclo'
 import { listarPreguntas } from '../../lib/banco'
 import { ir } from '../../lib/nav'
@@ -98,11 +98,12 @@ export default function Simulacros({ usuario }) {
           </div>
           {est && <p className="text-xs text-gray-500 mt-1">≈ {Math.round(est.sesiones[0].bloques.reduce((a, b) => a + b.preguntas, 0) * escala)} preguntas y {Math.round(est.duracion_sesion_min * escala)} min por sesión.</p>}
         </div>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           <button className="btn-secondary" onClick={() => lanzarSimulacro(1)}>Sesión 1</button>
           <button className="btn-secondary" onClick={() => lanzarSimulacro(2)}>Sesión 2</button>
+          <button className="btn-primary" onClick={async () => { setError(''); try { const s = await crearSimulacroCompleto({ estudiante: usuario, escala }); ir('sesion', { id: s.id }) } catch (e) { setError(e.message) } }}>Completo</button>
         </div>
-        <p className="text-xs text-gray-500">Un simulacro completo son las dos sesiones el mismo día con un descanso entre ellas, como en el examen real.</p>
+        <p className="text-xs text-gray-500">El simulacro completo son las dos sesiones el mismo día con un descanso entre ellas, como en el examen real: al terminar la sesión 1 podrás iniciar la sesión 2 y ver el resultado global.</p>
         {error && <p className="text-sm text-brand-red">{error}</p>}
       </div>
 

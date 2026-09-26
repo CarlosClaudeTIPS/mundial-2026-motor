@@ -61,13 +61,25 @@ function Ciclos() {
               <div><label className="label">Calendario</label><select className="input" value={c.calendario} onChange={ev => editar(c, { calendario: ev.target.value })}><option value="B">B (primer semestre)</option><option value="A">A (segundo semestre)</option></select></div>
               <div><label className="label">Fecha</label><select className="input" value={c.fecha_provisional ? 'prov' : 'ofi'} onChange={ev => editar(c, { fecha_provisional: ev.target.value === 'prov' })}><option value="prov">Provisional</option><option value="ofi">Oficial (verificada en ICFES)</option></select></div>
             </div>
-            {e && <p className="text-xs text-gray-400">{e.semanasTotales} semanas · hoy: semana {e.semanaActual} · {e.diasRestantes} días al examen · fase: {e.fase?.nombre ?? '—'}</p>}
+            <div>
+              <label className="label">Pausas (vacaciones): una por línea, "AAAA-MM-DD a AAAA-MM-DD · nombre"</label>
+              <textarea className="input font-mono text-xs" rows="2" defaultValue={(c.pausas ?? []).map(p => `${p.inicio} a ${p.fin} · ${p.nombre ?? ''}`).join('\n')}
+                onBlur={ev => editar(c, { pausas: parsearPausas(ev.target.value) })} placeholder="2026-12-18 a 2027-01-10 · Vacaciones" />
+            </div>
+            {e && <p className="text-xs text-gray-400">{e.semanasTotales} semanas efectivas ({e.semanas.filter(s => s.pausa).length} en pausa) · hoy: semana {e.semanaActual}{e.enPausa ? ` (en pausa: ${e.pausaActual})` : ''} · {e.diasRestantes} días al examen · fase: {e.fase?.nombre ?? '—'}</p>}
           </div>
         )
       })}
       <button className="btn-secondary w-full" onClick={nuevo}>Nuevo ciclo</button>
     </div>
   )
+}
+
+function parsearPausas(texto) {
+  return texto.split(/\r?\n/).map(l => l.trim()).filter(Boolean).map(l => {
+    const m = l.match(/(\d{4}-\d{2}-\d{2})\s*a\s*(\d{4}-\d{2}-\d{2})\s*(?:·\s*(.*))?$/)
+    return m ? { inicio: m[1], fin: m[2], nombre: (m[3] ?? 'Pausa').trim() || 'Pausa' } : null
+  }).filter(Boolean)
 }
 
 function Usuarios({ admin }) {

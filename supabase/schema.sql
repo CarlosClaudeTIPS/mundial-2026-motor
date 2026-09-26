@@ -153,6 +153,18 @@ create table if not exists recursos (
   actualizado timestamptz default now()
 );
 
+-- Sesiones del docente con el grupo (cada ~21 días): resumen del periodo y notas
+create table if not exists sesiones_docente (
+  id uuid primary key,
+  grupo_id uuid not null references grupos(id) on delete cascade,
+  docente_id uuid references perfiles(id) on delete set null,
+  fecha date not null,
+  titulo text,
+  notas text,
+  resumen jsonb,
+  creada timestamptz default now()
+);
+
 -- ─── Funciones auxiliares para RLS ───────────────────────────────────────────
 create or replace function rol_actual() returns text language sql stable security definer as $$
   select rol from perfiles where id = auth.uid()
@@ -176,6 +188,8 @@ alter table intentos enable row level security;
 alter table sesiones enable row level security;
 alter table asignaciones enable row level security;
 alter table recursos enable row level security;
+alter table sesiones_docente enable row level security;
+create policy sesiones_docente_gestion on sesiones_docente for all using (docente_id = auth.uid() or rol_actual() = 'admin') with check (docente_id = auth.uid() or rol_actual() = 'admin');
 
 -- perfiles: cada quien ve el suyo; el docente ve los de sus grupos; admin todo.
 create policy perfiles_leer on perfiles for select using (

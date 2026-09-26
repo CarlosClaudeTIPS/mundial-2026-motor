@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { UserPlus, ClipboardList, Printer, Lightbulb } from 'lucide-react'
 import { db } from '../../lib/db'
-import { intentosDeGrupo, agregarEstudiante, importarEstudiantes, crearAsignacion, asignacionesDeGrupo } from '../../lib/datos'
+import { intentosDeGrupo, agregarEstudiante, importarEstudiantes, crearAsignacion, asignacionesDeGrupo, sesionesDocenteDe, prepararSesionDocente, guardarSesionDocente } from '../../lib/datos'
 import { listarPreguntas } from '../../lib/banco'
 import { resumenGrupo, estadisticasPreguntas } from '../../lib/analitica'
 import { generarIntentosDemo } from '../../lib/demo'
@@ -57,7 +57,7 @@ export default function Grupo({ usuario, params }) {
   const guardarAsignacion = async () => {
     if (!asig.titulo.trim()) return alert('Falta el título')
     const config = asig.tipo === 'simulacro'
-      ? { sesion_examen: Number(asig.sesion_examen), escala: Number(asig.escala) }
+      ? { sesion_examen: asig.sesion_examen === 'completo' ? 'completo' : Number(asig.sesion_examen), escala: Number(asig.escala) }
       : { cantidad: Number(asig.cantidad), tiempo_min: asig.tiempo_min ? Number(asig.tiempo_min) : null, filtros: limpiar({ prueba: asig.prueba, competencia: asig.competencia, habilidad: asig.habilidad, tipo_error: asig.tipo_error, dificultad: asig.dificultad }) }
     await crearAsignacion({ grupo_id: grupo.id, docente_id: usuario.id, tipo: asig.tipo, titulo: asig.titulo, config, fecha_limite: asig.fecha_limite || null, nota: asig.nota })
     setAsig(null); cargar()
@@ -74,7 +74,7 @@ export default function Grupo({ usuario, params }) {
       <Titulo volver sub={`${grupo.colegio ?? ''}${grupo.curso ? ' · ' + grupo.curso : ''} · código ${grupo.codigo} · ${d.miembros.length} estudiantes`}>{grupo.nombre}</Titulo>
 
       <div className="flex gap-1.5 overflow-x-auto -mx-4 px-4 pb-1">
-        {[['resumen', 'Resumen'], ['estudiantes', 'Estudiantes'], ['preguntas', 'Preguntas'], ['asignaciones', 'Asignaciones']].map(([k, n]) => (
+        {[['resumen', 'Resumen'], ['estudiantes', 'Estudiantes'], ['preguntas', 'Preguntas'], ['asignaciones', 'Asignaciones'], ['sesiones', 'Sesiones']].map(([k, n]) => (
           <button key={k} onClick={() => setPestana(k)} className={`badge shrink-0 border px-3 py-1 ${pestana === k ? 'border-brand-blue text-white' : 'border-dark-600 text-gray-400'}`}>{n}</button>
         ))}
       </div>
@@ -189,6 +189,8 @@ export default function Grupo({ usuario, params }) {
         </div>
       )}
 
+      {pestana === 'sesiones' && <SesionesDocente grupo={grupo} usuario={usuario} porId={d.porId} onAsignar={asignarDesdeAccion} />}
+
       {pestana === 'asignaciones' && (
         <>
           {!asig && <button className="btn-secondary w-full" onClick={() => setAsig(nuevaAsig())}><ClipboardList size={16} /> Nueva asignación</button>}
@@ -207,7 +209,7 @@ export default function Grupo({ usuario, params }) {
                 </div>
               ) : (
                 <div className="grid grid-cols-2 gap-2">
-                  <select className="input" value={asig.sesion_examen} onChange={e => setAsig({ ...asig, sesion_examen: e.target.value })}><option value="1">Sesión 1</option><option value="2">Sesión 2</option></select>
+                  <select className="input" value={asig.sesion_examen} onChange={e => setAsig({ ...asig, sesion_examen: e.target.value })}><option value="1">Sesión 1</option><option value="2">Sesión 2</option><option value="completo">Completo (2 sesiones)</option></select>
                   <select className="input" value={asig.escala} onChange={e => setAsig({ ...asig, escala: e.target.value })}>{[0.1, 0.25, 0.5, 1].map(e => <option key={e} value={e}>Escala {Math.round(e * 100)} %</option>)}</select>
                 </div>
               )}
@@ -222,6 +224,62 @@ export default function Grupo({ usuario, params }) {
           </div>
         </>
       )}
+    </div>
+  )
+}
+
+// ─── Sesiones del docente (una cada ~21 días) ────────────────────────────────
+function SesionesDocente({ grupo, usuario, porId, onAsignar }) {
+  const [lista, setLista] = useState([])
+  const [borrador, setBorrador] = useState(null)
+  const [abierta, setAbierta] = useState(null)
+  const cargar = async () => setLista(await sesionesDocenteDe(grupo.id))
+  useEffect(() => { cargar() }, [grupo.id])
+  const ultima = lista[0]
+  const proxima = ultima ? new Date(new Date(ultima.fecha + 'T00:00:00').getTime() + 21 * 86400000) : null
+
+  const preparar = async () => {
+    setBorrador(await prepararSesionDocente({ grupo, docente_id: usuario.id, resumenGrupoFn: resumenGrupo, estadisticasPreguntasFn: estadisticasPreguntas, preguntasPorId: porId }))
+  }
+  const guardar = async () => { await guardarSesionDocente(borrador); setBorrador(null); cargar() }
+
+  const Resumen = ({ s }) => {
+    const r = s.resumen
+    return (
+      <div className="space-y-2 text-sm">
+        <p className="text-xs text-gray-500">Periodo desde {r.periodo_inicio} · {r.n_intentos} respuestas · {r.n_activos} estudiantes activos · promedio {r.promedio ?? '—'}%</p>
+        {r.errores_frecuentes.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Errores del periodo</p>{r.errores_frecuentes.map(e => <p key={e.id}>{e.nombre}: {e.pct_estudiantes}% de los activos ({e.errores} errores)</p>)}</div>}
+        {r.habilidades_debiles.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Habilidades problemáticas</p>{r.habilidades_debiles.map(h => <p key={h.id}>{h.nombre}: {h.precision}% en {h.total} preguntas</p>)}</div>}
+        {r.acciones.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Acciones sugeridas (reglas)</p>{r.acciones.slice(0, 3).map((a, i) => <div key={i} className="rounded bg-dark-900 p-2 mb-1"><p>{a.titulo}</p><p className="text-xs text-gray-400">{a.dato}</p>{a.accion && <button className="btn-ghost !py-0.5 text-xs mt-1" onClick={() => onAsignar(a)}>Asignar al grupo</button>}</div>)}</div>}
+        {r.preguntas_recomendadas.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Preguntas para trabajar en clase</p>{r.preguntas_recomendadas.map(q => <p key={q.id}><span className="font-mono text-xs text-gray-400">{q.id}</span> {porId[q.id]?.enunciado?.slice(0, 90)}… ({q.precision}%{q.distractor ? `, distractor ${q.distractor.clave}` : ''})</p>)}</div>}
+        {r.recursos.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Material recomendado</p>{r.recursos.map(x => <p key={x.id}>{x.titulo}</p>)}</div>}
+        {r.con_dificultad.length > 0 && <p className="text-xs text-gray-400">Con dificultades marcadas: {r.con_dificultad.join(', ')}</p>}
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-3">
+      <p className="text-xs text-gray-400">El programa sugiere una sesión de una hora con el grupo cada ~21 días (no es obligatorio). Cada sesión guarda un resumen del periodo para planear la clase.{proxima && ` Próxima sugerida: ${proxima.toLocaleDateString('es-CO', { day: 'numeric', month: 'long' })}.`}</p>
+      {!borrador && <button className="btn-secondary w-full" onClick={preparar}>Preparar sesión con los datos del periodo</button>}
+      {borrador && (
+        <div className="card space-y-2">
+          <input className="input" value={borrador.titulo} onChange={e => setBorrador({ ...borrador, titulo: e.target.value })} />
+          <input className="input" type="date" value={borrador.fecha} onChange={e => setBorrador({ ...borrador, fecha: e.target.value })} />
+          <Resumen s={borrador} />
+          <textarea className="input" rows="3" placeholder="Notas del docente: qué se trabajó, acuerdos, tareas" value={borrador.notas} onChange={e => setBorrador({ ...borrador, notas: e.target.value })} />
+          <div className="flex gap-2"><button className="btn-primary flex-1" onClick={guardar}>Guardar sesión</button><button className="btn-secondary flex-1" onClick={() => setBorrador(null)}>Cancelar</button></div>
+        </div>
+      )}
+      {lista.length === 0 && !borrador && <Vacio>Aún no hay sesiones registradas.</Vacio>}
+      {lista.map(s => (
+        <div key={s.id} className="card p-3">
+          <button className="w-full text-left flex justify-between" onClick={() => setAbierta(abierta === s.id ? null : s.id)}>
+            <span className="font-medium">{s.titulo}</span><span className="text-xs text-gray-500">{s.fecha}</span>
+          </button>
+          {abierta === s.id && <div className="mt-2 border-t border-dark-700 pt-2"><Resumen s={s} />{s.notas && <p className="text-sm mt-2 whitespace-pre-line"><span className="text-gray-500">Notas:</span> {s.notas}</p>}</div>}
+        </div>
+      ))}
     </div>
   )
 }

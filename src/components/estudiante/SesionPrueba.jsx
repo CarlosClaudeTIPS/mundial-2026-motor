@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Clock, ChevronLeft, ChevronRight, Flag } from 'lucide-react'
-import { obtenerSesion, responderEnSesion, acumularTiempo, guardarIndice, terminarSesion } from '../../lib/pruebas'
+import { obtenerSesion, responderEnSesion, acumularTiempo, guardarIndice, terminarSesion, sesion2DeCompleto, sesionesDeCompleto } from '../../lib/pruebas'
+import { resumen } from '../../lib/analitica'
 import { obtenerPregunta } from '../../lib/banco'
 import { db } from '../../lib/db'
 import { evaluar } from '../../lib/feedback'
@@ -138,12 +139,51 @@ function Resultados({ sesion, preguntas, usuario }) {
   const r = sesion.resultado
   const [intentos, setIntentos] = useState([])
   const [abierta, setAbierta] = useState(null)
+  const [completo, setCompleto] = useState(null) // { sesiones, combinado }
   useEffect(() => { db.intentos.where('sesion_id').equals(sesion.id).toArray().then(setIntentos) }, [sesion.id])
+  useEffect(() => {
+    if (!sesion.config?.completo_id) return
+    (async () => {
+      const ss = await sesionesDeCompleto(sesion.config.completo_id, sesion.estudiante_id)
+      const terminadas = ss.filter(s => s.estado === 'terminada')
+      let combinado = null
+      if (terminadas.length === 2) {
+        const todos = (await Promise.all(terminadas.map(s => db.intentos.where('sesion_id').equals(s.id).toArray()))).flat()
+        combinado = resumen(todos)
+      }
+      setCompleto({ sesiones: ss, combinado })
+    })()
+  }, [sesion.id])
   const porId = Object.fromEntries(intentos.map(i => [i.pregunta_id, i]))
+  const esSesion1Completo = sesion.config?.completo_id && sesion.config.sesion_examen === 1
+  const hayS2 = completo?.sesiones.some(s => s.config.sesion_examen === 2)
 
   return (
     <div className="space-y-4">
       <Titulo volver sub={`${sesion.titulo}${sesion.agotado ? ' · se agotó el tiempo' : ''}`}>Resultados</Titulo>
+
+      {esSesion1Completo && !hayS2 && (
+        <div className="card border-brand-blue/50">
+          <p className="font-medium">Sesión 1 terminada</p>
+          <p className="text-sm text-gray-400 mt-1">En el examen real hay un descanso entre las dos sesiones. Tómalo (30 a 60 minutos) y luego inicia la sesión 2 para completar el simulacro.</p>
+          <button className="btn-primary w-full mt-3" onClick={async () => { const s2 = await sesion2DeCompleto(sesion); ir('sesion', { id: s2.id }) }}>Iniciar sesión 2</button>
+        </div>
+      )}
+      {esSesion1Completo && hayS2 && (() => { const s2 = completo.sesiones.find(s => s.config.sesion_examen === 2); return s2.estado === 'en_curso' ? <button className="btn-primary w-full" onClick={() => ir('sesion', { id: s2.id })}>Continuar la sesión 2</button> : null })()}
+
+      {completo?.combinado && (
+        <div className="card border-brand-green/40">
+          <p className="font-medium mb-2">Simulacro completo (sesión 1 + sesión 2)</p>
+          <div className="grid grid-cols-2 gap-2 mb-2">
+            <Metrica etiqueta="Aciertos globales" valor={completo.combinado.precision} sufijo="%" />
+            <Metrica etiqueta="Correctas" valor={`${completo.combinado.aciertos}/${completo.combinado.total}`} />
+          </div>
+          {completo.combinado.por_prueba.map(x => <FilaMetrica key={x.id} nombre={x.nombre} valor={x.precision} detalle={`${x.aciertos}/${x.total}`} />)}
+          <div className="flex gap-2 mt-2 text-xs">
+            {completo.sesiones.map(s => <button key={s.id} className="btn-ghost !py-1" onClick={() => ir('sesion', { id: s.id })}>Ver sesión {s.config.sesion_examen}</button>)}
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-3 gap-2">
         <Metrica etiqueta="Aciertos" valor={r.precision} sufijo="%" />

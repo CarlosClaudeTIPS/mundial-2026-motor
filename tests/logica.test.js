@@ -97,6 +97,16 @@ describe('ciclo.estadoCiclo', () => {
     expect(e.fase.id).toBe('F2')
     expect(e.estado).toBe('en_curso')
   })
+  it('descuenta las semanas de pausa y marca el estado en pausa', () => {
+    const conPausa = { ...ciclo, pausas: [{ nombre: 'Vacaciones', inicio: '2026-12-18', fin: '2027-01-10' }] }
+    const sin = estadoCiclo(ciclo, programa, new Date('2027-02-01T12:00:00'))
+    const con = estadoCiclo(conPausa, programa, new Date('2027-02-01T12:00:00'))
+    expect(con.semanasTotales).toBeLessThan(sin.semanasTotales)
+    expect(con.semanaActual).toBeLessThan(sin.semanaActual)
+    const enPausa = estadoCiclo(conPausa, programa, new Date('2026-12-28T12:00:00'))
+    expect(enPausa.estado).toBe('pausa')
+    expect(enPausa.pausaActual).toBe('Vacaciones')
+  })
   it('detecta ciclo no iniciado y día del examen', () => {
     expect(estadoCiclo(ciclo, programa, new Date('2026-09-01T12:00:00')).estado).toBe('no_iniciado')
     expect(estadoCiclo(ciclo, programa, new Date('2027-03-14T12:00:00')).estado).toBe('dia_examen')

@@ -34,7 +34,7 @@ export default function PanelDocente({ usuario }) {
 
   return (
     <div className="space-y-4">
-      <Titulo sub={estadoC ? (estadoC.estado === 'no_iniciado' ? `Ciclo activo: empieza en ${-estadoC.diasTranscurridos} día(s) · ${estadoC.semanasTotales} semanas` : `Ciclo activo: semana ${estadoC.semanaActual} de ${estadoC.semanasTotales} · ${estadoC.fase?.nombre ?? ''}`) : null}
+      <Titulo sub={estadoC ? (estadoC.estado === 'no_iniciado' ? `Ciclo activo: empieza en ${-estadoC.diasTranscurridos} día(s) · ${estadoC.semanasTotales} semanas` : `Ciclo activo: semana ${estadoC.semanaActual} de ${estadoC.semanasTotales} · ${estadoC.enPausa ? estadoC.pausaActual : (estadoC.fase?.nombre ?? '')}`) : null}
         accion={<button className="btn-secondary" onClick={() => setNuevo({ nombre: '', colegio: '', curso: '', ciclo_id: ciclos.find(c => c.activo)?.id ?? '' })}><Plus size={16} /> Grupo</button>}>Mis grupos</Titulo>
 
       {nuevo && (
