@@ -35,12 +35,17 @@ Validar el banco:
 npm run validar-banco
 ```
 
-## Supabase (opcional)
+## Nube (Supabase + Vercel)
+
+**App publicada:** https://saber11-prep.vercel.app (proyecto Supabase `saber11-prep`, región Américas; despliegue automático desde la rama `main`).
+
+Para reproducir la configuración en otro proyecto:
 
 1. Crear proyecto en supabase.com y ejecutar `supabase/schema.sql` en el SQL Editor.
-2. Copiar `.env.example` a `.env.local` con `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY`.
-3. En Vercel, agregar además `SUPABASE_SERVICE_ROLE_KEY` (solo servidor) para `api/estudiantes.js`.
-4. Crear la cuenta del docente en Auth y su fila en `perfiles` con `rol = 'docente'`.
+2. Authentication → Sign In / Providers → desactivar **Confirm email** (los estudiantes usan correo sintético + PIN de 6 dígitos y se registran desde el navegador del docente; no hace falta clave secreta).
+3. Invitar al docente/admin desde Authentication → Users y crear su fila en `perfiles` (`rol = 'admin'` o `'docente'`).
+4. Copiar `.env.example` a `.env.local` con `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY` (clave *publishable*). En Vercel, las mismas dos variables.
+5. `api/estudiantes.js` es opcional (alternativa con clave secreta `SUPABASE_SERVICE_ROLE_KEY`, solo en servidor).
 
 Sin estas variables la app queda en modo local: cada navegador guarda sus propios datos (haz respaldos desde Administración → Datos).
 
