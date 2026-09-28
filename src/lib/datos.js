@@ -79,20 +79,33 @@ export async function agregarEstudiante(grupo, { nombre, usuario, pin }) {
   return crearUsuario({ nombre, usuario, pin, rol: 'estudiante', grupo_id: grupo.id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id })
 }
 
-// Con nube: la función de servidor api/estudiantes.js crea las cuentas de Auth
-// (correo sintético + PIN como contraseña) y las filas en `perfiles`.
+// Con nube: se crea la cuenta de Auth de cada estudiante desde el navegador del
+// docente con un cliente auxiliar (correo sintético <usuario>@estudiantes.saber11.local
+// y PIN como contraseña; requiere "Confirm email" desactivado en Supabase Auth) y
+// luego la fila en `perfiles` (política RLS: el docente inserta perfiles de sus grupos).
+// No necesita clave secreta en ningún servidor. Límite de Supabase: ~30 registros
+// por hora por IP; para grupos grandes, importar en tandas.
+const DOMINIO_ESTUDIANTES = 'estudiantes.saber11.local'
+
 async function inscribirEnNube(grupo, estudiantes) {
   const { data } = await supabase.auth.getSession()
-  const token = data.session?.access_token
-  if (!token) throw new Error('Inicia sesión en la nube para inscribir estudiantes')
-  const res = await fetch('/api/estudiantes', {
-    method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-    body: JSON.stringify({ grupo_id: grupo.id, estudiantes }),
-  })
-  const json = await res.json().catch(() => ({}))
-  if (!res.ok) throw new Error(json.error ?? `Error ${res.status} al inscribir`)
-  for (const u of json.creados ?? []) await db.usuarios.put({ ...u, sincronizado: 1 })
-  return { creados: (json.creados ?? []).map((u, i) => ({ ...u, pin: estudiantes.find(e => e.usuario === u.usuario)?.pin })), errores: json.errores ?? [] }
+  if (!data.session) throw new Error('Inicia sesión en la nube para inscribir estudiantes')
+  const { createClient } = await import('@supabase/supabase-js')
+  const aux = createClient(import.meta.env.VITE_SUPABASE_URL, import.meta.env.VITE_SUPABASE_ANON_KEY, { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } })
+  const creados = [], errores = []
+  for (const e of estudiantes) {
+    const usuario = String(e.usuario ?? '').trim().toLowerCase().replace(/[^a-z0-9._-]/g, '')
+    const pin = String(e.pin ?? '').trim()
+    if (!e.nombre || !usuario || pin.length < 6) { errores.push(`${e.nombre ?? '?'}: datos incompletos (el PIN debe tener al menos 6 dígitos)`); continue }
+    const { data: reg, error } = await aux.auth.signUp({ email: `${usuario}@${DOMINIO_ESTUDIANTES}`, password: pin, options: { data: { nombre: e.nombre, rol: 'estudiante' } } })
+    if (error || !reg?.user) { errores.push(`${e.nombre}: ${error?.message ?? 'no se creó la cuenta'}`); continue }
+    const fila = { id: reg.user.id, rol: 'estudiante', nombre: e.nombre, usuario, grupo_id: grupo.id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id }
+    const { error: errPerfil } = await supabase.from('perfiles').upsert(fila)
+    if (errPerfil) { errores.push(`${e.nombre}: cuenta creada pero sin perfil (${errPerfil.message})`); continue }
+    await db.usuarios.put({ ...fila, sincronizado: 1 })
+    creados.push({ ...fila, pin })
+  }
+  return { creados, errores }
 }
 
 // Importación por texto: una línea por estudiante "Nombre Apellido; usuario; pin"
@@ -104,7 +117,7 @@ export async function importarEstudiantes(grupo, texto) {
     const [nombre, usuario, pin] = fila.split(/[;,\t]/).map(s => (s ?? '').trim())
     if (!nombre) continue
     const handle = usuario || generarHandle(nombre)
-    const pinFinal = pin || String(1000 + Math.floor(Math.random() * 9000))
+    const pinFinal = pin || String(100000 + Math.floor(Math.random() * 900000))
     try {
       const u = await agregarEstudiante(grupo, { nombre, usuario: handle, pin: pinFinal })
       creados.push({ ...u, pin: pinFinal })

@@ -198,6 +198,10 @@ create policy perfiles_leer on perfiles for select using (
 create policy perfiles_editar_propio on perfiles for update using (id = auth.uid());
 create policy perfiles_admin on perfiles for all using (rol_actual() = 'admin');
 create policy perfiles_docente_edita_estudiantes on perfiles for update using (es_mi_estudiante(id));
+-- El docente inscribe estudiantes de sus propios grupos (la cuenta de Auth se crea con signUp desde su navegador).
+create policy perfiles_docente_inserta on perfiles for insert with check (
+  rol = 'estudiante' and exists (select 1 from grupos g where g.id = grupo_id and g.docente_id = auth.uid())
+);
 
 -- grupos: docente ve/edita los suyos; estudiante ve el suyo; admin todo.
 create policy grupos_leer on grupos for select using (
