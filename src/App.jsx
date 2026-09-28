@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import { useSesion, iniciarSesionGuardada } from './lib/sesion'
+import { useSesion, iniciarSesionGuardada, LLEGO_POR_ENLACE } from './lib/sesion'
+import { ir } from './lib/nav'
+import CrearContrasena from './components/CrearContrasena'
 import { sembrarBanco } from './lib/banco'
 import { sembrarRecursos } from './lib/recursos'
 import { asegurarCiclos } from './lib/ciclo'
@@ -46,6 +48,7 @@ export default function App() {
   const { ruta, params } = useRuta()
   const [listo, setListo] = useState(false)
   const [errorArranque, setErrorArranque] = useState(null)
+  const [contrasenaLista, setContrasenaLista] = useState(false)
 
   useEffect(() => {
     arrancar().then(() => setListo(true)).catch(e => { console.error(e); setErrorArranque(e.message) })
@@ -56,6 +59,7 @@ export default function App() {
   if (errorArranque) return <Pantalla>No se pudo iniciar la aplicación: {errorArranque}</Pantalla>
   if (!listo || sesion.cargando) return <Pantalla>Cargando…</Pantalla>
   if (!sesion.usuario) return <Login />
+  if (LLEGO_POR_ENLACE && !contrasenaLista) return <CrearContrasena onLista={() => { setContrasenaLista(true); ir('inicio') }} />
 
   const u = sesion.usuario
   const vista = elegirVista(u.rol, ruta, params, u)

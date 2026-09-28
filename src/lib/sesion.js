@@ -25,6 +25,27 @@ export async function hashPin(pin) {
   return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('')
 }
 
+// Si el usuario llega desde un enlace de invitación o de recuperación de
+// contraseña (Supabase pone #access_token=…&type=invite|recovery en la URL),
+// hay que pedirle que cree su contraseña antes de seguir.
+const HASH_INICIAL = typeof window !== 'undefined' ? window.location.hash : ''
+export const LLEGO_POR_ENLACE = /type=(invite|recovery|magiclink)/.test(HASH_INICIAL)
+
+export async function crearContrasena(nueva) {
+  if (!NUBE_DISPONIBLE) throw new Error('La nube no está configurada')
+  const { data, error } = await supabase.auth.updateUser({ password: nueva })
+  if (error) throw new Error(error.message)
+  const usuario = await perfilDesdeNube(data.user)
+  setEstado({ usuario })
+  return usuario
+}
+
+export async function pedirRecuperacion(correo) {
+  if (!NUBE_DISPONIBLE) throw new Error('La nube no está configurada')
+  const { error } = await supabase.auth.resetPasswordForEmail(correo, { redirectTo: window.location.origin + '/' })
+  if (error) throw new Error(error.message)
+}
+
 export async function iniciarSesionGuardada() {
   try {
     if (NUBE_DISPONIBLE) {

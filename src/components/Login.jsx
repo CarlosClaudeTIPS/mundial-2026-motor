@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { entrarLocal, entrarNube } from '../lib/sesion'
+import { entrarLocal, entrarNube, pedirRecuperacion } from '../lib/sesion'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { USUARIOS_DEMO } from '../lib/demo'
 
@@ -8,6 +8,7 @@ export default function Login() {
   const [usuario, setUsuario] = useState('')
   const [pin, setPin] = useState('')
   const [error, setError] = useState('')
+  const [aviso, setAviso] = useState('')
   const [cargando, setCargando] = useState(false)
 
   const entrar = async (e) => {
@@ -56,7 +57,15 @@ export default function Login() {
               <input className="input" type="password" inputMode={NUBE_DISPONIBLE && tipo === 'docente' ? 'text' : 'numeric'} value={pin} onChange={e => setPin(e.target.value)} autoComplete="current-password" placeholder="••••" />
             </div>
             {error && <p className="text-sm text-brand-red">{error}</p>}
+            {aviso && <p className="text-sm text-brand-green">{aviso}</p>}
             <button className="btn-primary w-full" disabled={cargando}>{cargando ? 'Entrando…' : 'Entrar'}</button>
+            {NUBE_DISPONIBLE && tipo === 'docente' && (
+              <button type="button" className="btn-ghost w-full text-xs" onClick={async () => {
+                setError(''); setAviso('')
+                if (!/\S+@\S+\.\S+/.test(usuario)) { setError('Escribe tu correo para enviarte el enlace'); return }
+                try { await pedirRecuperacion(usuario.trim()); setAviso('Te enviamos un enlace al correo para crear una contraseña nueva.') } catch (e) { setError(e.message) }
+              }}>¿Olvidaste tu contraseña o aún no la tienes?</button>
+            )}
           </form>
         </div>
 
