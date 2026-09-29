@@ -20,6 +20,8 @@ import MisErrores from './components/estudiante/MisErrores'
 import MiProgreso from './components/estudiante/MiProgreso'
 import MiRuta from './components/estudiante/MiRuta'
 import Biblioteca from './components/Biblioteca'
+import Materias from './components/estudiante/Materias'
+import Materia from './components/estudiante/Materia'
 import PanelDocente from './components/docente/PanelDocente'
 import Grupo from './components/docente/Grupo'
 import EstudianteDetalle from './components/docente/EstudianteDetalle'
@@ -49,6 +51,9 @@ export default function App() {
   const [listo, setListo] = useState(false)
   const [errorArranque, setErrorArranque] = useState(null)
   const [contrasenaLista, setContrasenaLista] = useState(false)
+  // Docente/admin: previsualizar la app como la ve un estudiante
+  const [vistaEstudiante, setVistaEstudianteRaw] = useState(() => { try { return localStorage.getItem('vista_estudiante') === '1' } catch { return false } })
+  const setVistaEstudiante = (v) => { setVistaEstudianteRaw(v); try { localStorage.setItem('vista_estudiante', v ? '1' : '0') } catch {} ; ir('inicio') }
 
   useEffect(() => {
     arrancar().then(() => setListo(true)).catch(e => { console.error(e); setErrorArranque(e.message) })
@@ -62,8 +67,10 @@ export default function App() {
   if (LLEGO_POR_ENLACE && !contrasenaLista) return <CrearContrasena onLista={() => { setContrasenaLista(true); ir('inicio') }} />
 
   const u = sesion.usuario
-  const vista = elegirVista(u.rol, ruta, params, u)
-  return <Layout usuario={u} ruta={ruta}>{vista}</Layout>
+  const previsualizando = vistaEstudiante && (u.rol === 'docente' || u.rol === 'admin')
+  const uVista = previsualizando ? { ...u, rol: 'estudiante', previsualizacion: true } : u
+  const vista = elegirVista(uVista.rol, ruta, params, uVista)
+  return <Layout usuario={u} rolVista={uVista.rol} ruta={ruta} vistaEstudiante={previsualizando} onVistaEstudiante={setVistaEstudiante}>{vista}</Layout>
 }
 
 function elegirVista(rol, ruta, params, usuario) {
@@ -71,6 +78,8 @@ function elegirVista(rol, ruta, params, usuario) {
   if (ruta === 'biblioteca') return <Biblioteca usuario={usuario} params={params} />
   if (ruta === 'practica') return <Practica usuario={usuario} params={params} />
   if (ruta === 'sesion') return <SesionPrueba usuario={usuario} params={params} />
+  if (ruta === 'materias') return <Materias usuario={usuario} params={params} />
+  if (ruta === 'materia') return <Materia usuario={usuario} params={params} />
 
   if (rol === 'estudiante') {
     switch (ruta) {

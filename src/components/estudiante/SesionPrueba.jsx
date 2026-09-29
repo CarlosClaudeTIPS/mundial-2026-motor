@@ -214,7 +214,7 @@ function Resultados({ sesion, preguntas, usuario }) {
         <div className="flex flex-wrap gap-1.5 mb-3">
           {preguntas.map((q, i) => {
             const it = porId[q.id]
-            return <button key={q.id} onClick={() => setAbierta(abierta === q.id ? null : q.id)} className={`w-8 h-8 rounded text-xs font-medium ${abierta === q.id ? 'ring-2 ring-brand-blue' : ''} ${!it ? 'bg-dark-900' : it.correcta ? 'bg-emerald-900/60 text-emerald-200' : it.opcion ? 'bg-red-900/60 text-red-200' : 'bg-dark-700 text-gray-400'}`}>{i + 1}</button>
+            return <button key={q.id} onClick={() => setAbierta(abierta === q.id ? null : q.id)} className={`w-8 h-8 rounded text-xs font-medium ${abierta === q.id ? 'ring-2 ring-brand-blue' : ''} ${!it ? 'bg-dark-900' : it.correcta ? 'bg-emerald-100 text-emerald-800' : it.opcion ? 'bg-red-100 text-red-800' : 'bg-dark-700 text-gray-400'}`}>{i + 1}</button>
           })}
         </div>
         {abierta && (() => {

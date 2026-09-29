@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Timer, Play } from 'lucide-react'
-import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto, sesionesDe } from '../../lib/pruebas'
+import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto, crearDiagnostico, sesionesDe } from '../../lib/pruebas'
 import { estructuraExamen, cicloActivo, programa, estadoCiclo } from '../../lib/ciclo'
 import { listarPreguntas } from '../../lib/banco'
 import { ir } from '../../lib/nav'
@@ -54,6 +54,11 @@ export default function Simulacros({ usuario }) {
   return (
     <div className="space-y-4">
       <Titulo sub="Mini-pruebas por competencia o habilidad, y simulacros con la estructura real del examen">Pruebas</Titulo>
+
+      <div className="card flex items-center gap-4 border-brand-blue">
+        <div className="flex-1"><p className="font-semibold text-brand-navy">Prueba diagnóstica</p><p className="text-sm text-gray-400">25 preguntas de las cinco materias en 40 minutos. Ideal al comenzar el ciclo.</p></div>
+        <button className="btn-primary shrink-0" onClick={async () => { const s = await crearDiagnostico({ estudiante: usuario }); ir('sesion', { id: s.id }) }}>Empezar</button>
+      </div>
 
       <div className="card space-y-3">
         <p className="font-medium flex items-center gap-2"><Timer size={18} /> Mini-prueba</p>

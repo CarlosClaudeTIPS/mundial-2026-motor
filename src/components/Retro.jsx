@@ -87,10 +87,10 @@ export default function Retro({ pregunta, evaluacion, intento = null, onRefuerzo
 
 function tono(t) {
   switch (t) {
-    case 'ok': return 'bg-emerald-950/40 border border-emerald-900'
-    case 'error': return 'bg-red-950/40 border border-red-900'
-    case 'aviso': return 'bg-amber-950/30 border border-amber-900'
-    case 'meta': return 'bg-sky-950/30 border border-sky-900'
+    case 'ok': return 'bg-emerald-50 border border-emerald-200'
+    case 'error': return 'bg-red-50 border border-red-200'
+    case 'aviso': return 'bg-amber-50 border border-amber-200'
+    case 'meta': return 'bg-sky-50 border border-sky-200'
     default: return 'bg-dark-800 border border-dark-700'
   }
 }

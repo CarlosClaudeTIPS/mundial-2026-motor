@@ -57,8 +57,8 @@ export function Metrica({ etiqueta, valor, sufijo = '' }) {
 
 export function Badge({ children, tono = 'gris' }) {
   const cls = {
-    gris: 'bg-dark-700 text-gray-300', azul: 'bg-sky-900/60 text-sky-300', verde: 'bg-emerald-900/60 text-emerald-300',
-    ambar: 'bg-amber-900/60 text-amber-300', rojo: 'bg-red-900/60 text-red-300', morado: 'bg-violet-900/60 text-violet-300',
+    gris: 'bg-dark-700 text-gray-300', azul: 'bg-sky-100 text-sky-800', verde: 'bg-emerald-100 text-emerald-800',
+    ambar: 'bg-amber-100 text-amber-800', rojo: 'bg-red-100 text-red-800', morado: 'bg-violet-100 text-violet-800',
   }[tono]
   return <span className={`badge ${cls}`}>{children}</span>
 }

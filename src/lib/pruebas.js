@@ -1,5 +1,5 @@
 import { db, uuid, ahora, encolar } from './db'
-import { elegirPreguntas, obtenerPregunta } from './banco'
+import { elegirPreguntas, obtenerPregunta, listarPreguntas, mezclar } from './banco'
 import { estructuraExamen } from './ciclo'
 import { registrarIntento, preguntasVistas } from './datos'
 import { resumen } from './analitica'
@@ -22,6 +22,40 @@ export async function crearMiniPrueba({ estudiante, cantidad = 10, tiempo_min = 
   }
   await db.sesiones.add(s)
   return s
+}
+
+// Prueba diagnóstica: N preguntas por cada una de las 5 pruebas, de dificultad
+// básica y media, repartidas entre competencias. Se hace al comenzar el ciclo.
+export async function crearDiagnostico({ estudiante, porPrueba = 5, tiempo_min = 40, asignacion_id = null }) {
+  const pruebas = ['lectura_critica', 'matematicas', 'sociales_ciudadanas', 'ciencias_naturales', 'ingles']
+  const ids = []
+  for (const prueba of pruebas) {
+    const todas = mezclar((await listarPreguntas({ prueba })).filter(p => p.dificultad <= 2))
+    // Una por competencia primero, luego completar
+    const porComp = {}
+    for (const p of todas) (porComp[p.competencia] ??= []).push(p)
+    const elegidas = []
+    let ronda = 0
+    while (elegidas.length < porPrueba && Object.values(porComp).some(l => l.length > ronda)) {
+      for (const l of Object.values(porComp)) if (l[ronda] && elegidas.length < porPrueba) elegidas.push(l[ronda])
+      ronda++
+    }
+    ids.push(...elegidas.map(p => p.id))
+  }
+  if (!ids.length) throw new Error('El banco no tiene preguntas para el diagnóstico')
+  const s = {
+    id: uuid(), estudiante_id: estudiante.id, tipo: 'mini', titulo: 'Prueba diagnóstica',
+    config: { cantidad: ids.length, tiempo_seg: tiempo_min * 60, diagnostico: true },
+    pregunta_ids: ids, respuestas: {}, tiempos: {}, indice: 0,
+    estado: 'en_curso', fecha_inicio: ahora(), fecha_fin: null, asignacion_id, sincronizado: 0,
+  }
+  await db.sesiones.add(s)
+  return s
+}
+
+export async function diagnosticoDe(estudiante_id) {
+  const ss = await db.sesiones.where('estudiante_id').equals(estudiante_id).toArray()
+  return ss.filter(s => s.config?.diagnostico).sort((a, b) => (a.fecha_inicio < b.fecha_inicio ? 1 : -1))[0] ?? null
 }
 
 // sesion_examen: 1 | 2. escala: 1 = tamaño real; 0.25 = un cuarto (misma proporción y mismo tiempo por pregunta).

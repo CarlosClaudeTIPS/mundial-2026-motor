@@ -37,7 +37,7 @@ function Tabla({ e }) {
   )
 }
 
-const COLORES = ['#38BDF8', '#FBBF24', '#34D399', '#F472B6', '#A78BFA']
+const COLORES = ["#1FA9EC", "#F59E0B", "#10B981", "#EC4899", "#8B5CF6"]
 
 function Grafico({ e, tipo }) {
   const series = e.series ?? []
@@ -57,16 +57,16 @@ function Grafico({ e, tipo }) {
   return (
     <figure className="my-3">
       {e.titulo && <p className="text-sm font-medium mb-1">{e.titulo}</p>}
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-xl bg-dark-900 rounded-lg border border-dark-700" role="img" aria-label={e.titulo ?? 'Gráfico'}>
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full max-w-xl bg-dark-800 rounded-xl border border-dark-700" role="img" aria-label={e.titulo ?? 'Gráfico'}>
         {ticks.map(t => (
           <g key={t}>
-            <line x1={mL} x2={W - mR} y1={y(t)} y2={y(t)} stroke="#334155" strokeWidth="0.5" />
+            <line x1={mL} x2={W - mR} y1={y(t)} y2={y(t)} stroke="#E2E8F0" strokeWidth="0.5" />
             <text x={mL - 6} y={y(t) + 4} textAnchor="end" fontSize="11" fill="#94A3B8">{t.toLocaleString('es-CO')}</text>
           </g>
         ))}
         <line x1={mL} x2={W - mR} y1={y(0)} y2={y(0)} stroke="#94A3B8" strokeWidth="1" />
         {categorias.map((c, i) => (
-          <text key={c} x={mL + grupoW * i + grupoW / 2} y={H - mB + 16} textAnchor="middle" fontSize="11" fill="#CBD5E1">{c}</text>
+          <text key={c} x={mL + grupoW * i + grupoW / 2} y={H - mB + 16} textAnchor="middle" fontSize="11" fill="#434766">{c}</text>
         ))}
         {tipo === 'barras' && series.map((s, si) => {
           const barW = Math.min(40, (grupoW * 0.7) / series.length)
@@ -77,7 +77,7 @@ function Grafico({ e, tipo }) {
             return (
               <g key={cat}>
                 <rect x={x} y={Math.min(y(v), y(0))} width={barW - 2} height={Math.abs(y(0) - y(v))} fill={COLORES[si % COLORES.length]} rx="2" />
-                <text x={x + (barW - 2) / 2} y={y(v) - 4} textAnchor="middle" fontSize="10" fill="#E2E8F0">{v.toLocaleString('es-CO')}</text>
+                <text x={x + (barW - 2) / 2} y={y(v) - 4} textAnchor="middle" fontSize="10" fill="#2B2A63">{v.toLocaleString('es-CO')}</text>
               </g>
             )
           })
@@ -87,7 +87,7 @@ function Grafico({ e, tipo }) {
           return (
             <g key={s.nombre}>
               <polyline points={pts.map(p => p.join(',')).join(' ')} fill="none" stroke={COLORES[si % COLORES.length]} strokeWidth="2" />
-              {pts.map((p, i) => <g key={i}><circle cx={p[0]} cy={p[1]} r="3.5" fill={COLORES[si % COLORES.length]} /><text x={p[0]} y={p[1] - 8} textAnchor="middle" fontSize="10" fill="#E2E8F0">{Number(s.valores[i][1]).toLocaleString('es-CO')}</text></g>)}
+              {pts.map((p, i) => <g key={i}><circle cx={p[0]} cy={p[1]} r="3.5" fill={COLORES[si % COLORES.length]} /><text x={p[0]} y={p[1] - 8} textAnchor="middle" fontSize="10" fill="#2B2A63">{Number(s.valores[i][1]).toLocaleString('es-CO')}</text></g>)}
             </g>
           )
         })}

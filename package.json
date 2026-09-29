@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "validar-banco": "node scripts/validar-banco.mjs"
+    "validar-banco": "node scripts/validar-banco.mjs",
+    "demo": "vite --mode demo --port 5181"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.1",

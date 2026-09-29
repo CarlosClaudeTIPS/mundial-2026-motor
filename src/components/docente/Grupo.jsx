@@ -56,7 +56,7 @@ export default function Grupo({ usuario, params }) {
 
   const guardarAsignacion = async () => {
     if (!asig.titulo.trim()) return alert('Falta el título')
-    const config = asig.tipo === 'simulacro'
+    const config = asig.tipo === 'diagnostico' ? { cantidad: 25, tiempo_min: 40, diagnostico: true } : asig.tipo === 'simulacro'
       ? { sesion_examen: asig.sesion_examen === 'completo' ? 'completo' : Number(asig.sesion_examen), escala: Number(asig.escala) }
       : { cantidad: Number(asig.cantidad), tiempo_min: asig.tiempo_min ? Number(asig.tiempo_min) : null, filtros: limpiar({ prueba: asig.prueba, competencia: asig.competencia, habilidad: asig.habilidad, tipo_error: asig.tipo_error, dificultad: asig.dificultad }) }
     await crearAsignacion({ grupo_id: grupo.id, docente_id: usuario.id, tipo: asig.tipo, titulo: asig.titulo, config, fecha_limite: asig.fecha_limite || null, nota: asig.nota })
@@ -196,9 +196,9 @@ export default function Grupo({ usuario, params }) {
           {!asig && <button className="btn-secondary w-full" onClick={() => setAsig(nuevaAsig())}><ClipboardList size={16} /> Nueva asignación</button>}
           {asig && (
             <div className="card space-y-2">
-              <div className="flex gap-2">{['mini', 'simulacro'].map(t => <button key={t} onClick={() => setAsig({ ...asig, tipo: t })} className={`btn flex-1 ${asig.tipo === t ? 'bg-dark-600 text-white' : 'bg-dark-900 text-gray-400'}`}>{t === 'mini' ? 'Mini-prueba' : 'Simulacro'}</button>)}</div>
+              <div className="flex gap-2">{['diagnostico', 'mini', 'simulacro'].map(t => <button key={t} onClick={() => setAsig({ ...asig, tipo: t, titulo: t === 'diagnostico' && !asig.titulo ? 'Prueba diagnóstica' : asig.titulo })} className={`btn flex-1 ${asig.tipo === t ? 'bg-dark-600 text-white' : 'bg-dark-900 text-gray-400'}`}>{t === 'mini' ? 'Mini-prueba' : t === 'diagnostico' ? 'Diagnóstica' : 'Simulacro'}</button>)}</div>
               <input className="input" placeholder="Título" value={asig.titulo} onChange={e => setAsig({ ...asig, titulo: e.target.value })} />
-              {asig.tipo === 'mini' ? (
+              {asig.tipo === 'diagnostico' ? <p className="text-sm text-gray-400">25 preguntas (5 por materia, dificultad básica y media) en 40 minutos.</p> : asig.tipo === 'mini' ? (
                 <div className="grid grid-cols-2 gap-2">
                   <input className="input" type="number" placeholder="Cantidad" value={asig.cantidad} onChange={e => setAsig({ ...asig, cantidad: e.target.value })} />
                   <input className="input" type="number" placeholder="Tiempo (min)" value={asig.tiempo_min} onChange={e => setAsig({ ...asig, tiempo_min: e.target.value })} />
@@ -294,7 +294,7 @@ function AsignacionFila({ a, miembros }) {
   return (
     <div className="card p-3">
       <div className="flex justify-between gap-2">
-        <div><p className="text-sm font-medium">{a.titulo}</p><p className="text-xs text-gray-500">{a.tipo === 'simulacro' ? `Simulacro sesión ${a.config.sesion_examen} · ${Math.round(a.config.escala * 100)} %` : `Mini-prueba · ${a.config.cantidad} preguntas${a.config.tiempo_min ? ` · ${a.config.tiempo_min} min` : ''}`}{a.fecha_limite ? ` · hasta ${a.fecha_limite}` : ''}</p></div>
+        <div><p className="text-sm font-medium">{a.titulo}</p><p className="text-xs text-gray-500">{a.tipo === 'diagnostico' ? 'Prueba diagnóstica · 25 preguntas · 40 min' : a.tipo === 'simulacro' ? `Simulacro sesión ${a.config.sesion_examen} · ${Math.round(a.config.escala * 100)} %` : `Mini-prueba · ${a.config.cantidad} preguntas${a.config.tiempo_min ? ` · ${a.config.tiempo_min} min` : ''}`}{a.fecha_limite ? ` · hasta ${a.fecha_limite}` : ''}</p></div>
         <div className="text-right shrink-0"><p className="text-sm font-medium">{prom != null ? `${prom}%` : '—'}</p><p className="text-xs text-gray-500">{hechas?.length ?? 0}/{miembros.length} hechas</p></div>
       </div>
     </div>

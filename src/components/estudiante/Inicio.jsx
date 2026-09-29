@@ -7,20 +7,22 @@ import { listarPreguntas } from '../../lib/banco'
 import { resumen } from '../../lib/analitica'
 import { ir } from '../../lib/nav'
 import { Barra, Badge } from '../ui'
-import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto } from '../../lib/pruebas'
+import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto, crearDiagnostico, diagnosticoDe } from '../../lib/pruebas'
+import { MATERIAS, ICONO_PRUEBA } from '../Login'
+import { Stethoscope } from 'lucide-react'
 
 export default function Inicio({ usuario }) {
   const [datos, setDatos] = useState(null)
 
   useEffect(() => {
     (async () => {
-      const [intentos, ciclo, prog, preguntas, pendientes] = await Promise.all([intentosDe(usuario.id), cicloActivo(), programa(), listarPreguntas(), asignacionesPendientes(usuario)])
+      const [intentos, ciclo, prog, preguntas, pendientes, diagnostico] = await Promise.all([intentosDe(usuario.id), cicloActivo(), programa(), listarPreguntas(), asignacionesPendientes(usuario), diagnosticoDe(usuario.id)])
       const preguntasPorId = Object.fromEntries(preguntas.map(p => [p.id, p]))
       setDatos({
         intentos, ciclo, estado: estadoCiclo(ciclo, prog), pendientes,
         resumen: resumen(intentos, preguntasPorId),
         recs: recomendar(intentos, { preguntasPorId, reglas: await reglasVigentes() }).slice(0, 2),
-        totalBanco: preguntas.length,
+        totalBanco: preguntas.length, diagnostico,
       })
     })()
   }, [usuario.id])
@@ -33,7 +35,7 @@ export default function Inicio({ usuario }) {
 
   const abrirAsignacion = async (a) => {
     try {
-      const s = a.tipo === 'simulacro'
+      const s = a.tipo === 'diagnostico' ? await crearDiagnostico({ estudiante: usuario, asignacion_id: a.id }) : a.tipo === 'simulacro'
         ? (a.config.sesion_examen === 'completo'
           ? await crearSimulacroCompleto({ estudiante: usuario, escala: a.config.escala, asignacion_id: a.id })
           : await crearSimulacro({ estudiante: usuario, ...a.config, asignacion_id: a.id, titulo: a.titulo }))
@@ -45,7 +47,7 @@ export default function Inicio({ usuario }) {
   return (
     <div className="space-y-4">
       <div>
-        <h1 className="text-2xl font-semibold">Hola, {usuario.nombre.split(' ')[0]}</h1>
+        <h1 className="text-3xl font-bold">Hola, {usuario.nombre.split(' ')[0]} 👋</h1>
         {ciclo && estado && (
           <p className="text-sm text-gray-400 mt-1">
             {estado.estado === 'no_iniciado' && `El ciclo ${ciclo.nombre} empieza el ${formatoFecha(ciclo.fecha_inicio)}.`}
@@ -56,6 +58,16 @@ export default function Inicio({ usuario }) {
             {ciclo.fecha_provisional && <Badge tono="ambar">fecha provisional</Badge>}
           </p>
         )}
+      </div>
+
+      <TarjetaDiagnostico diagnostico={datos.diagnostico} usuario={usuario} />
+
+      <div className="grid grid-cols-5 gap-2">
+        {MATERIAS.map(m => { const I = ICONO_PRUEBA[m.id]; return (
+          <button key={m.id} onClick={() => ir('materia', { id: m.id })} className="card !p-3 flex flex-col items-center gap-1.5 hover:-translate-y-0.5 transition-transform">
+            <span className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: m.fondo, color: m.color }}><I size={20} /></span>
+            <span className="text-[11px] font-medium text-center leading-tight text-brand-navy">{m.nombre.replace(' y Ciudadanas', '')}</span>
+          </button>) })}
       </div>
 
       <div className="card">
@@ -131,5 +143,34 @@ function Accion({ icono: Icono, titulo, sub, onClick, destacada = false }) {
       <p className="text-sm font-medium mt-2">{titulo}</p>
       <p className="text-xs text-gray-400">{sub}</p>
     </button>
+  )
+}
+
+function TarjetaDiagnostico({ diagnostico, usuario }) {
+  const empezar = async () => {
+    if (diagnostico?.estado === 'en_curso') return ir('sesion', { id: diagnostico.id })
+    const s = await crearDiagnostico({ estudiante: usuario })
+    ir('sesion', { id: s.id })
+  }
+  if (diagnostico?.estado === 'terminada') {
+    return (
+      <button onClick={() => ir('sesion', { id: diagnostico.id })} className="card w-full text-left flex items-center gap-3">
+        <span className="w-11 h-11 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center shrink-0"><Stethoscope size={22} /></span>
+        <div className="flex-1"><p className="font-semibold text-brand-navy">Prueba diagnóstica realizada</p><p className="text-xs text-gray-400">Resultado: {diagnostico.resultado?.precision ?? '—'}% de aciertos. Toca para ver el detalle por materia.</p></div>
+        <button onClick={e => { e.stopPropagation(); crearDiagnostico({ estudiante: usuario }).then(s => ir('sesion', { id: s.id })) }} className="text-xs font-semibold text-brand-blue shrink-0">Repetir</button>
+      </button>
+    )
+  }
+  return (
+    <div className="rounded-2xl p-5 bg-gradient-to-r from-brand-blue to-indigo-500 text-[#fff] shadow-lg shadow-sky-200">
+      <div className="flex items-start gap-3">
+        <Stethoscope size={28} className="shrink-0" />
+        <div>
+          <p className="text-lg font-bold">Prueba diagnóstica</p>
+          <p className="text-sm opacity-90">25 preguntas de las cinco materias · 40 minutos. Te dice dónde estás y qué practicar primero.</p>
+        </div>
+      </div>
+      <button onClick={empezar} className="mt-4 w-full rounded-xl bg-[#fff] text-brand-blue font-semibold py-2.5">{diagnostico?.estado === 'en_curso' ? 'Continuar la prueba diagnóstica' : 'Empezar la prueba diagnóstica'}</button>
+    </div>
   )
 }
