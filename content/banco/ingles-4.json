@@ -90,21 +90,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "library",
-        "correcta": false,
-        "explicacion": "\"Library\" significa biblioteca: allí se prestan o se leen libros, pero no se compran. Es un falso cognado de \"librería\". Quien elige esta opción tradujo \"library\" por el parecido con la palabra en español.",
-        "tipo_error": "vocabulario",
-        "diagnostico": "probable",
-        "razon_frecuente": "Falso cognado: creyó que \"library\" es \"librería\"."
-      },
-      {
-        "clave": "B",
         "texto": "bookshop",
         "correcta": true,
         "explicacion": "\"Bookshop\" (o \"bookstore\") es el lugar donde se COMPRAN libros y, a menudo, útiles escolares. La palabra clave de la descripción es \"buy\".",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "library",
+        "correcta": false,
+        "explicacion": "\"Library\" significa biblioteca: allí se prestan o se leen libros, pero no se compran. Es un falso cognado de \"librería\". Quien elige esta opción tradujo \"library\" por el parecido con la palabra en español.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Falso cognado: creyó que \"library\" es \"librería\"."
       },
       {
         "clave": "C",
@@ -116,7 +116,7 @@
         "razon_frecuente": "Se quedó con \"buy\" sin reconocer qué se vende en una bakery."
       }
     ],
-    "explicacion": "LEER: \"You go to this place when you want to buy books, notebooks and pens.\" COMPRENDER: se busca un lugar de la ciudad. INTERPRETAR: la acción clave es comprar (buy) y los productos son libros y útiles. REPRESENTAR: comprar + libros → librería. RAZONAR: \"library\" es biblioteca (se prestan libros, no se compran), \"bakery\" vende pan, \"bookshop\" vende libros. RESOLVER: la opción B. VERIFICAR: en una bookshop se pueden comprar books, notebooks and pens.",
+    "explicacion": "LEER: \"You go to this place when you want to buy books, notebooks and pens.\" COMPRENDER: se busca un lugar de la ciudad. INTERPRETAR: la acción clave es comprar (buy) y los productos son libros y útiles. REPRESENTAR: comprar + libros → librería. RAZONAR: \"library\" es biblioteca (se prestan libros, no se compran), \"bakery\" vende pan, \"bookshop\" vende libros. RESOLVER: la opción A. VERIFICAR: en una bookshop se pueden comprar books, notebooks and pens.",
     "que_identificar": "El verbo \"buy\" y los objetos \"books, notebooks and pens\".",
     "que_revisar": "Falsos cognados de lugares: library (biblioteca) / bookshop (librería); lugares donde se compra (bakery, pharmacy, supermarket).",
     "refuerzo_ids": [
@@ -564,21 +564,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Everything in the shop is free this week.",
-        "correcta": false,
-        "explicacion": "El aviso no dice que todo sea gratis: hay que comprar uno para recibir otro gratis. Quien elige esta opción se quedó con \"free\" y \"this week\" y no leyó la condición \"buy one\".",
-        "tipo_error": "distractor",
-        "diagnostico": "probable",
-        "razon_frecuente": "Se quedó con \"free\" y omitió la condición \"buy one\"."
-      },
-      {
-        "clave": "B",
         "texto": "If you buy one item, you get a second one without paying, until the end of the week.",
         "correcta": true,
         "explicacion": "\"Buy one, get one free\" = compre uno y le regalan otro; \"this week only\" = la oferta vale solo esta semana. La opción recoge la condición y el límite de tiempo.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Everything in the shop is free this week.",
+        "correcta": false,
+        "explicacion": "El aviso no dice que todo sea gratis: hay que comprar uno para recibir otro gratis. Quien elige esta opción se quedó con \"free\" y \"this week\" y no leyó la condición \"buy one\".",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con \"free\" y omitió la condición \"buy one\"."
       },
       {
         "clave": "C",
@@ -590,7 +590,7 @@
         "razon_frecuente": "Aplicó \"only\" a la cantidad (\"one\") en lugar de al tiempo (\"this week\")."
       }
     ],
-    "explicacion": "LEER: \"Buy one, get one free — this week only!\" COMPRENDER: el aviso anuncia una oferta. INTERPRETAR: tiene una condición (comprar uno) y un beneficio (otro gratis), con un límite: solo esta semana. REPRESENTAR: pago 1 → llevo 2, válido hasta el fin de semana. RAZONAR: A omite la condición; C aplica \"only\" a la cantidad; B incluye condición, beneficio y límite. RESOLVER: la opción B. VERIFICAR: la opción B no agrega nada que el aviso no diga.",
+    "explicacion": "LEER: \"Buy one, get one free — this week only!\" COMPRENDER: el aviso anuncia una oferta. INTERPRETAR: tiene una condición (comprar uno) y un beneficio (otro gratis), con un límite: solo esta semana. REPRESENTAR: pago 1 → llevo 2, válido hasta el fin de semana. RAZONAR: B omite la condición; C aplica \"only\" a la cantidad; A incluye condición, beneficio y límite. RESOLVER: la opción A. VERIFICAR: la opción A no agrega nada que el aviso no diga.",
     "que_identificar": "La condición \"buy one\", el beneficio \"get one free\" y a qué se refiere \"only\".",
     "que_revisar": "Lenguaje de ofertas (free, discount, sale, only, until) y cómo \"only\" modifica la palabra que tiene al lado.",
     "refuerzo_ids": [
@@ -767,21 +767,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "You're welcome.",
-        "correcta": false,
-        "explicacion": "\"You're welcome\" es la respuesta a \"Thank you\", no a \"Sorry\". Quien elige esta opción usó una fórmula de cortesía conocida sin identificar que el estudiante se estaba disculpando.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Usó la respuesta a \"thank you\" para contestar una disculpa."
-      },
-      {
-        "clave": "B",
         "texto": "Don't worry. Come in and sit down.",
         "correcta": true,
         "explicacion": "\"Don't worry\" es una respuesta amable para aceptar una disculpa, y \"Come in and sit down\" es lo que un profesor le diría a un estudiante que llega tarde. La respuesta atiende a la intención del estudiante.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "You're welcome.",
+        "correcta": false,
+        "explicacion": "\"You're welcome\" es la respuesta a \"Thank you\", no a \"Sorry\". Quien elige esta opción usó una fórmula de cortesía conocida sin identificar que el estudiante se estaba disculpando.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la respuesta a \"thank you\" para contestar una disculpa."
       },
       {
         "clave": "C",
@@ -793,7 +793,7 @@
         "razon_frecuente": "Respondió de forma literal a la información del bus y no a la disculpa."
       }
     ],
-    "explicacion": "LEER: el estudiante dice \"Sorry I'm late. The bus was very slow this morning.\" COMPRENDER: la primera oración es una disculpa; la segunda, una justificación. INTERPRETAR: lo que se espera del profesor es aceptar (o no) la disculpa. REPRESENTAR: Sorry → Don't worry / That's OK / No problem. RAZONAR: A es la respuesta a \"thank you\"; C comenta el bus sin responder la disculpa; B acepta la disculpa y da una instrucción coherente. RESOLVER: la opción B. VERIFICAR: la conversación completa suena natural en un salón de clase.",
+    "explicacion": "LEER: el estudiante dice \"Sorry I'm late. The bus was very slow this morning.\" COMPRENDER: la primera oración es una disculpa; la segunda, una justificación. INTERPRETAR: lo que se espera del profesor es aceptar (o no) la disculpa. REPRESENTAR: Sorry → Don't worry / That's OK / No problem. RAZONAR: B es la respuesta a \"thank you\"; C comenta el bus sin responder la disculpa; A acepta la disculpa y da una instrucción coherente. RESOLVER: la opción A. VERIFICAR: la conversación completa suena natural en un salón de clase.",
     "que_identificar": "La intención del primer hablante: disculparse (\"Sorry I'm late\").",
     "que_revisar": "Fórmulas de respuesta según la función: Thank you → You're welcome; Sorry → Don't worry / That's OK.",
     "refuerzo_ids": [
@@ -1107,21 +1107,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "that",
-        "correcta": false,
-        "explicacion": "En español se dice \"más pequeño QUE Bogotá\", y \"que\" se traduce muchas veces como \"that\". Pero en las comparaciones el inglés usa \"than\". Quien elige esta opción tradujo el \"que\" del español.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Tradujo el \"que\" comparativo del español como \"that\"."
-      },
-      {
-        "clave": "B",
         "texto": "than",
         "correcta": true,
         "explicacion": "Un adjetivo comparativo (smaller) se completa con \"than\": \"It is smaller than Bogotá\".",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "that",
+        "correcta": false,
+        "explicacion": "En español se dice \"más pequeño QUE Bogotá\", y \"que\" se traduce muchas veces como \"that\". Pero en las comparaciones el inglés usa \"than\". Quien elige esta opción tradujo el \"que\" del español.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo el \"que\" comparativo del español como \"that\"."
       },
       {
         "clave": "C",
@@ -1133,7 +1133,7 @@
         "razon_frecuente": "Mezcló la comparación de igualdad (as...as) con la de superioridad (-er than)."
       }
     ],
-    "explicacion": "LEER: \"It is smaller (2) ______ Bogotá, but it is full of history.\" COMPRENDER: falta la palabra que une el comparativo con el segundo término. INTERPRETAR: \"smaller\" es un adjetivo comparativo de superioridad (-er). REPRESENTAR: adjetivo-er + than + segundo término. RAZONAR: \"that\" es el calco del \"que\" español; \"as\" pertenece a \"as...as\"; \"than\" es la única que completa \"smaller\". RESOLVER: la opción B. VERIFICAR: \"Villa de Leyva is smaller than Bogotá\" es gramatical y verdadera.",
+    "explicacion": "LEER: \"It is smaller (2) ______ Bogotá, but it is full of history.\" COMPRENDER: falta la palabra que une el comparativo con el segundo término. INTERPRETAR: \"smaller\" es un adjetivo comparativo de superioridad (-er). REPRESENTAR: adjetivo-er + than + segundo término. RAZONAR: \"that\" es el calco del \"que\" español; \"as\" pertenece a \"as...as\"; \"than\" es la única que completa \"smaller\". RESOLVER: la opción A. VERIFICAR: \"Villa de Leyva is smaller than Bogotá\" es gramatical y verdadera.",
     "que_identificar": "El adjetivo comparativo \"smaller\" justo antes del espacio.",
     "que_revisar": "Comparativos: adjetivo-er / more + adjetivo + than; igualdad: as + adjetivo + as.",
     "refuerzo_ids": [
