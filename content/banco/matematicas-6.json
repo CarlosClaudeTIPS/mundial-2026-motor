@@ -214,7 +214,7 @@
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Conteo",
     "subtema": "Principio multiplicativo: número de combinaciones de un menú",
@@ -288,7 +288,7 @@
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Conteo",
     "subtema": "Permutaciones con una posición fija",
@@ -437,7 +437,7 @@
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
     "habilidad": "interpretar",
     "tema": "Probabilidad",
     "subtema": "Probabilidad condicional a partir de una tabla de doble entrada",
@@ -646,7 +646,7 @@
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
     "habilidad": "representar",
     "tema": "Ecuaciones lineales",
     "subtema": "Nota mínima necesaria para alcanzar un promedio deseado",
@@ -722,138 +722,100 @@
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
     "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
     "habilidad": "interpretar",
-    "tema": "Medidas de dispersión",
-    "subtema": "Rango como medida de variabilidad al comparar dos series en un gráfico de líneas",
+    "tema": "Probabilidad",
+    "subtema": "Probabilidad frecuencial: la frecuencia relativa se estabiliza al aumentar el número de ensayos",
     "dificultad": 1,
-    "contexto": "Un grupo de estudiantes registró durante una semana la temperatura máxima diaria (en °C) en dos municipios: **Ipiales** (Nariño) y **Girardot** (Cundinamarca). Los datos están en el gráfico.",
+    "contexto": "En la clase de estadística de un colegio de Duitama, un grupo lanzó una tachuela muchas veces y fue registrando qué porcentaje de los lanzamientos acumulados cayó con la **punta hacia arriba**. El gráfico muestra ese porcentaje después de 10, 50, 100, 200, 500 y 1 000 lanzamientos.",
     "estimulo": {
       "tipo": "lineas",
-      "titulo": "Temperatura máxima diaria durante una semana",
-      "eje_x": "Día",
-      "eje_y": "Temperatura (°C)",
+      "titulo": "Porcentaje acumulado de lanzamientos con la punta hacia arriba",
+      "eje_x": "Número de lanzamientos acumulados",
+      "eje_y": "Punta hacia arriba (%)",
       "series": [
         {
-          "nombre": "Ipiales",
+          "nombre": "Punta hacia arriba",
           "valores": [
             [
-              "Lun",
-              14
+              "10",
+              70
             ],
             [
-              "Mar",
-              19
+              "50",
+              58
             ],
             [
-              "Mié",
-              12
+              "100",
+              63
             ],
             [
-              "Jue",
-              17
+              "200",
+              61
             ],
             [
-              "Vie",
-              20
+              "500",
+              62
             ],
             [
-              "Sáb",
-              13
-            ],
-            [
-              "Dom",
-              16
-            ]
-          ]
-        },
-        {
-          "nombre": "Girardot",
-          "valores": [
-            [
-              "Lun",
-              33
-            ],
-            [
-              "Mar",
-              34
-            ],
-            [
-              "Mié",
-              33
-            ],
-            [
-              "Jue",
-              35
-            ],
-            [
-              "Vie",
-              34
-            ],
-            [
-              "Sáb",
-              33
-            ],
-            [
-              "Dom",
-              34
+              "1000",
+              62
             ]
           ]
         }
       ]
     },
-    "enunciado": "¿En cuál municipio la temperatura máxima VARIÓ MÁS durante la semana, y cuál fue su rango?",
+    "enunciado": "Con base en el gráfico, ¿cuál es la mejor estimación de la probabilidad de que la tachuela caiga con la punta hacia arriba?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "En Girardot, porque allí se registró la temperatura más alta de la semana (35 °C).",
+        "texto": "70 %",
         "correcta": false,
-        "explicacion": "No responde. Que Girardot tenga temperaturas más altas indica un nivel más alto, no más variación. Sus temperaturas solo van de 33 °C a 35 °C: rango de 2 °C.",
+        "explicacion": "No es la mejor estimación. 70 % corresponde a los primeros 10 lanzamientos; con tan pocos ensayos la frecuencia relativa varía mucho por azar. Las estimaciones basadas en más lanzamientos son más confiables.",
         "tipo_error": "interpretacion",
         "diagnostico": "probable",
-        "razon_frecuente": "Confunde \"valores más altos\" con \"valores más variables\": se fija en la altura de la línea y no en cuánto sube y baja."
+        "razon_frecuente": "Tomó el primer punto del gráfico sin considerar que se basa en muy pocos lanzamientos."
       },
       {
         "clave": "B",
-        "texto": "En Ipiales, con un rango de 20 °C.",
+        "texto": "58 %",
         "correcta": false,
-        "explicacion": "No responde. 20 °C es la temperatura máxima de Ipiales, no su rango. El rango es la diferencia entre el mayor y el menor valor: 20 − 12 = 8 °C.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confunde el rango con el valor máximo de los datos."
+        "explicacion": "No es la mejor estimación. 58 % es el valor más bajo del gráfico, obtenido con solo 50 lanzamientos; no hay razón para preferirlo sobre los valores con muchos más ensayos.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de tomar el punto más bajo, de leer mal el gráfico o de elegir al azar; no se asocia a un único error."
       },
       {
         "clave": "C",
-        "texto": "En Ipiales, con un rango de 6 °C.",
+        "texto": "50 %",
         "correcta": false,
-        "explicacion": "No responde. El municipio es correcto, pero 6 °C = 20 − 14 usa el valor del lunes como si fuera el menor. El menor valor de Ipiales es 12 °C (miércoles), así que el rango es 8 °C.",
-        "tipo_error": "lectura_grafico",
+        "explicacion": "No responde. Que haya dos resultados (punta hacia arriba o de lado) no significa que sean igualmente probables; la tachuela no es simétrica como una moneda. Los datos muestran que \"punta hacia arriba\" ocurre alrededor del 62 % de las veces.",
+        "tipo_error": "conocimiento",
         "diagnostico": "probable",
-        "razon_frecuente": "Tomó el primer dato de la serie como mínimo en lugar de buscar el punto más bajo de toda la línea."
+        "razon_frecuente": "Supone que todo experimento con dos resultados posibles tiene probabilidad 1/2, sin mirar los datos."
       },
       {
         "clave": "D",
-        "texto": "En Ipiales, con un rango de 8 °C.",
+        "texto": "62 %",
         "correcta": true,
-        "explicacion": "Es la correcta. En Ipiales la máxima fue 20 °C (viernes) y la mínima 12 °C (miércoles): rango = 20 − 12 = 8 °C. En Girardot el rango es 35 − 33 = 2 °C. Ipiales varió más.",
+        "explicacion": "Es la correcta. A medida que aumentan los lanzamientos, la frecuencia relativa se estabiliza: con 200, 500 y 1 000 lanzamientos queda en 61 % y 62 %. El valor basado en más ensayos (1 000) es 62 %, la mejor estimación de la probabilidad.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: dos series de 7 temperaturas: Ipiales (14, 19, 12, 17, 20, 13, 16) y Girardot (33, 34, 33, 35, 34, 33, 34). COMPRENDER: se pregunta cuál varió más y cuál es su rango. INTERPRETAR: variar más significa que los valores se alejan más entre sí, no que sean más altos; en el gráfico, la línea de Ipiales sube y baja mucho más. REPRESENTAR: rango = valor máximo − valor mínimo de cada serie. RAZONAR: se comparan los rangos de las dos series. RESOLVER: Ipiales 20 − 12 = 8 °C; Girardot 35 − 33 = 2 °C; varió más Ipiales, con rango 8 °C. VERIFICAR: ningún dato de Ipiales está por fuera de [12, 20] y ninguno de Girardot por fuera de [33, 35] ✔.",
-    "que_identificar": "El valor más alto y el más bajo de cada serie (Ipiales: 20 y 12; Girardot: 35 y 33).",
-    "que_revisar": "Rango como medida de dispersión; diferencia entre nivel (qué tan altos son los datos) y variabilidad (qué tan distintos son entre sí).",
+    "explicacion": "LEER: porcentaje acumulado de \"punta hacia arriba\": 70 % (10 lanzamientos), 58 % (50), 63 % (100), 61 % (200), 62 % (500) y 62 % (1 000). COMPRENDER: se pide la mejor estimación de la probabilidad. INTERPRETAR: con pocos lanzamientos la frecuencia relativa oscila mucho; con muchos, se acerca a un valor fijo. REPRESENTAR: probabilidad estimada ≈ frecuencia relativa con el mayor número de ensayos. RAZONAR: la línea se estabiliza entre 61 % y 62 % desde los 200 lanzamientos; el valor con 1 000 lanzamientos es el más confiable. RESOLVER: 62 %. VERIFICAR: 62 % de 1 000 son 620 lanzamientos con la punta hacia arriba, y los últimos puntos del gráfico casi no cambian, lo que confirma la estabilización ✔.",
+    "que_identificar": "Que el gráfico muestra frecuencias acumuladas y el valor en que se estabiliza la línea con muchos lanzamientos (62 %).",
+    "que_revisar": "Probabilidad frecuencial (experimental) y ley de los grandes números de forma intuitiva; diferencia con la probabilidad clásica de casos igualmente posibles.",
     "refuerzo_ids": [
-      "MAT-090",
-      "MAT-038"
+      "MAT-005",
+      "MAT-086"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
     "etiquetas": [
       "graficos",
       "lineas",
-      "rango",
-      "dispersion",
-      "clima"
+      "probabilidad_frecuencial",
+      "experimento"
     ],
     "estado": "aprobada"
   },
@@ -945,8 +907,8 @@
     "que_identificar": "Los valores mínimo y máximo (dispersión) de cada proveedor y el límite de 15 minutos del contexto.",
     "que_revisar": "Comparación de distribuciones: centro (media, mediana) frente a dispersión (rango); por qué la media sola no basta para decidir.",
     "refuerzo_ids": [
-      "MAT-089",
-      "MAT-038"
+      "MAT-038",
+      "MAT-004"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
@@ -1259,66 +1221,66 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
     "habilidad": "representar",
-    "tema": "Probabilidad geométrica",
-    "subtema": "Probabilidad como razón entre áreas",
+    "tema": "Polígonos y conteo",
+    "subtema": "Número de diagonales de un polígono: contar parejas de vértices sin repetir",
     "dificultad": 2,
-    "contexto": "En las fiestas de un municipio de Boyacá hay un juego que consiste en lanzar una ficha sobre un tablero rectangular de **100 cm de largo y 80 cm de ancho**. En el tablero están pintados **4 rectángulos de premio**, cada uno de **20 cm por 10 cm**, que no se superponen. La ficha siempre cae dentro del tablero y cualquier punto tiene la misma posibilidad de ser alcanzado. Se gana si la ficha cae dentro de un rectángulo de premio.",
+    "contexto": "En un parque de Girardot se construye una glorieta con forma de **hexágono regular**, con un poste en cada uno de sus **6 vértices**. Los postes vecinos ya están unidos por vigas (los lados del hexágono). Para reforzar la estructura, se tenderá **un cable entre cada par de postes que NO son vecinos**.",
     "estimulo": null,
-    "enunciado": "¿Cuál es la probabilidad de ganar en un lanzamiento?",
+    "enunciado": "¿Cuántos cables se necesitan?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "2,5 %",
+        "texto": "18",
         "correcta": false,
-        "explicacion": "No responde. 2,5 % = 200 ÷ 8 000 es la probabilidad de caer en UN rectángulo de premio. Hay 4 rectángulos, así que el área favorable es 4 × 200 = 800 cm².",
-        "tipo_error": "descuido",
+        "explicacion": "No responde. 18 = 6 × 3 cuenta, desde cada poste, los 3 postes no vecinos; pero así cada cable se cuenta dos veces (una desde cada extremo). El número real es 18 ÷ 2 = 9.",
+        "tipo_error": "procedimiento",
         "diagnostico": "probable",
-        "razon_frecuente": "Calculó el área de un solo rectángulo y olvidó multiplicar por los 4 que hay."
+        "razon_frecuente": "Contó los cables desde cada poste sin notar que cada cable une dos postes y queda contado dos veces."
       },
       {
         "clave": "B",
-        "texto": "10 %",
+        "texto": "9",
         "correcta": true,
-        "explicacion": "Es la correcta. Área del tablero: 100 × 80 = 8 000 cm². Área favorable: 4 × (20 × 10) = 800 cm². Probabilidad = 800 ÷ 8 000 = 0,1 = 10 %.",
+        "explicacion": "Es la correcta. Desde cada poste salen cables a 6 − 1 − 2 = 3 postes (se excluyen él mismo y sus 2 vecinos): 6 × 3 = 18, y como cada cable se contó dos veces, hay 18 ÷ 2 = 9 cables, que son las 9 diagonales del hexágono.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
       },
       {
         "clave": "C",
-        "texto": "50 %",
+        "texto": "15",
         "correcta": false,
-        "explicacion": "No responde. Que haya dos resultados (ganar o perder) no significa que sean igualmente probables. La probabilidad depende de qué fracción del tablero ocupan los premios, que es pequeña.",
-        "tipo_error": "conocimiento",
+        "explicacion": "No responde. 15 es el número total de parejas de postes (6 × 5 ÷ 2), incluidas las 6 parejas de postes vecinos, que ya están unidas por vigas y no llevan cable: 15 − 6 = 9.",
+        "tipo_error": "comprension",
         "diagnostico": "probable",
-        "razon_frecuente": "Supone que todo evento con dos resultados posibles tiene probabilidad 1/2."
+        "razon_frecuente": "No tuvo en cuenta la condición de que los postes vecinos no se unen con cable."
       },
       {
         "clave": "D",
-        "texto": "20 %",
+        "texto": "3",
         "correcta": false,
-        "explicacion": "No responde. 20 % sale de comparar longitudes (20 cm del rectángulo frente a 100 cm del tablero). La probabilidad de caer en una región depende de las áreas, no de una sola medida de longitud.",
-        "tipo_error": "procedimiento",
-        "diagnostico": "insuficiente",
-        "razon_frecuente": "Puede provenir de comparar longitudes en vez de áreas o de otra operación con los datos; no se asocia a un único error."
+        "explicacion": "No responde. 3 son solo las diagonales largas, que pasan por el centro del hexágono. También son pares de postes no vecinos los que están separados por un solo poste (6 diagonales cortas): 3 + 6 = 9.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Consideró como diagonales únicamente las que pasan por el centro de la figura."
       }
     ],
-    "explicacion": "LEER: tablero de 100 cm × 80 cm; 4 rectángulos de premio de 20 cm × 10 cm, sin superponerse; todos los puntos igualmente probables. COMPRENDER: se pide la probabilidad de caer en un rectángulo de premio. INTERPRETAR: como todos los puntos son igualmente posibles, la probabilidad es la fracción del área total que ocupan los premios. REPRESENTAR: P = área favorable ÷ área total. RAZONAR: área total = 100 × 80; área favorable = 4 rectángulos × (20 × 10). RESOLVER: 800 ÷ 8 000 = 0,10 = 10 %. VERIFICAR: si todo el tablero fuera premio, la probabilidad sería 8 000 ÷ 8 000 = 1; los premios ocupan un área pequeña, así que un 10 % es razonable ✔.",
-    "que_identificar": "Las dimensiones del tablero y de los rectángulos de premio, y que son 4 rectángulos.",
-    "que_revisar": "Área del rectángulo; probabilidad geométrica como cociente de áreas.",
+    "explicacion": "LEER: hexágono regular; 6 postes; los vecinos ya están unidos; un cable por cada par de postes no vecinos. COMPRENDER: se pide el número de cables, es decir, de diagonales del hexágono. INTERPRETAR: un cable queda determinado por una pareja de postes; la pareja (P1, P3) es la misma que (P3, P1). REPRESENTAR: desde cada vértice hay 6 − 3 = 3 vértices no vecinos; total de conteos = 6 × 3. RAZONAR: cada cable se contó desde sus dos extremos, así que hay que dividir entre 2. RESOLVER: 6 × 3 ÷ 2 = 9. VERIFICAR: parejas posibles 6 × 5 ÷ 2 = 15, menos los 6 lados = 9 ✔; además, 3 diagonales largas + 6 cortas = 9 ✔.",
+    "que_identificar": "Que solo se unen postes no vecinos y que cada cable une exactamente dos postes.",
+    "que_revisar": "Diagonales de un polígono, n(n − 3) ÷ 2; conteo de parejas sin repetir (combinaciones).",
     "refuerzo_ids": [
-      "MAT-005",
-      "MAT-014"
+      "MAT-085",
+      "MAT-095"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
     "etiquetas": [
-      "area",
-      "probabilidad",
-      "probabilidad_geometrica",
-      "juegos"
+      "poligonos",
+      "diagonales",
+      "conteo",
+      "combinaciones"
     ],
     "estado": "aprobada"
   },
@@ -1334,7 +1296,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
     "habilidad": "representar",
     "tema": "Conteo en cuadrículas",
     "subtema": "Número de caminos más cortos en una cuadrícula de calles",
@@ -1484,7 +1446,7 @@
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Medidas de tendencia central",
     "subtema": "Media de datos agrupados usando la marca de clase",
@@ -1663,107 +1625,91 @@
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
     "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
     "habilidad": "razonar",
-    "tema": "Comparación de distribuciones",
-    "subtema": "Comparar grupos de distinto tamaño: frecuencias absolutas frente a relativas",
+    "tema": "Interpretación de estudios estadísticos",
+    "subtema": "Asociación no implica causalidad: otras variables que acompañan la comparación",
     "dificultad": 3,
-    "contexto": "Dos colegios de Riohacha registraron cuántos libros leyó en el año cada estudiante de grado once. El **Colegio Norte** tiene **160 estudiantes** en ese grado y el **Colegio Sur**, **40**. El rector del Colegio Norte afirma: *\"En nuestro colegio se lee más que en el Sur: 40 de nuestros estudiantes leyeron 6 libros o más, y en el Sur solo 20\".*",
+    "contexto": "La Secretaría de Educación de Riohacha comparó los resultados de una prueba de inglés de **400 estudiantes de grado once**, según si tienen o no celular propio. La tabla resume los datos.\n\nUn concejal propone: *\"Si el municipio le regala un celular a cada estudiante que no tiene, sus puntajes de inglés subirán unos 11 puntos\".*",
     "estimulo": {
-      "tipo": "barras",
-      "titulo": "Libros leídos en el año por estudiantes de grado once",
-      "eje_x": "Libros leídos",
-      "eje_y": "Número de estudiantes",
-      "series": [
-        {
-          "nombre": "Colegio Norte (160)",
-          "valores": [
-            [
-              "0 a 2",
-              64
-            ],
-            [
-              "3 a 5",
-              56
-            ],
-            [
-              "6 o más",
-              40
-            ]
-          ]
-        },
-        {
-          "nombre": "Colegio Sur (40)",
-          "valores": [
-            [
-              "0 a 2",
-              8
-            ],
-            [
-              "3 a 5",
-              12
-            ],
-            [
-              "6 o más",
-              20
-            ]
-          ]
-        }
+      "tipo": "tabla",
+      "titulo": "Resultados de la prueba de inglés según tenencia de celular",
+      "columnas": [
+        "Grupo",
+        "Número de estudiantes",
+        "Puntaje promedio en inglés",
+        "Toman clases extra de inglés (%)",
+        "Tienen internet en casa (%)"
+      ],
+      "filas": [
+        [
+          "Con celular propio",
+          250,
+          62,
+          60,
+          90
+        ],
+        [
+          "Sin celular propio",
+          150,
+          51,
+          20,
+          35
+        ]
       ]
     },
-    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente el argumento del rector?",
+    "enunciado": "¿Cuál de las siguientes evaluaciones de la propuesta del concejal es correcta?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "El argumento no es válido: hay que comparar proporciones. En el Norte leyó 6 o más libros el 25 % (40 de 160) y en el Sur el 50 % (20 de 40), así que en proporción el Sur tiene más lectores frecuentes.",
+        "texto": "No está justificada: los datos muestran que tener celular está asociado con mejores puntajes, pero quienes lo tienen también toman más clases extra (60 % frente a 20 %) y tienen más internet en casa (90 % frente a 35 %); esos factores pueden explicar la diferencia, así que no se sabe cuánto aporta el celular.",
         "correcta": true,
-        "explicacion": "Es la correcta. Con grupos de distinto tamaño, la comparación justa es la frecuencia relativa: 40 ÷ 160 = 0,25 y 20 ÷ 40 = 0,50. La mitad de los estudiantes del Sur leyó 6 o más libros, frente a una cuarta parte en el Norte.",
+        "explicacion": "Es la correcta. Una asociación entre dos variables no demuestra que una cause la otra. Aquí, las clases extra y el internet en casa (que suelen depender de los recursos del hogar) acompañan a la tenencia de celular y pueden explicar gran parte de los 11 puntos. Regalar celulares no cambia esas otras condiciones.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
       },
       {
         "clave": "B",
-        "texto": "El argumento es válido, porque 40 estudiantes es el doble de 20.",
+        "texto": "No está justificada, porque los grupos tienen distinto número de estudiantes (250 y 150) y sus promedios no se pueden comparar.",
         "correcta": false,
-        "explicacion": "No es correcta. Compara cantidades de grupos de tamaños muy distintos: el Norte tiene 4 veces más estudiantes que el Sur. En proporción, 40 de 160 es solo el 25 %, mientras que 20 de 40 es el 50 %.",
-        "tipo_error": "argumentacion",
+        "explicacion": "No es correcta. Los promedios SÍ se pueden comparar entre grupos de distinto tamaño; justamente para eso se usa el promedio. El problema de la propuesta no es el tamaño de los grupos, sino que hay otras diferencias entre ellos.",
+        "tipo_error": "conocimiento",
         "diagnostico": "probable",
-        "razon_frecuente": "Compara frecuencias absolutas entre poblaciones de distinto tamaño."
+        "razon_frecuente": "Cree que dos promedios solo son comparables si provienen de grupos del mismo tamaño."
       },
       {
         "clave": "C",
-        "texto": "No se puede comparar la lectura de los dos colegios, porque tienen distinto número de estudiantes.",
+        "texto": "Está justificada, porque la diferencia entre los promedios (11 puntos) es grande y se observó en 400 estudiantes.",
         "correcta": false,
-        "explicacion": "No es correcta. Los grupos de distinto tamaño sí se pueden comparar, precisamente con porcentajes o frecuencias relativas. Negarse a comparar deja sin evaluar el argumento del rector.",
-        "tipo_error": "razonamiento",
+        "explicacion": "No es correcta. La diferencia de 62 − 51 = 11 puntos es real, pero solo muestra que los dos grupos son distintos, no que el celular produzca la diferencia. Los grupos también difieren en clases extra (60 % frente a 20 %) e internet en casa (90 % frente a 35 %).",
+        "tipo_error": "argumentacion",
         "diagnostico": "probable",
-        "razon_frecuente": "Sabe que las cantidades absolutas no sirven, pero no conoce la herramienta (frecuencia relativa) que permite comparar."
+        "razon_frecuente": "Toma una diferencia observada entre grupos como prueba de que una de sus características es la causa."
       },
       {
         "clave": "D",
-        "texto": "El argumento es válido, porque en el Norte 96 estudiantes leyeron 3 libros o más y en el Sur solo 32.",
+        "texto": "Está justificada, porque el celular es lo que permite a los estudiantes tomar clases extra y tener internet, así que es la causa de todo lo demás.",
         "correcta": false,
-        "explicacion": "No es correcta. Repite el mismo error con otra categoría: 56 + 40 = 96 y 12 + 20 = 32 son cantidades absolutas. En proporción, 96 ÷ 160 = 60 % en el Norte frente a 32 ÷ 40 = 80 % en el Sur, lo que también favorece al Sur.",
-        "tipo_error": "argumentacion",
+        "explicacion": "No es correcta. La tabla no dice nada sobre qué causa qué: es igual de posible que los hogares con más recursos puedan pagar celular, internet y clases extra al mismo tiempo. La opción añade una cadena de causas que los datos no respaldan.",
+        "tipo_error": "razonamiento",
         "diagnostico": "insuficiente",
-        "razon_frecuente": "Puede venir de comparar cantidades absolutas o de sumar categorías sin un criterio claro; no se asocia a un único error distinto del de la opción que compara 40 con 20."
+        "razon_frecuente": "Puede venir de suponer causas no mostradas en los datos o de querer defender la propuesta; no se asocia a un único error."
       }
     ],
-    "explicacion": "LEER: Norte (160): 64, 56 y 40 estudiantes en 0-2, 3-5 y 6 o más libros; Sur (40): 8, 12 y 20. El rector compara 40 con 20. COMPRENDER: se pide evaluar si el argumento del rector es válido. INTERPRETAR: las barras muestran cantidades absolutas; como los grupos tienen tamaños distintos (160 y 40), las alturas no son comparables directamente. REPRESENTAR: frecuencia relativa = cantidad ÷ total del grupo. RAZONAR: la afirmación \"se lee más\" se refiere a los estudiantes de cada colegio en proporción, no al número total de lectores. RESOLVER: Norte: 40 ÷ 160 = 25 %; Sur: 20 ÷ 40 = 50 %; el argumento no es válido: en proporción, el Sur tiene más lectores frecuentes. VERIFICAR: la categoría 0-2 confirma el patrón: Norte 64 ÷ 160 = 40 % frente a Sur 8 ÷ 40 = 20 %; en el Norte hay proporcionalmente más estudiantes que leen poco ✔.",
-    "que_identificar": "El tamaño de cada grupo (160 y 40) y las cantidades de la categoría \"6 o más\".",
-    "que_revisar": "Frecuencia absoluta frente a frecuencia relativa; comparación de distribuciones de grupos de distinto tamaño.",
+    "explicacion": "LEER: con celular: 250 estudiantes, promedio 62, 60 % con clases extra, 90 % con internet; sin celular: 150, promedio 51, 20 % con clases extra, 35 % con internet. El concejal concluye que regalar celulares subirá 11 puntos. COMPRENDER: se pide evaluar si los datos sustentan esa conclusión causal. INTERPRETAR: la tabla compara grupos que ya existían; los grupos difieren en varias características a la vez, no solo en el celular. REPRESENTAR: diferencia de promedios = 62 − 51 = 11; diferencias en otras variables: clases extra 60 % frente a 20 %, internet 90 % frente a 35 %. RAZONAR: si varias características cambian juntas, no se puede atribuir toda la diferencia a una sola; la propuesta supone una causalidad que los datos no muestran. RESOLVER: la propuesta no está justificada, porque hay asociación pero no evidencia de causalidad. VERIFICAR: para conocer el efecto del celular habría que comparar estudiantes parecidos en clases extra e internet, o entregar celulares al azar a una parte de los estudiantes y comparar después.",
+    "que_identificar": "Que además del celular, los grupos difieren en clases extra de inglés e internet en casa.",
+    "que_revisar": "Asociación frente a causalidad; variables que acompañan (o confunden) una comparación entre grupos; límites de las conclusiones de un estudio observacional.",
     "refuerzo_ids": [
-      "MAT-002",
-      "MAT-091"
+      "MAT-098",
+      "MAT-040"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
     "etiquetas": [
-      "graficos",
-      "barras",
-      "frecuencia_relativa",
-      "comparacion_distribuciones",
+      "tablas",
+      "causalidad",
+      "interpretacion_estudios",
       "argumentacion",
-      "lectura"
+      "educacion"
     ],
     "estado": "aprobada"
   },
