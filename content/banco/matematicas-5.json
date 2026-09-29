@@ -11,7 +11,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Volumen de sólidos",
     "subtema": "Volumen del cono y capacidad en litros: cuántos vasos cónicos se llenan con un botellón",
@@ -159,7 +159,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
     "habilidad": "representar",
     "tema": "Razones trigonométricas",
     "subtema": "Ángulo de elevación: altura de una torre con la tangente y la altura de los ojos del observador",
@@ -326,7 +326,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
     "habilidad": "razonar",
     "tema": "Razones trigonométricas",
     "subtema": "Cambio en la longitud de una sombra cuando disminuye el ángulo de elevación del sol",
@@ -426,7 +426,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Geometría en el plano cartesiano",
     "subtema": "Punto medio de un segmento y distancia entre dos puntos en un plano cuadriculado",
@@ -694,7 +694,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Medición y escalas",
     "subtema": "Área real a partir de un plano a escala 1:50: la escala se aplica a cada dimensión, no al área",
@@ -769,7 +769,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
     "habilidad": "representar",
     "tema": "Volumen de sólidos",
     "subtema": "Volumen de un sólido compuesto: cilindro con techo cónico (silo)",
@@ -844,7 +844,7 @@
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
     "habilidad": "razonar",
     "tema": "Área de superficies",
     "subtema": "Área lateral de una pirámide cuadrada: apotema lateral con el teorema de Pitágoras",
@@ -994,7 +994,7 @@
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
     "habilidad": "resolver",
     "tema": "Razón de cambio y tasas",
     "subtema": "Tiempo de llenado de un tanque cilíndrico a caudal constante, con conversión de m³ a litros",
@@ -1072,63 +1072,63 @@
     "evidencia": "Transforma la representación de una o más piezas de información",
     "habilidad": "representar",
     "tema": "Expresiones algebraicas",
-    "subtema": "Expresión del área de una figura compuesta: rectángulo de lados x y x + 3 menos un cuadrado de 2 m",
+    "subtema": "Expresión del volumen de una caja sin tapa armada recortando cuadrados de lado x en las esquinas de una lámina",
     "dificultad": 2,
-    "contexto": "Una huerta rectangular mide **x metros de ancho** y **3 metros más de largo que de ancho**. En una de sus esquinas se reserva un **cuadrado de 2 m de lado** para la compostera, y ahí no se siembra. El resto de la huerta sí se siembra.",
+    "contexto": "Una fábrica de bocadillos de Vélez arma cajas sin tapa a partir de **láminas rectangulares de cartón de 30 cm por 20 cm**. En cada una de las **cuatro esquinas** recorta un **cuadrado de x cm de lado** y luego dobla hacia arriba las cuatro pestañas que quedan, para formar las paredes de la caja. Así, la altura de la caja es x.",
     "estimulo": null,
-    "enunciado": "¿Cuál expresión representa el área sembrada, en metros cuadrados?",
+    "enunciado": "¿Cuál expresión representa el volumen de la caja, en centímetros cúbicos?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "x² − 1",
+        "texto": "x(30 − x)(20 − x)",
         "correcta": false,
-        "explicacion": "Resulta de escribir el área del rectángulo como x · x + 3 (sin paréntesis) y restar 4: x² + 3 − 4. El largo completo es (x + 3), así que el área es x·(x + 3) = x² + 3x: el 3 también se multiplica por x.",
-        "tipo_error": "procedimiento",
+        "explicacion": "Resta x una sola vez a cada dimensión. Pero en cada lado de la lámina se recortan DOS cuadrados (uno en cada extremo), así que el largo de la base es 30 − 2x y el ancho es 20 − 2x. Con x = 5, esta expresión da 1 875 cm³, cuando la caja real mide 20 × 10 × 5 = 1 000 cm³.",
+        "tipo_error": "interpretacion",
         "diagnostico": "probable",
-        "razon_frecuente": "No aplicó la propiedad distributiva al multiplicar x por (x + 3)."
+        "razon_frecuente": "No tuvo en cuenta que cada lado de la lámina pierde un cuadrado en cada extremo."
       },
       {
         "clave": "B",
-        "texto": "x² + 3x − 2",
+        "texto": "(30 − 2x)(20 − 2x)",
         "correcta": false,
-        "explicacion": "Resulta de restar el lado del cuadrado (2) en lugar de su área. La zona de la compostera ocupa 2 × 2 = 4 m², y eso es lo que se descuenta.",
-        "tipo_error": "conocimiento",
+        "explicacion": "Esa expresión es el ÁREA del fondo de la caja (largo × ancho de la base). El volumen necesita además la altura, que es x.",
+        "tipo_error": "procedimiento",
         "diagnostico": "probable",
-        "razon_frecuente": "Confundió la longitud del lado del cuadrado con su área."
+        "razon_frecuente": "Se detuvo en el área de la base y no multiplicó por la altura."
       },
       {
         "clave": "C",
-        "texto": "(x − 2)(x + 1)",
+        "texto": "600 − 4x²",
         "correcta": false,
-        "explicacion": "Esta expresión supone que al quitar la esquina se recortan 2 m del ancho y 2 m del largo en toda la huerta, lo que equivale a quitar una franja en L de ancho 2 m, mucho más que el cuadrado de la esquina. Desarrollada da x² − x − 2, que no coincide con x² + 3x − 4.",
-        "tipo_error": "interpretacion",
+        "explicacion": "Es el área del cartón que queda después de recortar las cuatro esquinas (30 × 20 − 4·x²). Es una medida de superficie, no el espacio que encierra la caja armada.",
+        "tipo_error": "conocimiento",
         "diagnostico": "probable",
-        "razon_frecuente": "Representó la esquina reservada como si redujera ambas dimensiones de todo el rectángulo."
+        "razon_frecuente": "Confundió el área de la lámina recortada con el volumen de la caja."
       },
       {
         "clave": "D",
-        "texto": "x² + 3x − 4",
+        "texto": "x(30 − 2x)(20 − 2x)",
         "correcta": true,
-        "explicacion": "Es la correcta. Área del rectángulo: x·(x + 3) = x² + 3x. Área de la compostera: 2² = 4. Área sembrada: x² + 3x − 4.",
+        "explicacion": "Es la correcta. Al recortar un cuadrado de lado x en cada esquina, el largo de la base queda 30 − 2x, el ancho 20 − 2x y, al doblar, la altura es x. Volumen = largo × ancho × alto = x(30 − 2x)(20 − 2x).",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: ancho x, largo x + 3, cuadrado de 2 m en una esquina que no se siembra. COMPRENDER: se pide una expresión para el área sembrada. INTERPRETAR: área sembrada = área total − área de la compostera. REPRESENTAR: x·(x + 3) − 2². RAZONAR: se aplica la propiedad distributiva y se resta el área (no el lado) del cuadrado. RESOLVER: x² + 3x − 4. VERIFICAR: con x = 5 m, la huerta mide 5 × 8 = 40 m² y la sembrada 40 − 4 = 36 m²; la expresión da 25 + 15 − 4 = 36 ✓, mientras que (x − 2)(x + 1) daría 18 ✗.",
-    "que_identificar": "Las dimensiones del rectángulo en función de x y el área de la zona que se descuenta.",
-    "que_revisar": "Traducción de enunciados a expresiones algebraicas, propiedad distributiva y verificación con un valor numérico.",
+    "explicacion": "LEER: lámina de 30 cm × 20 cm; cuadrados de lado x en las 4 esquinas; la altura es x. COMPRENDER: se pide una expresión para el volumen. INTERPRETAR: en cada lado de la lámina desaparecen dos segmentos de longitud x. REPRESENTAR: base (30 − 2x) × (20 − 2x); altura x. RAZONAR: volumen de un prisma rectangular = largo × ancho × alto. RESOLVER: V = x(30 − 2x)(20 − 2x). VERIFICAR: con x = 5 la caja mide 20 × 10 × 5 = 1 000 cm³ y la expresión da 5 · 20 · 10 = 1 000 ✓; además x debe ser menor que 10, porque si no el ancho 20 − 2x sería 0 o negativo ✓.",
+    "que_identificar": "Que se recortan cuadrados en las cuatro esquinas (dos por cada lado) y que la altura de la caja es x.",
+    "que_revisar": "Traducción de una situación geométrica a una expresión algebraica; volumen del prisma rectangular; verificación con un valor numérico.",
     "refuerzo_ids": [
-      "MAT-021",
-      "MAT-076"
+      "MAT-057",
+      "MAT-075"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
     "etiquetas": [
       "expresiones_algebraicas",
-      "area",
-      "figura_compuesta",
-      "distributiva"
+      "volumen",
+      "prisma",
+      "modelacion"
     ],
     "estado": "aprobada"
   },
@@ -1247,62 +1247,63 @@
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
     "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
     "habilidad": "verificar",
-    "tema": "Ecuaciones lineales",
-    "subtema": "Planteamiento de una ecuación con el perímetro de un rectángulo: se suman dos largos y dos anchos",
+    "tema": "Despeje de fórmulas",
+    "subtema": "Despejar el radio en V = π·r²·h: la división da r², falta la raíz cuadrada",
     "dificultad": 1,
-    "contexto": "Doña Rosa tiene **36 m de malla** y quiere cercar completamente un corral rectangular para sus gallinas, usando toda la malla. Quiere que el **largo sea el doble del ancho**. Su nieto plantea: «Si el ancho es x, el largo es 2x; entonces 2x + x = 36, así que x = 12. El corral debe medir 12 m de ancho y 24 m de largo».",
+    "contexto": "Una empresa de lácteos diseña una **lata cilíndrica** que debe contener **1 000 cm³** de leche condensada y medir **12 cm de altura**. Para hallar el radio, un practicante parte de la fórmula del volumen del cilindro, V = π·r²·h, y escribe: «r = V ÷ (π·h) = 1 000 ÷ (3,14 × 12) ≈ 26,5 cm».",
     "estimulo": null,
-    "enunciado": "¿Cuál afirmación sobre el procedimiento del nieto es correcta?",
+    "enunciado": "¿Cuál afirmación sobre el procedimiento del practicante es correcta?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "Es correcto, porque el largo más el ancho es 2x + x = 36, y así el ancho es 12 m.",
+        "texto": "Es correcto: al despejar r de V = π·r²·h se divide V entre π·h, así que el radio es aproximadamente 26,5 cm.",
         "correcta": false,
-        "explicacion": "2x + x es la suma de UN largo y UN ancho, es decir, medio perímetro. Con 12 m × 24 m se necesitarían 2 × (12 + 24) = 72 m de malla, el doble de la que tiene doña Rosa.",
+        "explicacion": "Dividir V entre π·h deja r², no r. Si el radio fuera 26,5 cm, el volumen sería 3,14 × 26,5² × 12 ≈ 26 461 cm³, unas 26 veces más de lo pedido.",
         "tipo_error": "verificacion",
         "diagnostico": "probable",
-        "razon_frecuente": "Aceptó el planteamiento sin comprobar la solución en la situación."
+        "razon_frecuente": "Aceptó el despeje sin comprobar el resultado en la fórmula original."
       },
       {
         "clave": "B",
-        "texto": "Es incorrecto: como el corral tiene 4 lados, debe plantearse 4x = 36, así que el ancho es 9 m.",
-        "correcta": false,
-        "explicacion": "4x = 36 supone que los cuatro lados miden x, es decir, un cuadrado. Pero el largo es el doble del ancho: dos lados miden x y dos miden 2x.",
-        "tipo_error": "razonamiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Ignoró la condición de que el largo es el doble del ancho."
-      },
-      {
-        "clave": "C",
-        "texto": "Es incorrecto: debe plantearse x · 2x = 36, así que el ancho es √18 ≈ 4,2 m.",
-        "correcta": false,
-        "explicacion": "x · 2x es el ÁREA del corral, y 36 m es la longitud de la malla, que corresponde al perímetro. Además con ese ancho el perímetro sería 6 × 4,2 ≈ 25 m, no 36 m.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confundió perímetro con área."
-      },
-      {
-        "clave": "D",
-        "texto": "Es incorrecto: el perímetro suma dos largos y dos anchos, 2(2x) + 2x = 36, así que el ancho es 6 m y el largo 12 m.",
+        "texto": "Es incorrecto: V ÷ (π·h) da el valor de r², así que falta sacar la raíz cuadrada; el radio es aproximadamente 5,2 cm.",
         "correcta": true,
-        "explicacion": "Es la correcta. La malla rodea los cuatro lados: 2·(2x) + 2·x = 6x = 36 → x = 6. El corral mide 6 m de ancho y 12 m de largo. Verificación: 2 × (6 + 12) = 36 m ✓.",
+        "explicacion": "Es la correcta. De V = π·r²·h se obtiene r² = V ÷ (π·h) = 1 000 ÷ 37,68 ≈ 26,54 y r = √26,54 ≈ 5,15 ≈ 5,2 cm. Comprobación: 3,14 × 5,15² × 12 ≈ 999 cm³ ✓.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Es incorrecto: el radio se obtiene restando, r = V − π·h ≈ 962 cm.",
+        "correcta": false,
+        "explicacion": "En la fórmula, π, r² y h están MULTIPLICANDO, así que para despejar se divide, no se resta. Un radio de 962 cm (más de 9 m) no tiene sentido para una lata.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la operación inversa equivocada al despejar."
+      },
+      {
+        "clave": "D",
+        "texto": "Es incorrecto: la raíz se aplica solo a V, r = √V ÷ (π·h) ≈ 0,84 cm.",
+        "correcta": false,
+        "explicacion": "La raíz debe aplicarse a todo el cociente V ÷ (π·h), porque ese cociente completo es r². Con r ≈ 0,84 cm el volumen sería 3,14 × 0,84² × 12 ≈ 27 cm³, muy lejos de 1 000 cm³.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la raíz cuadrada a una sola parte de la expresión."
       }
     ],
-    "explicacion": "LEER: 36 m de malla para todo el borde; largo = 2 × ancho; el nieto plantea 2x + x = 36. COMPRENDER: hay que juzgar el procedimiento. INTERPRETAR: la malla corresponde al perímetro, que incluye dos anchos y dos largos. REPRESENTAR: 2(2x) + 2(x) = 36. RAZONAR: el planteamiento del nieto solo cuenta la mitad del borde. RESOLVER: 6x = 36 → x = 6; largo = 12 m. VERIFICAR: 6 + 12 + 6 + 12 = 36 ✓ y 12 = 2 × 6 ✓; con la propuesta del nieto se necesitarían 72 m ✗.",
-    "que_identificar": "Que la malla rodea los cuatro lados y la condición largo = 2 × ancho.",
-    "que_revisar": "Perímetro de un rectángulo, planteamiento de ecuaciones lineales y verificación de la solución en el contexto.",
+    "explicacion": "LEER: V = 1 000 cm³, h = 12 cm, fórmula V = π·r²·h; el practicante obtiene r ≈ 26,5 cm. COMPRENDER: hay que juzgar su despeje. INTERPRETAR: en la fórmula el radio aparece al cuadrado. REPRESENTAR: r² = V ÷ (π·h) → r = √(V ÷ (π·h)). RAZONAR: al dividir entre π·h se despeja r², y para llegar a r falta la operación inversa del cuadrado, la raíz. RESOLVER: r² ≈ 26,54 → r ≈ 5,2 cm. VERIFICAR: 3,14 × 5,15² × 12 ≈ 999 cm³ ✓, mientras que con 26,5 cm saldrían unos 26 461 cm³ ✗; una lata de 12 cm de alto y unos 10 cm de diámetro es razonable ✓.",
+    "que_identificar": "Que el radio está elevado al cuadrado en la fórmula y que el resultado del practicante se puede comprobar.",
+    "que_revisar": "Despeje de variables en fórmulas (operaciones inversas, incluida la raíz cuadrada) y verificación sustituyendo en la fórmula original.",
     "refuerzo_ids": [
-      "MAT-074",
-      "MAT-012"
+      "MAT-073",
+      "MAT-061"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
     "etiquetas": [
-      "ecuaciones",
-      "perimetro",
+      "despeje",
+      "formulas",
+      "cilindro",
       "argumentacion",
       "verificacion"
     ],
@@ -1422,66 +1423,89 @@
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
-    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
-    "habilidad": "razonar",
-    "tema": "Probabilidad",
-    "subtema": "Probabilidad geométrica: razón entre el área de un círculo y el área de un cuadrado",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Estimación a partir de una muestra",
+    "subtema": "Densidad promedio de plantas por metro cuadrado y conversión de hectáreas a m² para estimar un total",
     "dificultad": 2,
-    "contexto": "En la feria del colegio hay un juego de dardos. El tablero es un **cuadrado de 40 cm de lado** y en su centro está pintado un **círculo de 10 cm de radio**. Se sabe que todos los dardos caen dentro del tablero y que cualquier punto del tablero tiene la misma posibilidad de ser alcanzado. Se gana un premio si el dardo cae dentro del círculo. Usa π ≈ 3,14.",
-    "estimulo": null,
-    "enunciado": "¿Cuál es, aproximadamente, la probabilidad de ganar el premio con un dardo?",
+    "contexto": "Un técnico agrícola quiere estimar cuántas plantas de fríjol hay en un lote de **0,5 hectáreas** sembrado de manera uniforme. Escogió al azar **5 cuadros de 1 m²** dentro del lote y contó las plantas de cada uno. Recuerda que **1 hectárea = 10 000 m²**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Plantas contadas en cada cuadro de 1 m²",
+      "columnas": [
+        "Cuadro",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "filas": [
+        [
+          "Número de plantas",
+          "12",
+          "15",
+          "11",
+          "14",
+          "13"
+        ]
+      ],
+      "nota": "Los cuadros se escogieron al azar en distintas partes del lote."
+    },
+    "enunciado": "Con base en el promedio de la muestra, ¿cuántas plantas hay aproximadamente en todo el lote?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "25 %",
+        "texto": "6 500",
         "correcta": false,
-        "explicacion": "Resulta de comparar longitudes: 10 cm (radio) ÷ 40 cm (lado) = 0,25. La probabilidad geométrica en una superficie se calcula con ÁREAS, no con longitudes.",
-        "tipo_error": "procedimiento",
+        "explicacion": "Resulta de convertir 0,5 ha como si 1 ha fuera 1 000 m² (0,5 ha = 500 m²) y multiplicar 13 × 500. Como 1 ha = 10 000 m², el lote tiene 5 000 m², diez veces más.",
+        "tipo_error": "calculo",
         "diagnostico": "probable",
-        "razon_frecuente": "Comparó medidas lineales en lugar de áreas."
+        "razon_frecuente": "Usó un factor de conversión de hectáreas a metros cuadrados equivocado."
       },
       {
         "clave": "B",
-        "texto": "19,6 %",
+        "texto": "65 000",
         "correcta": true,
-        "explicacion": "Es la correcta. Área del círculo: 3,14 × 10² = 314 cm². Área del tablero: 40² = 1 600 cm². Probabilidad: 314 ÷ 1 600 = 0,196 25 ≈ 19,6 %.",
+        "explicacion": "Es la correcta. Promedio de la muestra: (12 + 15 + 11 + 14 + 13) ÷ 5 = 65 ÷ 5 = 13 plantas por m². Área del lote: 0,5 × 10 000 = 5 000 m². Estimación: 13 × 5 000 = 65 000 plantas.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
       },
       {
         "clave": "C",
-        "texto": "50 %",
+        "texto": "325 000",
         "correcta": false,
-        "explicacion": "Resulta de comparar el diámetro con el lado: 20 ÷ 40 = 0,5. Además de usar longitudes en lugar de áreas, a simple vista el círculo ocupa bastante menos de la mitad del tablero.",
+        "explicacion": "Resulta de multiplicar el TOTAL contado en la muestra (65 plantas en 5 m²) por el área del lote, como si hubiera 65 plantas en cada metro cuadrado: 65 × 5 000. Las 65 plantas están repartidas en 5 m², así que la densidad es 13 por m².",
         "tipo_error": "procedimiento",
         "diagnostico": "probable",
-        "razon_frecuente": "Relacionó el diámetro con el lado del cuadrado, sin usar áreas."
+        "razon_frecuente": "Usó la suma de la muestra en lugar del promedio por metro cuadrado."
       },
       {
         "clave": "D",
-        "texto": "78,5 %",
+        "texto": "650 000",
         "correcta": false,
-        "explicacion": "Resulta de usar el diámetro (20 cm) como radio: 3,14 × 20² = 1 256 y 1 256 ÷ 1 600 = 0,785. Esa sería la probabilidad para un círculo que toca los cuatro lados del tablero; el radio real es 10 cm.",
-        "tipo_error": "interpretacion",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confundió radio con diámetro."
+        "explicacion": "Resulta de tomar 0,5 ha como 50 000 m² (13 × 50 000). Con 1 ha = 10 000 m², media hectárea son 5 000 m².",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de un error al correr la coma o de usar 1 ha = 100 000 m²."
       }
     ],
-    "explicacion": "LEER: cuadrado de 40 cm de lado, círculo de 10 cm de radio, todos los puntos igualmente posibles. COMPRENDER: se pide la probabilidad de caer en el círculo. INTERPRETAR: cuando los resultados están repartidos de manera uniforme en una región, la probabilidad es área favorable ÷ área total. REPRESENTAR: P = π·r² ÷ lado². RAZONAR: se comparan áreas porque el dardo cae en una superficie. RESOLVER: 314 ÷ 1 600 ≈ 0,196 → 19,6 %. VERIFICAR: el círculo de 20 cm de diámetro cabe holgadamente en el cuadrado de 40 cm, así que debe ocupar bastante menos de la mitad ✓; 0 ≤ P ≤ 1 ✓.",
-    "que_identificar": "Que la probabilidad depende de la razón entre áreas y que 10 cm es el radio.",
-    "que_revisar": "Probabilidad geométrica, área del círculo y del cuadrado, diferencia entre radio y diámetro.",
+    "explicacion": "LEER: 5 cuadros de 1 m² con 12, 15, 11, 14 y 13 plantas; lote de 0,5 ha; 1 ha = 10 000 m². COMPRENDER: se pide una estimación del total de plantas del lote. INTERPRETAR: como la siembra es uniforme y los cuadros se escogieron al azar, el promedio de la muestra estima las plantas por m² de todo el lote. REPRESENTAR: total ≈ (promedio por m²) × (área en m²). RAZONAR: primero se obtiene la densidad media y se expresa el área en la misma unidad (m²). RESOLVER: 65 ÷ 5 = 13 plantas/m²; 0,5 ha = 5 000 m²; 13 × 5 000 = 65 000. VERIFICAR: con el mínimo (11) y el máximo (15) de la muestra el total estaría entre 55 000 y 75 000, y 65 000 está en ese rango ✓.",
+    "que_identificar": "El promedio de plantas por metro cuadrado y el área del lote expresada en m².",
+    "que_revisar": "Media aritmética, estimación de un total a partir de una muestra y conversión de hectáreas a metros cuadrados.",
     "refuerzo_ids": [
-      "MAT-005",
-      "MAT-021"
+      "MAT-003",
+      "MAT-069"
     ],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
     "etiquetas": [
-      "probabilidad",
-      "probabilidad_geometrica",
-      "area",
-      "circulo"
+      "tablas",
+      "muestreo",
+      "media",
+      "hectareas",
+      "conversion_unidades"
     ],
     "estado": "aprobada"
   },

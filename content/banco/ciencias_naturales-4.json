@@ -183,12 +183,12 @@
       },
       {
         "clave": "B",
-        "texto": "Sí; el cambio de masa pasa de positivo (+4 % en 0,2 mol/L) a negativo (−4 % en 0,4 mol/L), así que el punto sin flujo neto de agua está entre esas concentraciones, cerca de 0,3 mol/L.",
-        "correcta": true,
-        "explicacion": "Es la correcta. Cuando la solución externa tiene menos solutos que la célula, entra agua y la papa gana masa; cuando tiene más, sale agua y la papa pierde masa. El cambio pasa de +4 % a −4 %, de modo que el cambio cero (solución isotónica) queda entre 0,2 y 0,4 mol/L; por simetría, cerca de 0,3 mol/L, como predijo la estudiante.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
+        "texto": "No; la concentración interna es exactamente 0,4 mol/L, porque es el valor intermedio entre las concentraciones que se usaron.",
+        "correcta": false,
+        "explicacion": "No responde. El valor intermedio del rango probado no tiene por qué coincidir con el de la célula; hay que mirar los datos. En 0,4 mol/L la papa perdió un 4 % de masa, así que esa solución es más concentrada que el interior de las células.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Escoge el punto medio del rango en lugar de buscar en la tabla dónde el cambio de masa es cero."
       },
       {
         "clave": "C",
@@ -201,15 +201,15 @@
       },
       {
         "clave": "D",
-        "texto": "No; la concentración interna es exactamente 0,4 mol/L, porque es el valor intermedio entre las concentraciones que se usaron.",
-        "correcta": false,
-        "explicacion": "No responde. El valor intermedio del rango probado no tiene por qué coincidir con el de la célula; hay que mirar los datos. En 0,4 mol/L la papa perdió un 4 % de masa, así que esa solución es más concentrada que el interior de las células.",
-        "tipo_error": "procedimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Escoge el punto medio del rango en lugar de buscar en la tabla dónde el cambio de masa es cero."
+        "texto": "Sí; el cambio de masa pasa de positivo (+4 % en 0,2 mol/L) a negativo (−4 % en 0,4 mol/L), así que el punto sin flujo neto de agua está entre esas concentraciones, cerca de 0,3 mol/L.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cuando la solución externa tiene menos solutos que la célula, entra agua y la papa gana masa; cuando tiene más, sale agua y la papa pierde masa. El cambio pasa de +4 % a −4 %, de modo que el cambio cero (solución isotónica) queda entre 0,2 y 0,4 mol/L; por simetría, cerca de 0,3 mol/L, como predijo la estudiante.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: cilindros de papa de 5,0 g en soluciones de sacarosa de 0,0 a 0,8 mol/L; la membrana deja pasar agua pero no sacarosa. COMPRENDER: hay que decidir si la concentración interna de la papa es cercana a 0,3 mol/L. INTERPRETAR: ganancia de masa = entró agua (medio hipotónico); pérdida = salió agua (medio hipertónico). REPRESENTAR: el cambio de masa pasa de +4 % (0,2) a −4 % (0,4); el cero está entre ambos. RAZONAR: en la solución isotónica no hay flujo neto de agua y la masa no cambia; interpolando, ocurre hacia 0,3 mol/L. RESOLVER: la predicción es coherente con los datos, opción B. VERIFICAR: con 0,3 mol/L, todas las filas tienen sentido: por debajo entra agua y por encima sale.",
+    "explicacion": "LEER: cilindros de papa de 5,0 g en soluciones de sacarosa de 0,0 a 0,8 mol/L; la membrana deja pasar agua pero no sacarosa. COMPRENDER: hay que decidir si la concentración interna de la papa es cercana a 0,3 mol/L. INTERPRETAR: ganancia de masa = entró agua (medio hipotónico); pérdida = salió agua (medio hipertónico). REPRESENTAR: el cambio de masa pasa de +4 % (0,2) a −4 % (0,4); el cero está entre ambos. RAZONAR: en la solución isotónica no hay flujo neto de agua y la masa no cambia; interpolando, ocurre hacia 0,3 mol/L. RESOLVER: la predicción es coherente con los datos, opción D. VERIFICAR: con 0,3 mol/L, todas las filas tienen sentido: por debajo entra agua y por encima sale.",
     "que_identificar": "El cambio de signo del cambio de masa entre 0,2 y 0,4 mol/L y la nota de que la sacarosa no atraviesa la membrana.",
     "que_revisar": "Ósmosis: el agua se mueve a través de una membrana semipermeable hacia donde hay mayor concentración de solutos; soluciones hipotónicas, isotónicas e hipertónicas; lectura del punto de cambio en una tabla.",
     "refuerzo_ids": [
@@ -303,21 +303,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Mitosis, porque el ADN se duplica antes de la división; al final se obtienen células con la misma cantidad de ADN que la célula inicial.",
-        "correcta": false,
-        "explicacion": "No responde. En la mitosis el ADN se duplica (2 → 4) y luego baja una sola vez (4 → 2). La gráfica muestra una segunda caída, de 2 a 1, a partir de las 14 h: las células finales tienen la MITAD del ADN inicial.",
-        "tipo_error": "distractor",
-        "diagnostico": "probable",
-        "razon_frecuente": "Reconoce la duplicación y la primera división, pero no lee la gráfica hasta el final."
-      },
-      {
-        "clave": "B",
         "texto": "Meiosis, porque el ADN se duplica una vez y luego hay dos divisiones seguidas; al final se obtienen células con la mitad del ADN que tenía la célula inicial.",
         "correcta": true,
         "explicacion": "Es la correcta. El ADN pasa de 2 a 4 unidades entre las 2 y las 6 h (duplicación), baja a 2 hacia las 12 h (primera división) y baja otra vez a 1 hacia las 16 h (segunda división, sin nueva duplicación). Una duplicación seguida de dos divisiones es la meiosis, que produce células con la mitad del material genético, como los gametos o las esporas.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Mitosis, porque el ADN se duplica antes de la división; al final se obtienen células con la misma cantidad de ADN que la célula inicial.",
+        "correcta": false,
+        "explicacion": "No responde. En la mitosis el ADN se duplica (2 → 4) y luego baja una sola vez (4 → 2). La gráfica muestra una segunda caída, de 2 a 1, a partir de las 14 h: las células finales tienen la MITAD del ADN inicial.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reconoce la duplicación y la primera división, pero no lee la gráfica hasta el final."
       },
       {
         "clave": "C",
@@ -338,7 +338,7 @@
         "razon_frecuente": "Cree que cualquier división reparte el ADN a la mitad, sin considerar la duplicación previa de la mitosis."
       }
     ],
-    "explicacion": "LEER: gráfica de ADN por célula contra tiempo durante una división. COMPRENDER: se pide el tipo de división y el contenido de ADN de las células finales. INTERPRETAR: 2 → 4 (de 2 a 6 h), 4 → 2 (hacia las 12 h), 2 → 1 (hacia las 16 h). REPRESENTAR: una subida y dos bajadas. RAZONAR: la mitosis tiene una duplicación y una división (termina con 2); la meiosis tiene una duplicación y dos divisiones (termina con 1, la mitad). RESOLVER: meiosis con células de la mitad del ADN, opción B. VERIFICAR: el valor final de la gráfica (1) es la mitad del inicial (2).",
+    "explicacion": "LEER: gráfica de ADN por célula contra tiempo durante una división. COMPRENDER: se pide el tipo de división y el contenido de ADN de las células finales. INTERPRETAR: 2 → 4 (de 2 a 6 h), 4 → 2 (hacia las 12 h), 2 → 1 (hacia las 16 h). REPRESENTAR: una subida y dos bajadas. RAZONAR: la mitosis tiene una duplicación y una división (termina con 2); la meiosis tiene una duplicación y dos divisiones (termina con 1, la mitad). RESOLVER: meiosis con células de la mitad del ADN, opción A. VERIFICAR: el valor final de la gráfica (1) es la mitad del inicial (2).",
     "que_identificar": "Que la línea sube una sola vez y baja dos veces, y que el valor final (1) es la mitad del inicial (2).",
     "que_revisar": "Mitosis y meiosis: número de duplicaciones del ADN y de divisiones, número de células y cantidad de material genético resultante; función de cada una (crecimiento y reparación frente a formación de gametos).",
     "refuerzo_ids": [
@@ -465,12 +465,12 @@
       },
       {
         "clave": "B",
-        "texto": "Ninguna hija será daltónica, pero cada hijo varón tendrá un 50 % de probabilidad de serlo.",
-        "correcta": true,
-        "explicacion": "Es la correcta. Laura recibió el X con el alelo d de su padre daltónico y, como ve normal, es portadora (XDXd). Su pareja es XDY. Todas las hijas reciben el XD del padre, así que ven normal (la mitad serán portadoras). Cada hijo varón recibe el Y del padre y uno de los dos X de la madre: 1/2 XDY (normal) y 1/2 XdY (daltónico).",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
+        "texto": "Las hijas tendrán un 50 % de probabilidad de ser daltónicas, porque la madre es portadora.",
+        "correcta": false,
+        "explicacion": "No responde. Para ser daltónica, una hija necesita dos alelos d, uno de cada progenitor. Como el padre tiene visión normal, siempre le da un XD, así que ninguna hija será daltónica; el 50 % corresponde a hijas PORTADORAS.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde ser portadora con manifestar el rasgo recesivo."
       },
       {
         "clave": "C",
@@ -483,15 +483,15 @@
       },
       {
         "clave": "D",
-        "texto": "Las hijas tendrán un 50 % de probabilidad de ser daltónicas, porque la madre es portadora.",
-        "correcta": false,
-        "explicacion": "No responde. Para ser daltónica, una hija necesita dos alelos d, uno de cada progenitor. Como el padre tiene visión normal, siempre le da un XD, así que ninguna hija será daltónica; el 50 % corresponde a hijas PORTADORAS.",
-        "tipo_error": "distractor",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confunde ser portadora con manifestar el rasgo recesivo."
+        "texto": "Ninguna hija será daltónica, pero cada hijo varón tendrá un 50 % de probabilidad de serlo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Laura recibió el X con el alelo d de su padre daltónico y, como ve normal, es portadora (XDXd). Su pareja es XDY. Todas las hijas reciben el XD del padre, así que ven normal (la mitad serán portadoras). Cada hijo varón recibe el Y del padre y uno de los dos X de la madre: 1/2 XDY (normal) y 1/2 XdY (daltónico).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: alelo recesivo d en el X; Laura ve normal y su padre era daltónico; su pareja ve normal. COMPRENDER: se pide qué se espera en hijos e hijas. INTERPRETAR: Laura recibió de su padre un Xd, así que es XDXd; la pareja es XDY. REPRESENTAR: cuadro de Punnett con gametos XD, Xd (madre) y XD, Y (padre): XDXD, XDXd, XDY, XdY. RAZONAR: las dos hijas posibles tienen al menos un XD (ven normal); de los dos hijos posibles, uno es XdY. RESOLVER: 0 % de hijas daltónicas y 50 % de hijos daltónicos, opción B. VERIFICAR: es el patrón típico de los rasgos recesivos ligados al X, más frecuentes en varones.",
+    "explicacion": "LEER: alelo recesivo d en el X; Laura ve normal y su padre era daltónico; su pareja ve normal. COMPRENDER: se pide qué se espera en hijos e hijas. INTERPRETAR: Laura recibió de su padre un Xd, así que es XDXd; la pareja es XDY. REPRESENTAR: cuadro de Punnett con gametos XD, Xd (madre) y XD, Y (padre): XDXD, XDXd, XDY, XdY. RAZONAR: las dos hijas posibles tienen al menos un XD (ven normal); de los dos hijos posibles, uno es XdY. RESOLVER: 0 % de hijas daltónicas y 50 % de hijos daltónicos, opción D. VERIFICAR: es el patrón típico de los rasgos recesivos ligados al X, más frecuentes en varones.",
     "que_identificar": "Que el gen está en el cromosoma X, que Laura heredó el X de su padre daltónico y que su pareja tiene visión normal.",
     "que_revisar": "Herencia ligada al cromosoma X: portadoras, por qué los rasgos recesivos ligados al X son más frecuentes en hombres; cuadro de Punnett con cromosomas sexuales.",
     "refuerzo_ids": [
@@ -701,21 +701,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La persona 1 no tiene ningún cambio en el ADN; el cambio de GAG a GAA solo ocurrió en el ARNm, por eso no se hereda ni afecta la proteína.",
-        "correcta": false,
-        "explicacion": "No responde. El contexto dice que ambas personas tienen un cambio en el ADN del gen. El ARNm es una copia (transcripción) del ADN: si el codón del ARNm cambió, es porque cambió la secuencia del ADN.",
-        "tipo_error": "comprension",
-        "diagnostico": "probable",
-        "razon_frecuente": "No relaciona la secuencia del ARNm con la del ADN del que se transcribe."
-      },
-      {
-        "clave": "B",
         "texto": "GAA codifica el mismo aminoácido que GAG (ácido glutámico), así que la proteína de la persona 1 no cambia; GUG codifica valina, de modo que la β-globina de la persona 2 tiene un aminoácido distinto que altera su forma y su función.",
         "correcta": true,
         "explicacion": "Es la correcta. Según la tabla, GAG y GAA codifican ácido glutámico: el código genético es redundante y la mutación de la persona 1 es silenciosa. En la persona 2, GUG codifica valina: la proteína cambia un aminoácido, lo que modifica su forma y hace que la hemoglobina se agrupe y deforme los glóbulos rojos.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La persona 1 no tiene ningún cambio en el ADN; el cambio de GAG a GAA solo ocurrió en el ARNm, por eso no se hereda ni afecta la proteína.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que ambas personas tienen un cambio en el ADN del gen. El ARNm es una copia (transcripción) del ADN: si el codón del ARNm cambió, es porque cambió la secuencia del ADN.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relaciona la secuencia del ARNm con la del ADN del que se transcribe."
       },
       {
         "clave": "C",
@@ -736,7 +736,7 @@
         "razon_frecuente": "Generaliza a partir de este caso particular una regla que no existe sobre la transcripción."
       }
     ],
-    "explicacion": "LEER: codón 6 normal GAG; persona 1 GAA (sin efecto), persona 2 GUG (anemia falciforme); tabla con codones y aminoácidos. COMPRENDER: se pide explicar por qué un cambio afecta la proteína y el otro no. INTERPRETAR: GAG → ácido glutámico, GAA → ácido glutámico, GUG → valina. REPRESENTAR: ADN → (transcripción) ARNm → (traducción) secuencia de aminoácidos → forma y función de la proteína. RAZONAR: si el aminoácido no cambia, la proteína es igual (mutación silenciosa); si cambia, la proteína puede alterar su función (mutación de cambio de sentido). RESOLVER: opción B. VERIFICAR: la explicación usa las tres filas relevantes de la tabla y es coherente con los síntomas descritos.",
+    "explicacion": "LEER: codón 6 normal GAG; persona 1 GAA (sin efecto), persona 2 GUG (anemia falciforme); tabla con codones y aminoácidos. COMPRENDER: se pide explicar por qué un cambio afecta la proteína y el otro no. INTERPRETAR: GAG → ácido glutámico, GAA → ácido glutámico, GUG → valina. REPRESENTAR: ADN → (transcripción) ARNm → (traducción) secuencia de aminoácidos → forma y función de la proteína. RAZONAR: si el aminoácido no cambia, la proteína es igual (mutación silenciosa); si cambia, la proteína puede alterar su función (mutación de cambio de sentido). RESOLVER: opción A. VERIFICAR: la explicación usa las tres filas relevantes de la tabla y es coherente con los síntomas descritos.",
     "que_identificar": "Los aminoácidos que corresponden a GAG, GAA y GUG en la tabla del código genético.",
     "que_revisar": "Flujo de la información genética (ADN → ARNm → proteína), codones, redundancia del código genético y tipos de mutación puntual (silenciosa, de cambio de sentido y sin sentido).",
     "refuerzo_ids": [
@@ -903,21 +903,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Unas 1 000 kcal, porque cada nivel recibe la mitad de la energía del nivel anterior.",
-        "correcta": false,
-        "explicacion": "No responde. Los datos muestran que de los pastos a los saltamontes queda el 10 % (de 20 000 a 2 000), no la mitad. Con 1 000 kcal en las ranas, las serpientes tendrían que recibir solo el 2 % para quedar en 20 kcal, lo que no mantiene el patrón.",
-        "tipo_error": "calculo",
-        "diagnostico": "probable",
-        "razon_frecuente": "Supone una disminución a la mitad sin calcular la proporción que muestran los datos."
-      },
-      {
-        "clave": "B",
         "texto": "Unas 200 kcal, porque en cada nivel solo pasa alrededor del 10 % de la energía; el resto se gasta en la respiración y se pierde como calor, o queda en partes no consumidas y en desechos.",
         "correcta": true,
         "explicacion": "Es la correcta. De 20 000 a 2 000 kcal hay un paso del 10 %; aplicando el mismo patrón, 2 000 × 0,1 = 200 kcal en las ranas y 200 × 0,1 = 20 kcal en las serpientes, que coincide con el dato medido. La energía restante se usa en las actividades de cada organismo y se disipa como calor.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Unas 1 000 kcal, porque cada nivel recibe la mitad de la energía del nivel anterior.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran que de los pastos a los saltamontes queda el 10 % (de 20 000 a 2 000), no la mitad. Con 1 000 kcal en las ranas, las serpientes tendrían que recibir solo el 2 % para quedar en 20 kcal, lo que no mantiene el patrón.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone una disminución a la mitad sin calcular la proporción que muestran los datos."
       },
       {
         "clave": "C",
@@ -938,7 +938,7 @@
         "razon_frecuente": "Aplica la conservación de la energía como si toda la energía quedara dentro de la cadena alimentaria."
       }
     ],
-    "explicacion": "LEER: pastos 20 000 kcal, saltamontes 2 000 kcal, serpientes 20 kcal; falta el valor de las ranas. COMPRENDER: se pide estimar la energía de las ranas y justificarla. INTERPRETAR: 2 000/20 000 = 0,1: pasa el 10 %. REPRESENTAR: pirámide de energía 20 000 → 2 000 → ? → 20. RAZONAR: con el mismo patrón, 2 000 × 0,1 = 200; la energía que no pasa se pierde como calor, no se recicla. RESOLVER: 200 kcal por pérdidas en respiración y calor, opción B. VERIFICAR: 200 × 0,1 = 20 kcal, igual al valor medido en las serpientes.",
+    "explicacion": "LEER: pastos 20 000 kcal, saltamontes 2 000 kcal, serpientes 20 kcal; falta el valor de las ranas. COMPRENDER: se pide estimar la energía de las ranas y justificarla. INTERPRETAR: 2 000/20 000 = 0,1: pasa el 10 %. REPRESENTAR: pirámide de energía 20 000 → 2 000 → ? → 20. RAZONAR: con el mismo patrón, 2 000 × 0,1 = 200; la energía que no pasa se pierde como calor, no se recicla. RESOLVER: 200 kcal por pérdidas en respiración y calor, opción A. VERIFICAR: 200 × 0,1 = 20 kcal, igual al valor medido en las serpientes.",
     "que_identificar": "La proporción entre la energía de los pastos y la de los saltamontes, y el valor de las serpientes para comprobar.",
     "que_revisar": "Flujo de energía y pirámides ecológicas: regla aproximada del 10 %, pérdidas por respiración y calor; diferencia entre el ciclo de la materia y el flujo de la energía.",
     "refuerzo_ids": [
@@ -1121,12 +1121,12 @@
       },
       {
         "clave": "B",
-        "texto": "Las sales biliares no digieren la grasa, pero la dividen en gotas muy pequeñas; así aumenta la superficie sobre la que actúa la lipasa y la digestión es más rápida.",
-        "correcta": true,
-        "explicacion": "Es la correcta. El tubo 3 muestra que las sales biliares solas no producen ácidos grasos; el tubo 2 muestra que, junto con la lipasa, la digestión es tres veces más rápida (4 min frente a 12 min). La explicación es la emulsificación: las sales biliares separan la grasa en gotitas, aumentando el área de contacto con la enzima, que es la que realmente la descompone.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
+        "texto": "La lipasa solo puede digerir la grasa cuando hay sales biliares.",
+        "correcta": false,
+        "explicacion": "No responde. En el tubo 1, con lipasa y sin sales biliares, el indicador sí cambió (en 12 min): la lipasa funciona sola, aunque más despacio. Las sales biliares aceleran la digestión, pero no son indispensables para que ocurra.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convierte \"acelera\" en \"es necesario para\", generalizando más allá de lo que muestran los datos."
       },
       {
         "clave": "C",
@@ -1139,15 +1139,15 @@
       },
       {
         "clave": "D",
-        "texto": "La lipasa solo puede digerir la grasa cuando hay sales biliares.",
-        "correcta": false,
-        "explicacion": "No responde. En el tubo 1, con lipasa y sin sales biliares, el indicador sí cambió (en 12 min): la lipasa funciona sola, aunque más despacio. Las sales biliares aceleran la digestión, pero no son indispensables para que ocurra.",
-        "tipo_error": "distractor",
-        "diagnostico": "probable",
-        "razon_frecuente": "Convierte \"acelera\" en \"es necesario para\", generalizando más allá de lo que muestran los datos."
+        "texto": "Las sales biliares no digieren la grasa, pero la dividen en gotas muy pequeñas; así aumenta la superficie sobre la que actúa la lipasa y la digestión es más rápida.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El tubo 3 muestra que las sales biliares solas no producen ácidos grasos; el tubo 2 muestra que, junto con la lipasa, la digestión es tres veces más rápida (4 min frente a 12 min). La explicación es la emulsificación: las sales biliares separan la grasa en gotitas, aumentando el área de contacto con la enzima, que es la que realmente la descompone.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: cuatro tubos con leche e indicador; se varía la presencia de lipasa y de sales biliares y se mide el tiempo de cambio de color (digestión de grasa). COMPRENDER: se pide la función de las sales biliares. INTERPRETAR: lipasa sola 12 min; lipasa + sales 4 min; sales solas y agua, sin cambio. REPRESENTAR: grasa en gotas grandes → (sales biliares) gotitas → más superficie → (lipasa) ácidos grasos + glicerol. RAZONAR: tubo 3 descarta que las sales digieran o cambien el indicador; tubo 1 descarta que la lipasa las necesite; tubo 2 muestra que aceleran. RESOLVER: emulsificación, opción B. VERIFICAR: B es coherente con los cuatro tubos, incluido el control con agua.",
+    "explicacion": "LEER: cuatro tubos con leche e indicador; se varía la presencia de lipasa y de sales biliares y se mide el tiempo de cambio de color (digestión de grasa). COMPRENDER: se pide la función de las sales biliares. INTERPRETAR: lipasa sola 12 min; lipasa + sales 4 min; sales solas y agua, sin cambio. REPRESENTAR: grasa en gotas grandes → (sales biliares) gotitas → más superficie → (lipasa) ácidos grasos + glicerol. RAZONAR: tubo 3 descarta que las sales digieran o cambien el indicador; tubo 1 descarta que la lipasa las necesite; tubo 2 muestra que aceleran. RESOLVER: emulsificación, opción D. VERIFICAR: D es coherente con los cuatro tubos, incluido el control con agua.",
     "que_identificar": "Que el tubo 3 (solo sales biliares) no cambia de color, que el tubo 1 (solo lipasa) sí cambia y que el tubo 2 es el más rápido.",
     "que_revisar": "Digestión química y mecánica; función de la bilis (emulsificación) y de la lipasa pancreática; uso de tubos de control para descartar explicaciones.",
     "refuerzo_ids": [
@@ -1301,21 +1301,21 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Porque el suero contiene veneno debilitado que estimula al campesino a fabricar sus propios anticuerpos, y estos tardan en aparecer.",
-        "correcta": false,
-        "explicacion": "No responde. Así funciona una vacuna, no el suero. El suero contiene anticuerpos ya fabricados por el caballo; si estimulara al cuerpo del campesino a producirlos, generaría memoria y lo protegería en el futuro, al contrario de lo que dice el médico.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confunde el suero (inmunidad pasiva) con la vacuna (inmunidad activa)."
-      },
-      {
-        "clave": "B",
         "texto": "Porque el suero trae anticuerpos ya fabricados que neutralizan el veneno de inmediato, pero el sistema inmune del campesino no los produjo ni formó células de memoria, y esos anticuerpos se eliminan con el tiempo.",
         "correcta": true,
         "explicacion": "Es la correcta. Es inmunidad pasiva: los anticuerpos vienen de otro organismo (el caballo), por eso actúan sin esperar a que el cuerpo responda. Como los linfocitos del campesino no participaron, no se forman células de memoria, y los anticuerpos recibidos se degradan en semanas. Una nueva mordedura requiere una nueva dosis.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el suero contiene veneno debilitado que estimula al campesino a fabricar sus propios anticuerpos, y estos tardan en aparecer.",
+        "correcta": false,
+        "explicacion": "No responde. Así funciona una vacuna, no el suero. El suero contiene anticuerpos ya fabricados por el caballo; si estimulara al cuerpo del campesino a producirlos, generaría memoria y lo protegería en el futuro, al contrario de lo que dice el médico.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el suero (inmunidad pasiva) con la vacuna (inmunidad activa)."
       },
       {
         "clave": "C",
@@ -1336,7 +1336,7 @@
         "razon_frecuente": "Confunde una toxina con un patógeno como un virus o una bacteria."
       }
     ],
-    "explicacion": "LEER: los anticuerpos del suero se fabrican en caballos; el campesino se recupera, pero no queda protegido para el futuro. COMPRENDER: se pide explicar la acción rápida y la falta de protección duradera. INTERPRETAR: el suero aporta anticuerpos ya hechos (inmunidad pasiva). REPRESENTAR: vacuna → antígeno → linfocitos propios → anticuerpos + memoria (lenta, duradera); suero → anticuerpos ajenos → neutralización (rápida, temporal). RAZONAR: sin participación de los linfocitos propios no hay memoria; los anticuerpos recibidos se degradan. RESOLVER: opción B. VERIFICAR: B explica las dos observaciones del contexto: la recuperación y la advertencia del médico.",
+    "explicacion": "LEER: los anticuerpos del suero se fabrican en caballos; el campesino se recupera, pero no queda protegido para el futuro. COMPRENDER: se pide explicar la acción rápida y la falta de protección duradera. INTERPRETAR: el suero aporta anticuerpos ya hechos (inmunidad pasiva). REPRESENTAR: vacuna → antígeno → linfocitos propios → anticuerpos + memoria (lenta, duradera); suero → anticuerpos ajenos → neutralización (rápida, temporal). RAZONAR: sin participación de los linfocitos propios no hay memoria; los anticuerpos recibidos se degradan. RESOLVER: opción A. VERIFICAR: A explica las dos observaciones del contexto: la recuperación y la advertencia del médico.",
     "que_identificar": "Que los anticuerpos del suero los fabrica el caballo, no el campesino.",
     "que_revisar": "Inmunidad activa y pasiva, natural y artificial; anticuerpos, antígenos y células de memoria; diferencia entre suero y vacuna.",
     "refuerzo_ids": [
@@ -1802,12 +1802,12 @@
       },
       {
         "clave": "B",
-        "texto": "Clara de huevo disuelta en agua, porque solo la prueba de Biuret resultó positiva.",
-        "correcta": true,
-        "explicacion": "Es la correcta. La única prueba en la que el color observado coincide con el color positivo es Biuret (violeta), que detecta proteínas. La clara de huevo está formada principalmente por agua y proteínas (como la albúmina), sin almidón, prácticamente sin azúcares ni grasas.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
+        "texto": "Aceite de cocina, porque la prueba de Biuret de color violeta indica la presencia de lípidos.",
+        "correcta": false,
+        "explicacion": "No responde. Según la tabla, Biuret detecta proteínas, no lípidos. Los lípidos se reconocen con Sudán III, que en la muestra X no tiñó ninguna gota.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia el reactivo con una biomolécula equivocada."
       },
       {
         "clave": "C",
@@ -1820,15 +1820,15 @@
       },
       {
         "clave": "D",
-        "texto": "Aceite de cocina, porque la prueba de Biuret de color violeta indica la presencia de lípidos.",
-        "correcta": false,
-        "explicacion": "No responde. Según la tabla, Biuret detecta proteínas, no lípidos. Los lípidos se reconocen con Sudán III, que en la muestra X no tiñó ninguna gota.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Asocia el reactivo con una biomolécula equivocada."
+        "texto": "Clara de huevo disuelta en agua, porque solo la prueba de Biuret resultó positiva.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La única prueba en la que el color observado coincide con el color positivo es Biuret (violeta), que detecta proteínas. La clara de huevo está formada principalmente por agua y proteínas (como la albúmina), sin almidón, prácticamente sin azúcares ni grasas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: cuatro reactivos, la biomolécula que detecta cada uno, su color positivo y el color observado en X. COMPRENDER: se pide qué sustancia puede ser X. INTERPRETAR: una prueba es positiva solo si el color observado coincide con el color positivo. REPRESENTAR: Lugol (−), Biuret (+), Benedict (−), Sudán III (−). RAZONAR: X tiene proteínas y no tiene almidón, azúcares reductores ni lípidos; la clara de huevo cumple esas condiciones. RESOLVER: opción B. VERIFICAR: el almidón, el jugo y el aceite habrían dado positivo en Lugol, Benedict y Sudán III, respectivamente.",
+    "explicacion": "LEER: cuatro reactivos, la biomolécula que detecta cada uno, su color positivo y el color observado en X. COMPRENDER: se pide qué sustancia puede ser X. INTERPRETAR: una prueba es positiva solo si el color observado coincide con el color positivo. REPRESENTAR: Lugol (−), Biuret (+), Benedict (−), Sudán III (−). RAZONAR: X tiene proteínas y no tiene almidón, azúcares reductores ni lípidos; la clara de huevo cumple esas condiciones. RESOLVER: opción D. VERIFICAR: el almidón, el jugo y el aceite habrían dado positivo en Lugol, Benedict y Sudán III, respectivamente.",
     "que_identificar": "En qué filas el color observado coincide con el color positivo esperado.",
     "que_revisar": "Biomoléculas (carbohidratos, lípidos, proteínas) y sus pruebas de reconocimiento; diferencia entre el color del reactivo y el color de una reacción positiva.",
     "refuerzo_ids": [
@@ -2193,24 +2193,24 @@
       },
       {
         "clave": "C",
-        "texto": "El código genético es universal: la bacteria \"lee\" el gen humano y une los mismos aminoácidos en el mismo orden; así se produce insulina idéntica a la humana en gran cantidad, con menos reacciones que la insulina animal.",
-        "correcta": true,
-        "explicacion": "Es la correcta. Todos los seres vivos usan prácticamente el mismo código genético, así que los ribosomas de la bacteria traducen el gen humano en la misma secuencia de aminoácidos. El beneficio para la sociedad es doble: se puede producir mucha insulina sin depender de animales, y al ser idéntica a la humana causa menos reacciones.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "D",
         "texto": "Las bacterias tienen páncreas y necesitan insulina, por eso pueden fabricarla cuando reciben el gen humano.",
         "correcta": false,
         "explicacion": "No responde. Las bacterias son organismos unicelulares: no tienen órganos como el páncreas ni usan insulina. Fabrican la proteína solo porque se les insertó el gen y lo traducen con su maquinaria celular.",
         "tipo_error": "conocimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Atribuye a las bacterias estructuras propias de organismos pluricelulares."
+      },
+      {
+        "clave": "D",
+        "texto": "El código genético es universal: la bacteria \"lee\" el gen humano y une los mismos aminoácidos en el mismo orden; así se produce insulina idéntica a la humana en gran cantidad, con menos reacciones que la insulina animal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Todos los seres vivos usan prácticamente el mismo código genético, así que los ribosomas de la bacteria traducen el gen humano en la misma secuencia de aminoácidos. El beneficio para la sociedad es doble: se puede producir mucha insulina sin depender de animales, y al ser idéntica a la humana causa menos reacciones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: antes la insulina se extraía de animales, con costos y reacciones; hoy se inserta el gen humano en bacterias que la fabrican. COMPRENDER: se pide qué hace posible la técnica y un beneficio. INTERPRETAR: el gen viene del ser humano; la maquinaria (ribosomas) es de la bacteria. REPRESENTAR: gen humano → plásmido → bacteria → transcripción y traducción → insulina humana. RAZONAR: si la bacteria usa el mismo código genético, produce la misma secuencia de aminoácidos; el cultivo en tanques permite una gran producción. RESOLVER: opción C. VERIFICAR: C es coherente con los dos problemas que el contexto atribuye a la insulina animal (disponibilidad y reacciones).",
+    "explicacion": "LEER: antes la insulina se extraía de animales, con costos y reacciones; hoy se inserta el gen humano en bacterias que la fabrican. COMPRENDER: se pide qué hace posible la técnica y un beneficio. INTERPRETAR: el gen viene del ser humano; la maquinaria (ribosomas) es de la bacteria. REPRESENTAR: gen humano → plásmido → bacteria → transcripción y traducción → insulina humana. RAZONAR: si la bacteria usa el mismo código genético, produce la misma secuencia de aminoácidos; el cultivo en tanques permite una gran producción. RESOLVER: opción D. VERIFICAR: D es coherente con los dos problemas que el contexto atribuye a la insulina animal (disponibilidad y reacciones).",
     "que_identificar": "Que el gen de la insulina humana se inserta en la bacteria y los problemas de la insulina de origen animal.",
     "que_revisar": "Ingeniería genética y ADN recombinante; universalidad del código genético; beneficios y retos de la biotecnología en la salud.",
     "refuerzo_ids": [
