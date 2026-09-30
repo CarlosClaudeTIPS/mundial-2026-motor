@@ -1,5 +1,5 @@
 import { db, uuid, ahora, encolar } from './db'
-import { elegirPreguntas, obtenerPregunta, listarPreguntas, mezclar } from './banco'
+import { elegirPreguntas, obtenerPregunta, listarPreguntas, mezclar, grupoTexto } from './banco'
 import { estructuraExamen } from './ciclo'
 import { registrarIntento, preguntasVistas } from './datos'
 import { resumen } from './analitica'
@@ -30,7 +30,10 @@ export async function crearDiagnostico({ estudiante, porPrueba = 5, tiempo_min =
   const pruebas = ['lectura_critica', 'matematicas', 'sociales_ciudadanas', 'ciencias_naturales', 'ingles']
   const ids = []
   for (const prueba of pruebas) {
-    const todas = mezclar((await listarPreguntas({ prueba })).filter(p => p.dificultad <= 2))
+    const disponibles = (await listarPreguntas({ prueba })).filter(p => p.dificultad <= 2)
+    // Para el diagnóstico se prefieren preguntas independientes (sin texto compartido), así cada una se entiende sola
+    const sueltas = disponibles.filter(p => !grupoTexto(p))
+    const todas = mezclar(sueltas.length >= porPrueba ? sueltas : disponibles)
     // Una por competencia primero, luego completar
     const porComp = {}
     for (const p of todas) (porComp[p.competencia] ??= []).push(p)

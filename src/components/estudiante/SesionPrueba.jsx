@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Clock, ChevronLeft, ChevronRight, Flag } from 'lucide-react'
 import { obtenerSesion, responderEnSesion, acumularTiempo, guardarIndice, terminarSesion, sesion2DeCompleto, sesionesDeCompleto } from '../../lib/pruebas'
 import { resumen } from '../../lib/analitica'
-import { obtenerPregunta } from '../../lib/banco'
+import { obtenerPregunta, grupoTexto } from '../../lib/banco'
 import { db } from '../../lib/db'
 import { evaluar } from '../../lib/feedback'
 import { ir } from '../../lib/nav'
@@ -98,7 +98,7 @@ export default function SesionPrueba({ usuario, params }) {
       )}
 
       <div className="card">
-        <PreguntaVista pregunta={p} numero={indice + 1} elegida={sesion.respuestas[p.id] ?? null} onElegir={responder} mostrarMeta={false} />
+        <PreguntaVista pregunta={p} numero={indice + 1} elegida={sesion.respuestas[p.id] ?? null} onElegir={responder} mostrarMeta={false} contextoRepetido={indice > 0 && !!grupoTexto(p) && grupoTexto(preguntas[indice - 1]) === grupoTexto(p)} />
       </div>
 
       <div className="flex items-center gap-2">

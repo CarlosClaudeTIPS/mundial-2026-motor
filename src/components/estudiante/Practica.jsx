@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
-import { elegirPreguntas, obtenerPregunta } from '../../lib/banco'
+import { elegirPreguntas, obtenerPregunta, grupoTexto } from '../../lib/banco'
 import { registrarIntento, preguntasVistas } from '../../lib/datos'
 import { ir } from '../../lib/nav'
 import PreguntaVista from '../PreguntaVista'
@@ -24,6 +24,7 @@ export default function Practica({ usuario, params }) {
   const [elegida, setElegida] = useState(null)
   const [resultado, setResultado] = useState(null) // { intento, evaluacion }
   const [hechas, setHechas] = useState([])
+  const [anterior, setAnterior] = useState(null)
   const [chequeo, setChequeo] = useState(false)
   const inicio = useRef(Date.now())
   const conVerificacion = params.verificacion === '1'
@@ -56,7 +57,7 @@ export default function Practica({ usuario, params }) {
   const siguiente = (pregunta = null) => {
     let sig = pregunta, resto = cola
     if (!sig) { sig = cola[0] ?? null; resto = cola.slice(1) }
-    setActual(sig); setCola(resto); setElegida(null); setResultado(null); setChequeo(false); inicio.current = Date.now()
+    setAnterior(actual); setActual(sig); setCola(resto); setElegida(null); setResultado(null); setChequeo(false); inicio.current = Date.now()
   }
 
   const refuerzo = async (id) => {
@@ -91,7 +92,7 @@ export default function Practica({ usuario, params }) {
       <Titulo volver sub={`${resultado ? hechas.length : hechas.length + 1} de ${hechas.length + (resultado ? 0 : 1) + cola.length}${refuerzoDe.current ? ' · refuerzo' : ''}`}>Práctica</Titulo>
 
       <div className="card">
-        <PreguntaVista pregunta={actual} elegida={resultado ? (resultado.intento.opcion) : elegida} onElegir={setElegida} modo={resultado ? 'revisar' : 'responder'} />
+        <PreguntaVista pregunta={actual} elegida={resultado ? (resultado.intento.opcion) : elegida} onElegir={setElegida} modo={resultado ? 'revisar' : 'responder'} contextoRepetido={!!anterior && !!grupoTexto(actual) && grupoTexto(anterior) === grupoTexto(actual)} />
       </div>
 
       {!resultado && chequeo && (

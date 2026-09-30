@@ -5,7 +5,7 @@ import { nombrePrueba, nombreCompetencia, nombreHabilidad } from '../lib/taxonom
 // ─── Vista de una pregunta ───────────────────────────────────────────────────
 // modo: 'responder' (elige opción), 'revisar' (muestra correcta/incorrecta), 'papel' (impresión)
 
-export default function PreguntaVista({ pregunta, elegida = null, onElegir = null, modo = 'responder', numero = null, mostrarMeta = true, mostrarContexto = true }) {
+export default function PreguntaVista({ pregunta, elegida = null, onElegir = null, modo = 'responder', numero = null, mostrarMeta = true, mostrarContexto = true, contextoRepetido = false }) {
   const p = pregunta
   const claseOpcion = (o) => {
     if (modo === 'revisar') {
@@ -26,8 +26,14 @@ export default function PreguntaVista({ pregunta, elegida = null, onElegir = nul
           {p.origen === 'oficial' ? <Badge tono="verde">Oficial ICFES</Badge> : p.origen === 'generada' ? <Badge tono="ambar">Generada por IA</Badge> : <Badge>Estilo Saber 11</Badge>}
         </div>
       )}
-      {mostrarContexto && p.contexto && <Md texto={p.contexto} className="text-[16px] text-gray-200 bg-dark-900 rounded-xl p-4 border border-dark-700" />}
-      {mostrarContexto && <Estimulo estimulo={p.estimulo} />}
+      {mostrarContexto && p.contexto && !contextoRepetido && <Md texto={p.contexto} className="text-[16px] text-gray-200 bg-dark-900 rounded-xl p-4 border border-dark-700" />}
+      {mostrarContexto && p.contexto && contextoRepetido && (
+        <details className="rounded-xl border border-dark-700 bg-dark-900">
+          <summary className="cursor-pointer px-4 py-2 text-sm text-brand-blue font-medium">Mismo texto de la pregunta anterior (toca para verlo otra vez)</summary>
+          <div className="px-4 pb-3"><Md texto={p.contexto} className="text-[16px] text-gray-200" /></div>
+        </details>
+      )}
+      {mostrarContexto && !contextoRepetido && <Estimulo estimulo={p.estimulo} />}
       <Md texto={p.enunciado} className="text-[17px] font-semibold text-brand-navy" />
       <div className="space-y-2">
         {p.opciones.map(o => (

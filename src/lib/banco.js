@@ -74,10 +74,40 @@ export function mezclar(arr, semilla = Date.now()) {
   return a
 }
 
-// Elige `n` preguntas respetando filtros y evitando repetir las ya vistas cuando se puede.
+// Etiqueta que agrupa las preguntas que comparten un mismo texto (texto:LC-T01, texto:ING-T05…).
+export const grupoTexto = (p) => (p.etiquetas ?? []).find(e => e.startsWith('texto:')) ?? null
+
+// Ordena de modo que las preguntas de un mismo texto queden juntas y en secuencia,
+// como en el examen real (el texto se muestra una vez y las preguntas van seguidas).
+export function ordenarPorTexto(lista) {
+  const orden = new Map()
+  const grupos = new Map()
+  for (const p of lista) {
+    const g = grupoTexto(p) ?? `solo:${p.id}`
+    if (!grupos.has(g)) { grupos.set(g, []); orden.set(g, orden.size) }
+    grupos.get(g).push(p)
+  }
+  const cmp = (a, b) => a.id.localeCompare(b.id, 'es', { numeric: true })
+  return [...grupos.entries()].sort((a, b) => orden.get(a[0]) - orden.get(b[0])).flatMap(([, ps]) => ps.sort(cmp))
+}
+
+// Elige ~`n` preguntas respetando filtros y evitando repetir las ya vistas cuando se puede.
+// Las preguntas de un mismo texto se toman como bloque (todas o ninguna) para no
+// presentar sueltas preguntas que dependen de un texto compartido.
 export async function elegirPreguntas({ n, vistas = new Set(), ...filtros }) {
   const todas = await listarPreguntas(filtros)
-  const nuevas = todas.filter(p => !vistas.has(p.id))
-  const base = nuevas.length >= n ? nuevas : [...nuevas, ...mezclar(todas.filter(p => vistas.has(p.id)))]
-  return mezclar(base).slice(0, n)
+  const bloques = new Map()
+  for (const p of todas) { const g = grupoTexto(p) ?? `solo:${p.id}`; (bloques.get(g) ?? bloques.set(g, []).get(g)).push(p) }
+  const unidades = [...bloques.values()]
+  const nuevas = unidades.filter(u => u.every(p => !vistas.has(p.id)))
+  const vistasYa = unidades.filter(u => u.some(p => vistas.has(p.id)))
+  const candidatas = [...mezclar(nuevas), ...mezclar(vistasYa)]
+  const elegidas = []
+  let total = 0
+  for (const u of candidatas) {
+    if (total >= n) break
+    if (total > 0 && total + u.length > n + 1) continue // no desbordar mucho; bloques enteros
+    elegidas.push(u); total += u.length
+  }
+  return ordenarPorTexto(elegidas.flat())
 }
