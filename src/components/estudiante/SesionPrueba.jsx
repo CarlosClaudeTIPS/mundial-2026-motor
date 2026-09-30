@@ -232,7 +232,8 @@ function Resultados({ sesion, preguntas, usuario }) {
       </div>
 
       <div className="flex gap-2">
-        <button className="btn-primary flex-1" onClick={() => ir('errores')}>Ir a mis errores</button>
+        {sesion.config?.diagnostico && <button className="btn-primary flex-1" onClick={() => ir('refuerzo')}>Ver mi plan de refuerzo</button>}
+        <button className={sesion.config?.diagnostico ? 'btn-secondary flex-1' : 'btn-primary flex-1'} onClick={() => ir('errores')}>Ir a mis errores</button>
         <button className="btn-secondary flex-1" onClick={() => ir(usuario.rol === 'estudiante' ? 'inicio' : 'simulacros')}>Volver</button>
       </div>
     </div>

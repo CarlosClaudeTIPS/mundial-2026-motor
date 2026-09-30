@@ -1,4 +1,4 @@
-import { Home, BookOpen, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff } from 'lucide-react'
+import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff } from 'lucide-react'
 import { salir } from '../lib/sesion'
 import { useSync, sincronizar } from '../lib/sync'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
@@ -9,8 +9,8 @@ const MENU = {
     { ruta: 'inicio', nombre: 'Inicio', icono: Home },
     { ruta: 'materias', nombre: 'Materias', icono: LayoutGrid },
     { ruta: 'simulacros', nombre: 'Pruebas', icono: Timer },
-    { ruta: 'errores', nombre: 'Mis errores', icono: AlertCircle },
-    { ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 },
+    { ruta: 'refuerzo', nombre: 'Refuerzo', icono: GraduationCap },
+    { ruta: 'errores', nombre: 'Errores', icono: AlertCircle },
   ],
   docente: [
     { ruta: 'inicio', nombre: 'Grupos', icono: Users },
@@ -28,7 +28,7 @@ const MENU = {
   ],
 }
 const EXTRA_ESCRITORIO = {
-  estudiante: [{ ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }],
+  estudiante: [{ ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 }, { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }],
   docente: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }],
   admin: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }],
 }

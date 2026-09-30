@@ -101,7 +101,7 @@ export default function Inicio({ usuario }) {
         <Accion icono={Play} titulo="Continuar práctica" sub="5 preguntas con explicación" onClick={() => ir('practica', { n: 5 })} destacada />
         <Accion icono={Timer} titulo="Mini-prueba" sub={`${estado?.fase?.mini_prueba?.cantidad ?? 10} preguntas · ${estado?.fase?.mini_prueba?.tiempo_min ?? 20} min`} onClick={async () => { const f = estado?.fase?.mini_prueba; const s = await crearMiniPrueba({ estudiante: usuario, cantidad: f?.cantidad ?? 10, tiempo_min: f?.tiempo_min ?? 20, titulo: 'Mini-prueba de la semana' }); ir('sesion', { id: s.id }) }} />
         <Accion icono={AlertCircle} titulo="Mis errores" sub={`${errores} para revisar`} onClick={() => ir('errores')} />
-        <Accion icono={BarChart3} titulo="Mi progreso" sub="por prueba y habilidad" onClick={() => ir('progreso')} />
+        <Accion icono={BarChart3} titulo="Refuerzo" sub="lo que está flojo, explicado" onClick={() => ir('refuerzo')} />
         <Accion icono={Timer} titulo="Simulacros" sub="por sesión, cronometrados" onClick={() => ir('simulacros')} />
         <Accion icono={Map} titulo="Mi ruta" sub="programa de 6 meses" onClick={() => ir('ruta')} />
       </div>
@@ -158,7 +158,7 @@ function TarjetaDiagnostico({ diagnostico, usuario }) {
     return (
       <button onClick={() => ir('sesion', { id: diagnostico.id })} className="card w-full text-left flex items-center gap-3">
         <span className="w-11 h-11 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center shrink-0"><Stethoscope size={22} /></span>
-        <div className="flex-1"><p className="font-semibold text-brand-navy">Prueba diagnóstica realizada</p><p className="text-xs text-gray-400">Resultado: {diagnostico.resultado?.precision ?? '—'}% de aciertos. Toca para ver el detalle por materia.</p></div>
+        <div className="flex-1"><p className="font-semibold text-brand-navy">Prueba diagnóstica realizada</p><p className="text-xs text-gray-400">Resultado: {diagnostico.resultado?.precision ?? '—'}% de aciertos. Toca para ver el detalle; tu plan está en Refuerzo.</p></div>
         <button onClick={e => { e.stopPropagation(); crearDiagnostico({ estudiante: usuario }).then(s => ir('sesion', { id: s.id })) }} className="text-xs font-semibold text-brand-blue shrink-0">Repetir</button>
       </button>
     )

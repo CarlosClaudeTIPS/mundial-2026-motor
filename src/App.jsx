@@ -22,6 +22,7 @@ import MiRuta from './components/estudiante/MiRuta'
 import Biblioteca from './components/Biblioteca'
 import Materias from './components/estudiante/Materias'
 import Materia from './components/estudiante/Materia'
+import Refuerzo from './components/estudiante/Refuerzo'
 import PanelDocente from './components/docente/PanelDocente'
 import Grupo from './components/docente/Grupo'
 import EstudianteDetalle from './components/docente/EstudianteDetalle'
@@ -84,6 +85,7 @@ function elegirVista(rol, ruta, params, usuario) {
   if (rol === 'estudiante') {
     switch (ruta) {
       case 'simulacros': return <Simulacros usuario={usuario} params={params} />
+      case 'refuerzo': return <Refuerzo usuario={usuario} params={params} />
       case 'errores': return <MisErrores usuario={usuario} params={params} />
       case 'progreso': return <MiProgreso usuario={usuario} params={params} />
       case 'ruta': return <MiRuta usuario={usuario} params={params} />
