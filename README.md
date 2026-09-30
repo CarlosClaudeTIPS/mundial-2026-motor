@@ -29,6 +29,8 @@ Usuarios de demostración (modo local, PIN `1234`): `admin`, `docente`, `est1` �
 - `content/programa.json` — programa de 24 semanas en 6 fases.
 - `content/banco/*.json` — banco de preguntas (esquema en `content/ESQUEMA-PREGUNTA.md`). Cada distractor trae explicación, tipo de error y nivel de diagnóstico.
 
+Importar preguntas: en el panel del docente, Banco → **Importar** admite PDF o texto (cuadernillos del ICFES, guías); detecta preguntas numeradas con opciones A-D y la hoja de respuestas, y las guarda como pendientes. Con la nube y la variable `ANTHROPIC_API_KEY` en Vercel, el botón **Completar con IA** clasifica cada pregunta y escribe las explicaciones de cada opción, y **Generar con IA** redacta preguntas nuevas a partir de un texto (`api/ia-preguntas.js`, modelo `claude-opus-5-5`). Todo queda pendiente hasta que el docente lo apruebe.
+
 Validar el banco:
 
 ```bash

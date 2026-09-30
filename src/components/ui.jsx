@@ -85,9 +85,11 @@ export function Md({ texto, className = '' }) {
 }
 
 function inline(t) {
-  const partes = t.split(/(\*\*[^*]+\*\*|\*[^*]+\*|_[^_]+_|https?:\/\/[^\s)]+)/g)
+  const partes = t.split(/(\*\*[^*]+\*\*|\*[^*]+\*|_[^_]+_|https?:\/\/[^\s)]+|\(\d{1,2}\)\s*_{3,})/g)
   return partes.map((p, i) => {
     if (/^https?:\/\//.test(p)) return <a key={i} href={p} target="_blank" rel="noreferrer" className="text-brand-blue underline">ver fuente ↗</a>
+    // Espacios numerados de los textos con huecos: (3) ______ → se resaltan para ubicarlos rápido
+    if (/^\(\d{1,2}\)\s*_{3,}$/.test(p)) return <span key={i} className="inline-block rounded-md bg-amber-100 text-amber-900 font-semibold px-1.5 mx-0.5">{p.replace(/\s+/g, ' ')}</span>
     if (/^\*\*[^*]+\*\*$/.test(p)) return <strong key={i}>{inline(p.slice(2, -2))}</strong>
     if (/^\*[^*]+\*$/.test(p) || /^_[^_]+_$/.test(p)) return <em key={i}>{p.slice(1, -1)}</em>
     return p

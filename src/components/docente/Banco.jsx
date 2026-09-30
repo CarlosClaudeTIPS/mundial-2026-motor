@@ -5,6 +5,10 @@ import { db } from '../../lib/db'
 import { taxonomia, nombrePrueba, nombreCompetencia } from '../../lib/taxonomia'
 import PreguntaVista from '../PreguntaVista'
 import { Titulo, Badge, Vacio } from '../ui'
+import ImportarPreguntas from './ImportarPreguntas'
+import { completarConIA } from '../../lib/importar'
+import { NUBE_DISPONIBLE } from '../../lib/supabase'
+import { FileText, Sparkles } from 'lucide-react'
 
 // ─── Banco de preguntas (CMS interno) ────────────────────────────────────────
 // Ver, filtrar, editar (JSON), duplicar, archivar, aprobar, importar y exportar.
@@ -15,7 +19,15 @@ export default function Banco({ usuario }) {
   const [abierta, setAbierta] = useState(null)
   const [edicion, setEdicion] = useState(null) // texto JSON
   const [error, setError] = useState('')
+  const [importando, setImportando] = useState(false)
+  const [iaOcupada, setIaOcupada] = useState(null)
   const tax = taxonomia()
+
+  const completar = async (p) => {
+    setIaOcupada(p.id)
+    try { await guardarPregunta(await completarConIA(p)); cargar() } catch (e) { alert(e.message) }
+    setIaOcupada(null)
+  }
 
   const cargar = async () => setLista(await listarPreguntas(f))
   useEffect(() => { cargar() }, [JSON.stringify(f)])
@@ -69,7 +81,7 @@ export default function Banco({ usuario }) {
 
   return (
     <div className="space-y-4">
-      <Titulo sub={`${lista.length} preguntas`} accion={<div className="flex gap-1"><button className="btn-ghost !px-2" title="Exportar" onClick={exportar}><Download size={16} /></button><label className="btn-ghost !px-2 cursor-pointer" title="Importar JSON"><Upload size={16} /><input type="file" accept=".json" className="hidden" onChange={e => e.target.files[0] && importar(e.target.files[0])} /></label><button className="btn-secondary" onClick={nueva}><Plus size={16} /> Nueva</button></div>}>Banco de preguntas</Titulo>
+      <Titulo sub={`${lista.length} preguntas`} accion={<div className="flex gap-1"><button className="btn-ghost !px-2" title="Exportar" onClick={exportar}><Download size={16} /></button><label className="btn-ghost !px-2 cursor-pointer" title="Importar JSON"><Upload size={16} /><input type="file" accept=".json" className="hidden" onChange={e => e.target.files[0] && importar(e.target.files[0])} /></label><button className="btn-secondary" onClick={() => setImportando(true)}><FileText size={16} /> Importar</button><button className="btn-secondary" onClick={nueva}><Plus size={16} /> Nueva</button></div>}>Banco de preguntas</Titulo>
 
       <div className="grid grid-cols-2 gap-2">
         <select className="input" value={f.prueba} onChange={e => setF({ ...f, prueba: e.target.value, competencia: '' })}><option value="">Todas las pruebas</option>{tax.pruebas.map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}</select>
@@ -78,6 +90,8 @@ export default function Banco({ usuario }) {
         <select className="input" value={f.estado} onChange={e => setF({ ...f, estado: e.target.value })}><option value="todas">Todos los estados</option>{['aprobada', 'pendiente', 'borrador', 'archivada'].map(e => <option key={e} value={e}>{e}</option>)}</select>
       </div>
       <input className="input" placeholder="Buscar por id, enunciado, tema…" value={f.buscar} onChange={e => setF({ ...f, buscar: e.target.value })} />
+
+      {importando && <ImportarPreguntas usuario={usuario} onCerrar={() => setImportando(false)} onGuardado={() => { setF({ ...f, estado: 'pendiente' }); cargar() }} />}
 
       {edicion != null && (
         <div className="card space-y-2">
@@ -103,7 +117,9 @@ export default function Banco({ usuario }) {
                 {p.origen !== 'estilo' && <Badge tono={p.origen === 'oficial' ? 'verde' : 'ambar'}>{p.origen}</Badge>}
                 {p.editada_local && <Badge>editada</Badge>}
                 {(p.etiquetas ?? []).includes('afirmacion_por_verificar') && <Badge tono="ambar">afirmación por verificar</Badge>}
-                {(p.etiquetas ?? []).includes('revisar') && <Badge tono="rojo">revisar (ver docs/13)</Badge>}
+                {(p.etiquetas ?? []).includes('revisar') && <Badge tono="rojo">revisar</Badge>}
+                {(p.etiquetas ?? []).includes('sin_clave') && <Badge tono="rojo">sin clave</Badge>}
+                {(p.etiquetas ?? []).includes('completada_ia') && <Badge tono="azul">completada por IA</Badge>}
               </div>
               <p className="text-sm text-gray-200 line-clamp-2">{p.enunciado}</p>
               <p className="text-xs text-gray-500">{p.tema}{p.subtema ? ` · ${p.subtema}` : ''}</p>
@@ -119,6 +135,8 @@ export default function Banco({ usuario }) {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <button className="btn-secondary !py-1.5 text-xs" onClick={() => abrirEdicion(p)}>Editar</button>
+                  {NUBE_DISPONIBLE && <button className="btn-secondary !py-1.5 text-xs" disabled={iaOcupada === p.id} onClick={() => completar(p)}><Sparkles size={14} /> {iaOcupada === p.id ? 'IA trabajando…' : 'Completar con IA'}</button>}
+                  {p.advertencias_ia?.length > 0 && <span className="text-xs text-amber-700 w-full">Advertencias de la IA: {p.advertencias_ia.join(' · ')}</span>}
                   <button className="btn-secondary !py-1.5 text-xs" onClick={() => duplicar(p)}><Copy size={14} /> Duplicar</button>
                   {p.estado !== 'aprobada' && <button className="btn-secondary !py-1.5 text-xs" onClick={() => cambiarEstado(p, 'aprobada')}>Aprobar</button>}
                   {p.estado !== 'archivada' && <button className="btn-ghost !py-1.5 text-xs" onClick={() => cambiarEstado(p, 'archivada')}><Archive size={14} /> Archivar</button>}
