@@ -85,9 +85,10 @@ export function Md({ texto, className = '' }) {
 }
 
 function inline(t) {
-  const partes = t.split(/(\*\*[^*]+\*\*|\*[^*]+\*|_[^_]+_)/g)
+  const partes = t.split(/(\*\*[^*]+\*\*|\*[^*]+\*|_[^_]+_|https?:\/\/[^\s)]+)/g)
   return partes.map((p, i) => {
-    if (/^\*\*[^*]+\*\*$/.test(p)) return <strong key={i}>{p.slice(2, -2)}</strong>
+    if (/^https?:\/\//.test(p)) return <a key={i} href={p} target="_blank" rel="noreferrer" className="text-brand-blue underline">ver fuente ↗</a>
+    if (/^\*\*[^*]+\*\*$/.test(p)) return <strong key={i}>{inline(p.slice(2, -2))}</strong>
     if (/^\*[^*]+\*$/.test(p) || /^_[^_]+_$/.test(p)) return <em key={i}>{p.slice(1, -1)}</em>
     return p
   })

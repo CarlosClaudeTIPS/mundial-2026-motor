@@ -9,7 +9,9 @@
   body {
     @apply bg-dark-900 text-gray-100 font-sans antialiased;
     padding-bottom: env(safe-area-inset-bottom);
+    overflow-x: hidden;
   }
+  .prosa, .prosa p, .card, main { overflow-wrap: anywhere; word-break: break-word; }
   h1, h2, h3 { @apply text-brand-navy; letter-spacing: -0.01em; }
   ::-webkit-scrollbar { @apply w-1.5; }
   ::-webkit-scrollbar-track { @apply bg-dark-900; }

@@ -148,9 +148,11 @@ function Accion({ icono: Icono, titulo, sub, onClick, destacada = false }) {
 
 function TarjetaDiagnostico({ diagnostico, usuario }) {
   const empezar = async () => {
-    if (diagnostico?.estado === 'en_curso') return ir('sesion', { id: diagnostico.id })
-    const s = await crearDiagnostico({ estudiante: usuario })
-    ir('sesion', { id: s.id })
+    try {
+      if (diagnostico?.estado === 'en_curso') return ir('sesion', { id: diagnostico.id })
+      const s = await crearDiagnostico({ estudiante: usuario })
+      ir('sesion', { id: s.id })
+    } catch (e) { alert('No se pudo iniciar la prueba: ' + e.message) }
   }
   if (diagnostico?.estado === 'terminada') {
     return (
