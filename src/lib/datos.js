@@ -2,6 +2,7 @@ import { db, uuid, ahora, encolar } from './db'
 import { evaluar } from './feedback'
 import { crearUsuario, claveDePin } from './sesion'
 import { supabase, NUBE_DISPONIBLE } from './supabase'
+import { sincronizar } from './sync'
 
 // ─── Capa de datos: intentos, grupos, asignaciones, recursos ────────────────
 // Todo se escribe primero en IndexedDB y se encola para sincronizar (sync.js).
@@ -63,7 +64,19 @@ export async function crearGrupo({ nombre, docente_id, colegio = '', curso = '',
   const g = { id: uuid(), nombre: nombre.trim(), docente_id, colegio, curso, ciclo_id, codigo: codigoGrupo(), creado: ahora(), sincronizado: 0 }
   await db.grupos.add(g)
   await encolar('grupos', g)
+  await sincronizar() // el grupo debe existir en la nube antes de asignarle estudiantes
   return g
+}
+
+// Pasa un estudiante a otro grupo (su historial de respuestas se va con él).
+export async function moverEstudiante(estudiante, grupo) {
+  const cambios = { grupo_id: grupo.id, colegio: grupo.colegio ?? null, curso: grupo.curso ?? null, ciclo_id: grupo.ciclo_id ?? null }
+  if (NUBE_DISPONIBLE) {
+    await sincronizar()
+    const { error } = await supabase.from('perfiles').update(cambios).eq('id', estudiante.id)
+    if (error) throw new Error(error.message)
+  }
+  await db.usuarios.update(estudiante.id, cambios)
 }
 
 export const gruposDe = (docente_id) => db.grupos.where('docente_id').equals(docente_id).toArray()

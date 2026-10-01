@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { db } from '../../lib/db'
-import { intentosDe } from '../../lib/datos'
+import { intentosDe, moverEstudiante } from '../../lib/datos'
 import { listarPreguntas } from '../../lib/banco'
 import { sesionesDe } from '../../lib/pruebas'
 import { resumen, evolucionSemanal } from '../../lib/analitica'
@@ -18,11 +18,18 @@ export default function EstudianteDetalle({ params }) {
     const [intentos, preguntas, sesiones] = await Promise.all([intentosDe(e.id), listarPreguntas({ estado: 'todas' }), sesionesDe(e.id)])
     const porId = Object.fromEntries(preguntas.map(p => [p.id, p]))
     const ordenados = [...intentos].sort((a, b) => (a.fecha < b.fecha ? 1 : -1))
-    setD({ e, r: resumen(intentos, porId), evo: evolucionSemanal(intentos), recs: recomendar(intentos, { preguntasPorId: porId, reglas: await reglasVigentes() }), errores: ordenados.filter(i => !i.correcta).slice(0, 20), porId, sesiones: sesiones.filter(s => s.estado === 'terminada') })
+    setD({ e, r: resumen(intentos, porId), evo: evolucionSemanal(intentos), recs: recomendar(intentos, { preguntasPorId: porId, reglas: await reglasVigentes() }), errores: ordenados.filter(i => !i.correcta).slice(0, 20), porId, sesiones: sesiones.filter(s => s.estado === 'terminada'), grupos: await db.grupos.toArray() })
   }
   useEffect(() => { cargar() }, [params.id])
   if (!d) return <p className="text-sm text-gray-400">Cargando…</p>
   const { e, r } = d
+
+  const cambiarGrupo = async (id) => {
+    const g = d.grupos.find(x => x.id === id)
+    if (!g || g.id === e.grupo_id) return
+    if (!confirm(`¿Pasar a ${e.nombre} al grupo ${g.nombre}?`)) return
+    try { await moverEstudiante(e, g); await cargar() } catch (err) { alert(err.message) }
+  }
 
   const cambiarPin = async () => {
     if (!/^\d{4,6}$/.test(pinNuevo)) return alert('El PIN debe tener 4 a 6 dígitos')
@@ -33,6 +40,15 @@ export default function EstudianteDetalle({ params }) {
   return (
     <div className="space-y-4">
       <Titulo volver sub={`${e.usuario} · ${e.curso ?? ''}`}>{e.nombre}</Titulo>
+      {d.grupos.length > 1 && (
+        <label className="card !py-2.5 flex items-center justify-between gap-2 text-sm">
+          <span className="text-gray-400">Grupo</span>
+          <select className="input !w-auto !py-1.5 text-sm" value={e.grupo_id ?? ''} onChange={ev => cambiarGrupo(ev.target.value)}>
+            {!e.grupo_id && <option value="">Sin grupo</option>}
+            {d.grupos.map(g => <option key={g.id} value={g.id}>{g.nombre}</option>)}
+          </select>
+        </label>
+      )}
       <div className="grid grid-cols-3 gap-2">
         <Metrica etiqueta="Aciertos" valor={r.precision} sufijo="%" />
         <Metrica etiqueta="Respuestas" valor={r.total} />

@@ -38,7 +38,7 @@ export default function PanelDocente({ usuario }) {
       <Titulo sub={estadoC ? (estadoC.estado === 'no_iniciado' ? `Ciclo activo: empieza en ${-estadoC.diasTranscurridos} día(s) · ${estadoC.semanasTotales} semanas` : `Ciclo activo: semana ${estadoC.semanaActual} de ${estadoC.semanasTotales} · ${estadoC.enPausa ? estadoC.pausaActual : (estadoC.fase?.nombre ?? '')}`) : null}
         accion={<button className="btn-secondary" onClick={() => setNuevo({ nombre: '', colegio: '', curso: '', ciclo_id: ciclos.find(c => c.activo)?.id ?? '' })}><Plus size={16} /> Grupo</button>}>Mis grupos</Titulo>
 
-      <Solicitudes grupos={grupos} onCambio={cargar} />
+      <Solicitudes usuario={usuario} grupos={grupos} onCambio={cargar} />
 
       {nuevo && (
         <div className="card space-y-2">
@@ -59,7 +59,7 @@ export default function PanelDocente({ usuario }) {
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0">
                 <p className="font-medium flex items-center gap-2"><Users size={16} /> {g.nombre}</p>
-                <p className="text-xs text-gray-400">{g.colegio}{g.curso ? ` · ${g.curso}` : ''} · código {g.codigo}</p>
+                <p className="text-xs text-gray-400">{[g.colegio, g.curso !== g.nombre && g.curso, `código ${g.codigo}`].filter(Boolean).join(' · ')}</p>
               </div>
               <div className="text-right shrink-0">
                 <p className="text-lg font-medium">{g.resumen.promedio ?? '—'}{g.resumen.promedio != null && '%'}</p>
