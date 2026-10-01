@@ -5,6 +5,7 @@ import { listarCiclos, cicloActivo, estadoCiclo, programa } from '../../lib/cicl
 import { resumenGrupo } from '../../lib/analitica'
 import { ir } from '../../lib/nav'
 import { Titulo, Badge, Vacio } from '../ui'
+import Solicitudes from './Solicitudes'
 
 export default function PanelDocente({ usuario }) {
   const [grupos, setGrupos] = useState(null)
@@ -36,6 +37,8 @@ export default function PanelDocente({ usuario }) {
     <div className="space-y-4">
       <Titulo sub={estadoC ? (estadoC.estado === 'no_iniciado' ? `Ciclo activo: empieza en ${-estadoC.diasTranscurridos} día(s) · ${estadoC.semanasTotales} semanas` : `Ciclo activo: semana ${estadoC.semanaActual} de ${estadoC.semanasTotales} · ${estadoC.enPausa ? estadoC.pausaActual : (estadoC.fase?.nombre ?? '')}`) : null}
         accion={<button className="btn-secondary" onClick={() => setNuevo({ nombre: '', colegio: '', curso: '', ciclo_id: ciclos.find(c => c.activo)?.id ?? '' })}><Plus size={16} /> Grupo</button>}>Mis grupos</Titulo>
+
+      <Solicitudes grupos={grupos} onCambio={cargar} />
 
       {nuevo && (
         <div className="card space-y-2">

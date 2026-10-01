@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from 'react'
 import { BookOpenCheck, Timer, LineChart, Calculator, BookOpen, Globe2, FlaskConical, Languages, Star, ChevronLeft, ChevronRight } from 'lucide-react'
-import { entrarLocal, entrarNube, pedirRecuperacion } from '../lib/sesion'
+import { entrarLocal, entrarNube, pedirRecuperacion, registrarEstudiante, baseUsuario } from '../lib/sesion'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { USUARIOS_DEMO } from '../lib/demo'
 import { preguntasSemilla } from '../lib/banco'
@@ -159,6 +159,16 @@ function FormularioAcceso({ tipo, setTipo }) {
   const [error, setError] = useState('')
   const [aviso, setAviso] = useState('')
   const [cargando, setCargando] = useState(false)
+  const [registro, setRegistro] = useState(false)
+  const [reg, setReg] = useState({ nombre: '', apellido: '', pin: '', pin2: '' })
+
+  const registrar = async (e) => {
+    e.preventDefault(); setError('')
+    if (reg.pin !== reg.pin2) { setError('Los dos PIN no coinciden'); return }
+    setCargando(true)
+    try { await registrarEstudiante(reg) } catch (err) { setError(err.message) }
+    finally { setCargando(false) }
+  }
 
   const entrar = async (e) => {
     e.preventDefault()
@@ -186,6 +196,23 @@ function FormularioAcceso({ tipo, setTipo }) {
           </button>
         ))}
       </div>
+      {tipo === 'estudiante' && registro ? (
+        <form onSubmit={registrar} className="space-y-4">
+          <p className="text-sm text-gray-400">Regístrate con tu primer nombre y tu primer apellido. Tu docente debe aceptar el registro antes de que puedas empezar.</p>
+          <div className="grid grid-cols-2 gap-2">
+            <div><label className="label">Primer nombre</label><input className="input" value={reg.nombre} onChange={e => setReg({ ...reg, nombre: e.target.value })} autoComplete="given-name" /></div>
+            <div><label className="label">Primer apellido</label><input className="input" value={reg.apellido} onChange={e => setReg({ ...reg, apellido: e.target.value })} autoComplete="family-name" /></div>
+          </div>
+          {baseUsuario(reg.nombre, reg.apellido).length >= 4 && <p className="text-xs text-gray-500">Tu usuario será <span className="font-mono font-semibold text-brand-blue">{baseUsuario(reg.nombre, reg.apellido)}</span> (si ya existe, se le agrega un número).</p>}
+          <div className="grid grid-cols-2 gap-2">
+            <div><label className="label">PIN (4 a 8 dígitos)</label><input className="input" type="password" inputMode="numeric" value={reg.pin} onChange={e => setReg({ ...reg, pin: e.target.value })} autoComplete="new-password" /></div>
+            <div><label className="label">Repite el PIN</label><input className="input" type="password" inputMode="numeric" value={reg.pin2} onChange={e => setReg({ ...reg, pin2: e.target.value })} autoComplete="new-password" /></div>
+          </div>
+          {error && <p className="text-sm text-brand-red">{error}</p>}
+          <button className="btn-primary w-full !py-3 text-base" disabled={cargando}>{cargando ? 'Registrando…' : 'Registrarme'}</button>
+          <button type="button" className="btn-ghost w-full text-sm" onClick={() => { setRegistro(false); setError('') }}>Ya tengo usuario, quiero entrar</button>
+        </form>
+      ) : (
       <form onSubmit={entrar} className="space-y-4">
         <div>
           <label className="label">{NUBE_DISPONIBLE && tipo === 'docente' ? 'Correo' : 'Usuario'}</label>
@@ -206,7 +233,9 @@ function FormularioAcceso({ tipo, setTipo }) {
             try { await pedirRecuperacion(usuario.trim()); setAviso('Te enviamos un enlace al correo para crear una contraseña nueva.') } catch (e) { setError(e.message) }
           }}>¿Olvidaste tu contraseña o aún no la tienes?</button>
         )}
+        {tipo === 'estudiante' && <button type="button" className="btn-secondary w-full" onClick={() => { setRegistro(true); setError('') }}>No tengo usuario: registrarme</button>}
       </form>
+      )}
       {!NUBE_DISPONIBLE && (
         <div className="mt-4 text-xs text-gray-500 leading-relaxed">
           <p className="mb-1"><span className="badge bg-dark-700 text-gray-300">Modo local</span> Los datos se guardan solo en este dispositivo.</p>
@@ -214,7 +243,7 @@ function FormularioAcceso({ tipo, setTipo }) {
         </div>
       )}
       {NUBE_DISPONIBLE && tipo === 'estudiante' && (
-        <p className="mt-4 text-xs text-gray-500">Tu docente te entrega el usuario y el PIN. Si los olvidaste, pídele que los restablezca.</p>
+        <p className="mt-4 text-xs text-gray-500">Si olvidaste tu usuario o tu PIN, pídele a tu docente que lo restablezca.</p>
       )}
     </div>
   )

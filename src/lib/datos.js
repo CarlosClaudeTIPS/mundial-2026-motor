@@ -1,6 +1,6 @@
 import { db, uuid, ahora, encolar } from './db'
 import { evaluar } from './feedback'
-import { crearUsuario } from './sesion'
+import { crearUsuario, claveDePin } from './sesion'
 import { supabase, NUBE_DISPONIBLE } from './supabase'
 
 // ─── Capa de datos: intentos, grupos, asignaciones, recursos ────────────────
@@ -96,10 +96,10 @@ async function inscribirEnNube(grupo, estudiantes) {
   for (const e of estudiantes) {
     const usuario = String(e.usuario ?? '').trim().toLowerCase().replace(/[^a-z0-9._-]/g, '')
     const pin = String(e.pin ?? '').trim()
-    if (!e.nombre || !usuario || pin.length < 6) { errores.push(`${e.nombre ?? '?'}: datos incompletos (el PIN debe tener al menos 6 dígitos)`); continue }
-    const { data: reg, error } = await aux.auth.signUp({ email: `${usuario}@${DOMINIO_ESTUDIANTES}`, password: pin, options: { data: { nombre: e.nombre, rol: 'estudiante' } } })
+    if (!e.nombre || !usuario || pin.length < 4) { errores.push(`${e.nombre ?? '?'}: datos incompletos (el PIN debe tener al menos 4 dígitos)`); continue }
+    const { data: reg, error } = await aux.auth.signUp({ email: `${usuario}@${DOMINIO_ESTUDIANTES}`, password: claveDePin(pin), options: { data: { nombre: e.nombre, rol: 'estudiante' } } })
     if (error || !reg?.user) { errores.push(`${e.nombre}: ${error?.message ?? 'no se creó la cuenta'}`); continue }
-    const fila = { id: reg.user.id, rol: 'estudiante', nombre: e.nombre, usuario, grupo_id: grupo.id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id }
+    const fila = { id: reg.user.id, rol: 'estudiante', estado: 'activo', nombre: e.nombre, usuario, grupo_id: grupo.id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id }
     const { error: errPerfil } = await supabase.from('perfiles').upsert(fila)
     if (errPerfil) { errores.push(`${e.nombre}: cuenta creada pero sin perfil (${errPerfil.message})`); continue }
     await db.usuarios.put({ ...fila, sincronizado: 1 })
@@ -117,7 +117,7 @@ export async function importarEstudiantes(grupo, texto) {
     const [nombre, usuario, pin] = fila.split(/[;,\t]/).map(s => (s ?? '').trim())
     if (!nombre) continue
     const handle = usuario || generarHandle(nombre)
-    const pinFinal = pin || String(100000 + Math.floor(Math.random() * 900000))
+    const pinFinal = pin || String(1000 + Math.floor(Math.random() * 9000))
     try {
       const u = await agregarEstudiante(grupo, { nombre, usuario: handle, pin: pinFinal })
       creados.push({ ...u, pin: pinFinal })

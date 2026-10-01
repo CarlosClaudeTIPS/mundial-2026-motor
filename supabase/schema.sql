@@ -251,3 +251,5 @@ from intentos group by estudiante_id;
 --  * Los PIN de estudiantes son la contraseña de Auth; nunca se guardan en perfiles.
 --  * Para eliminar una cuenta (habeas data): borrar el usuario en Auth → cascada en perfiles, intentos, sesiones.
 --  * Retención sugerida: exportar y borrar intentos de ciclos terminados hace más de 12 meses.
+
+-- Registro de estudiantes con aprobación: ejecutar también supabase/migracion-002-registro.sql

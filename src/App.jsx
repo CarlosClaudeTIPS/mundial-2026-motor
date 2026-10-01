@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSesion, iniciarSesionGuardada, LLEGO_POR_ENLACE } from './lib/sesion'
 import { ir } from './lib/nav'
 import CrearContrasena from './components/CrearContrasena'
+import Pendiente from './components/Pendiente'
 import { sembrarBanco } from './lib/banco'
 import { sembrarRecursos } from './lib/recursos'
 import { asegurarCiclos } from './lib/ciclo'
@@ -68,6 +69,7 @@ export default function App() {
   if (LLEGO_POR_ENLACE && !contrasenaLista) return <CrearContrasena onLista={() => { setContrasenaLista(true); ir('inicio') }} />
 
   const u = sesion.usuario
+  if (u.rol === 'estudiante' && u.estado && u.estado !== 'activo') return <Pendiente usuario={u} />
   const previsualizando = vistaEstudiante && (u.rol === 'docente' || u.rol === 'admin')
   const uVista = previsualizando ? { ...u, rol: 'estudiante', previsualizacion: true } : u
   const vista = elegirVista(uVista.rol, ruta, params, uVista)

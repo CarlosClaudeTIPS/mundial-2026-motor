@@ -136,13 +136,13 @@ export default function Grupo({ usuario, params }) {
                   <input className="input" placeholder="Nombre completo" value={alta.nombre} onChange={e => setAlta({ ...alta, nombre: e.target.value })} />
                   <div className="grid grid-cols-2 gap-2">
                     <input className="input" placeholder="usuario (sin espacios)" value={alta.usuario} onChange={e => setAlta({ ...alta, usuario: e.target.value })} />
-                    <input className="input" placeholder="PIN (6 dígitos)" value={alta.pin} onChange={e => setAlta({ ...alta, pin: e.target.value })} />
+                    <input className="input" placeholder="PIN (4 dígitos o más)" value={alta.pin} onChange={e => setAlta({ ...alta, pin: e.target.value })} />
                   </div>
                 </>
               ) : (
                 <>
                   <p className="text-xs text-gray-400">Una línea por estudiante: <code>Nombre Apellido; usuario; pin</code>. Usuario y PIN son opcionales (se generan). Puedes pegar desde Excel (columnas separadas por tabulación).</p>
-                  <textarea className="input font-mono text-xs" rows="6" value={alta.texto} onChange={e => setAlta({ ...alta, texto: e.target.value })} placeholder={'Valentina Rojas; valentina.r; 203145\nJuan Pérez'} />
+                  <textarea className="input font-mono text-xs" rows="6" value={alta.texto} onChange={e => setAlta({ ...alta, texto: e.target.value })} placeholder={'Valentina Rojas; valentina.r; 2031\nJuan Pérez'} />
                 </>
               )}
               <div className="flex gap-2"><button className="btn-primary flex-1" onClick={guardarAlta}>Guardar</button><button className="btn-secondary flex-1" onClick={() => setAlta(null)}>Cancelar</button></div>
