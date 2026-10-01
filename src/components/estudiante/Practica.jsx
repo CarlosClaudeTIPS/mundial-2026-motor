@@ -32,7 +32,8 @@ export default function Practica({ usuario, params }) {
   const refuerzoDe = useRef(null)
 
   useEffect(() => {
-    (async () => {
+    setCola(null); setActual(null); setElegida(null); setResultado(null); setHechas([]); setAnterior(null); setChequeo(false)
+    ;(async () => {
       let lista
       if (params.ids) lista = (await Promise.all(params.ids.split(',').map(obtenerPregunta))).filter(Boolean)
       else {
@@ -42,7 +43,10 @@ export default function Practica({ usuario, params }) {
       }
       setCola(lista.slice(1)); setActual(lista[0] ?? null); inicio.current = Date.now()
     })()
-  }, [params.ids, params.n, params.prueba, params.tipo_error, params.habilidad])
+  }, [JSON.stringify(params)]) // incluye _t: "Otra ronda" vuelve a cargar aunque los filtros no cambien
+
+  // Si la ronda era de preguntas fijas (un refuerzo o un reintento), la siguiente trae preguntas nuevas de esa materia.
+  const otraRonda = () => ir('practica', params.ids ? { prueba: hechas[0]?.prueba, n: 5, _t: Date.now() } : { ...params, _t: Date.now() })
 
   const enviar = async () => {
     if (!elegida || !actual) return
@@ -80,7 +84,7 @@ export default function Practica({ usuario, params }) {
           {hechas.length > 0 && <p className="text-xs text-gray-500 mt-2">Tiempo promedio: {formatoTiempo(hechas.reduce((a, i) => a + (i.tiempo_seg ?? 0), 0) / hechas.length)} por pregunta</p>}
         </div>
         <div className="flex gap-2">
-          <button className="btn-primary flex-1" onClick={() => ir('practica', { ...params, _t: Date.now() })}>Otra ronda</button>
+          <button className="btn-primary flex-1" onClick={otraRonda}>Otra ronda</button>
           <button className="btn-secondary flex-1" onClick={() => ir('errores')}>Ver mis errores</button>
         </div>
       </div>

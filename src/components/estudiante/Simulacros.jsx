@@ -15,7 +15,7 @@ export default function Simulacros({ usuario }) {
   const [conteo, setConteo] = useState({})
   const [fase, setFase] = useState(null)
   const [mini, setMini] = useState({ prueba: '', competencia: '', habilidad: '', dificultad: '', cantidad: 10, tiempo_min: 20 })
-  const [escala, setEscala] = useState(0.25)
+  const [escala, setEscala] = useState(1)
   const [error, setError] = useState('')
   const tax = taxonomia()
 
@@ -61,6 +61,32 @@ export default function Simulacros({ usuario }) {
       </div>
 
       <div className="card space-y-3">
+        <p className="font-semibold text-brand-navy flex items-center gap-2"><Timer size={18} /> Simulacro tipo ICFES</p>
+        <p className="text-sm text-gray-400">Igual que el examen: las mismas materias por sesión, la misma cantidad de preguntas, el mismo tiempo y sin ver respuestas hasta terminar.</p>
+        {est && (
+          <div className="text-xs text-gray-400 space-y-1">
+            {est.sesiones.map(s => (
+              <p key={s.numero}><span className="text-gray-200">{s.nombre}:</span> {s.bloques.map(b => `${nombrePrueba(b.prueba)} ${b.preguntas}`).join(' · ')} · {Math.floor(est.duracion_sesion_min / 60)} h {est.duracion_sesion_min % 60} min</p>
+            ))}
+          </div>
+        )}
+        <div>
+          <label className="label">Tamaño</label>
+          <div className="flex gap-2">
+            {[[1, 'Real'], [0.5, 'Mitad'], [0.25, 'Corto'], [0.1, 'Muy corto']].map(([e, n]) => <button key={e} onClick={() => setEscala(e)} className={`btn flex-1 !px-1 text-sm ${escala === e ? 'bg-dark-600 text-white' : 'bg-dark-900 text-gray-400'}`}>{n}</button>)}
+          </div>
+          {est && <p className="text-xs text-gray-500 mt-1">{est.sesiones.map(s => `Sesión ${s.numero}: ${s.bloques.reduce((a, b) => a + Math.max(1, Math.round(b.preguntas * escala)), 0)} preguntas`).join(' · ')} · {(m => m >= 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m} min`)(Math.round(est.duracion_sesion_min * escala))} cada una.{escala < 1 && ' Las versiones cortas conservan la proporción entre materias y el tiempo por pregunta.'}</p>}
+        </div>
+        <button className="btn-primary w-full" onClick={async () => { setError(''); try { const s = await crearSimulacroCompleto({ estudiante: usuario, escala }); ir('sesion', { id: s.id }) } catch (e) { setError(e.message) } }}><Play size={16} /> Empezar simulacro completo (2 sesiones)</button>
+        <div className="grid grid-cols-2 gap-2">
+          <button className="btn-secondary" onClick={() => lanzarSimulacro(1)}>Solo sesión 1</button>
+          <button className="btn-secondary" onClick={() => lanzarSimulacro(2)}>Solo sesión 2</button>
+        </div>
+        <p className="text-xs text-gray-500">En el completo, al terminar la sesión 1 tomas el descanso y luego inicias la sesión 2; al final ves el resultado global con un puntaje aproximado sobre 500. Si cierras la app, el cronómetro sigue corriendo como en el examen.</p>
+        {error && <p className="text-sm text-brand-red">{error}</p>}
+      </div>
+
+      <div className="card space-y-3">
         <p className="font-medium flex items-center gap-2"><Timer size={18} /> Mini-prueba</p>
         <div className="grid grid-cols-2 gap-2">
           <div><label className="label">Prueba</label>
@@ -84,32 +110,6 @@ export default function Simulacros({ usuario }) {
         </div>
         {fase?.mini_prueba && <p className="text-xs text-gray-500">Sugerencia de la fase actual ({fase.nombre}): {fase.mini_prueba.cantidad} preguntas en {fase.mini_prueba.tiempo_min} min · {fase.mini_prueba.enfoque}.</p>}
         <button className="btn-primary w-full" onClick={lanzarMini}><Play size={16} /> Empezar mini-prueba</button>
-      </div>
-
-      <div className="card space-y-3">
-        <p className="font-medium flex items-center gap-2"><Timer size={18} /> Simulacro por sesión</p>
-        {est && (
-          <div className="text-xs text-gray-400 space-y-1">
-            {est.sesiones.map(s => (
-              <p key={s.numero}><span className="text-gray-200">{s.nombre}:</span> {s.bloques.map(b => `${nombrePrueba(b.prueba)} ${b.preguntas}`).join(' · ')} · {est.duracion_sesion_min / 60} h {est.duracion_sesion_min % 60} min</p>
-            ))}
-            <p className="text-gray-500">{est._estado}</p>
-          </div>
-        )}
-        <div>
-          <label className="label">Escala (el banco aún es pequeño; la proporción y el tiempo por pregunta se conservan)</label>
-          <div className="flex gap-2">
-            {[0.1, 0.25, 0.5, 1].map(e => <button key={e} onClick={() => setEscala(e)} className={`btn flex-1 ${escala === e ? 'bg-dark-600 text-white' : 'bg-dark-900 text-gray-400'}`}>{Math.round(e * 100)} %</button>)}
-          </div>
-          {est && <p className="text-xs text-gray-500 mt-1">≈ {Math.round(est.sesiones[0].bloques.reduce((a, b) => a + b.preguntas, 0) * escala)} preguntas y {Math.round(est.duracion_sesion_min * escala)} min por sesión.</p>}
-        </div>
-        <div className="grid grid-cols-3 gap-2">
-          <button className="btn-secondary" onClick={() => lanzarSimulacro(1)}>Sesión 1</button>
-          <button className="btn-secondary" onClick={() => lanzarSimulacro(2)}>Sesión 2</button>
-          <button className="btn-primary" onClick={async () => { setError(''); try { const s = await crearSimulacroCompleto({ estudiante: usuario, escala }); ir('sesion', { id: s.id }) } catch (e) { setError(e.message) } }}>Completo</button>
-        </div>
-        <p className="text-xs text-gray-500">El simulacro completo son las dos sesiones el mismo día con un descanso entre ellas, como en el examen real: al terminar la sesión 1 podrás iniciar la sesión 2 y ver el resultado global.</p>
-        {error && <p className="text-sm text-brand-red">{error}</p>}
       </div>
 
       <div className="card">

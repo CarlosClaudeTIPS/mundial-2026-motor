@@ -4,6 +4,7 @@ import { obtenerSesion, responderEnSesion, acumularTiempo, guardarIndice, termin
 import { resumen } from '../../lib/analitica'
 import { obtenerPregunta, grupoTexto } from '../../lib/banco'
 import { db } from '../../lib/db'
+import { estructuraExamen } from '../../lib/ciclo'
 import { evaluar } from '../../lib/feedback'
 import { ir } from '../../lib/nav'
 import PreguntaVista from '../PreguntaVista'
@@ -151,7 +152,14 @@ function Resultados({ sesion, preguntas, usuario }) {
         const todos = (await Promise.all(terminadas.map(s => db.intentos.where('sesion_id').equals(s.id).toArray()))).flat()
         combinado = resumen(todos)
       }
-      setCompleto({ sesiones: ss, combinado })
+      // Puntaje global aproximado (0-500): promedio ponderado de las cinco pruebas × 5
+      let global = null
+      const pesos = (await estructuraExamen()).puntaje?.ponderacion_global
+      if (combinado && pesos && Object.keys(pesos).every(k => combinado.por_prueba.some(x => x.id === k))) {
+        const suma = Object.values(pesos).reduce((a, b) => a + b, 0)
+        global = Math.round(combinado.por_prueba.reduce((a, x) => a + (pesos[x.id] ?? 0) * x.precision, 0) / suma * 5)
+      }
+      setCompleto({ sesiones: ss, combinado, global })
     })()
   }, [sesion.id])
   const porId = Object.fromEntries(intentos.map(i => [i.pregunta_id, i]))
@@ -174,10 +182,12 @@ function Resultados({ sesion, preguntas, usuario }) {
       {completo?.combinado && (
         <div className="card border-brand-green/40">
           <p className="font-medium mb-2">Simulacro completo (sesión 1 + sesión 2)</p>
-          <div className="grid grid-cols-2 gap-2 mb-2">
+          <div className={`grid gap-2 mb-2 ${completo.global != null ? 'grid-cols-3' : 'grid-cols-2'}`}>
+            {completo.global != null && <Metrica etiqueta="Puntaje aprox." valor={completo.global} sufijo="/500" />}
             <Metrica etiqueta="Aciertos globales" valor={completo.combinado.precision} sufijo="%" />
             <Metrica etiqueta="Correctas" valor={`${completo.combinado.aciertos}/${completo.combinado.total}`} />
           </div>
+          {completo.global != null && <p className="text-xs text-gray-500 mb-2">El puntaje sobre 500 es una aproximación a partir del porcentaje de aciertos por materia (Lectura, Matemáticas, Sociales y Ciencias pesan 3; Inglés pesa 1). El ICFES califica con un modelo estadístico distinto, así que úsalo para comparar tus simulacros entre sí, no como predicción exacta.</p>}
           {completo.combinado.por_prueba.map(x => <FilaMetrica key={x.id} nombre={x.nombre} valor={x.precision} detalle={`${x.aciertos}/${x.total}`} />)}
           <div className="flex gap-2 mt-2 text-xs">
             {completo.sesiones.map(s => <button key={s.id} className="btn-ghost !py-1" onClick={() => ir('sesion', { id: s.id })}>Ver sesión {s.config.sesion_examen}</button>)}
