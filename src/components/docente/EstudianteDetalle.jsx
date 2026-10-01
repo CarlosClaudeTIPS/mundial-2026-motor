@@ -6,6 +6,7 @@ import { sesionesDe } from '../../lib/pruebas'
 import { resumen, evolucionSemanal } from '../../lib/analitica'
 import { recomendar, reglasVigentes } from '../../lib/reglas'
 import { hashPin } from '../../lib/sesion'
+import { ir } from '../../lib/nav'
 import { Titulo, FilaMetrica, Metrica, Badge, fechaCorta, formatoTiempo } from '../ui'
 import { nombrePrueba, nombreTipoError, nombreDiagnostico } from '../../lib/taxonomia'
 
@@ -49,6 +50,7 @@ export default function EstudianteDetalle({ params }) {
           </select>
         </label>
       )}
+      <button className="btn-secondary w-full" onClick={() => ir('historial', { id: e.id })}>Ver historial completo (cada prueba y cada pregunta)</button>
       <div className="grid grid-cols-3 gap-2">
         <Metrica etiqueta="Aciertos" valor={r.precision} sufijo="%" />
         <Metrica etiqueta="Respuestas" valor={r.total} />

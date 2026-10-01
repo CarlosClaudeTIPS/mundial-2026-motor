@@ -83,22 +83,45 @@ export async function descargarDeNube(usuario) {
   if (!NUBE_DISPONIBLE || !estado.enLinea || !usuario) return
   try {
     if (usuario.rol === 'estudiante') {
-      const { data: asig } = await supabase.from('asignaciones').select('*').eq('grupo_id', usuario.grupo_id ?? '')
-      if (asig) await db.asignaciones.bulkPut(asig.map(a => ({ ...a, sincronizado: 1 })))
+      if (usuario.grupo_id) {
+        const { data: asig } = await supabase.from('asignaciones').select('*').eq('grupo_id', usuario.grupo_id)
+        if (asig) await db.asignaciones.bulkPut(asig.map(a => ({ ...a, sincronizado: 1 })))
+      }
+      // Su propio historial (para verlo desde cualquier dispositivo). Solo se agrega
+      // lo que no está en este dispositivo: lo local puede tener cambios sin enviar.
+      const intentos = await todasLasFilas('intentos', q => q.eq('estudiante_id', usuario.id))
+      const tengoI = new Set(await db.intentos.where('estudiante_id').equals(usuario.id).primaryKeys())
+      await db.intentos.bulkPut(intentos.filter(i => !tengoI.has(i.uid)).map(i => ({ ...i, sincronizado: 1 })))
+      const sesiones = await todasLasFilas('sesiones', q => q.eq('estudiante_id', usuario.id))
+      const tengoS = new Set(await db.sesiones.where('estudiante_id').equals(usuario.id).primaryKeys())
+      await db.sesiones.bulkPut(sesiones.filter(s => !tengoS.has(s.id)).map(s => ({ ...s, sincronizado: 1 })))
     } else {
       const { data: grupos } = await supabase.from('grupos').select('*')
       if (grupos) await db.grupos.bulkPut(grupos.map(g => ({ ...g, sincronizado: 1 })))
       const { data: usuarios } = await supabase.from('perfiles').select('*')
       if (usuarios) await db.usuarios.bulkPut(usuarios.map(u => ({ ...u, sincronizado: 1 })))
-      const { data: intentos } = await supabase.from('intentos').select('*')
-      if (intentos) await db.intentos.bulkPut(intentos.map(i => ({ ...i, sincronizado: 1 })))
-      const { data: sesiones } = await supabase.from('sesiones').select('*')
-      if (sesiones) await db.sesiones.bulkPut(sesiones.map(s => ({ ...s, sincronizado: 1 })))
+      const intentos = await todasLasFilas('intentos')
+      await db.intentos.bulkPut(intentos.map(i => ({ ...i, sincronizado: 1 })))
+      const sesiones = await todasLasFilas('sesiones')
+      await db.sesiones.bulkPut(sesiones.map(s => ({ ...s, sincronizado: 1 })))
     }
     const { data: recursos } = await supabase.from('recursos').select('*')
     if (recursos) await db.recursos.bulkPut(recursos.map(r => ({ ...r, sincronizado: 1 })))
   } catch (e) {
     set({ error: e.message })
+  } finally {
+    set({ descargado: ahora() }) // las pantallas abiertas vuelven a leer
+  }
+}
+
+// Supabase devuelve máximo 1000 filas por consulta: se lee por páginas.
+async function todasLasFilas(tabla, filtrar = q => q) {
+  const clave = TABLAS[tabla].clave, filas = []
+  for (let desde = 0; ; desde += 1000) {
+    const { data, error } = await filtrar(supabase.from(tabla).select('*')).order(clave).range(desde, desde + 999)
+    if (error) throw new Error(`${tabla}: ${error.message}`)
+    filas.push(...data)
+    if (data.length < 1000) return filas
   }
 }
 

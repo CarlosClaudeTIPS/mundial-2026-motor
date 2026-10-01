@@ -1,4 +1,4 @@
-import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff } from 'lucide-react'
+import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History } from 'lucide-react'
 import { salir } from '../lib/sesion'
 import { useSync, sincronizar } from '../lib/sync'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
@@ -11,6 +11,7 @@ const MENU = {
     { ruta: 'simulacros', nombre: 'Pruebas', icono: Timer },
     { ruta: 'refuerzo', nombre: 'Refuerzo', icono: GraduationCap },
     { ruta: 'errores', nombre: 'Errores', icono: AlertCircle },
+    { ruta: 'historial', nombre: 'Historial', icono: History },
   ],
   docente: [
     { ruta: 'inicio', nombre: 'Grupos', icono: Users },

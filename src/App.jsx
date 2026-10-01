@@ -24,6 +24,7 @@ import Biblioteca from './components/Biblioteca'
 import Materias from './components/estudiante/Materias'
 import Materia from './components/estudiante/Materia'
 import Refuerzo from './components/estudiante/Refuerzo'
+import Historial from './components/estudiante/Historial'
 import PanelDocente from './components/docente/PanelDocente'
 import Grupo from './components/docente/Grupo'
 import EstudianteDetalle from './components/docente/EstudianteDetalle'
@@ -83,6 +84,7 @@ function elegirVista(rol, ruta, params, usuario) {
   if (ruta === 'sesion') return <SesionPrueba usuario={usuario} params={params} />
   if (ruta === 'materias') return <Materias usuario={usuario} params={params} />
   if (ruta === 'materia') return <Materia usuario={usuario} params={params} />
+  if (ruta === 'historial') return <Historial usuario={usuario} params={params} />
 
   if (rol === 'estudiante') {
     switch (ruta) {
