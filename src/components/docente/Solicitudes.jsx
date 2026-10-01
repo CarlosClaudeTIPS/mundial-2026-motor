@@ -15,7 +15,13 @@ export default function Solicitudes({ usuario, grupos, onCambio }) {
   const [error, setError] = useState('')
 
   const cargar = async () => { try { setLista(await solicitudesPendientes()) } catch (e) { setError(e.message); setLista([]) } }
-  useEffect(() => { cargar() }, [])
+  // Se vuelve a consultar cada 30 s y al volver a la pestaña: los registros llegan mientras el panel está abierto.
+  useEffect(() => {
+    cargar()
+    const t = setInterval(cargar, 30_000)
+    window.addEventListener('focus', cargar)
+    return () => { clearInterval(t); window.removeEventListener('focus', cargar) }
+  }, [])
 
   const elegido = (p) => grupoDe[p.id] ?? porDefecto ?? grupos[0]?.id ?? ''
 

@@ -1,5 +1,6 @@
-import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History } from 'lucide-react'
-import { salir } from '../lib/sesion'
+import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History, UserCheck } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { salir, solicitudesPendientes } from '../lib/sesion'
 import { useSync, sincronizar } from '../lib/sync'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { ir } from '../lib/nav'
@@ -96,6 +97,7 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
           </div>
         </header>
 
+        {puedePrevisualizar && !vistaEstudiante && <AvisoSolicitudes ruta={ruta} esAdmin={usuario.rol === 'admin'} />}
         <main className="flex-1 p-4 md:p-8 pb-24 md:pb-8 max-w-5xl w-full mx-auto">{children}</main>
 
         {/* Navegación inferior (móvil) */}
@@ -109,6 +111,26 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
         </nav>
       </div>
     </div>
+  )
+}
+
+// Aviso para docente/admin, en cualquier pantalla, de que hay estudiantes esperando aprobación.
+function AvisoSolicitudes({ ruta, esAdmin }) {
+  const [n, setN] = useState(0)
+  useEffect(() => {
+    const contar = () => solicitudesPendientes().then(l => setN(l.length)).catch(() => {})
+    contar()
+    const t = setInterval(contar, 30_000)
+    window.addEventListener('focus', contar)
+    return () => { clearInterval(t); window.removeEventListener('focus', contar) }
+  }, [ruta])
+  // En el panel de grupos ya se ve la tarjeta de solicitudes
+  const enPanel = ruta === 'inicio' && (!esAdmin || window.location.hash.includes('vista=docente'))
+  if (!n || enPanel) return null
+  return (
+    <button onClick={() => ir('inicio', { vista: 'docente' })} className="no-print w-full bg-sky-50 border-b border-sky-200 text-brand-navy text-sm px-4 py-2.5 flex items-center justify-center gap-2 font-medium">
+      <UserCheck size={17} className="text-brand-blue" /> {n === 1 ? 'Hay 1 estudiante esperando' : `Hay ${n} estudiantes esperando`} que aceptes su registro <span className="underline text-brand-blue">Revisar</span>
+    </button>
   )
 }
 
