@@ -136,6 +136,35 @@ Las fórmulas están en `src/lib/engine.js`:
 - `poissonOver` — Probabilidad Over con distribución de Poisson
 - `calcLiveExpected` — Proyección en vivo (ritmo × minutos restantes)
 
+## Proyecto hermano: Saber 11 Prep (ICFES)
+
+La carpeta [`saber11-prep/`](saber11-prep/) contiene la app de preparación para la prueba Saber 11° del ICFES, traída desde el repo `CarlosClaudeTIPS/saber11-prep` (publicada en https://saber11-prep.vercel.app). Es un proyecto independiente con su propio `package.json`:
+
+```bash
+cd saber11-prep
+npm install
+npm run dev -- --port 5180
+```
+
+Ver [`saber11-prep/README.md`](saber11-prep/README.md) para la configuración de Supabase, Vercel y el banco de preguntas.
+
+### Sincronizar con el repo `saber11-prep`
+
+La carpeta está montada como **git subtree**, así que los cambios que se hagan aquí se pueden registrar también en el repo original, y viceversa:
+
+```bash
+# Enviar lo que cambiaste en saber11-prep/ al otro repo (rama con el mismo nombre que la actual)
+npm run saber11:push
+
+# Enviar directo a main (Vercel despliega main a https://saber11-prep.vercel.app)
+scripts/saber11-sync.sh push main
+
+# Traer cambios hechos en el otro repo
+npm run saber11:pull
+```
+
+Haz commit aquí como siempre; el `push` del subtree solo envía los commits que tocan `saber11-prep/`.
+
 ## Licencia
 
 MIT

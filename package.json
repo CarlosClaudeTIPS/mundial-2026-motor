@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "saber11:push": "bash scripts/saber11-sync.sh push",
+    "saber11:pull": "bash scripts/saber11-sync.sh pull"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.1",
