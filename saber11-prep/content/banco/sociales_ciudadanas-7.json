@@ -1,0 +1,1837 @@
+[
+  {
+    "id": "SOC-101",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "interpretar",
+    "tema": "Mecanismos de participación ciudadana",
+    "subtema": "Elección del mecanismo adecuado: cabildo abierto",
+    "dificultad": 1,
+    "contexto": "En el municipio de **Sabanalarga del Río** (nombre ficticio), la alcaldía anunció que construirá una planta de tratamiento de basuras a 300 metros del barrio Los Almendros. Los vecinos no se oponen del todo al proyecto, pero quieren que el alcalde y el concejo lo expliquen en una sesión pública, respondan preguntas y escuchen sus propuestas de reubicación antes de firmar los contratos. Un estudiante de 11.° consultó la Constitución de 1991 y la Ley 134 de 1994 y organizó la siguiente tabla para orientar a la comunidad.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Algunos mecanismos de participación ciudadana en Colombia",
+      "columnas": [
+        "Mecanismo",
+        "¿Para qué sirve?"
+      ],
+      "filas": [
+        [
+          "Iniciativa popular",
+          "Un grupo de ciudadanos presenta un proyecto de ley, de acuerdo o de ordenanza para que la corporación pública lo discuta"
+        ],
+        [
+          "Referendo",
+          "Los ciudadanos aprueban o rechazan con su voto un proyecto de norma o derogan una norma vigente"
+        ],
+        [
+          "Consulta popular",
+          "El gobernante somete a votación una pregunta de interés general; el resultado es obligatorio"
+        ],
+        [
+          "Revocatoria del mandato",
+          "Los ciudadanos dan por terminado el mandato de un alcalde o gobernador"
+        ],
+        [
+          "Cabildo abierto",
+          "Reunión pública del concejo o la asamblea en la que los habitantes discuten asuntos de interés para la comunidad"
+        ],
+        [
+          "Plebiscito",
+          "El presidente convoca al pueblo para que apoye o rechace una decisión del Ejecutivo"
+        ]
+      ],
+      "nota": "Síntesis escolar; cada mecanismo tiene requisitos de firmas y trámites que aquí se omiten."
+    },
+    "enunciado": "Según la tabla y lo que buscan los vecinos, ¿cuál mecanismo responde mejor a su propósito?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El cabildo abierto, porque permite que los habitantes discutan el proyecto en una sesión pública del concejo.",
+        "correcta": true,
+        "explicacion": "Los vecinos quieren una sesión pública con el alcalde y el concejo para preguntar y proponer, no votar ni destituir. La tabla describe exactamente eso como cabildo abierto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La revocatoria del mandato, porque castiga al alcalde por decidir la ubicación de la planta sin consultar.",
+        "correcta": false,
+        "explicacion": "La revocatoria termina el periodo del alcalde; los vecinos no piden sacarlo del cargo, sino ser escuchados antes de que se firmen los contratos, según el contexto.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier inconformidad con la autoridad al mecanismo más drástico sin revisar qué piden los vecinos."
+      },
+      {
+        "clave": "C",
+        "texto": "La consulta popular, porque obliga a la alcaldía a someter la planta a una votación de todos los habitantes.",
+        "correcta": false,
+        "explicacion": "La consulta popular la convoca el gobernante y produce una decisión obligatoria por voto; el contexto dice que los vecinos buscan explicación y diálogo, no una votación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la palabra 'consulta' como sinónimo de 'preguntar' y no revisa la descripción de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "El plebiscito, porque es la forma de que el pueblo apoye o rechace la decisión de construir la planta.",
+        "correcta": false,
+        "explicacion": "La tabla indica que el plebiscito lo convoca el presidente de la República sobre decisiones del Ejecutivo nacional; no aplica a una obra municipal.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No lee quién convoca el plebiscito y lo toma como un voto sobre cualquier decisión pública."
+      }
+    ],
+    "explicacion": "LEER: el contexto describe lo que quieren los vecinos: una sesión pública con el alcalde y el concejo para preguntar y proponer antes de la firma de contratos. COMPRENDER: se pide elegir, con la tabla, el mecanismo que mejor sirve a ese propósito. INTERPRETAR: el propósito no es votar una norma, ni destituir al alcalde, ni aprobar una decisión presidencial, sino discutir públicamente un asunto local. REPRESENTAR: se cruza cada fila de la tabla con la necesidad: iniciativa y referendo tratan de normas; consulta y plebiscito implican votaciones convocadas por el gobernante; revocatoria termina el mandato; cabildo abierto es reunión pública de discusión. RAZONAR: solo el cabildo abierto coincide con 'discutir asuntos de interés para la comunidad' en sesión del concejo. RESOLVER: la opción del cabildo abierto. VERIFICAR: los vecinos 'no se oponen del todo', lo que descarta castigo o veto.",
+    "que_identificar": "Qué piden exactamente los vecinos (explicación y diálogo en sesión pública) y la descripción de cada mecanismo en la tabla.",
+    "que_revisar": "Mecanismos de participación del artículo 103 de la Constitución y la Ley 134 de 1994: quién convoca cada uno y qué efecto tiene.",
+    "refuerzo_ids": [
+      "SOC-113",
+      "SOC-004"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "participacion",
+      "cabildo_abierto",
+      "constitucion_1991",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-102",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "leer",
+    "tema": "Revolución Rusa",
+    "subtema": "Secuencia de 1905 a 1922 y salida de la Primera Guerra Mundial",
+    "dificultad": 1,
+    "contexto": "Para una exposición sobre el siglo XX, un grupo de estudiantes construyó una cronología simplificada de la Revolución Rusa.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Cronología básica de la Revolución Rusa",
+      "columnas": [
+        "Año",
+        "Hecho"
+      ],
+      "filas": [
+        [
+          "1905",
+          "Revolución fallida; el zar Nicolás II acepta crear una Duma (parlamento) con poderes limitados"
+        ],
+        [
+          "1914",
+          "Rusia entra a la Primera Guerra Mundial del lado de Francia y Gran Bretaña"
+        ],
+        [
+          "Feb. 1917",
+          "Huelgas y protestas en Petrogrado; el zar abdica y se forma un Gobierno Provisional"
+        ],
+        [
+          "Oct. 1917",
+          "Los bolcheviques, dirigidos por Lenin, toman el poder"
+        ],
+        [
+          "Mar. 1918",
+          "Tratado de Brest-Litovsk: Rusia se retira de la guerra y cede territorios"
+        ],
+        [
+          "1918-1921",
+          "Guerra civil entre el Ejército Rojo y los ejércitos blancos"
+        ],
+        [
+          "1922",
+          "Se funda la Unión de Repúblicas Socialistas Soviéticas (URSS)"
+        ]
+      ],
+      "nota": "Fechas según el calendario de uso corriente en Occidente."
+    },
+    "enunciado": "¿Cuál afirmación es coherente con la cronología presentada?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La URSS fue fundada antes de que estallara la guerra civil entre rojos y blancos.",
+        "correcta": false,
+        "explicacion": "La tabla sitúa la guerra civil entre 1918 y 1921 y la fundación de la URSS en 1922, es decir, después y no antes de la guerra civil.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el orden de las dos últimas filas o asume que la URSS existió desde la toma del poder."
+      },
+      {
+        "clave": "B",
+        "texto": "Rusia se retiró de la Primera Guerra Mundial después de que los bolcheviques tomaran el poder.",
+        "correcta": true,
+        "explicacion": "La toma del poder bolchevique es de octubre de 1917 y el Tratado de Brest-Litovsk, con el que Rusia sale de la guerra, es de marzo de 1918: el retiro ocurre después.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El zar Nicolás II abdicó como consecuencia directa de la toma del poder por los bolcheviques.",
+        "correcta": false,
+        "explicacion": "Según la tabla, la abdicación es de febrero de 1917 y dio paso a un Gobierno Provisional; los bolcheviques tomaron el poder meses después, en octubre.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Funde las dos revoluciones de 1917 en un solo hecho y atribuye la caída del zar a Lenin."
+      },
+      {
+        "clave": "D",
+        "texto": "La Duma creada en 1905 fue el órgano que firmó el tratado de retiro de la guerra.",
+        "correcta": false,
+        "explicacion": "La tabla no atribuye el tratado a la Duma; en 1918 el poder lo ejercían los bolcheviques, que habían tomado el gobierno en octubre de 1917.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Conecta dos filas lejanas sin verificar quién gobernaba en 1918."
+      }
+    ],
+    "explicacion": "LEER: la tabla ordena siete hechos de 1905 a 1922. COMPRENDER: se pide la afirmación que respeta ese orden temporal. INTERPRETAR: hay dos revoluciones en 1917 (febrero y octubre) y la salida de la guerra es de marzo de 1918. REPRESENTAR: se dibuja la línea: 1905 Duma → 1914 guerra → feb. 1917 abdicación → oct. 1917 bolcheviques → mar. 1918 Brest-Litovsk → 1918-1921 guerra civil → 1922 URSS. RAZONAR: la URSS es posterior a la guerra civil; la abdicación es anterior a los bolcheviques; la Duma no gobernaba en 1918; el retiro de la guerra sí es posterior a octubre de 1917. RESOLVER: la opción que ubica la salida de la guerra después de la toma del poder bolchevique. VERIFICAR: marzo de 1918 es posterior a octubre de 1917, lo que confirma la respuesta.",
+    "que_identificar": "El orden de las filas de 1917 y 1918: abdicación en febrero, bolcheviques en octubre y tratado en marzo del año siguiente.",
+    "que_revisar": "Revolución Rusa: revoluciones de febrero y octubre de 1917, Brest-Litovsk, guerra civil y fundación de la URSS.",
+    "refuerzo_ids": [
+      "SOC-013",
+      "SOC-111"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "revolucion_rusa",
+      "siglo_xx",
+      "cronologia",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-103",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "comprender",
+    "tema": "Energías renovables y territorios étnicos",
+    "subtema": "Perspectivas frente a un parque eólico en La Guajira",
+    "dificultad": 2,
+    "contexto": "Una empresa proyecta un parque eólico en la Alta Guajira. En una audiencia, se recogieron estas voces (testimonios ficticios):\n\n- **Gerente de la empresa:** “El viento de La Guajira es de los mejores del mundo. El parque dará energía limpia a miles de hogares y generará empleo durante la construcción”.\n- **Autoridad tradicional wayuu:** “Para nosotros el territorio no es solo tierra: allí están nuestros cementerios, los caminos de los animales y los sueños que guían a la comunidad. Nadie nos preguntó dónde se podían poner las torres”.\n- **Alcalde del municipio:** “Las regalías y los impuestos del proyecto nos permitirían ampliar el acueducto”.\n- **Ingeniera ambiental independiente:** “Las aspas pueden afectar las rutas de aves migratorias; falta un estudio de largo plazo”.",
+    "estimulo": null,
+    "enunciado": "¿Qué distingue la perspectiva de la autoridad wayuu de las demás voces de la audiencia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Rechaza las energías renovables porque considera que el viento es un recurso que no debe aprovecharse.",
+        "correcta": false,
+        "explicacion": "El testimonio no dice nada contra la energía eólica en sí; su reclamo es sobre el significado del territorio y la falta de consulta, no sobre el uso del viento.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a la comunidad una posición de rechazo total que el texto no expresa."
+      },
+      {
+        "clave": "B",
+        "texto": "Prioriza los beneficios económicos para la comunidad, como empleo y recursos para el acueducto.",
+        "correcta": false,
+        "explicacion": "Ese énfasis corresponde al gerente y al alcalde; la autoridad wayuu no menciona empleo ni dinero, sino cementerios, caminos y sueños.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde las voces y asigna a la comunidad los argumentos de la empresa y la alcaldía."
+      },
+      {
+        "clave": "C",
+        "texto": "Concibe el territorio como un espacio cultural y espiritual, y reclama haber sido consultada sobre su uso.",
+        "correcta": true,
+        "explicacion": "La autoridad habla de cementerios, caminos de animales y sueños: el territorio tiene un valor cultural y espiritual, y añade que 'nadie nos preguntó', es decir, reclama participación en la decisión.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Pide un estudio técnico de largo plazo sobre el efecto de las torres en las aves migratorias.",
+        "correcta": false,
+        "explicacion": "La preocupación por las aves y el estudio de largo plazo es de la ingeniera ambiental; la comunidad wayuu plantea su relación con el territorio y la falta de consulta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcla el argumento ambiental de la ingeniera con el reclamo cultural de la comunidad."
+      }
+    ],
+    "explicacion": "LEER: hay cuatro testimonios con intereses distintos: energía y empleo (empresa), territorio y consulta (wayuu), ingresos (alcalde) y aves (ingeniera). COMPRENDER: se pide lo que distingue la voz wayuu. INTERPRETAR: la autoridad define el territorio por sus cementerios, los caminos de los animales y los sueños, y dice que nadie les preguntó. REPRESENTAR: empresa y alcalde ven el territorio como fuente de recursos; la ingeniera, como ecosistema; la comunidad, como espacio cultural y espiritual que exige consulta. RAZONAR: ni el rechazo al viento ni el empleo ni las aves aparecen en el testimonio wayuu. RESOLVER: la opción que habla de territorio cultural y espiritual y de consulta. VERIFICAR: la frase 'nadie nos preguntó' confirma el reclamo de participación, que en Colombia se concreta en la consulta previa.",
+    "que_identificar": "Las palabras clave de cada testimonio: energía y empleo, cementerios y sueños, regalías, aves migratorias.",
+    "que_revisar": "Perspectivas de actores en conflictos territoriales; consulta previa a comunidades étnicas (Convenio 169 de la OIT, artículo 330 de la Constitución).",
+    "refuerzo_ids": [
+      "SOC-078",
+      "SOC-057"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "la_guajira",
+      "wayuu",
+      "energia_eolica",
+      "consulta_previa",
+      "perspectivas",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-104",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Movilidad urbana y calidad del aire",
+    "subtema": "Efectos de una tarifa de congestión en varias dimensiones",
+    "dificultad": 2,
+    "contexto": "La alcaldía de una ciudad intermedia estudia cobrar una **tarifa de congestión** a los carros particulares que entren al centro entre 6 a. m. y 7 p. m. El dinero recaudado se destinaría a comprar buses y construir ciclorrutas. El gráfico muestra cómo se mueve hoy la gente que llega al centro cada día.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Viajes diarios hacia el centro según medio de transporte (miles de viajes)",
+      "eje_x": "Medio de transporte",
+      "eje_y": "Miles de viajes por día",
+      "series": [
+        {
+          "nombre": "2025",
+          "valores": [
+            [
+              "Carro particular",
+              95
+            ],
+            [
+              "Moto",
+              80
+            ],
+            [
+              "Bus",
+              140
+            ],
+            [
+              "Bicicleta",
+              25
+            ],
+            [
+              "A pie",
+              60
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Si la tarifa logra que una parte de quienes hoy van en carro cambien de medio de transporte, ¿cuál combinación de efectos es la más probable a corto plazo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mejora la calidad del aire y aumenta el uso de la bicicleta, pero el recaudo bajaría a cero porque nadie entraría en carro.",
+        "correcta": false,
+        "explicacion": "Que una parte cambie de medio no significa que nadie entre en carro; el gráfico muestra 95 mil viajes en carro, y algunos seguirán pagando la tarifa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lleva la medida al extremo y supone que la tarifa elimina por completo el uso del carro."
+      },
+      {
+        "clave": "B",
+        "texto": "Se reduce el tráfico en el centro, pero los buses quedan vacíos porque la gente prefiere caminar más de una hora.",
+        "correcta": false,
+        "explicacion": "Los buses ya son el medio más usado (140 mil viajes); quienes dejen el carro irán sobre todo a bus o moto, no a caminatas de más de una hora.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora que el bus es la barra más alta y por tanto el destino más probable de quienes cambien."
+      },
+      {
+        "clave": "C",
+        "texto": "Aumentan los viajes en moto y en bus, con lo cual la contaminación crece y el comercio del centro se beneficia de inmediato.",
+        "correcta": false,
+        "explicacion": "Si bajan los carros, la contaminación total tiende a disminuir aunque suban algunos viajes en moto; además, el efecto sobre el comercio no es inmediato ni seguro.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supone que todo cambio de medio contamina más y confunde efectos inmediatos con efectos de largo plazo."
+      },
+      {
+        "clave": "D",
+        "texto": "Baja el tráfico y la contaminación en el centro, sube la demanda de buses y algunos comerciantes temen perder clientes que llegan en carro.",
+        "correcta": true,
+        "explicacion": "Menos carros implica menos congestión y emisiones; la barra más alta (bus) recibiría a muchos de los que cambian, por lo que crece su demanda; y la tarifa puede desanimar a clientes motorizados, de donde surge el temor del comercio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la medida cobra a los carros, destina el recaudo a buses y ciclorrutas, y el gráfico muestra 95 mil viajes en carro frente a 140 mil en bus. COMPRENDER: se pide la combinación de efectos más probable si parte de los conductores cambia de medio. INTERPRETAR: menos carros reduce tráfico y emisiones; quienes cambian se reparten entre los medios existentes, sobre todo el bus, que ya es el mayoritario. REPRESENTAR: dimensión ambiental (aire), dimensión de transporte (demanda de buses), dimensión económica (comercio que recibe clientes en carro). RAZONAR: las opciones que anulan el recaudo, vacían los buses o aumentan la contaminación contradicen el gráfico o la lógica de la medida. RESOLVER: la opción que combina menos tráfico, más demanda de bus y temor del comercio. VERIFICAR: el recaudo existe mientras algunos sigan entrando en carro, lo que es compatible con esa opción.",
+    "que_identificar": "Los 95 mil viajes en carro, la barra del bus como la más alta y el destino del recaudo.",
+    "que_revisar": "Efectos multidimensionales de una política pública: ambiente, movilidad y economía local; lectura de gráficos de barras.",
+    "refuerzo_ids": [
+      "SOC-117",
+      "SOC-064"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "movilidad",
+      "calidad_del_aire",
+      "politica_publica",
+      "barras",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-105",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce la organización del Estado: funciones y alcances de las ramas del poder y de los organismos de control",
+    "habilidad": "comprender",
+    "tema": "Control de constitucionalidad",
+    "subtema": "Función de la Corte Constitucional frente a una ley del Congreso",
+    "dificultad": 1,
+    "contexto": "Noticia ficticia: “El Congreso aprobó una ley que permitía a las empresas descontar del salario de sus trabajadores el costo de los uniformes. Tras una demanda presentada por un ciudadano, la **Corte Constitucional** declaró **inexequible** (contrario a la Constitución) ese artículo, por considerar que vulneraba el derecho al trabajo en condiciones dignas. Un senador reaccionó: ‘Nueve magistrados que nadie eligió no pueden tumbar lo que aprobamos quienes representamos al pueblo’”.",
+    "estimulo": null,
+    "enunciado": "De acuerdo con la organización del Estado colombiano, ¿qué función cumplió la Corte Constitucional en este caso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Legislar en lugar del Congreso, pues al eliminar el artículo creó una norma nueva sobre los salarios.",
+        "correcta": false,
+        "explicacion": "La Corte no redactó una norma nueva: retiró del ordenamiento un artículo por contradecir la Constitución; crear leyes sigue siendo tarea del Congreso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Adopta el argumento del senador y confunde anular una norma con legislar."
+      },
+      {
+        "clave": "B",
+        "texto": "Ejercer el control de constitucionalidad: verificar que las leyes respeten la Constitución, que está por encima de ellas.",
+        "correcta": true,
+        "explicacion": "La Constitución es la norma superior y la Corte Constitucional tiene la función de guardar su integridad; al declarar inexequible el artículo, cumplió ese control previsto en el artículo 241.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Sancionar al Congreso por aprobar una ley que perjudicaba a los trabajadores de las empresas privadas.",
+        "correcta": false,
+        "explicacion": "La Corte no castiga a los congresistas; su decisión recae sobre la norma, no sobre quienes la votaron. Las sanciones disciplinarias a funcionarios corresponden a otros organismos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el control sobre las normas con el control disciplinario sobre personas."
+      },
+      {
+        "clave": "D",
+        "texto": "Resolver un conflicto laboral entre un trabajador y su empleador sobre el descuento de los uniformes.",
+        "correcta": false,
+        "explicacion": "El caso no fue una demanda laboral individual, sino una demanda ciudadana contra la ley; los conflictos entre trabajador y empresa los resuelven los jueces laborales.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee 'demanda' como pleito entre particulares y no como acción pública de inconstitucionalidad."
+      }
+    ],
+    "explicacion": "LEER: el Congreso aprobó una ley, un ciudadano la demandó y la Corte Constitucional declaró inexequible un artículo; un senador protesta. COMPRENDER: se pregunta qué función cumplió la Corte. INTERPRETAR: 'inexequible' significa contrario a la Constitución; la Corte compara la ley con la norma superior. REPRESENTAR: rama legislativa hace leyes; rama judicial, a través de la Corte Constitucional, revisa que esas leyes respeten la Constitución (control de constitucionalidad). RAZONAR: la Corte no creó una norma, no sancionó personas ni resolvió un pleito laboral; solo retiró un artículo contrario a la Constitución. RESOLVER: la opción sobre el control de constitucionalidad. VERIFICAR: la protesta del senador refleja la tensión propia de la separación de poderes, pero la Constitución de 1991 asigna expresamente esa función a la Corte.",
+    "que_identificar": "El significado de 'inexequible' y la relación entre la ley aprobada y la Constitución como norma superior.",
+    "que_revisar": "Ramas del poder público; supremacía constitucional (artículo 4) y funciones de la Corte Constitucional (artículo 241); acción pública de inconstitucionalidad.",
+    "refuerzo_ids": [
+      "SOC-003",
+      "SOC-116"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "corte_constitucional",
+      "ramas_del_poder",
+      "constitucion_1991",
+      "control_constitucional",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-106",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "verificar",
+    "tema": "Fuentes históricas y vida cotidiana en el siglo XIX",
+    "subtema": "Límites de un diario de viaje para estudiar a los artesanos",
+    "dificultad": 2,
+    "contexto": "Fragmento (ficticio) del diario de un comerciante europeo que visitó Bogotá en 1836:\n\n“La ciudad tiene calles empedradas pero lodosas, y las casas de los notables lucen patios con fuentes. Fui recibido por familias que sirven chocolate a las cuatro y conversan de política con pasión. Los artesanos de la plaza venden ruanas y sombreros de muy buena factura, aunque me pareció gente de pocas palabras y escasa curiosidad por el mundo”.\n\nUna estudiante quiere usar este diario como fuente para una monografía sobre **las condiciones de vida y las opiniones políticas de los artesanos bogotanos** en la década de 1830.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la principal limitación de esta fuente para el propósito de la estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El autor observa a los artesanos desde afuera y de paso, y describe sobre todo a las familias notables que lo recibieron.",
+        "correcta": true,
+        "explicacion": "El comerciante conversó con las élites ('familias que sirven chocolate') y apenas vio a los artesanos en la plaza; su juicio sobre ellos ('pocas palabras') es una impresión externa, no información sobre sus condiciones ni sus ideas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El diario es una fuente secundaria, porque fue escrito por un extranjero que no conocía la historia de Colombia.",
+        "correcta": false,
+        "explicacion": "Ser extranjero no convierte un testimonio en fuente secundaria; el diario fue escrito por un testigo directo en 1836 y por eso es una fuente primaria, aunque sesgada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la nacionalidad o el desconocimiento del autor con la clasificación primaria o secundaria de la fuente."
+      },
+      {
+        "clave": "C",
+        "texto": "La fuente no sirve porque describe las calles y las casas, temas que no tienen relación con la historia social.",
+        "correcta": false,
+        "explicacion": "La descripción material de la ciudad sí interesa a la historia social; el problema no es ese contenido, sino que el autor casi no accede a la vida de los artesanos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Descarta la fuente por completo en lugar de identificar qué puede y qué no puede aportar."
+      },
+      {
+        "clave": "D",
+        "texto": "El texto fue escrito en 1836, y los hechos de esa época ya no pueden verificarse con otras fuentes.",
+        "correcta": false,
+        "explicacion": "La antigüedad no invalida una fuente: para la década de 1830 existen censos, prensa, actas y otros diarios que permiten contrastar lo que dice el viajero.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supone que todo documento antiguo es inverificable y por tanto inútil."
+      }
+    ],
+    "explicacion": "LEER: el diario describe la ciudad, las familias notables que recibieron al viajero y una impresión breve sobre los artesanos. COMPRENDER: se pide la principal limitación para estudiar la vida y las opiniones de los artesanos. INTERPRETAR: el autor sí conversó con las élites, pero a los artesanos solo los vio vender en la plaza; su juicio ('pocas palabras, escasa curiosidad') es una impresión de forastero. REPRESENTAR: fuente primaria, testigo directo, pero con acceso desigual: mucho sobre notables, casi nada sobre artesanos. RAZONAR: la nacionalidad no la hace secundaria, la descripción material no la inutiliza y la antigüedad no impide contrastarla. RESOLVER: la opción que señala la mirada externa y centrada en las élites. VERIFICAR: el propio texto reconoce que fue 'recibido por familias', mientras que de los artesanos solo da una apreciación superficial.",
+    "que_identificar": "A quiénes trató de cerca el autor (familias notables) y cómo describe a los artesanos (desde afuera, con un juicio de valor).",
+    "que_revisar": "Fuentes primarias y secundarias; posición del autor y acceso a los hechos; alcances y límites de los relatos de viajeros.",
+    "refuerzo_ids": [
+      "SOC-115",
+      "SOC-050"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "fuentes_historicas",
+      "siglo_xix",
+      "artesanos",
+      "viajeros",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-107",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "habilidad": "razonar",
+    "tema": "Indicadores de desarrollo",
+    "subtema": "PIB per cápita frente a Índice de Desarrollo Humano",
+    "dificultad": 3,
+    "contexto": "El **PIB per cápita** divide el valor de todo lo que produce un país entre su número de habitantes. El **Índice de Desarrollo Humano (IDH)** combina tres dimensiones: ingreso, esperanza de vida y años de escolaridad, y va de 0 a 1. Una agencia de cooperación debe decidir en cuál de cuatro países (ficticios) concentrar un programa de salud y educación básica, y recibe esta tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Indicadores de cuatro países (datos ficticios)",
+      "columnas": [
+        "País",
+        "PIB per cápita (dólares)",
+        "Esperanza de vida (años)",
+        "Años promedio de escolaridad",
+        "IDH"
+      ],
+      "filas": [
+        [
+          "Arvania",
+          18500,
+          78,
+          11.2,
+          0.81
+        ],
+        [
+          "Belmar",
+          17900,
+          66,
+          6.1,
+          0.63
+        ],
+        [
+          "Coralia",
+          9200,
+          74,
+          9.8,
+          0.72
+        ],
+        [
+          "Dunavia",
+          8700,
+          71,
+          8.9,
+          0.69
+        ]
+      ],
+      "nota": "Datos construidos con fines escolares."
+    },
+    "enunciado": "La agencia decide priorizar a Belmar en lugar de a Dunavia, aunque Belmar tiene un PIB per cápita dos veces mayor. ¿Qué muestra esa decisión sobre el uso de los indicadores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el IDH es un indicador equivocado, pues un país con más ingreso por habitante debería tener siempre mejor desarrollo.",
+        "correcta": false,
+        "explicacion": "La tabla muestra justamente lo contrario: Belmar tiene más ingreso que Coralia y Dunavia pero menos esperanza de vida y escolaridad, lo que el IDH capta y el PIB no.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asume que ingreso y bienestar van siempre juntos y descarta el dato que lo contradice."
+      },
+      {
+        "clave": "B",
+        "texto": "Que la agencia debió escoger a Arvania, porque tiene los mejores valores en todas las columnas de la tabla.",
+        "correcta": false,
+        "explicacion": "Arvania tiene el IDH más alto (0,81) y los mejores indicadores sociales; un programa de salud y educación básica se dirige a donde hay más carencias, no a donde ya están resueltas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la tabla buscando el valor máximo sin relacionarlo con el objetivo del programa."
+      },
+      {
+        "clave": "C",
+        "texto": "Que el PIB per cápita mide mejor la pobreza que el IDH, ya que usa cifras en dólares y no un índice abstracto.",
+        "correcta": false,
+        "explicacion": "El PIB per cápita es un promedio de ingreso y no dice cómo se reparte ni cómo viven las personas; el ejemplo de Belmar muestra que un ingreso alto puede coexistir con baja escolaridad y menor esperanza de vida.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Prefiere la cifra en dinero por parecer más concreta, sin considerar qué dimensiones mide cada indicador."
+      },
+      {
+        "clave": "D",
+        "texto": "Que el indicador elegido depende del problema que se quiere atender: el IDH revela carencias en salud y educación que el PIB per cápita no muestra.",
+        "correcta": true,
+        "explicacion": "Belmar tiene ingreso alto pero la menor esperanza de vida (66) y escolaridad (6,1) de la tabla; su IDH (0,63) es el más bajo. Como el programa es de salud y educación, el IDH es el indicador pertinente para esa decisión.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da PIB per cápita, esperanza de vida, escolaridad e IDH de cuatro países; el programa es de salud y educación básica. COMPRENDER: se pide qué revela priorizar a Belmar sobre Dunavia pese a su mayor ingreso. INTERPRETAR: Belmar tiene el IDH más bajo (0,63), la menor esperanza de vida (66) y la menor escolaridad (6,1); Dunavia, con menos ingreso, está mejor en esas dos dimensiones. REPRESENTAR: PIB per cápita = solo ingreso promedio; IDH = ingreso + salud + educación. RAZONAR: un modelo conceptual se escoge según la decisión: para un programa social, el IDH muestra las carencias que el ingreso oculta. RESOLVER: la opción que afirma que el indicador depende del problema a atender. VERIFICAR: ordenar por IDH pone a Belmar en último lugar, lo que coincide con la decisión de la agencia.",
+    "que_identificar": "Las columnas de esperanza de vida y escolaridad de Belmar frente a las de Dunavia, y el objetivo del programa.",
+    "que_revisar": "Indicadores de desarrollo: PIB, PIB per cápita, IDH; uso de modelos conceptuales en decisiones de política social.",
+    "refuerzo_ids": [
+      "SOC-120",
+      "SOC-068"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": [
+      "desarrollo",
+      "idh",
+      "pib",
+      "indicadores",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-108",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Gestión del riesgo y relieve",
+    "subtema": "Deslizamientos en barrios de ladera",
+    "dificultad": 1,
+    "contexto": "Descripción de un mapa de un municipio andino (ficticio): el casco urbano se ubica en el fondo de un valle estrecho atravesado por el río Claro. Hacia el oriente, la ladera sube con pendientes fuertes; allí, en los últimos veinte años, se levantaron sin licencia los barrios Mirador y La Cumbre, con casas de dos y tres pisos construidas sobre cortes del terreno y sin alcantarillado, de modo que las aguas lluvias y las de uso doméstico corren por las calles y se filtran al suelo. En la temporada de lluvias de 2025 ocurrieron tres deslizamientos que destruyeron doce viviendas en el Mirador.",
+    "estimulo": null,
+    "enunciado": "¿Cuál relación entre las características del espacio y la ocupación humana explica mejor los deslizamientos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La cercanía del río Claro al casco urbano, que inunda el valle y arrastra las casas construidas en la parte baja.",
+        "correcta": false,
+        "explicacion": "Los deslizamientos ocurrieron en el Mirador, en la ladera oriental, no en la parte baja del valle; el texto no menciona inundaciones del río.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde dos amenazas distintas, inundación y deslizamiento, y ubica mal el barrio afectado."
+      },
+      {
+        "clave": "B",
+        "texto": "El crecimiento de la población del municipio, que obliga a construir edificios cada vez más altos en el centro.",
+        "correcta": false,
+        "explicacion": "El problema descrito no es la altura de los edificios del centro, sino la construcción en pendientes fuertes sin manejo de aguas en la ladera oriental.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generaliza sobre el crecimiento urbano sin ubicar el fenómeno en el lugar que señala el texto."
+      },
+      {
+        "clave": "C",
+        "texto": "La construcción sin licencia en laderas de pendiente fuerte, con cortes del terreno y sin alcantarillado, que satura el suelo en épocas de lluvia.",
+        "correcta": true,
+        "explicacion": "El texto reúne los factores: pendiente fuerte, cortes del terreno, ausencia de alcantarillado y aguas que se filtran; con las lluvias de 2025 el suelo saturado cedió y causó los deslizamientos en el Mirador.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La antigüedad de los barrios Mirador y La Cumbre, cuyas casas se deterioraron con el paso de más de cien años.",
+        "correcta": false,
+        "explicacion": "Los barrios se levantaron en los últimos veinte años, según el texto; no son antiguos, y el deterioro por edad no explica que el terreno se deslice.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "No lee el dato temporal ('últimos veinte años') y atribuye el daño al desgaste de las casas."
+      }
+    ],
+    "explicacion": "LEER: el mapa descrito ubica el casco urbano en el valle y dos barrios recientes en la ladera oriental, de pendiente fuerte, con cortes del terreno y sin alcantarillado. COMPRENDER: se pide la relación entre el espacio y la ocupación que explica los deslizamientos. INTERPRETAR: las aguas que corren y se filtran saturan un suelo ya cortado en pendiente; con las lluvias intensas, el terreno se desliza. REPRESENTAR: pendiente + cortes + agua infiltrada + lluvias = deslizamiento; la zona afectada es el Mirador, en la ladera. RAZONAR: el río y las inundaciones afectarían la parte baja; la altura de edificios del centro y la supuesta antigüedad no aparecen en el texto. RESOLVER: la opción que vincula construcción sin licencia en laderas con el agua que satura el suelo. VERIFICAR: las doce viviendas destruidas estaban en el Mirador, uno de los barrios de ladera.",
+    "que_identificar": "La ubicación de los barrios afectados (ladera oriental), la pendiente, los cortes del terreno y la falta de alcantarillado.",
+    "que_revisar": "Amenaza, vulnerabilidad y riesgo; relieve y ocupación del suelo; gestión del riesgo en los planes de ordenamiento territorial.",
+    "refuerzo_ids": [
+      "SOC-047",
+      "SOC-114"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "gestion_del_riesgo",
+      "deslizamientos",
+      "relieve",
+      "ordenamiento_territorial",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-109",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "razonar",
+    "tema": "Migración y discurso público",
+    "subtema": "Generalización y prejuicio en una columna de opinión",
+    "dificultad": 2,
+    "contexto": "Fragmento de una columna de opinión (ficticia) publicada en un periódico regional:\n\n“Desde que llegaron los migrantes, en mi barrio ya nadie consigue trabajo. Lo vi con mis propios ojos: en la ferretería de la esquina contrataron a dos de ellos y despidieron a un muchacho de aquí. Es claro que vienen a quitarnos lo poco que tenemos, y por eso el desempleo en la ciudad subió el año pasado”.\n\nSegún el boletín oficial de estadística que la misma columna cita en una nota al pie, el desempleo de la ciudad pasó de 11,2 % a 11,6 % en ese año, y la población migrante representa alrededor del 3 % de los habitantes.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es el principal problema del argumento del columnista?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Usa cifras oficiales de desempleo, que son poco confiables porque las entidades estadísticas suelen ocultar el desempleo real.",
+        "correcta": false,
+        "explicacion": "El problema no está en las cifras oficiales, que el propio columnista cita; desconfiar de ellas sin fundamento no corrige el razonamiento, lo empeora.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Busca el defecto del argumento en los datos en lugar de en la forma de razonar con ellos."
+      },
+      {
+        "clave": "B",
+        "texto": "Habla de su barrio, cuando una columna de opinión debería referirse únicamente a problemas nacionales e internacionales.",
+        "correcta": false,
+        "explicacion": "Una columna puede partir de lo local; el defecto no es la escala de la anécdota, sino que se usa para concluir sobre toda la ciudad y sobre todo un grupo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el género del texto con la calidad del argumento."
+      },
+      {
+        "clave": "C",
+        "texto": "Generaliza a partir de un caso aislado y atribuye a un grupo del 3 % de la población un aumento del desempleo que tiene muchas causas posibles.",
+        "correcta": true,
+        "explicacion": "De un despido en una ferretería concluye que 'nadie consigue trabajo' y que los migrantes 'vienen a quitarnos'; además, un grupo del 3 % difícilmente explica por sí solo un cambio de 0,4 puntos en el desempleo de toda la ciudad, que depende de muchos factores.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Afirma que el desempleo subió, cuando el boletín oficial muestra que en realidad bajó durante el año pasado.",
+        "correcta": false,
+        "explicacion": "El boletín sí registra un aumento, de 11,2 % a 11,6 %; el dato del columnista es correcto, lo equivocado es la causa que le atribuye.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee mal las cifras del contexto o asume que todo lo que dice el columnista es falso."
+      }
+    ],
+    "explicacion": "LEER: el columnista parte de un hecho visto en su barrio (un despido y dos contrataciones) y concluye que los migrantes causan el desempleo de la ciudad; el contexto añade los datos oficiales. COMPRENDER: se pide el problema principal del argumento. INTERPRETAR: el salto de un caso a 'nadie consigue trabajo' es una generalización apresurada; atribuir a un 3 % de la población un cambio de 0,4 puntos en el desempleo es una causa única sin evidencia. REPRESENTAR: anécdota → generalización → culpable único, un patrón típico de prejuicio. RAZONAR: las cifras son las oficiales y sí muestran un aumento; la escala local no es el defecto. RESOLVER: la opción que señala la generalización y la atribución causal injustificada. VERIFICAR: la frase 'vienen a quitarnos lo poco que tenemos' muestra la intención de culpar a un grupo entero.",
+    "que_identificar": "El paso de un caso puntual a una afirmación sobre todos los migrantes, y las cifras del boletín (3 % de población, 0,4 puntos de cambio).",
+    "que_revisar": "Falacias de generalización y de causa única; prejuicio y estereotipo; lectura crítica de columnas de opinión.",
+    "refuerzo_ids": [
+      "SOC-029",
+      "SOC-041"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "migracion",
+      "prejuicio",
+      "argumentacion",
+      "desempleo",
+      "opinion",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-110",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Reconoce la distribución espacial de la población y los cambios que experimenta en el tiempo",
+    "habilidad": "leer",
+    "tema": "Urbanización en Colombia",
+    "subtema": "Cambio de la población urbana entre 1951 y 2018",
+    "dificultad": 1,
+    "contexto": "El gráfico resume, con cifras redondeadas de los censos nacionales, el porcentaje de la población colombiana que vivía en cabeceras municipales (zonas urbanas) en distintos años.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Población que vive en cabeceras municipales (porcentaje aproximado)",
+      "eje_x": "Año del censo",
+      "eje_y": "Porcentaje de la población",
+      "series": [
+        {
+          "nombre": "Población urbana (%)",
+          "valores": [
+            [
+              "1951",
+              39
+            ],
+            [
+              "1964",
+              52
+            ],
+            [
+              "1973",
+              59
+            ],
+            [
+              "1985",
+              65
+            ],
+            [
+              "1993",
+              69
+            ],
+            [
+              "2005",
+              74
+            ],
+            [
+              "2018",
+              77
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál afirmación describe correctamente lo que muestra el gráfico?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Entre 1951 y 1964 la población urbana pasó de ser minoritaria a ser mayoritaria en el país.",
+        "correcta": true,
+        "explicacion": "En 1951 el 39 % vivía en cabeceras (menos de la mitad) y en 1964 el 52 % (más de la mitad): en ese intervalo la mayoría de los colombianos pasó a vivir en zonas urbanas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La población urbana creció al mismo ritmo en todos los periodos entre un censo y otro.",
+        "correcta": false,
+        "explicacion": "Los aumentos son desiguales: 13 puntos entre 1951 y 1964, pero solo 3 puntos entre 2005 y 2018; el ritmo se desacelera con el tiempo.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ve una línea que siempre sube y concluye que sube igual en cada tramo."
+      },
+      {
+        "clave": "C",
+        "texto": "En 2018 la población rural de Colombia ya había desaparecido casi por completo.",
+        "correcta": false,
+        "explicacion": "Si el 77 % vivía en cabeceras, el 23 % restante vivía en zonas rurales: cerca de una cuarta parte de la población, lejos de desaparecer.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvida que el porcentaje rural es el complemento del urbano y exagera la tendencia."
+      },
+      {
+        "clave": "D",
+        "texto": "Hacia 1985 la población rural todavía superaba en número a la población urbana.",
+        "correcta": false,
+        "explicacion": "En 1985 el 65 % era urbano, por lo que el 35 % era rural; la población urbana ya era mayoría desde los años sesenta, según el gráfico.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee el 65 % como si fuera el porcentaje rural o no compara con el 50 %."
+      }
+    ],
+    "explicacion": "LEER: la línea muestra el porcentaje urbano en siete censos, de 39 % en 1951 a 77 % en 2018. COMPRENDER: se pide la afirmación correcta sobre el gráfico. INTERPRETAR: el 50 % es el umbral entre minoría y mayoría; el porcentaje rural es 100 menos el urbano. REPRESENTAR: 1951: 39 % (minoría urbana); 1964: 52 % (mayoría urbana); 1985: 65 % urbano y 35 % rural; 2018: 77 % urbano y 23 % rural. RAZONAR: el cruce del 50 % ocurre entre 1951 y 1964; los incrementos por periodo son distintos; en 2018 la población rural sigue siendo casi una cuarta parte. RESOLVER: la opción sobre el paso de minoría a mayoría entre 1951 y 1964. VERIFICAR: 39 < 50 < 52 confirma el cambio en ese intervalo.",
+    "que_identificar": "Los valores de 1951 (39 %) y 1964 (52 %) respecto al umbral del 50 %, y la relación entre porcentaje urbano y rural.",
+    "que_revisar": "Transición urbana en Colombia durante el siglo XX; lectura de gráficos de líneas y porcentajes complementarios.",
+    "refuerzo_ids": [
+      "SOC-020",
+      "SOC-066"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "urbanizacion",
+      "poblacion",
+      "censos",
+      "lineas",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-111",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Frente Nacional",
+    "subtema": "Relación entre el pacto bipartidista y la aparición de nuevas oposiciones",
+    "dificultad": 2,
+    "contexto": "Entre 1958 y 1974 Colombia vivió el **Frente Nacional**, un acuerdo entre los partidos Liberal y Conservador que buscaba poner fin a la violencia bipartidista de los años cuarenta y cincuenta. El pacto estableció la **alternancia** en la presidencia (un periodo liberal, uno conservador) y la **paridad**: los cargos del Congreso, las asambleas, los concejos y el gabinete se repartían por mitades entre los dos partidos. Un libro escolar resume así sus efectos: “Se redujo la violencia entre liberales y conservadores, pero las corrientes políticas que no pertenecían a esos dos partidos quedaron sin posibilidad real de acceder al poder por la vía electoral. En esos años surgieron movimientos de oposición como la ANAPO y aparecieron las primeras guerrillas de inspiración comunista”.",
+    "estimulo": null,
+    "enunciado": "¿Qué relación entre dimensiones del problema plantea el libro escolar?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una relación económica: el reparto de cargos encareció la administración pública y por eso surgieron las guerrillas.",
+        "correcta": false,
+        "explicacion": "El texto no habla de costos de la administración; relaciona la falta de acceso electoral de otras corrientes con la aparición de oposiciones, no el gasto público.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce una causa económica que el fragmento no menciona."
+      },
+      {
+        "clave": "B",
+        "texto": "Una relación política: la solución a la violencia bipartidista cerró el acceso electoral a otras fuerzas, lo que alimentó nuevas formas de oposición.",
+        "correcta": true,
+        "explicacion": "El libro conecta dos efectos del mismo pacto: redujo la violencia entre liberales y conservadores, pero al repartirse los cargos solo entre ellos excluyó a las demás corrientes, y de esa exclusión surgieron la ANAPO y guerrillas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Una relación cultural: la alternancia hizo que los colombianos perdieran interés en las tradiciones de los dos partidos históricos.",
+        "correcta": false,
+        "explicacion": "El fragmento no trata de tradiciones ni de identidades partidistas; su idea central es la exclusión electoral de quienes no eran liberales ni conservadores.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde la pérdida de monopolio de los partidos con un cambio cultural que el texto no describe."
+      },
+      {
+        "clave": "D",
+        "texto": "Una relación geográfica: el pacto favoreció a las ciudades y descuidó el campo, donde la violencia continuó igual que antes.",
+        "correcta": false,
+        "explicacion": "El texto afirma que la violencia bipartidista se redujo y no distingue entre campo y ciudad; la relación que establece es entre exclusión política y nuevas oposiciones.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Proyecta conocimientos sobre el conflicto rural sin apoyarse en lo que dice el fragmento."
+      }
+    ],
+    "explicacion": "LEER: el contexto define el Frente Nacional (alternancia y paridad) y cita un libro escolar sobre sus efectos. COMPRENDER: se pide la relación entre dimensiones que plantea ese libro. INTERPRETAR: el pacto resolvió un problema (violencia entre los dos partidos) y creó otro (exclusión de las demás corrientes), del cual surgieron la ANAPO y guerrillas. REPRESENTAR: pacto bipartidista → menos violencia liberal-conservadora; pacto bipartidista → sin acceso electoral para terceros → nuevas oposiciones, legales e ilegales. RAZONAR: no se mencionan costos, tradiciones ni diferencias campo-ciudad; la relación es entre una solución política y sus efectos políticos no deseados. RESOLVER: la opción que describe la relación política entre cierre electoral y nuevas oposiciones. VERIFICAR: la palabra 'pero' en el fragmento marca justo ese contraste entre el logro y el costo del pacto.",
+    "que_identificar": "Las dos consecuencias que el libro une con 'pero': reducción de la violencia bipartidista y exclusión de otras corrientes.",
+    "que_revisar": "Frente Nacional (1958-1974): alternancia, paridad, ANAPO y origen de las guerrillas; relación entre exclusión política y conflicto.",
+    "refuerzo_ids": [
+      "SOC-056",
+      "SOC-071"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "frente_nacional",
+      "siglo_xx_colombia",
+      "bipartidismo",
+      "conflicto_armado",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-112",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "interpretar",
+    "tema": "Conquista de América y cosmovisiones",
+    "subtema": "Dos relatos sobre un mismo objeto: el oro",
+    "dificultad": 2,
+    "contexto": "Dos relatos (ficticios, inspirados en documentos de la época) sobre el mismo hecho ocurrido en los Andes en el siglo XVI:\n\n**Relato de un soldado español:** “Hallamos en el templo gran cantidad de láminas y figuras de oro fino. Las fundimos en barras para repartirlas según lo acordado, apartando el quinto que corresponde al Rey”.\n\n**Relato recogido de un anciano indígena:** “Los extranjeros tomaron las ofrendas que nuestros abuelos entregaron al Sol y a la laguna. Las derritieron como si fueran piedras sin nombre. Desde entonces la laguna guarda silencio”.",
+    "estimulo": null,
+    "enunciado": "¿Qué explica la diferencia entre los dos relatos sobre el mismo hecho?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El soldado describe el hecho con exactitud y el anciano lo exagera, porque los relatos orales siempre deforman lo ocurrido.",
+        "correcta": false,
+        "explicacion": "Ambos relatan el mismo hecho (tomar y fundir el oro); la diferencia no está en la exactitud, sino en el sentido que cada cultura da a esos objetos. Suponer que lo oral deforma es un prejuicio.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Jerarquiza la fuente escrita sobre la oral sin analizar el contenido de cada una."
+      },
+      {
+        "clave": "B",
+        "texto": "El anciano no entendía el valor económico del oro, mientras que el soldado conocía el precio real de las figuras.",
+        "correcta": false,
+        "explicacion": "El relato indígena sí reconoce el valor de las piezas, pero como ofrendas sagradas; no se trata de ignorancia económica, sino de otra forma de valorar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mide la perspectiva indígena con los criterios de la economía europea."
+      },
+      {
+        "clave": "C",
+        "texto": "El soldado actuó por cuenta propia y el anciano por encargo de su comunidad, por eso uno cuenta hechos y el otro sentimientos.",
+        "correcta": false,
+        "explicacion": "El soldado dice que repartieron el oro 'según lo acordado' y apartaron el quinto del Rey: actuaba dentro de un sistema, no por su cuenta. La diferencia es de cosmovisión, no de hechos frente a sentimientos.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No lee la referencia al quinto real y reduce el relato indígena a una emoción."
+      },
+      {
+        "clave": "D",
+        "texto": "Cada relato parte de una cosmovisión distinta: para el soldado el oro es riqueza que se reparte; para el anciano, ofrenda sagrada que une a la comunidad con sus dioses.",
+        "correcta": true,
+        "explicacion": "El español habla de 'oro fino', barras, reparto y quinto del Rey (valor económico y orden colonial); el indígena habla de ofrendas al Sol y a la laguna (valor sagrado). La misma acción significa cosas opuestas según la cultura de quien la narra.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: dos relatos sobre la toma y fundición de objetos de oro en un templo. COMPRENDER: se pide explicar por qué difieren. INTERPRETAR: el soldado usa un vocabulario económico y legal (láminas, barras, reparto, quinto del Rey); el anciano usa uno religioso y comunitario (ofrendas, abuelos, Sol, laguna, silencio). REPRESENTAR: mismo hecho, dos marcos: riqueza para repartir frente a ofrenda sagrada destruida. RAZONAR: ninguno exagera ni ignora el hecho; el soldado actúa dentro de un orden colonial y el anciano expresa un significado cultural, no solo un sentimiento. RESOLVER: la opción que atribuye la diferencia a las cosmovisiones. VERIFICAR: la frase 'como si fueran piedras sin nombre' muestra que, para el anciano, el error de los extranjeros fue no reconocer el carácter sagrado de las piezas.",
+    "que_identificar": "El vocabulario de cada relato: barras, reparto y quinto del Rey frente a ofrendas, abuelos, Sol y laguna.",
+    "que_revisar": "Conquista de América: visiones de vencedores y vencidos; cosmovisión y valor de los objetos; el quinto real.",
+    "refuerzo_ids": [
+      "SOC-058",
+      "SOC-060"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "conquista",
+      "cosmovision",
+      "fuentes",
+      "pueblos_indigenas",
+      "siglo_xvi",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-113",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "resolver",
+    "tema": "Mecanismos de protección de derechos colectivos",
+    "subtema": "Acción popular frente a tutela y derecho de petición",
+    "dificultad": 1,
+    "contexto": "La Constitución de 1991 prevé varios instrumentos judiciales y administrativos:\n\n- **Acción de tutela** (art. 86): protege los derechos fundamentales de una persona cuando son vulnerados o amenazados.\n- **Acción popular** (art. 88): protege derechos e intereses **colectivos**, como el ambiente sano, el espacio público y la salubridad pública.\n- **Acción de cumplimiento** (art. 87): busca que una autoridad cumpla una ley o un acto administrativo concreto.\n- **Derecho de petición** (art. 23): permite pedir información o solicitar algo a las autoridades, que deben responder.\n\nEn el barrio Las Garzas, una fábrica vierte residuos a un humedal que colinda con el parque donde juegan los niños. El agua huele mal y han aparecido peces muertos. Los vecinos, de manera colectiva, quieren que un juez ordene detener la contaminación y recuperar el humedal.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es el instrumento que corresponde al propósito de los vecinos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La acción popular, porque buscan proteger el ambiente sano, un derecho colectivo de todo el barrio.",
+        "correcta": true,
+        "explicacion": "Los vecinos actúan como colectivo y el bien afectado es el humedal y el ambiente del barrio, un interés colectivo; el artículo 88 prevé la acción popular justamente para estos casos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La acción de tutela, porque los niños del parque tienen derecho a la salud y a la recreación.",
+        "correcta": false,
+        "explicacion": "La tutela protege derechos fundamentales de personas concretas; aquí el problema es colectivo (humedal, parque, barrio) y lo que se busca es recuperar un bien común, lo que corresponde a la acción popular.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier derecho vulnerado con la tutela, que es el mecanismo más conocido."
+      },
+      {
+        "clave": "C",
+        "texto": "El derecho de petición, porque pueden pedir a la alcaldía que les informe quién autorizó los vertimientos.",
+        "correcta": false,
+        "explicacion": "El derecho de petición sirve para pedir información o solicitudes a autoridades, pero los vecinos quieren que un juez ordene detener la contaminación, lo que exige una acción judicial.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No distingue entre pedir información a una autoridad y pedir a un juez una orden de protección."
+      },
+      {
+        "clave": "D",
+        "texto": "La acción de cumplimiento, porque la fábrica debe cumplir las normas ambientales que regulan sus vertimientos.",
+        "correcta": false,
+        "explicacion": "La acción de cumplimiento se dirige contra autoridades que no aplican una ley o acto administrativo, no contra una empresa privada; además, lo pedido es proteger un derecho colectivo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la palabra 'cumplir' y la aplica a la fábrica sin revisar contra quién procede ese mecanismo."
+      }
+    ],
+    "explicacion": "LEER: el contexto define cuatro instrumentos y describe la contaminación de un humedal junto a un parque; los vecinos quieren que un juez detenga la contaminación. COMPRENDER: se pide el instrumento adecuado. INTERPRETAR: el bien afectado es colectivo (ambiente sano del barrio), los afectados actúan como grupo y buscan una orden judicial. REPRESENTAR: tutela = derecho fundamental individual; acción popular = derecho colectivo; cumplimiento = autoridad que no aplica una norma; petición = solicitud de información. RAZONAR: solo la acción popular combina derecho colectivo, ambiente sano y orden de un juez. RESOLVER: la opción de la acción popular. VERIFICAR: el artículo 88 menciona expresamente el ambiente sano entre los intereses colectivos que protege.",
+    "que_identificar": "Que el derecho afectado es colectivo (ambiente del barrio) y que los vecinos buscan una orden judicial, no información.",
+    "que_revisar": "Mecanismos de protección de derechos en la Constitución de 1991: tutela, acción popular, acción de cumplimiento, derecho de petición, habeas corpus.",
+    "refuerzo_ids": [
+      "SOC-101",
+      "SOC-006"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "accion_popular",
+      "derechos_colectivos",
+      "ambiente",
+      "constitucion_1991",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-114",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Fenómeno de El Niño y energía",
+    "subtema": "Decisiones ante la baja de los embalses",
+    "dificultad": 3,
+    "contexto": "Cerca del 65 % de la electricidad de Colombia se genera en hidroeléctricas. Durante el **fenómeno de El Niño** disminuyen las lluvias en la región Andina y el Caribe y los embalses bajan. Una comisión de expertos presenta al gobierno la siguiente tabla y dos alternativas: (1) racionar la energía por sectores durante el día o (2) encender más plantas térmicas de gas y carbón, cuyo mayor costo se trasladaría a las facturas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Situación de los embalses y de la generación (datos ficticios)",
+      "columnas": [
+        "Mes",
+        "Nivel de los embalses (% de su capacidad)",
+        "Lluvia respecto al promedio histórico",
+        "Generación térmica (% del total)"
+      ],
+      "filas": [
+        [
+          "Octubre",
+          68,
+          "-20 %",
+          25
+        ],
+        [
+          "Noviembre",
+          55,
+          "-35 %",
+          33
+        ],
+        [
+          "Diciembre",
+          44,
+          "-45 %",
+          40
+        ],
+        [
+          "Enero (proyección)",
+          35,
+          "-50 %",
+          "?"
+        ]
+      ],
+      "nota": "Si el nivel baja del 30 %, las plantas no pueden operar con normalidad."
+    },
+    "enunciado": "¿Cuál análisis relaciona correctamente las dimensiones ambiental, económica y social de las dos alternativas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Racionar es la única opción posible, porque las plantas térmicas no pueden aumentar su producción cuando llueve menos de lo normal.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que la generación térmica ya subió de 25 % a 40 % mientras caía la lluvia; las térmicas no dependen de los embalses, así que sí pueden producir más.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que toda generación depende del agua y no lee la columna de generación térmica."
+      },
+      {
+        "clave": "B",
+        "texto": "Encender térmicas no tiene efectos negativos, porque mantiene la luz prendida y el gas y el carbón son recursos nacionales abundantes.",
+        "correcta": false,
+        "explicacion": "Las térmicas evitan apagones, pero el contexto dice que su costo se traslada a las facturas y queman combustibles fósiles, con efectos económicos y ambientales que el análisis debe considerar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mira solo la dimensión de continuidad del servicio y omite el costo y las emisiones."
+      },
+      {
+        "clave": "C",
+        "texto": "El racionamiento afecta por igual a todos los sectores, por lo que es la alternativa más justa y no tiene costo económico alguno.",
+        "correcta": false,
+        "explicacion": "Un racionamiento interrumpe la producción de empresas y la vida de los hogares; aunque no suba la factura, sí tiene costos económicos y sociales, y no afecta a todos por igual.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde 'sin aumento de tarifa' con 'sin costo' y supone que un corte de luz es neutral."
+      },
+      {
+        "clave": "D",
+        "texto": "Las térmicas evitan apagones pero suben las facturas y las emisiones; el racionamiento no encarece la luz pero interrumpe actividades económicas y servicios, y ambas respuestas son necesarias si el nivel se acerca al 30 %.",
+        "correcta": true,
+        "explicacion": "Cada alternativa tiene costos en una dimensión distinta: las térmicas en lo económico (facturas) y ambiental (combustibles fósiles); el racionamiento en lo económico y social (interrupciones). La proyección de 35 % en enero, cercana al umbral de 30 %, obliga a combinarlas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra embalses que caen de 68 % a una proyección de 35 %, lluvias cada vez más bajas y generación térmica que sube de 25 % a 40 %; la nota fija un umbral crítico de 30 %. COMPRENDER: se pide el análisis que relaciona las dimensiones de las dos alternativas. INTERPRETAR: las térmicas compensan el agua faltante pero con costo económico (facturas) y ambiental (combustibles fósiles); el racionamiento evita el sobrecosto pero interrumpe actividades. REPRESENTAR: ambiental (emisiones), económica (facturas, producción), social (servicios, hogares). RAZONAR: las opciones que niegan la capacidad de las térmicas, sus costos o los costos del racionamiento miran una sola dimensión. RESOLVER: la opción que reconoce costos distintos en cada alternativa y la necesidad de combinarlas. VERIFICAR: 35 % está a solo cinco puntos del umbral de 30 %, lo que justifica actuar en ambos frentes.",
+    "que_identificar": "La tendencia de los embalses hacia el umbral del 30 %, el aumento de la generación térmica y el traslado de su costo a las facturas.",
+    "que_revisar": "Fenómeno de El Niño y sus efectos en Colombia; matriz energética; análisis multidimensional de decisiones públicas.",
+    "refuerzo_ids": [
+      "SOC-108",
+      "SOC-075"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "el_nino",
+      "energia",
+      "embalses",
+      "cambio_climatico",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-115",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Huelga de las bananeras de 1928",
+    "subtema": "Contexto de un pliego de peticiones obrero",
+    "dificultad": 2,
+    "contexto": "Fragmento (ficticio, inspirado en documentos de la época) de un volante repartido entre trabajadores en el Magdalena, en noviembre de 1928:\n\n“Compañeros: exigimos que la Compañía nos pague en dinero y no en vales que solo sirven en sus propias tiendas; que nos reconozca como trabajadores suyos y no de contratistas; que nos dé descanso dominical remunerado y un hospital digno. Si no responde, el 12 de noviembre nadie corta una sola mata de banano”.",
+    "estimulo": null,
+    "enunciado": "¿En qué contexto económico y social se inscribe este volante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En la economía cafetera de pequeños propietarios antioqueños, que vendían su cosecha a comerciantes de Medellín.",
+        "correcta": false,
+        "explicacion": "El volante habla de banano, de una Compañía con tiendas propias y de trabajadores asalariados, no de pequeños cafeteros propietarios de su tierra en Antioquia.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier conflicto agrario de la época con la economía cafetera, la más conocida."
+      },
+      {
+        "clave": "B",
+        "texto": "En la expansión de una empresa extranjera, la United Fruit Company, que empleaba miles de jornaleros en la zona bananera del Magdalena bajo condiciones laborales precarias.",
+        "correcta": true,
+        "explicacion": "Banano, Magdalena, 1928, pago en vales, contratistas y hospital: son las condiciones de los trabajadores de la zona bananera de la United Fruit Company, cuya huelga de noviembre y diciembre de 1928 terminó en la masacre de Ciénaga.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "En la apertura económica de los años noventa, cuando las empresas agroexportadoras pidieron flexibilizar los contratos de trabajo.",
+        "correcta": false,
+        "explicacion": "La fecha del volante es 1928, más de sesenta años antes de la apertura económica; el contexto de los noventa no corresponde al documento.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "No tiene en cuenta la fecha y relaciona el tema laboral con un periodo reciente."
+      },
+      {
+        "clave": "D",
+        "texto": "En la construcción del ferrocarril de Panamá, donde los obreros reclamaban salarios iguales a los de los ingenieros estadounidenses.",
+        "correcta": false,
+        "explicacion": "El volante se refiere al corte de banano en el Magdalena colombiano y a una compañía con tiendas propias; no menciona ferrocarril ni Panamá, que además se separó en 1903.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde dos presencias extranjeras en la región Caribe sin atender al producto ni al lugar."
+      }
+    ],
+    "explicacion": "LEER: el volante, fechado en noviembre de 1928 en el Magdalena, exige pago en dinero, reconocimiento como trabajadores directos, descanso dominical y hospital, y anuncia una huelga en el corte de banano. COMPRENDER: se pide el contexto en que se inscribe. INTERPRETAR: las pistas son el producto (banano), el lugar (Magdalena), la fecha (1928) y las condiciones (vales, contratistas). REPRESENTAR: zona bananera + compañía con tiendas propias + 1928 = United Fruit Company y huelga de las bananeras. RAZONAR: café antioqueño, apertura de los noventa y ferrocarril de Panamá no coinciden con el producto, la fecha o el lugar. RESOLVER: la opción sobre la United Fruit Company en la zona bananera del Magdalena. VERIFICAR: la fecha anunciada para la huelga, 12 de noviembre de 1928, coincide con el inicio histórico del paro bananero.",
+    "que_identificar": "Las pistas del documento: banano, Magdalena, noviembre de 1928, pago en vales, contratistas.",
+    "que_revisar": "Huelga y masacre de las bananeras (1928); presencia de la United Fruit Company; condiciones laborales a comienzos del siglo XX en Colombia.",
+    "refuerzo_ids": [
+      "SOC-106",
+      "SOC-049"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "bananeras",
+      "1928",
+      "fuentes_primarias",
+      "movimiento_obrero",
+      "siglo_xx_colombia",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-116",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce el modelo de Estado Social de Derecho y su aplicación en Colombia",
+    "habilidad": "interpretar",
+    "tema": "Libertad de cultos y Estado laico",
+    "subtema": "Actividades religiosas obligatorias en un colegio público",
+    "dificultad": 2,
+    "contexto": "El artículo 19 de la Constitución de 1991 garantiza la **libertad de cultos**: toda persona tiene derecho a profesar libremente su religión y a difundirla, y todas las confesiones religiosas e iglesias son igualmente libres ante la ley. La Corte Constitucional ha señalado que Colombia es un **Estado laico**, es decir, que no tiene religión oficial y debe tratar con neutralidad a todas las creencias y a quienes no tienen ninguna.\n\nEn un colegio público, la rectora dispuso que todos los estudiantes asistan cada mes a una misa católica en el aula múltiple y que la nota de comportamiento baje a quien no asista. La familia de Daniela, que pertenece a otra iglesia, y la de Samuel, que no practica ninguna religión, pidieron que sus hijos no fueran obligados.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes decisiones respeta el artículo 19 y el carácter laico del Estado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mantener la misa obligatoria, porque la mayoría de los estudiantes del colegio es católica y en democracia decide la mayoría.",
+        "correcta": false,
+        "explicacion": "La libertad de cultos protege a cada persona, incluidas las minorías; un derecho fundamental no se somete al voto de la mayoría, y una institución pública no puede imponer un culto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la regla de mayoría de la democracia con el alcance de los derechos fundamentales."
+      },
+      {
+        "clave": "B",
+        "texto": "Reemplazar la misa católica por un acto de la iglesia de Daniela, para que las minorías religiosas también sean reconocidas.",
+        "correcta": false,
+        "explicacion": "Cambiar un culto obligatorio por otro mantiene el problema: el colegio público seguiría imponiendo una religión y vulnerando la libertad de Samuel y de los demás.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Entiende la neutralidad como alternar religiones en lugar de no imponer ninguna."
+      },
+      {
+        "clave": "C",
+        "texto": "Hacer voluntaria la asistencia a actos religiosos y garantizar que la nota de comportamiento no dependa de participar en ellos.",
+        "correcta": true,
+        "explicacion": "La neutralidad del Estado laico exige que un colegio público no obligue a nadie a participar en un culto ni lo castigue por no hacerlo; la asistencia voluntaria respeta a católicos, a Daniela y a Samuel por igual.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Prohibir cualquier expresión religiosa dentro del colegio, incluidas las oraciones personales de los estudiantes.",
+        "correcta": false,
+        "explicacion": "El Estado laico es neutral, no antirreligioso: el artículo 19 protege también el derecho a profesar y difundir la propia fe, así que prohibir toda expresión religiosa vulneraría a los estudiantes creyentes.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde laicidad con prohibición de la religión."
+      }
+    ],
+    "explicacion": "LEER: el artículo 19 garantiza libertad de cultos e igualdad de las confesiones; la Corte define a Colombia como Estado laico; una rectora de colegio público impone una misa mensual con sanción. COMPRENDER: se pide la decisión compatible con esas normas. INTERPRETAR: imponer un culto en una institución pública y castigar la inasistencia vulnera la libertad de Daniela, de Samuel y de cualquier estudiante. REPRESENTAR: Estado laico = no impone ni prohíbe religiones; libertad de cultos = cada persona decide. RAZONAR: la mayoría no puede imponer un culto; cambiar de iglesia mantiene la imposición; prohibir toda expresión religiosa viola el derecho de los creyentes. RESOLVER: la opción de asistencia voluntaria sin efecto en la nota. VERIFICAR: esa decisión permite que los católicos sigan asistiendo y que nadie sea sancionado, lo que equilibra todos los derechos.",
+    "que_identificar": "Que se trata de un colegio público, que la misa es obligatoria con sanción y que hay estudiantes de otra iglesia y sin religión.",
+    "que_revisar": "Libertad de cultos (artículo 19), Estado laico, derechos fundamentales frente a la regla de mayoría; libertad de conciencia (artículo 18).",
+    "refuerzo_ids": [
+      "SOC-083",
+      "SOC-105"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "libertad_de_cultos",
+      "estado_laico",
+      "derechos_fundamentales",
+      "colegio",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-117",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "interpretar",
+    "tema": "Manglares y pesca artesanal",
+    "subtema": "Relación entre pérdida de manglar y captura pesquera",
+    "dificultad": 3,
+    "contexto": "En un municipio del Pacífico (ficticio), parte del manglar se ha talado para construir estanques camaroneros y ampliar un muelle. Los **manglares** son bosques costeros donde muchas especies de peces y moluscos se reproducen y crecen antes de salir al mar. Una organización de pescadores artesanales presentó estos datos al concejo municipal para pedir que se detenga la tala.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Área de manglar y captura de los pescadores artesanales (datos ficticios)",
+      "eje_x": "Año",
+      "eje_y": "Valor",
+      "series": [
+        {
+          "nombre": "Área de manglar (hectáreas)",
+          "valores": [
+            [
+              "2010",
+              4200
+            ],
+            [
+              "2015",
+              3800
+            ],
+            [
+              "2020",
+              3100
+            ],
+            [
+              "2025",
+              2600
+            ]
+          ]
+        },
+        {
+          "nombre": "Captura artesanal (toneladas por año)",
+          "valores": [
+            [
+              "2010",
+              950
+            ],
+            [
+              "2015",
+              900
+            ],
+            [
+              "2020",
+              720
+            ],
+            [
+              "2025",
+              560
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál lectura del gráfico apoya mejor la petición de los pescadores, sin ir más allá de lo que muestran los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La captura cayó porque los pescadores artesanales dejaron de salir al mar cuando se construyó el muelle en 2015.",
+        "correcta": false,
+        "explicacion": "El gráfico no informa sobre el número de pescadores ni sobre sus salidas al mar; además, la captura ya venía bajando antes y sigue bajando después de 2015.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventa una causa que los datos no registran para explicar la caída."
+      },
+      {
+        "clave": "B",
+        "texto": "Los estanques camaroneros producen más alimento que la pesca artesanal, por lo que la pérdida de manglar está compensada.",
+        "correcta": false,
+        "explicacion": "El gráfico no incluye la producción de los estanques; afirmar que compensan la pérdida no tiene apoyo en los datos y contradice el propósito de la petición.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Introduce una variable ausente en el gráfico para defender una conclusión."
+      },
+      {
+        "clave": "C",
+        "texto": "El manglar perdió 1 600 hectáreas en quince años, lo que demuestra por sí solo que la pesca desaparecerá antes de 2030.",
+        "correcta": false,
+        "explicacion": "La reducción de manglar es correcta (4 200 a 2 600), pero proyectar la desaparición total de la pesca para 2030 va mucho más allá de lo que muestran cuatro datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Extrapola la tendencia a un futuro que los datos no permiten afirmar."
+      },
+      {
+        "clave": "D",
+        "texto": "A medida que el manglar se redujo de 4 200 a 2 600 hectáreas, la captura bajó de 950 a 560 toneladas, lo que es coherente con el papel del manglar como criadero de peces.",
+        "correcta": true,
+        "explicacion": "Las dos series descienden juntas en los cuatro años y el contexto explica el mecanismo (los peces se reproducen en el manglar). El gráfico muestra una relación coherente con esa explicación, sin afirmar más de lo que los datos permiten.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el gráfico tiene dos series por año: área de manglar (4 200 → 2 600 hectáreas) y captura artesanal (950 → 560 toneladas); el contexto explica que el manglar es criadero de peces. COMPRENDER: se pide la lectura que mejor apoya la petición sin exceder los datos. INTERPRETAR: ambas series bajan de manera sostenida y simultánea. REPRESENTAR: dimensión ambiental (pérdida de manglar) ligada a dimensión económica (menor captura) y social (sustento de pescadores). RAZONAR: atribuir la caída al muelle, compensarla con camarones o predecir el fin de la pesca en 2030 añade información que el gráfico no tiene. RESOLVER: la opción que describe el descenso paralelo y lo relaciona con el papel del manglar. VERIFICAR: los números citados (4 200, 2 600, 950, 560) coinciden con las barras de 2010 y 2025.",
+    "que_identificar": "Los valores inicial y final de cada serie y la explicación del contexto sobre el manglar como criadero.",
+    "que_revisar": "Ecosistemas estratégicos costeros; correlación y explicación causal; lectura de gráficos de barras con dos series.",
+    "refuerzo_ids": [
+      "SOC-104",
+      "SOC-061"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "manglar",
+      "pesca_artesanal",
+      "pacifico",
+      "ambiente",
+      "barras",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-118",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Establece relaciones entre las perspectivas de los individuos en una situación conflictiva y las propuestas de solución",
+    "habilidad": "resolver",
+    "tema": "Convivencia escolar y manual de convivencia",
+    "subtema": "Conflicto por el uso del celular en clase",
+    "dificultad": 2,
+    "contexto": "En un colegio se discute una reforma al manual de convivencia sobre el uso del celular. Estas fueron las posiciones en el consejo directivo:\n\n- **Coordinadora académica:** “Los celulares distraen; propongo prohibirlos durante toda la jornada y decomisarlos si se ven”.\n- **Representante de los estudiantes:** “Usamos el celular para consultar, tomar fotos del tablero y avisar a la casa. Prohibirlo del todo nos trata como si no supiéramos decidir”.\n- **Representante de padres:** “Necesito poder comunicarme con mi hijo en caso de emergencia, pero también me preocupa que pase la clase en redes sociales”.\n- **Docente de matemáticas:** “En mis clases a veces pido usar la calculadora del celular; otras veces necesito que lo guarden”.",
+    "estimulo": null,
+    "enunciado": "¿Cuál propuesta de reforma atiende de manera más equilibrada las preocupaciones de los cuatro actores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Prohibir los celulares durante toda la jornada y decomisarlos al primer uso, porque la coordinadora representa la autoridad académica del colegio.",
+        "correcta": false,
+        "explicacion": "Esta propuesta solo recoge la posición de la coordinadora; ignora las necesidades de comunicación de los padres, el uso pedagógico que menciona la docente y la autonomía que reclaman los estudiantes.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Resuelve el conflicto dando la razón a quien tiene más jerarquía, no a quien integra más intereses."
+      },
+      {
+        "clave": "B",
+        "texto": "Permitir el uso libre del celular en todo momento, porque los estudiantes son los directamente afectados por la norma.",
+        "correcta": false,
+        "explicacion": "Atiende solo a los estudiantes y deja de lado la preocupación por la distracción que comparten la coordinadora, la madre y la docente.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma partido por un actor en lugar de buscar una solución que reconozca a todos."
+      },
+      {
+        "clave": "C",
+        "texto": "Guardar el celular durante las clases, salvo cuando el docente autorice su uso pedagógico, y permitirlo en descansos y para emergencias con aviso al profesor.",
+        "correcta": true,
+        "explicacion": "Reduce la distracción (coordinadora y madre), conserva el uso pedagógico cuando el docente lo autoriza (profesor de matemáticas), mantiene la comunicación en emergencias (padres) y deja espacios de uso libre que reconocen la autonomía de los estudiantes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Que cada docente decida si prohíbe o permite el celular en su clase, sin fijar ninguna regla común en el manual de convivencia.",
+        "correcta": false,
+        "explicacion": "Dejar todo a cada docente genera reglas distintas en cada aula, no resuelve la comunicación en emergencias ni la preocupación de los padres, y vacía de contenido al manual de convivencia que se quería reformar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde flexibilidad con ausencia de norma y no considera a los actores que no son docentes."
+      }
+    ],
+    "explicacion": "LEER: cuatro actores exponen posiciones distintas sobre el celular: prohibir (coordinadora), autonomía y usos prácticos (estudiantes), comunicación en emergencias y temor a la distracción (padres), uso pedagógico variable (docente). COMPRENDER: se pide la propuesta más equilibrada. INTERPRETAR: una buena solución debe reducir la distracción, permitir usos pedagógicos, garantizar la comunicación en emergencias y reconocer cierta autonomía. REPRESENTAR: se cruza cada propuesta con las cuatro preocupaciones. RAZONAR: prohibir del todo o permitir del todo satisfacen a un solo actor; dejarlo a cada docente no crea una regla común ni atiende a padres. RESOLVER: la opción de guardar el celular en clase salvo autorización, con descansos y emergencias permitidos. VERIFICAR: en esa propuesta cada actor encuentra atendida al menos su preocupación principal.",
+    "que_identificar": "La preocupación central de cada actor y los puntos en que coinciden (distracción) y difieren (prohibición total frente a uso regulado).",
+    "que_revisar": "Resolución de conflictos y negociación; manual de convivencia y gobierno escolar; participación de los distintos estamentos.",
+    "refuerzo_ids": [
+      "SOC-084",
+      "SOC-032"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "convivencia_escolar",
+      "manual_de_convivencia",
+      "conflicto",
+      "perspectivas",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-119",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona dimensiones históricas y geográficas de eventos y problemáticas sociales",
+    "habilidad": "razonar",
+    "tema": "Imperialismo y reparto de África",
+    "subtema": "Fronteras coloniales y conflictos posteriores",
+    "dificultad": 3,
+    "contexto": "En la **Conferencia de Berlín (1884-1885)**, las potencias europeas acordaron las reglas para repartirse África, sin participación de ningún representante africano. Descripción de un mapa escolar del continente hacia 1914: casi todo el territorio aparece coloreado según la potencia que lo controlaba (Gran Bretaña, Francia, Alemania, Bélgica, Portugal, Italia y España); solo Etiopía y Liberia figuran como independientes. Muchas fronteras son líneas rectas que atraviesan ríos, desiertos y zonas donde vivían pueblos con lenguas y organizaciones propias. Al compararlo con un mapa de 1970, las fronteras de los nuevos Estados independientes coinciden casi exactamente con las coloniales.",
+    "estimulo": null,
+    "enunciado": "¿Qué relación entre la dimensión histórica y la geográfica permite explicar conflictos en varios países africanos después de la independencia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las fronteras trazadas por las potencias dividieron pueblos y juntaron dentro de un mismo Estado a grupos distintos, y los países independientes heredaron esos límites.",
+        "correcta": true,
+        "explicacion": "Las líneas rectas descritas en el mapa ignoraban la distribución de los pueblos; al mantenerse en 1970, los nuevos Estados reunieron grupos separados o diversos bajo fronteras que no habían elegido, fuente de tensiones internas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Los desiertos y los grandes ríos impidieron que los africanos se comunicaran entre sí, lo que hizo imposible formar Estados unidos.",
+        "correcta": false,
+        "explicacion": "El texto dice que las fronteras rectas atravesaban ríos y desiertos, es decir, fueron decisiones políticas; no afirma que el relieve impidiera la comunicación o la unidad.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a la geografía física una causa que el texto ubica en decisiones humanas."
+      },
+      {
+        "clave": "C",
+        "texto": "Etiopía y Liberia, al no haber sido colonizadas, invadieron a sus vecinos para ampliar sus fronteras tras la independencia de estos.",
+        "correcta": false,
+        "explicacion": "El mapa solo señala que esos dos países eran independientes en 1914; nada en el contexto indica que hayan invadido a sus vecinos, y la coincidencia de fronteras entre 1914 y 1970 lo contradice.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Construye una historia a partir de un dato aislado del mapa."
+      },
+      {
+        "clave": "D",
+        "texto": "Las potencias europeas respetaron los límites de los reinos africanos, por lo que los conflictos surgieron después por razones religiosas.",
+        "correcta": false,
+        "explicacion": "El contexto afirma lo contrario: la Conferencia de Berlín excluyó a los africanos y las fronteras rectas atravesaban territorios de pueblos con lenguas y organizaciones propias.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee el mapa sin relacionarlo con la ausencia africana en la Conferencia de Berlín."
+      }
+    ],
+    "explicacion": "LEER: la Conferencia de Berlín repartió África sin africanos; el mapa de 1914 muestra fronteras rectas que cruzan ríos, desiertos y territorios de pueblos diversos; en 1970 las fronteras siguen iguales. COMPRENDER: se pide la relación histórica-geográfica que explica conflictos posteriores. INTERPRETAR: líneas rectas = fronteras decididas desde Europa sin considerar a los pueblos; su permanencia en 1970 significa que los Estados independientes heredaron esa división. REPRESENTAR: decisión histórica (reparto) → trazado geográfico (fronteras artificiales) → consecuencia (pueblos divididos o mezclados) → conflictos. RAZONAR: el relieve no impidió la unidad, nadie invade en el mapa y las potencias no respetaron límites africanos. RESOLVER: la opción sobre fronteras heredadas que dividieron y juntaron pueblos. VERIFICAR: que las fronteras de 1970 coincidan con las coloniales confirma la herencia.",
+    "que_identificar": "La exclusión de los africanos en Berlín, las fronteras rectas sobre territorios de pueblos diversos y su permanencia en 1970.",
+    "que_revisar": "Imperialismo del siglo XIX, Conferencia de Berlín, descolonización de África y conflictos poscoloniales; fronteras artificiales.",
+    "refuerzo_ids": [
+      "SOC-023",
+      "SOC-038"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "imperialismo",
+      "africa",
+      "conferencia_de_berlin",
+      "fronteras",
+      "descolonizacion",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-120",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza el impacto de las ciencias sociales en la sociedad",
+    "habilidad": "verificar",
+    "tema": "Ciencias sociales y focalización de subsidios",
+    "subtema": "Uso de encuestas de hogares para asignar programas sociales",
+    "dificultad": 3,
+    "contexto": "Un municipio quiere asignar un subsidio de alimentación escolar, pero el presupuesto alcanza solo para 2 000 de sus 5 000 estudiantes. Un equipo de economistas y trabajadores sociales aplicó una **encuesta de condiciones de vida** a los hogares y construyó un puntaje (de 0 a 100, donde menos puntos indica más carencias) con variables como ingresos, materiales de la vivienda, acceso a servicios y nivel educativo de los padres. La tabla muestra el resultado por zona.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados de la encuesta por zona (datos ficticios)",
+      "columnas": [
+        "Zona",
+        "Estudiantes",
+        "Puntaje promedio",
+        "Estudiantes con puntaje menor a 40"
+      ],
+      "filas": [
+        [
+          "Centro",
+          1500,
+          62,
+          150
+        ],
+        [
+          "Barrios del sur",
+          1800,
+          41,
+          900
+        ],
+        [
+          "Zona rural",
+          1200,
+          35,
+          800
+        ],
+        [
+          "Barrios del norte",
+          500,
+          70,
+          30
+        ]
+      ],
+      "nota": "El equipo propone dar el subsidio a los estudiantes con puntaje menor a 40."
+    },
+    "enunciado": "¿Qué muestra este caso sobre el impacto de las ciencias sociales en las decisiones públicas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que las encuestas sociales no sirven para decidir, porque la suma de estudiantes con puntaje menor a 40 (1 880) no coincide con el cupo de 2 000.",
+        "correcta": false,
+        "explicacion": "Que el criterio técnico deje 120 cupos por asignar no invalida la encuesta; muestra que el puntaje orienta la decisión y que el ajuste final sigue siendo una decisión política.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa una pequeña diferencia numérica para descartar todo el método."
+      },
+      {
+        "clave": "B",
+        "texto": "Que un instrumento de las ciencias sociales permite reemplazar el reparto por zonas o por influencia política con un criterio verificable de necesidad.",
+        "correcta": true,
+        "explicacion": "Sin la encuesta, el municipio habría repartido por zona o por presión; el puntaje identifica a los hogares con más carencias (900 en el sur, 800 en lo rural, pero también 150 en el centro) y hace la asignación comprobable y discutible públicamente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que los científicos sociales deben decidir solos a quién se le entrega el subsidio, porque sus datos son objetivos y no admiten discusión.",
+        "correcta": false,
+        "explicacion": "El equipo construyó el puntaje y propuso un criterio, pero la elección de las variables y del umbral de 40 implica juicios de valor; la decisión final corresponde a las autoridades y a la deliberación pública.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el aporte técnico con la autoridad para decidir y niega el carácter discutible de los indicadores."
+      },
+      {
+        "clave": "D",
+        "texto": "Que basta con dar el subsidio a toda la zona rural y los barrios del sur, pues allí están los puntajes promedio más bajos de la tabla.",
+        "correcta": false,
+        "explicacion": "Repartir por zonas entregaría el subsidio a 3 000 estudiantes, más del cupo, incluiría hogares sin carencias y dejaría por fuera a los 150 del centro con puntaje menor a 40.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mira solo la columna de promedios y olvida que dentro de cada zona hay hogares muy distintos."
+      }
+    ],
+    "explicacion": "LEER: hay 5 000 estudiantes, 2 000 cupos y una encuesta que produce un puntaje por hogar; la tabla da promedios y número de estudiantes con puntaje menor a 40 por zona. COMPRENDER: se pide lo que el caso muestra sobre el impacto de las ciencias sociales en decisiones públicas. INTERPRETAR: el puntaje permite identificar necesidad hogar por hogar, incluso en zonas de promedio alto (150 en el centro), en lugar de repartir por zona o por influencia. REPRESENTAR: 150 + 900 + 800 + 30 = 1 880 estudiantes bajo el umbral, cerca del cupo de 2 000. RAZONAR: la diferencia de 120 no invalida el método; los técnicos no deciden solos; repartir por zonas excedería el cupo e ignoraría a los más necesitados del centro. RESOLVER: la opción que destaca el criterio verificable de necesidad. VERIFICAR: la nota de la tabla dice que el equipo propone, no impone: papel orientador de la ciencia social.",
+    "que_identificar": "La columna de estudiantes con puntaje menor a 40 por zona, su suma (1 880) frente al cupo, y la diferencia entre proponer un criterio y decidir.",
+    "que_revisar": "Focalización de programas sociales; papel de las ciencias sociales en la política pública; límites de los indicadores y juicios de valor en su construcción.",
+    "refuerzo_ids": [
+      "SOC-107",
+      "SOC-075"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": [
+      "politica_social",
+      "focalizacion",
+      "encuestas",
+      "ciencias_sociales",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

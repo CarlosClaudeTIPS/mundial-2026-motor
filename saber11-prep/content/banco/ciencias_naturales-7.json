@@ -1,0 +1,1386 @@
+[
+  {
+    "id": "CIE-101",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta datos de energía disponible en los niveles tróficos de un ecosistema y los relaciona con la forma de pirámide",
+    "habilidad": "interpretar",
+    "tema": "Ecosistemas: pirámides ecológicas",
+    "subtema": "Energía disponible por nivel trófico y pérdida entre niveles",
+    "dificultad": 1,
+    "contexto": "Un grupo de ecólogos estimó la energía que queda almacenada cada año en los organismos de cada nivel trófico de una sabana de los Llanos Orientales. Los resultados se muestran en la tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Energía almacenada por nivel trófico (sabana, datos hipotéticos)",
+      "columnas": ["Nivel trófico","Ejemplo","Energía (kJ/m² por año)"],
+      "filas": [
+        ["Productores","Pastos",10000],
+        ["Consumidores primarios","Chigüiros, saltamontes",1000],
+        ["Consumidores secundarios","Zorros, aves insectívoras",100],
+        ["Consumidores terciarios","Jaguar, águila",10]
+      ],
+      "nota": "La energía se midió en los organismos vivos de cada nivel."
+    },
+    "enunciado": "Según la tabla, ¿qué ocurre con la energía al pasar de un nivel trófico al siguiente y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Solo cerca del 10 % pasa al siguiente nivel; el resto se usa en la respiración de los organismos, se libera como calor o queda en restos no consumidos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cada nivel tiene la décima parte del anterior (10 000 → 1 000 → 100 → 10). La energía que no pasa se gasta en mantener vivos a los organismos, se disipa como calor o queda en excrementos y restos que no se comen.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Cerca del 90 % pasa al siguiente nivel, porque los consumidores aprovechan casi toda la energía del alimento que ingieren.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran lo contrario: de 10 000 kJ/m² en los productores solo quedan 1 000 kJ/m² en los herbívoros, es decir, pasa el 10 %, no el 90 %.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la proporción: confundió lo que se pierde con lo que se transfiere."
+      },
+      {
+        "clave": "C",
+        "texto": "La energía se mantiene igual en todos los niveles, porque la energía no se crea ni se destruye, solo se transforma.",
+        "correcta": false,
+        "explicacion": "No responde. La energía total se conserva, pero no se queda en los organismos: gran parte sale del ecosistema como calor. La tabla muestra que la energía almacenada baja de 10 000 a 10 kJ/m² por año.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica la conservación de la energía sin considerar que el calor liberado sale de la cadena alimentaria."
+      },
+      {
+        "clave": "D",
+        "texto": "La energía aumenta en cada nivel, porque los carnívoros son más grandes y acumulan la energía de todas sus presas durante su vida.",
+        "correcta": false,
+        "explicacion": "No responde. Un jaguar es grande, pero hay muy pocos por kilómetro cuadrado; por eso la energía total almacenada en el nivel es la menor (10 kJ/m² por año), como indica la última fila.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el tamaño de un individuo con la energía total del nivel trófico."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la energía almacenada en cuatro niveles tróficos: 10 000, 1 000, 100 y 10 kJ/m² por año. COMPRENDER: se pide describir el cambio entre niveles y su causa. INTERPRETAR: cada valor es la décima parte del anterior, es decir, se transfiere alrededor del 10 %. REPRESENTAR: 10 000 × 0,1 = 1 000; 1 000 × 0,1 = 100; 100 × 0,1 = 10. RAZONAR: la energía que no pasa no desaparece: los organismos la gastan en respirar y moverse, se libera como calor y una parte queda en restos que nadie come; esto da la forma de pirámide. RESOLVER: la respuesta es la opción que indica que pasa cerca del 10 % y explica a dónde va el resto. VERIFICAR: la opción del 90 % contradice las cifras, la de energía constante ignora el calor liberado y la de energía creciente confunde tamaño individual con energía del nivel.",
+    "que_identificar": "La razón constante entre filas consecutivas de la tabla (cada nivel tiene la décima parte del anterior).",
+    "que_revisar": "Niveles tróficos; flujo de energía en los ecosistemas; regla del 10 %; pirámides de energía.",
+    "refuerzo_ids": ["CIE-102","CIE-040"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["ecosistemas","piramide de energia","niveles troficos","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-102",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el orden en que se establecen las especies durante la sucesión ecológica a partir de los cambios que cada etapa produce en el ambiente",
+    "habilidad": "razonar",
+    "tema": "Ecosistemas: sucesión ecológica",
+    "subtema": "Especies pioneras y cambios en el suelo tras un deslizamiento",
+    "dificultad": 2,
+    "contexto": "Un deslizamiento en la vía entre Bogotá y Villavicencio dejó una ladera de roca y arcilla sin vegetación. Un grupo de estudiantes registró lo que creció allí durante ocho años:\n\n- **Año 1:** líquenes sobre la roca y algunos musgos.\n- **Años 2-3:** pastos y hierbas de semillas livianas; se forma una capa delgada de suelo.\n- **Años 4-6:** arbustos de 1 a 2 m; el suelo retiene más agua y hay sombra parcial.\n- **Años 7-8:** aparecen plántulas de árboles como yarumos y guamos.\n\nLos estudiantes notaron que las semillas de árbol que cayeron en el año 1 no germinaron, aunque en los años 7 y 8 sí lo hicieron.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la mejor explicación de por qué los árboles aparecen al final y no al comienzo del proceso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los árboles son las especies más lentas en llegar al lugar, porque sus semillas son pesadas y el viento tarda años en transportarlas hasta la ladera.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que semillas de árbol cayeron desde el año 1 y no germinaron. El problema no fue la llegada de las semillas sino las condiciones del lugar.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No tuvo en cuenta el dato de que las semillas de árbol ya estaban presentes el primer año."
+      },
+      {
+        "clave": "B",
+        "texto": "Las especies pioneras modifican el ambiente: forman suelo, retienen humedad y dan sombra, condiciones que las semillas de árbol necesitan para germinar y crecer.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Las mismas semillas no germinaron en el año 1 (roca desnuda, sin suelo ni humedad) pero sí en el año 7, cuando ya había suelo, agua retenida y sombra. Cada etapa crea las condiciones de la siguiente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los líquenes y pastos liberan sustancias que impiden la germinación de los árboles hasta que mueren por completo en los años 7 y 8.",
+        "correcta": false,
+        "explicacion": "No responde. Nada en el registro indica que los pastos murieran ni que liberaran inhibidores; al contrario, los arbustos y pastos siguen presentes cuando aparecen los árboles y les dan sombra.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa un mecanismo de competencia que los datos no muestran."
+      },
+      {
+        "clave": "D",
+        "texto": "Cada especie tiene un tiempo fijo de aparición después de un deslizamiento, determinado por sus genes, independiente de las condiciones del terreno.",
+        "correcta": false,
+        "explicacion": "No responde. Si el orden dependiera solo de un reloj genético, las semillas del año 1 habrían germinado igual que las del año 7. La diferencia entre ambos momentos está en el suelo, la humedad y la sombra.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la sucesión a un programa interno de las especies y no a los cambios del ambiente."
+      }
+    ],
+    "explicacion": "LEER: el registro muestra líquenes, luego pastos con formación de suelo, luego arbustos con humedad y sombra, y al final árboles; las semillas de árbol del año 1 no germinaron. COMPRENDER: se pide explicar por qué los árboles llegan al final. INTERPRETAR: el dato clave es que las mismas semillas fallan en el año 1 y prosperan en el año 7, así que lo que cambió fue el ambiente. REPRESENTAR: roca desnuda → suelo delgado → suelo húmedo con sombra → condiciones aptas para árboles. RAZONAR: las especies pioneras toleran la roca desnuda y, al vivir y morir allí, forman suelo y retienen agua; eso permite que lleguen especies más exigentes. RESOLVER: la respuesta es la opción que señala que las pioneras modifican el ambiente y crean las condiciones para los árboles. VERIFICAR: las otras opciones contradicen el dato de las semillas del año 1 o proponen mecanismos que el registro no respalda.",
+    "que_identificar": "La observación de que las semillas de árbol estaban presentes desde el año 1 pero solo germinaron cuando había suelo, humedad y sombra.",
+    "que_revisar": "Sucesión ecológica primaria y secundaria; especies pioneras; formación del suelo; requisitos de germinación.",
+    "refuerzo_ids": ["CIE-101","CIE-040"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["ecosistemas","sucesion ecologica","especies pioneras","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-103",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Identifica, comparando ensayos en los que cambia una sola variable, cuáles factores afectan la germinación de semillas",
+    "habilidad": "razonar",
+    "tema": "Indagación: análisis de variables",
+    "subtema": "Germinación de fríjol: efecto del agua, la luz y la temperatura",
+    "dificultad": 2,
+    "contexto": "Para averiguar qué necesitan las semillas de fríjol para germinar, un grupo de grado once sembró 50 semillas en cada una de cuatro bandejas con la misma tierra y registró el porcentaje que germinó a los 10 días.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Germinación de fríjol en cuatro condiciones (10 días)",
+      "columnas": ["Bandeja","Temperatura","Luz","Riego diario","Semillas germinadas"],
+      "filas": [
+        ["Bandeja 1","25 °C","Con luz","10 mL","45 de 50 (90 %)"],
+        ["Bandeja 2","25 °C","Sin luz","10 mL","44 de 50 (88 %)"],
+        ["Bandeja 3","25 °C","Con luz","0 mL","0 de 50 (0 %)"],
+        ["Bandeja 4","10 °C","Con luz","10 mL","15 de 50 (30 %)"]
+      ],
+      "nota": "Todas las bandejas tenían la misma tierra y la misma profundidad de siembra."
+    },
+    "enunciado": "¿Qué conclusión sobre los factores que afectan la germinación está respaldada por los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La luz es el factor más importante, porque las tres bandejas con luz germinaron y la que estaba sin luz fue la de menor porcentaje.",
+        "correcta": false,
+        "explicacion": "No responde. La bandeja sin luz germinó en un 88 %, casi igual que su par con luz (90 %). Además, una bandeja con luz (sin riego) tuvo 0 %, así que la luz no explica las diferencias.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó mal la fila de la bandeja sin luz o no comparó pares que difieren en una sola variable."
+      },
+      {
+        "clave": "B",
+        "texto": "Los tres factores afectan la germinación por igual, porque cada vez que se cambió uno de ellos el resultado fue distinto.",
+        "correcta": false,
+        "explicacion": "No responde. Al cambiar solo la luz el porcentaje varió apenas de 90 % a 88 %, una diferencia de una semilla, mientras que cambiar el riego o la temperatura produjo caídas de 90 y 60 puntos. Los efectos no son iguales.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trató cualquier diferencia numérica como un efecto real sin valorar su tamaño."
+      },
+      {
+        "clave": "C",
+        "texto": "El agua y la temperatura afectan la germinación, pero la luz no la afecta de forma apreciable.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Bandejas 1 y 2 solo difieren en la luz y dan casi lo mismo (90 % y 88 %). Bandejas 1 y 3 solo difieren en el riego: 90 % frente a 0 %. Bandejas 1 y 4 solo difieren en la temperatura: 90 % frente a 30 %.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La temperatura de 10 °C mata las semillas, porque en esa bandeja germinaron 35 semillas menos que en la bandeja de referencia.",
+        "correcta": false,
+        "explicacion": "No responde. En la bandeja fría germinó el 30 %, así que las semillas no murieron: la baja temperatura redujo o retrasó la germinación. Los datos no permiten afirmar que las no germinadas estén muertas.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Va más allá de lo medido: el experimento no evaluó la viabilidad de las semillas que no germinaron."
+      }
+    ],
+    "explicacion": "LEER: cuatro bandejas con 50 semillas; se varían temperatura, luz y riego, y se registra el porcentaje germinado. COMPRENDER: se pide qué factores afectan la germinación según los datos. INTERPRETAR: para aislar un factor hay que comparar bandejas que difieren en una sola variable. REPRESENTAR: luz (1 frente a 2): 90 % y 88 %; riego (1 frente a 3): 90 % y 0 %; temperatura (1 frente a 4): 90 % y 30 %. RAZONAR: una diferencia de 2 puntos es despreciable, mientras que 90 y 60 puntos indican un efecto claro; por tanto, agua y temperatura sí afectan, la luz no. RESOLVER: la respuesta es la opción que señala agua y temperatura como factores y descarta la luz. VERIFICAR: la conclusión usa las cuatro filas y no afirma nada que no se haya medido, como la muerte de las semillas.",
+    "que_identificar": "Los pares de bandejas que difieren en una sola variable y el tamaño de la diferencia en cada par.",
+    "que_revisar": "Variables independiente, dependiente y controladas; comparación de ensayos cambiando una sola variable; requisitos de la germinación.",
+    "refuerzo_ids": ["CIE-106","CIE-092"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["indagacion","control de variables","germinacion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-104",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Determina genotipos y probabilidades en la herencia del grupo sanguíneo ABO a partir de los fenotipos de una familia",
+    "habilidad": "resolver",
+    "tema": "Genética: alelos múltiples y codominancia",
+    "subtema": "Grupo sanguíneo ABO de padres e hijos",
+    "dificultad": 1,
+    "contexto": "En una donación de sangre, una familia de Montería conoce sus grupos sanguíneos: la madre es del grupo **A**, el padre del grupo **B** y su primer hijo es del grupo **O**. El grupo ABO depende de un gen con tres alelos: **Iᴬ** e **Iᴮ** son dominantes sobre **i**, y cuando están juntos (IᴬIᴮ) ambos se expresan y producen el grupo AB. El grupo O corresponde al genotipo **ii**.",
+    "estimulo": null,
+    "enunciado": "Si la pareja tiene un segundo hijo, ¿cuál es la probabilidad de que sea del grupo AB?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0 %, porque si el primer hijo fue del grupo O, los padres no tienen alelos dominantes suficientes para producir un hijo AB.",
+        "correcta": false,
+        "explicacion": "No responde. El hijo O indica que cada padre tiene un alelo i, pero conserva su alelo dominante (Iᴬ la madre, Iᴮ el padre), pues esos son los que determinan su grupo sanguíneo. Juntos pueden producir IᴬIᴮ.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que un hijo recesivo agota los alelos dominantes de los padres."
+      },
+      {
+        "clave": "B",
+        "texto": "50 %, porque la madre siempre aporta Iᴬ y el padre siempre aporta Iᴮ, y la mitad de los hijos recibe ambos.",
+        "correcta": false,
+        "explicacion": "No responde. Cada progenitor aporta uno de sus dos alelos al azar: la madre da Iᴬ o i, y el padre Iᴮ o i. Solo cuando ambos entregan el alelo dominante (una de cuatro combinaciones) el hijo es AB.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó que cada padre también puede transmitir el alelo i que demostró tener."
+      },
+      {
+        "clave": "C",
+        "texto": "100 %, porque los alelos Iᴬ e Iᴮ son codominantes y al combinarse un padre A con una madre B el hijo siempre es AB.",
+        "correcta": false,
+        "explicacion": "No responde. Eso solo ocurriría si los padres fueran IᴬIᴬ e IᴮIᴮ. El primer hijo, del grupo O, demuestra que ambos son heterocigotos (Iᴬi e Iᴮi), de modo que también pueden tener hijos A, B u O.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que los padres son homocigotos a pesar del dato del hijo del grupo O."
+      },
+      {
+        "clave": "D",
+        "texto": "25 %, porque el hijo del grupo O demuestra que cada progenitor porta un alelo i, así que la madre es Iᴬi y el padre Iᴮi.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Para que el primer hijo sea ii, cada padre aportó un alelo i; por eso la madre es Iᴬi y el padre Iᴮi. El cruce da cuatro combinaciones igualmente probables: IᴬIᴮ, Iᴬi, Iᴮi e ii, y solo una de ellas es AB.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: madre A, padre B, primer hijo O; tres alelos, Iᴬ e Iᴮ dominan sobre i y son codominantes entre sí. COMPRENDER: se pide la probabilidad de un hijo AB. INTERPRETAR: el grupo O exige genotipo ii, así que cada padre tiene un alelo i; con sus fenotipos, la madre es Iᴬi y el padre Iᴮi. REPRESENTAR: cuadro de Punnett de Iᴬi × Iᴮi: IᴬIᴮ, Iᴬi, Iᴮi, ii. RAZONAR: las cuatro combinaciones son igualmente probables y solo IᴬIᴮ produce grupo AB. RESOLVER: la respuesta es la opción que da 25 % y justifica los genotipos heterocigotos de los padres. VERIFICAR: el mismo cuadro predice 25 % de hijos O, lo que es coherente con el primer hijo de la familia.",
+    "que_identificar": "Que el hijo del grupo O obliga a que cada progenitor sea heterocigoto y porte el alelo i.",
+    "que_revisar": "Alelos múltiples; codominancia; genotipo y fenotipo; cuadro de Punnett.",
+    "refuerzo_ids": ["CIE-064","CIE-105"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["genetica","grupos sanguineos","codominancia","punnett","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-105",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela el efecto de la temperatura sobre la actividad de una enzima y lo relaciona con su estructura proteica",
+    "habilidad": "interpretar",
+    "tema": "Biomoléculas: enzimas",
+    "subtema": "Actividad de la amilasa frente a la temperatura y desnaturalización",
+    "dificultad": 3,
+    "contexto": "La **amilasa** es una enzima de la saliva que rompe el almidón en azúcares. Un grupo midió cuántos miligramos de almidón degrada una misma cantidad de amilasa en un minuto a distintas temperaturas, manteniendo iguales el pH y la concentración de almidón. Al terminar, enfriaron todas las muestras a 37 °C y repitieron la medición: las que habían estado a 60 °C y 70 °C siguieron casi sin actividad.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Actividad de la amilasa según la temperatura",
+      "eje_x": "Temperatura (°C)",
+      "eje_y": "Almidón degradado (mg/min)",
+      "series": [
+        {
+          "nombre": "Actividad",
+          "valores": [["10",0.4],["20",0.9],["30",1.6],["40",2.4],["50",1.8],["60",0.6],["70",0.1]]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál modelo explica mejor la forma de la curva y el resultado obtenido al volver las muestras a 37 °C?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Por encima de 40 °C el almidón se descompone solo por el calor, así que la enzima ya no encuentra sustrato que degradar y la medición da valores bajos.",
+        "correcta": false,
+        "explicacion": "No responde. El almidón no se descompone a 60 °C en un minuto, y si así fuera, al enfriar las muestras y añadir almidón nuevo la enzima trabajaría de nuevo. El hecho de que no se recupere indica que la afectada es la enzima.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la caída de actividad al sustrato en vez de a la proteína."
+      },
+      {
+        "clave": "B",
+        "texto": "Al subir la temperatura aumentan los choques entre enzima y almidón, pero por encima de 40 °C la proteína pierde su forma de manera irreversible y el sitio activo deja de reconocer al almidón.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Hasta 40 °C la actividad sube porque las moléculas se mueven más y chocan más. Después cae porque el calor desorganiza la estructura de la proteína (desnaturalización). Como al enfriar no se recupera la actividad, el daño es irreversible.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La enzima funciona de forma reversible: a más de 40 °C se apaga temporalmente y, al enfriarla, debería volver a degradar 2,4 mg/min como a 40 °C.",
+        "correcta": false,
+        "explicacion": "No responde. Esa predicción contradice el dato final: las muestras calentadas a 60 °C y 70 °C siguieron casi sin actividad después de enfriarlas a 37 °C, lo que indica un cambio permanente en la enzima.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No integró la última observación del contexto sobre el enfriamiento de las muestras."
+      },
+      {
+        "clave": "D",
+        "texto": "La actividad depende solo de la velocidad de las moléculas, por lo que debería seguir aumentando con la temperatura; la caída se debe a errores de medición a altas temperaturas.",
+        "correcta": false,
+        "explicacion": "No responde. La caída es grande y regular (2,4 → 1,8 → 0,6 → 0,1 mg/min), no un error aislado, y se mantiene al repetir la medición a 37 °C. Un error de medición no explicaría un patrón tan consistente.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descarta como error los datos que no encajan con su idea previa."
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra la actividad de la amilasa de 10 °C a 70 °C, con máximo de 2,4 mg/min a 40 °C y caída hasta 0,1 mg/min; al enfriar, las muestras calentadas no recuperan actividad. COMPRENDER: se pide un modelo que explique la curva y la irreversibilidad. INTERPRETAR: hay dos tramos: ascenso (10 a 40 °C) y descenso (40 a 70 °C). REPRESENTAR: ascenso = más movimiento molecular, más choques enzima-sustrato; descenso = pérdida de la forma tridimensional de la proteína. RAZONAR: la amilasa es una proteína; el calor rompe las interacciones que mantienen su forma y el sitio activo deja de encajar con el almidón; si fuera reversible, la actividad regresaría al enfriar. RESOLVER: la respuesta es la opción que combina aumento de choques y desnaturalización irreversible. VERIFICAR: el máximo cerca de 37-40 °C coincide con la temperatura corporal, donde la amilasa salival actúa normalmente.",
+    "que_identificar": "El máximo de la curva a 40 °C, la caída posterior y el dato de que al enfriar no se recupera la actividad.",
+    "que_revisar": "Enzimas como proteínas; sitio activo; efecto de la temperatura y el pH; desnaturalización.",
+    "refuerzo_ids": ["CIE-093","CIE-035"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["enzimas","desnaturalizacion","temperatura","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-106",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Reconoce la necesidad de un grupo de control y de condiciones iguales para atribuir un efecto a la variable que se manipula",
+    "habilidad": "verificar",
+    "tema": "Indagación: diseño experimental",
+    "subtema": "Grupo de control en una prueba de fertilizante orgánico",
+    "dificultad": 2,
+    "contexto": "Un estudiante quiere probar si un fertilizante orgánico hecho con cáscaras de plátano aumenta el crecimiento de la lechuga. Siembra 20 lechugas en el patio de su casa, les aplica el fertilizante cada semana y, al cabo de un mes, miden en promedio 18 cm de alto. Concluye: *\"El fertilizante funciona, porque las lechugas crecieron mucho\"*.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la principal debilidad del diseño que impide aceptar la conclusión del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No hay un grupo de lechugas sin fertilizante, sembradas en las mismas condiciones, con el cual comparar los 18 cm obtenidos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Sin un grupo de control no se sabe cuánto habrían crecido las lechugas sin fertilizante. Los 18 cm podrían deberse al sol, al riego o a la tierra del patio. Comparar con plantas iguales sin fertilizante es lo que permite atribuir el efecto al producto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Se usaron muy pocas lechugas; con 20 plantas el promedio no es confiable y habría que sembrar al menos 200 para concluir algo.",
+        "correcta": false,
+        "explicacion": "No responde. Veinte plantas pueden bastar para una comparación escolar. Aunque sembrara 200, sin un grupo sin fertilizante seguiría sin saber si el crecimiento se debe al producto o a las condiciones del patio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde el problema de la ausencia de control con un problema de tamaño de muestra."
+      },
+      {
+        "clave": "C",
+        "texto": "Midió la altura y no la masa de las hojas, que es la variable que de verdad interesa en un cultivo de lechuga para la venta.",
+        "correcta": false,
+        "explicacion": "No responde. La altura es una medida válida de crecimiento y es la que el estudiante decidió evaluar. Cambiar la variable dependiente no resolvería la falta de comparación con plantas sin fertilizante.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se fija en la elección de la variable medida en vez de en la lógica del experimento."
+      },
+      {
+        "clave": "D",
+        "texto": "El experimento duró solo un mes; el fertilizante debería evaluarse durante varias cosechas para confirmar que el efecto se mantiene.",
+        "correcta": false,
+        "explicacion": "No responde. Prolongar el estudio daría más información, pero no corrige el defecto central: incluso con varias cosechas, sin plantas de control no se podría separar el efecto del fertilizante del de las demás condiciones.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propone una mejora secundaria sin identificar la comparación que falta."
+      }
+    ],
+    "explicacion": "LEER: 20 lechugas, todas con fertilizante, crecen 18 cm en un mes y el estudiante concluye que el fertilizante funciona. COMPRENDER: se pide la debilidad del diseño que invalida la conclusión. INTERPRETAR: la conclusión compara implícitamente con \"lo que habrían crecido sin fertilizante\", pero ese dato no se midió. REPRESENTAR: grupo experimental (con fertilizante) = 18 cm; grupo de control (sin fertilizante) = no existe. RAZONAR: para afirmar que una variable causa un efecto hay que comparar con un grupo igual en todo salvo en esa variable; sin control, el sol, el riego y la tierra del patio son explicaciones alternativas. RESOLVER: la respuesta es la opción que señala la falta de un grupo sin fertilizante en las mismas condiciones. VERIFICAR: las demás opciones proponen mejoras (más plantas, otra variable, más tiempo) que no eliminan las explicaciones alternativas.",
+    "que_identificar": "Que todas las plantas recibieron fertilizante y que la conclusión supone una comparación que nunca se hizo.",
+    "que_revisar": "Grupo de control y grupo experimental; variables controladas; conclusiones causales en un experimento.",
+    "refuerzo_ids": ["CIE-103","CIE-100"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["indagacion","diseno experimental","grupo de control","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-107",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta gráficas de posición contra tiempo de dos móviles para comparar sus rapideces y determinar dónde se encuentran",
+    "habilidad": "interpretar",
+    "tema": "Cinemática: gráficas posición-tiempo",
+    "subtema": "Dos ciclistas con movimiento uniforme que se encuentran en una ciclovía",
+    "dificultad": 1,
+    "contexto": "Dos ciclistas recorren la misma ciclovía en Cali en el mismo sentido. Camila parte del inicio de la ruta (kilómetro 0) y Andrés parte al mismo tiempo desde el kilómetro 6. La gráfica muestra la posición de cada uno durante la primera hora.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Posición de dos ciclistas en la ciclovía",
+      "eje_x": "Tiempo (min)",
+      "eje_y": "Posición (km)",
+      "series": [
+        {
+          "nombre": "Camila",
+          "valores": [["0",0],["15",4],["30",8],["45",12],["60",16]]
+        },
+        {
+          "nombre": "Andrés",
+          "valores": [["0",6],["15",8],["30",10],["45",12],["60",14]]
+        }
+      ]
+    },
+    "enunciado": "De acuerdo con la gráfica, ¿cuál afirmación es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Andrés va más rápido que Camila durante toda la hora, porque su línea está por encima en los primeros 45 minutos.",
+        "correcta": false,
+        "explicacion": "No responde. Que la línea esté más arriba significa que está más adelante en la ruta, no que vaya más rápido. La rapidez es la pendiente, y la línea de Camila es más inclinada: 4 km cada 15 min frente a 2 km cada 15 min.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la posición (altura de la línea) con la rapidez (pendiente)."
+      },
+      {
+        "clave": "B",
+        "texto": "Camila va a 4 km/h y Andrés a 2 km/h, porque esas son las distancias que avanzan en cada intervalo de la gráfica.",
+        "correcta": false,
+        "explicacion": "No responde. Avanzar 4 km en 15 minutos equivale a 16 km en una hora, es decir, 16 km/h; 2 km en 15 min son 8 km/h. Los valores de 4 y 2 km son distancias por intervalo, no rapideces.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el avance por intervalo de 15 minutos como si fuera la rapidez en km/h."
+      },
+      {
+        "clave": "C",
+        "texto": "Los ciclistas nunca se encuentran, porque Andrés partió 6 km adelante y las dos líneas son rectas que no se tocan.",
+        "correcta": false,
+        "explicacion": "No responde. Las líneas sí se cruzan: a los 45 minutos ambos están en el kilómetro 12. A partir de ahí Camila queda adelante (16 km frente a 14 km a los 60 min).",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó los valores a los 45 minutos, donde las dos series coinciden."
+      },
+      {
+        "clave": "D",
+        "texto": "Camila va a 16 km/h y Andrés a 8 km/h; Camila alcanza a Andrés a los 45 minutos, en el kilómetro 12.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Camila recorre 16 km en 60 min (16 km/h) y Andrés 8 km en 60 min (8 km/h). Las dos líneas se cruzan en el punto (45 min, 12 km): allí están en la misma posición, es decir, Camila lo alcanza.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica da la posición de Camila (de 0 a 16 km) y de Andrés (de 6 a 14 km) cada 15 minutos durante una hora. COMPRENDER: se pide comparar rapideces y determinar si se encuentran. INTERPRETAR: en una gráfica posición-tiempo la rapidez es la pendiente, y un cruce de líneas indica misma posición al mismo tiempo. REPRESENTAR: Camila: 16 km / 1 h = 16 km/h; Andrés: (14 − 6) km / 1 h = 8 km/h; a los 45 min ambos marcan 12 km. RAZONAR: la línea más inclinada corresponde a la mayor rapidez, y el punto común (45 min, 12 km) es el encuentro. RESOLVER: la respuesta es la opción que da 16 km/h y 8 km/h y ubica el encuentro a los 45 min en el km 12. VERIFICAR: Camila necesita cerrar 6 km de ventaja a 8 km/h de diferencia: 6/8 h = 0,75 h = 45 min, coherente con la gráfica.",
+    "que_identificar": "La pendiente de cada línea y el punto donde las dos series tienen el mismo valor de posición.",
+    "que_revisar": "Movimiento rectilíneo uniforme; gráficas posición-tiempo; rapidez como pendiente; conversión de unidades.",
+    "refuerzo_ids": ["CIE-001","CIE-109"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cinematica","grafica posicion-tiempo","rapidez","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-108",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica por qué flota o se hunde un objeto comparando su densidad promedio con la del fluido",
+    "habilidad": "razonar",
+    "tema": "Fluidos: flotación",
+    "subtema": "Densidad promedio de una embarcación de acero frente a un bloque de acero",
+    "dificultad": 2,
+    "contexto": "En el astillero de Cartagena un aprendiz observa que un bloque macizo de acero de 30 kg se hunde de inmediato en el agua, pero un casco de acero de 300 toneladas flota. Consulta estas densidades: acero 7 850 kg/m³, agua de mar 1 025 kg/m³, aire 1,2 kg/m³. El casco tiene forma de cuenco: sus paredes son de acero y su interior está lleno de aire.",
+    "estimulo": null,
+    "enunciado": "¿Por qué el casco flota mientras el bloque se hunde, si ambos son de acero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el casco es mucho más pesado y el agua de mar ejerce una fuerza mayor sobre los objetos de mayor masa, lo que lo mantiene arriba.",
+        "correcta": false,
+        "explicacion": "No responde. La fuerza de empuje depende del volumen de agua desplazada, no de la masa del objeto. Si solo importara la masa, un bloque de 300 toneladas de acero flotaría, y en realidad se hundiría igual que el de 30 kg.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que objetos más masivos reciben más empuje por el solo hecho de pesar más."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la sal del agua de mar aumenta la densidad del agua lo suficiente para sostener el acero del casco, pero no la de un bloque pequeño.",
+        "correcta": false,
+        "explicacion": "No responde. La densidad del agua de mar (1 025 kg/m³) es casi ocho veces menor que la del acero (7 850 kg/m³); la sal no cambia eso. Además, la densidad del fluido es la misma para el bloque y para el casco.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la flotación a la salinidad sin comparar las densidades dadas."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el casco encierra un gran volumen de aire, de modo que su densidad promedio (acero más aire) es menor que la del agua, mientras que la del bloque macizo es la del acero.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Lo que decide la flotación es la densidad promedio del objeto completo frente a la del fluido. El casco es en su mayor parte aire, así que su masa total dividida por su volumen total es menor que 1 025 kg/m³; el bloque tiene 7 850 kg/m³ y se hunde.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el acero del casco está tratado para ser menos denso que el agua, mientras que el bloque usa acero común de 7 850 kg/m³.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica una sola densidad para el acero y señala que el casco está hecho de acero y lleno de aire. Ningún tratamiento vuelve al acero menos denso que el agua; lo que baja la densidad promedio es el aire encerrado.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa una propiedad del material en lugar de usar la forma del casco descrita en el contexto."
+      }
+    ],
+    "explicacion": "LEER: un bloque de acero se hunde y un casco de acero lleno de aire flota; densidades: acero 7 850, agua de mar 1 025, aire 1,2 kg/m³. COMPRENDER: se pide explicar la diferencia. INTERPRETAR: un objeto flota si su densidad promedio es menor que la del fluido. REPRESENTAR: densidad promedio = masa total / volumen total; en el casco el volumen total incluye el aire interior, que casi no aporta masa. RAZONAR: el bloque macizo tiene densidad 7 850 kg/m³ > 1 025 kg/m³ y se hunde; el casco, al ser en su mayoría aire, tiene densidad promedio menor que 1 025 kg/m³ y flota. RESOLVER: la respuesta es la opción que explica la flotación por la densidad promedio del conjunto acero más aire. VERIFICAR: si el casco se llena de agua (naufragio), su densidad promedio supera la del agua y se hunde, lo que confirma el papel del aire.",
+    "que_identificar": "Que el casco está hecho de acero pero lleno de aire, y las densidades del acero, el agua y el aire.",
+    "que_revisar": "Densidad promedio; principio de Arquímedes; condición de flotación; empuje y volumen desplazado.",
+    "refuerzo_ids": ["CIE-004","CIE-116"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["fluidos","flotacion","densidad","arquimedes","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-109",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Relaciona patrones en los datos de un experimento con péndulos para evaluar una predicción sobre el periodo",
+    "habilidad": "razonar",
+    "tema": "Oscilaciones: péndulo simple",
+    "subtema": "Dependencia del periodo con la longitud y con la masa",
+    "dificultad": 2,
+    "contexto": "Antes de medir, una estudiante predice: *\"Si cuelgo una masa más pesada, el péndulo tardará más en cada oscilación\"*. Luego construye varios péndulos y mide el tiempo de 10 oscilaciones completas con un cronómetro, con una amplitud pequeña en todos los casos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Periodo de péndulos de distinta longitud y masa",
+      "columnas": ["Ensayo","Longitud (m)","Masa (g)","Tiempo de 10 oscilaciones (s)","Periodo (s)"],
+      "filas": [["1","0,25",50,"10,0","1,0"],["2","1,00",50,"20,1","2,0"],["3","1,00",100,"20,0","2,0"],["4","1,00",200,"20,1","2,0"],["5","2,25",50,"30,1","3,0"]],
+      "nota": "Periodo = tiempo de 10 oscilaciones ÷ 10."
+    },
+    "enunciado": "¿Qué puede concluirse sobre la predicción y sobre el patrón de los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción se cumple: el ensayo con 200 g tardó 20,1 s y el de 100 g tardó 20,0 s, así que la masa mayor sí aumenta el periodo.",
+        "correcta": false,
+        "explicacion": "No responde. Una diferencia de 0,1 s en 10 oscilaciones es el margen de error normal de un cronómetro manual, y el ensayo de 50 g también dio 20,1 s. El periodo se mantiene en 2,0 s para las tres masas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma una diferencia dentro del error de medición como si fuera un efecto real."
+      },
+      {
+        "clave": "B",
+        "texto": "El periodo es directamente proporcional a la longitud: al duplicar la longitud se duplica el periodo, y al triplicarla se triplica, sin importar la masa colgada.",
+        "correcta": false,
+        "explicacion": "No responde. De 0,25 m a 1,00 m la longitud se multiplicó por cuatro, pero el periodo solo se duplicó (1,0 s → 2,0 s); de 1,00 m a 2,25 m la longitud se multiplicó por 2,25 y el periodo por 1,5. No es proporcionalidad directa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vio que ambos crecen y asumió proporcionalidad directa sin comparar los factores."
+      },
+      {
+        "clave": "C",
+        "texto": "La predicción no se cumple: con la misma longitud, cambiar la masa de 50 g a 200 g no cambió el periodo; en cambio, el periodo aumenta con la longitud, y se duplica al cuadruplicarla.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los ensayos 2, 3 y 4 tienen la misma longitud y masas distintas, y el periodo es 2,0 s en los tres. Los ensayos 1, 2 y 5 muestran que al pasar de 0,25 m a 1,00 m (cuatro veces) el periodo pasa de 1,0 s a 2,0 s (el doble), y a 2,25 m llega a 3,0 s.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede evaluar la predicción, porque la estudiante debió medir el tiempo de una sola oscilación en lugar de diez y repetir cada ensayo con amplitudes distintas.",
+        "correcta": false,
+        "explicacion": "No responde. Medir diez oscilaciones y dividir es un procedimiento mejor que medir una sola, porque reduce el error del cronómetro. Los datos permiten comparar directamente los ensayos de igual longitud y distinta masa.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Cuestiona un procedimiento correcto en lugar de analizar los datos disponibles."
+      }
+    ],
+    "explicacion": "LEER: la predicción dice que más masa implica mayor periodo; la tabla da cinco ensayos con longitudes y masas distintas. COMPRENDER: se pide evaluar la predicción y describir el patrón. INTERPRETAR: para probar el efecto de la masa se comparan ensayos de igual longitud (2, 3 y 4); para el de la longitud, ensayos de igual masa (1, 2 y 5). REPRESENTAR: masa 50, 100, 200 g → periodo 2,0 s en los tres; longitud 0,25, 1,00, 2,25 m → periodo 1,0, 2,0, 3,0 s. RAZONAR: la masa no cambia el periodo, así que la predicción se refuta; el periodo crece con la longitud, pero cuadruplicar la longitud solo lo duplica, lo que corresponde a una relación con la raíz cuadrada. RESOLVER: la respuesta es la opción que refuta la predicción y describe el patrón con la longitud. VERIFICAR: las raíces cuadradas de 0,25, 1,00 y 2,25 son 0,5, 1,0 y 1,5, exactamente proporcionales a 1,0, 2,0 y 3,0 s.",
+    "que_identificar": "Los ensayos que comparten longitud y difieren solo en masa, y los que comparten masa y difieren en longitud.",
+    "que_revisar": "Péndulo simple; variables que determinan el periodo; comparación controlada de ensayos; error de medición.",
+    "refuerzo_ids": ["CIE-107","CIE-092"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["pendulo","periodo","indagacion","prediccion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-110",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Usa la relación lineal entre voltaje y corriente de un conductor óhmico para calcular la resistencia y predecir la corriente",
+    "habilidad": "resolver",
+    "tema": "Electricidad: ley de Ohm",
+    "subtema": "Resistencia a partir de una tabla voltaje-corriente y predicción de la corriente",
+    "dificultad": 2,
+    "contexto": "En el laboratorio de un colegio de Pereira se conecta una resistencia a una fuente de voltaje variable y se mide la corriente para distintos voltajes.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Voltaje y corriente en una resistencia",
+      "columnas": ["Voltaje (V)","Corriente (A)"],
+      "filas": [[2,"0,10"],[4,"0,20"],[6,"0,30"],[8,"0,40"]],
+      "nota": "La temperatura de la resistencia se mantuvo constante."
+    },
+    "enunciado": "Si la fuente se ajusta a 12 V, ¿qué corriente se espera y cuál es el valor de la resistencia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0,40 A, porque la corriente máxima que admite esta resistencia es la del último dato de la tabla.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla termina en 8 V porque hasta ahí se midió, no porque la resistencia tenga un límite. La relación lineal permite extrapolar: a 12 V la corriente es 0,60 A.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el último valor medido como un tope físico de la corriente."
+      },
+      {
+        "clave": "B",
+        "texto": "240 A, porque la corriente se obtiene multiplicando el voltaje por la resistencia de 20 Ω.",
+        "correcta": false,
+        "explicacion": "No responde. La ley de Ohm indica I = V/R, no V × R. Multiplicar da un valor absurdo: 240 A es mayor que la corriente de una casa completa, y los datos muestran corrientes de décimas de amperio.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la operación de la ley de Ohm y multiplicó en vez de dividir."
+      },
+      {
+        "clave": "C",
+        "texto": "1,67 A, porque la resistencia es de 0,05 Ω, que resulta de dividir la corriente por el voltaje.",
+        "correcta": false,
+        "explicacion": "No responde. La resistencia es V/I, no I/V: 2 V / 0,10 A = 20 Ω. El valor 0,05 es el inverso de la resistencia, y usarlo como resistencia produce una corriente incoherente con la tendencia de la tabla.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la división al calcular la resistencia."
+      },
+      {
+        "clave": "D",
+        "texto": "0,60 A, porque la resistencia es de 20 Ω y la corriente es el voltaje dividido por la resistencia.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En cada fila V/I = 20 Ω (2/0,10 = 4/0,20 = 20), así que la resistencia es constante. Para 12 V: I = 12 V / 20 Ω = 0,60 A. También se ve que cada 2 V añaden 0,10 A, y 12 V son seis pasos de 2 V.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da pares voltaje-corriente: 2 V → 0,10 A, 4 V → 0,20 A, 6 V → 0,30 A, 8 V → 0,40 A. COMPRENDER: se pide la corriente a 12 V y la resistencia. INTERPRETAR: la corriente es proporcional al voltaje, señal de un conductor óhmico. REPRESENTAR: R = V/I = 2 V / 0,10 A = 20 Ω, igual en todas las filas. RAZONAR: como R es constante, I = V/R = 12 V / 20 Ω = 0,60 A. RESOLVER: la respuesta es la opción que da 0,60 A con una resistencia de 20 Ω. VERIFICAR: la tabla sube 0,10 A por cada 2 V; de 8 V a 12 V hay dos pasos más, así que 0,40 + 0,20 = 0,60 A, lo que coincide.",
+    "que_identificar": "El cociente constante entre voltaje y corriente en todas las filas de la tabla.",
+    "que_revisar": "Ley de Ohm; resistencia eléctrica; proporcionalidad directa; extrapolación de una relación lineal.",
+    "refuerzo_ids": ["CIE-023","CIE-111"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["electricidad","ley de ohm","resistencia","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-111",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela la energía necesaria para fundir y calentar una sustancia distinguiendo calor latente y calor específico",
+    "habilidad": "resolver",
+    "tema": "Calor: cambios de estado",
+    "subtema": "Calor latente de fusión del hielo y calentamiento del agua resultante",
+    "dificultad": 3,
+    "contexto": "Para preparar una bebida, una vendedora de jugos en Santa Marta saca de la nevera **200 g de hielo a 0 °C** y lo deja en un vaso hasta que se convierte en agua a **20 °C**. Datos: calor latente de fusión del hielo = 334 J/g; calor específico del agua = 4,18 J/(g·°C). Mientras el hielo se funde, su temperatura permanece en 0 °C.",
+    "estimulo": null,
+    "enunciado": "¿Cuánta energía absorbió el hielo del ambiente en todo el proceso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Aproximadamente 83,5 kJ: 66,8 kJ para fundir el hielo a 0 °C más 16,7 kJ para calentar el agua de 0 °C a 20 °C.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Fusión: Q = m·L = 200 g × 334 J/g = 66 800 J. Calentamiento: Q = m·c·ΔT = 200 g × 4,18 J/(g·°C) × 20 °C = 16 720 J. Total: 83 520 J ≈ 83,5 kJ.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Aproximadamente 66,8 kJ, porque la energía se usa solo en fundir el hielo; una vez líquido, el agua se calienta sola hasta la temperatura ambiente.",
+        "correcta": false,
+        "explicacion": "No responde. El agua no se calienta \"sola\": subir 200 g de agua de 0 °C a 20 °C exige absorber 200 × 4,18 × 20 = 16 720 J del ambiente. Ese calor debe sumarse al de la fusión.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó que calentar el agua líquida también requiere energía."
+      },
+      {
+        "clave": "C",
+        "texto": "Aproximadamente 16,7 kJ, porque la única etapa en la que cambia la temperatura es el calentamiento del agua de 0 °C a 20 °C.",
+        "correcta": false,
+        "explicacion": "No responde. Aunque durante la fusión la temperatura no cambia, el hielo sí absorbe energía para romper su estructura sólida: 200 g × 334 J/g = 66 800 J, que es la mayor parte del total.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que si la temperatura no cambia no se absorbe calor."
+      },
+      {
+        "clave": "D",
+        "texto": "Aproximadamente 133,6 kJ, porque se necesitan 334 J por gramo tanto para fundir el hielo como para calentar el agua.",
+        "correcta": false,
+        "explicacion": "No responde. El valor 334 J/g es el calor latente, que solo aplica al cambio de estado. Para calentar el agua se usa el calor específico, 4,18 J por gramo y por grado, que da 16 720 J y no otros 66 800 J.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó el calor latente a las dos etapas del proceso."
+      }
+    ],
+    "explicacion": "LEER: 200 g de hielo a 0 °C terminan como agua a 20 °C; L = 334 J/g, c = 4,18 J/(g·°C). COMPRENDER: se pide la energía total absorbida. INTERPRETAR: hay dos etapas: cambio de estado a temperatura constante y luego aumento de temperatura del líquido. REPRESENTAR: Q₁ = m·L = 200 × 334 = 66 800 J; Q₂ = m·c·ΔT = 200 × 4,18 × 20 = 16 720 J. RAZONAR: ambas etapas requieren energía del ambiente, aunque en la primera el termómetro no se mueva; el total es la suma. RESOLVER: 66 800 + 16 720 = 83 520 J ≈ 83,5 kJ; la respuesta es la opción que suma ambas etapas. VERIFICAR: la fusión consume unas cuatro veces más energía que el calentamiento, lo que explica por qué el hielo tarda tanto en derretirse comparado con lo rápido que se entibia el agua.",
+    "que_identificar": "Las dos etapas del proceso (fusión a 0 °C y calentamiento hasta 20 °C) y qué constante corresponde a cada una.",
+    "que_revisar": "Calor latente de fusión; calor específico; curvas de calentamiento; conservación de la energía.",
+    "refuerzo_ids": ["CIE-021","CIE-110"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["calor","calor latente","cambios de estado","calculo","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-112",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Clasifica transformaciones de la materia como cambios físicos o químicos a partir de evidencias observadas",
+    "habilidad": "comprender",
+    "tema": "Cambios físicos y químicos",
+    "subtema": "Evidencias de reacción química en situaciones de la cocina",
+    "dificultad": 1,
+    "contexto": "En clase se pide clasificar lo que ocurre en una cocina. Un cambio es **químico** cuando se forman sustancias nuevas, y suele evidenciarse por cambio de color permanente, desprendimiento de gas, formación de un sólido o liberación de calor y luz. Un cambio es **físico** cuando la sustancia sigue siendo la misma aunque cambie su forma, tamaño o estado.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Observaciones en la cocina",
+      "columnas": ["Proceso","Observación"],
+      "filas": [
+        ["Hervir agua","Burbujas de vapor que, al enfriarse, vuelven a ser agua"],
+        ["Freír un huevo","La clara pasa de transparente a blanca y no vuelve atrás al enfriarse"],
+        ["Disolver azúcar en café","El azúcar desaparece; al evaporar el café se recupera el azúcar"],
+        ["Prender el fogón de gas","Llama azul, calor y formación de dióxido de carbono y vapor de agua"],
+        ["Picar cebolla","Trozos más pequeños con el mismo olor y sabor"]
+      ],
+      "nota": null
+    },
+    "enunciado": "¿Cuáles procesos de la tabla corresponden a cambios químicos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Hervir agua y prender el fogón, porque en ambos interviene el calor y se producen gases.",
+        "correcta": false,
+        "explicacion": "No responde. Al hervir, el vapor sigue siendo agua y se recupera al enfriar: es un cambio de estado, físico. Que haya calor o gas no basta; lo decisivo es que aparezca una sustancia nueva, como en la combustión.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier gas o calor con una reacción química."
+      },
+      {
+        "clave": "B",
+        "texto": "Freír el huevo y prender el fogón, porque en ambos se forman sustancias nuevas que no vuelven a su estado inicial.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Al freír, las proteínas de la clara cambian de forma permanente (cambio de color irreversible). En la combustión del gas se forman dióxido de carbono y agua, sustancias distintas del gas original. Los otros tres procesos conservan la sustancia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Disolver azúcar y picar cebolla, porque en ambos la sustancia original deja de verse como estaba.",
+        "correcta": false,
+        "explicacion": "No responde. En los dos casos la sustancia sigue siendo la misma: el azúcar se recupera al evaporar el café y la cebolla picada conserva olor y sabor. Cambiar de apariencia o tamaño es un cambio físico.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde cambio de apariencia con formación de una sustancia nueva."
+      },
+      {
+        "clave": "D",
+        "texto": "Freír el huevo y hervir agua, porque en ambos la temperatura modifica el estado de la sustancia de manera visible.",
+        "correcta": false,
+        "explicacion": "No responde. Freír el huevo sí es químico, pero hervir agua no: el vapor vuelve a ser agua líquida al enfriarse, según la tabla, lo que indica que no se formó una sustancia distinta.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No usó la pista de la tabla sobre la reversibilidad del vapor."
+      }
+    ],
+    "explicacion": "LEER: la tabla describe cinco procesos de cocina y el contexto da los criterios de cambio químico (sustancia nueva, color permanente, gas, calor y luz) y físico (misma sustancia). COMPRENDER: se pide identificar los cambios químicos. INTERPRETAR: hay que buscar en cada observación si aparece una sustancia nueva o si el cambio es reversible. REPRESENTAR: hervir → mismo agua (físico); freír → clara cambia de forma irreversible (químico); disolver → se recupera el azúcar (físico); fogón → CO₂ y agua nuevos (químico); picar → misma cebolla (físico). RAZONAR: solo en dos procesos la observación indica sustancias nuevas. RESOLVER: la respuesta es la opción que señala freír el huevo y prender el fogón. VERIFICAR: en los tres procesos físicos la tabla menciona explícitamente que la sustancia se recupera o conserva su olor y sabor.",
+    "que_identificar": "En cada fila, si la observación indica una sustancia nueva o la misma sustancia con otra forma o estado.",
+    "que_revisar": "Cambios físicos y químicos; evidencias de reacción; cambios de estado; disoluciones.",
+    "refuerzo_ids": ["CIE-016","CIE-113"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["cambios fisicos y quimicos","reacciones","cocina","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-113",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el cambio de temperatura en una disolución a partir de la energía absorbida o liberada en el proceso",
+    "habilidad": "razonar",
+    "tema": "Reacciones endotérmicas y exotérmicas",
+    "subtema": "Bolsa de frío instantáneo con nitrato de amonio",
+    "dificultad": 2,
+    "contexto": "Los botiquines deportivos incluyen **bolsas de frío instantáneo**: contienen nitrato de amonio sólido (NH₄NO₃) y una ampolla de agua. Al golpear la bolsa, la ampolla se rompe, la sal se disuelve y la bolsa se enfría. Un grupo midió la temperatura de la mezcla: antes de romper la ampolla, agua y sal estaban a 24 °C; a los 2 minutos la mezcla marcó 6 °C; a los 30 minutos volvió a 24 °C. La bolsa no tiene ningún componente eléctrico ni compartimentos de hielo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál explicación da cuenta del enfriamiento de la bolsa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La sal libera energía al disolverse, pero esa energía escapa tan rápido de la bolsa que la mezcla queda más fría que al principio.",
+        "correcta": false,
+        "explicacion": "No responde. Si la disolución liberara energía, la mezcla se calentaría primero, como ocurre con otras sales. Además, la energía que escapa de un sistema nunca lo deja por debajo de la temperatura del ambiente, y aquí la bolsa bajó 18 °C.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Describe un proceso exotérmico e intenta forzarlo para que explique un enfriamiento."
+      },
+      {
+        "clave": "B",
+        "texto": "El agua de la ampolla estaba congelada y al romperse se mezcla con la sal; el frío proviene del hielo que se derrite.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que el agua estaba a 24 °C antes de romper la ampolla, igual que la sal, y que la bolsa no tiene compartimentos de hielo. El frío aparece después de que la sal se disuelve.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la temperatura inicial del agua ni la aclaración sobre el hielo."
+      },
+      {
+        "clave": "C",
+        "texto": "El nitrato de amonio reacciona con el agua y produce un gas que, al expandirse dentro de la bolsa, enfría la mezcla como en un aerosol.",
+        "correcta": false,
+        "explicacion": "No responde. El nitrato de amonio se disuelve en agua sin descomponerse ni producir gas; la bolsa no se infla. El enfriamiento por expansión de gases ocurre en aerosoles y neveras, pero no es el mecanismo de esta bolsa.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Traslada el mecanismo de otro dispositivo sin evidencia de que haya gas."
+      },
+      {
+        "clave": "D",
+        "texto": "La disolución del nitrato de amonio es endotérmica: separar los iones de la sal requiere más energía de la que se libera al rodearlos de agua, y esa energía se toma del agua, cuya temperatura baja.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Disolver una sal implica romper la red cristalina (absorbe energía) y rodear los iones con moléculas de agua (libera energía). En el nitrato de amonio predomina lo primero, así que el proceso absorbe calor del agua y del entorno, y la temperatura cae de 24 °C a 6 °C.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: una bolsa con nitrato de amonio y agua, ambos a 24 °C, baja a 6 °C al mezclarse y vuelve a 24 °C en 30 minutos; no hay hielo ni partes eléctricas. COMPRENDER: se pide explicar el enfriamiento. INTERPRETAR: la temperatura cae justo cuando la sal se disuelve, así que la causa es el proceso de disolución. REPRESENTAR: disolución = romper la red del cristal (absorbe energía) + hidratar los iones (libera energía); si lo absorbido supera lo liberado, el proceso es endotérmico. RAZONAR: un proceso endotérmico toma energía del agua que lo rodea, y el agua se enfría; luego, el ambiente devuelve calor a la bolsa y la temperatura regresa a 24 °C. RESOLVER: la respuesta es la opción que describe la disolución endotérmica del nitrato de amonio. VERIFICAR: que la bolsa recupere la temperatura ambiente confirma que no había hielo almacenado, sino un intercambio de energía durante la disolución.",
+    "que_identificar": "Que la caída de temperatura coincide con la disolución de la sal y que no hay hielo ni gas en la bolsa.",
+    "que_revisar": "Procesos endotérmicos y exotérmicos; energía en la disolución de sales; transferencia de calor.",
+    "refuerzo_ids": ["CIE-112","CIE-021"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["reacciones","endotermico","disolucion","energia","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-114",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Evalúa una predicción sobre el decaimiento de un isótopo radiactivo usando el patrón de la vida media",
+    "habilidad": "verificar",
+    "tema": "Radiactividad: vida media",
+    "subtema": "Decaimiento del yodo-131 usado en medicina nuclear",
+    "dificultad": 3,
+    "contexto": "El **yodo-131** es un isótopo radiactivo que se usa para tratar enfermedades de la tiroides. Su **vida media** es de 8 días: en ese tiempo la mitad de los átomos presentes se desintegra. Un paciente recibe una dosis y el hospital registra el porcentaje de yodo-131 que queda en el cuerpo. Un auxiliar predice: *\"Después de tres vidas medias, es decir, a los 24 días, ya no quedará yodo-131\"*.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Yodo-131 remanente en el paciente",
+      "eje_x": "Tiempo (días)",
+      "eje_y": "Yodo-131 remanente (%)",
+      "series": [
+        {
+          "nombre": "Remanente",
+          "valores": [["0",100],["8",50],["16",25],["24",12.5],["32",6.25]]
+        }
+      ]
+    },
+    "enunciado": "¿Qué puede concluirse sobre la predicción del auxiliar a partir del patrón de la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es correcta: como cada vida media elimina el 50 % de la dosis inicial, en dos vidas medias se elimina el 100 % y a los 24 días ya no queda nada.",
+        "correcta": false,
+        "explicacion": "No responde. La vida media elimina la mitad de lo que hay en ese momento, no la mitad de la dosis inicial. La gráfica muestra 25 % a los 16 días y 12,5 % a los 24 días, no cero.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trata el decaimiento como una resta fija del 50 % inicial en lugar de una reducción a la mitad sucesiva."
+      },
+      {
+        "clave": "B",
+        "texto": "Es incorrecta, porque la gráfica indica que el yodo-131 desaparece por completo solo a los 32 días, cuando se completan cuatro vidas medias.",
+        "correcta": false,
+        "explicacion": "No responde. A los 32 días la gráfica marca 6,25 %, no cero. Siguiendo el patrón, a los 40 días quedaría 3,125 % y así sucesivamente; el valor se reduce a la mitad cada vez, pero no se anula.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el último punto de la gráfica como si fuera cero."
+      },
+      {
+        "clave": "C",
+        "texto": "Es incorrecta: en cada vida media queda la mitad de lo anterior, así que a los 24 días queda el 12,5 % y a los 32 días el 6,25 %; la cantidad se acerca a cero pero nunca llega a ser exactamente cero.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La gráfica muestra 100 → 50 → 25 → 12,5 → 6,25 %. Cada 8 días se divide por dos, no se resta una cantidad fija. Tres vidas medias dejan (1/2)³ = 1/8 = 12,5 %, no cero.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede evaluar, porque el ritmo de decaimiento depende del paciente y la gráfica solo muestra un caso particular.",
+        "correcta": false,
+        "explicacion": "No responde. La vida media es una propiedad del isótopo y no cambia con el paciente; de hecho, la gráfica reproduce exactamente el patrón de 8 días anunciado en el contexto, así que sí permite evaluar la predicción.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye variabilidad biológica a una constante física del isótopo."
+      }
+    ],
+    "explicacion": "LEER: vida media del yodo-131 de 8 días; la gráfica da 100, 50, 25, 12,5 y 6,25 % a los 0, 8, 16, 24 y 32 días; la predicción afirma que a los 24 días no queda nada. COMPRENDER: se pide evaluar la predicción con el patrón. INTERPRETAR: cada punto es la mitad del anterior, un decaimiento exponencial. REPRESENTAR: remanente = 100 % × (1/2)ⁿ, con n vidas medias; n = 3 → 12,5 %; n = 4 → 6,25 %. RAZONAR: dividir repetidamente por dos nunca da cero exactamente; la predicción confunde \"tres mitades sucesivas\" con \"tres veces el 50 % inicial\". RESOLVER: la respuesta es la opción que refuta la predicción con el 12,5 % a los 24 días y señala que nunca llega a cero. VERIFICAR: 100 × 0,5 × 0,5 × 0,5 = 12,5, que coincide con el punto de la gráfica a los 24 días.",
+    "que_identificar": "Que cada punto de la gráfica es la mitad del anterior y que a los 24 días el valor leído es 12,5 %, no cero.",
+    "que_revisar": "Vida media; decaimiento exponencial; isótopos radiactivos; evaluación de predicciones con datos.",
+    "refuerzo_ids": ["CIE-079","CIE-081"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["radiactividad","vida media","prediccion","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-115",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Calcula el volumen de una solución concentrada necesario para preparar una dilución de concentración conocida",
+    "habilidad": "resolver",
+    "tema": "Soluciones: dilución",
+    "subtema": "Preparación de desinfectante diluido a partir de hipoclorito comercial",
+    "dificultad": 2,
+    "contexto": "En un restaurante de Bucaramanga se desinfectan superficies con una solución de hipoclorito de sodio al **0,5 %** en masa por volumen. El producto comercial que compran tiene una concentración del **5,0 %** (5,0 g de hipoclorito por cada 100 mL). Al diluir, la cantidad de hipoclorito no cambia: solo se reparte en más volumen. Se necesita preparar **1 litro** de la solución de trabajo.",
+    "estimulo": null,
+    "enunciado": "¿Qué volumen del producto comercial debe medirse y hasta dónde debe completarse con agua?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "10 mL de producto comercial, completados con agua hasta 1 000 mL, porque pasar de 5,0 % a 0,5 % equivale a diluir cien veces.",
+        "correcta": false,
+        "explicacion": "No responde. Pasar de 5,0 % a 0,5 % es diluir diez veces, no cien: 5,0 ÷ 0,5 = 10. Con 10 mL solo habría 0,5 g de hipoclorito en el litro, es decir, una concentración del 0,05 %.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el factor de dilución al mover la coma decimal."
+      },
+      {
+        "clave": "B",
+        "texto": "100 mL de producto comercial, completados con agua hasta 1 000 mL, porque 1 000 mL al 0,5 % contienen 5,0 g de hipoclorito, que es lo que hay en 100 mL del producto.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La solución de trabajo necesita 0,5 g por cada 100 mL, es decir, 5,0 g en 1 000 mL. El producto tiene 5,0 g por cada 100 mL, así que 100 mL aportan justo esa masa. Se completa con 900 mL de agua hasta 1 litro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "500 mL de producto comercial, completados con agua hasta 1 000 mL, porque el 0,5 % corresponde a la mitad del producto.",
+        "correcta": false,
+        "explicacion": "No responde. Mezclar mitad y mitad daría una concentración de 2,5 %, cinco veces mayor que la deseada. El 0,5 % se refiere a gramos por 100 mL, no a la fracción del producto en la mezcla.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó el 0,5 % como \"la mitad\" del producto comercial."
+      },
+      {
+        "clave": "D",
+        "texto": "50 mL de producto comercial, completados con agua hasta 1 000 mL, porque la mitad de 100 mL basta para pasar de 5,0 % a 0,5 %.",
+        "correcta": false,
+        "explicacion": "No responde. 50 mL del producto contienen 2,5 g de hipoclorito; en 1 000 mL eso da 0,25 %, la mitad de lo requerido. Se necesitan 5,0 g, que están en 100 mL del producto.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió el volumen correcto por dos sin verificar la masa de hipoclorito resultante."
+      }
+    ],
+    "explicacion": "LEER: producto al 5,0 % (5,0 g por 100 mL); se quiere 1 L al 0,5 %; la masa de hipoclorito se conserva al diluir. COMPRENDER: se pide el volumen del producto y el volumen final. INTERPRETAR: 0,5 % significa 0,5 g por cada 100 mL de solución final. REPRESENTAR: masa necesaria = 0,5 g/100 mL × 1 000 mL = 5,0 g; volumen de producto = 5,0 g ÷ (5,0 g/100 mL) = 100 mL. Equivalente: C₁V₁ = C₂V₂ → 5,0 × V₁ = 0,5 × 1 000 → V₁ = 100 mL. RAZONAR: el factor de dilución es 10, así que una parte de producto y nueve de agua. RESOLVER: la respuesta es la opción que indica 100 mL de producto completados hasta 1 000 mL. VERIFICAR: 5,0 g en 1 000 mL = 0,5 g en 100 mL = 0,5 %, lo pedido.",
+    "que_identificar": "El significado de cada porcentaje (gramos por 100 mL) y que la masa de hipoclorito es la misma antes y después de diluir.",
+    "que_revisar": "Concentración porcentual masa/volumen; dilución y factor de dilución; relación C₁V₁ = C₂V₂.",
+    "refuerzo_ids": ["CIE-088","CIE-119"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["soluciones","dilucion","concentracion","desinfeccion","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-116",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Identifica una sustancia desconocida a partir de medidas de masa y volumen y una tabla de densidades",
+    "habilidad": "interpretar",
+    "tema": "Propiedades de la materia: densidad",
+    "subtema": "Identificación de un líquido con la relación masa/volumen",
+    "dificultad": 1,
+    "contexto": "Un frasco sin etiqueta contiene un líquido incoloro. Para identificarlo, un grupo de estudiantes mide con una balanza la masa de distintos volúmenes del líquido y compara con una tabla de densidades conocidas a 20 °C: agua 1,00 g/mL; etanol 0,79 g/mL; aceite de cocina 0,92 g/mL; glicerina 1,26 g/mL.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masa de distintos volúmenes del líquido desconocido",
+      "columnas": ["Volumen (mL)","Masa (g)"],
+      "filas": [[20,"15,8"],[40,"31,6"],[60,"47,4"]],
+      "nota": "La masa del recipiente ya fue descontada."
+    },
+    "enunciado": "¿Qué sustancia es, con mayor probabilidad, el líquido del frasco?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Etanol, porque en los tres ensayos la masa dividida por el volumen da 0,79 g/mL.",
+        "correcta": true,
+        "explicacion": "Es la correcta. 15,8/20 = 0,79; 31,6/40 = 0,79; 47,4/60 = 0,79 g/mL. El cociente es constante, como corresponde a una propiedad característica, y coincide con la densidad del etanol.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Agua, porque es un líquido incoloro y la masa aumenta con el volumen de forma regular.",
+        "correcta": false,
+        "explicacion": "No responde. El agua también es incolora, pero su densidad es 1,00 g/mL: 20 mL de agua pesarían 20,0 g, no 15,8 g. La masa aumenta de forma regular en cualquier líquido puro; lo que identifica es el cociente.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Identificó por la apariencia sin calcular la densidad."
+      },
+      {
+        "clave": "C",
+        "texto": "Glicerina, porque la masa total medida (94,8 g) es la mayor de los líquidos de la tabla para esos volúmenes.",
+        "correcta": false,
+        "explicacion": "No responde. La glicerina tiene 1,26 g/mL, así que 60 mL pesarían 75,6 g, no 47,4 g. Sumar las tres masas no tiene sentido físico; la densidad se obtiene dividiendo cada masa por su volumen.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Operó con los datos de la tabla sin aplicar la definición de densidad."
+      },
+      {
+        "clave": "D",
+        "texto": "Aceite de cocina, porque su densidad es menor que la del agua, igual que la del líquido medido.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que el líquido es menos denso que el agua, pero el aceite tiene 0,92 g/mL: 20 mL de aceite pesarían 18,4 g, no 15,8 g. El valor medido, 0,79 g/mL, corresponde al etanol.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detuvo en \"menor que el agua\" sin comparar el valor exacto."
+      }
+    ],
+    "explicacion": "LEER: tres pares masa-volumen del líquido y una tabla de densidades de cuatro líquidos. COMPRENDER: se pide identificar la sustancia. INTERPRETAR: la densidad es masa/volumen y es característica de cada sustancia a una temperatura dada. REPRESENTAR: 15,8/20 = 0,79; 31,6/40 = 0,79; 47,4/60 = 0,79 g/mL. RAZONAR: el cociente constante indica un líquido puro, y 0,79 g/mL coincide solo con el etanol. RESOLVER: la respuesta es la opción que identifica el etanol con el cálculo de 0,79 g/mL. VERIFICAR: ninguno de los otros líquidos daría 15,8 g en 20 mL (agua 20,0 g, aceite 18,4 g, glicerina 25,2 g).",
+    "que_identificar": "El cociente masa/volumen de cada fila y su coincidencia con un valor de la tabla de densidades.",
+    "que_revisar": "Densidad como propiedad característica; medición de masa y volumen; identificación de sustancias.",
+    "refuerzo_ids": ["CIE-108","CIE-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["densidad","propiedades de la materia","identificacion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-117",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el patrón diario de concentración de partículas finas en una ciudad relacionándolo con sus fuentes de emisión",
+    "habilidad": "interpretar",
+    "tema": "Calidad del aire y salud",
+    "subtema": "Variación horaria de PM2,5 y tráfico vehicular",
+    "dificultad": 2,
+    "contexto": "Una estación de monitoreo en una avenida de Medellín registra la concentración de **partículas finas PM2,5** (de diámetro menor a 2,5 micrómetros, que penetran hasta los alvéolos). La gráfica muestra el promedio por franja horaria de un día laboral. Ese día no hubo quemas ni incendios, y la estación está rodeada de vías con alto flujo de vehículos.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "PM2,5 promedio por franja horaria (día laboral)",
+      "eje_x": "Franja horaria",
+      "eje_y": "PM2,5 (µg/m³)",
+      "series": [
+        {
+          "nombre": "PM2,5",
+          "valores": [["0-3",10],["3-6",9],["6-9",34],["9-12",20],["12-15",13],["15-18",17],["18-21",29],["21-24",14]]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál es la explicación más razonable del patrón que muestra la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los dos máximos coinciden con las horas de mayor tráfico de la mañana y la tarde, lo que indica que la combustión en los motores de los vehículos es la fuente principal de PM2,5 en ese sitio.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los picos de 34 µg/m³ (6-9) y 29 µg/m³ (18-21) coinciden con las horas de entrada y salida del trabajo y el estudio. La estación está rodeada de vías, no hubo quemas, y la combustión incompleta de los motores libera partículas finas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El sol de la mañana calienta el aire y hace subir las partículas del suelo, por eso el pico más alto ocurre entre las 6 y las 9.",
+        "correcta": false,
+        "explicacion": "No responde. Entre las 6 y las 9 la radiación solar apenas comienza, y al mediodía, cuando el sol es más fuerte, la concentración es de las más bajas (13 µg/m³). El patrón tampoco explica el segundo pico de la noche.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone una causa que no coincide con los dos picos ni con el mínimo del mediodía."
+      },
+      {
+        "clave": "C",
+        "texto": "Las partículas provienen de incendios forestales cercanos, cuya intensidad aumenta dos veces al día por efecto de los vientos que soplan en la mañana y al anochecer.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que ese día no hubo quemas ni incendios. Además, los incendios no siguen un horario de dos picos coincidentes con los desplazamientos de la gente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró la aclaración del contexto sobre la ausencia de quemas."
+      },
+      {
+        "clave": "D",
+        "texto": "La concentración depende solo de la humedad: de noche el aire húmedo disuelve las partículas y por eso los valores nocturnos son los más bajos.",
+        "correcta": false,
+        "explicacion": "No responde. Las partículas sólidas no se disuelven en el aire húmedo. Los valores bajos de la madrugada se explican mejor porque casi no circulan vehículos, y la franja 21-24 (14 µg/m³) ya es más baja que la de 18-21 por la misma razón.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye el patrón a un factor que no está en el contexto y con un mecanismo incorrecto."
+      }
+    ],
+    "explicacion": "LEER: la gráfica de PM2,5 por franja horaria muestra 9-10 µg/m³ de madrugada, un pico de 34 entre 6 y 9, descenso a 13 al mediodía, un segundo pico de 29 entre 18 y 21 y 14 al final del día; el contexto descarta quemas y ubica la estación entre vías. COMPRENDER: se pide explicar el patrón. INTERPRETAR: dos máximos separados por un mínimo diurno es la huella típica de las horas pico de transporte. REPRESENTAR: pico de la mañana (ida al trabajo y al estudio) ↔ 34 µg/m³; pico de la tarde (regreso) ↔ 29 µg/m³; madrugada sin tráfico ↔ 9-10 µg/m³. RAZONAR: los motores de combustión emiten partículas finas; cuando circulan más vehículos la concentración sube y cuando casi no hay tráfico baja. RESOLVER: la respuesta es la opción que relaciona los picos con el tráfico vehicular. VERIFICAR: las explicaciones por sol, incendios o humedad no coinciden con los datos o contradicen el contexto.",
+    "que_identificar": "Las franjas con los dos máximos, el mínimo de madrugada y las pistas del contexto (sin quemas, rodeada de vías).",
+    "que_revisar": "Contaminación del aire: PM2,5 y PM10; fuentes de emisión; combustión en motores; efectos en la salud respiratoria.",
+    "refuerzo_ids": ["CIE-097","CIE-118"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts","calidad del aire","pm2.5","grafica de barras","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-118",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Deriva conclusiones sobre la acumulación de un contaminante en la cadena alimentaria a partir de datos de concentración por nivel trófico",
+    "habilidad": "razonar",
+    "tema": "Minería y contaminantes: mercurio",
+    "subtema": "Biomagnificación del mercurio en peces de un río minero",
+    "dificultad": 3,
+    "contexto": "En la minería informal de oro se usa **mercurio**, parte del cual llega a los ríos. Un estudio en un río del bajo Cauca midió la concentración de mercurio en organismos de distintos niveles tróficos. La norma colombiana fija un máximo de 0,5 mg/kg de mercurio en pescado para consumo humano. El mercurio no se elimina con facilidad del cuerpo de los animales.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Mercurio en organismos del río (datos hipotéticos)",
+      "columnas": ["Organismo","Nivel trófico","Se alimenta de","Mercurio (mg/kg)"],
+      "filas": [
+        ["Agua del río","—","—","0,0001"],
+        ["Plancton","Productor","Luz y nutrientes","0,01"],
+        ["Sardinata","Consumidor primario","Plancton","0,08"],
+        ["Mojarra","Consumidor secundario","Sardinata","0,35"],
+        ["Bagre","Consumidor terciario","Mojarra y otros peces","1,20"]
+      ],
+      "nota": "Valores promedio de 20 ejemplares por especie."
+    },
+    "enunciado": "¿Qué conclusión está mejor respaldada por los datos de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El agua del río es segura porque su concentración de mercurio (0,0001 mg/kg) es muy inferior a la norma, así que todos los peces pueden consumirse sin riesgo.",
+        "correcta": false,
+        "explicacion": "No responde. La norma de 0,5 mg/kg se aplica al pescado, no al agua, y el bagre tiene 1,20 mg/kg, más del doble del límite. Una concentración baja en el agua no impide que se acumule en la cadena alimentaria.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Juzga la seguridad de los peces por la concentración del agua."
+      },
+      {
+        "clave": "B",
+        "texto": "La concentración de mercurio aumenta en cada nivel trófico porque cada depredador acumula el mercurio de muchas presas y no lo elimina; por eso el bagre supera la norma aunque el agua tenga una concentración mínima.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los valores crecen 0,01 → 0,08 → 0,35 → 1,20 mg/kg al subir de nivel. Como el mercurio no se elimina, cada animal concentra el de todas las presas que come a lo largo de su vida (biomagnificación). Solo el bagre (1,20) supera el límite de 0,5 mg/kg.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los peces grandes tienen más mercurio porque absorben más agua a través de las branquias, de modo que el tamaño del animal es lo que determina su concentración.",
+        "correcta": false,
+        "explicacion": "No responde. La absorción desde el agua no explica el patrón: el agua tiene 0,0001 mg/kg, diez mil veces menos que el bagre. La columna \"se alimenta de\" muestra que la concentración sigue la dieta, no el tamaño.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye la diferencia al tamaño corporal sin usar la información sobre la alimentación."
+      },
+      {
+        "clave": "D",
+        "texto": "El mercurio se produce dentro de los peces como resultado de su metabolismo, por eso los más activos, como el bagre, tienen más.",
+        "correcta": false,
+        "explicacion": "No responde. El mercurio es un elemento químico; ningún organismo lo produce. El contexto indica que proviene de la minería y llega al río, y la tabla muestra que se concentra siguiendo la cadena alimentaria.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que un contaminante puede originarse en el metabolismo del animal."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la concentración de mercurio en agua, plancton y tres peces de niveles tróficos crecientes; la norma es 0,5 mg/kg en pescado y el mercurio no se elimina del cuerpo. COMPRENDER: se pide la conclusión mejor respaldada. INTERPRETAR: la concentración se multiplica varias veces en cada paso de la cadena: 0,01 → 0,08 → 0,35 → 1,20 mg/kg. REPRESENTAR: cada depredador come muchas presas durante su vida y retiene el mercurio de todas → concentración creciente con el nivel trófico (biomagnificación). RAZONAR: el agua tiene muy poco mercurio, pero la acumulación hace que el consumidor terciario supere la norma; la dieta explica el patrón. RESOLVER: la respuesta es la opción que describe el aumento por nivel trófico y señala que el bagre supera la norma. VERIFICAR: la mojarra (0,35) está por debajo del límite y el bagre (1,20) por encima, lo que concuerda con la conclusión.",
+    "que_identificar": "El aumento sistemático de la concentración al subir de nivel trófico, la columna de alimentación y el límite de 0,5 mg/kg.",
+    "que_revisar": "Bioacumulación y biomagnificación; cadenas tróficas; contaminación por mercurio; interpretación de normas de seguridad alimentaria.",
+    "refuerzo_ids": ["CIE-101","CIE-117"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cts","mercurio","biomagnificacion","mineria","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-119",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Calcula la cantidad de desinfectante necesaria para tratar un volumen de agua a partir de una dosis recomendada",
+    "habilidad": "resolver",
+    "tema": "Agua potable: desinfección",
+    "subtema": "Dosis de cloro para un tanque de almacenamiento",
+    "dificultad": 1,
+    "contexto": "En una vereda de Boyacá, el agua del tanque comunitario se desinfecta con una solución de hipoclorito de sodio. La guía del acueducto indica una dosis de **2 mg de cloro por cada litro** de agua y aclara que cada mililitro de la solución disponible aporta **50 mg de cloro**. El tanque contiene **2 000 litros** de agua.",
+    "estimulo": null,
+    "enunciado": "¿Qué volumen de la solución de hipoclorito debe agregarse al tanque?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "40 mL, porque se necesitan 2 000 mg de cloro para los 2 000 litros y cada mililitro aporta 50 mg.",
+        "correcta": false,
+        "explicacion": "No responde. La dosis es de 2 mg por litro, no de 1 mg: 2 000 L × 2 mg/L = 4 000 mg, no 2 000 mg. Con 40 mL el agua quedaría con la mitad de la dosis recomendada.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó multiplicar por la dosis de 2 mg por litro."
+      },
+      {
+        "clave": "B",
+        "texto": "800 mL, porque 2 000 litros son 2 000 000 mL y a esa cantidad se le aplica la dosis de 2 mg por litro.",
+        "correcta": false,
+        "explicacion": "No responde. La dosis está expresada por litro, así que no hay que convertir los litros a mililitros. Convertir y luego aplicar la dosis como si fuera por mililitro multiplica el resultado por mil y luego por una fracción incorrecta.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló unidades: convirtió litros a mililitros antes de aplicar una dosis dada por litro."
+      },
+      {
+        "clave": "C",
+        "texto": "80 mL, porque el tanque requiere 4 000 mg de cloro y cada mililitro de solución aporta 50 mg.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cloro necesario = 2 mg/L × 2 000 L = 4 000 mg. Volumen de solución = 4 000 mg ÷ 50 mg/mL = 80 mL.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "8 mL, porque 4 000 mg de cloro equivalen a 4 g, y 4 g divididos entre 50 dan 0,08, es decir, 8 mL.",
+        "correcta": false,
+        "explicacion": "No responde. El cálculo mezcla gramos y miligramos: 50 mg/mL equivalen a 0,05 g/mL, y 4 g ÷ 0,05 g/mL = 80 mL. Dividir gramos por una cantidad en miligramos produce un resultado diez veces menor.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió a gramos una de las cantidades y no la otra."
+      }
+    ],
+    "explicacion": "LEER: dosis de 2 mg de cloro por litro, solución que aporta 50 mg por mililitro y un tanque de 2 000 L. COMPRENDER: se pide el volumen de solución a agregar. INTERPRETAR: primero se halla la masa total de cloro y luego se convierte a volumen de solución. REPRESENTAR: masa = 2 mg/L × 2 000 L = 4 000 mg; volumen = 4 000 mg ÷ 50 mg/mL = 80 mL. RAZONAR: las unidades deben ser coherentes: la dosis está por litro y la solución por mililitro, pero ambas en miligramos de cloro, así que no hace falta convertir litros. RESOLVER: la respuesta es la opción que da 80 mL con 4 000 mg de cloro. VERIFICAR: 80 mL × 50 mg/mL = 4 000 mg, y 4 000 mg ÷ 2 000 L = 2 mg/L, la dosis indicada.",
+    "que_identificar": "La dosis por litro, el volumen del tanque y el aporte de cloro por mililitro de solución.",
+    "que_revisar": "Proporcionalidad y unidades de concentración (mg/L); desinfección del agua; conversión de unidades.",
+    "refuerzo_ids": ["CIE-115","CIE-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["cts","agua potable","cloracion","calculo","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-120",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Evalúa afirmaciones sobre la eficiencia de dos tecnologías de iluminación contrastándolas con datos técnicos",
+    "habilidad": "verificar",
+    "tema": "Energía en el hogar: eficiencia",
+    "subtema": "Bombillos LED frente a incandescentes: potencia, flujo luminoso y costo",
+    "dificultad": 3,
+    "contexto": "Un vendedor afirma: *\"El bombillo LED ilumina mucho más que el incandescente y por eso gasta menos\"*. Una familia de Ibagué compara las fichas técnicas de dos bombillos y calcula el costo de usarlos 1 000 horas, con una tarifa de 800 pesos por kilovatio-hora.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Comparación de dos bombillos",
+      "columnas": ["Característica","Incandescente","LED"],
+      "filas": [
+        ["Potencia eléctrica","60 W","9 W"],
+        ["Flujo luminoso (luz emitida)","800 lúmenes","800 lúmenes"],
+        ["Vida útil","1 000 h","15 000 h"],
+        ["Energía en 1 000 h","60 kWh","9 kWh"],
+        ["Costo de la energía en 1 000 h","$48 000","$7 200"]
+      ],
+      "nota": "Energía (kWh) = potencia (kW) × tiempo (h)."
+    },
+    "enunciado": "¿Qué puede concluirse sobre la afirmación del vendedor a partir de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es verdadera: el LED ilumina más porque dura 15 000 horas, quince veces más que el incandescente, y esa duración se traduce en más luz total.",
+        "correcta": false,
+        "explicacion": "No responde. La vida útil indica cuánto tiempo funciona el bombillo, no cuánta luz emite en cada momento. La fila de flujo luminoso muestra 800 lúmenes para ambos: iluminan igual mientras están encendidos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde duración del bombillo con intensidad de la luz."
+      },
+      {
+        "clave": "B",
+        "texto": "Es falsa en todo: como ambos dan 800 lúmenes, consumen la misma energía y el ahorro del LED solo proviene de cambiarlo menos veces.",
+        "correcta": false,
+        "explicacion": "No responde. Dar la misma luz no implica consumir lo mismo: la tabla muestra 60 W frente a 9 W y 48 000 frente a 7 200 pesos por 1 000 horas. El ahorro de energía existe además del ahorro por reposición.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que igual luz implica igual consumo de energía."
+      },
+      {
+        "clave": "C",
+        "texto": "Es verdadera: 60 W es la luz que emite el incandescente y 9 W la del LED, así que el LED gasta menos aunque, en realidad, ilumina menos.",
+        "correcta": false,
+        "explicacion": "No responde. Los vatios miden la potencia eléctrica consumida, no la luz emitida; la luz se mide en lúmenes y es igual (800) en ambos. Con esa lectura el LED iluminaría menos, lo que contradice la tabla.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma la potencia eléctrica como medida de la cantidad de luz."
+      },
+      {
+        "clave": "D",
+        "texto": "Es parcialmente falsa: ambos emiten la misma luz (800 lúmenes), pero el LED gasta menos porque convierte en luz una fracción mayor de la energía eléctrica y desperdicia menos en calor.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El flujo luminoso es igual, así que el LED no ilumina más. Sí gasta menos: 9 W frente a 60 W para la misma luz, porque el incandescente pierde la mayor parte de la energía como calor. El ahorro es de 51 kWh y 40 800 pesos cada 1 000 horas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la afirmación dice que el LED ilumina más y por eso gasta menos; la tabla da potencia (60 W y 9 W), flujo luminoso (800 lúmenes ambos), vida útil, energía y costo en 1 000 h. COMPRENDER: hay que contrastar cada parte de la afirmación con los datos. INTERPRETAR: la luz emitida se mide en lúmenes y es igual; el consumo se mide en vatios y es muy distinto. REPRESENTAR: incandescente: 60 W → 60 kWh → $48 000; LED: 9 W → 9 kWh → $7 200; misma luz. RAZONAR: la primera parte de la afirmación (\"ilumina más\") es falsa; la segunda (\"gasta menos\") es cierta, pero no por iluminar más, sino porque transforma más energía en luz y menos en calor. RESOLVER: la respuesta es la opción que califica la afirmación como parcialmente falsa y explica la eficiencia. VERIFICAR: 0,060 kW × 1 000 h = 60 kWh y 0,009 kW × 1 000 h = 9 kWh, como indica la tabla; 60 × 800 = 48 000 pesos.",
+    "que_identificar": "Que el flujo luminoso es igual en ambos bombillos y que la diferencia está en la potencia consumida.",
+    "que_revisar": "Potencia y energía eléctrica; eficiencia de transformación de energía; lúmenes frente a vatios; evaluación de afirmaciones publicitarias.",
+    "refuerzo_ids": ["CIE-010","CIE-098"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cts","energia en el hogar","eficiencia","led","evaluar afirmaciones","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

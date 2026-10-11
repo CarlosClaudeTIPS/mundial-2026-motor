@@ -1,0 +1,1882 @@
+[
+  {
+    "id": "LC-101",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto expositivo (divulgación histórica)",
+    "subtema": "Información explícita en un texto expositivo",
+    "dificultad": 1,
+    "contexto": "**Los champanes del Magdalena**\n\nAntes de que existieran carreteras y ferrocarriles, el río Magdalena fue durante más de tres siglos la principal vía de comunicación entre la costa Caribe y el interior de lo que hoy es Colombia. Por él subían mercancías, cartas, viajeros y funcionarios, y por él bajaban el oro, el tabaco y la quina que se exportaban a Europa. La embarcación característica de ese tráfico fue el champán: una canoa grande, de fondo plano, techada con hojas de palma, que podía medir hasta veinte metros de largo.\n\nEl champán no tenía motor ni velas. Lo movían los bogas, hombres que, de pie sobre los bordes de la embarcación, clavaban largas varas en el lecho del río y empujaban con todo el cuerpo, o remaban con canaletes en los tramos profundos. El viaje desde la costa hasta Honda podía tardar entre cuarenta y setenta días, según el caudal y el viento. Los viajeros dormían bajo el techo de palma, soportaban mosquitos y calor, y dependían por completo de la destreza de los bogas para sortear troncos y bancos de arena.\n\nHacia 1824 comenzaron a circular los primeros barcos de vapor, pero tardaron décadas en imponerse: eran costosos, encallaban con frecuencia y necesitaban leña que no siempre se conseguía. Durante buena parte del siglo XIX, vapor y champán convivieron en el mismo río. Cuando el ferrocarril y luego la carretera conectaron el interior con el mar, el champán desapareció sin ruido, y con él un oficio que había sostenido la economía del país.",
+    "estimulo": null,
+    "enunciado": "Según el texto, ¿de qué dependía la duración del viaje en champán desde la costa hasta Honda?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "De la cantidad de leña disponible en las orillas del río.",
+        "correcta": false,
+        "explicacion": "La leña aparece en el tercer párrafo como una necesidad de los barcos de vapor («necesitaban leña que no siempre se conseguía»), no de los champanes, que se movían con la fuerza de los bogas.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló la información sobre los vapores con la información sobre los champanes."
+      },
+      {
+        "clave": "B",
+        "texto": "Del caudal del río y del viento que encontraran en el trayecto.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo lo dice de manera explícita: el viaje «podía tardar entre cuarenta y setenta días, según el caudal y el viento». Son los dos factores que el texto menciona como causa de la variación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Del número de mercancías y pasajeros que llevara la embarcación.",
+        "correcta": false,
+        "explicacion": "El texto enumera lo que se transportaba (mercancías, cartas, viajeros, oro, tabaco, quina), pero en ningún momento relaciona la carga con la duración del viaje.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una relación lógica entre carga y velocidad que el texto no plantea."
+      },
+      {
+        "clave": "D",
+        "texto": "De la cantidad de troncos y bancos de arena que hubiera en el lecho del río.",
+        "correcta": false,
+        "explicacion": "Los troncos y bancos de arena se mencionan como obstáculos que los bogas debían sortear con destreza, pero el texto no los señala como la causa de que el viaje durara más o menos días.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un detalle cercano a la frase buscada y lo confundió con la causa que el texto sí menciona."
+      }
+    ],
+    "explicacion": "LEER: busco en el texto la frase sobre la duración del viaje desde la costa hasta Honda. COMPRENDER: la pregunta pide una información explícita, no una deducción. INTERPRETAR: la oración dice que el viaje podía tardar entre cuarenta y setenta días «según el caudal y el viento». REPRESENTAR: duración variable → causas: caudal + viento. RAZONAR: la leña se asocia a los vapores, no al champán; la carga y los obstáculos del lecho se mencionan, pero no como causa de la duración. RESOLVER: la opción que señala el caudal y el viento. VERIFICAR: releo el segundo párrafo y confirmo que la expresión «según el caudal y el viento» sigue inmediatamente a la duración del viaje.",
+    "que_identificar": "La oración del segundo párrafo: «El viaje desde la costa hasta Honda podía tardar entre cuarenta y setenta días, según el caudal y el viento».",
+    "que_revisar": "Localizar información explícita y distinguir, en un párrafo, qué dato responde exactamente a la pregunta y cuáles son detalles vecinos.",
+    "refuerzo_ids": [
+      "LC-102",
+      "LC-053"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T30",
+      "expositivo",
+      "historia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-102",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto expositivo (divulgación histórica)",
+    "subtema": "Sentido de una expresión en el texto",
+    "dificultad": 2,
+    "contexto": "**Los champanes del Magdalena**\n\nAntes de que existieran carreteras y ferrocarriles, el río Magdalena fue durante más de tres siglos la principal vía de comunicación entre la costa Caribe y el interior de lo que hoy es Colombia. Por él subían mercancías, cartas, viajeros y funcionarios, y por él bajaban el oro, el tabaco y la quina que se exportaban a Europa. La embarcación característica de ese tráfico fue el champán: una canoa grande, de fondo plano, techada con hojas de palma, que podía medir hasta veinte metros de largo.\n\nEl champán no tenía motor ni velas. Lo movían los bogas, hombres que, de pie sobre los bordes de la embarcación, clavaban largas varas en el lecho del río y empujaban con todo el cuerpo, o remaban con canaletes en los tramos profundos. El viaje desde la costa hasta Honda podía tardar entre cuarenta y setenta días, según el caudal y el viento. Los viajeros dormían bajo el techo de palma, soportaban mosquitos y calor, y dependían por completo de la destreza de los bogas para sortear troncos y bancos de arena.\n\nHacia 1824 comenzaron a circular los primeros barcos de vapor, pero tardaron décadas en imponerse: eran costosos, encallaban con frecuencia y necesitaban leña que no siempre se conseguía. Durante buena parte del siglo XIX, vapor y champán convivieron en el mismo río. Cuando el ferrocarril y luego la carretera conectaron el interior con el mar, el champán desapareció sin ruido, y con él un oficio que había sostenido la economía del país.",
+    "estimulo": null,
+    "enunciado": "En la última oración, la expresión «desapareció sin ruido» indica que el champán",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "era una embarcación tan silenciosa que nadie notaba cuándo pasaba por el río.",
+        "correcta": false,
+        "explicacion": "Aunque el champán no tenía motor, la expresión no se refiere al ruido real de la embarcación, sino a la manera en que terminó su historia; el contexto («y con él un oficio») habla de su fin, no de su navegación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció «sin ruido» con la ausencia de motor en lugar de leer la oración completa."
+      },
+      {
+        "clave": "B",
+        "texto": "se hundió en el río durante una época de poco caudal y mucho viento.",
+        "correcta": false,
+        "explicacion": "Nada en el texto habla de hundimientos ni de un desastre. La expresión es figurada: no describe un accidente físico sino la forma discreta en que el champán dejó de usarse.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó de manera literal una expresión figurada."
+      },
+      {
+        "clave": "C",
+        "texto": "dejó de fabricarse porque los bogas protestaron en silencio contra el vapor.",
+        "correcta": false,
+        "explicacion": "El texto no menciona protestas ni resistencia de los bogas; al contrario, señala que el oficio desapareció junto con la embarcación como consecuencia de las nuevas vías de transporte.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó una causa social que el texto no sugiere en ninguna parte."
+      },
+      {
+        "clave": "D",
+        "texto": "fue reemplazado de manera gradual, sin un hecho concreto que marcara su final.",
+        "correcta": true,
+        "explicacion": "El texto describe un proceso lento: vapor y champán convivieron durante décadas y, cuando llegaron el ferrocarril y la carretera, el champán simplemente dejó de usarse. «Sin ruido» alude a esa desaparición silenciosa y progresiva, no anunciada por un acontecimiento.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico la última oración del texto y la expresión «desapareció sin ruido». COMPRENDER: debo interpretar el sentido de esa expresión en su contexto, no su significado literal. INTERPRETAR: el párrafo cuenta que los vapores tardaron décadas en imponerse y que el champán solo desapareció cuando el ferrocarril y la carretera unieron el interior con el mar. REPRESENTAR: proceso largo → convivencia → sustitución → fin silencioso. RAZONAR: no hubo accidente, protesta ni acontecimiento; el fin fue paulatino y casi inadvertido. Las opciones del hundimiento y del silencio del motor leen la frase de forma literal; la de las protestas inventa información. RESOLVER: la opción que habla de un reemplazo gradual sin un hecho que marcara el final. VERIFICAR: la frase siguiente, «y con él un oficio», confirma que se habla del final de una época.",
+    "que_identificar": "La relación entre «desapareció sin ruido» y el proceso descrito en el tercer párrafo (convivencia de vapor y champán, llegada del ferrocarril y la carretera).",
+    "que_revisar": "Interpretar expresiones figuradas a partir del contexto inmediato y del desarrollo del párrafo.",
+    "refuerzo_ids": [
+      "LC-101",
+      "LC-103"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T30",
+      "expositivo",
+      "historia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-103",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "representar",
+    "tema": "Texto expositivo (divulgación histórica)",
+    "subtema": "Función de un párrafo en la estructura del texto",
+    "dificultad": 2,
+    "contexto": "**Los champanes del Magdalena**\n\nAntes de que existieran carreteras y ferrocarriles, el río Magdalena fue durante más de tres siglos la principal vía de comunicación entre la costa Caribe y el interior de lo que hoy es Colombia. Por él subían mercancías, cartas, viajeros y funcionarios, y por él bajaban el oro, el tabaco y la quina que se exportaban a Europa. La embarcación característica de ese tráfico fue el champán: una canoa grande, de fondo plano, techada con hojas de palma, que podía medir hasta veinte metros de largo.\n\nEl champán no tenía motor ni velas. Lo movían los bogas, hombres que, de pie sobre los bordes de la embarcación, clavaban largas varas en el lecho del río y empujaban con todo el cuerpo, o remaban con canaletes en los tramos profundos. El viaje desde la costa hasta Honda podía tardar entre cuarenta y setenta días, según el caudal y el viento. Los viajeros dormían bajo el techo de palma, soportaban mosquitos y calor, y dependían por completo de la destreza de los bogas para sortear troncos y bancos de arena.\n\nHacia 1824 comenzaron a circular los primeros barcos de vapor, pero tardaron décadas en imponerse: eran costosos, encallaban con frecuencia y necesitaban leña que no siempre se conseguía. Durante buena parte del siglo XIX, vapor y champán convivieron en el mismo río. Cuando el ferrocarril y luego la carretera conectaron el interior con el mar, el champán desapareció sin ruido, y con él un oficio que había sostenido la economía del país.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la función del tercer párrafo en relación con los dos anteriores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Introducir la tecnología que terminó sustituyendo al champán y explicar por qué la sustitución fue lenta.",
+        "correcta": true,
+        "explicacion": "Los dos primeros párrafos describen el champán y el trabajo de los bogas; el tercero presenta los barcos de vapor, explica las dificultades que retrasaron su triunfo (costo, encallamientos, leña) y cierra con el final del champán. Es el párrafo que narra el cambio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Describir con más detalle las condiciones del viaje que los pasajeros soportaban en el champán.",
+        "correcta": false,
+        "explicacion": "Las condiciones del viaje (mosquitos, calor, dormir bajo el techo de palma) están en el segundo párrafo. El tercero cambia de tema: habla de los barcos de vapor y de la desaparición del champán.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al tercer párrafo el contenido del segundo sin revisar dónde termina cada idea."
+      },
+      {
+        "clave": "C",
+        "texto": "Demostrar que el vapor fue superior al champán desde el primer día en que empezó a navegar por el río.",
+        "correcta": false,
+        "explicacion": "El párrafo dice lo contrario: los vapores «tardaron décadas en imponerse» porque eran costosos, encallaban y necesitaban leña escasa. No presenta una superioridad inmediata.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que la llegada de una tecnología nueva implica su triunfo inmediato, en contra de lo que dice el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "Explicar por qué el río Magdalena dejó de ser navegable después de la construcción del ferrocarril.",
+        "correcta": false,
+        "explicacion": "El texto no afirma que el río dejara de ser navegable; afirma que el champán dejó de usarse cuando otras vías conectaron el interior con el mar. Son cosas distintas.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Exageró la conclusión del párrafo y la convirtió en una afirmación sobre el río."
+      }
+    ],
+    "explicacion": "LEER: repaso el contenido de cada párrafo. COMPRENDER: la pregunta pide la función del tercero respecto a los otros dos en la organización del texto. INTERPRETAR: párrafo 1 = importancia del río y descripción del champán; párrafo 2 = los bogas y las condiciones del viaje; párrafo 3 = llegada del vapor, dificultades, convivencia y desaparición del champán. REPRESENTAR: descripción → funcionamiento → cambio y final. RAZONAR: el tercer párrafo no repite condiciones del viaje, no muestra una superioridad inmediata del vapor ni habla de que el río dejara de ser navegable; introduce la tecnología que reemplazó al champán y explica la lentitud del reemplazo. RESOLVER: la opción que menciona la introducción del vapor y la lentitud de la sustitución. VERIFICAR: las frases «tardaron décadas en imponerse» y «convivieron en el mismo río» confirman la idea de un cambio lento.",
+    "que_identificar": "El contenido central de cada párrafo y el giro temático que ocurre al comenzar el tercero («Hacia 1824 comenzaron a circular los primeros barcos de vapor…»).",
+    "que_revisar": "Reconocer la estructura de un texto expositivo: cómo cada párrafo aporta una parte distinta (descripción, funcionamiento, transformación).",
+    "refuerzo_ids": [
+      "LC-102",
+      "LC-098"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T30",
+      "expositivo",
+      "historia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-104",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto expositivo (divulgación histórica)",
+    "subtema": "Afirmaciones respaldadas por el texto",
+    "dificultad": 3,
+    "contexto": "**Los champanes del Magdalena**\n\nAntes de que existieran carreteras y ferrocarriles, el río Magdalena fue durante más de tres siglos la principal vía de comunicación entre la costa Caribe y el interior de lo que hoy es Colombia. Por él subían mercancías, cartas, viajeros y funcionarios, y por él bajaban el oro, el tabaco y la quina que se exportaban a Europa. La embarcación característica de ese tráfico fue el champán: una canoa grande, de fondo plano, techada con hojas de palma, que podía medir hasta veinte metros de largo.\n\nEl champán no tenía motor ni velas. Lo movían los bogas, hombres que, de pie sobre los bordes de la embarcación, clavaban largas varas en el lecho del río y empujaban con todo el cuerpo, o remaban con canaletes en los tramos profundos. El viaje desde la costa hasta Honda podía tardar entre cuarenta y setenta días, según el caudal y el viento. Los viajeros dormían bajo el techo de palma, soportaban mosquitos y calor, y dependían por completo de la destreza de los bogas para sortear troncos y bancos de arena.\n\nHacia 1824 comenzaron a circular los primeros barcos de vapor, pero tardaron décadas en imponerse: eran costosos, encallaban con frecuencia y necesitaban leña que no siempre se conseguía. Durante buena parte del siglo XIX, vapor y champán convivieron en el mismo río. Cuando el ferrocarril y luego la carretera conectaron el interior con el mar, el champán desapareció sin ruido, y con él un oficio que había sostenido la economía del país.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones está mejor respaldada por la información del texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El ferrocarril llegó al interior del país antes de que circularan los primeros vapores.",
+        "correcta": false,
+        "explicacion": "El orden que da el texto es el contrario: primero los vapores (hacia 1824), luego la convivencia durante el siglo XIX y después el ferrocarril y la carretera, que son los que finalmente acaban con el champán.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la secuencia temporal de las tecnologías que menciona el texto."
+      },
+      {
+        "clave": "B",
+        "texto": "Los bogas fueron contratados como tripulantes de los nuevos barcos de vapor.",
+        "correcta": false,
+        "explicacion": "El texto no dice qué pasó con los bogas al llegar el vapor; solo señala que el oficio desapareció junto con el champán. Suponer que pasaron a los vapores es una invención sin apoyo textual.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Completó la historia con una suposición razonable pero ausente en el texto."
+      },
+      {
+        "clave": "C",
+        "texto": "La llegada del barco de vapor no eliminó de inmediato el oficio de los bogas.",
+        "correcta": true,
+        "explicacion": "El texto afirma que los vapores tardaron décadas en imponerse y que «durante buena parte del siglo XIX, vapor y champán convivieron en el mismo río». Si el champán siguió navegando, los bogas siguieron trabajando; la afirmación se deduce directamente del texto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El tabaco y la quina eran productos que se importaban desde Europa por el río.",
+        "correcta": false,
+        "explicacion": "El texto dice que el oro, el tabaco y la quina «bajaban» por el río para ser «exportados a Europa», es decir, salían del país. La opción invierte la dirección del comercio.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió exportar con importar al leer rápidamente el primer párrafo."
+      }
+    ],
+    "explicacion": "LEER: reviso las cuatro afirmaciones y busco el pasaje que podría respaldar cada una. COMPRENDER: debo elegir la afirmación que se sostenga en lo que el texto dice, no en lo que parece lógico. INTERPRETAR: el tercer párrafo dice que los vapores tardaron décadas en imponerse y convivieron con el champán; el primero dice que tabaco y quina se exportaban; el orden temporal es vapor → ferrocarril → carretera. REPRESENTAR: convivencia de décadas = los bogas siguieron trabajando. RAZONAR: la opción sobre los bogas en los vapores no tiene apoyo; la del ferrocarril invierte la cronología; la del tabaco invierte el sentido del comercio. RESOLVER: la afirmación de que el vapor no eliminó de inmediato el oficio de los bogas. VERIFICAR: la frase «vapor y champán convivieron en el mismo río» confirma la conclusión.",
+    "que_identificar": "Las frases «tardaron décadas en imponerse» y «vapor y champán convivieron en el mismo río», que implican la continuidad del oficio de los bogas.",
+    "que_revisar": "Distinguir entre inferencias válidas (apoyadas en el texto) y suposiciones plausibles pero sin respaldo.",
+    "refuerzo_ids": [
+      "LC-103",
+      "LC-088"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T30",
+      "expositivo",
+      "historia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-105",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Identifica los eventos narrados de manera explícita en un texto (literario, descriptivo, caricatura o cómic) y los personajes involucrados",
+    "habilidad": "leer",
+    "tema": "Texto literario (fábula contemporánea)",
+    "subtema": "Eventos explícitos en un relato",
+    "dificultad": 1,
+    "contexto": "**El colibrí y el frailejón**\n\nEn lo alto del páramo, donde las nubes caminan a ras de suelo, vivía un frailejón viejo que había crecido apenas un centímetro cada año. A su lado llegó, una mañana de niebla, un colibrí recién salido del nido, con las alas todavía torpes y la prisa de los que acaban de nacer.\n\n—¿Cuántos años tienes? —preguntó el colibrí, que ya había visitado veinte flores antes del mediodía.\n\n—Doscientos, más o menos —respondió el frailejón—. He dejado de contar.\n\nEl colibrí soltó una risa breve como un chasquido.\n\n—Doscientos años para medir dos metros. Yo en un solo día recorro toda la ladera.\n\n—Es cierto —dijo el frailejón—. Y en ese mismo día bebes de mis flores, te resguardas del viento entre mis hojas y encuentras en mi tallo los insectos que te alimentan. Recorres la ladera, pero regresas.\n\nEl colibrí no respondió. Esa tarde cayó una helada, de esas que queman el páramo en una sola noche, y el colibrí se refugió entre las hojas lanudas del frailejón, que guardaban el calor del día como una cobija. Al amanecer, antes de salir, se detuvo un instante frente a la flor amarilla.\n\n—No fue una pregunta justa —dijo.\n\n—Ninguna pregunta sobre la edad lo es —respondió el frailejón—. Lo justo es preguntar para qué sirve el tiempo que cada uno tiene.",
+    "estimulo": null,
+    "enunciado": "Según el relato, ¿qué hizo el colibrí cuando cayó la helada?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se refugió entre las hojas lanudas del frailejón, que conservaban el calor del día.",
+        "correcta": true,
+        "explicacion": "El texto lo narra de manera explícita: «el colibrí se refugió entre las hojas lanudas del frailejón, que guardaban el calor del día como una cobija». Es el hecho que ocurre la tarde de la helada.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Voló hasta la parte baja de la ladera para escapar del frío de la noche.",
+        "correcta": false,
+        "explicacion": "El relato dice que el colibrí recorría la ladera durante el día, pero cuando cayó la helada no se fue: se quedó junto al frailejón y se refugió entre sus hojas.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló la presunción del colibrí («recorro toda la ladera») con lo que efectivamente hizo durante la helada."
+      },
+      {
+        "clave": "C",
+        "texto": "Bebió de la flor amarilla del frailejón para recuperar fuerzas antes de dormir.",
+        "correcta": false,
+        "explicacion": "Beber de las flores es algo que el frailejón menciona como hábito diario del colibrí, pero el texto no dice que lo hiciera la noche de la helada; esa noche el colibrí buscó abrigo entre las hojas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó una acción habitual mencionada en el diálogo como si fuera el evento de esa noche."
+      },
+      {
+        "clave": "D",
+        "texto": "Le pidió perdón al frailejón por haberse reído de su edad y de su tamaño.",
+        "correcta": false,
+        "explicacion": "La disculpa («No fue una pregunta justa») ocurre al amanecer siguiente, antes de salir, no durante la helada. Además, el colibrí no pide perdón de forma directa: reconoce que su pregunta no fue justa.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Alteró el orden de los eventos y adelantó la escena final del relato."
+      }
+    ],
+    "explicacion": "LEER: localizo en el relato el momento en que «cayó una helada». COMPRENDER: la pregunta pide el evento explícito que ocurre en ese instante, no lo que el colibrí hace habitualmente ni lo que ocurre después. INTERPRETAR: la oración continúa: «el colibrí se refugió entre las hojas lanudas del frailejón». REPRESENTAR: secuencia: diálogo → helada → refugio entre las hojas → amanecer → disculpa. RAZONAR: volar ladera abajo no aparece; beber de la flor es un hábito que menciona el frailejón; la disculpa ocurre al amanecer. RESOLVER: la opción que describe el refugio entre las hojas lanudas. VERIFICAR: la comparación «como una cobija» confirma que las hojas le dieron abrigo esa noche.",
+    "que_identificar": "La oración «el colibrí se refugió entre las hojas lanudas del frailejón, que guardaban el calor del día como una cobija».",
+    "que_revisar": "Seguir el orden cronológico de los eventos de un relato y separar hechos narrados de acciones mencionadas en los diálogos.",
+    "refuerzo_ids": [
+      "LC-106",
+      "LC-093"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T31",
+      "literario",
+      "fabula"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-106",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (fábula contemporánea)",
+    "subtema": "Caracterización de personajes a partir de sus palabras",
+    "dificultad": 2,
+    "contexto": "**El colibrí y el frailejón**\n\nEn lo alto del páramo, donde las nubes caminan a ras de suelo, vivía un frailejón viejo que había crecido apenas un centímetro cada año. A su lado llegó, una mañana de niebla, un colibrí recién salido del nido, con las alas todavía torpes y la prisa de los que acaban de nacer.\n\n—¿Cuántos años tienes? —preguntó el colibrí, que ya había visitado veinte flores antes del mediodía.\n\n—Doscientos, más o menos —respondió el frailejón—. He dejado de contar.\n\nEl colibrí soltó una risa breve como un chasquido.\n\n—Doscientos años para medir dos metros. Yo en un solo día recorro toda la ladera.\n\n—Es cierto —dijo el frailejón—. Y en ese mismo día bebes de mis flores, te resguardas del viento entre mis hojas y encuentras en mi tallo los insectos que te alimentan. Recorres la ladera, pero regresas.\n\nEl colibrí no respondió. Esa tarde cayó una helada, de esas que queman el páramo en una sola noche, y el colibrí se refugió entre las hojas lanudas del frailejón, que guardaban el calor del día como una cobija. Al amanecer, antes de salir, se detuvo un instante frente a la flor amarilla.\n\n—No fue una pregunta justa —dijo.\n\n—Ninguna pregunta sobre la edad lo es —respondió el frailejón—. Lo justo es preguntar para qué sirve el tiempo que cada uno tiene.",
+    "estimulo": null,
+    "enunciado": "La comparación «una risa breve como un chasquido» y la frase «Yo en un solo día recorro toda la ladera» presentan al colibrí, al inicio del relato, como un personaje",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "tímido y respetuoso, que no se atreve a contradecir a un ser mucho más viejo.",
+        "correcta": false,
+        "explicacion": "El colibrí hace lo contrario: se ríe del frailejón y le replica con una comparación que lo desvaloriza («Doscientos años para medir dos metros»). No hay timidez ni respeto en ese momento.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Proyectó sobre el inicio del relato la actitud que el colibrí adopta al final."
+      },
+      {
+        "clave": "B",
+        "texto": "presumido e impaciente, que mide el valor de los demás por su rapidez.",
+        "correcta": true,
+        "explicacion": "La risa seca y la comparación de sus logros diarios con los doscientos años del frailejón muestran a un colibrí que se burla y que considera que valer es moverse rápido. El narrador ya lo había anunciado con «la prisa de los que acaban de nacer».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "curioso y reflexivo, que pregunta la edad para aprender del frailejón.",
+        "correcta": false,
+        "explicacion": "La pregunta inicial podría parecer curiosidad, pero la risa que sigue y la burla por la lentitud muestran que el colibrí no busca aprender, sino compararse favorablemente.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se quedó con la pregunta inicial y no leyó la reacción posterior del personaje."
+      },
+      {
+        "clave": "D",
+        "texto": "triste y cansado, que envidia la larga vida del frailejón en el páramo.",
+        "correcta": false,
+        "explicacion": "No hay señales de tristeza ni de envidia: el colibrí se muestra orgulloso de su propia velocidad y considera inútil la longevidad del frailejón, como indica su burla.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó al personaje emociones que el texto no sugiere en ninguna de sus frases."
+      }
+    ],
+    "explicacion": "LEER: ubico la risa «breve como un chasquido» y la frase sobre recorrer la ladera en un día. COMPRENDER: la pregunta pide caracterizar al colibrí al inicio, a partir de sus palabras y gestos. INTERPRETAR: reírse de la edad del otro y presumir de la propia velocidad son signos de arrogancia; «la prisa de los que acaban de nacer» refuerza la impaciencia. REPRESENTAR: inicio = burla y presunción; final = reconocimiento («No fue una pregunta justa»). RAZONAR: timidez y respeto describen el final, no el inicio; la curiosidad no explica la burla; no hay tristeza ni envidia. RESOLVER: la opción que lo describe como presumido e impaciente. VERIFICAR: el frailejón responde justamente a esa presunción al recordarle que «recorres la ladera, pero regresas».",
+    "que_identificar": "Los gestos y frases del colibrí en la primera parte del diálogo, en contraste con su actitud al amanecer.",
+    "que_revisar": "Caracterizar personajes a partir de lo que dicen y hacen, y notar cómo cambian a lo largo del relato.",
+    "refuerzo_ids": [
+      "LC-105",
+      "LC-094"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T31",
+      "literario",
+      "fabula"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-107",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (fábula contemporánea)",
+    "subtema": "Sentido de la respuesta final del relato",
+    "dificultad": 2,
+    "contexto": "**El colibrí y el frailejón**\n\nEn lo alto del páramo, donde las nubes caminan a ras de suelo, vivía un frailejón viejo que había crecido apenas un centímetro cada año. A su lado llegó, una mañana de niebla, un colibrí recién salido del nido, con las alas todavía torpes y la prisa de los que acaban de nacer.\n\n—¿Cuántos años tienes? —preguntó el colibrí, que ya había visitado veinte flores antes del mediodía.\n\n—Doscientos, más o menos —respondió el frailejón—. He dejado de contar.\n\nEl colibrí soltó una risa breve como un chasquido.\n\n—Doscientos años para medir dos metros. Yo en un solo día recorro toda la ladera.\n\n—Es cierto —dijo el frailejón—. Y en ese mismo día bebes de mis flores, te resguardas del viento entre mis hojas y encuentras en mi tallo los insectos que te alimentan. Recorres la ladera, pero regresas.\n\nEl colibrí no respondió. Esa tarde cayó una helada, de esas que queman el páramo en una sola noche, y el colibrí se refugió entre las hojas lanudas del frailejón, que guardaban el calor del día como una cobija. Al amanecer, antes de salir, se detuvo un instante frente a la flor amarilla.\n\n—No fue una pregunta justa —dijo.\n\n—Ninguna pregunta sobre la edad lo es —respondió el frailejón—. Lo justo es preguntar para qué sirve el tiempo que cada uno tiene.",
+    "estimulo": null,
+    "enunciado": "Con la frase «Lo justo es preguntar para qué sirve el tiempo que cada uno tiene», el frailejón sugiere que",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "es inútil contar los años porque en el páramo el tiempo pasa de forma distinta.",
+        "correcta": false,
+        "explicacion": "Que el frailejón haya «dejado de contar» es un detalle del diálogo, pero la frase final no habla del paso del tiempo en el páramo sino del uso que cada ser le da a su propio tiempo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se apoyó en un detalle anterior («He dejado de contar») y no en la oración que debía interpretar."
+      },
+      {
+        "clave": "B",
+        "texto": "los seres que viven más años tienen más derecho a juzgar a los que viven poco.",
+        "correcta": false,
+        "explicacion": "El frailejón afirma justamente lo contrario: «Ninguna pregunta sobre la edad lo es [justa]». No reclama autoridad por su edad; rechaza que la edad sea un criterio para juzgar.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la frase como una reivindicación de la vejez en vez de como un rechazo a comparar edades."
+      },
+      {
+        "clave": "C",
+        "texto": "el colibrí debería dejar de volar tanto y quedarse quieto como el frailejón.",
+        "correcta": false,
+        "explicacion": "El frailejón nunca le pide al colibrí que cambie su manera de vivir; reconoce que recorre la ladera y solo le recuerda que regresa. La frase final no es un consejo sobre quedarse quieto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió la reflexión final en una instrucción práctica que el texto no da."
+      },
+      {
+        "clave": "D",
+        "texto": "el valor de una vida no se mide por su duración ni por su velocidad, sino por lo que aporta.",
+        "correcta": true,
+        "explicacion": "El frailejón desplaza la discusión: ya no importa cuántos años se tienen (doscientos o uno) ni cuán rápido se vive, sino qué se hace con el tiempo. Él mismo lo ha mostrado al dar alimento y refugio al colibrí.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico la última intervención del frailejón. COMPRENDER: debo interpretar qué idea general transmite esa frase dentro del relato. INTERPRETAR: toda la historia opone dos formas de medir: años y metros (duración, tamaño) frente a velocidad; el frailejón propone un tercer criterio: para qué sirve el tiempo. REPRESENTAR: edad / velocidad → criterios injustos; utilidad del tiempo → criterio justo. RAZONAR: la opción sobre el derecho a juzgar contradice «ninguna pregunta sobre la edad es justa»; la de quedarse quieto es un consejo que no aparece; la del tiempo en el páramo se apoya en un detalle lateral. RESOLVER: la opción que afirma que el valor de la vida está en lo que aporta, no en su duración o velocidad. VERIFICAR: los actos del frailejón (alimentar y abrigar al colibrí) ilustran esa idea.",
+    "que_identificar": "La frase final del frailejón y su relación con la discusión anterior sobre edad y velocidad.",
+    "que_revisar": "Identificar la enseñanza o idea central de una fábula a partir del desenlace y de la actitud de los personajes.",
+    "refuerzo_ids": [
+      "LC-108",
+      "LC-105"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T31",
+      "literario",
+      "fabula"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-108",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece relaciones entre un texto y otros textos o enunciados",
+    "habilidad": "razonar",
+    "tema": "Texto literario (fábula contemporánea)",
+    "subtema": "Relación entre la enseñanza del texto y otros enunciados",
+    "dificultad": 3,
+    "contexto": "**El colibrí y el frailejón**\n\nEn lo alto del páramo, donde las nubes caminan a ras de suelo, vivía un frailejón viejo que había crecido apenas un centímetro cada año. A su lado llegó, una mañana de niebla, un colibrí recién salido del nido, con las alas todavía torpes y la prisa de los que acaban de nacer.\n\n—¿Cuántos años tienes? —preguntó el colibrí, que ya había visitado veinte flores antes del mediodía.\n\n—Doscientos, más o menos —respondió el frailejón—. He dejado de contar.\n\nEl colibrí soltó una risa breve como un chasquido.\n\n—Doscientos años para medir dos metros. Yo en un solo día recorro toda la ladera.\n\n—Es cierto —dijo el frailejón—. Y en ese mismo día bebes de mis flores, te resguardas del viento entre mis hojas y encuentras en mi tallo los insectos que te alimentan. Recorres la ladera, pero regresas.\n\nEl colibrí no respondió. Esa tarde cayó una helada, de esas que queman el páramo en una sola noche, y el colibrí se refugió entre las hojas lanudas del frailejón, que guardaban el calor del día como una cobija. Al amanecer, antes de salir, se detuvo un instante frente a la flor amarilla.\n\n—No fue una pregunta justa —dijo.\n\n—Ninguna pregunta sobre la edad lo es —respondió el frailejón—. Lo justo es preguntar para qué sirve el tiempo que cada uno tiene.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados expresa una idea más cercana a la enseñanza del relato?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "«Más vale crecer un centímetro al año que no crecer en absoluto».",
+        "correcta": false,
+        "explicacion": "Aunque toma el detalle del crecimiento del frailejón, el relato no defiende la lentitud como virtud en sí misma; el frailejón ni siquiera presume de su edad, dice haber dejado de contarla.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con un detalle del texto y lo convirtió en moraleja."
+      },
+      {
+        "clave": "B",
+        "texto": "«El que madruga encuentra las mejores flores antes de que lleguen los demás».",
+        "correcta": false,
+        "explicacion": "Este enunciado celebra la rapidez y la ventaja de llegar primero, que es precisamente la actitud del colibrí al inicio del relato, la que el frailejón cuestiona.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió una idea que coincide con el personaje del colibrí, no con la enseñanza del relato."
+      },
+      {
+        "clave": "C",
+        "texto": "«Nadie vive bien por vivir mucho ni por vivir deprisa, sino por saber en qué gasta sus días».",
+        "correcta": true,
+        "explicacion": "Este enunciado recoge las dos ideas que el relato rechaza (medir la vida por su duración o por su velocidad) y la que propone (lo importante es el uso del tiempo), tal como lo formula el frailejón al final.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "«Quien recibe un favor en la noche debe pagarlo al amanecer siguiente».",
+        "correcta": false,
+        "explicacion": "El colibrí reconoce al amanecer que su pregunta no fue justa, pero el relato no plantea la relación entre ambos como una deuda que deba pagarse; el frailejón no le reclama nada.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpretó la escena final como una transacción en lugar de un reconocimiento."
+      }
+    ],
+    "explicacion": "LEER: releo el final del relato y formulo su enseñanza: lo que importa no es cuánto ni cuán rápido se vive, sino para qué se usa el tiempo. COMPRENDER: debo relacionar esa enseñanza con enunciados externos y elegir el más cercano. INTERPRETAR: cada opción resume una idea distinta: rapidez, lentitud, deuda, uso del tiempo. REPRESENTAR: colibrí = rapidez; frailejón = duración; enseñanza = uso del tiempo. RAZONAR: la frase del que madruga coincide con el colibrí presumido; la del centímetro exalta la lentitud, que el relato no defiende; la de pagar el favor introduce una idea de deuda ausente. RESOLVER: la opción que dice que nadie vive bien por vivir mucho ni deprisa, sino por saber en qué gasta sus días. VERIFICAR: esa frase traduce casi punto por punto la última intervención del frailejón.",
+    "que_identificar": "La enseñanza expresada en la última frase del frailejón y la oposición entre los criterios de edad, velocidad y utilidad del tiempo.",
+    "que_revisar": "Relacionar la idea central de un texto literario con enunciados externos (refranes, máximas) y descartar los que coinciden solo con un personaje o un detalle.",
+    "refuerzo_ids": [
+      "LC-107",
+      "LC-087"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T31",
+      "literario",
+      "fabula"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-109",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto discontinuo (factura de servicios con tabla)",
+    "subtema": "Información explícita en un documento de servicios",
+    "dificultad": 1,
+    "contexto": "**Factura de acueducto y alcantarillado — Empresa de Servicios Públicos de Villa del Sol**\n\nUsuario: hogar residencial, barrio La Esperanza. Periodo facturado: 1 al 30 de septiembre. Fecha límite de pago: 15 de octubre.\n\n**Mensajes para el usuario**\n\n1. Su consumo del periodo supera en más del 30 % el promedio de los cinco meses anteriores. Revise fugas en sanitarios, llaves y tanques: una gota por segundo equivale a cerca de 30 litros diarios desperdiciados.\n\n2. El consumo básico subsidiado para su estrato es de 16 metros cúbicos al mes. Cada metro cúbico adicional se cobra a tarifa plena, sin subsidio, por lo que el valor de la factura crece más rápido que el consumo cuando se supera ese límite.\n\n3. Si considera que la lectura del medidor es incorrecta, puede presentar una reclamación en cualquiera de nuestras oficinas dentro de los cinco meses siguientes a la fecha de esta factura. Mientras la reclamación se resuelve, solo está obligado a pagar el promedio de los últimos seis periodos facturados.\n\n4. El pago después de la fecha límite genera intereses de mora. Pasados dos periodos consecutivos sin pago, el servicio será suspendido y su reconexión tendrá un costo adicional.\n\nLa tabla registra el consumo mensual del inmueble en metros cúbicos y el valor facturado en cada periodo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Historial de consumo del inmueble",
+      "columnas": [
+        "Mes",
+        "Consumo (m³)",
+        "Valor facturado ($)"
+      ],
+      "filas": [
+        [
+          "Abril",
+          15,
+          58200
+        ],
+        [
+          "Mayo",
+          14,
+          54900
+        ],
+        [
+          "Junio",
+          16,
+          61500
+        ],
+        [
+          "Julio",
+          15,
+          58200
+        ],
+        [
+          "Agosto",
+          17,
+          68300
+        ],
+        [
+          "Septiembre",
+          23,
+          109800
+        ]
+      ],
+      "nota": "Consumo básico subsidiado para el estrato del usuario: 16 m³ al mes."
+    },
+    "enunciado": "De acuerdo con la factura, ¿qué debe pagar el usuario mientras se resuelve una reclamación por la lectura del medidor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Nada, hasta que la empresa responda la reclamación presentada.",
+        "correcta": false,
+        "explicacion": "La factura no exime del pago: dice que el usuario «solo está obligado a pagar el promedio», es decir, debe pagar una suma reducida mientras espera la respuesta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó «solo está obligado a pagar» como si no hubiera obligación alguna."
+      },
+      {
+        "clave": "B",
+        "texto": "El valor correspondiente al consumo básico de 16 metros cúbicos.",
+        "correcta": false,
+        "explicacion": "Los 16 metros cúbicos aparecen en el mensaje 2 como el límite del consumo subsidiado, no como el valor que se paga durante una reclamación. El mensaje 3 habla de un promedio, no de un consumo fijo.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló dos mensajes distintos de la factura porque ambos mencionan cantidades de consumo."
+      },
+      {
+        "clave": "C",
+        "texto": "El valor total de la factura reclamada, con intereses de mora.",
+        "correcta": false,
+        "explicacion": "Los intereses de mora se mencionan en el mensaje 4 para pagos tardíos, no para reclamaciones. El mensaje 3 reduce lo que debe pagarse durante la reclamación en lugar de aumentarlo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que reclamar implica una penalización, en contra de lo que dice el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "El promedio de los últimos seis periodos facturados.",
+        "correcta": true,
+        "explicacion": "El mensaje 3 lo indica expresamente: «Mientras la reclamación se resuelve, solo está obligado a pagar el promedio de los últimos seis periodos facturados».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: busco en los mensajes de la factura la palabra «reclamación». COMPRENDER: la pregunta pide un dato explícito del mensaje 3. INTERPRETAR: ese mensaje dice que, mientras se resuelve la reclamación, el usuario paga el promedio de los últimos seis periodos. REPRESENTAR: reclamación → pago provisional = promedio de seis periodos. RAZONAR: los 16 metros cúbicos son el límite del subsidio (mensaje 2), los intereses de mora corresponden a pagos tardíos (mensaje 4) y la factura no exime de pagar. RESOLVER: la opción que menciona el promedio de los últimos seis periodos. VERIFICAR: releo el mensaje 3 y confirmo la frase «solo está obligado a pagar el promedio de los últimos seis periodos facturados».",
+    "que_identificar": "La última oración del mensaje 3 de la factura.",
+    "que_revisar": "Localizar información puntual en documentos administrativos con varios apartados numerados.",
+    "refuerzo_ids": [
+      "LC-110",
+      "LC-089"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T32",
+      "discontinuo",
+      "factura",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-110",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo)",
+    "habilidad": "interpretar",
+    "tema": "Texto discontinuo (factura de servicios con tabla)",
+    "subtema": "Relación entre el texto y los datos de la tabla",
+    "dificultad": 2,
+    "contexto": "**Factura de acueducto y alcantarillado — Empresa de Servicios Públicos de Villa del Sol**\n\nUsuario: hogar residencial, barrio La Esperanza. Periodo facturado: 1 al 30 de septiembre. Fecha límite de pago: 15 de octubre.\n\n**Mensajes para el usuario**\n\n1. Su consumo del periodo supera en más del 30 % el promedio de los cinco meses anteriores. Revise fugas en sanitarios, llaves y tanques: una gota por segundo equivale a cerca de 30 litros diarios desperdiciados.\n\n2. El consumo básico subsidiado para su estrato es de 16 metros cúbicos al mes. Cada metro cúbico adicional se cobra a tarifa plena, sin subsidio, por lo que el valor de la factura crece más rápido que el consumo cuando se supera ese límite.\n\n3. Si considera que la lectura del medidor es incorrecta, puede presentar una reclamación en cualquiera de nuestras oficinas dentro de los cinco meses siguientes a la fecha de esta factura. Mientras la reclamación se resuelve, solo está obligado a pagar el promedio de los últimos seis periodos facturados.\n\n4. El pago después de la fecha límite genera intereses de mora. Pasados dos periodos consecutivos sin pago, el servicio será suspendido y su reconexión tendrá un costo adicional.\n\nLa tabla registra el consumo mensual del inmueble en metros cúbicos y el valor facturado en cada periodo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Historial de consumo del inmueble",
+      "columnas": [
+        "Mes",
+        "Consumo (m³)",
+        "Valor facturado ($)"
+      ],
+      "filas": [
+        [
+          "Abril",
+          15,
+          58200
+        ],
+        [
+          "Mayo",
+          14,
+          54900
+        ],
+        [
+          "Junio",
+          16,
+          61500
+        ],
+        [
+          "Julio",
+          15,
+          58200
+        ],
+        [
+          "Agosto",
+          17,
+          68300
+        ],
+        [
+          "Septiembre",
+          23,
+          109800
+        ]
+      ],
+      "nota": "Consumo básico subsidiado para el estrato del usuario: 16 m³ al mes."
+    },
+    "enunciado": "¿Qué relación existe entre el mensaje 1 de la factura y los datos de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La tabla respalda el mensaje: el consumo de septiembre supera en más del 30 % el promedio de los cinco meses anteriores.",
+        "correcta": true,
+        "explicacion": "El promedio de abril a agosto es (15 + 14 + 16 + 15 + 17) ÷ 5 = 15,4 m³. Un 30 % más sería unos 20 m³, y septiembre registra 23 m³. Por eso la factura advierte sobre el consumo elevado y sugiere revisar fugas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La tabla contradice el mensaje: el consumo de septiembre es apenas un poco mayor que el de agosto.",
+        "correcta": false,
+        "explicacion": "Pasar de 17 a 23 m³ es un aumento de 6 m³, es decir, más del 35 % respecto a agosto, y la advertencia compara con el promedio de cinco meses (15,4 m³), no solo con agosto. La tabla no contradice el mensaje.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó solo con el mes anterior y subestimó la diferencia."
+      },
+      {
+        "clave": "C",
+        "texto": "La tabla muestra que la fuga comenzó en agosto, cuando el consumo pasó de 15 a 17 metros cúbicos.",
+        "correcta": false,
+        "explicacion": "La tabla registra consumos, no causas: no puede mostrar cuándo comenzó una fuga ni si existe. El mensaje 1 solo sugiere revisar fugas como posible explicación del aumento de septiembre.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió una hipótesis del texto («revise fugas») en un hecho confirmado por la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "La tabla no se relaciona con el mensaje, porque este habla de litros diarios y la tabla registra metros cúbicos.",
+        "correcta": false,
+        "explicacion": "Los litros aparecen solo en el ejemplo de la gota por segundo. La comparación central del mensaje 1 es entre el consumo del periodo y el promedio anterior, que es justamente lo que permite verificar la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detuvo en la diferencia de unidades y no revisó la idea principal del mensaje."
+      }
+    ],
+    "explicacion": "LEER: leo el mensaje 1 («supera en más del 30 % el promedio de los cinco meses anteriores») y la columna de consumo de la tabla. COMPRENDER: debo establecer si la tabla confirma, contradice o es ajena a esa afirmación. INTERPRETAR: calculo el promedio de abril a agosto: 77 ÷ 5 = 15,4 m³. REPRESENTAR: 15,4 × 1,3 ≈ 20 m³; septiembre = 23 m³. RAZONAR: 23 supera los 20, así que la tabla respalda el mensaje; comparar solo con agosto es un error de lectura; la tabla no muestra causas; la diferencia de unidades es irrelevante para la comparación principal. RESOLVER: la opción que afirma que la tabla respalda el mensaje. VERIFICAR: incluso comparando con el mes de mayor consumo anterior (17 m³), septiembre lo supera en más del 30 %.",
+    "que_identificar": "La afirmación del mensaje 1 sobre el 30 % y los consumos de abril a septiembre en la tabla.",
+    "que_revisar": "Verificar afirmaciones de un texto con los datos de una tabla, calculando promedios y porcentajes sencillos.",
+    "refuerzo_ids": [
+      "LC-109",
+      "LC-090"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T32",
+      "discontinuo",
+      "factura",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-111",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto discontinuo (factura de servicios con tabla)",
+    "subtema": "Explicación de un dato a partir de otra parte del texto",
+    "dificultad": 2,
+    "contexto": "**Factura de acueducto y alcantarillado — Empresa de Servicios Públicos de Villa del Sol**\n\nUsuario: hogar residencial, barrio La Esperanza. Periodo facturado: 1 al 30 de septiembre. Fecha límite de pago: 15 de octubre.\n\n**Mensajes para el usuario**\n\n1. Su consumo del periodo supera en más del 30 % el promedio de los cinco meses anteriores. Revise fugas en sanitarios, llaves y tanques: una gota por segundo equivale a cerca de 30 litros diarios desperdiciados.\n\n2. El consumo básico subsidiado para su estrato es de 16 metros cúbicos al mes. Cada metro cúbico adicional se cobra a tarifa plena, sin subsidio, por lo que el valor de la factura crece más rápido que el consumo cuando se supera ese límite.\n\n3. Si considera que la lectura del medidor es incorrecta, puede presentar una reclamación en cualquiera de nuestras oficinas dentro de los cinco meses siguientes a la fecha de esta factura. Mientras la reclamación se resuelve, solo está obligado a pagar el promedio de los últimos seis periodos facturados.\n\n4. El pago después de la fecha límite genera intereses de mora. Pasados dos periodos consecutivos sin pago, el servicio será suspendido y su reconexión tendrá un costo adicional.\n\nLa tabla registra el consumo mensual del inmueble en metros cúbicos y el valor facturado en cada periodo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Historial de consumo del inmueble",
+      "columnas": [
+        "Mes",
+        "Consumo (m³)",
+        "Valor facturado ($)"
+      ],
+      "filas": [
+        [
+          "Abril",
+          15,
+          58200
+        ],
+        [
+          "Mayo",
+          14,
+          54900
+        ],
+        [
+          "Junio",
+          16,
+          61500
+        ],
+        [
+          "Julio",
+          15,
+          58200
+        ],
+        [
+          "Agosto",
+          17,
+          68300
+        ],
+        [
+          "Septiembre",
+          23,
+          109800
+        ]
+      ],
+      "nota": "Consumo básico subsidiado para el estrato del usuario: 16 m³ al mes."
+    },
+    "enunciado": "Entre agosto y septiembre, el consumo aumentó cerca del 35 %, pero el valor facturado aumentó cerca del 60 %. ¿Qué parte de la factura explica esta diferencia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El mensaje 4, porque el usuario pagó después de la fecha límite y se le cobraron intereses de mora.",
+        "correcta": false,
+        "explicacion": "La factura de septiembre tiene fecha límite el 15 de octubre, así que aún no puede incluir intereses de mora. Además, la tabla registra el valor facturado, no lo que el usuario pagó.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó una penalización para explicar el aumento sin revisar las fechas de la factura."
+      },
+      {
+        "clave": "B",
+        "texto": "El mensaje 2, porque los metros cúbicos por encima de 16 se cobran a tarifa plena, sin subsidio.",
+        "correcta": true,
+        "explicacion": "En septiembre se consumieron 23 m³: los primeros 16 con subsidio y los otros 7 a tarifa plena. Por eso el valor crece más que el consumo, tal como advierte el mensaje 2: «el valor de la factura crece más rápido que el consumo cuando se supera ese límite».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El mensaje 1, porque una gota por segundo equivale a cerca de 30 litros diarios desperdiciados.",
+        "correcta": false,
+        "explicacion": "El dato de la gota explica cuánto puede aumentar el consumo por una fuga, pero no por qué el valor en pesos crece más que los metros cúbicos. La diferencia entre consumo y valor depende de las tarifas, no de las fugas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la causa del mayor consumo con la causa del mayor valor por metro cúbico."
+      },
+      {
+        "clave": "D",
+        "texto": "El mensaje 3, porque durante una reclamación se cobra el promedio de los últimos seis periodos.",
+        "correcta": false,
+        "explicacion": "El mensaje 3 describe lo que se paga si el usuario reclama, situación que no se menciona en esta factura. El valor de septiembre fue facturado normalmente, no como promedio.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un mensaje que menciona valores sin verificar si se aplica a la situación."
+      }
+    ],
+    "explicacion": "LEER: comparo agosto (17 m³, $68 300) y septiembre (23 m³, $109 800). COMPRENDER: el enunciado señala que el valor subió más que el consumo y pide la parte de la factura que lo explica. INTERPRETAR: el mensaje 2 dice que hasta 16 m³ hay subsidio y que cada metro cúbico adicional se cobra a tarifa plena. REPRESENTAR: septiembre = 16 m³ subsidiados + 7 m³ a tarifa plena → el costo medio por metro cúbico sube. RAZONAR: la mora no aplica porque la fecha límite no ha pasado; la gota explica el consumo, no la tarifa; el promedio de reclamación no fue aplicado. RESOLVER: la opción que remite al mensaje 2 y a la tarifa plena. VERIFICAR: en los meses con consumo de 16 m³ o menos, el valor por metro cúbico se mantiene cercano a $3 900, mientras que en septiembre sube a unos $4 770.",
+    "que_identificar": "El mensaje 2 (límite de 16 m³ y tarifa plena para el exceso) y el salto entre agosto y septiembre en la tabla.",
+    "que_revisar": "Relacionar una regla enunciada en el texto con el comportamiento de los datos de una tabla.",
+    "refuerzo_ids": [
+      "LC-110",
+      "LC-091"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T32",
+      "discontinuo",
+      "factura",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-112",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "verificar",
+    "tema": "Texto discontinuo (factura de servicios con tabla)",
+    "subtema": "Evaluación de una conclusión a partir del texto",
+    "dificultad": 3,
+    "contexto": "**Factura de acueducto y alcantarillado — Empresa de Servicios Públicos de Villa del Sol**\n\nUsuario: hogar residencial, barrio La Esperanza. Periodo facturado: 1 al 30 de septiembre. Fecha límite de pago: 15 de octubre.\n\n**Mensajes para el usuario**\n\n1. Su consumo del periodo supera en más del 30 % el promedio de los cinco meses anteriores. Revise fugas en sanitarios, llaves y tanques: una gota por segundo equivale a cerca de 30 litros diarios desperdiciados.\n\n2. El consumo básico subsidiado para su estrato es de 16 metros cúbicos al mes. Cada metro cúbico adicional se cobra a tarifa plena, sin subsidio, por lo que el valor de la factura crece más rápido que el consumo cuando se supera ese límite.\n\n3. Si considera que la lectura del medidor es incorrecta, puede presentar una reclamación en cualquiera de nuestras oficinas dentro de los cinco meses siguientes a la fecha de esta factura. Mientras la reclamación se resuelve, solo está obligado a pagar el promedio de los últimos seis periodos facturados.\n\n4. El pago después de la fecha límite genera intereses de mora. Pasados dos periodos consecutivos sin pago, el servicio será suspendido y su reconexión tendrá un costo adicional.\n\nLa tabla registra el consumo mensual del inmueble en metros cúbicos y el valor facturado en cada periodo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Historial de consumo del inmueble",
+      "columnas": [
+        "Mes",
+        "Consumo (m³)",
+        "Valor facturado ($)"
+      ],
+      "filas": [
+        [
+          "Abril",
+          15,
+          58200
+        ],
+        [
+          "Mayo",
+          14,
+          54900
+        ],
+        [
+          "Junio",
+          16,
+          61500
+        ],
+        [
+          "Julio",
+          15,
+          58200
+        ],
+        [
+          "Agosto",
+          17,
+          68300
+        ],
+        [
+          "Septiembre",
+          23,
+          109800
+        ]
+      ],
+      "nota": "Consumo básico subsidiado para el estrato del usuario: 16 m³ al mes."
+    },
+    "enunciado": "Al recibir la factura, el usuario concluye: «Si el valor subió tanto, el medidor tiene que estar dañado». ¿Cuál es la objeción más pertinente a esa conclusión, según el propio documento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La factura prohíbe cuestionar la lectura del medidor porque el consumo básico está subsidiado por el Estado.",
+        "correcta": false,
+        "explicacion": "El documento no prohíbe cuestionar la lectura: al contrario, el mensaje 3 explica cómo presentar una reclamación. El subsidio no tiene relación con el derecho a reclamar.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó una restricción que el texto no contiene y la mezcló con la información del subsidio."
+      },
+      {
+        "clave": "B",
+        "texto": "La factura demuestra que el medidor funciona bien, porque los valores de abril a agosto fueron siempre parecidos entre sí.",
+        "correcta": false,
+        "explicacion": "Que los valores anteriores fueran estables no demuestra que el medidor funcione bien en septiembre; un aparato puede fallar de repente. La factura no afirma nada sobre el estado del medidor.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la regularidad anterior como prueba definitiva, cometiendo el mismo salto lógico que el usuario."
+      },
+      {
+        "clave": "C",
+        "texto": "La factura ofrece otra explicación posible del aumento, las fugas, y un procedimiento para comprobar la lectura antes de concluir que el medidor falla.",
+        "correcta": true,
+        "explicacion": "El mensaje 1 propone revisar fugas y el mensaje 3 ofrece la reclamación para verificar la lectura. El aumento del valor es compatible con varias causas; concluir de inmediato que el medidor está dañado es saltar a una sola explicación sin descartar las demás.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La factura indica que un aumento superior al 30 % siempre se debe a un error de lectura y debe reclamarse en cinco meses.",
+        "correcta": false,
+        "explicacion": "El mensaje 1 asocia el aumento a posibles fugas, no a errores de lectura, y el plazo de cinco meses es el límite para reclamar, no una indicación de que haya error. La opción distorsiona ambos mensajes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Unió datos de mensajes distintos y les dio un sentido que no tienen."
+      }
+    ],
+    "explicacion": "LEER: releo la conclusión del usuario y los cuatro mensajes de la factura. COMPRENDER: debo evaluar si la conclusión «el medidor está dañado» se sigue del aumento del valor, según el documento. INTERPRETAR: el mensaje 1 ofrece una causa alternativa (fugas) y el mensaje 3 un mecanismo para verificar la lectura. REPRESENTAR: valor alto → posibles causas: fuga, mayor uso, error de medidor; el usuario solo considera una. RAZONAR: la objeción pertinente es señalar que hay otras explicaciones y un procedimiento de verificación; las demás opciones afirman cosas que la factura no dice (que el medidor funciona bien, que está prohibido reclamar, que el aumento siempre es error). RESOLVER: la opción que menciona las fugas y el procedimiento de reclamación. VERIFICAR: el documento invita a «revisar fugas» y a «presentar una reclamación», lo que confirma que no da por hecho ninguna causa.",
+    "que_identificar": "La hipótesis de las fugas (mensaje 1) y el procedimiento de reclamación (mensaje 3) como alternativas a la conclusión apresurada del usuario.",
+    "que_revisar": "Evaluar la validez de una conclusión: una consecuencia puede tener varias causas y conviene descartar alternativas antes de afirmar una.",
+    "refuerzo_ids": [
+      "LC-109",
+      "LC-092"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T32",
+      "discontinuo",
+      "factura",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-113",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto argumentativo (editorial de periódico escolar)",
+    "subtema": "Datos explícitos usados como evidencia",
+    "dificultad": 1,
+    "contexto": "**Editorial: Guardar el celular no es apagar el pensamiento**\n\n*Periódico estudiantil El Pupitre, Institución Educativa Las Acacias*\n\nDesde este mes, el colegio exige que los celulares permanezcan guardados en el casillero durante las clases. La medida ha generado quejas razonables: muchos usamos el teléfono para consultar el diccionario, tomar fotos del tablero o grabar explicaciones. Sin embargo, este periódico considera que la decisión es acertada, y queremos explicar por qué.\n\nPrimero, la evidencia disponible en el propio colegio es clara. En la encuesta que aplicamos en agosto a 240 estudiantes, el 68 % reconoció revisar redes sociales durante las clases al menos una vez por hora, y el 41 % admitió que esa costumbre le había hecho perder el hilo de una explicación esa misma semana. No hablamos de un vicio ajeno: hablamos de nosotros.\n\nSegundo, el argumento de la utilidad académica, aunque válido, no exige tener el aparato encima todo el tiempo. Las fotos del tablero se pueden tomar al final de la clase; los diccionarios existen en papel y en los computadores de la biblioteca.\n\nTercero, quienes dicen que la medida «trata a los estudiantes como niños» olvidan que los adultos también la aplican: en muchas empresas y en los quirófanos los teléfonos se guardan por la misma razón.\n\nNo defendemos la prohibición como castigo, sino como una condición para pensar sin interrupciones. Si en un semestre la medida no mejora la atención, seremos los primeros en pedir que se revise.",
+    "estimulo": null,
+    "enunciado": "¿Qué dato de la encuesta usa el editorial para sostener que el problema de la distracción afecta a los propios estudiantes del colegio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los 240 estudiantes encuestados pidieron que los celulares se guardaran en el casillero.",
+        "correcta": false,
+        "explicacion": "El texto dice que 240 estudiantes respondieron la encuesta, pero no que pidieran la medida; de hecho, el primer párrafo reconoce que la medida «ha generado quejas razonables».",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió el tamaño de la muestra en una opinión unánime de los encuestados."
+      },
+      {
+        "clave": "B",
+        "texto": "El 41 % de los estudiantes afirmó usar el celular para tomar fotos del tablero.",
+        "correcta": false,
+        "explicacion": "El 41 % corresponde a quienes admitieron haber perdido el hilo de una explicación por revisar redes, no a quienes toman fotos del tablero. Las fotos se mencionan en el primer párrafo sin ningún porcentaje.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció un porcentaje real del texto con un uso del celular que aparece en otro párrafo."
+      },
+      {
+        "clave": "C",
+        "texto": "El 68 % de los encuestados reconoció revisar redes sociales en clase al menos una vez por hora.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo cita ese porcentaje de la encuesta aplicada a 240 estudiantes y concluye: «No hablamos de un vicio ajeno: hablamos de nosotros». Es el dato que muestra que el problema es propio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "En muchas empresas y quirófanos los adultos también guardan el teléfono durante el trabajo.",
+        "correcta": false,
+        "explicacion": "Esa información aparece en el cuarto párrafo como una comparación con los adultos, no como dato de la encuesta aplicada en el colegio.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió un argumento por analogía con el dato estadístico que pedía la pregunta."
+      }
+    ],
+    "explicacion": "LEER: busco en el editorial el párrafo que menciona la encuesta. COMPRENDER: la pregunta pide el dato que respalda la idea de que el problema es «de nosotros», los estudiantes del colegio. INTERPRETAR: el segundo párrafo da dos cifras: 68 % revisa redes al menos una vez por hora y 41 % perdió el hilo de una explicación. REPRESENTAR: encuesta (240 estudiantes) → 68 % → «hablamos de nosotros». RAZONAR: el 41 % se refiere a perder el hilo, no a las fotos; los 240 son la muestra, no una petición; las empresas y los quirófanos pertenecen a otro argumento. RESOLVER: la opción que cita el 68 % que revisa redes sociales en clase. VERIFICAR: la frase que sigue al dato («No hablamos de un vicio ajeno») confirma su función.",
+    "que_identificar": "Las cifras del segundo párrafo y la frase que las interpreta: «No hablamos de un vicio ajeno: hablamos de nosotros».",
+    "que_revisar": "Asociar correctamente cada cifra con la afirmación que respalda; no mezclar datos de párrafos distintos.",
+    "refuerzo_ids": [
+      "LC-114",
+      "LC-097"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T33",
+      "argumentativo",
+      "editorial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-114",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "representar",
+    "tema": "Texto argumentativo (editorial de periódico escolar)",
+    "subtema": "Función del párrafo de cierre en un texto argumentativo",
+    "dificultad": 2,
+    "contexto": "**Editorial: Guardar el celular no es apagar el pensamiento**\n\n*Periódico estudiantil El Pupitre, Institución Educativa Las Acacias*\n\nDesde este mes, el colegio exige que los celulares permanezcan guardados en el casillero durante las clases. La medida ha generado quejas razonables: muchos usamos el teléfono para consultar el diccionario, tomar fotos del tablero o grabar explicaciones. Sin embargo, este periódico considera que la decisión es acertada, y queremos explicar por qué.\n\nPrimero, la evidencia disponible en el propio colegio es clara. En la encuesta que aplicamos en agosto a 240 estudiantes, el 68 % reconoció revisar redes sociales durante las clases al menos una vez por hora, y el 41 % admitió que esa costumbre le había hecho perder el hilo de una explicación esa misma semana. No hablamos de un vicio ajeno: hablamos de nosotros.\n\nSegundo, el argumento de la utilidad académica, aunque válido, no exige tener el aparato encima todo el tiempo. Las fotos del tablero se pueden tomar al final de la clase; los diccionarios existen en papel y en los computadores de la biblioteca.\n\nTercero, quienes dicen que la medida «trata a los estudiantes como niños» olvidan que los adultos también la aplican: en muchas empresas y en los quirófanos los teléfonos se guardan por la misma razón.\n\nNo defendemos la prohibición como castigo, sino como una condición para pensar sin interrupciones. Si en un semestre la medida no mejora la atención, seremos los primeros en pedir que se revise.",
+    "estimulo": null,
+    "enunciado": "¿Qué función cumple el último párrafo dentro del editorial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Presentar un cuarto argumento, basado en la experiencia de otros colegios, para reforzar la tesis.",
+        "correcta": false,
+        "explicacion": "El último párrafo no introduce evidencia nueva ni menciona otros colegios; los tres argumentos están numerados en los párrafos anteriores («Primero», «Segundo», «Tercero»).",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que cada párrafo del cuerpo debe aportar un argumento nuevo, sin leer el contenido del cierre."
+      },
+      {
+        "clave": "B",
+        "texto": "Precisar el sentido de la postura defendida y fijar una condición bajo la cual los autores aceptarían revisarla.",
+        "correcta": true,
+        "explicacion": "El párrafo aclara que no se defiende la prohibición «como castigo» sino como condición para pensar, y añade un compromiso: si en un semestre no mejora la atención, pedirán revisar la medida. Matiza y cierra la argumentación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Reconocer que la medida es injusta y anunciar que el periódico pedirá su eliminación.",
+        "correcta": false,
+        "explicacion": "El editorial mantiene su apoyo a la medida hasta el final; solo promete pedir una revisión si no funciona. No la califica de injusta ni anuncia su eliminación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la condición («si no mejora la atención») como si ya se hubiera cumplido."
+      },
+      {
+        "clave": "D",
+        "texto": "Resumir las quejas de los estudiantes que se presentaron en el primer párrafo del texto.",
+        "correcta": false,
+        "explicacion": "Las quejas (diccionario, fotos del tablero, grabaciones) aparecen solo en el primer párrafo y fueron respondidas en el segundo argumento. El cierre no vuelve sobre ellas.",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asumió que el cierre repite el inicio sin verificar su contenido."
+      }
+    ],
+    "explicacion": "LEER: releo el último párrafo: «No defendemos la prohibición como castigo… Si en un semestre la medida no mejora la atención, seremos los primeros en pedir que se revise». COMPRENDER: la pregunta pide la función de ese párrafo en la estructura argumentativa. INTERPRETAR: la primera oración aclara el sentido de la postura; la segunda establece una condición para revisarla. REPRESENTAR: introducción (tesis) → tres argumentos numerados → cierre (matiz + compromiso). RAZONAR: no hay cuarto argumento ni mención de otros colegios; no se califica la medida de injusta; no se repiten las quejas. RESOLVER: la opción que habla de precisar la postura y fijar una condición para revisarla. VERIFICAR: las expresiones «no… como castigo, sino como…» y «si… seremos los primeros» corresponden exactamente a matizar y condicionar.",
+    "que_identificar": "Las dos oraciones del párrafo final y su relación con la tesis planteada en el primer párrafo.",
+    "que_revisar": "Reconocer las funciones típicas de un párrafo de cierre en textos argumentativos: matizar, concluir, abrir la puerta a la revisión.",
+    "refuerzo_ids": [
+      "LC-115",
+      "LC-098"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T33",
+      "argumentativo",
+      "editorial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-115",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (editorial de periódico escolar)",
+    "subtema": "Estrategia discursiva para responder una objeción",
+    "dificultad": 2,
+    "contexto": "**Editorial: Guardar el celular no es apagar el pensamiento**\n\n*Periódico estudiantil El Pupitre, Institución Educativa Las Acacias*\n\nDesde este mes, el colegio exige que los celulares permanezcan guardados en el casillero durante las clases. La medida ha generado quejas razonables: muchos usamos el teléfono para consultar el diccionario, tomar fotos del tablero o grabar explicaciones. Sin embargo, este periódico considera que la decisión es acertada, y queremos explicar por qué.\n\nPrimero, la evidencia disponible en el propio colegio es clara. En la encuesta que aplicamos en agosto a 240 estudiantes, el 68 % reconoció revisar redes sociales durante las clases al menos una vez por hora, y el 41 % admitió que esa costumbre le había hecho perder el hilo de una explicación esa misma semana. No hablamos de un vicio ajeno: hablamos de nosotros.\n\nSegundo, el argumento de la utilidad académica, aunque válido, no exige tener el aparato encima todo el tiempo. Las fotos del tablero se pueden tomar al final de la clase; los diccionarios existen en papel y en los computadores de la biblioteca.\n\nTercero, quienes dicen que la medida «trata a los estudiantes como niños» olvidan que los adultos también la aplican: en muchas empresas y en los quirófanos los teléfonos se guardan por la misma razón.\n\nNo defendemos la prohibición como castigo, sino como una condición para pensar sin interrupciones. Si en un semestre la medida no mejora la atención, seremos los primeros en pedir que se revise.",
+    "estimulo": null,
+    "enunciado": "En el cuarto párrafo, al mencionar las empresas y los quirófanos, el editorial utiliza principalmente",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "una analogía con contextos de adultos para desvirtuar la objeción de que la medida infantiliza a los estudiantes.",
+        "correcta": true,
+        "explicacion": "La objeción dice que la medida «trata a los estudiantes como niños»; el editorial responde mostrando que en espacios adultos (empresas, quirófanos) se guarda el teléfono por la misma razón. La comparación quita fuerza a la idea de que guardar el celular sea algo propio de niños.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "un argumento de autoridad basado en lo que opinan los médicos y los empresarios sobre los celulares.",
+        "correcta": false,
+        "explicacion": "El párrafo no cita la opinión de ningún médico ni empresario; menciona una práctica (guardar el teléfono) en esos lugares. No hay apelación a expertos, sino comparación de situaciones.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la mención de un contexto profesional con la cita de la opinión de un experto."
+      },
+      {
+        "clave": "C",
+        "texto": "una generalización apresurada que afirma que todos los adultos guardan el teléfono en el trabajo.",
+        "correcta": false,
+        "explicacion": "El texto dice «en muchas empresas», no en todas, y se refiere a dos contextos específicos. No se trata de una generalización sobre todos los adultos, sino de ejemplos que sirven de comparación.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exageró el alcance de la afirmación para encajarla en una falacia conocida."
+      },
+      {
+        "clave": "D",
+        "texto": "una descripción detallada de los riesgos de usar el celular durante una cirugía médica.",
+        "correcta": false,
+        "explicacion": "El párrafo no describe riesgos ni detalla lo que ocurre en una cirugía; solo señala que los teléfonos se guardan «por la misma razón» que en el colegio, es decir, para no interrumpir la atención.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se concentró en la palabra «quirófanos» y supuso un desarrollo que el texto no hace."
+      }
+    ],
+    "explicacion": "LEER: ubico el cuarto párrafo: «quienes dicen que la medida trata a los estudiantes como niños olvidan que los adultos también la aplican…». COMPRENDER: la pregunta pide identificar la estrategia discursiva, es decir, cómo argumenta el autor en ese pasaje. INTERPRETAR: el autor toma una objeción y la responde comparando el colegio con lugares de adultos donde ocurre lo mismo. REPRESENTAR: objeción (infantiliza) → comparación con adultos → la objeción pierde fuerza. RAZONAR: no se cita a expertos, no se afirma que todos los adultos lo hagan y no se describen riesgos de cirugías; la operación central es comparar contextos. RESOLVER: la opción que habla de una analogía para desvirtuar la objeción de infantilización. VERIFICAR: la expresión «por la misma razón» marca explícitamente la comparación entre situaciones.",
+    "que_identificar": "La objeción citada entre comillas y la comparación con empresas y quirófanos que la responde.",
+    "que_revisar": "Identificar estrategias argumentativas: analogía, autoridad, ejemplo, refutación de objeciones.",
+    "refuerzo_ids": [
+      "LC-116",
+      "LC-099"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T33",
+      "argumentativo",
+      "editorial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-116",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "verificar",
+    "tema": "Texto argumentativo (editorial de periódico escolar)",
+    "subtema": "Debilidades de un argumento basado en datos",
+    "dificultad": 3,
+    "contexto": "**Editorial: Guardar el celular no es apagar el pensamiento**\n\n*Periódico estudiantil El Pupitre, Institución Educativa Las Acacias*\n\nDesde este mes, el colegio exige que los celulares permanezcan guardados en el casillero durante las clases. La medida ha generado quejas razonables: muchos usamos el teléfono para consultar el diccionario, tomar fotos del tablero o grabar explicaciones. Sin embargo, este periódico considera que la decisión es acertada, y queremos explicar por qué.\n\nPrimero, la evidencia disponible en el propio colegio es clara. En la encuesta que aplicamos en agosto a 240 estudiantes, el 68 % reconoció revisar redes sociales durante las clases al menos una vez por hora, y el 41 % admitió que esa costumbre le había hecho perder el hilo de una explicación esa misma semana. No hablamos de un vicio ajeno: hablamos de nosotros.\n\nSegundo, el argumento de la utilidad académica, aunque válido, no exige tener el aparato encima todo el tiempo. Las fotos del tablero se pueden tomar al final de la clase; los diccionarios existen en papel y en los computadores de la biblioteca.\n\nTercero, quienes dicen que la medida «trata a los estudiantes como niños» olvidan que los adultos también la aplican: en muchas empresas y en los quirófanos los teléfonos se guardan por la misma razón.\n\nNo defendemos la prohibición como castigo, sino como una condición para pensar sin interrupciones. Si en un semestre la medida no mejora la atención, seremos los primeros en pedir que se revise.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes objeciones afecta de manera más directa la fuerza del primer argumento del editorial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Un 41 % es menos de la mitad de los encuestados, de modo que la mayoría de los estudiantes no se distrae con el celular.",
+        "correcta": false,
+        "explicacion": "El 41 % corresponde a quienes perdieron el hilo esa misma semana; el dato principal de distracción es el 68 %, que sí es mayoría. La objeción lee mal las cifras y no afecta el núcleo del argumento.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el porcentaje menor como si fuera la medida de la distracción general."
+      },
+      {
+        "clave": "B",
+        "texto": "La encuesta se aplicó en agosto, un mes en el que muchos estudiantes están pendientes de los partidos de fútbol.",
+        "correcta": false,
+        "explicacion": "Esta objeción especula sobre una causa externa que el texto no menciona y no cuestiona la relación entre el dato y la conclusión; aunque fuera cierta, el porcentaje seguiría indicando distracción en clase.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atacó un detalle circunstancial del dato en lugar de la lógica del argumento."
+      },
+      {
+        "clave": "C",
+        "texto": "El periódico no debería opinar sobre el tema porque sus redactores también usan el celular en clase.",
+        "correcta": false,
+        "explicacion": "Esta objeción se dirige a quienes escriben, no al argumento. El editorial incluso reconoce que el problema es «de nosotros»; señalar que los redactores usan el celular no debilita el dato ni la conclusión.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una crítica a las personas con una crítica al razonamiento."
+      },
+      {
+        "clave": "D",
+        "texto": "Mostrar que los estudiantes se distraen con el celular no demuestra que guardarlo en el casillero mejore la atención en clase.",
+        "correcta": true,
+        "explicacion": "El primer argumento prueba que existe un problema (68 % revisa redes, 41 % pierde el hilo), pero el editorial defiende una solución concreta. Falta el paso que conecte el problema con la eficacia de la medida; el propio texto lo admite al prometer revisarla si no mejora la atención.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo el primer argumento: el 68 % revisa redes en clase y el 41 % perdió el hilo de una explicación. COMPRENDER: la pregunta pide la objeción que más debilita ese argumento, es decir, la que ataca el vínculo entre la evidencia y la tesis. INTERPRETAR: la evidencia prueba que hay distracción; la tesis es que guardar el celular es acertado. REPRESENTAR: dato (hay distracción) → ¿? → conclusión (la medida funciona). RAZONAR: la objeción más fuerte señala ese vacío: probar el problema no prueba la eficacia de la solución. Las otras objeciones atacan la fecha de la encuesta, a los redactores o leen mal el 41 %, sin tocar la lógica. RESOLVER: la opción que dice que mostrar distracción no demuestra que guardar el celular mejore la atención. VERIFICAR: el editorial mismo reconoce la incertidumbre al prometer revisar la medida si no mejora la atención en un semestre.",
+    "que_identificar": "La relación entre los datos de la encuesta (existencia del problema) y la tesis (la medida es acertada), y el salto que hay entre ambos.",
+    "que_revisar": "Evaluar argumentos: distinguir entre evidencia de un problema y evidencia de que una solución funciona; reconocer ataques a la persona y objeciones irrelevantes.",
+    "refuerzo_ids": [
+      "LC-113",
+      "LC-100"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T33",
+      "argumentativo",
+      "editorial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-117",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto discontinuo (infografía ambiental con gráfico)",
+    "subtema": "Información explícita en una infografía",
+    "dificultad": 1,
+    "contexto": "**Infografía: ¿A dónde va la basura de Ciudad Verde?**\n\n*Elaborada por la Secretaría de Ambiente municipal para la Semana del Reciclaje*\n\n**Panel 1. Lo que botamos.** Cada habitante del municipio genera en promedio 0,8 kilogramos de residuos al día. De ese total, cerca de la mitad es material orgánico (restos de comida y poda), un tercio son materiales aprovechables (papel, cartón, vidrio, plástico y metales) y el resto son residuos que hoy no tienen aprovechamiento.\n\n**Panel 2. Lo que separamos.** Separar en la fuente significa clasificar los residuos en el hogar antes de entregarlos: bolsa blanca para aprovechables, bolsa verde para orgánicos y bolsa negra para los demás. Solo lo que llega limpio y seco en la bolsa blanca puede venderse a las empresas transformadoras.\n\n**Panel 3. Lo que recuperamos.** El gráfico muestra las toneladas de material aprovechable recuperadas cada año por la asociación de recicladores del municipio, comparadas con las toneladas aprovechables que, según los cálculos de la Secretaría, se generaron en el mismo periodo.\n\n**Panel 4. Lo que podemos hacer.** Si cada hogar separara correctamente, la asociación podría duplicar sus ingresos sin recoger un kilo más de basura: hoy casi una tercera parte de lo que llega en bolsa blanca se descarta porque viene contaminado con residuos orgánicos.\n\n*Fuente: registros de la asociación de recicladores y estimaciones de la Secretaría de Ambiente, 2021-2025.*",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Material aprovechable generado y recuperado en el municipio (toneladas por año)",
+      "eje_x": "Año",
+      "eje_y": "Toneladas",
+      "series": [
+        {
+          "nombre": "Generado (estimación)",
+          "valores": [
+            [
+              "2021",
+              4200
+            ],
+            [
+              "2022",
+              4300
+            ],
+            [
+              "2023",
+              4450
+            ],
+            [
+              "2024",
+              4550
+            ],
+            [
+              "2025",
+              4700
+            ]
+          ]
+        },
+        {
+          "nombre": "Recuperado por la asociación",
+          "valores": [
+            [
+              "2021",
+              820
+            ],
+            [
+              "2022",
+              910
+            ],
+            [
+              "2023",
+              1150
+            ],
+            [
+              "2024",
+              1300
+            ],
+            [
+              "2025",
+              1480
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Según el panel 2 de la infografía, ¿qué condición debe cumplir el material aprovechable para que pueda venderse a las empresas transformadoras?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Llegar limpio y seco en la bolsa blanca.",
+        "correcta": true,
+        "explicacion": "El panel 2 lo dice de manera explícita: «Solo lo que llega limpio y seco en la bolsa blanca puede venderse a las empresas transformadoras». Las dos condiciones son limpieza y sequedad, más el uso de la bolsa correcta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Pesar menos de 0,8 kilogramos por habitante al día.",
+        "correcta": false,
+        "explicacion": "Los 0,8 kilogramos son el promedio de residuos que genera cada habitante, según el panel 1; no son una condición para vender el material aprovechable.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la primera cifra de la infografía sin verificar en qué panel estaba la respuesta."
+      },
+      {
+        "clave": "C",
+        "texto": "Ser recogido directamente por la Secretaría de Ambiente del municipio.",
+        "correcta": false,
+        "explicacion": "La infografía señala que la recuperación la hace la asociación de recicladores, y la Secretaría solo elabora estimaciones. Además, el panel 2 no menciona quién recoge el material como condición de venta.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió los papeles de la Secretaría y de la asociación de recicladores."
+      },
+      {
+        "clave": "D",
+        "texto": "Estar mezclado con los residuos orgánicos en la bolsa verde.",
+        "correcta": false,
+        "explicacion": "Es lo contrario de lo que dice la infografía: la bolsa verde es para orgánicos, y el panel 4 explica que el material contaminado con orgánicos se descarta, no se vende.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación entre contaminación con orgánicos y posibilidad de venta."
+      }
+    ],
+    "explicacion": "LEER: ubico el panel 2, titulado «Lo que separamos». COMPRENDER: la pregunta pide una condición explícita para que el material se pueda vender. INTERPRETAR: el panel describe las tres bolsas y termina con la condición: «Solo lo que llega limpio y seco en la bolsa blanca puede venderse». REPRESENTAR: bolsa blanca + limpio + seco → vendible. RAZONAR: los 0,8 kilogramos pertenecen al panel 1; la Secretaría no recoge el material; mezclar con orgánicos lo contamina y lo hace descartable. RESOLVER: la opción que dice llegar limpio y seco en la bolsa blanca. VERIFICAR: el panel 4 confirma que lo que viene contaminado con orgánicos se descarta, lo que es coherente con la condición del panel 2.",
+    "que_identificar": "La última oración del panel 2 de la infografía.",
+    "que_revisar": "Localizar información específica en textos discontinuos organizados por paneles o secciones.",
+    "refuerzo_ids": [
+      "LC-118",
+      "LC-089"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T34",
+      "discontinuo",
+      "infografia",
+      "barras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-118",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo)",
+    "habilidad": "interpretar",
+    "tema": "Texto discontinuo (infografía ambiental con gráfico)",
+    "subtema": "Conclusión apoyada en un gráfico de barras",
+    "dificultad": 2,
+    "contexto": "**Infografía: ¿A dónde va la basura de Ciudad Verde?**\n\n*Elaborada por la Secretaría de Ambiente municipal para la Semana del Reciclaje*\n\n**Panel 1. Lo que botamos.** Cada habitante del municipio genera en promedio 0,8 kilogramos de residuos al día. De ese total, cerca de la mitad es material orgánico (restos de comida y poda), un tercio son materiales aprovechables (papel, cartón, vidrio, plástico y metales) y el resto son residuos que hoy no tienen aprovechamiento.\n\n**Panel 2. Lo que separamos.** Separar en la fuente significa clasificar los residuos en el hogar antes de entregarlos: bolsa blanca para aprovechables, bolsa verde para orgánicos y bolsa negra para los demás. Solo lo que llega limpio y seco en la bolsa blanca puede venderse a las empresas transformadoras.\n\n**Panel 3. Lo que recuperamos.** El gráfico muestra las toneladas de material aprovechable recuperadas cada año por la asociación de recicladores del municipio, comparadas con las toneladas aprovechables que, según los cálculos de la Secretaría, se generaron en el mismo periodo.\n\n**Panel 4. Lo que podemos hacer.** Si cada hogar separara correctamente, la asociación podría duplicar sus ingresos sin recoger un kilo más de basura: hoy casi una tercera parte de lo que llega en bolsa blanca se descarta porque viene contaminado con residuos orgánicos.\n\n*Fuente: registros de la asociación de recicladores y estimaciones de la Secretaría de Ambiente, 2021-2025.*",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Material aprovechable generado y recuperado en el municipio (toneladas por año)",
+      "eje_x": "Año",
+      "eje_y": "Toneladas",
+      "series": [
+        {
+          "nombre": "Generado (estimación)",
+          "valores": [
+            [
+              "2021",
+              4200
+            ],
+            [
+              "2022",
+              4300
+            ],
+            [
+              "2023",
+              4450
+            ],
+            [
+              "2024",
+              4550
+            ],
+            [
+              "2025",
+              4700
+            ]
+          ]
+        },
+        {
+          "nombre": "Recuperado por la asociación",
+          "valores": [
+            [
+              "2021",
+              820
+            ],
+            [
+              "2022",
+              910
+            ],
+            [
+              "2023",
+              1150
+            ],
+            [
+              "2024",
+              1300
+            ],
+            [
+              "2025",
+              1480
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes conclusiones sobre el periodo 2021-2025 está respaldada por el gráfico?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La recuperación de material se mantuvo estable, mientras que la generación aumentó de forma acelerada.",
+        "correcta": false,
+        "explicacion": "Ocurre lo contrario: la generación crece de manera moderada (unas 100 a 150 toneladas por año) y la recuperación es la que crece con rapidez, casi duplicándose en el periodo.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió el comportamiento de las dos series."
+      },
+      {
+        "clave": "B",
+        "texto": "La cantidad de material aprovechable generado disminuyó cada año gracias a la campaña de separación en la fuente.",
+        "correcta": false,
+        "explicacion": "La serie «Generado» aumenta todos los años, de 4200 a 4700 toneladas. La conclusión invierte la tendencia y además atribuye una causa que el gráfico no puede mostrar.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la barra de generado con la de recuperado o leyó la tendencia al revés."
+      },
+      {
+        "clave": "C",
+        "texto": "En 2025 la asociación recuperó más de la mitad del material aprovechable que se generó en el municipio.",
+        "correcta": false,
+        "explicacion": "En 2025 se recuperaron 1480 toneladas frente a 4700 generadas; eso es cerca del 31 %, muy lejos de la mitad. La lectura sobreestima la proporción recuperada.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó el crecimiento de la barra de recuperado consigo misma en vez de compararla con la de generado."
+      },
+      {
+        "clave": "D",
+        "texto": "La recuperación creció más rápido que la generación, pero todavía representa menos de un tercio del material aprovechable que se produce.",
+        "correcta": true,
+        "explicacion": "El material recuperado pasó de 820 a 1480 toneladas (casi se duplicó), mientras que el generado pasó de 4200 a 4700 (creció cerca de un 12 %). Aun así, 1480 de 4700 toneladas equivale a cerca del 31 %, menos de un tercio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: observo las dos series del gráfico: generado (4200 → 4700) y recuperado (820 → 1480). COMPRENDER: debo elegir la conclusión que los datos respalden. INTERPRETAR: lo generado crece poco (alrededor del 12 %); lo recuperado casi se duplica (alrededor del 80 %). REPRESENTAR: 1480 ÷ 4700 ≈ 0,31, es decir, menos de un tercio. RAZONAR: la generación no disminuye; la recuperación no llega a la mitad; la recuperación no está estable. Solo la primera conclusión describe correctamente ambas tendencias y la proporción. RESOLVER: la opción que dice que la recuperación creció más rápido pero sigue siendo menos de un tercio. VERIFICAR: en 2021 la proporción era 820 ÷ 4200 ≈ 0,20; en 2025 es 0,31: creció, pero no alcanza 0,33.",
+    "que_identificar": "Los valores inicial y final de cada serie y la proporción entre recuperado y generado en 2025.",
+    "que_revisar": "Comparar tendencias de dos series en un gráfico de barras y calcular proporciones aproximadas entre ellas.",
+    "refuerzo_ids": [
+      "LC-117",
+      "LC-090"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T34",
+      "discontinuo",
+      "infografia",
+      "barras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-119",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "representar",
+    "tema": "Texto discontinuo (infografía ambiental con gráfico)",
+    "subtema": "Función de una sección en un texto discontinuo",
+    "dificultad": 2,
+    "contexto": "**Infografía: ¿A dónde va la basura de Ciudad Verde?**\n\n*Elaborada por la Secretaría de Ambiente municipal para la Semana del Reciclaje*\n\n**Panel 1. Lo que botamos.** Cada habitante del municipio genera en promedio 0,8 kilogramos de residuos al día. De ese total, cerca de la mitad es material orgánico (restos de comida y poda), un tercio son materiales aprovechables (papel, cartón, vidrio, plástico y metales) y el resto son residuos que hoy no tienen aprovechamiento.\n\n**Panel 2. Lo que separamos.** Separar en la fuente significa clasificar los residuos en el hogar antes de entregarlos: bolsa blanca para aprovechables, bolsa verde para orgánicos y bolsa negra para los demás. Solo lo que llega limpio y seco en la bolsa blanca puede venderse a las empresas transformadoras.\n\n**Panel 3. Lo que recuperamos.** El gráfico muestra las toneladas de material aprovechable recuperadas cada año por la asociación de recicladores del municipio, comparadas con las toneladas aprovechables que, según los cálculos de la Secretaría, se generaron en el mismo periodo.\n\n**Panel 4. Lo que podemos hacer.** Si cada hogar separara correctamente, la asociación podría duplicar sus ingresos sin recoger un kilo más de basura: hoy casi una tercera parte de lo que llega en bolsa blanca se descarta porque viene contaminado con residuos orgánicos.\n\n*Fuente: registros de la asociación de recicladores y estimaciones de la Secretaría de Ambiente, 2021-2025.*",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Material aprovechable generado y recuperado en el municipio (toneladas por año)",
+      "eje_x": "Año",
+      "eje_y": "Toneladas",
+      "series": [
+        {
+          "nombre": "Generado (estimación)",
+          "valores": [
+            [
+              "2021",
+              4200
+            ],
+            [
+              "2022",
+              4300
+            ],
+            [
+              "2023",
+              4450
+            ],
+            [
+              "2024",
+              4550
+            ],
+            [
+              "2025",
+              4700
+            ]
+          ]
+        },
+        {
+          "nombre": "Recuperado por la asociación",
+          "valores": [
+            [
+              "2021",
+              820
+            ],
+            [
+              "2022",
+              910
+            ],
+            [
+              "2023",
+              1150
+            ],
+            [
+              "2024",
+              1300
+            ],
+            [
+              "2025",
+              1480
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "En la organización de la infografía, el panel 4 cumple la función de",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "presentar los datos numéricos que respaldan las estimaciones de la Secretaría en los paneles anteriores.",
+        "correcta": false,
+        "explicacion": "Los datos numéricos principales están en el panel 1 (0,8 kilogramos, mitad, tercio) y en el gráfico del panel 3. El panel 4 solo menciona una proporción (una tercera parte) para justificar la acción propuesta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la función del panel con la presencia de alguna cifra en él."
+      },
+      {
+        "clave": "B",
+        "texto": "pasar del diagnóstico a la acción, mostrando cómo la separación en los hogares se conecta con los ingresos de los recicladores.",
+        "correcta": true,
+        "explicacion": "Los paneles 1 a 3 describen la situación (cuánto se bota, cómo se separa, cuánto se recupera). El panel 4, titulado «Lo que podemos hacer», propone una acción (separar correctamente) y explica su efecto sobre los ingresos de la asociación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "explicar el significado de los colores de las bolsas que se usan para separar los residuos.",
+        "correcta": false,
+        "explicacion": "La explicación de las bolsas blanca, verde y negra se encuentra en el panel 2, no en el panel 4, que ya da por conocido ese sistema y habla de sus consecuencias económicas.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al panel 4 el contenido del panel 2 porque ambos mencionan la bolsa blanca."
+      },
+      {
+        "clave": "D",
+        "texto": "advertir que la asociación de recicladores recogerá más basura en los próximos años.",
+        "correcta": false,
+        "explicacion": "El panel 4 dice lo contrario: la asociación podría aumentar sus ingresos «sin recoger un kilo más de basura». La mejora propuesta no depende de recoger más, sino de recibir material limpio.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la expresión «sin recoger un kilo más» en sentido inverso."
+      }
+    ],
+    "explicacion": "LEER: repaso los títulos de los cuatro paneles: lo que botamos, lo que separamos, lo que recuperamos, lo que podemos hacer. COMPRENDER: la pregunta pide la función del cuarto panel en esa organización. INTERPRETAR: los tres primeros describen hechos; el cuarto propone una acción y señala su efecto económico. REPRESENTAR: diagnóstico (paneles 1-3) → propuesta (panel 4). RAZONAR: los datos de respaldo están en los paneles 1 y 3; los colores de las bolsas en el 2; la frase «sin recoger un kilo más» niega que se vaya a recoger más basura. RESOLVER: la opción que describe el paso del diagnóstico a la acción y la conexión con los ingresos. VERIFICAR: el título «Lo que podemos hacer» y el verbo «podría duplicar sus ingresos» confirman la función propositiva.",
+    "que_identificar": "Los títulos de los paneles y el cambio de verbos descriptivos («botamos», «separamos», «recuperamos») a uno propositivo («podemos hacer»).",
+    "que_revisar": "Reconocer la organización de textos discontinuos: secciones descriptivas frente a secciones que proponen acciones.",
+    "refuerzo_ids": [
+      "LC-118",
+      "LC-095"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T34",
+      "discontinuo",
+      "infografia",
+      "barras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-120",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto discontinuo (infografía ambiental con gráfico)",
+    "subtema": "Evaluación de una afirmación cuantitativa del texto",
+    "dificultad": 3,
+    "contexto": "**Infografía: ¿A dónde va la basura de Ciudad Verde?**\n\n*Elaborada por la Secretaría de Ambiente municipal para la Semana del Reciclaje*\n\n**Panel 1. Lo que botamos.** Cada habitante del municipio genera en promedio 0,8 kilogramos de residuos al día. De ese total, cerca de la mitad es material orgánico (restos de comida y poda), un tercio son materiales aprovechables (papel, cartón, vidrio, plástico y metales) y el resto son residuos que hoy no tienen aprovechamiento.\n\n**Panel 2. Lo que separamos.** Separar en la fuente significa clasificar los residuos en el hogar antes de entregarlos: bolsa blanca para aprovechables, bolsa verde para orgánicos y bolsa negra para los demás. Solo lo que llega limpio y seco en la bolsa blanca puede venderse a las empresas transformadoras.\n\n**Panel 3. Lo que recuperamos.** El gráfico muestra las toneladas de material aprovechable recuperadas cada año por la asociación de recicladores del municipio, comparadas con las toneladas aprovechables que, según los cálculos de la Secretaría, se generaron en el mismo periodo.\n\n**Panel 4. Lo que podemos hacer.** Si cada hogar separara correctamente, la asociación podría duplicar sus ingresos sin recoger un kilo más de basura: hoy casi una tercera parte de lo que llega en bolsa blanca se descarta porque viene contaminado con residuos orgánicos.\n\n*Fuente: registros de la asociación de recicladores y estimaciones de la Secretaría de Ambiente, 2021-2025.*",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Material aprovechable generado y recuperado en el municipio (toneladas por año)",
+      "eje_x": "Año",
+      "eje_y": "Toneladas",
+      "series": [
+        {
+          "nombre": "Generado (estimación)",
+          "valores": [
+            [
+              "2021",
+              4200
+            ],
+            [
+              "2022",
+              4300
+            ],
+            [
+              "2023",
+              4450
+            ],
+            [
+              "2024",
+              4550
+            ],
+            [
+              "2025",
+              4700
+            ]
+          ]
+        },
+        {
+          "nombre": "Recuperado por la asociación",
+          "valores": [
+            [
+              "2021",
+              820
+            ],
+            [
+              "2022",
+              910
+            ],
+            [
+              "2023",
+              1150
+            ],
+            [
+              "2024",
+              1300
+            ],
+            [
+              "2025",
+              1480
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "El panel 4 afirma que, si todos los hogares separaran correctamente, la asociación «podría duplicar sus ingresos sin recoger un kilo más de basura». Tomando como base el dato que ofrece el mismo panel, ¿cuál es la debilidad de esa afirmación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El panel no indica el color de la bolsa en la que deben ir los residuos orgánicos, de modo que los hogares no sabrían cómo separar.",
+        "correcta": false,
+        "explicacion": "El panel 2 ya indicó que los orgánicos van en la bolsa verde. Además, esa información no tiene relación con la exactitud de la afirmación sobre duplicar los ingresos.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Señaló una supuesta omisión que no afecta el razonamiento cuantitativo que se pide evaluar."
+      },
+      {
+        "clave": "B",
+        "texto": "La asociación no puede aumentar sus ingresos porque el gráfico muestra que la generación de material aprovechable es cada vez menor.",
+        "correcta": false,
+        "explicacion": "El gráfico muestra que la generación aumenta cada año (de 4200 a 4700 toneladas). La objeción se basa en una lectura incorrecta de los datos y no evalúa el cálculo del panel 4.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó mal la tendencia del gráfico y la usó para objetar un cálculo que no depende de ella."
+      },
+      {
+        "clave": "C",
+        "texto": "Si hoy se descarta cerca de una tercera parte de lo que llega en bolsa blanca, aprovecharlo todo aumentaría el material vendible en cerca de la mitad, no al doble.",
+        "correcta": true,
+        "explicacion": "Si de cada 3 kilos que llegan se venden 2 y se descarta 1, recuperar ese kilo descartado lleva la venta de 2 a 3 kilos: un aumento del 50 %. Para duplicar los ingresos tendría que descartarse la mitad del material, no un tercio, o el precio debería subir, algo que la infografía no menciona.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Duplicar los ingresos exigiría que los recicladores recogieran el doble de basura, lo cual contradice la frase «sin recoger un kilo más».",
+        "correcta": false,
+        "explicacion": "Esta objeción supone que los ingresos solo pueden crecer recogiendo más, pero el panel plantea otra vía: vender lo que hoy se descarta. La objeción no analiza la proporción descartada, que es donde está el error.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Rechazó la idea general sin examinar el dato numérico que la sostiene."
+      }
+    ],
+    "explicacion": "LEER: releo el panel 4: se descarta «casi una tercera parte» de lo que llega en bolsa blanca y se afirma que, sin esa pérdida, los ingresos podrían duplicarse. COMPRENDER: debo evaluar si el dato respalda la conclusión. INTERPRETAR: si llegan 3 partes y se descarta 1, hoy se venden 2; si se aprovecharan las 3, la venta pasaría de 2 a 3. REPRESENTAR: 2 → 3 es un aumento del 50 %, no del 100 %. RAZONAR: para duplicar habría que descartar la mitad o que el precio subiera, y la infografía no dice nada de eso. Las otras objeciones leen mal el gráfico, señalan una omisión irrelevante o suponen que solo se crece recogiendo más. RESOLVER: la opción que indica que el material vendible aumentaría cerca de la mitad, no al doble. VERIFICAR: con números: 1480 toneladas recuperadas, un tercio descartado ≈ 490; vendible hoy ≈ 990; vendible total 1480; 1480 ÷ 990 ≈ 1,5.",
+    "que_identificar": "La proporción «casi una tercera parte» descartada y la afirmación de que los ingresos podrían duplicarse, en el panel 4.",
+    "que_revisar": "Verificar afirmaciones cuantitativas de un texto con un cálculo sencillo de proporciones antes de aceptarlas.",
+    "refuerzo_ids": [
+      "LC-117",
+      "LC-092"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "texto:LC-T34",
+      "discontinuo",
+      "infografia",
+      "barras"
+    ],
+    "estado": "aprobada"
+  }
+]
