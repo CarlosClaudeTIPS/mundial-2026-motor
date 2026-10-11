@@ -14,8 +14,33 @@
 // Rusia NO está en Betano Colombia.
 
 const ES_DEV = !!import.meta.env.DEV
-// En dev no hay Edge Functions: se usa el proxy de producción (CORS abierto)
-const PROXY = ES_DEV ? 'https://motor-apuestas-xi.vercel.app/api/betano' : '/api/betano'
+// Betano solo responde a IPs colombianas (2026-10-10: 403 desde Vercel iad1 y
+// gru1). Orden de intento:
+//   1. relé local en el PC de Carlos (npm run betano → http://localhost:8787)
+//   2. proxy de Vercel (por si algún día deja de bloquear)
+// En dev no hay Functions locales: el 2º es el proxy de producción (CORS abierto).
+const RELAY = 'http://localhost:8787/api/betano'
+const PROXY_VERCEL = ES_DEV ? 'https://motor-apuestas-xi.vercel.app/api/betano' : '/api/betano'
+let relayCaido = 0 // ts del último fallo del relé: no reintentar en 2 min
+
+async function pedir(query) {
+  const intentos = Date.now() - relayCaido > 2 * 60_000 ? [RELAY, PROXY_VERCEL] : [PROXY_VERCEL]
+  for (const base of intentos) {
+    try {
+      const ctrl = new AbortController()
+      const t = setTimeout(() => ctrl.abort(), base === RELAY ? 2500 : 15000)
+      const r = await fetch(`${base}?${query}`, { signal: ctrl.signal })
+      clearTimeout(t)
+      if (!r.ok) { if (base === RELAY) relayCaido = Date.now(); continue }
+      const data = await r.json()
+      if (data?.ok) return data
+      // el proxy respondió pero Betano no (403 geo, etc.): probar el siguiente
+    } catch {
+      if (base === RELAY) relayCaido = Date.now()
+    }
+  }
+  return null
+}
 
 // liga interna (leagues.js) → id de liga en Betano Colombia (ligas.txt 2026-09-11)
 export const BETANO_LIGA = {
@@ -68,10 +93,8 @@ export async function fetchEventosBetano(leagueId) {
   if (!id) return null
   const cached = getCache(`liga_${id}`, TTL_LIGA)
   if (cached) return cached
-  const r = await fetch(`${PROXY}?liga=${id}`)
-  if (!r.ok) return null
-  const data = await r.json()
-  if (!data?.ok) return null
+  const data = await pedir(`liga=${id}`)
+  if (!data) return null
   setCache(`liga_${id}`, data.eventos)
   return data.eventos
 }
@@ -79,10 +102,8 @@ export async function fetchEventosBetano(leagueId) {
 export async function fetchMercadosBetano(evUrl) {
   const cached = getCache(`ev_${evUrl}`, TTL_EVENTO)
   if (cached) return cached
-  const r = await fetch(`${PROXY}?evento=${encodeURIComponent(evUrl)}`)
-  if (!r.ok) return null
-  const data = await r.json()
-  if (!data?.ok) return null
+  const data = await pedir(`evento=${encodeURIComponent(evUrl)}`)
+  if (!data) return null
   const out = { evento: data.evento, mercados: data.mercados }
   setCache(`ev_${evUrl}`, out)
   return out
@@ -235,7 +256,7 @@ export function textoOferta(oferta) {
   switch (oferta.estado) {
     case 'sin-liga': return 'Esta liga no está en Betano Colombia'
     case 'sin-partido': return 'Betano aún no publicó este partido'
-    case 'error': return 'Betano no respondió (cuotas estimadas)'
+    case 'error': return 'Sin cuotas de Betano: enciende el relé (npm run betano) — Betano solo responde desde Colombia'
     case 'ok': return `Cuotas reales de Betano · ${oferta.mercados?.length ?? 0} mercados`
     default: return null
   }

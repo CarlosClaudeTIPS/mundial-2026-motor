@@ -7,7 +7,8 @@
     "test": "vitest run",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "betano": "node scripts/betano-relay.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
