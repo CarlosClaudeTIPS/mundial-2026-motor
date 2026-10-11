@@ -370,7 +370,7 @@ textarea{resize:vertical}
 /* Sección personalización */
 .section-persona{background:linear-gradient(180deg,#fff 0%,var(--c-bg-soft) 30%,var(--c-bg-soft) 100%);position:relative}
 .simulador{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;background:#fff;border-radius:24px;box-shadow:var(--shadow);padding:32px;border:1px solid var(--c-line);position:relative}
-.simulador::before{content:"Pruébalo";position:absolute;top:-14px;left:28px;background:var(--c-yellow);color:var(--c-ink);font-family:var(--font-head);font-weight:800;font-size:.8rem;padding:5px 14px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase}
+.simulador::before{content:"Ejemplo interactivo";position:absolute;top:-14px;left:28px;background:var(--c-yellow);color:var(--c-ink);font-family:var(--font-head);font-weight:800;font-size:.8rem;padding:5px 14px;border-radius:999px;letter-spacing:.04em;text-transform:uppercase}
 .sim-group{margin-bottom:18px}
 .sim-label{display:block;font-family:var(--font-head);font-weight:800;font-size:.95rem;margin-bottom:8px;color:var(--c-primary)}
 .sim-result{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
@@ -445,3 +445,6 @@ textarea{resize:vertical}
   .inputs-list{grid-template-columns:auto 1fr}
   .simulador{padding:28px 18px 22px}
 }
+
+.sim-help{font-size:.9rem;color:var(--c-ink-3);margin:0 0 16px;padding:10px 12px;background:var(--c-bg-soft);border-radius:8px;border-left:3px solid var(--c-yellow)}
+.sim-result-label{display:inline-block;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--c-green);margin-bottom:6px}
