@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "test": "vitest run",
     "validar-banco": "node scripts/validar-banco.mjs",
-    "demo": "vite --mode demo --port 5181"
+    "demo": "vite --mode demo --port 5181",
+    "revisar-banco": "node scripts/revisar-banco.mjs",
+    "balancear-banco": "node scripts/balancear-banco.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.129.0",
