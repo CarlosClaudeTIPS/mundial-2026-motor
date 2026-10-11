@@ -152,7 +152,7 @@
       </dl>
       <p class="small" style="color:var(--c-ink-3)">Documento demostrativo con datos ficticios. El resultado final depende de tu contexto.</p>
       <div class="modal-actions">
-        ${p.archivo ? `<a class="btn btn-ghost" href="${esc(p.archivo)}" download>Descargar PDF</a>` : ""}
+        ${p.archivo ? `<a class="btn btn-ghost" href="${esc(p.archivo)}" download="${esc(p.archivo.split("/").pop())}">Descargar PDF</a>` : ""}
         <a class="btn btn-primary" href="#formulario" data-close data-preselect="${esc(p.categoria)}">Quiero algo similar</a>
         <a class="btn btn-wa wa-link" href="#" data-wa="un material similar a: ${esc(p.nombre)}">Preguntar por WhatsApp</a>
       </div>`);
@@ -292,6 +292,27 @@
     }
     sim.addEventListener("change", update); update();
   })();
+
+  /* ---------- Descargas dentro de la vista previa de claude.ai ----------
+     En un hosting normal (Netlify, GitHub Pages) el enlace con "download" basta.
+     Dentro del visor de claude.ai las descargas directas están bloqueadas; se piden por su API. */
+  let hostDownloads = null;
+  if (window.claude && typeof window.claude.use === "function") {
+    window.claude.use("downloads").then((d) => { hostDownloads = d; }).catch(() => {});
+  }
+  document.addEventListener("click", async (e) => {
+    const a = e.target.closest("a[download]"); if (!a || !hostDownloads) return;
+    e.preventDefault(); const label = a.textContent;
+    try {
+      a.textContent = "Preparando…";
+      const blob = await (await fetch(a.href)).blob();
+      await hostDownloads.save({ filename: a.getAttribute("download") || "muestra.pdf", data: blob });
+      a.textContent = label;
+    } catch (err) {
+      a.textContent = err && err.code === "declined" ? label : "Descarga no disponible aquí";
+      setTimeout(() => { a.textContent = label; }, 2500);
+    }
+  });
 
   /* ---------- Plegables solo en celular ---------- */
   const mq = window.matchMedia("(max-width: 820px)");
