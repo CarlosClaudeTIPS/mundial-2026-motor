@@ -136,11 +136,12 @@
 
   T.plantilla = (txt, vars) => String(txt || '').replace(/\{(\w+)\}/g, (m, k) => (vars[k] != null ? vars[k] : ''));
 
-  T.mensajeProducto = (p, variantes, tipo) => {
+  T.mensajeProducto = (p, variantes, tipo, cantidad) => {
     const wa = T.datos.config.whatsapp || {};
     const tpl = tipo === 'disponibilidad' ? wa.mensajeDisponibilidad : wa.mensajeProducto;
-    const vTxt = variantes && Object.keys(variantes).length
+    let vTxt = variantes && Object.keys(variantes).length
       ? Object.entries(variantes).map(([k, v]) => `${k}: ${v}`).join(', ') + '\n' : '';
+    if (cantidad && cantidad > 1) vTxt = `Cantidad: ${cantidad}\n` + vTxt;
     return T.plantilla(tpl || 'Hola, estoy interesado en {nombre}. {enlace}', {
       nombre: p.nombre, precio: T.formatoPrecio(p.precio), enlace: T.urlProducto(p, true), variantes: vTxt
     }).trim();
@@ -413,11 +414,13 @@
     return `<article class="tarjeta aparece ${p.disponible ? '' : 'agotada'}" data-id="${T.esc(p.id)}">
       <a class="tarjeta-imagen" href="${url}" tabindex="-1" aria-hidden="true">
         <img src="${T.esc(T.imagenProducto(p))}" alt="" loading="lazy" width="400" height="400">
+        ${p.imagenes && p.imagenes[1] ? `<img class="img-hover" src="${T.esc(T.imagenProducto(p, 1))}" alt="" loading="lazy" width="400" height="400">` : ''}
       </a>
       <div class="etiquetas">${etiquetas}</div>
       <div class="tarjeta-cuerpo">
         ${cat ? `<span class="tarjeta-categoria-txt">${T.esc(cat.nombre)}</span>` : ''}
         <h3 class="tarjeta-titulo"><a href="${url}">${T.esc(p.nombre)}</a></h3>
+        ${p.descripcionCorta ? `<p class="tarjeta-desc">${T.esc(p.descripcionCorta)}</p>` : ''}
         <div class="precio"><span class="precio-actual">${T.formatoPrecio(p.precio)}</span>${d > 0 ? `<span class="precio-anterior">${T.formatoPrecio(p.precioAnterior)}</span>` : ''}</div>
         <div class="tarjeta-acciones">
           ${p.disponible
@@ -468,12 +471,69 @@
   T.faqs = () => (T.datos.config.preguntasFrecuentes || []).filter(q => q.p && q.r);
   T.renderFaq = (lista) => lista.map(q => `<details class="faq"><summary>${T.esc(q.p)}</summary><p>${T.esc(q.r).replace(/\n/g, '<br>')}</p></details>`).join('');
 
+
+  /* ---------- Vistos recientemente ---------- */
+  T.vistos = {
+    lista() { return T.leerLS('tienda_vistos', []).filter(id => { const p = T.producto(id); return p && p.visible !== false; }); },
+    agregar(id) { const l = T.leerLS('tienda_vistos', []).filter(x => x !== id); l.unshift(id); T.guardarLS('tienda_vistos', l.slice(0, 12)); }
+  };
+  T.renderVistos = (sel, excluir) => {
+    const sec = $(sel); if (!sec) return;
+    const lista = T.vistos.lista().filter(id => id !== excluir).map(T.producto).slice(0, 8);
+    if (!lista.length) { sec.hidden = true; return; }
+    sec.hidden = false; T.renderGrid(sec.querySelector('.grid-productos'), lista);
+  };
+
+  /* ---------- Autocompletado del buscador ---------- */
+  T.autocompletar = () => {
+    $$('.buscador').forEach(form => {
+      const input = form.querySelector('input'); if (!input || form.dataset.ac) return; form.dataset.ac = '1';
+      const caja = document.createElement('div'); caja.className = 'sugerencias'; caja.hidden = true; form.appendChild(caja);
+      const cerrar = () => { caja.hidden = true; };
+      const render = () => {
+        const q = input.value.trim();
+        if (q.length < 2) { cerrar(); return; }
+        const prods = T.buscar(T.visibles(), q).slice(0, 5);
+        const cats = T.datos.catalogo.categorias.filter(c => c.visible !== false && T.slug(c.nombre).includes(T.slug(q))).slice(0, 2);
+        if (!prods.length && !cats.length) { caja.innerHTML = `<div class="sug-vacio">Sin resultados para “${T.esc(q)}”. <a href="${T.ruta('catalogo.html')}">Ver todo el catálogo</a></div>`; caja.hidden = false; return; }
+        caja.innerHTML = cats.map(c => `<a class="sug sug-cat" href="${T.ruta('catalogo.html?cat=' + encodeURIComponent(c.id))}"><span class="sug-ico">${T.icono(c.icono, 'svg:etiqueta')}</span><span>Categoría: <strong>${T.esc(c.nombre)}</strong></span></a>`).join('') +
+          prods.map(p => `<a class="sug" href="${T.urlProducto(p)}"><img src="${T.esc(T.imagenProducto(p))}" alt="" loading="lazy"><span><strong>${T.esc(p.nombre)}</strong><small>${T.formatoPrecio(p.precio)}${p.disponible ? '' : ' · Agotado'}</small></span></a>`).join('') +
+          `<a class="sug sug-todos" href="${T.ruta('catalogo.html?q=' + encodeURIComponent(q))}">Ver todos los resultados para “${T.esc(q)}” →</a>`;
+        caja.hidden = false;
+      };
+      input.addEventListener('input', render);
+      input.addEventListener('focus', render);
+      input.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrar(); });
+      document.addEventListener('click', (e) => { if (!form.contains(e.target)) cerrar(); });
+    });
+  };
+
+  /* ---------- Barra de navegación inferior (móvil) ---------- */
+  T.renderBarraInferior = (activa) => {
+    if ($('.barra-inferior')) return;
+    const cfg = T.datos.config;
+    const nav = document.createElement('nav'); nav.className = 'barra-inferior'; nav.setAttribute('aria-label', 'Navegación móvil');
+    const it = (href, ico, txt, k, extra) => `<a href="${href}" class="${activa === k ? 'activo' : ''}" ${extra || ''}>${ico}<span>${txt}</span></a>`;
+    nav.innerHTML = it(T.ruta('index.html'), T.icoCat.casa, 'Inicio', 'inicio') +
+      it(T.ruta('catalogo.html'), T.ico.tienda, 'Catálogo', 'catalogo') +
+      `<a href="#" id="bi-buscar">${T.ico.buscar}<span>Buscar</span></a>` +
+      `<a href="#" id="bi-carrito">${T.ico.carrito}<span class="contador"></span><span>Carrito</span></a>` +
+      `<a href="${T.enlaceWA((cfg.whatsapp || {}).mensajeGeneral)}" id="bi-wa" class="bi-wa" target="_blank" rel="noopener">${T.ico.wa}<span>WhatsApp</span></a>`;
+    document.body.appendChild(nav); document.body.classList.add('con-barra-inferior');
+    $('#bi-buscar').addEventListener('click', (e) => { e.preventDefault(); const m = $('#menu-movil'); if (m) { m.classList.add('abierto'); window.scrollTo({ top: 0, behavior: 'smooth' }); const i = m.querySelector('input'); if (i) setTimeout(() => i.focus(), 250); } });
+    $('#bi-carrito').addEventListener('click', (e) => { e.preventDefault(); T.abrirCarrito(true); });
+    $('#bi-wa').addEventListener('click', (e) => { if (!T.hayWA()) { e.preventDefault(); T.toast('El número de WhatsApp aún no está configurado.'); } else T.registrar('whatsapp_click', { origen: 'barra-inferior' }); });
+    T.renderContador();
+  };
+
   /* ---------- Arranque común ---------- */
   T.iniciar = async (activa, fn) => {
     try {
       await T.cargar();
       T.renderEncabezado(activa);
       T.renderGlobales();
+      T.renderBarraInferior(activa);
+      T.autocompletar();
       if (fn) await fn(T.datos);
       T.renderPie();
     } catch (err) {

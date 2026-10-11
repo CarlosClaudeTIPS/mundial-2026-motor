@@ -116,3 +116,15 @@ No incluido (y por qué):
 3. Formulario de pedido opcional (Netlify Forms, gratis hasta 100/mes) como respaldo cuando WhatsApp no esté disponible.
 4. Catálogo de WhatsApp Business sincronizado a mano con el CSV exportado.
 5. Si el volumen crece: CMS gratuito (Decap CMS) sobre los mismos JSON para editar con usuario y contraseña y subir fotos desde el navegador.
+
+## 8. Prácticas de conversión aplicadas (basadas en investigación de usabilidad)
+
+- Barra de navegación inferior en móvil (Inicio, Catálogo, Buscar, Carrito, WhatsApp), como las apps de Mercado Libre y Amazon.
+- Autocompletado del buscador con productos y categorías mientras se escribe.
+- Galería deslizable con puntos, contador y zoom a pantalla completa; miniaturas visibles (Baymard: solo el 24 % de los sitios móviles las muestra).
+- Barra de compra fija que aparece solo cuando el bloque de compra sale de pantalla.
+- Señales de confianza junto al botón de compra, no en el pie de página.
+- Selector de cantidad; la cantidad y la variante viajan en el mensaje de WhatsApp.
+- Segunda foto al pasar el cursor sobre la tarjeta y descripción corta en la tarjeta.
+- Carruseles horizontales en la portada móvil y sección «Vistos recientemente».
+- Contenido completo visible en la ficha (sin esconderlo en subpáginas, un error frecuente en móvil según Baymard).

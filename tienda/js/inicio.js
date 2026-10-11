@@ -16,6 +16,8 @@
 
     const vis = T.visibles();
     const conteo = (id) => vis.filter(p => p.categoria === id).length;
+    T.$('#categorias').classList.add('rail', 'rail-cat');
+    T.$$('#destacados, #populares, #nuevos, #ofertas, #recomendados, #sec-vistos .grid-productos').forEach(g => g.classList.add('rail'));
     T.$('#categorias').innerHTML = catalogo.categorias.filter(c => c.visible !== false && conteo(c.id) > 0).map(c => `
       <a class="tarjeta-categoria aparece" href="catalogo.html?cat=${encodeURIComponent(c.id)}">
         <span class="icono">${T.icono(c.icono, 'svg:etiqueta')}</span><strong>${T.esc(c.nombre)}</strong>
@@ -37,6 +39,7 @@
       <div class="confianza-item"><span class="icono">${T.icono(c.icono, 'svg:escudo')}</span>
         <div><strong>${T.esc(c.titulo)}</strong><span>${c.texto ? T.esc(c.texto) : '<em class="pendiente">Información pendiente de confirmar por el negocio.</em>'}</span></div></div>`).join('');
 
+    T.renderVistos('#sec-vistos');
     T.$('#pasos').innerHTML = (config.pasosCompra || []).map((p, i) => `<div class="paso aparece"><span class="paso-num">${i + 1}</span><strong>${T.esc(p.titulo)}</strong><span>${T.esc(p.texto)}</span></div>`).join('');
     if (!(config.pasosCompra || []).length) T.$('#sec-pasos').hidden = true;
     const faqs = T.faqs(); const dest = faqs.filter(q => q.destacada);
