@@ -10,12 +10,18 @@ funciona sin conexión y los datos se guardan en el propio dispositivo.
 | Pestaña | Función |
 |---------|---------|
 | Inicio | Consejo del día, puntos vencidos / próximos, acciones rápidas |
-| Mantenimiento | Plan de 19 puntos basado en el programa Suzuki de la Gixxer (servicio a 1.000 km y luego cada 3.000 km): aceite, filtros, bujía, válvulas, cadena, frenos, mangueras, llantas, cables, batería, tornillería, horquilla, más SOAT y revisión técnico-mecánica. Cada uno con intervalo en km y/o meses, estado (al día / pronto / vencido) y barra de progreso. Editable. |
+| Mantenimiento | Mapa lateral de la moto con las piezas numeradas. Plan de 19 puntos basado en el programa Suzuki de la Gixxer (servicio a 1.000 km y luego cada 3.000 km): aceite, filtros, bujía, válvulas, cadena, frenos, mangueras, llantas, cables, batería, tornillería, horquilla, más SOAT y revisión técnico-mecánica. Cada uno con intervalo en km y/o meses, estado (al día / pronto / vencido) y barra de progreso. Cada punto tiene un esquema dibujado, dónde está en la Gixxer y cómo saber si está bien (botón "¿Qué es?"). Editable. |
 | Historial | Registro de cada intervención con fecha, km, coste, taller y notas. Gasto anual y total. |
 | Combustible | Tanqueadas con cálculo de L/100 km, km/L y costo por 100 km (referencia Gixxer: 40-50 km/L). |
 | Checklist | Revisión pre-ruta T-CLOCS que se reinicia cada día. |
 | Aprender | 14 lecciones, la primera dedicada a la Gixxer (refrigeración por aire y aceite, ABS, valores clave, plan Suzuki, trámites en Colombia), más motor, aceite, cadena, llantas, frenos, eléctrico, conducción segura y glosario. Mini test al final de cada una. |
 | Ajustes | Ficha técnica de la Gixxer (aceite, bujía, presiones, cadena, frenos, tanque...), datos de la moto, copia de seguridad (exportar / importar JSON), moneda (pesos por defecto), instalación. |
+
+## Diseño
+
+Fondo claro, tipografía Nunito (Google Fonts, con respaldo del sistema) y esquemas
+SVG dibujados en el propio archivo: no carga imágenes externas, así que funciona sin
+conexión y no depende de fotos con derechos.
 
 ## Usarla
 

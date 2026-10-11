@@ -1,5 +1,5 @@
 // Service worker de MotoLog: cachea la app para que funcione sin conexión.
-const CACHE = 'motolog-v2';
+const CACHE = 'motolog-v3';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', e => {
