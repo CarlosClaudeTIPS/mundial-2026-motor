@@ -225,7 +225,8 @@
         ${campo('politicas.cambios', 'Cambios y devoluciones', 'textarea', pol.cambios, { rows: 2 })}${campo('politicas.garantia', 'Garantías', 'textarea', pol.garantia, { rows: 2 })}
         ${campo('politicas.privacidad', 'Privacidad y tratamiento de datos', 'textarea', pol.privacidad, { rows: 4, ayuda: 'En Colombia aplica la Ley 1581 de 2012. Indica qué datos recibes por WhatsApp, para qué los usas y cómo puede el cliente pedir su eliminación.' })}
       </fieldset>
-      <fieldset><legend>Preguntas frecuentes generales</legend>${listaEditable('faq', 'Preguntas', (config.preguntasFrecuentes || []).map(q => `${q.p} | ${q.r}`), 'Formato: Pregunta | Respuesta')}</fieldset>
+      <fieldset><legend>Preguntas frecuentes generales</legend>${listaEditable('faq', 'Preguntas', (config.preguntasFrecuentes || []).map(q => `${q.destacada ? '* ' : ''}${q.p} | ${q.r} | ${q.grupo || ''}`), 'Formato: Pregunta | Respuesta | Grupo. Empieza con * para destacarla en la portada y en las fichas de producto.')}</fieldset>
+      <fieldset><legend>Pasos de «Cómo comprar» (portada)</legend>${listaEditable('pasos', 'Pasos', (config.pasosCompra || []).map(p => `${p.titulo} | ${p.texto}`), 'Formato: Título | Texto')}</fieldset>
       <fieldset><legend>Analítica y publicidad (opcional, gratuito)</legend>
         <div class="fila">${campo('analitica.ga4', 'ID de Google Analytics 4 (G-XXXXXXX)', 'text', a.ga4)}${campo('analitica.metaPixel', 'ID de Meta Pixel', 'text', a.metaPixel)}</div>
         <p class="nota-legal">Se envían los eventos view_item, whatsapp_click, add_to_cart y buscar. Si usas Meta Pixel, publica una política de privacidad que lo mencione.</p>
@@ -246,7 +247,8 @@
     const set = (ruta, val) => { const k = ruta.split('.'); let o = config; for (let i = 0; i < k.length - 1; i++) { if (o[k[i]] == null) o[k[i]] = /^\d+$/.test(k[i + 1]) ? [] : {}; o = o[k[i]]; } o[k[k.length - 1]] = val; };
     Array.from(f.elements).forEach(el => { if (!el.name || el.closest('[data-lista]')) return; set(el.name, el.type === 'checkbox' ? el.checked : el.value.trim()); });
     config.whatsapp.numero = String(config.whatsapp.numero || '').replace(/\D/g, '');
-    config.preguntasFrecuentes = leerLista('faq').map(s => { const [p, ...r] = s.split('|'); return r.length ? { p: p.trim(), r: r.join('|').trim() } : null; }).filter(Boolean);
+    config.preguntasFrecuentes = leerLista('faq').map(s => { const partes = s.split('|').map(x => x.trim()); if (partes.length < 2) return null; let p = partes[0]; const destacada = p.startsWith('*'); if (destacada) p = p.slice(1).trim(); return { p, r: partes[1], grupo: partes[2] || 'General', destacada }; }).filter(Boolean);
+    config.pasosCompra = leerLista('pasos').map(s => { const [t, ...x] = s.split('|'); return x.length ? { titulo: t.trim(), texto: x.join('|').trim() } : null; }).filter(Boolean);
     persistir(); T.aplicarMarca(config); renderConfig(); T.toast('Configuración guardada en el borrador');
   });
 

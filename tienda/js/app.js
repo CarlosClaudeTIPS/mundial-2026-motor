@@ -297,11 +297,16 @@
         ${T.ico.buscar}<label class="visualmente-oculto" for="${id}">Buscar productos</label>
         <input id="${id}" type="search" name="q" placeholder="Buscar productos…" autocomplete="off">
         <button type="submit" aria-label="Buscar">${T.ico.buscar}</button></form>`;
-    const enlaces = `<a href="${T.ruta('index.html')}" ${activa === 'inicio' ? 'class="activo"' : ''}>Inicio</a>
-        <a href="${T.ruta('catalogo.html')}" ${activa === 'catalogo' ? 'class="activo"' : ''}>Catálogo</a>
-        <a href="${T.ruta('catalogo.html?f=ofertas')}">Ofertas</a>
-        <a href="${T.ruta('catalogo.html?f=nuevos')}">Novedades</a>
-        <a href="${T.ruta('preguntas.html')}" ${activa === 'preguntas' ? 'class="activo"' : ''}>Preguntas</a>`;
+    /* el elemento activo depende también del filtro de la URL (ofertas / novedades) */
+    const f = T.param('f');
+    if (activa === 'catalogo' && f === 'ofertas') activa = 'ofertas';
+    else if (activa === 'catalogo' && f === 'nuevos') activa = 'nuevos';
+    const act = (k) => activa === k ? 'class="activo" aria-current="page"' : '';
+    const enlaces = `<a href="${T.ruta('index.html')}" ${act('inicio')}>Inicio</a>
+        <a href="${T.ruta('catalogo.html')}" ${act('catalogo')}>Catálogo</a>
+        <a href="${T.ruta('catalogo.html?f=ofertas')}" ${act('ofertas')}>Ofertas</a>
+        <a href="${T.ruta('catalogo.html?f=nuevos')}" ${act('nuevos')}>Novedades</a>
+        <a href="${T.ruta('preguntas.html')}" ${act('preguntas')}>Preguntas</a>`;
     const avisos = [];
     if (!T.hayWA()) avisos.push(`<div class="aviso-config"><div class="contenedor">⚠️ Falta configurar el número de WhatsApp. Los botones de pedido no funcionarán hasta hacerlo en <a href="${T.ruta('admin.html')}">el panel de administración</a>.</div></div>`);
     if (T.modoBorrador) avisos.push(`<div class="aviso-demo">👁️ Estás viendo el <strong>borrador local</strong> del panel admin. <a href="#" id="salir-preview">Salir de la vista previa</a></div>`);
@@ -457,6 +462,11 @@
       return { p, score };
     }).filter(Boolean).sort((a, b) => b.score - a.score).map(x => x.p);
   };
+
+
+  /* ---------- Preguntas frecuentes (reutilizable) ---------- */
+  T.faqs = () => (T.datos.config.preguntasFrecuentes || []).filter(q => q.p && q.r);
+  T.renderFaq = (lista) => lista.map(q => `<details class="faq"><summary>${T.esc(q.p)}</summary><p>${T.esc(q.r).replace(/\n/g, '<br>')}</p></details>`).join('');
 
   /* ---------- Arranque común ---------- */
   T.iniciar = async (activa, fn) => {

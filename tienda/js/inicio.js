@@ -37,6 +37,12 @@
       <div class="confianza-item"><span class="icono">${T.icono(c.icono, 'svg:escudo')}</span>
         <div><strong>${T.esc(c.titulo)}</strong><span>${c.texto ? T.esc(c.texto) : '<em class="pendiente">Información pendiente de confirmar por el negocio.</em>'}</span></div></div>`).join('');
 
+    T.$('#pasos').innerHTML = (config.pasosCompra || []).map((p, i) => `<div class="paso aparece"><span class="paso-num">${i + 1}</span><strong>${T.esc(p.titulo)}</strong><span>${T.esc(p.texto)}</span></div>`).join('');
+    if (!(config.pasosCompra || []).length) T.$('#sec-pasos').hidden = true;
+    const faqs = T.faqs(); const dest = faqs.filter(q => q.destacada);
+    T.$('#faq-inicio').innerHTML = T.renderFaq((dest.length ? dest : faqs).slice(0, 5));
+    if (!faqs.length) T.$('#sec-faq').hidden = true;
+
     const wa = config.whatsapp || {};
     const atajo = (txt, msg, ev) => `<button class="btn btn-whatsapp btn-sm" data-msg="${T.esc(msg)}" data-ev="${ev}">${T.ico.wa} ${txt}</button>`;
     T.$('#atajos-wa').innerHTML = atajo('Consultar envíos', wa.mensajeEnvios, 'envios') + atajo('Métodos de pago', wa.mensajePagos, 'pagos') + atajo('Hablar con nosotros', wa.mensajeGeneral, 'general');

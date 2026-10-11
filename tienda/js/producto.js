@@ -84,6 +84,7 @@
       ${p.instrucciones.length ? `<div class="bloque"><h2>Cómo se usa</h2>${listaNum(p.instrucciones)}</div>` : ''}
       ${p.precauciones.length ? `<div class="bloque"><h2>Recomendaciones y precauciones</h2>${lista(p.precauciones)}</div>` : ''}
       ${p.preguntas.length ? `<div class="bloque"><h2>Preguntas frecuentes</h2>${p.preguntas.map(q => `<details class="faq"><summary>${T.esc(q.p)}</summary><p>${T.esc(q.r)}</p></details>`).join('')}</div>` : ''}
+      ${T.faqs().length ? `<div class="bloque"><h2>Compra con tranquilidad</h2><p style="color:var(--texto-suave)">Respuestas a lo que más preguntan antes de pedir.</p>${T.renderFaq((T.faqs().filter(q => q.destacada).length ? T.faqs().filter(q => q.destacada) : T.faqs()).slice(0, 4))}<p style="margin:.8rem 0 0"><a href="${T.ruta('preguntas.html')}">Ver todas las preguntas frecuentes →</a></p></div>` : ''}
       ${relFinal.length ? `<section class="seccion"><div class="seccion-cabecera"><h2>Productos relacionados</h2></div><div class="grid-productos">${relFinal.slice(0, 4).map(T.tarjeta).join('')}</div></section>` : '<div style="height:1.5rem"></div>'}
 
       ${p.disponible ? `<div class="barra-fija"><span class="precio-actual">${T.formatoPrecio(p.precio)}</span><button class="btn btn-whatsapp" id="btn-pedir-fijo">${T.ico.wa} Pedir por WhatsApp</button></div>` : ''}`;
