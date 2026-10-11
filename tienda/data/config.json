@@ -1,0 +1,78 @@
+{
+  "negocio": {
+    "nombre": "Mi Tienda",
+    "eslogan": "Productos útiles, novedosos y a buen precio",
+    "descripcion": "Catálogo digital de productos para el hogar, tecnología, cuidado personal y más. Pedidos por WhatsApp.",
+    "logo": "img/logo-ejemplo.svg",
+    "ciudad": "",
+    "horario": ""
+  },
+  "whatsapp": {
+    "numero": "",
+    "mensajeProducto": "Hola, estoy interesado en el producto {nombre}. ¿Me pueden confirmar disponibilidad, precio y costo de envío?\n{variantes}{enlace}",
+    "mensajeDisponibilidad": "Hola, ¿tienen disponible el producto {nombre}?\n{variantes}{enlace}",
+    "mensajeGeneral": "Hola, quiero más información sobre sus productos.",
+    "mensajeEnvios": "Hola, ¿me pueden informar los costos y tiempos de envío?",
+    "mensajePagos": "Hola, ¿qué métodos de pago aceptan?",
+    "mensajeCarrito": "Hola, quiero pedir estos productos:\n{items}\nTotal estimado: {total}\n¿Me confirman disponibilidad y costo de envío?"
+  },
+  "redes": {
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "marketplace": ""
+  },
+  "marca": {
+    "colorPrimario": "#1e3a5f",
+    "colorAcento": "#d97706"
+  },
+  "portada": {
+    "titulo": "Productos que resuelven cosas de todos los días",
+    "subtitulo": "Explora el catálogo, pregunta por WhatsApp y recibe tu pedido sin complicaciones.",
+    "imagen": "img/portada.png",
+    "etiqueta": "Catálogo actualizado"
+  },
+  "confianza": [
+    {
+      "icono": "svg:camion",
+      "titulo": "Entregas",
+      "texto": ""
+    },
+    {
+      "icono": "svg:tarjeta",
+      "titulo": "Pagos",
+      "texto": ""
+    },
+    {
+      "icono": "svg:chat",
+      "titulo": "Atención",
+      "texto": "Respondemos tus preguntas por WhatsApp antes de que compres."
+    }
+  ],
+  "politicas": {
+    "entregas": "",
+    "pagos": "",
+    "cambios": "",
+    "garantia": "",
+    "privacidad": ""
+  },
+  "preguntasFrecuentes": [
+    {
+      "p": "¿Cómo hago un pedido?",
+      "r": "Elige el producto, toca «Pedir por WhatsApp» y te atendemos directamente. Abrir WhatsApp no confirma la compra: te confirmamos disponibilidad y total antes de cerrar el pedido."
+    },
+    {
+      "p": "¿Puedo pedir varios productos a la vez?",
+      "r": "Sí. Agrega los productos al carrito y envía el resumen completo por WhatsApp con un solo botón."
+    }
+  ],
+  "analitica": {
+    "ga4": "",
+    "metaPixel": ""
+  },
+  "sitio": {
+    "moneda": "COP",
+    "paginasEstaticas": false,
+    "avisoDemo": true
+  }
+}
