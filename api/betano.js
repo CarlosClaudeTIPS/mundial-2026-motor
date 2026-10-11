@@ -10,10 +10,11 @@
 // Uso:  /api/betano?liga=1            → { ok, eventos:[{id,name,startTime,url,home,away}] }
 //       /api/betano?evento=/cuotas-de-partido/x-y/91655509/ → { ok, evento, mercados:[{type,name,selections:[{name,handicap,price}]}] }
 
-export const config = { runtime: 'edge' }
+// Runtime Node (no Edge): Cloudflare delante de Betano devolvió 403 al fetch del
+// Edge runtime desde iad1; se prueba con undici desde gru1 (vercel.json).
 
 const BASE = 'https://www.betano.co'
-const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36'
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
 
 // Códigos de mercado de Betano que usa el motor (verificados 2026-09-11 con
 // Bournemouth–Brentford, Premier League). Por equipo: el 1º es local, el 2º visita.
@@ -28,12 +29,28 @@ const TIPOS = new Set([
   'MRES', 'DBLC', '1000617', '1000618',
 ])
 
-export default async function handler(req) {
-  const { searchParams } = new URL(req.url)
+export default async function handler(req, res) {
+  const { searchParams } = new URL(req.url, 'http://x')
   const liga = searchParams.get('liga')
   const evento = searchParams.get('evento')
+  const json = (data, status = 200, sMaxAge = 0) => {
+    res.setHeader('Content-Type', 'application/json')
+    // CORS abierto: datos públicos; permite usar el proxy de producción desde el dev local
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Cache-Control', sMaxAge ? `s-maxage=${sMaxAge}, stale-while-revalidate=120` : 'no-store')
+    res.status(status).send(JSON.stringify(data))
+  }
 
   try {
+    if (searchParams.get('debug')) {
+      // Qué ve el otro lado (cabeceras/IP) y qué contesta Betano
+      const eco = await fetch('https://httpbin.org/anything', { headers: cabeceras() }).then(r => r.json()).catch(e => ({ error: e.message }))
+      const b = await betano('/api/sport/futbol/ligas/x/1/?req=la,s,stnf,c,mb')
+      const cf = {}
+      for (const k of ['cf-ray', 'cf-mitigated', 'server']) cf[k] = b.headers.get(k)
+      return json({ ok: true, region: process.env.VERCEL_REGION, eco: { origin: eco.origin, headers: eco.headers }, betano: { status: b.status, cf } })
+    }
+
     if (liga) {
       if (!/^\d{1,8}g?$/.test(liga)) return json({ ok: false, error: 'liga inválida' }, 400)
       const r = await betano(`/api/sport/futbol/ligas/x/${liga}/?req=la,s,stnf,c,mb`)
@@ -98,25 +115,23 @@ export default async function handler(req) {
   }
 }
 
-function betano(path) {
-  return fetch(`${BASE}${path}`, {
-    headers: {
-      'User-Agent': UA,
-      'Accept': 'application/json, text/plain, */*',
-      'Accept-Language': 'es-CO,es;q=0.9',
-      'Referer': `${BASE}/`,
-    },
-  })
+function cabeceras() {
+  return {
+    'User-Agent': UA,
+    'Accept': 'application/json, text/plain, */*',
+    'Accept-Language': 'es-CO,es;q=0.9,en;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Referer': `${BASE}/sport/futbol/`,
+    'Origin': BASE,
+    'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"Windows"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+  }
 }
 
-function json(data, status = 200, sMaxAge = 0) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      'Content-Type': 'application/json',
-      // CORS abierto: datos públicos; permite usar el proxy de producción desde el dev local
-      'Access-Control-Allow-Origin': '*',
-      'Cache-Control': sMaxAge ? `s-maxage=${sMaxAge}, stale-while-revalidate=120` : 'no-store',
-    },
-  })
+function betano(path) {
+  return fetch(`${BASE}${path}`, { headers: cabeceras() })
 }
