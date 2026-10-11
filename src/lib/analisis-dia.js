@@ -18,6 +18,7 @@ import { computePrematchCalc } from './prematch'
 import { generateCandidates, pickUnoPorMercado, explicacionCorta } from './picks'
 import { sugerirCombinadasDia } from './combinadas-dia'
 import { anotarCuotas } from './odds'
+import { ofertaBetano, aplicarOfertaBetano, getCuotaObjetivo } from './betano'
 import { savePrediccion, getPrediccion } from './predicciones'
 import { getLeague, getBaseline } from './leagues'
 import { mercadosDeLiga, resumenLiga } from './mercados-liga'
@@ -52,11 +53,14 @@ async function analizarPartido(liga, fixture, onProgress) {
   // UN pick por mercado (hasta 5), solo de los que la casa ofrece en esta liga,
   // cada uno con su porqué guardado para que la tarjeta lo muestre directo
   const base = getBaseline(liga.id)
-  let picks = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(liga.id))
+  // Cuotas REALES de Betano: solo líneas ofrecidas, prioridad a la cuota objetivo
+  prog('cuotas Betano')
+  const oferta = await ofertaBetano(liga.id, teamA.name, teamB.name, fixture.date)
+  const cands = aplicarOfertaBetano(generateCandidates(calc, null, teamA, teamB), oferta)
+  let picks = pickUnoPorMercado(cands, mercadosDeLiga(liga.id), 5, { cuotaObjetivo: getCuotaObjetivo() })
     .map(p => ({ ...p, porque: explicacionCorta(p, teamA, teamB, {}, calc, {}, {}, base) }))
-  // Cuotas REALES para goles/hándicap si hay VITE_ODDS_API_KEY (odds.js);
-  // sin clave o sin cobertura, el pick queda con la estimada de siempre
-  picks = await anotarCuotas(liga.id, teamA.name, teamB.name, picks)
+  // Respaldo (The Odds API, solo goles/hándicap) si Betano no tiene el partido
+  if (oferta?.estado !== 'ok') picks = await anotarCuotas(liga.id, teamA.name, teamB.name, picks)
 
   savePrediccion({
     leagueId: liga.id,
@@ -74,6 +78,7 @@ async function analizarPartido(liga, fixture, onProgress) {
 
   return {
     fixture, picks,
+    betano: oferta?.estado ?? null,
     muestraPobre: teamA.est || teamB.est,
     equipos: { a: teamA.name, b: teamB.name },
   }

@@ -277,7 +277,8 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
   // volumen es mayor, así que las líneas van más abiertas (1.5–3.5).
   pushHandicap(calc.adj?.goalsA, calc.adj?.goalsB, [-2.5, -1.5, -0.5, 0.5, 1.5],
     'handicap', 'handicap_local', 'handicap_visita', 'goles')
-  pushHandicap(calc.adj?.cornA, calc.adj?.cornB, [-3.5, -2.5, -1.5, 1.5, 2.5, 3.5],
+  // (±0.5 incluido: es la única línea 2-way que Betano suele publicar prematch)
+  pushHandicap(calc.adj?.cornA, calc.adj?.cornB, [-3.5, -2.5, -1.5, -0.5, 0.5, 1.5, 2.5, 3.5],
     'handicap_corners', 'handicap_corners_local', 'handicap_corners_visita', 'corners')
 
   // Ordenar por EV desc (si hay cuota), si no por margen abs desc
@@ -289,17 +290,41 @@ export function generateCandidates(calc, _odds, teamA, teamB) {
 // Evita el absurdo de recomendar "X más de 8.5 tiros" Y "X menos de 13.5" a la
 // vez: de cada mercado sale UNO solo, el de mayor confianza. Da igual si es
 // total, del local o del visitante — es un pick por mercado, no por variante.
-// Orden de presentación estable
-const ORDEN_MERCADOS = ['shots', 'sot', 'corners', 'ti', 'gk', 'goals', 'handicap', 'handicap_corners', 'cards']
+// Orden de presentación estable. Saques de portería primero: es el mercado
+// que Carlos quiere priorizar (2026-10-10).
+const ORDEN_MERCADOS = ['gk', 'shots', 'sot', 'corners', 'ti', 'goals', 'handicap', 'handicap_corners', 'cards']
 
-export function pickUnoPorMercado(candidates, mercadosPermitidos = null, objetivo = 5) {
+// Margen mínimo de la casa que hace jugable un pick: cuota ≥ 1.025 / P
+export const esJugable = (c) => c.cuota == null || (c.pMod > 0 && c.cuota >= 1.025 / (c.pMod / 100))
+
+// ── Ranking dentro de un mercado ──
+// Sin cuota real: confianza, luego margen (como siempre).
+// Con cuota real (Betano): primero las líneas en la ZONA OBJETIVO
+// [cuotaObjetivo, cuotaObjetivo + 0.7] ordenadas por EV — es lo que pidió
+// Carlos ("priorizar cuotas 1.5"); después las más cortas por confianza; las
+// muy largas (modelo demasiado seguro de sí mismo) al final.
+export function rankPick(c, cuotaObjetivo = 1.5) {
+  const conf = c.confidence ?? 0
+  const mar = Math.abs(c.margin ?? 0)
+  if (c.cuota == null) return [1, conf, mar]
+  const enZona = c.cuota >= cuotaObjetivo - 0.02 && c.cuota <= cuotaObjetivo + 0.7
+  if (enZona) return [2, c.ev ?? -999, conf]
+  if (c.cuota < cuotaObjetivo) return [1, conf, mar]
+  return [0, c.ev ?? -999, conf]
+}
+const cmpRank = (a, b) => {
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return b[i] - a[i]
+  return 0
+}
+
+export function pickUnoPorMercado(candidates, mercadosPermitidos = null, objetivo = 5, opts = {}) {
+  const cuotaObjetivo = opts.cuotaObjetivo ?? 1.5
   // Solo variables de PARTIDO COMPLETO: las líneas 1H/2H se quedan para el
   // análisis profundo — aquí confunden (promedios de 90' vs línea de 45')
   const permitido = (c) => !/_(1h|2h)$/.test(c.marketKey ?? '')
     && (!mercadosPermitidos || mercadosPermitidos.includes(c.category))
-  const mejorQue = (c, prev) => !prev
-    || (c.confidence ?? 0) > (prev.confidence ?? 0)
-    || ((c.confidence ?? 0) === (prev.confidence ?? 0) && Math.abs(c.margin ?? 0) > Math.abs(prev.margin ?? 0))
+    && esJugable(c) // con cuota real conocida, sin valor = no se recomienda
+  const mejorQue = (c, prev) => !prev || cmpRank(rankPick(c, cuotaObjetivo), rankPick(prev, cuotaObjetivo)) < 0
 
   const mejorPorCat = {}
   for (const c of candidates) {
@@ -317,8 +342,7 @@ export function pickUnoPorMercado(candidates, mercadosPermitidos = null, objetiv
     const usadas = new Set(elegidos.map(p => p.marketKey))
     const porCat = {}
     for (const p of elegidos) porCat[p.category] = [p]
-    const orden = [...candidates].sort((a, b) =>
-      (b.confidence ?? 0) - (a.confidence ?? 0) || Math.abs(b.margin ?? 0) - Math.abs(a.margin ?? 0))
+    const orden = [...candidates].sort((a, b) => cmpRank(rankPick(a, cuotaObjetivo), rankPick(b, cuotaObjetivo)))
 
     for (const c of orden) {
       if (elegidos.length >= objetivo) break

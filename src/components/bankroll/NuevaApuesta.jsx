@@ -5,7 +5,7 @@ const CASAS = ['BetWinner', 'Betplay', 'Rushbet', 'Codere', 'Wplay', 'Zamba', 'O
 const MERCADOS = ['Tiros totales Over', 'Tiros totales Under', 'Córners Over', 'Córners Under', 'Over 2.5 goles', 'Under 2.5 goles', 'Over 1.5 goles', 'BTTS Sí', 'BTTS No', 'Ganador local', 'Ganador visitante', 'Empate', 'Tarjetas Over', 'Tarjetas Under', 'Otro']
 const DEPORTES = ['Fútbol', 'Baloncesto', 'Tenis', 'Béisbol', 'Otro']
 
-const EMPTY = { deporte: 'Fútbol', competicion: '', casa: 'BetWinner', partido: '', mercado: 'Tiros totales Over', seleccion: '', cuota: '', monto: '' }
+const EMPTY = { deporte: 'Fútbol', competicion: '', casa: 'Betano', partido: '', mercado: 'Tiros totales Over', seleccion: '', cuota: '', monto: '' }
 
 // La lectura del pantallazo pasa SIEMPRE por /api/vision (Edge Function): la
 // clave de Claude vive en el servidor y nunca se expone en el navegador.

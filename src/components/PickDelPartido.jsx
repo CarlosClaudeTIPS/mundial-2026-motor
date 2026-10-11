@@ -7,6 +7,7 @@ import { generateCandidates, pickUnoPorMercado, explicacionCorta } from '../lib/
 import { mercadosDeLiga, MERCADO_LABEL } from '../lib/mercados-liga'
 import { getBaseline } from '../lib/leagues'
 import { anotarCuotas } from '../lib/odds'
+import { ofertaBetano, aplicarOfertaBetano, getCuotaObjetivo, textoOferta } from '../lib/betano'
 
 // ─── PICKS DEL PARTIDO, UNO POR MERCADO ──────────────────────────────────────
 // Regla del usuario: un pick de tiros, uno de córners, uno de tiros al arco,
@@ -50,6 +51,7 @@ export default function PickDelPartido({ fixture }) {
   const [estado, setEstado] = useState('cargando') // cargando|listo|vacio|sin-analizar
   const [calculando, setCalculando] = useState(false)
   const [progreso, setProgreso] = useState('')
+  const [betano, setBetano] = useState(null)
 
   const permitidos = mercadosDeLiga(fixture.leagueId)
 
@@ -61,6 +63,7 @@ export default function PickDelPartido({ fixture }) {
     // reanálisis — las stats están cacheadas, así que cuesta casi 0 llamadas
     if (lista.length && !lista.some(p => p.porque?.length)) { setEstado('sin-analizar'); return }
     if (lista.length) { setPicks(lista); setEstado('listo') } else setEstado('vacio')
+    if (lista.some(p => p.casaCuota === 'Betano')) setBetano({ estado: 'ok', mercados: [] })
   }, [fixture.leagueId, fixture.homeTeam, fixture.awayTeam]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { leer() }, [leer])
@@ -74,11 +77,17 @@ export default function PickDelPartido({ fixture }) {
       const B = await buildTeamStats(liga, fixture.awayId, fixture.awayTeam, onProg)
       const calc = computePrematchCalc(A, B, liga)
       const base = getBaseline(liga.id)
-      let lista = pickUnoPorMercado(generateCandidates(calc, null, A, B), permitidos)
+      // Cuotas REALES de Betano: solo quedan las líneas que la casa ofrece, con
+      // prioridad a la zona de cuota objetivo (1.50 por defecto)
+      setProgreso('cuotas Betano...')
+      const oferta = await ofertaBetano(liga.id, A.name, B.name, fixture.date)
+      setBetano(oferta)
+      const cands = aplicarOfertaBetano(generateCandidates(calc, null, A, B), oferta)
+      let lista = pickUnoPorMercado(cands, permitidos, 5, { cuotaObjetivo: getCuotaObjetivo() })
         // El porqué se guarda CON el pick: la tarjeta lo muestra después sin
         // volver a pedir el historial de los equipos.
         .map(p => ({ ...p, porque: explicacionCorta(p, A, B, {}, calc, {}, {}, base) }))
-      lista = await anotarCuotas(liga.id, A.name, B.name, lista) // cuota real si hay API key
+      if (oferta?.estado !== 'ok') lista = await anotarCuotas(liga.id, A.name, B.name, lista) // respaldo: The Odds API
       savePrediccion({
         leagueId: liga.id, teamAName: A.name, teamBName: B.name,
         expected: {
@@ -97,8 +106,12 @@ export default function PickDelPartido({ fixture }) {
   }
 
   if (estado === 'listo') {
+    const conBetano = picks.some(p => p.casaCuota === 'Betano')
     return (
       <div className="px-3 pb-2.5 -mt-1 space-y-1.5">
+        <p className={`text-[9px] uppercase tracking-wide ${conBetano ? 'text-emerald-500' : 'text-gray-600'}`}>
+          {conBetano ? '🎰 Cuotas reales de Betano · solo líneas que la casa ofrece' : (textoOferta(betano) ?? 'Cuotas estimadas (sin Betano)')}
+        </p>
         {picks.map((p, i) => {
           const cat = p.category ?? catDe(p.marketKey)
           const cuotaMin = p.pMod > 5 ? (1.025 / (p.pMod / 100)).toFixed(2) : null
@@ -117,10 +130,15 @@ export default function PickDelPartido({ fixture }) {
                 <span className="text-[10px] text-gray-500 ml-auto shrink-0">
                   proy {p.expected} · P {p.pMod}%
                   {p.cuota
-                    ? <span className="text-emerald-400 font-semibold"> · cuota {p.cuota}{p.casaCuota ? ` (${p.casaCuota})` : ''}</span>
+                    ? <span className="text-emerald-400 font-semibold"> · cuota {p.cuota}{p.casaCuota ? ` (${p.casaCuota})` : ''}{p.ev != null ? ` · EV ${p.ev > 0 ? '+' : ''}${p.ev}%` : ''}</span>
                     : cuotaMin ? ` · desde ${cuotaMin}` : ''}
                 </span>
               </div>
+              {p.lineasBetano?.length > 0 && p.dir !== 'CUBRE' && (
+                <p className="pl-7 text-[9px] text-gray-500 truncate">
+                  Betano: {p.lineasBetano.map(l => `${l.line} (${l.over ?? '—'}/${l.under ?? '—'})`).join(' · ')}
+                </p>
+              )}
               {p.porque?.length > 0 && (
                 <div className="mt-1 pl-7 space-y-0.5">
                   {p.porque.map((linea, k) => (

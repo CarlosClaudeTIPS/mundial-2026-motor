@@ -15,6 +15,7 @@ import { fetchStandings, fetchFixtures } from '../lib/football-api'
 import { buildTeamStats, teamsFromStandings } from '../lib/league-stats'
 import { fetchH2H, fetchFixtureStats, hasLivescore } from '../lib/livescore-api'
 import RecentResults, { fechaDMY } from './RecentResults'
+import { ofertaBetano, aplicarOfertaBetano, getCuotaObjetivo, setCuotaObjetivo, textoOferta } from '../lib/betano'
 import { situacionTabla, jornadaDe } from '../lib/motivacion'
 import { ascendidosDeLiga, esAscendido } from '../lib/ascendidos'
 import { informePrePartido, hasIA } from '../lib/ia'
@@ -762,6 +763,28 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
     }))
   }, [teamA?.id, teamB?.id, tabla, league.type, ascendidos]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Cuotas reales de Betano para este partido ──
+  const [betano, setBetano] = useState(null)
+  const [cuotaObjetivo, setCuotaObj] = useState(getCuotaObjetivo())
+  const cambiarCuotaObjetivo = (v) => { setCuotaObjetivo(v); setCuotaObj(v) }
+  useEffect(() => {
+    setBetano(null)
+    if (!teamA?.name || !teamB?.name) return
+    let alive = true
+    ;(async () => {
+      let fecha = null
+      try {
+        const fx = await fetchFixtures(league.id)
+        const norm = s => (s ?? '').toLowerCase()
+        const f = (fx?.fixtures ?? []).find(f => norm(f.homeTeam) === norm(teamA.name) && norm(f.awayTeam) === norm(teamB.name))
+        fecha = f?.date ?? null
+      } catch {}
+      const o = await ofertaBetano(league.id, teamA.name, teamB.name, fecha)
+      if (alive) setBetano(o)
+    })()
+    return () => { alive = false }
+  }, [teamA?.name, teamB?.name, league.id])
+
   // ── Clima automático: busca el fixture de estos equipos y trae el pronóstico ──
   useEffect(() => {
     setClima(null)
@@ -994,13 +1017,16 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
     // UN pick por mercado, solo de los que la casa ofrece en esta competición.
     // Evita el absurdo de recomendar "X más de 8.5 tiros" y "X menos de 13.5".
     const base = getBaseline(league.id)
-    const top = pickUnoPorMercado(generateCandidates(calc, null, teamA, teamB), mercadosDeLiga(league.id))
+    // Con Betano: solo líneas que la casa ofrece, con su cuota real, y la zona
+    // de cuota objetivo primero. Sin Betano: candidatos del motor como siempre.
+    const cands = aplicarOfertaBetano(generateCandidates(calc, null, teamA, teamB), betano)
+    const top = pickUnoPorMercado(cands, mercadosDeLiga(league.id), 5, { cuotaObjetivo })
       // El porqué viaja CON el pick: al guardarse, la tarjeta del Fixture
       // muestra EXACTAMENTE estos picks (Analizar es la fuente de verdad)
       .map(p => ({ ...p, porque: explicacionCorta(p, teamA, teamB, ctx, calc, modsA, modsB, base) }))
     const c = suggestCombo(top)
     return { picks: top, combo: c }
-  }, [calc, teamA, teamB, league.id, ctx, modsA, modsB])
+  }, [calc, teamA, teamB, league.id, ctx, modsA, modsB, betano, cuotaObjetivo])
 
   // v5.1 §9: registrar CADA evaluación de combinada (con sus picks, el gate y
   // la incertidumbre) — la selección humana no decide qué entra en la muestra
@@ -1431,7 +1457,23 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
                       : `${picks[0].dir === 'OVER' ? 'MÁS' : 'MENOS'} de ${picks[0].line}`}
                   </span> {picks[0].label}
                   <span className="text-sm font-semibold text-gray-400 ml-2">P {picks[0].pMod}% · Confianza {picks[0].confidence}</span>
+                  {picks[0].cuota && <span className="text-sm font-bold text-emerald-300 ml-2">· cuota {picks[0].cuota} ({picks[0].casaCuota})</span>}
                 </p>
+              </div>
+
+              {/* ── Betano: estado de la oferta y cuota objetivo ── */}
+              <div className="flex items-center gap-3 flex-wrap text-xs">
+                <span className={betano?.estado === 'ok' ? 'text-emerald-400' : 'text-gray-500'}>
+                  🎰 {betano ? textoOferta(betano) : 'Consultando Betano…'}
+                  {betano?.estado === 'ok' && betano.evento?.name ? ` · ${betano.evento.name}` : ''}
+                </span>
+                <label className="ml-auto flex items-center gap-1.5 text-gray-400">
+                  Cuota objetivo
+                  <select value={cuotaObjetivo} onChange={e => cambiarCuotaObjetivo(parseFloat(e.target.value))}
+                    className="bg-dark-700 border border-dark-500 rounded px-1.5 py-0.5 text-white text-xs">
+                    {[1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2.0].map(v => <option key={v} value={v}>{v.toFixed(2)}</option>)}
+                  </select>
+                </label>
               </div>
 
               {picks.map((pick, i) => {
@@ -1477,6 +1519,21 @@ export default function Analizar({ league, preloadTeams, onVerLiga }) {
                       if (!p || p <= 0.05) return null
                       const min = (1.025 / p).toFixed(2)
                       const max = (1.25 / p).toFixed(2)
+                      if (pick.cuota) {
+                        return (
+                          <div className="mt-2 space-y-1">
+                            <p className="text-sm font-bold text-emerald-300 bg-emerald-950/60 border border-emerald-800/50 rounded-lg px-3 py-1.5 inline-block">
+                              🎰 {pick.casaCuota} paga <span className="text-white text-base">{pick.cuota}</span>
+                              <span className="text-gray-400 font-normal ml-2 text-xs">cuota justa {(1 / p).toFixed(2)} · EV {pick.ev > 0 ? '+' : ''}{pick.ev}%</span>
+                            </p>
+                            {pick.lineasBetano?.length > 0 && pick.dir !== 'CUBRE' && (
+                              <p className="text-[11px] text-gray-500">
+                                Líneas en Betano (más/menos): {pick.lineasBetano.map(l => `${l.line} → ${l.over ?? '—'} / ${l.under ?? '—'}`).join(' · ')}
+                              </p>
+                            )}
+                          </div>
+                        )
+                      }
                       return (
                         <p className="text-sm font-bold text-green-300 mt-2 bg-green-950/60 border border-green-800/50 rounded-lg px-3 py-1.5 inline-block">
                           💰 Apuesta si la cuota está entre <span className="text-white">{min}</span> y <span className="text-white">{max}</span>
