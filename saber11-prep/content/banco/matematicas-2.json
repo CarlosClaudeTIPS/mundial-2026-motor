@@ -3,11 +3,7 @@
     "id": "MAT-015",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -23,16 +19,7 @@
       "eje_x": "Tiempo desde que se abrió la llave (minutos)",
       "eje_y": "Agua en el tanque (litros)",
       "series": [
-        {
-          "nombre": "Agua en el tanque",
-          "valores": [
-            ["0", 800],
-            ["10", 650],
-            ["20", 500],
-            ["30", 350],
-            ["40", 200]
-          ]
-        }
+        { "nombre": "Agua en el tanque", "valores": [["0", 800], ["10", 650], ["20", 500], ["30", 350], ["40", 200]] }
       ]
     },
     "enunciado": "De acuerdo con el gráfico, ¿cuántos litros de agua salen del tanque cada minuto?",
@@ -87,11 +74,7 @@
     "id": "MAT-016",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -154,11 +137,7 @@
     "id": "MAT-017",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -221,11 +200,7 @@
     "id": "MAT-018",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "algebra_calculo",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -240,24 +215,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Tiene razón: 10 % + 10 % = 20 %, así que el arriendo de 2026 será $960.000.",
-        "correcta": false,
-        "explicacion": "Sumar los porcentajes solo sería válido si los dos aumentos se calcularan sobre el mismo valor ($800.000). Pero el segundo 10 % se calcula sobre el arriendo de 2025, que ya es $880.000: 10 % de 880.000 = 88.000, y el arriendo de 2026 es $968.000, no $960.000.",
-        "tipo_error": "procedimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Sumó los porcentajes como si ambos aumentos se aplicaran sobre el arriendo original."
-      },
-      {
-        "clave": "B",
-        "texto": "Se equivoca: dos aumentos seguidos siempre rinden menos que la suma de los porcentajes, así que el aumento total es menor que 20 %.",
-        "correcta": false,
-        "explicacion": "Esa regla aplica a los DESCUENTOS sucesivos (el segundo se calcula sobre un valor ya reducido, y por eso el descuento total es menor que la suma). Con AUMENTOS sucede lo contrario: el segundo se calcula sobre un valor ya mayor, y el aumento total (21 %) supera la suma (20 %).",
-        "tipo_error": "razonamiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Trasladó a los aumentos la regla de los descuentos sucesivos sin revisar la dirección del cambio."
-      },
-      {
-        "clave": "C",
         "texto": "Se equivoca: el segundo 10 % se calcula sobre $880.000, no sobre $800.000; el arriendo de 2026 será $968.000, es decir, 21 % más que en 2024.",
         "correcta": true,
         "explicacion": "2025: 800.000 × 1,10 = 880.000. 2026: 880.000 × 1,10 = 968.000. El aumento total es 968.000 − 800.000 = 168.000, y 168.000 ÷ 800.000 = 0,21 = 21 %. Como el segundo aumento se calcula sobre un valor mayor, el total supera la simple suma de porcentajes.",
@@ -266,16 +223,34 @@
         "razon_frecuente": null
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "Se equivoca: el aumento total sí es 20 %, pero debe calcularse sobre $880.000, así que el arriendo de 2026 será $1.056.000.",
         "correcta": false,
         "explicacion": "Aplicar 20 % sobre $880.000 equivale a cobrar el primer 10 % dos veces: una al pasar de 800.000 a 880.000 y otra dentro del 20 %. El arriendo de 2026 es 880.000 + 10 % de 880.000 = 968.000, y $1.056.000 sería un aumento de 32 % sobre el arriendo de 2024.",
         "tipo_error": "procedimiento",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Puede venir de mezclar la suma de porcentajes con la base equivocada, o de aceptar la cifra de 20 % sin revisar sobre qué valor se aplica."
+      },
+      {
+        "clave": "C",
+        "texto": "Tiene razón: 10 % + 10 % = 20 %, así que el arriendo de 2026 será $960.000.",
+        "correcta": false,
+        "explicacion": "Sumar los porcentajes solo sería válido si los dos aumentos se calcularan sobre el mismo valor ($800.000). Pero el segundo 10 % se calcula sobre el arriendo de 2025, que ya es $880.000: 10 % de 880.000 = 88.000, y el arriendo de 2026 es $968.000, no $960.000.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los porcentajes como si ambos aumentos se aplicaran sobre el arriendo original."
+      },
+      {
+        "clave": "D",
+        "texto": "Se equivoca: dos aumentos seguidos siempre rinden menos que la suma de los porcentajes, así que el aumento total es menor que 20 %.",
+        "correcta": false,
+        "explicacion": "Esa regla aplica a los DESCUENTOS sucesivos (el segundo se calcula sobre un valor ya reducido, y por eso el descuento total es menor que la suma). Con AUMENTOS sucede lo contrario: el segundo se calcula sobre un valor ya mayor, y el aumento total (21 %) supera la suma (20 %).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trasladó a los aumentos la regla de los descuentos sucesivos sin revisar la dirección del cambio."
       }
     ],
-    "explicacion": "Leer: arriendo 2024 = $800.000; aumento de 10 % en 2025 y otro 10 % en 2026; el propietario afirma que el aumento total es 20 %. Comprender: hay que decidir si esa afirmación es válida y con qué argumento. Interpretar: cada aumento porcentual se calcula sobre el valor vigente en ese momento, no sobre el valor original. Representar: 2025: 800.000 × 1,10 = 880.000; 2026: 880.000 × 1,10 = 968.000; en un solo paso, 800.000 × 1,10 × 1,10 = 800.000 × 1,21. Razonar: el factor total es 1,21, es decir, 21 % de aumento; supera el 20 % porque el segundo 10 % se toma sobre una base mayor (880.000 en vez de 800.000, lo que agrega 8.000 extra). Resolver: el propietario se equivoca; el aumento es 21 % (opción C). Verificar: 968.000 − 800.000 = 168.000 y 168.000 ÷ 800.000 = 0,21; mientras que 20 % de 800.000 daría 960.000, que no coincide.",
+    "explicacion": "Leer: arriendo 2024 = $800.000; aumento de 10 % en 2025 y otro 10 % en 2026; el propietario afirma que el aumento total es 20 %. Comprender: hay que decidir si esa afirmación es válida y con qué argumento. Interpretar: cada aumento porcentual se calcula sobre el valor vigente en ese momento, no sobre el valor original. Representar: 2025: 800.000 × 1,10 = 880.000; 2026: 880.000 × 1,10 = 968.000; en un solo paso, 800.000 × 1,10 × 1,10 = 800.000 × 1,21. Razonar: el factor total es 1,21, es decir, 21 % de aumento; supera el 20 % porque el segundo 10 % se toma sobre una base mayor (880.000 en vez de 800.000, lo que agrega 8.000 extra). Resolver: el propietario se equivoca; el aumento es 21 % (opción A). Verificar: 968.000 − 800.000 = 168.000 y 168.000 ÷ 800.000 = 0,21; mientras que 20 % de 800.000 daría 960.000, que no coincide.",
     "que_identificar": "Que el segundo aumento se aplica sobre el arriendo de 2025 ($880.000) y no sobre el de 2024, por lo que los porcentajes no se pueden sumar.",
     "que_revisar": "Aumentos y descuentos sucesivos: se multiplican los factores (1,10 × 1,10 = 1,21), no se suman los porcentajes; con aumentos el total supera la suma y con descuentos queda por debajo.",
     "refuerzo_ids": ["MAT-010", "MAT-002"],
@@ -288,11 +263,7 @@
     "id": "MAT-019",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -306,12 +277,7 @@
       "tipo": "tabla",
       "titulo": "Depósito semanal en la alcancía",
       "columnas": ["Semana (n)", "Depósito de esa semana ($)"],
-      "filas": [
-        [1, 5000],
-        [2, 8000],
-        [3, 11000],
-        [4, 14000]
-      ],
+      "filas": [[1, 5000], [2, 8000], [3, 11000], [4, 14000]],
       "nota": "Cada fila muestra solo lo depositado esa semana, no el total acumulado."
     },
     "enunciado": "¿Cuál expresión permite calcular el depósito de la semana n?",
@@ -366,11 +332,7 @@
     "id": "MAT-020",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "geometria",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -433,11 +395,7 @@
     "id": "MAT-021",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -452,6 +410,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "494 m²",
+        "correcta": false,
+        "explicacion": "494 = 180 + 314 usa 10 m como radio (3,14 × 10² = 314). Pero 10 m es el DIÁMETRO del semicírculo, así que el radio es 5 m y el círculo completo mide 3,14 × 25 = 78,5 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió diámetro con radio al aplicar la fórmula del área del círculo."
+      },
+      {
+        "clave": "B",
         "texto": "219,25 m²",
         "correcta": false,
         "explicacion": "219,25 = 180 + 39,25 incluye el rectángulo y UN solo semicírculo (39,25 m² es la mitad de 3,14 × 5²). Pero la zona tiene dos semicírculos, uno en cada lado de 10 m; falta sumar los otros 39,25 m².",
@@ -460,7 +427,7 @@
         "razon_frecuente": "Leyó 'un semicírculo' y no tuvo en cuenta que hay uno en cada extremo del rectángulo."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "258,5 m²",
         "correcta": true,
         "explicacion": "Rectángulo: 18 × 10 = 180 m². Los dos semicírculos tienen diámetro 10 m (radio 5 m) y juntos forman un círculo completo: 3,14 × 5² = 78,5 m². Total: 180 + 78,5 = 258,5 m².",
@@ -469,25 +436,16 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "337 m²",
         "correcta": false,
         "explicacion": "337 = 180 + 157 cuenta cada semicírculo como si fuera un círculo completo (2 × 78,5 = 157). Cada extremo es solo MEDIO círculo; los dos semicírculos juntos equivalen a un círculo de 78,5 m², no a dos.",
         "tipo_error": "procedimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Calculó el área de un círculo completo por cada semicírculo, sin dividir entre 2."
-      },
-      {
-        "clave": "D",
-        "texto": "494 m²",
-        "correcta": false,
-        "explicacion": "494 = 180 + 314 usa 10 m como radio (3,14 × 10² = 314). Pero 10 m es el DIÁMETRO del semicírculo, así que el radio es 5 m y el círculo completo mide 3,14 × 25 = 78,5 m².",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confundió diámetro con radio al aplicar la fórmula del área del círculo."
       }
     ],
-    "explicacion": "Leer: rectángulo de 18 m × 10 m; dos semicírculos, uno en cada lado de 10 m, con diámetro 10 m; π ≈ 3,14. Comprender: se pide el área total de la figura compuesta. Interpretar: dos semicírculos iguales unidos por su diámetro equivalen a un círculo completo de radio 5 m (la mitad del diámetro de 10 m). Representar: Área total = (18 × 10) + (3,14 × 5²). Razonar: el área del rectángulo es 180 m² y el círculo equivalente es 3,14 × 25 = 78,5 m². Resolver: 180 + 78,5 = 258,5 m² (opción B). Verificar: el resultado debe ser un poco mayor que el rectángulo (180) pero menor que el rectángulo que encerraría toda la figura, 28 m × 10 m = 280 m²; 258,5 cumple ambas condiciones.",
+    "explicacion": "Leer: rectángulo de 18 m × 10 m; dos semicírculos, uno en cada lado de 10 m, con diámetro 10 m; π ≈ 3,14. Comprender: se pide el área total de la figura compuesta. Interpretar: dos semicírculos iguales unidos por su diámetro equivalen a un círculo completo de radio 5 m (la mitad del diámetro de 10 m). Representar: Área total = (18 × 10) + (3,14 × 5²). Razonar: el área del rectángulo es 180 m² y el círculo equivalente es 3,14 × 25 = 78,5 m². Resolver: 180 + 78,5 = 258,5 m² (opción C). Verificar: el resultado debe ser un poco mayor que el rectángulo (180) pero menor que el rectángulo que encerraría toda la figura, 28 m × 10 m = 280 m²; 258,5 cumple ambas condiciones.",
     "que_identificar": "Que hay DOS semicírculos, que juntos forman un círculo, y que 10 m es el diámetro (radio 5 m).",
     "que_revisar": "Área de figuras compuestas: descomponer en figuras conocidas; área del círculo π·r² con el radio, no el diámetro.",
     "refuerzo_ids": ["MAT-014", "MAT-012"],
@@ -500,11 +458,7 @@
     "id": "MAT-022",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "geometria",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -567,11 +521,7 @@
     "id": "MAT-023",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "geometria",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -634,11 +584,7 @@
     "id": "MAT-024",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -654,24 +600,8 @@
       "eje_x": "Grado",
       "eje_y": "Kilos recogidos",
       "series": [
-        {
-          "nombre": "Plástico",
-          "valores": [
-            ["Sexto", 30],
-            ["Séptimo", 20],
-            ["Octavo", 45],
-            ["Noveno", 35]
-          ]
-        },
-        {
-          "nombre": "Papel",
-          "valores": [
-            ["Sexto", 25],
-            ["Séptimo", 40],
-            ["Octavo", 10],
-            ["Noveno", 22]
-          ]
-        }
+        { "nombre": "Plástico", "valores": [["Sexto", 30], ["Séptimo", 20], ["Octavo", 45], ["Noveno", 35]] },
+        { "nombre": "Papel", "valores": [["Sexto", 25], ["Séptimo", 40], ["Octavo", 10], ["Noveno", 22]] }
       ]
     },
     "enunciado": "Sumando plástico y papel, ¿cuál grado recogió la mayor cantidad de material?",
@@ -726,11 +656,7 @@
     "id": "MAT-025",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -744,17 +670,22 @@
       "tipo": "tabla",
       "titulo": "Uso del transporte escolar por jornada",
       "columnas": ["Jornada", "Usa transporte escolar", "No usa transporte escolar", "Total"],
-      "filas": [
-        ["Mañana", 70, 80, 150],
-        ["Tarde", 30, 90, 120],
-        ["Total", 100, 170, 270]
-      ],
+      "filas": [["Mañana", 70, 80, 150], ["Tarde", 30, 90, 120], ["Total", 100, 170, 270]],
       "nota": null
     },
     "enunciado": "Se elige al azar un estudiante de la jornada de la tarde. ¿Cuál es la probabilidad de que use el transporte escolar?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "3/4",
+        "correcta": false,
+        "explicacion": "3/4 = 90/120 usa la fila correcta (tarde) pero los casos favorables equivocados: 90 son los que NO usan transporte escolar. Es la probabilidad del evento contrario al que se pregunta.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la columna 'No usa' en lugar de 'Usa', o respondió el complemento de lo que se pedía."
+      },
+      {
+        "clave": "B",
         "texto": "1/9",
         "correcta": false,
         "explicacion": "1/9 = 30/270 divide entre TODOS los estudiantes del colegio, pero el enunciado dice que se elige un estudiante de la jornada de la tarde: los casos posibles son solo los 120 de esa jornada, no los 270 del colegio.",
@@ -763,7 +694,7 @@
         "razon_frecuente": "Usó el total general de la tabla como casos posibles sin restringirse a la jornada de la tarde."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "1/4",
         "correcta": true,
         "explicacion": "Casos posibles: los 120 estudiantes de la jornada de la tarde. Casos favorables: los 30 de esa jornada que usan transporte escolar. Probabilidad = 30/120 = 1/4 = 0,25.",
@@ -772,25 +703,16 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "3/10",
         "correcta": false,
         "explicacion": "3/10 = 30/100 usa como casos posibles a los 100 estudiantes que usan transporte escolar. Ese cociente responde otra pregunta: 'si se elige un usuario del transporte, ¿probabilidad de que sea de la tarde?'. Aquí la condición es ser de la tarde, así que el denominador es 120.",
         "tipo_error": "lectura_tabla",
         "diagnostico": "probable",
         "razon_frecuente": "Tomó el total de la columna en lugar del total de la fila que indica la condición del enunciado."
-      },
-      {
-        "clave": "D",
-        "texto": "3/4",
-        "correcta": false,
-        "explicacion": "3/4 = 90/120 usa la fila correcta (tarde) pero los casos favorables equivocados: 90 son los que NO usan transporte escolar. Es la probabilidad del evento contrario al que se pregunta.",
-        "tipo_error": "descuido",
-        "diagnostico": "probable",
-        "razon_frecuente": "Leyó la columna 'No usa' en lugar de 'Usa', o respondió el complemento de lo que se pedía."
       }
     ],
-    "explicacion": "Leer: la tabla cruza jornada (mañana, tarde) con uso del transporte (usa, no usa) e incluye totales: tarde 30 usan, 90 no usan, 120 en total; el colegio tiene 270 estudiantes y 100 usan transporte. Comprender: se elige un estudiante DE LA TARDE; se pregunta la probabilidad de que use transporte escolar. Interpretar: la condición 'de la tarde' reduce los casos posibles a la fila 'Tarde' (120), y los casos favorables son la celda 'Tarde – Usa' (30). Representar: P = casos favorables / casos posibles = 30/120. Razonar: ni el total del colegio (270) ni el total de usuarios (100) son el conjunto del que se elige. Resolver: 30/120 = 1/4 (opción B). Verificar: 1/4 + 90/120 = 1/4 + 3/4 = 1, así que 'usa' y 'no usa' dentro de la tarde suman la certeza, como debe ser.",
+    "explicacion": "Leer: la tabla cruza jornada (mañana, tarde) con uso del transporte (usa, no usa) e incluye totales: tarde 30 usan, 90 no usan, 120 en total; el colegio tiene 270 estudiantes y 100 usan transporte. Comprender: se elige un estudiante DE LA TARDE; se pregunta la probabilidad de que use transporte escolar. Interpretar: la condición 'de la tarde' reduce los casos posibles a la fila 'Tarde' (120), y los casos favorables son la celda 'Tarde – Usa' (30). Representar: P = casos favorables / casos posibles = 30/120. Razonar: ni el total del colegio (270) ni el total de usuarios (100) son el conjunto del que se elige. Resolver: 30/120 = 1/4 (opción C). Verificar: 1/4 + 90/120 = 1/4 + 3/4 = 1, así que 'usa' y 'no usa' dentro de la tarde suman la certeza, como debe ser.",
     "que_identificar": "La fila que corresponde a la condición del enunciado (jornada de la tarde) y la celda de casos favorables dentro de esa fila.",
     "que_revisar": "Probabilidad como cociente favorables/posibles; en tablas de doble entrada, la condición 'se elige un estudiante de…' fija la fila o columna que da los casos posibles.",
     "refuerzo_ids": ["MAT-005", "MAT-002"],
@@ -803,11 +725,7 @@
     "id": "MAT-026",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -823,23 +741,22 @@
       "eje_x": "Hora",
       "eje_y": "Temperatura (°C)",
       "series": [
-        {
-          "nombre": "Temperatura",
-          "valores": [
-            ["6:00", 8],
-            ["9:00", 12],
-            ["12:00", 18],
-            ["15:00", 17],
-            ["18:00", 12],
-            ["21:00", 9]
-          ]
-        }
+        { "nombre": "Temperatura", "valores": [["6:00", 8], ["9:00", 12], ["12:00", 18], ["15:00", 17], ["18:00", 12], ["21:00", 9]] }
       ]
     },
     "enunciado": "¿En cuál intervalo de tres horas la temperatura descendió más?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "Entre las 18:00 y las 21:00",
+        "correcta": false,
+        "explicacion": "Este tramo termina en una de las temperaturas más bajas del día (9 °C), pero el descenso fue de 3 °C (de 12 a 9), menor que los 5 °C del tramo anterior. Que la temperatura final sea baja no significa que el descenso haya sido el mayor.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el tramo que llega a la temperatura más baja con el tramo en que más baja la temperatura."
+      },
+      {
+        "clave": "B",
         "texto": "Entre las 9:00 y las 12:00",
         "correcta": false,
         "explicacion": "Entre las 9:00 y las 12:00 la temperatura cambió 6 °C, el mayor cambio del día, pero fue un ASCENSO (de 12 a 18 °C). La pregunta pide el mayor descenso, es decir, el tramo en que la línea baja más.",
@@ -848,7 +765,7 @@
         "razon_frecuente": "Buscó el mayor cambio de temperatura sin fijarse en si la línea subía o bajaba."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "Entre las 12:00 y las 15:00",
         "correcta": false,
         "explicacion": "En ese tramo comienza el descenso, pero la temperatura solo bajó 1 °C (de 18 a 17). Contiene la temperatura máxima del día, pero el descenso más fuerte ocurre después.",
@@ -857,25 +774,16 @@
         "razon_frecuente": "Asoció el mayor descenso con el punto más alto del gráfico en vez de comparar cuánto baja la línea en cada tramo."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "Entre las 15:00 y las 18:00",
         "correcta": true,
         "explicacion": "Descensos: 12:00–15:00: 18 − 17 = 1 °C; 15:00–18:00: 17 − 12 = 5 °C; 18:00–21:00: 12 − 9 = 3 °C. El mayor descenso, 5 °C, ocurre entre las 15:00 y las 18:00.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
-      },
-      {
-        "clave": "D",
-        "texto": "Entre las 18:00 y las 21:00",
-        "correcta": false,
-        "explicacion": "Este tramo termina en una de las temperaturas más bajas del día (9 °C), pero el descenso fue de 3 °C (de 12 a 9), menor que los 5 °C del tramo anterior. Que la temperatura final sea baja no significa que el descenso haya sido el mayor.",
-        "tipo_error": "interpretacion",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confundió el tramo que llega a la temperatura más baja con el tramo en que más baja la temperatura."
       }
     ],
-    "explicacion": "Leer: temperaturas de 8, 12, 18, 17, 12 y 9 °C a las 6:00, 9:00, 12:00, 15:00, 18:00 y 21:00. Comprender: se pregunta por el intervalo de tres horas en que la temperatura DESCENDIÓ más, no por el mayor cambio ni por la hora más fría. Interpretar: un descenso corresponde a un tramo donde la línea baja; su magnitud es la diferencia entre el valor inicial y el final del tramo. Representar: cambios por tramo: +4, +6, −1, −5, −3. Razonar: solo los tramos con signo negativo son descensos; entre ellos, el de mayor valor absoluto es −5. Resolver: entre las 15:00 y las 18:00 (opción C). Verificar: 17 − 12 = 5, mayor que 1 y que 3; el tramo de +6 se descarta porque es un ascenso.",
+    "explicacion": "Leer: temperaturas de 8, 12, 18, 17, 12 y 9 °C a las 6:00, 9:00, 12:00, 15:00, 18:00 y 21:00. Comprender: se pregunta por el intervalo de tres horas en que la temperatura DESCENDIÓ más, no por el mayor cambio ni por la hora más fría. Interpretar: un descenso corresponde a un tramo donde la línea baja; su magnitud es la diferencia entre el valor inicial y el final del tramo. Representar: cambios por tramo: +4, +6, −1, −5, −3. Razonar: solo los tramos con signo negativo son descensos; entre ellos, el de mayor valor absoluto es −5. Resolver: entre las 15:00 y las 18:00 (opción D). Verificar: 17 − 12 = 5, mayor que 1 y que 3; el tramo de +6 se descarta porque es un ascenso.",
     "que_identificar": "La palabra 'descendió' en el enunciado (solo cuentan los tramos donde la línea baja) y la diferencia de temperatura en cada tramo.",
     "que_revisar": "Lectura de gráficos de líneas: variación entre puntos consecutivos, signo del cambio (ascenso o descenso) y comparación de magnitudes.",
     "refuerzo_ids": ["MAT-008", "MAT-015"],
@@ -888,11 +796,7 @@
     "id": "MAT-027",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -906,13 +810,7 @@
       "tipo": "tabla",
       "titulo": "Número de hermanos de los estudiantes del curso",
       "columnas": ["Número de hermanos", "Número de estudiantes"],
-      "filas": [
-        [0, 6],
-        [1, 7],
-        [2, 9],
-        [3, 2],
-        [4, 1]
-      ],
+      "filas": [[0, 6], [1, 7], [2, 9], [3, 2], [4, 1]],
       "nota": "En total respondieron 25 estudiantes."
     },
     "enunciado": "¿Cuál es la mediana del número de hermanos de los estudiantes del curso?",
@@ -967,11 +865,7 @@
     "id": "MAT-028",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "estadistica",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -987,14 +881,7 @@
       "eje_x": "Grupo",
       "eje_y": "Promedio",
       "series": [
-        {
-          "nombre": "Promedio del periodo",
-          "valores": [
-            ["11-1", 3.0],
-            ["11-2", 4.0],
-            ["11-3", 3.0]
-          ]
-        }
+        { "nombre": "Promedio del periodo", "valores": [["11-1", 3], ["11-2", 4], ["11-3", 3]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente el procedimiento de la coordinadora?",

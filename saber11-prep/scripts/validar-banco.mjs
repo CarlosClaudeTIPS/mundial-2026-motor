@@ -93,6 +93,22 @@ for (const p of todas) {
   }
 }
 
+// Distribución de la letra correcta: ninguna letra debe dominar un archivo ni
+// repetirse muchas veces seguidas (los estudiantes lo notan y responden por patrón).
+// Para repartirlas: node scripts/balancear-banco.mjs --aplicar
+const porArchivo = new Map()
+for (const p of todas) { const a = todosIds.get(p.id); (porArchivo.get(a) ?? porArchivo.set(a, []).get(a)).push(p) }
+for (const [archivo, lista] of porArchivo) {
+  const letras = lista.map(p => p.opciones?.find(o => o.correcta)?.clave).filter(Boolean)
+  if (letras.length < 8) continue
+  const conteo = {}
+  for (const l of letras) conteo[l] = (conteo[l] ?? 0) + 1
+  const [letra, n] = Object.entries(conteo).sort((a, b) => b[1] - a[1])[0]
+  if (n / letras.length > 0.6) err(archivo, null, `la respuesta correcta es "${letra}" en ${n} de ${letras.length} preguntas: reparte las letras`)
+  let racha = 1
+  for (let i = 1; i < letras.length; i++) { racha = letras[i] === letras[i - 1] ? racha + 1 : 1; if (racha === 5) err(archivo, lista[i].id, `cinco preguntas seguidas con la correcta en "${letras[i]}"`) }
+}
+
 // Resumen
 const porPrueba = {}
 for (const p of todas) porPrueba[p.prueba] = (porPrueba[p.prueba] ?? 0) + 1

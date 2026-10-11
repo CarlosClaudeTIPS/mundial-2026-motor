@@ -3,11 +3,7 @@
     "id": "SOC-063",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
@@ -20,38 +16,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Rasgos físicos generales de cuatro regiones naturales de Colombia",
-      "columnas": [
-        "Región",
-        "Relieve predominante",
-        "Régimen de lluvias",
-        "Vegetación predominante"
-      ],
-      "filas": [
-        [
-          "Andina",
-          "Tres cordilleras con valles entre ellas",
-          "En muchas zonas, dos temporadas de lluvia y dos secas al año",
-          "Bosques andinos, páramos y áreas de cultivo en laderas"
-        ],
-        [
-          "Pacífica",
-          "Llanura costera estrecha y serranía",
-          "Lluvias abundantes durante casi todo el año",
-          "Selva húmeda y manglares"
-        ],
-        [
-          "Orinoquia",
-          "Llanuras bajas y extensas",
-          "Una temporada de lluvias larga y una temporada seca muy marcada",
-          "Sabanas de pastos naturales y bosques de galería junto a los ríos"
-        ],
-        [
-          "Amazonia",
-          "Llanura baja con algunas mesetas",
-          "Lluvias abundantes durante casi todo el año",
-          "Selva tropical densa"
-        ]
-      ],
+      "columnas": ["Región", "Relieve predominante", "Régimen de lluvias", "Vegetación predominante"],
+      "filas": [["Andina", "Tres cordilleras con valles entre ellas", "En muchas zonas, dos temporadas de lluvia y dos secas al año", "Bosques andinos, páramos y áreas de cultivo en laderas"], ["Pacífica", "Llanura costera estrecha y serranía", "Lluvias abundantes durante casi todo el año", "Selva húmeda y manglares"], ["Orinoquia", "Llanuras bajas y extensas", "Una temporada de lluvias larga y una temporada seca muy marcada", "Sabanas de pastos naturales y bosques de galería junto a los ríos"], ["Amazonia", "Llanura baja con algunas mesetas", "Lluvias abundantes durante casi todo el año", "Selva tropical densa"]],
       "nota": "Descripción general y simplificada con fines escolares."
     },
     "enunciado": "De acuerdo con el relato y la tabla, ¿en qué región natural se encuentra, con mayor probabilidad, la finca de doña Rosalba?",
@@ -96,29 +62,17 @@
     "explicacion": "LEER: el relato describe terreno plano, pastos naturales, árboles solo junto a los caños y dos temporadas (lluvias de abril a noviembre; sequía de diciembre a marzo). COMPRENDER: se pide ubicar la finca en una región natural usando la tabla. INTERPRETAR: \"árboles a orillas de los caños\" equivale a bosques de galería; \"no cae una gota\" durante cuatro meses indica una temporada seca muy marcada. REPRESENTAR: se cruzan cuatro rasgos (relieve, lluvias, vegetación, práctica) con cada fila. RAZONAR: la Andina falla en el relieve; la Pacífica y la Amazonia fallan en las lluvias y la vegetación. RESOLVER: la Orinoquia (C). VERIFICAR: la ganadería extensiva y el traslado del ganado en verano son prácticas típicas de las sabanas llaneras, coherentes con la respuesta.",
     "que_identificar": "Los cuatro rasgos del relato (relieve plano, sabana, bosques de galería y una sola temporada seca marcada) y la fila de la tabla que los reúne todos.",
     "que_revisar": "Regiones naturales de Colombia: relieve, clima, vegetación y actividades económicas asociadas; cruzar varios criterios antes de decidir.",
-    "refuerzo_ids": [
-      "SOC-064",
-      "SOC-078"
-    ],
+    "refuerzo_ids": ["SOC-064", "SOC-078"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 100,
-    "etiquetas": [
-      "regiones_naturales",
-      "orinoquia",
-      "geografia_colombia",
-      "tabla"
-    ],
+    "etiquetas": ["regiones_naturales", "orinoquia", "geografia_colombia", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-064",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -133,24 +87,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Ninguna, porque el agua de las quebradas proviene de la lluvia y la lluvia seguiría cayendo igual sobre el páramo.",
-        "correcta": false,
-        "explicacion": "El texto explica que el páramo no solo recibe lluvia: la retiene y la libera gradualmente. Aunque llueva lo mismo, sin esa \"esponja\" el agua escurre rápido y no queda reservada para los meses secos.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Pensó que la cantidad de lluvia es lo único que importa y no el papel del ecosistema en regular cuándo llega el agua a las quebradas."
-      },
-      {
-        "clave": "B",
-        "texto": "El caudal de las quebradas se volvería más irregular: bajaría en los meses secos, con riesgo de desabastecimiento, y el agua de las lluvias bajaría más rápido, con más arrastre de tierra.",
-        "correcta": true,
-        "explicacion": "Si se retira la vegetación y se compacta el suelo, se pierde la capacidad de retener y liberar el agua poco a poco. El agua de las lluvias escurre de inmediato (crecientes y sedimentos) y en época seca las quebradas llevan menos agua, justo cuando el acueducto más la necesita.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "C",
         "texto": "Habría más agua disponible, porque sin frailejones ni musgos las plantas ya no consumirían el agua de la lluvia.",
         "correcta": false,
         "explicacion": "La vegetación del páramo no \"gasta\" el agua que abastece a las quebradas; al contrario, la almacena y la regula. Quitarla reduce la regulación y no aumenta el agua disponible en los meses secos.",
@@ -159,41 +95,47 @@
         "razon_frecuente": "Aplicó la idea de que las plantas compiten por el agua, sin tener en cuenta la función de retención que describe el contexto."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "El efecto sería únicamente sobre la biodiversidad, porque desaparecerían especies como el frailejón, pero el acueducto no se vería afectado.",
         "correcta": false,
         "explicacion": "Es cierto que se perdería biodiversidad, pero la opción ignora el dato central del contexto: el 70 % del agua del acueducto depende de quebradas reguladas por el páramo.",
         "tipo_error": "distractor",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Reconoció un efecto real (pérdida de especies) y se quedó con él, sin conectar el ecosistema con el servicio de agua que presta a la población."
+      },
+      {
+        "clave": "C",
+        "texto": "Ninguna, porque el agua de las quebradas proviene de la lluvia y la lluvia seguiría cayendo igual sobre el páramo.",
+        "correcta": false,
+        "explicacion": "El texto explica que el páramo no solo recibe lluvia: la retiene y la libera gradualmente. Aunque llueva lo mismo, sin esa \"esponja\" el agua escurre rápido y no queda reservada para los meses secos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pensó que la cantidad de lluvia es lo único que importa y no el papel del ecosistema en regular cuándo llega el agua a las quebradas."
+      },
+      {
+        "clave": "D",
+        "texto": "El caudal de las quebradas se volvería más irregular: bajaría en los meses secos, con riesgo de desabastecimiento, y el agua de las lluvias bajaría más rápido, con más arrastre de tierra.",
+        "correcta": true,
+        "explicacion": "Si se retira la vegetación y se compacta el suelo, se pierde la capacidad de retener y liberar el agua poco a poco. El agua de las lluvias escurre de inmediato (crecientes y sedimentos) y en época seca las quebradas llevan menos agua, justo cuando el acueducto más la necesita.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: el acueducto depende en un 70 % de quebradas que nacen en el páramo; el páramo retiene el agua y la libera poco a poco. COMPRENDER: se pregunta la consecuencia para el abastecimiento si se reemplaza la vegetación nativa por cultivos y potreros. INTERPRETAR: el concepto clave es regulación hídrica: el páramo funciona como una esponja que reparte el agua a lo largo del año. REPRESENTAR: vegetación y suelo del páramo → retención → caudal estable; sin vegetación → escurrimiento rápido → crecientes en lluvias y poca agua en sequía. RAZONAR: A ignora la regulación; C confunde regulación con consumo; D se queda en la biodiversidad. RESOLVER: B. VERIFICAR: la respuesta usa exactamente la función descrita en el contexto y la dependencia del acueducto.",
     "que_identificar": "La función de retener y liberar gradualmente el agua que el texto atribuye al páramo, y la dependencia del acueducto de esas quebradas.",
     "que_revisar": "Páramos como ecosistemas estratégicos: regulación hídrica y servicios ecosistémicos; relación entre uso del suelo y disponibilidad de agua.",
-    "refuerzo_ids": [
-      "SOC-009",
-      "SOC-017"
-    ],
+    "refuerzo_ids": ["SOC-009", "SOC-017"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "paramos",
-      "agua",
-      "servicios_ecosistemicos",
-      "caso_ficticio"
-    ],
+    "etiquetas": ["paramos", "agua", "servicios_ecosistemicos", "caso_ficticio"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-065",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "etico_politico",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -208,6 +150,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "Que suba, porque la helada hará que las familias demanden más papa que antes.",
+        "correcta": false,
+        "explicacion": "Acierta en que el precio sube, pero por una causa equivocada: el contexto indica que las familias siguen comprando como siempre; lo que cambió fue la oferta, no la demanda.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Llegó a la dirección correcta (alza) pero confundió un cambio en la oferta con un cambio en la demanda."
+      },
+      {
+        "clave": "B",
         "texto": "Que suba, porque llegará menos papa a las plazas mientras la cantidad que las familias quieren comprar se mantiene.",
         "correcta": true,
         "explicacion": "La helada reduce la oferta (hay menos papa para vender) y la demanda se mantiene porque es un alimento básico. Con la misma demanda y menos oferta, los compradores compiten por una cantidad menor y el precio tiende a subir.",
@@ -216,7 +167,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "Que baje, porque los agricultores que perdieron cosecha necesitan vender rápido lo que les quedó.",
         "correcta": false,
         "explicacion": "La necesidad de vender de algunos productores no cambia que la cantidad total disponible disminuyó. Con menos producto y la misma demanda, la presión es hacia el alza, no hacia la baja.",
@@ -225,50 +176,29 @@
         "razon_frecuente": "Razonó desde la situación de un productor individual y no desde el mercado completo (menos oferta total frente a igual demanda)."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "Que se mantenga igual, porque el precio de los alimentos básicos lo fija el Gobierno.",
         "correcta": false,
         "explicacion": "El contexto dice expresamente que el precio no lo fija el Gobierno, sino que se forma en las plazas según oferta y demanda.",
         "tipo_error": "comprension",
         "diagnostico": "probable",
         "razon_frecuente": "No leyó o no tuvo en cuenta la frase del contexto que descarta un precio fijado por el Gobierno."
-      },
-      {
-        "clave": "D",
-        "texto": "Que suba, porque la helada hará que las familias demanden más papa que antes.",
-        "correcta": false,
-        "explicacion": "Acierta en que el precio sube, pero por una causa equivocada: el contexto indica que las familias siguen comprando como siempre; lo que cambió fue la oferta, no la demanda.",
-        "tipo_error": "distractor",
-        "diagnostico": "probable",
-        "razon_frecuente": "Llegó a la dirección correcta (alza) pero confundió un cambio en la oferta con un cambio en la demanda."
       }
     ],
-    "explicacion": "LEER: la helada destruyó un tercio de la cosecha; las familias compran como siempre; el precio se forma por oferta y demanda. COMPRENDER: se pide predecir el precio en febrero. INTERPRETAR: la helada afecta a la oferta (cantidad disponible); la demanda no cambia. REPRESENTAR: oferta ↓, demanda =, precio ? RAZONAR: cuando hay menos producto para la misma cantidad de compradores, estos compiten y el precio sube; B mira a un solo productor, C contradice el contexto, D atribuye el alza a la demanda. RESOLVER: A. VERIFICAR: la opción A nombra el cambio correcto (oferta) y el que no cambió (demanda).",
+    "explicacion": "LEER: la helada destruyó un tercio de la cosecha; las familias compran como siempre; el precio se forma por oferta y demanda. COMPRENDER: se pide predecir el precio en febrero. INTERPRETAR: la helada afecta a la oferta (cantidad disponible); la demanda no cambia. REPRESENTAR: oferta ↓, demanda =, precio ? RAZONAR: cuando hay menos producto para la misma cantidad de compradores, estos compiten y el precio sube; B mira a un solo productor, C contradice el contexto, D atribuye el alza a la demanda. RESOLVER: A. VERIFICAR: la opción B nombra el cambio correcto (oferta) y el que no cambió (demanda).",
     "que_identificar": "Qué variable cambia (la oferta, por la helada) y cuál permanece (la demanda de las familias).",
     "que_revisar": "Ley de oferta y demanda: diferencia entre un cambio en la oferta y un cambio en la demanda y su efecto sobre el precio.",
-    "refuerzo_ids": [
-      "SOC-066",
-      "SOC-081"
-    ],
+    "refuerzo_ids": ["SOC-066", "SOC-081"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 100,
-    "etiquetas": [
-      "oferta_demanda",
-      "precios",
-      "economia",
-      "agricultura"
-    ],
+    "etiquetas": ["oferta_demanda", "precios", "economia", "agricultura"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-066",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "etico_politico",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -284,56 +214,8 @@
       "eje_x": "Año",
       "eje_y": "Porcentaje (%)",
       "series": [
-        {
-          "nombre": "Aumento del salario de Marta (%)",
-          "valores": [
-            [
-              "2021",
-              4
-            ],
-            [
-              "2022",
-              6
-            ],
-            [
-              "2023",
-              8
-            ],
-            [
-              "2024",
-              9
-            ],
-            [
-              "2025",
-              7
-            ]
-          ]
-        },
-        {
-          "nombre": "Inflación anual (%)",
-          "valores": [
-            [
-              "2021",
-              5.6
-            ],
-            [
-              "2022",
-              13.1
-            ],
-            [
-              "2023",
-              9.3
-            ],
-            [
-              "2024",
-              5.2
-            ],
-            [
-              "2025",
-              5
-            ]
-          ]
-        }
+        { "nombre": "Aumento del salario de Marta (%)", "valores": [["2021", 4], ["2022", 6], ["2023", 8], ["2024", 9], ["2025", 7]] },
+        { "nombre": "Inflación anual (%)", "valores": [["2021", 5.6], ["2022", 13.1], ["2023", 9.3], ["2024", 5.2], ["2025", 5]] }
       ]
     },
     "enunciado": "¿En qué años disminuyó el poder adquisitivo del salario de Marta?",
@@ -378,30 +260,17 @@
     "explicacion": "LEER: la gráfica tiene dos líneas: aumento del salario e inflación, de 2021 a 2025. COMPRENDER: se pregunta en qué años Marta pudo comprar menos con su salario. INTERPRETAR: el poder adquisitivo cae cuando la inflación es mayor que el aumento salarial (la línea de inflación queda por encima). REPRESENTAR: diferencias salario − inflación: 2021: −1,6; 2022: −7,1; 2023: −1,3; 2024: +3,8; 2025: +2,0. RAZONAR: A omite 2021 y 2023; B confunde nominal con real; C invierte la relación. RESOLVER: D. VERIFICAR: los tres años con diferencia negativa son exactamente los de la opción D.",
     "que_identificar": "Los años en que la línea de inflación está por encima de la línea de aumento salarial.",
     "que_revisar": "Inflación, salario nominal y salario real; cómo comparar dos series en una gráfica de líneas.",
-    "refuerzo_ids": [
-      "SOC-065",
-      "SOC-067"
-    ],
+    "refuerzo_ids": ["SOC-065", "SOC-067"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "inflacion",
-      "poder_adquisitivo",
-      "salario",
-      "lineas",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["inflacion", "poder_adquisitivo", "salario", "lineas", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-067",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "etico_politico",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -414,32 +283,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "IVA pagado en un mes por tres hogares (datos ficticios)",
-      "columnas": [
-        "Hogar",
-        "Ingreso mensual (pesos)",
-        "Compras gravadas con IVA, antes del impuesto (pesos)",
-        "IVA pagado (pesos)"
-      ],
-      "filas": [
-        [
-          "Hogar 1",
-          1500000,
-          1000000,
-          190000
-        ],
-        [
-          "Hogar 2",
-          4000000,
-          1800000,
-          342000
-        ],
-        [
-          "Hogar 3",
-          12000000,
-          3000000,
-          570000
-        ]
-      ],
+      "columnas": ["Hogar", "Ingreso mensual (pesos)", "Compras gravadas con IVA, antes del impuesto (pesos)", "IVA pagado (pesos)"],
+      "filas": [["Hogar 1", 1500000, 1000000, 190000], ["Hogar 2", 4000000, 1800000, 342000], ["Hogar 3", 12000000, 3000000, 570000]],
       "nota": "El IVA pagado corresponde al 19 % de las compras gravadas. Los hogares de mayores ingresos ahorran o gastan en bienes no gravados una parte mayor de su ingreso."
     },
     "enunciado": "¿Cuál de las siguientes conclusiones sobre el IVA se apoya en los datos de la tabla?",
@@ -484,30 +329,17 @@
     "explicacion": "LEER: definiciones de impuesto progresivo y regresivo; tabla con ingreso, compras gravadas e IVA de tres hogares. COMPRENDER: se pide la conclusión que los datos sostienen. INTERPRETAR: para saber si un impuesto es progresivo o regresivo hay que comparar el impuesto con el ingreso, no en pesos. REPRESENTAR: IVA/ingreso: 12,7 %, 8,6 % y 4,75 %. RAZONAR: A compara pesos; C confunde tarifa con carga; D usa un dato mal leído. RESOLVER: B. VERIFICAR: la proporción disminuye cuando el ingreso aumenta, lo que cumple la definición de regresivo dada en el contexto.",
     "que_identificar": "La proporción del ingreso que cada hogar destina al IVA (IVA pagado ÷ ingreso mensual).",
     "que_revisar": "Impuestos directos e indirectos; progresividad y regresividad; diferencia entre tarifa, cantidad pagada y carga relativa.",
-    "refuerzo_ids": [
-      "SOC-066",
-      "SOC-079"
-    ],
+    "refuerzo_ids": ["SOC-066", "SOC-079"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "impuestos",
-      "iva",
-      "progresividad",
-      "tabla",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["impuestos", "iva", "progresividad", "tabla", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-068",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "historia_cultura",
     "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
@@ -522,6 +354,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "La colonización antioqueña fue solo un proceso de fundación de ciudades, sin relación con la ampliación de las tierras cultivables.",
+        "correcta": false,
+        "explicacion": "El texto dice que los colonos talaron bosques para abrir parcelas y que esas tierras se dedicaron al café: sí hubo ampliación de la frontera agrícola, no solo fundación de poblaciones.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la mención de Manizales y Armenia y pasó por alto la información sobre la tala y la apertura de parcelas."
+      },
+      {
+        "clave": "B",
         "texto": "El café se consolidó en esa zona porque requería tierras planas y cálidas como las de los Llanos Orientales, adonde llegaron los colonos.",
         "correcta": false,
         "explicacion": "El texto ubica la colonización en las laderas de la cordillera Central, no en los Llanos, y habla de tierras de clima medio. La opción contradice la localización geográfica del proceso.",
@@ -530,7 +371,7 @@
         "razon_frecuente": "Tiene una idea equivocada sobre las condiciones del café y sobre dónde ocurrió la colonización, y no la contrastó con el texto."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "Los colonos se instalaron allí gracias a la titulación de tierras que ordenó la Constitución de 1991.",
         "correcta": false,
         "explicacion": "La colonización antioqueña ocurrió entre mediados del siglo XIX y comienzos del XX, mucho antes de 1991. La opción ubica mal el proceso en el tiempo.",
@@ -539,50 +380,29 @@
         "razon_frecuente": "No ubicó el proceso en su época y lo asoció con un hecho posterior que conoce mejor."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "El clima medio de las laderas de la cordillera favorecía el cultivo de café, y la apertura de tierras por los colonos permitió que se expandiera en fincas familiares, lo que convirtió a esa región en centro de la economía exportadora a comienzos del siglo XX.",
         "correcta": true,
         "explicacion": "Relaciona el rasgo geográfico (laderas de clima medio, aptas para el café) con el proceso histórico (colonización y tala de bosques para abrir parcelas) y con su resultado económico (café como principal exportación, producido en fincas pequeñas y medianas).",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
-      },
-      {
-        "clave": "D",
-        "texto": "La colonización antioqueña fue solo un proceso de fundación de ciudades, sin relación con la ampliación de las tierras cultivables.",
-        "correcta": false,
-        "explicacion": "El texto dice que los colonos talaron bosques para abrir parcelas y que esas tierras se dedicaron al café: sí hubo ampliación de la frontera agrícola, no solo fundación de poblaciones.",
-        "tipo_error": "comprension",
-        "diagnostico": "probable",
-        "razon_frecuente": "Se quedó con la mención de Manizales y Armenia y pasó por alto la información sobre la tala y la apertura de parcelas."
       }
     ],
     "explicacion": "LEER: el texto ubica la colonización en el tiempo (segunda mitad del siglo XIX a comienzos del XX) y en el espacio (laderas de clima medio de la cordillera Central), y la relaciona con el café. COMPRENDER: se pide la afirmación que une la dimensión geográfica con la histórica. INTERPRETAR: \"clima medio\" y \"laderas\" son condiciones del espacio; \"colonos\", \"tala\" y \"exportación a comienzos del siglo XX\" son el proceso histórico. REPRESENTAR: espacio (laderas de clima medio) + proceso (colonización y apertura de parcelas) → resultado (economía cafetera de fincas familiares). RAZONAR: A falla en la geografía, B en la cronología, D omite la ampliación de tierras. RESOLVER: C. VERIFICAR: cada parte de C está respaldada por una frase del texto.",
     "que_identificar": "Dónde ocurrió la colonización (laderas de clima medio), cuándo (siglo XIX a comienzos del XX) y qué transformación produjo (apertura de parcelas y café).",
     "que_revisar": "Colonización antioqueña, economía cafetera y frontera agrícola; ubicar procesos en el tiempo y en el espacio.",
-    "refuerzo_ids": [
-      "SOC-077",
-      "SOC-080"
-    ],
+    "refuerzo_ids": ["SOC-077", "SOC-080"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "colonizacion_antioquena",
-      "cafe",
-      "frontera_agricola",
-      "historia_economica"
-    ],
+    "etiquetas": ["colonizacion_antioquena", "cafe", "frontera_agricola", "historia_economica"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-069",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
@@ -635,29 +455,17 @@
     "explicacion": "LEER: cuatro testimonios sobre la minería de oro en el mismo río. COMPRENDER: se pide la comparación correcta entre perspectivas. INTERPRETAR: el barequero defiende la minería artesanal como sustento; la empresa, la minería mecanizada con empleo y regalías; la lideresa, la salud y el río como fuente de comida; la funcionaria, el cumplimiento de condiciones legales. REPRESENTAR: una tabla mental actor → interés → postura frente a la minería (a favor artesanal / a favor mecanizada / en contra de sus efectos / condicionada). RAZONAR: A generaliza; B iguala dos posturas distintas; C ignora la competencia por el mismo tramo. RESOLVER: D. VERIFICAR: cada parte de D se puede señalar en el testimonio correspondiente.",
     "que_identificar": "El interés principal de cada actor y si su postura frente a la minería es a favor, en contra o condicionada.",
     "que_revisar": "Comparación de perspectivas: coincidencias y diferencias entre actores; minería artesanal, minería mecanizada y regulación ambiental.",
-    "refuerzo_ids": [
-      "SOC-005",
-      "SOC-071"
-    ],
+    "refuerzo_ids": ["SOC-005", "SOC-071"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "mineria",
-      "perspectivas",
-      "conflictos_ambientales",
-      "caso_ficticio"
-    ],
+    "etiquetas": ["mineria", "perspectivas", "conflictos_ambientales", "caso_ficticio"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-070",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
@@ -673,43 +481,7 @@
       "eje_x": "Año",
       "eje_y": "Hectáreas deforestadas",
       "series": [
-        {
-          "nombre": "Hectáreas deforestadas",
-          "valores": [
-            [
-              "2018",
-              21000
-            ],
-            [
-              "2019",
-              17000
-            ],
-            [
-              "2020",
-              22000
-            ],
-            [
-              "2021",
-              20000
-            ],
-            [
-              "2022",
-              12000
-            ],
-            [
-              "2023",
-              9000
-            ],
-            [
-              "2024",
-              13000
-            ],
-            [
-              "2025",
-              11000
-            ]
-          ]
-        }
+        { "nombre": "Hectáreas deforestadas", "valores": [["2018", 21000], ["2019", 17000], ["2020", 22000], ["2021", 20000], ["2022", 12000], ["2023", 9000], ["2024", 13000], ["2025", 11000]] }
       ]
     },
     "enunciado": "¿Cuál es la principal limitación de esta gráfica para apoyar la afirmación de la gobernadora?",
@@ -754,30 +526,17 @@
     "explicacion": "LEER: la gráfica muestra las hectáreas deforestadas de 2018 a 2025; la gobernadora asumió en 2024 y atribuye a su política una baja del 15 % en 2025. COMPRENDER: se pide evaluar qué tanto la gráfica sostiene esa atribución causal. INTERPRETAR: de 2024 a 2025 hubo una baja de 13.000 a 11.000 ha (≈15 %), pero de 2021 a 2023 la baja fue de 20.000 a 9.000 ha, y en 2024 la cifra subió. REPRESENTAR: antes del programa: 20.000 → 9.000; con el programa: 9.000 → 13.000 → 11.000. RAZONAR: una serie de cifras describe cambios, no identifica sus causas; B lee mal la gráfica, C confunde secuencia con causa, D señala una limitación irrelevante. RESOLVER: A. VERIFICAR: A reconoce que el dato del 15 % es cierto y explica por qué no basta como prueba de la causa.",
     "que_identificar": "Cuándo empezó el programa (2024), cómo se comporta la serie antes y después, y qué tipo de afirmación hace la gobernadora (causal).",
     "que_revisar": "Diferencia entre describir un cambio y explicar su causa; evaluar si una fuente sostiene una afirmación; deforestación en Colombia.",
-    "refuerzo_ids": [
-      "SOC-018",
-      "SOC-077"
-    ],
+    "refuerzo_ids": ["SOC-018", "SOC-077"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 190,
-    "etiquetas": [
-      "deforestacion",
-      "uso_de_fuentes",
-      "causalidad",
-      "barras",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["deforestacion", "uso_de_fuentes", "causalidad", "barras", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-071",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "etico_politico",
     "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
@@ -830,30 +589,17 @@
     "explicacion": "LEER: cuatro opiniones sobre un tratado que elimina aranceles a la leche en polvo (importación) y a las flores (exportación). COMPRENDER: se pregunta por qué las posiciones difieren. INTERPRETAR: cada actor ocupa un lugar distinto: produce leche, la compra como insumo, la consume o exporta otro producto. REPRESENTAR: productora → pierde; fábrica → gana; consumidora → gana; exportador → gana. RAZONAR: las posiciones dependen del rol económico de cada actor; A descalifica, C atribuye una ideología que no aparece, D confunde tema con posición. RESOLVER: B. VERIFICAR: cada argumento del contexto se refiere a ingresos o gastos propios, lo que confirma B.",
     "que_identificar": "El papel económico de cada actor frente al tratado (productor, comprador de insumos, consumidor, exportador) y si gana o pierde.",
     "que_revisar": "Globalización, aranceles y tratados de libre comercio; cómo los roles sociales influyen en las posiciones frente a una política.",
-    "refuerzo_ids": [
-      "SOC-069",
-      "SOC-080"
-    ],
+    "refuerzo_ids": ["SOC-069", "SOC-080"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "globalizacion",
-      "tlc",
-      "aranceles",
-      "perspectivas",
-      "economia_campesina"
-    ],
+    "etiquetas": ["globalizacion", "tlc", "aranceles", "perspectivas", "economia_campesina"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-072",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "etico_politico",
     "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
@@ -906,29 +652,17 @@
     "explicacion": "LEER: definición de desempleado (sin trabajo, busca activamente, disponible) y un comentario que culpa a la \"pereza\". COMPRENDER: se pide identificar el prejuicio. INTERPRETAR: un prejuicio es un juicio negativo y generalizado sobre un grupo, sin evidencia. REPRESENTAR: comentario → \"desempleados = perezosos\"; definición → \"desempleados = buscan trabajo\". RAZONAR: la generalización choca con la definición y omite causas económicas; A confunde opinión con validez, B confunde hecho con juicio, D cree que los números arreglan una causa infundada. RESOLVER: C. VERIFICAR: C señala el grupo, el juicio y por qué carece de fundamento.",
     "que_identificar": "La generalización sobre las personas desempleadas y su contradicción con la definición de desempleado.",
     "que_revisar": "Concepto de desempleo; cómo reconocer prejuicios y generalizaciones en argumentos.",
-    "refuerzo_ids": [
-      "SOC-022",
-      "SOC-018"
-    ],
+    "refuerzo_ids": ["SOC-022", "SOC-018"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 100,
-    "etiquetas": [
-      "desempleo",
-      "prejuicios",
-      "argumentacion",
-      "trabajo"
-    ],
+    "etiquetas": ["desempleo", "prejuicios", "argumentacion", "trabajo"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-073",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "historia_cultura",
     "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
@@ -981,30 +715,17 @@
     "explicacion": "LEER: carta de 1963 de colonos al gerente del INCORA que piden títulos de baldíos que trabajan, frente a alguien que dice ser dueño. COMPRENDER: se pide el contexto económico y político en que se inscribe la fuente. INTERPRETAR: las pistas son la fecha, la institución (INCORA, creado en 1961), la \"ley de reforma social agraria\", los baldíos colonizados y el conflicto con un supuesto propietario. REPRESENTAR: fecha + institución + solicitud → reforma agraria de los años sesenta y conflictos por la tierra. RAZONAR: B y C son anacronismos; D confunde el destino de la carta con su contenido. RESOLVER: A. VERIFICAR: todas las pistas de la fuente son coherentes con A y ninguna con las demás.",
     "que_identificar": "La fecha, la institución destinataria, la ley mencionada y lo que piden los firmantes.",
     "que_revisar": "Reforma agraria de 1961 e INCORA; colonización de baldíos y conflictos por la tierra; cómo ubicar una fuente primaria en su contexto.",
-    "refuerzo_ids": [
-      "SOC-006",
-      "SOC-081"
-    ],
+    "refuerzo_ids": ["SOC-006", "SOC-081"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "reforma_agraria",
-      "fuente_primaria",
-      "tierra",
-      "economia_campesina",
-      "fuente_ficticia"
-    ],
+    "etiquetas": ["reforma_agraria", "fuente_primaria", "tierra", "economia_campesina", "fuente_ficticia"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-074",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1020,127 +741,14 @@
       "eje_x": "Mes",
       "eje_y": "Lluvia (milímetros)",
       "series": [
-        {
-          "nombre": "1981-2010",
-          "valores": [
-            [
-              "Ene",
-              60
-            ],
-            [
-              "Feb",
-              80
-            ],
-            [
-              "Mar",
-              130
-            ],
-            [
-              "Abr",
-              190
-            ],
-            [
-              "May",
-              170
-            ],
-            [
-              "Jun",
-              90
-            ],
-            [
-              "Jul",
-              60
-            ],
-            [
-              "Ago",
-              70
-            ],
-            [
-              "Sep",
-              120
-            ],
-            [
-              "Oct",
-              200
-            ],
-            [
-              "Nov",
-              170
-            ],
-            [
-              "Dic",
-              90
-            ]
-          ]
-        },
-        {
-          "nombre": "2016-2025",
-          "valores": [
-            [
-              "Ene",
-              40
-            ],
-            [
-              "Feb",
-              50
-            ],
-            [
-              "Mar",
-              90
-            ],
-            [
-              "Abr",
-              210
-            ],
-            [
-              "May",
-              190
-            ],
-            [
-              "Jun",
-              70
-            ],
-            [
-              "Jul",
-              35
-            ],
-            [
-              "Ago",
-              40
-            ],
-            [
-              "Sep",
-              80
-            ],
-            [
-              "Oct",
-              230
-            ],
-            [
-              "Nov",
-              190
-            ],
-            [
-              "Dic",
-              60
-            ]
-          ]
-        }
+        { "nombre": "1981-2010", "valores": [["Ene", 60], ["Feb", 80], ["Mar", 130], ["Abr", 190], ["May", 170], ["Jun", 90], ["Jul", 60], ["Ago", 70], ["Sep", 120], ["Oct", 200], ["Nov", 170], ["Dic", 90]] },
+        { "nombre": "2016-2025", "valores": [["Ene", 40], ["Feb", 50], ["Mar", 90], ["Abr", 210], ["May", 190], ["Jun", 70], ["Jul", 35], ["Ago", 40], ["Sep", 80], ["Oct", 230], ["Nov", 190], ["Dic", 60]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones relaciona correctamente la dimensión ambiental con la económica en esta situación?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "La lluvia aumentó en todos los meses, por lo que las familias tienen más agua para sus cultivos y sus ingresos deberían mejorar.",
-        "correcta": false,
-        "explicacion": "La lluvia aumentó solo en abril, mayo, octubre y noviembre; en los demás meses disminuyó. En total, el año pasó de 1.430 mm a 1.285 mm.",
-        "tipo_error": "lectura_grafico",
-        "diagnostico": "probable",
-        "razon_frecuente": "Se fijó en los picos, donde la línea reciente está por encima, y no revisó los demás meses."
-      },
-      {
-        "clave": "B",
         "texto": "Como la lluvia total del año cambió poco, el problema es solo ambiental y no afecta la economía de las familias.",
         "correcta": false,
         "explicacion": "Aunque la diferencia anual no es enorme, la distribución cambió: meses secos más secos y meses lluviosos más intensos. Eso afecta directamente la siembra y las cosechas, es decir, los ingresos.",
@@ -1149,7 +757,7 @@
         "razon_frecuente": "Miró solo el total anual y no la distribución mensual, que es la que importa para el calendario agrícola."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "Las familias deberían sembrar en julio, porque es el mes con menos lluvia y por lo tanto con menos riesgo de crecientes.",
         "correcta": false,
         "explicacion": "Julio es el mes más seco (35 mm): sembrar allí aumentaría el riesgo de perder la siembra por falta de agua. Evitar un riesgo lleva a otro mayor.",
@@ -1158,42 +766,38 @@
         "razon_frecuente": "Consideró solo el riesgo de crecientes y olvidó que los cultivos necesitan agua para germinar."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "Los meses secos se volvieron más secos (marzo pasó de 130 a 90 mm) y los lluviosos más intensos (octubre, de 200 a 230 mm); por eso sembrar a finales de marzo es más riesgoso y las cosechas e ingresos de las familias se vuelven más inciertos.",
         "correcta": true,
         "explicacion": "La gráfica muestra un régimen más extremo: menos lluvia en los meses de siembra y más en los picos. Eso explica las pérdidas por falta de agua al inicio y los daños por crecientes en octubre, y conecta el cambio ambiental con la inestabilidad de la producción y los ingresos.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La lluvia aumentó en todos los meses, por lo que las familias tienen más agua para sus cultivos y sus ingresos deberían mejorar.",
+        "correcta": false,
+        "explicacion": "La lluvia aumentó solo en abril, mayo, octubre y noviembre; en los demás meses disminuyó. En total, el año pasó de 1.430 mm a 1.285 mm.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en los picos, donde la línea reciente está por encima, y no revisó los demás meses."
       }
     ],
     "explicacion": "LEER: dos líneas de lluvia mensual (1981-2010 y 2016-2025) y el relato de siembras perdidas y crecientes. COMPRENDER: se pide la relación correcta entre lo ambiental (lluvias) y lo económico (cosechas e ingresos). INTERPRETAR: la línea reciente está por debajo en los meses secos y por encima en los picos de abril-mayo y octubre-noviembre. REPRESENTAR: marzo 130 → 90; julio 60 → 35; octubre 200 → 230; total 1.430 → 1.285 mm. RAZONAR: A lee mal la gráfica; B ignora la distribución; C cambia un riesgo por otro peor. RESOLVER: D. VERIFICAR: los datos de D coinciden con la gráfica y explican los problemas que narran las familias.",
     "que_identificar": "Los meses en que la lluvia reciente es menor o mayor que la histórica, en especial el mes de siembra (marzo) y el de crecientes (octubre).",
     "que_revisar": "Cambio climático, variabilidad de lluvias y adaptación agrícola; lectura comparada de dos series en una gráfica de líneas.",
-    "refuerzo_ids": [
-      "SOC-021",
-      "SOC-064"
-    ],
+    "refuerzo_ids": ["SOC-021", "SOC-064"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "cambio_climatico",
-      "adaptacion",
-      "agricultura",
-      "lineas",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["cambio_climatico", "adaptacion", "agricultura", "lineas", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-075",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1206,36 +810,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Población y acueducto en Puerto Alegre (datos ficticios)",
-      "columnas": [
-        "Año",
-        "Población urbana",
-        "Población rural",
-        "Población urbana con acueducto (%)",
-        "Barrios de origen informal"
-      ],
-      "filas": [
-        [
-          "2005",
-          80000,
-          40000,
-          92,
-          6
-        ],
-        [
-          "2015",
-          120000,
-          35000,
-          85,
-          14
-        ],
-        [
-          "2025",
-          170000,
-          30000,
-          78,
-          25
-        ]
-      ],
+      "columnas": ["Año", "Población urbana", "Población rural", "Población urbana con acueducto (%)", "Barrios de origen informal"],
+      "filas": [["2005", 80000, 40000, 92, 6], ["2015", 120000, 35000, 85, 14], ["2025", 170000, 30000, 78, 25]],
       "nota": "Barrios de origen informal: los que surgieron sin licencia urbanística ni redes de servicios planificadas."
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones establece correctamente la relación entre el crecimiento urbano y la cobertura de acueducto?",
@@ -1280,30 +856,17 @@
     "explicacion": "LEER: la tabla muestra población urbana y rural, porcentaje de población urbana con acueducto y número de barrios informales en 2005, 2015 y 2025; el concejal dice que hoy se atiende a menos gente. COMPRENDER: se pide la relación correcta entre crecimiento urbano y cobertura. INTERPRETAR: un porcentaje que baja no implica que baje la cantidad, si la base crece. REPRESENTAR: 2005: 0,92 × 80.000 = 73.600; 2015: 0,85 × 120.000 = 102.000; 2025: 0,78 × 170.000 = 132.600. RAZONAR: la red creció, pero menos que la población, que se asentó en buena parte en barrios informales sin redes planificadas; A no calcula, C se aleja de la pregunta, D lee mal la tabla. RESOLVER: B. VERIFICAR: las cifras calculadas contradicen al concejal y respaldan B.",
     "que_identificar": "La diferencia entre porcentaje de cobertura y número de personas atendidas, y el ritmo de crecimiento de la población urbana y de los barrios informales.",
     "que_revisar": "Urbanización, migración interna y servicios públicos; porcentajes frente a cantidades absolutas.",
-    "refuerzo_ids": [
-      "SOC-002",
-      "SOC-076"
-    ],
+    "refuerzo_ids": ["SOC-002", "SOC-076"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 190,
-    "etiquetas": [
-      "urbanizacion",
-      "migracion_interna",
-      "servicios_publicos",
-      "tabla",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["urbanizacion", "migracion_interna", "servicios_publicos", "tabla", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-076",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1316,38 +879,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Desplazamiento forzado en cuatro municipios, 2024 (datos ficticios)",
-      "columnas": [
-        "Municipio",
-        "Población total",
-        "Personas expulsadas",
-        "Personas recibidas"
-      ],
-      "filas": [
-        [
-          "El Retiro Alto",
-          18000,
-          3200,
-          150
-        ],
-        [
-          "Santa Inés",
-          12000,
-          1800,
-          300
-        ],
-        [
-          "Villanueva del Río",
-          140000,
-          400,
-          5600
-        ],
-        [
-          "San Gabriel (capital)",
-          420000,
-          200,
-          2100
-        ]
-      ],
+      "columnas": ["Municipio", "Población total", "Personas expulsadas", "Personas recibidas"],
+      "filas": [["El Retiro Alto", 18000, 3200, 150], ["Santa Inés", 12000, 1800, 300], ["Villanueva del Río", 140000, 400, 5600], ["San Gabriel (capital)", 420000, 200, 2100]],
       "nota": "Cifras ficticias, redondeadas."
     },
     "enunciado": "Según la tabla, ¿cuál de las siguientes afirmaciones relaciona correctamente la llegada de población desplazada con la presión sobre los servicios de los municipios receptores?",
@@ -1392,30 +925,17 @@
     "explicacion": "LEER: la tabla muestra población total, personas expulsadas y recibidas en cuatro municipios. COMPRENDER: se pide relacionar la llegada de desplazados con la presión sobre los servicios de los receptores. INTERPRETAR: los receptores son Villanueva y San Gabriel; para comparar la presión hay que relacionar las llegadas con la población. REPRESENTAR: Villanueva: 5.600 / 140.000 = 4 %; San Gabriel: 2.100 / 420.000 = 0,5 %. RAZONAR: A confunde tamaño con presión, B confunde expulsor con receptor, D ignora la demanda de servicios. RESOLVER: C. VERIFICAR: Villanueva supera a San Gabriel tanto en número como en proporción de personas recibidas.",
     "que_identificar": "Qué municipios son receptores y qué proporción de su población representan las personas recibidas.",
     "que_revisar": "Desplazamiento forzado: municipios expulsores y receptores; comparación de cifras absolutas y relativas; efectos sociales de la llegada de población.",
-    "refuerzo_ids": [
-      "SOC-075",
-      "SOC-002"
-    ],
+    "refuerzo_ids": ["SOC-075", "SOC-002"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "desplazamiento_forzado",
-      "poblacion",
-      "servicios_publicos",
-      "tabla",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["desplazamiento_forzado", "poblacion", "servicios_publicos", "tabla", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-077",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Evalúa usos sociales de las ciencias sociales",
@@ -1468,30 +988,17 @@
     "explicacion": "LEER: definición y propósito de la frontera agrícola; 300 familias ocuparon un bosque de reserva fuera de ella; se propone titularles. COMPRENDER: se pide analizar la decisión usando el modelo. INTERPRETAR: el modelo sirve para impedir que la actividad agropecuaria avance sobre ecosistemas estratégicos. REPRESENTAR: ocupación fuera de la frontera → titulación → señal de que talar da propiedad → posible nueva deforestación. RAZONAR: B deforma el modelo, C opone lo social y lo ambiental sin buscar alternativas, D ignora los incentivos. RESOLVER: A. VERIFICAR: A usa el propósito del modelo, prevé efectos y atiende la dimensión social con alternativas compatibles.",
     "que_identificar": "El propósito de la frontera agrícola y la ubicación de las tierras ocupadas (fuera de ella, en un bosque de reserva).",
     "que_revisar": "Frontera agrícola y ordenamiento del suelo rural; efectos e incentivos de las decisiones públicas; cómo usar un modelo conceptual para evaluar una propuesta.",
-    "refuerzo_ids": [
-      "SOC-012",
-      "SOC-078"
-    ],
+    "refuerzo_ids": ["SOC-012", "SOC-078"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 190,
-    "etiquetas": [
-      "frontera_agricola",
-      "deforestacion",
-      "titulacion",
-      "modelos_conceptuales",
-      "caso_ficticio"
-    ],
+    "etiquetas": ["frontera_agricola", "deforestacion", "titulacion", "modelos_conceptuales", "caso_ficticio"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-078",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1507,40 +1014,8 @@
       "eje_x": "Tipo de uso",
       "eje_y": "Hectáreas",
       "series": [
-        {
-          "nombre": "Vocación del suelo",
-          "valores": [
-            [
-              "Agrícola",
-              30000
-            ],
-            [
-              "Ganadero",
-              15000
-            ],
-            [
-              "Forestal y de conservación",
-              25000
-            ]
-          ]
-        },
-        {
-          "nombre": "Uso actual",
-          "valores": [
-            [
-              "Agrícola",
-              12000
-            ],
-            [
-              "Ganadero",
-              38000
-            ],
-            [
-              "Forestal y de conservación",
-              20000
-            ]
-          ]
-        }
+        { "nombre": "Vocación del suelo", "valores": [["Agrícola", 30000], ["Ganadero", 15000], ["Forestal y de conservación", 25000]] },
+        { "nombre": "Uso actual", "valores": [["Agrícola", 12000], ["Ganadero", 38000], ["Forestal y de conservación", 20000]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones se apoya en la gráfica?",
@@ -1585,30 +1060,17 @@
     "explicacion": "LEER: la gráfica compara, para tres tipos de uso, las hectáreas según vocación y según uso actual. COMPRENDER: se pide la afirmación respaldada por los datos. INTERPRETAR: si una barra de uso supera a la de vocación, esa actividad ocupa suelos que no son los suyos. REPRESENTAR: diferencias uso − vocación: agrícola −18.000; ganadero +23.000; forestal −5.000 (−18.000 − 5.000 + 23.000 = 0). RAZONAR: A invierte las series, B compara solo totales, C inventa una evolución temporal. RESOLVER: D. VERIFICAR: las 23.000 ha de más en ganadería son exactamente las que faltan en agricultura y conservación.",
     "que_identificar": "Qué uso supera su vocación (ganadero) y cuáles quedan por debajo (agrícola y forestal).",
     "que_revisar": "Vocación y uso del suelo; conflictos de uso; ganadería extensiva y seguridad alimentaria.",
-    "refuerzo_ids": [
-      "SOC-009",
-      "SOC-063"
-    ],
+    "refuerzo_ids": ["SOC-009", "SOC-063"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 100,
-    "etiquetas": [
-      "uso_del_suelo",
-      "ganaderia",
-      "conflicto_de_uso",
-      "barras",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["uso_del_suelo", "ganaderia", "conflicto_de_uso", "barras", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-079",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "etico_politico",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1661,30 +1123,17 @@
     "explicacion": "LEER: el concejo actualiza los avalúos, lo que sube el predial, y destina el recaudo adicional al transporte escolar rural. COMPRENDER: se pide el análisis de efectos en distintas dimensiones. INTERPRETAR: la decisión tiene un costo (más impuestos), un beneficio (acceso a la escuela) y una dimensión política (aceptación, control ciudadano). REPRESENTAR: económico → más pago y más recaudo; social → menos deserción rural; político → posible rechazo y rendición de cuentas. RAZONAR: A se queda en una dimensión; C generaliza; D contradice el contexto. RESOLVER: B. VERIFICAR: B cubre tres dimensiones y explica cómo se conectan entre sí.",
     "que_identificar": "Quiénes pagan más, quiénes se benefician y qué reacciones políticas puede generar la decisión.",
     "que_revisar": "Impuestos y gasto público municipal; impuesto predial y avalúo catastral; análisis multidimensional de decisiones públicas.",
-    "refuerzo_ids": [
-      "SOC-011",
-      "SOC-067"
-    ],
+    "refuerzo_ids": ["SOC-011", "SOC-067"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "impuestos",
-      "gasto_publico",
-      "predial",
-      "educacion_rural",
-      "caso_ficticio"
-    ],
+    "etiquetas": ["impuestos", "gasto_publico", "predial", "educacion_rural", "caso_ficticio"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-080",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "historia_cultura",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1700,72 +1149,8 @@
       "eje_x": "Año",
       "eje_y": "Miles (hectáreas o toneladas)",
       "series": [
-        {
-          "nombre": "Área sembrada de cultivos transitorios (miles de hectáreas)",
-          "valores": [
-            [
-              "1988",
-              2500
-            ],
-            [
-              "1990",
-              2550
-            ],
-            [
-              "1992",
-              2300
-            ],
-            [
-              "1994",
-              2050
-            ],
-            [
-              "1996",
-              1800
-            ],
-            [
-              "1998",
-              1650
-            ],
-            [
-              "2000",
-              1600
-            ]
-          ]
-        },
-        {
-          "nombre": "Importaciones de cereales (miles de toneladas)",
-          "valores": [
-            [
-              "1988",
-              900
-            ],
-            [
-              "1990",
-              1000
-            ],
-            [
-              "1992",
-              1600
-            ],
-            [
-              "1994",
-              2300
-            ],
-            [
-              "1996",
-              2900
-            ],
-            [
-              "1998",
-              3300
-            ],
-            [
-              "2000",
-              3500
-            ]
-          ]
-        }
+        { "nombre": "Área sembrada de cultivos transitorios (miles de hectáreas)", "valores": [["1988", 2500], ["1990", 2550], ["1992", 2300], ["1994", 2050], ["1996", 1800], ["1998", 1650], ["2000", 1600]] },
+        { "nombre": "Importaciones de cereales (miles de toneladas)", "valores": [["1988", 900], ["1990", 1000], ["1992", 1600], ["1994", 2300], ["1996", 2900], ["1998", 3300], ["2000", 3500]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones relaciona de manera más consistente el contexto histórico con los datos de la gráfica?",
@@ -1810,30 +1195,17 @@
     "explicacion": "LEER: el contexto sitúa la apertura a inicios de los noventa (reducción de aranceles); la gráfica muestra área de cultivos transitorios e importaciones de cereales de 1988 a 2000. COMPRENDER: se pide la relación más consistente entre el proceso histórico y los datos. INTERPRETAR: después de 1990 las importaciones suben de forma sostenida y el área sembrada baja. REPRESENTAR: importaciones 1.000 → 3.500 (×3,5); área 2.550 → 1.600 (−950, ≈ −37 %). RAZONAR: A invierte la tendencia, B exagera la conclusión y habla de una variable ausente, D lee mal el inicio de la serie. RESOLVER: C. VERIFICAR: C cita cifras correctas, relaciona dimensiones y no afirma más de lo que los datos permiten.",
     "que_identificar": "El año en que comienza la apertura y la dirección de cada serie antes y después de ese año.",
     "que_revisar": "Apertura económica de los años noventa, aranceles e importaciones; relación entre globalización y economía campesina; asociación frente a causalidad.",
-    "refuerzo_ids": [
-      "SOC-071",
-      "SOC-068"
-    ],
+    "refuerzo_ids": ["SOC-071", "SOC-068"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 190,
-    "etiquetas": [
-      "apertura_economica",
-      "globalizacion",
-      "agricultura",
-      "lineas",
-      "datos_ficticios"
-    ],
+    "etiquetas": ["apertura_economica", "globalizacion", "agricultura", "lineas", "datos_ficticios"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-081",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -1886,18 +1258,10 @@
     "explicacion": "LEER: la vereda produce plátano, yuca y cacao; el camino es una trocha; se vende barato a intermediarios y hay dificultad para llegar a la escuela y al puesto de salud; se propone placa huella. COMPRENDER: se pide un efecto razonable en distintas dimensiones. INTERPRETAR: el mal camino es la causa común de los problemas económicos y sociales. REPRESENTAR: mejor vía → menos tiempo y costo → venta directa y mejores precios (económico) + acceso a servicios (social). RAZONAR: B supone que nada cambia, C exagera, D usa una explicación ajena al caso. RESOLVER: A. VERIFICAR: A se deriva directamente de los problemas que el contexto atribuye al camino.",
     "que_identificar": "Los problemas que el contexto atribuye al mal estado del camino (precios bajos, dependencia de intermediarios, difícil acceso a servicios).",
     "que_revisar": "Economía campesina, intermediación y comercialización; infraestructura rural; efectos de una intervención en distintas dimensiones.",
-    "refuerzo_ids": [
-      "SOC-065",
-      "SOC-073"
-    ],
+    "refuerzo_ids": ["SOC-065", "SOC-073"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 100,
-    "etiquetas": [
-      "economia_campesina",
-      "vias_terciarias",
-      "infraestructura_rural",
-      "caso_ficticio"
-    ],
+    "etiquetas": ["economia_campesina", "vias_terciarias", "infraestructura_rural", "caso_ficticio"],
     "estado": "aprobada"
   }
 ]

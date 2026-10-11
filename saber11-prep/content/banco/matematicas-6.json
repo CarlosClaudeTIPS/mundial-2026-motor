@@ -3,11 +3,7 @@
     "id": "MAT-081",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -23,37 +19,22 @@
       "eje_x": "Tiempo (minutos)",
       "eje_y": "Número de estudiantes",
       "series": [
-        {
-          "nombre": "Estudiantes",
-          "valores": [
-            [
-              "[0, 10)",
-              8
-            ],
-            [
-              "[10, 20)",
-              15
-            ],
-            [
-              "[20, 30)",
-              12
-            ],
-            [
-              "[30, 40)",
-              9
-            ],
-            [
-              "[40, 50)",
-              6
-            ]
-          ]
-        }
+        { "nombre": "Estudiantes", "valores": [["[0, 10)", 8], ["[10, 20)", 15], ["[20, 30)", 12], ["[30, 40)", 9], ["[40, 50)", 6]] }
       ]
     },
     "enunciado": "¿Cuántos estudiantes tardan menos de 20 minutos en llegar al colegio?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "23",
+        "correcta": true,
+        "explicacion": "Es la correcta. \"Menos de 20 minutos\" reúne los intervalos [0, 10) y [10, 20): 8 + 15 = 23 estudiantes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
         "texto": "15",
         "correcta": false,
         "explicacion": "No responde. 15 es solo la altura de la barra [10, 20). \"Menos de 20 minutos\" también incluye a quienes tardan menos de 10 minutos (barra [0, 10), con 8 estudiantes).",
@@ -62,7 +43,7 @@
         "razon_frecuente": "Buscó la barra donde aparece el número 20 y leyó solo esa, sin sumar los intervalos anteriores."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "27",
         "correcta": false,
         "explicacion": "No responde. 27 = 12 + 9 + 6 es el número de estudiantes que tardan 20 minutos o más, es decir, el complemento de lo que se pregunta (50 − 23 = 27).",
@@ -71,50 +52,29 @@
         "razon_frecuente": "Contó el grupo contrario (\"20 minutos o más\") porque confundió \"menos de\" con \"a partir de\"."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "35",
         "correcta": false,
         "explicacion": "No responde. 35 = 8 + 15 + 12 incluye el intervalo [20, 30), cuyos estudiantes tardan 20 minutos o más; ellos no cumplen la condición \"menos de 20\".",
         "tipo_error": "interpretacion",
         "diagnostico": "probable",
         "razon_frecuente": "Interpretó el intervalo [20, 30) como si empezara antes de 20, sin tener en cuenta que el límite inferior pertenece a ese intervalo."
-      },
-      {
-        "clave": "D",
-        "texto": "23",
-        "correcta": true,
-        "explicacion": "Es la correcta. \"Menos de 20 minutos\" reúne los intervalos [0, 10) y [10, 20): 8 + 15 = 23 estudiantes.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: histograma de 50 estudiantes con cinco intervalos de 10 minutos: 8, 15, 12, 9 y 6. COMPRENDER: se pide cuántos tardan menos de 20 minutos. INTERPRETAR: cada barra agrupa a los estudiantes de un intervalo; \"menos de 20\" abarca todo lo que está a la izquierda de 20 en el eje horizontal. REPRESENTAR: menos de 20 = [0, 10) ∪ [10, 20). RAZONAR: el intervalo [20, 30) no se incluye, porque sus estudiantes tardan 20 minutos o más. RESOLVER: 8 + 15 = 23. VERIFICAR: los que tardan 20 o más son 12 + 9 + 6 = 27, y 23 + 27 = 50, el total de encuestados.",
     "que_identificar": "Los intervalos que quedan por debajo de 20 minutos ([0, 10) y [10, 20)) y sus frecuencias (8 y 15).",
     "que_revisar": "Lectura de histogramas y tablas de frecuencia agrupada; frecuencia acumulada; significado de los límites de un intervalo.",
-    "refuerzo_ids": [
-      "MAT-097",
-      "MAT-001"
-    ],
+    "refuerzo_ids": ["MAT-097", "MAT-001"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "graficos",
-      "histograma",
-      "frecuencia_agrupada",
-      "frecuencia_acumulada"
-    ],
+    "etiquetas": ["graficos", "histograma", "frecuencia_agrupada", "frecuencia_acumulada"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-082",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -127,23 +87,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Datos del gráfico publicado por la alcaldía",
-      "columnas": [
-        "Año",
-        "Personas afiliadas",
-        "Altura visible de la barra (por encima de 1 750)"
-      ],
-      "filas": [
-        [
-          "2024",
-          1800,
-          50
-        ],
-        [
-          "2025",
-          1950,
-          200
-        ]
-      ],
+      "columnas": ["Año", "Personas afiliadas", "Altura visible de la barra (por encima de 1 750)"],
+      "filas": [["2024", 1800, 50], ["2025", 1950, 200]],
       "nota": "El eje vertical del gráfico publicado comenzaba en 1 750."
     },
     "enunciado": "¿Cuál de las siguientes descripciones corresponde al cambio REAL en el número de personas afiliadas entre 2024 y 2025?",
@@ -188,29 +133,17 @@
     "explicacion": "LEER: afiliados 1 800 (2024) y 1 950 (2025); el eje del gráfico empieza en 1 750, así que las barras visibles miden 50 y 200. COMPRENDER: se pide el cambio real, no el que sugiere el dibujo. INTERPRETAR: con el eje truncado, la altura de cada barra representa solo el exceso sobre 1 750; por eso 50 contra 200 parece \"cuatro veces\". REPRESENTAR: cambio absoluto = valor final − valor inicial; cambio relativo = cambio absoluto ÷ valor inicial. RAZONAR: la comparación válida es entre 1 800 y 1 950, no entre 50 y 200. RESOLVER: 1 950 − 1 800 = 150; 150 ÷ 1 800 ≈ 0,083 = 8,3 %. VERIFICAR: 1 800 × 1,083 ≈ 1 950 ✔; si el gráfico hubiera empezado en 0, las barras de 1 800 y 1 950 se verían casi iguales, lo que coincide con un aumento pequeño.",
     "que_identificar": "Que el eje vertical empieza en 1 750 y que los valores reales son 1 800 y 1 950.",
     "que_revisar": "Gráficos engañosos (escala truncada); diferencia entre cambio absoluto y cambio porcentual; el porcentaje de cambio se calcula sobre el valor inicial.",
-    "refuerzo_ids": [
-      "MAT-093",
-      "MAT-092"
-    ],
+    "refuerzo_ids": ["MAT-093", "MAT-092"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "tablas",
-      "grafico_enganoso",
-      "escala_truncada",
-      "porcentajes"
-    ],
+    "etiquetas": ["tablas", "grafico_enganoso", "escala_truncada", "porcentajes"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-083",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -263,28 +196,17 @@
     "explicacion": "LEER: 3 sopas, 4 principios y 2 bebidas; cada almuerzo lleva exactamente una de cada tipo. COMPRENDER: se pide el número de almuerzos distintos. INTERPRETAR: la elección se hace en tres etapas independientes. REPRESENTAR: un diagrama de árbol: 3 ramas (sopa), de cada una salen 4 (principio) y de cada una de esas salen 2 (bebida). RAZONAR: cada rama final es un almuerzo distinto, así que el total es el producto de las ramas de cada etapa. RESOLVER: 3 × 4 × 2 = 24. VERIFICAR: con una sola sopa habría 4 × 2 = 8 almuerzos; con tres sopas, 3 × 8 = 24 ✔.",
     "que_identificar": "Que cada almuerzo tiene exactamente una opción de cada categoría y cuántas opciones hay en cada una (3, 4 y 2).",
     "que_revisar": "Principio multiplicativo del conteo; diagramas de árbol.",
-    "refuerzo_ids": [
-      "MAT-084",
-      "MAT-095"
-    ],
+    "refuerzo_ids": ["MAT-084", "MAT-095"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "conteo",
-      "principio_multiplicativo",
-      "diagrama_arbol"
-    ],
+    "etiquetas": ["conteo", "principio_multiplicativo", "diagrama_arbol"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-084",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -337,28 +259,17 @@
     "explicacion": "LEER: 5 grupos; el anfitrión va de último; los otros 4 se ordenan libremente. COMPRENDER: se pide el número de órdenes posibles de presentación. INTERPRETAR: el orden importa (no es lo mismo tocar primero que segundo) y ningún grupo se repite; la posición 5 está fija. REPRESENTAR: _ _ _ _ | Anfitrión: quedan 4 casillas para 4 invitados. RAZONAR: para la primera casilla hay 4 opciones, para la segunda 3, luego 2 y luego 1; se multiplican por el principio multiplicativo. RESOLVER: 4 × 3 × 2 × 1 = 24. VERIFICAR: sin restricción habría 120 órdenes; el anfitrión ocupa cada una de las 5 posiciones en la misma cantidad de ellos, así que en 120 ÷ 5 = 24 órdenes queda de último ✔.",
     "que_identificar": "Que el orden importa y que la posición del grupo anfitrión está fija (último lugar).",
     "que_revisar": "Permutaciones (factorial) y cómo una condición reduce el número de casos.",
-    "refuerzo_ids": [
-      "MAT-083",
-      "MAT-085"
-    ],
+    "refuerzo_ids": ["MAT-083", "MAT-085"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "conteo",
-      "permutaciones",
-      "factorial"
-    ],
+    "etiquetas": ["conteo", "permutaciones", "factorial"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-085",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "estadistica",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -411,29 +322,17 @@
     "explicacion": "LEER: 6 candidatos; situación 1: dos cargos diferentes; situación 2: dos cargos iguales; Laura propone 6 × 5 = 30 para ambas. COMPRENDER: se pide validar el procedimiento de Laura en cada caso. INTERPRETAR: la pregunta clave es si importa el orden: ¿cambia el resultado si se intercambian las dos personas elegidas? REPRESENTAR: con Ana (A) y Beto (B): situación 1: (A pres., B vice) ≠ (B pres., A vice); situación 2: {A, B} = {B, A}. RAZONAR: 6 × 5 cuenta parejas ordenadas; sirve cuando el orden importa (situación 1), pero en la situación 2 cuenta cada comité dos veces. RESOLVER: situación 1: 30; situación 2: 30 ÷ 2 = 15. Laura acierta solo en la situación 1. VERIFICAR: listar los comités de A con los demás da 5; de B con los 4 restantes, 4; luego 3, 2, 1: 5 + 4 + 3 + 2 + 1 = 15 ✔.",
     "que_identificar": "La diferencia entre cargos distintos (presidente/vicepresidente) y cargos iguales (dos delegados).",
     "que_revisar": "Permutaciones y combinaciones: cuándo importa el orden; cómo corregir un conteo que repite casos.",
-    "refuerzo_ids": [
-      "MAT-084",
-      "MAT-083"
-    ],
+    "refuerzo_ids": ["MAT-084", "MAT-083"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "conteo",
-      "combinaciones",
-      "permutaciones",
-      "argumentacion"
-    ],
+    "etiquetas": ["conteo", "combinaciones", "permutaciones", "argumentacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-086",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -446,32 +345,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Resultados de la jornada de salud visual",
-      "columnas": [
-        "Resultado de la prueba rápida",
-        "Necesita gafas (según el optómetra)",
-        "No necesita gafas",
-        "Total"
-      ],
-      "filas": [
-        [
-          "Positiva",
-          48,
-          34,
-          82
-        ],
-        [
-          "Negativa",
-          12,
-          306,
-          318
-        ],
-        [
-          "Total",
-          60,
-          340,
-          400
-        ]
-      ],
+      "columnas": ["Resultado de la prueba rápida", "Necesita gafas (según el optómetra)", "No necesita gafas", "Total"],
+      "filas": [["Positiva", 48, 34, 82], ["Negativa", 12, 306, 318], ["Total", 60, 340, 400]],
       "nota": "Una prueba rápida \"positiva\" indica que la prueba sugiere que el estudiante necesita gafas."
     },
     "enunciado": "A un estudiante le salió **positiva** la prueba rápida. Según la tabla, ¿cuál es la probabilidad aproximada de que realmente necesite gafas?",
@@ -516,29 +391,17 @@
     "explicacion": "LEER: 400 estudiantes; positivos 82 (48 necesitan gafas y 34 no); negativos 318 (12 necesitan y 306 no). COMPRENDER: se sabe que el estudiante dio positivo; se pide la probabilidad de que necesite gafas. INTERPRETAR: la información \"dio positivo\" reduce el universo a la fila \"Positiva\". REPRESENTAR: P(necesita | positiva) = (positivos que necesitan) ÷ (total de positivos). RAZONAR: no sirve dividir entre 400 (eso ignora la información conocida) ni entre 60 (eso responde la pregunta inversa). RESOLVER: 48 ÷ 82 ≈ 0,585 ≈ 59 %. VERIFICAR: los positivos que no necesitan gafas son 34 ÷ 82 ≈ 41 %, y 59 % + 41 % = 100 % ✔; tiene sentido que sea bastante menor que 80 %, porque hay muchos estudiantes sin problema visual (340) y algunos dan falso positivo.",
     "que_identificar": "La fila de la condición conocida (prueba positiva: 82 estudiantes) y, dentro de ella, la casilla del evento pedido (48).",
     "que_revisar": "Probabilidad condicional en tablas de doble entrada; diferencia entre P(A dado B) y P(B dado A).",
-    "refuerzo_ids": [
-      "MAT-025",
-      "MAT-005"
-    ],
+    "refuerzo_ids": ["MAT-025", "MAT-005"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "tablas",
-      "doble_entrada",
-      "probabilidad_condicional",
-      "salud"
-    ],
+    "etiquetas": ["tablas", "doble_entrada", "probabilidad_condicional", "salud"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-087",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -554,42 +417,13 @@
       "eje_x": "Talla",
       "eje_y": "Camisetas vendidas",
       "series": [
-        {
-          "nombre": "Camisetas",
-          "valores": [
-            [
-              "S",
-              45
-            ],
-            [
-              "M",
-              120
-            ],
-            [
-              "L",
-              80
-            ],
-            [
-              "XL",
-              35
-            ]
-          ]
-        }
+        { "nombre": "Camisetas", "valores": [["S", 45], ["M", 120], ["L", 80], ["XL", 35]] }
       ]
     },
     "enunciado": "¿Qué medida estadística responde lo que quiere saber la dueña y cuál es su valor?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "La moda, que es la talla M, porque es la talla con mayor número de camisetas vendidas.",
-        "correcta": true,
-        "explicacion": "Es la correcta. La moda es el valor de la variable que más se repite. Aquí la variable es la talla (un dato cualitativo) y la talla con mayor frecuencia es M, con 120 camisetas. Es justo lo que la dueña quiere saber.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "La media: se vendieron 280 camisetas entre 4 tallas, así que el promedio es 70 camisetas y debe pedir 70 de cada talla.",
         "correcta": false,
         "explicacion": "No responde. 280 ÷ 4 = 70 es el promedio de las frecuencias, no una talla. Además, pedir la misma cantidad de todas las tallas contradice el objetivo de la dueña, que es identificar la talla que más se vende.",
@@ -598,7 +432,7 @@
         "razon_frecuente": "Calcula la media de las alturas de las barras sin reconocer que la variable es la talla y que con datos cualitativos la medida útil es la moda."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "La talla L, porque es la talla del centro en la lista de tallas que ofrece la tienda.",
         "correcta": false,
         "explicacion": "No responde. Que L esté en una posición central de la lista S, M, L, XL no dice nada sobre cuánto se vende. La talla más vendida es la de la barra más alta (M).",
@@ -607,42 +441,38 @@
         "razon_frecuente": "Puede venir de confundir \"valor central\" con \"valor más frecuente\" o de elegir sin leer el gráfico; no se asocia a un único error."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "La mediana de las ventas, 62,5 camisetas, porque la mediana no se afecta por el valor alto de la talla M.",
         "correcta": false,
         "explicacion": "No responde. Ordenar 35, 45, 80 y 120 y tomar el centro ((45 + 80) ÷ 2 = 62,5) da un número de camisetas que no corresponde a ninguna talla; no responde cuál talla se vende más.",
         "tipo_error": "conocimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Aplica la mediana a las frecuencias porque recuerda que es \"resistente a valores extremos\", sin revisar qué variable se estudia."
+      },
+      {
+        "clave": "D",
+        "texto": "La moda, que es la talla M, porque es la talla con mayor número de camisetas vendidas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La moda es el valor de la variable que más se repite. Aquí la variable es la talla (un dato cualitativo) y la talla con mayor frecuencia es M, con 120 camisetas. Es justo lo que la dueña quiere saber.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: ventas por talla: S 45, M 120, L 80, XL 35. COMPRENDER: la dueña quiere la talla que más se vende. INTERPRETAR: la variable es la talla (cualitativa); las alturas de las barras son frecuencias. REPRESENTAR: \"la que más se vende\" = el valor de mayor frecuencia = la moda. RAZONAR: la media y la mediana de las frecuencias (70 y 62,5) son números de camisetas, no tallas, y no responden la pregunta. RESOLVER: la barra más alta es M (120); la moda es M. VERIFICAR: 120 es mayor que 45, 80 y 35, así que M es la única talla con máxima frecuencia ✔.",
     "que_identificar": "Que la variable estudiada es la talla (cualitativa) y que la pregunta pide la más frecuente.",
     "que_revisar": "Media, mediana y moda: qué describe cada una y cuándo usar cada medida según el tipo de dato.",
-    "refuerzo_ids": [
-      "MAT-004",
-      "MAT-090"
-    ],
+    "refuerzo_ids": ["MAT-004", "MAT-090"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "graficos",
-      "barras",
-      "moda",
-      "medidas_tendencia_central",
-      "comercio"
-    ],
+    "etiquetas": ["graficos", "barras", "moda", "medidas_tendencia_central", "comercio"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-088",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -695,28 +525,17 @@
     "explicacion": "LEER: 4 notas con igual peso; ya tiene 3,2; 4,0 y 3,6; quiere promedio de al menos 3,8. COMPRENDER: se pide la menor cuarta nota x que logra ese promedio. INTERPRETAR: \"promedio de 4 notas\" significa sumar las 4 y dividir entre 4. REPRESENTAR: (3,2 + 4,0 + 3,6 + x) ÷ 4 = 3,8. RAZONAR: multiplicar por 4 ambos lados da la suma total necesaria. RESOLVER: 10,8 + x = 15,2 → x = 4,4. VERIFICAR: (3,2 + 4,0 + 3,6 + 4,4) ÷ 4 = 15,2 ÷ 4 = 3,8 ✔, y 4,4 está dentro de la escala de 1,0 a 5,0.",
     "que_identificar": "Que son 4 notas del mismo peso y que la suma de las tres primeras es 10,8.",
     "que_revisar": "Definición de media aritmética y planteamiento de ecuaciones lineales a partir de ella.",
-    "refuerzo_ids": [
-      "MAT-003",
-      "MAT-097"
-    ],
+    "refuerzo_ids": ["MAT-003", "MAT-097"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "ecuaciones",
-      "media",
-      "notas_escolares"
-    ],
+    "etiquetas": ["ecuaciones", "media", "notas_escolares"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-089",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -732,35 +551,7 @@
       "eje_x": "Número de lanzamientos acumulados",
       "eje_y": "Punta hacia arriba (%)",
       "series": [
-        {
-          "nombre": "Punta hacia arriba",
-          "valores": [
-            [
-              "10",
-              70
-            ],
-            [
-              "50",
-              58
-            ],
-            [
-              "100",
-              63
-            ],
-            [
-              "200",
-              61
-            ],
-            [
-              "500",
-              62
-            ],
-            [
-              "1000",
-              62
-            ]
-          ]
-        }
+        { "nombre": "Punta hacia arriba", "valores": [["10", 70], ["50", 58], ["100", 63], ["200", 61], ["500", 62], ["1000", 62]] }
       ]
     },
     "enunciado": "Con base en el gráfico, ¿cuál es la mejor estimación de la probabilidad de que la tachuela caiga con la punta hacia arriba?",
@@ -805,29 +596,17 @@
     "explicacion": "LEER: porcentaje acumulado de \"punta hacia arriba\": 70 % (10 lanzamientos), 58 % (50), 63 % (100), 61 % (200), 62 % (500) y 62 % (1 000). COMPRENDER: se pide la mejor estimación de la probabilidad. INTERPRETAR: con pocos lanzamientos la frecuencia relativa oscila mucho; con muchos, se acerca a un valor fijo. REPRESENTAR: probabilidad estimada ≈ frecuencia relativa con el mayor número de ensayos. RAZONAR: la línea se estabiliza entre 61 % y 62 % desde los 200 lanzamientos; el valor con 1 000 lanzamientos es el más confiable. RESOLVER: 62 %. VERIFICAR: 62 % de 1 000 son 620 lanzamientos con la punta hacia arriba, y los últimos puntos del gráfico casi no cambian, lo que confirma la estabilización ✔.",
     "que_identificar": "Que el gráfico muestra frecuencias acumuladas y el valor en que se estabiliza la línea con muchos lanzamientos (62 %).",
     "que_revisar": "Probabilidad frecuencial (experimental) y ley de los grandes números de forma intuitiva; diferencia con la probabilidad clásica de casos igualmente posibles.",
-    "refuerzo_ids": [
-      "MAT-005",
-      "MAT-086"
-    ],
+    "refuerzo_ids": ["MAT-005", "MAT-086"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "graficos",
-      "lineas",
-      "probabilidad_frecuencial",
-      "experimento"
-    ],
+    "etiquetas": ["graficos", "lineas", "probabilidad_frecuencial", "experimento"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-090",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "estadistica",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -840,29 +619,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Retrasos en la entrega durante 10 días (minutos)",
-      "columnas": [
-        "Proveedor",
-        "Media",
-        "Mediana",
-        "Retraso mínimo",
-        "Retraso máximo"
-      ],
-      "filas": [
-        [
-          "A",
-          10,
-          10,
-          8,
-          12
-        ],
-        [
-          "B",
-          9,
-          6,
-          0,
-          30
-        ]
-      ]
+      "columnas": ["Proveedor", "Media", "Mediana", "Retraso mínimo", "Retraso máximo"],
+      "filas": [["A", 10, 10, 8, 12], ["B", 9, 6, 0, 30]]
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones REFUTA mejor el argumento de la administradora?",
     "opciones": [
@@ -906,30 +664,17 @@
     "explicacion": "LEER: A: media 10, mediana 10, retrasos entre 8 y 12; B: media 9, mediana 6, retrasos entre 0 y 30; más de 15 minutos es llegar tarde. COMPRENDER: se busca el dato que refute \"B conviene porque su media es menor\". INTERPRETAR: la media resume el centro, pero no cuánto varían los datos; el criterio del problema es no pasar de 15 minutos. REPRESENTAR: rango A = 12 − 8 = 4; rango B = 30 − 0 = 30. RAZONAR: B tuvo al menos un día con 30 minutos de retraso (pan tarde), mientras que A nunca superó 12; un proveedor con menor media pero gran dispersión es menos confiable para cumplir un límite. RESOLVER: refuta el argumento la afirmación que señala la dispersión de B (rango 30 y un retraso máximo de 30 min) frente a la de A (rango 4). VERIFICAR: un ejemplo de datos compatibles con B es 0, 2, 4, 5, 6, 6, 8, 10, 19, 30 (suma 90, media 9, mediana 6): hay dos días con más de 15 minutos ✔.",
     "que_identificar": "Los valores mínimo y máximo (dispersión) de cada proveedor y el límite de 15 minutos del contexto.",
     "que_revisar": "Comparación de distribuciones: centro (media, mediana) frente a dispersión (rango); por qué la media sola no basta para decidir.",
-    "refuerzo_ids": [
-      "MAT-038",
-      "MAT-004"
-    ],
+    "refuerzo_ids": ["MAT-038", "MAT-004"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "tablas",
-      "dispersion",
-      "rango",
-      "comparacion_distribuciones",
-      "argumentacion"
-    ],
+    "etiquetas": ["tablas", "dispersion", "rango", "comparacion_distribuciones", "argumentacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-091",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -945,31 +690,7 @@
       "eje_x": "Medio de transporte",
       "eje_y": "Porcentaje de encuestados (%)",
       "series": [
-        {
-          "nombre": "Porcentaje",
-          "valores": [
-            [
-              "Bus",
-              55
-            ],
-            [
-              "Moto",
-              40
-            ],
-            [
-              "A pie",
-              30
-            ],
-            [
-              "Bicicleta",
-              25
-            ],
-            [
-              "Carro",
-              15
-            ]
-          ]
-        }
+        { "nombre": "Porcentaje", "valores": [["Bus", 55], ["Moto", 40], ["A pie", 30], ["Bicicleta", 25], ["Carro", 15]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes conclusiones es correcta a partir de la encuesta?",
@@ -1014,30 +735,17 @@
     "explicacion": "LEER: 200 encuestados; pregunta de respuesta múltiple; bus 55 %, moto 40 %, a pie 30 %, bicicleta 25 %, carro 15 %. COMPRENDER: se pide qué conclusión se sostiene con los datos. INTERPRETAR: cada barra dice qué porcentaje de las 200 personas marcó esa opción; una persona puede estar en varias barras, por eso la suma es 165 %. REPRESENTAR: número de personas de una barra = porcentaje × 200. RAZONAR: no se puede sumar entre barras ni suponer que los grupos son exclusivos; sí se puede convertir cada barra en número de personas. RESOLVER: bus: 0,55 × 200 = 110; la conclusión correcta es que 110 encuestados usan bus, sin excluir que usen otros medios. VERIFICAR: 165 % > 100 % es coherente con una pregunta de varias respuestas; en promedio cada encuestado marcó 1,65 opciones.",
     "que_identificar": "La indicación \"puede marcar varias opciones\" y el total de encuestados (200).",
     "que_revisar": "Interpretación de encuestas de respuesta múltiple; porcentaje de una cantidad; eventos no excluyentes.",
-    "refuerzo_ids": [
-      "MAT-100",
-      "MAT-002"
-    ],
+    "refuerzo_ids": ["MAT-100", "MAT-002"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "graficos",
-      "barras",
-      "encuestas",
-      "porcentajes",
-      "movilidad"
-    ],
+    "etiquetas": ["graficos", "barras", "encuestas", "porcentajes", "movilidad"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-092",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -1053,42 +761,13 @@
       "eje_x": "Año",
       "eje_y": "Hogares con internet fijo (%)",
       "series": [
-        {
-          "nombre": "Hogares con internet fijo",
-          "valores": [
-            [
-              "2021",
-              20
-            ],
-            [
-              "2022",
-              22
-            ],
-            [
-              "2023",
-              25
-            ],
-            [
-              "2024",
-              30
-            ]
-          ]
-        }
+        { "nombre": "Hogares con internet fijo", "valores": [["2021", 20], ["2022", 22], ["2023", 25], ["2024", 30]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes descripciones del cambio entre 2021 y 2024 es correcta?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "Aumentó un 10 %, como dice el noticiero.",
-        "correcta": false,
-        "explicacion": "No es correcta. Pasar de 20 % a 30 % es un aumento de 10 PUNTOS porcentuales. Un aumento del 10 % sobre 20 % llevaría solo a 22 %.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confunde la diferencia entre dos porcentajes (puntos porcentuales) con un cambio porcentual."
-      },
-      {
-        "clave": "B",
         "texto": "Aumentó un 30 %, porque en 2024 el valor llegó a 30.",
         "correcta": false,
         "explicacion": "No es correcta. 30 % es el nivel de 2024, no el cambio. El cambio compara 2024 con 2021.",
@@ -1097,7 +776,7 @@
         "razon_frecuente": "Leyó el último punto del gráfico como si fuera el aumento."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "Aumentó 10 puntos porcentuales, lo que equivale a un aumento relativo del 50 %.",
         "correcta": true,
         "explicacion": "Es la correcta. La diferencia es 30 − 20 = 10 puntos porcentuales. Respecto al valor inicial, 10 ÷ 20 = 0,5 = 50 %: la proporción de hogares con internet fijo creció a la mitad más de lo que era.",
@@ -1106,42 +785,38 @@
         "razon_frecuente": null
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "Aumentó 10 puntos porcentuales, lo que equivale a un aumento relativo de aproximadamente 33 %.",
         "correcta": false,
         "explicacion": "No es correcta. 33 % sale de 10 ÷ 30, es decir, de dividir entre el valor final. El cambio relativo se calcula respecto al valor inicial: 10 ÷ 20 = 50 %.",
         "tipo_error": "calculo",
         "diagnostico": "probable",
         "razon_frecuente": "Tomó como base el valor de 2024 en lugar del de 2021."
+      },
+      {
+        "clave": "D",
+        "texto": "Aumentó un 10 %, como dice el noticiero.",
+        "correcta": false,
+        "explicacion": "No es correcta. Pasar de 20 % a 30 % es un aumento de 10 PUNTOS porcentuales. Un aumento del 10 % sobre 20 % llevaría solo a 22 %.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la diferencia entre dos porcentajes (puntos porcentuales) con un cambio porcentual."
       }
     ],
     "explicacion": "LEER: 20 % (2021), 22 % (2022), 25 % (2023), 30 % (2024); el noticiero dice \"aumentó un 10 %\". COMPRENDER: se pide describir bien el cambio de 2021 a 2024. INTERPRETAR: cuando la variable ya es un porcentaje, su diferencia se mide en puntos porcentuales; el cambio relativo compara esa diferencia con el valor inicial. REPRESENTAR: diferencia = 30 − 20; cambio relativo = (30 − 20) ÷ 20. RAZONAR: \"10 %\" no describe lo ocurrido, porque un 10 % de 20 % sería solo 2 puntos. RESOLVER: 10 puntos porcentuales; 10 ÷ 20 = 0,5 = 50 %. VERIFICAR: 20 % aumentado en un 50 % es 20 × 1,5 = 30 % ✔.",
     "que_identificar": "El valor inicial (20 % en 2021) y el final (30 % en 2024).",
     "que_revisar": "Puntos porcentuales frente a porcentaje de cambio; cambio relativo respecto al valor inicial.",
-    "refuerzo_ids": [
-      "MAT-082",
-      "MAT-100"
-    ],
+    "refuerzo_ids": ["MAT-082", "MAT-100"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "graficos",
-      "lineas",
-      "porcentajes",
-      "puntos_porcentuales",
-      "noticias"
-    ],
+    "etiquetas": ["graficos", "lineas", "porcentajes", "puntos_porcentuales", "noticias"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-093",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "geometria",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -1194,30 +869,17 @@
     "explicacion": "LEER: producción 2 000 → 4 000 sacos (se duplica); dibujos de 2 × 3 cm y 4 × 6 cm. COMPRENDER: hay que encontrar el argumento válido de por qué el afiche exagera. INTERPRETAR: en un pictograma, el lector compara el tamaño (área) de las figuras, no solo su alto. REPRESENTAR: área 2023 = 2 × 3 = 6 cm²; área 2024 = 4 × 6 = 24 cm². RAZONAR: si todas las longitudes se multiplican por k, el área se multiplica por k²; con k = 2, el área se multiplica por 4, el doble de lo que debería. RESOLVER: 24 ÷ 6 = 4 ≠ 2: el afiche exagera porque el área se cuadruplica. VERIFICAR: con lados 2,83 cm y 4,24 cm el área sería ≈ 12 cm² = 2 × 6 ✔, que sí representaría un crecimiento del doble.",
     "que_identificar": "Que ambas dimensiones del dibujo se duplicaron y que la producción solo se duplicó.",
     "que_revisar": "Efecto de una escala k sobre longitudes (k), áreas (k²) y volúmenes (k³); gráficos engañosos con pictogramas.",
-    "refuerzo_ids": [
-      "MAT-082",
-      "MAT-013"
-    ],
+    "refuerzo_ids": ["MAT-082", "MAT-013"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "area",
-      "escala",
-      "grafico_enganoso",
-      "pictograma",
-      "argumentacion"
-    ],
+    "etiquetas": ["area", "escala", "grafico_enganoso", "pictograma", "argumentacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-094",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -1270,29 +932,17 @@
     "explicacion": "LEER: hexágono regular; 6 postes; los vecinos ya están unidos; un cable por cada par de postes no vecinos. COMPRENDER: se pide el número de cables, es decir, de diagonales del hexágono. INTERPRETAR: un cable queda determinado por una pareja de postes; la pareja (P1, P3) es la misma que (P3, P1). REPRESENTAR: desde cada vértice hay 6 − 3 = 3 vértices no vecinos; total de conteos = 6 × 3. RAZONAR: cada cable se contó desde sus dos extremos, así que hay que dividir entre 2. RESOLVER: 6 × 3 ÷ 2 = 9. VERIFICAR: parejas posibles 6 × 5 ÷ 2 = 15, menos los 6 lados = 9 ✔; además, 3 diagonales largas + 6 cortas = 9 ✔.",
     "que_identificar": "Que solo se unen postes no vecinos y que cada cable une exactamente dos postes.",
     "que_revisar": "Diagonales de un polígono, n(n − 3) ÷ 2; conteo de parejas sin repetir (combinaciones).",
-    "refuerzo_ids": [
-      "MAT-085",
-      "MAT-095"
-    ],
+    "refuerzo_ids": ["MAT-085", "MAT-095"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "poligonos",
-      "diagonales",
-      "conteo",
-      "combinaciones"
-    ],
+    "etiquetas": ["poligonos", "diagonales", "conteo", "combinaciones"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-095",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -1345,29 +995,17 @@
     "explicacion": "LEER: el colegio está 3 cuadras al oriente y 2 al norte; solo se avanza hacia el oriente o el norte. COMPRENDER: se pide el número de rutas distintas de 5 cuadras. INTERPRETAR: toda ruta tiene exactamente 3 movimientos O y 2 movimientos N; lo que cambia es el orden en que se intercalan. REPRESENTAR: una ruta es una palabra de 5 letras con 3 O y 2 N, por ejemplo OONON. RAZONAR: basta escoger las 2 posiciones de las N entre 5; el orden en que se escogen no importa. RESOLVER: (5 × 4) ÷ 2 = 10. VERIFICAR: listado: NNOOO, NONOO, NOONO, NOOON, ONNOO, ONONO, ONOON, OONNO, OONON, OOONN = 10 rutas ✔.",
     "que_identificar": "Que cada ruta tiene 3 cuadras al oriente y 2 al norte, y que las rutas se diferencian solo en el orden de esos movimientos.",
     "que_revisar": "Conteo de caminos en cuadrículas; combinaciones (escoger posiciones); permutaciones con elementos repetidos.",
-    "refuerzo_ids": [
-      "MAT-085",
-      "MAT-083"
-    ],
+    "refuerzo_ids": ["MAT-085", "MAT-083"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "conteo",
-      "combinaciones",
-      "cuadricula",
-      "plano"
-    ],
+    "etiquetas": ["conteo", "combinaciones", "cuadricula", "plano"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-096",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "geometria",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -1420,29 +1058,17 @@
     "explicacion": "LEER: 240 jóvenes; el sector \"Deporte\" mide 72°. COMPRENDER: se pide el porcentaje y el número de jóvenes de ese sector. INTERPRETAR: en un gráfico circular, el círculo completo (360°) representa el 100 % de los encuestados, y cada sector es proporcional a su frecuencia. REPRESENTAR: 72/360 = porcentaje/100 = jóvenes/240. RAZONAR: primero se obtiene la fracción del círculo y luego se aplica al total. RESOLVER: 72 ÷ 360 = 0,2 = 20 %; 0,2 × 240 = 48. VERIFICAR: 48 ÷ 240 × 360° = 72° ✔.",
     "que_identificar": "Que 72° es una parte de los 360° del círculo y que el total de encuestados es 240.",
     "que_revisar": "Proporcionalidad entre ángulo central, porcentaje y frecuencia en un gráfico circular.",
-    "refuerzo_ids": [
-      "MAT-037",
-      "MAT-100"
-    ],
+    "refuerzo_ids": ["MAT-037", "MAT-100"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "grafico_circular",
-      "angulos",
-      "porcentajes",
-      "proporcionalidad"
-    ],
+    "etiquetas": ["grafico_circular", "angulos", "porcentajes", "proporcionalidad"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-097",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -1455,28 +1081,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Horas diarias de uso del celular",
-      "columnas": [
-        "Horas al día",
-        "Número de estudiantes"
-      ],
-      "filas": [
-        [
-          "[0, 2)",
-          5
-        ],
-        [
-          "[2, 4)",
-          12
-        ],
-        [
-          "[4, 6)",
-          8
-        ],
-        [
-          "[6, 8)",
-          5
-        ]
-      ],
+      "columnas": ["Horas al día", "Número de estudiantes"],
+      "filas": [["[0, 2)", 5], ["[2, 4)", 12], ["[4, 6)", 8], ["[6, 8)", 5]],
       "nota": "Total: 30 estudiantes."
     },
     "enunciado": "Si se usa el punto medio de cada intervalo (marca de clase) para representar a los estudiantes de ese intervalo, ¿cuál es aproximadamente el promedio de horas diarias de uso del celular?",
@@ -1521,29 +1127,17 @@
     "explicacion": "LEER: 30 estudiantes; intervalos [0, 2), [2, 4), [4, 6), [6, 8) con frecuencias 5, 12, 8 y 5. COMPRENDER: se pide el promedio aproximado usando la marca de clase. INTERPRETAR: con datos agrupados no se conoce el valor exacto de cada estudiante; se supone que todos los de un intervalo tienen el valor del punto medio. REPRESENTAR: marcas 1, 3, 5, 7; media ≈ Σ(marca × frecuencia) ÷ total. RAZONAR: cada marca se pondera por el número de estudiantes de su intervalo y se divide entre 30. RESOLVER: 5 + 36 + 40 + 35 = 116; 116 ÷ 30 ≈ 3,87 ≈ 3,9 horas. VERIFICAR: el resultado está entre 2 y 4, donde se concentra la mayoría (12 estudiantes en [2, 4)), y es algo mayor que 3 porque hay 13 estudiantes con 4 horas o más ✔.",
     "que_identificar": "Las marcas de clase (1, 3, 5, 7), las frecuencias y el total de estudiantes (30).",
     "que_revisar": "Tablas de frecuencia agrupada; marca de clase; media ponderada por frecuencias.",
-    "refuerzo_ids": [
-      "MAT-081",
-      "MAT-003"
-    ],
+    "refuerzo_ids": ["MAT-081", "MAT-003"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "tablas",
-      "frecuencia_agrupada",
-      "marca_de_clase",
-      "media"
-    ],
+    "etiquetas": ["tablas", "frecuencia_agrupada", "marca_de_clase", "media"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-098",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "algebra_calculo",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -1596,30 +1190,17 @@
     "explicacion": "LEER: 4 000 hogares; encuesta 1 aleatoria sobre todos: 36 de 150 con leña; encuesta 2 en el parque, casi solo urbana: 6 de 150; el funcionario estima 160 con la encuesta 2. COMPRENDER: se pide validar la propuesta. INTERPRETAR: una estimación proporcional solo sirve si la muestra representa a toda la población; la encuesta 2 excluye a las veredas. REPRESENTAR: estimación = (proporción en la muestra) × 4 000. RAZONAR: el cálculo del funcionario (6 ÷ 150 = 4 %; 0,04 × 4 000 = 160) es aritméticamente correcto, pero parte de una muestra sesgada; debe usarse la encuesta 1. RESOLVER: 36 ÷ 150 = 0,24; 0,24 × 4 000 = 960 hogares. VERIFICAR: 960 ÷ 4 000 = 0,24 = 36 ÷ 150 ✔; es coherente que la estimación rural-urbana sea mayor que la de una muestra urbana.",
     "que_identificar": "Cómo se escogió cada muestra y cuál representa a toda la población (la encuesta 1).",
     "que_revisar": "Muestras representativas frente a sesgadas; estimación de totales por proporcionalidad (regla de tres).",
-    "refuerzo_ids": [
-      "MAT-040",
-      "MAT-100"
-    ],
+    "refuerzo_ids": ["MAT-040", "MAT-100"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "muestreo",
-      "sesgo",
-      "proporcionalidad",
-      "porcentajes",
-      "argumentacion"
-    ],
+    "etiquetas": ["muestreo", "sesgo", "proporcionalidad", "porcentajes", "argumentacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-099",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "estadistica",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -1632,29 +1213,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Resultados de la prueba de inglés según tenencia de celular",
-      "columnas": [
-        "Grupo",
-        "Número de estudiantes",
-        "Puntaje promedio en inglés",
-        "Toman clases extra de inglés (%)",
-        "Tienen internet en casa (%)"
-      ],
-      "filas": [
-        [
-          "Con celular propio",
-          250,
-          62,
-          60,
-          90
-        ],
-        [
-          "Sin celular propio",
-          150,
-          51,
-          20,
-          35
-        ]
-      ]
+      "columnas": ["Grupo", "Número de estudiantes", "Puntaje promedio en inglés", "Toman clases extra de inglés (%)", "Tienen internet en casa (%)"],
+      "filas": [["Con celular propio", 250, 62, 60, 90], ["Sin celular propio", 150, 51, 20, 35]]
     },
     "enunciado": "¿Cuál de las siguientes evaluaciones de la propuesta del concejal es correcta?",
     "opciones": [
@@ -1698,30 +1258,17 @@
     "explicacion": "LEER: con celular: 250 estudiantes, promedio 62, 60 % con clases extra, 90 % con internet; sin celular: 150, promedio 51, 20 % con clases extra, 35 % con internet. El concejal concluye que regalar celulares subirá 11 puntos. COMPRENDER: se pide evaluar si los datos sustentan esa conclusión causal. INTERPRETAR: la tabla compara grupos que ya existían; los grupos difieren en varias características a la vez, no solo en el celular. REPRESENTAR: diferencia de promedios = 62 − 51 = 11; diferencias en otras variables: clases extra 60 % frente a 20 %, internet 90 % frente a 35 %. RAZONAR: si varias características cambian juntas, no se puede atribuir toda la diferencia a una sola; la propuesta supone una causalidad que los datos no muestran. RESOLVER: la propuesta no está justificada, porque hay asociación pero no evidencia de causalidad. VERIFICAR: para conocer el efecto del celular habría que comparar estudiantes parecidos en clases extra e internet, o entregar celulares al azar a una parte de los estudiantes y comparar después.",
     "que_identificar": "Que además del celular, los grupos difieren en clases extra de inglés e internet en casa.",
     "que_revisar": "Asociación frente a causalidad; variables que acompañan (o confunden) una comparación entre grupos; límites de las conclusiones de un estudio observacional.",
-    "refuerzo_ids": [
-      "MAT-098",
-      "MAT-040"
-    ],
+    "refuerzo_ids": ["MAT-098", "MAT-040"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "tablas",
-      "causalidad",
-      "interpretacion_estudios",
-      "argumentacion",
-      "educacion"
-    ],
+    "etiquetas": ["tablas", "causalidad", "interpretacion_estudios", "argumentacion", "educacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-100",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -1737,33 +1284,22 @@
       "eje_x": "Fuente",
       "eje_y": "Hogares (%)",
       "series": [
-        {
-          "nombre": "Hogares",
-          "valores": [
-            [
-              "Acueducto",
-              48
-            ],
-            [
-              "Agua lluvia",
-              28
-            ],
-            [
-              "Botellón",
-              12
-            ],
-            [
-              "Pozo",
-              12
-            ]
-          ]
-        }
+        { "nombre": "Hogares", "valores": [["Acueducto", 48], ["Agua lluvia", 28], ["Botellón", 12], ["Pozo", 12]] }
       ]
     },
     "enunciado": "¿Cuántos hogares MÁS usan agua lluvia que botellón?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "150",
+        "correcta": false,
+        "explicacion": "No responde. 150 = 0,12 × 1 250 es el número de hogares que usan botellón, no la diferencia entre las dos fuentes.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de calcular la barra equivocada o de detenerse a mitad del procedimiento; no se asocia a un único error."
+      },
+      {
+        "clave": "B",
         "texto": "16",
         "correcta": false,
         "explicacion": "No responde. 16 = 28 − 12 es la diferencia en puntos porcentuales, no en número de hogares. Hay que aplicar ese 16 % al total de 1 250 hogares.",
@@ -1772,7 +1308,7 @@
         "razon_frecuente": "Restó los porcentajes y dio la diferencia como si fuera una cantidad de hogares."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "200",
         "correcta": true,
         "explicacion": "Es la correcta. La diferencia es 28 % − 12 % = 16 % de los hogares; 0,16 × 1 250 = 200 hogares. Por otro camino: 0,28 × 1 250 = 350 y 0,12 × 1 250 = 150; 350 − 150 = 200.",
@@ -1781,39 +1317,22 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "350",
         "correcta": false,
         "explicacion": "No responde. 350 = 0,28 × 1 250 es el número de hogares que usan agua lluvia; falta restar los 150 que usan botellón.",
         "tipo_error": "descuido",
         "diagnostico": "probable",
         "razon_frecuente": "Calculó solo la cantidad de la primera barra y olvidó que se pregunta por la diferencia."
-      },
-      {
-        "clave": "D",
-        "texto": "150",
-        "correcta": false,
-        "explicacion": "No responde. 150 = 0,12 × 1 250 es el número de hogares que usan botellón, no la diferencia entre las dos fuentes.",
-        "tipo_error": "lectura_grafico",
-        "diagnostico": "insuficiente",
-        "razon_frecuente": "Puede venir de calcular la barra equivocada o de detenerse a mitad del procedimiento; no se asocia a un único error."
       }
     ],
     "explicacion": "LEER: 1 250 hogares; agua lluvia 28 %, botellón 12 % (acueducto 48 %, pozo 12 %). COMPRENDER: se pide cuántos hogares más usan agua lluvia que botellón. INTERPRETAR: los porcentajes son partes del total de hogares y, como cada hogar marcó una sola fuente, suman 100 %. REPRESENTAR: diferencia = (28 % − 12 %) × 1 250. RAZONAR: se puede restar primero los porcentajes (ambos se refieren al mismo total) y luego convertir a hogares. RESOLVER: 16 % × 1 250 = 0,16 × 1 250 = 200. VERIFICAR: 350 − 150 = 200 ✔, y 48 + 28 + 12 + 12 = 100 % confirma que el gráfico está completo.",
     "que_identificar": "Los porcentajes de agua lluvia (28 %) y botellón (12 %) y el total de hogares (1 250).",
     "que_revisar": "Cálculo del porcentaje de una cantidad; diferencia entre puntos porcentuales y número de casos.",
-    "refuerzo_ids": [
-      "MAT-092",
-      "MAT-091"
-    ],
+    "refuerzo_ids": ["MAT-092", "MAT-091"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "graficos",
-      "barras",
-      "porcentajes",
-      "servicios_publicos"
-    ],
+    "etiquetas": ["graficos", "barras", "porcentajes", "servicios_publicos"],
     "estado": "aprobada"
   }
 ]

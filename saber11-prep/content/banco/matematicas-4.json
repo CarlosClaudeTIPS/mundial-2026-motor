@@ -3,11 +3,7 @@
     "id": "MAT-041",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -60,29 +56,17 @@
     "explicacion": "LEER: el tanque empieza con 1 200 L, se gastan 75 L por día y el carrotanque se pide cuando quedan 300 L. COMPRENDER: se pregunta el número de días hasta que el tanque llega a 300 L. INTERPRETAR: la cantidad de agua disminuye la misma cantidad cada día, es una relación lineal decreciente. REPRESENTAR: agua restante = 1 200 − 75d; ecuación 1 200 − 75d = 300. RAZONAR: el agua que puede gastarse antes de pedir el carrotanque es 1 200 − 300 = 900 L. RESOLVER: 75d = 900, d = 12. VERIFICAR: 1 200 − 75 × 12 = 1 200 − 900 = 300 L, coincide con la condición.",
     "que_identificar": "El contenido inicial (1 200 L), el gasto diario constante (75 L) y el nivel al que se pide el carrotanque (300 L).",
     "que_revisar": "Plantear y resolver ecuaciones lineales de la forma a − bx = c; diferenciar “cuánto queda” de “cuánto se gasta”.",
-    "refuerzo_ids": [
-      "MAT-044",
-      "MAT-051"
-    ],
+    "refuerzo_ids": ["MAT-044", "MAT-051"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "ecuaciones",
-      "lineal",
-      "agua",
-      "ruralidad"
-    ],
+    "etiquetas": ["ecuaciones", "lineal", "agua", "ruralidad"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-042",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -98,41 +82,22 @@
       "eje_x": "Número de viajes realizados",
       "eje_y": "Saldo (pesos)",
       "series": [
-        {
-          "nombre": "Saldo",
-          "valores": [
-            [
-              "0",
-              24000
-            ],
-            [
-              "2",
-              19200
-            ],
-            [
-              "4",
-              14400
-            ],
-            [
-              "6",
-              9600
-            ],
-            [
-              "8",
-              4800
-            ],
-            [
-              "10",
-              0
-            ]
-          ]
-        }
+        { "nombre": "Saldo", "valores": [["0", 24000], ["2", 19200], ["4", 14400], ["6", 9600], ["8", 4800], ["10", 0]] }
       ]
     },
     "enunciado": "En el contexto de la situación, ¿qué representa el punto donde la gráfica corta el eje vertical?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "El saldo que queda después del primer viaje: $21 600.",
+        "correcta": false,
+        "explicacion": "$21 600 = 24 000 − 2 400 es el saldo tras un viaje, que corresponde a x = 1, no a x = 0. En el eje vertical el número de viajes es cero.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pensó que la gráfica empieza en el primer viaje y no en cero viajes."
+      },
+      {
+        "clave": "B",
         "texto": "El saldo con el que la tarjeta quedó cargada antes de hacer cualquier viaje: $24 000.",
         "correcta": true,
         "explicacion": "El eje vertical corresponde a 0 viajes. El punto (0; 24 000) indica el saldo cuando todavía no se ha hecho ningún viaje, es decir, la carga inicial de la tarjeta.",
@@ -141,7 +106,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "El valor de cada viaje: $2 400.",
         "correcta": false,
         "explicacion": "$2 400 es la pendiente: cada viaje el saldo baja 2 400 (por ejemplo, de 24 000 a 19 200 en 2 viajes). Ese valor se ve en la inclinación de la recta, no en el punto de corte con el eje vertical.",
@@ -150,51 +115,29 @@
         "razon_frecuente": "Confunde el intercepto (valor inicial) con la pendiente (cambio por viaje)."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "El número máximo de viajes que se pueden hacer: 10.",
         "correcta": false,
         "explicacion": "10 viajes es el punto donde la gráfica corta el eje HORIZONTAL (saldo 0). El corte con el eje vertical ocurre cuando el número de viajes es 0.",
         "tipo_error": "lectura_grafico",
         "diagnostico": "probable",
         "razon_frecuente": "Confundió el corte con el eje horizontal y el corte con el eje vertical."
-      },
-      {
-        "clave": "D",
-        "texto": "El saldo que queda después del primer viaje: $21 600.",
-        "correcta": false,
-        "explicacion": "$21 600 = 24 000 − 2 400 es el saldo tras un viaje, que corresponde a x = 1, no a x = 0. En el eje vertical el número de viajes es cero.",
-        "tipo_error": "interpretacion",
-        "diagnostico": "probable",
-        "razon_frecuente": "Pensó que la gráfica empieza en el primer viaje y no en cero viajes."
       }
     ],
     "explicacion": "LEER: el eje x es el número de viajes y el eje y el saldo; la recta va de (0; 24 000) a (10; 0). COMPRENDER: se pregunta el significado del corte con el eje vertical. INTERPRETAR: sobre el eje vertical x = 0, o sea, 0 viajes. REPRESENTAR: el saldo es S = 24 000 − 2 400v, donde 24 000 es el intercepto y −2 400 la pendiente. RAZONAR: con 0 viajes no se ha descontado nada, así que el valor es la carga inicial. RESOLVER: el punto es (0; 24 000): la tarjeta se cargó con $24 000. VERIFICAR: 24 000 − 2 400 × 10 = 0, coherente con el corte en el eje horizontal a los 10 viajes.",
     "que_identificar": "Que el eje vertical corresponde a 0 viajes y que el punto (0; 24 000) es el saldo inicial.",
     "que_revisar": "Elementos de la función afín y = mx + b: intercepto (b, valor inicial) y pendiente (m, cambio por unidad); cortes con los ejes.",
-    "refuerzo_ids": [
-      "MAT-015",
-      "MAT-043"
-    ],
+    "refuerzo_ids": ["MAT-015", "MAT-043"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "graficos",
-      "lineas",
-      "funcion_afin",
-      "intercepto",
-      "transporte"
-    ],
+    "etiquetas": ["graficos", "lineas", "funcion_afin", "intercepto", "transporte"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-043",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -207,52 +150,14 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Costo del domicilio según la distancia",
-      "columnas": [
-        "Distancia (km)",
-        "Costo (pesos)"
-      ],
-      "filas": [
-        [
-          "2",
-          5000
-        ],
-        [
-          "4",
-          6600
-        ],
-        [
-          "6",
-          8200
-        ],
-        [
-          "8",
-          9800
-        ]
-      ],
+      "columnas": ["Distancia (km)", "Costo (pesos)"],
+      "filas": [["2", 5000], ["4", 6600], ["6", 8200], ["8", 9800]],
       "nota": "Tarifa vigente para distancias hasta 10 km."
     },
     "enunciado": "¿Cuál expresión permite calcular el costo C, en pesos, de un domicilio de d kilómetros?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "C = 2 500d",
-        "correcta": false,
-        "explicacion": "Sale de dividir 5 000 ÷ 2 usando solo la primera fila, como si el costo fuera proporcional a la distancia. Falla con las demás filas: para d = 4 daría 10 000 y no 6 600.",
-        "tipo_error": "interpretacion",
-        "diagnostico": "probable",
-        "razon_frecuente": "Supuso proporcionalidad directa a partir de una sola fila de la tabla."
-      },
-      {
-        "clave": "B",
-        "texto": "C = 3 400 + 800d",
-        "correcta": true,
-        "explicacion": "Entre filas la distancia aumenta 2 km y el costo 1 600 pesos, así que cada kilómetro cuesta 1 600 ÷ 2 = 800. Para d = 2: 800 × 2 = 1 600, y 5 000 − 1 600 = 3 400 es el valor fijo. Comprobación: 3 400 + 800 × 8 = 9 800.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "C",
         "texto": "C = 5 000 + 800d",
         "correcta": false,
         "explicacion": "Usa 5 000 como valor fijo, pero 5 000 es el costo para 2 km, no para 0 km. Para d = 2 daría 6 600, que no coincide con la tabla.",
@@ -261,42 +166,47 @@
         "razon_frecuente": "Tomó el primer valor de la tabla como intercepto aunque la tabla no empieza en d = 0."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "C = 3 400 + 1 600d",
         "correcta": false,
         "explicacion": "1 600 es el aumento por cada 2 km (de una fila a la siguiente), no por cada kilómetro. Para d = 2 daría 6 600 y no 5 000.",
         "tipo_error": "procedimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Calculó la pendiente con el cambio entre filas sin dividir entre el cambio de la distancia."
+      },
+      {
+        "clave": "C",
+        "texto": "C = 2 500d",
+        "correcta": false,
+        "explicacion": "Sale de dividir 5 000 ÷ 2 usando solo la primera fila, como si el costo fuera proporcional a la distancia. Falla con las demás filas: para d = 4 daría 10 000 y no 6 600.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso proporcionalidad directa a partir de una sola fila de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "C = 3 400 + 800d",
+        "correcta": true,
+        "explicacion": "Entre filas la distancia aumenta 2 km y el costo 1 600 pesos, así que cada kilómetro cuesta 1 600 ÷ 2 = 800. Para d = 2: 800 × 2 = 1 600, y 5 000 − 1 600 = 3 400 es el valor fijo. Comprobación: 3 400 + 800 × 8 = 9 800.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: (2; 5 000), (4; 6 600), (6; 8 200), (8; 9 800). COMPRENDER: se pide una expresión C en función de d que sirva para todas las filas. INTERPRETAR: el costo sube lo mismo por cada km, así que la relación es afín: C = b + md. REPRESENTAR: m = (6 600 − 5 000) ÷ (4 − 2) = 1 600 ÷ 2 = 800 pesos por km. RAZONAR: la tabla no incluye d = 0, así que el valor fijo se obtiene “devolviéndose” desde d = 2: b = 5 000 − 800 × 2. RESOLVER: b = 3 400, entonces C = 3 400 + 800d. VERIFICAR: d = 4 → 3 400 + 3 200 = 6 600; d = 6 → 3 400 + 4 800 = 8 200; d = 8 → 9 800. Todas coinciden.",
     "que_identificar": "Que la distancia avanza de 2 en 2 km y el costo de 1 600 en 1 600 pesos, y que la tabla no muestra el costo para 0 km.",
     "que_revisar": "Pendiente como cambio en y dividido entre cambio en x; cálculo del intercepto a partir de un punto conocido; comprobar la expresión con todas las filas.",
-    "refuerzo_ids": [
-      "MAT-009",
-      "MAT-042"
-    ],
+    "refuerzo_ids": ["MAT-009", "MAT-042"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "tablas",
-      "funcion_afin",
-      "pendiente",
-      "intercepto",
-      "domicilios"
-    ],
+    "etiquetas": ["tablas", "funcion_afin", "pendiente", "intercepto", "domicilios"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-044",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -349,29 +259,17 @@
     "explicacion": "LEER: ahorro $430 000, meta mínima $1 250 000, ganancia $12 000 por bono. COMPRENDER: se busca el MENOR número entero de bonos que permita llegar al menos a la meta. INTERPRETAR: “como mínimo” se traduce con ≥. REPRESENTAR: 430 000 + 12 000b ≥ 1 250 000. RAZONAR: falta 1 250 000 − 430 000 = 820 000; como no se venden fracciones de bono, se redondea hacia arriba. RESOLVER: b ≥ 820 000 ÷ 12 000 ≈ 68,33 → b = 69. VERIFICAR: con 68 bonos: 1 246 000 (no alcanza); con 69: 1 258 000 (sí alcanza).",
     "que_identificar": "El dinero ya ahorrado, la meta mínima y la ganancia por bono; que la respuesta debe ser un número entero de bonos.",
     "que_revisar": "Resolver inecuaciones lineales; interpretar “como mínimo” y “como máximo”; redondeo según el contexto (hacia arriba cuando hay una meta mínima).",
-    "refuerzo_ids": [
-      "MAT-041",
-      "MAT-045"
-    ],
+    "refuerzo_ids": ["MAT-041", "MAT-045"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "inecuaciones",
-      "redondeo",
-      "ahorro",
-      "vida_escolar"
-    ],
+    "etiquetas": ["inecuaciones", "redondeo", "ahorro", "vida_escolar"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-045",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "algebra_calculo",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -424,30 +322,17 @@
     "explicacion": "LEER: A = $8 000 fijos + $3 000 por hora; B = $5 000 por hora. COMPRENDER: hay que validar si A es “siempre” más barato. INTERPRETAR: “siempre” significa para cualquier número de horas; basta un contraejemplo para refutarlo. REPRESENTAR: C_A = 8 000 + 3 000h; C_B = 5 000h. RAZONAR: B empieza más barato (sin cargo fijo) pero crece más rápido; las rectas se cruzan en un punto. RESOLVER: 8 000 + 3 000h = 5 000h → h = 4; para h > 4, A es más barato; para h < 4, B. VERIFICAR: h = 2: A = 14 000, B = 10 000 (gana B); h = 6: A = 26 000, B = 30 000 (gana A).",
     "que_identificar": "Que cada negocio tiene una parte fija y una parte que depende de las horas, y que la palabra “siempre” exige que se cumpla para todos los casos.",
     "que_revisar": "Comparación de funciones afines mediante inecuaciones; punto de intersección de dos rectas; uso de contraejemplos para refutar afirmaciones generales.",
-    "refuerzo_ids": [
-      "MAT-009",
-      "MAT-044"
-    ],
+    "refuerzo_ids": ["MAT-009", "MAT-044"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "inecuaciones",
-      "funcion_afin",
-      "comparacion_tarifas",
-      "argumentacion",
-      "turismo"
-    ],
+    "etiquetas": ["inecuaciones", "funcion_afin", "comparacion_tarifas", "argumentacion", "turismo"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-046",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -463,31 +348,7 @@
       "eje_x": "Mes desde el lanzamiento",
       "eje_y": "Usuarios activos",
       "series": [
-        {
-          "nombre": "Usuarios",
-          "valores": [
-            [
-              "0",
-              400
-            ],
-            [
-              "1",
-              600
-            ],
-            [
-              "2",
-              900
-            ],
-            [
-              "3",
-              1350
-            ],
-            [
-              "4",
-              2025
-            ]
-          ]
-        }
+        { "nombre": "Usuarios", "valores": [["0", 400], ["1", 600], ["2", 900], ["3", 1350], ["4", 2025]] }
       ]
     },
     "enunciado": "¿Cuál enunciado describe correctamente cómo cambió el número de usuarios de un mes al siguiente?",
@@ -532,30 +393,17 @@
     "explicacion": "LEER: 400, 600, 900, 1 350 y 2 025 usuarios en los meses 0 a 4. COMPRENDER: se pregunta cómo cambia el número de usuarios de un mes al siguiente. INTERPRETAR: las diferencias (200, 300, 450, 675) crecen, así que no es lineal; conviene mirar los cocientes. REPRESENTAR: 600/400 = 900/600 = 1 350/900 = 2 025/1 350 = 1,5; U = 400 × 1,5^m. RAZONAR: un cociente constante de 1,5 significa que cada mes se suma el 50 % del mes anterior. RESOLVER: crecimiento de 50 % mensual respecto al mes anterior. VERIFICAR: 2 025 = 400 × 1,5⁴ = 400 × 5,0625 = 2 025.",
     "que_identificar": "Que las diferencias entre meses no son iguales pero los cocientes sí (todos iguales a 1,5).",
     "que_revisar": "Diferencia entre crecimiento lineal (se suma lo mismo) y exponencial (se multiplica por lo mismo); relación entre factor multiplicador y porcentaje de aumento.",
-    "refuerzo_ids": [
-      "MAT-047",
-      "MAT-048"
-    ],
+    "refuerzo_ids": ["MAT-047", "MAT-048"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "graficos",
-      "lineas",
-      "funcion_exponencial",
-      "crecimiento",
-      "emprendimiento"
-    ],
+    "etiquetas": ["graficos", "lineas", "funcion_exponencial", "crecimiento", "emprendimiento"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-047",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -608,29 +456,17 @@
     "explicacion": "LEER: valor inicial $8 000 000, pierde 15 % por año sobre el valor al comienzo de ese año. COMPRENDER: se pide el VALOR al final del año 2. INTERPRETAR: perder 15 % equivale a conservar 85 %, y el porcentaje se aplica cada año sobre un valor distinto. REPRESENTAR: V(t) = 8 000 000 × 0,85^t. RAZONAR: al ser una tasa sobre el valor del momento, el decrecimiento es exponencial, no lineal. RESOLVER: V(2) = 8 000 000 × 0,7225 = 5 780 000. VERIFICAR: pérdida del año 1: 1 200 000; pérdida del año 2: 15 % de 6 800 000 = 1 020 000 (menor que la del año 1, como corresponde); 8 000 000 − 1 200 000 − 1 020 000 = 5 780 000.",
     "que_identificar": "Que el 15 % se aplica cada año sobre el valor al comienzo de ese año y que se pregunta el valor final, no la pérdida.",
     "que_revisar": "Decrecimiento exponencial V = V₀(1 − r)^t; diferencia con la depreciación lineal; porcentajes encadenados.",
-    "refuerzo_ids": [
-      "MAT-018",
-      "MAT-046"
-    ],
+    "refuerzo_ids": ["MAT-018", "MAT-046"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "funcion_exponencial",
-      "depreciacion",
-      "porcentajes",
-      "trabajo"
-    ],
+    "etiquetas": ["funcion_exponencial", "depreciacion", "porcentajes", "trabajo"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-048",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "algebra_calculo",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -683,29 +519,17 @@
     "explicacion": "LEER: 40 000 habitantes, crecimiento de 5 % anual respecto al año anterior, horizonte de 10 años. COMPRENDER: hay que validar si sumar 10 × 5 % es un procedimiento correcto. INTERPRETAR: “respecto a la del año anterior” indica que la base cambia cada año: crecimiento exponencial. REPRESENTAR: P(t) = 40 000 × 1,05^t. RAZONAR: el concejal usa siempre la misma base (40 000), lo que corresponde a un modelo lineal y subestima la población. RESOLVER: 1,05¹⁰ ≈ 1,6289; P(10) ≈ 65 156 habitantes (aumento ≈ 62,9 %). VERIFICAR: tras 1 año 42 000, tras 2 años 44 100 (aumento de 2 100 > 2 000): los aumentos crecen, así que el total debe superar 60 000.",
     "que_identificar": "La frase “respecto a la del año anterior”, que indica que cada 5 % se calcula sobre una base distinta.",
     "que_revisar": "Modelo exponencial P = P₀(1 + r)^t; por qué los porcentajes encadenados no se suman; factor de crecimiento 1 + r.",
-    "refuerzo_ids": [
-      "MAT-046",
-      "MAT-018"
-    ],
+    "refuerzo_ids": ["MAT-046", "MAT-018"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "funcion_exponencial",
-      "poblacion",
-      "porcentajes",
-      "argumentacion"
-    ],
+    "etiquetas": ["funcion_exponencial", "poblacion", "porcentajes", "argumentacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-049",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -758,29 +582,17 @@
     "explicacion": "LEER: precio inicial $1 600, precio final $2 000. COMPRENDER: se pide el porcentaje de aumento. INTERPRETAR: el porcentaje de cambio se mide respecto al valor inicial. REPRESENTAR: variación % = (final − inicial) ÷ inicial × 100. RAZONAR: la diferencia es 400 y la base es 1 600. RESOLVER: 400 ÷ 1 600 = 0,25 → 25 %. VERIFICAR: 25 % de 1 600 es 400 y 1 600 + 400 = 2 000.",
     "que_identificar": "Cuál es el valor inicial (marzo) y cuál el final (abril), y que el porcentaje se calcula sobre el inicial.",
     "que_revisar": "Variación porcentual; diferencia entre “es el x % de” y “aumentó x %”.",
-    "refuerzo_ids": [
-      "MAT-030",
-      "MAT-055"
-    ],
+    "refuerzo_ids": ["MAT-030", "MAT-055"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "porcentajes",
-      "tasa_de_cambio",
-      "precios",
-      "alimentos"
-    ],
+    "etiquetas": ["porcentajes", "tasa_de_cambio", "precios", "alimentos"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-050",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -833,28 +645,17 @@
     "explicacion": "LEER: 6 voluntarios, 180 m², 5 h; ahora 9 voluntarios y 432 m². COMPRENDER: se pregunta el tiempo. INTERPRETAR: a más área, más tiempo (directa); a más voluntarios, menos tiempo (inversa). REPRESENTAR: rendimiento = 180 ÷ (6 × 5) = 6 m² por voluntario-hora; tiempo = área ÷ (voluntarios × rendimiento). RAZONAR: equivalente a 5 × (432/180) × (6/9). RESOLVER: 5 × 2,4 × 2/3 = 8 horas. VERIFICAR: 9 voluntarios × 8 h × 6 m² = 432 m², coincide con lo pedido.",
     "que_identificar": "Las tres magnitudes (voluntarios, área, horas) y el sentido de la relación de cada una con el tiempo.",
     "que_revisar": "Regla de tres compuesta; identificar magnitudes directa e inversamente proporcionales; rendimiento por unidad (voluntario-hora).",
-    "refuerzo_ids": [
-      "MAT-017",
-      "MAT-032"
-    ],
+    "refuerzo_ids": ["MAT-017", "MAT-032"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "proporcionalidad_compuesta",
-      "trabajo_comunitario",
-      "arte"
-    ],
+    "etiquetas": ["proporcionalidad_compuesta", "trabajo_comunitario", "arte"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-051",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "algebra_calculo",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -907,28 +708,17 @@
     "explicacion": "LEER: 48 vehículos, 136 ruedas, 4 ruedas por carro y 2 por moto. COMPRENDER: se pide el número de carros. INTERPRETAR: hay dos incógnitas y dos condiciones independientes. REPRESENTAR: c + m = 48; 4c + 2m = 136. RAZONAR: si todos fueran motos habría 96 ruedas; cada carro agrega 2 ruedas más, y sobran 136 − 96 = 40 ruedas. RESOLVER: c = 40 ÷ 2 = 20; m = 28. VERIFICAR: 20 + 28 = 48 vehículos y 80 + 56 = 136 ruedas.",
     "que_identificar": "Las dos condiciones (total de vehículos y total de ruedas) y cuántas ruedas aporta cada tipo de vehículo.",
     "que_revisar": "Planteamiento de sistemas 2×2 a partir de un contexto; método de reducción o sustitución; verificar ambas ecuaciones.",
-    "refuerzo_ids": [
-      "MAT-016",
-      "MAT-041"
-    ],
+    "refuerzo_ids": ["MAT-016", "MAT-041"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "sistemas_de_ecuaciones",
-      "transporte",
-      "conteo"
-    ],
+    "etiquetas": ["sistemas_de_ecuaciones", "transporte", "conteo"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-052",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "algebra_calculo",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -941,24 +731,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Cadena de llamadas de la junta",
-      "columnas": [
-        "Nivel",
-        "Personas que reciben llamada en ese nivel"
-      ],
-      "filas": [
-        [
-          "1",
-          3
-        ],
-        [
-          "2",
-          9
-        ],
-        [
-          "3",
-          27
-        ]
-      ],
+      "columnas": ["Nivel", "Personas que reciben llamada en ese nivel"],
+      "filas": [["1", 3], ["2", 9], ["3", 27]],
       "nota": "Nadie recibe más de una llamada."
     },
     "enunciado": "¿Cuántas personas reciben llamada en el nivel 5?",
@@ -1003,30 +777,17 @@
     "explicacion": "LEER: nivel 1: 3 personas; nivel 2: 9; nivel 3: 27. COMPRENDER: se pregunta cuántas personas reciben llamada SOLO en el nivel 5. INTERPRETAR: 9 = 3 × 3 y 27 = 9 × 3: cada nivel es el triple del anterior. REPRESENTAR: término general aₙ = 3ⁿ. RAZONAR: la razón constante entre términos indica una sucesión geométrica. RESOLVER: nivel 4: 81; nivel 5: 81 × 3 = 243. VERIFICAR: 3⁵ = 243, y con n = 3 la fórmula da 27, igual que la tabla.",
     "que_identificar": "Que cada persona avisada llama a 3 personas nuevas, de modo que el número de cada nivel se triplica.",
     "que_revisar": "Sucesiones geométricas: razón y término general aₙ = a₁ · rⁿ⁻¹; diferencia entre término n-ésimo y suma de términos.",
-    "refuerzo_ids": [
-      "MAT-019",
-      "MAT-046"
-    ],
+    "refuerzo_ids": ["MAT-019", "MAT-046"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "sucesiones",
-      "patrones",
-      "sucesion_geometrica",
-      "comunidad",
-      "tablas"
-    ],
+    "etiquetas": ["sucesiones", "patrones", "sucesion_geometrica", "comunidad", "tablas"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-053",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "estadistica",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -1042,64 +803,8 @@
       "eje_x": "Mes (m)",
       "eje_y": "Visitantes",
       "series": [
-        {
-          "nombre": "Visitantes registrados",
-          "valores": [
-            [
-              "0",
-              1180
-            ],
-            [
-              "1",
-              1370
-            ],
-            [
-              "2",
-              1490
-            ],
-            [
-              "3",
-              1660
-            ],
-            [
-              "4",
-              1790
-            ],
-            [
-              "5",
-              1950
-            ]
-          ]
-        },
-        {
-          "nombre": "Modelo V = 1 200 + 150m",
-          "valores": [
-            [
-              "0",
-              1200
-            ],
-            [
-              "1",
-              1350
-            ],
-            [
-              "2",
-              1500
-            ],
-            [
-              "3",
-              1650
-            ],
-            [
-              "4",
-              1800
-            ],
-            [
-              "5",
-              1950
-            ]
-          ]
-        }
+        { "nombre": "Visitantes registrados", "valores": [["0", 1180], ["1", 1370], ["2", 1490], ["3", 1660], ["4", 1790], ["5", 1950]] },
+        { "nombre": "Modelo V = 1 200 + 150m", "valores": [["0", 1200], ["1", 1350], ["2", 1500], ["3", 1650], ["4", 1800], ["5", 1950]] }
       ]
     },
     "enunciado": "Si la tendencia se mantiene, ¿para qué valor de m el modelo predice 3 000 visitantes en el mes?",
@@ -1144,31 +849,17 @@
     "explicacion": "LEER: modelo V = 1 200 + 150m; los datos del gráfico se acercan a la recta del modelo. COMPRENDER: se pide el valor de m para el cual V = 3 000. INTERPRETAR: 1 200 es el valor estimado en enero y 150 el aumento estimado por mes. REPRESENTAR: 1 200 + 150m = 3 000. RAZONAR: faltan 3 000 − 1 200 = 1 800 visitantes por encima del valor inicial, a razón de 150 por mes. RESOLVER: m = 1 800 ÷ 150 = 12. VERIFICAR: 1 200 + 150 × 12 = 3 000; además, el modelo en m = 5 da 1 950, igual al dato registrado, así que es razonable usarlo.",
     "que_identificar": "La fórmula del modelo, el significado de V y de m, y el valor de V que se busca (3 000).",
     "que_revisar": "Lectura de fórmulas y despeje de una variable; interpretación de un modelo lineal de tendencia para hacer predicciones.",
-    "refuerzo_ids": [
-      "MAT-042",
-      "MAT-041"
-    ],
+    "refuerzo_ids": ["MAT-042", "MAT-041"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "graficos",
-      "lineas",
-      "lectura_de_formulas",
-      "tendencia",
-      "prediccion",
-      "biblioteca"
-    ],
+    "etiquetas": ["graficos", "lineas", "lectura_de_formulas", "tendencia", "prediccion", "biblioteca"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-054",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -1184,31 +875,7 @@
       "eje_x": "Año",
       "eje_y": "Número de estudiantes",
       "series": [
-        {
-          "nombre": "Estudiantes",
-          "valores": [
-            [
-              "2021",
-              80
-            ],
-            [
-              "2022",
-              96
-            ],
-            [
-              "2023",
-              115
-            ],
-            [
-              "2024",
-              138
-            ],
-            [
-              "2025",
-              166
-            ]
-          ]
-        }
+        { "nombre": "Estudiantes", "valores": [["2021", 80], ["2022", 96], ["2023", 115], ["2024", 138], ["2025", 166]] }
       ]
     },
     "enunciado": "¿Cuántos estudiantes más llegaron en bicicleta en 2025 que en 2021?",
@@ -1253,30 +920,17 @@
     "explicacion": "LEER: 2021: 80; 2022: 96; 2023: 115; 2024: 138; 2025: 166. COMPRENDER: se pregunta cuántos estudiantes MÁS hubo en 2025 que en 2021. INTERPRETAR: “cuántos más” es la diferencia entre los dos valores. REPRESENTAR: 166 − 80. RAZONAR: se usan solo la primera y la última barra. RESOLVER: 86 estudiantes. VERIFICAR: sumando los aumentos anuales: 16 + 19 + 23 + 28 = 86.",
     "que_identificar": "Las alturas de las barras de 2021 y 2025.",
     "que_revisar": "Lectura de gráficos de barras; cambio absoluto como diferencia entre valor final e inicial.",
-    "refuerzo_ids": [
-      "MAT-024",
-      "MAT-056"
-    ],
+    "refuerzo_ids": ["MAT-024", "MAT-056"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "graficos",
-      "barras",
-      "tasa_de_cambio",
-      "movilidad",
-      "vida_escolar"
-    ],
+    "etiquetas": ["graficos", "barras", "tasa_de_cambio", "movilidad", "vida_escolar"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-055",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "estadistica",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -1289,28 +943,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Inscritos por programa",
-      "columnas": [
-        "Programa",
-        "2024",
-        "2025"
-      ],
-      "filas": [
-        [
-          "Soldadura",
-          40,
-          52
-        ],
-        [
-          "Contabilidad",
-          120,
-          138
-        ],
-        [
-          "Cocina",
-          60,
-          75
-        ]
-      ],
+      "columnas": ["Programa", "2024", "2025"],
+      "filas": [["Soldadura", 40, 52], ["Contabilidad", 120, 138], ["Cocina", 60, 75]],
       "nota": "Datos de inscripción al inicio de cada año."
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente lo que dice el coordinador?",
@@ -1355,30 +989,17 @@
     "explicacion": "LEER: Soldadura 40 → 52; Contabilidad 120 → 138; Cocina 60 → 75. COMPRENDER: la afirmación tiene dos partes: mayor crecimiento en número y en porcentaje. INTERPRETAR: el crecimiento en número es la diferencia; en porcentaje es la diferencia dividida entre el valor de 2024. REPRESENTAR: aumentos 12, 18, 15; porcentajes 12/40, 18/120, 15/60. RAZONAR: basta que una parte sea falsa para refutar la afirmación completa. RESOLVER: 30 %, 15 % y 25 %: Contabilidad gana en número pero es la última en porcentaje; Soldadura es la primera en porcentaje. VERIFICAR: 40 × 1,30 = 52; 120 × 1,15 = 138; 60 × 1,25 = 75.",
     "que_identificar": "Los inscritos de cada programa en los dos años y que la afirmación incluye dos criterios distintos (número y porcentaje).",
     "que_revisar": "Diferencia entre cambio absoluto y cambio relativo; cálculo de variación porcentual respecto al valor inicial.",
-    "refuerzo_ids": [
-      "MAT-049",
-      "MAT-054"
-    ],
+    "refuerzo_ids": ["MAT-049", "MAT-054"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "tablas",
-      "porcentajes",
-      "tasa_de_cambio",
-      "argumentacion",
-      "educacion_tecnica"
-    ],
+    "etiquetas": ["tablas", "porcentajes", "tasa_de_cambio", "argumentacion", "educacion_tecnica"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-056",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "estadistica",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -1394,31 +1015,7 @@
       "eje_x": "Mes",
       "eje_y": "Consumo (m³)",
       "series": [
-        {
-          "nombre": "Consumo",
-          "valores": [
-            [
-              "Ene",
-              18
-            ],
-            [
-              "Feb",
-              22
-            ],
-            [
-              "Mar",
-              19
-            ],
-            [
-              "Abr",
-              25
-            ],
-            [
-              "May",
-              21
-            ]
-          ]
-        }
+        { "nombre": "Consumo", "valores": [["Ene", 18], ["Feb", 22], ["Mar", 19], ["Abr", 25], ["May", 21]] }
       ]
     },
     "enunciado": "La familia quiere una lista con la variación del consumo de cada mes respecto al mes inmediatamente anterior, de febrero a mayo (positiva si aumentó, negativa si disminuyó). ¿Cuál es esa lista, en m³?",
@@ -1463,30 +1060,17 @@
     "explicacion": "LEER: Ene 18, Feb 22, Mar 19, Abr 25, May 21 m³. COMPRENDER: se pide la variación de cada mes respecto al anterior, con signo. INTERPRETAR: variación = valor del mes − valor del mes anterior; positiva si subió. REPRESENTAR: 22 − 18; 19 − 22; 25 − 19; 21 − 25. RAZONAR: cada resta usa dos barras consecutivas, en orden. RESOLVER: +4, −3, +6, −4. VERIFICAR: 18 + 4 − 3 + 6 − 4 = 21, que es el consumo de mayo.",
     "que_identificar": "Los valores de cada barra y la instrucción de comparar con el mes inmediatamente anterior, conservando el signo.",
     "que_revisar": "Variación entre valores consecutivos (valor final − valor inicial); significado del signo; paso de un gráfico a una tabla de cambios.",
-    "refuerzo_ids": [
-      "MAT-008",
-      "MAT-054"
-    ],
+    "refuerzo_ids": ["MAT-008", "MAT-054"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "graficos",
-      "barras",
-      "variacion",
-      "servicios_publicos",
-      "representacion"
-    ],
+    "etiquetas": ["graficos", "barras", "variacion", "servicios_publicos", "representacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-057",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M1",
     "componente": "geometria",
     "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
@@ -1539,29 +1123,17 @@
     "explicacion": "LEER: ancho x, largo x + 4. COMPRENDER: se pide una expresión del ÁREA. INTERPRETAR: el área del rectángulo es largo por ancho. REPRESENTAR: A = x(x + 4). RAZONAR: al multiplicar, el x afecta a los dos términos del paréntesis. RESOLVER: A = x² + 4x. VERIFICAR: con x = 3: 3 × 7 = 21 y 3² + 4 × 3 = 21. En cambio 4x + 8 da 20, que es el perímetro.",
     "que_identificar": "Cómo se expresa el largo en términos del ancho (x + 4) y que se pide el área, no el perímetro.",
     "que_revisar": "Área y perímetro del rectángulo; propiedad distributiva; comprobar una expresión con un valor numérico.",
-    "refuerzo_ids": [
-      "MAT-012",
-      "MAT-058"
-    ],
+    "refuerzo_ids": ["MAT-012", "MAT-058"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "geometria",
-      "area",
-      "expresiones_algebraicas",
-      "huerta_escolar"
-    ],
+    "etiquetas": ["geometria", "area", "expresiones_algebraicas", "huerta_escolar"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-058",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M2",
     "componente": "geometria",
     "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
@@ -1614,30 +1186,17 @@
     "explicacion": "LEER: 36 m de malla para tres lados; el lado paralelo a la pared mide el doble de cada lado perpendicular. COMPRENDER: se pide el área del corral. INTERPRETAR: la malla cubre dos lados cortos (perpendiculares) y un lado largo (paralelo a la pared). REPRESENTAR: x + x + 2x = 36. RAZONAR: la ecuación usa solo los tres lados con malla. RESOLVER: 4x = 36, x = 9; lados 9 m y 18 m; área 162 m². VERIFICAR: 9 + 9 + 18 = 36 m de malla y 18 = 2 × 9.",
     "que_identificar": "Qué lados llevan malla (solo tres) y la relación “el doble” entre los lados.",
     "que_revisar": "Plantear ecuaciones a partir de condiciones geométricas; diferenciar perímetro cercado de perímetro total; área del rectángulo.",
-    "refuerzo_ids": [
-      "MAT-057",
-      "MAT-012"
-    ],
+    "refuerzo_ids": ["MAT-057", "MAT-012"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "geometria",
-      "perimetro",
-      "area",
-      "ecuaciones",
-      "ruralidad"
-    ],
+    "etiquetas": ["geometria", "perimetro", "area", "ecuaciones", "ruralidad"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-059",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "geometria",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -1652,6 +1211,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "No cumple, porque para subir 0,50 m se necesitan al menos 0,50 × 12 = 6 m de recorrido horizontal y la rampa solo tiene 5,40 m.",
+        "correcta": true,
+        "explicacion": "Con la razón 1:12, el recorrido mínimo es 12 veces la altura: 0,50 × 12 = 6,00 m. Como 5,40 m < 6,00 m, la rampa es demasiado empinada. Equivalente: 0,50 ÷ 5,40 ≈ 0,093 > 1/12 ≈ 0,083.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
         "texto": "Cumple, porque el recorrido horizontal es más de 10 veces la altura (5,40 ÷ 0,50 = 10,8).",
         "correcta": false,
         "explicacion": "El cálculo 5,40 ÷ 0,50 = 10,8 es correcto, pero el criterio es de al menos 12 veces, no 10. Como 10,8 < 12, la rampa es más empinada de lo permitido.",
@@ -1660,7 +1228,7 @@
         "razon_frecuente": "Hizo bien la división pero la comparó con un criterio distinto del establecido."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "Cumple, porque la pendiente 0,50 ÷ 5,40 ≈ 0,093 es mucho menor que 12.",
         "correcta": false,
         "explicacion": "Compara la pendiente con 12, cuando debe compararse con 1 ÷ 12 ≈ 0,083. Como 0,093 > 0,083, la pendiente supera el máximo.",
@@ -1669,51 +1237,29 @@
         "razon_frecuente": "Interpretó la razón 1:12 como el número 12 y no como la fracción 1/12."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "No cumple, porque con una razón 1:12 la rampa debería tener 12 m de recorrido horizontal.",
         "correcta": false,
         "explicacion": "La conclusión es correcta, pero la justificación no: 12 m sería el recorrido para 1 m de altura. Para 0,50 m de altura se necesitan 0,50 × 12 = 6 m.",
         "tipo_error": "razonamiento",
         "diagnostico": "probable",
         "razon_frecuente": "Aplicó la razón 1:12 como si la altura fuera 1 m, sin escalarla a la altura real."
-      },
-      {
-        "clave": "D",
-        "texto": "No cumple, porque para subir 0,50 m se necesitan al menos 0,50 × 12 = 6 m de recorrido horizontal y la rampa solo tiene 5,40 m.",
-        "correcta": true,
-        "explicacion": "Con la razón 1:12, el recorrido mínimo es 12 veces la altura: 0,50 × 12 = 6,00 m. Como 5,40 m < 6,00 m, la rampa es demasiado empinada. Equivalente: 0,50 ÷ 5,40 ≈ 0,093 > 1/12 ≈ 0,083.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: criterio 1:12 (al menos 12 de recorrido por cada 1 de altura); altura 0,50 m; recorrido 5,40 m. COMPRENDER: hay que decidir si cumple y con una justificación válida. INTERPRETAR: la pendiente es altura ÷ recorrido horizontal y debe ser ≤ 1/12. REPRESENTAR: recorrido mínimo = 12 × altura. RAZONAR: una conclusión correcta con un argumento incorrecto no es una respuesta válida. RESOLVER: 12 × 0,50 = 6 m > 5,40 m → no cumple. VERIFICAR: 0,50 ÷ 5,40 ≈ 0,0926 y 1 ÷ 12 ≈ 0,0833; la pendiente real es mayor que la permitida.",
     "que_identificar": "El criterio 1:12 como razón altura : recorrido, y las medidas reales de la rampa (0,50 m y 5,40 m).",
     "que_revisar": "Pendiente como razón entre cambio vertical y horizontal; razones y proporciones; evaluar a la vez la conclusión y la justificación.",
-    "refuerzo_ids": [
-      "MAT-015",
-      "MAT-060"
-    ],
+    "refuerzo_ids": ["MAT-015", "MAT-060"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "geometria",
-      "pendiente",
-      "razones",
-      "accesibilidad",
-      "argumentacion"
-    ],
+    "etiquetas": ["geometria", "pendiente", "razones", "accesibilidad", "argumentacion"],
     "estado": "aprobada"
   },
   {
     "id": "MAT-060",
     "prueba": "matematicas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "M3",
     "componente": "geometria",
     "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
@@ -1766,19 +1312,10 @@
     "explicacion": "LEER: A(2, 1), B(8, 4), C(14, 8); la ciclorruta se prolonga en línea recta desde A pasando por B. COMPRENDER: se debe validar si C está sobre la recta AB y con qué argumento. INTERPRETAR: tres puntos están alineados si la pendiente entre cada par es la misma. REPRESENTAR: m_AB = Δy/Δx = 3/6; m_BC = 4/6; recta AB: y = 1 + 0,5(x − 2). RAZONAR: si las pendientes difieren, C no está en la recta, aunque esté “en la misma dirección general”. RESOLVER: 0,5 ≠ 0,67; en x = 14 la recta da y = 7. VERIFICAR: el punto (14, 7) sí cumple: (7 − 4) ÷ (14 − 8) = 3/6 = 0,5.",
     "que_identificar": "Las coordenadas de los tres puntos y que la prolongación debe conservar la misma pendiente.",
     "que_revisar": "Pendiente entre dos puntos (Δy/Δx); ecuación de la recta punto-pendiente; colinealidad; evaluar conclusión y justificación.",
-    "refuerzo_ids": [
-      "MAT-042",
-      "MAT-059"
-    ],
+    "refuerzo_ids": ["MAT-042", "MAT-059"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "geometria",
-      "plano_cartesiano",
-      "pendiente",
-      "movilidad",
-      "argumentacion"
-    ],
+    "etiquetas": ["geometria", "plano_cartesiano", "pendiente", "movilidad", "argumentacion"],
     "estado": "aprobada"
   }
 ]

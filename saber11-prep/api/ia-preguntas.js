@@ -68,6 +68,8 @@ const REGLAS = `Reglas del banco:
 - dificultad: 1 básica, 2 media, 3 alta. tiempo_sugerido_seg: entre 60 y 240.
 - Si la pregunta original tiene errores, ambigüedad o no puedes determinar la clave con certeza, dilo en "advertencias" (el docente revisará).
 - Español claro; en Inglés, enunciado y opciones en inglés y explicaciones en español.
+- Varía la letra de la opción correcta entre preguntas (A, B, C y D por igual; nunca todas en la misma letra) y procura que la correcta no sea sistemáticamente la opción más larga.
+- En explicaciones y razones cita la opción por su contenido o como "opción X"; evita letras sueltas ("la B", "(C)", "A y D") para que las opciones se puedan reordenar después.
 - No inventes datos ni fuentes.`
 
 export default async function handler(req, res) {

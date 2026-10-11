@@ -87,24 +87,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Porque el cerebro procesa primero la orden de mover el brazo y después la sensación de dolor.",
-        "correcta": false,
-        "explicacion": "No responde. Según la explicación, la orden de retirar la mano no sale del cerebro: se genera en la médula espinal, donde la neurona sensitiva se conecta con la motora. El cerebro solo interviene en la sensación de dolor, que llega después.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Atribuye todas las respuestas del organismo al cerebro, sin reconocer el papel de la médula espinal en los reflejos."
-      },
-      {
-        "clave": "B",
-        "texto": "Porque el músculo se contrae por sí solo con el calor, sin que intervenga el sistema nervioso.",
-        "correcta": false,
-        "explicacion": "No responde. El contexto describe una cadena de neuronas (sensitiva → médula → motora) que lleva la señal desde la piel hasta el músculo. Sin esa señal nerviosa el músculo no se contrae; el calor no actúa directamente sobre él.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Cree que la contracción muscular puede ocurrir sin una orden nerviosa."
-      },
-      {
-        "clave": "C",
         "texto": "Porque los receptores de la piel envían la señal directamente al músculo, sin pasar por ninguna neurona.",
         "correcta": false,
         "explicacion": "No responde. La explicación menciona expresamente dos neuronas y la médula espinal en el recorrido de la señal. Los receptores no se conectan con el músculo de forma directa.",
@@ -113,16 +95,34 @@
         "razon_frecuente": "No leyó con atención el recorrido descrito en el contexto o lo simplificó en exceso."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "Porque la respuesta refleja se coordina en la médula espinal sin esperar al cerebro, mientras que la sensación de dolor requiere que la señal llegue hasta el cerebro, un recorrido más largo.",
         "correcta": true,
         "explicacion": "Es la correcta. El arco reflejo (receptor → neurona sensitiva → médula espinal → neurona motora → músculo) es un circuito corto que produce la respuesta de manera rápida y automática. La sensación consciente de dolor necesita que la información viaje además desde la médula hasta el cerebro y sea procesada allí, por eso se percibe un instante después de haber retirado la mano.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el cerebro procesa primero la orden de mover el brazo y después la sensación de dolor.",
+        "correcta": false,
+        "explicacion": "No responde. Según la explicación, la orden de retirar la mano no sale del cerebro: se genera en la médula espinal, donde la neurona sensitiva se conecta con la motora. El cerebro solo interviene en la sensación de dolor, que llega después.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye todas las respuestas del organismo al cerebro, sin reconocer el papel de la médula espinal en los reflejos."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el músculo se contrae por sí solo con el calor, sin que intervenga el sistema nervioso.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto describe una cadena de neuronas (sensitiva → médula → motora) que lleva la señal desde la piel hasta el músculo. Sin esa señal nerviosa el músculo no se contrae; el calor no actúa directamente sobre él.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la contracción muscular puede ocurrir sin una orden nerviosa."
       }
     ],
-    "explicacion": "LEER: Camila retira la mano antes de sentir dolor; la señal va de los receptores a la médula por una neurona sensitiva, pasa a una neurona motora y llega al músculo; otra señal sube al cerebro, donde se siente el dolor. COMPRENDER: se pregunta la razón del orden de los dos eventos (retirar y luego sentir). INTERPRETAR: hay dos recorridos: uno corto (arco reflejo en la médula) y uno largo (hasta el cerebro). REPRESENTAR: piel → sensitiva → médula → motora → músculo (rápido) | médula → cerebro → sensación de dolor (más tarde). RAZONAR: A ubica la orden motora en el cerebro, B elimina el sistema nervioso, C elimina las neuronas; D describe exactamente los dos recorridos. RESOLVER: la respuesta es D. VERIFICAR: la opción D es coherente con cada elemento nombrado en el contexto y explica el orden temporal observado.",
+    "explicacion": "LEER: Camila retira la mano antes de sentir dolor; la señal va de los receptores a la médula por una neurona sensitiva, pasa a una neurona motora y llega al músculo; otra señal sube al cerebro, donde se siente el dolor. COMPRENDER: se pregunta la razón del orden de los dos eventos (retirar y luego sentir). INTERPRETAR: hay dos recorridos: uno corto (arco reflejo en la médula) y uno largo (hasta el cerebro). REPRESENTAR: piel → sensitiva → médula → motora → músculo (rápido) | médula → cerebro → sensación de dolor (más tarde). RAZONAR: A ubica la orden motora en el cerebro, B elimina el sistema nervioso, C elimina las neuronas; D describe exactamente los dos recorridos. RESOLVER: la respuesta es D. VERIFICAR: la opción B es coherente con cada elemento nombrado en el contexto y explica el orden temporal observado.",
     "que_identificar": "Los dos recorridos de la señal descritos en el contexto: el corto, que termina en el músculo, y el largo, que termina en el cerebro.",
     "que_revisar": "Organización del sistema nervioso (encéfalo, médula espinal, nervios); arco reflejo y sus componentes; diferencia entre respuesta refleja y respuesta voluntaria o consciente.",
     "refuerzo_ids": ["CIE-001", "CIE-017"],
@@ -149,18 +149,22 @@
       "tipo": "tabla",
       "titulo": "Proporción de polillas claras y oscuras y aspecto de los troncos",
       "columnas": ["Época", "Polillas claras (%)", "Polillas oscuras (%)", "Aspecto de los troncos"],
-      "filas": [
-        ["1850, antes de las fábricas", 98, 2, "Claros, cubiertos de líquenes"],
-        ["1900, auge industrial", 45, 55, "Oscurecidos por el hollín"],
-        ["1950, máxima contaminación", 10, 90, "Muy oscuros, sin líquenes"],
-        ["2000, tras leyes de aire limpio", 70, 30, "Claros, líquenes recuperados"]
-      ],
+      "filas": [["1850, antes de las fábricas", 98, 2, "Claros, cubiertos de líquenes"], ["1900, auge industrial", 45, 55, "Oscurecidos por el hollín"], ["1950, máxima contaminación", 10, 90, "Muy oscuros, sin líquenes"], ["2000, tras leyes de aire limpio", 70, 30, "Claros, líquenes recuperados"]],
       "nota": "Datos construidos con fines didácticos a partir del caso documentado de la polilla del abedul."
     },
     "enunciado": "¿Cuál explicación de los cambios registrados en la tabla es coherente con la teoría de la selección natural?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "Las polillas oscuras aparecieron por primera vez en 1900 como una mutación provocada por la contaminación, por eso antes no existían.",
+        "correcta": false,
+        "explicacion": "No responde. La primera fila de la tabla muestra que en 1850, antes de las fábricas, ya existía un 2 % de polillas oscuras. La contaminación no creó la variedad oscura: cambió el ambiente y con ello cuál variedad tenía ventaja frente a las aves.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó la fila de 1850 y supuso que la variedad oscura surgió con la contaminación."
+      },
+      {
+        "clave": "B",
         "texto": "Las polillas cambiaron su color para camuflarse con los troncos oscuros y, cuando el aire se limpió, volvieron a aclararse.",
         "correcta": false,
         "explicacion": "No responde. La selección natural no actúa sobre individuos que 'deciden' cambiar: cada polilla nace clara u oscura y conserva ese color toda su vida. Lo que cambia es la PROPORCIÓN de cada variedad en la población, porque en cada época sobreviven y se reproducen más las que pasan desapercibidas para las aves.",
@@ -169,7 +173,7 @@
         "razon_frecuente": "Explica la evolución como un cambio voluntario o adaptativo de cada individuo (idea lamarckista), no de la población."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "En cada época, las polillas cuyo color se confundía con los troncos eran menos cazadas por las aves, sobrevivían y dejaban más descendencia con ese mismo color, así que su proporción aumentó; ambas variedades ya existían desde 1850.",
         "correcta": true,
         "explicacion": "Es la correcta. La tabla muestra que en 1850 ya había un 2 % de polillas oscuras: la variación heredable existía antes de la contaminación. Cuando los troncos se oscurecieron, las oscuras quedaron camufladas y las claras se volvieron presas fáciles; las oscuras se reprodujeron más y pasaron del 2 % al 90 %. Al recuperarse los troncos claros, la ventaja se invirtió y las claras volvieron a aumentar (70 %). Es el mecanismo de la selección natural: variación, supervivencia y reproducción diferencial.",
@@ -178,22 +182,13 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "El hollín tiñó de oscuro a las polillas y, cuando el aire se limpió, el tinte desapareció de sus alas.",
         "correcta": false,
         "explicacion": "No responde. El contexto dice que el color es una característica HEREDITARIA, no una mancha externa. Un tinte adquirido no se transmite a la descendencia y no explicaría por qué la proporción de oscuras siguió cambiando entre generaciones.",
         "tipo_error": "comprension",
         "diagnostico": "probable",
         "razon_frecuente": "Confunde un cambio ambiental sobre el cuerpo del individuo con una característica heredable."
-      },
-      {
-        "clave": "D",
-        "texto": "Las polillas oscuras aparecieron por primera vez en 1900 como una mutación provocada por la contaminación, por eso antes no existían.",
-        "correcta": false,
-        "explicacion": "No responde. La primera fila de la tabla muestra que en 1850, antes de las fábricas, ya existía un 2 % de polillas oscuras. La contaminación no creó la variedad oscura: cambió el ambiente y con ello cuál variedad tenía ventaja frente a las aves.",
-        "tipo_error": "lectura_tabla",
-        "diagnostico": "probable",
-        "razon_frecuente": "No revisó la fila de 1850 y supuso que la variedad oscura surgió con la contaminación."
       }
     ],
     "explicacion": "LEER: dos variedades hereditarias (clara y oscura) cazadas por aves que las ven; la tabla da la proporción de cada una y el color de los troncos en cuatro épocas. COMPRENDER: se pide la explicación coherente con la selección natural. INTERPRETAR: cuando los troncos son claros predominan las claras (98 %, 70 %); cuando son oscuros predominan las oscuras (55 %, 90 %); en 1850 ya había un 2 % de oscuras. REPRESENTAR: ambiente (color del tronco) → camuflaje → menor depredación → más descendencia → mayor proporción en la siguiente generación. RAZONAR: A supone que cada individuo cambia de color; C supone un tinte no heredable; D contradice la fila de 1850; B usa la variación previa, la supervivencia diferencial y la herencia, y explica tanto el aumento como la disminución de las oscuras. RESOLVER: la respuesta es B. VERIFICAR: la explicación B es coherente con las cuatro filas y con la reversión observada en 2000.",
@@ -427,11 +422,7 @@
       "tipo": "tabla",
       "titulo": "Mezclas de agua fría y caliente",
       "columnas": ["Ensayo", "Agua fría", "Agua caliente", "Temperatura final (°C)"],
-      "filas": [
-        ["1", "100 g a 20 °C", "100 g a 60 °C", 40],
-        ["2", "100 g a 20 °C", "300 g a 60 °C", 50],
-        ["3", "300 g a 20 °C", "100 g a 60 °C", 30]
-      ],
+      "filas": [["1", "100 g a 20 °C", "100 g a 60 °C", 40], ["2", "100 g a 20 °C", "300 g a 60 °C", 50], ["3", "300 g a 20 °C", "100 g a 60 °C", 30]],
       "nota": "El recipiente está aislado, de modo que el intercambio de calor con el exterior es despreciable."
     },
     "enunciado": "¿Cuál es la evaluación correcta de la predicción del estudiante?",
@@ -500,12 +491,7 @@
       "tipo": "tabla",
       "titulo": "Propiedades observadas de las muestras",
       "columnas": ["Muestra", "Estado a 25 °C", "Conduce la electricidad", "Aspecto", "Al golpearla"],
-      "filas": [
-        ["W", "Sólido", "Sí, muy bien", "Brillo metálico rojizo", "Se aplana sin romperse"],
-        ["X", "Gas", "No", "Incoloro", "No aplica"],
-        ["Y", "Sólido", "No", "Amarillo opaco", "Se rompe en pedazos"],
-        ["Z", "Sólido", "Muy poco", "Brillo gris", "Se rompe en pedazos"]
-      ],
+      "filas": [["W", "Sólido", "Sí, muy bien", "Brillo metálico rojizo", "Se aplana sin romperse"], ["X", "Gas", "No", "Incoloro", "No aplica"], ["Y", "Sólido", "No", "Amarillo opaco", "Se rompe en pedazos"], ["Z", "Sólido", "Muy poco", "Brillo gris", "Se rompe en pedazos"]],
       "nota": "Todas las muestras se observaron a la misma temperatura y presión."
     },
     "enunciado": "¿Cuál muestra corresponde a un metal adecuado para fabricar el alambre del cable?",
@@ -637,12 +623,7 @@
       "tipo": "tabla",
       "titulo": "Propiedades de las cuatro sustancias",
       "columnas": ["Sustancia", "Punto de fusión (°C)", "Conduce en estado sólido", "Se disuelve en agua", "Conduce disuelta en agua"],
-      "filas": [
-        ["1", 801, "No", "Sí", "Sí"],
-        ["2", -23, "No", "No", "No aplica"],
-        ["3", 1085, "Sí", "No", "No aplica"],
-        ["4", 186, "No", "Sí", "No"]
-      ],
+      "filas": [["1", 801, "No", "Sí", "Sí"], ["2", -23, "No", "No", "No aplica"], ["3", 1085, "Sí", "No", "No aplica"], ["4", 186, "No", "Sí", "No"]],
       "nota": "Todas las medidas se hicieron a presión normal."
     },
     "enunciado": "¿Cuál sustancia tiene enlace iónico y qué evidencia de la tabla lo sustenta?",
@@ -790,6 +771,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "El mensaje es incorrecto porque la tabla muestra que la cobertura no influye en los casos: en 2014 y 2016 la cobertura fue distinta y los casos fueron casi iguales.",
+        "correcta": false,
+        "explicacion": "No responde. Entre 2014 y 2016 la cobertura solo bajó 3 puntos y los casos, aunque pocos, se duplicaron (0,2 a 0,5). Las demás filas muestran cambios grandes en la misma dirección (85 % → 3,1; 78 % → 12,4). Concluir que 'no influye' contradice el patrón general y, además, le daría la razón al mensaje en lugar de refutarlo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó solo dos filas con valores pequeños y desconoció la tendencia que muestran las cinco."
+      },
+      {
+        "clave": "B",
         "texto": "El mensaje es correcto, porque si las vacunas funcionaran no habría ningún caso con una cobertura del 90 %.",
         "correcta": false,
         "explicacion": "No responde. Una cobertura del 90 % deja un 10 % de personas sin vacunar entre las que el virus puede circular, y está por debajo del 95 % necesario para la inmunidad de rebaño. Que una vacuna funcione no significa cero casos en una población parcialmente vacunada: significa muchos menos casos, que es lo que muestra la tabla (2,0 frente a 12,4 por 100 000 cuando la cobertura era del 78 %).",
@@ -798,7 +788,7 @@
         "razon_frecuente": "Exige un resultado de todo o nada (cero casos) para aceptar que la vacuna funciona, ignorando el umbral del 95 %."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "El mensaje es incorrecto, porque los casos de 2022 corresponden a personas vacunadas que se enfermaron por un lote defectuoso de la vacuna.",
         "correcta": false,
         "explicacion": "No responde. La tabla no indica quiénes se enfermaron ni nada sobre lotes de vacuna; esa explicación se inventa un dato. La evaluación debe apoyarse en lo que sí muestran los datos: la relación entre cobertura y casos y el umbral del 95 %.",
@@ -807,22 +797,13 @@
         "razon_frecuente": "Rechaza el mensaje con una explicación que no está respaldada por ninguna información del contexto ni de la tabla."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "El mensaje no se sostiene: los datos muestran que los casos aumentan cuando la cobertura baja y disminuyen cuando sube; en 2022 aún hubo casos porque el 90 % está por debajo del 95 % necesario para frenar la circulación del virus.",
         "correcta": true,
         "explicacion": "Es la correcta. La tabla muestra una relación inversa clara: al caer la cobertura de 95 % a 78 % (2014 a 2020), los casos subieron de 0,2 a 12,4 por 100 000; al recuperarse a 90 % en 2022, bajaron a 2,0. Eso es evidencia de que la vacuna sí protege. Los casos que persisten en 2022 son coherentes con el conocimiento científico: por debajo del umbral del 95 % el virus todavía puede circular entre los no vacunados.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
-      },
-      {
-        "clave": "D",
-        "texto": "El mensaje es incorrecto porque la tabla muestra que la cobertura no influye en los casos: en 2014 y 2016 la cobertura fue distinta y los casos fueron casi iguales.",
-        "correcta": false,
-        "explicacion": "No responde. Entre 2014 y 2016 la cobertura solo bajó 3 puntos y los casos, aunque pocos, se duplicaron (0,2 a 0,5). Las demás filas muestran cambios grandes en la misma dirección (85 % → 3,1; 78 % → 12,4). Concluir que 'no influye' contradice el patrón general y, además, le daría la razón al mensaje en lugar de refutarlo.",
-        "tipo_error": "lectura_tabla",
-        "diagnostico": "probable",
-        "razon_frecuente": "Comparó solo dos filas con valores pequeños y desconoció la tendencia que muestran las cinco."
       }
     ],
     "explicacion": "LEER: la tabla da cobertura y casos por 100 000 en cinco años; el umbral de inmunidad de rebaño es 95 %; el mensaje afirma que las vacunas no sirven porque con 90 % hubo casos. COMPRENDER: se pide evaluar el mensaje con los datos y el conocimiento científico. INTERPRETAR: a menor cobertura, más casos (95 % → 0,2; 78 % → 12,4); al subir la cobertura, bajan (90 % → 2,0); 90 % sigue por debajo del 95 %. REPRESENTAR: cobertura ↓ → casos ↑; cobertura ↑ → casos ↓; casos = 0 solo se espera con cobertura ≥ 95 %. RAZONAR: A exige cero casos sin considerar el umbral; B inventa una causa que los datos no muestran; D niega una relación que cuatro de cinco filas evidencian; C describe la relación y explica los casos de 2022 con el umbral del 95 %. RESOLVER: la respuesta es C. VERIFICAR: la explicación C es coherente con cada fila y con la definición de inmunidad de rebaño dada en el contexto.",

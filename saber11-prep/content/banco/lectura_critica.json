@@ -3,11 +3,7 @@
     "id": "LC-001",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -22,6 +18,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "había sido reparado a esa hora por Manuela.",
+        "correcta": false,
+        "explicacion": "Ocurre lo contrario: la frase aparece justo después de «Nada», que indica que ninguno de los intentos de Manuela (pilas nuevas, limpiar el mecanismo, ajustar las manecillas) funcionó.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó los intentos de arreglo y asumió que tuvieron éxito, sin advertir el «Nada» que los niega."
+      },
+      {
+        "clave": "B",
         "texto": "estaba sujeto a la pared con un clavo a esa altura.",
         "correcta": false,
         "explicacion": "Es una lectura literal de «clavado». El párrafo no habla de cómo está sujeto el reloj, sino de que «marcaba las cuatro y veinte y no se movía»; la frase describe la hora fija, no la forma de colgarlo.",
@@ -30,7 +35,7 @@
         "razon_frecuente": "Tomó «clavado» en su sentido literal (sujeto con un clavo) en lugar del sentido figurado (inmóvil, fijo)."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "marcaba siempre esa hora, sin avanzar.",
         "correcta": true,
         "explicacion": "En este contexto «clavado» significa fijo, inmóvil. Lo confirma la frase anterior, «marcaba las cuatro y veinte y no se movía», y el «Nada» que resume el fracaso de todos los intentos de Manuela por ponerlo a andar.",
@@ -39,47 +44,29 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "se atrasaba veinte minutos cada día.",
         "correcta": false,
         "explicacion": "El texto no menciona ningún atraso progresivo: dice que el reloj «no se movía». «Cuatro y veinte» es la hora que muestra, no una cantidad de minutos de retraso.",
         "tipo_error": "interpretacion",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Asoció «veinte» con un retraso de minutos, o supuso un problema típico de relojes sin releer la frase."
-      },
-      {
-        "clave": "D",
-        "texto": "había sido reparado a esa hora por Manuela.",
-        "correcta": false,
-        "explicacion": "Ocurre lo contrario: la frase aparece justo después de «Nada», que indica que ninguno de los intentos de Manuela (pilas nuevas, limpiar el mecanismo, ajustar las manecillas) funcionó.",
-        "tipo_error": "comprension",
-        "diagnostico": "probable",
-        "razon_frecuente": "Leyó los intentos de arreglo y asumió que tuvieron éxito, sin advertir el «Nada» que los niega."
       }
     ],
-    "explicacion": "LEER: ubico la frase en el primer párrafo y leo las oraciones que la rodean. COMPRENDER: la pregunta pide el significado de «clavado en las cuatro y veinte» tal como se usa aquí, no el de diccionario. INTERPRETAR: las frases previas dicen que el reloj «no se movía» y que, tras todos los intentos, «Nada» cambió; «clavado» funciona entonces como sinónimo de inmóvil. REPRESENTAR: reformulo la frase con mis palabras: «el reloj seguía detenido en esa hora». RAZONAR: A toma la palabra en sentido literal; C inventa un atraso que el texto no menciona; D contradice el «Nada». RESOLVER: la opción B es la única coherente con el contexto. VERIFICAR: sustituyo la expresión por «seguía marcando fijamente las cuatro y veinte» y el párrafo conserva el sentido.",
+    "explicacion": "LEER: ubico la frase en el primer párrafo y leo las oraciones que la rodean. COMPRENDER: la pregunta pide el significado de «clavado en las cuatro y veinte» tal como se usa aquí, no el de diccionario. INTERPRETAR: las frases previas dicen que el reloj «no se movía» y que, tras todos los intentos, «Nada» cambió; «clavado» funciona entonces como sinónimo de inmóvil. REPRESENTAR: reformulo la frase con mis palabras: «el reloj seguía detenido en esa hora». RAZONAR: A toma la palabra en sentido literal; C inventa un atraso que el texto no menciona; D contradice el «Nada». RESOLVER: la opción C es la única coherente con el contexto. VERIFICAR: sustituyo la expresión por «seguía marcando fijamente las cuatro y veinte» y el párrafo conserva el sentido.",
     "que_identificar": "Las frases del primer párrafo que rodean la expresión: «no se movía» y «Nada», que fijan el sentido figurado de «clavado».",
     "que_revisar": "Sentido literal y sentido figurado de las palabras; uso del contexto inmediato para deducir el significado de una expresión.",
-    "refuerzo_ids": [
-      "LC-008"
-    ],
+    "refuerzo_ids": ["LC-008"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T01",
-      "literario"
-    ],
+    "etiquetas": ["texto:LC-T01", "literario"],
     "estado": "aprobada"
   },
   {
     "id": "LC-002",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -94,24 +81,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "descubre que las pilas nuevas eran lo que impedía que el reloj de la sala funcionara.",
-        "correcta": false,
-        "explicacion": "Mezcla dos detalles sin relación. Las pilas nuevas se mencionan al principio como uno de los intentos fallidos de arreglo; el desenlace no dice nada de un defecto en ellas. Además, la abuela aclara que el reloj «no está dañado», así que las pilas nunca fueron el problema.",
-        "tipo_error": "inferencia",
-        "diagnostico": "probable",
-        "razon_frecuente": "Buscó una explicación mecánica del gesto final conectando la palabra «pilas» del principio con la del final."
-      },
-      {
-        "clave": "B",
-        "texto": "comprende que el reloj detenido es una forma de recordar y decide acompañar a su abuela con un gesto semejante.",
-        "correcta": true,
-        "explicacion": "El último párrafo enlaza los dos momentos: tras conocer la razón del reloj detenido, Manuela «pensó que había cosas en esa casa que no necesitaban arreglo, sino compañía», y «sin decir nada» detiene también su propio reloj. El gesto repite el de la abuela como señal de comprensión y solidaridad.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "C",
         "texto": "decide que en esa casa ya no hace falta saber la hora.",
         "correcta": false,
         "explicacion": "Generaliza más allá del texto. El relato no dice que la hora deje de importar; lo que Manuela concluye es que hay cosas que «no necesitaban arreglo, sino compañía», es decir, se trata de un gesto afectivo, no de una decisión práctica sobre los relojes de la casa.",
@@ -120,38 +89,47 @@
         "razon_frecuente": "Interpretó el gesto de manera literal como una renuncia a medir el tiempo."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "está molesta porque la abuela le ocultó durante semanas la verdad sobre el reloj.",
         "correcta": false,
         "explicacion": "No hay ninguna marca de enojo en el desenlace: Manuela actúa «sin decir nada» después de reflexionar sobre la «compañía». El silencio es de comprensión, no de reproche; el texto no menciona que se sintiera engañada.",
         "tipo_error": "inferencia",
         "diagnostico": "probable",
         "razon_frecuente": "Atribuyó al silencio final una emoción negativa sin apoyarse en las frases que lo rodean."
+      },
+      {
+        "clave": "C",
+        "texto": "descubre que las pilas nuevas eran lo que impedía que el reloj de la sala funcionara.",
+        "correcta": false,
+        "explicacion": "Mezcla dos detalles sin relación. Las pilas nuevas se mencionan al principio como uno de los intentos fallidos de arreglo; el desenlace no dice nada de un defecto en ellas. Además, la abuela aclara que el reloj «no está dañado», así que las pilas nunca fueron el problema.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó una explicación mecánica del gesto final conectando la palabra «pilas» del principio con la del final."
+      },
+      {
+        "clave": "D",
+        "texto": "comprende que el reloj detenido es una forma de recordar y decide acompañar a su abuela con un gesto semejante.",
+        "correcta": true,
+        "explicacion": "El último párrafo enlaza los dos momentos: tras conocer la razón del reloj detenido, Manuela «pensó que había cosas en esa casa que no necesitaban arreglo, sino compañía», y «sin decir nada» detiene también su propio reloj. El gesto repite el de la abuela como señal de comprensión y solidaridad.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: leo el cuento completo y me detengo en el último párrafo, donde ocurre el gesto por el que se pregunta. COMPRENDER: la pregunta pide la causa de una acción de Manuela; debo buscar qué cambió en ella antes de actuar. INTERPRETAR: la revelación de la abuela (paró el reloj «para que esa hora no se me fuera») lleva a Manuela a pensar que hay cosas que «no necesitaban arreglo, sino compañía». REPRESENTAR: abuela detiene su reloj por amor → Manuela entiende → Manuela detiene el suyo. RAZONAR: A inventa una falla mecánica que la abuela ya descartó; C convierte un gesto afectivo en una regla práctica; D atribuye una emoción que el texto no muestra. RESOLVER: B, porque conecta la reflexión sobre la «compañía» con la acción final. VERIFICAR: el gesto es silencioso e imita el de la abuela, lo que confirma que se trata de acompañarla.",
     "que_identificar": "La frase «no necesitaban arreglo, sino compañía» y su posición inmediatamente antes del gesto final.",
     "que_revisar": "Inferencia de motivaciones a partir de la secuencia de acciones y reflexiones de un personaje; relación causa-consecuencia entre partes del relato.",
-    "refuerzo_ids": [
-      "LC-017"
-    ],
+    "refuerzo_ids": ["LC-017"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T01",
-      "literario"
-    ],
+    "etiquetas": ["texto:LC-T01", "literario"],
     "estado": "aprobada"
   },
   {
     "id": "LC-003",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -204,26 +182,17 @@
     "explicacion": "LEER: leo el cuento completo, prestando atención a cómo cambia la mirada sobre el reloj de principio a fin. COMPRENDER: la pregunta no pide lo que dice la abuela ni lo que pensaba Manuela al principio, sino la valoración que el relato, en conjunto, hace de la decisión de parar el reloj. INTERPRETAR: al comienzo el reloj es un objeto «dañado»; después de la revelación se convierte en memoria del abuelo, y Manuela concluye que hay cosas que «no necesitaban arreglo, sino compañía». REPRESENTAR: arreglo (inicio) → memoria (revelación) → compañía (desenlace). RAZONAR: A se queda en la etapa inicial; B introduce un juicio que el texto no hace; D generaliza a partir del barrio. RESOLVER: C recoge la valoración positiva que el desenlace confirma. VERIFICAR: si el narrador viera la decisión como error o capricho, no cerraría con Manuela imitándola.",
     "que_identificar": "El giro del relato tras la revelación de la abuela y la frase final sobre la «compañía», que revela la postura del narrador.",
     "que_revisar": "Diferencia entre lo que piensa un personaje en un momento dado y la valoración global que construye el texto; contenidos valorativos implícitos en un relato.",
-    "refuerzo_ids": [
-      "LC-010"
-    ],
+    "refuerzo_ids": ["LC-010"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T01",
-      "literario"
-    ],
+    "etiquetas": ["texto:LC-T01", "literario"],
     "estado": "aprobada"
   },
   {
     "id": "LC-004",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -276,26 +245,17 @@
     "explicacion": "LEER: busco en el texto la palabra «vellos»; aparece una sola vez, en el segundo párrafo. COMPRENDER: la pregunta pide la función que el texto asigna a los vellos, no lo que yo sepa de la planta. INTERPRETAR: la oración completa es «tiene hojas cubiertas de vellos que atrapan las gotas de la niebla y las conducen hacia el suelo». REPRESENTAR: niebla → vellos atrapan gotas → gotas al suelo. RAZONAR: B añade información externa; C atribuye a los vellos lo que hace el suelo; D mezcla el tercer párrafo. RESOLVER: A reproduce la información explícita. VERIFICAR: releo la oración y compruebo que el sujeto es «hojas cubiertas de vellos» y las acciones son «atrapan» y «conducen».",
     "que_identificar": "La oración del segundo párrafo cuyo sujeto son las hojas con vellos del frailejón, distinguiéndola de la oración siguiente sobre el suelo.",
     "que_revisar": "Localización de información explícita; identificación del sujeto de cada oración cuando varias acciones aparecen en el mismo párrafo.",
-    "refuerzo_ids": [
-      "LC-012"
-    ],
+    "refuerzo_ids": ["LC-012"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T02",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T02", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-005",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -348,26 +308,17 @@
     "explicacion": "LEER: leo los cuatro párrafos y anoto de qué trata cada uno. COMPRENDER: la pregunta pide la idea principal, es decir, la que todos los párrafos sostienen, no el dato más llamativo. INTERPRETAR: párrafo 1, importancia del agua de los páramos; párrafo 2, cómo capturan y regulan el agua; párrafo 3, por qué esa capacidad es frágil; párrafo 4, conclusión: protegerlos asegura el agua. REPRESENTAR: importancia → mecanismo → fragilidad → protección. RAZONAR: A y C son detalles de un solo párrafo; D añade una propuesta ausente. RESOLVER: B integra el mecanismo y la conclusión. VERIFICAR: cada párrafo puede leerse como apoyo a la opción B, cosa que no ocurre con las demás.",
     "que_identificar": "El tema que se mantiene a lo largo de los cuatro párrafos y la frase de cierre que lo sintetiza («proteger un páramo (…) es asegurar que el grifo de las ciudades siga abierto»).",
     "que_revisar": "Diferencia entre idea principal e ideas de apoyo; uso del párrafo de cierre para confirmar el sentido global.",
-    "refuerzo_ids": [
-      "LC-013"
-    ],
+    "refuerzo_ids": ["LC-013"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T02",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T02", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-006",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -382,15 +333,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "anunciar la explicación del proceso que se desarrolla en el resto del párrafo.",
-        "correcta": true,
-        "explicacion": "Es una pregunta retórica que organiza el texto: inmediatamente después, el autor la responde («En realidad, no la produce: la captura y la regula») y dedica el resto del párrafo a describir cómo ocurre esa captura (niebla, vellos del frailejón, suelo esponja).",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "expresar la duda del autor sobre si los páramos realmente producen agua.",
         "correcta": false,
         "explicacion": "El autor no duda: responde de inmediato y con seguridad («En realidad, no la produce: la captura y la regula»). Además, las comillas en «producir» indican que usa la palabra con reserva, precisamente porque ya sabe que el término no es exacto.",
@@ -399,7 +341,7 @@
         "razon_frecuente": "Leyó la pregunta como una duda genuina del autor y no como un recurso para introducir la explicación."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "contradecir lo que se afirmó en el primer párrafo sobre el agua de las ciudades.",
         "correcta": false,
         "explicacion": "No hay contradicción: el primer párrafo dice que de los páramos «depende el agua» de las ciudades, y el segundo precisa cómo ocurre (no la producen, la regulan). La corrección «no la produce» afina el título, no niega la dependencia.",
@@ -408,38 +350,38 @@
         "razon_frecuente": "Interpretó la aclaración «no la produce» como una negación de lo dicho antes, sin ver que precisa la misma idea."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "invitar al lector a investigar el tema por su cuenta.",
         "correcta": false,
         "explicacion": "El texto no deja la pregunta abierta: la responde en la misma línea y desarrolla la respuesta en todo el párrafo. Una invitación a investigar dejaría la pregunta sin contestar.",
         "tipo_error": "interpretacion",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Asignó a la pregunta una función genérica («hacer pensar al lector») sin revisar qué viene después de ella."
+      },
+      {
+        "clave": "D",
+        "texto": "anunciar la explicación del proceso que se desarrolla en el resto del párrafo.",
+        "correcta": true,
+        "explicacion": "Es una pregunta retórica que organiza el texto: inmediatamente después, el autor la responde («En realidad, no la produce: la captura y la regula») y dedica el resto del párrafo a describir cómo ocurre esa captura (niebla, vellos del frailejón, suelo esponja).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: ubico la pregunta al inicio del segundo párrafo y leo lo que sigue. COMPRENDER: se me pide la función de esa pregunta dentro del texto, no su respuesta. INTERPRETAR: justo después aparece «En realidad, no la produce: la captura y la regula», y el resto del párrafo describe ese proceso; la pregunta sirve para abrir la explicación. REPRESENTAR: pregunta → respuesta breve → desarrollo del proceso. RAZONAR: B confunde recurso retórico con duda real; C ve contradicción donde hay precisión; D supone que la pregunta queda abierta. RESOLVER: A describe la función organizadora. VERIFICAR: si quito la pregunta, el párrafo pierde su entrada pero conserva la explicación, lo que confirma que su papel es introducirla.",
     "que_identificar": "La respuesta inmediata a la pregunta («En realidad, no la produce…») y el desarrollo que la sigue en el mismo párrafo.",
     "que_revisar": "Preguntas retóricas y otros recursos para organizar un texto expositivo; función de las partes de un párrafo.",
-    "refuerzo_ids": [
-      "LC-009"
-    ],
+    "refuerzo_ids": ["LC-009"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T02",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T02", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-007",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -492,27 +434,17 @@
     "explicacion": "LEER: ubico el enunciado en el tercer párrafo y leo el párrafo completo. COMPRENDER: se pide una conclusión válida que se desprenda del enunciado, no una repetición de este. INTERPRETAR: el enunciado opone dos plazos: siglos para formarse, pocos años para perderse; el «pero» marca la desproporción. REPRESENTAR: formación = siglos; pérdida = años; por tanto, lo perdido no vuelve pronto. RAZONAR: A exagera hasta la desaparición total; C niega la oposición; D invierte causa y efecto. RESOLVER: B expresa la implicación proporcionada: el daño es prácticamente irreversible a escala humana. VERIFICAR: la conclusión es coherente con que el texto llame «frágil» a la capacidad del páramo y con el llamado final a protegerlo.",
     "que_identificar": "El contraste entre «siglos» y «pocos años», marcado por «pero», y las causas de pérdida que enumera el párrafo.",
     "que_revisar": "Distinción entre lo que un enunciado implica y lo que exagera o contradice; relaciones de causa y consecuencia.",
-    "refuerzo_ids": [
-      "LC-021",
-      "LC-011"
-    ],
+    "refuerzo_ids": ["LC-021", "LC-011"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T02",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T02", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-008",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -565,26 +497,17 @@
     "explicacion": "LEER: ubico «sensatas» en la última oración del primer párrafo. COMPRENDER: debo encontrar un sinónimo que conserve el sentido en ese lugar exacto. INTERPRETAR: la oración contrasta («en cambio») con quienes ven la medida como castigo o exceso; el autor la califica positivamente. REPRESENTAR: quejas (castigo, exceso) ↔ autor (decisión sensata = acertada). RAZONAR: «severas» coincide con los críticos, no con el autor; «recientes» y «discutidas» describen datos de la situación, no el juicio. RESOLVER: «razonables» mantiene el elogio. VERIFICAR: releo la frase con «razonables» y el «en cambio» sigue teniendo sentido.",
     "que_identificar": "El conector «en cambio», que indica que la palabra expresa una postura opuesta a la de quienes se quejan.",
     "que_revisar": "Sinónimos en contexto; conectores de contraste (en cambio, pero, sin embargo) como pistas para el sentido de una palabra.",
-    "refuerzo_ids": [
-      "LC-001"
-    ],
+    "refuerzo_ids": ["LC-001"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T03",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T03", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-009",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -637,26 +560,17 @@
     "explicacion": "LEER: leo el segundo párrafo completo, incluida la oración que antecede a la frase citada. COMPRENDER: la pregunta pide identificar de quién es esa voz. INTERPRETAR: la introduce «El argumento de quienes se oponen suena razonable:», y la sigue «Pero ese argumento confunde dos cosas distintas»; el autor la reproduce para responderla. REPRESENTAR: voz ajena (objeción) → «pero» → voz del autor (refutación). RAZONAR: A y C atribuyen al autor lo que él rechaza; D inventa una fuente inexistente. RESOLVER: B. VERIFICAR: la tesis final del texto («no apaga el cerebro de nadie») es incompatible con la frase, lo que confirma que no es la opinión del autor.",
     "que_identificar": "La expresión «El argumento de quienes se oponen» que introduce la frase, y el «Pero» que marca el paso a la voz del autor.",
     "que_revisar": "Identificación de voces en un texto argumentativo; estructura objeción-refutación.",
-    "refuerzo_ids": [
-      "LC-006"
-    ],
+    "refuerzo_ids": ["LC-006"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T03",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T03", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-010",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -671,24 +585,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "mostrar que la medida no rechaza la tecnología en general, sino un uso específico del celular.",
-        "correcta": true,
-        "explicacion": "La frase cierra la distinción que el autor acaba de hacer entre «usar la tecnología con un propósito» y «tener en el bolsillo (…) un aparato diseñado para interrumpirnos». Con un ejemplo extremo y evidente (nadie quiere quitar los computadores) desarma la objeción de que la medida es «darle la espalda a la tecnología».",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "proponer que los computadores reemplacen a los celulares en las aulas.",
-        "correcta": false,
-        "explicacion": "Lectura literal de una frase que no propone nada: solo señala lo que nadie pide. El texto no plantea sustituir un aparato por otro; su tema es guardar el celular durante la jornada.",
-        "tipo_error": "interpretacion",
-        "diagnostico": "probable",
-        "razon_frecuente": "Tomó la mención de los computadores como una propuesta, sin advertir que la frase sirve para contrastar con la objeción anterior."
-      },
-      {
-        "clave": "C",
         "texto": "reconocer que la medida tiene fallas que deben corregirse.",
         "correcta": false,
         "explicacion": "Las concesiones del autor están en el cuarto párrafo («Es cierto que la medida exige confianza…»), no en esta frase. Aquí el autor no admite una debilidad: está rebatiendo el argumento de los opositores.",
@@ -697,38 +593,47 @@
         "razon_frecuente": "Confundió una refutación con una concesión, quizá por recordar el tono del párrafo final."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "demostrar que los estudiantes prefieren los computadores a los celulares.",
         "correcta": false,
         "explicacion": "El texto no dice nada sobre las preferencias de los estudiantes entre ambos aparatos; lo único que menciona de ellos es que algunos ven la medida como «un castigo» y que en los descansos miran «su propia pantalla».",
         "tipo_error": "inferencia",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Añadió una idea sobre gustos de los estudiantes que el texto no plantea."
+      },
+      {
+        "clave": "C",
+        "texto": "mostrar que la medida no rechaza la tecnología en general, sino un uso específico del celular.",
+        "correcta": true,
+        "explicacion": "La frase cierra la distinción que el autor acaba de hacer entre «usar la tecnología con un propósito» y «tener en el bolsillo (…) un aparato diseñado para interrumpirnos». Con un ejemplo extremo y evidente (nadie quiere quitar los computadores) desarma la objeción de que la medida es «darle la espalda a la tecnología».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "proponer que los computadores reemplacen a los celulares en las aulas.",
+        "correcta": false,
+        "explicacion": "Lectura literal de una frase que no propone nada: solo señala lo que nadie pide. El texto no plantea sustituir un aparato por otro; su tema es guardar el celular durante la jornada.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la mención de los computadores como una propuesta, sin advertir que la frase sirve para contrastar con la objeción anterior."
       }
     ],
     "explicacion": "LEER: ubico la frase al final del segundo párrafo y leo las oraciones anteriores. COMPRENDER: se pregunta por el propósito de la frase dentro de la argumentación, no por su contenido literal. INTERPRETAR: el párrafo distingue tecnología con propósito y aparato que interrumpe; la frase final ofrece un caso obvio para mostrar que la medida no es contra la tecnología. REPRESENTAR: objeción («darle la espalda a la tecnología») → distinción → ejemplo evidente (computadores) que anula la objeción. RAZONAR: B la lee como propuesta; C la confunde con una concesión; D inventa preferencias. RESOLVER: A. VERIFICAR: la frase responde exactamente a la objeción citada antes, lo que confirma su función refutadora.",
     "que_identificar": "La distinción entre «usar la tecnología con un propósito» y «tener en el bolsillo (…) un aparato», que la frase ilustra con un caso extremo.",
     "que_revisar": "Estrategias de refutación: ejemplo evidente, reducción al absurdo, distinción de conceptos.",
-    "refuerzo_ids": [
-      "LC-003"
-    ],
+    "refuerzo_ids": ["LC-003"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T03",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T03", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-011",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -743,15 +648,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "anuncia una «evidencia» sobre la atención, pero en lugar de presentarla ofrece una observación general de los descansos.",
-        "correcta": true,
-        "explicacion": "El párrafo abre con «la evidencia sobre el efecto de las notificaciones en la atención es difícil de ignorar», pero no cita estudios ni datos: pasa a «Basta observar un descanso en cualquier colegio». Una impresión general sobre jóvenes con el celular en el recreo no demuestra el efecto de las notificaciones en la atención durante la clase; el apoyo prometido no aparece.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "niega que las notificaciones afecten la atención de los estudiantes.",
         "correcta": false,
         "explicacion": "Es lo contrario de lo que dice el párrafo: el autor sostiene que ese efecto es «difícil de ignorar». La objeción válida no es que niegue el efecto, sino que no lo respalda con la evidencia que anuncia.",
@@ -760,7 +656,7 @@
         "razon_frecuente": "Leyó de forma invertida la frase «difícil de ignorar» o respondió sin releer el párrafo."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "afirma que los jóvenes de hoy ya no saben conversar.",
         "correcta": false,
         "explicacion": "El texto no hace esa afirmación. Dice que un recreo sin celulares «devuelve algo que parecía perdido: la conversación», lo que sugiere que la conversación se recupera, no que los jóvenes sean incapaces de ella. Objetar algo que el texto no dice no es una crítica válida.",
@@ -769,39 +665,38 @@
         "razon_frecuente": "Exageró la última frase del párrafo hasta convertirla en un juicio sobre los jóvenes."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "contradice lo que el cuarto párrafo dice sobre las urgencias familiares.",
         "correcta": false,
         "explicacion": "No hay contradicción: el cuarto párrafo es una concesión («Es cierto que la medida exige confianza…») que reconoce casos especiales sin negar el argumento de la atención. Un buen argumentador puede sostener una tesis y admitir excepciones a la vez.",
         "tipo_error": "argumentacion",
         "diagnostico": "probable",
         "razon_frecuente": "Confundió una concesión con una contradicción interna del texto."
+      },
+      {
+        "clave": "D",
+        "texto": "anuncia una «evidencia» sobre la atención, pero en lugar de presentarla ofrece una observación general de los descansos.",
+        "correcta": true,
+        "explicacion": "El párrafo abre con «la evidencia sobre el efecto de las notificaciones en la atención es difícil de ignorar», pero no cita estudios ni datos: pasa a «Basta observar un descanso en cualquier colegio». Una impresión general sobre jóvenes con el celular en el recreo no demuestra el efecto de las notificaciones en la atención durante la clase; el apoyo prometido no aparece.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: leo el tercer párrafo completo y anoto qué promete y qué entrega. COMPRENDER: la pregunta pide evaluar la solidez del argumento, no decir si estoy de acuerdo con la medida. INTERPRETAR: el párrafo anuncia «evidencia» sobre la atención, pero lo que da es una escena de recreo («Basta observar un descanso»). REPRESENTAR: afirmación (hay evidencia) → apoyo ofrecido (observación informal) → brecha entre ambos. RAZONAR: B invierte la postura del autor; C objeta algo que no se dijo; D confunde concesión con contradicción. RESOLVER: A señala la brecha real entre lo prometido y lo presentado. VERIFICAR: releo el párrafo buscando cifras, estudios o fuentes: no hay ninguno, lo que confirma la objeción.",
     "que_identificar": "La distancia entre «la evidencia (…) es difícil de ignorar» y el único apoyo que sigue: una observación general del descanso.",
     "que_revisar": "Criterios para evaluar un argumento: relación entre la afirmación y el apoyo, diferencia entre evidencia y anécdota, concesión frente a contradicción.",
-    "refuerzo_ids": [
-      "LC-024",
-      "LC-007"
-    ],
+    "refuerzo_ids": ["LC-024", "LC-007"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T03",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T03", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-012",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_discontinuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -814,43 +709,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Cuatro formas de llegar al colegio (recorrido de 4 km)",
-      "columnas": [
-        "Medio de transporte",
-        "Tiempo aproximado (min)",
-        "Costo por viaje (pesos)",
-        "Emisiones de CO₂ por viaje (gramos)",
-        "Recomendación del comité"
-      ],
-      "filas": [
-        [
-          "A pie",
-          50,
-          0,
-          0,
-          "Ideal para distancias cortas"
-        ],
-        [
-          "Bicicleta",
-          18,
-          0,
-          0,
-          "Usa casco y ciclorruta"
-        ],
-        [
-          "Bus (SITP)",
-          25,
-          3200,
-          60,
-          "Comparte el viaje"
-        ],
-        [
-          "Carro particular",
-          15,
-          6500,
-          900,
-          "Solo si no hay otra opción"
-        ]
-      ],
+      "columnas": ["Medio de transporte", "Tiempo aproximado (min)", "Costo por viaje (pesos)", "Emisiones de CO₂ por viaje (gramos)", "Recomendación del comité"],
+      "filas": [["A pie", 50, 0, 0, "Ideal para distancias cortas"], ["Bicicleta", 18, 0, 0, "Usa casco y ciclorruta"], ["Bus (SITP)", 25, 3200, 60, "Comparte el viaje"], ["Carro particular", 15, 6500, 900, "Solo si no hay otra opción"]],
       "nota": "Datos estimados por el comité para un viaje en hora pico. Emisiones calculadas por pasajero."
     },
     "enunciado": "Según la tabla del afiche, el medio de transporte que no produce emisiones y, además, toma menos tiempo es",
@@ -895,26 +755,17 @@
     "explicacion": "LEER: leo el enunciado y localizo en la tabla las dos columnas que menciona: emisiones y tiempo. COMPRENDER: se piden dos condiciones a la vez: cero emisiones y menor tiempo entre los que cumplan la primera. INTERPRETAR: en la columna de emisiones hay dos ceros: «A pie» y «Bicicleta». REPRESENTAR: A pie 0 g / 50 min; Bicicleta 0 g / 18 min. RAZONAR: entre esos dos, el menor tiempo es 18 min. Carro y bus quedan descartados por emitir CO₂. RESOLVER: bicicleta. VERIFICAR: la fila de la bicicleta muestra 18 min y 0 g, ambas condiciones cumplidas.",
     "que_identificar": "Las dos columnas que la pregunta pide cruzar (emisiones y tiempo) y las filas que tienen 0 gramos.",
     "que_revisar": "Lectura de tablas con varias columnas; filtrar filas por una condición antes de comparar por otra.",
-    "refuerzo_ids": [
-      "LC-004"
-    ],
+    "refuerzo_ids": ["LC-004"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T04",
-      "discontinuo"
-    ],
+    "etiquetas": ["texto:LC-T04", "discontinuo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-013",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_discontinuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -927,43 +778,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Cuatro formas de llegar al colegio (recorrido de 4 km)",
-      "columnas": [
-        "Medio de transporte",
-        "Tiempo aproximado (min)",
-        "Costo por viaje (pesos)",
-        "Emisiones de CO₂ por viaje (gramos)",
-        "Recomendación del comité"
-      ],
-      "filas": [
-        [
-          "A pie",
-          50,
-          0,
-          0,
-          "Ideal para distancias cortas"
-        ],
-        [
-          "Bicicleta",
-          18,
-          0,
-          0,
-          "Usa casco y ciclorruta"
-        ],
-        [
-          "Bus (SITP)",
-          25,
-          3200,
-          60,
-          "Comparte el viaje"
-        ],
-        [
-          "Carro particular",
-          15,
-          6500,
-          900,
-          "Solo si no hay otra opción"
-        ]
-      ],
+      "columnas": ["Medio de transporte", "Tiempo aproximado (min)", "Costo por viaje (pesos)", "Emisiones de CO₂ por viaje (gramos)", "Recomendación del comité"],
+      "filas": [["A pie", 50, 0, 0, "Ideal para distancias cortas"], ["Bicicleta", 18, 0, 0, "Usa casco y ciclorruta"], ["Bus (SITP)", 25, 3200, 60, "Comparte el viaje"], ["Carro particular", 15, 6500, 900, "Solo si no hay otra opción"]],
       "nota": "Datos estimados por el comité para un viaje en hora pico. Emisiones calculadas por pasajero."
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones resume correctamente la información de la tabla?",
@@ -1008,26 +824,17 @@
     "explicacion": "LEER: leo la tabla completa, fila por fila y columna por columna. COMPRENDER: la pregunta pide un resumen fiel, es decir, una frase que traduzca todos los datos sin añadir ni deformar. INTERPRETAR: los dos medios sin motor tienen costo 0 y emisiones 0; a pie es el más lento; el carro es el más rápido, el más caro y el más contaminante. REPRESENTAR: traduzco la tabla a una frase propia y la comparo con cada opción. RAZONAR: B y C proponen reglas «cuanto más… más…» que fallan al compararlas con la bicicleta y el bus; D atribuye al comité una recomendación que la tabla no hace. RESOLVER: A. VERIFICAR: compruebo cada dato de la opción A contra la tabla: todos coinciden.",
     "que_identificar": "Los valores máximos y mínimos de cada columna y las filas que comparten valores (a pie y bicicleta con 0 y 0).",
     "que_revisar": "Traducir una tabla a un enunciado verbal; comprobar generalizaciones («cuanto más… más…») contra todas las filas, no solo contra los extremos.",
-    "refuerzo_ids": [
-      "LC-005"
-    ],
+    "refuerzo_ids": ["LC-005"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T04",
-      "discontinuo"
-    ],
+    "etiquetas": ["texto:LC-T04", "discontinuo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-014",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_discontinuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -1040,43 +847,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Cuatro formas de llegar al colegio (recorrido de 4 km)",
-      "columnas": [
-        "Medio de transporte",
-        "Tiempo aproximado (min)",
-        "Costo por viaje (pesos)",
-        "Emisiones de CO₂ por viaje (gramos)",
-        "Recomendación del comité"
-      ],
-      "filas": [
-        [
-          "A pie",
-          50,
-          0,
-          0,
-          "Ideal para distancias cortas"
-        ],
-        [
-          "Bicicleta",
-          18,
-          0,
-          0,
-          "Usa casco y ciclorruta"
-        ],
-        [
-          "Bus (SITP)",
-          25,
-          3200,
-          60,
-          "Comparte el viaje"
-        ],
-        [
-          "Carro particular",
-          15,
-          6500,
-          900,
-          "Solo si no hay otra opción"
-        ]
-      ],
+      "columnas": ["Medio de transporte", "Tiempo aproximado (min)", "Costo por viaje (pesos)", "Emisiones de CO₂ por viaje (gramos)", "Recomendación del comité"],
+      "filas": [["A pie", 50, 0, 0, "Ideal para distancias cortas"], ["Bicicleta", 18, 0, 0, "Usa casco y ciclorruta"], ["Bus (SITP)", 25, 3200, 60, "Comparte el viaje"], ["Carro particular", 15, 6500, 900, "Solo si no hay otra opción"]],
       "nota": "Datos estimados por el comité para un viaje en hora pico. Emisiones calculadas por pasajero."
     },
     "enunciado": "La nota «Emisiones calculadas por pasajero» es necesaria para interpretar correctamente la tabla porque",
@@ -1121,16 +893,10 @@
     "explicacion": "LEER: leo la nota en letra diminuta del afiche, repetida en el estímulo: «Emisiones calculadas por pasajero». COMPRENDER: la pregunta pide explicar por qué esa nota es necesaria para leer bien la tabla. INTERPRETAR: los valores de emisiones no son por vehículo sino por persona transportada; eso afecta a los medios con motor, donde el humo se reparte entre los ocupantes. REPRESENTAR: emisiones del vehículo ÷ número de pasajeros = emisiones por pasajero; bus (muchos pasajeros) → 60 g; carro (pocos) → 900 g. RAZONAR: B invierte la relación; C menciona algo verdadero pero independiente de la nota; D confunde columnas. RESOLVER: A. VERIFICAR: la recomendación «Comparte el viaje» en la fila del bus es coherente con esta lectura: más pasajeros, menos emisiones por cada uno.",
     "que_identificar": "La nota al pie del afiche y su relación con la columna de emisiones, especialmente con la diferencia entre bus (60 g) y carro (900 g).",
     "que_revisar": "Función de las notas y unidades en tablas e infografías; razonamiento proporcional (total repartido entre varias personas).",
-    "refuerzo_ids": [
-      "LC-013"
-    ],
+    "refuerzo_ids": ["LC-013"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T04",
-      "discontinuo",
-      "afirmacion_por_verificar"
-    ],
+    "etiquetas": ["texto:LC-T04", "discontinuo", "afirmacion_por_verificar"],
     "estado": "aprobada"
   }
 ]

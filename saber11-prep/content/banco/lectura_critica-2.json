@@ -3,11 +3,7 @@
     "id": "LC-015",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -22,24 +18,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "las tejas están hechas de un material parecido al hueso.",
-        "correcta": false,
-        "explicacion": "Es una lectura literal de la comparación. «Como dientes» no describe el material de las tejas sino la manera en que se van perdiendo: «ceden una a una». El texto no dice nada sobre de qué están hechas.",
-        "tipo_error": "vocabulario",
-        "diagnostico": "probable",
-        "razon_frecuente": "Tomó la comparación como una descripción física del objeto y no como una imagen del modo en que se pierde."
-      },
-      {
-        "clave": "B",
-        "texto": "el techo se está deteriorando poco a poco, como quien pierde los dientes con la edad.",
-        "correcta": true,
-        "explicacion": "«Ceden una a una» indica un deterioro lento y progresivo, y la comparación con los dientes (que se caen de a uno con la vejez) refuerza la idea de un cuerpo que envejece. Encaja con el resto del párrafo, donde los vecinos dicen «qué lástima» y un muchacho «midió lo que queda».",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "C",
         "texto": "alguien está quitando las tejas para venderlas.",
         "correcta": false,
         "explicacion": "El verbo «ceden» indica que las tejas caen por sí solas, no que alguien las retire. La única persona que aparece en el párrafo, el muchacho, «midió lo que queda» y «anotó cifras»; no toca el techo. La idea de que se lleven partes de la casa aparece solo al final («quién se lleva la puerta») y como un deseo futuro.",
@@ -48,38 +26,47 @@
         "razon_frecuente": "Mezcló la frase con la última línea del relato o supuso un saqueo que el texto no menciona."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "el narrador siente un dolor físico comparable al de una muela.",
         "correcta": false,
         "explicacion": "La comparación habla de pérdida progresiva («una a una»), no de dolor. En todo el relato el narrador mantiene un tono sereno («No guardo rencor») y nunca menciona sufrimiento físico.",
         "tipo_error": "interpretacion",
         "diagnostico": "probable",
         "razon_frecuente": "Asoció «dientes» con dolor de muelas en lugar de fijarse en «ceden una a una», que es lo que la comparación ilustra."
+      },
+      {
+        "clave": "C",
+        "texto": "las tejas están hechas de un material parecido al hueso.",
+        "correcta": false,
+        "explicacion": "Es una lectura literal de la comparación. «Como dientes» no describe el material de las tejas sino la manera en que se van perdiendo: «ceden una a una». El texto no dice nada sobre de qué están hechas.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la comparación como una descripción física del objeto y no como una imagen del modo en que se pierde."
+      },
+      {
+        "clave": "D",
+        "texto": "el techo se está deteriorando poco a poco, como quien pierde los dientes con la edad.",
+        "correcta": true,
+        "explicacion": "«Ceden una a una» indica un deterioro lento y progresivo, y la comparación con los dientes (que se caen de a uno con la vejez) refuerza la idea de un cuerpo que envejece. Encaja con el resto del párrafo, donde los vecinos dicen «qué lástima» y un muchacho «midió lo que queda».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: ubico la frase en el segundo párrafo y leo las oraciones vecinas. COMPRENDER: la pregunta pide qué sugiere la comparación en este contexto, no una definición de «teja» o «diente». INTERPRETAR: «ceden una a una» describe una caída lenta y progresiva; «como dientes» remite a los dientes que se pierden de a uno con los años. REPRESENTAR: tejas que caen de a una = dientes que se caen con la vejez = casa que envejece y se deteriora. RAZONAR: A lee la comparación como material; C introduce un saqueo que no está en el texto; D convierte la pérdida en dolor. RESOLVER: B recoge el deterioro progresivo y el matiz de vejez. VERIFICAR: la frase siguiente («midió lo que queda») confirma que la casa está perdiendo partes poco a poco.",
     "que_identificar": "El verbo «ceden» y la expresión «una a una», que fijan el sentido de la comparación con los dientes.",
     "que_revisar": "Comparaciones y sentido figurado en textos literarios; uso del contexto inmediato para interpretar una imagen.",
-    "refuerzo_ids": [
-      "LC-001"
-    ],
+    "refuerzo_ids": ["LC-001"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T05",
-      "literario"
-    ],
+    "etiquetas": ["texto:LC-T05", "literario"],
     "estado": "aprobada"
   },
   {
     "id": "LC-016",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -132,26 +119,17 @@
     "explicacion": "LEER: leo el relato completo subrayando cada palabra que se refiera al «yo»: «me quedé», «me habitó», «me dejó un cuadrado más claro», «hablan de mí o del jardín», «no me miró», «tumbarme». COMPRENDER: la pregunta pide identificar quién habla, algo que el texto no dice de forma explícita. INTERPRETAR: ser habitado, tener pintura, ser medido con un metro y poder ser tumbado son rasgos de una construcción, no de una persona. REPRESENTAR: personajes que se van (el mayor, la niña, ella) frente a un «yo» que permanece y tiene paredes, pintura, tejas y puerta. RAZONAR: B, C y D asignan la voz a personajes que el texto presenta en tercera persona o de los que el narrador se distingue. RESOLVER: A. VERIFICAR: releo el título, «Inventario», y la última línea: una casa que enumera lo que le queda y quiere ver quién se lleva la puerta; todo es coherente.",
     "que_identificar": "Las marcas de primera persona («me habitó», «tumbarme», «me dejó un cuadrado más claro») que solo pueden aplicarse a la casa, y la tercera persona con que se nombra a la familia.",
     "que_revisar": "Voz narrativa y narradores no humanos; distinción entre el «yo» que narra y los personajes de los que habla.",
-    "refuerzo_ids": [
-      "LC-009"
-    ],
+    "refuerzo_ids": ["LC-009"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T05",
-      "literario"
-    ],
+    "etiquetas": ["texto:LC-T05", "literario"],
     "estado": "aprobada"
   },
   {
     "id": "LC-017",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -204,26 +182,17 @@
     "explicacion": "LEER: leo el relato completo y me detengo en el tercer párrafo, frase por frase. COMPRENDER: la pregunta pide la función de ese párrafo dentro del conjunto, es decir, qué aporta que los otros dos no tenían. INTERPRETAR: el párrafo 1 cuenta las partidas; el párrafo 2, el deterioro y la indiferencia del muchacho; el párrafo 3 expresa la actitud del narrador («No guardo rencor»), lo que atesora (las voces) y su deseo final. REPRESENTAR: pérdida → deterioro → aceptación y último deseo. RAZONAR: A busca causas que el párrafo no da; B inventa un rescate que «Cuando vengan a tumbarme» descarta; D confunde aceptación con final feliz. RESOLVER: C. VERIFICAR: cada frase del último párrafo (rencor, voces, tumbarme, puerta) cabe en la descripción de la opción C.",
     "que_identificar": "La frase «No guardo rencor» que abre el párrafo y la petición «que sea de día», que fijan el tono de aceptación del cierre.",
     "que_revisar": "Función de las partes de un relato (inicio, desarrollo, cierre); diferencia entre tono y desenlace.",
-    "refuerzo_ids": [
-      "LC-006"
-    ],
+    "refuerzo_ids": ["LC-006"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T05",
-      "literario"
-    ],
+    "etiquetas": ["texto:LC-T05", "literario"],
     "estado": "aprobada"
   },
   {
     "id": "LC-018",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -238,6 +207,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "el recurso más escaso de La Guajira.",
+        "correcta": false,
+        "explicacion": "Dice lo contrario de la última oración: los recursos escasos son «cables, acuerdos y tiempo», que «han resultado más escasos que el sol». El sol es justamente lo que sobra, como anuncia el título («Sol de sobra»).",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Leyó de forma apresurada la comparación final o respondió sin volver al párrafo."
+      },
+      {
+        "clave": "B",
         "texto": "una parte de una cadena de pasos necesarios para obtener energía útil.",
         "correcta": true,
         "explicacion": "Un eslabón es cada pieza de una cadena. La frase siguiente completa la imagen: convertir la radiación en energía útil «exige cables, acuerdos y tiempo», es decir, otros eslabones. Con «solo el primer» el autor subraya que la radiación es el inicio del proceso, no el proceso completo.",
@@ -246,7 +224,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "la fuente de energía más abundante del departamento.",
         "correcta": false,
         "explicacion": "Es verdad según el primer párrafo, pero no es lo que significa «eslabón». La palabra no habla de cantidad sino de posición dentro de una secuencia («el primer»); la abundancia del sol se afirma en otro lugar y con otras palabras («uno de los niveles de radiación solar más altos del país»).",
@@ -255,47 +233,29 @@
         "razon_frecuente": "Eligió una afirmación verdadera del texto sin fijarse en que la pregunta pide el sentido de «eslabón»."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "un obstáculo que impide que la energía llegue al interior del país.",
         "correcta": false,
         "explicacion": "Invierte el papel de la radiación: el texto la presenta como «ventaja». Los obstáculos que menciona son otros: las líneas de transmisión «todavía están incompletas» y las consultas que «no se hicieron a tiempo».",
         "tipo_error": "comprension",
         "diagnostico": "probable",
         "razon_frecuente": "Asoció «eslabón» con las dificultades del texto y atribuyó a la radiación el papel de traba."
-      },
-      {
-        "clave": "D",
-        "texto": "el recurso más escaso de La Guajira.",
-        "correcta": false,
-        "explicacion": "Dice lo contrario de la última oración: los recursos escasos son «cables, acuerdos y tiempo», que «han resultado más escasos que el sol». El sol es justamente lo que sobra, como anuncia el título («Sol de sobra»).",
-        "tipo_error": "comprension",
-        "diagnostico": "insuficiente",
-        "razon_frecuente": "Leyó de forma apresurada la comparación final o respondió sin volver al párrafo."
       }
     ],
     "explicacion": "LEER: ubico «eslabón» en el último párrafo y leo la oración siguiente. COMPRENDER: la pregunta pide qué idea transmite la palabra en este lugar, no el dato más llamativo del texto. INTERPRETAR: un eslabón es una pieza de una cadena; «el primer» indica que hay más piezas después, y la oración siguiente las nombra: cables, acuerdos y tiempo. REPRESENTAR: radiación → cables → acuerdos → tiempo → energía útil. RAZONAR: B es cierta pero no responde a la palabra; C convierte la ventaja en obstáculo; D contradice «más escasos que el sol». RESOLVER: A. VERIFICAR: sustituyo «eslabón» por «paso» y la oración conserva el sentido: «la radiación es solo el primer paso».",
     "que_identificar": "La expresión «el primer eslabón» y la enumeración que sigue («cables, acuerdos y tiempo»), que completa la imagen de la cadena.",
     "que_revisar": "Metáforas de uso común (cadena, eslabón, puerta, motor) y cómo el contexto inmediato fija su sentido.",
-    "refuerzo_ids": [
-      "LC-008"
-    ],
+    "refuerzo_ids": ["LC-008"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T06",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T06", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-019",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -310,24 +270,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "introduce una limitación que matiza el panorama favorable presentado al comienzo.",
-        "correcta": true,
-        "explicacion": "El primer párrafo acumula ventajas (radiación alta, vientos constantes, parques anunciados). El segundo abre con «Sin embargo», conector de contraste, y presenta el primer problema: «producir energía (…) no es lo mismo que llevarla a donde se necesita», porque las líneas de transmisión «todavía están incompletas». No niega lo anterior; le pone una condición.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "demuestra que los datos sobre la radiación solar del primer párrafo son falsos.",
-        "correcta": false,
-        "explicacion": "El segundo párrafo no discute la radiación ni los vientos; da por buena la producción («la energía producida») y señala que falta transportarla. «Sin embargo» introduce una objeción parcial, no una refutación de los datos.",
-        "tipo_error": "razonamiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Interpretó el conector de contraste como si negara todo lo dicho antes, en vez de ver que añade una condición."
-      },
-      {
-        "clave": "C",
         "texto": "repite con otras palabras la idea de que La Guajira tiene mucho sol.",
         "correcta": false,
         "explicacion": "El segundo párrafo no menciona el sol ni la radiación: habla de paneles, aerogeneradores y líneas de transmisión. Si solo repitiera la idea anterior, no empezaría con «Sin embargo», que anuncia un cambio de dirección.",
@@ -336,38 +278,47 @@
         "razon_frecuente": "Pasó por alto el conector inicial y supuso que el párrafo continuaba la misma idea."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "explica el funcionamiento técnico de los paneles solares y los aerogeneradores.",
         "correcta": false,
         "explicacion": "Los paneles y los aerogeneradores solo se nombran como los aparatos que «generan electricidad»; el párrafo no describe cómo funcionan. Lo que explica entre paréntesis es qué son las líneas de transmisión, y lo hace para mostrar que faltan.",
         "tipo_error": "interpretacion",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Tomó la mención de los aparatos y el paréntesis explicativo como si el párrafo fuera una descripción técnica."
+      },
+      {
+        "clave": "C",
+        "texto": "introduce una limitación que matiza el panorama favorable presentado al comienzo.",
+        "correcta": true,
+        "explicacion": "El primer párrafo acumula ventajas (radiación alta, vientos constantes, parques anunciados). El segundo abre con «Sin embargo», conector de contraste, y presenta el primer problema: «producir energía (…) no es lo mismo que llevarla a donde se necesita», porque las líneas de transmisión «todavía están incompletas». No niega lo anterior; le pone una condición.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "demuestra que los datos sobre la radiación solar del primer párrafo son falsos.",
+        "correcta": false,
+        "explicacion": "El segundo párrafo no discute la radiación ni los vientos; da por buena la producción («la energía producida») y señala que falta transportarla. «Sin embargo» introduce una objeción parcial, no una refutación de los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó el conector de contraste como si negara todo lo dicho antes, en vez de ver que añade una condición."
       }
     ],
     "explicacion": "LEER: leo los dos primeros párrafos completos y marco la primera palabra del segundo: «Sin embargo». COMPRENDER: la pregunta pide la relación entre las dos partes, no el contenido de cada una por separado. INTERPRETAR: el párrafo 1 presenta ventajas y anuncios optimistas; el párrafo 2 introduce una dificultad (líneas de transmisión incompletas) que impide aprovechar del todo esa ventaja. REPRESENTAR: ventaja (sol y viento) → pero → obstáculo (no hay por dónde sacar la energía). RAZONAR: B exagera el contraste hasta la refutación; C ignora el conector; D confunde una mención con una explicación técnica. RESOLVER: A. VERIFICAR: el título («Sol de sobra, cables de menos») resume exactamente esa relación entre los dos párrafos.",
     "que_identificar": "El conector «Sin embargo» al inicio del segundo párrafo y la oposición entre «producir energía» y «llevarla a donde se necesita».",
     "que_revisar": "Conectores de contraste (sin embargo, pero, no obstante) y su función para relacionar párrafos; diferencia entre matizar y refutar.",
-    "refuerzo_ids": [
-      "LC-006"
-    ],
+    "refuerzo_ids": ["LC-006"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T06",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T06", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-020",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -420,26 +371,17 @@
     "explicacion": "LEER: leo los cuatro párrafos y anoto una frase corta para cada uno. COMPRENDER: la idea principal es la que todos los párrafos sostienen, no el dato más llamativo ni una oración aislada. INTERPRETAR: párrafo 1, ventaja natural y anuncios; párrafo 2, faltan líneas de transmisión; párrafo 3, faltan consultas y acuerdos; párrafo 4, la radiación es solo el comienzo. REPRESENTAR: sol y viento (ventaja) − cables − acuerdos − tiempo = energía que aún no llega. RAZONAR: A y D cubren un solo párrafo (A además predice); C deforma el tercer párrafo. RESOLVER: B enlaza ventaja, obstáculos y conclusión. VERIFICAR: releo el título, «Sol de sobra, cables de menos», y coincide con la opción B.",
     "que_identificar": "El contraste que estructura el texto (ventaja natural frente a obstáculos técnicos y sociales) y la síntesis del último párrafo.",
     "que_revisar": "Idea principal frente a ideas de apoyo; uso del título y del párrafo de cierre para confirmar el sentido global.",
-    "refuerzo_ids": [
-      "LC-005"
-    ],
+    "refuerzo_ids": ["LC-005"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T06",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T06", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-021",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -454,15 +396,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "instalar un parque de energía en una zona no garantiza que sus habitantes reciban electricidad.",
-        "correcta": true,
-        "explicacion": "La paradoja consiste en que la energía se produce al lado de casas que no la tienen; por tanto, producir cerca no equivale a abastecer. Es coherente con el segundo párrafo, que distingue «producir energía» de «llevarla a donde se necesita», y con la conclusión de que hacen falta «cables, acuerdos y tiempo».",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "las comunidades wayuu rechazan la electricidad que producen los parques.",
         "correcta": false,
         "explicacion": "El texto no dice que las comunidades rechacen nada: explica que deben ser consultadas y que las consultas no se hicieron a tiempo o no llegaron a acuerdos. Que las rancherías sigan sin luz se presenta como una paradoja, no como una decisión de sus habitantes.",
@@ -471,7 +404,7 @@
         "razon_frecuente": "Atribuyó la falta de servicio a una voluntad de las comunidades, mezclando la consulta previa con un supuesto rechazo."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "los parques solares y eólicos de La Guajira todavía no producen nada de energía.",
         "correcta": false,
         "explicacion": "Exagera lo que dice el texto. El segundo párrafo habla de «parte de la energía producida», lo que supone que sí hay producción; el problema es que no tiene por dónde salir. Además, la paradoja solo existe si los proyectos producen energía junto a casas que no la reciben.",
@@ -480,38 +413,38 @@
         "razon_frecuente": "Convirtió «no llega a las rancherías» en «no se produce», sin revisar el segundo párrafo."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "el servicio eléctrico de las rancherías depende únicamente de que se hagan las consultas previas.",
         "correcta": false,
         "explicacion": "El texto señala al menos dos causas distintas de que la energía no llegue: las líneas de transmisión incompletas (párrafo 2) y las consultas y acuerdos (párrafo 3). Reducir todo a una sola causa contradice la conclusión, que enumera tres recursos escasos: «cables, acuerdos y tiempo».",
         "tipo_error": "razonamiento",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Tomó la causa mencionada en el mismo párrafo como la única, sin integrar el resto del texto."
+      },
+      {
+        "clave": "D",
+        "texto": "instalar un parque de energía en una zona no garantiza que sus habitantes reciban electricidad.",
+        "correcta": true,
+        "explicacion": "La paradoja consiste en que la energía se produce al lado de casas que no la tienen; por tanto, producir cerca no equivale a abastecer. Es coherente con el segundo párrafo, que distingue «producir energía» de «llevarla a donde se necesita», y con la conclusión de que hacen falta «cables, acuerdos y tiempo».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: ubico la frase al final del tercer párrafo y releo también el segundo y el cuarto. COMPRENDER: la pregunta pide una conclusión que se desprenda del enunciado, no una repetición ni una exageración. INTERPRETAR: «Paradójicamente» marca una contradicción aparente: hay proyectos de energía junto a casas sin electricidad. REPRESENTAR: producir energía (sí) ≠ recibir energía (no) en el mismo lugar. RAZONAR: B inventa un rechazo; C niega la producción que el texto da por hecha; D reduce a una sola causa lo que el texto explica con varias. RESOLVER: A expresa la implicación justa: producir cerca no garantiza abastecer. VERIFICAR: la conclusión es coherente con «producir energía (…) no es lo mismo que llevarla a donde se necesita» y con el título del texto.",
     "que_identificar": "La palabra «Paradójicamente» y la distinción del segundo párrafo entre producir energía y llevarla a donde se necesita.",
     "que_revisar": "Implicaciones válidas de un enunciado frente a exageraciones y causas únicas; sentido de «paradoja».",
-    "refuerzo_ids": [
-      "LC-007"
-    ],
+    "refuerzo_ids": ["LC-007"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T06",
-      "expositivo"
-    ],
+    "etiquetas": ["texto:LC-T06", "expositivo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-022",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -564,26 +497,17 @@
     "explicacion": "LEER: busco en el texto la expresión «mejores herramientas»; está en el segundo párrafo. COMPRENDER: la pregunta pide información explícita: qué enumera el autor justo después de esa expresión. INTERPRETAR: tras los dos puntos aparece la lista: teatro, música, debate, periódico escolar. REPRESENTAR: identidad → herramientas del colegio → cuatro actividades. RAZONAR: B toma los argumentos de otros; C y D mezclan elementos de los párrafos 3 y 4. RESOLVER: A reproduce la lista textual. VERIFICAR: la oración siguiente («Ninguna de ellas depende de la camiseta») confirma que se trata de actividades y no de prendas.",
     "que_identificar": "La oración del segundo párrafo que sigue a «mejores herramientas:» y su enumeración.",
     "que_revisar": "Localización de información explícita; distinguir lo que dice el autor de lo que atribuye a otros.",
-    "refuerzo_ids": [
-      "LC-004"
-    ],
+    "refuerzo_ids": ["LC-004"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T07",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T07", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-023",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -598,6 +522,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "demostrar que la ropa de calle resulta más cara que el uniforme.",
+        "correcta": false,
+        "explicacion": "El texto no compara precios entre uniforme y ropa de calle; el costo de la ropa de calle no se menciona en ningún párrafo. El último párrafo trata el precio del uniforme como un problema real que debe resolverse con uno «sencillo» y de «segunda mano».",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Añadió una comparación de precios que el texto no hace, quizá por el argumento económico del tercer párrafo."
+      },
+      {
+        "clave": "B",
         "texto": "mostrar que el alto costo del uniforme es un problema del precio y no una razón para eliminarlo.",
         "correcta": true,
         "explicacion": "La comparación traduce la frase anterior («eso es un problema del precio del uniforme, no del uniforme en sí») a un caso que el lector juzga absurdo de inmediato: nadie cerraría el comedor por un almuerzo caro; se abarataría el almuerzo. Comedor equivale a uniforme, almuerzo caro a uniforme costoso, y cerrar a eliminar.",
@@ -606,7 +539,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "proponer que los colegios también reduzcan el precio del almuerzo escolar.",
         "correcta": false,
         "explicacion": "Lectura literal de una comparación. El comedor no es un tema del texto: aparece solo como ejemplo para ilustrar el razonamiento sobre el uniforme. Las propuestas concretas del autor están antes («exigir uno solo, sencillo, y aceptar prendas de segunda mano») y se refieren al uniforme.",
@@ -615,47 +548,29 @@
         "razon_frecuente": "Tomó el término de comparación (el comedor) como un nuevo tema y no como una imagen del tema principal."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "reconocer que el uniforme, igual que el comedor, es un gasto innecesario.",
         "correcta": false,
         "explicacion": "Invierte el sentido. La comparación funciona justamente porque el comedor se considera necesario: por eso cerrarlo sería un despropósito. El autor admite que el uniforme «puede ser costoso», pero defiende conservarlo; en ningún momento lo llama innecesario.",
         "tipo_error": "comprension",
         "diagnostico": "probable",
         "razon_frecuente": "Confundió la concesión «puede ser costoso» con una crítica al uniforme y leyó la comparación al revés."
-      },
-      {
-        "clave": "D",
-        "texto": "demostrar que la ropa de calle resulta más cara que el uniforme.",
-        "correcta": false,
-        "explicacion": "El texto no compara precios entre uniforme y ropa de calle; el costo de la ropa de calle no se menciona en ningún párrafo. El último párrafo trata el precio del uniforme como un problema real que debe resolverse con uno «sencillo» y de «segunda mano».",
-        "tipo_error": "inferencia",
-        "diagnostico": "insuficiente",
-        "razon_frecuente": "Añadió una comparación de precios que el texto no hace, quizá por el argumento económico del tercer párrafo."
       }
     ],
     "explicacion": "LEER: leo el cuarto párrafo completo, de la concesión inicial a la comparación final. COMPRENDER: se pregunta para qué sirve la comparación dentro del argumento, no si el comedor es caro. INTERPRETAR: el autor acaba de decir que el costo es «un problema del precio del uniforme, no del uniforme en sí»; la comparación pone ese razonamiento en un caso evidente. REPRESENTAR: comedor = uniforme; almuerzo caro = uniforme costoso; cerrar el comedor = eliminar el uniforme; solución razonable = abaratar, no eliminar. RAZONAR: B lee la imagen como propuesta; C invierte su sentido; D inventa una comparación de precios. RESOLVER: A. VERIFICAR: la comparación responde exactamente a la objeción del costo que el párrafo había planteado, lo que confirma su función.",
     "que_identificar": "La frase «eso es un problema del precio del uniforme, no del uniforme en sí», que la comparación ilustra, y las correspondencias entre sus términos.",
     "que_revisar": "Analogías y comparaciones como recurso argumentativo; traducir cada término de la comparación a su equivalente en el tema.",
-    "refuerzo_ids": [
-      "LC-017"
-    ],
+    "refuerzo_ids": ["LC-017"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T07",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T07", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-024",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -670,24 +585,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "su único apoyo son relatos de docentes («cuentan que»), sin datos que permitan comprobar que las burlas aumentaron por la ropa.",
-        "correcta": true,
-        "explicacion": "El párrafo sostiene una afirmación fuerte (sin uniforme, la ropa es «una competencia diaria» que «pierden siempre los mismos»), pero la respalda con testimonios no verificables: «Docentes de varios colegios públicos cuentan que…». No se dice cuántos colegios, cuántos docentes ni cómo se midió el aumento de burlas, y tampoco se descarta que las burlas tuvieran otras causas. La conclusión puede ser cierta, pero el apoyo ofrecido no la demuestra.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "el autor niega que existan diferencias económicas entre los estudiantes.",
-        "correcta": false,
-        "explicacion": "Es lo contrario de lo que dice el párrafo: «El uniforme no borra las diferencias económicas, pero las saca del salón de clase por unas horas». El autor parte de que las diferencias existen; objetar que las niega es objetar algo que el texto no afirma.",
-        "tipo_error": "comprension",
-        "diagnostico": "probable",
-        "razon_frecuente": "Leyó de forma invertida la frase «no borra las diferencias económicas»."
-      },
-      {
-        "clave": "C",
         "texto": "contradice lo que el cuarto párrafo admite sobre el costo del uniforme.",
         "correcta": false,
         "explicacion": "No hay contradicción: el tercer párrafo dice que el uniforme reduce la competencia por la ropa, y el cuarto reconoce que el uniforme puede ser caro y propone abaratarlo. Se puede sostener que algo es útil y, a la vez, que su precio debe bajar. Es una concesión, no una incoherencia.",
@@ -696,38 +593,47 @@
         "razon_frecuente": "Confundió la concesión del último párrafo con una contradicción interna del argumento."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "afirma que la ropa es la única causa de las burlas en los colegios.",
         "correcta": false,
         "explicacion": "El texto no dice eso: habla de «burlas relacionadas con la vestimenta», es decir, de un tipo de burla, sin afirmar que sea el único. Una objeción válida debe apuntar a lo que el texto realmente sostiene, y aquí la debilidad está en la calidad de la evidencia, no en una afirmación que no se hizo.",
         "tipo_error": "argumentacion",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Exageró la afirmación del autor para objetarla con más facilidad."
+      },
+      {
+        "clave": "C",
+        "texto": "su único apoyo son relatos de docentes («cuentan que»), sin datos que permitan comprobar que las burlas aumentaron por la ropa.",
+        "correcta": true,
+        "explicacion": "El párrafo sostiene una afirmación fuerte (sin uniforme, la ropa es «una competencia diaria» que «pierden siempre los mismos»), pero la respalda con testimonios no verificables: «Docentes de varios colegios públicos cuentan que…». No se dice cuántos colegios, cuántos docentes ni cómo se midió el aumento de burlas, y tampoco se descarta que las burlas tuvieran otras causas. La conclusión puede ser cierta, pero el apoyo ofrecido no la demuestra.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "el autor niega que existan diferencias económicas entre los estudiantes.",
+        "correcta": false,
+        "explicacion": "Es lo contrario de lo que dice el párrafo: «El uniforme no borra las diferencias económicas, pero las saca del salón de clase por unas horas». El autor parte de que las diferencias existen; objetar que las niega es objetar algo que el texto no afirma.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó de forma invertida la frase «no borra las diferencias económicas»."
       }
     ],
     "explicacion": "LEER: leo el tercer párrafo y separo la afirmación central de lo que la respalda. COMPRENDER: la pregunta pide evaluar la solidez del argumento, no decir si estoy a favor del uniforme. INTERPRETAR: la afirmación es que sin uniforme la ropa se vuelve una competencia que perjudica a los de menos recursos; el apoyo es lo que «cuentan» docentes de «varios colegios». REPRESENTAR: afirmación (competencia diaria, burlas) ← apoyo (testimonios sin cifras ni fuente precisa) = brecha. RAZONAR: B invierte una frase del texto; C confunde concesión con contradicción; D objeta algo que no se afirmó. RESOLVER: A señala la brecha real entre la afirmación y su evidencia. VERIFICAR: releo el párrafo buscando cifras, estudios o nombres de colegios: no hay ninguno, lo que confirma la objeción.",
     "que_identificar": "La expresión «Docentes de varios colegios públicos cuentan que», que revela el carácter testimonial e impreciso de la evidencia.",
     "que_revisar": "Criterios para evaluar un argumento: relación entre afirmación y evidencia; testimonio frente a dato verificable; concesión frente a contradicción.",
-    "refuerzo_ids": [
-      "LC-011"
-    ],
+    "refuerzo_ids": ["LC-011"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T07",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T07", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-025",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -780,26 +686,17 @@
     "explicacion": "LEER: ubico la frase en el segundo párrafo y leo la oración anterior (el argumento contrario) y la siguiente (el «Pero»). COMPRENDER: se pregunta por la estrategia, es decir, qué hace el autor con esa frase dentro de su argumentación. INTERPRETAR: «eso» es el argumento de la expresión personal; el autor lo admite en parte y luego lo limita. REPRESENTAR: contraargumento → concesión («hay algo de cierto») → refutación («Pero la ropa no es la única forma…»). RAZONAR: B confunde conceder con rendirse; C y D relacionan la frase con el argumento económico, que aún no aparece. RESOLVER: A describe la concesión seguida de refutación. VERIFICAR: la tesis se conserva hasta el final del texto, lo que confirma que el autor solo cedió un punto y no la posición.",
     "que_identificar": "El pronombre «eso», que remite al argumento de la expresión personal, y el «Pero» que introduce la refutación.",
     "que_revisar": "Estrategias discursivas en la argumentación: concesión, refutación, presentación del contraargumento antes de responderlo.",
-    "refuerzo_ids": [
-      "LC-010"
-    ],
+    "refuerzo_ids": ["LC-010"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T07",
-      "argumentativo"
-    ],
+    "etiquetas": ["texto:LC-T07", "argumentativo"],
     "estado": "aprobada"
   },
   {
     "id": "LC-026",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_discontinuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -814,15 +711,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "leyó un resumen de la novela en internet la noche anterior al examen.",
-        "correcta": true,
-        "explicacion": "El Texto 2 lo dice de forma explícita: de treinta y dos estudiantes, «apenas cinco terminamos la novela (…); el resto leyó un resumen en internet la noche anterior al examen». «El resto» son veintisiete, es decir, la mayoría.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "terminó la novela del plan lector.",
         "correcta": false,
         "explicacion": "Invierte los datos: los que terminaron la novela fueron «apenas cinco» de treinta y dos, una minoría. La palabra «apenas» subraya que fueron pocos.",
@@ -831,7 +719,7 @@
         "razon_frecuente": "Leyó la cifra de cinco sin relacionarla con el total de treinta y dos, o no captó el sentido de «apenas»."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "se inscribió en el club de lectura libre de la biblioteca.",
         "correcta": false,
         "explicacion": "El texto dice que en el club «hubo lista de espera», pero no indica quiénes se inscribieron ni que fueran los compañeros del autor. Es un dato sobre el club, no sobre el curso.",
@@ -840,39 +728,38 @@
         "razon_frecuente": "Conectó la lista de espera del club con el curso del autor, aunque el texto no establece esa relación."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "pidió que se eliminaran los libros del plan lector.",
         "correcta": false,
         "explicacion": "El texto dice lo contrario y en primera persona: «No pido que se eliminen los libros; pido que se pueda escoger». Además, esa petición es del autor, no de sus compañeros.",
         "tipo_error": "comprension",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Pasó por alto la negación «No pido» o atribuyó al grupo una idea del autor."
+      },
+      {
+        "clave": "D",
+        "texto": "leyó un resumen de la novela en internet la noche anterior al examen.",
+        "correcta": true,
+        "explicacion": "El Texto 2 lo dice de forma explícita: de treinta y dos estudiantes, «apenas cinco terminamos la novela (…); el resto leyó un resumen en internet la noche anterior al examen». «El resto» son veintisiete, es decir, la mayoría.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: la pregunta se refiere solo al Texto 2; leo su primera oración, donde están las cifras. COMPRENDER: se pregunta por «la mayoría» del curso, así que debo identificar el grupo más numeroso. INTERPRETAR: cinco terminaron la novela; «el resto» (27 de 32) leyó un resumen la noche anterior. REPRESENTAR: 32 estudiantes = 5 (novela completa) + 27 (resumen). RAZONAR: B toma la minoría por mayoría; C relaciona el club con el curso sin apoyo; D ignora la negación «No pido». RESOLVER: A. VERIFICAR: releo «el resto leyó un resumen en internet» y compruebo que coincide con la opción elegida.",
     "que_identificar": "La primera oración del Texto 2, con las cifras «treinta y dos» y «apenas cinco», y la expresión «el resto».",
     "que_revisar": "Localización de información explícita en textos múltiples; interpretar cantidades («apenas», «el resto») en relación con el total.",
-    "refuerzo_ids": [
-      "LC-012"
-    ],
+    "refuerzo_ids": ["LC-012"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T08",
-      "texto_multiple",
-      "afirmacion_por_verificar"
-    ],
+    "etiquetas": ["texto:LC-T08", "texto_multiple", "afirmacion_por_verificar"],
     "estado": "aprobada"
   },
   {
     "id": "LC-027",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_discontinuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -925,27 +812,17 @@
     "explicacion": "LEER: leo los dos textos completos, uno después del otro. COMPRENDER: la pregunta pide un punto en común, así que cada opción debe cumplirse en ambos textos, no en uno solo. INTERPRETAR: el Texto 1 defiende la lectura obligatoria porque abre puertas; el Texto 2 critica la obligación pero aclara que no quiere eliminar los libros y valora el club de lectura. REPRESENTAR: tabla mental con dos columnas (T1, T2) y una fila por opción: A cumple solo en T2; B cumple en T1 y T2; C no cumple en ninguno; D no cumple en ninguno. RAZONAR: solo B tiene apoyo en las dos columnas. RESOLVER: B. VERIFICAR: releo «les abrió una puerta» (T1) y «No pido que se eliminen los libros» (T2): ambos suponen que leer vale la pena.",
     "que_identificar": "Las frases que muestran el aprecio por la lectura en cada texto: «les abrió una puerta» (Texto 1) y «No pido que se eliminen los libros» (Texto 2).",
     "que_revisar": "Comparación de textos con posturas distintas: separar el punto de acuerdo (el valor de leer) del punto de desacuerdo (obligación o elección); verificar cada opción contra ambos textos.",
-    "refuerzo_ids": [
-      "LC-013"
-    ],
+    "refuerzo_ids": ["LC-013"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T08",
-      "texto_multiple",
-      "afirmacion_por_verificar"
-    ],
+    "etiquetas": ["texto:LC-T08", "texto_multiple", "afirmacion_por_verificar"],
     "estado": "aprobada"
   },
   {
     "id": "LC-028",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_discontinuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -998,15 +875,10 @@
     "explicacion": "LEER: leo los dos textos y ubico el dato del Texto 2 (cinco de treinta y dos) y las ideas centrales del Texto 1. COMPRENDER: la pregunta pide ponerme en el lugar de la autora del Texto 1 y deducir cómo respondería a ese dato; no pide mi opinión ni la del estudiante. INTERPRETAR: para la profesora, el plan lector «no existe para dar gusto» y las lecturas impuestas abren puertas aunque nadie las escogería por su cuenta. REPRESENTAR: dato (pocos terminaron) → lectura desde T1: era esperable que no gustara al principio; el valor aparece después. RAZONAR: B responde desde el Texto 2; C atribuye a la profesora un juicio que no hace; D contradice su ejemplo de la novela de doscientas páginas. RESOLVER: A. VERIFICAR: cada parte de la opción A puede rastrearse en una frase del Texto 1 («no existe para dar gusto», «lugares a los que no irían solos», «les abrió una puerta»).",
     "que_identificar": "Las tesis del Texto 1 («no existe para dar gusto», «lugares a los que no irían solos») que permiten anticipar su respuesta al dato del Texto 2.",
     "que_revisar": "Relación entre textos con posturas opuestas: responder desde el punto de vista de un autor usando solo sus ideas; distinguir la propia opinión de la del texto.",
-    "refuerzo_ids": [
-      "LC-003"
-    ],
+    "refuerzo_ids": ["LC-003"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T08",
-      "texto_multiple"
-    ],
+    "etiquetas": ["texto:LC-T08", "texto_multiple"],
     "estado": "aprobada"
   }
 ]

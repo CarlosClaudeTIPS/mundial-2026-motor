@@ -17,13 +17,7 @@
       "tipo": "tabla",
       "titulo": "Relaciones alimentarias observadas en el humedal",
       "columnas": ["Organismo", "De qué se alimenta"],
-      "filas": [
-        ["Algas y plantas acuáticas", "Producen su propio alimento mediante la fotosíntesis"],
-        ["Larvas de insectos acuáticos", "Algas"],
-        ["Renacuajos", "Algas y plantas acuáticas"],
-        ["Guapuchas (peces pequeños)", "Larvas de insectos acuáticos y renacuajos"],
-        ["Garzas", "Guapuchas"]
-      ],
+      "filas": [["Algas y plantas acuáticas", "Producen su propio alimento mediante la fotosíntesis"], ["Larvas de insectos acuáticos", "Algas"], ["Renacuajos", "Algas y plantas acuáticas"], ["Guapuchas (peces pequeños)", "Larvas de insectos acuáticos y renacuajos"], ["Garzas", "Guapuchas"]],
       "nota": "Las garzas no consumen larvas ni renacuajos, porque son presas demasiado pequeñas para ellas."
     },
     "enunciado": "¿Qué cambio es más probable que ocurra en el humedal durante las semanas siguientes a la desaparición de las guapuchas?",
@@ -92,34 +86,13 @@
       "tipo": "tabla",
       "titulo": "Cuadro de Punnett del cruce Mm × Mm",
       "columnas": ["Gametos de la planta madre ↓ / Gametos de la planta padre →", "M", "m"],
-      "filas": [
-        ["M", "MM", "Mm"],
-        ["m", "Mm", "mm"]
-      ],
+      "filas": [["M", "MM", "Mm"], ["m", "Mm", "mm"]],
       "nota": "M = alelo dominante (flor morada); m = alelo recesivo (flor blanca). Cada una de las cuatro casillas representa una combinación igualmente probable."
     },
     "enunciado": "Si se toma al azar una de las plantas de flor morada de la nueva generación, ¿qué genotipo puede tener y con qué probabilidad?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "Solo puede ser MM, porque el color morado es el carácter dominante.",
-        "correcta": false,
-        "explicacion": "No responde. Que el morado sea dominante significa que basta un alelo M para que la flor sea morada; por eso tanto MM como Mm tienen flor morada. El cuadro muestra dos casillas Mm con flor morada, así que no todas las moradas son MM.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confunde fenotipo dominante con genotipo homocigoto dominante."
-      },
-      {
-        "clave": "B",
-        "texto": "Puede ser MM con probabilidad 1/3 o Mm con probabilidad 2/3, porque de las tres casillas del cuadro que dan flor morada, una es MM y dos son Mm.",
-        "correcta": true,
-        "explicacion": "Es la correcta. De las cuatro casillas, tres producen flor morada (MM, Mm, Mm) y una produce flor blanca (mm). Como la planta elegida es morada, solo cuentan las tres casillas moradas: una de ellas es MM (1/3) y dos son Mm (2/3). La proporción fenotípica 3:1 se confirma con los datos: se esperaban 90 moradas y 30 blancas, y se obtuvieron 92 y 28.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "C",
         "texto": "Puede ser MM, Mm o mm con probabilidades 1/4, 2/4 y 1/4, como muestra el cuadro completo.",
         "correcta": false,
         "explicacion": "No responde. Esas son las probabilidades para cualquier planta de la generación, pero la pregunta se refiere a una planta de flor morada. El genotipo mm produce flor blanca, así que queda excluido, y las probabilidades deben calcularse solo sobre las tres casillas moradas.",
@@ -128,13 +101,31 @@
         "razon_frecuente": "Lee correctamente el cuadro completo pero no aplica la condición del enunciado (planta de flor morada)."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "Solo puede ser Mm, porque las dos plantas progenitoras eran Mm y los hijos heredan el mismo genotipo.",
         "correcta": false,
         "explicacion": "No responde. Cada progenitor entrega solo uno de sus dos alelos en cada gameto, de modo que los hijos combinan alelos y no copian el genotipo de los padres; el cuadro lo muestra: aparecen MM, Mm y mm. Además, si todos fueran Mm no habría plantas blancas, y hubo 28.",
         "tipo_error": "conocimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Cree que la descendencia hereda el genotipo completo de los padres, sin segregación de alelos."
+      },
+      {
+        "clave": "C",
+        "texto": "Solo puede ser MM, porque el color morado es el carácter dominante.",
+        "correcta": false,
+        "explicacion": "No responde. Que el morado sea dominante significa que basta un alelo M para que la flor sea morada; por eso tanto MM como Mm tienen flor morada. El cuadro muestra dos casillas Mm con flor morada, así que no todas las moradas son MM.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde fenotipo dominante con genotipo homocigoto dominante."
+      },
+      {
+        "clave": "D",
+        "texto": "Puede ser MM con probabilidad 1/3 o Mm con probabilidad 2/3, porque de las tres casillas del cuadro que dan flor morada, una es MM y dos son Mm.",
+        "correcta": true,
+        "explicacion": "Es la correcta. De las cuatro casillas, tres producen flor morada (MM, Mm, Mm) y una produce flor blanca (mm). Como la planta elegida es morada, solo cuentan las tres casillas moradas: una de ellas es MM (1/3) y dos son Mm (2/3). La proporción fenotípica 3:1 se confirma con los datos: se esperaban 90 moradas y 30 blancas, y se obtuvieron 92 y 28.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: el cruce es Mm × Mm; el cuadro tiene cuatro casillas: MM, Mm, Mm y mm; los resultados fueron 92 moradas y 28 blancas. COMPRENDER: se pregunta por el genotipo de una planta que ya sabemos que es morada, no de una planta cualquiera. INTERPRETAR: M domina sobre m, así que MM y Mm son moradas y mm es blanca; tres casillas moradas y una blanca (3:1). REPRESENTAR: entre las moradas: MM (1 casilla), Mm (2 casillas) → 1/3 y 2/3. RAZONAR: A ignora que Mm también es morada; C incluye mm, que es blanca; D niega la segregación de alelos y contradice las 28 blancas; B condiciona correctamente sobre las casillas moradas. RESOLVER: la respuesta es B. VERIFICAR: 120 × 3/4 = 90 moradas esperadas frente a 92 observadas, lo que confirma el modelo del cuadro; y entre esas 90, unas 30 serían MM y 60 Mm, en proporción 1:2.",
@@ -164,27 +155,13 @@
       "tipo": "tabla",
       "titulo": "Corriente y brillo en cuatro circuitos con la misma pila",
       "columnas": ["Circuito", "Conexión de los bombillos", "Corriente que entrega la pila (A)", "Brillo de cada bombillo"],
-      "filas": [
-        ["1", "Un solo bombillo", 0.30, "Normal"],
-        ["2", "Dos bombillos en serie", 0.15, "Más tenue que en el circuito 1"],
-        ["3", "Dos bombillos en paralelo", 0.60, "Igual que en el circuito 1"],
-        ["4", "Tres bombillos en paralelo", 0.90, "Igual que en el circuito 1"]
-      ],
+      "filas": [["1", "Un solo bombillo", 0.3, "Normal"], ["2", "Dos bombillos en serie", 0.15, "Más tenue que en el circuito 1"], ["3", "Dos bombillos en paralelo", 0.6, "Igual que en el circuito 1"], ["4", "Tres bombillos en paralelo", 0.9, "Igual que en el circuito 1"]],
       "nota": "Se supone que la pila mantiene 9 V entre sus bornes en todos los casos."
     },
     "enunciado": "¿Cuál explicación es coherente con las corrientes y los brillos registrados en la tabla?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "En serie, la corriente de 0,30 A del bombillo solo se reparte por igual entre los dos bombillos, por eso cada uno recibe 0,15 A y brilla menos.",
-        "correcta": false,
-        "explicacion": "No responde. En un circuito en serie hay un solo camino y la misma corriente atraviesa los dos bombillos; no se 'reparte'. La corriente total baja a 0,15 A porque al poner dos bombillos en fila la resistencia total del circuito se duplica (I = V/R), y esa corriente reducida pasa completa por cada bombillo.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Cree que la corriente se divide entre los elementos en serie, en lugar de reconocer que aumenta la resistencia total."
-      },
-      {
-        "clave": "B",
         "texto": "En paralelo, cada bombillo queda conectado directamente a los 9 V de la pila, recibe 0,30 A y brilla normal, y la pila entrega la suma de las corrientes; en serie, los dos bombillos comparten los 9 V y la resistencia total se duplica, así que circula la mitad de la corriente y ambos brillan menos.",
         "correcta": true,
         "explicacion": "Es la correcta. Cada bombillo tiene una resistencia de 9 V / 0,30 A = 30 Ω. En paralelo, cada rama ve 9 V y toma 0,30 A; la pila entrega 0,60 A con dos ramas y 0,90 A con tres, como muestra la tabla, y el brillo no cambia. En serie, la resistencia total es 60 Ω y la corriente única del circuito es 9 V / 60 Ω = 0,15 A; cada bombillo recibe solo 4,5 V y brilla menos.",
@@ -193,7 +170,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "En paralelo la pila entrega más corriente porque cada bombillo adicional aporta energía al circuito.",
         "correcta": false,
         "explicacion": "No responde. Los bombillos no aportan energía: la consumen (la transforman en luz y calor). La única fuente de energía es la pila. La corriente total aumenta en paralelo porque hay más caminos de igual resistencia conectados a los mismos 9 V, no porque los bombillos 'generen' corriente.",
@@ -202,13 +179,22 @@
         "razon_frecuente": "Atribuye a los bombillos el papel de fuente en lugar de consumidores de energía."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "La corriente que entrega la pila siempre aumenta con el número de bombillos, sin importar cómo se conecten.",
         "correcta": false,
         "explicacion": "No responde. La fila del circuito 2 lo contradice: con dos bombillos en serie la corriente bajó de 0,30 A a 0,15 A. El número de bombillos no basta para predecir la corriente; hay que tener en cuenta la forma de conexión.",
         "tipo_error": "lectura_tabla",
         "diagnostico": "probable",
         "razon_frecuente": "Generaliza a partir de los circuitos en paralelo sin revisar el circuito en serie."
+      },
+      {
+        "clave": "D",
+        "texto": "En serie, la corriente de 0,30 A del bombillo solo se reparte por igual entre los dos bombillos, por eso cada uno recibe 0,15 A y brilla menos.",
+        "correcta": false,
+        "explicacion": "No responde. En un circuito en serie hay un solo camino y la misma corriente atraviesa los dos bombillos; no se 'reparte'. La corriente total baja a 0,15 A porque al poner dos bombillos en fila la resistencia total del circuito se duplica (I = V/R), y esa corriente reducida pasa completa por cada bombillo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la corriente se divide entre los elementos en serie, en lugar de reconocer que aumenta la resistencia total."
       }
     ],
     "explicacion": "LEER: misma pila de 9 V y bombillos idénticos; cuatro circuitos con corriente total y brillo registrados. COMPRENDER: se pide la explicación que sea coherente con TODAS las filas. INTERPRETAR: en serie la corriente se reduce a la mitad y el brillo baja; en paralelo la corriente total es 0,30 A por cada bombillo y el brillo se mantiene. REPRESENTAR: R de cada bombillo = 9 V / 0,30 A = 30 Ω; serie: R total = 60 Ω → I = 0,15 A; paralelo: cada rama a 9 V toma 0,30 A → I total = 0,30 × número de ramas. RAZONAR: A supone que la corriente se divide en serie, cuando es la misma en todo el circuito; C convierte los bombillos en fuentes; D contradice la fila 2; B explica las cuatro filas con la ley de Ohm y las reglas de serie y paralelo. RESOLVER: la respuesta es B. VERIFICAR: los cálculos reproducen exactamente 0,15, 0,60 y 0,90 A, y explican por qué el brillo solo cambia en la conexión en serie.",
@@ -309,39 +295,13 @@
       "tipo": "tabla",
       "titulo": "Flujo sanguíneo por órgano en reposo y en ejercicio intenso",
       "columnas": ["Órgano o tejido", "Flujo en reposo (mL/min)", "Flujo en ejercicio intenso (mL/min)"],
-      "filas": [
-        ["Músculos esqueléticos", 1000, 12500],
-        ["Aparato digestivo", 1400, 600],
-        ["Riñones", 1100, 600],
-        ["Cerebro", 750, 750],
-        ["Piel", 500, 1900],
-        ["Corazón (músculo cardíaco)", 250, 750],
-        ["Total (gasto cardíaco)", 5000, 17100]
-      ],
+      "filas": [["Músculos esqueléticos", 1000, 12500], ["Aparato digestivo", 1400, 600], ["Riñones", 1100, 600], ["Cerebro", 750, 750], ["Piel", 500, 1900], ["Corazón (músculo cardíaco)", 250, 750], ["Total (gasto cardíaco)", 5000, 17100]],
       "nota": "Valores aproximados para una persona adulta sana."
     },
     "enunciado": "¿Cómo se explica que los músculos esqueléticos reciban más de doce veces más sangre por minuto durante el ejercicio intenso que en reposo?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "El corazón bombea más sangre por minuto (de 5000 a 17 100 mL) y, al mismo tiempo, los vasos sanguíneos de los músculos se dilatan mientras los del aparato digestivo y los riñones se estrechan, de modo que el flujo se redistribuye hacia los tejidos con mayor demanda de oxígeno.",
-        "correcta": true,
-        "explicacion": "Es la correcta. Combina los dos mecanismos que muestra la tabla: el gasto cardíaco se multiplica por más de tres (mayor frecuencia y mayor volumen bombeado por latido) y, además, la sangre se reparte de otra manera: sube en músculos, piel (para eliminar calor) y corazón, y baja en digestivo y riñones, cuya actividad puede posponerse. El cerebro conserva su flujo porque no tolera una reducción de oxígeno.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "Toda la sangre adicional que reciben los músculos proviene del aparato digestivo y de los riñones, que la ceden durante el ejercicio.",
-        "correcta": false,
-        "explicacion": "No responde. Los músculos aumentan su flujo en 11 500 mL/min (de 1000 a 12 500), pero el aparato digestivo y los riñones solo reducen el suyo en 1300 mL/min en total (de 2500 a 1200). La redistribución existe, pero aporta una parte pequeña; la mayor parte del aumento viene de que el corazón bombea mucho más sangre por minuto (el total pasa de 5000 a 17 100).",
-        "tipo_error": "calculo",
-        "diagnostico": "probable",
-        "razon_frecuente": "Nota que algunos órganos reciben menos, pero no compara las magnitudes ni revisa el cambio del total."
-      },
-      {
-        "clave": "C",
         "texto": "El cerebro reduce su flujo sanguíneo para enviar más sangre a los músculos; por eso a veces se siente mareo al hacer ejercicio.",
         "correcta": false,
         "explicacion": "No responde. La tabla muestra que el cerebro recibe 750 mL/min tanto en reposo como en ejercicio: su flujo no cambia, porque las neuronas no soportan una reducción de oxígeno. La explicación contradice directamente la fila del cerebro.",
@@ -350,13 +310,31 @@
         "razon_frecuente": "Supone que todos los órganos 'no musculares' ceden sangre sin verificar la fila del cerebro."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "Durante el ejercicio el cuerpo produce más sangre, por lo que hay más volumen para repartir entre todos los órganos.",
         "correcta": false,
         "explicacion": "No responde. El volumen de sangre del cuerpo (unos 5 litros en un adulto) no aumenta en minutos; producir glóbulos rojos toma días. Lo que cambia es la velocidad con que esa misma sangre circula: el corazón la bombea más veces por minuto y con más fuerza, por eso el total por minuto pasa de 5000 a 17 100 mL.",
         "tipo_error": "conocimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Confunde el volumen total de sangre con el flujo por minuto (gasto cardíaco)."
+      },
+      {
+        "clave": "C",
+        "texto": "El corazón bombea más sangre por minuto (de 5000 a 17 100 mL) y, al mismo tiempo, los vasos sanguíneos de los músculos se dilatan mientras los del aparato digestivo y los riñones se estrechan, de modo que el flujo se redistribuye hacia los tejidos con mayor demanda de oxígeno.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Combina los dos mecanismos que muestra la tabla: el gasto cardíaco se multiplica por más de tres (mayor frecuencia y mayor volumen bombeado por latido) y, además, la sangre se reparte de otra manera: sube en músculos, piel (para eliminar calor) y corazón, y baja en digestivo y riñones, cuya actividad puede posponerse. El cerebro conserva su flujo porque no tolera una reducción de oxígeno.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Toda la sangre adicional que reciben los músculos proviene del aparato digestivo y de los riñones, que la ceden durante el ejercicio.",
+        "correcta": false,
+        "explicacion": "No responde. Los músculos aumentan su flujo en 11 500 mL/min (de 1000 a 12 500), pero el aparato digestivo y los riñones solo reducen el suyo en 1300 mL/min en total (de 2500 a 1200). La redistribución existe, pero aporta una parte pequeña; la mayor parte del aumento viene de que el corazón bombea mucho más sangre por minuto (el total pasa de 5000 a 17 100).",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Nota que algunos órganos reciben menos, pero no compara las magnitudes ni revisa el cambio del total."
       }
     ],
     "explicacion": "LEER: la tabla da el flujo por órgano en reposo y en ejercicio, y el total bombeado por minuto (5000 → 17 100 mL). COMPRENDER: se pregunta por el mecanismo que permite a los músculos pasar de 1000 a 12 500 mL/min. INTERPRETAR: el total se multiplica por 3,4; digestivo y riñones bajan; cerebro se mantiene; piel y corazón suben. REPRESENTAR: aumento en músculos = 11 500 mL/min; ahorro en digestivo + riñones = 1300 mL/min; aumento del gasto cardíaco = 12 100 mL/min. RAZONAR: B atribuye todo a la redistribución, que es solo una parte pequeña; C contradice la fila del cerebro; D confunde volumen de sangre con flujo por minuto; A combina mayor gasto cardíaco con vasodilatación en músculos y vasoconstricción en órganos que pueden esperar. RESOLVER: la respuesta es A. VERIFICAR: sumando el aumento del gasto cardíaco y la sangre desviada de digestivo y riñones se cubre el incremento de músculos, piel y corazón, en coherencia con todas las filas.",
@@ -396,15 +374,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Ambos se mueven con rapidez constante; el ciclista 1 va más rápido (5 m/s frente a 3 m/s) y alcanza al ciclista 2 a los 30 s, cuando los dos están a 150 m de la entrada.",
-        "correcta": true,
-        "explicacion": "Es la correcta. Las dos gráficas son líneas rectas, así que cada ciclista recorre la misma distancia en cada intervalo de 10 s: 50 m el ciclista 1 (5 m/s) y 30 m el ciclista 2 (3 m/s). La línea del ciclista 1 tiene mayor pendiente, es decir, mayor rapidez, y por eso, aunque salió 60 m atrás, alcanza al ciclista 2 en el punto donde las líneas se cruzan: t = 30 s y d = 150 m. Después de ese instante va adelante.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "El ciclista 2 es más rápido, porque su línea está por encima de la del ciclista 1 durante los primeros 30 segundos.",
         "correcta": false,
         "explicacion": "No responde. Que una línea esté más arriba significa que ese ciclista está más lejos de la entrada, no que vaya más rápido. La rapidez es la pendiente: el ciclista 2 avanza 30 m cada 10 s y el ciclista 1 avanza 50 m cada 10 s. El ciclista 2 iba adelante solo porque empezó con 60 m de ventaja.",
@@ -413,7 +382,7 @@
         "razon_frecuente": "Confunde la posición (altura de la línea) con la rapidez (pendiente de la línea)."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "El ciclista 1 va acelerando, porque su distancia a la entrada es cada vez mayor.",
         "correcta": false,
         "explicacion": "No responde. Que la distancia aumente solo indica que el ciclista se aleja de la entrada; para saber si acelera hay que ver si la distancia recorrida en cada intervalo crece. Aquí es siempre 50 m por cada 10 s: la línea es recta, la rapidez es constante y no hay aceleración.",
@@ -422,13 +391,22 @@
         "razon_frecuente": "Interpreta 'la distancia aumenta' como 'la rapidez aumenta'."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "A los 30 segundos los dos ciclistas se detienen, porque en ese punto las líneas se cruzan.",
         "correcta": false,
         "explicacion": "No responde. El cruce de las líneas indica que en ese instante los dos ciclistas están en el mismo lugar (150 m de la entrada), no que se detengan; después de los 30 s ambas líneas siguen subiendo. Un ciclista detenido se vería como una línea horizontal.",
         "tipo_error": "interpretacion",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Lee el punto de cruce como un evento de parada en lugar de una coincidencia de posición."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos se mueven con rapidez constante; el ciclista 1 va más rápido (5 m/s frente a 3 m/s) y alcanza al ciclista 2 a los 30 s, cuando los dos están a 150 m de la entrada.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Las dos gráficas son líneas rectas, así que cada ciclista recorre la misma distancia en cada intervalo de 10 s: 50 m el ciclista 1 (5 m/s) y 30 m el ciclista 2 (3 m/s). La línea del ciclista 1 tiene mayor pendiente, es decir, mayor rapidez, y por eso, aunque salió 60 m atrás, alcanza al ciclista 2 en el punto donde las líneas se cruzan: t = 30 s y d = 150 m. Después de ese instante va adelante.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: gráfica de distancia contra tiempo con dos líneas rectas; ciclista 1 parte de 0 m y ciclista 2 de 60 m; se registran cinco instantes. COMPRENDER: se pide describir el movimiento: rapidez de cada uno, quién es más rápido y qué significa el cruce. INTERPRETAR: en una gráfica distancia-tiempo la pendiente es la rapidez; línea recta = rapidez constante. REPRESENTAR: ciclista 1: 50 m / 10 s = 5 m/s; ciclista 2: 30 m / 10 s = 3 m/s; cruce en (30 s, 150 m). RAZONAR: B confunde altura con pendiente; C confunde alejarse con acelerar; D confunde cruce con detención; A usa correctamente la pendiente y el cruce. RESOLVER: la respuesta es A. VERIFICAR: con las ecuaciones d₁ = 5t y d₂ = 60 + 3t, la igualdad 5t = 60 + 3t da t = 30 s y d = 150 m, exactamente el punto de cruce de la gráfica.",
@@ -458,11 +436,7 @@
       "tipo": "tabla",
       "titulo": "Masa medida antes y después de la reacción en cada montaje",
       "columnas": ["Montaje", "Descripción", "Masa antes de mezclar (g)", "Masa al terminar la reacción (g)"],
-      "filas": [
-        ["A", "Vaso abierto: el bicarbonato se agrega al vinagre y se deja el vaso destapado", 150.0, 148.9],
-        ["B", "Botella cerrada: el bicarbonato está dentro de un globo ajustado a la boca de la botella y se deja caer al vinagre sin abrir el sistema", 180.0, 180.0],
-        ["C", "Igual que B, pero al terminar la reacción se retira el globo y se pesa de nuevo", 180.0, 178.9]
-      ],
+      "filas": [["A", "Vaso abierto: el bicarbonato se agrega al vinagre y se deja el vaso destapado", 150, 148.9], ["B", "Botella cerrada: el bicarbonato está dentro de un globo ajustado a la boca de la botella y se deja caer al vinagre sin abrir el sistema", 180, 180], ["C", "Igual que B, pero al terminar la reacción se retira el globo y se pesa de nuevo", 180, 178.9]],
       "nota": "En B y en C el globo se infló durante la reacción."
     },
     "enunciado": "¿Cuál explicación es coherente con los tres resultados y con la ley de conservación de la masa?",
@@ -594,14 +568,7 @@
       "tipo": "tabla",
       "titulo": "Temperatura del mar y blanqueamiento de corales en el arrecife monitoreado",
       "columnas": ["Año", "Temperatura superficial media del mar en el periodo más cálido (°C)", "Semanas consecutivas con temperatura mayor que 30 °C", "Colonias de coral blanqueadas (%)"],
-      "filas": [
-        ["2005", 30.2, 6, 45],
-        ["2010", 30.4, 8, 60],
-        ["2013", 29.1, 0, 5],
-        ["2017", 29.5, 2, 12],
-        ["2020", 29.3, 1, 8],
-        ["2023", 30.8, 10, 75]
-      ],
+      "filas": [["2005", 30.2, 6, 45], ["2010", 30.4, 8, 60], ["2013", 29.1, 0, 5], ["2017", 29.5, 2, 12], ["2020", 29.3, 1, 8], ["2023", 30.8, 10, 75]],
       "nota": "Datos construidos con fines didácticos a partir del patrón observado en arrecifes del Caribe."
     },
     "enunciado": "¿Cuál conclusión está mejor sustentada por los datos de la tabla y por la información del contexto?",
@@ -670,19 +637,22 @@
       "tipo": "tabla",
       "titulo": "Masa, volumen y comportamiento de cinco objetos en agua dulce",
       "columnas": ["Objeto", "Masa (g)", "Volumen (cm³)", "Resultado al soltarlo en el agua"],
-      "filas": [
-        ["Bloque de madera", 40, 80, "Flota"],
-        ["Bola de vidrio", 25, 10, "Se hunde"],
-        ["Vela de parafina", 45, 50, "Flota"],
-        ["Barra de plastilina", 90, 60, "Se hunde"],
-        ["Naranja con cáscara", 190, 200, "Flota"]
-      ],
+      "filas": [["Bloque de madera", 40, 80, "Flota"], ["Bola de vidrio", 25, 10, "Se hunde"], ["Vela de parafina", 45, 50, "Flota"], ["Barra de plastilina", 90, 60, "Se hunde"], ["Naranja con cáscara", 190, 200, "Flota"]],
       "nota": "Densidad del agua dulce: 1,0 g/cm³. Densidad = masa / volumen."
     },
     "enunciado": "¿Qué muestran los datos respecto a la predicción del grupo?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "La predicción no puede evaluarse, porque en la tabla no se midió la densidad de ningún objeto.",
+        "correcta": false,
+        "explicacion": "No responde. La densidad no se mide directamente: se calcula dividiendo la masa entre el volumen, y la tabla trae ambas magnitudes para cada objeto (además, la nota recuerda la fórmula). Con esos datos la predicción sí puede evaluarse.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoce que la densidad se obtiene a partir de la masa y el volumen registrados."
+      },
+      {
+        "clave": "B",
         "texto": "La predicción se cumple: los objetos con densidad menor que 1,0 g/cm³ (madera 0,5; vela 0,9; naranja 0,95) flotaron y los de densidad mayor (vidrio 2,5; plastilina 1,5) se hundieron, aunque la naranja es el objeto más pesado y el vidrio uno de los más livianos.",
         "correcta": true,
         "explicacion": "Es la correcta. Calculando masa / volumen para cada fila: madera 40/80 = 0,5; vidrio 25/10 = 2,5; vela 45/50 = 0,9; plastilina 90/60 = 1,5; naranja 190/200 = 0,95. Los tres valores menores que 1,0 corresponden a los objetos que flotaron y los dos mayores a los que se hundieron, sin excepción. Los casos de la naranja (pesada pero flota) y el vidrio (liviano pero se hunde) confirman que ni la masa ni el volumen por sí solos deciden la flotación.",
@@ -691,7 +661,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "La predicción falla, porque el objeto más pesado (la naranja, 190 g) flotó mientras que la bola de vidrio, de solo 25 g, se hundió.",
         "correcta": false,
         "explicacion": "No responde. La predicción dice explícitamente que la masa no importa, solo la densidad; el caso naranja-vidrio no la contradice, la confirma: la naranja tiene 0,95 g/cm³ (menor que 1,0) y el vidrio 2,5 g/cm³ (mayor que 1,0). Quien elige esta opción evaluó la predicción con la masa en lugar de la densidad.",
@@ -700,22 +670,13 @@
         "razon_frecuente": "Confunde 'pesado' con 'denso' y juzga la predicción con una variable que ella misma descarta."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "Los datos muestran que lo que decide la flotación es el volumen: los objetos grandes flotan y los pequeños se hunden.",
         "correcta": false,
         "explicacion": "No responde. La barra de plastilina (60 cm³) es más grande que la vela (50 cm³) y sin embargo la plastilina se hundió y la vela flotó. El volumen por sí solo no explica los cinco resultados; la densidad sí.",
         "tipo_error": "lectura_tabla",
         "diagnostico": "probable",
         "razon_frecuente": "Observa que la naranja, el objeto más grande, flota, y generaliza sin revisar la plastilina y la vela."
-      },
-      {
-        "clave": "D",
-        "texto": "La predicción no puede evaluarse, porque en la tabla no se midió la densidad de ningún objeto.",
-        "correcta": false,
-        "explicacion": "No responde. La densidad no se mide directamente: se calcula dividiendo la masa entre el volumen, y la tabla trae ambas magnitudes para cada objeto (además, la nota recuerda la fórmula). Con esos datos la predicción sí puede evaluarse.",
-        "tipo_error": "procedimiento",
-        "diagnostico": "insuficiente",
-        "razon_frecuente": "No reconoce que la densidad se obtiene a partir de la masa y el volumen registrados."
       }
     ],
     "explicacion": "LEER: predicción: flota si densidad < 1,0 g/cm³, sin importar masa ni tamaño; tabla con masa, volumen y resultado de cinco objetos. COMPRENDER: se pide decir si los datos confirman o refutan la predicción. INTERPRETAR: para evaluarla hay que calcular la densidad de cada objeto y compararla con 1,0. REPRESENTAR: madera 0,5 (flota), vidrio 2,5 (se hunde), vela 0,9 (flota), plastilina 1,5 (se hunde), naranja 0,95 (flota). RAZONAR: los cinco resultados coinciden con la regla; B usa la masa, que la predicción descarta; C usa el volumen, que falla con plastilina y vela; D ignora que la densidad se calcula; A evalúa la predicción con la variable correcta. RESOLVER: la respuesta es A. VERIFICAR: no hay ningún objeto con densidad menor que 1,0 que se haya hundido ni ninguno con densidad mayor que haya flotado, así que la predicción se cumple en todos los casos observados.",
@@ -746,24 +707,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Pasar el imán sobre la mezcla seca para retirar el hierro; agregar agua y agitar para disolver la sal; filtrar para retener la arena; y calentar el líquido filtrado en la cápsula hasta evaporar el agua y recuperar la sal.",
-        "correcta": true,
-        "explicacion": "Es la correcta. Cada paso aprovecha una propiedad que solo tiene uno de los componentes: el magnetismo del hierro (imantación), la solubilidad de la sal en agua (disolución), el tamaño de las partículas de arena no disueltas (filtración) y la diferencia de puntos de ebullición entre el agua y la sal (evaporación). Al final se tienen hierro seco, arena en el papel de filtro y sal cristalizada en la cápsula.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "Agregar agua a toda la mezcla, filtrar y evaporar el líquido filtrado: la arena y el hierro quedan juntos en el papel de filtro y la sal se recupera en la cápsula.",
-        "correcta": false,
-        "explicacion": "No responde. Este procedimiento recupera la sal, pero deja la arena y el hierro mezclados en el filtro, y la tarea exige entregar los TRES componentes por separado. Además, el hierro mojado empieza a oxidarse. Faltó usar el imán, y conviene hacerlo antes de agregar agua.",
-        "tipo_error": "procedimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Omite un paso y no verifica que el resultado cumpla la condición de separar los tres componentes."
-      },
-      {
-        "clave": "C",
         "texto": "Calentar la mezcla seca en la cápsula con el mechero hasta que la sal se funda y se separe de la arena y del hierro.",
         "correcta": false,
         "explicacion": "No responde. La sal de cocina funde a unos 800 °C, una temperatura que un mechero de laboratorio no alcanza en una cápsula con mezcla; y aunque se fundiera, quedaría empapando la arena y el hierro, no separada. La propiedad útil de la sal aquí es que se disuelve en agua, no su punto de fusión.",
@@ -772,13 +715,31 @@
         "razon_frecuente": "Confunde disolver con fundir y desconoce el punto de fusión de la sal."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "Filtrar la mezcla seca con el embudo para separar la sal, que es la de grano más fino, y luego pasar el imán por lo que quede en el filtro.",
         "correcta": false,
         "explicacion": "No responde. La filtración separa un sólido de un líquido, no sólidos secos entre sí: los granos de sal, arena y hierro son todos más grandes que los poros del papel de filtro y quedarían juntos. Sin disolver la sal en agua no hay nada que atraviese el filtro.",
         "tipo_error": "procedimiento",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Aplica la filtración a una mezcla seca sin entender qué separa ese método."
+      },
+      {
+        "clave": "C",
+        "texto": "Pasar el imán sobre la mezcla seca para retirar el hierro; agregar agua y agitar para disolver la sal; filtrar para retener la arena; y calentar el líquido filtrado en la cápsula hasta evaporar el agua y recuperar la sal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cada paso aprovecha una propiedad que solo tiene uno de los componentes: el magnetismo del hierro (imantación), la solubilidad de la sal en agua (disolución), el tamaño de las partículas de arena no disueltas (filtración) y la diferencia de puntos de ebullición entre el agua y la sal (evaporación). Al final se tienen hierro seco, arena en el papel de filtro y sal cristalizada en la cápsula.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Agregar agua a toda la mezcla, filtrar y evaporar el líquido filtrado: la arena y el hierro quedan juntos en el papel de filtro y la sal se recupera en la cápsula.",
+        "correcta": false,
+        "explicacion": "No responde. Este procedimiento recupera la sal, pero deja la arena y el hierro mezclados en el filtro, y la tarea exige entregar los TRES componentes por separado. Además, el hierro mojado empieza a oxidarse. Faltó usar el imán, y conviene hacerlo antes de agregar agua.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Omite un paso y no verifica que el resultado cumpla la condición de separar los tres componentes."
       }
     ],
     "explicacion": "LEER: mezcla seca de arena, sal y hierro; materiales: imán, agua, filtro, vaso, cápsula, mechero; propiedades: la sal se disuelve, la arena y el hierro no, solo el hierro es magnético. COMPRENDER: se pide un orden de pasos que deje los tres componentes separados y secos. INTERPRETAR: cada propiedad distinta sugiere un método: magnetismo → imán; solubilidad → agua y luego filtración; recuperar la sal disuelta → evaporación. REPRESENTAR: imán (sale el hierro) → agua (la sal se disuelve) → filtro (queda la arena) → evaporación (queda la sal). RAZONAR: B deja arena y hierro juntos; C usa un cambio de estado imposible con el mechero; D filtra sólidos secos; A usa una propiedad diferente en cada paso y separa los tres. RESOLVER: la respuesta es A. VERIFICAR: al final del procedimiento A hay tres recipientes con hierro, arena y sal secos, que es exactamente lo que pide la tarea.",
@@ -808,36 +769,13 @@
       "tipo": "tabla",
       "titulo": "Calidad del agua en cuatro puntos del acueducto veredal",
       "columnas": ["Punto de muestreo", "Turbidez (UNT)", "Coliformes (UFC por 100 mL)", "Cloro residual (mg/L)"],
-      "filas": [
-        ["Quebrada (agua cruda)", 45, 1200, 0],
-        ["Salida de la sedimentación", 12, 900, 0],
-        ["Salida de la filtración", 2, 150, 0],
-        ["Salida de la cloración (agua que va a las casas)", 2, 0, 0.8]
-      ],
+      "filas": [["Quebrada (agua cruda)", 45, 1200, 0], ["Salida de la sedimentación", 12, 900, 0], ["Salida de la filtración", 2, 150, 0], ["Salida de la cloración (agua que va a las casas)", 2, 0, 0.8]],
       "nota": "UNT: unidades nefelométricas de turbidez. UFC: unidades formadoras de colonias."
     },
     "enunciado": "Para reducir costos, un habitante propone suprimir la cloración porque 'después del filtro el agua ya sale transparente'. ¿Cuál evaluación de la propuesta es correcta según los datos?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "La propuesta es aceptable: con 2 UNT el agua ya cumple la norma de turbidez, y un agua transparente es agua potable.",
-        "correcta": false,
-        "explicacion": "No responde. Transparente no significa segura: a la salida del filtro el agua tiene 150 coliformes por 100 mL, cuando la norma exige cero. Las bacterias no se ven a simple vista y no producen turbidez; por eso un agua cristalina puede transmitir enfermedades como la diarrea infecciosa.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Iguala 'agua transparente' con 'agua potable' e ignora la columna de coliformes."
-      },
-      {
-        "clave": "B",
-        "texto": "La propuesta no es aceptable: la filtración deja el agua transparente pero todavía con 150 coliformes por 100 mL; solo la cloración los lleva a cero y deja cloro residual (0,8 mg/L) que sigue protegiendo el agua en la red, de modo que sin ella el agua transparente podría transmitir enfermedades.",
-        "correcta": true,
-        "explicacion": "Es la correcta. La tabla muestra que sedimentación y filtración resuelven la turbidez (45 → 12 → 2 UNT) pero no eliminan por completo las bacterias (1200 → 900 → 150 UFC). La cloración es la única etapa que lleva los coliformes a cero, cumpliendo la norma, y además deja cloro residual dentro del rango exigido (0,3-2,0 mg/L), que protege el agua contra una nueva contaminación mientras viaja por las tuberías. Suprimirla dejaría un agua que parece limpia pero no lo es.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "C",
         "texto": "La propuesta no es aceptable, porque la cloración es la etapa que más reduce la turbidez del agua.",
         "correcta": false,
         "explicacion": "No responde. La conclusión (no suprimir la cloración) es correcta, pero la razón es falsa: la turbidez entra a la cloración en 2 UNT y sale en 2 UNT, es decir, esa etapa no la modifica. Quienes reducen la turbidez son la sedimentación (45 → 12) y la filtración (12 → 2). El papel de la cloración es eliminar microorganismos.",
@@ -846,13 +784,31 @@
         "razon_frecuente": "Justifica la respuesta con una columna equivocada sin verificar que la turbidez no cambia en la cloración."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "La propuesta es aceptable si se alarga el tiempo de sedimentación, porque esa fue la etapa que eliminó más coliformes.",
         "correcta": false,
         "explicacion": "No responde. La sedimentación redujo los coliformes en 300 UFC (1200 → 900), la filtración en 750 (900 → 150) y la cloración eliminó todos los que quedaban (150 → 0); la sedimentación fue, de hecho, la etapa que menos bacterias retiró. Y ninguna etapa física llega a cero: sin desinfección el agua no cumple la norma.",
         "tipo_error": "calculo",
         "diagnostico": "probable",
         "razon_frecuente": "No calcula la reducción de coliformes en cada etapa y atribuye a la sedimentación un efecto que no tuvo."
+      },
+      {
+        "clave": "C",
+        "texto": "La propuesta es aceptable: con 2 UNT el agua ya cumple la norma de turbidez, y un agua transparente es agua potable.",
+        "correcta": false,
+        "explicacion": "No responde. Transparente no significa segura: a la salida del filtro el agua tiene 150 coliformes por 100 mL, cuando la norma exige cero. Las bacterias no se ven a simple vista y no producen turbidez; por eso un agua cristalina puede transmitir enfermedades como la diarrea infecciosa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Iguala 'agua transparente' con 'agua potable' e ignora la columna de coliformes."
+      },
+      {
+        "clave": "D",
+        "texto": "La propuesta no es aceptable: la filtración deja el agua transparente pero todavía con 150 coliformes por 100 mL; solo la cloración los lleva a cero y deja cloro residual (0,8 mg/L) que sigue protegiendo el agua en la red, de modo que sin ella el agua transparente podría transmitir enfermedades.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que sedimentación y filtración resuelven la turbidez (45 → 12 → 2 UNT) pero no eliminan por completo las bacterias (1200 → 900 → 150 UFC). La cloración es la única etapa que lleva los coliformes a cero, cumpliendo la norma, y además deja cloro residual dentro del rango exigido (0,3-2,0 mg/L), que protege el agua contra una nueva contaminación mientras viaja por las tuberías. Suprimirla dejaría un agua que parece limpia pero no lo es.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
     "explicacion": "LEER: tres etapas de tratamiento; tabla con turbidez, coliformes y cloro residual en cuatro puntos; norma: ≤ 2 UNT, 0 coliformes, cloro residual 0,3-2,0 mg/L. COMPRENDER: hay que evaluar si se puede eliminar la cloración usando los datos, no la apariencia del agua. INTERPRETAR: la turbidez se resuelve en la filtración (2 UNT), pero los coliformes solo llegan a cero en la cloración; el cloro residual aparece únicamente después de clorar. REPRESENTAR: reducción de coliformes por etapa: sedimentación −300, filtración −750, cloración −150 hasta 0; turbidez: −33, −10, 0. RAZONAR: A confunde transparencia con potabilidad; C da una razón que contradice la columna de turbidez; D calcula mal el aporte de la sedimentación y olvida que sin desinfección no se llega a cero; B usa las tres columnas y la norma para mostrar que la cloración es indispensable. RESOLVER: la respuesta es B. VERIFICAR: sin cloración, el agua a las casas tendría 150 UFC/100 mL y 0 mg/L de cloro residual, dos incumplimientos de la norma; con cloración cumple los tres parámetros.",

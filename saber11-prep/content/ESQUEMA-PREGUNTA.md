@@ -44,6 +44,8 @@ Cada archivo del banco es un arreglo JSON de preguntas. Todas las claves en espa
 - `habilidad`: la habilidad del eje transversal que MÁS pesa en la pregunta: `leer` | `comprender` | `interpretar` | `representar` | `razonar` | `resolver` | `verificar`.
 - `dificultad`: 1 (básica), 2 (media), 3 (alta).
 - `opciones`: exactamente 4 (Inglés partes 1-4 y 7 pueden tener 3), una sola `correcta: true`. Cada distractor DEBE tener `explicacion`, `tipo_error` (id de `tipos_error` en la taxonomía) y `diagnostico` (`probable` si la opción se construyó para un error específico; `insuficiente` si puede provenir de varias causas). El nivel `confirmado` nunca se escribe en el banco: lo asigna la plataforma cuando el estudiante explica su razonamiento.
+- La letra de la opción correcta debe variar entre preguntas (A, B, C y D por igual dentro de cada archivo, sin más de tres seguidas iguales). `npm run validar-banco` lo revisa y `node scripts/balancear-banco.mjs --aplicar` las reparte.
+- En explicaciones y razones, cita la opción por su contenido ("la opción que propone 40 °C") o como "opción X"; evita letras sueltas ("la B", "(C)", "A y D") porque impiden reordenar las opciones después.
 - `estimulo`: `null`, o uno de:
   - tabla: `{ "tipo": "tabla", "titulo": "…", "columnas": ["Año", "Ventas"], "filas": [["2020", 12], ["2021", 15]], "nota": "…" }`
   - barras: `{ "tipo": "barras", "titulo": "…", "eje_x": "Mes", "eje_y": "Litros", "series": [{ "nombre": "Ventas", "valores": [["Ene", 12], ["Feb", 15]] }] }`

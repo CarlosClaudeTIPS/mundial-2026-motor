@@ -18,15 +18,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "una consulta popular, porque una pregunta sobre un asunto de interés municipal se somete a la votación de los ciudadanos.",
-        "correcta": true,
-        "explicacion": "La consulta popular es el mecanismo mediante el cual una pregunta de carácter general sobre un asunto de trascendencia municipal es sometida por el alcalde a consideración del pueblo. El contexto describe exactamente eso: una pregunta (¿se traslada la plaza?), respondida con sí o no por los ciudadanos en las urnas, convocada por la alcaldesa.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "un cabildo abierto, porque los habitantes se reúnen con el concejo para discutir el traslado de la plaza.",
         "correcta": false,
         "explicacion": "En el cabildo abierto los habitantes participan en una sesión pública del concejo para discutir asuntos de la comunidad, pero no se vota con sí o no en las urnas. El contexto no menciona ninguna reunión con el concejo: habla de una jornada de votación, así que no describe un cabildo abierto.",
@@ -35,7 +26,7 @@
         "razon_frecuente": "Confundió deliberar públicamente sobre un asunto con decidirlo mediante el voto."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "una revocatoria del mandato, porque los vecinos están en desacuerdo con una decisión de la alcaldesa.",
         "correcta": false,
         "explicacion": "La revocatoria del mandato sirve para dar por terminado el periodo de un alcalde o gobernador, no para decidir sobre un proyecto concreto. Los vecinos del contexto no piden que la alcaldesa deje el cargo, sino que se vote el traslado de la plaza; además, la propia alcaldesa convoca la votación.",
@@ -44,16 +35,25 @@
         "razon_frecuente": "Tomó el desacuerdo con una decisión de la alcaldía por un intento de sacar a la alcaldesa del cargo."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "un referendo, porque los ciudadanos aprueban o rechazan una norma redactada por la alcaldía.",
         "correcta": false,
         "explicacion": "El referendo consiste en aprobar o rechazar un proyecto de norma jurídica, o derogar una norma vigente. En el contexto no se vota ningún texto normativo: se responde una pregunta general sobre si se hace o no el traslado. Esa diferencia (pregunta general frente a norma) es la que separa la consulta popular del referendo.",
         "tipo_error": "distractor",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Confundió consulta popular con referendo porque en ambos se vota sí o no, sin revisar si se decide sobre una norma."
+      },
+      {
+        "clave": "D",
+        "texto": "una consulta popular, porque una pregunta sobre un asunto de interés municipal se somete a la votación de los ciudadanos.",
+        "correcta": true,
+        "explicacion": "La consulta popular es el mecanismo mediante el cual una pregunta de carácter general sobre un asunto de trascendencia municipal es sometida por el alcalde a consideración del pueblo. El contexto describe exactamente eso: una pregunta (¿se traslada la plaza?), respondida con sí o no por los ciudadanos en las urnas, convocada por la alcaldesa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: el contexto dice que los vecinos reunieron firmas para que los ciudadanos decidan en las urnas, con sí o no, si se traslada la plaza, y que la alcaldesa convoca la votación. COMPRENDER: se pregunta a qué mecanismo de participación de la Constitución de 1991 corresponde esa situación. INTERPRETAR: las claves son tres: (1) se decide una pregunta general, no una norma; (2) se decide con el voto, no en una reunión; (3) no se busca sacar a nadie del cargo. REPRESENTAR: cabildo abierto = reunión pública con el concejo; referendo = votar una norma; revocatoria = terminar el mandato; consulta popular = votar una pregunta sobre un asunto de interés local. RAZONAR: la única definición que cumple las tres claves es la consulta popular. RESOLVER: opción A. VERIFICAR: releer el contexto confirma que hay pregunta, votación en las urnas y convocatoria de la alcaldesa, y no hay norma, reunión ni cargo en juego.",
+    "explicacion": "LEER: el contexto dice que los vecinos reunieron firmas para que los ciudadanos decidan en las urnas, con sí o no, si se traslada la plaza, y que la alcaldesa convoca la votación. COMPRENDER: se pregunta a qué mecanismo de participación de la Constitución de 1991 corresponde esa situación. INTERPRETAR: las claves son tres: (1) se decide una pregunta general, no una norma; (2) se decide con el voto, no en una reunión; (3) no se busca sacar a nadie del cargo. REPRESENTAR: cabildo abierto = reunión pública con el concejo; referendo = votar una norma; revocatoria = terminar el mandato; consulta popular = votar una pregunta sobre un asunto de interés local. RAZONAR: la única definición que cumple las tres claves es la consulta popular. RESOLVER: opción D. VERIFICAR: releer el contexto confirma que hay pregunta, votación en las urnas y convocatoria de la alcaldesa, y no hay norma, reunión ni cargo en juego.",
     "que_identificar": "Que lo que se somete a votación es una pregunta general (sí/no) sobre un asunto municipal, no una norma ni la continuidad de la alcaldesa, y que se decide en las urnas y no en una reunión.",
     "que_revisar": "Los mecanismos de participación del artículo 103 de la Constitución de 1991 (voto, plebiscito, referendo, consulta popular, cabildo abierto, iniciativa legislativa y revocatoria del mandato) y qué decide cada uno.",
     "refuerzo_ids": ["SOC-004", "SOC-005"],
@@ -80,11 +80,7 @@
       "tipo": "tabla",
       "titulo": "Población por zona en tres municipios (miles de habitantes)",
       "columnas": ["Municipio", "Cabecera 2005", "Cabecera 2018", "Rural 2005", "Rural 2018"],
-      "filas": [
-        ["Las Palmas", 18, 31, 22, 14],
-        ["El Retiro Alto", 6, 7, 15, 16],
-        ["Puerto Nuevo", 40, 52, 9, 10]
-      ],
+      "filas": [["Las Palmas", 18, 31, 22, 14], ["El Retiro Alto", 6, 7, 15, 16], ["Puerto Nuevo", 40, 52, 9, 10]],
       "nota": "Cabecera: zona urbana del municipio. Rural: centros poblados y población dispersa."
     },
     "enunciado": "¿En cuál municipio se observa con mayor claridad el proceso que menciona el docente y por qué?",
@@ -279,12 +275,7 @@
       "tipo": "tabla",
       "titulo": "Resultados de la consulta popular de Piedras Altas por zona",
       "columnas": ["Zona", "Votos Sí", "Votos No", "Total votantes", "Personas habilitadas"],
-      "filas": [
-        ["Cabecera municipal", 2140, 2610, 4750, 9800],
-        ["Corregimiento El Salado", 310, 1920, 2230, 3400],
-        ["Veredas del norte", 180, 1450, 1630, 2900],
-        ["Total municipio", 2630, 5980, 8610, 16100]
-      ],
+      "filas": [["Cabecera municipal", 2140, 2610, 4750, 9800], ["Corregimiento El Salado", 310, 1920, 2230, 3400], ["Veredas del norte", 180, 1450, 1630, 2900], ["Total municipio", 2630, 5980, 8610, 16100]],
       "nota": "Personas habilitadas: ciudadanos inscritos que podían votar en cada zona."
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones sobre las perspectivas de los habitantes de Piedras Altas se apoya en los resultados de la tabla?",
@@ -480,15 +471,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "El consejo comunitario y la historiadora coinciden en que la historia del hacendado debe contarse completa, pero difieren sobre si la estatua debe permanecer en el parque.",
-        "correcta": true,
-        "explicacion": "El consejo dice que 'la historia debe contarse completa' y la historiadora propone una placa que cuente 'lo que en ese momento se ocultó': ambos quieren que se conozca el pasado esclavista. Sin embargo, el consejo pide retirar la estatua (llevarla a un museo) y la historiadora pide conservarla en el parque con la placa. Coincidencia en el fin, diferencia en el medio.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "Los comerciantes y la historiadora comparten el mismo argumento, pues ambos quieren conservar la estatua para preservar la historia del pueblo.",
         "correcta": false,
         "explicacion": "Ambos llegan a la misma conclusión (conservar), pero con argumentos distintos: los comerciantes hablan de símbolo y turismo, y no proponen cambiar nada; la historiadora ve la estatua como un documento de 1920 y exige una placa que muestre lo ocultado. Tener la misma conclusión no es tener el mismo argumento.",
@@ -497,7 +479,7 @@
         "razon_frecuente": "Confundió coincidir en la conclusión con coincidir en las razones."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "El consejo comunitario niega que el hacendado haya fundado el pueblo, por lo que su postura contradice los documentos del archivo.",
         "correcta": false,
         "explicacion": "El consejo no discute la fundación; su argumento es que no se debe honrar a quien esclavizó a sus antepasados, hecho que los mismos documentos del archivo respaldan. La opción le atribuye al actor una afirmación que no hizo.",
@@ -506,16 +488,25 @@
         "razon_frecuente": "Supuso que quien pide retirar la estatua niega los hechos que la justificaron."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "La alcaldía apoya la postura de los comerciantes, ya que el cabildo abierto busca proteger la economía del turismo.",
         "correcta": false,
         "explicacion": "El texto solo dice que la alcaldía decidirá después de escuchar a todos en un cabildo abierto; no toma partido ni menciona el turismo. La opción inventa una postura y un propósito que el contexto no da.",
         "tipo_error": "comprension",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Atribuyó a la alcaldía una posición que el texto no expresa, quizá por asociar cabildo abierto con intereses económicos."
+      },
+      {
+        "clave": "D",
+        "texto": "El consejo comunitario y la historiadora coinciden en que la historia del hacendado debe contarse completa, pero difieren sobre si la estatua debe permanecer en el parque.",
+        "correcta": true,
+        "explicacion": "El consejo dice que 'la historia debe contarse completa' y la historiadora propone una placa que cuente 'lo que en ese momento se ocultó': ambos quieren que se conozca el pasado esclavista. Sin embargo, el consejo pide retirar la estatua (llevarla a un museo) y la historiadora pide conservarla en el parque con la placa. Coincidencia en el fin, diferencia en el medio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: cuatro actores: consejo comunitario (retirar; contar la historia completa en un museo), comerciantes (conservar; símbolo y turismo), historiadora (conservar con placa; la estatua es documento, la placa cuenta lo ocultado), alcaldía (escuchar en cabildo abierto y luego decidir). COMPRENDER: se pide la afirmación que describa correctamente la relación entre posturas, así que cada opción debe contrastarse con lo que cada actor dijo. INTERPRETAR: en cada postura hay que separar la conclusión (retirar/conservar) del argumento (por qué). REPRESENTAR: tabla mental: actor / conclusión / argumento. Consejo: retirar / contar la historia completa. Comerciantes: conservar / símbolo y turismo. Historiadora: conservar + placa / la estatua es documento y hay que contar lo ocultado. Alcaldía: sin postura / escuchar. RAZONAR: A: consejo e historiadora comparten el argumento de contar lo que se ocultó, pero difieren en retirar o conservar: correcto. B: misma conclusión, distinto argumento: incorrecto. C: el consejo no niega la fundación. D: la alcaldía no apoya a nadie. RESOLVER: opción A. VERIFICAR: se comprueba frase por frase que A solo afirma lo que los dos actores dijeron y no les añade nada.",
+    "explicacion": "LEER: cuatro actores: consejo comunitario (retirar; contar la historia completa en un museo), comerciantes (conservar; símbolo y turismo), historiadora (conservar con placa; la estatua es documento, la placa cuenta lo ocultado), alcaldía (escuchar en cabildo abierto y luego decidir). COMPRENDER: se pide la afirmación que describa correctamente la relación entre posturas, así que cada opción debe contrastarse con lo que cada actor dijo. INTERPRETAR: en cada postura hay que separar la conclusión (retirar/conservar) del argumento (por qué). REPRESENTAR: tabla mental: actor / conclusión / argumento. Consejo: retirar / contar la historia completa. Comerciantes: conservar / símbolo y turismo. Historiadora: conservar + placa / la estatua es documento y hay que contar lo ocultado. Alcaldía: sin postura / escuchar. RAZONAR: A: consejo e historiadora comparten el argumento de contar lo que se ocultó, pero difieren en retirar o conservar: correcto. B: misma conclusión, distinto argumento: incorrecto. C: el consejo no niega la fundación. D: la alcaldía no apoya a nadie. RESOLVER: opción D. VERIFICAR: se comprueba frase por frase que A solo afirma lo que los dos actores dijeron y no les añade nada.",
     "que_identificar": "Para cada actor, su conclusión (retirar o conservar) y el argumento que la sustenta, distinguiendo lo que dijo de lo que uno supone que piensa.",
     "que_revisar": "Cómo comparar posturas de actores: separar conclusión de argumento e interés, y verificar cada afirmación contra el texto antes de aceptarla.",
     "refuerzo_ids": ["SOC-005", "SOC-006"],
@@ -740,18 +731,22 @@
       "tipo": "tabla",
       "titulo": "Alternativas para el manejo de residuos en Loma Verde",
       "columnas": ["Alternativa", "Costo de inversión (millones de pesos)", "¿Afecta fuentes de agua?", "Aceptación de la comunidad cercana", "Empleos que genera"],
-      "filas": [
-        ["A1. Ampliar el relleno actual", 600, "Sí (quebrada La Chorrera)", "Baja", 10],
-        ["A2. Nuevo relleno en la vereda El Palmar", 850, "No", "Baja (la vereda se opone)", 25],
-        ["A3. Planta de separación y compostaje más un relleno pequeño", 880, "No", "Alta (requiere que los hogares separen residuos)", 40],
-        ["A4. Transportar la basura al relleno de la capital del departamento", 1100, "No", "Alta", 5]
-      ],
+      "filas": [["A1. Ampliar el relleno actual", 600, "Sí (quebrada La Chorrera)", "Baja", 10], ["A2. Nuevo relleno en la vereda El Palmar", 850, "No", "Baja (la vereda se opone)", 25], ["A3. Planta de separación y compostaje más un relleno pequeño", 880, "No", "Alta (requiere que los hogares separen residuos)", 40], ["A4. Transportar la basura al relleno de la capital del departamento", 1100, "No", "Alta", 5]],
       "nota": "Costo de inversión: valor único que debe pagarse para poner en marcha la alternativa."
     },
     "enunciado": "Según los criterios fijados por el concejo, ¿cuál alternativa debería elegirse y por qué?",
     "opciones": [
       {
         "clave": "A",
+        "texto": "A2, porque genera más empleo que A1 y no afecta fuentes de agua, aunque la vereda se oponga.",
+        "correcta": false,
+        "explicacion": "A2 incumple el criterio 3: la comunidad de El Palmar se opone. La opción reemplaza ese criterio por uno que el concejo no fijó (el empleo) y decide en contra de una condición obligatoria. Que cumpla el presupuesto y el criterio ambiental no compensa el incumplimiento del social.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sustituyó un criterio obligatorio por un dato atractivo de la tabla (empleos)."
+      },
+      {
+        "clave": "B",
         "texto": "A1, porque es la de menor costo y no requiere conseguir un terreno nuevo.",
         "correcta": false,
         "explicacion": "A1 cumple el criterio del presupuesto, pero incumple los otros dos: afecta la quebrada La Chorrera y tiene baja aceptación. El concejo exigió que los tres criterios se cumplieran al mismo tiempo, así que el menor costo no basta.",
@@ -760,7 +755,7 @@
         "razon_frecuente": "Decidió por un solo criterio (el económico) sin revisar los otros dos."
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "A3, porque cumple los tres criterios del concejo y además es la que más empleos genera.",
         "correcta": true,
         "explicacion": "A3 cuesta 880 millones (menos de 900), no afecta fuentes de agua y tiene alta aceptación: es la única alternativa que cumple los tres criterios a la vez. El empleo no era un criterio, pero es un beneficio adicional que refuerza la elección. La condición de que los hogares separen residuos no contradice la alta aceptación registrada.",
@@ -769,25 +764,16 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "A4, porque no afecta fuentes de agua y es la que tiene mayor aceptación sin exigir cambios a los hogares.",
         "correcta": false,
         "explicacion": "A4 cumple los criterios ambiental y social, pero cuesta 1100 millones, más que el presupuesto de 900. Al incumplir el criterio 1 queda descartada, por buenas que sean sus otras características.",
         "tipo_error": "lectura_tabla",
         "diagnostico": "probable",
         "razon_frecuente": "Revisó dos criterios y olvidó comparar el costo con el presupuesto disponible."
-      },
-      {
-        "clave": "D",
-        "texto": "A2, porque genera más empleo que A1 y no afecta fuentes de agua, aunque la vereda se oponga.",
-        "correcta": false,
-        "explicacion": "A2 incumple el criterio 3: la comunidad de El Palmar se opone. La opción reemplaza ese criterio por uno que el concejo no fijó (el empleo) y decide en contra de una condición obligatoria. Que cumpla el presupuesto y el criterio ambiental no compensa el incumplimiento del social.",
-        "tipo_error": "razonamiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Sustituyó un criterio obligatorio por un dato atractivo de la tabla (empleos)."
       }
     ],
-    "explicacion": "LEER: el concejo fijó tres criterios obligatorios y simultáneos: costo ≤ 900 millones, no afectar agua, aceptación de la comunidad. La tabla tiene cuatro alternativas con costo, efecto sobre el agua, aceptación y empleos. COMPRENDER: se pide la alternativa que debe elegirse según esos criterios, no la que parezca mejor por otras razones. INTERPRETAR: hay que verificar cada alternativa contra cada criterio; el empleo es información adicional, no criterio. REPRESENTAR: A1: costo sí / agua no / aceptación no. A2: sí / sí / no. A3: sí (880) / sí / sí. A4: no (1100) / sí / sí. RAZONAR: solo A3 tiene tres 'sí'; cada distractor elige una alternativa que falla al menos un criterio y lo justifica con un dato que no era criterio (menor costo, más aceptación, más empleo). RESOLVER: opción B. VERIFICAR: 880 < 900 se cumple; 'No' en agua; 'Alta' en aceptación. El requisito de separar residuos en los hogares es una condición de funcionamiento, no una objeción de la comunidad.",
+    "explicacion": "LEER: el concejo fijó tres criterios obligatorios y simultáneos: costo ≤ 900 millones, no afectar agua, aceptación de la comunidad. La tabla tiene cuatro alternativas con costo, efecto sobre el agua, aceptación y empleos. COMPRENDER: se pide la alternativa que debe elegirse según esos criterios, no la que parezca mejor por otras razones. INTERPRETAR: hay que verificar cada alternativa contra cada criterio; el empleo es información adicional, no criterio. REPRESENTAR: A1: costo sí / agua no / aceptación no. A2: sí / sí / no. A3: sí (880) / sí / sí. A4: no (1100) / sí / sí. RAZONAR: solo A3 tiene tres 'sí'; cada distractor elige una alternativa que falla al menos un criterio y lo justifica con un dato que no era criterio (menor costo, más aceptación, más empleo). RESOLVER: opción C. VERIFICAR: 880 < 900 se cumple; 'No' en agua; 'Alta' en aceptación. El requisito de separar residuos en los hogares es una condición de funcionamiento, no una objeción de la comunidad.",
     "que_identificar": "Los tres criterios obligatorios y el valor de cada alternativa en cada uno; el presupuesto (900 millones) como límite para la columna de costo.",
     "que_revisar": "Cómo evaluar alternativas con varios criterios simultáneos: construir una matriz alternativa × criterio y descartar toda alternativa que falle en uno, antes de considerar beneficios adicionales.",
     "refuerzo_ids": ["SOC-009", "SOC-011"],

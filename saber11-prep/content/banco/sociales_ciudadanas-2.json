@@ -3,11 +3,7 @@
     "id": "SOC-013",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "etico_politico",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -60,29 +56,17 @@
     "explicacion": "LEER: hay dos casos: Sofía quiere conocer los criterios de una beca y le niegan la información; Andrés será expulsado mañana sin descargos, a dos semanas de los exámenes. El contexto define el derecho de petición (obtener respuesta de fondo a una solicitud) y la tutela (protección inmediata de un derecho fundamental amenazado). COMPRENDER: se pide asignar a cada estudiante la herramienta adecuada y justificarla. INTERPRETAR: la clave de cada caso es distinta: Sofía necesita información; Andrés necesita evitar un daño grave e inminente a sus derechos. REPRESENTAR: petición → respuesta a una solicitud; tutela → juez protege un derecho fundamental amenazado. Sofía → petición; Andrés → tutela. RAZONAR: A usa tutela para todo (Sofía no tiene un derecho amenazado); C usa petición para todo (no detiene la expulsión de Andrés); D invierte los casos. RESOLVER: opción B. VERIFICAR: la opción B da a cada estudiante la herramienta cuya definición del contexto coincide con lo que necesita: información para Sofía, protección inmediata para Andrés.",
     "que_identificar": "Qué necesita cada estudiante (una respuesta con información o la protección urgente de un derecho) y cuál definición del contexto corresponde a esa necesidad.",
     "que_revisar": "Diferencia entre derecho de petición (art. 23) y acción de tutela (art. 86) de la Constitución de 1991: qué se pide, ante quién y en qué situaciones procede cada uno.",
-    "refuerzo_ids": [
-      "SOC-004",
-      "SOC-020"
-    ],
+    "refuerzo_ids": ["SOC-004", "SOC-020"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "derechos_fundamentales",
-      "tutela",
-      "derecho_de_peticion",
-      "gobierno_escolar"
-    ],
+    "etiquetas": ["derechos_fundamentales", "tutela", "derecho_de_peticion", "gobierno_escolar"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-014",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "etico_politico",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -97,24 +81,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "El Congreso (rama legislativa) creó la norma, la DIAN (rama ejecutiva) la aplicó y la Corte Constitucional (rama judicial) revisó si se ajustaba a la Constitución; cada una actuó dentro de su función y ninguna reemplazó a la otra.",
-        "correcta": true,
-        "explicacion": "El caso muestra la separación de funciones: hacer las leyes corresponde al Congreso; ejecutarlas y administrar (por ejemplo, cobrar impuestos) corresponde a la rama ejecutiva, de la que hace parte la DIAN; y decidir si una ley respeta la Constitución corresponde a la Corte Constitucional, órgano de la rama judicial. Cada actor hizo lo suyo y la decisión de la Corte fue acatada por la ejecutiva, lo que ilustra la colaboración armónica.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "El Presidente creó el impuesto a través de la DIAN, y el Congreso solo lo aprobó como formalidad, porque la rama ejecutiva es la que dirige la economía del país.",
-        "correcta": false,
-        "explicacion": "El texto dice que el Congreso aprobó la ley que creó el impuesto; la DIAN solo lo cobró después. Crear impuestos mediante leyes es función de la rama legislativa, no de la ejecutiva. La opción atribuye la creación de la norma a la institución equivocada.",
-        "tipo_error": "conocimiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Atribuyó al Presidente la creación de la ley porque asocia 'gobierno' con todo el poder del Estado."
-      },
-      {
-        "clave": "C",
         "texto": "La Corte Constitucional invadió la función del Congreso, porque al anular un artículo de la ley actuó como si fuera un legislador.",
         "correcta": false,
         "explicacion": "Revisar si las leyes se ajustan a la Constitución y retirar del ordenamiento las normas que la contradicen es una función propia de la Corte Constitucional (control de constitucionalidad). La Corte no escribió una ley nueva ni creó un impuesto: verificó una norma existente. Eso no es invadir la función legislativa sino ejercer la judicial.",
@@ -123,40 +89,47 @@
         "razon_frecuente": "Interpretó el control constitucional como una invasión de funciones en vez de como una tarea propia de la rama judicial."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "La asociación de tenderos ejerció la función de la rama judicial, pues fue ella quien logró que el artículo perdiera validez.",
         "correcta": false,
         "explicacion": "Los ciudadanos y las organizaciones pueden presentar demandas contra las leyes, pero quien decide es la Corte Constitucional. Según el texto, la Corte 'estudió el caso y declaró inexequible' el artículo. La opción confunde a quien presenta la demanda con quien resuelve.",
         "tipo_error": "comprension",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Confundió a quien presenta la demanda con quien decide sobre ella."
+      },
+      {
+        "clave": "C",
+        "texto": "El Congreso (rama legislativa) creó la norma, la DIAN (rama ejecutiva) la aplicó y la Corte Constitucional (rama judicial) revisó si se ajustaba a la Constitución; cada una actuó dentro de su función y ninguna reemplazó a la otra.",
+        "correcta": true,
+        "explicacion": "El caso muestra la separación de funciones: hacer las leyes corresponde al Congreso; ejecutarlas y administrar (por ejemplo, cobrar impuestos) corresponde a la rama ejecutiva, de la que hace parte la DIAN; y decidir si una ley respeta la Constitución corresponde a la Corte Constitucional, órgano de la rama judicial. Cada actor hizo lo suyo y la decisión de la Corte fue acatada por la ejecutiva, lo que ilustra la colaboración armónica.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El Presidente creó el impuesto a través de la DIAN, y el Congreso solo lo aprobó como formalidad, porque la rama ejecutiva es la que dirige la economía del país.",
+        "correcta": false,
+        "explicacion": "El texto dice que el Congreso aprobó la ley que creó el impuesto; la DIAN solo lo cobró después. Crear impuestos mediante leyes es función de la rama legislativa, no de la ejecutiva. La opción atribuye la creación de la norma a la institución equivocada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al Presidente la creación de la ley porque asocia 'gobierno' con todo el poder del Estado."
       }
     ],
-    "explicacion": "LEER: el texto narra tres acciones: el Congreso aprueba la ley del impuesto; la DIAN (rama ejecutiva) lo cobra; una asociación demanda y la Corte Constitucional declara inexequible un artículo, que la DIAN deja de aplicar. Además recuerda que las tres ramas tienen funciones separadas y colaboran armónicamente. COMPRENDER: se pide la afirmación que describa correctamente qué hizo cada rama. INTERPRETAR: legislar = Congreso; ejecutar/administrar = DIAN y Ministerio; juzgar la constitucionalidad = Corte. REPRESENTAR: legislativa → crea la norma; ejecutiva → la aplica; judicial → la revisa frente a la Constitución; ejecutiva → acata la decisión. RAZONAR: B pone la creación de la ley en la ejecutiva; C califica de invasión una función propia de la Corte; D confunde a la demandante con el juez. RESOLVER: opción A. VERIFICAR: cada oración de A corresponde a un hecho del texto y a la función que la Constitución asigna a esa rama, y la frase 'ninguna reemplazó a la otra' coincide con la idea de funciones separadas que colaboran.",
+    "explicacion": "LEER: el texto narra tres acciones: el Congreso aprueba la ley del impuesto; la DIAN (rama ejecutiva) lo cobra; una asociación demanda y la Corte Constitucional declara inexequible un artículo, que la DIAN deja de aplicar. Además recuerda que las tres ramas tienen funciones separadas y colaboran armónicamente. COMPRENDER: se pide la afirmación que describa correctamente qué hizo cada rama. INTERPRETAR: legislar = Congreso; ejecutar/administrar = DIAN y Ministerio; juzgar la constitucionalidad = Corte. REPRESENTAR: legislativa → crea la norma; ejecutiva → la aplica; judicial → la revisa frente a la Constitución; ejecutiva → acata la decisión. RAZONAR: B pone la creación de la ley en la ejecutiva; C califica de invasión una función propia de la Corte; D confunde a la demandante con el juez. RESOLVER: opción C. VERIFICAR: cada oración de A corresponde a un hecho del texto y a la función que la Constitución asigna a esa rama, y la frase 'ninguna reemplazó a la otra' coincide con la idea de funciones separadas que colaboran.",
     "que_identificar": "Qué acción realiza cada institución en el texto (aprobar, cobrar, demandar, declarar inexequible) y a qué rama pertenece cada una.",
     "que_revisar": "Ramas del poder público en la Constitución de 1991 (art. 113): funciones del Congreso, del Presidente y las entidades del Gobierno, y de la Corte Constitucional y demás órganos judiciales; diferencia entre quien demanda y quien decide.",
-    "refuerzo_ids": [
-      "SOC-001",
-      "SOC-023"
-    ],
+    "refuerzo_ids": ["SOC-001", "SOC-023"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "constitucion_1991",
-      "ramas_del_poder",
-      "organizacion_del_estado"
-    ],
+    "etiquetas": ["constitucion_1991", "ramas_del_poder", "organizacion_del_estado"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-015",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "historia_cultura",
     "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
@@ -171,15 +144,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Que la abolición se hizo reconociendo a los propietarios una compensación económica, es decir, que hasta el momento de la liberación la ley trató a las personas esclavizadas como bienes con un valor, y que los hacendados perdieron una mano de obra que ahora debían pagar con jornal.",
-        "correcta": true,
-        "explicacion": "La carta muestra tres rasgos del contexto: el hacendado espera 'bonos prometidos' (la indemnización que ordenó la ley), habla de 'el valor de lo que perdí' (las personas eran contadas como propiedad con precio) y se queja de que nadie trabaja por el jornal que puede pagar (la mano de obra pasó de ser forzada a ser asalariada). Así, la fuente se inscribe en un contexto económico en el que la libertad se concedió sin dejar de reconocer el 'derecho' de los antiguos amos a una compensación.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
         "texto": "Que la esclavitud continuó en el Cauca después de 1852, porque el hacendado sigue llamando 'mías' a las personas que trabajaban en su hacienda.",
         "correcta": false,
         "explicacion": "El hacendado escribe 'hasta diciembre eran mías' y dice que 'se me han ido': reconoce que desde enero de 1852 esas personas ya no le pertenecen y que se marcharon. La carta prueba lo contrario de lo que afirma la opción: la ley se estaba aplicando.",
@@ -188,7 +152,7 @@
         "razon_frecuente": "No leyó 'hasta diciembre' y tomó la expresión del hacendado como prueba de que la esclavitud seguía."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "Que la ley de 1851 fue innecesaria, porque desde 1821 los hijos de esclavas ya nacían libres y para 1852 casi no quedaban personas esclavizadas.",
         "correcta": false,
         "explicacion": "La ley de 1821 solo liberó a los nacidos después de esa fecha, y aun así los obligaba a servir hasta los 18 años; quienes ya eran esclavos siguieron siéndolo. La propia carta habla de doce personas liberadas en una sola hacienda en 1852, lo que muestra que la esclavitud seguía existiendo hasta la ley de 1851.",
@@ -197,41 +161,38 @@
         "razon_frecuente": "Confundió la libertad de vientres (parcial y gradual) con la abolición total, y no tuvo en cuenta que la carta habla de doce personas liberadas."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "Que el hacendado apoyaba la abolición, porque acepta que las personas se fueron y solo reclama el pago que le prometieron.",
         "correcta": false,
         "explicacion": "Aceptar que la ley se cumplió no es apoyarla. El tono de la carta ('exijo', 'lo que perdí', queja por el jornal) muestra a alguien que se siente perjudicado y reclama su compensación, no a un partidario de la abolición. La opción infiere una actitud que el texto no expresa.",
         "tipo_error": "inferencia",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Interpretó la aceptación forzada de la ley como apoyo a ella."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la abolición se hizo reconociendo a los propietarios una compensación económica, es decir, que hasta el momento de la liberación la ley trató a las personas esclavizadas como bienes con un valor, y que los hacendados perdieron una mano de obra que ahora debían pagar con jornal.",
+        "correcta": true,
+        "explicacion": "La carta muestra tres rasgos del contexto: el hacendado espera 'bonos prometidos' (la indemnización que ordenó la ley), habla de 'el valor de lo que perdí' (las personas eran contadas como propiedad con precio) y se queja de que nadie trabaja por el jornal que puede pagar (la mano de obra pasó de ser forzada a ser asalariada). Así, la fuente se inscribe en un contexto económico en el que la libertad se concedió sin dejar de reconocer el 'derecho' de los antiguos amos a una compensación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
       }
     ],
-    "explicacion": "LEER: el contexto da dos hitos (libertad de vientres en 1821; abolición total con indemnización a propietarios en 1851, vigente desde el 1.º de enero de 1852) y una carta de marzo de 1852 en la que un hacendado reclama bonos por doce personas que 'hasta diciembre eran mías' y se queja de que nadie trabaja por su jornal. COMPRENDER: se pide qué permite comprender la carta sobre el contexto de aplicación de la abolición, es decir, inscribir la fuente en su momento económico y político. INTERPRETAR: los bonos corresponden a la indemnización de la ley; 'el valor de lo que perdí' revela que las personas eran tratadas como propiedad con precio; la queja por el jornal revela el paso del trabajo forzado al trabajo pagado. REPRESENTAR: ley 1851 → libertad + indemnización → hacendado pierde 'propiedad' y mano de obra gratuita → reclama bonos y se queja del jornal. RAZONAR: B contradice 'hasta diciembre'; C ignora que la ley de 1821 fue gradual y que la carta menciona doce personas liberadas; D convierte una queja en apoyo. RESOLVER: opción A. VERIFICAR: cada elemento de A (compensación, personas contadas como bienes, mano de obra ahora pagada) se apoya en una frase concreta de la carta y en la información del contexto sobre la ley.",
+    "explicacion": "LEER: el contexto da dos hitos (libertad de vientres en 1821; abolición total con indemnización a propietarios en 1851, vigente desde el 1.º de enero de 1852) y una carta de marzo de 1852 en la que un hacendado reclama bonos por doce personas que 'hasta diciembre eran mías' y se queja de que nadie trabaja por su jornal. COMPRENDER: se pide qué permite comprender la carta sobre el contexto de aplicación de la abolición, es decir, inscribir la fuente en su momento económico y político. INTERPRETAR: los bonos corresponden a la indemnización de la ley; 'el valor de lo que perdí' revela que las personas eran tratadas como propiedad con precio; la queja por el jornal revela el paso del trabajo forzado al trabajo pagado. REPRESENTAR: ley 1851 → libertad + indemnización → hacendado pierde 'propiedad' y mano de obra gratuita → reclama bonos y se queja del jornal. RAZONAR: B contradice 'hasta diciembre'; C ignora que la ley de 1821 fue gradual y que la carta menciona doce personas liberadas; D convierte una queja en apoyo. RESOLVER: opción D. VERIFICAR: cada elemento de A (compensación, personas contadas como bienes, mano de obra ahora pagada) se apoya en una frase concreta de la carta y en la información del contexto sobre la ley.",
     "que_identificar": "Las tres frases clave de la carta (bonos prometidos, 'lo que perdí', el jornal) y su relación con la disposición de la ley de 1851 sobre indemnizar a los propietarios.",
     "que_revisar": "Proceso de abolición de la esclavitud en Colombia: ley de libertad de vientres (1821) y ley de abolición (1851, vigente desde 1852) con indemnización a los propietarios; cómo leer una fuente primaria ubicándola en su contexto.",
-    "refuerzo_ids": [
-      "SOC-006",
-      "SOC-019"
-    ],
+    "refuerzo_ids": ["SOC-006", "SOC-019"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "fuentes_historicas",
-      "abolicion_esclavitud",
-      "memoria_historica",
-      "siglo_xix"
-    ],
+    "etiquetas": ["fuentes_historicas", "abolicion_esclavitud", "memoria_historica", "siglo_xix"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-016",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
@@ -244,43 +205,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Zonas de Puerto Amparo y propuesta del nuevo POT",
-      "columnas": [
-        "Zona",
-        "Altura sobre el nivel del río (m)",
-        "Veces que se inundó entre 2015 y 2024",
-        "Viviendas actuales",
-        "Uso propuesto en el nuevo POT"
-      ],
-      "filas": [
-        [
-          "La Playita",
-          1,
-          7,
-          320,
-          "Protección: reubicar viviendas y sembrar bosque de ribera"
-        ],
-        [
-          "Centro",
-          6,
-          1,
-          1850,
-          "Vivienda y comercio"
-        ],
-        [
-          "Loma del Sol",
-          14,
-          0,
-          640,
-          "Vivienda: nuevos barrios"
-        ],
-        [
-          "Vega Baja",
-          2,
-          5,
-          90,
-          "Agrícola (cultivos de ciclo corto); no se permiten viviendas"
-        ]
-      ],
+      "columnas": ["Zona", "Altura sobre el nivel del río (m)", "Veces que se inundó entre 2015 y 2024", "Viviendas actuales", "Uso propuesto en el nuevo POT"],
+      "filas": [["La Playita", 1, 7, 320, "Protección: reubicar viviendas y sembrar bosque de ribera"], ["Centro", 6, 1, 1850, "Vivienda y comercio"], ["Loma del Sol", 14, 0, 640, "Vivienda: nuevos barrios"], ["Vega Baja", 2, 5, 90, "Agrícola (cultivos de ciclo corto); no se permiten viviendas"]],
       "nota": "La Playita fue ocupada a partir de 1998 por familias que llegaron desplazadas de zonas rurales y construyeron sin licencia."
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones relaciona correctamente las características del espacio con la propuesta del POT?",
@@ -325,29 +251,17 @@
     "explicacion": "LEER: el POT debe identificar áreas con amenazas y restringir viviendas en las de alto riesgo. La tabla da, por zona, altura sobre el río, número de inundaciones en diez años, viviendas y uso propuesto; la nota explica el origen de La Playita. COMPRENDER: se pide la afirmación que relacione correctamente las características del espacio (altura, inundaciones) con lo que propone el POT. INTERPRETAR: a menor altura, más inundaciones: 1 m → 7; 2 m → 5; 6 m → 1; 14 m → 0. REPRESENTAR: zonas bajas e inundables (La Playita, Vega Baja) → sin viviendas (protección, agricultura); zona alta y seca (Loma del Sol) → nuevos barrios; Centro (riesgo bajo) → se mantiene. RAZONAR: B usa la nota como causa; C iguala Centro y La Playita por una sola inundación; D confunde pocas viviendas con terreno apto. RESOLVER: opción A. VERIFICAR: A describe exactamente lo que dice la columna 'uso propuesto' y lo justifica con las columnas de altura e inundaciones, que es la relación espacio-problema que pide el enunciado.",
     "que_identificar": "La relación entre la altura sobre el río y el número de inundaciones de cada zona, y cómo el uso propuesto responde a esa relación.",
     "que_revisar": "Qué es un plan de ordenamiento territorial y por qué incorpora la gestión del riesgo; lectura de tablas comparando varias columnas a la vez y sin tomar la nota al pie como causa principal.",
-    "refuerzo_ids": [
-      "SOC-009",
-      "SOC-021"
-    ],
+    "refuerzo_ids": ["SOC-009", "SOC-021"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "ordenamiento_territorial",
-      "gestion_del_riesgo",
-      "inundaciones",
-      "tabla"
-    ],
+    "etiquetas": ["ordenamiento_territorial", "gestion_del_riesgo", "inundaciones", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-017",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
@@ -400,29 +314,17 @@
     "explicacion": "LEER: cuatro actores opinan sobre una quebrada que en verano no alcanza para el acueducto y para la empresa: junta (prioridad al consumo humano; suspender la concesión), empresa (permiso legal, empleos; construir reservorio), autoridad ambiental (concesión basada en caudal promedio; medir y ajustar para garantizar un mínimo al acueducto), jóvenes (trabajan en la empresa y sus familias necesitan agua; mesa con todos). COMPRENDER: se pide la afirmación que relacione correctamente cada perspectiva con la solución que propone. INTERPRETAR: en cada actor hay que separar el interés (qué protege), el hecho que reconoce y la solución que propone. REPRESENTAR: tabla mental actor / interés / solución: junta / agua para las familias / suspender; empresa / producción y empleo / reservorio; autoridad / garantizar el recurso a todos / ajustar; jóvenes / empleo y agua / mesa. RAZONAR: B atribuye a la empresa una negación que no hace; C reduce a los jóvenes a un solo rol; D confunde ajustar con suspender. RESOLVER: opción A. VERIFICAR: A solo afirma lo que cada actor dijo y describe la solución de la autoridad como intermedia, lo cual coincide con 'ajustar la concesión para garantizar un caudal mínimo'.",
     "que_identificar": "Para cada actor, el interés que defiende y la solución concreta que propone (suspender, reservorio, ajustar, mesa), sin atribuirle intenciones que no expresó.",
     "que_revisar": "Cómo analizar un conflicto por un recurso: identificar actores, intereses y propuestas; diferencia entre reconocer un problema y estar de acuerdo con una solución; qué es una concesión de aguas.",
-    "refuerzo_ids": [
-      "SOC-005",
-      "SOC-008"
-    ],
+    "refuerzo_ids": ["SOC-005", "SOC-008"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "agua",
-      "actores_sociales",
-      "conflicto_ambiental",
-      "concesion_de_aguas"
-    ],
+    "etiquetas": ["agua", "actores_sociales", "conflicto_ambiental", "concesion_de_aguas"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-018",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "historia_cultura",
     "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
@@ -475,30 +377,17 @@
     "explicacion": "LEER: una publicación viral usa una foto con la leyenda 'casa de la cultura en 1910' para defender el edificio; la estudiante encuentra en el archivo que (1) la foto es de una casa cural de otro municipio en 1952, (2) la casa de la cultura de San Isidro es de un piso y su foto más antigua es de 1938, y (3) fue comprada en 1961 para biblioteca. COMPRENDER: se pregunta qué muestra la verificación sobre el uso de la foto, es decir, si la fuente sirve para el argumento. INTERPRETAR: la foto no corresponde ni al edificio ni a la fecha; las demás fuentes sí hablan del edificio, pero desde 1938. REPRESENTAR: fuente de la publicación → otro lugar, otra fecha → no sirve; fuentes del archivo → edificio real, desde 1938 y 1961 → sí sirven. RAZONAR: B salta de 'prueba falsa' a 'afirmación falsa'; C confunde 'antigua' con '1910'; D infiere una intención que los datos no muestran. RESOLVER: opción A. VERIFICAR: A distingue lo que la verificación sí establece (la foto no sirve) de lo que deja abierto (la historia del edificio, documentable con otras fuentes), que es justamente lo que se necesita para deliberar con información confiable.",
     "que_identificar": "Qué dice cada hallazgo del archivo sobre la foto (lugar y fecha reales) y sobre el edificio (fecha más antigua documentada), y qué no dice (la intención de quien publicó).",
     "que_revisar": "Cómo verificar una imagen o noticia (origen, fecha, contraste con archivos); diferencia entre invalidar una fuente e invalidar un argumento; deliberación ciudadana con información verificada.",
-    "refuerzo_ids": [
-      "SOC-006",
-      "SOC-008"
-    ],
+    "refuerzo_ids": ["SOC-006", "SOC-008"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "fuentes_historicas",
-      "noticias_falsas",
-      "verificacion",
-      "patrimonio",
-      "deliberacion"
-    ],
+    "etiquetas": ["fuentes_historicas", "noticias_falsas", "verificacion", "patrimonio", "deliberacion"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-019",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S2",
     "componente": "historia_cultura",
     "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
@@ -551,29 +440,17 @@
     "explicacion": "LEER: el contexto explica La Violencia, el gobierno militar de 1953-1957, el plebiscito de 1957 y las reglas del Frente Nacional (alternación cada cuatro años y reparto de cargos entre liberales y conservadores, 1958-1974). El historiador 1 destaca paz, poder civil y estabilidad; la historiadora 2 destaca el cierre de la competencia política, la búsqueda de caminos por fuera de las instituciones y la abstención. COMPRENDER: se pide la afirmación que compare correctamente las dos perspectivas. INTERPRETAR: hay que separar hechos (qué pasó) de valoraciones (qué importa más) en cada historiador. REPRESENTAR: hechos compartidos: pacto bipartidista, fin de la violencia entre los dos partidos, elecciones con solo dos opciones de gobierno. Valoración 1: éxito por la paz y la estabilidad. Valoración 2: problema por la exclusión y sus efectos. RAZONAR: B le atribuye a la historiadora 2 una negación que no hace; C toma partido y no compara; D inventa afirmaciones sobre las elecciones. RESOLVER: opción A. VERIFICAR: A no dice que uno tenga razón, no añade hechos que no estén en el texto y ubica la diferencia donde realmente está: en los efectos que cada uno decide poner en el centro de su evaluación.",
     "que_identificar": "En cada perspectiva, qué hechos reconoce y qué efectos del Frente Nacional valora como más importantes; y qué no dice cada historiador.",
     "que_revisar": "El Frente Nacional (1958-1974): antecedentes (La Violencia, gobierno militar), plebiscito de 1957, alternación y paridad; cómo comparar interpretaciones históricas distinguiendo hechos de valoraciones.",
-    "refuerzo_ids": [
-      "SOC-008",
-      "SOC-015"
-    ],
+    "refuerzo_ids": ["SOC-008", "SOC-015"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "frente_nacional",
-      "siglo_xx",
-      "perspectivas_historicas",
-      "la_violencia"
-    ],
+    "etiquetas": ["frente_nacional", "siglo_xx", "perspectivas_historicas", "la_violencia"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-020",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S1",
     "componente": "etico_politico",
     "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
@@ -588,6 +465,15 @@
     "opciones": [
       {
         "clave": "A",
+        "texto": "La queja 1 al personero, porque los computadores son un derecho de los estudiantes; la queja 2 al contralor, porque debe controlar que los profesores no abusen de su poder.",
+        "correcta": false,
+        "explicacion": "Invierte las figuras. El manual asigna al contralor el control sobre recursos y bienes (como los computadores comprados con el fondo) y al personero las quejas sobre derechos (como una sanción sin ser escuchada). 'Control' en el nombre del contralor se refiere a los recursos, no a la conducta de los profesores.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asignó las figuras por asociaciones sueltas ('derecho', 'control') sin distinguir recursos de derechos."
+      },
+      {
+        "clave": "B",
         "texto": "La queja 1 al contralor, que puede pedir información sobre ese gasto y presentar observaciones; la queja 2 al personero, que puede evaluar la queja y presentar una solicitud al rector para que se respete el derecho de la estudiante.",
         "correcta": true,
         "explicacion": "La queja 1 trata del uso de recursos del colegio (dinero del fondo, computadores), que es el campo del contralor según el manual: pedir información y presentar observaciones. La queja 2 trata de una sanción impuesta sin escuchar a la estudiante, es decir, de una posible lesión a sus derechos, que es el campo del personero: evaluar la queja y presentar solicitudes al rector. Las acciones descritas son exactamente las que el manual les permite.",
@@ -596,7 +482,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "B",
+        "clave": "C",
         "texto": "Ambas quejas al personero, porque es el único representante de los estudiantes que puede intervenir ante el rector.",
         "correcta": false,
         "explicacion": "El manual dice que el contralor también puede presentar observaciones a la rectoría y al consejo directivo, y que su campo es el uso de los recursos, que es de lo que trata la queja 1. Enviar todo al personero ignora la división de funciones que describe el manual.",
@@ -605,50 +491,29 @@
         "razon_frecuente": "Consideró al personero como el único representante estudiantil sin leer las funciones del contralor."
       },
       {
-        "clave": "C",
+        "clave": "D",
         "texto": "La queja 1 al contralor, que debe ordenar que los computadores se devuelvan al laboratorio; la queja 2 al personero, que debe anular la sanción.",
         "correcta": false,
         "explicacion": "Asigna bien las figuras pero les atribuye poderes que el manual les niega expresamente: el contralor 'no ordena ni autoriza gastos' y el personero 'no impone sanciones ni toma decisiones administrativas'. Ninguno de los dos puede ordenar ni anular; solo pueden pedir información, evaluar quejas y presentar solicitudes u observaciones.",
         "tipo_error": "conocimiento",
         "diagnostico": "probable",
         "razon_frecuente": "Atribuyó a las dos figuras poder de decisión, cuando el manual dice que solo pueden pedir información, evaluar quejas y presentar solicitudes u observaciones."
-      },
-      {
-        "clave": "D",
-        "texto": "La queja 1 al personero, porque los computadores son un derecho de los estudiantes; la queja 2 al contralor, porque debe controlar que los profesores no abusen de su poder.",
-        "correcta": false,
-        "explicacion": "Invierte las figuras. El manual asigna al contralor el control sobre recursos y bienes (como los computadores comprados con el fondo) y al personero las quejas sobre derechos (como una sanción sin ser escuchada). 'Control' en el nombre del contralor se refiere a los recursos, no a la conducta de los profesores.",
-        "tipo_error": "comprension",
-        "diagnostico": "insuficiente",
-        "razon_frecuente": "Asignó las figuras por asociaciones sueltas ('derecho', 'control') sin distinguir recursos de derechos."
       }
     ],
-    "explicacion": "LEER: el manual define al personero (derechos y deberes; recibe y evalúa quejas; presenta solicitudes; no sanciona ni decide) y al contralor (recursos y bienes; pide información; presenta observaciones; no ordena ni autoriza gastos). Llegan dos quejas: computadores del fondo que no llegaron al laboratorio, y una sanción impuesta sin escuchar a la estudiante. COMPRENDER: se pide asignar cada queja a la figura correcta y decir qué puede hacer según el manual. INTERPRETAR: la queja 1 es sobre recursos; la queja 2 es sobre un derecho (ser escuchada, debido proceso). REPRESENTAR: recursos → contralor → pedir información y observar; derechos → personero → evaluar y solicitar. RAZONAR: B envía todo al personero; C acierta en las figuras pero les da poder de decisión que el manual niega; D invierte las figuras. RESOLVER: opción A. VERIFICAR: cada acción de A ('pedir información y presentar observaciones', 'evaluar la queja y presentar una solicitud al rector') está escrita literalmente en el manual para la figura correspondiente.",
+    "explicacion": "LEER: el manual define al personero (derechos y deberes; recibe y evalúa quejas; presenta solicitudes; no sanciona ni decide) y al contralor (recursos y bienes; pide información; presenta observaciones; no ordena ni autoriza gastos). Llegan dos quejas: computadores del fondo que no llegaron al laboratorio, y una sanción impuesta sin escuchar a la estudiante. COMPRENDER: se pide asignar cada queja a la figura correcta y decir qué puede hacer según el manual. INTERPRETAR: la queja 1 es sobre recursos; la queja 2 es sobre un derecho (ser escuchada, debido proceso). REPRESENTAR: recursos → contralor → pedir información y observar; derechos → personero → evaluar y solicitar. RAZONAR: B envía todo al personero; C acierta en las figuras pero les da poder de decisión que el manual niega; D invierte las figuras. RESOLVER: opción B. VERIFICAR: cada acción de A ('pedir información y presentar observaciones', 'evaluar la queja y presentar una solicitud al rector') está escrita literalmente en el manual para la figura correspondiente.",
     "que_identificar": "De qué trata cada queja (recursos o derechos) y qué acciones concretas permite el manual a cada figura, incluidas las que prohíbe.",
     "que_revisar": "Órganos y figuras del gobierno escolar (personero, contralor estudiantil, consejo estudiantil, consejo directivo, comité de convivencia) y la diferencia entre proponer o vigilar y decidir o sancionar.",
-    "refuerzo_ids": [
-      "SOC-007",
-      "SOC-013"
-    ],
+    "refuerzo_ids": ["SOC-007", "SOC-013"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "gobierno_escolar",
-      "personero",
-      "contralor_estudiantil",
-      "afirmacion_por_verificar"
-    ],
+    "etiquetas": ["gobierno_escolar", "personero", "contralor_estudiantil", "afirmacion_por_verificar"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-021",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -664,56 +529,8 @@
       "eje_x": "Rubro",
       "eje_y": "Millones de pesos",
       "series": [
-        {
-          "nombre": "2016",
-          "valores": [
-            [
-              "Pavimentación de vías",
-              400
-            ],
-            [
-              "Drenajes y alcantarillado",
-              90
-            ],
-            [
-              "Protección de nacimientos de agua y reforestación",
-              40
-            ],
-            [
-              "Fiestas y eventos",
-              120
-            ],
-            [
-              "Deporte y cultura",
-              150
-            ]
-          ]
-        },
-        {
-          "nombre": "2026",
-          "valores": [
-            [
-              "Pavimentación de vías",
-              220
-            ],
-            [
-              "Drenajes y alcantarillado",
-              230
-            ],
-            [
-              "Protección de nacimientos de agua y reforestación",
-              170
-            ],
-            [
-              "Fiestas y eventos",
-              60
-            ],
-            [
-              "Deporte y cultura",
-              120
-            ]
-          ]
-        }
+        { "nombre": "2016", "valores": [["Pavimentación de vías", 400], ["Drenajes y alcantarillado", 90], ["Protección de nacimientos de agua y reforestación", 40], ["Fiestas y eventos", 120], ["Deporte y cultura", 150]] },
+        { "nombre": "2026", "valores": [["Pavimentación de vías", 220], ["Drenajes y alcantarillado", 230], ["Protección de nacimientos de agua y reforestación", 170], ["Fiestas y eventos", 60], ["Deporte y cultura", 120]] }
       ]
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones analiza adecuadamente el cambio en las decisiones de la comunidad frente al problema climático descrito?",
@@ -758,29 +575,17 @@
     "explicacion": "LEER: el contexto describe más días de lluvia intensa (de 4 a 9 por año), veranos más largos (de 2 a casi 4 meses), inundaciones y racionamiento; el gráfico compara cinco rubros en 2016 y 2026 con el mismo total. COMPRENDER: se pide la afirmación que analice adecuadamente el cambio de prioridades en relación con ese problema. INTERPRETAR: calcular las diferencias por rubro: pavimentación -180, drenajes +140, nacimientos +130, fiestas -60, deporte y cultura -30. REPRESENTAR: problema (inundaciones, sequías) → rubros que lo atienden (drenajes, nacimientos) crecen → rubros que no lo atienden (vías, fiestas) bajan, porque el total es fijo. RAZONAR: B cree que la medida local cambia la lluvia; C inventa que las vías se acabaron; D exagera un cambio pequeño y opina. RESOLVER: opción A. VERIFICAR: A se apoya en los cuatro rubros que más cambiaron, conecta cada aumento con un problema del contexto y reconoce el costo en las otras dimensiones, que es lo que exige un análisis de efectos de una intervención.",
     "que_identificar": "La diferencia de cada rubro entre 2016 y 2026, cuáles crecieron y cuáles bajaron, y qué problema del contexto atiende cada rubro que creció.",
     "que_revisar": "Diferencia entre mitigación (reducir las causas del cambio climático) y adaptación (reducir sus efectos); presupuesto participativo; lectura de gráficos de barras con dos series comparando cambios rubro por rubro.",
-    "refuerzo_ids": [
-      "SOC-009",
-      "SOC-016"
-    ],
+    "refuerzo_ids": ["SOC-009", "SOC-016"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "cambio_climatico",
-      "presupuesto_participativo",
-      "adaptacion",
-      "barras"
-    ],
+    "etiquetas": ["cambio_climatico", "presupuesto_participativo", "adaptacion", "barras"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-022",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "espacio_territorio_ambiente",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -793,60 +598,14 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Jóvenes de 18 a 28 años que trabajan en Río Manso, por zona",
-      "columnas": [
-        "Zona",
-        "Jóvenes que trabajan",
-        "Con empleo formal (%)",
-        "Ingreso mensual promedio (miles de pesos)",
-        "Terminaron el bachillerato (%)"
-      ],
-      "filas": [
-        [
-          "Cabecera municipal",
-          3000,
-          50,
-          1400,
-          80
-        ],
-        [
-          "Centros poblados",
-          1200,
-          25,
-          950,
-          55
-        ],
-        [
-          "Rural disperso",
-          1800,
-          10,
-          700,
-          35
-        ]
-      ],
+      "columnas": ["Zona", "Jóvenes que trabajan", "Con empleo formal (%)", "Ingreso mensual promedio (miles de pesos)", "Terminaron el bachillerato (%)"],
+      "filas": [["Cabecera municipal", 3000, 50, 1400, 80], ["Centros poblados", 1200, 25, 950, 55], ["Rural disperso", 1800, 10, 700, 35]],
       "nota": "Los porcentajes se calculan sobre los jóvenes que trabajan en cada zona."
     },
     "enunciado": "¿Cuál de las siguientes afirmaciones establece una relación entre las dimensiones del problema que se apoya en la tabla?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "La informalidad juvenil es más alta donde menos jóvenes terminan el bachillerato y donde los ingresos son menores; además, más de la mitad de los jóvenes con empleo informal del municipio (unos 2500 de 4000) viven fuera de la cabecera, así que un programa concentrado en la cabecera dejaría por fuera a la mayoría de ellos.",
-        "correcta": true,
-        "explicacion": "Las tres variables se mueven juntas de la cabecera al campo: la formalidad baja (50 %, 25 %, 10 %), el ingreso baja (1400, 950, 700) y la terminación del bachillerato baja (80 %, 55 %, 35 %). En número de personas, los informales son 1500 en la cabecera (50 % de 3000), 900 en centros poblados (75 % de 1200) y 1620 en el rural disperso (90 % de 1800): 2520 de 4020 están fuera de la cabecera. La afirmación relaciona la dimensión educativa, la económica y la espacial y saca una consecuencia correcta para el diseño del programa.",
-        "tipo_error": null,
-        "diagnostico": null,
-        "razon_frecuente": null
-      },
-      {
-        "clave": "B",
-        "texto": "La cabecera concentra el mayor número de jóvenes informales del municipio, porque allí trabaja la mayor cantidad de jóvenes.",
-        "correcta": false,
-        "explicacion": "La cabecera tiene más jóvenes trabajando, pero la mitad de ellos son formales: 1500 informales. En las otras dos zonas, aunque hay menos jóvenes, casi todos son informales: 900 + 1620 = 2520. La opción confunde el tamaño de la base con la cantidad de informales y no hace el cálculo.",
-        "tipo_error": "calculo",
-        "diagnostico": "probable",
-        "razon_frecuente": "Supuso que la zona con más jóvenes trabajando tiene también más informales, sin calcular el número en cada zona (50 % de 3000 = 1500 frente a 900 + 1620 = 2520)."
-      },
-      {
-        "clave": "C",
         "texto": "Terminar el bachillerato garantiza conseguir empleo formal, porque en la cabecera el 80 % lo terminó y allí está la mayor formalidad.",
         "correcta": false,
         "explicacion": "Los datos muestran una asociación (más bachilleres, más formalidad), no una garantía: en la cabecera el 80 % terminó el bachillerato pero solo el 50 % tiene empleo formal, así que al menos 3 de cada 10 jóvenes terminaron el bachillerato y aun así trabajan de manera informal. La opción generaliza más allá de lo que la tabla permite.",
@@ -855,41 +614,47 @@
         "razon_frecuente": "Convirtió una asociación entre dos variables en una garantía, sin notar que en la cabecera hay muchos bachilleres sin empleo formal."
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "Los jóvenes de la zona rural dispersa prefieren el empleo informal porque les permite trabajar en sus propias fincas sin depender de un patrón.",
         "correcta": false,
         "explicacion": "La tabla no registra preferencias ni el tipo de actividad; solo formalidad, ingresos y educación. Además, los ingresos rurales son los más bajos (700 mil), lo que no sugiere una elección ventajosa. La opción explica los datos con una idea externa en lugar de relacionar las variables que sí aparecen.",
         "tipo_error": "inferencia",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Explicó los datos con una preferencia que la tabla no registra, en vez de relacionar las variables que sí aparecen."
+      },
+      {
+        "clave": "C",
+        "texto": "La informalidad juvenil es más alta donde menos jóvenes terminan el bachillerato y donde los ingresos son menores; además, más de la mitad de los jóvenes con empleo informal del municipio (unos 2500 de 4000) viven fuera de la cabecera, así que un programa concentrado en la cabecera dejaría por fuera a la mayoría de ellos.",
+        "correcta": true,
+        "explicacion": "Las tres variables se mueven juntas de la cabecera al campo: la formalidad baja (50 %, 25 %, 10 %), el ingreso baja (1400, 950, 700) y la terminación del bachillerato baja (80 %, 55 %, 35 %). En número de personas, los informales son 1500 en la cabecera (50 % de 3000), 900 en centros poblados (75 % de 1200) y 1620 en el rural disperso (90 % de 1800): 2520 de 4020 están fuera de la cabecera. La afirmación relaciona la dimensión educativa, la económica y la espacial y saca una consecuencia correcta para el diseño del programa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La cabecera concentra el mayor número de jóvenes informales del municipio, porque allí trabaja la mayor cantidad de jóvenes.",
+        "correcta": false,
+        "explicacion": "La cabecera tiene más jóvenes trabajando, pero la mitad de ellos son formales: 1500 informales. En las otras dos zonas, aunque hay menos jóvenes, casi todos son informales: 900 + 1620 = 2520. La opción confunde el tamaño de la base con la cantidad de informales y no hace el cálculo.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la zona con más jóvenes trabajando tiene también más informales, sin calcular el número en cada zona (50 % de 3000 = 1500 frente a 900 + 1620 = 2520)."
       }
     ],
-    "explicacion": "LEER: el contexto define empleo formal e informal y presenta una tabla con jóvenes que trabajan, porcentaje formal, ingreso promedio y porcentaje que terminó el bachillerato, por tres zonas. COMPRENDER: se pide la afirmación que relacione dimensiones (educativa, económica, espacial) y que se apoye en los datos. INTERPRETAR: las tres columnas de porcentaje e ingreso descienden de la cabecera al rural disperso; para saber dónde están los informales hay que pasar de porcentajes a cantidades. REPRESENTAR: informales = cabecera 3000 × 0,5 = 1500; centros 1200 × 0,75 = 900; rural 1800 × 0,9 = 1620; total 4020; fuera de la cabecera 2520 (63 %). RAZONAR: B confunde base grande con más informales; C convierte asociación en garantía; D introduce una preferencia que la tabla no mide. RESOLVER: opción A. VERIFICAR: los redondeos de A ('unos 2500 de 4000') coinciden con 2520 de 4020, y la conclusión sobre el programa se deriva directamente de ese cálculo.",
+    "explicacion": "LEER: el contexto define empleo formal e informal y presenta una tabla con jóvenes que trabajan, porcentaje formal, ingreso promedio y porcentaje que terminó el bachillerato, por tres zonas. COMPRENDER: se pide la afirmación que relacione dimensiones (educativa, económica, espacial) y que se apoye en los datos. INTERPRETAR: las tres columnas de porcentaje e ingreso descienden de la cabecera al rural disperso; para saber dónde están los informales hay que pasar de porcentajes a cantidades. REPRESENTAR: informales = cabecera 3000 × 0,5 = 1500; centros 1200 × 0,75 = 900; rural 1800 × 0,9 = 1620; total 4020; fuera de la cabecera 2520 (63 %). RAZONAR: B confunde base grande con más informales; C convierte asociación en garantía; D introduce una preferencia que la tabla no mide. RESOLVER: opción C. VERIFICAR: los redondeos de A ('unos 2500 de 4000') coinciden con 2520 de 4020, y la conclusión sobre el programa se deriva directamente de ese cálculo.",
     "que_identificar": "Cómo cambian formalidad, ingreso y educación entre zonas, y cuántos jóvenes informales hay en cada zona en números absolutos (porcentaje × cantidad), no solo en porcentaje.",
     "que_revisar": "Conceptos de empleo formal e informal; diferencia entre porcentaje y cantidad al comparar zonas de distinto tamaño; diferencia entre asociación y garantía (causalidad) al leer datos sociales.",
-    "refuerzo_ids": [
-      "SOC-002",
-      "SOC-011"
-    ],
+    "refuerzo_ids": ["SOC-002", "SOC-011"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "economia_informal",
-      "trabajo_juvenil",
-      "poblacion",
-      "tabla"
-    ],
+    "etiquetas": ["economia_informal", "trabajo_juvenil", "poblacion", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-023",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "etico_politico",
     "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
@@ -942,29 +707,17 @@
     "explicacion": "LEER: la obra prometida está detenida a año y medio de gobierno; el contexto describe la revocatoria (voto ciudadano para terminar el periodo; después del primer año; firmas, verificación, votación con participación mínima; nuevas elecciones) y el cabildo abierto (sesión pública del concejo; se puede citar al alcalde; respuesta pública y razonada obligatoria; no obliga a cumplir lo pedido). COMPRENDER: se pide el análisis más adecuado de los efectos de cada mecanismo dado el objetivo: terminar la obra pronto. INTERPRETAR: hay que evaluar cada mecanismo en dos dimensiones: tiempo que tarda y relación de su efecto con la obra. REPRESENTAR: revocatoria → meses → nuevo alcalde (efecto político, no la obra). Cabildo → pronto → respuesta pública y posibles compromisos (sin garantía). RAZONAR: B convierte el cambio de alcalde en reanudación inmediata; C le da al cabildo un poder de destitución que no tiene; D descarta ambos con una idea que el texto no da. RESOLVER: opción A. VERIFICAR: A no dice que el cabildo garantice la obra ni que la revocatoria sea inútil; describe los alcances y límites de cada uno tal como los da el contexto, en relación con el objetivo planteado.",
     "que_identificar": "El objetivo concreto de los habitantes (la obra, pronto) y, para cada mecanismo, cuánto tarda, qué produce y qué no garantiza según el contexto.",
     "que_revisar": "Mecanismos de participación ciudadana (Constitución de 1991, art. 103, y Ley 1757 de 2015): revocatoria del mandato y cabildo abierto, sus requisitos y efectos; cómo evaluar una intervención según su relación con el objetivo buscado.",
-    "refuerzo_ids": [
-      "SOC-001",
-      "SOC-011"
-    ],
+    "refuerzo_ids": ["SOC-001", "SOC-011"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "participacion_ciudadana",
-      "revocatoria",
-      "cabildo_abierto",
-      "decisiones_publicas"
-    ],
+    "etiquetas": ["participacion_ciudadana", "revocatoria", "cabildo_abierto", "decisiones_publicas"],
     "estado": "aprobada"
   },
   {
     "id": "SOC-024",
     "prueba": "sociales_ciudadanas",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "S3",
     "componente": "historia_cultura",
     "afirmacion": "Evalúa usos sociales de las ciencias sociales",
@@ -1017,19 +770,10 @@
     "explicacion": "LEER: el contexto define las propiedades de las tierras de resguardos y comunidades étnicas (inalienables, imprescriptibles, inembargables) y el funcionamiento de los títulos colectivos de la Ley 70 (los recibe el consejo comunitario, se administran con normas propias, no se venden a personas ajenas). Luego presenta tres posiciones sobre una oferta de compra: don Evaristo (es mía porque la trabajé), la empresa (cada familia decide) y la junta (nadie vende; decide la asamblea). COMPRENDER: se pide el análisis correcto del uso del concepto de propiedad en esas posiciones. INTERPRETAR: dos actores razonan con propiedad individual; uno con propiedad colectiva; el contexto establece cuál aplica al territorio. REPRESENTAR: propiedad individual → trabajo o posesión → derecho a vender (don Evaristo, empresa); propiedad colectiva → título del consejo → inalienable, decide la comunidad (junta). RAZONAR: B usa la prescripción, excluida por 'imprescriptibles'; C invierte el sentido de la protección a la diversidad cultural; D propone en lugar de analizar y contradice la inalienabilidad. RESOLVER: opción A. VERIFICAR: A identifica el concepto que usa cada actor y explica, con las reglas del contexto, por qué el concepto colectivo es el que rige la decisión, sin añadir información externa.",
     "que_identificar": "Qué concepto de propiedad (individual o colectiva) está detrás de cada posición y qué reglas del contexto (inalienable, imprescriptible, título al consejo comunitario) definen cuál aplica.",
     "que_revisar": "Diversidad étnica y cultural en la Constitución de 1991 (arts. 7 y 63); resguardos indígenas y territorios colectivos de comunidades negras (Ley 70 de 1993); diferencia entre propiedad individual y propiedad colectiva.",
-    "refuerzo_ids": [
-      "SOC-008",
-      "SOC-017"
-    ],
+    "refuerzo_ids": ["SOC-008", "SOC-017"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 180,
-    "etiquetas": [
-      "diversidad_cultural",
-      "territorios_colectivos",
-      "consejos_comunitarios",
-      "resguardos",
-      "constitucion_1991"
-    ],
+    "etiquetas": ["diversidad_cultural", "territorios_colectivos", "consejos_comunitarios", "resguardos", "constitucion_1991"],
     "estado": "aprobada"
   }
 ]

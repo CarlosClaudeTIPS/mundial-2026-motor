@@ -3,11 +3,7 @@
     "id": "LC-045",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -22,24 +18,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "protege a las personas de los ataques personales que reciben en una discusión.",
-        "correcta": false,
-        "explicacion": "El texto dice lo contrario: con esa expresión «cualquier objeción se vuelve un ataque personal». El muro no protege de ataques; convierte las objeciones legítimas en ataques.",
-        "tipo_error": "interpretacion",
-        "diagnostico": "probable",
-        "razon_frecuente": "Tomó la imagen del muro en su sentido habitual (defensa) sin leer la oración que la explica."
-      },
-      {
-        "clave": "B",
-        "texto": "muestra la humildad de quien reconoce que su opinión es solo suya.",
-        "correcta": false,
-        "explicacion": "El autor concede que la expresión «parece humilde», pero introduce un «pero» que desmiente esa apariencia. Quedarse con «parece humilde» es tomar la concesión por la idea que se defiende.",
-        "tipo_error": "comprension",
-        "diagnostico": "probable",
-        "razon_frecuente": "Leyó solo la primera parte de la oración y no atendió al conector «pero»."
-      },
-      {
-        "clave": "C",
         "texto": "impide que lo afirmado sea examinado o cuestionado por los demás.",
         "correcta": true,
         "explicacion": "La oración misma explica la imagen: «si la verdad es mía, nadie puede examinarla». Un muro separa e impide el paso; aquí impide que otros revisen la afirmación.",
@@ -48,40 +26,47 @@
         "razon_frecuente": null
       },
       {
-        "clave": "D",
+        "clave": "B",
         "texto": "separa a los vecinos que discuten por la altura del árbol.",
         "correcta": false,
         "explicacion": "Los vecinos pertenecen al ejemplo del segundo párrafo; el muro del tercer párrafo es una metáfora sobre la expresión «esta es mi verdad», no un objeto de la anécdota.",
         "tipo_error": "descuido",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Mezcló el ejemplo del árbol con la metáfora de otro párrafo, o leyó de forma literal."
+      },
+      {
+        "clave": "C",
+        "texto": "protege a las personas de los ataques personales que reciben en una discusión.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: con esa expresión «cualquier objeción se vuelve un ataque personal». El muro no protege de ataques; convierte las objeciones legítimas en ataques.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la imagen del muro en su sentido habitual (defensa) sin leer la oración que la explica."
+      },
+      {
+        "clave": "D",
+        "texto": "muestra la humildad de quien reconoce que su opinión es solo suya.",
+        "correcta": false,
+        "explicacion": "El autor concede que la expresión «parece humilde», pero introduce un «pero» que desmiente esa apariencia. Quedarse con «parece humilde» es tomar la concesión por la idea que se defiende.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó solo la primera parte de la oración y no atendió al conector «pero»."
       }
     ],
-    "explicacion": "LEER: ubico la expresión en el tercer párrafo y leo la oración completa. COMPRENDER: se pide el sentido de una metáfora local («funcionar como un muro»). INTERPRETAR: la misma oración la aclara: «si la verdad es mía, nadie puede examinarla». REPRESENTAR: muro = barrera que impide el paso → la expresión impide el examen ajeno. RAZONAR: A invierte la relación con los ataques; B toma la concesión («parece humilde») por la tesis; D confunde la metáfora con el ejemplo del árbol. RESOLVER: opción C. VERIFICAR: encaja con la conclusión del ensayo, donde quien no cambia de opinión «ha cerrado mejor la puerta», otra imagen de cierre.",
+    "explicacion": "LEER: ubico la expresión en el tercer párrafo y leo la oración completa. COMPRENDER: se pide el sentido de una metáfora local («funcionar como un muro»). INTERPRETAR: la misma oración la aclara: «si la verdad es mía, nadie puede examinarla». REPRESENTAR: muro = barrera que impide el paso → la expresión impide el examen ajeno. RAZONAR: A invierte la relación con los ataques; B toma la concesión («parece humilde») por la tesis; D confunde la metáfora con el ejemplo del árbol. RESOLVER: opción A. VERIFICAR: encaja con la conclusión del ensayo, donde quien no cambia de opinión «ha cerrado mejor la puerta», otra imagen de cierre.",
     "que_identificar": "La explicación que sigue a los dos puntos: «si la verdad es mía, nadie puede examinarla».",
     "que_revisar": "Interpretación de metáforas a partir del contexto inmediato; papel del conector «pero» después de una concesión.",
-    "refuerzo_ids": [
-      "LC-048"
-    ],
+    "refuerzo_ids": ["LC-048"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T13",
-      "argumentativo",
-      "filosofia",
-      "verdad"
-    ],
+    "etiquetas": ["texto:LC-T13", "argumentativo", "filosofia", "verdad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-046",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -134,29 +119,17 @@
     "explicacion": "LEER: releo el segundo párrafo y su última oración. COMPRENDER: la pregunta es por la función de una parte dentro del todo, no por su contenido literal. INTERPRETAR: el párrafo empieza con «Pensemos en…», marca típica de un ejemplo, y cierra con una frase general que retoma la tesis. REPRESENTAR: párrafo 1 = tesis (la verdad no es posesión) → párrafo 2 = caso que la ilustra. RAZONAR: A toma el ejemplo por el tema; C lo convierte en prueba científica; D ignora el «Pero». RESOLVER: opción B. VERIFICAR: si se suprimiera el párrafo, la tesis seguiría en pie, pero sería más abstracta; eso confirma que su función es ilustrar.",
     "que_identificar": "La marca «Pensemos en…» y la oración final del párrafo que lo enlaza con la tesis.",
     "que_revisar": "Estructura del ensayo: tesis, ejemplos, concesiones y conclusión; diferencia entre ejemplo y argumento central.",
-    "refuerzo_ids": [
-      "LC-048",
-      "LC-008"
-    ],
+    "refuerzo_ids": ["LC-048", "LC-008"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T13",
-      "argumentativo",
-      "filosofia",
-      "verdad"
-    ],
+    "etiquetas": ["texto:LC-T13", "argumentativo", "filosofia", "verdad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-047",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -209,29 +182,17 @@
     "explicacion": "LEER: identifico la tesis en el tercer párrafo («cuando afirmamos algo sobre el mundo, aceptamos que otros puedan comprobarlo»). COMPRENDER: se pide una implicación, algo que se deduce de la postura, no algo que el texto repita. INTERPRETAR: para el autor, la verdad exige apertura al examen ajeno. REPRESENTAR: si «afirmación sobre el mundo» → «debe poder comprobarse»; entonces «se niega a la comprobación» → «no cumple la condición». RAZONAR: A choca con la concesión del autor; B generaliza el ejemplo; C invierte la frase final y usa la lógica de la posesión que el ensayo critica. RESOLVER: opción D. VERIFICAR: D es coherente también con la conclusión (hospitalidad, opinión que «puede salir corregida»).",
     "que_identificar": "La tesis del tercer párrafo y la concesión «No niego que…», que limita su alcance.",
     "que_revisar": "Diferencia entre lo que un texto dice y lo que implica; cuidado con invertir enunciados (si A entonces B no equivale a si B entonces A).",
-    "refuerzo_ids": [
-      "LC-063",
-      "LC-037"
-    ],
+    "refuerzo_ids": ["LC-063", "LC-037"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T13",
-      "argumentativo",
-      "filosofia",
-      "verdad"
-    ],
+    "etiquetas": ["texto:LC-T13", "argumentativo", "filosofia", "verdad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-048",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -284,28 +245,17 @@
     "explicacion": "LEER: repaso la función de cada párrafo. COMPRENDER: se pide un esquema fiel al orden y a las relaciones entre las partes. INTERPRETAR: §1 presenta y critica una creencia común; §2 la ilustra; §3 rechaza «mi verdad» pero concede el valor de la experiencia propia; §4 concluye con la metáfora de la hospitalidad. REPRESENTAR: creencia criticada → ejemplo → crítica con concesión → conclusión. RAZONAR: B se queda en el ejemplo; C y D atribuyen al autor la idea que rechaza. RESOLVER: opción A. VERIFICAR: cada flecha de A corresponde a un párrafo y ninguna contradice el texto.",
     "que_identificar": "Los marcadores de cada parte: «esconde un error», «Pensemos en…», «Por eso desconfío…», «No niego que…», «entonces».",
     "que_revisar": "Cómo resumir en un esquema la estructura de un texto argumentativo sin confundir la postura del autor con las que discute.",
-    "refuerzo_ids": [
-      "LC-046"
-    ],
+    "refuerzo_ids": ["LC-046"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T13",
-      "argumentativo",
-      "filosofia",
-      "verdad"
-    ],
+    "etiquetas": ["texto:LC-T13", "argumentativo", "filosofia", "verdad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-049",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -320,15 +270,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "dejaron por completo de asistir a la escuela.",
-        "correcta": false,
-        "explicacion": "La profesora registró que en mayo faltaban «en promedio, once de sus veintiséis estudiantes cada día»; es decir, la mayoría seguía asistiendo.",
-        "tipo_error": "inferencia",
-        "diagnostico": "probable",
-        "razon_frecuente": "Generalizó el problema de ausencias a todos los estudiantes."
-      },
-      {
-        "clave": "B",
         "texto": "cruzaban el río en la canoa de don Aurelio, que cobraba por viaje y solo salía cuando el agua bajaba.",
         "correcta": true,
         "explicacion": "Es lo que dice el segundo párrafo: «cruzaban el río en la canoa de don Aurelio, que cobraba mil pesos por viaje y solo trabajaba cuando el agua bajaba».",
@@ -337,7 +278,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "usaban el puente metálico que construyó la Secretaría de Obras.",
         "correcta": false,
         "explicacion": "El puente metálico es solo un anuncio para 2027, sujeto a «estudios técnicos»; no existe en el tiempo de la crónica.",
@@ -346,40 +287,38 @@
         "razon_frecuente": "Confundió un anuncio a futuro con un hecho ya ocurrido."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "recibían clases en la finca de los Mosquera.",
         "correcta": false,
         "explicacion": "La finca de los Mosquera aparece solo como el lugar donde se cortaron las guaduas; no se menciona que allí se dieran clases.",
         "tipo_error": "comprension",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Asoció un lugar mencionado en el texto con un hecho que no se narra."
+      },
+      {
+        "clave": "D",
+        "texto": "dejaron por completo de asistir a la escuela.",
+        "correcta": false,
+        "explicacion": "La profesora registró que en mayo faltaban «en promedio, once de sus veintiséis estudiantes cada día»; es decir, la mayoría seguía asistiendo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó el problema de ausencias a todos los estudiantes."
       }
     ],
-    "explicacion": "LEER: ubico el periodo entre la creciente y la minga en el segundo párrafo. COMPRENDER: se pide un hecho explícito. INTERPRETAR: no hace falta inferir; el texto dice que cruzaban en canoa con dos condiciones (pago y nivel del agua). REPRESENTAR: creciente (abril) → canoa + ausencias (mayo) → reunión (junio) → minga. RAZONAR: A exagera el dato de ausencias; C toma un anuncio futuro como hecho; D traslada un lugar a otra acción. RESOLVER: opción B. VERIFICAR: la frase de B coincide casi palabra por palabra con el párrafo.",
+    "explicacion": "LEER: ubico el periodo entre la creciente y la minga en el segundo párrafo. COMPRENDER: se pide un hecho explícito. INTERPRETAR: no hace falta inferir; el texto dice que cruzaban en canoa con dos condiciones (pago y nivel del agua). REPRESENTAR: creciente (abril) → canoa + ausencias (mayo) → reunión (junio) → minga. RAZONAR: A exagera el dato de ausencias; C toma un anuncio futuro como hecho; D traslada un lugar a otra acción. RESOLVER: opción A. VERIFICAR: la frase de B coincide casi palabra por palabra con el párrafo.",
     "que_identificar": "El segundo párrafo, con la canoa, el cobro y la condición del nivel del agua.",
     "que_revisar": "Localización de información explícita y ordenamiento cronológico de los hechos de un relato.",
-    "refuerzo_ids": [
-      "LC-052"
-    ],
+    "refuerzo_ids": ["LC-052"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T14",
-      "cronica",
-      "periodistico",
-      "comunidad"
-    ],
+    "etiquetas": ["texto:LC-T14", "cronica", "periodistico", "comunidad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-050",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -432,29 +371,17 @@
     "explicacion": "LEER: reviso el primer párrafo y quién pronuncia la frase entre comillas. COMPRENDER: la pregunta tiene dos partes, la voz y el sentido. INTERPRETAR: la dice doña Ofelia mientras reparte tinto a quienes van a construir el puente; «la escuela» nombra a la comunidad que la necesita. REPRESENTAR: voz = presidenta de la junta; sentido = iniciativa comunitaria frente a la espera. RAZONAR: A y C fallan en la voz; B acierta en la voz pero lee literalmente. RESOLVER: opción D. VERIFICAR: el contraste final con la Secretaría, que anuncia «estudios técnicos», confirma el sentido de no esperar.",
     "que_identificar": "El verbo «repetía» y el sujeto de la oración (doña Ofelia), además de la situación en que se dice la frase.",
     "que_revisar": "Identificación de voces en textos periodísticos: narrador, personajes citados y fuentes oficiales.",
-    "refuerzo_ids": [
-      "LC-026",
-      "LC-051"
-    ],
+    "refuerzo_ids": ["LC-026", "LC-051"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T14",
-      "cronica",
-      "periodistico",
-      "comunidad"
-    ],
+    "etiquetas": ["texto:LC-T14", "cronica", "periodistico", "comunidad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-051",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -507,29 +434,17 @@
     "explicacion": "LEER: releo el último párrafo y la oración final. COMPRENDER: se pregunta por la intención de una estrategia (el cierre), no por el dato. INTERPRETAR: la oración une dos ideas opuestas: pierde su oficio y, aun así, es de los que más trabajan. REPRESENTAR: interés propio (pasajeros) vs. bien común (puente) → elige el bien común. RAZONAR: A inventa una denuncia; B se queda en el dato económico; D contradice el texto. RESOLVER: opción C. VERIFICAR: el cierre contrasta además con el comunicado oficial que «nadie leyó en voz alta»: la crónica valora lo que la comunidad hace por sí misma.",
     "que_identificar": "La oposición dentro de la oración final («ya no tendrá pasajeros» / «de los que más guaduas cargó»).",
     "que_revisar": "Estrategias discursivas en la crónica: selección de detalles, contraste y cierres con efecto.",
-    "refuerzo_ids": [
-      "LC-050",
-      "LC-040"
-    ],
+    "refuerzo_ids": ["LC-050", "LC-040"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T14",
-      "cronica",
-      "periodistico",
-      "comunidad"
-    ],
+    "etiquetas": ["texto:LC-T14", "cronica", "periodistico", "comunidad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-052",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -582,29 +497,17 @@
     "explicacion": "LEER: ubico en el tercer párrafo la oración que explica el motivo. COMPRENDER: se pide la causa inmediata de la minga. INTERPRETAR: «esa cuenta» remite al registro de la profesora del párrafo anterior (once de veintiséis ausentes al día). REPRESENTAR: creciente → canoa → ausencias registradas → reunión de la junta → minga → comunicado oficial / don Aurelio sin pasajeros. RAZONAR: A es un antecedente descartado explícitamente; B y C son posteriores a la minga, por lo que no pueden ser su causa. RESOLVER: opción D. VERIFICAR: la reacción en la reunión («nadie discutió más») ocurre justo después de ver el cuaderno.",
     "que_identificar": "La oración «Fue esa cuenta, y no el aguacero…» y el referente de «esa cuenta».",
     "que_revisar": "Relaciones de causa y efecto y orden temporal; referentes de expresiones como «esa cuenta».",
-    "refuerzo_ids": [
-      "LC-049",
-      "LC-064"
-    ],
+    "refuerzo_ids": ["LC-049", "LC-064"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T14",
-      "cronica",
-      "periodistico",
-      "comunidad"
-    ],
+    "etiquetas": ["texto:LC-T14", "cronica", "periodistico", "comunidad"],
     "estado": "aprobada"
   },
   {
     "id": "LC-053",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_discontinuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -617,64 +520,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Azúcar en un envase de bebidas comunes",
-      "columnas": [
-        "Bebida",
-        "Envase",
-        "Azúcar (g)",
-        "Cucharaditas (1 ≈ 4 g)",
-        "% del máximo diario (25 g)"
-      ],
-      "filas": [
-        [
-          "Gaseosa de cola",
-          "400 ml",
-          "42",
-          "10,5",
-          "168 %"
-        ],
-        [
-          "Té frío embotellado",
-          "500 ml",
-          "30",
-          "7,5",
-          "120 %"
-        ],
-        [
-          "Bebida energizante",
-          "250 ml",
-          "27",
-          "6,75",
-          "108 %"
-        ],
-        [
-          "Yogur bebible saborizado",
-          "200 ml",
-          "24",
-          "6",
-          "96 %"
-        ],
-        [
-          "Néctar de naranja en caja",
-          "200 ml",
-          "22",
-          "5,5",
-          "88 %"
-        ],
-        [
-          "Agua de panela casera (un vaso)",
-          "250 ml",
-          "20",
-          "5",
-          "80 %"
-        ],
-        [
-          "Agua",
-          "500 ml",
-          "0",
-          "0",
-          "0 %"
-        ]
-      ],
+      "columnas": ["Bebida", "Envase", "Azúcar (g)", "Cucharaditas (1 ≈ 4 g)", "% del máximo diario (25 g)"],
+      "filas": [["Gaseosa de cola", "400 ml", "42", "10,5", "168 %"], ["Té frío embotellado", "500 ml", "30", "7,5", "120 %"], ["Bebida energizante", "250 ml", "27", "6,75", "108 %"], ["Yogur bebible saborizado", "200 ml", "24", "6", "96 %"], ["Néctar de naranja en caja", "200 ml", "22", "5,5", "88 %"], ["Agua de panela casera (un vaso)", "250 ml", "20", "5", "80 %"], ["Agua", "500 ml", "0", "0", "0 %"]],
       "nota": "Valores aproximados de etiquetas de productos genéricos; cambian según la marca y el tamaño del envase."
     },
     "enunciado": "En la infografía, la columna «% del máximo diario (25 g)» indica",
@@ -719,30 +566,17 @@
     "explicacion": "LEER: leo el encabezado completo de la columna y la franja del termómetro. COMPRENDER: se pide qué significa un elemento de la tabla. INTERPRETAR: «25 g» es la referencia: el porcentaje compara los gramos de un envase con ese máximo. REPRESENTAR: % = azúcar del envase ÷ 25 g × 100; para la gaseosa, 42 ÷ 25 = 1,68 → 168 %. RAZONAR: A es imposible (más de 100 % de azúcar); B y D introducen datos ausentes. RESOLVER: opción C. VERIFICAR: compruebo con otra fila: agua de panela, 20 ÷ 25 = 0,8 → 80 %, coincide.",
     "que_identificar": "El encabezado «% del máximo diario (25 g)» y la marca del termómetro.",
     "que_revisar": "Lectura de encabezados de tablas y de la base sobre la que se calcula un porcentaje.",
-    "refuerzo_ids": [
-      "LC-054",
-      "LC-012"
-    ],
+    "refuerzo_ids": ["LC-054", "LC-012"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T15",
-      "infografia",
-      "salud",
-      "consumo",
-      "tabla"
-    ],
+    "etiquetas": ["texto:LC-T15", "infografia", "salud", "consumo", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "LC-054",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_discontinuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -755,64 +589,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Azúcar en un envase de bebidas comunes",
-      "columnas": [
-        "Bebida",
-        "Envase",
-        "Azúcar (g)",
-        "Cucharaditas (1 ≈ 4 g)",
-        "% del máximo diario (25 g)"
-      ],
-      "filas": [
-        [
-          "Gaseosa de cola",
-          "400 ml",
-          "42",
-          "10,5",
-          "168 %"
-        ],
-        [
-          "Té frío embotellado",
-          "500 ml",
-          "30",
-          "7,5",
-          "120 %"
-        ],
-        [
-          "Bebida energizante",
-          "250 ml",
-          "27",
-          "6,75",
-          "108 %"
-        ],
-        [
-          "Yogur bebible saborizado",
-          "200 ml",
-          "24",
-          "6",
-          "96 %"
-        ],
-        [
-          "Néctar de naranja en caja",
-          "200 ml",
-          "22",
-          "5,5",
-          "88 %"
-        ],
-        [
-          "Agua de panela casera (un vaso)",
-          "250 ml",
-          "20",
-          "5",
-          "80 %"
-        ],
-        [
-          "Agua",
-          "500 ml",
-          "0",
-          "0",
-          "0 %"
-        ]
-      ],
+      "columnas": ["Bebida", "Envase", "Azúcar (g)", "Cucharaditas (1 ≈ 4 g)", "% del máximo diario (25 g)"],
+      "filas": [["Gaseosa de cola", "400 ml", "42", "10,5", "168 %"], ["Té frío embotellado", "500 ml", "30", "7,5", "120 %"], ["Bebida energizante", "250 ml", "27", "6,75", "108 %"], ["Yogur bebible saborizado", "200 ml", "24", "6", "96 %"], ["Néctar de naranja en caja", "200 ml", "22", "5,5", "88 %"], ["Agua de panela casera (un vaso)", "250 ml", "20", "5", "80 %"], ["Agua", "500 ml", "0", "0", "0 %"]],
       "nota": "Valores aproximados de etiquetas de productos genéricos; cambian según la marca y el tamaño del envase."
     },
     "enunciado": "Un estudiante debe resumir la información de la infografía en una sola frase para la cartelera del salón. ¿Cuál resumen es fiel a los datos?",
@@ -857,30 +635,17 @@
     "explicacion": "LEER: reviso las siete filas y la columna de porcentajes. COMPRENDER: se pide traducir la tabla a una frase breve sin deformar los datos. INTERPRETAR: el subtítulo («Un solo envase puede superar…») se confirma solo en algunas bebidas. REPRESENTAR: clasifico: >100 % = gaseosa, té frío, energizante; <100 % = yogur, néctar, panela; 0 % = agua. RAZONAR: A generaliza; C ignora la fila de panela; D mezcla columnas. RESOLVER: opción B. VERIFICAR: cuento de nuevo las filas por encima de 100 %: son exactamente tres.",
     "que_identificar": "Los porcentajes de cada fila y cuáles superan el 100 %.",
     "que_revisar": "Resumir textos discontinuos: cuantificadores precisos («todas», «tres», «solo») y correspondencia entre columnas y unidades.",
-    "refuerzo_ids": [
-      "LC-053",
-      "LC-055"
-    ],
+    "refuerzo_ids": ["LC-053", "LC-055"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T15",
-      "infografia",
-      "salud",
-      "consumo",
-      "tabla"
-    ],
+    "etiquetas": ["texto:LC-T15", "infografia", "salud", "consumo", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "LC-055",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_discontinuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -893,64 +658,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Azúcar en un envase de bebidas comunes",
-      "columnas": [
-        "Bebida",
-        "Envase",
-        "Azúcar (g)",
-        "Cucharaditas (1 ≈ 4 g)",
-        "% del máximo diario (25 g)"
-      ],
-      "filas": [
-        [
-          "Gaseosa de cola",
-          "400 ml",
-          "42",
-          "10,5",
-          "168 %"
-        ],
-        [
-          "Té frío embotellado",
-          "500 ml",
-          "30",
-          "7,5",
-          "120 %"
-        ],
-        [
-          "Bebida energizante",
-          "250 ml",
-          "27",
-          "6,75",
-          "108 %"
-        ],
-        [
-          "Yogur bebible saborizado",
-          "200 ml",
-          "24",
-          "6",
-          "96 %"
-        ],
-        [
-          "Néctar de naranja en caja",
-          "200 ml",
-          "22",
-          "5,5",
-          "88 %"
-        ],
-        [
-          "Agua de panela casera (un vaso)",
-          "250 ml",
-          "20",
-          "5",
-          "80 %"
-        ],
-        [
-          "Agua",
-          "500 ml",
-          "0",
-          "0",
-          "0 %"
-        ]
-      ],
+      "columnas": ["Bebida", "Envase", "Azúcar (g)", "Cucharaditas (1 ≈ 4 g)", "% del máximo diario (25 g)"],
+      "filas": [["Gaseosa de cola", "400 ml", "42", "10,5", "168 %"], ["Té frío embotellado", "500 ml", "30", "7,5", "120 %"], ["Bebida energizante", "250 ml", "27", "6,75", "108 %"], ["Yogur bebible saborizado", "200 ml", "24", "6", "96 %"], ["Néctar de naranja en caja", "200 ml", "22", "5,5", "88 %"], ["Agua de panela casera (un vaso)", "250 ml", "20", "5", "80 %"], ["Agua", "500 ml", "0", "0", "0 %"]],
       "nota": "Valores aproximados de etiquetas de productos genéricos; cambian según la marca y el tamaño del envase."
     },
     "enunciado": "Después de ver la infografía, una estudiante afirma: «El néctar de naranja en caja es una opción saludable, porque no supera el máximo diario de azúcar». ¿Qué evaluación de esta afirmación es correcta?",
@@ -995,30 +704,17 @@
     "explicacion": "LEER: busco la fila del néctar (200 ml, 22 g, 88 %) y releo la nota. COMPRENDER: se pide evaluar si la conclusión se sostiene con los datos, no solo si el dato es correcto. INTERPRETAR: 88 % en un solo envase pequeño deja apenas 3 g de margen para el resto del día. REPRESENTAR: 25 g − 22 g = 3 g disponibles para todo lo demás. RAZONAR: A se queda en «menor que 100»; C lee mal la tabla; D usa la nota como argumento que no apoya la conclusión. RESOLVER: opción B. VERIFICAR: reviso que la infografía no hable de vitaminas u otros nutrientes: solo trata del azúcar, así que no permite declarar «saludable» una bebida.",
     "que_identificar": "La fila del néctar (22 g, 88 %) y el alcance de la infografía (solo azúcar).",
     "que_revisar": "Evaluación de conclusiones: si los datos alcanzan para lo que se afirma; diferencia entre «no supera el límite» y «es saludable».",
-    "refuerzo_ids": [
-      "LC-054",
-      "LC-063"
-    ],
+    "refuerzo_ids": ["LC-054", "LC-063"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T15",
-      "infografia",
-      "salud",
-      "consumo",
-      "tabla"
-    ],
+    "etiquetas": ["texto:LC-T15", "infografia", "salud", "consumo", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "LC-056",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_discontinuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -1031,64 +727,8 @@
     "estimulo": {
       "tipo": "tabla",
       "titulo": "Azúcar en un envase de bebidas comunes",
-      "columnas": [
-        "Bebida",
-        "Envase",
-        "Azúcar (g)",
-        "Cucharaditas (1 ≈ 4 g)",
-        "% del máximo diario (25 g)"
-      ],
-      "filas": [
-        [
-          "Gaseosa de cola",
-          "400 ml",
-          "42",
-          "10,5",
-          "168 %"
-        ],
-        [
-          "Té frío embotellado",
-          "500 ml",
-          "30",
-          "7,5",
-          "120 %"
-        ],
-        [
-          "Bebida energizante",
-          "250 ml",
-          "27",
-          "6,75",
-          "108 %"
-        ],
-        [
-          "Yogur bebible saborizado",
-          "200 ml",
-          "24",
-          "6",
-          "96 %"
-        ],
-        [
-          "Néctar de naranja en caja",
-          "200 ml",
-          "22",
-          "5,5",
-          "88 %"
-        ],
-        [
-          "Agua de panela casera (un vaso)",
-          "250 ml",
-          "20",
-          "5",
-          "80 %"
-        ],
-        [
-          "Agua",
-          "500 ml",
-          "0",
-          "0",
-          "0 %"
-        ]
-      ],
+      "columnas": ["Bebida", "Envase", "Azúcar (g)", "Cucharaditas (1 ≈ 4 g)", "% del máximo diario (25 g)"],
+      "filas": [["Gaseosa de cola", "400 ml", "42", "10,5", "168 %"], ["Té frío embotellado", "500 ml", "30", "7,5", "120 %"], ["Bebida energizante", "250 ml", "27", "6,75", "108 %"], ["Yogur bebible saborizado", "200 ml", "24", "6", "96 %"], ["Néctar de naranja en caja", "200 ml", "22", "5,5", "88 %"], ["Agua de panela casera (un vaso)", "250 ml", "20", "5", "80 %"], ["Agua", "500 ml", "0", "0", "0 %"]],
       "nota": "Valores aproximados de etiquetas de productos genéricos; cambian según la marca y el tamaño del envase."
     },
     "enunciado": "En la infografía, la nota en letra pequeña («Valores aproximados, tomados de etiquetas de productos genéricos…») cumple la función de",
@@ -1133,30 +773,17 @@
     "explicacion": "LEER: localizo la nota al pie y la comparo con las otras partes (título, termómetro, tabla, recuadro). COMPRENDER: se pregunta por la función de una parte. INTERPRETAR: la nota no da datos nuevos; matiza los que ya se dieron. REPRESENTAR: título = mensaje; termómetro = referencia; tabla = datos; recuadro = recomendación; nota = fuente y límites de los datos. RAZONAR: A confunde nota y mensaje; C y D atribuyen a la nota contenido de otras partes o inexistente. RESOLVER: opción B. VERIFICAR: la nota de la tabla repite la misma advertencia, lo que confirma su función aclaratoria.",
     "que_identificar": "El contenido de la nota y su lugar (al pie, en letra pequeña) dentro de la infografía.",
     "que_revisar": "Partes de un texto discontinuo (título, subtítulo, datos, notas, llamados a la acción) y la función de cada una.",
-    "refuerzo_ids": [
-      "LC-053",
-      "LC-012"
-    ],
+    "refuerzo_ids": ["LC-053", "LC-012"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T15",
-      "infografia",
-      "salud",
-      "consumo",
-      "tabla"
-    ],
+    "etiquetas": ["texto:LC-T15", "infografia", "salud", "consumo", "tabla"],
     "estado": "aprobada"
   },
   {
     "id": "LC-057",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_discontinuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -1209,29 +836,17 @@
     "explicacion": "LEER: reviso la descripción de los personajes y el globo de la abuela. COMPRENDER: se pide un hecho explícito sobre un personaje. INTERPRETAR: la abuela es la única sin celular; está frente a la torta y pregunta por las velas. REPRESENTAR: papá = likes; mamá = mensaje de la tía; muchacho = historia; abuela = pide ayuda con las velas. RAZONAR: A y B le asignan acciones de otros; D inventa un desenlace. RESOLVER: opción C. VERIFICAR: «Nadie le responde» confirma que la pregunta queda en el aire y que las velas siguen encendidas.",
     "que_identificar": "A quién pertenece cada globo y qué hace cada personaje.",
     "que_revisar": "Lectura de caricaturas: relacionar cada globo con su personaje y distinguir lo que se muestra de lo que se imagina.",
-    "refuerzo_ids": [
-      "LC-058"
-    ],
+    "refuerzo_ids": ["LC-058"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T16",
-      "caricatura",
-      "humor_grafico",
-      "tecnologia",
-      "familia"
-    ],
+    "etiquetas": ["texto:LC-T16", "caricatura", "humor_grafico", "tecnologia", "familia"],
     "estado": "aprobada"
   },
   {
     "id": "LC-058",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_discontinuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -1246,15 +861,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Celebrar que la tecnología permite a la familia, incluso a los parientes lejanos, felicitar a la abuela.",
-        "correcta": false,
-        "explicacion": "Es la lectura que sugiere el título «Conectados» tomado al pie de la letra, pero la imagen lo contradice: nadie atiende a la abuela, que queda sin respuesta.",
-        "tipo_error": "comprension",
-        "diagnostico": "probable",
-        "razon_frecuente": "Leyó solo el título y la leyenda sin contrastarlos con la escena."
-      },
-      {
-        "clave": "B",
         "texto": "Cuestionar que la familia celebre el cumpleaños en las redes mientras deja sola a la abuela que tiene al frente.",
         "correcta": true,
         "explicacion": "Todos los globos de la familia hablan de redes («me gusta», grupo, historia), mientras la pregunta de la abuela queda sin respuesta; el módem aparece como «invitado de honor». La crítica recae en esa ausencia de quienes están presentes.",
@@ -1263,7 +869,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "Burlarse de la abuela por no saber usar el celular.",
         "correcta": false,
         "explicacion": "La caricatura no muestra torpeza de la abuela; al contrario, ella es la única que busca a los demás. La crítica apunta a los que miran la pantalla.",
@@ -1272,42 +878,38 @@
         "razon_frecuente": "Invirtió el blanco de la crítica."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "Advertir que las velas encendidas pueden causar un accidente en la casa.",
         "correcta": false,
         "explicacion": "La cera que chorrea sirve para indicar que pasa el tiempo sin que nadie reaccione; no es una advertencia sobre seguridad.",
         "tipo_error": "distractor",
         "diagnostico": "insuficiente",
         "razon_frecuente": "Tomó un detalle del dibujo como si fuera el mensaje principal."
+      },
+      {
+        "clave": "D",
+        "texto": "Celebrar que la tecnología permite a la familia, incluso a los parientes lejanos, felicitar a la abuela.",
+        "correcta": false,
+        "explicacion": "Es la lectura que sugiere el título «Conectados» tomado al pie de la letra, pero la imagen lo contradice: nadie atiende a la abuela, que queda sin respuesta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó solo el título y la leyenda sin contrastarlos con la escena."
       }
     ],
-    "explicacion": "LEER: reviso los cuatro globos, los detalles (cera que chorrea, reloj, módem con gorrito) y la leyenda. COMPRENDER: se pide la intención valorativa del autor. INTERPRETAR: tres personajes celebran «hacia afuera» (likes, grupo, historia) y nadie escucha a la abuela. REPRESENTAR: presencia física + atención en la pantalla = ausencia real; el módem ocupa el lugar de la festejada. RAZONAR: A se queda en el título; C invierte el blanco de la crítica; D toma un detalle por el mensaje. RESOLVER: opción B. VERIFICAR: la ironía de la leyenda («Nunca habíamos estado tan conectados») confirma que la conexión digital sustituye a la cercanía.",
+    "explicacion": "LEER: reviso los cuatro globos, los detalles (cera que chorrea, reloj, módem con gorrito) y la leyenda. COMPRENDER: se pide la intención valorativa del autor. INTERPRETAR: tres personajes celebran «hacia afuera» (likes, grupo, historia) y nadie escucha a la abuela. REPRESENTAR: presencia física + atención en la pantalla = ausencia real; el módem ocupa el lugar de la festejada. RAZONAR: A se queda en el título; C invierte el blanco de la crítica; D toma un detalle por el mensaje. RESOLVER: opción A. VERIFICAR: la ironía de la leyenda («Nunca habíamos estado tan conectados») confirma que la conexión digital sustituye a la cercanía.",
     "que_identificar": "El contraste entre los globos de la familia (redes) y el globo sin respuesta de la abuela.",
     "que_revisar": "Contenidos valorativos en textos gráficos: blanco de la crítica, detalles simbólicos e ironía.",
-    "refuerzo_ids": [
-      "LC-059",
-      "LC-044"
-    ],
+    "refuerzo_ids": ["LC-059", "LC-044"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T16",
-      "caricatura",
-      "humor_grafico",
-      "tecnologia",
-      "familia"
-    ],
+    "etiquetas": ["texto:LC-T16", "caricatura", "humor_grafico", "tecnologia", "familia"],
     "estado": "aprobada"
   },
   {
     "id": "LC-059",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_discontinuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -1360,30 +962,17 @@
     "explicacion": "LEER: ubico la leyenda al pie y la comparo con la escena. COMPRENDER: se pide el tipo de relación entre dos elementos del texto discontinuo. INTERPRETAR: «conectados» tiene dos sentidos: a la red y entre personas. REPRESENTAR: leyenda = «muy conectados»; imagen = cada uno en su pantalla, abuela ignorada → contradicción deliberada. RAZONAR: A lee literalmente; B confunde la voz de la leyenda con un globo; D cambia el motivo de la celebración. RESOLVER: opción C. VERIFICAR: el módem con gorrito de fiesta refuerza el doble sentido: el «invitado de honor» es la conexión, no la abuela.",
     "que_identificar": "La ubicación de la leyenda (fuera de los globos) y el contraste con la escena.",
     "que_revisar": "Relaciones entre texto e imagen en caricaturas: anclaje, complemento, contradicción e ironía.",
-    "refuerzo_ids": [
-      "LC-058",
-      "LC-060"
-    ],
+    "refuerzo_ids": ["LC-058", "LC-060"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T16",
-      "caricatura",
-      "humor_grafico",
-      "tecnologia",
-      "familia"
-    ],
+    "etiquetas": ["texto:LC-T16", "caricatura", "humor_grafico", "tecnologia", "familia"],
     "estado": "aprobada"
   },
   {
     "id": "LC-060",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_discontinuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -1436,30 +1025,17 @@
     "explicacion": "LEER: repaso la intención crítica (familia volcada a las redes, abuela ignorada) y los cuatro enunciados. COMPRENDER: se pide qué enunciado externo comparte la misma crítica. INTERPRETAR: la caricatura cuestiona la sustitución de la presencia por la publicación. REPRESENTAR: para cada opción verifico dos condiciones: (1) mismo blanco (la familia conectada) y (2) mismo alcance (sin generalizar ni prohibir). RAZONAR: A falla en el alcance; B y C fallan en el blanco. RESOLVER: opción D. VERIFICAR: D se apoya en un elemento concreto del texto (la historia «Celebrando con la mejor abuela») que contradice la escena.",
     "que_identificar": "El globo del muchacho frente a la pregunta sin respuesta de la abuela, y quiénes usan el celular.",
     "que_revisar": "Relacionar un texto con otros enunciados: comprobar que coincidan el blanco y el alcance de la crítica.",
-    "refuerzo_ids": [
-      "LC-058",
-      "LC-028"
-    ],
+    "refuerzo_ids": ["LC-058", "LC-028"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T16",
-      "caricatura",
-      "humor_grafico",
-      "tecnologia",
-      "familia"
-    ],
+    "etiquetas": ["texto:LC-T16", "caricatura", "humor_grafico", "tecnologia", "familia"],
     "estado": "aprobada"
   },
   {
     "id": "LC-061",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -1512,29 +1088,17 @@
     "explicacion": "LEER: releo el último párrafo completo. COMPRENDER: se pide el sentido de una expresión metafórica. INTERPRETAR: una deuda es algo que falta y crece si no se paga; aplicado al sueño, son horas que faltan. REPRESENTAR: dormirse a las 11 + levantarse a las 5 = 6 horas por noche; lo que falta se suma cada día. RAZONAR: A invierte el sentido; C toma información de otro párrafo; D contradice la última oración. RESOLVER: opción B. VERIFICAR: «se acumula día tras día» confirma la idea de suma de faltantes.",
     "que_identificar": "Las horas mencionadas (once de la noche, cinco de la mañana) y el verbo «se acumula».",
     "que_revisar": "Sentido de metáforas cotidianas a partir del contexto; no mezclar información de párrafos distintos.",
-    "refuerzo_ids": [
-      "LC-064"
-    ],
+    "refuerzo_ids": ["LC-064"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 90,
-    "etiquetas": [
-      "texto:LC-T17",
-      "expositivo",
-      "divulgacion",
-      "neurociencia",
-      "sueno"
-    ],
+    "etiquetas": ["texto:LC-T17", "expositivo", "divulgacion", "neurociencia", "sueno"],
     "estado": "aprobada"
   },
   {
     "id": "LC-062",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC2",
     "componente": "texto_continuo",
     "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
@@ -1587,30 +1151,17 @@
     "explicacion": "LEER: identifico la idea de cada párrafo. COMPRENDER: se pide la idea que integra todo el texto. INTERPRETAR: §1 tesis (el cerebro trabaja de noche); §2 limpieza; §3 memoria; §4 adolescentes. REPRESENTAR: tesis + tarea 1 + tarea 2 + caso especial. RESOLVER: busco la opción que contenga todas esas partes sin contradecir ninguna: la D. RAZONAR: A es un detalle; B es la idea refutada; C contradice el último párrafo. VERIFICAR: el título («El turno de noche del cerebro») coincide con D: el cerebro tiene trabajo durante la noche.",
     "que_identificar": "La oración tesis del primer párrafo y las expresiones «Una de ellas…», «La otra tarea…», «problema adicional».",
     "que_revisar": "Identificación de la idea global en textos expositivos: distinguir tesis, ejemplos y datos de apoyo.",
-    "refuerzo_ids": [
-      "LC-004",
-      "LC-018"
-    ],
+    "refuerzo_ids": ["LC-004", "LC-018"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T17",
-      "expositivo",
-      "divulgacion",
-      "neurociencia",
-      "sueno"
-    ],
+    "etiquetas": ["texto:LC-T17", "expositivo", "divulgacion", "neurociencia", "sueno"],
     "estado": "aprobada"
   },
   {
     "id": "LC-063",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC3",
     "componente": "texto_continuo",
     "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
@@ -1663,30 +1214,17 @@
     "explicacion": "LEER: releo el segundo párrafo, en especial la primera y la última oración. COMPRENDER: se pide evaluar si una afirmación del resumen es fiel al texto. INTERPRETAR: el hallazgo se hizo «en ratones» y el texto marca su límite («Todavía se estudia…»). REPRESENTAR: dato observado en ratones → pregunta abierta para humanos ≠ «comprobado en personas». RAZONAR: B recurre a la autoridad; C cambia el referente de la cifra; D usa un dato sin relación lógica. RESOLVER: opción A. VERIFICAR: la palabra «comprobado» y la expresión «en las personas» son precisamente las que el texto no permite.",
     "que_identificar": "La expresión «observó en ratones» y la advertencia final del segundo párrafo.",
     "que_revisar": "Alcance de los hallazgos científicos: no generalizar de un modelo animal a humanos; distinguir datos de conclusiones.",
-    "refuerzo_ids": [
-      "LC-055",
-      "LC-047"
-    ],
+    "refuerzo_ids": ["LC-055", "LC-047"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 120,
-    "etiquetas": [
-      "texto:LC-T17",
-      "expositivo",
-      "divulgacion",
-      "neurociencia",
-      "sueno"
-    ],
+    "etiquetas": ["texto:LC-T17", "expositivo", "divulgacion", "neurociencia", "sueno"],
     "estado": "aprobada"
   },
   {
     "id": "LC-064",
     "prueba": "lectura_critica",
     "origen": "estilo",
-    "fuente": {
-      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
-      "url": null,
-      "anio": 2026
-    },
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
     "competencia": "LC1",
     "componente": "texto_continuo",
     "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
@@ -1701,15 +1239,6 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "estudiar de noche es inútil, porque después de las once el cerebro ya no aprende.",
-        "correcta": false,
-        "explicacion": "Mezcla dos párrafos: las «once de la noche» aparecen en el párrafo de los adolescentes y no se refieren a la capacidad de aprender. Además, el texto dice «puede resultar», no que sea inútil.",
-        "tipo_error": "inferencia",
-        "diagnostico": "probable",
-        "razon_frecuente": "Generalizó y combinó datos de párrafos distintos."
-      },
-      {
-        "clave": "B",
         "texto": "el hipocampo borra durante la noche lo que se repasó en exceso.",
         "correcta": false,
         "explicacion": "El texto dice que el hipocampo «repite» patrones y los «envía a la corteza»; no habla de borrar nada.",
@@ -1718,7 +1247,7 @@
         "razon_frecuente": "Interpretó al revés la acción del hipocampo."
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "como la memoria se consolida durante el día, dormir hace que se pierda lo repasado.",
         "correcta": false,
         "explicacion": "Invierte el orden: según el texto, la consolidación ocurre «en las fases de sueño profundo»; lo que se pierde al trasnochar es ese sueño.",
@@ -1727,31 +1256,31 @@
         "razon_frecuente": "Invirtió causa y efecto entre dormir y consolidar."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "lo estudiado al trasnochar tiene menos oportunidad de guardarse a largo plazo, porque sin sueño profundo el hipocampo no lo transfiere a la corteza.",
         "correcta": true,
         "explicacion": "«Ese repaso» remite al estudio de la noche; «se consolida» remite a lo explicado antes: en el sueño profundo el hipocampo envía la información a la corteza, «donde se guardan a largo plazo». Si no se duerme, se pierde ese momento.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "estudiar de noche es inútil, porque después de las once el cerebro ya no aprende.",
+        "correcta": false,
+        "explicacion": "Mezcla dos párrafos: las «once de la noche» aparecen en el párrafo de los adolescentes y no se refieren a la capacidad de aprender. Además, el texto dice «puede resultar», no que sea inútil.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó y combinó datos de párrafos distintos."
       }
     ],
-    "explicacion": "LEER: releo el tercer párrafo desde «La otra tarea…». COMPRENDER: se pide el sentido de un enunciado y de sus referentes («ese repaso», «se consolida»). INTERPRETAR: «contraproducente» = produce el efecto contrario al buscado; se busca recordar más y se termina fijando menos. REPRESENTAR: trasnochar → + tiempo de estudio, − sueño profundo → − transferencia hipocampo-corteza → − memoria a largo plazo. RAZONAR: A mezcla párrafos y exagera; B cambia «repite» por «borra»; C invierte cuándo ocurre la consolidación. RESOLVER: opción D. VERIFICAR: la oración empieza con «Por eso», que la liga causalmente con la explicación previa del hipocampo, y D respeta esa relación.",
+    "explicacion": "LEER: releo el tercer párrafo desde «La otra tarea…». COMPRENDER: se pide el sentido de un enunciado y de sus referentes («ese repaso», «se consolida»). INTERPRETAR: «contraproducente» = produce el efecto contrario al buscado; se busca recordar más y se termina fijando menos. REPRESENTAR: trasnochar → + tiempo de estudio, − sueño profundo → − transferencia hipocampo-corteza → − memoria a largo plazo. RAZONAR: A mezcla párrafos y exagera; B cambia «repite» por «borra»; C invierte cuándo ocurre la consolidación. RESOLVER: opción C. VERIFICAR: la oración empieza con «Por eso», que la liga causalmente con la explicación previa del hipocampo, y D respeta esa relación.",
     "que_identificar": "El conector «Por eso», el referente de «ese repaso» y la explicación previa sobre el hipocampo y la corteza.",
     "que_revisar": "Referentes y conectores causales; vocabulario en contexto («contraproducente», «consolida»).",
-    "refuerzo_ids": [
-      "LC-061",
-      "LC-052"
-    ],
+    "refuerzo_ids": ["LC-061", "LC-052"],
     "recurso_ids": [],
     "tiempo_sugerido_seg": 150,
-    "etiquetas": [
-      "texto:LC-T17",
-      "expositivo",
-      "divulgacion",
-      "neurociencia",
-      "sueno"
-    ],
+    "etiquetas": ["texto:LC-T17", "expositivo", "divulgacion", "neurociencia", "sueno"],
     "estado": "aprobada"
   }
 ]

@@ -17,11 +17,7 @@
       "tipo": "tabla",
       "titulo": "Frecuencias medidas en tres momentos",
       "columnas": ["Momento", "Frecuencia cardíaca (latidos/min)", "Frecuencia respiratoria (respiraciones/min)"],
-      "filas": [
-        ["En reposo", 72, 16],
-        ["Justo después de saltar 1 minuto", 130, 30],
-        ["5 minutos después de terminar", 80, 18]
-      ],
+      "filas": [["En reposo", 72, 16], ["Justo después de saltar 1 minuto", 130, 30], ["5 minutos después de terminar", 80, 18]],
       "nota": "Las mediciones se hicieron el mismo día, con la misma persona y en el mismo lugar."
     },
     "enunciado": "¿Cuál es la explicación más adecuada del aumento simultáneo de la frecuencia cardíaca y de la frecuencia respiratoria justo después del ejercicio?",
@@ -296,12 +292,7 @@
       "tipo": "tabla",
       "titulo": "Condiciones y resultado de cada botella a los 30 minutos",
       "columnas": ["Botella", "Azúcar (g)", "Temperatura del agua (°C)", "Diámetro del globo (cm)"],
-      "filas": [
-        ["1", 0, 35, 0],
-        ["2", 10, 35, 9],
-        ["3", 10, 5, 1],
-        ["4", 10, 70, 0]
-      ],
+      "filas": [["1", 0, 35, 0], ["2", 10, 35, 9], ["3", 10, 5, 1], ["4", 10, 70, 0]],
       "nota": "Todas las botellas tenían la misma cantidad de levadura y de agua, y se mantuvieron a la temperatura indicada durante los 30 minutos."
     },
     "enunciado": "¿Cuál explicación es consistente con los resultados de las cuatro botellas?",
@@ -433,12 +424,7 @@
       "tipo": "tabla",
       "titulo": "Estado de cada clavo a los siete días",
       "columnas": ["Tubo", "Condición", "Observación a los 7 días"],
-      "filas": [
-        ["1", "Aire seco (con un desecante que absorbe la humedad)", "Sin cambios"],
-        ["2", "Agua hervida y cubierta con una capa de aceite", "Sin cambios"],
-        ["3", "Agua de la llave, en contacto con el aire", "Óxido leve (manchas cafés)"],
-        ["4", "Agua de la llave con sal disuelta, en contacto con el aire", "Óxido abundante"]
-      ]
+      "filas": [["1", "Aire seco (con un desecante que absorbe la humedad)", "Sin cambios"], ["2", "Agua hervida y cubierta con una capa de aceite", "Sin cambios"], ["3", "Agua de la llave, en contacto con el aire", "Óxido leve (manchas cafés)"], ["4", "Agua de la llave con sal disuelta, en contacto con el aire", "Óxido abundante"]]
     },
     "enunciado": "¿Qué conclusión sobre las condiciones necesarias para la oxidación del hierro está mejor sustentada por el conjunto de los cuatro resultados?",
     "opciones": [
@@ -506,10 +492,7 @@
       "tipo": "tabla",
       "titulo": "Respuesta de anticuerpos ante el mismo antígeno",
       "columnas": ["Exposición al antígeno", "Día en que se detectan anticuerpos", "Día del nivel máximo", "Nivel máximo de anticuerpos (unidades relativas)"],
-      "filas": [
-        ["Primera (primera dosis)", 7, 14, 10],
-        ["Segunda (segunda dosis)", 2, 5, 100]
-      ],
+      "filas": [["Primera (primera dosis)", 7, 14, 10], ["Segunda (segunda dosis)", 2, 5, 100]],
       "nota": "El antígeno y la cantidad aplicada fueron los mismos en ambas dosis."
     },
     "enunciado": "¿Cómo se explica que la respuesta a la segunda dosis sea más rápida y más intensa que la respuesta a la primera?",
@@ -651,12 +634,7 @@
       "tipo": "tabla",
       "titulo": "Periodo del péndulo en cuatro ensayos",
       "columnas": ["Ensayo", "Longitud del hilo (cm)", "Masa (g)", "Ángulo inicial (°)", "Periodo (s)"],
-      "filas": [
-        ["1", 50, 20, 10, 1.42],
-        ["2", 50, 40, 10, 1.42],
-        ["3", 100, 20, 10, 2.01],
-        ["4", 100, 40, 10, 2.01]
-      ],
+      "filas": [["1", 50, 20, 10, 1.42], ["2", 50, 40, 10, 1.42], ["3", 100, 20, 10, 2.01], ["4", 100, 40, 10, 2.01]],
       "nota": "Cada periodo es el promedio de tres mediciones."
     },
     "enunciado": "A partir de la tabla, ¿cuál conclusión sobre la hipótesis y sobre las variables es válida?",
@@ -788,30 +766,12 @@
       "tipo": "tabla",
       "titulo": "Lluvia mensual y casos de dengue en el municipio",
       "columnas": ["Mes", "Lluvia (mm)", "Casos de dengue"],
-      "filas": [
-        ["Enero", 40, 12],
-        ["Febrero", 60, 15],
-        ["Marzo", 120, 20],
-        ["Abril", 220, 35],
-        ["Mayo", 250, 58],
-        ["Junio", 150, 62],
-        ["Julio", 80, 40],
-        ["Agosto", 70, 22]
-      ]
+      "filas": [["Enero", 40, 12], ["Febrero", 60, 15], ["Marzo", 120, 20], ["Abril", 220, 35], ["Mayo", 250, 58], ["Junio", 150, 62], ["Julio", 80, 40], ["Agosto", 70, 22]]
     },
     "enunciado": "¿Cuál de las siguientes conclusiones es válida a partir de los datos de la tabla y del contexto?",
     "opciones": [
       {
         "clave": "A",
-        "texto": "La lluvia causa directamente el dengue, pues en los meses más lluviosos hubo más casos.",
-        "correcta": false,
-        "explicacion": "No responde. Los datos muestran una asociación entre lluvia y casos, pero la lluvia no produce la enfermedad: el dengue lo transmite un mosquito. Además, el mes con más lluvia (mayo, 250 mm) no es el de más casos (junio, 62), así que ni siquiera la coincidencia mes a mes es exacta. Afirmar causalidad directa concluye más de lo que muestran los datos.",
-        "tipo_error": "razonamiento",
-        "diagnostico": "probable",
-        "razon_frecuente": "Confunde correlación con causa directa y omite el mecanismo (el mosquito) descrito en el contexto."
-      },
-      {
-        "clave": "B",
         "texto": "Hay una asociación entre lluvia y casos: el máximo de casos ocurre aproximadamente un mes después del máximo de lluvia, lo cual es compatible con el tiempo que tarda el mosquito en desarrollarse en el agua acumulada; para afirmar causalidad harían falta más datos, como la cantidad de criaderos o de mosquitos.",
         "correcta": true,
         "explicacion": "Es la correcta. La tabla muestra que los casos suben cuando sube la lluvia y bajan cuando baja, con un desfase: lluvia máxima en mayo (250 mm) y casos máximos en junio (62). Ese retraso coincide con el tiempo de desarrollo de las larvas descrito en el contexto. La conclusión describe la asociación, propone un mecanismo plausible y reconoce que los datos por sí solos no demuestran la causa.",
@@ -820,7 +780,7 @@
         "razon_frecuente": null
       },
       {
-        "clave": "C",
+        "clave": "B",
         "texto": "Los casos de dengue hacen disminuir la lluvia, ya que después de junio, cuando hubo más casos, la lluvia bajó.",
         "correcta": false,
         "explicacion": "No responde. Invierte la relación entre las variables: la lluvia es un fenómeno climático que no puede ser afectado por el número de enfermos. Además, la lluvia ya venía bajando desde mayo (250 → 150 mm) antes del máximo de casos en junio, así que ni siquiera el orden temporal apoya esta idea.",
@@ -829,13 +789,22 @@
         "razon_frecuente": "Invierte la dirección de la relación y toma una coincidencia temporal como causa."
       },
       {
-        "clave": "D",
+        "clave": "C",
         "texto": "No hay relación entre las variables, porque en junio llovió menos que en mayo y sin embargo hubo más casos.",
         "correcta": false,
         "explicacion": "No responde. Un solo par de meses no anula la tendencia general: de enero a mayo ambas variables suben y de junio a agosto ambas bajan. La 'excepción' de junio se explica por el desfase de unas semanas entre la lluvia y la aparición de mosquitos adultos que menciona el contexto, no por ausencia de relación.",
         "tipo_error": "interpretacion",
         "diagnostico": "probable",
         "razon_frecuente": "Espera una relación exacta mes a mes y descarta la asociación por una excepción explicable."
+      },
+      {
+        "clave": "D",
+        "texto": "La lluvia causa directamente el dengue, pues en los meses más lluviosos hubo más casos.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran una asociación entre lluvia y casos, pero la lluvia no produce la enfermedad: el dengue lo transmite un mosquito. Además, el mes con más lluvia (mayo, 250 mm) no es el de más casos (junio, 62), así que ni siquiera la coincidencia mes a mes es exacta. Afirmar causalidad directa concluye más de lo que muestran los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde correlación con causa directa y omite el mecanismo (el mosquito) descrito en el contexto."
       }
     ],
     "explicacion": "LEER: tabla de ocho meses con lluvia y casos de dengue; contexto: el mosquito se cría en agua acumulada y tarda una a dos semanas en desarrollarse. COMPRENDER: se pide la conclusión VÁLIDA, es decir, la que los datos y el contexto respaldan sin exagerar. INTERPRETAR: lluvia sube de enero a mayo (40 → 250) y baja de junio a agosto (150 → 70); casos suben de enero a junio (12 → 62) y bajan después (40, 22); el pico de casos (junio) va un mes después del pico de lluvia (mayo). REPRESENTAR: lluvia → agua acumulada → larvas (1-2 semanas) → mosquitos adultos → casos; por eso el desfase. RAZONAR: A convierte una asociación en causa directa; C invierte las variables; D niega la relación por un solo par de meses que el desfase explica; B describe la asociación, el desfase, el mecanismo plausible y los límites de los datos. RESOLVER: la respuesta es B. VERIFICAR: se comprueba que B no afirma nada que no esté en la tabla o en el contexto y que el desfase de un mes coincide con el tiempo de desarrollo del mosquito.",
