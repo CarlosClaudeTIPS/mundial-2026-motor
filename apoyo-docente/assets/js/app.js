@@ -82,17 +82,10 @@
   toggle.addEventListener("click", () => { const open = nav.classList.toggle("open"); toggle.setAttribute("aria-expanded", String(open)); });
   nav.addEventListener("click", (e) => { if (e.target.tagName === "A") { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); } });
 
-  /* ---------- Áreas ---------- */
-  $("#areasGrid").innerHTML = (CFG.areas || []).map((a) => `
-    <a class="area reveal" href="#servicios" data-service="${esc(a.id)}">
-      <div class="area-icon">${icon(a.icono)}</div>
-      <h3>${esc(a.titulo)}</h3><p>${esc(a.corto)}</p>
-      <span class="area-more">Ver detalle →</span>
-    </a>`).join("");
-
   /* ---------- Servicios ---------- */
   const servicios = CFG.servicios || [];
-  $("#serviceTabs").innerHTML = servicios.map((s, i) => `<button class="tab" role="tab" id="tab-${esc(s.id)}" aria-selected="${i === 0}" aria-controls="panel-${esc(s.id)}" data-id="${esc(s.id)}">${esc(s.titulo)}</button>`).join("");
+  const areaIcon = (id) => ((CFG.areas || []).find((a) => a.id === id) || {}).icono || "doc";
+  $("#serviceTabs").innerHTML = servicios.map((s, i) => `<button class="tab" role="tab" id="tab-${esc(s.id)}" aria-selected="${i === 0}" aria-controls="panel-${esc(s.id)}" data-id="${esc(s.id)}">${icon(areaIcon(s.id))}<span>${esc(s.titulo)}</span></button>`).join("");
   $("#servicePanels").innerHTML = servicios.map((s, i) => `
     <article class="service-panel${i === 0 ? " active" : ""}" id="panel-${esc(s.id)}" role="tabpanel" aria-labelledby="tab-${esc(s.id)}">
       <header><h3>${esc(s.titulo)}</h3><p>${esc(s.descripcion)}</p></header>
@@ -112,7 +105,6 @@
     $$(".service-panel").forEach((p) => p.classList.toggle("active", p.id === `panel-${id}`));
   }
   $("#serviceTabs").addEventListener("click", (e) => { const t = e.target.closest(".tab"); if (t) showService(t.dataset.id); });
-  $("#areasGrid").addEventListener("click", (e) => { const a = e.target.closest("[data-service]"); if (a) showService(a.dataset.service); });
   bindWaLinks($("#servicePanels"));
 
   /* ---------- Ejemplos de flexibilidad y modalidades ---------- */
@@ -150,7 +142,9 @@
     openModal(`
       <span class="eyebrow">${esc(p.categoria)}</span>
       <h3 id="modalTitle">${esc(p.nombre)}</h3>
-      <div class="modal-preview">${preview(p)}</div>
+      ${Array.isArray(p.paginas) && p.paginas.length
+        ? `<div class="modal-pages" aria-label="Páginas de la muestra">${p.paginas.map((src, i) => `<figure><img src="${esc(src)}" alt="${esc(p.nombre)}, página ${i + 1}" loading="lazy"><figcaption>Página ${i + 1} de ${p.paginas.length}</figcaption></figure>`).join("")}</div>`
+        : `<div class="modal-preview">${preview(p)}</div>`}
       <dl class="modal-meta">
         <dt>Necesidad que resuelve</dt><dd>${esc(p.necesidad)}</dd>
         ${p.contexto ? `<dt>Grado o contexto</dt><dd>${esc(p.contexto)}</dd>` : ""}
@@ -158,8 +152,8 @@
       </dl>
       <p class="small" style="color:var(--c-ink-3)">Documento demostrativo con datos ficticios. El resultado final depende de tu contexto.</p>
       <div class="modal-actions">
-        ${p.archivo ? `<a class="btn btn-primary" href="${esc(p.archivo)}" target="_blank" rel="noopener">Abrir muestra completa (PDF)</a>` : ""}
-        <a class="btn btn-ghost" href="#formulario" data-close data-preselect="${esc(p.categoria)}">Quiero algo similar</a>
+        ${p.archivo ? `<a class="btn btn-ghost" href="${esc(p.archivo)}" download>Descargar PDF</a>` : ""}
+        <a class="btn btn-primary" href="#formulario" data-close data-preselect="${esc(p.categoria)}">Quiero algo similar</a>
         <a class="btn btn-wa wa-link" href="#" data-wa="un material similar a: ${esc(p.nombre)}">Preguntar por WhatsApp</a>
       </div>`);
   });
@@ -298,6 +292,19 @@
     }
     sim.addEventListener("change", update); update();
   })();
+
+  /* ---------- Plegables solo en celular ---------- */
+  const mq = window.matchMedia("(max-width: 820px)");
+  const syncCollapse = () => $$(".mobile-collapse").forEach((d) => { d.open = !mq.matches; });
+  syncCollapse(); mq.addEventListener("change", syncCollapse);
+  $$(".mobile-collapse").forEach((d) => d.addEventListener("toggle", () => { if (d.open) setTimeout(observeAll, 50); }));
+
+  /* ---------- Barra fija inferior (celular) ---------- */
+  const bar = $("#mobileCta"), formSec = $("#formulario");
+  if (bar && formSec && "IntersectionObserver" in window) {
+    new IntersectionObserver((en) => { document.body.classList.toggle("form-in-view", en[0].isIntersecting); }, { threshold: .15 }).observe(formSec);
+    new IntersectionObserver((en) => { document.body.classList.toggle("past-hero", !en[0].isIntersecting); }).observe($(".hero"));
+  }
 
   /* ---------- Animaciones al hacer scroll ---------- */
   const io = "IntersectionObserver" in window ? new IntersectionObserver((entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: .08, rootMargin: "0px 0px -40px 0px" }) : null;

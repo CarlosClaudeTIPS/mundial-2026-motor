@@ -202,6 +202,8 @@
       </div>
     </div>
 
+    <details class="mobile-collapse" id="collapseDiff">
+      <summary class="btn btn-ghost">Ver por qué somos diferentes</summary>
     <div class="compare reveal">
       <div class="compare-col no">
         <h3><span class="x">✕</span> Lo que no hacemos</h3>
@@ -242,17 +244,7 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== ÁREAS DE APOYO (resumen) ========== -->
-<section class="section" id="areas">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">¿En qué podemos apoyarte?</span>
-      <h2>Principales áreas de apoyo</h2>
-    </div>
-    <div class="areas-grid" id="areasGrid"><!-- se genera desde config.js --></div>
+    </details>
   </div>
 </section>
 
@@ -260,9 +252,9 @@
 <section class="section section-soft" id="servicios">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Servicios</span>
-      <h2>Qué puedes solicitar, para qué sirve y qué necesitamos</h2>
-      <p>Elige una categoría para ver el detalle.</p>
+      <span class="eyebrow">¿En qué podemos apoyarte?</span>
+      <h2>Cinco áreas de apoyo, un solo punto de partida: tu necesidad</h2>
+      <p>Toca un área para ver qué puedes solicitar, para qué sirve y qué necesitamos de ti.</p>
     </div>
     <div class="tabs reveal" role="tablist" id="serviceTabs"><!-- tabs --></div>
     <div id="servicePanels" class="service-panels"><!-- panels --></div>
@@ -316,7 +308,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">Ejemplos de trabajo</span>
       <h2>Explora lo que se puede elaborar</h2>
-      <p>Documentos demostrativos con datos ficticios. Cada uno se personaliza según tu contexto.</p>
+      <p>Documentos demostrativos con datos ficticios. Toca uno para ver la muestra completa. <span class="only-mobile">Desliza para ver más →</span></p>
     </div>
     <div class="filters reveal" id="portfolioFilters" role="group" aria-label="Filtrar ejemplos"></div>
     <div class="portfolio-grid" id="portfolioGrid"></div>
@@ -550,6 +542,8 @@
       <span class="eyebrow">Confianza y claridad</span>
       <h2>Condiciones del servicio</h2>
     </div>
+    <details class="mobile-collapse" id="collapseTrust">
+      <summary class="btn btn-ghost">Ver condiciones del servicio</summary>
     <div class="trust-grid">
       <article class="trust reveal">
         <div class="trust-icon" data-icon="layers"></div>
@@ -575,6 +569,7 @@
     <div class="trust-note reveal">
       <strong>Revisión final del docente:</strong> los documentos entregados deben ser revisados por ti para asegurar que respondan a las orientaciones de tu institución antes de usarlos.
     </div>
+    </details>
     <div class="trust-links reveal">
       <a href="#privacidad" data-modal="privacidad">Política de privacidad</a>
       <a href="#condiciones" data-modal="condiciones">Condiciones del servicio</a>
@@ -621,6 +616,9 @@
     <span>© <span id="year"></span> <span data-cfg="marca.nombre">Aula Organizada</span>. Servicio independiente de apoyo a docentes. No es una institución educativa.</span>
   </div>
 </footer>
+
+<!-- Barra fija inferior (solo celular) -->
+<div class="mobile-cta" id="mobileCta"><a href="#formulario" class="btn btn-primary">Cuéntame qué necesitas</a></div>
 
 <!-- Botón flotante WhatsApp -->
 <a href="#" class="wa-float wa-link" data-wa="" aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">

@@ -451,3 +451,43 @@ textarea{resize:vertical}
 .sim-result-label{display:inline-block;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--c-green);margin-bottom:6px}
 
 .pcard[data-cat="Presentaciones y recursos visuales"] .preview img{object-fit:contain;background:#fff;padding:12px}
+
+/* =========================================================
+   v3 — versión celular más corta + galería de muestras
+   ========================================================= */
+.tab{display:inline-flex;align-items:center;gap:8px}
+.tab svg{width:18px;height:18px}
+.only-mobile{display:none}
+.mobile-collapse>summary{display:none;list-style:none;margin:28px auto 0}
+.mobile-collapse>summary::-webkit-details-marker{display:none}
+.modal-pages{display:grid;gap:14px;max-height:62vh;overflow:auto;padding:12px;background:var(--c-bg-soft);border-radius:var(--radius-sm);margin-bottom:12px;-webkit-overflow-scrolling:touch}
+.modal-pages figure{margin:0}
+.modal-pages img{width:100%;height:auto;border-radius:6px;box-shadow:0 2px 12px rgba(31,45,85,.14);background:#fff}
+.modal-pages figcaption{text-align:center;font-size:.78rem;color:var(--c-ink-3);margin-top:6px}
+.mobile-cta{display:none}
+@media (max-width:820px){
+  .only-mobile{display:inline;color:var(--c-accent);font-weight:700}
+  /* 1. Portafolio como carrusel */
+  .portfolio-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;margin:0 -20px;padding-left:20px;scrollbar-width:none}
+  .portfolio-grid::-webkit-scrollbar{display:none}
+  .pcard{flex:0 0 76vw;max-width:320px;scroll-snap-align:start}
+  .pcard.hidden{display:none}
+  .pcard .preview{aspect-ratio:16/11}
+  .filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;margin:0 -20px 18px;padding:0 20px 6px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .filter{white-space:nowrap}
+  /* 3 y 4. Plegables */
+  .mobile-collapse>summary{display:inline-flex;width:100%}
+  .mobile-collapse[open]>summary{margin-bottom:20px}
+  .mobile-collapse[open]>summary::after{content:" ▲";font-size:.7em}
+  .mobile-collapse:not([open])>summary::after{content:" ▼";font-size:.7em}
+  .compare{margin-top:0}
+  /* 5. Barra fija inferior */
+  .mobile-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-top:1px solid var(--c-line);transform:translateY(110%);transition:transform .25s}
+  .mobile-cta .btn{width:100%}
+  body.past-hero:not(.form-in-view) .mobile-cta{transform:none}
+  body.past-hero:not(.form-in-view) .wa-float{bottom:84px}
+  .wa-float{transition:bottom .25s,background .2s}
+  .modal-pages{max-height:55vh;padding:8px}
+  .section{padding:44px 0}
+}
