@@ -63,7 +63,7 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
-      <span class="eyebrow">Apoyo personalizado para docentes en Colombia</span>
+      <span class="eyebrow pill"><span class="dot"></span>Apoyo personalizado para docentes en Colombia</span>
       <h1>¿Necesitas apoyo con tu trabajo docente? <span class="hl">Organicemos juntos</span> lo que necesitas.</h1>
       <p class="lead">Planeaciones, materiales, evaluaciones y documentación educativa desarrollados según tu asignatura, tus estudiantes, tu institución y el tiempo del que dispones.</p>
       <div class="hero-actions">
@@ -71,13 +71,16 @@
         <a href="#servicios" class="btn btn-ghost btn-lg">Conoce los servicios</a>
       </div>
       <ul class="hero-badges" aria-label="Características del servicio">
+        <li>Sin paquetes genéricos</li>
         <li>Trabajo puntual o acompañamiento</li>
         <li>Con tu formato institucional</li>
-        <li>Cotización según tu necesidad</li>
       </ul>
     </div>
     <div class="hero-visual reveal" id="heroVisual">
       <!-- Si config.marca.foto tiene una ruta, se reemplaza por esa imagen -->
+      <div class="hero-tag hero-tag-1" aria-hidden="true"><b>Hecho para:</b> 5° · Matemáticas · Semana 3</div>
+      <div class="hero-tag hero-tag-2" aria-hidden="true"><b>Formato:</b> el de tu institución ✓</div>
+      <div class="hero-tag hero-tag-3" aria-hidden="true"><b>Alcance:</b> solo lo que necesitas</div>
       <div class="hero-illustration" aria-hidden="true">
         <svg viewBox="0 0 520 440" class="illus-main" role="img" aria-label="Ilustración de una profesional organizando materiales educativos">
           <defs>
@@ -120,32 +123,122 @@
       </div>
     </div>
   </div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track">
+    <span>Planeaciones</span><span>Guías de aprendizaje</span><span>Rúbricas</span><span>Talleres</span><span>PIAR y ajustes razonables</span><span>Presentaciones</span><span>Planes de área</span><span>Evaluaciones</span><span>Informes</span><span>Material de refuerzo</span>
+    <span>Planeaciones</span><span>Guías de aprendizaje</span><span>Rúbricas</span><span>Talleres</span><span>PIAR y ajustes razonables</span><span>Presentaciones</span><span>Planes de área</span><span>Evaluaciones</span><span>Informes</span><span>Material de refuerzo</span>
+  </div></div>
 </section>
 
 <!-- ========== PERSONALIZACIÓN ========== -->
-<section class="section section-soft" id="personalizado">
+<section class="section section-persona" id="personalizado">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Nuestra forma de trabajar</span>
-      <h2>Cada propuesta se adapta al docente, no al revés</h2>
-      <p>No vendemos paquetes genéricos. Primero entendemos tu contexto y después definimos qué apoyo te conviene.</p>
+      <span class="eyebrow">Lo que nos diferencia</span>
+      <h2>No hay dos docentes iguales.<br>Por eso <span class="hl2">no hay dos propuestas iguales.</span></h2>
+      <p>Muévele a las opciones y mira cómo cambia la propuesta. Esto es lo que hacemos contigo antes de cotizar.</p>
     </div>
-    <div class="pillars">
-      <article class="pillar reveal">
-        <div class="pillar-icon" data-icon="user"></div>
-        <h3>Según tu situación</h3>
-        <p>Grado, asignatura, periodo académico, objetivos de aprendizaje y contexto institucional.</p>
-      </article>
-      <article class="pillar reveal">
-        <div class="pillar-icon" data-icon="scale"></div>
-        <h3>Solo lo que necesitas</h3>
-        <p>Un trabajo puntual o un acompañamiento durante un periodo. Nunca más de lo que te sirve.</p>
-      </article>
-      <article class="pillar reveal">
-        <div class="pillar-icon" data-icon="refresh"></div>
-        <h3>Revisado contigo</h3>
-        <p>Tú participas en la definición y validas que el resultado corresponda a tu contexto.</p>
-      </article>
+
+    <div class="simulador reveal" id="simulador">
+      <div class="sim-controls">
+        <div class="sim-group">
+          <span class="sim-label">1 · Tu grado</span>
+          <div class="chips" data-sim="grado">
+            <label><input type="radio" name="s_grado" value="Preescolar"><span>Preescolar</span></label>
+            <label><input type="radio" name="s_grado" value="2°"><span>2°</span></label>
+            <label><input type="radio" name="s_grado" value="5°" checked><span>5°</span></label>
+            <label><input type="radio" name="s_grado" value="8°"><span>8°</span></label>
+            <label><input type="radio" name="s_grado" value="11°"><span>11°</span></label>
+          </div>
+        </div>
+        <div class="sim-group">
+          <span class="sim-label">2 · Tu área</span>
+          <div class="chips" data-sim="area">
+            <label><input type="radio" name="s_area" value="Matemáticas" checked><span>Matemáticas</span></label>
+            <label><input type="radio" name="s_area" value="Lenguaje"><span>Lenguaje</span></label>
+            <label><input type="radio" name="s_area" value="Ciencias"><span>Ciencias</span></label>
+            <label><input type="radio" name="s_area" value="Sociales"><span>Sociales</span></label>
+            <label><input type="radio" name="s_area" value="Inglés"><span>Inglés</span></label>
+          </div>
+        </div>
+        <div class="sim-group">
+          <span class="sim-label">3 · Lo que necesitas</span>
+          <div class="chips" data-sim="nec">
+            <label><input type="radio" name="s_nec" value="planeacion" checked><span>Una planeación</span></label>
+            <label><input type="radio" name="s_nec" value="guia"><span>Una guía</span></label>
+            <label><input type="radio" name="s_nec" value="rubrica"><span>Una rúbrica</span></label>
+            <label><input type="radio" name="s_nec" value="inclusion"><span>Adaptar una actividad</span></label>
+            <label><input type="radio" name="s_nec" value="revision"><span>Mejorar lo que ya tengo</span></label>
+          </div>
+        </div>
+        <div class="sim-group">
+          <span class="sim-label">4 · Tu tiempo</span>
+          <div class="chips" data-sim="tiempo">
+            <label><input type="radio" name="s_tiempo" value="semana" checked><span>Una semana</span></label>
+            <label><input type="radio" name="s_tiempo" value="periodo"><span>Un periodo</span></label>
+            <label><input type="radio" name="s_tiempo" value="puntual"><span>Solo esto</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="sim-result">
+        <div class="sim-doc" id="simDoc">
+          <div class="sim-doc-bar"><span></span><span></span><span></span><em>Vista simulada</em></div>
+          <div class="sim-doc-body">
+            <span class="sim-doc-tag" id="simTag">Planeación semanal</span>
+            <h3 id="simTitle">Planeación · Matemáticas · 5°</h3>
+            <p class="sim-doc-sub" id="simSub">Semana de clase, con tu formato institucional</p>
+            <ul class="sim-doc-lines" id="simLines"></ul>
+            <div class="sim-doc-stamp" id="simStamp">Hecho para ti</div>
+          </div>
+        </div>
+        <div class="sim-explain">
+          <h3>Tu propuesta incluiría</h3>
+          <ul class="check-list" id="simIncluye"></ul>
+          <p class="sim-note" id="simNote"></p>
+          <a href="#formulario" class="btn btn-primary" id="simCta">Pedir exactamente esto</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-col no">
+        <h3><span class="x">✕</span> Lo que no hacemos</h3>
+        <ul>
+          <li>Vender el mismo paquete a todos los docentes</li>
+          <li>Obligarte a contratar un servicio completo si solo necesitas una tarea</li>
+          <li>Entregar documentos genéricos que luego tienes que rehacer</li>
+          <li>Ignorar el formato y las orientaciones de tu institución</li>
+        </ul>
+      </div>
+      <div class="compare-col yes">
+        <h3><span class="ok">✓</span> Lo que sí hacemos</h3>
+        <ul>
+          <li>Entender primero tu grado, tu área, tu periodo y tus estudiantes</li>
+          <li>Definir contigo el alcance: una tarea puntual o un acompañamiento</li>
+          <li>Elaborar sobre tu formato institucional y tus objetivos</li>
+          <li>Revisar contigo y ajustar según lo acordado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="inputs-map reveal">
+      <h3>Todo esto entra en tu propuesta</h3>
+      <div class="inputs-flow">
+        <div class="inputs-list">
+          <span data-icon="user"></span><b>Grado y estudiantes</b>
+          <span data-icon="book"></span><b>Asignatura</b>
+          <span data-icon="calendar"></span><b>Periodo académico</b>
+          <span data-icon="check"></span><b>Objetivos de aprendizaje</b>
+          <span data-icon="folder"></span><b>Formato institucional</b>
+          <span data-icon="clock"></span><b>Tiempo disponible</b>
+        </div>
+        <div class="inputs-arrow" aria-hidden="true"><svg viewBox="0 0 80 40"><path d="M2 20h60" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 8" class="dash"/><path d="M58 8l16 12-16 12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="inputs-out">
+          <span class="inputs-out-icon" data-icon="doc"></span>
+          <b>Una propuesta hecha a tu medida</b>
+          <small>Entregables, alcance, plazo, revisiones y precio definidos contigo.</small>
+        </div>
+      </div>
     </div>
   </div>
 </section>

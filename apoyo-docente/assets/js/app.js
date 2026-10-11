@@ -261,6 +261,44 @@
   });
   renderStep();
 
+
+  /* ---------- Simulador de personalización ---------- */
+  (function () {
+    const sim = $("#simulador"); if (!sim) return;
+    const NEC = {
+      planeacion: { tag: "Planeación", doc: (a, g) => `Planeación · ${a} · ${g}`, lines: ["t", "w", "y", "", "g", "w"],
+        inc: (t) => [t === "periodo" ? "Planeaciones de todas las semanas del periodo" : t === "semana" ? "Planeación de una semana completa" : "Una sola planeación de clase", "Objetivos, actividades y evidencias en tu formato institucional", "Distribución realista del tiempo de clase"] },
+      guia: { tag: "Guía de aprendizaje", doc: (a, g) => `Guía · ${a} · ${g}`, lines: ["t", "w", "", "g", "g", "y"],
+        inc: (t) => [t === "periodo" ? "Guías de cada tema del periodo" : t === "semana" ? "Guías de la semana, conectadas con tu planeación" : "Una guía sobre el tema que indiques", "Explicación, ejemplos y actividades al nivel del grupo", "Versión imprimible y digital"] },
+      rubrica: { tag: "Rúbrica", doc: (a, g) => `Rúbrica · ${a} · ${g}`, lines: ["t", "y", "y", "y", "g", ""],
+        inc: (t) => [t === "periodo" ? "Instrumentos de evaluación de todo el periodo" : "Una rúbrica con criterios, niveles y escala", "Ajustada al sistema de evaluación (SIEE) de tu institución", "Lista de cotejo opcional para seguimiento"] },
+      inclusion: { tag: "Actividad adaptada", doc: (a, g) => `Adaptación · ${a} · ${g}`, lines: ["t", "g", "w", "y", "", "g"],
+        inc: (t) => [t === "periodo" ? "Adaptación de las actividades del periodo" : "Adaptación de la actividad que nos envíes", "Ajustes razonables a partir de la información que tú y tu institución proporcionen", "Organización de la información para el PIAR, si la necesitas"] },
+      revision: { tag: "Revisión y ajustes", doc: (a, g) => `Revisión · ${a} · ${g}`, lines: ["t", "w", "y", "w", "", "g"],
+        inc: (t) => [t === "periodo" ? "Revisión del material de todo el periodo" : "Revisión del material que ya tienes", "Correcciones, mejoras y ajuste al formato institucional", "Comentarios para que sepas qué cambió y por qué"] }
+    };
+    const TIEMPO = { semana: "una semana", periodo: "un periodo académico", puntual: "un trabajo puntual" };
+    const NOTES = {
+      puntual: "Solo pagas por esta tarea. No necesitas contratar nada más.",
+      semana: "Un alcance corto y claro: una semana de clase, lista para usar.",
+      periodo: "Un acompañamiento con entregas programadas durante el periodo."
+    };
+    const val = (n) => (sim.querySelector(`input[name="${n}"]:checked`) || {}).value;
+    function update() {
+      const g = val("s_grado"), a = val("s_area"), n = val("s_nec"), t = val("s_tiempo"), cfg = NEC[n];
+      $("#simTag").textContent = cfg.tag;
+      $("#simTitle").textContent = cfg.doc(a, g);
+      $("#simSub").textContent = `Para ${TIEMPO[t]} · con el formato de tu institución`;
+      $("#simLines").innerHTML = cfg.lines.map((c) => `<li class="${c}"></li>`).join("");
+      $("#simIncluye").innerHTML = cfg.inc(t).map((x) => `<li>${esc(x)}</li>`).join("");
+      $("#simNote").textContent = NOTES[t];
+      $("#simStamp").textContent = `Hecho para ${g}`;
+      $("#simCta").dataset.preselect = n === "revision" ? "Revisión" : n === "inclusion" ? "Inclusión" : n === "rubrica" ? "Evaluación" : n === "guia" ? "Material" : "Planeación";
+      const doc = $("#simDoc"); doc.classList.remove("bump"); void doc.offsetWidth; doc.classList.add("bump");
+    }
+    sim.addEventListener("change", update); update();
+  })();
+
   /* ---------- Animaciones al hacer scroll ---------- */
   const io = "IntersectionObserver" in window ? new IntersectionObserver((entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: .08, rootMargin: "0px 0px -40px 0px" }) : null;
   const observeAll = () => $$(".reveal:not(.in)").forEach((el) => io ? io.observe(el) : el.classList.add("in"));
