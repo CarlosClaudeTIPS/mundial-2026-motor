@@ -123,3 +123,14 @@ y entra a `http://localhost:8080`.
 - No inventes títulos, certificaciones, testimonios ni clientes. La página no incluye ninguno a propósito.
 - Revisa que la política de privacidad y las condiciones (al final de `index.html`) correspondan a cómo trabajas realmente.
 - Actualiza las preguntas frecuentes con lo que te pregunten los docentes de verdad.
+
+## 8. Documentos de muestra incluidos
+
+En `assets/portafolio/` hay 11 documentos demostrativos (PDF + imagen de vista previa), uno por cada tipo de material. Todos usan datos ficticios y llevan el sello «Documento demostrativo».
+
+Sus fuentes editables están en `assets/portafolio/fuentes/` (archivos HTML + `base.css`). Para modificar uno:
+1. Abre el `.html` con cualquier editor de texto, cambia el contenido y guárdalo.
+2. Ábrelo en el navegador y usa **Imprimir → Guardar como PDF** (tamaño Carta, sin márgenes, con gráficos de fondo).
+3. Toma una captura de la parte superior para la vista previa y reemplaza el `.png` del mismo nombre.
+
+Cuando tengas trabajos reales autorizados, reemplaza estos archivos por los tuyos siguiendo la sección 2.

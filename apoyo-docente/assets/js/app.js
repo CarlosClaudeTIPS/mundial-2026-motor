@@ -158,8 +158,8 @@
       </dl>
       <p class="small" style="color:var(--c-ink-3)">Documento demostrativo con datos ficticios. El resultado final depende de tu contexto.</p>
       <div class="modal-actions">
-        ${p.archivo ? `<a class="btn btn-ghost" href="${esc(p.archivo)}" target="_blank" rel="noopener">Ver muestra (PDF)</a>` : ""}
-        <a class="btn btn-primary" href="#formulario" data-close data-preselect="${esc(p.categoria)}">Quiero algo similar</a>
+        ${p.archivo ? `<a class="btn btn-primary" href="${esc(p.archivo)}" target="_blank" rel="noopener">Abrir muestra completa (PDF)</a>` : ""}
+        <a class="btn btn-ghost" href="#formulario" data-close data-preselect="${esc(p.categoria)}">Quiero algo similar</a>
         <a class="btn btn-wa wa-link" href="#" data-wa="un material similar a: ${esc(p.nombre)}">Preguntar por WhatsApp</a>
       </div>`);
   });
