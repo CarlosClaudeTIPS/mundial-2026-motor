@@ -112,3 +112,58 @@ describe('ciclo.estadoCiclo', () => {
     expect(estadoCiclo(ciclo, programa, new Date('2027-03-14T12:00:00')).estado).toBe('dia_examen')
   })
 })
+
+// ─── Modo carrera ────────────────────────────────────────────────────────────
+import { prioridadesDe, mezclaPorPrueba, horasPorPrueba, CARRERAS, PRUEBAS } from '../src/lib/carreras'
+
+describe('carreras.prioridadesDe', () => {
+  it('sin carreras todas las pruebas son base y reparten igual', () => {
+    const p = prioridadesDe([])
+    expect(p).toHaveLength(5)
+    expect(p.every(x => x.nivel === 'base')).toBe(true)
+    expect(p.every(x => Math.abs(x.proporcion - 0.2) < 1e-9)).toBe(true)
+  })
+  it('medicina pone ciencias naturales de primera y en prioridad alta', () => {
+    const p = prioridadesDe(['medicina'])
+    expect(p[0].prueba).toBe('ciencias_naturales')
+    expect(p[0].nivel).toBe('alta')
+    expect(p.find(x => x.prueba === 'lectura_critica').nivel).toBe('media')
+    expect(p.find(x => x.prueba === 'sociales_ciudadanas').nivel).toBe('base')
+  })
+  it('con carreras muy distintas las prioridades se aplanan pero conservan orden', () => {
+    const p = prioridadesDe(['medicina', 'ing_sistemas', 'derecho'])
+    expect(['lectura_critica', 'matematicas']).toContain(p[0].prueba)
+    expect(p.filter(x => x.nivel === 'alta').length).toBeLessThan(5)
+  })
+  it('ninguna materia queda sin práctica: la proporción mínima es positiva', () => {
+    const p = prioridadesDe(['ing_sistemas', 'derecho', 'medicina'])
+    expect(Math.min(...p.map(x => x.proporcion))).toBeGreaterThan(0.1)
+    expect(Math.abs(p.reduce((a, x) => a + x.proporcion, 0) - 1)).toBeLessThan(1e-9)
+  })
+  it('ignora ids desconocidos', () => {
+    expect(prioridadesDe(['no_existe'])).toEqual(prioridadesDe([]))
+  })
+  it('el catálogo tiene pesos 1-3 para las cinco pruebas en cada carrera', () => {
+    for (const c of CARRERAS) for (const pr of PRUEBAS) expect([1, 2, 3]).toContain(c.pesos[pr])
+    expect(new Set(CARRERAS.map(c => c.id)).size).toBe(CARRERAS.length)
+  })
+})
+
+describe('carreras.mezclaPorPrueba', () => {
+  it('reparte exactamente n y da al menos 1 por prueba cuando n ≥ 5', () => {
+    const r = mezclaPorPrueba(prioridadesDe(['medicina']), 10)
+    expect(Object.values(r).reduce((a, b) => a + b, 0)).toBe(10)
+    expect(Object.values(r).every(k => k >= 1)).toBe(true)
+    expect(r.ciencias_naturales).toBeGreaterThan(r.sociales_ciudadanas)
+  })
+  it('con pocas preguntas prioriza las de mayor peso sin pasarse de n', () => {
+    const r = mezclaPorPrueba(prioridadesDe(['derecho']), 3)
+    expect(Object.values(r).reduce((a, b) => a + b, 0)).toBe(3)
+    expect(r.lectura_critica + r.sociales_ciudadanas).toBeGreaterThanOrEqual(2)
+  })
+  it('las horas suman aproximadamente las de la semana', () => {
+    const h = horasPorPrueba(prioridadesDe(['ing_civil']), 3)
+    expect(Math.abs(h.reduce((a, x) => a + x.minutos, 0) - 180)).toBeLessThanOrEqual(15)
+    expect(h[0].minutos).toBeGreaterThan(h[h.length - 1].minutos)
+  })
+})

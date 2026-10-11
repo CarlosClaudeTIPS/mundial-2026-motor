@@ -10,7 +10,7 @@ Frente a la lista de la sección 44 del prompt, el modelo real fusiona entidades
 |---|---|---|---|
 | `preguntas` | `id` (texto, p. ej. `MAT-001`) | `prueba, competencia, habilidad, componente, dificultad, estado, origen, *etiquetas` | Banco: semilla del repo + editadas/creadas en la app |
 | `intentos` | `uid` (uuid) | `estudiante_id, pregunta_id, fecha, sesion_id, sincronizado, [estudiante_id+pregunta_id], [estudiante_id+fecha]` | Cada respuesta enviada (práctica, mini, simulacro, papel) |
-| `usuarios` (SQL: `perfiles`) | `id` (uuid) | `rol, usuario, grupo_id` | Estudiantes, docentes, admin |
+| `usuarios` (SQL: `perfiles`) | `id` (uuid) | `rol, usuario, grupo_id` | Estudiantes, docentes, admin. Estudiante: `carreras` (ids de `content/carreras.json`, máx. 3), `modo_carrera`, `carreras_definidas`; en nube se guardan con la función `guardar_carreras` (migración 003) |
 | `grupos` | `id` | `docente_id, codigo` | Curso de un docente |
 | `asignaciones` | `id` | `grupo_id, tipo, fecha_creacion` | Tarea del docente al grupo (mini o simulacro) |
 | `sesiones` | `id` | `estudiante_id, tipo, estado, fecha_inicio, asignacion_id` | Una mini-prueba o simulacro en curso o terminado |

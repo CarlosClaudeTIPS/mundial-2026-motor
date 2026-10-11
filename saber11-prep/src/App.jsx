@@ -25,6 +25,7 @@ import Materias from './components/estudiante/Materias'
 import Materia from './components/estudiante/Materia'
 import Refuerzo from './components/estudiante/Refuerzo'
 import Historial from './components/estudiante/Historial'
+import Carreras from './components/estudiante/Carreras'
 import PanelDocente from './components/docente/PanelDocente'
 import Grupo from './components/docente/Grupo'
 import EstudianteDetalle from './components/docente/EstudianteDetalle'
@@ -73,6 +74,8 @@ export default function App() {
   if (u.rol === 'estudiante' && u.estado && u.estado !== 'activo') return <Pendiente usuario={u} />
   const previsualizando = vistaEstudiante && (u.rol === 'docente' || u.rol === 'admin')
   const uVista = previsualizando ? { ...u, rol: 'estudiante', previsualizacion: true } : u
+  // Primera vez: el estudiante elige sus carreras (o decide hacerlo después) antes de ver el inicio.
+  if (u.rol === 'estudiante' && !u.carreras_definidas) return <Carreras usuario={u} inicial />
   const vista = elegirVista(uVista.rol, ruta, params, uVista)
   return <Layout usuario={u} rolVista={uVista.rol} ruta={ruta} vistaEstudiante={previsualizando} onVistaEstudiante={setVistaEstudiante}>{vista}</Layout>
 }
@@ -93,6 +96,7 @@ function elegirVista(rol, ruta, params, usuario) {
       case 'errores': return <MisErrores usuario={usuario} params={params} />
       case 'progreso': return <MiProgreso usuario={usuario} params={params} />
       case 'ruta': return <MiRuta usuario={usuario} params={params} />
+      case 'carreras': return <Carreras usuario={usuario} params={params} />
       default: return <Inicio usuario={usuario} params={params} />
     }
   }

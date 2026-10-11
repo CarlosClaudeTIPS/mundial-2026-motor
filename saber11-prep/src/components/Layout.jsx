@@ -1,4 +1,4 @@
-import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History, UserCheck } from 'lucide-react'
+import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History, UserCheck, Compass } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { salir, solicitudesPendientes } from '../lib/sesion'
 import { useSync, sincronizar } from '../lib/sync'
@@ -30,7 +30,7 @@ const MENU = {
   ],
 }
 const EXTRA_ESCRITORIO = {
-  estudiante: [{ ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 }, { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }],
+  estudiante: [{ ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 }, { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }, { ruta: 'carreras', nombre: 'Mi carrera', icono: Compass }],
   docente: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }],
   admin: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }],
 }

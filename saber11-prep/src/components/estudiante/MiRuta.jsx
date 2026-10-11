@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { cicloActivo, listarCiclos, estadoCiclo, programa, formatoFecha } from '../../lib/ciclo'
 import { Titulo, Badge, Barra } from '../ui'
+import { Compass } from 'lucide-react'
+import { modoCarreraActivo, prioridadesDeUsuario, horasPorPrueba, formatoMinutos, carreraPorId, NOMBRE_NIVEL } from '../../lib/carreras'
+import { MATERIAS } from '../Login'
+import { ir } from '../../lib/nav'
 
 // ─── Mi ruta: el programa de ~6 meses aplicado al ciclo activo ───────────────
 
@@ -32,6 +36,7 @@ export default function MiRuta({ usuario }) {
           {' '}Dedicación sugerida: {prog.horas_estudiante_semana.clase} h de clase + {prog.horas_estudiante_semana.autonomo} h de práctica autónoma por semana.
         </p>
       </div>
+      {usuario.rol === 'estudiante' && modoCarreraActivo(usuario) && <RutaCarrera usuario={usuario} horasAutonomas={prog.horas_estudiante_semana.autonomo} />}
       <div className="space-y-2">
         {estado.fases.map(f => {
           const actual = estado.fase?.id === f.id
@@ -50,6 +55,30 @@ export default function MiRuta({ usuario }) {
         })}
       </div>
       <p className="text-xs text-gray-500">{prog._estado}</p>
+    </div>
+  )
+}
+
+// Modo carrera: cómo repartir las horas de práctica autónoma de la semana entre las materias.
+function RutaCarrera({ usuario, horasAutonomas }) {
+  const filas = horasPorPrueba(prioridadesDeUsuario(usuario), horasAutonomas)
+  const carreras = (usuario.carreras ?? []).map(carreraPorId).filter(Boolean)
+  const tono = { alta: 'azul', media: 'ambar', base: 'gris' }
+  return (
+    <div className="card border-brand-blue/40">
+      <div className="flex items-start justify-between gap-2">
+        <p className="font-medium flex items-center gap-2"><Compass size={18} className="text-brand-blue" /> Tu semana en modo carrera</p>
+        <button onClick={() => ir('carreras')} className="text-xs font-semibold text-brand-blue shrink-0">Cambiar</button>
+      </div>
+      <p className="text-xs text-gray-400 mt-1">{carreras.map(c => c.nombre).join(' · ')} · {horasAutonomas} h de práctica autónoma repartidas así:</p>
+      <div className="mt-3 space-y-2">
+        {filas.map(f => { const m = MATERIAS.find(x => x.id === f.prueba); return (
+          <div key={f.prueba}>
+            <div className="flex justify-between text-sm mb-1"><span className="flex items-center gap-2">{m.nombre} <Badge tono={tono[f.nivel]}>{NOMBRE_NIVEL[f.nivel]}</Badge></span><span className="text-gray-300">{formatoMinutos(f.minutos)}</span></div>
+            <Barra valor={f.proporcion * 100 * 2.5} color={m.color} alto={6} />
+          </div>) })}
+      </div>
+      <p className="text-[11px] text-gray-500 mt-2">Las horas de clase siguen el programa normal para las cinco pruebas. Lo que cambia es en qué inviertes tu tiempo de práctica por tu cuenta.</p>
     </div>
   )
 }

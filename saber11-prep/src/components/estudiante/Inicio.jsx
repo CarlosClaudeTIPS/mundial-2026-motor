@@ -9,7 +9,9 @@ import { ir } from '../../lib/nav'
 import { Barra, Badge } from '../ui'
 import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto, crearDiagnostico, diagnosticoDe } from '../../lib/pruebas'
 import { MATERIAS, ICONO_PRUEBA } from '../Login'
-import { Stethoscope } from 'lucide-react'
+import { Stethoscope, Compass } from 'lucide-react'
+import { modoCarreraActivo, prioridadesDeUsuario, carreraPorId, NOMBRE_NIVEL } from '../../lib/carreras'
+import { VistaPrioridades } from './Carreras'
 
 export default function Inicio({ usuario }) {
   const [datos, setDatos] = useState(null)
@@ -32,6 +34,11 @@ export default function Inicio({ usuario }) {
   const vistas = new Set(datos.intentos.map(i => i.pregunta_id)).size
   const progresoBanco = Math.round((vistas / Math.max(1, datos.totalBanco)) * 100)
   const errores = datos.intentos.filter(i => !i.correcta).length
+  // Modo carrera: las materias se ordenan por lo que más pesa para las carreras elegidas.
+  const enModoCarrera = modoCarreraActivo(usuario)
+  const prioridades = prioridadesDeUsuario(usuario)
+  const nivelDe = Object.fromEntries(prioridades.map(p => [p.prueba, p.nivel]))
+  const materias = enModoCarrera ? prioridades.map(p => MATERIAS.find(m => m.id === p.prueba)).filter(Boolean) : MATERIAS
 
   const abrirAsignacion = async (a) => {
     try {
@@ -63,12 +70,15 @@ export default function Inicio({ usuario }) {
       <TarjetaDiagnostico diagnostico={datos.diagnostico} usuario={usuario} />
 
       <div className="grid grid-cols-5 gap-2">
-        {MATERIAS.map(m => { const I = ICONO_PRUEBA[m.id]; return (
-          <button key={m.id} onClick={() => ir('materia', { id: m.id })} className="card !p-3 flex flex-col items-center gap-1.5 hover:-translate-y-0.5 transition-transform">
+        {materias.map(m => { const I = ICONO_PRUEBA[m.id]; const nivel = nivelDe[m.id]; return (
+          <button key={m.id} onClick={() => ir('materia', { id: m.id })} className={`card !p-3 flex flex-col items-center gap-1.5 hover:-translate-y-0.5 transition-transform ${enModoCarrera && nivel === 'alta' ? 'border-brand-blue' : ''}`}>
             <span className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: m.fondo, color: m.color }}><I size={20} /></span>
             <span className="text-[11px] font-medium text-center leading-tight text-brand-navy">{m.nombre.replace(' y Ciudadanas', '')}</span>
+            {enModoCarrera && nivel !== 'base' && <span className={`text-[9px] font-semibold uppercase tracking-wide ${nivel === 'alta' ? 'text-brand-blue' : 'text-amber-600'}`}>{nivel === 'alta' ? 'prioridad' : 'media'}</span>}
           </button>) })}
       </div>
+
+      <TarjetaCarrera usuario={usuario} prioridades={prioridades} activo={enModoCarrera} />
 
       <div className="card">
         <div className="flex justify-between text-sm mb-1">
@@ -98,7 +108,7 @@ export default function Inicio({ usuario }) {
       )}
 
       <div className="grid grid-cols-2 gap-2">
-        <Accion icono={Play} titulo="Continuar práctica" sub="5 preguntas con explicación" onClick={() => ir('practica', { n: 5 })} destacada />
+        <Accion icono={Play} titulo={enModoCarrera ? 'Práctica enfocada' : 'Continuar práctica'} sub={enModoCarrera ? '5 preguntas, más de tus prioridades' : '5 preguntas con explicación'} onClick={() => ir('practica', enModoCarrera ? { n: 5, enfoque: 'carrera' } : { n: 5 })} destacada />
         <Accion icono={Timer} titulo="Mini-prueba" sub={`${estado?.fase?.mini_prueba?.cantidad ?? 10} preguntas · ${estado?.fase?.mini_prueba?.tiempo_min ?? 20} min`} onClick={async () => { const f = estado?.fase?.mini_prueba; const s = await crearMiniPrueba({ estudiante: usuario, cantidad: f?.cantidad ?? 10, tiempo_min: f?.tiempo_min ?? 20, titulo: 'Mini-prueba de la semana' }); ir('sesion', { id: s.id }) }} />
         <Accion icono={AlertCircle} titulo="Mis errores" sub={`${errores} para revisar`} onClick={() => ir('errores')} />
         <Accion icono={BarChart3} titulo="Refuerzo" sub="lo que está flojo, explicado" onClick={() => ir('refuerzo')} />
@@ -143,6 +153,33 @@ function Accion({ icono: Icono, titulo, sub, onClick, destacada = false }) {
       <p className="text-sm font-medium mt-2">{titulo}</p>
       <p className="text-xs text-gray-400">{sub}</p>
     </button>
+  )
+}
+
+// Modo carrera: qué eligió y cómo se reparte la práctica. Si no eligió nada, invita a hacerlo.
+function TarjetaCarrera({ usuario, prioridades, activo }) {
+  const carreras = (usuario.carreras ?? []).map(carreraPorId).filter(Boolean)
+  if (!carreras.length) {
+    return (
+      <button onClick={() => ir('carreras')} className="card w-full text-left flex items-center gap-3">
+        <span className="w-11 h-11 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center shrink-0"><Compass size={22} /></span>
+        <div className="flex-1"><p className="font-semibold text-brand-navy">¿Qué te gustaría estudiar?</p><p className="text-xs text-gray-400">Elige hasta 3 carreras y la app prioriza las materias que más pesan para ellas.</p></div>
+      </button>
+    )
+  }
+  return (
+    <div className="card">
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <Compass size={18} className="text-brand-blue shrink-0" />
+          <p className="font-semibold text-brand-navy truncate">Modo carrera {activo ? <Badge tono="azul">activo</Badge> : <Badge>apagado</Badge>}</p>
+        </div>
+        <button onClick={() => ir('carreras')} className="text-xs font-semibold text-brand-blue shrink-0">Cambiar</button>
+      </div>
+      <p className="text-xs text-gray-400 mt-1">{carreras.map(c => c.nombre).join(' · ')}</p>
+      <div className="mt-3"><VistaPrioridades prioridades={prioridades} activo={activo} compacta /></div>
+      <p className="text-[11px] text-gray-500 mt-2">{activo ? 'Practicas más de lo que más pesa para tus carreras, sin dejar ninguna materia: la meta sigue siendo subir las cinco.' : 'Con el modo apagado todas las materias pesan igual. Actívalo en "Cambiar".'}</p>
+    </div>
   )
 }
 

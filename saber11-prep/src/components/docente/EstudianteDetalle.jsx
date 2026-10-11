@@ -9,6 +9,7 @@ import { hashPin } from '../../lib/sesion'
 import { ir } from '../../lib/nav'
 import { Titulo, FilaMetrica, Metrica, Badge, fechaCorta, formatoTiempo } from '../ui'
 import { nombrePrueba, nombreTipoError, nombreDiagnostico } from '../../lib/taxonomia'
+import { carreraPorId } from '../../lib/carreras'
 
 export default function EstudianteDetalle({ params }) {
   const [d, setD] = useState(null)
@@ -41,6 +42,9 @@ export default function EstudianteDetalle({ params }) {
   return (
     <div className="space-y-4">
       <Titulo volver sub={`${e.usuario} · ${e.curso ?? ''}`}>{e.nombre}</Titulo>
+      {(e.carreras ?? []).length > 0 && (
+        <p className="text-sm text-gray-400 -mt-2">Le gustaría estudiar: <span className="text-brand-navy font-medium">{e.carreras.map(id => carreraPorId(id)?.nombre).filter(Boolean).join(' · ')}</span>{e.modo_carrera ? <Badge tono="azul">modo carrera</Badge> : null}</p>
+      )}
       {d.grupos.length > 1 && (
         <label className="card !py-2.5 flex items-center justify-between gap-2 text-sm">
           <span className="text-gray-400">Grupo</span>

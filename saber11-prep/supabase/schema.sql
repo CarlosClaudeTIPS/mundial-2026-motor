@@ -19,6 +19,9 @@ create table if not exists perfiles (
   curso text,
   ciclo_id text,
   demo boolean default false,
+  carreras jsonb default '[]'::jsonb,       -- ids de content/carreras.json (hasta 3)
+  modo_carrera boolean default false,       -- prioriza las pruebas que pesan para esas carreras
+  carreras_definidas boolean default false, -- ya pasó por la pantalla inicial de carreras
   creado timestamptz default now()
 );
 

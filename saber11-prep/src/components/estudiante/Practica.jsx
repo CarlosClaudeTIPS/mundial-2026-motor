@@ -6,6 +6,7 @@ import { ir } from '../../lib/nav'
 import PreguntaVista from '../PreguntaVista'
 import Retro from '../Retro'
 import { Titulo, formatoTiempo } from '../ui'
+import { modoCarreraActivo, prioridadesDeUsuario, mezclaPorPrueba } from '../../lib/carreras'
 
 // ─── Práctica libre / dirigida ───────────────────────────────────────────────
 // Flujo: pregunta → elegir → (lista de verificación opcional) → enviar →
@@ -39,7 +40,14 @@ export default function Practica({ usuario, params }) {
       else {
         const filtros = {}
         for (const k of ['prueba', 'competencia', 'habilidad', 'componente', 'dificultad', 'tipo_error', 'tema']) if (params[k]) filtros[k] = params[k]
-        lista = await elegirPreguntas({ n: Number(params.n ?? 5), vistas: await preguntasVistas(usuario.id), ...filtros })
+        const n = Number(params.n ?? 5)
+        const vistas = await preguntasVistas(usuario.id)
+        if (params.enfoque === 'carrera' && !filtros.prueba && modoCarreraActivo(usuario)) {
+          // Práctica enfocada: reparte las preguntas entre materias según las prioridades de la carrera.
+          const reparto = mezclaPorPrueba(prioridadesDeUsuario(usuario), n)
+          const porPrueba = await Promise.all(Object.entries(reparto).filter(([, k]) => k > 0).map(([prueba, k]) => elegirPreguntas({ n: k, vistas, ...filtros, prueba })))
+          lista = porPrueba.flat()
+        } else lista = await elegirPreguntas({ n, vistas, ...filtros })
       }
       setCola(lista.slice(1)); setActual(lista[0] ?? null); inicio.current = Date.now()
     })()

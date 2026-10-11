@@ -27,6 +27,7 @@ Usuarios de demostración (modo local, PIN `1234`): `admin`, `docente`, `est1` �
 - `content/taxonomia.json` — pruebas, competencias, componentes, habilidades del eje transversal, tipos de error → tipo de práctica.
 - `content/estructura-examen.json` — dos sesiones de 4 h 30 min, preguntas por prueba (Guía 2026-2).
 - `content/programa.json` — programa de 24 semanas en 6 fases.
+- `content/carreras.json` — catálogo de carreras por área con el peso (1-3) de cada prueba. Alimenta el **modo carrera**: al entrar por primera vez el estudiante elige hasta 3 carreras y la app prioriza (orden de materias, práctica enfocada, horas en Mi ruta) sin dejar ninguna prueba por fuera. Se cambia en Inicio → Mi carrera. En nube requiere `supabase/migracion-003-carreras.sql`.
 - `content/banco/*.json` — banco de preguntas (esquema en `content/ESQUEMA-PREGUNTA.md`). Cada distractor trae explicación, tipo de error y nivel de diagnóstico.
 
 Importar preguntas: en el panel del docente, Banco → **Importar** admite PDF o texto (cuadernillos del ICFES, guías); detecta preguntas numeradas con opciones A-D y la hoja de respuestas, y las guarda como pendientes. Con la nube y la variable `ANTHROPIC_API_KEY` en Vercel, el botón **Completar con IA** clasifica cada pregunta y escribe las explicaciones de cada opción, y **Generar con IA** redacta preguntas nuevas a partir de un texto (`api/ia-preguntas.js`, modelo `claude-opus-5-5`). Todo queda pendiente hasta que el docente lo apruebe.
