@@ -57,7 +57,13 @@ export async function iniciarSesionGuardada() {
       }
     }
     const id = await getConfig('sesion_usuario_id')
-    const usuario = id ? await db.usuarios.get(id) : null
+    let usuario = id ? await db.usuarios.get(id) : null
+    // Solo modo local: VITE_AUTOLOGIN="usuario:pin" entra directo (vistas previas y demos).
+    const auto = import.meta.env.VITE_AUTOLOGIN
+    if (!usuario && auto) {
+      const [handle, pin = ''] = String(auto).split(':')
+      usuario = await entrarLocal(handle, pin).catch(e => { console.warn('AUTOLOGIN falló', e); return null })
+    }
     setEstado({ usuario: usuario ?? null, cargando: false })
   } catch (e) {
     console.error('No se pudo restaurar la sesión', e)
