@@ -1,0 +1,112 @@
+{
+  "_nota": "Mini-lecciones por competencia y por habilidad del eje transversal. Se muestran en la sección Refuerzo cuando el estudiante tiene esa competencia floja. Editables desde este archivo.",
+  "competencias": {
+    "LC1": {
+      "que_evalua": "Que entiendas lo que dice cada parte del texto: el significado de palabras y expresiones en su contexto, quién habla, a qué se refiere un pronombre, qué información aparece explícita.",
+      "como_se_pregunta": "\"En el texto, la palabra X significa…\", \"La expresión Y se refiere a…\", \"Según el texto, ¿qué…?\"",
+      "pasos": ["Vuelve al lugar exacto del texto donde está la palabra o el dato.", "Lee la oración completa y la anterior: el significado sale de lo que la rodea, no del diccionario.", "Reemplaza la palabra por cada opción y comprueba cuál conserva el sentido de la oración.", "Descarta las opciones que dicen algo que el texto no dice, aunque suenen razonables."],
+      "errores_tipicos": ["Responder con el significado más común de la palabra y no con el que tiene en ese texto.", "Confundir quién dice algo (el narrador, un personaje, el autor).", "Elegir una opción que está en el texto pero responde otra pregunta."],
+      "ejemplo": "Si el texto dice \"los sollozos le embargaban la voz\", \"embargar\" no es un trámite legal: por el contexto (sollozos, no poder hablar) significa \"impedir, ahogar\"."
+    },
+    "LC2": {
+      "que_evalua": "Que entiendas el texto como un todo: la idea principal, la función de cada párrafo, cómo se conectan las partes, y lo que se puede inferir sin que esté escrito.",
+      "como_se_pregunta": "\"La idea principal del texto es…\", \"El segundo párrafo cumple la función de…\", \"Del texto se puede inferir que…\", \"El título más adecuado sería…\"",
+      "pasos": ["Después de leer, resume cada párrafo en una frase corta (de qué trata, qué hace: presenta, ejemplifica, contradice, concluye).", "La idea principal cubre todo el texto; un detalle solo cubre una parte. Si la opción habla de una sola parte, no es la principal.", "Para inferir, busca la frase del texto que sostiene la opción. Si no la encuentras, la opción va más allá del texto.", "Distingue lo que el texto afirma de lo que tú opinas o sabes por fuera."],
+      "errores_tipicos": ["Tomar un detalle llamativo como idea principal.", "Inferir más de lo que el texto permite (generalizar).", "Invertir causa y consecuencia."],
+      "ejemplo": "Un texto que describe tres beneficios de los páramos y termina pidiendo protegerlos tiene como idea principal la importancia de protegerlos, no uno de los tres beneficios."
+    },
+    "LC3": {
+      "que_evalua": "Que evalúes el texto: la intención del autor, la validez de sus argumentos, el punto de vista, las estrategias que usa para convencer, y cómo se relaciona con otros textos o contextos.",
+      "como_se_pregunta": "\"El propósito del autor es…\", \"¿Cuál de los siguientes enunciados debilita el argumento?\", \"La estrategia que usa el autor para convencer es…\", \"Los dos textos coinciden en…\"",
+      "pasos": ["Identifica la tesis (lo que el autor quiere que aceptes) y los argumentos (las razones que da).", "Pregúntate: ¿esta razón realmente sostiene la tesis o solo la acompaña?", "Reconoce recursos: ejemplos, cifras, citas de autoridad, preguntas retóricas, ironía, exageración.", "Para comparar textos, escribe en una línea la postura de cada uno antes de mirar las opciones."],
+      "errores_tipicos": ["Confundir la opinión del autor con la de alguien que cita.", "Aceptar un argumento porque estás de acuerdo con él, no porque esté bien sustentado.", "No detectar falacias: atacar a la persona, generalizar con un caso, falso dilema."],
+      "ejemplo": "Si una columna dice \"todos los que se oponen son perezosos\", eso ataca a las personas, no al argumento: es una falacia, y una pregunta LC3 puede pedirte identificarla."
+    },
+    "M1": {
+      "que_evalua": "Que leas y traduzcas información cuantitativa: tablas, gráficos de barras y de líneas, esquemas, fórmulas; y que pases de una representación a otra (de tabla a gráfico, de texto a ecuación).",
+      "como_se_pregunta": "\"Según la gráfica, ¿en qué mes…?\", \"¿Cuál tabla representa la información?\", \"La expresión que representa la situación es…\"",
+      "pasos": ["Lee primero el título, los ejes y las unidades. Sin eso, el número no significa nada.", "Ubica con el dedo el dato exacto que piden (año, categoría, serie de la leyenda).", "Escribe el dato con su unidad antes de calcular nada.", "Si te piden otra representación, comprueba dos o tres valores, no solo el primero."],
+      "errores_tipicos": ["Leer la barra o la columna equivocada por no mirar la leyenda.", "Confundir porcentaje con cantidad.", "Tomar el valor del eje equivocado."],
+      "ejemplo": "En una gráfica con barras de 2023 y 2024, la pregunta pide 2024: la leyenda dice que 2024 es la barra clara. Leer la oscura da la respuesta del distractor."
+    },
+    "M2": {
+      "que_evalua": "Que plantees y resuelvas problemas: elegir la operación o la estrategia, ejecutarla bien y llegar a un resultado que responda exactamente lo preguntado.",
+      "como_se_pregunta": "\"¿Cuánto debe pagar…?\", \"¿Cuántas baldosas se necesitan…?\", \"El valor de x es…\"",
+      "pasos": ["Subraya qué te piden exactamente (¿el total, la diferencia, el porcentaje, el promedio?).", "Anota los datos con sus unidades y descarta los que sobran.", "Elige la operación y estima el resultado antes de calcular (¿debe dar más o menos que…?).", "Calcula, y al final vuelve a la pregunta: ¿esto es lo que preguntaron?"],
+      "errores_tipicos": ["Responder una pregunta parecida (calcular el total cuando pedían la diferencia).", "Aplicar dos descuentos sumando los porcentajes (10 % + 10 % no es 20 %).", "Errores de unidades (m y cm, litros y m³)."],
+      "ejemplo": "Un aumento del 10 % dos veces seguidas no es 20 %: 1,1 × 1,1 = 1,21, es decir 21 %."
+    },
+    "M3": {
+      "que_evalua": "Que justifiques y evalúes afirmaciones matemáticas: decidir si un procedimiento es válido, si una conclusión se sigue de los datos, y por qué una estrategia funciona o no.",
+      "como_se_pregunta": "\"La afirmación es correcta porque…\", \"¿Cuál procedimiento es válido para…?\", \"Se puede concluir que… porque…\"",
+      "pasos": ["Lee la afirmación y decide primero si es verdadera o falsa por tu cuenta.", "Busca la razón: ¿qué propiedad, regla o dato la sostiene?", "En las opciones, descarta las que dan una razón verdadera pero que no sostiene la afirmación.", "Cuidado con \"siempre\" y \"nunca\": basta un contraejemplo para tumbarlas."],
+      "errores_tipicos": ["Elegir una opción con un hecho cierto que no responde el \"porque\".", "Confundir correlación con causa en datos estadísticos.", "Aceptar una generalización a partir de una muestra sesgada."],
+      "ejemplo": "\"El promedio de los dos grupos es el promedio de sus promedios\" solo es cierto si los grupos tienen el mismo tamaño. Con 20 y 40 estudiantes, no."
+    },
+    "S1": {
+      "que_evalua": "Conceptos básicos de las ciencias sociales y la ciudadanía: la Constitución, los mecanismos de participación, los derechos, la organización del Estado, los procesos históricos y geográficos.",
+      "como_se_pregunta": "\"El mecanismo adecuado para… es…\", \"La institución encargada de… es…\", \"El proceso descrito corresponde a…\"",
+      "pasos": ["Identifica el concepto que está en juego (¿un derecho?, ¿un mecanismo de participación?, ¿una rama del poder?).", "Recuerda para qué sirve exactamente ese concepto y quién lo aplica.", "Descarta opciones que confunden instituciones parecidas (Procuraduría y Contraloría; tutela y derecho de petición).", "Si la pregunta trae un texto, la respuesta debe ser coherente con él, no solo con tu memoria."],
+      "errores_tipicos": ["Atribuir a una institución la función de otra.", "Confundir tutela (protege derechos fundamentales) con petición (pide información o una respuesta).", "Ubicar un proceso histórico en la época equivocada."],
+      "ejemplo": "Si a un estudiante le niegan el cupo por su discapacidad, el mecanismo es la acción de tutela (derecho fundamental a la educación), no el derecho de petición."
+    },
+    "S2": {
+      "que_evalua": "Que reconozcas distintas perspectivas: qué intereses, argumentos y valores tiene cada actor en una situación, y cómo se relacionan con su posición social o histórica.",
+      "como_se_pregunta": "\"La postura del alcalde se basa en…\", \"Un argumento que usaría la comunidad en contra es…\", \"El autor de la fuente muestra una visión…\"",
+      "pasos": ["Haz una lista de los actores que aparecen (quiénes son y qué quieren).", "Para cada uno, anota su interés principal en una frase.", "Al leer una opción, pregúntate: ¿esto lo diría este actor, o lo diría otro?", "Separa lo que el texto describe de tu propia opinión sobre quién tiene razón."],
+      "errores_tipicos": ["Atribuir a un actor el argumento de otro.", "Responder con tu opinión en vez de con lo que dice la fuente.", "No notar que una fuente es de la época y tiene el punto de vista de su autor."],
+      "ejemplo": "En un conflicto por el agua, la empresa argumenta empleo e inversión; la vereda, acceso al agua y salud; la autoridad ambiental, la norma. Cada opción encaja con uno solo."
+    },
+    "S3": {
+      "que_evalua": "Que analices problemas sociales de forma sistémica: cómo se conectan las dimensiones económica, política, ambiental y cultural, y qué efectos tiene una decisión sobre distintos grupos.",
+      "como_se_pregunta": "\"Una consecuencia de esta medida sería…\", \"La relación entre X y Y se explica porque…\", \"El problema tiene causas… y…\"",
+      "pasos": ["Dibuja mentalmente la cadena: causa → efecto → nuevo efecto.", "Pregunta a quién afecta la decisión y de qué manera (no todos igual).", "Busca las dimensiones: ¿esto es económico, político, ambiental, cultural… o varias a la vez?", "Descarta opciones que invierten la cadena (ponen la consecuencia como causa)."],
+      "errores_tipicos": ["Ver una sola causa donde hay varias.", "Invertir causa y consecuencia.", "Generalizar un dato de una tabla a toda la población."],
+      "ejemplo": "Ampliar la frontera agrícola en un páramo produce empleo a corto plazo, pero reduce el agua río abajo: la pregunta suele pedir el efecto en otro grupo o a otro plazo."
+    },
+    "C1": {
+      "que_evalua": "Que uses conceptos científicos para entender situaciones: aplicar una ley, un principio o un modelo (célula, fuerza, reacción química) a un caso concreto.",
+      "como_se_pregunta": "\"Este fenómeno se explica por…\", \"Según el modelo, lo que ocurre es…\", \"La sustancia con mayor… es…\"",
+      "pasos": ["Identifica el concepto que se aplica (¿qué ley o principio está detrás?).", "Recuerda en una frase qué dice ese concepto y en qué condiciones vale.", "Compara con los datos del enunciado: ¿se cumplen esas condiciones?", "Descarta opciones que usan una ley que no aplica al caso."],
+      "errores_tipicos": ["Confundir conceptos parecidos (masa y peso, calor y temperatura, velocidad y aceleración).", "Aplicar una regla fuera de su condición (Boyle sin temperatura constante).", "Responder con conocimiento cotidiano en vez de científico."],
+      "ejemplo": "El agua hierve a menos de 100 °C en Bogotá por la menor presión atmosférica, no porque haga más frío."
+    },
+    "C2": {
+      "que_evalua": "Que construyas explicaciones: dado un fenómeno o unos resultados, elegir la explicación que da cuenta de todos los datos, no solo de algunos.",
+      "como_se_pregunta": "\"La explicación más adecuada de los resultados es…\", \"El aumento de… se debe a…\"",
+      "pasos": ["Lee todos los datos (tabla o gráfico completa) antes de elegir.", "Formula tu propia explicación en una frase.", "Prueba cada opción contra todos los datos: si contradice uno, descártala.", "Prefiere la explicación que usa el mecanismo científico, no la que solo describe."],
+      "errores_tipicos": ["Explicar solo una parte de los datos.", "Confundir describir (\"la temperatura sube\") con explicar (\"porque…\").", "Tomar una correlación por causa."],
+      "ejemplo": "Si las plantas con luz producen más burbujas de oxígeno, la explicación es la fotosíntesis (usa luz para producir O₂), no que \"la luz calienta el agua\"."
+    },
+    "C3": {
+      "que_evalua": "Indagación: cómo se diseña un experimento, cuáles son las variables, qué hipótesis se pone a prueba, si una conclusión es válida con esos datos y qué faltaría para confirmarla.",
+      "como_se_pregunta": "\"La variable que se debe mantener constante es…\", \"Para comprobar la hipótesis se debería…\", \"Una conclusión válida a partir de la tabla es…\"",
+      "pasos": ["Identifica la pregunta del experimento y la hipótesis.", "Nombra la variable que se cambia (independiente), la que se mide (dependiente) y las que se controlan.", "Un experimento bien hecho cambia una sola cosa a la vez y tiene grupo de control.", "Una conclusión válida no dice más de lo que muestran los datos."],
+      "errores_tipicos": ["Cambiar dos variables a la vez.", "Confundir variable dependiente e independiente.", "Concluir para todos los casos con una sola prueba."],
+      "ejemplo": "Para saber si el abono aumenta el crecimiento, se cambia solo el abono; agua, luz y semilla deben ser iguales en todas las materas."
+    },
+    "I1": {
+      "que_evalua": "Vocabulario y gramática del inglés en uso: elegir la palabra o la forma que completa correctamente un texto o una definición.",
+      "como_se_pregunta": "Definición → palabra (parte 1); texto con espacios de estructura (parte 4) o de léxico (parte 7).",
+      "pasos": ["Lee la oración completa alrededor del espacio, no solo las palabras vecinas.", "Decide qué tipo de palabra falta (verbo, sustantivo, preposición, conector).", "Prueba cada opción en la oración y comprueba tiempo verbal, concordancia y sentido.", "Cuidado con los falsos cognados: library es biblioteca, actually es en realidad."],
+      "errores_tipicos": ["Falsos cognados.", "Tiempo verbal que no concuerda con el contexto (\"yesterday\" exige pasado).", "Calcar del español: \"depend of\" en vez de \"depend on\"."],
+      "ejemplo": "\"We had great ____ running together\": \"fun\" es sustantivo (diversión) y encaja en \"have fun\"; \"funny\" es adjetivo y no cabe."
+    },
+    "I2": {
+      "que_evalua": "Comprensión de textos y situaciones en inglés: avisos, conversaciones cortas y lecturas, tanto lo explícito como lo que se infiere.",
+      "como_se_pregunta": "\"What does this sign mean?\" (parte 2), respuesta adecuada en una conversación (parte 3), preguntas de lectura literal e inferencial (partes 5 y 6).",
+      "pasos": ["Lee la pregunta primero para saber qué buscar en el texto.", "Ubica las palabras clave en el texto y lee la frase completa.", "En conversaciones, piensa en la intención (invitar, disculparse, pedir ayuda) y elige la respuesta que responde a esa intención.", "En inferencias, la respuesta se apoya en una frase del texto: encuéntrala."],
+      "errores_tipicos": ["Elegir una opción porque repite una palabra del texto.", "Interpretar literalmente una expresión (\"it's raining cats and dogs\").", "Confundir el referente de un pronombre (he, it, they)."],
+      "ejemplo": "\"Would you like to come?\" pide una respuesta a una invitación (\"I'd love to\"), no una opinión sobre si te gusta algo."
+    }
+  },
+  "habilidades": {
+    "leer": { "consejo": "Lee todo antes de responder: el contexto, el estímulo (tabla o gráfico) y el enunciado completo. Muchas respuestas incorrectas vienen de leer solo el título o la primera línea.", "practica": "Antes de mirar las opciones, di en voz baja qué preguntan." },
+    "comprender": { "consejo": "Reformula la pregunta con tus palabras: \"me piden…\". Si no puedes, vuelve a leer. Subraya la información relevante y tacha la que sobra.", "practica": "En cada pregunta, escribe qué te piden en máximo diez palabras." },
+    "interpretar": { "consejo": "Dale significado a los datos: ¿qué representa este número, esta barra, esta frase? Conecta el dato con la pregunta, no lo copies.", "practica": "Con una tabla o gráfico, di una frase completa por cada dato importante: \"En 2024 las ventas fueron 15, más que en 2023\"." },
+    "representar": { "consejo": "Traduce la información a otra forma: haz una tabla pequeña, un dibujo, una ecuación o un esquema de flechas. Cambiar de representación revela lo que el texto esconde.", "practica": "Antes de calcular, escribe los datos en una tabla de dos columnas." },
+    "razonar": { "consejo": "Encadena: \"si esto, entonces aquello, porque…\". Compara opciones dos a dos y descarta con una razón explícita, no por intuición.", "practica": "Para cada opción descartada, di en una frase por qué no responde." },
+    "resolver": { "consejo": "Elige la estrategia antes de ejecutar: estima el resultado, decide la operación, luego calcula con cuidado. Escribe los pasos; no hagas todo mental.", "practica": "Estima primero (¿más o menos que 100?) y compara con tu resultado final." },
+    "verificar": { "consejo": "Antes de enviar, comprueba: ¿respondí exactamente lo que preguntaron?, ¿tiene sentido el tamaño de la respuesta?, ¿usé el dato correcto? Tres segundos de verificación evitan la mitad de los errores por descuido.", "practica": "Usa la lista de chequeo de la app en cada pregunta durante una semana." }
+  }
+}

@@ -1,0 +1,801 @@
+[
+  {
+    "id": "MAT-029",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Interés simple",
+    "subtema": "Cálculo del valor total a pagar con interés simple a partir de la tasa leída en un gráfico",
+    "dificultad": 2,
+    "contexto": "El fondo de empleados de una empresa de Bucaramanga presta dinero con **interés simple**: cada mes se cobra el mismo valor de intereses, calculado siempre sobre el capital prestado. El gráfico muestra cuánto debería en total (capital más intereses) una persona que pidió prestados $2 000 000, según el mes en que pague la deuda completa.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Deuda total según el mes de pago (préstamo de $2 000 000)",
+      "eje_x": "Mes en que se paga la deuda",
+      "eje_y": "Deuda total (pesos)",
+      "series": [
+        { "nombre": "Deuda total", "valores": [["0", 2000000], ["1", 2040000], ["2", 2080000], ["3", 2120000], ["4", 2160000]] }
+      ]
+    },
+    "enunciado": "Otra empleada pide prestados $5 000 000 con las mismas condiciones y paga toda la deuda a los 6 meses. ¿Cuánto dinero debe pagar en total?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "$5 240 000",
+        "correcta": false,
+        "explicacion": "5 240 000 resulta de sumar $40 000 por cada uno de los 6 meses (6 × 40 000 = 240 000). Pero $40 000 es el interés mensual de un préstamo de $2 000 000; el interés es proporcional al capital, así que para $5 000 000 el interés mensual es 2 % de 5 000 000 = $100 000.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el interés mensual del gráfico ($40 000) como una cantidad fija, sin darse cuenta de que depende del capital prestado."
+      },
+      {
+        "clave": "B",
+        "texto": "$5 600 000",
+        "correcta": true,
+        "explicacion": "Del gráfico: la deuda sube $40 000 cada mes sobre un capital de $2 000 000, es decir, la tasa es 40 000 ÷ 2 000 000 = 0,02 = 2 % mensual. Para $5 000 000 el interés mensual es 0,02 × 5 000 000 = $100 000; en 6 meses son 6 × 100 000 = $600 000 de intereses. Total a pagar: 5 000 000 + 600 000 = $5 600 000.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "$600 000",
+        "correcta": false,
+        "explicacion": "$600 000 son solo los intereses de los 6 meses (6 × 100 000). La pregunta pide el total que debe pagar, que incluye devolver el capital: 5 000 000 + 600 000 = $5 600 000.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó bien los intereses pero olvidó que el total incluye el capital prestado."
+      },
+      {
+        "clave": "D",
+        "texto": "$5 630 812",
+        "correcta": false,
+        "explicacion": "5 630 812 resulta de aplicar interés compuesto: 5 000 000 × 1,02⁶ ≈ 5 630 812, es decir, de cobrar cada mes el 2 % sobre la deuda ya aumentada. Pero el contexto dice que el interés es simple (siempre sobre el capital) y el gráfico lo confirma: la deuda crece en línea recta, $40 000 cada mes, no cada vez más.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó interés compuesto (intereses sobre intereses) sin tener en cuenta que el gráfico muestra un crecimiento constante."
+      }
+    ],
+    "explicacion": "LEER: el gráfico muestra la deuda de un préstamo de $2 000 000: 2 000 000, 2 040 000, 2 080 000, 2 120 000 y 2 160 000 en los meses 0 a 4; el contexto dice que el interés es simple. COMPRENDER: se pregunta el TOTAL a pagar (capital más intereses) por un préstamo de $5 000 000 a 6 meses con las mismas condiciones. INTERPRETAR: la deuda sube siempre $40 000 por mes (línea recta), así que la tasa es 40 000 ÷ 2 000 000 = 2 % mensual sobre el capital. REPRESENTAR: total = capital + capital × tasa × meses = 5 000 000 + 5 000 000 × 0,02 × 6. RAZONAR: el interés mensual debe escalar con el capital: para 5 000 000 es $100 000, no $40 000; y como es simple, no se acumula sobre intereses. RESOLVER: intereses = 100 000 × 6 = 600 000; total = 5 600 000. VERIFICAR: 600 000 ÷ 5 000 000 = 0,12 = 6 meses × 2 %, coherente con el gráfico; además, con 2 000 000 la misma fórmula da 2 000 000 + 2 000 000 × 0,02 × 4 = 2 160 000, que coincide con el mes 4 del gráfico.",
+    "que_identificar": "Que el aumento constante de $40 000 por mes en el gráfico corresponde al 2 % del capital de $2 000 000, y que la pregunta pide el total, no solo los intereses.",
+    "que_revisar": "Interés simple: I = C × i × t; diferencia entre interés simple (crecimiento lineal) e interés compuesto (crecimiento exponencial); porcentaje de una cantidad.",
+    "refuerzo_ids": ["MAT-018", "MAT-030"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["graficos", "lineas", "porcentajes", "interes_simple", "prestamo", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-030",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "verificar",
+    "tema": "Porcentajes",
+    "subtema": "Precio sin IVA a partir del precio con IVA incluido: el porcentaje se aplica sobre la base, no sobre el total",
+    "dificultad": 3,
+    "contexto": "En un almacén de tecnología de Cali un computador portátil cuesta **$952 000, IVA incluido**. En Colombia el IVA general es del 19 % y se calcula sobre el precio sin IVA. Una empresa que compra el equipo necesita conocer el precio sin IVA para su contabilidad. El vendedor hace este cálculo:\n\n19 % de 952 000 = 952 000 × 0,19 = 180 880\n\nPrecio sin IVA = 952 000 − 180 880 = **$771 120**",
+    "estimulo": null,
+    "enunciado": "¿Es correcto el procedimiento del vendedor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque el IVA es el 19 % del precio y, para quitarlo, basta restar el 19 % del valor pagado.",
+        "correcta": false,
+        "explicacion": "No es válido. El 19 % no se calcula sobre los $952 000 (que ya incluyen el IVA) sino sobre el precio sin IVA, que es menor. Al restar el 19 % del total se quita más de lo debido: si el precio sin IVA fuera $771 120, el precio con IVA sería 771 120 × 1,19 = $917 633, no $952 000.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que sumar un 19 % y luego restar un 19 % devuelve al valor original, sin notar que los dos porcentajes se calculan sobre bases distintas."
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque el IVA se debe sumar y no restar: el precio sin IVA es 952 000 × 1,19 = $1 132 880.",
+        "correcta": false,
+        "explicacion": "No es válido. Multiplicar por 1,19 sirve para pasar del precio SIN IVA al precio CON IVA. Aquí se conoce el precio con IVA y se busca el de base, así que hay que hacer la operación inversa: dividir entre 1,19. Además, el precio sin IVA no puede ser mayor que el precio con IVA.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió cuál de los dos precios es el dato y cuál la incógnita, y no verificó que el resultado fuera menor que el precio con IVA."
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque el 19 % se aplica sobre el precio sin IVA: ese precio es 952 000 ÷ 1,19 = $800 000 y el IVA es $152 000, no $180 880.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Si P es el precio sin IVA, el precio con IVA es P + 0,19P = 1,19P. Entonces 1,19P = 952 000 y P = 952 000 ÷ 1,19 = 800 000. El IVA es 952 000 − 800 000 = 152 000, que en efecto es el 19 % de 800 000 (0,19 × 800 000 = 152 000). El vendedor calculó el 19 % sobre el total y por eso obtuvo un IVA demasiado alto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No, porque para quitar el IVA se divide entre el porcentaje: 952 000 ÷ 0,19 = $5 010 526.",
+        "correcta": false,
+        "explicacion": "No es válido. Dividir entre 0,19 da el valor del cual $952 000 sería el 19 %, lo que no tiene sentido en este problema: el resultado es cinco veces mayor que el precio con IVA. Hay que dividir entre 1,19 (el 100 % de base más el 19 % de IVA), y una respuesta así de grande debía descartarse al verificar.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recordó que 'hay que dividir' pero usó 0,19 en lugar de 1,19, y no comprobó que el resultado fuera razonable."
+      }
+    ],
+    "explicacion": "LEER: el precio con IVA es $952 000; el IVA es 19 % y se calcula sobre el precio sin IVA; el vendedor restó el 19 % de 952 000. COMPRENDER: se pide juzgar si ese procedimiento da el precio sin IVA. INTERPRETAR: 'IVA incluido' significa que 952 000 = precio base + 19 % del precio base, es decir, el 119 % de la base. REPRESENTAR: 1,19 × P = 952 000. RAZONAR: el vendedor tomó el 19 % del 119 %, no del 100 %, así que su IVA (180 880) es mayor que el real; la operación correcta es dividir entre 1,19. RESOLVER: P = 952 000 ÷ 1,19 = 800 000; IVA = 152 000. VERIFICAR: 800 000 × 1,19 = 952 000 ✓; en cambio 771 120 × 1,19 = 917 633 ≠ 952 000, lo que confirma que el procedimiento del vendedor no es válido.",
+    "que_identificar": "Que el 19 % se aplica sobre el precio sin IVA (la base) y que $952 000 ya corresponde al 119 % de esa base.",
+    "que_revisar": "Porcentajes sobre una base: pasar de la base al total (× 1,19) y del total a la base (÷ 1,19); por qué restar un porcentaje no deshace haberlo sumado.",
+    "refuerzo_ids": ["MAT-010", "MAT-029"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["porcentajes", "iva", "argumentacion", "comercio", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-031",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Medición y conversión de unidades",
+    "subtema": "Conversión de km/h a m/s y de galones a litros",
+    "dificultad": 2,
+    "contexto": "Un carrotanque que transporta **2 000 galones** de agua potable viaja por la vía Bogotá–Girardot a **72 km/h**. Antes de entrar a un túnel, un aviso indica: *Velocidad máxima 20 m/s*. Para el registro de entrega, el conductor debe reportar la carga en litros.\n\nDatos: 1 galón ≈ 3,8 litros; 1 km = 1 000 m; 1 hora = 3 600 segundos.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El carrotanque va exactamente a la velocidad máxima permitida (20 m/s) y transporta 7 600 litros de agua.",
+        "correcta": true,
+        "explicacion": "Es la correcta. 72 km/h = 72 000 m ÷ 3 600 s = 20 m/s, justo el límite del túnel. Y 2 000 galones × 3,8 L/galón = 7 600 litros.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El carrotanque va a 259,2 m/s, muy por encima del límite, y transporta 7 600 litros de agua.",
+        "correcta": false,
+        "explicacion": "Los litros están bien, pero 259,2 resulta de multiplicar 72 × 3,6. Para pasar de km/h a m/s se divide entre 3,6 (o se multiplica por 1 000 y se divide entre 3 600), porque un metro por segundo equivale a 3,6 km/h. Una velocidad de 259,2 m/s (más de 900 km/h) es imposible para un camión, lo que debía alertar al verificar.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recordó el factor 3,6 pero lo aplicó al revés (multiplicó en lugar de dividir) y no juzgó si el resultado era razonable."
+      },
+      {
+        "clave": "C",
+        "texto": "El carrotanque va a 1,2 m/s, muy por debajo del límite, y transporta 526 litros de agua.",
+        "correcta": false,
+        "explicacion": "1,2 resulta de dividir 72 entre 60, como si una hora tuviera 60 segundos y sin convertir los kilómetros a metros; y 526 resulta de dividir 2 000 ÷ 3,8, cuando cada galón contiene 3,8 litros, así que hay que multiplicar. Un camión a 1,2 m/s iría más despacio que una persona caminando.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió minutos con segundos en la conversión de tiempo y dividió por el factor de conversión en lugar de multiplicar."
+      },
+      {
+        "clave": "D",
+        "texto": "El carrotanque va a 20 m/s y transporta 526 litros de agua.",
+        "correcta": false,
+        "explicacion": "La velocidad está bien, pero 526 resulta de 2 000 ÷ 3,8. Como un galón es MÁS grande que un litro (3,8 L), la misma cantidad de agua se expresa con MÁS litros que galones: 2 000 × 3,8 = 7 600 litros.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió en lugar de multiplicar porque no razonó cuál unidad es mayor."
+      }
+    ],
+    "explicacion": "LEER: 72 km/h, límite de 20 m/s, 2 000 galones, 1 galón ≈ 3,8 L, 1 km = 1 000 m, 1 h = 3 600 s. COMPRENDER: hay que expresar la velocidad en m/s para compararla con el límite y la carga en litros. INTERPRETAR: km/h → m/s exige cambiar dos unidades a la vez (km a m y h a s); galones → litros exige multiplicar porque el galón es la unidad mayor. REPRESENTAR: v = 72 × 1 000 m ÷ 3 600 s; carga = 2 000 × 3,8 L. RAZONAR: 72 000 ÷ 3 600 = 20; 2 000 × 3,8 = 7 600. RESOLVER: 20 m/s (igual al límite) y 7 600 L. VERIFICAR: 20 m/s × 3,6 = 72 km/h ✓; 7 600 ÷ 3,8 = 2 000 galones ✓; ambos valores son razonables para un camión.",
+    "que_identificar": "Que la velocidad y la carga vienen en unidades distintas a las pedidas, cuáles son los factores de conversión dados y en qué dirección se aplican.",
+    "que_revisar": "Conversión de unidades por factores: km/h ↔ m/s (dividir o multiplicar por 3,6) y galones ↔ litros; decidir si se multiplica o se divide según qué unidad es mayor.",
+    "refuerzo_ids": ["MAT-011", "MAT-022"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["unidades", "conversion", "velocidad", "capacidad", "transporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-032",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Proporcionalidad",
+    "subtema": "Razón y proporción directa: escalar los ingredientes de una receta",
+    "dificultad": 1,
+    "contexto": "Para un desayuno comunitario en Medellín, un grupo de estudiantes prepara arepas siguiendo esta receta, que rinde **8 arepas**:\n\n- 2 tazas de harina de maíz precocida\n- 2½ tazas de agua\n- 1 cucharadita de sal\n\nNecesitan preparar **20 arepas** conservando el mismo sabor y textura.",
+    "estimulo": null,
+    "enunciado": "¿Cuánta harina y cuánta agua deben usar para las 20 arepas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "4 tazas de harina y 5 tazas de agua",
+        "correcta": false,
+        "explicacion": "Esas cantidades corresponden al doble de la receta, es decir, a 16 arepas, no a 20. El factor de escala no es 2 sino 20 ÷ 8 = 2,5.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Redondeó 20 a 'el doble de 8' en lugar de calcular la razón exacta 20 ÷ 8."
+      },
+      {
+        "clave": "B",
+        "texto": "5 tazas de harina y 5½ tazas de agua",
+        "correcta": false,
+        "explicacion": "La harina está bien (2 × 2,5 = 5), pero el agua se obtuvo sumando ½ taza a la harina, como en la receta original. La diferencia entre agua y harina no se conserva al escalar; lo que se conserva es la razón: el agua también se multiplica por 2,5, y 2,5 × 2,5 = 6,25 = 6¼ tazas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Razonó de forma aditiva ('el agua es media taza más que la harina') en lugar de multiplicativa."
+      },
+      {
+        "clave": "C",
+        "texto": "3 tazas de harina y 3¾ tazas de agua",
+        "correcta": false,
+        "explicacion": "Esas cantidades corresponden a 12 arepas (factor 12 ÷ 8 = 1,5), que son las arepas ADICIONALES respecto a la receta, no el total. La pregunta pide los ingredientes para las 20 arepas completas: 20 ÷ 8 = 2,5 veces la receta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la diferencia 20 − 8 = 12 y escaló la receta a 12 arepas, olvidando incluir las 8 originales."
+      },
+      {
+        "clave": "D",
+        "texto": "5 tazas de harina y 6¼ tazas de agua",
+        "correcta": true,
+        "explicacion": "Es la correcta. La razón entre las arepas que se quieren y las de la receta es 20 ÷ 8 = 2,5. Todos los ingredientes se multiplican por ese factor: harina 2 × 2,5 = 5 tazas; agua 2,5 × 2,5 = 6,25 = 6¼ tazas (y sal 1 × 2,5 = 2½ cucharaditas).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la receta rinde 8 arepas con 2 tazas de harina y 2½ tazas de agua; se necesitan 20 arepas con el mismo sabor. COMPRENDER: se pide la harina y el agua para 20 arepas, conservando las proporciones. INTERPRETAR: 'mismo sabor y textura' significa que la razón entre ingredientes se mantiene; es una proporcionalidad directa. REPRESENTAR: factor = 20 ÷ 8 = 2,5; cada ingrediente × 2,5. RAZONAR: no basta duplicar (16 arepas) ni sumar cantidades fijas; todo se escala por el mismo factor. RESOLVER: harina = 2 × 2,5 = 5 tazas; agua = 2,5 × 2,5 = 6,25 = 6¼ tazas. VERIFICAR: la razón agua/harina en la receta es 2,5 ÷ 2 = 1,25 y en la respuesta 6,25 ÷ 5 = 1,25 ✓; 5 tazas de harina rinden 5 ÷ 2 × 8 = 20 arepas ✓.",
+    "que_identificar": "El factor de escala 20 ÷ 8 = 2,5 y que ese factor se aplica a cada ingrediente, incluida la fracción 2½.",
+    "que_revisar": "Proporcionalidad directa y razón; multiplicar fracciones y números mixtos; diferencia entre razonar aditiva y multiplicativamente.",
+    "refuerzo_ids": ["MAT-017", "MAT-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["proporcionalidad", "razon", "fracciones", "receta", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-033",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Función cuadrática en contexto",
+    "subtema": "Lectura del valor máximo y del comportamiento de una variable en una tabla de altura contra tiempo",
+    "dificultad": 1,
+    "contexto": "En una clase de educación física de Barranquilla, un estudiante patea un balón hacia arriba. Con una cámara, el profesor registró la altura del balón cada medio segundo, como se muestra en la tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Altura del balón según el tiempo",
+      "columnas": ["Tiempo (s)", "Altura (m)"],
+      "filas": [["0,0", "1,0"], ["0,5", "4,75"], ["1,0", "6,0"], ["1,5", "4,75"], ["2,0", "1,0"]],
+      "nota": "La altura se mide desde el suelo. El balón se patea desde 1,0 m de altura."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente el movimiento del balón según la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El balón sube durante 2,0 segundos y alcanza una altura de 6,0 m.",
+        "correcta": false,
+        "explicacion": "No responde. Los 2,0 s son el tiempo total registrado, no el tiempo de subida: la altura crece solo hasta 1,0 s (1,0 → 4,75 → 6,0 m) y luego decrece (6,0 → 4,75 → 1,0 m). El balón sube 1,0 s y baja 1,0 s.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el último tiempo de la tabla como el tiempo de subida sin observar que la altura empieza a bajar después de 1,0 s."
+      },
+      {
+        "clave": "B",
+        "texto": "La altura máxima registrada es 6,0 m y se alcanza a 1,0 segundo; después el balón desciende.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En la columna de altura el mayor valor es 6,0 m y está en la fila de 1,0 s. Antes de ese instante las alturas aumentan (1,0; 4,75; 6,0) y después disminuyen (4,75; 1,0), lo que muestra el comportamiento de subida y bajada típico de una función cuadrática con un máximo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La altura máxima es 2,0 m, porque es el mayor valor que aparece en la tabla.",
+        "correcta": false,
+        "explicacion": "No responde. 2,0 es el mayor valor de la columna de TIEMPO (en segundos), no de la altura. La altura máxima se busca en la columna 'Altura (m)', donde el mayor valor es 6,0 m.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las columnas de la tabla y leyó un tiempo como si fuera una altura."
+      },
+      {
+        "clave": "D",
+        "texto": "El balón sube la misma cantidad en cada medio segundo, porque la tabla avanza de 0,5 s en 0,5 s.",
+        "correcta": false,
+        "explicacion": "No responde. Que el tiempo avance en intervalos iguales no significa que la altura cambie lo mismo: en el primer medio segundo sube 3,75 m (de 1,0 a 4,75) y en el segundo solo 1,25 m (de 4,75 a 6,0). El balón va frenando mientras sube, y luego baja; no es un cambio constante.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la altura crece de manera constante (lineal) sin comparar las diferencias entre filas consecutivas."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la altura en cinco instantes: 1,0; 4,75; 6,0; 4,75 y 1,0 m para 0; 0,5; 1,0; 1,5 y 2,0 s. COMPRENDER: se pide la afirmación que describe correctamente el movimiento (cuándo sube, cuánto alcanza, cuándo baja). INTERPRETAR: la altura crece hasta 1,0 s y luego decrece de forma simétrica; el mayor valor es 6,0 m. REPRESENTAR: si se graficaran los puntos se vería una parábola abierta hacia abajo con vértice en (1,0 s; 6,0 m). RAZONAR: A confunde el tiempo total con el de subida, C lee la columna equivocada y D supone un cambio constante que las diferencias (3,75 m y luego 1,25 m) desmienten. RESOLVER: la respuesta es B. VERIFICAR: las alturas a 0,5 s y 1,5 s son iguales (4,75 m), lo que confirma que el máximo está justo en medio, a 1,0 s.",
+    "que_identificar": "En qué columna está la altura, cuál es su mayor valor y en qué fila (instante) aparece; que después de ese instante los valores decrecen.",
+    "que_revisar": "Lectura de tablas de dos variables; máximo de una función y vértice de la parábola; diferencia entre variación constante (lineal) y variable (cuadrática).",
+    "refuerzo_ids": ["MAT-019", "MAT-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tablas", "funcion_cuadratica", "maximo", "deporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-034",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Semejanza y teorema de Tales",
+    "subtema": "Altura de un objeto a partir de su sombra usando la proporción de triángulos semejantes",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes de Pasto quiere saber la altura de un árbol del patio sin subirse a él. A la misma hora de la mañana, con el sol en la misma posición, midieron la altura y la longitud de la sombra de varios objetos verticales sobre el piso plano. Como los rayos del sol llegan paralelos, cada objeto y su sombra forman triángulos rectángulos **semejantes**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Alturas y sombras medidas a la misma hora",
+      "columnas": ["Objeto", "Altura (m)", "Longitud de la sombra (m)"],
+      "filas": [["Estudiante", "1,60", "2,00"], ["Poste de luz", "4,80", "6,00"], ["Árbol", "?", "9,00"]],
+      "nota": "Todas las medidas se tomaron con el mismo metro y en el mismo momento."
+    },
+    "enunciado": "¿Cuál es la altura del árbol?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "7,8 m",
+        "correcta": false,
+        "explicacion": "7,8 resulta de razonar por diferencia: en el poste la sombra supera a la altura en 1,2 m (6,00 − 4,80), así que 9,00 − 1,2 = 7,8. Pero en triángulos semejantes lo que se conserva es el COCIENTE, no la diferencia; de hecho, para el estudiante la diferencia es 0,4 m, no 1,2 m, lo que muestra que ese método no funciona.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó una relación aditiva (restar una diferencia fija) en lugar de la razón constante entre altura y sombra."
+      },
+      {
+        "clave": "B",
+        "texto": "9,0 m",
+        "correcta": false,
+        "explicacion": "9,0 m es la longitud de la sombra del árbol, no su altura. La tabla muestra que a esa hora la sombra es más larga que el objeto (1,60 m de altura da 2,00 m de sombra), así que el árbol debe medir menos de 9 m.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la sombra mide lo mismo que el objeto, sin usar las razones de las otras filas."
+      },
+      {
+        "clave": "C",
+        "texto": "7,2 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. La razón altura ÷ sombra es la misma para todos los objetos: 1,60 ÷ 2,00 = 0,8 y 4,80 ÷ 6,00 = 0,8. Entonces altura del árbol = 0,8 × 9,00 = 7,2 m. Equivalente por proporción: 1,60/2,00 = h/9,00 → h = 1,60 × 9,00 ÷ 2,00 = 7,2.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "11,25 m",
+        "correcta": false,
+        "explicacion": "11,25 resulta de invertir la razón: 9,00 × 6,00 ÷ 4,80 = 11,25, es decir, de multiplicar la sombra por sombra/altura en vez de por altura/sombra. Como las sombras son más largas que los objetos, la altura del árbol debe ser menor que 9 m, no mayor.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Planteó la proporción con los términos cruzados y no verificó que el resultado fuera menor que la sombra."
+      }
+    ],
+    "explicacion": "LEER: a la misma hora, un estudiante de 1,60 m proyecta una sombra de 2,00 m; un poste de 4,80 m, una de 6,00 m; el árbol, una de 9,00 m. COMPRENDER: se pide la altura del árbol. INTERPRETAR: como los rayos del sol son paralelos, los triángulos objeto-sombra son semejantes y la razón altura/sombra es constante (teorema de Tales). REPRESENTAR: 1,60/2,00 = 4,80/6,00 = h/9,00. RAZONAR: la razón vale 0,8 en las dos filas conocidas, lo que confirma la semejanza; la altura del árbol es 0,8 veces su sombra. RESOLVER: h = 0,8 × 9,00 = 7,2 m. VERIFICAR: 7,2 ÷ 9,0 = 0,8, igual que en las otras filas ✓; además 7,2 m es menor que la sombra (9 m), como ocurre con los demás objetos ✓.",
+    "que_identificar": "Que las dos filas completas de la tabla dan la misma razón altura/sombra (0,8) y que esa razón se aplica a la sombra del árbol.",
+    "que_revisar": "Semejanza de triángulos y teorema de Tales; planteamiento y despeje de una proporción; verificación del orden de magnitud del resultado.",
+    "refuerzo_ids": ["MAT-020", "MAT-023"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "semejanza", "tales", "proporcion", "sombras", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-035",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Ángulos y polígonos regulares",
+    "subtema": "Condición para cubrir el plano con un polígono regular: el ángulo interior debe dividir exactamente a 360°",
+    "dificultad": 3,
+    "contexto": "Una familia de Ibagué quiere cubrir el piso de una terraza con baldosas de un solo tipo de **polígono regular**, sin dejar huecos ni superponerlas. En la ferretería hay baldosas cuadradas, hexagonales regulares y pentagonales regulares, todas con lados de 20 cm. El vendedor afirma:\n\n*\"Se puede con los hexágonos y también con los pentágonos, porque los dos son polígonos regulares y tienen todos sus lados iguales, así que encajan lado con lado.\"*\n\nRecuerde que la suma de los ángulos interiores de un polígono de n lados es (n − 2) × 180°.",
+    "estimulo": null,
+    "enunciado": "¿Es válida la afirmación del vendedor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No. Solo es válida para los hexágonos: su ángulo interior mide 120° y tres baldosas completan exactamente los 360° alrededor de cada vértice; el ángulo interior del pentágono mide 108°, que no divide exactamente a 360°, así que siempre queda un hueco o una superposición.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Hexágono: (6 − 2) × 180° ÷ 6 = 720° ÷ 6 = 120°, y 360° ÷ 120° = 3 baldosas exactas por vértice. Pentágono: (5 − 2) × 180° ÷ 5 = 540° ÷ 5 = 108°; tres pentágonos suman 324° (queda un hueco de 36°) y cuatro suman 432° (se superponen). Que los lados sean iguales garantiza que los bordes coincidan, pero no que los ángulos completen la vuelta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Sí. Cualquier polígono regular tiene todos sus lados iguales, y eso basta para que las baldosas encajen unas con otras sin huecos.",
+        "correcta": false,
+        "explicacion": "No es válido. Que los lados sean iguales permite juntar los bordes, pero en cada vértice los ángulos de las baldosas que se encuentran deben sumar exactamente 360°. Con el pentágono regular (108°) eso no ocurre: 3 × 108° = 324° deja un hueco de 36° y 4 × 108° = 432° obliga a superponer.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la condición de lados iguales con la condición sobre los ángulos, que es la que decide si el plano se cubre."
+      },
+      {
+        "clave": "C",
+        "texto": "No. Ninguna de las dos sirve: en cada vértice deben juntarse cuatro ángulos rectos de 90°, como ocurre con las baldosas cuadradas.",
+        "correcta": false,
+        "explicacion": "No es válido. Cuatro ángulos de 90° es UNA forma de completar 360°, pero no la única: tres ángulos de 120° (hexágonos) o seis de 60° (triángulos equiláteros) también la completan. Por eso los hexágonos sí cubren el plano, como se ve en los panales de abejas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generaliza el caso del cuadrado como si fuera la única manera de cubrir un piso."
+      },
+      {
+        "clave": "D",
+        "texto": "Sí. Como 360° ÷ 108° ≈ 3,3, alrededor de cada vértice caben tres pentágonos y el pequeño espacio que sobra se rellena con cemento.",
+        "correcta": false,
+        "explicacion": "No es válido. El cálculo muestra justamente que los pentágonos NO encajan: si 360° ÷ 108° no es un número entero, siempre sobra un ángulo (36°) en cada vértice, y el problema exige cubrir SIN dejar huecos. Rellenar con cemento contradice la condición del enunciado.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Hizo el cálculo correcto pero ignoró la condición 'sin huecos', o no reconoció que un cociente no entero significa que no encajan."
+      }
+    ],
+    "explicacion": "LEER: baldosas cuadradas, hexagonales y pentagonales regulares; se exige cubrir sin huecos ni superposiciones; el vendedor afirma que hexágonos y pentágonos sirven porque tienen lados iguales; se da la fórmula de la suma de ángulos interiores. COMPRENDER: se pide juzgar la validez de la afirmación con un argumento matemático. INTERPRETAR: para que un solo polígono regular cubra el plano, los ángulos que se juntan en cada vértice deben sumar exactamente 360°, es decir, 360° debe ser múltiplo del ángulo interior. REPRESENTAR: ángulo interior = (n − 2) × 180° ÷ n; hexágono: 120°; pentágono: 108°. RAZONAR: 360 ÷ 120 = 3 (entero: encajan tres hexágonos); 360 ÷ 108 = 3,33… (no entero: tres dejan 36° de hueco, cuatro se superponen). Los lados iguales no bastan. RESOLVER: la afirmación solo vale para los hexágonos; la respuesta es A. VERIFICAR: con cuadrados 360 ÷ 90 = 4 y con triángulos equiláteros 360 ÷ 60 = 6, los otros dos polígonos regulares que sí cubren el plano, lo que confirma el criterio usado.",
+    "que_identificar": "La condición 'sin huecos ni superposiciones', la fórmula de los ángulos interiores y que el argumento del vendedor se apoya solo en los lados, no en los ángulos.",
+    "que_revisar": "Ángulo interior de un polígono regular; suma de ángulos alrededor de un punto (360°); teselaciones regulares (solo triángulo, cuadrado y hexágono).",
+    "refuerzo_ids": ["MAT-014", "MAT-023"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["angulos", "poligonos_regulares", "teselaciones", "baldosas", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-036",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Circunferencia y longitud de arco",
+    "subtema": "Longitud de un arco como fracción de la circunferencia según el ángulo central",
+    "dificultad": 2,
+    "contexto": "En un parque de Montería hay una pista circular para trotar cuyo **radio mide 50 m**. Los puntos de hidratación A y B están sobre la pista, y el ángulo formado por los radios que van del centro a A y a B mide **144°**. Una atleta corre desde A hasta B por el camino más corto sobre la pista.\n\nUse π ≈ 3,14.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos metros recorre la atleta entre A y B?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "62,8 m",
+        "correcta": false,
+        "explicacion": "62,8 resulta de calcular la circunferencia como π × r (3,14 × 50 = 157) en lugar de 2 × π × r, y luego tomar los 144/360 de ese valor (157 × 0,4 = 62,8). La longitud de la circunferencia es π por el diámetro, es decir, 2 × 3,14 × 50 = 314 m.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el radio como si fuera el diámetro en la fórmula de la circunferencia."
+      },
+      {
+        "clave": "B",
+        "texto": "188,4 m",
+        "correcta": false,
+        "explicacion": "188,4 es lo que mide el arco restante de la pista (314 − 125,6), que corresponde al ángulo de 360° − 144° = 216°. La atleta va por el camino más corto, es decir, por el arco de 144°, que mide 125,6 m.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el arco complementario (el resto de la pista) en lugar del arco entre A y B por el camino más corto."
+      },
+      {
+        "clave": "C",
+        "texto": "3 140 m",
+        "correcta": false,
+        "explicacion": "3 140 resulta de usar el área del círculo (π × r² = 3,14 × 2 500 = 7 850 m²) y tomar de ella la fracción 144/360 (7 850 × 0,4 = 3 140). Pero se pide una LONGITUD sobre la pista, no una superficie; además 3 140 m es diez veces más que toda la pista (314 m), lo que debía descartarse al verificar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la fórmula del área del círculo con la de la longitud de la circunferencia."
+      },
+      {
+        "clave": "D",
+        "texto": "125,6 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. La circunferencia completa mide 2 × π × r = 2 × 3,14 × 50 = 314 m y corresponde a 360°. El arco de 144° es la fracción 144/360 = 0,4 de la vuelta: 314 × 0,4 = 125,6 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: pista circular de radio 50 m; el ángulo central entre A y B es 144°; la atleta va por el camino más corto sobre la pista; π ≈ 3,14. COMPRENDER: se pide la longitud del arco AB, es decir, una distancia sobre la circunferencia. INTERPRETAR: la vuelta completa (360°) mide 2πr; un arco de 144° es la fracción 144/360 de esa vuelta. REPRESENTAR: L = (144/360) × 2 × 3,14 × 50. RAZONAR: 2 × 3,14 × 50 = 314 m; 144/360 = 0,4; el arco mide 0,4 de 314. RESOLVER: L = 125,6 m. VERIFICAR: 125,6 es menos de la mitad de la pista (157 m), como corresponde a un ángulo menor que 180° ✓; el arco restante mide 314 − 125,6 = 188,4 m, que es la fracción 216/360 = 0,6 ✓.",
+    "que_identificar": "Que 50 m es el radio (no el diámetro), que 144° es el ángulo central del arco pedido y que se busca una longitud, no un área.",
+    "que_revisar": "Longitud de la circunferencia (2πr); longitud de arco como fracción (ángulo/360°) de la circunferencia; diferencia entre longitud y área.",
+    "refuerzo_ids": ["MAT-021", "MAT-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["circunferencia", "arco", "angulo_central", "deporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-037",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "interpretar",
+    "tema": "Representación de datos",
+    "subtema": "De una tabla de porcentajes a un gráfico circular: número de personas y ángulo de un sector",
+    "dificultad": 1,
+    "contexto": "El comité de bienestar de un colegio de Villavicencio encuestó a **200 estudiantes** sobre la actividad a la que dedican más tiempo libre. Los resultados, en porcentaje, se muestran en la tabla. El comité quiere presentarlos en un **gráfico circular** (de torta) para la cartelera.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Actividad principal en el tiempo libre (200 estudiantes)",
+      "columnas": ["Actividad", "Porcentaje de estudiantes"],
+      "filas": [["Redes sociales", "35 %"], ["Deporte", "25 %"], ["Videojuegos", "20 %"], ["Lectura", "15 %"], ["Otras", "5 %"]],
+      "nota": "Cada estudiante eligió una sola actividad."
+    },
+    "enunciado": "¿Cuántos estudiantes eligieron Deporte y qué ángulo debe tener el sector correspondiente en el gráfico circular?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "25 estudiantes y un ángulo de 25°",
+        "correcta": false,
+        "explicacion": "No responde. 25 es el porcentaje, no el número de estudiantes ni el ángulo. El 25 % de los 200 encuestados es 0,25 × 200 = 50 estudiantes, y el 25 % de los 360° del círculo es 0,25 × 360° = 90°.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el porcentaje directamente como cantidad de personas y como grados, sin aplicarlo al total (200) ni al círculo (360°)."
+      },
+      {
+        "clave": "B",
+        "texto": "50 estudiantes y un ángulo de 90°",
+        "correcta": true,
+        "explicacion": "Es la correcta. Estudiantes: 25 % de 200 = 0,25 × 200 = 50. Ángulo: en un gráfico circular el 100 % corresponde a 360°, así que el 25 % corresponde a 0,25 × 360° = 90°, es decir, un cuarto del círculo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "50 estudiantes y un ángulo de 25°",
+        "correcta": false,
+        "explicacion": "No responde. El número de estudiantes está bien, pero el ángulo no: 25° sería apenas la catorceava parte del círculo. Como el círculo completo (360°) representa el 100 %, el sector del 25 % debe medir 0,25 × 360° = 90°.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Calculó los estudiantes pero no convirtió el porcentaje a grados, o cree que un porcentaje y un ángulo se escriben con el mismo número."
+      },
+      {
+        "clave": "D",
+        "texto": "70 estudiantes y un ángulo de 126°",
+        "correcta": false,
+        "explicacion": "No responde. Esos valores corresponden a Redes sociales (35 %): 0,35 × 200 = 70 estudiantes y 0,35 × 360° = 126°. La pregunta es por Deporte, que está en la segunda fila con 25 %.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el porcentaje de la primera fila de la tabla en lugar del de la fila de Deporte."
+      }
+    ],
+    "explicacion": "LEER: 200 estudiantes encuestados; Deporte tiene el 25 %; se quiere un gráfico circular. COMPRENDER: se piden dos cosas: cuántos estudiantes son el 25 % y cuántos grados ocupa ese sector. INTERPRETAR: el porcentaje es una fracción del total de personas y también del círculo completo (360°). REPRESENTAR: estudiantes = 0,25 × 200; ángulo = 0,25 × 360°. RAZONAR: 25 % es la cuarta parte, así que serán la cuarta parte de 200 y la cuarta parte de la vuelta. RESOLVER: 50 estudiantes y 90°. VERIFICAR: los porcentajes suman 100 % (35 + 25 + 20 + 15 + 5) y los ángulos de todos los sectores sumarían 126° + 90° + 72° + 54° + 18° = 360° ✓.",
+    "que_identificar": "El total de encuestados (200), la fila de Deporte (25 %) y que un gráfico circular reparte 360° en proporción a los porcentajes.",
+    "que_revisar": "Porcentaje de una cantidad; construcción de un gráfico circular (porcentaje × 360°); lectura de la fila correcta de una tabla.",
+    "refuerzo_ids": ["MAT-002", "MAT-001"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tablas", "porcentajes", "grafico_circular", "encuesta_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-038",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Medidas de dispersión",
+    "subtema": "Dos grupos con la misma media y distinta dispersión: lectura intuitiva de la variabilidad en un gráfico de barras",
+    "dificultad": 2,
+    "contexto": "Una profesora de Neiva aplicó la misma evaluación (calificada de 1,0 a 5,0) a dos grupos de estudio de cinco estudiantes cada uno. El gráfico muestra la nota de cada estudiante en los dos grupos.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Notas de los estudiantes de cada grupo",
+      "eje_x": "Estudiante",
+      "eje_y": "Nota (1,0 a 5,0)",
+      "series": [
+        { "nombre": "Grupo A", "valores": [["E1", 2.8], ["E2", 2.9], ["E3", 3.0], ["E4", 3.1], ["E5", 3.2]] },
+        { "nombre": "Grupo B", "valores": [["E1", 1.0], ["E2", 2.0], ["E3", 3.0], ["E4", 4.0], ["E5", 5.0]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones es correcta al comparar los dos grupos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El grupo B tiene mejor promedio, porque en él está la nota más alta (5,0).",
+        "correcta": false,
+        "explicacion": "No responde. Tener el valor más alto no garantiza el mejor promedio: el grupo B también tiene la nota más baja (1,0). Su promedio es (1 + 2 + 3 + 4 + 5) ÷ 5 = 3,0, igual al del grupo A: (2,8 + 2,9 + 3,0 + 3,1 + 3,2) ÷ 5 = 15 ÷ 5 = 3,0.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Juzgó el promedio por un solo valor extremo (el máximo) en lugar de considerar todas las notas."
+      },
+      {
+        "clave": "B",
+        "texto": "El grupo A tiene mejor promedio, porque ninguna de sus notas está por debajo de 2,8.",
+        "correcta": false,
+        "explicacion": "No responde. Que el grupo A no tenga notas bajas se compensa con que tampoco tiene notas altas: sus cinco notas suman 15,0, igual que las del grupo B (1 + 2 + 3 + 4 + 5 = 15). Ambos promedios son 3,0.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se fijó solo en el valor mínimo, o intuyó que las barras 'parejas' del grupo A implican un promedio mayor."
+      },
+      {
+        "clave": "C",
+        "texto": "Los dos grupos tienen el mismo promedio (3,0), pero en el grupo B las notas están mucho más dispersas: van de 1,0 a 5,0, mientras que en el A están todas entre 2,8 y 3,2.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Ambos grupos suman 15,0 puntos en cinco estudiantes, así que el promedio es 3,0 en los dos. La diferencia está en la dispersión: en el grupo A las notas se alejan como máximo 0,2 del promedio (rango 0,4), mientras que en el B se alejan hasta 2,0 (rango 4,0). Un grupo es homogéneo y el otro muy heterogéneo, aunque tengan el mismo promedio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Los dos grupos tuvieron un desempeño idéntico, porque tienen el mismo promedio.",
+        "correcta": false,
+        "explicacion": "No responde. El promedio es igual, pero el desempeño no es idéntico: en el grupo A todos obtuvieron notas cercanas a 3,0, mientras que en el B hay un estudiante con 1,0 y otro con 5,0. El promedio por sí solo no describe qué tan diferentes son los datos entre sí.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que dos conjuntos de datos con la misma media son equivalentes, ignorando la dispersión."
+      }
+    ],
+    "explicacion": "LEER: el gráfico muestra cinco notas por grupo: A = 2,8; 2,9; 3,0; 3,1; 3,2 y B = 1,0; 2,0; 3,0; 4,0; 5,0. COMPRENDER: se pide la afirmación correcta al COMPARAR los grupos, lo que incluye promedio y variabilidad. INTERPRETAR: las barras del grupo A tienen casi la misma altura; las del B van desde muy bajas hasta muy altas. REPRESENTAR: suma A = 15,0; suma B = 15,0; media = 15 ÷ 5 = 3,0 en ambos; rango A = 3,2 − 2,8 = 0,4; rango B = 5,0 − 1,0 = 4,0. RAZONAR: A y B juzgan el promedio por un solo valor extremo; D iguala 'mismo promedio' con 'mismo desempeño'; la comparación completa exige mencionar la dispersión. RESOLVER: la respuesta es C. VERIFICAR: las desviaciones respecto a 3,0 en el grupo A (−0,2; −0,1; 0; 0,1; 0,2) son mucho menores que en el B (−2; −1; 0; 1; 2), lo que confirma que B es más disperso con la misma media.",
+    "que_identificar": "Que las cinco notas de cada grupo suman lo mismo (15,0) y que lo que cambia es qué tan lejos del promedio están las notas.",
+    "que_revisar": "Media aritmética; dispersión de los datos (rango y desviaciones respecto a la media); por qué la media sola no describe un conjunto de datos.",
+    "refuerzo_ids": ["MAT-004", "MAT-028"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["graficos", "barras", "barras_agrupadas", "promedio", "dispersion", "notas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-039",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Probabilidad",
+    "subtema": "Probabilidad de un evento compuesto en dos lanzamientos: 'al menos una vez' mediante el complemento o el conteo de casos",
+    "dificultad": 3,
+    "contexto": "En la feria de matemáticas de un colegio de Manizales hay un juego con un dado común (caras numeradas del 1 al 6, todas igualmente probables). Cada participante lanza el dado **dos veces** y gana un premio si obtiene un **6 en al menos uno** de los dos lanzamientos.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la probabilidad de que un participante gane el premio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "11/36",
+        "correcta": true,
+        "explicacion": "Es la correcta. Hay 6 × 6 = 36 resultados igualmente probables. Los que tienen al menos un 6 son: 6 en el primero (6 casos: 6-1 a 6-6) más 6 en el segundo (6 casos: 1-6 a 6-6), pero el caso 6-6 se contó dos veces: 6 + 6 − 1 = 11 casos. Por el complemento: P(ningún 6) = 5/6 × 5/6 = 25/36, así que P(al menos un 6) = 1 − 25/36 = 11/36.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "1/3",
+        "correcta": false,
+        "explicacion": "1/3 = 12/36 resulta de sumar 1/6 + 1/6 como si los eventos '6 en el primer lanzamiento' y '6 en el segundo' no pudieran ocurrir juntos. Pero el resultado 6-6 pertenece a ambos y queda contado dos veces; hay que restarlo: 6 + 6 − 1 = 11 casos, no 12.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó las probabilidades de dos eventos que no son mutuamente excluyentes sin descontar la intersección."
+      },
+      {
+        "clave": "C",
+        "texto": "1/36",
+        "correcta": false,
+        "explicacion": "1/36 es la probabilidad de obtener 6 en LOS DOS lanzamientos (1/6 × 1/6), es decir, el único caso 6-6. El juego se gana con al menos un 6, lo que incluye además los casos en que sale 6 solo en el primero o solo en el segundo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó 'al menos un 6' como 'un 6 en ambos lanzamientos'."
+      },
+      {
+        "clave": "D",
+        "texto": "10/36",
+        "correcta": false,
+        "explicacion": "10/36 resulta de contar los 5 casos con 6 solo en el primer lanzamiento (6-1 a 6-5) y los 5 con 6 solo en el segundo (1-6 a 5-6), olvidando el caso 6-6, que también tiene 'al menos un 6'. El conteo correcto es 5 + 5 + 1 = 11.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Al separar los casos por lanzamiento dejó por fuera el resultado en que salen dos seises."
+      }
+    ],
+    "explicacion": "LEER: dado de 6 caras equiprobables, dos lanzamientos, se gana con al menos un 6. COMPRENDER: se pide P(al menos un 6 en dos lanzamientos); 'al menos uno' incluye uno o dos seises. INTERPRETAR: el espacio muestral tiene 6 × 6 = 36 pares ordenados igualmente probables. REPRESENTAR: casos favorables = {6 en el 1.º} ∪ {6 en el 2.º}; o bien, complemento = 'ningún 6'. RAZONAR: |{6 en el 1.º}| = 6, |{6 en el 2.º}| = 6, intersección = {6-6} = 1, así que favorables = 6 + 6 − 1 = 11; alternativamente, ningún 6 tiene 5 × 5 = 25 casos. RESOLVER: P = 11/36 (o 1 − 25/36 = 11/36). VERIFICAR: 11 + 25 = 36, los casos con y sin 6 completan el espacio muestral ✓; 11/36 ≈ 0,31, mayor que 1/6 (un solo lanzamiento) y menor que 2/6, como debe ser.",
+    "que_identificar": "Que 'al menos un 6' incluye tres tipos de resultados (solo en el primero, solo en el segundo, en ambos) y que el espacio muestral tiene 36 casos.",
+    "que_revisar": "Espacio muestral de dos lanzamientos (tabla 6 × 6); unión de eventos no excluyentes; probabilidad del complemento para 'al menos uno'.",
+    "refuerzo_ids": ["MAT-005", "MAT-025"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["probabilidad", "eventos_compuestos", "complemento", "dado", "feria_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-040",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Inferencia estadística",
+    "subtema": "Validez de una generalización a partir de una muestra sesgada",
+    "dificultad": 2,
+    "contexto": "El periódico de un colegio de Cartagena con **1 200 estudiantes** quiso saber en qué actividad extracurricular debería invertirse el presupuesto del próximo año. Un reportero encuestó a **60 estudiantes a la salida del gimnasio**, al terminar los entrenamientos de la tarde. Los resultados se muestran en el gráfico. Con ellos, el periódico publicó el titular:\n\n*\"El 70 % de los estudiantes del colegio prefiere que el presupuesto se invierta en deportes\".*",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Actividad preferida por los 60 estudiantes encuestados",
+      "eje_x": "Actividad",
+      "eje_y": "Número de estudiantes",
+      "series": [
+        { "nombre": "Estudiantes", "valores": [["Deportes", 42], ["Música", 8], ["Teatro", 6], ["Ciencia", 4]] }
+      ]
+    },
+    "enunciado": "¿Es válido el titular del periódico?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque 42 de 60 es exactamente el 70 % y todos los encuestados son estudiantes reales del colegio.",
+        "correcta": false,
+        "explicacion": "No es válido. El cálculo es correcto (42 ÷ 60 = 0,70) y los encuestados son del colegio, pero eso solo permite afirmar algo sobre los 60 encuestados. Para hablar de 'los estudiantes del colegio' la muestra debe representar a todos, y quienes salen del gimnasio tras entrenar son, casi por definición, aficionados al deporte.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde un cálculo correcto sobre la muestra con una conclusión válida sobre toda la población."
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque 60 estudiantes son muy pocos: para que una encuesta sea válida hay que preguntar al menos a la mitad del colegio.",
+        "correcta": false,
+        "explicacion": "No es la razón. Una muestra de 60 personas puede dar una estimación razonable de una población de 1 200 si se elige al azar entre todos los estudiantes; no se necesita encuestar a la mitad. El problema de esta encuesta no es el tamaño sino DÓNDE se tomó la muestra.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la validez de una muestra depende solo de que sea grande, y no de cómo se seleccionó."
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque 42 de 60 estudiantes no es el 70 % sino el 42 %.",
+        "correcta": false,
+        "explicacion": "No es la razón. 42 ÷ 60 = 0,70, es decir, el 70 %; el 42 % sería si los encuestados fueran 100. El porcentaje del titular está bien calculado; lo que falla es a quién se le aplica.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el número de estudiantes (42) como si fuera un porcentaje, sin dividir entre el total de encuestados (60)."
+      },
+      {
+        "clave": "D",
+        "texto": "No, porque la muestra se tomó a la salida del gimnasio, donde es más probable encontrar estudiantes que practican deporte; el 70 % describe a los encuestados, no al colegio.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El 70 % (42 de 60) es un dato verdadero sobre la muestra, pero la muestra está sesgada: se eligió en un lugar y momento que favorecen a quienes hacen deporte, así que no representa a los 1 200 estudiantes. Una generalización válida exigiría una muestra aleatoria de todo el colegio (por ejemplo, estudiantes elegidos al azar de las listas de todos los cursos).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: colegio de 1 200 estudiantes; 60 encuestados a la salida del gimnasio después de entrenar; 42 eligieron deportes; el titular generaliza a todo el colegio. COMPRENDER: se pide evaluar si la afirmación sobre 'los estudiantes del colegio' está sustentada. INTERPRETAR: el gráfico describe a los 60 encuestados; la pregunta clave es si esos 60 representan a los 1 200. REPRESENTAR: muestra = quienes salen del gimnasio (grupo con interés deportivo) frente a población = todo el colegio. RAZONAR: 42 ÷ 60 = 70 % es correcto para la muestra; pero el lugar de selección hace que la muestra esté sesgada hacia el deporte, así que el porcentaje no puede extenderse a la población; el tamaño (60) no es el problema, y el cálculo tampoco. RESOLVER: el titular no es válido por el sesgo de selección; la respuesta es D. VERIFICAR: si la misma encuesta se hiciera a la salida de la sala de música, probablemente 'ganaría' la música, lo que muestra que el resultado depende del lugar de muestreo y no refleja a todo el colegio.",
+    "que_identificar": "Dónde y cuándo se tomó la muestra (salida del gimnasio, tras entrenar) y que el titular habla de todo el colegio, no de los encuestados.",
+    "que_revisar": "Población y muestra; muestra aleatoria frente a muestra sesgada; cuándo un porcentaje de la muestra puede generalizarse a la población.",
+    "refuerzo_ids": ["MAT-002", "MAT-038"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["graficos", "barras", "muestra", "sesgo", "argumentacion", "encuesta_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]
