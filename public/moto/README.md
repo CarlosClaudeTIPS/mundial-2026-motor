@@ -15,6 +15,7 @@ funciona sin conexión y los datos se guardan en el propio dispositivo.
 | Combustible | Tanqueadas con cálculo de L/100 km, km/L y costo por 100 km (referencia Gixxer: 40-50 km/L). |
 | Checklist | Revisión pre-ruta T-CLOCS que se reinicia cada día. |
 | Aprender | 14 lecciones, la primera dedicada a la Gixxer (refrigeración por aire y aceite, ABS, valores clave, plan Suzuki, trámites en Colombia), más motor, aceite, cadena, llantas, frenos, eléctrico, conducción segura y glosario. Mini test al final de cada una. |
+| Fotos propias | En cada punto y para la moto: tomar foto con la cámara o elegir de la galería. Se reducen a 1200 px, se guardan en IndexedDB en el dispositivo y van dentro de la copia exportada. |
 | Ajustes | Ficha técnica de la Gixxer (aceite, bujía, presiones, cadena, frenos, tanque...), datos de la moto, copia de seguridad (exportar / importar JSON), moneda (pesos por defecto), instalación. |
 
 ## Diseño

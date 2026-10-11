@@ -122,7 +122,11 @@ td.num,th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-n
 .illus .lba{font-size:9px;fill:var(--accent);font-family:inherit;font-weight:800}
 .illus .num{font-size:9px;fill:#fff;font-family:inherit;font-weight:800;text-anchor:middle}
 .itemcard{display:flex;gap:14px;align-items:flex-start}
-.itemcard .pic{width:88px;flex:0 0 auto;background:var(--bg2);border-radius:12px;padding:6px;cursor:pointer}
+.itemcard .pic{width:88px;flex:0 0 auto;background:var(--bg2);border-radius:12px;padding:6px;cursor:pointer;overflow:hidden}
+.itemcard .pic img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.photo{display:block;width:100%;max-height:300px;object-fit:cover;border-radius:12px}
+.photocap{font-size:12px;color:var(--text2);font-weight:700;margin:6px 0 10px}
+.bikephoto{display:block;width:100%;max-height:220px;object-fit:cover;border-radius:12px;margin-bottom:10px}
 .itemcard .body{flex:1;min-width:0}
 .sheet .pic{background:var(--bg2);border-radius:14px;padding:10px;margin:8px 0 14px}
 .sheet .pic svg{max-width:320px;margin:0 auto}
@@ -387,6 +391,22 @@ const TIPS=[
  'La tecnomecánica de una moto 2024 empieza en 2026 y después es anual. El SOAT, siempre al día.'
 ];
 
+/* ==================== FOTOS PROPIAS (IndexedDB) ==================== */
+let photos={};
+function idb(){return new Promise((res,rej)=>{const r=indexedDB.open('motolog',1);r.onupgradeneeded=()=>r.result.createObjectStore('photos');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function loadPhotos(){try{const db=await idb();await new Promise((res,rej)=>{const t=db.transaction('photos').objectStore('photos');const req=t.openCursor();req.onsuccess=()=>{const c=req.result;if(c){photos[c.key]=c.value;c.continue()}else res()};req.onerror=()=>rej(req.error)})}catch(e){}}
+async function setPhoto(id,data){try{const db=await idb();await new Promise((res,rej)=>{const t=db.transaction('photos','readwrite');if(data)t.objectStore('photos').put(data,id);else t.objectStore('photos').delete(id);t.oncomplete=res;t.onerror=()=>rej(t.error)});if(data)photos[id]=data;else delete photos[id];return true}catch(e){toast('No se pudo guardar la foto');return false}}
+function pickPhoto(id,after,fromGallery){
+  const inp=document.createElement('input');inp.type='file';inp.accept='image/*';if(!fromGallery)inp.setAttribute('capture','environment');
+  inp.onchange=()=>{const f=inp.files[0];if(!f)return;const img=new Image();const url=URL.createObjectURL(f);
+    img.onload=async()=>{const MAX=1200;let w=img.width,h=img.height;const k=Math.min(1,MAX/Math.max(w,h));w=Math.round(w*k);h=Math.round(h*k);
+      const c=document.createElement('canvas');c.width=w;c.height=h;c.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(url);
+      const data=c.toDataURL('image/jpeg',.82);if(await setPhoto(id,data)){toast('Foto guardada');after&&after()}};
+    img.onerror=()=>{URL.revokeObjectURL(url);toast('No se pudo leer la imagen')};img.src=url};
+  inp.click();
+}
+async function removePhoto(id,after){if(confirm('¿Quitar esta foto?')){await setPhoto(id,null);toast('Foto quitada');after&&after()}}
+
 /* ==================== ESTADO ==================== */
 function freshState(){return {v:1,plan:PLAN_VERSION,bike:{name:'Mi Gixxer',brand:BIKE.brand,model:BIKE.model,year:BIKE.year,plate:'',km:0,notes:''},items:JSON.parse(JSON.stringify(DEFAULT_ITEMS)),logs:[],fuel:[],checklist:{date:'',done:[]},learn:{read:[],quiz:{}},settings:{currency:'$'},createdAt:today()}}
 let state=load();
@@ -465,6 +485,7 @@ function renderHome(){
   if(!Number(state.bike.km)){
     h+=`<div class="card"><b>👋 Bienvenido a MotoLog</b><p class="muted" style="margin:6px 0 10px">La app ya viene configurada para tu <b>Suzuki Gixxer 155 FI ABS 2024</b>. Empieza poniendo los kilómetros actuales y, en cada punto, cuándo fue la última vez que se hizo. A partir de ahí te avisa cuando toque.</p><div class="btnrow"><button class="btn primary" onclick="editBike()">Poner kilómetros y placa</button></div></div>`;
   }
+  if(photos.bike)h+=`<img class="bikephoto" src="${photos.bike}" alt="Mi Gixxer">`;
   h+=`<div class="tipbox"><div class="t">💡 Consejo del día</div>${esc(tip)}</div>`;
   h+=`<div class="stats">
     <div class="stat"><div class="v" style="color:var(--red)">${due.length}</div><div class="l">Vencidos</div></div>
@@ -487,7 +508,7 @@ function renderHome(){
   h+=`<h3>Acciones rápidas</h3><div class="btnrow"><button class="btn primary" onclick="addLog()">＋ Registrar intervención</button><button class="btn" onclick="addFuel()">⛽ Tanqueada</button><button class="btn" onclick="updateKm()">📍 Actualizar km</button><button class="btn" onclick="go('check')">✅ Checklist pre-ruta</button></div>`;
   el.innerHTML=h;
 }
-function pic(it){return ILLUS[it.id]||ILLUS.generic}
+function pic(it){return photos[it.id]?`<img src="${photos[it.id]}" alt="">`:(ILLUS[it.id]||ILLUS.generic)}
 function itemCard(it,st,compact){
   return `<div class="card ${st.code}"><div class="itemcard"><div class="pic" onclick="openInfo('${it.id}')" title="¿Qué es?">${pic(it)}</div><div class="body"><div class="row"><div><b>${esc(it.name)}</b><div class="muted">${st.last?`Último: ${fmtD(st.last.date)} a ${fmtKm(st.last.km)}`:'Sin registro'} · ${intervalText(it)}</div>${st.code!=='none'?`<div class="muted">${statusText(st)}</div>`:''}</div><span class="badge ${st.code}">${st.label}</span></div>
   ${st.code!=='none'?`<div class="bar ${st.code}"><i style="width:${Math.round(st.pct*100)}%"></i></div>`:''}
@@ -495,7 +516,12 @@ function itemCard(it,st,compact){
 }
 function openInfo(id){
   const it=state.items.find(i=>i.id===id);if(!it)return;
-  openSheet(it.name,`<div class="sheet"><div class="pic">${pic(it)}</div>
+  const ph=photos[it.id];
+  openSheet(it.name,`<div class="sheet">
+    ${ph?`<img class="photo" src="${ph}" alt="Foto de ${esc(it.name)} en mi moto"><div class="photocap">📷 Tu foto</div>`:''}
+    <div class="pic">${ILLUS[it.id]||ILLUS.generic}</div>
+    <div class="btnrow" style="margin:-6px 0 6px"><button class="btn sm" onclick="pickPhoto('${it.id}',()=>{openInfo('${it.id}');render()})">📷 ${ph?'Otra foto':'Tomar foto'}</button><button class="btn sm" onclick="pickPhoto('${it.id}',()=>{openInfo('${it.id}');render()},true)">🖼️ Elegir de la galería</button>${ph?`<button class="btn sm danger" onclick="removePhoto('${it.id}',()=>{openInfo('${it.id}');render()})">Quitar</button>`:''}</div>
+    ${ph?'':'<p class="tiny" style="margin:-2px 0 8px">Guarda aquí una foto de esta pieza en tu propia moto, o una imagen libre de derechos que hayas descargado.</p>'}
     ${it.where?`<h4>📍 Dónde está en tu Gixxer</h4><p>${esc(it.where)}</p>`:''}
     ${it.how?`<h4>👀 Cómo saber si está bien</h4><p>${esc(it.how)}</p>`:''}
     ${it.tip?`<h4>💡 Consejo</h4><p>${esc(it.tip)}</p>`:''}
@@ -662,7 +688,7 @@ const LESSONS=[
 <h4>Trámites en Colombia</h4>
 <ul><li><b>SOAT:</b> anual y obligatorio siempre.</li>
 <li><b>Revisión técnico-mecánica:</b> la primera al cumplir 2 años desde la matrícula (una moto de 2024 empieza en 2026) y luego cada año. Antes de ir: luces, pito, frenos, llantas, sin fugas y sin ruidos de escape.</li></ul>
-<div class="note">Todos estos valores ya están cargados en el plan de mantenimiento y en la ficha técnica de esta app.</div>`,
+<div class="note">Todos estos valores ya están cargados en el plan de mantenimiento y en la ficha técnica de esta app. En cada punto puedes guardar una foto de la pieza en tu propia moto (botón "¿Qué es?").</div>`,
 quiz:[{q:'¿Cómo se refrigera el motor de la Gixxer 155?',o:['Con refrigerante y radiador de agua','Con aire y un radiador de aceite','Solo con agua','No necesita refrigeración'],a:1},{q:'¿Qué presión lleva la llanta trasera yendo solo?',o:['25 psi','29 psi','33 psi','40 psi'],a:2},{q:'Si el testigo ABS sigue encendido rodando...',o:['Los frenos no funcionan','Es normal, siempre está encendido','Los frenos funcionan pero sin ABS; hay que revisarlo','Hay que apagar la moto de inmediato'],a:2},{q:'¿Cuándo es la primera revisión técnico-mecánica de una moto matriculada en 2024?',o:['En 2025','En 2026','En 2027','Nunca'],a:1}]},
 
 {id:'motor',emoji:'⚙️',cat:'Cómo funciona',title:'Cómo funciona un motor de 4 tiempos',min:5,body:`
@@ -896,7 +922,10 @@ function markRead(id){if(!state.learn.read.includes(id))state.learn.read.push(id
 function renderSettings(){
   const el=$('#p-settings');const b=state.bike;
   el.innerHTML=`<h2>Ajustes</h2>
-  <div class="card"><div class="row"><div><b>${esc(b.name||'Mi moto')}</b><div class="muted">${esc([b.brand,b.model,b.year].filter(Boolean).join(' '))||'Sin datos'}${b.plate?' · '+esc(b.plate):''}</div><div class="muted">${fmtKm(b.km)}</div>${b.notes?`<div class="tiny">${esc(b.notes)}</div>`:''}</div><button class="btn sm" onclick="editBike()">Editar</button></div></div>
+  <div class="card"><div class="row"><div><b>${esc(b.name||'Mi moto')}</b><div class="muted">${esc([b.brand,b.model,b.year].filter(Boolean).join(' '))||'Sin datos'}${b.plate?' · '+esc(b.plate):''}</div><div class="muted">${fmtKm(b.km)}</div>${b.notes?`<div class="tiny">${esc(b.notes)}</div>`:''}</div><button class="btn sm" onclick="editBike()">Editar</button></div>
+  ${photos.bike?`<img class="bikephoto" style="margin-top:12px" src="${photos.bike}" alt="Mi Gixxer">`:''}
+  <div class="btnrow"><button class="btn sm" onclick="pickPhoto('bike',render)">📷 ${photos.bike?'Otra foto':'Tomar foto de mi moto'}</button><button class="btn sm" onclick="pickPhoto('bike',render,true)">🖼️ Elegir de la galería</button>${photos.bike?`<button class="btn sm danger" onclick="removePhoto('bike',render)">Quitar foto</button>`:''}</div>
+  <p class="tiny" style="margin-top:8px">Las fotos se guardan en este dispositivo y se incluyen en la copia de seguridad exportada. ¿Imágenes libres de derechos de la Gixxer? Busca "Suzuki Gixxer" en Wikimedia Commons u Openverse, descarga la que quieras y súbela con "Elegir de la galería".</p></div>
   <h3>Ficha técnica · Suzuki Gixxer 155 FI ABS 2024</h3>
   <div class="card"><div class="tablewrap"><table>
     <tr><th>Motor</th><td>${esc(BIKE.engine)}</td></tr>
@@ -915,14 +944,14 @@ function renderSettings(){
   </table></div><p class="tiny" style="margin-top:8px">Valores del manual del propietario y de Suzuki Colombia. Si tu manual indica otro dato, manda el manual.</p></div>
   <h3>Datos</h3>
   <div class="card"><p class="muted">Tus datos se guardan solo en este dispositivo. Exporta una copia de seguridad de vez en cuando (o antes de cambiar de móvil).</p>
-  <div class="btnrow"><button class="btn" onclick="exportData()">⬇️ Exportar copia</button><label class="btn" style="display:inline-block;margin:0">⬆️ Importar copia<input type="file" accept="application/json" style="display:none" onchange="importData(this)"></label><button class="btn" onclick="copyData()">📋 Copiar al portapapeles</button></div>
+  <div class="btnrow"><button class="btn" onclick="exportData()">⬇️ Exportar copia</button><label class="btn" style="display:inline-block;margin:0">⬆️ Importar copia<input type="file" accept="application/json" style="display:none" onchange="importData(this)"></label><button class="btn" onclick="copyData()">📋 Copiar al portapapeles</button></div><p class="tiny" style="margin-top:6px">La copia al portapapeles no incluye las fotos (pesan demasiado); la exportación sí.</p>
   <div class="btnrow"><button class="btn sm danger" onclick="resetItems()">Restaurar plan de mantenimiento por defecto</button><button class="btn sm danger" onclick="resetAll()">Borrar todo</button></div></div>
   <h3>Preferencias</h3>
   <div class="card"><label>Moneda <span class="tiny">($ = pesos colombianos, sin decimales)</span><input value="${esc(state.settings.currency)}" maxlength="4" onchange="state.settings.currency=this.value||'$';save();render()"></label></div>
   <h3>Instalar como app</h3>
   <div class="card"><p class="muted"><b>Android (Chrome):</b> menú ⋮ → "Añadir a pantalla de inicio" o "Instalar aplicación".<br><b>iPhone (Safari):</b> botón compartir → "Añadir a pantalla de inicio".</p><p class="tiny" style="margin-top:6px">Una vez instalada funciona sin conexión y se abre como cualquier otra app.</p>
   <div class="btnrow" id="installRow"></div></div>
-  <p class="tiny" style="margin-top:14px">MotoLog v3 · Gixxer 155 FI ABS 2024 · Los consejos son orientativos y no sustituyen el manual del fabricante ni a un mecánico.</p>`;
+  <p class="tiny" style="margin-top:14px">MotoLog v4 · Gixxer 155 FI ABS 2024 · Los consejos son orientativos y no sustituyen el manual del fabricante ni a un mecánico.</p>`;
   if(deferredInstall){$('#installRow').innerHTML='<button class="btn primary" onclick="doInstall()">Instalar MotoLog</button>'}
 }
 function editBike(){
@@ -936,16 +965,16 @@ function editBike(){
     d=>{Object.assign(state.bike,{name:d.name.trim(),brand:d.brand.trim(),model:d.model.trim(),year:d.year,plate:d.plate.trim(),km:Number(d.km)||0,notes:d.notes.trim()});save();render();toast('Moto guardada')});
 }
 function exportData(){
-  const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`motolog-${today()}.json`;document.body.appendChild(a);a.click();a.remove();
+  const blob=new Blob([JSON.stringify(Object.assign({},state,{photos}),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`motolog-${today()}.json`;document.body.appendChild(a);a.click();a.remove();
 }
 function copyData(){navigator.clipboard?.writeText(JSON.stringify(state)).then(()=>toast('Copiado')).catch(()=>toast('No se pudo copiar'))}
 function importData(input){
   const f=input.files[0];if(!f)return;const r=new FileReader();
-  r.onload=()=>{try{const s=JSON.parse(r.result);if(!s||s.v!==1||!Array.isArray(s.items))throw 0;if(confirm('Esto reemplazará los datos actuales. ¿Continuar?')){localStorage.setItem(KEY,JSON.stringify(s));state=load();render();toast('Datos importados')}}catch(e){toast('Archivo no válido')}input.value=''};
+  r.onload=()=>{try{const s=JSON.parse(r.result);if(!s||s.v!==1||!Array.isArray(s.items))throw 0;if(confirm('Esto reemplazará los datos actuales. ¿Continuar?')){const ph=s.photos&&typeof s.photos==='object'?s.photos:null;delete s.photos;localStorage.setItem(KEY,JSON.stringify(s));state=load();(async()=>{if(ph){for(const k of Object.keys(photos))await setPhoto(k,null);for(const [k,v] of Object.entries(ph))if(typeof v==='string'&&v.startsWith('data:image/'))await setPhoto(k,v)}render();toast('Datos importados')})()}}catch(e){toast('Archivo no válido')}input.value=''};
   r.readAsText(f);
 }
 function resetItems(){if(confirm('Se restaurarán los puntos e intervalos por defecto. El historial se conserva. ¿Continuar?')){const custom=state.items.filter(i=>!DEFAULT_ITEMS.some(d=>d.id===i.id));state.items=[...JSON.parse(JSON.stringify(DEFAULT_ITEMS)),...custom];save();render();toast('Plan restaurado')}}
-function resetAll(){if(confirm('¿Borrar TODOS los datos? Esta acción no se puede deshacer.')&&confirm('¿Seguro? Exporta una copia antes si tienes dudas.')){localStorage.removeItem(KEY);state=freshState();save();go('home')}}
+function resetAll(){if(confirm('¿Borrar TODOS los datos? Esta acción no se puede deshacer.')&&confirm('¿Seguro? Exporta una copia antes si tienes dudas.')){localStorage.removeItem(KEY);state=freshState();save();(async()=>{for(const k of Object.keys(photos))await setPhoto(k,null);go('home')})()}}
 
 /* ==================== MODAL ==================== */
 let modalCb=null;
@@ -975,6 +1004,7 @@ function doInstall(){if(!deferredInstall)return;deferredInstall.prompt();deferre
 /* ==================== ARRANQUE ==================== */
 const initial=(location.hash||'').slice(1);
 go(['home','maint','history','fuel','check','learn','settings'].includes(initial)?initial:'home');
+loadPhotos().then(()=>{if(Object.keys(photos).length)render()});
 </script>
 </body>
 </html>
