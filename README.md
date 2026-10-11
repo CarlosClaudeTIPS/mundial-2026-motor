@@ -153,10 +153,10 @@ Ver [`saber11-prep/README.md`](saber11-prep/README.md) para la configuración de
 La carpeta está montada como **git subtree**, así que los cambios que se hagan aquí se pueden registrar también en el repo original, y viceversa:
 
 ```bash
-# Enviar lo que cambiaste en saber11-prep/ al otro repo (rama con el mismo nombre que la actual)
+# Enviar lo que cambiaste en saber11-prep/ al otro repo (a main: se publica en Vercel)
 npm run saber11:push
 
-# Enviar directo a main (Vercel despliega main a https://saber11-prep.vercel.app)
+# Enviar a otra rama sin publicar
 scripts/saber11-sync.sh push main
 
 # Traer cambios hechos en el otro repo

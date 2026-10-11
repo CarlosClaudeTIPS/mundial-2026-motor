@@ -6,9 +6,9 @@
 #   scripts/saber11-sync.sh push [rama]   envía los cambios hechos aquí al otro repo
 #   scripts/saber11-sync.sh pull [rama]   trae los cambios hechos allá a esta carpeta
 #
-# La rama por defecto es el nombre de la rama actual de este repo. Para publicar
-# en producción (Vercel despliega desde main) pasa "main" explícitamente:
-#   scripts/saber11-sync.sh push main
+# La rama por defecto es main: Vercel despliega main a https://saber11-prep.vercel.app
+# de inmediato. Para enviar a otra rama pásala como segundo argumento:
+#   scripts/saber11-sync.sh push mi-rama
 set -euo pipefail
 
 PREFIX="saber11-prep"
@@ -22,7 +22,7 @@ if ! git remote get-url "$REMOTE" >/dev/null 2>&1; then
 fi
 
 accion="${1:-}"
-rama="${2:-$(git branch --show-current)}"
+rama="${2:-main}"
 
 case "$accion" in
   push)

@@ -80,11 +80,15 @@ export const NOMBRE_NIVEL = { alta: 'Prioridad alta', media: 'Prioridad media', 
 export async function guardarCarreras(usuario, { carreras = [], modo_carrera = false }) {
   const limpias = [...new Set((carreras ?? []).filter(id => porId[id]))].slice(0, MAX_CARRERAS)
   const cambios = { carreras: limpias, modo_carrera: Boolean(modo_carrera && limpias.length), carreras_definidas: true }
+  let aviso = null
   if (NUBE_DISPONIBLE && !usuario.previsualizacion) {
     const { error } = await supabase.rpc('guardar_carreras', { p_carreras: cambios.carreras, p_modo: cambios.modo_carrera })
-    if (error) throw new Error('No se pudieron guardar tus carreras: ' + error.message)
+    // Si la nube aún no tiene la migración 003 (función inexistente) se guarda solo en este
+    // dispositivo y se avisa; cualquier otro error sí se reporta.
+    if (error && /guardar_carreras|function|schema cache/i.test(error.message)) aviso = 'Tus carreras quedaron guardadas en este dispositivo. La nube todavía no tiene esta función: avísale a tu docente.'
+    else if (error) throw new Error('No se pudieron guardar tus carreras: ' + error.message)
   }
   await db.usuarios.update(usuario.id, cambios)
   await refrescarUsuario()
-  return cambios
+  return { ...cambios, aviso }
 }
