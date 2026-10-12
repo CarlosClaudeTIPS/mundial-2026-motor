@@ -51,16 +51,23 @@ export async function sincronizar() {
   set({ sincronizando: true, error: null })
   try {
     const cola = await db.cola.orderBy('id').toArray()
+    const fallos = []
     for (const item of cola) {
       const destino = TABLAS[item.tabla]
       if (!destino) { await db.cola.delete(item.id); continue }
-      const fila = aFilaNube(item.tabla, item.datos)
-      const { error } = await supabase.from(destino.destino).upsert(fila, { onConflict: destino.clave })
-      if (error) throw new Error(`${item.tabla}: ${error.message}`)
-      await db.cola.delete(item.id)
-      if (item.tabla === 'intentos') await db.intentos.update(item.datos.uid, { sincronizado: 1 })
+      try {
+        const fila = aFilaNube(item.tabla, item.datos)
+        const { error } = await supabase.from(destino.destino).upsert(fila, { onConflict: destino.clave })
+        if (error) throw new Error(`${item.tabla}: ${error.message}`)
+        await db.cola.delete(item.id)
+        if (item.tabla === 'intentos') await db.intentos.update(item.datos.uid, { sincronizado: 1 })
+      } catch (e) {
+        // Un cambio que falla no bloquea a los demás: se anota el error y se reintenta en la siguiente ronda.
+        fallos.push(e.message)
+        await db.cola.update(item.id, { error: e.message, fallos: (item.fallos ?? 0) + 1, ultimo_intento: ahora() })
+      }
     }
-    set({ ultimo: ahora() })
+    set({ ultimo: ahora(), error: fallos.length ? `${fallos.length} cambio(s) no se pudieron subir · ${fallos[0]}` : null })
   } catch (e) {
     set({ error: e.message })
   } finally {

@@ -143,11 +143,15 @@ function EstadoSync({ compacto = false }) {
   }
   const Icono = s.enLinea ? Wifi : WifiOff
   const texto = !s.enLinea ? `Sin conexión · ${s.pendientes} por sincronizar` : s.pendientes ? `${s.pendientes} por sincronizar` : 'Sincronizado'
+  const conError = Boolean(s.error) && s.pendientes > 0
   return (
-    <button onClick={sincronizar} className={`flex items-center gap-1.5 text-xs ${s.enLinea ? 'text-gray-400' : 'text-brand-amber'} ${compacto ? '' : 'px-2'}`} title={s.error ?? texto}>
-      {s.sincronizando ? <RefreshCw size={14} className="animate-spin" /> : <Icono size={14} />}
-      {!compacto && <span>{texto}</span>}
-      {compacto && s.pendientes > 0 && <span>{s.pendientes}</span>}
-    </button>
+    <div className={compacto ? '' : 'px-2'}>
+      <button onClick={sincronizar} className={`flex items-center gap-1.5 text-xs ${conError ? 'text-brand-red' : s.enLinea ? 'text-gray-400' : 'text-brand-amber'}`} title={s.error ?? texto}>
+        {s.sincronizando ? <RefreshCw size={14} className="animate-spin" /> : <Icono size={14} />}
+        {!compacto && <span>{conError ? `${s.pendientes} sin subir · toca para reintentar` : texto}</span>}
+        {compacto && s.pendientes > 0 && <span>{s.pendientes}</span>}
+      </button>
+      {!compacto && conError && <p className="text-[10px] text-brand-red mt-1 break-words">{s.error}</p>}
+    </div>
   )
 }
