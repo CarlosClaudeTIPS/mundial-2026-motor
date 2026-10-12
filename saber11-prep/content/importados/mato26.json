@@ -2719,11 +2719,13 @@
       "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2026)",
       "url": "https://www.icfes.gov.co/wp-content/uploads/2026/04/09-Marzo_Cuadernillo-de-Preguntas-Matematicas-Saber-11-2026.pdf",
       "anio": 2026,
-      "referencia": "Pregunta 45"
+      "referencia": "Pregunta 45",
+      "explicacion_url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/03_EXPLICADAS_MATEMATICAS.pdf",
+      "explicacion_referencia": "Ejemplos de preguntas explicadas, Pregunta 2"
     },
-    "competencia": null,
+    "competencia": "M2",
     "componente": null,
-    "afirmacion": "",
+    "afirmacion": "Esta pregunta evalúa la habilidad de los estudiantes para plantear e implementar estrategias que lleven a soluciones adecuadas frente a un problema que involucre información cuantitativa. Específicamente, el responder correctamente esta pregunta, el evaluado demuestra que resuelve un problema que involucra información cuantitativa o esquemática. Prueba y Matemáticas",
     "evidencia": "",
     "habilidad": "comprender",
     "tema": "",
@@ -2764,13 +2766,13 @@
         "clave": "D",
         "texto": "40 .",
         "correcta": true,
-        "explicacion": "",
+        "explicacion": "La elección de los estudiantes que representarán al colegio en un foro tiene las siguientes características: 1 Se distinguen dos grupos excluyentes para elegir (décimo y undécimo). 2 No es posible repetir estudiante en la elección. 3 El orden de elección no es relevante en el resultado final. Por tanto, el conteo de posibles grupos de estudiantes que pueden formarse para representar al colegio en el foro utiliza el principio de multiplicación (característica 1) y el concepto de combinación (características 2 y 3). De los 5 estudiantes de grado décimo preparados, se deben elegir 2, la cantidad total de posibilidades de elección es la combinación de 5 en 2: ( 25 ( = 2!5!3! = 10 De los 4 estudiantes de grado undécimo preparados, se deben elegir 3, la cantidad total de posibilidades de elección es la combinación de 4 en 3: ( 34 ( = 3!4!1! = 4 Finalmente, el total de grupos posibles de estudiantes preparados para asistir al foro es el producto entre la cantidad total de posibilidades de elegir 2 de 5 estudiantes de grado décimo y la cantidad total de posibilidades de elegir 3 de 4 estudiantes de grado undécimo, es decir, 10 × 4 = 40. Por tanto, la respuesta correcta a esta pregunta se encuentra en la opción D.",
         "tipo_error": null,
         "diagnostico": null,
         "razon_frecuente": null
       }
     ],
-    "explicacion": "",
+    "explicacion": "La elección de los estudiantes que representarán al colegio en un foro tiene las siguientes características: 1 Se distinguen dos grupos excluyentes para elegir (décimo y undécimo). 2 No es posible repetir estudiante en la elección. 3 El orden de elección no es relevante en el resultado final. Por tanto, el conteo de posibles grupos de estudiantes que pueden formarse para representar al colegio en el foro utiliza el principio de multiplicación (característica 1) y el concepto de combinación (características 2 y 3). De los 5 estudiantes de grado décimo preparados, se deben elegir 2, la cantidad total de posibilidades de elección es la combinación de 5 en 2: ( 25 ( = 2!5!3! = 10 De los 4 estudiantes de grado undécimo preparados, se deben elegir 3, la cantidad total de posibilidades de elección es la combinación de 4 en 3: ( 34 ( = 3!4!1! = 4 Finalmente, el total de grupos posibles de estudiantes preparados para asistir al foro es el producto entre la cantidad total de posibilidades de elegir 2 de 5 estudiantes de grado décimo y la cantidad total de posibilidades de elegir 3 de 4 estudiantes de grado undécimo, es decir, 10 × 4 = 40. Por tanto, la respuesta correcta a esta pregunta se encuentra en la opción D.\n\nQué evalúa: Esta pregunta evalúa la habilidad de los estudiantes para plantear e implementar estrategias que lleven a soluciones adecuadas frente a un problema que involucre información cuantitativa. Específicamente, el responder correctamente esta pregunta, el evaluado demuestra que resuelve un problema que involucra información cuantitativa o esquemática. Prueba y Matemáticas",
     "que_identificar": "",
     "que_revisar": "",
     "refuerzo_ids": [],
@@ -2778,7 +2780,8 @@
     "tiempo_sugerido_seg": 120,
     "etiquetas": [
       "importada",
-      "icfes"
+      "icfes",
+      "explicada_oficial"
     ],
     "estado": "pendiente"
   },

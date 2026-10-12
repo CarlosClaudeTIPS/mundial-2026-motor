@@ -1,0 +1,2503 @@
+[
+  {
+    "id": "CIEO21-001",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 1"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "A continuación, se muestra un modelo que simboliza la distribución de las moléculas de agua en estado líquido, en un recipiente cerrado. Cuando este recipiente se calienta manteniendo la presión constante, las moléculas de agua líquida cambian de estado y cambian su distribución. ¿Cuál de los siguientes modelos muestra la distribución que pueden adquirir las moléculas de agua en estado gaseoso y en estado líquido?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 5]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 5]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 5]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 5]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-003",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 3"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante analiza cómo cambia la solubilidad de una sal de sodio; para esto, disuelve\n         distintas cantidades de la sal de sodio en 20 gramos de agua destilada y registra la temperatura\n         exacta a la cual se logra disolver completamente la sal.\n         Los resultados se muestran a continuación.\n                  Masa de la         Masa de agua      Temperatura a la cual se logra disolver\n                    sal (g)          destilada (g)          completamente la sal (°C)\n                      20                   20                          57\n                      25                   20                          65\n                      30                   20                          73\n                      35                   20                          83\n         Teniendo en cuenta lo observado con 20 gramos de agua destilada, el estudiante cree que\n         si a 83 °C se agregan 50 gramos de la sal de sodio en 40 gramos de agua destilada no se\n         solubilizará completamente esta cantidad de sal de sodio. ¿La suposición del estudiante es\n         correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque para disolver esta cantidad de sal de sodio en 40 gramos de agua también se necesitaría el doble de temperatura, es decir, 166 °C.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque al tener el doble de agua, es más probable que la sal de sodio solo necesite la mitad de la temperatura para disolverse, es decir, 42 °C.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque a partir de 65 °C se pueden disolver completamente 50 g de sal de sodio en 40 gramos de agua, por lo que a 83 °C la sal estará completamente disuelta.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Sí, porque con masas mayores a 35 gramos de sal de sodio, se necesitarían temperaturas mayores que 83 °C para disolverla en esa cantidad de agua.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-004",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 4"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un bloque de hielo seco, CO2 sólido, cambia del estado sólido al gaseoso en condiciones ambientales. Este cambio de estado determina un cambio en la densidad del CO2. Teniendo en cuenta la información anterior, tras el cambio de estado, ¿por qué disminuye la densidad del CO2?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque la masa de CO2 disminuye.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la distancia entre partículas y el volumen aumentan.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque la distancia entre partículas disminuye.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque la distancia entre partículas aumenta y la masa disminuye.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-005",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 5"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En el modelo se presenta el proceso de síntesis de proteínas en una célula.\n                                            Núcleo\n                                                                ADN\n                                                Transcripción ARNm\n                                               Citoplasma               Ribosoma\n                                                                           Aminoácido\n                                                                              ARNt\n                                                            Proteína        Traducción\n         De acuerdo con el modelo, si no se copia correctamente la información del ADN al ARNm\n         en el proceso de transcripción, ¿qué puede sucederle al proceso de síntesis de proteínas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se produciría una cadena de ARNm doble como la molécula de ADN.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El ribosoma no podría entrar al núcleo a leer la información del ADN.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los aminoácidos no podrían unirse al ARNt en el citoplasma.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Se unirían aminoácidos que no corresponden con la secuencia de ADN.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-006",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 6"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Juan calienta una gran cantidad de agua en una olla. Al retirarla del fuego, la temperatura del\n         agua se mide con un termómetro y este indica 100 °C. Juan mide la temperatura del ambiente\n         y obtiene 20 °C. La ley de enfriamiento de Newton establece que cuanto mayor es la diferencia\n         de temperatura entre un objeto y el ambiente, mayor es el flujo de calor y, por tanto, más\n         rápido se enfría el objeto.\n         Teniendo en cuenta la información anterior, ¿cuál de las siguientes gráficas describe mejor el\n         proceso de enfriamiento del agua en la olla?\n                      120                                                     120\n                      100                                                     100\n                       80                                                      80\n                       60                                                      60\n                       40                                                      40\n                       20                                                      20\n                        0                                                       0\n                                                 Tiempo                                              Tiempo",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Temperatura (°C)",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Temperatura (°C)",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Temperatura (°C)",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Temperatura (°C) 100 100 80 80 60 60 40 40 20 20 0 0 Tiempo Tiempo",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-007",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 7"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Unos investigadores quieren saber si el agua de la llave está contaminada por dos tipos de contaminantes (X y W). Los investigadores únicamente disponen de un método que permite medir la cantidad de contaminante X, pero saben que existe una reacción química mediante la cual pueden convertir todo el contaminante W en el contaminante X. Teniendo en cuenta esta información, si se quiere saber cuál es el contenido de contaminantes X y W, por separado, en una muestra de agua de la llave, ¿cuál sería el procedimiento adecuado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "1. Llevar a cabo la 2. Medir el contenido de reacción que convierte contaminante W con el todo el contaminante X método disponible, ya que en el contaminante W. esta medición corresponde a la medición del contenido de ambos contaminantes.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "1. Medir el contenido 2. Llevar a cabo la reacción 3. Volver a medir el de contaminante X con que convierte todo el contenido de contaminante el método disponible y contaminante W en el X, ya que esta última separarlo de la muestra. contaminante X. medición corresponderá a la medición del contenido de contaminante W.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "1. Llevar a cabo la 2. Medir el contenido de reacción que convierte contaminante X con el todo el contaminante método disponible, ya que W en el contaminante X. esta medición corresponde a la medición del contenido de ambos contaminantes.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "1. Medir el contenido 2. Llevar a cabo la reacción 3. Volver a medir el de contaminante W con que convierte todo el contenido de contaminante el método disponible y contaminante X en el W, ya que esta última separarlo de la muestra. contaminante W. medición corresponderá a la medición del contenido de contaminante X.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-008",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 8"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante quiere clasificar dos sustancias de acuerdo con el tipo de mezclas que son. Al buscar, encuentra que las mezclas homogéneas son uniformes en todas sus partes, pero las mezclas heterogéneas no lo son. La estudiante realiza los procedimientos que se muestran en la tabla con las sustancias 1 y 2. La sustancia 1 es un líquido de una so- Vapor la fase, que al calentarlo hasta evaporar por completo, queda un sólido blanco en Fase 1 Sólido blanco el fondo. La sustancia 2 es un líquido que al ser Fase 1 Fase 1 introducido en un recipiente, se observa Fase 2 la separación de dos fases. Fase 2 Teniendo en cuenta lo observado, al separar las sustancias, ¿qué tipos de mezclas son las sustancias 1 y 2?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La sustancia 1 es una mezcla homogénea y la sustancia 2 es una mezcla heterogénea.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La sustancia 1 es una mezcla heterogénea y la sustancia 2 es una mezcla homogénea.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas sustancias son mezclas homogéneas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Ambas sustancias son mezclas heterogéneas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-010",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 10"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante camina por el frente de dos parlantes ubicados afuera de la emisora del colegio. Dentro de la emisora, la profesora de física toca la nota do, en un clarinete, para ayudar al profesor de música a afinar algunos instrumentos musicales. El estudiante percibe que hay lugares en donde el sonido del clarinete se escucha más fuerte, y los marca con puntos blancos, mientras que en otros lugares no se escucha fuerte, y los marca con puntos negros. Si el estudiante le pregunta a la profesora la razón por la cual en los puntos blancos el sonido se escucha más fuerte que en los negros, ¿cuál de los siguientes argumentos debe darle la profesora al estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque las ondas de sonido interfieren constructivamente en los puntos negros, y en los puntos blancos se reflejan.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque las ondas de sonido interfieren constructivamente y destructivamente en todos los puntos, pero en los blancos las ondas se refractan.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque las ondas de sonido interfieren constructivamente en los puntos blancos, y destructivamente en los puntos negros.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque las ondas de sonido interfieren destructivamente en los puntos blancos y negros, pero en los negros se reflejan y se refractan.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-011",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 11"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante observa la construcción de un edificio nuevo para el colegio y mira a un obrero que lanza, cada vez, un ladrillo desde el primer piso, mientras que otro lo recibe justo a 3,0 m de altura, como se muestra en la siguiente figura. Ladrillo 2 3,0 m 2,5 m 2,0 m 1,5 m 1,0 m Ladrillo 1 Si la estudiante sabe que la energía potencial depende de la altura y de la masa del objeto y de repente observa que mientras el obrero se mantiene sosteniendo el ladrillo 1 a una altura de 1,0 m respecto al piso, el otro obrero deja caer el ladrillo 2, ¿qué altura tiene que descender el ladrillo 2 para que ambos ladrillos tengan la misma energía potencial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2,0 m.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "1,5 m.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "1,0 m.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "3,0 m.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-013",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 13"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un bus se mueve con una velocidad constante en la dirección que se indica en la figura. Mientras tanto, llueve y las gotas de lluvia caen a velocidad constante. Movimiento del bus Personas fuera del bus Si los observadores en reposo, para el sistema de referencia fuera del bus, ven que la lluvia cae de manera vertical, ¿cuál de los siguientes diagramas de vectores representa mejor la velocidad de las gotas de lluvia para las personas que viajan en el bus?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 12]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 12]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 12]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 12]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-014",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 14"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En la extracción minera de oro se emplea cianuro de sodio, zinc y ácidos fuertes durante el proceso de purificación. Los ácidos fuertes que pueden emplearse son ácido sulfúrico (H2SO4) de una concentración volumen-volumen del 78 % o ácido nítrico (HNO3) que contenga 112 mL de ácido por cada 200 mL de solución. Si en la extracción del oro se requiere usar el ácido de mayor concentración, ¿cuál ácido debería emplearse?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "HNO3, porque como su volumen es mayor que el de la solución de H2SO4 tiene una mayor concentración.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "H2SO4, porque la concentración volumen-volumen del HNO3 es del 56 %.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "HNO3, porque su concentración volumen-volumen es del 112 %.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "H2SO4, porque como su volumen es menor que el de la solución de HNO3 se encuentra más concentrado.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-015",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 15"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Se mide el tiempo de vaciado del agua de un tanque a través de una llave conectada al fondo del mismo. La siguiente tabla muestra los resultados de este experimento, tomados para tres llaves de diferentes diámetros y para el tanque llenado hasta determinada altura. Con base en los datos registrados en la tabla y teniendo en cuenta el diámetro de la llave y la altura del agua, ¿qué se puede concluir acerca del tiempo de vaciado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Disminuye más cuando el diámetro de la llave aumenta 1 cm que cuando se reduce la altura del nivel de agua 10 cm.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Disminuye más cuando el diámetro de la llave se reduce 1 cm que cuando se reduce la altura del nivel de agua 10 cm.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Aumenta más cuando el diámetro de la llave aumenta 1 cm que cuando se reduce la altura del nivel de agua en 10 cm.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Aumenta más cuando el diámetro de la llave aumenta 1 cm que cuando se aumenta la altura del nivel de agua en 10 cm.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-018",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 18"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Considere la siguiente reacción y las masas molares de reactivos y productos:\n                                          P4 + 6 Cl2           4 PCl3\n                                   Compuesto           Masa molar (g/mol)\n                                         P4                   124\n                                        Cl2                    70\n                                        PCl3                  137\n         De acuerdo con la información anterior, si reaccionan 124 g de P4 con 210 g de Cl2, ¿cuál es\n         el reactivo límite?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El Cl2, porque reaccionan en su totalidad 210 gramos de Cl2 y queda la mitad de P4 sin reaccionar.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El P4, porque hay menor masa en gramos que de Cl2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El Cl2, porque según la relación estequiométrica siempre se necesitan 6 moles de Cl2, sin importar la cantidad de P4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El P4, porque su masa molar es casi el doble que la del Cl2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-019",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 19"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En un metal que pierde electrones, la cantidad de protones es mayor que la de electrones y,\n         por tanto, la carga total es positiva y se representa con signos +.\n         Se tienen dos esferas metálicas idénticas: una esfera (1) inicialmente con carga + Q y otra\n         esfera (2) inicialmente neutra. Al ponerlas en contacto y luego separarlas, se observa que las\n         dos esferas quedan con cargas iguales + Q/2, como muestra la figura.\n                                 Antes del contacto           Después del contacto\n                                   +Q                         + Q/2             + Q/2\n                                   +                            +\n                             +       +                                      +       +\n                            +      1    +     2           +     1       +       2\n                             +         +                                    +       +\n                                   +                            +\n         Con base en la información anterior, ¿qué sucedió al poner las esferas en contacto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "De la esfera 2 pasaron electrones hacia la esfera 1.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "De la esfera 2 pasaron protones hacia la esfera 1.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "De la esfera 1 pasaron electrones hacia la esfera 2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "De la esfera 1 pasaron protones hacia la esfera 2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-020",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 20"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un carro de masa M se mueve sobre una superficie horizontal con velocidad V1, en la dirección que ilustra la Figura 1. En cierto instante un cubo de masa m, que se mueve perpendicular a la superficie, cae en el interior del carro y continúan moviéndose los dos como se muestra en la Figura 2. Desprecie el rozamiento entre la superficie de la carretera y el carro. ¿Qué sucede con la rapidez del carro después de que el cubo cae dentro de él?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Disminuye porque la cantidad de masa que se desplaza horizontalmente aumenta.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Aumenta porque durante el choque el carro adquiere la velocidad del cubo que cae.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Aumenta porque al caer el cubo le da un impulso adicional al carro.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No cambia porque el momentum del cubo es perpendicular al del carro.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-021",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 21"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El modelo muestra una red trófica marina. La pesca indiscriminada de varias especies de atún ha llevado a las organizaciones ambientales a implementar estrategias para impedir su extinción. Con base en la información anterior, ¿qué le sucedería al ecosistema marino, a mediano plazo, si se extingue el atún?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Disminuirían las poblaciones de pez loro debido al aumento de su principal depredador.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Aumentarían las poblaciones de tiburones, porque podrán alimentarse de todos los otros niveles tróficos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Aumentaría la cantidad de zooplancton, porque disminuirían la presión de sus depredadores.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Disminuiría la abundancia de productores, porque aumentarían los consumidores primarios.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-023",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 23"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En un centro comercial, una estudiante observa a un trabajador que se dispone a limpiar los vidrios del edificio. La cuerda 2 se usa para mantener en equilibrio al trabajador ante un viento constante que corre de derecha a izquierda, como se muestra en la Figura 1. La estudiante construye el diagrama de cuerpo libre de la situación (ver Figura 1). La estudiante observa que el trabajador llena su recipiente completamente con agua y limpiavidrios y, por tanto, debe modificar su diagrama de cuerpo libre. Teniendo en cuenta la información anterior, ¿cuál de los diagramas mostrados en la Figura 2 corresponde a las fuerzas después de llenar el recipiente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El diagrama 1, porque si solo aumenta la masa, debe aumentar solamente el peso.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El diagrama 2, porque la tensión de las cuerdas debe aumentar para soportar más peso.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El diagrama 3, porque al aumentar la masa aumentan el peso y la tensión de la cuerda 1.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El diagrama 4, porque al aumentar la masa aumentan todas las fuerzas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-024",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 24"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una onda de luz se mueve hacia un vaso de vidrio que contiene agua, como lo muestra la siguiente figura. Se espera que la longitud de onda de la luz sea menor en el vidrio (el material más denso), mayor en el aire (el material menos denso) y tenga un valor intermedio en el agua (el material más denso que el aire y menos denso que el vidrio). Si se pudiera ver el comportamiento de la onda al entrar en el vaso y salir de este, ¿cuál de las siguientes gráficas representa mejor la longitud de onda de luz en los tres materiales?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 18]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 18]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 18]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 18]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-025",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 25"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En tres instantes diferentes, un estudiante dibuja el diagrama de cuerpo libre para una piedra que cae en un estanque de agua, como se muestra en la siguiente figura. Si el estudiante mide la aceleración de la piedra después del tercer instante, ¿cómo será su magnitud, respecto a los otros instantes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mayor que la del primer instante, porque el peso hace que la piedra se acelere hacia abajo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Mayor que el primer instante, porque el peso de la piedra disminuye cuando la fuerza de resistencia comienza a aumentar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Constante, porque la aceleración de la piedra siempre es igual que la aceleración de la gravedad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Nula, porque después del tercer instante, el peso de la piedra y la fuerza de resistencia se cancelan.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-026",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 26"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante sopla una pelota por un tubo vertical como muestra la figura. La pelota sube aceleradamente por el tubo. ¿Por qué ocurre esto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el peso de la pelota cambia cuando el estudiante sopla aire por el tubo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la fuerza que ejerce el aire que sopla el estudiante es igual que el peso de la pelota.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el peso de la pelota es mayor que la fuerza del aire que sopla el estudiante.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque la fuerza que ejerce el aire que sopla el estudiante es mayor que el peso de la pelota.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-027",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 27"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El siguiente modelo representa la relación entre, la altura y la cantidad de partículas de aire. Una olla con agua hierve a una temperatura de 100 °C, cuando la altura es 0 km. Teniendo en cuenta que el punto de ebullición corresponde a la temperatura a la cual la presión de vapor del líquido iguala la presión atmosférica, si se pone a calentar la misma cantidad de agua a una altura de 25 km, ¿qué le sucede al agua?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Hierve a una temperatura menor que 100 °C, porque la presión es menor en esta altura.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Hierve a una temperatura mayor que 100 °C, porque la presión es menor en esta altura.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Nunca hierve, porque en esta altura hay muy poca cantidad de aire.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Se congela, porque al no haber aire el agua pasará a estado sólido.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-028",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 28"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La materia puede clasificarse analizando su composición como se muestra en el diagrama.\n                                      Mezcla\n                                                            variable?\n                                                                        Mezcla\n         El acero es un material que contiene los elementos hierro y carbono. Dos muestras distintas\n         de acero tienen diferentes cantidades de estos elementos, pero ambas muestras tienen\n         composición uniforme. Usando el diagrama anterior, ¿cómo clasificaría al acero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Como mezcla homogénea, porque está formado por diferentes elementos y es uniforme.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Como sustancia pura, porque tiene composición uniforme y es un solo compuesto.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Como mezcla heterogénea, porque está formado por diferentes elementos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Como sustancia pura, porque muestras distintas tienen composición diferente.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-030",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 30"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La conductividad de una disolución es la capacidad que tiene esta para conducir la corriente eléctrica. Un estudiante realiza una serie de experimentos para estudiar la conductividad de sulfato de magnesio (MgSO4) disuelto en agua, y obtiene los siguientes resultados: Con base en la anterior información, ¿qué se buscaba estudiar con este experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La influencia de la temperatura sobre la conductividad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El efecto de la conductividad de la disolución sobre la concentración de la sal.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La influencia de la carga de los iones sobre la conductividad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El efecto de la concentración de la sal sobre la conductividad de la disolución.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-032",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 32"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Los rayos de luz emitidos por objetos luminosos viajan en línea recta dentro de un mismo medio (ver Figura 1). Si un rayo de luz pasa de aire a agua cambia su dirección como se muestra en la figura 2. llena de agua Cuando una piscina está vacía, un nadador observa el farol que está en el borde (ver Figura 1); luego, cuando se llena la piscina (ver Figura 2), ¿cómo vera el nadador el farol?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Más bajo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "De la misma altura.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Más alto.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Invertido.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-033",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 33"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante desea comparar los valores de las densidades de tres líquidos (agua, etanol\n         y aceite) y para ello hace tres mediciones de una misma masa de líquido (100 g) a tres\n         temperaturas. Los resultados obtenidos se muestran en la tabla.\n                          Agua                       Etanol                      Aceite\n         Con base en la información anterior, ¿por qué el experimento está mal planteado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque las temperaturas empleadas no son las mismas, por lo que no se pueden hacer comparaciones entre las densidades de los tres líquidos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque no se pueden hacer comparaciones sin medir diferentes volúmenes de los tres líquidos en las temperaturas indicadas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque es necesario realizar otras mediciones a temperaturas más altas, para saber si el valor de la densidad sigue cambiando.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el aceite posee propiedades físicas y químicas muy diferentes del agua y del etanol y esto hace que no se puedan comparar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-034",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 34"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El objetivo de una práctica es la detección de almidón en la papa, utilizando lugol como colorante. Se realizan cuatro experimentos con las condiciones que se muestran en la tabla. En esta práctica, ¿por qué es importante el experimento 4?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque permite que el almidón se encuentre soluble.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque contiene el colorante con el cual se logra la detección de almidón.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque contiene más almidón que el que contiene la papa.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque permite establecer el color esperado para la detección de almidón.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-035",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 35"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En un experimento, un sólido de identidad desconocida se calienta y se mide su temperatura hasta que se evapora, obteniendo la siguiente gráfica. Para identificar el sólido se cuenta con los datos de la tabla. Temperatura Temperatura de Sustancia de fusión (ºC) ebullición (ºC) Teniendo en cuenta la información anterior, ¿a qué sustancia corresponde el sólido inicial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Benceno.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Agua.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Acetonitrilo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "2-butanol.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-037",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 37"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante realiza diferentes ensayos con el objetivo de determinar el efecto de la concentración de los reactivos sobre la velocidad de formación de Z en la reacción X + Y ĺ\u0003Z. En cada ensayo mide la velocidad de formación de Z manteniendo constante la concentración de uno de los reactivos y variando la del otro, como se muestra en las siguientes gráficas: Teniendo en cuenta la información anterior, ¿qué se puede concluir del cambio en la velocidad de formación de Z?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El cambio de la velocidad de formación de Z no depende de la concentración de los reactivos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El cambio de la velocidad de formación de Z depende de la concentración de ambos reactivos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El cambio de la velocidad de formación de Z depende solamente de la concentración de X.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El cambio de la velocidad de formación de Z depende solamente de la concentración de Y.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-038",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 38"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En una especie de pato se pueden encontrar individuos con cuello corto e individuos con cuello largo. En esta especie se encuentran una mayor cantidad de patos con cuello largo. En un experimento se aparearon una hembra y un macho de cuello largo; de sus hijos 3/4 son de cuello largo y 1/4 son de cuello corto. De las siguientes afirmaciones sobre los genotipos de los padres, ¿cuál es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Ambos padres eran heterocigotos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El macho era heterocigoto y la hembra era homocigoto recesivo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El macho era heterocigoto y la hembra era homocigoto dominante.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos padres eran homocigotos dominantes.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-041",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 41"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Los alcoholes pueden ser oxidados a cetonas, aldehídos o ácidos carboxílicos de acuerdo con el tipo de alcohol que reacciona, como se muestra en la imagen. Para reconocer el tipo de compuesto que se forma en una oxidación se realizan las siguientes pruebas. Prueba de Prueba de Tollens Prueba de Lucas Prueba de yodoformo Yoduro-Yodato Reconoce la presencia Reconoce la presencia Reconoce la presencia Reconoce la presencia de aldehídos, si se forma de ácidos, si una de alcoholes, si se forma de cetonas, si aparece un espejo de plata (color solución con almidón se un precipitado insoluble un precipitado de color plateado) en el fondo torna de color morado en la reacción. amarillo. del tubo de ensayo. oscuro. Si en un laboratorio se oxida un alcohol de 6 carbonos y se aplican las pruebas de reconocimiento de grupos funcionales obteniendo un espejo de plata y coloración morada con almidón, ¿cuál es la mezcla que se espera se haya formado después de la oxidación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 27]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 27]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 27]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 27]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-042",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 42"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "De la ley de Coulomb se sabe que la fuerza eléctrica debido a la interacción entre cargas de signos iguales es repulsiva y entre cargas de signos opuestos es atractiva. La siguiente figura muestra un sistema conformado por tres cargas eléctricas. ¿Cuál de las siguientes figuras muestra la fuerza eléctrica que ejercen la carga 2 y la carga 3 sobre la carga 1?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 28]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 28]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 28]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 28]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-043",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 43"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante midió la energía potencial de un vagón en una montaña rusa. La gráfica representa los datos obtenidos por el estudiante. De los siguientes modelos de montaña rusa, ¿cuál explica la gráfica obtenida por el estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 29]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 29]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 29]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 29]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-044",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 44"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Los ecosistemas se consideran sistemas abiertos porque en su mantenimiento es fundamental el flujo de materia y energía que intercambian de manera constante con su medio externo. De acuerdo con la información anterior, ¿cuál de los siguientes modelos representa precisamente un ecosistema abierto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 29]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 29]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 29]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 29]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-045",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 45"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Al agitar una cuerda extendida horizontalmente, cada sección de la cuerda se mueve de arriba abajo en dirección perpendicular a la dirección de propagación de la onda generada; este es un ejemplo de una onda transversal. En contraste, en una onda longitudinal, las partículas del medio vibran en la misma dirección de propagación de la onda. Un grupo de personas quiere representar una onda longitudinal; para esto, se ubican como muestra la figura. La fila representa el medio de propagación y las personas representan las partículas del medio. Para lograr la representación, ¿cuál es el movimiento que debe hacer la primera persona y que los demás deben repetir sucesivamente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Alzar y bajar lateralmente los brazos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Sentarse y ponerse de pie.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Balancearse de izquierda a derecha.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Moverse hacia adelante y atrás.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO21-048",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/08_PRACTICA_CIENCIAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 48"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante realizó un experimento para medir la velocidad de propagación del sonido en el aire a diferentes temperaturas. Los resultados que obtuvo se muestran en la siguiente tabla. ¿Cuál de las siguientes gráficas muestra los resultados del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 32]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 32]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 32]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 32]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  }
+]
