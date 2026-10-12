@@ -101,7 +101,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "El día 1 los riñones trabajaron menos por el calor, así que filtraron menos sangre y por eso se produjo menos orina y de color más oscuro.",
+        "texto": "El día 1 los riñones trabajaron menos por el calor, así que filtraron menos sangre y por eso se produjo menos orina y de color más oscuro; el día 2, sin calor, filtraron con normalidad.",
         "correcta": false,
         "explicacion": "No responde. Los riñones no \"trabajan menos\" con el calor: filtran un volumen similar cada día. Lo que cambia es cuánta agua se reabsorbe después del filtrado, regulado por la ADH, como indica el contexto.",
         "tipo_error": "conocimiento",
@@ -128,7 +128,7 @@
       },
       {
         "clave": "D",
-        "texto": "La diferencia se debe solo a la cantidad de agua bebida: todo lo que se bebe sale como orina, y el día 1 se bebió menos.",
+        "texto": "La diferencia se debe solo a la cantidad de agua bebida: todo lo que se bebe sale como orina sin que el cuerpo regule nada, y el día 1 se bebió menos, así que salió menos.",
         "correcta": false,
         "explicacion": "No responde. El día 1 se bebió 1,0 L y salieron 0,6 L; el día 2 se bebieron 3,0 L y salieron 2,2 L. En ambos casos parte del agua se perdió por sudor y respiración, y la proporción retenida fue distinta, lo que requiere una regulación activa.",
         "tipo_error": "lectura_tabla",
@@ -307,7 +307,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Los mosquitos se fueron acostumbrando al insecticida: cada individuo que lo recibió desarrolló tolerancia y se la transmitió a sus hijos.",
+        "texto": "Los mosquitos se fueron acostumbrando al insecticida: cada individuo que lo recibió y sobrevivió desarrolló tolerancia durante su vida y se la transmitió a sus hijos, que nacieron ya acostumbrados.",
         "correcta": false,
         "explicacion": "No responde. Un mosquito no puede volverse resistente por exposición ni heredar un rasgo que adquirió en vida. La resistencia proviene de variantes genéticas que ya existían en la población y que se hicieron más frecuentes.",
         "tipo_error": "conocimiento",
@@ -316,7 +316,7 @@
       },
       {
         "clave": "B",
-        "texto": "El insecticida perdió potencia con los años por estar almacenado, de modo que cada vez mató menos mosquitos en las pruebas.",
+        "texto": "El insecticida perdió potencia con los años por estar almacenado en malas condiciones, de modo que cada vez mató menos mosquitos en las pruebas, sin que la población cambiara genéticamente.",
         "correcta": false,
         "explicacion": "No responde. El contexto indica que en el laboratorio se usó siempre el mismo lote, la misma dosis y las mismas condiciones. Lo que cambió fueron los mosquitos capturados cada año, no el insecticida.",
         "tipo_error": "comprension",
@@ -334,7 +334,7 @@
       },
       {
         "clave": "D",
-        "texto": "Los mosquitos necesitaban resistir y por eso mutaron a propósito; el insecticida provocó directamente las mutaciones que los protegen.",
+        "texto": "Los mosquitos necesitaban resistir y por eso mutaron a propósito en respuesta al peligro; el insecticida provocó directamente, en cada individuo, las mutaciones que los protegen.",
         "correcta": false,
         "explicacion": "No responde. Las mutaciones ocurren al azar y no en respuesta a una necesidad. El insecticida no crea la resistencia: selecciona a los que ya la tenían, lo que explica que el aumento sea gradual a lo largo de varias generaciones.",
         "tipo_error": "razonamiento",
@@ -518,7 +518,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La gravedad se hace más débil a medida que el paracaidista desciende, por eso la velocidad deja de aumentar después de los 12 segundos.",
+        "texto": "La gravedad se hace más débil a medida que el paracaidista desciende y se acerca al suelo, por eso la aceleración disminuye y la velocidad deja de aumentar después de los 12 segundos.",
         "correcta": false,
         "explicacion": "No responde. La gravedad cerca de la superficie es prácticamente constante; en unos cientos de metros de descenso no cambia de forma apreciable. El contexto indica que el peso no cambia y que la resistencia del aire sí depende de la velocidad.",
         "tipo_error": "conocimiento",
@@ -527,7 +527,7 @@
       },
       {
         "clave": "B",
-        "texto": "La velocidad se estabiliza porque el paracaidista abrió el paracaídas a los 12 segundos, lo que elimina la aceleración.",
+        "texto": "La velocidad se estabiliza porque el paracaidista abrió el paracaídas justo a los 12 segundos, lo que elimina la aceleración y mantiene la velocidad fija mientras siga abierto.",
         "correcta": false,
         "explicacion": "No responde. El contexto aclara que la gráfica corresponde al tramo anterior a la apertura del paracaídas. Además, al abrirlo la velocidad disminuiría bruscamente, no se mantendría en 52 m/s.",
         "tipo_error": "comprension",
@@ -536,7 +536,7 @@
       },
       {
         "clave": "C",
-        "texto": "La velocidad aumenta de forma uniforme como en toda caída libre, y el aplanamiento final se debe a que el dispositivo no mide más de 52 m/s.",
+        "texto": "La velocidad aumenta de forma uniforme como en toda caída libre; el aplanamiento final se debe a que el dispositivo de medición no registra valores mayores de 52 m/s.",
         "correcta": false,
         "explicacion": "No responde. En caída libre sin aire la velocidad aumentaría 9,8 m/s cada segundo (unos 20 m/s cada 2 s) de forma constante, pero aquí los incrementos bajan de 18 a 1 m/s por intervalo mucho antes de llegar a 52 m/s, lo que indica una desaceleración real.",
         "tipo_error": "razonamiento",
@@ -545,7 +545,7 @@
       },
       {
         "clave": "D",
-        "texto": "Al inicio solo actúa prácticamente el peso y la velocidad crece rápido; al aumentar la velocidad crece la resistencia del aire, la fuerza neta disminuye y, cuando la resistencia iguala al peso, la velocidad se mantiene constante en 52 m/s.",
+        "texto": "Al inicio casi solo actúa el peso y la velocidad crece rápido; al aumentar la velocidad crece la resistencia del aire y la fuerza neta disminuye, hasta que ambas fuerzas se igualan y la velocidad queda constante en 52 m/s.",
         "correcta": true,
         "explicacion": "Es la correcta. La pendiente de la gráfica (aceleración) es máxima al comienzo (18 m/s en 2 s) y disminuye progresivamente (10, 6, 3, 1 m/s en cada intervalo) hasta hacerse cero. Eso corresponde a una fuerza neta que se reduce porque la resistencia crece con la velocidad hasta igualar al peso.",
         "tipo_error": null,
@@ -587,7 +587,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La hipótesis se confirma: los bloques apoyados en la cara grande requieren más fuerza, como muestra la diferencia entre 6,0 N y 6,1 N.",
+        "texto": "La hipótesis se confirma: los bloques apoyados en la cara grande requieren más fuerza para deslizarse, como muestra la diferencia entre 6,0 N y 6,1 N, pequeña pero a favor del área mayor.",
         "correcta": false,
         "explicacion": "No responde. En los ensayos 3 y 4 la cara pequeña (100 cm²) dio 6,1 N, ligeramente mayor que la grande (6,0 N), lo contrario de la hipótesis, y la diferencia de 0,1 N está dentro del error de un dinamómetro. Los ensayos 1 y 2 dan exactamente lo mismo.",
         "tipo_error": "lectura_tabla",
@@ -596,7 +596,7 @@
       },
       {
         "clave": "B",
-        "texto": "La hipótesis se confirma, porque al duplicar la masa también se duplica el área que toca la mesa y por eso la fuerza se duplica.",
+        "texto": "La hipótesis se confirma, porque al duplicar la masa también se duplica el área que toca la mesa y por eso la fuerza se duplica; ambos efectos actúan juntos en los datos.",
         "correcta": false,
         "explicacion": "No responde. La tabla separa las dos variables: el área de apoyo es la misma (200 o 100 cm²) para bloques de 1,0 y 2,0 kg. La fuerza se duplicó por la masa, con el área fija, lo que descarta al área como causa.",
         "tipo_error": "razonamiento",
@@ -605,7 +605,7 @@
       },
       {
         "clave": "C",
-        "texto": "No se puede concluir nada, porque los ensayos deberían haberse hecho con bloques de distintos materiales y sobre varias mesas.",
+        "texto": "No se puede concluir nada, porque los ensayos deberían haberse hecho con bloques de distintos materiales y sobre varias mesas antes de descartar el efecto del área.",
         "correcta": false,
         "explicacion": "No responde. Para probar el efecto del área hay que mantener fijo todo lo demás (material y mesa), que es justo lo que hizo el grupo. Cambiar materiales introduciría otra variable y haría imposible aislar el efecto del área.",
         "tipo_error": "procedimiento",
@@ -614,7 +614,7 @@
       },
       {
         "clave": "D",
-        "texto": "La hipótesis no se sostiene: con la misma masa, duplicar el área no cambió la fuerza de fricción; en cambio, duplicar la masa duplicó la fuerza, así que la fricción depende del peso que presiona las superficies y no del área.",
+        "texto": "La hipótesis no se sostiene: con la misma masa, duplicar el área no cambió la fricción, mientras que duplicar la masa duplicó la fuerza; la fricción depende del peso que presiona las superficies, no del área.",
         "correcta": true,
         "explicacion": "Es la correcta. Ensayos 1 y 2 (misma masa, áreas 200 y 100 cm²) dan 3,0 N en ambos. Ensayos 3 y 4 dan 6,0 y 6,1 N, también iguales dentro del error. Al pasar de 1,0 a 2,0 kg la fuerza pasa de 3,0 a 6,0 N: la fricción es proporcional al peso.",
         "tipo_error": null,
@@ -719,7 +719,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Porque la luz se refleja en la superficie del agua como en un espejo y forma una imagen del pez por encima de su posición.",
+        "texto": "Porque la luz se refleja en la superficie del agua como en un espejo y forma una imagen del pez por encima de su posición real, que es la que el pescador mira.",
         "correcta": false,
         "explicacion": "No responde. La reflexión en la superficie formaría la imagen de objetos que están fuera del agua (el cielo, el pescador), no del pez sumergido. La luz del pez atraviesa la superficie y se refracta.",
         "tipo_error": "conocimiento",
@@ -737,7 +737,7 @@
       },
       {
         "clave": "C",
-        "texto": "Porque el agua en movimiento arrastra al pez hacia el fondo en el momento en que el pescador introduce el brazo.",
+        "texto": "Porque el agua en movimiento arrastra al pez hacia el fondo en el momento en que el pescador introduce el brazo, y el animal queda más abajo de donde se veía.",
         "correcta": false,
         "explicacion": "No responde. El contexto dice que el pez está quieto y que el pescador lo ve en una posición equivocada antes de meter el brazo. El efecto se debe a cómo viaja la luz, no al movimiento del agua.",
         "tipo_error": "comprension",
@@ -746,7 +746,7 @@
       },
       {
         "clave": "D",
-        "texto": "Porque el agua absorbe la luz roja y hace ver los objetos más pequeños y, por tanto, más cercanos a la superficie.",
+        "texto": "Porque el agua absorbe la luz roja y hace ver los objetos más pequeños y, por tanto, más cercanos a la superficie de lo que están en realidad.",
         "correcta": false,
         "explicacion": "No responde. La absorción de algunos colores cambia el tono con que se ve el pez, pero no su posición aparente. Lo que desplaza la imagen es el cambio de dirección de los rayos al salir del agua.",
         "tipo_error": "razonamiento",
@@ -860,7 +860,7 @@
       },
       {
         "clave": "B",
-        "texto": "Porque el dióxido de carbono producido en la combustión completa se acumula y es un veneno que destruye los glóbulos rojos.",
+        "texto": "Porque el dióxido de carbono producido en la combustión completa se acumula en el baño y es un veneno que destruye los glóbulos rojos e impide que transporten oxígeno.",
         "correcta": false,
         "explicacion": "No responde. El CO₂ no destruye glóbulos rojos ni es el gas responsable de estas intoxicaciones; además, el peligro surge justamente cuando la combustión deja de ser completa y aparece el CO, según el contexto.",
         "tipo_error": "conocimiento",
@@ -869,7 +869,7 @@
       },
       {
         "clave": "C",
-        "texto": "Porque el propano sin quemar se acumula en el baño y desplaza todo el aire, de modo que la persona se asfixia por falta de oxígeno.",
+        "texto": "Porque el propano sin quemar se acumula en el baño y desplaza todo el aire, de modo que la persona se asfixia por falta de oxígeno aunque la llama siga encendida.",
         "correcta": false,
         "explicacion": "No responde. El contexto describe una combustión que sí ocurre, aunque incompleta; el riesgo no es el propano sin quemar sino el CO formado. El propano, además, tiene olor añadido para detectar fugas, mientras el CO es inodoro.",
         "tipo_error": "razonamiento",
@@ -878,7 +878,7 @@
       },
       {
         "clave": "D",
-        "texto": "Porque el vapor de agua de la combustión humedece el aire y dificulta la respiración, lo que produce el desmayo de la persona.",
+        "texto": "Porque el vapor de agua de la combustión humedece el aire y dificulta la respiración, lo que produce el desmayo de la persona al no poder tomar suficiente aire.",
         "correcta": false,
         "explicacion": "No responde. El aire húmedo de una ducha no causa intoxicación. El contexto señala que el CO se une a la hemoglobina con afinidad 200 veces mayor que el oxígeno, y ese es el mecanismo del daño.",
         "tipo_error": "comprension",
@@ -925,7 +925,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La predicción es correcta: la gráfica muestra que la cantidad de oxígeno cambia con la temperatura, tal como anticipó el estudiante.",
+        "texto": "La predicción es correcta: la gráfica muestra que la cantidad de oxígeno disuelto cambia con la temperatura, tal como anticipó el estudiante, sin importar el sentido del cambio.",
         "correcta": false,
         "explicacion": "No responde. El estudiante predijo que el oxígeno se disolvería más en agua tibia, pero la gráfica muestra lo contrario: a 30 °C hay 7,6 mg/L frente a 11,3 mg/L a 10 °C. Que haya un cambio no significa que sea en el sentido predicho.",
         "tipo_error": "lectura_grafico",
@@ -934,7 +934,7 @@
       },
       {
         "clave": "B",
-        "texto": "La predicción es correcta, porque el comportamiento del oxígeno debe ser igual al del azúcar: ambos se disuelven en agua.",
+        "texto": "La predicción es correcta, porque el comportamiento del oxígeno debe ser igual al del azúcar: ambos se disuelven en agua y toda sustancia se disuelve mejor en caliente.",
         "correcta": false,
         "explicacion": "No responde. Los datos muestran que el oxígeno se comporta de forma distinta al azúcar: su solubilidad baja con la temperatura. Una predicción se evalúa con los datos, no con la analogía que la motivó.",
         "tipo_error": "razonamiento",
@@ -943,7 +943,7 @@
       },
       {
         "clave": "C",
-        "texto": "No se puede evaluar, porque la gráfica se obtuvo a una presión fija y en la ciénaga y el río la presión atmosférica es diferente.",
+        "texto": "No se puede evaluar, porque la gráfica se obtuvo a una presión fija y en la ciénaga y el río la presión atmosférica es diferente, lo que invalida cualquier comparación.",
         "correcta": false,
         "explicacion": "No responde. La predicción compara el efecto de la temperatura, y la gráfica aísla justamente esa variable al fijar la presión. La diferencia de presión entre ambos lugares puede modificar los valores, pero no invierte la tendencia observada.",
         "tipo_error": "argumentacion",
@@ -1057,7 +1057,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "El hidrógeno es un gas más liviano que el oxígeno, por eso sube con más facilidad en el tubo y ocupa el doble de espacio.",
+        "texto": "El hidrógeno es un gas más liviano que el oxígeno, por eso sube con más facilidad en el tubo y, al ser menos denso, ocupa el doble de espacio con la misma masa.",
         "correcta": false,
         "explicacion": "No responde. La masa de un gas no determina el volumen que ocupa: a igual temperatura y presión, el volumen depende del número de moléculas, según el contexto. La razón 2:1 proviene de la proporción de átomos en la fórmula del agua.",
         "tipo_error": "conocimiento",
@@ -1066,7 +1066,7 @@
       },
       {
         "clave": "B",
-        "texto": "En el electrodo negativo se forma hidrógeno y en el positivo oxígeno; como cada molécula de agua tiene dos átomos de hidrógeno por uno de oxígeno, se producen dos moléculas de H₂ por cada una de O₂ y, por tanto, el doble de volumen.",
+        "texto": "En el electrodo negativo se forma hidrógeno y en el positivo oxígeno; como cada molécula de agua tiene dos átomos de H por uno de O, se producen dos moléculas de H₂ por cada O₂ y, por tanto, el doble de volumen.",
         "correcta": true,
         "explicacion": "Es la correcta. La prueba de la llama identifica el hidrógeno (arde con estallido) y el oxígeno (aviva la llama). La ecuación 2 H₂O → 2 H₂ + O₂ muestra 2 moléculas de H₂ por cada O₂, y como volúmenes iguales contienen igual número de moléculas, los volúmenes están en razón 2:1, como la tabla (10:5, 20:10, 30:15, 40:20).",
         "tipo_error": null,
@@ -1075,7 +1075,7 @@
       },
       {
         "clave": "C",
-        "texto": "La corriente eléctrica llega con más intensidad al electrodo negativo, por lo que allí se descompone el doble de agua.",
+        "texto": "La corriente eléctrica llega con más intensidad al electrodo negativo, por lo que allí se descompone el doble de agua y se desprende el doble de gas en el mismo tiempo.",
         "correcta": false,
         "explicacion": "No responde. En un circuito en serie la misma corriente pasa por ambos electrodos. Además, la misma agua se descompone y genera ambos gases a la vez; la diferencia de volumen refleja la fórmula H₂O, no una diferencia de corriente.",
         "tipo_error": "razonamiento",
@@ -1084,7 +1084,7 @@
       },
       {
         "clave": "D",
-        "texto": "Parte del oxígeno se disuelve en el agua y por eso se recoge menos; si no se disolviera, ambos volúmenes serían iguales.",
+        "texto": "Parte del oxígeno producido se disuelve en el agua y por eso se recoge menos; si no se disolviera, ambos volúmenes serían iguales, como en cualquier reacción.",
         "correcta": false,
         "explicacion": "No responde. La proporción 2:1 se mantiene exacta en los cuatro tiempos, lo que sería muy improbable si se debiera a una disolución parcial. La ecuación balanceada predice precisamente esa razón de volúmenes.",
         "tipo_error": "inferencia",
@@ -1204,7 +1204,7 @@
       },
       {
         "clave": "B",
-        "texto": "No es válida porque una semana es poco tiempo; con un mes de seguimiento la conclusión sí sería correcta.",
+        "texto": "No es válida porque una semana es poco tiempo para evaluar un repelente; con un mes de seguimiento en las mismas condiciones la conclusión sí sería correcta.",
         "correcta": false,
         "explicacion": "No responde. Prolongar la observación no corrige el problema: mientras un grupo viva junto a la ciénaga y el otro en la ciudad, la diferencia de exposición a mosquitos seguirá mezclada con el efecto del repelente.",
         "tipo_error": "argumentacion",
@@ -1222,7 +1222,7 @@
       },
       {
         "clave": "D",
-        "texto": "Es válida, porque ambos grupos tenían el mismo número de personas y edades similares, lo que garantiza una comparación justa.",
+        "texto": "Es válida, porque ambos grupos tenían el mismo número de personas y edades similares, lo que garantiza una comparación justa entre quienes usaron y no usaron el producto.",
         "correcta": false,
         "explicacion": "No responde. Igualar el tamaño y la edad de los grupos es necesario pero no suficiente; también deben coincidir las demás condiciones que afectan las picaduras, en especial la cantidad de mosquitos del lugar, que aquí es muy diferente.",
         "tipo_error": "comprension",
@@ -1273,7 +1273,7 @@
       },
       {
         "clave": "B",
-        "texto": "Las cuencas con menos bosque están en zonas de mayor lluvia, y es la lluvia, no la deforestación, la que explica los sedimentos y las crecientes.",
+        "texto": "Las cuencas con menos bosque están en zonas de mayor lluvia, y es la lluvia, no la deforestación, la que explica los sedimentos y las crecientes; el bosque es solo una coincidencia.",
         "correcta": false,
         "explicacion": "No responde. La nota de la tabla indica que las tres cuencas reciben cantidades similares de lluvia. Con lluvia igual, la variable que cambia entre cuencas es la cobertura de bosque.",
         "tipo_error": "comprension",
@@ -1282,7 +1282,7 @@
       },
       {
         "clave": "C",
-        "texto": "El bosque produce sedimentos al caer sus hojas y ramas al río; con menos bosque debería haber menos sedimentos, así que los datos están invertidos.",
+        "texto": "El bosque produce sedimentos al caer sus hojas y ramas al río; con menos bosque debería haber menos sedimentos, así que los datos de la tabla deben estar invertidos.",
         "correcta": false,
         "explicacion": "No responde. Los sedimentos medidos son partículas de suelo arrastradas por la escorrentía, no hojas. Los datos no están invertidos: muestran de forma consistente más sedimentos cuanto menos bosque hay, un patrón ampliamente documentado.",
         "tipo_error": "conocimiento",
@@ -1291,7 +1291,7 @@
       },
       {
         "clave": "D",
-        "texto": "Las raíces y la hojarasca del bosque sujetan el suelo y permiten que el agua se infiltre lentamente; sin bosque, la lluvia arrastra el suelo y escurre de golpe, lo que aumenta los sedimentos y hace más extremos los caudales.",
+        "texto": "Las raíces y la hojarasca sujetan el suelo y permiten que el agua se infiltre lentamente; sin bosque, la lluvia arrastra el suelo y escurre de golpe, lo que aumenta los sedimentos y hace extremos los caudales.",
         "correcta": true,
         "explicacion": "Es la correcta. Al pasar de 80 % a 10 % de bosque, los sedimentos se multiplican por 30 y la relación de caudales pasa de 3 a 20. El bosque actúa como esponja y como malla: infiltra agua que luego alimenta al río en sequía y evita que el suelo sea arrastrado.",
         "tipo_error": null,
@@ -1342,7 +1342,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "A medida que la cobertura cayó por debajo del 95 %, los casos aumentaron de forma sostenida, lo que es coherente con la pérdida de protección colectiva; conviene descartar otros factores, como brotes importados, antes de afirmar que es la única causa.",
+        "texto": "Al caer la cobertura por debajo del 95 %, los casos aumentaron de forma sostenida, lo que concuerda con la pérdida de protección colectiva; conviene descartar otros factores, como brotes importados, antes de hablar de causa única.",
         "correcta": true,
         "explicacion": "Es la correcta. Los datos muestran una relación inversa clara y sostenida, consistente con el umbral del 95 % mencionado en el contexto. Una conclusión científica señala la asociación y su coherencia con la teoría, pero reconoce que otros factores podrían contribuir.",
         "tipo_error": null,
@@ -1351,7 +1351,7 @@
       },
       {
         "clave": "B",
-        "texto": "La vacuna dejó de funcionar a partir de 2022, porque desde ese año aumentaron los casos a pesar de que la mayoría de los niños seguía vacunada.",
+        "texto": "La vacuna dejó de funcionar a partir de 2022, porque desde ese año aumentaron los casos a pesar de que la mayoría de los niños seguía vacunada; el problema está en el producto, no en la cobertura.",
         "correcta": false,
         "explicacion": "No responde. Que la mayoría esté vacunada no basta para una enfermedad tan contagiosa: el contexto indica que se necesita cerca del 95 %. Los casos aumentaron justo cuando la cobertura bajó de ese umbral, lo que apoya la eficacia de la vacuna, no su fracaso.",
         "tipo_error": "razonamiento",
@@ -1360,7 +1360,7 @@
       },
       {
         "clave": "C",
-        "texto": "Los casos de sarampión hicieron que la gente dejara de vacunarse, porque ambas curvas cambian en los mismos años.",
+        "texto": "Los casos de sarampión hicieron que la gente dejara de vacunarse por miedo a enfermar, porque ambas curvas cambian en los mismos años y una debe ser causa de la otra.",
         "correcta": false,
         "explicacion": "No responde. El orden temporal no apoya esa lectura: la cobertura empezó a bajar en 2021 (92 %) cuando los casos aún eran muy pocos (3), y los casos crecieron después. Además, un brote suele aumentar la vacunación, no reducirla.",
         "tipo_error": "inferencia",
@@ -1369,7 +1369,7 @@
       },
       {
         "clave": "D",
-        "texto": "Los datos demuestran sin lugar a dudas que la caída de la cobertura es la única causa del aumento de casos, y no es necesario investigar nada más.",
+        "texto": "Los datos demuestran sin lugar a dudas que la caída de la cobertura es la única causa del aumento de casos, y no es necesario investigar brotes importados ni otros factores.",
         "correcta": false,
         "explicacion": "No responde. La conclusión va más allá de los datos: una asociación en el tiempo, aunque sea coherente con la teoría, no descarta por sí sola factores como casos importados o cambios en la vigilancia. La prudencia exige reconocer esas posibilidades.",
         "tipo_error": "argumentacion",

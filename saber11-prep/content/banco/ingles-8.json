@@ -1,0 +1,1547 @@
+[
+  {
+    "id": "ING-121",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Familia: nephew (sobrino)",
+    "dificultad": 2,
+    "contexto": "Description: **This is the son of your brother or your sister.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "uncle",
+        "correcta": false,
+        "explicacion": "Un \"uncle\" (tío) es el hermano de tu padre o de tu madre, es decir, una persona de la generación anterior. La descripción habla del HIJO (\"the son\") de tu hermano o hermana, alguien de la generación siguiente. Quien elige esta opción invirtió la relación familiar.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"brother or sister\" y pensó en el pariente adulto más cercano sin fijarse en \"the son of\"."
+      },
+      {
+        "clave": "B",
+        "texto": "nephew",
+        "correcta": true,
+        "explicacion": "Un \"nephew\" (sobrino) es exactamente \"the son of your brother or your sister\": el hijo de tu hermano o de tu hermana. La descripción define la palabra con la relación familiar precisa, y la forma femenina sería \"niece\" (sobrina).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "cousin",
+        "correcta": false,
+        "explicacion": "Un \"cousin\" (primo o prima) es el hijo o la hija de tu tío o tía, no de tu hermano o hermana. Quien elige esta opción reconoció que se trata de un pariente joven, pero cambió al progenitor: \"brother or sister\" en lugar de \"uncle or aunt\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió primo y sobrino porque ambos son parientes jóvenes de la misma familia."
+      }
+    ],
+    "explicacion": "LEER: la descripción dice \"This is the son of your brother or your sister\". COMPRENDER: se busca la palabra que nombra ese parentesco. INTERPRETAR: las pistas son \"son\" (hijo) y \"your brother or your sister\" (tu hermano o tu hermana): el hijo de un hermano. REPRESENTAR: yo → mi hermano o hermana → su hijo = sobrino. RAZONAR: \"uncle\" es el hermano de un padre, no un hijo; \"cousin\" es el hijo de un tío; solo \"nephew\" es el hijo de un hermano o hermana. RESOLVER: la opción que dice \"nephew\". VERIFICAR: \"My nephew is my sister's son\" es una oración natural que repite la descripción con la palabra elegida.",
+    "que_identificar": "Las pistas \"the son of\" y \"your brother or your sister\".",
+    "que_revisar": "Vocabulario de la familia extendida: nephew / niece (sobrino / sobrina), uncle / aunt (tío / tía), cousin (primo / prima), grandson (nieto); leer de quién es hijo o hermano cada pariente.",
+    "refuerzo_ids": [
+      "ING-102",
+      "ING-122"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "familia",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-122",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Objetos de la cocina: spoon",
+    "dificultad": 1,
+    "contexto": "Description: **You use this to eat soup or to put sugar in your coffee.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "spoon",
+        "correcta": true,
+        "explicacion": "Una \"spoon\" (cuchara) es el cubierto que sirve para comer sopa (\"eat soup\") y para echar azúcar en el café (\"put sugar in your coffee\"). Las dos acciones de la descripción se hacen con una cuchara, porque es el único cubierto que recoge líquidos y polvos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "fork",
+        "correcta": false,
+        "explicacion": "Un \"fork\" (tenedor) sirve para pinchar comida sólida, como carne o pasta; no se puede comer sopa ni servir azúcar con él. Quien elige esta opción reconoció que se trata de un cubierto, pero no revisó las dos acciones concretas de la descripción.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió un cubierto cualquiera sin comprobar que sirviera para la sopa y el azúcar."
+      },
+      {
+        "clave": "C",
+        "texto": "knife",
+        "correcta": false,
+        "explicacion": "Un \"knife\" (cuchillo) sirve para cortar; no recoge líquidos como la sopa ni sirve para echar azúcar en una taza. Quien elige esta opción pudo confundir la palabra con otro cubierto o guiarse solo por el contexto de la mesa.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No distinguió el nombre en inglés de los tres cubiertos básicos."
+      }
+    ],
+    "explicacion": "LEER: la descripción dice \"You use this to eat soup or to put sugar in your coffee\". COMPRENDER: se busca el nombre de un objeto de la mesa. INTERPRETAR: las pistas son dos usos: comer sopa y poner azúcar en el café; ambos necesitan un objeto que recoja líquido o polvo. REPRESENTAR: sopa + azúcar en el café = cuchara. RAZONAR: el tenedor pincha y el cuchillo corta; ninguno sirve para la sopa ni para el azúcar; la cuchara cumple los dos usos. RESOLVER: la opción que dice \"spoon\". VERIFICAR: \"Can you pass me a spoon for my soup?\" es una oración natural y coherente con la descripción.",
+    "que_identificar": "Los dos usos de la descripción: \"eat soup\" y \"put sugar in your coffee\".",
+    "que_revisar": "Vocabulario de la mesa: spoon (cuchara), fork (tenedor), knife (cuchillo), plate (plato), glass (vaso), cup (taza); asociar cada objeto con su uso.",
+    "refuerzo_ids": [
+      "ING-101",
+      "ING-121"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "cocina",
+      "objetos",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-123",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "interpretar",
+    "tema": "Avisos y letreros",
+    "subtema": "Gimnasio: instrucción con \"after use\" e información adicional",
+    "dificultad": 2,
+    "contexto": "Sign in a gym in Bello:\n\n**PLEASE WIPE THE MACHINES AFTER USE.\nTOWELS AVAILABLE AT THE FRONT DESK.**",
+    "estimulo": null,
+    "enunciado": "What does this sign mean?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "You must bring your own towel from home to use the machines.",
+        "correcta": false,
+        "explicacion": "El aviso dice que hay toallas disponibles en la recepción (\"towels available at the front desk\"), así que no es necesario traerlas de casa. Quien elige esta opción leyó \"towels\" pero no la palabra \"available\", que indica que el gimnasio las ofrece.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso una obligación de traer toalla sin leer que el gimnasio las proporciona."
+      },
+      {
+        "clave": "B",
+        "texto": "You have to clean each machine before you start using it.",
+        "correcta": false,
+        "explicacion": "El aviso dice \"after use\" (después de usarlas), no antes. Quien elige esta opción entendió la idea de limpiar las máquinas, pero cambió el momento: la limpieza es responsabilidad de quien termina de usar la máquina, no de quien empieza.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"after\" (después) con \"before\" (antes) al leer la instrucción."
+      },
+      {
+        "clave": "C",
+        "texto": "You should clean the machines after using them; towels are at the desk.",
+        "correcta": true,
+        "explicacion": "\"Wipe the machines after use\" significa limpiar (secar) las máquinas después de usarlas, y \"towels available at the front desk\" informa dónde conseguir una toalla para hacerlo. La opción recoge las dos partes del aviso: la instrucción y el lugar donde están las toallas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el aviso tiene dos frases: \"Please wipe the machines after use\" y \"Towels available at the front desk\". COMPRENDER: se pregunta qué significa el aviso en conjunto. INTERPRETAR: \"wipe\" = limpiar pasando un paño; \"after use\" = después de usar; \"available\" = disponibles, es decir, el gimnasio las ofrece en la recepción. REPRESENTAR: usar la máquina → limpiarla → la toalla se consigue en la recepción. RAZONAR: la opción sobre traer la toalla de casa contradice \"available at the front desk\"; la opción de limpiar antes contradice \"after use\"; la opción que habla de limpiar después y de las toallas en la recepción coincide con las dos frases. RESOLVER: la opción que propone limpiar después de usar las máquinas. VERIFICAR: cada parte del aviso queda recogida y no se agrega ninguna obligación nueva.",
+    "que_identificar": "La expresión \"after use\" y la palabra \"available\" en la segunda frase.",
+    "que_revisar": "Avisos con instrucciones: please + verbo, after / before + sustantivo; vocabulario de gimnasio: wipe, towel, front desk, machines.",
+    "refuerzo_ids": [
+      "ING-103",
+      "ING-124"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "instrucciones",
+      "gimnasio",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-124",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "razonar",
+    "tema": "Avisos y letreros",
+    "subtema": "Terminal de buses: frecuencia, último servicio y lugar de venta",
+    "dificultad": 2,
+    "contexto": "Notice at the bus terminal in Girardot:\n\n**BUSES TO BOGOTÁ LEAVE EVERY 30 MINUTES FROM PLATFORM 4.\nLAST BUS: 9:30 P.M. TICKETS AT WINDOW 2.**",
+    "estimulo": null,
+    "enunciado": "Which sentence is TRUE according to the notice?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "You can buy a ticket for Bogotá at platform 4, next to the bus.",
+        "correcta": false,
+        "explicacion": "El aviso separa dos lugares: los buses salen de la plataforma 4 (\"leave... from platform 4\"), pero los tiquetes se venden en la ventanilla 2 (\"tickets at window 2\"). Quien elige esta opción mezcló el lugar de salida con el lugar de venta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el número 4 con los tiquetes porque es el primer número que aparece en el aviso."
+      },
+      {
+        "clave": "B",
+        "texto": "If you arrive at 10 p.m., there are no more buses to Bogotá.",
+        "correcta": true,
+        "explicacion": "\"Last bus: 9:30 p.m.\" indica que el último bus sale a las 9:30 de la noche. Quien llegue a las 10 p.m. ya no encontrará buses a Bogotá ese día. La opción se deduce directamente de la hora del último servicio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "There is only one bus to Bogotá every hour in the evening.",
+        "correcta": false,
+        "explicacion": "\"Every 30 minutes\" significa cada media hora, es decir, dos buses por hora, no uno. El aviso no dice que la frecuencia cambie en la noche. Quien elige esta opción calculó mal la frecuencia o no leyó \"30 minutes\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió \"every 30 minutes\" en \"every hour\" sin revisar el dato."
+      }
+    ],
+    "explicacion": "LEER: el aviso da cuatro datos: frecuencia (every 30 minutes), lugar de salida (platform 4), último bus (9:30 p.m.) y lugar de venta (window 2). COMPRENDER: se busca la única oración verdadera según esos datos. INTERPRETAR: \"last bus\" = último bus; después de esa hora no hay servicio; \"every 30 minutes\" = dos buses por hora. REPRESENTAR: 9:30 p.m. = última salida → a las 10 p.m. ya no hay bus. RAZONAR: la opción sobre comprar en la plataforma 4 confunde dos lugares; la opción de un bus por hora contradice \"every 30 minutes\"; la opción sobre llegar a las 10 p.m. es consecuencia directa de \"Last bus: 9:30 p.m.\". RESOLVER: la opción que dice que a las 10 p.m. no hay más buses. VERIFICAR: 10 p.m. es más tarde que 9:30 p.m., así que la conclusión es coherente con el aviso.",
+    "que_identificar": "La hora del último bus (\"Last bus: 9:30 p.m.\") y la diferencia entre \"platform 4\" y \"window 2\".",
+    "que_revisar": "Vocabulario de terminales: platform, window, ticket, leave; expresiones de frecuencia (every 30 minutes) y horas con a.m. / p.m.",
+    "refuerzo_ids": [
+      "ING-104",
+      "ING-123"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "avisos",
+      "transporte",
+      "horarios",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-125",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "En el cine: responder a \"What time does... start?\"",
+    "dificultad": 1,
+    "contexto": "At a cinema in Ibagué.\n\nTeenager: **Excuse me, what time does the film start?**\n\nTicket seller: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "At a quarter past seven, in room 3.",
+        "correcta": true,
+        "explicacion": "La pregunta \"What time does the film start?\" pide una hora. \"At a quarter past seven\" (a las siete y cuarto) responde exactamente eso, y \"in room 3\" añade la sala, un dato útil que daría un taquillero. Es la respuesta natural a una pregunta con \"what time\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "It costs twelve thousand pesos.",
+        "correcta": false,
+        "explicacion": "Esta frase responde a \"How much is the ticket?\" (¿cuánto cuesta?), no a una pregunta sobre la hora. Quien elige esta opción asoció la taquilla con el precio sin fijarse en las palabras \"what time\" de la pregunta.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió al lugar (taquilla) y no a la pregunta concreta sobre la hora."
+      },
+      {
+        "clave": "C",
+        "texto": "Yes, it's a very long film.",
+        "correcta": false,
+        "explicacion": "\"What time...?\" no es una pregunta de sí o no, así que empezar con \"Yes\" no tiene sentido. Además, la duración de la película no es la hora de inicio. Quien elige esta opción confundió \"what time\" (a qué hora) con \"how long\" (cuánto dura).",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trató una pregunta con \"what time\" como si fuera de sí o no."
+      }
+    ],
+    "explicacion": "LEER: el joven pregunta \"what time does the film start?\". COMPRENDER: hay que elegir la respuesta natural del taquillero. INTERPRETAR: \"what time\" pide una hora concreta; la respuesta debe contener una hora. REPRESENTAR: pregunta por la hora → respuesta con \"at + hora\". RAZONAR: el precio responde a \"how much\"; \"Yes, it's a very long film\" responde a una pregunta de sí o no sobre la duración; \"At a quarter past seven\" da la hora de inicio y la sala. RESOLVER: la opción que da la hora. VERIFICAR: \"What time does the film start? – At a quarter past seven, in room 3.\" es un diálogo coherente de taquilla.",
+    "que_identificar": "Las palabras \"what time\" en la pregunta, que exigen una hora como respuesta.",
+    "que_revisar": "Preguntas y respuestas sobre la hora: What time...? / At + hora; expresiones como quarter past, half past, quarter to; diferenciar what time, how much y how long.",
+    "refuerzo_ids": [
+      "ING-105",
+      "ING-126"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "cine",
+      "hora",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-126",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "Entre amigos: reaccionar a una buena noticia",
+    "dificultad": 2,
+    "contexto": "Two friends at school in Armenia.\n\nDaniela: **Guess what! I passed my driving test this morning!**\n\nMateo: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Never mind, you can try again next month.",
+        "correcta": false,
+        "explicacion": "\"Never mind\" (no importa) y \"try again\" (intentarlo otra vez) se usan para consolar a alguien que FALLÓ. Daniela dice \"I passed\" (aprobé), una buena noticia, así que consolarla no tiene sentido. Quien elige esta opción confundió \"passed\" con \"failed\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"passed my driving test\" como una mala noticia."
+      },
+      {
+        "clave": "B",
+        "texto": "Really? What's the matter with you?",
+        "correcta": false,
+        "explicacion": "\"What's the matter with you?\" (¿qué te pasa?) se usa cuando alguien está mal o se comporta de forma extraña. No es una reacción a una buena noticia y hasta puede sonar grosera aquí. Quien elige esta opción se fijó en \"Really?\" sin revisar la segunda frase.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió una frase de sorpresa sin notar que la segunda parte expresa preocupación o molestia."
+      },
+      {
+        "clave": "C",
+        "texto": "Congratulations! I knew you could do it.",
+        "correcta": true,
+        "explicacion": "Daniela da una buena noticia: aprobó el examen de conducción (\"I passed my driving test\"). La reacción natural de un amigo es felicitarla (\"Congratulations!\") y mostrar confianza en ella (\"I knew you could do it\"). La opción responde a la intención comunicativa de compartir un logro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: Daniela dice \"Guess what! I passed my driving test this morning!\". COMPRENDER: hay que elegir la reacción natural de Mateo. INTERPRETAR: \"Guess what!\" anuncia una noticia y \"I passed\" (aprobé) indica que es buena; el signo de admiración muestra entusiasmo. REPRESENTAR: buena noticia → felicitación. RAZONAR: \"Never mind\" consuela a quien fracasó; \"What's the matter with you?\" pregunta por un problema; \"Congratulations!\" celebra el logro. RESOLVER: la opción que felicita. VERIFICAR: \"I passed my driving test! – Congratulations! I knew you could do it.\" es un intercambio coherente y amable.",
+    "que_identificar": "El verbo \"passed\" (aprobé) y la expresión \"Guess what!\", que anuncian una buena noticia.",
+    "que_revisar": "Reacciones a noticias: Congratulations! / Well done! (buenas); I'm sorry to hear that / Never mind (malas); diferenciar pass (aprobar) y fail (reprobar) un examen.",
+    "refuerzo_ids": [
+      "ING-106",
+      "ING-125"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "amigos",
+      "felicitar",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-127",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Pasado simple irregular: went con marcador \"last Friday\"",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(1)**.\n\n**Our Trip to the Salt Cathedral**\n\nLast Friday, the students of grade 10 **(1) ______** to Zipaquirá on a school trip. We left the school at six in the morning and the journey took about two hours. There were not **(2) ______** cars on the road, so we arrived early. Our guide, Andrés, explained that the cathedral is inside an old salt mine, 180 metres under the ground. It was cold and dark inside, **(3) ______** nobody was afraid; everybody wanted to take photos. After the visit we had lunch in the main square and played football in the park. We came back to Bogotá at five o'clock, tired and happy.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "go",
+        "correcta": false,
+        "explicacion": "\"Go\" es la forma base del verbo; con el sujeto \"the students\" podría ser presente simple, pero el texto empieza con \"Last Friday\" (el viernes pasado) y todos los demás verbos están en pasado (left, took, arrived). El relato exige pasado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la forma base porque el sujeto es plural y no revisó el marcador \"Last Friday\"."
+      },
+      {
+        "clave": "B",
+        "texto": "went",
+        "correcta": true,
+        "explicacion": "\"Went\" es el pasado simple irregular de \"go\". La oración empieza con \"Last Friday\", un marcador de tiempo terminado, y el resto del texto está en pasado (left, took, arrived, had, played, came back). Por eso el verbo del espacio también va en pasado: \"the students... went to Zipaquirá\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "goes",
+        "correcta": false,
+        "explicacion": "\"Goes\" es presente simple de tercera persona singular (he / she / it). Aquí el sujeto es plural (\"the students of grade 10\") y, además, el relato ocurre en el pasado (\"Last Friday\"). Fallan tanto la concordancia como el tiempo verbal.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Agregó -es por costumbre sin revisar el sujeto plural ni el tiempo del relato."
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"Last Friday, the students of grade 10 ______ to Zipaquirá on a school trip\". COMPRENDER: hay que elegir la forma del verbo \"go\" que concuerda con el sujeto y el tiempo. INTERPRETAR: \"Last Friday\" sitúa la acción en un pasado terminado, y los demás verbos (left, took, arrived, had, came back) confirman el pasado simple. REPRESENTAR: marcador de pasado + verbo irregular → went. RAZONAR: \"go\" y \"goes\" son formas de presente; \"goes\" además no concuerda con un sujeto plural; \"went\" es el único pasado. RESOLVER: la opción que dice \"went\". VERIFICAR: \"Last Friday the students went to Zipaquirá\" es coherente con \"We left the school at six\" en la oración siguiente.",
+    "que_identificar": "El marcador \"Last Friday\" al inicio y los verbos en pasado del resto del texto (left, took, arrived).",
+    "que_revisar": "Pasado simple de verbos irregulares frecuentes: go → went, take → took, leave → left, come → came, have → had; marcadores de pasado: last, yesterday, ago.",
+    "refuerzo_ids": [
+      "ING-107",
+      "ING-128"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "pasado_simple",
+      "texto:ING-T24",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-128",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Cuantificadores: many con sustantivo contable plural",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(2)**.\n\n**Our Trip to the Salt Cathedral**\n\nLast Friday, the students of grade 10 **(1) ______** to Zipaquirá on a school trip. We left the school at six in the morning and the journey took about two hours. There were not **(2) ______** cars on the road, so we arrived early. Our guide, Andrés, explained that the cathedral is inside an old salt mine, 180 metres under the ground. It was cold and dark inside, **(3) ______** nobody was afraid; everybody wanted to take photos. After the visit we had lunch in the main square and played football in the park. We came back to Bogotá at five o'clock, tired and happy.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "many",
+        "correcta": true,
+        "explicacion": "\"Many\" se usa con sustantivos contables en plural, especialmente en oraciones negativas y preguntas: \"There were not many cars on the road\" (no había muchos carros). \"Cars\" es contable y plural, y la oración es negativa, así que \"many\" es la forma adecuada.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "much",
+        "correcta": false,
+        "explicacion": "\"Much\" acompaña sustantivos incontables (\"much water\", \"much time\"). \"Cars\" es un sustantivo contable en plural, por lo que la forma correcta es \"many\". Quien elige esta opción tradujo \"muchos\" sin distinguir contable e incontable.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"muchos\" como \"much\" sin revisar si el sustantivo es contable."
+      },
+      {
+        "clave": "C",
+        "texto": "a lot",
+        "correcta": false,
+        "explicacion": "\"A lot\" solo funciona sin sustantivo (\"I like it a lot\") o seguido de \"of\": \"a lot of cars\". Sin \"of\" delante de \"cars\" la frase queda incompleta. Quien elige esta opción conoce la expresión pero olvidó la preposición necesaria.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usó \"a lot\" sin la preposición \"of\" que exige el sustantivo que sigue."
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"There were not ______ cars on the road, so we arrived early\". COMPRENDER: hay que elegir el cuantificador que acompaña a \"cars\" en una oración negativa. INTERPRETAR: \"cars\" es un sustantivo contable en plural; la oración explica que había pocos carros y por eso llegaron temprano. REPRESENTAR: not + many + contable plural. RAZONAR: \"much\" va con incontables; \"a lot\" necesita \"of\" antes del sustantivo; \"many\" encaja con \"cars\" y con la negación. RESOLVER: la opción que dice \"many\". VERIFICAR: \"There were not many cars, so we arrived early\" tiene sentido: poco tráfico explica la llegada temprana.",
+    "que_identificar": "El sustantivo contable plural \"cars\" después del espacio y la negación \"not\" antes.",
+    "que_revisar": "Cuantificadores: many (contables), much (incontables), a lot of (ambos); uso de \"not many / not much\" en negaciones.",
+    "refuerzo_ids": [
+      "ING-127",
+      "ING-129"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "cuantificadores",
+      "texto:ING-T24",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-129",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "razonar",
+    "tema": "Gramática en contexto",
+    "subtema": "Conectores: but para contraste entre dos ideas",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(3)**.\n\n**Our Trip to the Salt Cathedral**\n\nLast Friday, the students of grade 10 **(1) ______** to Zipaquirá on a school trip. We left the school at six in the morning and the journey took about two hours. There were not **(2) ______** cars on the road, so we arrived early. Our guide, Andrés, explained that the cathedral is inside an old salt mine, 180 metres under the ground. It was cold and dark inside, **(3) ______** nobody was afraid; everybody wanted to take photos. After the visit we had lunch in the main square and played football in the park. We came back to Bogotá at five o'clock, tired and happy.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "so",
+        "correcta": false,
+        "explicacion": "\"So\" introduce una consecuencia (\"it was dark, so we turned on the lights\"). Que nadie tuviera miedo no es consecuencia de que estuviera frío y oscuro; es lo contrario de lo esperado. Quien elige esta opción copió el \"so\" que aparece antes en el texto sin revisar la relación entre las ideas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Repitió el conector \"so\" de una oración anterior sin analizar la relación lógica."
+      },
+      {
+        "clave": "B",
+        "texto": "because",
+        "correcta": false,
+        "explicacion": "\"Because\" introduce una causa. \"Nobody was afraid because it was cold and dark\" no tiene lógica: el frío y la oscuridad causarían miedo, no lo quitarían. La relación entre las dos ideas es de contraste, no de causa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó una causa donde el texto plantea un contraste entre lo esperado y lo que pasó."
+      },
+      {
+        "clave": "C",
+        "texto": "but",
+        "correcta": true,
+        "explicacion": "La primera idea (\"It was cold and dark inside\") hace esperar que la gente tuviera miedo; la segunda (\"nobody was afraid\") dice lo contrario. Ese contraste entre lo esperado y lo que ocurrió se expresa con \"but\": \"It was cold and dark inside, but nobody was afraid\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"It was cold and dark inside, ______ nobody was afraid; everybody wanted to take photos\". COMPRENDER: hay que elegir el conector que une las dos ideas. INTERPRETAR: frío y oscuridad normalmente producen miedo; sin embargo, nadie tuvo miedo. Hay un contraste entre lo esperado y lo ocurrido. REPRESENTAR: idea 1 (condiciones que asustan) ↔ idea 2 (nadie se asustó) = contraste. RAZONAR: \"so\" indica consecuencia y \"because\" indica causa; ninguno expresa oposición; \"but\" sí. RESOLVER: la opción que dice \"but\". VERIFICAR: \"It was cold and dark, but nobody was afraid; everybody wanted to take photos\" es coherente: a pesar de las condiciones, todos querían fotos.",
+    "que_identificar": "La relación de contraste entre \"cold and dark\" y \"nobody was afraid\".",
+    "que_revisar": "Conectores básicos: and (adición), but (contraste), so (consecuencia), because (causa); comprobar la lógica entre las dos ideas antes de elegir.",
+    "refuerzo_ids": [
+      "ING-127",
+      "ING-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "gramatica",
+      "conectores",
+      "texto:ING-T24",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-130",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una instrucción explícita con please + verbo (bring)",
+    "dificultad": 1,
+    "contexto": "Read the poster and the table, and answer the question.\n\n**FARMERS' MARKET – BARRIO LA FLORESTA, PEREIRA**\n\nEvery second Saturday of the month, from 7 a.m. to 1 p.m., Carrera 20 is closed to cars and becomes a farmers' market. Thirty families from the villages around Pereira sell fruit, vegetables, cheese, honey and bread directly to the public, without intermediaries.\n\nPlease bring your own bags or baskets: plastic bags are not given at the stalls. There is a free bicycle parking area at the corner of Calle 14. Car parking is available at the Floresta shopping centre for 3,000 pesos per hour.\n\nStudents who show their school ID get a free glass of fresh juice at the information tent. The tent is also the place to go if you lose something or need first aid.\n\nWould you like to sell your products? Call 311 555 0198 before the first Monday of the month. Stalls are free for producers, but all food must come from your own farm.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Programme – Saturday 14 March",
+      "columnas": [
+        "Time",
+        "Activity",
+        "Place"
+      ],
+      "filas": [
+        [
+          "7:00 – 8:00 a.m.",
+          "Opening of the stalls",
+          "Carrera 20"
+        ],
+        [
+          "9:00 – 9:45 a.m.",
+          "Cooking show with chef Lina Torres",
+          "Information tent"
+        ],
+        [
+          "10:00 – 11:00 a.m.",
+          "Children's workshop: planting seeds",
+          "Corner of Calle 14"
+        ],
+        [
+          "12:00 – 12:30 p.m.",
+          "Music by the school band",
+          "Main stage, Calle 15"
+        ]
+      ],
+      "nota": "Activities are free. In case of rain, the cooking show moves to the shopping centre."
+    },
+    "enunciado": "What should visitors bring to the market?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Plastic bags from the supermarket.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: \"plastic bags are not given at the stalls\" explica por qué hay que llevar las propias bolsas, pero no pide traer bolsas plásticas. Quien elige esta opción leyó \"plastic bags\" sin la negación que lo acompaña.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en la palabra \"plastic bags\" sin procesar \"are not given\"."
+      },
+      {
+        "clave": "B",
+        "texto": "Their school ID and 3,000 pesos.",
+        "correcta": false,
+        "explicacion": "El carné escolar solo lo necesitan los estudiantes que quieran el jugo gratis, y los 3,000 pesos son el precio por hora del parqueadero del centro comercial. Ninguno de los dos es algo que todos los visitantes deban llevar.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló dos datos de párrafos distintos (jugo para estudiantes y precio del parqueadero)."
+      },
+      {
+        "clave": "C",
+        "texto": "A bicycle, because cars are not allowed.",
+        "correcta": false,
+        "explicacion": "El texto dice que la Carrera 20 se cierra a los carros, pero ofrece parqueadero para carros en el centro comercial; no obliga a ir en bicicleta. El parqueadero de bicicletas es una facilidad, no un requisito. Es una inferencia sin apoyo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió la facilidad del parqueadero de bicicletas en una obligación."
+      },
+      {
+        "clave": "D",
+        "texto": "Their own bags or baskets.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo dice: \"Please bring your own bags or baskets: plastic bags are not given at the stalls\". La pregunta usa \"should bring\", que corresponde a la petición \"please bring\". Las bolsas o canastas propias son lo único que el afiche pide llevar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo del afiche empieza con una petición: \"Please bring your own bags or baskets\". COMPRENDER: la pregunta pide qué deben llevar los visitantes (should bring). INTERPRETAR: la razón de la petición es que en los puestos no dan bolsas plásticas (\"are not given\"). REPRESENTAR: llevar: bolsas o canastas propias; no esperar: bolsas plásticas; otros datos (carné, 3,000 pesos) son para casos particulares. RAZONAR: las bolsas plásticas se descartan por la negación; el carné y el dinero del parqueadero son datos de otros párrafos; la bicicleta es una facilidad, no un requisito. RESOLVER: la opción que dice \"their own bags or baskets\". VERIFICAR: la frase del texto y la opción usan las mismas palabras, \"bags\" y \"baskets\".",
+    "que_identificar": "La petición \"Please bring your own bags or baskets\" y la negación \"plastic bags are not given\".",
+    "que_revisar": "Peticiones con \"please + verbo\"; procesar negaciones en pasiva (are not given); no mezclar datos de párrafos distintos.",
+    "refuerzo_ids": [
+      "ING-110",
+      "ING-131"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "mercado",
+      "texto:ING-T28",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-131",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Relaciona la información de una tabla con la pregunta y con el texto que la acompaña",
+    "habilidad": "leer",
+    "tema": "Comprensión de lectura",
+    "subtema": "Leer una fila de la tabla: lugar y hora de una actividad",
+    "dificultad": 1,
+    "contexto": "Read the poster and the table, and answer the question.\n\n**FARMERS' MARKET – BARRIO LA FLORESTA, PEREIRA**\n\nEvery second Saturday of the month, from 7 a.m. to 1 p.m., Carrera 20 is closed to cars and becomes a farmers' market. Thirty families from the villages around Pereira sell fruit, vegetables, cheese, honey and bread directly to the public, without intermediaries.\n\nPlease bring your own bags or baskets: plastic bags are not given at the stalls. There is a free bicycle parking area at the corner of Calle 14. Car parking is available at the Floresta shopping centre for 3,000 pesos per hour.\n\nStudents who show their school ID get a free glass of fresh juice at the information tent. The tent is also the place to go if you lose something or need first aid.\n\nWould you like to sell your products? Call 311 555 0198 before the first Monday of the month. Stalls are free for producers, but all food must come from your own farm.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Programme – Saturday 14 March",
+      "columnas": [
+        "Time",
+        "Activity",
+        "Place"
+      ],
+      "filas": [
+        [
+          "7:00 – 8:00 a.m.",
+          "Opening of the stalls",
+          "Carrera 20"
+        ],
+        [
+          "9:00 – 9:45 a.m.",
+          "Cooking show with chef Lina Torres",
+          "Information tent"
+        ],
+        [
+          "10:00 – 11:00 a.m.",
+          "Children's workshop: planting seeds",
+          "Corner of Calle 14"
+        ],
+        [
+          "12:00 – 12:30 p.m.",
+          "Music by the school band",
+          "Main stage, Calle 15"
+        ]
+      ],
+      "nota": "Activities are free. In case of rain, the cooking show moves to the shopping centre."
+    },
+    "enunciado": "According to the table, where and when can children plant seeds?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "At the information tent, at 9 a.m.",
+        "correcta": false,
+        "explicacion": "Esos son el lugar y la hora de la demostración de cocina con la chef Lina Torres (segunda fila), no del taller infantil. Quien elige esta opción leyó una fila equivocada o asoció la carpa de información con todas las actividades.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la fila anterior de la tabla sin confirmar el nombre de la actividad."
+      },
+      {
+        "clave": "B",
+        "texto": "At the corner of Calle 14, at 10 a.m.",
+        "correcta": true,
+        "explicacion": "En la tabla, la fila \"Children's workshop: planting seeds\" indica \"10:00 – 11:00 a.m.\" en la columna Time y \"Corner of Calle 14\" en la columna Place. La opción reproduce exactamente esos dos datos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "On the main stage, at noon.",
+        "correcta": false,
+        "explicacion": "La tarima principal a las 12 del día es el lugar y la hora del concierto de la banda del colegio (última fila), no del taller de siembra. Quien elige esta opción confundió dos actividades de la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la fila del concierto con la del taller infantil."
+      },
+      {
+        "clave": "D",
+        "texto": "At Carrera 20, when the stalls open.",
+        "correcta": false,
+        "explicacion": "La Carrera 20 a las 7 a.m. corresponde a la apertura de los puestos (primera fila). El taller para niños aparece en otra fila, con otra hora y otro lugar. Quien elige esta opción tomó la primera fila sin buscar la actividad pedida.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó la primera fila de la tabla sin buscar la actividad concreta."
+      }
+    ],
+    "explicacion": "LEER: la pregunta remite a la tabla y a la actividad de sembrar semillas (\"plant seeds\"). COMPRENDER: se piden dos datos: dónde (where) y cuándo (when). INTERPRETAR: en la tabla, la fila \"Children's workshop: planting seeds\" tiene Time \"10:00 – 11:00 a.m.\" y Place \"Corner of Calle 14\". REPRESENTAR: taller infantil → 10 a.m. → esquina de la Calle 14. RAZONAR: las otras opciones corresponden a las filas de la cocina, el concierto y la apertura; ninguna menciona el taller. RESOLVER: la opción con la esquina de la Calle 14 a las 10 a.m. VERIFICAR: el texto también menciona la esquina de la Calle 14 como zona de bicicletas, lo que confirma que es un lugar del mercado.",
+    "que_identificar": "La fila \"Children's workshop: planting seeds\" de la tabla y sus columnas Time y Place.",
+    "que_revisar": "Lectura de tablas: ubicar primero la fila por la actividad y después leer las columnas pedidas; horas con a.m. / p.m. y \"noon\".",
+    "refuerzo_ids": [
+      "ING-111",
+      "ING-130"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "tabla",
+      "programacion",
+      "texto:ING-T28",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-132",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una condición explícita (who + show) para un beneficio",
+    "dificultad": 2,
+    "contexto": "Read the poster and the table, and answer the question.\n\n**FARMERS' MARKET – BARRIO LA FLORESTA, PEREIRA**\n\nEvery second Saturday of the month, from 7 a.m. to 1 p.m., Carrera 20 is closed to cars and becomes a farmers' market. Thirty families from the villages around Pereira sell fruit, vegetables, cheese, honey and bread directly to the public, without intermediaries.\n\nPlease bring your own bags or baskets: plastic bags are not given at the stalls. There is a free bicycle parking area at the corner of Calle 14. Car parking is available at the Floresta shopping centre for 3,000 pesos per hour.\n\nStudents who show their school ID get a free glass of fresh juice at the information tent. The tent is also the place to go if you lose something or need first aid.\n\nWould you like to sell your products? Call 311 555 0198 before the first Monday of the month. Stalls are free for producers, but all food must come from your own farm.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Programme – Saturday 14 March",
+      "columnas": [
+        "Time",
+        "Activity",
+        "Place"
+      ],
+      "filas": [
+        [
+          "7:00 – 8:00 a.m.",
+          "Opening of the stalls",
+          "Carrera 20"
+        ],
+        [
+          "9:00 – 9:45 a.m.",
+          "Cooking show with chef Lina Torres",
+          "Information tent"
+        ],
+        [
+          "10:00 – 11:00 a.m.",
+          "Children's workshop: planting seeds",
+          "Corner of Calle 14"
+        ],
+        [
+          "12:00 – 12:30 p.m.",
+          "Music by the school band",
+          "Main stage, Calle 15"
+        ]
+      ],
+      "nota": "Activities are free. In case of rain, the cooking show moves to the shopping centre."
+    },
+    "enunciado": "Who can get a free glass of juice?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Students who show their school ID.",
+        "correcta": true,
+        "explicacion": "El tercer párrafo dice: \"Students who show their school ID get a free glass of fresh juice at the information tent\". La condición es ser estudiante y mostrar el carné escolar; la opción la reproduce de forma directa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Families who sell at the market.",
+        "correcta": false,
+        "explicacion": "Las treinta familias que venden aparecen en el primer párrafo, pero el texto no les ofrece jugo gratis. El beneficio está en otro párrafo y es para estudiantes con carné. Quien elige esta opción asoció \"free\" con los productores.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la palabra \"free\" con los puestos gratuitos para productores, no con el jugo."
+      },
+      {
+        "clave": "C",
+        "texto": "People who arrive before 7 a.m.",
+        "correcta": false,
+        "explicacion": "El texto no ofrece ningún premio por llegar temprano; las 7 a.m. es solo la hora de apertura. Quien elige esta opción inventó una condición que suena lógica en una promoción pero no está en el afiche.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una promoción por llegar temprano que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "Visitors who park at the shopping centre.",
+        "correcta": false,
+        "explicacion": "Parquear en el centro comercial cuesta 3,000 pesos por hora y no da ningún beneficio. Quien elige esta opción conectó dos datos del mismo párrafo (parqueadero y pago) con un beneficio de otro párrafo.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vinculó el parqueadero pagado con un beneficio que el texto da a otro grupo."
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo habla del jugo gratis en la carpa de información. COMPRENDER: la pregunta pide quién (who) puede recibirlo. INTERPRETAR: \"Students who show their school ID get a free glass of fresh juice\": la condición es mostrar el carné escolar. REPRESENTAR: estudiante + carné → jugo gratis. RAZONAR: los vendedores, los madrugadores y quienes parquean en el centro comercial no aparecen asociados al jugo; solo los estudiantes con carné. RESOLVER: la opción que menciona a los estudiantes con su carné. VERIFICAR: la opción y el texto coinciden en \"students\", \"show\" y \"school ID\".",
+    "que_identificar": "La oración \"Students who show their school ID get a free glass of fresh juice\".",
+    "que_revisar": "Oraciones con cláusula relativa que expresan condición (people who...); vocabulario: school ID, free, information tent.",
+    "refuerzo_ids": [
+      "ING-112",
+      "ING-133"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "condicion",
+      "texto:ING-T28",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-133",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Combinar dos requisitos explícitos de un mismo párrafo",
+    "dificultad": 2,
+    "contexto": "Read the poster and the table, and answer the question.\n\n**FARMERS' MARKET – BARRIO LA FLORESTA, PEREIRA**\n\nEvery second Saturday of the month, from 7 a.m. to 1 p.m., Carrera 20 is closed to cars and becomes a farmers' market. Thirty families from the villages around Pereira sell fruit, vegetables, cheese, honey and bread directly to the public, without intermediaries.\n\nPlease bring your own bags or baskets: plastic bags are not given at the stalls. There is a free bicycle parking area at the corner of Calle 14. Car parking is available at the Floresta shopping centre for 3,000 pesos per hour.\n\nStudents who show their school ID get a free glass of fresh juice at the information tent. The tent is also the place to go if you lose something or need first aid.\n\nWould you like to sell your products? Call 311 555 0198 before the first Monday of the month. Stalls are free for producers, but all food must come from your own farm.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Programme – Saturday 14 March",
+      "columnas": [
+        "Time",
+        "Activity",
+        "Place"
+      ],
+      "filas": [
+        [
+          "7:00 – 8:00 a.m.",
+          "Opening of the stalls",
+          "Carrera 20"
+        ],
+        [
+          "9:00 – 9:45 a.m.",
+          "Cooking show with chef Lina Torres",
+          "Information tent"
+        ],
+        [
+          "10:00 – 11:00 a.m.",
+          "Children's workshop: planting seeds",
+          "Corner of Calle 14"
+        ],
+        [
+          "12:00 – 12:30 p.m.",
+          "Music by the school band",
+          "Main stage, Calle 15"
+        ]
+      ],
+      "nota": "Activities are free. In case of rain, the cooking show moves to the shopping centre."
+    },
+    "enunciado": "What must producers do to sell at the market?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pay for a stall before the first Monday of the month.",
+        "correcta": false,
+        "explicacion": "El texto dice que los puestos son gratis para los productores (\"Stalls are free for producers\"). Lo que hay que hacer antes del primer lunes es llamar, no pagar. Quien elige esta opción cambió la acción de la oración y contradijo el dato del precio.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que había que pagar sin leer que los puestos son gratuitos."
+      },
+      {
+        "clave": "B",
+        "texto": "Buy their products from the villages around Pereira.",
+        "correcta": false,
+        "explicacion": "El último párrafo exige que la comida venga de la propia finca (\"all food must come from your own farm\"), no que se compre en las veredas. Comprar para revender contradice la idea de venta directa sin intermediarios del primer párrafo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"come from your own farm\" con comprar en las veredas cercanas."
+      },
+      {
+        "clave": "C",
+        "texto": "Call in advance and sell only food from their own farm.",
+        "correcta": true,
+        "explicacion": "El último párrafo da dos requisitos: \"Call 311 555 0198 before the first Monday of the month\" y \"all food must come from your own farm\". La opción recoge ambos: llamar con anticipación y vender solo comida de la propia finca.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Register at the information tent on the day of the market.",
+        "correcta": false,
+        "explicacion": "La carpa de información sirve para el jugo de los estudiantes, los objetos perdidos y los primeros auxilios; el texto no dice que allí se inscriban los vendedores. La inscripción es por teléfono y con anticipación.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció la carpa de información con cualquier trámite del mercado."
+      }
+    ],
+    "explicacion": "LEER: el último párrafo se dirige a quienes quieren vender: \"Would you like to sell your products?\". COMPRENDER: la pregunta pide los requisitos (must do) para vender. INTERPRETAR: hay dos: llamar al número antes del primer lunes del mes y que toda la comida venga de la propia finca; además, los puestos son gratis. REPRESENTAR: llamar antes + comida propia → puesto gratuito. RAZONAR: pagar contradice \"free\"; comprar en las veredas contradice \"your own farm\"; inscribirse en la carpa no aparece en el texto. RESOLVER: la opción que combina llamar con anticipación y vender solo comida propia. VERIFICAR: \"call before the first Monday\" equivale a \"call in advance\" y \"come from your own farm\" a \"food from their own farm\".",
+    "que_identificar": "Las dos oraciones del último párrafo: la del teléfono con fecha límite y la de \"must come from your own farm\".",
+    "que_revisar": "Identificar todos los requisitos de un párrafo antes de responder; modal \"must\" para obligaciones; vocabulario: stall, producer, farm, in advance.",
+    "refuerzo_ids": [
+      "ING-113",
+      "ING-132"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "requisitos",
+      "mercado",
+      "texto:ING-T28",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-134",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir la motivación de una decisión a partir de una cita inicial",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**A Radio Station the Size of a Classroom**\n\nWhen Claudia Perea arrived in a small village on the Atrato River to teach Spanish, she noticed that her students rarely spoke in class. \"They knew the answers,\" she says, \"but they preferred to stay quiet. I needed something that made them want to be heard.\"\n\nThe answer came from an old radio she found in a cupboard at the school. With a second-hand microphone and a speaker borrowed from the church, she and twelve students started Radio Escuela, a programme that plays every Friday afternoon through loudspeakers in the main square. The students write the scripts, interview their grandparents about local traditions and read the news of the week, from the price of fish to the results of the football tournament.\n\nNot everyone was enthusiastic at the beginning. One father complained that his daughter spent too many hours \"talking into a box\". Today he never misses a programme. Claudia laughs when she remembers it: \"He now gives us ideas for interviews.\"\n\nThe village still has no internet, and Claudia doesn't think that is the main problem. \"People here have plenty of stories,\" she says. \"What they needed was a reason to tell them out loud.\"",
+    "estimulo": null,
+    "enunciado": "Why did Claudia decide to start the radio programme?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Because the school needed money to buy new equipment.",
+        "correcta": false,
+        "explicacion": "El texto no habla de recaudar dinero. Al contrario, el programa se hizo con equipos viejos y prestados (una radio vieja, un micrófono de segunda mano, un parlante de la iglesia). Quien elige esta opción inventó una motivación económica.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso un objetivo económico sin apoyo en el texto."
+      },
+      {
+        "clave": "B",
+        "texto": "Because her students did not know the answers in class.",
+        "correcta": false,
+        "explicacion": "Claudia dice justo lo contrario: \"They knew the answers, but they preferred to stay quiet\". El problema no era el conocimiento sino el silencio. Quien elige esta opción no procesó la primera parte de la cita.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"rarely spoke in class\" y concluyó que los estudiantes no sabían."
+      },
+      {
+        "clave": "C",
+        "texto": "Because the village had no internet and no newspapers.",
+        "correcta": false,
+        "explicacion": "La falta de internet aparece al final, y Claudia aclara que no cree que sea el problema principal (\"she doesn't think that is the main problem\"). Los periódicos no se mencionan. No es la razón del programa.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un dato del último párrafo como causa, a pesar de que el texto lo descarta."
+      },
+      {
+        "clave": "D",
+        "texto": "Because she wanted her students to feel confident to speak.",
+        "correcta": true,
+        "explicacion": "En el primer párrafo, Claudia explica que sus estudiantes sabían las respuestas pero preferían callarse, y concluye: \"I needed something that made them want to be heard\" (necesitaba algo que les hiciera querer ser escuchados). El programa nace de ese deseo de que hablaran con confianza.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo describe el problema que encontró Claudia y termina con su cita: \"I needed something that made them want to be heard\". COMPRENDER: la pregunta pide la razón (why) del programa. INTERPRETAR: los estudiantes \"rarely spoke\", \"knew the answers\" y \"preferred to stay quiet\"; ella buscaba algo que les diera ganas de hablar. REPRESENTAR: silencio en clase → necesidad de ser escuchados → radio. RAZONAR: el dinero y los periódicos no aparecen; la falta de respuestas contradice \"they knew the answers\"; la falta de internet se descarta en el último párrafo. RESOLVER: la opción sobre la confianza para hablar. VERIFICAR: \"want to be heard\" equivale a querer hablar con confianza, y el final del texto lo confirma: \"a reason to tell them out loud\".",
+    "que_identificar": "La cita \"They knew the answers, but they preferred to stay quiet. I needed something that made them want to be heard\".",
+    "que_revisar": "Inferir motivaciones a partir de citas; conectores de contraste (but); distinguir el problema planteado al inicio de los detalles finales del texto.",
+    "refuerzo_ids": [
+      "ING-115",
+      "ING-135"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "motivacion",
+      "texto:ING-T32",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-135",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir el cambio de actitud de un personaje secundario",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**A Radio Station the Size of a Classroom**\n\nWhen Claudia Perea arrived in a small village on the Atrato River to teach Spanish, she noticed that her students rarely spoke in class. \"They knew the answers,\" she says, \"but they preferred to stay quiet. I needed something that made them want to be heard.\"\n\nThe answer came from an old radio she found in a cupboard at the school. With a second-hand microphone and a speaker borrowed from the church, she and twelve students started Radio Escuela, a programme that plays every Friday afternoon through loudspeakers in the main square. The students write the scripts, interview their grandparents about local traditions and read the news of the week, from the price of fish to the results of the football tournament.\n\nNot everyone was enthusiastic at the beginning. One father complained that his daughter spent too many hours \"talking into a box\". Today he never misses a programme. Claudia laughs when she remembers it: \"He now gives us ideas for interviews.\"\n\nThe village still has no internet, and Claudia doesn't think that is the main problem. \"People here have plenty of stories,\" she says. \"What they needed was a reason to tell them out loud.\"",
+    "estimulo": null,
+    "enunciado": "What can we infer about the father who complained?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He changed his opinion about the programme completely.",
+        "correcta": true,
+        "explicacion": "Al principio el padre se quejó de que su hija pasaba demasiadas horas \"talking into a box\". Luego el texto dice: \"Today he never misses a programme\" y \"He now gives us ideas for interviews\". Pasar de la queja a no perderse ningún programa y proponer ideas muestra un cambio total de opinión.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "He still thinks his daughter spends too much time on the radio.",
+        "correcta": false,
+        "explicacion": "Esa fue su queja inicial (\"complained\"), pero el texto marca el cambio con \"Today he never misses a programme\". Quien elige esta opción se quedó con la primera parte del párrafo y no procesó el contraste con \"today\" y \"now\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la actitud inicial del padre como su actitud actual."
+      },
+      {
+        "clave": "C",
+        "texto": "He never listened to the programme because he works on Fridays.",
+        "correcta": false,
+        "explicacion": "El texto dice \"he never misses a programme\" (nunca se pierde un programa), lo contrario de no escucharlo. Nada se dice de su trabajo. Quien elige esta opción confundió \"never misses\" con \"never listens\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"never\" y no procesó el verbo \"misses\" (perderse algo)."
+      },
+      {
+        "clave": "D",
+        "texto": "He asked Claudia to stop interviewing his daughter.",
+        "correcta": false,
+        "explicacion": "El texto no menciona ninguna petición de ese tipo. La única acción actual del padre es dar ideas para entrevistas, lo que indica apoyo al programa, no rechazo. Es una idea agregada sin apoyo en el texto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Extendió la queja inicial a una acción que el texto no describe."
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo cuenta que un padre se quejó de que su hija pasaba muchas horas \"talking into a box\", y luego añade \"Today he never misses a programme\" y \"He now gives us ideas for interviews\". COMPRENDER: la pregunta pide una inferencia sobre ese padre. INTERPRETAR: \"complained\" describe el pasado; \"today\" y \"now\" describen el presente, con acciones de apoyo. REPRESENTAR: antes: queja → ahora: oyente fiel y colaborador. RAZONAR: seguir pensando que pierde el tiempo contradice \"now gives us ideas\"; no escuchar contradice \"never misses\"; pedir que dejen de entrevistar a la hija no aparece. RESOLVER: la opción que dice que cambió de opinión por completo. VERIFICAR: la risa de Claudia al recordarlo (\"Claudia laughs\") confirma que la queja quedó atrás.",
+    "que_identificar": "El contraste entre \"complained\" y \"Today he never misses a programme... He now gives us ideas\".",
+    "que_revisar": "Marcadores temporales que señalan cambios (at the beginning, today, now); expresión \"never miss something\" (no perderse algo); inferir actitudes a partir de acciones.",
+    "refuerzo_ids": [
+      "ING-116",
+      "ING-134"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "cambio_actitud",
+      "texto:ING-T32",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-136",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar una cita final con sentido no literal (a reason to tell them out loud)",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**A Radio Station the Size of a Classroom**\n\nWhen Claudia Perea arrived in a small village on the Atrato River to teach Spanish, she noticed that her students rarely spoke in class. \"They knew the answers,\" she says, \"but they preferred to stay quiet. I needed something that made them want to be heard.\"\n\nThe answer came from an old radio she found in a cupboard at the school. With a second-hand microphone and a speaker borrowed from the church, she and twelve students started Radio Escuela, a programme that plays every Friday afternoon through loudspeakers in the main square. The students write the scripts, interview their grandparents about local traditions and read the news of the week, from the price of fish to the results of the football tournament.\n\nNot everyone was enthusiastic at the beginning. One father complained that his daughter spent too many hours \"talking into a box\". Today he never misses a programme. Claudia laughs when she remembers it: \"He now gives us ideas for interviews.\"\n\nThe village still has no internet, and Claudia doesn't think that is the main problem. \"People here have plenty of stories,\" she says. \"What they needed was a reason to tell them out loud.\"",
+    "estimulo": null,
+    "enunciado": "What does Claudia mean when she says the people needed \"a reason to tell them out loud\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The people in the village did not have interesting stories to share.",
+        "correcta": false,
+        "explicacion": "Es lo contrario de lo que dice la cita: \"People here have plenty of stories\" (tienen muchas historias). Lo que faltaba no eran historias sino un motivo para contarlas. Quien elige esta opción no leyó la primera parte de la cita.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró \"plenty of stories\" y supuso que el problema era la falta de historias."
+      },
+      {
+        "clave": "B",
+        "texto": "The people needed a purpose that encouraged them to speak in public.",
+        "correcta": true,
+        "explicacion": "Claudia dice que la gente tiene muchas historias (\"plenty of stories\") y que lo que necesitaba era \"a reason to tell them out loud\": un motivo para contarlas en voz alta, frente a otros. La radio es ese motivo. La frase retoma la idea inicial de que los estudiantes querían \"ser escuchados\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "The people had to speak loudly because the loudspeakers were old.",
+        "correcta": false,
+        "explicacion": "Es una lectura literal de \"out loud\". La frase no habla del volumen ni de la calidad de los parlantes, sino de atreverse a contar las historias en público. Quien elige esta opción conectó \"loud\" con \"loudspeakers\" de forma mecánica.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"out loud\" literalmente, como un problema de volumen."
+      },
+      {
+        "clave": "D",
+        "texto": "The people could not write their stories because they had no internet.",
+        "correcta": false,
+        "explicacion": "La cita no habla de escribir, y Claudia acaba de decir que la falta de internet no es el problema principal. Quien elige esta opción mezcló el dato del internet con la cita, aunque el texto los separa expresamente.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Unió la falta de internet con la cita final sin apoyo en el texto."
+      }
+    ],
+    "explicacion": "LEER: la cita cierra el texto: \"People here have plenty of stories. What they needed was a reason to tell them out loud\". COMPRENDER: se pide el sentido de la frase, no su lectura literal. INTERPRETAR: la gente ya tiene historias; lo que faltaba era un motivo para contarlas \"en voz alta\", es decir, en público; la radio les da ese motivo. REPRESENTAR: historias (ya existen) + motivo para contarlas (la radio) = hablar en público. RAZONAR: la opción sobre historias poco interesantes contradice \"plenty of stories\"; la de los parlantes es literal; la del internet se descarta en la oración anterior. RESOLVER: la opción que habla de un propósito que los anime a hablar en público. VERIFICAR: la idea coincide con el primer párrafo (\"made them want to be heard\"), así que el texto abre y cierra con la misma idea.",
+    "que_identificar": "La relación entre \"plenty of stories\" y \"a reason to tell them out loud\", y su eco en \"want to be heard\" del primer párrafo.",
+    "que_revisar": "Interpretar expresiones con sentido figurado (out loud = en público, sin miedo); conectar la idea final de un texto con la inicial; \"plenty of\" = muchos.",
+    "refuerzo_ids": [
+      "ING-117",
+      "ING-137"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "cita",
+      "texto:ING-T32",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-137",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Identifica la intención del autor y la idea principal de un texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar el propósito principal de un texto periodístico",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**A Radio Station the Size of a Classroom**\n\nWhen Claudia Perea arrived in a small village on the Atrato River to teach Spanish, she noticed that her students rarely spoke in class. \"They knew the answers,\" she says, \"but they preferred to stay quiet. I needed something that made them want to be heard.\"\n\nThe answer came from an old radio she found in a cupboard at the school. With a second-hand microphone and a speaker borrowed from the church, she and twelve students started Radio Escuela, a programme that plays every Friday afternoon through loudspeakers in the main square. The students write the scripts, interview their grandparents about local traditions and read the news of the week, from the price of fish to the results of the football tournament.\n\nNot everyone was enthusiastic at the beginning. One father complained that his daughter spent too many hours \"talking into a box\". Today he never misses a programme. Claudia laughs when she remembers it: \"He now gives us ideas for interviews.\"\n\nThe village still has no internet, and Claudia doesn't think that is the main problem. \"People here have plenty of stories,\" she says. \"What they needed was a reason to tell them out loud.\"",
+    "estimulo": null,
+    "enunciado": "What is the main purpose of the text?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "To criticise the lack of internet in rural schools in Chocó.",
+        "correcta": false,
+        "explicacion": "El internet se menciona solo en una oración, y la propia Claudia dice que no es el problema principal. Un texto cuyo propósito fuera criticar esa carencia la desarrollaría mucho más. Quien elige esta opción dio peso de idea principal a un detalle final.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un detalle del último párrafo como el tema central."
+      },
+      {
+        "clave": "B",
+        "texto": "To explain how to build a radio station with old equipment.",
+        "correcta": false,
+        "explicacion": "El texto menciona la radio vieja, el micrófono y el parlante, pero no da instrucciones ni pasos técnicos. Esos objetos sirven para mostrar que el proyecto se hizo con pocos recursos, no para enseñar a construir una emisora.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió la mención de equipos con un texto instructivo."
+      },
+      {
+        "clave": "C",
+        "texto": "To describe the traditions of the villages on the Atrato River.",
+        "correcta": false,
+        "explicacion": "Las tradiciones aparecen solo como tema de las entrevistas que hacen los estudiantes a sus abuelos. El texto no describe ninguna tradición concreta; se centra en la profesora, los estudiantes y el programa.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el contenido de las entrevistas como el tema del texto."
+      },
+      {
+        "clave": "D",
+        "texto": "To show how a teacher used a radio project to motivate her students.",
+        "correcta": true,
+        "explicacion": "Todo el texto gira en torno a Claudia, el problema del silencio de sus estudiantes y el programa de radio como solución: cómo nació, qué hacen los estudiantes, cómo reaccionó la comunidad y qué significa para ella. Ese recorrido muestra el proyecto como una forma de motivar a los estudiantes a hablar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el texto presenta a una profesora, el problema de que sus estudiantes no hablaban, el programa de radio que creó, la reacción de un padre y una reflexión final. COMPRENDER: se pide el propósito principal, lo que une todas las partes. INTERPRETAR: cada párrafo aporta al mismo hilo: cómo un proyecto de radio hizo que los estudiantes quisieran hablar. REPRESENTAR: problema (silencio) → solución (radio) → resultado (participación, apoyo de la comunidad). RAZONAR: el internet, los equipos viejos y las tradiciones son detalles que apoyan la historia, no su propósito. RESOLVER: la opción que habla de la profesora que usó un proyecto de radio para motivar a sus estudiantes. VERIFICAR: el título (\"A Radio Station the Size of a Classroom\") y la cita final apuntan al mismo propósito.",
+    "que_identificar": "El hilo que recorre todos los párrafos: el silencio de los estudiantes y la radio como respuesta.",
+    "que_revisar": "Diferenciar idea principal de detalles de apoyo; propósito de un texto (describir, criticar, instruir, mostrar un caso); usar el título como pista.",
+    "refuerzo_ids": [
+      "ING-136",
+      "ING-114"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "proposito",
+      "idea_principal",
+      "texto:ING-T32",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-138",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "verificar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Arrive in vs. reach / get to: llegar a un lugar",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(1)**.\n\n**My First Time at the Sea**\n\nI was nine years old the first time I saw the sea. My family lived in Tunja, far from the coast, and the bus trip to Santa Marta took almost twenty hours. When we finally **(1) ______** in the city, it was six in the morning and the air was already hot and salty. My brother and I ran to the beach before breakfast. It was Sunday, so the beach was very **(2) ______**: there were families with tents, people selling fruit and children playing football on the sand. I remember the water was warm, not cold like the rivers near my town. Every time I smell the sea now, it **(3) ______** me of that morning, when I thought the ocean was the biggest thing in the world.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "reached",
+        "correcta": false,
+        "explicacion": "\"Reach\" significa llegar, pero se usa SIN preposición: \"we reached the city\". Como el texto dice \"______ in the city\", la preposición \"in\" hace que \"reached\" no encaje. Quien elige esta opción conoce el verbo pero no su construcción.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó \"reach\" sin recordar que no lleva preposición."
+      },
+      {
+        "clave": "B",
+        "texto": "got",
+        "correcta": false,
+        "explicacion": "\"Get\" con el sentido de llegar necesita la preposición \"to\": \"we got to the city\". Con \"in\" la frase no es correcta. Quien elige esta opción pensó en la expresión informal \"get to\" pero no revisó la preposición que sigue al espacio.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recordó \"get to\" pero no comprobó que la preposición del texto es \"in\"."
+      },
+      {
+        "clave": "C",
+        "texto": "arrived",
+        "correcta": true,
+        "explicacion": "\"Arrive\" se combina con \"in\" para ciudades y países (\"arrive in Santa Marta\") y con \"at\" para lugares concretos. El texto dice \"When we finally ______ in the city\", así que \"arrived\" es el verbo que acepta esa preposición y describe la llegada tras un viaje de veinte horas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el espacio (1) está en \"When we finally ______ in the city, it was six in the morning\". COMPRENDER: se busca un verbo que signifique llegar y que acepte la preposición \"in\" que sigue. INTERPRETAR: el viaje duró casi veinte horas y \"finally\" marca el final del trayecto: la familia llega a Santa Marta. REPRESENTAR: arrive + in + ciudad; reach + lugar (sin preposición); get + to + lugar. RAZONAR: \"reached in\" y \"got in the city\" son construcciones incorrectas con ese sentido; \"arrived in the city\" es la combinación correcta. RESOLVER: la opción que dice \"arrived\". VERIFICAR: \"When we finally arrived in the city, it was six in the morning\" es natural y coherente con el largo viaje en bus.",
+    "que_identificar": "La preposición \"in\" después del espacio y el adverbio \"finally\", que indica el fin del viaje.",
+    "que_revisar": "Verbos de llegada y sus preposiciones: arrive in / at, get to, reach (sin preposición); vocabulario de viajes: trip, journey, coast.",
+    "refuerzo_ids": [
+      "ING-118",
+      "ING-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "arrive_reach_get",
+      "viajes",
+      "texto:ING-T36",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-139",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Adjetivos para lugares: crowded (lleno de gente)",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(2)**.\n\n**My First Time at the Sea**\n\nI was nine years old the first time I saw the sea. My family lived in Tunja, far from the coast, and the bus trip to Santa Marta took almost twenty hours. When we finally **(1) ______** in the city, it was six in the morning and the air was already hot and salty. My brother and I ran to the beach before breakfast. It was Sunday, so the beach was very **(2) ______**: there were families with tents, people selling fruit and children playing football on the sand. I remember the water was warm, not cold like the rivers near my town. Every time I smell the sea now, it **(3) ______** me of that morning, when I thought the ocean was the biggest thing in the world.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "crowded",
+        "correcta": true,
+        "explicacion": "\"Crowded\" significa lleno de gente. El texto explica por qué: era domingo y había familias con carpas, vendedores de fruta y niños jugando fútbol. Esa lista describe una playa llena de personas, así que \"the beach was very crowded\" es la opción coherente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "heavy",
+        "correcta": false,
+        "explicacion": "\"Heavy\" significa pesado y se usa con objetos, con la lluvia (\"heavy rain\") o con el tráfico (\"heavy traffic\"), pero no para describir una playa llena de gente. Quien elige esta opción pensó en \"tráfico pesado\" y lo trasladó a la playa.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trasladó la colocación \"heavy traffic\" a un lugar lleno de personas."
+      },
+      {
+        "clave": "C",
+        "texto": "tight",
+        "correcta": false,
+        "explicacion": "\"Tight\" significa apretado o ajustado y se usa con ropa, nudos o horarios (\"a tight schedule\"), no con lugares llenos de gente. Quien elige esta opción tradujo \"apretado\" pensando en el espacio reducido, pero el adjetivo no se aplica a una playa.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tradujo la idea de poco espacio con un adjetivo que solo se usa para ropa u horarios."
+      }
+    ],
+    "explicacion": "LEER: el espacio (2) está en \"It was Sunday, so the beach was very ______: there were families with tents, people selling fruit and children playing football\". COMPRENDER: se busca el adjetivo que describe la playa según lo que sigue a los dos puntos. INTERPRETAR: la lista de familias, vendedores y niños indica que había mucha gente; \"It was Sunday, so\" presenta esa situación como consecuencia del día. REPRESENTAR: domingo → mucha gente → playa llena = crowded. RAZONAR: \"heavy\" se usa para peso, lluvia o tráfico; \"tight\" para ropa u horarios; solo \"crowded\" describe un lugar lleno de personas. RESOLVER: la opción que dice \"crowded\". VERIFICAR: \"the beach was very crowded: there were families...\" es coherente, porque los dos puntos introducen la explicación de la palabra.",
+    "que_identificar": "La lista de personas después de los dos puntos y la causa \"It was Sunday\".",
+    "que_revisar": "Adjetivos para describir lugares: crowded, empty, quiet, noisy, busy; colocaciones: heavy rain / traffic, tight clothes / schedule.",
+    "refuerzo_ids": [
+      "ING-138",
+      "ING-140"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "adjetivos",
+      "playa",
+      "texto:ING-T36",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-140",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Remind vs. remember: remind someone of something",
+    "dificultad": 3,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(3)**.\n\n**My First Time at the Sea**\n\nI was nine years old the first time I saw the sea. My family lived in Tunja, far from the coast, and the bus trip to Santa Marta took almost twenty hours. When we finally **(1) ______** in the city, it was six in the morning and the air was already hot and salty. My brother and I ran to the beach before breakfast. It was Sunday, so the beach was very **(2) ______**: there were families with tents, people selling fruit and children playing football on the sand. I remember the water was warm, not cold like the rivers near my town. Every time I smell the sea now, it **(3) ______** me of that morning, when I thought the ocean was the biggest thing in the world.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "remembers",
+        "correcta": false,
+        "explicacion": "\"Remember\" significa recordar algo uno mismo, y su sujeto es la persona que recuerda: \"I remember that morning\". Aquí el sujeto es \"it\" (el olor del mar) y hay un objeto \"me\": el olor no recuerda, sino que HACE recordar. Esa idea se expresa con \"remind\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"me recuerda\" con \"remember\" sin notar que el sujeto es el olor y no la persona."
+      },
+      {
+        "clave": "B",
+        "texto": "reminds",
+        "correcta": true,
+        "explicacion": "\"Remind someone of something\" significa hacer que alguien recuerde algo: \"Every time I smell the sea, it reminds me of that morning\" = cada vez que huelo el mar, me recuerda aquella mañana. El sujeto \"it\" (el olor) provoca el recuerdo, hay un objeto \"me\" y la preposición \"of\" completa la estructura. La -s concuerda con \"it\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "forgets",
+        "correcta": false,
+        "explicacion": "\"Forget\" significa olvidar, lo contrario de lo que cuenta el narrador, que conserva el recuerdo con detalle. Además, \"it forgets me of\" no es una construcción del inglés. Quien elige esta opción no procesó el sentido de la oración final.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un verbo relacionado con la memoria sin revisar el sentido ni la estructura."
+      }
+    ],
+    "explicacion": "LEER: el espacio (3) está en \"Every time I smell the sea now, it ______ me of that morning\". COMPRENDER: se busca el verbo que expresa que el olor hace recordar aquella mañana. INTERPRETAR: el sujeto es \"it\" (el olor del mar), el objeto es \"me\" y sigue la preposición \"of\": la estructura es \"X reminds me of Y\". REPRESENTAR: olor (sujeto) → provoca recuerdo → en mí (objeto) → de aquella mañana (of). RAZONAR: \"remember\" tendría como sujeto a la persona y no lleva \"me of\"; \"forget\" invierte el sentido y no admite esa estructura; \"remind... of\" encaja en forma y significado. RESOLVER: la opción que dice \"reminds\". VERIFICAR: \"it reminds me of that morning\" es una oración natural y la -s concuerda con el sujeto \"it\".",
+    "que_identificar": "El sujeto \"it\", el objeto \"me\" y la preposición \"of\" alrededor del espacio.",
+    "que_revisar": "Diferencia entre remember (recordar uno mismo) y remind someone of / to (hacer recordar); estructura verbo + objeto + preposición.",
+    "refuerzo_ids": [
+      "ING-139",
+      "ING-119"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "vocabulario",
+      "remind_remember",
+      "texto:ING-T36",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

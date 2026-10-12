@@ -220,7 +220,7 @@
       },
       {
         "clave": "B",
-        "texto": "Beneficiaría por igual a todos los trabajadores del país, porque el salario mínimo es la base de pago de cualquier empleo en Colombia.",
+        "texto": "Beneficiaría por igual a todos los trabajadores del país, porque el salario mínimo es la base legal de pago de cualquier empleo en Colombia y, con el tiempo, también arrastra hacia arriba lo que ganan los informales.",
         "correcta": false,
         "explicacion": "El contexto indica que cerca de la mitad de los trabajadores es informal y no recibe salario mínimo legal; el aumento no les llega de forma directa.",
         "tipo_error": "comprension",
@@ -229,7 +229,7 @@
       },
       {
         "clave": "C",
-        "texto": "No tendría ningún efecto real, porque la inflación del 6 % se come todo el aumento y los trabajadores quedan igual.",
+        "texto": "No tendría ningún efecto real sobre nadie, porque la inflación del 6 % se come todo el aumento y tanto los trabajadores formales como los informales terminan con el mismo poder de compra que tenían antes.",
         "correcta": false,
         "explicacion": "Un aumento del 15 % con inflación del 6 % deja una ganancia real cercana al 9 %; la afirmación confunde un aumento mayor que la inflación con uno igual a ella.",
         "tipo_error": "calculo",
@@ -238,7 +238,7 @@
       },
       {
         "clave": "D",
-        "texto": "Reduciría la informalidad, porque con un salario más alto todos los empleadores preferirían contratar de manera formal.",
+        "texto": "Reduciría la informalidad de inmediato, porque con un salario más alto todos los empleadores, incluidas las microempresas, preferirían contratar de manera formal para no perder a sus trabajadores.",
         "correcta": false,
         "explicacion": "Un mayor costo de la nómina formal tiende a desestimular, no a favorecer, la contratación formal en las microempresas, según el dato de que la nómina supera la mitad de sus costos.",
         "tipo_error": "razonamiento",
@@ -504,7 +504,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La caída de visitantes en 2021 provocó una baja de los arriendos y permitió que las familias regresaran al centro histórico.",
+        "texto": "La caída de visitantes en 2021 provocó una baja de los arriendos del centro histórico, lo que permitió que las familias desplazadas regresaran a sus casas y frenó la presión sobre los barrios periféricos.",
         "correcta": false,
         "explicacion": "En 2021 los visitantes bajaron de 160 a 120 mil, pero el arriendo no bajó: subió levemente de 1 100 a 1 150; el contexto tampoco habla de regreso de familias.",
         "tipo_error": "lectura_grafico",
@@ -513,7 +513,7 @@
       },
       {
         "clave": "B",
-        "texto": "El aumento de visitantes mejoró los ingresos de todos los habitantes del pueblo, por lo que el desplazamiento de familias se debe a otras causas.",
+        "texto": "El aumento de visitantes mejoró los ingresos de todos los habitantes del pueblo por igual (dimensión económica), de modo que el desplazamiento de familias hacia la periferia debe explicarse por otras causas, como la inseguridad.",
         "correcta": false,
         "explicacion": "El gráfico no muestra ingresos de los habitantes; sí muestra que el arriendo se multiplicó por 3,5 mientras crecía el turismo, lo que coincide con la salida de familias señalada en el contexto.",
         "tipo_error": "inferencia",
@@ -531,7 +531,7 @@
       },
       {
         "clave": "D",
-        "texto": "El alza de los arriendos hizo que llegaran más turistas, porque los precios altos dan prestigio al destino.",
+        "texto": "El alza de los arriendos hizo que llegaran más turistas (dimensión económica), porque los precios altos dan prestigio al destino y atraen visitantes de mayores ingresos que buscan exclusividad y tranquilidad.",
         "correcta": false,
         "explicacion": "La relación lógica va en sentido contrario: la demanda turística eleva los precios del centro; nada en el contexto indica que los turistas lleguen atraídos por arriendos caros.",
         "tipo_error": "razonamiento",
@@ -622,7 +622,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La Revolución Francesa comenzó antes que la independencia de las Trece Colonias y le sirvió de modelo.",
+        "texto": "La Revolución Francesa comenzó antes que la independencia de las Trece Colonias y les sirvió de modelo político a los colonos.",
         "correcta": false,
         "explicacion": "La tabla ubica la independencia de las Trece Colonias en 1776 y la toma de la Bastilla en 1789: la primera es trece años anterior a la segunda.",
         "tipo_error": "lectura_tabla",
@@ -640,7 +640,7 @@
       },
       {
         "clave": "C",
-        "texto": "La batalla de Boyacá puso fin al dominio español en toda Sudamérica.",
+        "texto": "La batalla de Boyacá puso fin al dominio español en toda Sudamérica, por lo que la batalla de Ayacucho fue apenas un combate menor.",
         "correcta": false,
         "explicacion": "Según la tabla, el fin del dominio español en Sudamérica se asocia a Ayacucho (1824), cinco años después de Boyacá (1819), que fue decisiva para el Nuevo Reino de Granada.",
         "tipo_error": "lectura_tabla",
@@ -649,7 +649,7 @@
       },
       {
         "clave": "D",
-        "texto": "Entre la independencia de Haití y la de las Trece Colonias pasaron menos de diez años.",
+        "texto": "Entre la independencia de Haití y la de las Trece Colonias pasaron menos de diez años, pues ambas ocurrieron en la década de 1770.",
         "correcta": false,
         "explicacion": "De 1776 a 1804 transcurrieron 28 años, no menos de diez; el error proviene de restar mal o de confundir las fechas.",
         "tipo_error": "calculo",
@@ -882,7 +882,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La capital debe recibir la planta, porque tiene más niños (60 000) y por tanto allí ocurren más hospitalizaciones en total.",
+        "texto": "La capital debe recibir la planta, porque tiene más niños (60 000) y por tanto allí ocurren más hospitalizaciones en total, aunque su tasa por cada 1 000 niños sea la más baja de las tres zonas de la tabla.",
         "correcta": false,
         "explicacion": "Con 8 por cada 1 000, la capital tiene unas 480 hospitalizaciones; la zona rural, con 42 por cada 1 000 y 50 000 niños, tiene unas 2 100. Ni en tasa ni en total la capital es la más afectada.",
         "tipo_error": "calculo",
@@ -891,7 +891,7 @@
       },
       {
         "clave": "B",
-        "texto": "Las tres zonas presentan tasas parecidas de enfermedad, así que la cobertura de agua tratada no tiene relación con la salud infantil.",
+        "texto": "Las tres zonas presentan tasas parecidas de enfermedad si se tiene en cuenta el tamaño de su población infantil, así que la cobertura de agua tratada no tiene una relación directa con la salud de los niños.",
         "correcta": false,
         "explicacion": "Las tasas van de 8 a 42 por cada 1 000, más de cinco veces de diferencia, y descienden a medida que sube la cobertura de agua tratada: la relación es clara.",
         "tipo_error": "lectura_tabla",
@@ -909,7 +909,7 @@
       },
       {
         "clave": "D",
-        "texto": "Las hospitalizaciones rurales se explican por la distancia a los hospitales, no por el agua, así que la inversión debe ir a construir más vías.",
+        "texto": "Las hospitalizaciones rurales se explican por la distancia a los hospitales y no por el agua, pues los niños de las veredas llegan más graves a consulta, así que la inversión debe ir a construir más vías.",
         "correcta": false,
         "explicacion": "La tabla no mide distancias; sí muestra que donde el agua tratada escasea la diarrea es mucho más frecuente, y el contexto señala que en las veredas se bebe agua sin tratar.",
         "tipo_error": "inferencia",
@@ -959,7 +959,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "El juez busca que el joven aprenda de su error, mientras que el gobernador solo quiere que el afectado recupere sus animales.",
+        "texto": "El juez busca que el joven aprenda de su error mediante un proceso judicial con garantías, mientras que el gobernador solo quiere que el afectado recupere sus animales lo más pronto posible, sin pensar en el joven.",
         "correcta": false,
         "explicacion": "Es el gobernador quien insiste en el aprendizaje ('quienes pueden enseñarle') y en la reparación; el juez habla de proceso y pena proporcional, no de aprendizaje.",
         "tipo_error": "comprension",
@@ -968,7 +968,7 @@
       },
       {
         "clave": "B",
-        "texto": "El gobernador desconoce que el robo es un delito, mientras que el juez sí conoce la ley colombiana.",
+        "texto": "El gobernador desconoce que el robo es un delito tipificado en el Código Penal, mientras que el juez sí conoce la ley colombiana y por eso propone la única sanción que el ordenamiento jurídico del país permite.",
         "correcta": false,
         "explicacion": "El gobernador reconoce el daño y propone una sanción; no niega que haya una falta. La diferencia no es de conocimiento, sino de la forma de entender para qué sirve castigar.",
         "tipo_error": "argumentacion",
@@ -977,7 +977,7 @@
       },
       {
         "clave": "C",
-        "texto": "Ambos quieren castigar con prisión, pero el gobernador considera que la cárcel debe estar dentro del resguardo.",
+        "texto": "Ambos quieren castigar al joven privándolo de su libertad, pero el gobernador considera que el encierro debe cumplirse dentro del resguardo y acompañado de ceremonias, no en una cárcel ordinaria del Estado.",
         "correcta": false,
         "explicacion": "El gobernador rechaza expresamente el encierro ('encerrarlo lejos no cura nada') y propone trabajo, ceremonia y perdón; no habla de cárcel en ningún lugar.",
         "tipo_error": "descuido",
@@ -1191,7 +1191,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "Una acción de tutela contra el contratista, para que un juez le ordene terminar el bloque de aulas en un plazo fijo.",
+        "texto": "Una acción de tutela contra el contratista, para que un juez le ordene terminar el bloque de aulas en un plazo fijo, porque el retraso de la obra vulnera el derecho a la educación de los estudiantes del colegio.",
         "correcta": false,
         "explicacion": "La tutela protege derechos fundamentales frente a amenazas concretas y se dirige sobre todo contra autoridades; el grupo no pide una orden judicial, sino vigilar y pedir informes.",
         "tipo_error": "interpretacion",
@@ -1209,7 +1209,7 @@
       },
       {
         "clave": "C",
-        "texto": "Promover una revocatoria del mandato del alcalde, pues la obra atrasada demuestra que incumplió su programa de gobierno.",
+        "texto": "Promover una revocatoria del mandato del alcalde, pues la obra atrasada demuestra que incumplió su programa de gobierno y la ley permite a los ciudadanos retirar al gobernante por esa causa en cualquier momento.",
         "correcta": false,
         "explicacion": "La revocatoria busca terminar el periodo del alcalde y exige firmas y votación; el grupo quiere seguir la obra y los pagos, no cambiar de gobernante.",
         "tipo_error": "interpretacion",
@@ -1218,7 +1218,7 @@
       },
       {
         "clave": "D",
-        "texto": "Solicitar un plebiscito municipal para que los habitantes decidan si la obra debe continuar o cancelarse.",
+        "texto": "Solicitar un plebiscito municipal para que todos los habitantes decidan con su voto si la obra debe continuar con el mismo contratista o cancelarse y volver a licitarse con nuevos recursos del municipio.",
         "correcta": false,
         "explicacion": "El plebiscito es convocado por el presidente sobre decisiones del Ejecutivo nacional; no existe un plebiscito municipal para decidir sobre un contrato de obra.",
         "tipo_error": "conocimiento",
@@ -1276,7 +1276,7 @@
       },
       {
         "clave": "B",
-        "texto": "En la instalación del Congreso que aprobó el Frente Nacional, convocado tras el plebiscito de 1957 para alternar liberales y conservadores en el poder.",
+        "texto": "En la instalación del Congreso que aprobó el Frente Nacional, convocado tras el plebiscito de 1957 para alternar liberales y conservadores en el poder, después de una década de violencia bipartidista y de la dictadura de Rojas Pinilla.",
         "correcta": false,
         "explicacion": "El plebiscito de 1957 sí fue una votación, pero el fragmento habla de una papeleta no prevista por la ley, de una Constitución 'centenaria' y de jóvenes universitarios: pistas que remiten a 1990-1991, no a 1957.",
         "tipo_error": "conocimiento",
@@ -1285,7 +1285,7 @@
       },
       {
         "clave": "C",
-        "texto": "En la firma del acuerdo de paz de 2016, cuando se convocó un plebiscito para que los ciudadanos aprobaran lo pactado con la guerrilla.",
+        "texto": "En la firma del acuerdo de paz de 2016, cuando se convocó un plebiscito para que los ciudadanos aprobaran lo pactado con la guerrilla tras más de cincuenta años de conflicto armado y de atentados contra dirigentes políticos.",
         "correcta": false,
         "explicacion": "El plebiscito de 2016 estaba previsto por la ley y no buscaba redactar una nueva Constitución; además, en 2016 la Constitución vigente tenía 25 años, no cien.",
         "tipo_error": "descuido",
@@ -1294,7 +1294,7 @@
       },
       {
         "clave": "D",
-        "texto": "En la convención que redactó la Constitución de 1886, tras la derrota de los federalistas radicales en la guerra civil de 1885.",
+        "texto": "En la convención que redactó la Constitución de 1886, tras la derrota de los federalistas radicales en la guerra civil de 1885, cuando el país buscaba un Estado centralista y una Constitución que durara más que las anteriores.",
         "correcta": false,
         "explicacion": "La Constitución de 1886 es justamente la 'centenaria' que el orador quiere reemplazar; el fragmento es de febrero de 1991, como indica su encabezado.",
         "tipo_error": "lectura_tabla",
@@ -1371,7 +1371,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La medida no tendrá efectos sociales, porque las familias pueden pasarse al turismo de naturaleza, que ya es la actividad principal del páramo.",
+        "texto": "La medida no tendrá efectos sociales negativos, porque las familias que cultivan papa o tienen ganado pueden pasarse al turismo de naturaleza, que ya es la actividad principal del páramo y crece con cada visitante que llega a la zona.",
         "correcta": false,
         "explicacion": "El gráfico muestra que el turismo ocupa solo a 25 familias frente a 300 de papa y ganadería; no es la actividad principal y no podría absorber de inmediato a todas las demás.",
         "tipo_error": "lectura_grafico",
@@ -1380,7 +1380,7 @@
       },
       {
         "clave": "B",
-        "texto": "Proteger el agua es lo único que importa, de modo que las 300 familias de papa y leche deben salir del páramo sin más consideración.",
+        "texto": "Proteger el agua es lo único que importa en un ecosistema estratégico, de modo que las 300 familias de papa y leche deben salir del páramo sin más consideración, pues cualquier compensación retrasaría la recuperación ambiental.",
         "correcta": false,
         "explicacion": "La propia ley citada exige acordar la transición con las comunidades; ignorar a 300 familias desconoce la dimensión social y puede generar conflicto y pobreza.",
         "tipo_error": "razonamiento",
@@ -1389,7 +1389,7 @@
       },
       {
         "clave": "C",
-        "texto": "La agricultura debe continuar igual, porque 300 familias dependen de ella y el páramo ha resistido siglos de cultivo sin perder su función.",
+        "texto": "La agricultura debe continuar exactamente igual, porque 300 familias dependen de ella, el páramo ha resistido siglos de cultivo sin perder su función y el agua seguirá llegando a las ciudades como lo ha hecho hasta ahora.",
         "correcta": false,
         "explicacion": "El contexto afirma que la ley prohíbe esas actividades a gran escala para proteger el agua de millones de personas; mantener todo igual ignora la dimensión ambiental y la norma.",
         "tipo_error": "razonamiento",
@@ -1474,7 +1474,7 @@
     "opciones": [
       {
         "clave": "A",
-        "texto": "La población infantil creció, por lo que el país deberá construir muchas más escuelas primarias en los próximos años.",
+        "texto": "La población infantil creció, por lo que el país deberá construir muchas más escuelas primarias y contratar más docentes en los próximos años para atender la nueva demanda.",
         "correcta": false,
         "explicacion": "El porcentaje de niños bajó de 37 % a 21 %; la tabla muestra una reducción relativa de la población infantil, no un crecimiento.",
         "tipo_error": "lectura_tabla",
@@ -1492,7 +1492,7 @@
       },
       {
         "clave": "C",
-        "texto": "La población se mantuvo igual, porque la suma de los tres grupos sigue siendo 100 % en los dos años.",
+        "texto": "La población se mantuvo igual en su composición, porque la suma de los tres grupos sigue siendo 100 % en los dos años y eso demuestra que no hubo cambios relevantes entre 1985 y 2025.",
         "correcta": false,
         "explicacion": "Que los porcentajes sumen 100 es una propiedad de cualquier distribución; lo relevante es cómo se reparte ese 100 entre los grupos, y eso cambió mucho.",
         "tipo_error": "razonamiento",
@@ -1501,7 +1501,7 @@
       },
       {
         "clave": "D",
-        "texto": "La población en edad de trabajar disminuyó, lo que explica la escasez de trabajadores en las empresas del país.",
+        "texto": "La población en edad de trabajar disminuyó, lo que explica la escasez de trabajadores en las empresas del país y obligará a traer mano de obra de otros países en los próximos años.",
         "correcta": false,
         "explicacion": "El grupo de 15 a 64 años aumentó de 59 % a 67 %; la tabla no muestra disminución de la población en edad de trabajar.",
         "tipo_error": "lectura_tabla",
@@ -1770,7 +1770,7 @@
       },
       {
         "clave": "B",
-        "texto": "Doña Rosalba solo podrá operarse si consigue un empleo con contrato y cotiza al régimen contributivo durante al menos un año.",
+        "texto": "Doña Rosalba solo podrá operarse si consigue un empleo con contrato y cotiza al régimen contributivo durante al menos un año, porque el sistema de salud se financia únicamente con los aportes de quienes trabajan formalmente.",
         "correcta": false,
         "explicacion": "Esta respuesta repite el error del funcionario: condiciona el derecho a la salud a la capacidad de pago, lo que contradice el artículo 49 y la existencia del régimen subsidiado.",
         "tipo_error": "conocimiento",
@@ -1779,7 +1779,7 @@
       },
       {
         "clave": "C",
-        "texto": "El hospital debe operarla gratis por caridad, aunque la ley no la obligue, porque es una persona de edad y sin recursos.",
+        "texto": "El hospital debe operarla gratis por caridad, aunque la ley no lo obligue, porque es una persona de edad y sin recursos, y negarse iría en contra de la ética médica, aunque no de la Constitución ni de la ley.",
         "correcta": false,
         "explicacion": "La atención no depende de la caridad del hospital, sino de un derecho constitucional y de un régimen financiado con recursos públicos; presentar el derecho como favor desconoce el modelo de Estado Social de Derecho.",
         "tipo_error": "conocimiento",
@@ -1788,7 +1788,7 @@
       },
       {
         "clave": "D",
-        "texto": "Doña Rosalba debe pagar la cirugía con sus ventas, pues el régimen subsidiado cubre únicamente a niños y a personas mayores de 65 años.",
+        "texto": "Doña Rosalba debe pagar la cirugía con sus ventas, pues el régimen subsidiado cubre únicamente a niños, a personas mayores de 65 años y a quienes estén registrados oficialmente como población en pobreza extrema.",
         "correcta": false,
         "explicacion": "El régimen subsidiado no está limitado por edad; cubre a quienes no tienen capacidad de pago, como una vendedora sin ingresos fijos de 58 años.",
         "tipo_error": "conocimiento",

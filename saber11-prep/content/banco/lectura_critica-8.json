@@ -1,0 +1,1670 @@
+[
+  {
+    "id": "LC-121",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Identifica los eventos narrados de manera explícita en un texto (literario, descriptivo, caricatura o cómic) y los personajes involucrados",
+    "habilidad": "leer",
+    "tema": "Texto literario (dramaturgia)",
+    "subtema": "Hechos explícitos en un texto dramático",
+    "dificultad": 1,
+    "contexto": "**La silla vacía** (fragmento de una obra de teatro)\n\n*Comedor de una casa de barrio. Una mesa puesta para cuatro; tres personas sentadas. La cuarta silla, en la cabecera, está vacía. Es de noche. Se oye la lluvia.*\n\nCLARA: *(mirando el reloj de la pared)* Son las ocho y veinte. Dijo que venía a las siete.\n\nTOMÁS: Siempre dice que viene a las siete. Y siempre llega cuando la sopa está fría.\n\nABUELA: *(sirviendo)* La sopa no se enfría si uno la deja tapada. Lo que se enfría es la gente.\n\nCLARA: Tal vez el bus se demoró con la lluvia.\n\nTOMÁS: Tal vez no quería venir. *(Pausa.)* Desde que vendió la casa del pueblo no ha vuelto a sentarse en esa silla sin mirar la puerta.\n\nABUELA: Esa silla era de tu abuelo. Tu padre la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender. *(Pone un plato frente a la silla vacía.)*\n\nCLARA: ¿Para qué le sirve, si no ha llegado?\n\nABUELA: Para que, cuando llegue, no tenga que pedir.\n\n*(Suena el timbre. Nadie se levanta de inmediato. Tomás mira a Clara; Clara mira a la abuela. La abuela sigue sirviendo.)*\n\nTOMÁS: *(levantándose por fin)* Voy yo.\n\nABUELA: *(sin mirarlo)* Dile que la sopa está caliente.",
+    "estimulo": null,
+    "enunciado": "Según el fragmento, ¿por qué el padre de Clara y Tomás trajo la silla en el techo del bus?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque la abuela le pidió conservar algún recuerdo del abuelo en la casa nueva.",
+        "correcta": false,
+        "explicacion": "La abuela explica el origen de la silla, pero no dice que ella la haya pedido; afirma que el padre la trajo «porque fue lo único que no quiso vender». La petición de la abuela es una invención.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a la abuela una intención que el texto no menciona, solo porque es ella quien cuenta la historia."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque fue lo único que no quiso vender de la casa del pueblo.",
+        "correcta": true,
+        "explicacion": "La abuela lo dice de manera explícita: «Tu padre la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender». La silla era del abuelo y el padre la conservó al vender la casa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque en la casa nueva faltaba una silla para completar la mesa de cuatro.",
+        "correcta": false,
+        "explicacion": "El texto describe una mesa puesta para cuatro, pero nunca relaciona la silla con una necesidad práctica de completar el comedor; la razón que da la abuela es afectiva, no de mobiliario.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Conectó el dato de la mesa para cuatro con la silla y supuso una causa práctica que el texto no da."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el abuelo, antes de morir, le encargó cuidarla como herencia.",
+        "correcta": false,
+        "explicacion": "El fragmento dice que la silla «era de tu abuelo», pero no menciona ningún encargo ni promesa hecha por él; esa explicación añade un hecho ausente en el diálogo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Completó la historia con un motivo sentimental común en otros relatos, pero no en este."
+      }
+    ],
+    "explicacion": "LEER: busco en el diálogo el momento en que se habla del origen de la silla. COMPRENDER: la pregunta pide la razón explícita por la que el padre trajo la silla, no una suposición. INTERPRETAR: la abuela dice que la silla era del abuelo y que el padre «la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender». REPRESENTAR: venta de la casa del pueblo → todo se vende → excepción: la silla → viaja en el techo del bus. RAZONAR: las otras opciones inventan causas (petición de la abuela, falta de sillas, encargo del abuelo) que no están en el texto. RESOLVER: la opción que señala que fue lo único que el padre no quiso vender. VERIFICAR: releo la intervención de la abuela y confirmo que la causa aparece introducida por «porque».",
+    "que_identificar": "La intervención de la abuela: «Tu padre la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender».",
+    "que_revisar": "Localizar información explícita en un texto dramático, donde los hechos se cuentan a través de los parlamentos de los personajes y las acotaciones.",
+    "refuerzo_ids": [
+      "LC-122",
+      "LC-105"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T35",
+      "literario",
+      "teatro"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-122",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (dramaturgia)",
+    "subtema": "Caracterización de un personaje por sus parlamentos",
+    "dificultad": 2,
+    "contexto": "**La silla vacía** (fragmento de una obra de teatro)\n\n*Comedor de una casa de barrio. Una mesa puesta para cuatro; tres personas sentadas. La cuarta silla, en la cabecera, está vacía. Es de noche. Se oye la lluvia.*\n\nCLARA: *(mirando el reloj de la pared)* Son las ocho y veinte. Dijo que venía a las siete.\n\nTOMÁS: Siempre dice que viene a las siete. Y siempre llega cuando la sopa está fría.\n\nABUELA: *(sirviendo)* La sopa no se enfría si uno la deja tapada. Lo que se enfría es la gente.\n\nCLARA: Tal vez el bus se demoró con la lluvia.\n\nTOMÁS: Tal vez no quería venir. *(Pausa.)* Desde que vendió la casa del pueblo no ha vuelto a sentarse en esa silla sin mirar la puerta.\n\nABUELA: Esa silla era de tu abuelo. Tu padre la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender. *(Pone un plato frente a la silla vacía.)*\n\nCLARA: ¿Para qué le sirve, si no ha llegado?\n\nABUELA: Para que, cuando llegue, no tenga que pedir.\n\n*(Suena el timbre. Nadie se levanta de inmediato. Tomás mira a Clara; Clara mira a la abuela. La abuela sigue sirviendo.)*\n\nTOMÁS: *(levantándose por fin)* Voy yo.\n\nABUELA: *(sin mirarlo)* Dile que la sopa está caliente.",
+    "estimulo": null,
+    "enunciado": "La frase de la abuela «La sopa no se enfría si uno la deja tapada. Lo que se enfría es la gente» caracteriza a este personaje como alguien que",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "se preocupa, ante todo, por que la comida se sirva a la hora exacta y bien caliente.",
+        "correcta": false,
+        "explicacion": "La abuela resta importancia al problema de la comida («no se enfría si uno la deja tapada»); su preocupación no es el horario de la cena sino lo que ocurre entre las personas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la primera mitad de la frase, que habla de la sopa, y no leyó el giro de la segunda."
+      },
+      {
+        "clave": "B",
+        "texto": "culpa al padre de Clara y Tomás por llegar tarde y hacerlos esperar.",
+        "correcta": false,
+        "explicacion": "En ninguna de sus intervenciones la abuela reprocha al hijo; al contrario, le guarda el plato y manda decirle que la sopa está caliente. El reproche viene de Tomás, no de ella.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a la abuela la actitud de Tomás, que es quien se queja de las llegadas tarde."
+      },
+      {
+        "clave": "C",
+        "texto": "evita hablar de sus propios sentimientos refugiándose en frases sobre la cocina.",
+        "correcta": false,
+        "explicacion": "La abuela usa la cocina como imagen, pero no para evitar el tema: justamente lo nombra («lo que se enfría es la gente»). No esquiva los sentimientos, los expresa de manera indirecta.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió hablar con imágenes cotidianas con negarse a hablar del asunto."
+      },
+      {
+        "clave": "D",
+        "texto": "responde a una queja práctica con una reflexión sobre el afecto entre las personas.",
+        "correcta": true,
+        "explicacion": "Tomás se queja de que la sopa se enfría; la abuela toma esa queja literal y la convierte en una advertencia sobre los vínculos: lo grave no es la comida fría sino que las personas se distancien. Es la clave de su manera de hablar en todo el fragmento.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico la frase de la abuela y la intervención de Tomás que la provoca («siempre llega cuando la sopa está fría»). COMPRENDER: debo caracterizar al personaje a partir de cómo responde. INTERPRETAR: la abuela acepta el dato práctico (la sopa se tapa y no se enfría) y desplaza el sentido hacia las personas: «Lo que se enfría es la gente». REPRESENTAR: queja práctica de Tomás → respuesta en dos tiempos: solución doméstica + reflexión sobre los vínculos. RAZONAR: no se preocupa por el horario, no culpa al hijo y no evita el tema; al contrario, lo nombra con una imagen. RESOLVER: la opción que describe una respuesta a una queja práctica con una reflexión sobre el afecto. VERIFICAR: el resto de sus parlamentos («Para que, cuando llegue, no tenga que pedir», «Dile que la sopa está caliente») confirman esa misma actitud.",
+    "que_identificar": "El contraste entre la queja de Tomás sobre la sopa fría y la respuesta de la abuela, que traslada el sentido de «enfriarse» a las personas.",
+    "que_revisar": "Caracterizar a un personaje dramático a partir de lo que dice y de cómo responde a los demás, atendiendo a los dobles sentidos.",
+    "refuerzo_ids": [
+      "LC-121",
+      "LC-106"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T35",
+      "literario",
+      "teatro"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-123",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (dramaturgia)",
+    "subtema": "Inferencia a partir de una acotación",
+    "dificultad": 2,
+    "contexto": "**La silla vacía** (fragmento de una obra de teatro)\n\n*Comedor de una casa de barrio. Una mesa puesta para cuatro; tres personas sentadas. La cuarta silla, en la cabecera, está vacía. Es de noche. Se oye la lluvia.*\n\nCLARA: *(mirando el reloj de la pared)* Son las ocho y veinte. Dijo que venía a las siete.\n\nTOMÁS: Siempre dice que viene a las siete. Y siempre llega cuando la sopa está fría.\n\nABUELA: *(sirviendo)* La sopa no se enfría si uno la deja tapada. Lo que se enfría es la gente.\n\nCLARA: Tal vez el bus se demoró con la lluvia.\n\nTOMÁS: Tal vez no quería venir. *(Pausa.)* Desde que vendió la casa del pueblo no ha vuelto a sentarse en esa silla sin mirar la puerta.\n\nABUELA: Esa silla era de tu abuelo. Tu padre la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender. *(Pone un plato frente a la silla vacía.)*\n\nCLARA: ¿Para qué le sirve, si no ha llegado?\n\nABUELA: Para que, cuando llegue, no tenga que pedir.\n\n*(Suena el timbre. Nadie se levanta de inmediato. Tomás mira a Clara; Clara mira a la abuela. La abuela sigue sirviendo.)*\n\nTOMÁS: *(levantándose por fin)* Voy yo.\n\nABUELA: *(sin mirarlo)* Dile que la sopa está caliente.",
+    "estimulo": null,
+    "enunciado": "La acotación «Nadie se levanta de inmediato. Tomás mira a Clara; Clara mira a la abuela» permite inferir que, al sonar el timbre, los personajes",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "dudan sobre cómo recibir a quien llega, después de lo que se ha dicho de él.",
+        "correcta": true,
+        "explicacion": "Justo antes del timbre, Tomás ha sugerido que el padre «no quería venir» y la abuela ha puesto el plato en la silla vacía. La cadena de miradas y la demora en levantarse muestran la incomodidad de los tres frente a ese encuentro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "no están seguros de que la persona que timbra sea el padre que esperaban.",
+        "correcta": false,
+        "explicacion": "Nada en el fragmento sugiere que esperen a otra persona ni que haya duda sobre la identidad de quien llega; toda la escena gira en torno a la llegada del padre y las acotaciones no plantean esa incertidumbre.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Buscó una explicación práctica para la pausa en lugar de relacionarla con la tensión del diálogo previo."
+      },
+      {
+        "clave": "C",
+        "texto": "esperan que la abuela, por ser la mayor de la casa, sea quien abra la puerta.",
+        "correcta": false,
+        "explicacion": "Las miradas terminan en la abuela, pero ella «sigue sirviendo» y no da señal de ir a abrir; además, en la escena quien se levanta es Tomás. La inferencia de una regla de cortesía no se apoya en el texto.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la dirección de las miradas como una expectativa de jerarquía y no como un gesto de vacilación."
+      },
+      {
+        "clave": "D",
+        "texto": "temen que la lluvia haya causado un accidente a quien llega con retraso.",
+        "correcta": false,
+        "explicacion": "La lluvia aparece como posible causa del retraso del bus, pero nadie expresa miedo por un accidente; la pausa ocurre justamente cuando el padre ya ha llegado y timbra.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó un detalle del ambiente (la lluvia) y construyó con él una emoción que la escena no muestra."
+      }
+    ],
+    "explicacion": "LEER: ubico la acotación del timbre y repaso lo que se dijo inmediatamente antes. COMPRENDER: la pregunta pide inferir el estado de los personajes a partir de sus gestos. INTERPRETAR: Tomás acaba de insinuar que el padre no quería venir y de recordar la venta de la casa; la abuela ha puesto un plato para él. Cuando suena el timbre, nadie se mueve y las miradas pasan de uno a otro. REPRESENTAR: tensión acumulada en el diálogo → timbre → pausa y miradas → Tomás, el más crítico, termina levantándose. RAZONAR: la demora no se explica por duda sobre quién llega, por cortesía hacia la abuela ni por miedo a un accidente; se explica por la incomodidad de recibir a alguien de quien se habló con resentimiento. RESOLVER: la opción que habla de la duda sobre cómo recibir al que llega. VERIFICAR: la acotación «levantándose por fin» confirma que hubo vacilación antes de actuar.",
+    "que_identificar": "La relación entre el diálogo previo (reproches de Tomás, plato servido por la abuela) y la pausa con miradas cruzadas al sonar el timbre.",
+    "que_revisar": "Leer las acotaciones de un texto dramático como información sobre las emociones de los personajes y relacionarlas con el diálogo que las precede.",
+    "refuerzo_ids": [
+      "LC-122",
+      "LC-124"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T35",
+      "literario",
+      "teatro"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-124",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (dramaturgia)",
+    "subtema": "Valoración implícita en el parlamento final",
+    "dificultad": 3,
+    "contexto": "**La silla vacía** (fragmento de una obra de teatro)\n\n*Comedor de una casa de barrio. Una mesa puesta para cuatro; tres personas sentadas. La cuarta silla, en la cabecera, está vacía. Es de noche. Se oye la lluvia.*\n\nCLARA: *(mirando el reloj de la pared)* Son las ocho y veinte. Dijo que venía a las siete.\n\nTOMÁS: Siempre dice que viene a las siete. Y siempre llega cuando la sopa está fría.\n\nABUELA: *(sirviendo)* La sopa no se enfría si uno la deja tapada. Lo que se enfría es la gente.\n\nCLARA: Tal vez el bus se demoró con la lluvia.\n\nTOMÁS: Tal vez no quería venir. *(Pausa.)* Desde que vendió la casa del pueblo no ha vuelto a sentarse en esa silla sin mirar la puerta.\n\nABUELA: Esa silla era de tu abuelo. Tu padre la trajo en el techo del bus, amarrada con cabuya, porque fue lo único que no quiso vender. *(Pone un plato frente a la silla vacía.)*\n\nCLARA: ¿Para qué le sirve, si no ha llegado?\n\nABUELA: Para que, cuando llegue, no tenga que pedir.\n\n*(Suena el timbre. Nadie se levanta de inmediato. Tomás mira a Clara; Clara mira a la abuela. La abuela sigue sirviendo.)*\n\nTOMÁS: *(levantándose por fin)* Voy yo.\n\nABUELA: *(sin mirarlo)* Dile que la sopa está caliente.",
+    "estimulo": null,
+    "enunciado": "La última indicación de la abuela, «Dile que la sopa está caliente», puede entenderse como",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "una corrección a Tomás, que había afirmado que la sopa siempre estaba fría.",
+        "correcta": false,
+        "explicacion": "Aunque la frase retoma la imagen de la sopa, la abuela no está discutiendo con Tomás un dato de temperatura: le da un mensaje para el padre. Reducirla a una corrección deja fuera a quien va a recibirlo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la frase solo con la queja inicial de Tomás y no con la situación de la llegada del padre."
+      },
+      {
+        "clave": "B",
+        "texto": "un reproche indirecto al padre por haberlos hecho esperar más de una hora.",
+        "correcta": false,
+        "explicacion": "El tono de la abuela en todo el fragmento es acogedor: guarda el plato «para que, cuando llegue, no tenga que pedir». Un mensaje de reproche contradiría esa actitud sostenida.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que, tras una espera larga, el mensaje tenía que ser una queja, sin revisar la actitud del personaje."
+      },
+      {
+        "clave": "C",
+        "texto": "un mensaje de acogida que resuelve, sin discutirlo, el reclamo de Tomás.",
+        "correcta": true,
+        "explicacion": "La sopa caliente responde, con la misma imagen, a la queja de Tomás («siempre llega cuando la sopa está fría») y a la propia frase de la abuela sobre la gente que se enfría. Al enviar ese mensaje con Tomás, la abuela convierte al que se quejaba en portador de la bienvenida.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "una señal de que la abuela no quiere participar del encuentro con su hijo.",
+        "correcta": false,
+        "explicacion": "La abuela no se levanta porque sigue sirviendo, pero envía un mensaje para su hijo y le ha guardado un plato; esas acciones muestran participación, no distancia ni rechazo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpretó «sin mirarlo» y el hecho de no levantarse como frialdad, en contra del sentido de sus actos."
+      }
+    ],
+    "explicacion": "LEER: ubico la última línea y la relaciono con las frases anteriores sobre la sopa. COMPRENDER: la pregunta pide el valor que tiene ese parlamento final, es decir, qué actitud expresa. INTERPRETAR: Tomás se quejó de la sopa fría; la abuela respondió que lo que se enfría es la gente; ahora, cuando el padre llega, le manda decir que la sopa está caliente. REPRESENTAR: sopa fría (queja) → gente que se enfría (advertencia) → sopa caliente (bienvenida). RAZONAR: no es una corrección técnica ni un reproche, y tampoco un gesto de distancia, porque la abuela ha preparado el plato para él. El mensaje cierra la cadena de imágenes con una señal de acogida y lo lleva Tomás, el que se quejaba. RESOLVER: la opción que habla de un mensaje de acogida que resuelve el reclamo sin discutirlo. VERIFICAR: la frase «Para que, cuando llegue, no tenga que pedir» confirma la actitud hospitalaria de la abuela.",
+    "que_identificar": "La cadena de sentidos de la palabra «sopa» a lo largo del fragmento y el hecho de que el mensaje de bienvenida lo lleva Tomás.",
+    "que_revisar": "Reconocer contenidos valorativos implícitos en un texto literario: cómo una frase cotidiana expresa una actitud (acogida, reproche, distancia) según el contexto.",
+    "refuerzo_ids": [
+      "LC-123",
+      "LC-107"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T35",
+      "literario",
+      "teatro"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-125",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la atención)",
+    "subtema": "Sentido de un término definido en el texto («umbral»)",
+    "dificultad": 1,
+    "contexto": "**Elogio del aburrimiento**\n\nNos han enseñado a temerle al aburrimiento como si fuera una enfermedad. Apenas aparece, lo tapamos: una pantalla, una notificación, un video más. Y sin embargo, durante siglos, el aburrimiento fue considerado una antesala del pensamiento. Quien se aburre está, sin saberlo, frente a una pregunta: ¿qué hago con este tiempo que nadie me está llenando?\n\nConviene distinguir dos cosas. Una es el tedio de quien está obligado a hacer algo que no le interesa: la fila del banco, la clase que no avanza. Otra es el aburrimiento de quien no tiene nada que hacer y, por eso mismo, puede elegir. El primero es una prisión; el segundo es un umbral. Nuestra época confunde ambos y los combate con la misma medicina: la distracción.\n\nEl problema es que la distracción no cura el aburrimiento; solo lo aplaza. Cuando el video termina, el vacío sigue ahí, un poco más grande. En cambio, quien soporta diez minutos de aburrimiento sin huir suele descubrir algo: una idea que estaba esperando turno, un recuerdo, un plan. No es casualidad que tantas personas digan que sus mejores ideas llegan en la ducha o en un trayecto largo, es decir, en los pocos lugares donde todavía no cabe una pantalla.\n\nNo propongo aburrirse por deporte. Propongo algo más modesto: no salir corriendo en el primer segundo. Darle al silencio la oportunidad de decir algo.",
+    "estimulo": null,
+    "enunciado": "En el segundo párrafo, el autor llama «umbral» al aburrimiento de quien",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "debe esperar en una fila o soportar una clase que no avanza.",
+        "correcta": false,
+        "explicacion": "La fila del banco y la clase que no avanza son los ejemplos del tedio de quien está «obligado a hacer algo que no le interesa», y a ese caso el autor lo llama «prisión», no «umbral».",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió los dos casos que el autor distingue y asignó la imagen del umbral al ejemplo equivocado."
+      },
+      {
+        "clave": "B",
+        "texto": "recurre a la distracción para no enfrentar el tiempo vacío.",
+        "correcta": false,
+        "explicacion": "La distracción aparece al final del párrafo como la «medicina» con la que la época combate ambos tipos de aburrimiento; no define al segundo tipo ni se asocia con la palabra «umbral».",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó la última idea del párrafo como si fuera la definición pedida."
+      },
+      {
+        "clave": "C",
+        "texto": "no tiene nada que hacer y, por esa razón, puede elegir qué hacer.",
+        "correcta": true,
+        "explicacion": "El autor dice: «Otra es el aburrimiento de quien no tiene nada que hacer y, por eso mismo, puede elegir. El primero es una prisión; el segundo es un umbral». El segundo caso, el del que puede elegir, es el umbral.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "descubre una idea nueva después de ver un video hasta el final.",
+        "correcta": false,
+        "explicacion": "El descubrimiento de ideas aparece en el tercer párrafo y se atribuye a quien soporta el aburrimiento sin huir, no a quien ve un video; además, el texto sostiene que al terminar el video «el vacío sigue ahí».",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló el contenido del tercer párrafo con la distinción que hace el segundo."
+      }
+    ],
+    "explicacion": "LEER: ubico el segundo párrafo, donde el autor «distingue dos cosas». COMPRENDER: la pregunta pide a cuál de las dos llama «umbral». INTERPRETAR: el primer caso es el tedio del obligado (fila, clase) y el segundo es el aburrimiento de quien no tiene nada que hacer y puede elegir; luego dice «el primero es una prisión; el segundo es un umbral». REPRESENTAR: obligado → prisión; libre para elegir → umbral. RAZONAR: la fila y la clase pertenecen al primer caso; la distracción es la medicina de la época; el video pertenece a otro párrafo. RESOLVER: la opción que describe a quien no tiene nada que hacer y puede elegir. VERIFICAR: el orden de las oraciones («una es… otra es… el primero… el segundo») confirma la correspondencia.",
+    "que_identificar": "La correspondencia entre «el segundo es un umbral» y la definición previa: «el aburrimiento de quien no tiene nada que hacer y, por eso mismo, puede elegir».",
+    "que_revisar": "Seguir las referencias ordinales (el primero, el segundo) para saber a qué elemento del texto corresponde cada caracterización.",
+    "refuerzo_ids": [
+      "LC-126",
+      "LC-045"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T36",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-126",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la atención)",
+    "subtema": "Relación entre el cierre de un párrafo y el siguiente",
+    "dificultad": 2,
+    "contexto": "**Elogio del aburrimiento**\n\nNos han enseñado a temerle al aburrimiento como si fuera una enfermedad. Apenas aparece, lo tapamos: una pantalla, una notificación, un video más. Y sin embargo, durante siglos, el aburrimiento fue considerado una antesala del pensamiento. Quien se aburre está, sin saberlo, frente a una pregunta: ¿qué hago con este tiempo que nadie me está llenando?\n\nConviene distinguir dos cosas. Una es el tedio de quien está obligado a hacer algo que no le interesa: la fila del banco, la clase que no avanza. Otra es el aburrimiento de quien no tiene nada que hacer y, por eso mismo, puede elegir. El primero es una prisión; el segundo es un umbral. Nuestra época confunde ambos y los combate con la misma medicina: la distracción.\n\nEl problema es que la distracción no cura el aburrimiento; solo lo aplaza. Cuando el video termina, el vacío sigue ahí, un poco más grande. En cambio, quien soporta diez minutos de aburrimiento sin huir suele descubrir algo: una idea que estaba esperando turno, un recuerdo, un plan. No es casualidad que tantas personas digan que sus mejores ideas llegan en la ducha o en un trayecto largo, es decir, en los pocos lugares donde todavía no cabe una pantalla.\n\nNo propongo aburrirse por deporte. Propongo algo más modesto: no salir corriendo en el primer segundo. Darle al silencio la oportunidad de decir algo.",
+    "estimulo": null,
+    "enunciado": "La oración «Nuestra época confunde ambos y los combate con la misma medicina: la distracción» se relaciona con el párrafo siguiente porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "anuncia el remedio que el tercer párrafo examinará y declarará ineficaz.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo termina presentando la distracción como «medicina»; el tercero comienza: «El problema es que la distracción no cura el aburrimiento; solo lo aplaza». La oración introduce el tema que el párrafo siguiente evalúa y rechaza.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "presenta la causa de que las ideas lleguen en la ducha o en los trayectos largos.",
+        "correcta": false,
+        "explicacion": "El tercer párrafo explica que las ideas llegan en esos lugares porque allí «todavía no cabe una pantalla», es decir, por la ausencia de distracción. La oración citada no es la causa de ese fenómeno, sino el problema que se analiza.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación: la distracción impide las ideas; su ausencia las permite."
+      },
+      {
+        "clave": "C",
+        "texto": "introduce la propuesta final del autor de no huir en el primer segundo.",
+        "correcta": false,
+        "explicacion": "La propuesta de «no salir corriendo en el primer segundo» aparece en el cuarto párrafo, después de que el tercero haya mostrado el fracaso de la distracción; la oración citada está dos pasos antes de esa propuesta.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Saltó directamente a la conclusión del texto sin atender a la relación con el párrafo inmediato."
+      },
+      {
+        "clave": "D",
+        "texto": "resume la distinción entre tedio y aburrimiento que el autor acaba de hacer.",
+        "correcta": false,
+        "explicacion": "La oración no resume la distinción: la da por hecha («ambos») y añade algo nuevo, la crítica a la época que confunde los dos casos. Su función es abrir la discusión siguiente, no cerrar la anterior.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la última oración de un párrafo siempre resume lo dicho en él."
+      }
+    ],
+    "explicacion": "LEER: ubico la oración al final del segundo párrafo y leo el inicio del tercero. COMPRENDER: la pregunta pide la relación entre esa oración y el párrafo siguiente. INTERPRETAR: la oración introduce la distracción como «medicina»; el tercer párrafo empieza con «El problema es que la distracción no cura el aburrimiento; solo lo aplaza» y dedica el resto a mostrar su ineficacia. REPRESENTAR: remedio anunciado → examen del remedio → remedio rechazado. RAZONAR: no es la causa de las ideas en la ducha (es lo contrario), no introduce la propuesta final (eso ocurre después) y no resume la distinción (la da por hecha). RESOLVER: la opción que dice que anuncia el remedio que el tercer párrafo examina y declara ineficaz. VERIFICAR: la palabra «medicina» del segundo párrafo se corresponde con «no cura» en el tercero.",
+    "que_identificar": "La continuidad léxica entre «medicina» (fin del segundo párrafo) y «no cura… solo lo aplaza» (inicio del tercero).",
+    "que_revisar": "Reconocer cómo la última oración de un párrafo puede funcionar como puente que introduce el tema del párrafo siguiente.",
+    "refuerzo_ids": [
+      "LC-125",
+      "LC-127"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T36",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-127",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la atención)",
+    "subtema": "Supuesto subyacente a un argumento",
+    "dificultad": 3,
+    "contexto": "**Elogio del aburrimiento**\n\nNos han enseñado a temerle al aburrimiento como si fuera una enfermedad. Apenas aparece, lo tapamos: una pantalla, una notificación, un video más. Y sin embargo, durante siglos, el aburrimiento fue considerado una antesala del pensamiento. Quien se aburre está, sin saberlo, frente a una pregunta: ¿qué hago con este tiempo que nadie me está llenando?\n\nConviene distinguir dos cosas. Una es el tedio de quien está obligado a hacer algo que no le interesa: la fila del banco, la clase que no avanza. Otra es el aburrimiento de quien no tiene nada que hacer y, por eso mismo, puede elegir. El primero es una prisión; el segundo es un umbral. Nuestra época confunde ambos y los combate con la misma medicina: la distracción.\n\nEl problema es que la distracción no cura el aburrimiento; solo lo aplaza. Cuando el video termina, el vacío sigue ahí, un poco más grande. En cambio, quien soporta diez minutos de aburrimiento sin huir suele descubrir algo: una idea que estaba esperando turno, un recuerdo, un plan. No es casualidad que tantas personas digan que sus mejores ideas llegan en la ducha o en un trayecto largo, es decir, en los pocos lugares donde todavía no cabe una pantalla.\n\nNo propongo aburrirse por deporte. Propongo algo más modesto: no salir corriendo en el primer segundo. Darle al silencio la oportunidad de decir algo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados expresa un supuesto en el que se apoya el argumento del tercer párrafo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las personas que trabajan en oficios creativos se aburren menos que las demás.",
+        "correcta": false,
+        "explicacion": "El párrafo no distingue entre oficios ni habla de personas creativas; su argumento se refiere a cualquiera que soporte unos minutos de aburrimiento. Este enunciado no hace falta para que el razonamiento funcione.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció la palabra «ideas» con la creatividad profesional, algo que el texto no plantea."
+      },
+      {
+        "clave": "B",
+        "texto": "Los videos y las notificaciones están diseñados para durar exactamente diez minutos.",
+        "correcta": false,
+        "explicacion": "Los «diez minutos» del texto se refieren al tiempo que alguien soporta el aburrimiento, no a la duración de los videos. El argumento no necesita ningún dato sobre cuánto duran las distracciones.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió dos cifras o detalles del párrafo y los unió en una afirmación que el texto no hace."
+      },
+      {
+        "clave": "C",
+        "texto": "La ducha y los trayectos largos son los únicos momentos en que se puede pensar.",
+        "correcta": false,
+        "explicacion": "El autor los menciona como ejemplos de «los pocos lugares donde todavía no cabe una pantalla», no como los únicos posibles. El argumento funciona aunque existan otros momentos sin estímulos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió un ejemplo ilustrativo en una afirmación absoluta que el autor no necesita."
+      },
+      {
+        "clave": "D",
+        "texto": "El pensamiento necesita tiempos sin estímulos externos para producir ideas.",
+        "correcta": true,
+        "explicacion": "El párrafo afirma que quien soporta el aburrimiento «suele descubrir algo» y que las ideas llegan donde «no cabe una pantalla». Ambas afirmaciones solo tienen sentido si se acepta, sin decirlo, que las ideas requieren momentos sin estímulos. Ese es el supuesto que sostiene el argumento.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo el tercer párrafo completo. COMPRENDER: la pregunta pide un supuesto, es decir, algo que el autor no dice pero necesita dar por cierto para que su argumento funcione. INTERPRETAR: el autor sostiene que la distracción aplaza el vacío y que quien soporta el aburrimiento descubre ideas; cita la ducha y los trayectos largos porque allí no cabe una pantalla. REPRESENTAR: sin estímulos → aparecen ideas; con pantalla → las ideas no llegan. RAZONAR: para pasar de los ejemplos a la conclusión hay que aceptar que el pensamiento necesita tiempos sin estímulos externos. Los oficios creativos, la duración de los videos y la exclusividad de la ducha no son necesarios para el razonamiento. RESOLVER: la opción sobre la necesidad de tiempos sin estímulos. VERIFICAR: si ese supuesto fuera falso, el argumento del párrafo perdería su fuerza; eso confirma que es el supuesto buscado.",
+    "que_identificar": "La conexión implícita entre «donde todavía no cabe una pantalla» y «sus mejores ideas llegan»: la ausencia de estímulos como condición del pensamiento.",
+    "que_revisar": "Identificar supuestos: preguntarse qué debe ser cierto, aunque el texto no lo diga, para que las premisas lleven a la conclusión.",
+    "refuerzo_ids": [
+      "LC-126",
+      "LC-128"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "texto:LC-T36",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-128",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la atención)",
+    "subtema": "Estrategia discursiva: anticipar una objeción para precisar la tesis",
+    "dificultad": 2,
+    "contexto": "**Elogio del aburrimiento**\n\nNos han enseñado a temerle al aburrimiento como si fuera una enfermedad. Apenas aparece, lo tapamos: una pantalla, una notificación, un video más. Y sin embargo, durante siglos, el aburrimiento fue considerado una antesala del pensamiento. Quien se aburre está, sin saberlo, frente a una pregunta: ¿qué hago con este tiempo que nadie me está llenando?\n\nConviene distinguir dos cosas. Una es el tedio de quien está obligado a hacer algo que no le interesa: la fila del banco, la clase que no avanza. Otra es el aburrimiento de quien no tiene nada que hacer y, por eso mismo, puede elegir. El primero es una prisión; el segundo es un umbral. Nuestra época confunde ambos y los combate con la misma medicina: la distracción.\n\nEl problema es que la distracción no cura el aburrimiento; solo lo aplaza. Cuando el video termina, el vacío sigue ahí, un poco más grande. En cambio, quien soporta diez minutos de aburrimiento sin huir suele descubrir algo: una idea que estaba esperando turno, un recuerdo, un plan. No es casualidad que tantas personas digan que sus mejores ideas llegan en la ducha o en un trayecto largo, es decir, en los pocos lugares donde todavía no cabe una pantalla.\n\nNo propongo aburrirse por deporte. Propongo algo más modesto: no salir corriendo en el primer segundo. Darle al silencio la oportunidad de decir algo.",
+    "estimulo": null,
+    "enunciado": "En el último párrafo, la oración «No propongo aburrirse por deporte» cumple la función de",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "resumir la distinción entre tedio y aburrimiento mediante una imagen deportiva.",
+        "correcta": false,
+        "explicacion": "La oración no retoma la diferencia entre prisión y umbral del segundo párrafo; «por deporte» es una expresión coloquial que significa «sin necesidad, por gusto», no una imagen que resuma la distinción.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la expresión «por deporte» en sentido literal y buscó una función de síntesis que no tiene."
+      },
+      {
+        "clave": "B",
+        "texto": "anticipar una objeción exagerada para precisar el alcance de la propuesta.",
+        "correcta": true,
+        "explicacion": "Después de elogiar el aburrimiento, el autor prevé que alguien entienda que recomienda aburrirse a propósito; niega esa lectura extrema y a continuación formula lo que sí propone: «algo más modesto: no salir corriendo en el primer segundo». Es una estrategia para delimitar la tesis.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "reconocer que el autor no ha logrado demostrar la utilidad del aburrimiento.",
+        "correcta": false,
+        "explicacion": "El autor no se retracta de nada: mantiene que el aburrimiento tiene valor y pasa a formular su propuesta. Negar una interpretación exagerada no equivale a admitir que el argumento falló.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió una matización de la tesis con una concesión de derrota."
+      },
+      {
+        "clave": "D",
+        "texto": "introducir un ejemplo personal que ilustra las ideas de los párrafos previos.",
+        "correcta": false,
+        "explicacion": "La oración no cuenta ninguna experiencia del autor ni presenta un caso concreto; está formulada en términos generales («no propongo…») y sirve para delimitar la propuesta, no para ilustrarla.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó la primera persona («propongo») como señal de una anécdota personal."
+      }
+    ],
+    "explicacion": "LEER: ubico la oración en el último párrafo y leo la que la sigue. COMPRENDER: la pregunta pide la función discursiva de esa negación. INTERPRETAR: tras tres párrafos a favor del aburrimiento, el autor descarta una lectura extrema (aburrirse a propósito) y enseguida precisa su propuesta «más modesta». REPRESENTAR: elogio → posible malentendido («entonces hay que aburrirse») → negación del malentendido → propuesta delimitada. RAZONAR: no resume la distinción anterior, no admite una derrota ni presenta una anécdota; anticipa lo que un lector podría objetar y lo neutraliza para afinar la tesis. RESOLVER: la opción que habla de anticipar una objeción exagerada para precisar el alcance de la propuesta. VERIFICAR: la frase siguiente, «Propongo algo más modesto», confirma que la negación sirve para graduar la propuesta.",
+    "que_identificar": "El par de oraciones «No propongo aburrirse por deporte. Propongo algo más modesto…», que niega un extremo y formula la tesis matizada.",
+    "que_revisar": "Reconocer estrategias argumentativas como la anticipación de objeciones y la delimitación de la tesis frente a lecturas exageradas.",
+    "refuerzo_ids": [
+      "LC-127",
+      "LC-115"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T36",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-129",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto discontinuo (etiqueta de alimento con tabla nutricional)",
+    "subtema": "Instrucciones explícitas en una etiqueta",
+    "dificultad": 1,
+    "contexto": "**Etiqueta de una bebida de avena «Campo Claro»**\n\n*Texto impreso en el envase de un litro.*\n\nBebida de avena con calcio y vitamina D. Sin lactosa. Elaborada con avena cultivada en el altiplano cundiboyacense. Ingredientes: agua, avena (12 %), aceite de girasol, carbonato de calcio, sal, vitamina D.\n\nSugerencia de consumo: agitar antes de abrir. Una vez abierto, conservar refrigerado y consumir en máximo cinco días. No requiere refrigeración mientras esté cerrado.\n\nAdvertencia: este producto no es leche ni la sustituye en la alimentación de menores de dos años. Puede contener trazas de gluten; no recomendado para personas con enfermedad celíaca.\n\nEn la cara frontal del envase, en letras grandes, se lee: «100 % vegetal. Tanto calcio como un vaso de leche». En la cara lateral aparece la tabla de información nutricional por porción de 200 ml (un vaso); el envase contiene cinco porciones. Debajo de la tabla, en letra pequeña: «Los porcentajes de valor diario se calculan sobre una dieta de 2000 calorías».",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Información nutricional por porción (200 ml)",
+      "columnas": [
+        "Nutriente",
+        "Cantidad por porción",
+        "% del valor diario"
+      ],
+      "filas": [
+        [
+          "Calorías",
+          "90 kcal",
+          "5 %"
+        ],
+        [
+          "Grasa total",
+          "3 g",
+          "4 %"
+        ],
+        [
+          "Azúcares añadidos",
+          "0 g",
+          "0 %"
+        ],
+        [
+          "Proteína",
+          "1 g",
+          "2 %"
+        ],
+        [
+          "Calcio",
+          "240 mg",
+          "24 %"
+        ],
+        [
+          "Vitamina D",
+          "2 µg",
+          "10 %"
+        ],
+        [
+          "Sodio",
+          "100 mg",
+          "4 %"
+        ]
+      ],
+      "nota": "Porciones por envase: 5. Porcentajes calculados sobre una dieta de 2000 calorías."
+    },
+    "enunciado": "Según la etiqueta, una vez abierto el envase, la bebida",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "debe consumirse el mismo día, porque no contiene conservantes.",
+        "correcta": false,
+        "explicacion": "La etiqueta fija un plazo de «máximo cinco días» después de abrir, no de un día; además, no menciona la presencia o ausencia de conservantes.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una regla más estricta de la que dice el texto, quizá por asociar «vegetal» con «sin conservantes»."
+      },
+      {
+        "clave": "B",
+        "texto": "debe mantenerse refrigerada y consumirse en un plazo máximo de cinco días.",
+        "correcta": true,
+        "explicacion": "La sugerencia de consumo lo indica de manera explícita: «Una vez abierto, conservar refrigerado y consumir en máximo cinco días». Las dos condiciones (refrigeración y plazo) aparecen juntas en esa oración.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "puede permanecer sin refrigerar, igual que cuando el envase está cerrado.",
+        "correcta": false,
+        "explicacion": "La etiqueta distingue dos situaciones: cerrado, «no requiere refrigeración»; abierto, «conservar refrigerado». La opción aplica al envase abierto la regla del cerrado.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la última oración de la sugerencia de consumo y la aplicó a ambos casos sin notar la condición «mientras esté cerrado»."
+      },
+      {
+        "clave": "D",
+        "texto": "debe agitarse cada vez antes de servirla para evitar que se dañe.",
+        "correcta": false,
+        "explicacion": "La indicación es «agitar antes de abrir», no antes de cada servida, y la etiqueta no relaciona agitar con la conservación del producto; la conservación depende de la refrigeración y del plazo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Extendió la instrucción de agitar a cada uso y le atribuyó una función que la etiqueta no le da."
+      }
+    ],
+    "explicacion": "LEER: busco en la etiqueta la sección «Sugerencia de consumo». COMPRENDER: la pregunta pide qué debe hacerse con la bebida una vez abierta, según el texto. INTERPRETAR: la sección dice «agitar antes de abrir. Una vez abierto, conservar refrigerado y consumir en máximo cinco días. No requiere refrigeración mientras esté cerrado». REPRESENTAR: cerrado → sin nevera; abierto → nevera + cinco días. RAZONAR: la opción de un día endurece el plazo; la de no refrigerar confunde los dos estados; la de agitar en cada uso cambia la instrucción. RESOLVER: la opción que combina refrigeración y plazo máximo de cinco días. VERIFICAR: la oración comienza con «Una vez abierto», exactamente la condición de la pregunta.",
+    "que_identificar": "La oración «Una vez abierto, conservar refrigerado y consumir en máximo cinco días» y su contraste con «No requiere refrigeración mientras esté cerrado».",
+    "que_revisar": "Ubicar instrucciones en un texto discontinuo y distinguir las condiciones a las que aplica cada una.",
+    "refuerzo_ids": [
+      "LC-130",
+      "LC-109"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 70,
+    "etiquetas": [
+      "texto:LC-T37",
+      "discontinuo",
+      "etiqueta",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-130",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo)",
+    "habilidad": "interpretar",
+    "tema": "Texto discontinuo (etiqueta de alimento con tabla nutricional)",
+    "subtema": "Relación entre un eslogan y los datos de la tabla",
+    "dificultad": 2,
+    "contexto": "**Etiqueta de una bebida de avena «Campo Claro»**\n\n*Texto impreso en el envase de un litro.*\n\nBebida de avena con calcio y vitamina D. Sin lactosa. Elaborada con avena cultivada en el altiplano cundiboyacense. Ingredientes: agua, avena (12 %), aceite de girasol, carbonato de calcio, sal, vitamina D.\n\nSugerencia de consumo: agitar antes de abrir. Una vez abierto, conservar refrigerado y consumir en máximo cinco días. No requiere refrigeración mientras esté cerrado.\n\nAdvertencia: este producto no es leche ni la sustituye en la alimentación de menores de dos años. Puede contener trazas de gluten; no recomendado para personas con enfermedad celíaca.\n\nEn la cara frontal del envase, en letras grandes, se lee: «100 % vegetal. Tanto calcio como un vaso de leche». En la cara lateral aparece la tabla de información nutricional por porción de 200 ml (un vaso); el envase contiene cinco porciones. Debajo de la tabla, en letra pequeña: «Los porcentajes de valor diario se calculan sobre una dieta de 2000 calorías».",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Información nutricional por porción (200 ml)",
+      "columnas": [
+        "Nutriente",
+        "Cantidad por porción",
+        "% del valor diario"
+      ],
+      "filas": [
+        [
+          "Calorías",
+          "90 kcal",
+          "5 %"
+        ],
+        [
+          "Grasa total",
+          "3 g",
+          "4 %"
+        ],
+        [
+          "Azúcares añadidos",
+          "0 g",
+          "0 %"
+        ],
+        [
+          "Proteína",
+          "1 g",
+          "2 %"
+        ],
+        [
+          "Calcio",
+          "240 mg",
+          "24 %"
+        ],
+        [
+          "Vitamina D",
+          "2 µg",
+          "10 %"
+        ],
+        [
+          "Sodio",
+          "100 mg",
+          "4 %"
+        ]
+      ],
+      "nota": "Porciones por envase: 5. Porcentajes calculados sobre una dieta de 2000 calorías."
+    },
+    "enunciado": "El dato de la tabla que respalda la frase de la cara frontal «Tanto calcio como un vaso de leche» es",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "los 240 mg de calcio por porción, que corresponden al 24 % del valor diario.",
+        "correcta": true,
+        "explicacion": "La frase del frente habla de la cantidad de calcio por vaso; la tabla da la información por porción de 200 ml, es decir, un vaso, y la fila de calcio indica 240 mg y 24 % del valor diario. Es el único dato que permite comparar el aporte de calcio con el de la leche.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "el 12 % de avena que figura en la lista de ingredientes del producto.",
+        "correcta": false,
+        "explicacion": "El porcentaje de avena indica cuánta avena tiene la bebida, no cuánto calcio aporta; de hecho, el calcio proviene del carbonato de calcio añadido, según la lista de ingredientes.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó un porcentaje cualquiera en la etiqueta sin verificar que se refiriera al calcio."
+      },
+      {
+        "clave": "C",
+        "texto": "los 2 µg de vitamina D, que ayudan a absorber el calcio de los alimentos.",
+        "correcta": false,
+        "explicacion": "La etiqueta no explica la relación entre vitamina D y absorción de calcio; aunque ese conocimiento sea cierto, el eslogan habla de cantidad de calcio, y el dato que la mide está en otra fila.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usó un conocimiento externo sobre la vitamina D en lugar de buscar el dato directo en la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "las 90 calorías por vaso, semejantes a las de un vaso de leche entera.",
+        "correcta": false,
+        "explicacion": "La tabla no compara calorías con la leche, y el eslogan no habla de energía sino de calcio. Que el valor calórico sea parecido al de la leche es una suposición ajena al texto.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la mención de la leche con la primera fila de la tabla sin leer el nutriente que nombra el eslogan."
+      }
+    ],
+    "explicacion": "LEER: leo la frase del frente del envase y recorro las filas de la tabla. COMPRENDER: debo encontrar el dato de la tabla que da sustento a la afirmación sobre el calcio. INTERPRETAR: el eslogan compara el calcio de la bebida con el de un vaso de leche; la tabla está dada por porción de 200 ml (un vaso) e incluye una fila específica para el calcio: 240 mg, 24 % del valor diario. REPRESENTAR: eslogan (calcio por vaso) ↔ fila «Calcio» (por porción de 200 ml). RAZONAR: el porcentaje de avena es un ingrediente, la vitamina D es otro nutriente y las calorías miden energía; ninguno mide el calcio. RESOLVER: la opción de los 240 mg de calcio por porción. VERIFICAR: el contexto aclara que la porción es «200 ml (un vaso)», lo que hace válida la comparación con «un vaso de leche».",
+    "que_identificar": "La fila «Calcio: 240 mg, 24 %» de la tabla y la aclaración de que la porción equivale a un vaso de 200 ml.",
+    "que_revisar": "Relacionar un enunciado verbal de un texto discontinuo con el dato numérico específico que lo respalda, sin dejarse llevar por cifras cercanas.",
+    "refuerzo_ids": [
+      "LC-129",
+      "LC-131"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T37",
+      "discontinuo",
+      "etiqueta",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-131",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto discontinuo (etiqueta de alimento con tabla nutricional)",
+    "subtema": "Implicación de un dato de la tabla para un caso concreto",
+    "dificultad": 2,
+    "contexto": "**Etiqueta de una bebida de avena «Campo Claro»**\n\n*Texto impreso en el envase de un litro.*\n\nBebida de avena con calcio y vitamina D. Sin lactosa. Elaborada con avena cultivada en el altiplano cundiboyacense. Ingredientes: agua, avena (12 %), aceite de girasol, carbonato de calcio, sal, vitamina D.\n\nSugerencia de consumo: agitar antes de abrir. Una vez abierto, conservar refrigerado y consumir en máximo cinco días. No requiere refrigeración mientras esté cerrado.\n\nAdvertencia: este producto no es leche ni la sustituye en la alimentación de menores de dos años. Puede contener trazas de gluten; no recomendado para personas con enfermedad celíaca.\n\nEn la cara frontal del envase, en letras grandes, se lee: «100 % vegetal. Tanto calcio como un vaso de leche». En la cara lateral aparece la tabla de información nutricional por porción de 200 ml (un vaso); el envase contiene cinco porciones. Debajo de la tabla, en letra pequeña: «Los porcentajes de valor diario se calculan sobre una dieta de 2000 calorías».",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Información nutricional por porción (200 ml)",
+      "columnas": [
+        "Nutriente",
+        "Cantidad por porción",
+        "% del valor diario"
+      ],
+      "filas": [
+        [
+          "Calorías",
+          "90 kcal",
+          "5 %"
+        ],
+        [
+          "Grasa total",
+          "3 g",
+          "4 %"
+        ],
+        [
+          "Azúcares añadidos",
+          "0 g",
+          "0 %"
+        ],
+        [
+          "Proteína",
+          "1 g",
+          "2 %"
+        ],
+        [
+          "Calcio",
+          "240 mg",
+          "24 %"
+        ],
+        [
+          "Vitamina D",
+          "2 µg",
+          "10 %"
+        ],
+        [
+          "Sodio",
+          "100 mg",
+          "4 %"
+        ]
+      ],
+      "nota": "Porciones por envase: 5. Porcentajes calculados sobre una dieta de 2000 calorías."
+    },
+    "enunciado": "Una persona toma dos vasos de esta bebida al día. De acuerdo con la tabla, ¿qué puede concluir sobre su consumo de calcio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Cubre la totalidad del calcio diario, porque cada vaso aporta un 24 % y el envase trae cinco porciones.",
+        "correcta": false,
+        "explicacion": "El número de porciones del envase no cuenta si la persona solo toma dos vasos; dos porciones aportan 24 % + 24 % = 48 %, no el 100 %. Mezcla un dato irrelevante (porciones por envase) con el cálculo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó por las porciones del envase en lugar de por los vasos que la persona realmente consume."
+      },
+      {
+        "clave": "B",
+        "texto": "Cubre menos del 10 % del valor diario, ya que la bebida es vegetal y no contiene leche.",
+        "correcta": false,
+        "explicacion": "La tabla indica 24 % del valor diario de calcio por vaso, sin importar que la bebida sea vegetal; el calcio proviene del carbonato de calcio añadido. La opción ignora el dato y razona desde un prejuicio.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asumió que solo la leche aporta calcio y no consultó la fila correspondiente de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "Supera el valor diario recomendado, porque 240 mg por vaso es una cantidad muy alta.",
+        "correcta": false,
+        "explicacion": "La propia tabla traduce los 240 mg a un 24 % del valor diario; dos vasos suman 48 %, lejos de superar el 100 %. La opción juzga la cifra en miligramos sin usar el porcentaje que la etiqueta ofrece.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Valoró el número absoluto como «alto» sin apoyarse en la columna de porcentaje."
+      },
+      {
+        "clave": "D",
+        "texto": "Cubre cerca de la mitad del valor diario, pues cada vaso aporta un 24 %.",
+        "correcta": true,
+        "explicacion": "La tabla señala que una porción de 200 ml aporta el 24 % del valor diario de calcio. Dos vasos equivalen a dos porciones: 24 % × 2 = 48 %, es decir, aproximadamente la mitad del valor diario de referencia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico la fila de calcio en la tabla y la nota sobre las porciones. COMPRENDER: la pregunta plantea un caso (dos vasos al día) y pide la implicación del dato. INTERPRETAR: una porción es un vaso de 200 ml y aporta el 24 % del valor diario de calcio. REPRESENTAR: 2 vasos × 24 % = 48 %. RAZONAR: 48 % es cerca de la mitad; no es la totalidad (eso exigiría más de cuatro vasos), no es menos del 10 % y no supera el 100 %. Las porciones por envase no intervienen porque la persona no se toma el litro completo. RESOLVER: la opción que concluye «cerca de la mitad del valor diario». VERIFICAR: compruebo que la tabla está expresada por porción de 200 ml, por lo que cada vaso corresponde a una fila completa.",
+    "que_identificar": "La fila «Calcio: 24 % del valor diario» por porción de 200 ml y la equivalencia porción = vaso que da el contexto.",
+    "que_revisar": "Aplicar un dato de una tabla nutricional a una situación concreta, multiplicando por el número real de porciones consumidas.",
+    "refuerzo_ids": [
+      "LC-130",
+      "LC-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T37",
+      "discontinuo",
+      "etiqueta",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-132",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Contextualiza adecuadamente un texto o la información contenida en este",
+    "habilidad": "verificar",
+    "tema": "Texto discontinuo (etiqueta de alimento con tabla nutricional)",
+    "subtema": "Evaluar una afirmación sobre el producto a partir de las advertencias",
+    "dificultad": 3,
+    "contexto": "**Etiqueta de una bebida de avena «Campo Claro»**\n\n*Texto impreso en el envase de un litro.*\n\nBebida de avena con calcio y vitamina D. Sin lactosa. Elaborada con avena cultivada en el altiplano cundiboyacense. Ingredientes: agua, avena (12 %), aceite de girasol, carbonato de calcio, sal, vitamina D.\n\nSugerencia de consumo: agitar antes de abrir. Una vez abierto, conservar refrigerado y consumir en máximo cinco días. No requiere refrigeración mientras esté cerrado.\n\nAdvertencia: este producto no es leche ni la sustituye en la alimentación de menores de dos años. Puede contener trazas de gluten; no recomendado para personas con enfermedad celíaca.\n\nEn la cara frontal del envase, en letras grandes, se lee: «100 % vegetal. Tanto calcio como un vaso de leche». En la cara lateral aparece la tabla de información nutricional por porción de 200 ml (un vaso); el envase contiene cinco porciones. Debajo de la tabla, en letra pequeña: «Los porcentajes de valor diario se calculan sobre una dieta de 2000 calorías».",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Información nutricional por porción (200 ml)",
+      "columnas": [
+        "Nutriente",
+        "Cantidad por porción",
+        "% del valor diario"
+      ],
+      "filas": [
+        [
+          "Calorías",
+          "90 kcal",
+          "5 %"
+        ],
+        [
+          "Grasa total",
+          "3 g",
+          "4 %"
+        ],
+        [
+          "Azúcares añadidos",
+          "0 g",
+          "0 %"
+        ],
+        [
+          "Proteína",
+          "1 g",
+          "2 %"
+        ],
+        [
+          "Calcio",
+          "240 mg",
+          "24 %"
+        ],
+        [
+          "Vitamina D",
+          "2 µg",
+          "10 %"
+        ],
+        [
+          "Sodio",
+          "100 mg",
+          "4 %"
+        ]
+      ],
+      "nota": "Porciones por envase: 5. Porcentajes calculados sobre una dieta de 2000 calorías."
+    },
+    "enunciado": "Un consumidor afirma: «Como la etiqueta dice que la bebida es 100 % vegetal y sin lactosa, cualquier persona puede tomarla sin riesgo». ¿Qué parte de la etiqueta pone en duda esa afirmación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La indicación de agitar antes de abrir, que sugiere que los ingredientes se separan.",
+        "correcta": false,
+        "explicacion": "Que los ingredientes se separen en el envase es un asunto de textura, no de seguridad; agitar no revela ningún riesgo para la salud de un grupo de personas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Buscó cualquier instrucción de manejo y la confundió con una advertencia de salud."
+      },
+      {
+        "clave": "B",
+        "texto": "La tabla nutricional, porque muestra que la bebida contiene sodio y grasa total.",
+        "correcta": false,
+        "explicacion": "Las cantidades de sodio (4 %) y grasa (4 %) son bajas según la propia tabla y no están presentadas como riesgo; el texto no advierte a ningún grupo por esos nutrientes.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la presencia de cualquier nutriente como señal de peligro, sin leer los porcentajes ni las advertencias."
+      },
+      {
+        "clave": "C",
+        "texto": "La advertencia sobre trazas de gluten y sobre su uso en menores de dos años.",
+        "correcta": true,
+        "explicacion": "La sección «Advertencia» señala dos grupos para los que el producto no es adecuado: los menores de dos años, porque no sustituye la leche, y las personas con enfermedad celíaca, por las trazas de gluten. Esos datos muestran que «cualquier persona» es una generalización falsa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La nota sobre la dieta de 2000 calorías, que no aplica a todas las personas.",
+        "correcta": false,
+        "explicacion": "La nota sirve para interpretar los porcentajes de la tabla, no para indicar que la bebida sea riesgosa para alguien; que la referencia calórica varíe entre personas no convierte el producto en inseguro.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una aclaración metodológica sobre los porcentajes con una advertencia de consumo."
+      }
+    ],
+    "explicacion": "LEER: leo la afirmación del consumidor y recorro la etiqueta buscando restricciones. COMPRENDER: debo encontrar la información que contradice la idea de que «cualquier persona» puede tomar la bebida sin riesgo. INTERPRETAR: la sección de advertencias excluye a los menores de dos años (el producto «no es leche ni la sustituye») y a las personas con enfermedad celíaca (trazas de gluten). REPRESENTAR: «vegetal y sin lactosa» ≠ «apto para todos»: hay al menos dos grupos excluidos. RAZONAR: agitar es una instrucción de manejo, la tabla muestra nutrientes en cantidades bajas y la nota de 2000 calorías es una referencia de cálculo; ninguno señala un riesgo. RESOLVER: la opción que cita la advertencia sobre gluten y menores de dos años. VERIFICAR: la afirmación del consumidor se apoya solo en el eslogan del frente y omite la sección «Advertencia», que la contradice.",
+    "que_identificar": "La sección «Advertencia» de la etiqueta, que excluye a menores de dos años y a personas con enfermedad celíaca.",
+    "que_revisar": "Contrastar generalizaciones («cualquier persona») con la información completa de un texto, incluidas las secciones en letra pequeña.",
+    "refuerzo_ids": [
+      "LC-131",
+      "LC-116"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T37",
+      "discontinuo",
+      "etiqueta",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-133",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto expositivo (divulgación biológica)",
+    "subtema": "Información explícita sobre un proceso descrito",
+    "dificultad": 1,
+    "contexto": "**Las hormigas que cultivan**\n\nMucho antes de que los seres humanos sembraran la primera semilla, las hormigas arrieras ya eran agricultoras. Estas hormigas, comunes en los campos y jardines de Colombia, cortan trozos de hojas y los cargan en fila hasta su nido; de ahí viene su nombre popular. Pero no se las comen. Las hojas sirven de alimento a un hongo que las hormigas cultivan en cámaras subterráneas, y es ese hongo lo que las alimenta a ellas.\n\nLa relación es tan estrecha que ninguna de las dos especies sobrevive sin la otra. El hongo no existe en estado silvestre: solo crece dentro de los hormigueros, donde las obreras lo limpian, lo podan y lo protegen de otros hongos invasores. Cuando una reina joven abandona el nido para fundar una colonia nueva, lleva en la boca un pequeño fragmento del cultivo original, como quien se muda con una semilla de la casa materna.\n\nPor eso los agricultores las consideran una plaga: una colonia grande puede deshojar un árbol de cítricos en una sola noche. Sin embargo, los biólogos señalan que, al excavar sus nidos, las arrieras remueven toneladas de tierra, airean el suelo y lo enriquecen con restos vegetales. El mismo insecto es, según quién lo mire, un enemigo del cultivo o un ingeniero del suelo.",
+    "estimulo": null,
+    "enunciado": "Según el texto, las hormigas arrieras cargan hojas hasta su nido para",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "construir con ellas las cámaras subterráneas en las que viven.",
+        "correcta": false,
+        "explicacion": "El texto dice que el hongo crece «en cámaras subterráneas», pero no afirma que las hojas sirvan para construirlas; las cámaras son el lugar del cultivo, no su material.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció las hojas con una función de construcción porque el texto habla de nidos y cámaras."
+      },
+      {
+        "clave": "B",
+        "texto": "alimentar a la reina joven antes de que funde una colonia nueva.",
+        "correcta": false,
+        "explicacion": "La reina joven aparece en el segundo párrafo llevando un fragmento del hongo, no comiendo hojas; el texto nunca relaciona la carga de hojas con la alimentación de la reina.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló el episodio de la reina con la explicación del primer párrafo sobre las hojas."
+      },
+      {
+        "clave": "C",
+        "texto": "comerlas después de que el hongo las haya ablandado en el nido.",
+        "correcta": false,
+        "explicacion": "El texto es tajante: «Pero no se las comen». Las hojas alimentan al hongo y las hormigas se alimentan del hongo, no de las hojas ablandadas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasó por alto la negación «no se las comen» y supuso un uso directo de las hojas como alimento."
+      },
+      {
+        "clave": "D",
+        "texto": "alimentar al hongo que cultivan y del cual se alimentan ellas mismas.",
+        "correcta": true,
+        "explicacion": "El primer párrafo lo explica paso a paso: las hojas «sirven de alimento a un hongo que las hormigas cultivan en cámaras subterráneas, y es ese hongo lo que las alimenta a ellas». Las hojas son el alimento del cultivo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico en el primer párrafo la explicación sobre las hojas. COMPRENDER: la pregunta pide la finalidad explícita de cargar hojas. INTERPRETAR: el texto dice que no se las comen, que las hojas alimentan a un hongo cultivado en cámaras subterráneas y que las hormigas se alimentan de ese hongo. REPRESENTAR: hojas → hongo → hormigas. RAZONAR: construir cámaras no se menciona; la reina lleva hongo, no hojas; comer las hojas está negado de manera expresa. RESOLVER: la opción que dice que las hojas alimentan al hongo del cual se alimentan las hormigas. VERIFICAR: la frase «es ese hongo lo que las alimenta a ellas» cierra la cadena y confirma la respuesta.",
+    "que_identificar": "La secuencia del primer párrafo: «Pero no se las comen. Las hojas sirven de alimento a un hongo… y es ese hongo lo que las alimenta a ellas».",
+    "que_revisar": "Seguir una cadena de causas y finalidades en un texto expositivo, prestando atención a las negaciones.",
+    "refuerzo_ids": [
+      "LC-134",
+      "LC-101"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T38",
+      "expositivo",
+      "ciencia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-134",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las ideas o afirmaciones presentes en un texto informativo",
+    "habilidad": "comprender",
+    "tema": "Texto expositivo (divulgación biológica)",
+    "subtema": "Síntesis de la idea central de un párrafo informativo",
+    "dificultad": 2,
+    "contexto": "**Las hormigas que cultivan**\n\nMucho antes de que los seres humanos sembraran la primera semilla, las hormigas arrieras ya eran agricultoras. Estas hormigas, comunes en los campos y jardines de Colombia, cortan trozos de hojas y los cargan en fila hasta su nido; de ahí viene su nombre popular. Pero no se las comen. Las hojas sirven de alimento a un hongo que las hormigas cultivan en cámaras subterráneas, y es ese hongo lo que las alimenta a ellas.\n\nLa relación es tan estrecha que ninguna de las dos especies sobrevive sin la otra. El hongo no existe en estado silvestre: solo crece dentro de los hormigueros, donde las obreras lo limpian, lo podan y lo protegen de otros hongos invasores. Cuando una reina joven abandona el nido para fundar una colonia nueva, lleva en la boca un pequeño fragmento del cultivo original, como quien se muda con una semilla de la casa materna.\n\nPor eso los agricultores las consideran una plaga: una colonia grande puede deshojar un árbol de cítricos en una sola noche. Sin embargo, los biólogos señalan que, al excavar sus nidos, las arrieras remueven toneladas de tierra, airean el suelo y lo enriquecen con restos vegetales. El mismo insecto es, según quién lo mire, un enemigo del cultivo o un ingeniero del suelo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados sintetiza mejor la idea central del segundo párrafo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las reinas jóvenes abandonan el hormiguero para fundar colonias nuevas en otro lugar.",
+        "correcta": false,
+        "explicacion": "La salida de la reina es el ejemplo final del párrafo, usado para mostrar cómo se transmite el hongo; tomarlo como idea central deja fuera la primera mitad del párrafo, que trata de la dependencia mutua.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el último detalle del párrafo, el más narrativo, en lugar de la idea que organiza todo el párrafo."
+      },
+      {
+        "clave": "B",
+        "texto": "Las hormigas arrieras y su hongo dependen por completo una de la otra para sobrevivir.",
+        "correcta": true,
+        "explicacion": "El párrafo abre con la idea organizadora: «ninguna de las dos especies sobrevive sin la otra». Luego la desarrolla con dos pruebas: el hongo no existe en estado silvestre y la reina lleva un fragmento del cultivo al fundar una colonia. Todo el párrafo gira en torno a esa dependencia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El hongo que cultivan las arrieras es atacado con frecuencia por otros hongos invasores.",
+        "correcta": false,
+        "explicacion": "Los hongos invasores se mencionan solo como una de las amenazas de las que las obreras protegen el cultivo; es un detalle dentro de la explicación, no la idea que sostiene el párrafo.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió un detalle secundario en idea central por su carácter llamativo."
+      },
+      {
+        "clave": "D",
+        "texto": "Las obreras del hormiguero se encargan de limpiar, podar y proteger el cultivo del hongo.",
+        "correcta": false,
+        "explicacion": "Las tareas de las obreras explican por qué el hongo solo sobrevive dentro del hormiguero; son una evidencia de la dependencia, no la idea central del párrafo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó una de las pruebas de la idea principal como si fuera la idea misma."
+      }
+    ],
+    "explicacion": "LEER: releo el segundo párrafo de principio a fin. COMPRENDER: la pregunta pide la idea que organiza el párrafo, no uno de sus detalles. INTERPRETAR: la primera oración afirma que «ninguna de las dos especies sobrevive sin la otra»; las siguientes dan pruebas: el hongo no existe en estado silvestre, las obreras lo cuidan, la reina lo lleva consigo. REPRESENTAR: idea central (dependencia mutua) → evidencia 1 (hongo solo en hormigueros) → evidencia 2 (cuidado de las obreras) → evidencia 3 (reina con fragmento). RAZONAR: los otros enunciados corresponden a detalles que sirven de apoyo. RESOLVER: la opción sobre la dependencia total entre hormigas y hongo. VERIFICAR: cada oración del párrafo puede leerse como respuesta a la pregunta «¿por qué dependen una de la otra?», lo que confirma la jerarquía.",
+    "que_identificar": "La oración inicial del segundo párrafo, «La relación es tan estrecha que ninguna de las dos especies sobrevive sin la otra», y su desarrollo con ejemplos.",
+    "que_revisar": "Distinguir en un párrafo expositivo la idea principal de las evidencias o ejemplos que la sostienen.",
+    "refuerzo_ids": [
+      "LC-133",
+      "LC-135"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T38",
+      "expositivo",
+      "ciencia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-135",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "representar",
+    "tema": "Texto expositivo (divulgación biológica)",
+    "subtema": "Función de una comparación en un texto expositivo",
+    "dificultad": 2,
+    "contexto": "**Las hormigas que cultivan**\n\nMucho antes de que los seres humanos sembraran la primera semilla, las hormigas arrieras ya eran agricultoras. Estas hormigas, comunes en los campos y jardines de Colombia, cortan trozos de hojas y los cargan en fila hasta su nido; de ahí viene su nombre popular. Pero no se las comen. Las hojas sirven de alimento a un hongo que las hormigas cultivan en cámaras subterráneas, y es ese hongo lo que las alimenta a ellas.\n\nLa relación es tan estrecha que ninguna de las dos especies sobrevive sin la otra. El hongo no existe en estado silvestre: solo crece dentro de los hormigueros, donde las obreras lo limpian, lo podan y lo protegen de otros hongos invasores. Cuando una reina joven abandona el nido para fundar una colonia nueva, lleva en la boca un pequeño fragmento del cultivo original, como quien se muda con una semilla de la casa materna.\n\nPor eso los agricultores las consideran una plaga: una colonia grande puede deshojar un árbol de cítricos en una sola noche. Sin embargo, los biólogos señalan que, al excavar sus nidos, las arrieras remueven toneladas de tierra, airean el suelo y lo enriquecen con restos vegetales. El mismo insecto es, según quién lo mire, un enemigo del cultivo o un ingeniero del suelo.",
+    "estimulo": null,
+    "enunciado": "La comparación «como quien se muda con una semilla de la casa materna» se emplea en el texto para",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "explicar por qué el hongo no logra sobrevivir fuera de los hormigueros.",
+        "correcta": false,
+        "explicacion": "La imposibilidad del hongo de vivir en estado silvestre se explica antes, por el cuidado de las obreras; la comparación aparece después y se refiere al viaje de la reina, no a las condiciones de supervivencia del hongo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la comparación con la oración anterior en vez de con la que la contiene."
+      },
+      {
+        "clave": "B",
+        "texto": "demostrar que las hormigas aprendieron la agricultura observando a los seres humanos.",
+        "correcta": false,
+        "explicacion": "El texto afirma lo contrario en su primera oración: las arrieras cultivaban «mucho antes de que los seres humanos sembraran la primera semilla». La comparación acerca el fenómeno al lector, pero no sugiere imitación.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Leyó la referencia a la casa materna, un escenario humano, como si implicara un aprendizaje de los humanos."
+      },
+      {
+        "clave": "C",
+        "texto": "ilustrar, con una imagen cotidiana, cómo pasa el cultivo a una colonia nueva.",
+        "correcta": true,
+        "explicacion": "La oración describe un hecho biológico (la reina lleva en la boca un fragmento del cultivo) y lo compara con una experiencia humana conocida: mudarse llevando una semilla de la casa de la madre. La comparación traduce el dato técnico a una escena familiar para el lector.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "sugerir que las hormigas sienten nostalgia por el nido en el que nacieron.",
+        "correcta": false,
+        "explicacion": "El texto no atribuye sentimientos a las hormigas; la comparación describe una acción (llevar un fragmento del cultivo), no una emoción. Interpretar nostalgia es proyectar sobre el insecto un rasgo humano que el texto no afirma.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la connotación afectiva de «casa materna» como una afirmación sobre los sentimientos de las hormigas."
+      }
+    ],
+    "explicacion": "LEER: ubico la comparación al final del segundo párrafo y la oración que la contiene. COMPRENDER: la pregunta pide la función de ese recurso dentro de un texto expositivo. INTERPRETAR: la oración informa que la reina «lleva en la boca un pequeño fragmento del cultivo original» y agrega la comparación con quien se muda llevando una semilla de la casa materna. REPRESENTAR: dato biológico (fragmento de hongo) → imagen cotidiana (semilla de la casa materna) → comprensión del lector. RAZONAR: la comparación no explica la supervivencia del hongo, no habla de aprendizaje humano y no atribuye emociones; acerca al lector un hecho poco familiar mediante una escena conocida. RESOLVER: la opción que habla de ilustrar con una imagen cotidiana cómo pasa el cultivo a la colonia nueva. VERIFICAR: el conector «como quien» introduce una analogía, recurso típico de la divulgación.",
+    "que_identificar": "La estructura de la oración: hecho («lleva en la boca un pequeño fragmento del cultivo original») + comparación («como quien se muda con una semilla…»).",
+    "que_revisar": "Reconocer la función de analogías y comparaciones en textos de divulgación: hacer comprensible un dato técnico sin afirmar una identidad entre los términos.",
+    "refuerzo_ids": [
+      "LC-134",
+      "LC-136"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T38",
+      "expositivo",
+      "ciencia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-136",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto expositivo (divulgación biológica)",
+    "subtema": "Implicación de la oración final del texto",
+    "dificultad": 3,
+    "contexto": "**Las hormigas que cultivan**\n\nMucho antes de que los seres humanos sembraran la primera semilla, las hormigas arrieras ya eran agricultoras. Estas hormigas, comunes en los campos y jardines de Colombia, cortan trozos de hojas y los cargan en fila hasta su nido; de ahí viene su nombre popular. Pero no se las comen. Las hojas sirven de alimento a un hongo que las hormigas cultivan en cámaras subterráneas, y es ese hongo lo que las alimenta a ellas.\n\nLa relación es tan estrecha que ninguna de las dos especies sobrevive sin la otra. El hongo no existe en estado silvestre: solo crece dentro de los hormigueros, donde las obreras lo limpian, lo podan y lo protegen de otros hongos invasores. Cuando una reina joven abandona el nido para fundar una colonia nueva, lleva en la boca un pequeño fragmento del cultivo original, como quien se muda con una semilla de la casa materna.\n\nPor eso los agricultores las consideran una plaga: una colonia grande puede deshojar un árbol de cítricos en una sola noche. Sin embargo, los biólogos señalan que, al excavar sus nidos, las arrieras remueven toneladas de tierra, airean el suelo y lo enriquecen con restos vegetales. El mismo insecto es, según quién lo mire, un enemigo del cultivo o un ingeniero del suelo.",
+    "estimulo": null,
+    "enunciado": "La última oración del texto, «El mismo insecto es, según quién lo mire, un enemigo del cultivo o un ingeniero del suelo», implica que",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "la valoración de las arrieras depende de los intereses de quien las observa.",
+        "correcta": true,
+        "explicacion": "El tercer párrafo presenta dos miradas: la del agricultor, que pierde un árbol en una noche, y la del biólogo, que ve el suelo aireado y enriquecido. La expresión «según quién lo mire» indica que el juicio sobre el insecto cambia con la posición y los intereses del observador.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "los biólogos se equivocan al defender a un insecto que daña los cultivos.",
+        "correcta": false,
+        "explicacion": "El texto no toma partido entre agricultores y biólogos; presenta ambas visiones con «sin embargo» y cierra señalando que las dos dependen del punto de vista. No descalifica a ninguna de las partes.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que el autor debía inclinarse por una de las dos posturas y eligió la del agricultor."
+      },
+      {
+        "clave": "C",
+        "texto": "las arrieras solo resultan perjudiciales en los cultivos de cítricos del país.",
+        "correcta": false,
+        "explicacion": "El árbol de cítricos es un ejemplo del daño que puede causar una colonia grande, no una delimitación de los únicos cultivos afectados; la oración final no restringe el perjuicio a un tipo de planta.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió un ejemplo en una afirmación general sobre el alcance del daño."
+      },
+      {
+        "clave": "D",
+        "texto": "los agricultores deberían dejar de combatirlas para mejorar la calidad del suelo.",
+        "correcta": false,
+        "explicacion": "La oración final describe dos formas de ver al insecto, pero no formula ninguna recomendación; pasar de la descripción a una orden («deberían») añade una conclusión que el texto no extrae.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la mención de los beneficios para el suelo como una recomendación práctica del autor."
+      }
+    ],
+    "explicacion": "LEER: ubico la última oración y releo el tercer párrafo que la prepara. COMPRENDER: la pregunta pide la implicación de ese enunciado, es decir, qué se sigue de él. INTERPRETAR: el párrafo presenta la visión del agricultor (plaga) y la del biólogo (ingeniero del suelo), unidas por «sin embargo», y la oración final las resume con «según quién lo mire». REPRESENTAR: mismo insecto → observador 1 (agricultor) → enemigo; observador 2 (biólogo) → ingeniero. RAZONAR: la oración no dice que una parte se equivoque, no limita el daño a los cítricos ni recomienda nada; afirma que el juicio depende del observador. RESOLVER: la opción sobre la valoración que depende de los intereses de quien observa. VERIFICAR: la expresión «según quién lo mire» es, literalmente, una referencia al punto de vista del observador.",
+    "que_identificar": "La expresión «según quién lo mire» y las dos perspectivas (agricultores y biólogos) presentadas en el tercer párrafo.",
+    "que_revisar": "Derivar implicaciones de un enunciado sin añadir juicios o recomendaciones que el texto no formula.",
+    "refuerzo_ids": [
+      "LC-135",
+      "LC-104"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T38",
+      "expositivo",
+      "ciencia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-137",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto literario (letra de canción)",
+    "subtema": "Información explícita en la letra de una canción",
+    "dificultad": 1,
+    "contexto": "**Carta al río** (letra de canción)\n\n*Canción compuesta para el festival de música del municipio de Puerto Nuevo.*\n\nRío que te llevaste mi canoa\ny la camisa blanca de mi hermano,\nyo no te guardo rencor, río, te canto,\nporque también me diste el pescado.\n\nMe enseñaste a nadar antes que a escribir,\nme diste el bocachico en Semana Santa,\nme diste la sombra de la ceiba grande\ndonde mi madre lavaba y cantaba.\n\nHoy vengo a decirte que me voy al norte,\nque ya no hay pescado y la ceiba se cayó,\nque el agua baja turbia y huele a cosa muerta\ny el que ensucia tu cauce no eres tú, soy yo.\n\nPerdóname, río, por el plástico y la rabia,\npor el muelle de cemento y el motor;\ncuando vuelva, si vuelvo, traigo una semilla\npara sembrar la ceiba donde cantó mi amor.\n\nRío que te llevaste mi canoa,\nyo me llevo tu nombre en la garganta;\nno es rencor, río viejo, lo que canto,\nes la deuda de un hijo que no paga.",
+    "estimulo": null,
+    "enunciado": "Según la letra, ¿por qué quien canta dice que no le guarda rencor al río, a pesar de haber perdido su canoa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el río le devolvió, tiempo después, la camisa blanca de su hermano.",
+        "correcta": false,
+        "explicacion": "La canción menciona que el río se llevó la camisa del hermano, pero en ningún verso dice que la haya devuelto; la razón del perdón está en lo que el río le dio, no en una devolución.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó un desenlace para el detalle de la camisa, que la letra deja sin resolver."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el río también le dio alimento y le enseñó a nadar.",
+        "correcta": true,
+        "explicacion": "La primera estrofa lo dice directamente: «yo no te guardo rencor, río, te canto, / porque también me diste el pescado». La segunda estrofa amplía la lista de dones: «Me enseñaste a nadar…», «me diste el bocachico», «me diste la sombra de la ceiba».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque sabe que fue la lluvia, y no el río, la causa de la pérdida de la canoa.",
+        "correcta": false,
+        "explicacion": "La letra atribuye la pérdida al río («Río que te llevaste mi canoa») y no menciona la lluvia en ningún verso; la causa de la crecida no forma parte del texto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Añadió una explicación meteorológica razonable pero ausente de la canción."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque su madre le pidió que perdonara al río antes de morir.",
+        "correcta": false,
+        "explicacion": "La madre aparece lavando y cantando bajo la ceiba; la canción no dice que haya muerto ni que haya pedido nada. La razón del perdón la da el propio cantante con «porque también me diste el pescado».",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la mención de la madre con un motivo sentimental que la letra no desarrolla."
+      }
+    ],
+    "explicacion": "LEER: leo la primera estrofa, donde aparecen la pérdida de la canoa y la frase «no te guardo rencor». COMPRENDER: la pregunta pide la razón explícita de ese perdón. INTERPRETAR: el verso siguiente la da con un «porque»: «porque también me diste el pescado»; la segunda estrofa enumera otros dones del río (nadar, bocachico, sombra de la ceiba). REPRESENTAR: pérdidas (canoa, camisa) frente a dones (pescado, nadar, sombra) → balance a favor del río. RAZONAR: no hay devolución de la camisa, no se menciona la lluvia y la madre no pide nada. RESOLVER: la opción que señala el alimento y la enseñanza de nadar. VERIFICAR: la palabra «también» en «también me diste el pescado» marca la compensación que justifica la ausencia de rencor.",
+    "que_identificar": "El verso «porque también me diste el pescado» y la enumeración de la segunda estrofa («Me enseñaste a nadar…»).",
+    "que_revisar": "Localizar la causa explícita de una actitud en un texto poético, siguiendo los conectores causales («porque»).",
+    "refuerzo_ids": [
+      "LC-138",
+      "LC-069"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T39",
+      "literario",
+      "cancion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-138",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (letra de canción)",
+    "subtema": "Situación de enunciación: quién habla y a quién",
+    "dificultad": 2,
+    "contexto": "**Carta al río** (letra de canción)\n\n*Canción compuesta para el festival de música del municipio de Puerto Nuevo.*\n\nRío que te llevaste mi canoa\ny la camisa blanca de mi hermano,\nyo no te guardo rencor, río, te canto,\nporque también me diste el pescado.\n\nMe enseñaste a nadar antes que a escribir,\nme diste el bocachico en Semana Santa,\nme diste la sombra de la ceiba grande\ndonde mi madre lavaba y cantaba.\n\nHoy vengo a decirte que me voy al norte,\nque ya no hay pescado y la ceiba se cayó,\nque el agua baja turbia y huele a cosa muerta\ny el que ensucia tu cauce no eres tú, soy yo.\n\nPerdóname, río, por el plástico y la rabia,\npor el muelle de cemento y el motor;\ncuando vuelva, si vuelvo, traigo una semilla\npara sembrar la ceiba donde cantó mi amor.\n\nRío que te llevaste mi canoa,\nyo me llevo tu nombre en la garganta;\nno es rencor, río viejo, lo que canto,\nes la deuda de un hijo que no paga.",
+    "estimulo": null,
+    "enunciado": "¿Quién habla en la canción y a quién se dirige?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Alguien que creció junto al río y, antes de irse, le habla como si fuera una persona.",
+        "correcta": true,
+        "explicacion": "La voz usa la primera persona («mi canoa», «me voy al norte»), recuerda su infancia junto al río y se dirige a él en segunda persona con vocativos («río», «río viejo»), le pide perdón y promete volver. Es un hijo del lugar que personifica al río como interlocutor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Un pescador que se dirige a su hermano mayor para contarle los cambios que ha sufrido el río.",
+        "correcta": false,
+        "explicacion": "El hermano aparece solo como dueño de la camisa que el río se llevó; nunca es el destinatario. Todos los vocativos («río», «río viejo») y los verbos en segunda persona («te llevaste», «me diste») se dirigen al río.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó al personaje mencionado en el segundo verso como destinatario del mensaje."
+      },
+      {
+        "clave": "C",
+        "texto": "Un músico del festival que describe el río a los habitantes del municipio.",
+        "correcta": false,
+        "explicacion": "La nota introductoria dice que la canción se compuso para un festival, pero la voz del texto no se dirige a un público ni describe desde fuera: habla al río en segunda persona y cuenta su propia vida con él.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió la información sobre el origen de la canción con la situación de enunciación interna del texto."
+      },
+      {
+        "clave": "D",
+        "texto": "Una madre que, bajo la sombra de la ceiba, canta al hijo que se marcha al norte.",
+        "correcta": false,
+        "explicacion": "La madre es un personaje recordado por la voz («donde mi madre lavaba y cantaba»); quien dice «me voy al norte» es el propio cantante, y se dirige al río, no a un hijo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó la voz al personaje que la letra describe cantando, en lugar de a quien dice «yo»."
+      }
+    ],
+    "explicacion": "LEER: recorro la letra buscando las marcas de primera y segunda persona. COMPRENDER: la pregunta pide identificar la voz que habla y su destinatario. INTERPRETAR: la voz dice «mi canoa», «me enseñaste a nadar», «me voy al norte»; se dirige a un «tú» que se llevó la canoa, dio el pescado y cuyo cauce está sucio: el río, nombrado con los vocativos «río» y «río viejo». REPRESENTAR: yo = alguien criado junto al río que se va; tú = el río personificado. RAZONAR: el hermano y la madre son personajes mencionados, no destinatarios ni emisores; la nota sobre el festival es información externa a la voz del texto. RESOLVER: la opción que describe a alguien que creció junto al río y le habla como a una persona. VERIFICAR: el título, «Carta al río», confirma quién es el destinatario.",
+    "que_identificar": "Los vocativos «río» y «río viejo», los verbos en segunda persona dirigidos al río y la primera persona que recuerda su infancia y anuncia su partida.",
+    "que_revisar": "Identificar la situación de enunciación de un texto lírico: voz, destinatario y personajes mencionados, sin confundirla con los datos externos sobre el autor.",
+    "refuerzo_ids": [
+      "LC-137",
+      "LC-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T39",
+      "literario",
+      "cancion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-139",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (letra de canción)",
+    "subtema": "Giro en el sentido de la canción marcado por un verso",
+    "dificultad": 2,
+    "contexto": "**Carta al río** (letra de canción)\n\n*Canción compuesta para el festival de música del municipio de Puerto Nuevo.*\n\nRío que te llevaste mi canoa\ny la camisa blanca de mi hermano,\nyo no te guardo rencor, río, te canto,\nporque también me diste el pescado.\n\nMe enseñaste a nadar antes que a escribir,\nme diste el bocachico en Semana Santa,\nme diste la sombra de la ceiba grande\ndonde mi madre lavaba y cantaba.\n\nHoy vengo a decirte que me voy al norte,\nque ya no hay pescado y la ceiba se cayó,\nque el agua baja turbia y huele a cosa muerta\ny el que ensucia tu cauce no eres tú, soy yo.\n\nPerdóname, río, por el plástico y la rabia,\npor el muelle de cemento y el motor;\ncuando vuelva, si vuelvo, traigo una semilla\npara sembrar la ceiba donde cantó mi amor.\n\nRío que te llevaste mi canoa,\nyo me llevo tu nombre en la garganta;\nno es rencor, río viejo, lo que canto,\nes la deuda de un hijo que no paga.",
+    "estimulo": null,
+    "enunciado": "El verso «y el que ensucia tu cauce no eres tú, soy yo» marca un cambio en la canción porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "revela que el cantante mentía al decir que no le guardaba ningún rencor al río por la canoa.",
+        "correcta": false,
+        "explicacion": "El verso no desmiente la ausencia de rencor; al contrario, la refuerza: si el culpable del daño es el propio cantante, menos razones tiene para reprochar al río. La estrofa final insiste en que «no es rencor… lo que canto».",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la confesión de culpa como una contradicción con el perdón, cuando en realidad lo profundiza."
+      },
+      {
+        "clave": "B",
+        "texto": "introduce la razón por la que el río se llevó la canoa en el primer verso.",
+        "correcta": false,
+        "explicacion": "La pérdida de la canoa no recibe explicación en la letra; el verso habla de la contaminación actual del cauce, un hecho distinto y posterior a la crecida que se llevó la canoa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Buscó una relación de causa entre dos hechos que la canción presenta por separado."
+      },
+      {
+        "clave": "C",
+        "texto": "anuncia que el cantante decidirá quedarse en el pueblo para limpiar el cauce del río.",
+        "correcta": false,
+        "explicacion": "La estrofa anterior dice «me voy al norte» y la siguiente plantea un regreso condicional («cuando vuelva, si vuelvo»); la partida no se cancela, de modo que el verso no anuncia una decisión de quedarse.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que reconocer la culpa debía traducirse en la acción inmediata de permanecer."
+      },
+      {
+        "clave": "D",
+        "texto": "desplaza la responsabilidad por el daño desde el río hacia el propio cantante y su gente.",
+        "correcta": true,
+        "explicacion": "Hasta ese punto el río es el que actúa: se llevó la canoa, dio el pescado, hoy baja turbio. En este verso la voz se señala a sí misma como causante de la suciedad y, en la estrofa siguiente, pide perdón «por el plástico y la rabia, por el muelle de cemento y el motor». La culpa cambia de lado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico el verso al final de la tercera estrofa y leo la estrofa que sigue. COMPRENDER: la pregunta pide explicar qué cambia en la canción con ese verso. INTERPRETAR: antes, el río es sujeto de las acciones (se llevó, me diste, baja turbia); en este verso la voz niega la culpa del río («no eres tú») y la asume («soy yo»); la cuarta estrofa continúa con «Perdóname, río, por el plástico…». REPRESENTAR: río que da y quita → río dañado → culpable: el ser humano que canta. RAZONAR: el verso no revela una mentira, no explica la pérdida de la canoa ni cancela el viaje; cambia a quién se atribuye el daño. RESOLVER: la opción que habla del desplazamiento de la responsabilidad hacia el cantante y su gente. VERIFICAR: la petición de perdón de la estrofa siguiente solo tiene sentido si el cantante se reconoce culpable.",
+    "que_identificar": "El contraste entre «no eres tú» y «soy yo», y la petición de perdón de la cuarta estrofa que enumera los daños causados por las personas.",
+    "que_revisar": "Reconocer los puntos de giro en un texto poético y cómo un verso reorganiza la relación entre la voz y su interlocutor.",
+    "refuerzo_ids": [
+      "LC-138",
+      "LC-140"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T39",
+      "literario",
+      "cancion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-140",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece relaciones entre un texto y otros textos o enunciados",
+    "habilidad": "razonar",
+    "tema": "Texto literario (letra de canción)",
+    "subtema": "Relación del sentido global de la canción con otros enunciados",
+    "dificultad": 3,
+    "contexto": "**Carta al río** (letra de canción)\n\n*Canción compuesta para el festival de música del municipio de Puerto Nuevo.*\n\nRío que te llevaste mi canoa\ny la camisa blanca de mi hermano,\nyo no te guardo rencor, río, te canto,\nporque también me diste el pescado.\n\nMe enseñaste a nadar antes que a escribir,\nme diste el bocachico en Semana Santa,\nme diste la sombra de la ceiba grande\ndonde mi madre lavaba y cantaba.\n\nHoy vengo a decirte que me voy al norte,\nque ya no hay pescado y la ceiba se cayó,\nque el agua baja turbia y huele a cosa muerta\ny el que ensucia tu cauce no eres tú, soy yo.\n\nPerdóname, río, por el plástico y la rabia,\npor el muelle de cemento y el motor;\ncuando vuelva, si vuelvo, traigo una semilla\npara sembrar la ceiba donde cantó mi amor.\n\nRío que te llevaste mi canoa,\nyo me llevo tu nombre en la garganta;\nno es rencor, río viejo, lo que canto,\nes la deuda de un hijo que no paga.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados expresa una idea más cercana al sentido global de la canción?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "«La naturaleza es una fuerza indiferente que nos quita lo que nos da, sin ninguna razón.»",
+        "correcta": false,
+        "explicacion": "La canción no presenta al río como indiferente ni arbitrario: le habla como a un ser querido, reconoce sus dones y asume que el daño actual lo causaron las personas. La idea de una fuerza caprichosa contradice el tono de gratitud y culpa de la letra.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la pérdida de la canoa del primer verso y generalizó una visión negativa de la naturaleza."
+      },
+      {
+        "clave": "B",
+        "texto": "«Quien se va de su tierra debe olvidar el pasado para empezar de nuevo en otra parte.»",
+        "correcta": false,
+        "explicacion": "La voz se va al norte, pero se lleva «tu nombre en la garganta» y promete volver con una semilla; la canción es un acto de memoria, no de olvido. Este enunciado va en dirección contraria.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la partida como tema central y le atribuyó un consejo que la letra no da."
+      },
+      {
+        "clave": "C",
+        "texto": "«Lo que recibimos de la tierra nos deja una deuda que no siempre sabemos pagar.»",
+        "correcta": true,
+        "explicacion": "La canción enumera lo que el río dio (alimento, enseñanzas, sombra), reconoce el daño causado por las personas y cierra con «es la deuda de un hijo que no paga». Gratitud, culpa y deuda pendiente son el núcleo del sentido global; este enunciado los recoge.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "«El progreso de un pueblo exige sacrificar sus ríos y sus árboles más antiguos.»",
+        "correcta": false,
+        "explicacion": "El muelle de cemento, el motor y el plástico aparecen en la letra como motivos de una petición de perdón, no como un precio aceptable del progreso. La canción lamenta esos cambios en lugar de justificarlos.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Leyó la mención del cemento y el motor como una defensa del desarrollo, en contra del tono de disculpa."
+      }
+    ],
+    "explicacion": "LEER: releo la canción completa, atendiendo a la primera y a la última estrofa. COMPRENDER: la pregunta pide el enunciado que mejor dialoga con el sentido global, no con un verso aislado. INTERPRETAR: el río dio alimento, enseñanza y sombra; las personas lo ensuciaron; el cantante pide perdón, promete sembrar una ceiba y cierra con «la deuda de un hijo que no paga». REPRESENTAR: dones recibidos → daño causado → culpa → deuda sin saldar. RAZONAR: la naturaleza no aparece como indiferente, el que se va no olvida, y los cambios (cemento, motor) se lamentan, no se justifican. RESOLVER: la opción que habla de la deuda con la tierra que no siempre sabemos pagar. VERIFICAR: el último verso usa literalmente la palabra «deuda», lo que confirma la lectura.",
+    "que_identificar": "La relación entre la enumeración de dones (segunda estrofa), la petición de perdón (cuarta) y el verso final «es la deuda de un hijo que no paga».",
+    "que_revisar": "Relacionar el sentido global de un texto literario con enunciados externos, descartando los que coinciden solo con un detalle o contradicen el tono general.",
+    "refuerzo_ids": [
+      "LC-139",
+      "LC-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T39",
+      "literario",
+      "cancion"
+    ],
+    "estado": "aprobada"
+  }
+]

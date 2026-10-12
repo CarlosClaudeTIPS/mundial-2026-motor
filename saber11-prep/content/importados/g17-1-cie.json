@@ -1,0 +1,798 @@
+[
+  {
+    "id": "G17-1-CIE-001",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 1"
+    },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El siguiente modelo muestra el ciclo biogeoquímico del dióxido de carbono.\n\n                                                Luz solar\n                                                       Ciclo de\n                                                                                  Emisiones\n                                                          CO2                    de vehículos\n                                                                                  y fábricas\n\n                                     Fotosíntesis                       Respiración\n                                                          Respiración   de las plantas\n                                                            de los\n                                                           animales\n                                     Carbón orgánico\n                                Organismos\n                                    en              Organismos muertos y\n                                                                             Respiración\n                               descomposición       productos de desecho\n                                                                             de las raíces\n\nLevantamiento Fósiles y combustibles fósiles del océano\n\nCon base en el modelo mostrado, ¿qué efecto tiene para el ecosistema el aumento de la emisión de CO2 por causa de las fábricas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pérdida de la capacidad de las plantas para realizar su respiración.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Incremento en la concentración de este gas en la atmósfera.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Pérdida de la concentración de carbón en los combustibles fósiles.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Pérdida de las bacterias anaerobias que realizan la descomposición.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe identificar que la producción de dióxido de carbono (CO2) por parte de las fábricas se emite a la atmósfera. Asimismo, debe identificar que esta alta producción de CO2 no será utilizado por las plantas y, por esto, se acumulará en la atmosfera.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Biológico",
+      "competencia": "Uso comprensivo del conocimiento científico",
+      "afirmación": "",
+      "respuesta correcta": "B",
+      "nivel de desempeño": "3"
+    }
+  },
+  {
+    "id": "G17-1-CIE-002",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 2"
+    },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 3,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Las sustancias con el grupo C=O en su estructura química pueden reducirse en presencia de un catalizador M y un medio ácido, para formar un alcano, como se muestra a continuación.\n\n                                     O                              H\n                                                 catalizador M\n                                —C—C—C—                          —C—C—C—\n                                                 Medio ácido\n                                Sustancia                            H\n                                con grupo                         Alcano\n                                   C=O\n\nCon base en la anterior información, ¿cuál de las siguientes sustancias puede reducirse para formar un alcano de 4 carbonos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 76]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 76]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 76]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 76]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe reconocer el tipo de reacción que se muestra. Asimismo, debe identificar qué compuesto se necesita para que reaccione y forme el producto esperado con el tipo de reacción mostrado.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Químico",
+      "competencia": "Uso comprensivo del conocimiento científico",
+      "afirmación": "",
+      "respuesta correcta": "D",
+      "nivel de desempeño": "4"
+    }
+  },
+  {
+    "id": "G17-1-CIE-003",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 3"
+    },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "la naturaleza basado en el análisis de información y Identificar las características de algunos fenómenos de conceptos propios del conocimiento científico.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante toma cuatro recipientes con cuatro líquidos diferentes y de diferente masa, y los pone encima de una estufa para proporcionarles calor con llamas idénticas (ver figura).\n\n0,25 kg 0,5 kg 1 kg 0,75 kg\n\nSi la estudiante nota que el líquido del recipiente 1 llegó primero al punto de ebullición, luego el líquido del recipiente 3, después el líquido del recipiente 4 y por último el líquido del recipiente 2, ¿cuál de los líquidos necesitó mayor energía calórica para alcanzar el punto de ebullición?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El del recipiente 3.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El del recipiente 4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El del recipiente 1.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El del recipiente 2.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe reconocer información relevante que le permita identificar qué líquido requiere mayor cantidad de calor para llegar a su punto de ebullición. En este caso, las llamas dan la misma cantidad de calor por unidad de tiempo y, por lo tanto, aquella sustancia que tarda más tiempo en llegar al punto de ebullición necesita más energía calorífica.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Físico",
+      "competencia": "Uso comprensivo del conocimiento científico",
+      "afirmación": "la naturaleza basado en el análisis de información y",
+      "respuesta correcta": "D",
+      "nivel de desempeño": "3"
+    }
+  },
+  {
+    "id": "G17-1-CIE-004",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 4"
+    },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "naturaleza basado en observaciones, en patrones y en Explicar cómo ocurren algunos fenómenos de la conceptos propios del conocimiento científico.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una boya se ata al fondo del mar mediante una cuerda. En un día con el mar tranquilo, un estudiante observa que la boya se mantiene quieta durante unos segundos. Las fuerzas sobre la boya en ese intervalo de tiempo se representan en la figura.\n\nFuerza de la flotación\n\nPeso de la boya Tensión de la cuerda\n\nPuede afirmarse que la boya se mantiene quieta porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "la fuerza de flotación es igual al peso de la boya sumado a la tensión de la cuerda.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "la tensión de la cuerda más el peso de la boya es mayor que la fuerza de flotación.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "la fuerza de flotación es igual al peso de la boya.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "la fuerza de flotación es igual a la tensión de la cuerda.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe explicar el comportamiento de un sistema teniendo en cuenta la segunda ley de Newton. En este caso, como el objeto permanece quieto, la fuerza neta sobre la boya es cero y, por lo tanto, la fuerza de flotación (que va a hacia arriba) debe ser igual en magnitud a la suma del peso de la boya y la tensión de la cuerda que la ata al fondo.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Físico",
+      "competencia": "Explicación de fenómenos",
+      "afirmación": "naturaleza basado en observaciones, en patrones y en",
+      "respuesta correcta": "A",
+      "nivel de desempeño": "3"
+    }
+  },
+  {
+    "id": "G17-1-CIE-005",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 5"
+    },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modelar fenómenos de la naturaleza basado en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un diagrama de fases muestra las condiciones de presión y temperatura de los estados o fases de un mismo compuesto (sólido, líquido o gas). A continuación se muestra el diagrama de fases del compuesto W, dos valores de presión (P1 y P2) y dos valores de temperatura (T1 y T 2).\n\nP2\n\n                                     Presión\n                                                     Sólido         Líquido\n                                               P1\n\nGas\n\nT1 T2 Temperatura\n\nSi durante el procesamiento de un alimento que contiene el compuesto W, en el momento 1 se tiene una presión P1 y una temperatura T1 y en el momento 2 se pasa a una presión P 2 y a una temperatura T 2, ¿cuál es el estado del compuesto W en el momento 1 y en el momento 2?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En el momento 1 el compuesto W es un sólido y en el momento 2 es un líquido, porque hubo un aumento de la temperatura.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "En el momento 1 el compuesto W es un sólido y en el momento 2 también es un sólido, porque aunque hay un aumento de presión y temperatura no hay un cambio de fase.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "En el momento 1 el compuesto W es un gas y en el momento 2 es un sólido, porque hubo un aumento de la presión.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "En el momento 1 el compuesto W es un líquido y en el momento 2 también es un líquido, porque aunque hay un aumento de presión y temperatura no hay un cambio de fase.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe analizar un modelo de diagrama de fases para explicar el comportamiento de una sustancia. Para este caso en particular y de acuerdo con el diagrama, a una presión P1 y una temperatura T1, se identifica que el compuesto W es sólido al igual que a una presión P2 y una temperatura T2, de manera que, aunque la presión y la temperatura aumentan, no es suficiente para que cambie de fase.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Químico",
+      "competencia": "Explicación de fenómenos",
+      "afirmación": "",
+      "respuesta correcta": "B",
+      "nivel de desempeño": "3"
+    }
+  },
+  {
+    "id": "G17-1-CIE-006",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 6"
+    },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "procesos de respiración. Analizar el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La Tierra se puede considerar un sistema termodinámico que recibe energía del Sol e intercambia calor con el espacio exterior a través de la atmósfera. En las últimas décadas está presentándose el fenómeno denominado calentamiento global. Esto se debe al aumento en la concentración atmosférica de los llamados gases de efecto invernadero, principalmente el vapor de agua, el dióxido de carbono y el metano. En la siguiente tabla se muestra información acerca de estos tres gases.\n\n                         Efecto porcentual                                 Procesos y fuentes            Procesos y fuentes\n                                              Potencial de\n             Gas              sobre el                                        de emisión a                de eliminación de\n                                             calentamiento*\n                        calentamiento global                                  la atmósfera                   la atmósfera\n        Dióxido de                                                       Respiración, combustión             Fotosíntesis por\n         carbono                   22%                        1           de materia orgánica,          fitoplancton y bosques,\n           (CO2)                                                            volcanes activos.               difusión oceánica.\n           Vapor de                                                       Evaporación de cuerpos      Condensación y\n            agua                   62%                       <1            de agua, organismos   solidificación que origina\n            (H2O)                                                             y ecosistemas.      lluvias, nieve y granizo.\n\n           Metano                                                           Descomposición de             Oxidación aerobia\n            (CH4)                  1%                        23           residuos, subproductos         por microorganismos\n                                                                               de la digestión.               acuáticos.\n\n* Indica el aporte de la sustancia al calentamiento global en comparación con el CO2. Es decir, 1 molécula de metano contribuye al calentamiento global, lo mismo que 23 moléculas de dióxido de carbono.\n\nTeniendo en cuenta la información anterior, ¿cuál de las siguientes estrategias ayudaría a reducir la acumulación de dióxido de carbono en la atmósfera?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Plantar más árboles, porque los árboles absorben el dióxido de carbono y lo incorporan en sus cuerpos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Prohibir la explotación de las aguas subterráneas, porque así se evita la evaporación del dióxido de carbono disuelto en cuerpos de agua.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Descontaminar las aguas residuales con métodos de oxigenación, porque se detiene la descomposición de compuestos orgánicos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Proteger la fauna silvestre, porque los animales incorporan moléculas de carbono en sus",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe analizar diferentes propuestas de solución a una problemática ambiental. En esta caso particular, para reducir la acumulación de dióxido de carbono, la mejor propuesta, entre las planteadas como opciones de respuesta, es plantar árboles ya que estos lo acumulan en su estructura.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "CTS",
+      "competencia": "Explicación de fenómenos",
+      "afirmación": "",
+      "respuesta correcta": "A",
+      "nivel de desempeño": "2"
+    }
+  },
+  {
+    "id": "G17-1-CIE-007",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 7"
+    },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Comprender que a partir de la investigación científica se construyen explicaciones sobre el mundo natural.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Las micorrizas son asociaciones simbióticas entre hongos y plantas. Los hongos crecen en la su- perficie de las raíces de las plantas, lo cual le genera un sistema especializado para la absorción de nutrientes hacia la planta. En esta asociación, el hongo obtiene carbohidratos de la planta. Un grupo de estudiantes quiere aprender más acerca de las micorrizas.\n\n¿Cuál de las siguientes preguntas guiaría una investigación para obtener más información sobre las simbiosis entre estos organismos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "¿La presencia de micorrizas afecta la absorción de nutrientes en las plantas?",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "¿Cuántos tipos de micorrizas se han clasificado hasta el momento?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "¿Los hongos de las micorrizas son microscópicos?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "¿Con qué órgano absorben las plantas los nutrientes del suelo?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe reconocer qué pregunta se puede responder mediante el método científico, el cual permite evidenciar hipótesis o problemas planteados por un investigador. En este caso particular, la única pregunta que se puede responder mediante un experimento controlado, y que nos daría más información sobre qué obtiene la planta del hongo, es la de la opción A.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Biológico",
+      "competencia": "Indagación",
+      "afirmación": "",
+      "respuesta correcta": "A",
+      "nivel de desempeño": "2"
+    }
+  },
+  {
+    "id": "G17-1-CIE-008",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 8"
+    },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "naturaleza basándose en conocimientos científicos y en Derivar conclusiones para algunos fenómenos de la la evidencia de su propia investigación y de la de otros.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 3,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La energía geotérmica es la generación de energía eléctrica aprovechando el calor del interior de la Tierra. Pa- ra lograrlo, se realizan perforaciones en la tierra de varios kilómetros de profundidad, para luego bombear, a través de una de estas, agua fría. Una vez el agua se calienta abajo hasta el punto de ebullición, el vapor sube a la superficie en donde se disponen de turbinas que, al moverse, generan corrientes eléctricas (ver figura).\n\nGenerador eléctrico\n\nAgua fría bombeada Vapor de hacia abajo agua\n\n        Para estimar la eficiencia de un pozo geotérmico, los ingenieros del pozo inyectaron determinada\n        cantidad de agua y midieron el tiempo durante el cual el pozo generaba suficiente presión de vapor\n        para las turbinas a partir del agua inyectada. Esto se realizó cuatro (4) veces, una detrás de otra,\n        reutilizando el agua del ciclo anterior. Los resultados se muestran en la tabla.\n                                             Tiempo                 Proporción de agua\n                                  Ciclo\n                                            (minutos)             recuperada como vapor\n                                    1           50                         98%\n                                    2           22                         99%\n                                    3           21                         99%\n                                    4           23                         99%\n\nLos ingenieros saben que cuanto más caliente esté el agua inicialmente, menos calor necesita para evaporarse. Por tanto, puede concluirse que la temperatura del agua al principio del",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "primer ciclo era mayor que en los ciclos 2, 3 y 4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "primer ciclo era menor que en los ciclos 2, 3 y 4.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "cuarto ciclo era mayor que en los ciclos 1, 2 y 3.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "cuarto ciclo era menor que en los ciclos 1, 2 y 3.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe analizar resultados de una investigación y a partir de estos llegar a una relación entre las variables del sistema. En este caso, debe determinar la relación entre las temperaturas de los diferentes ciclos, a partir de los tiempos de generación de vapor y de un principio físico. Como el primer ciclo tarda más tiempo que los demás ciclos, entonces la temperatura inicial fue menor que la de los demás. Este resultado es de esperarse, pues el agua se reutiliza tras cada ciclo.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Físico",
+      "competencia": "Indagación",
+      "afirmación": "naturaleza basándose en conocimientos científicos y en",
+      "respuesta correcta": "B",
+      "nivel de desempeño": "4"
+    }
+  },
+  {
+    "id": "G17-1-CIE-009",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 9"
+    },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Observar y relacionar patrones en los datos para evaluar las predicciones.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante tiene la mezcla 1 y la mezcla 2 y tiene la hipótesis que la mezcla 2 tiene menor pH que la mezcla 1.\n\nSi la hipótesis del estudiante es cierta, ¿cuál de las siguientes gráficas muestra los resultados que se esperaría encontrar?\n\n10 10",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 83]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 83]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 83]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 83]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe reconocer las variables de la hipótesis que se plantea. Asimismo, debe identificar cómo serían los resultados esperados si la hipótesis es verdadera.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Químico",
+      "competencia": "Indagación",
+      "afirmación": "",
+      "respuesta correcta": "B",
+      "nivel de desempeño": "2"
+    }
+  },
+  {
+    "id": "G17-1-CIE-010",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Ciencias Naturales, ejemplo 10"
+    },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Utilizar algunas habilidades de pensamiento y de procedimiento para evaluar predicciones.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Los machos de las ranas de árbol, una especie nocturna, hacen un llamado para que las hembras puedan identificarlos más fácilmente. Las hembras reconocen el llamado por la frecuencia del canto de los machos. Un grupo de biólogos cree que la frecuencia del canto se afecta por la temperatura. Con base en esta información, ¿cuál de los siguientes procedimientos es el más apropiado para abordar la hipótesis de los biólogos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Registrar la frecuencia del canto de grupos de machos y de hembras, y comparar sus diferencias a diferentes horas del día.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Registrar la frecuencia del canto de grupos de machos de ranas de árbol en la mañana, al mediodía y en la noche, y luego analizar los datos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Registrar la frecuencia del canto de grupos de machos de ranas de árbol a diferentes temperaturas, y analizar los datos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Registrar la frecuencia del canto de grupos de machos y de hembras y comparar sus diferencias a diferentes temperaturas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Para responder acertadamente este tipo de preguntas, el estudiante debe reconocer el procedimiento que les permitirá a los investigadores abordar la hipótesis planteada en el estudio. Para este caso particular, al evaluar el llamado de los machos a diferentes temperaturas y registrar los datos, los investigadores podrán resolver su pregunta y sacar las conclusiones adecuadas. E. Prueba de Inglés El Programa Nacional de Bilingüismo del Ministerio de Educación Nacional (MEN) tiene como objetivo “lograr ciudadanos y ciudadanas capaces de comunicarse en inglés, de tal forma que puedan insertar al país en los procesos de comunicación universal, en la economía global y en la apertura cultural, con estándares internacionalmente comparables”25. Por consiguiente, los estándares del área de inglés y las pruebas nacionales de esta pretenden dar cuenta de los niveles de desempeño propuestos por el Marco Común Europeo de Referencia para las lenguas (aprendizaje, enseñanza y evaluación) del Consejo de Europa. Este marco contempla seis (6) niveles: A1, A2, B1, B2, C1, C2, entre los cuales el MEN propuso como meta para el año 2019 alcanzar el nivel B1 en la población de educación media. 1. Especificaciones de la prueba La prueba de Inglés está conformada por 45 preguntas de selección múltiple con única respuesta, distribuidas de la siguiente manera: Tabla 17. Distribución de preguntas por partes de la prueba. Parte Porcentaje (%) 1 11 2 11 3 11 4 18 5 16 6 11 7 22 Total 100 25 MEN. (2006). Estándares Básicos de Competencias en Lenguas Extranjeras: inglés. Bogotá, D. C.: MEN. p.6 2. Partes de la prueba a. Parte 1 En esta parte de la prueba se indaga por el conocimiento pragmático del estudiante. En particular, el estudiante debe reconocer el propósito comunicativo de un aviso y el lugar donde este puede aparecer, según ese propósito. Para ello, se le presentan al estudiante cinco avisos y él debe decidir dónde podría encontrarlos. En cada pregunta hay tres opciones de respuesta, A, B o C, una de las cuales deberá marcar en su Hoja de respuestas. b. Parte 2 Esta parte evalúa el conocimiento lexical del estudiante . A partir de este conocimiento, el estudiante debe comprender una serie de descripciones con el fin de relacionarlas con una lista de palabras. En esta parte, el estudiante encuentra una lista de ocho (8) palabras clasificadas de A a H y una serie de enunciados. Cada uno de los enunciados describe una de las ocho (8) palabras y el estudiante debe buscar la relación correcta entre palabras y descripciones para asociar cada enunciado con su letra correspondiente (A a H) en su Hoja de respuestas. Hay más palabras (A a H) de las que el estudiante necesita. c. Parte 3 La parte 3 evalúa al estudiante en su conocimiento comunicativo. En concreto, el estudiante debe elegir la intervención más adecuada que un interlocutor 2 haría frente a lo dicho por un interlocutor 1. Lo anterior se relaciona con la pertinencia del lenguaje usado en situaciones particulares recreadas en pequeñas conversaciones. En consonancia con lo anterior, en esta parte el estudiante encuentra cinco (5) conversaciones cortas que debe completar seleccionando la respuesta correcta de las tres (3) opciones, A, B o C, en su Hoja de respuestas. d. Parte 4 Con base en un texto, en esta parte se evalúa del estudiante su conocimiento gramatical. Puntualmente, se trata de elegir las palabras más adecuadas para completar el texto. Para ello, el estudiante debe leer el texto prestando atención a una serie de espacios y, para cada uno de ellos, debe seleccionar la palabra correcta entre las tres (3) opciones, A, B o C, en su Hoja de respuestas. e. Parte 5 En esta parte de la prueba, el estudiante debe realizar un ejercicio de comprensión de lectura literal, de un texto. Este ejercicio consiste en seleccionar la paráfrasis que permite responder correctamente a cada pregunta sobre el texto. El estudiante debe seleccionar la respuesta correcta, para cada pregunta, entre tres (3) opciones, A, B o C, en su Hoja de respuestas. f. Parte 6 Con base en un texto, en esta parte el estudiante debe llevar cabo un proceso de lectura inferencial. Se plantean distintas preguntas sobre la intención del autor y los aspectos generales y particulares por destacar del texto. El estudiante debe seleccionar la respuesta correcta, para cada pregunta, entre cuatro (4) opciones, A, B, C o D, en su Hoja de respuestas. g. Parte 7 A partir del texto que integra esta parte de la prueba, se evalúa del estudiante su conocimiento tanto gramatical como lexical. El ejercicio consiste en elegir las palabras más adecuadas para completar el texto. Para ello, el estudiante debe leer el texto prestando atención a los espacios y, para cada uno de ellos, debe seleccionar la palabra correcta de las cuatro (4) opciones, A, B, C o D en su Hoja de respuestas. 3. Niveles de desempeño Los niveles de desempeño consisten en una descripción cualitativa de las habilidades y conocimientos de los estudiantes que se ubican en determinado nivel. En Colombia existe población que se encuentra por debajo del primer nivel del Marco Común Europeo (A1), lo cual ha llevado a incluir en la prueba de Inglés de Saber 11.° un nivel inferior a A1, denominado A–, que corresponde a aquellos desempeños mínimos que involucran el manejo de vocabulario y estructuras básicos. De igual forma, se incluye un nivel superior al B1 para aquellos estudiantes que superan lo evaluado en este nivel. Este nivel se denomina B+(véase la Tabla 18). Tabla 18. Descripción de los niveles de desempeño. Nivel de Descripción desempeño A- • El estudiante promedio clasificado en este nivel no supera las preguntas de menor Puntaje en la complejidad de la prueba. prueba 0 a 47 • El estudiante es capaz de comprender y utilizar expresiones cotidianas de uso muy frecuente, así como frases sencillas destinadas a satisfacer necesidades inmediatas. A1 Puntaje en • Puede presentarse a sí mismo y a otros, pedir y dar información personal básica sobre la prueba 48 su domicilio, sus pertenencias y las personas que conoce. a 57 • Puede relacionarse de forma elemental con su interlocutor siempre que este hable despacio y con claridad y esté dispuesto a cooperar. • El estudiante es capaz de comprender frases y expresiones de uso frecuente relacionadas con áreas de experiencia que le son especialmente relevantes (información básica sobre sí mismo y su familia, compras, lugares de interés, ocupaciones, etc.). A2 Puntaje en • Sabe comunicarse a la hora de llevar a cabo tareas simples y cotidianas que no la prueba 58 requieran más que intercambios sencillos y directos de información sobre cuestiones a 67 que le son conocidas o habituales. • Sabe describir en términos sencillos aspectos de su pasado y su entorno, así como cuestiones relacionadas con sus necesidades inmediatas. • El estudiante es capaz de comprender los puntos principales de textos claros y en lengua estándar si tratan sobre cuestiones que le son conocidas, ya sea en situaciones de trabajo, de estudio o de ocio. B1 • Sabe desenvolverse en la mayor parte de las situaciones que pueden surgir durante un Puntaje en viaje por zonas donde se utiliza la lengua. la prueba 68 a 78 • Es capaz de producir textos sencillos y coherentes sobre temas que le son familiares o en los que tiene un interés personal. • Puede describir experiencias, acontecimientos, deseos y aspiraciones, así como justificar brevemente sus opiniones o explicar sus planes. B+ Puntaje en la • El estudiante promedio clasificado en este nivel supera las preguntas de mayor prueba 79 a complejidad de la prueba.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "componente": "Biológico",
+      "competencia": "Indagación",
+      "afirmación": "",
+      "respuesta correcta": "C",
+      "nivel de desempeño": "2"
+    }
+  }
+]
