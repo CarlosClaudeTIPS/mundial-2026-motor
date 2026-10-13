@@ -46,3 +46,13 @@ npm run balancear-banco   # reparte la letra correcta cuando es seguro (añade -
 - Reducir la pista "la correcta es la opción más larga" en los archivos originales (1-6) de Sociales y Ciencias.
 
 Para retomar con Claude en el otro PC basta con abrir la carpeta del repo y pedir: "continúa el banco según CONTINUAR.md".
+
+## Siguiente gran tarea: sistema inteligente de acompañamiento (pedido 13-oct-2026, sin empezar)
+
+Carlos pidió implementarlo con una **Fase 0 obligatoria de auditoría** antes de tocar código:
+1. Inventario de funciones existentes (estado / evidencia / problema / acción). Ya existen y deben reutilizarse, no duplicarse: `src/components/Retro.jsx` + `src/lib/feedback.js` (retroalimentación y "¿Por qué elegiste X?"), `content/lecciones.json` (mini-lecciones), `src/lib/reglas.js` (recomendaciones), `src/lib/analitica.js`, `src/components/estudiante/MiRuta.jsx` (ruta genérica de 24 semanas), `src/lib/pruebas.js` (`crearDiagnostico`, 25 preguntas), `src/lib/informes.js` (informes), `src/lib/acceso.js` (planes), modo carrera (`src/lib/carreras.js`).
+2. Comparar con las 18 necesidades del estudiante y presentar el plan de intervención (escribirlo en `docs/16-acompanamiento.md`).
+3. Implementar por prioridad: (1) diagnóstico inteligente y "¿Por qué me equivoqué?" con pregunta de verificación nueva; (2) "Mi ruta para mejorar" personalizada (grado, fecha del examen, meta, tiempo/día, sesiones diarias) y medición del aprendizaje con preguntas nuevas; luego tutor "Explícame desde cero", preparación mental, panel de progreso.
+4. Informe final verificable (no afirmar como hecha una función que solo tiene interfaz).
+
+Otros pendientes: guía ICFES solo tiene Antioquia y Eje Cafetero (faltan Bogotá, Caribe, Pacífico/sur, Oriente/Llanos; enlaces de `content/guia/*.json` aún sin verificar uno a uno); la migración `supabase/migracion-004-planes.sql` debe correrla Carlos en el SQL Editor de Supabase.
