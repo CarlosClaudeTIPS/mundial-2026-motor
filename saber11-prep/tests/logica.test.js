@@ -197,17 +197,18 @@ describe('acceso.estadoLiberacion', () => {
     expect(estadoLiberacion(bancoFicticio(), { plan: 'completo' })).toBeNull()
     expect(estadoLiberacion(bancoFicticio(), null)).toBeNull()
   })
-  it('primer mes libera 100 repartidas 20 por prueba y las propias antes que las oficiales', () => {
-    const e = estadoLiberacion(bancoFicticio(), { plan: 'mensual', plan_inicio: '2026-10-01' }, new Date('2026-10-05'))
+  it('primer mes libera el lote por asignatura (20 de prueba) y las propias antes que las oficiales', () => {
+    const e = estadoLiberacion(bancoFicticio(), { plan: 'mensual', plan_inicio: '2026-10-01', plan_lote: 20 }, new Date('2026-10-05'))
     expect(e.liberadas.size).toBe(100)
     expect(e.nuevas.size).toBe(100)
+    expect(e.lote_total).toBe(100)
     expect([...e.liberadas].filter(id => id.startsWith('MAT')).length).toBe(20)
     expect(e.liberadas.has('MAT-001')).toBe(true)
     expect(e.liberadas.has('MAT-046')).toBe(false)
     expect(e.proximo.toISOString().slice(0, 10)).toBe('2026-11-01')
   })
   it('el tercer mes acumula 300 y solo 100 son nuevas; lo anterior sigue liberado', () => {
-    const grupo = { plan: 'mensual', plan_inicio: '2026-10-01' }
+    const grupo = { plan: 'mensual', plan_inicio: '2026-10-01', plan_lote: 20 }
     const e1 = estadoLiberacion(bancoFicticio(), grupo, new Date('2026-10-05'))
     const e3 = estadoLiberacion(bancoFicticio(), grupo, new Date('2026-12-05'))
     expect(e3.liberadas.size).toBe(250) // 50 por prueba es el máximo del banco ficticio
@@ -215,8 +216,13 @@ describe('acceso.estadoLiberacion', () => {
     expect(e3.agotado).toBe(true)
     expect(e3.proximo).toBeNull()
   })
+  it('con el lote por defecto (100 por asignatura) el primer mes libera hasta 500', () => {
+    const e = estadoLiberacion(bancoFicticio(), { plan: 'mensual', plan_inicio: '2026-10-01' }, new Date('2026-10-05'))
+    expect(e.lote_total).toBe(500)
+    expect(e.liberadas.size).toBe(250) // el banco ficticio solo tiene 50 por prueba
+  })
   it('agregar preguntas nuevas al banco no cambia lo ya liberado', () => {
-    const grupo = { plan: 'mensual', plan_inicio: '2026-10-01' }
+    const grupo = { plan: 'mensual', plan_inicio: '2026-10-01', plan_lote: 20 }
     const antes = estadoLiberacion(bancoFicticio(), grupo, new Date('2026-10-05'))
     const mas = [...bancoFicticio(), ...[51, 52, 53].map(i => ({ id: `MAT-${i}`, prueba: 'matematicas', estado: 'aprobada', origen: 'estilo' }))]
     const despues = estadoLiberacion(mas, grupo, new Date('2026-10-05'))

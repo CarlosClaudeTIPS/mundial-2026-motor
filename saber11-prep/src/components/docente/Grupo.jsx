@@ -324,7 +324,7 @@ function PlanAcceso({ grupo, preguntas, onCambio }) {
           <p className="font-medium">Plan de acceso al banco <Badge tono={e ? 'ambar' : 'verde'}>{PLANES[grupo.plan ?? 'completo']?.nombre ?? grupo.plan}</Badge></p>
           <p className="text-xs text-gray-400 mt-1">
             {e
-              ? <>Mes {e.meses + 1} · liberadas {e.liberadas.size} de {e.total} preguntas ({e.nuevas.size} nuevas este mes). {e.proximo ? `Próximo lote de ${e.lote}: ${formatoFecha(e.proximo.toISOString())}.` : 'Ya se liberó todo el banco.'}</>
+              ? <>Mes {e.meses + 1} · liberadas {e.liberadas.size} de {e.total} preguntas ({e.nuevas.size} nuevas este mes). {e.proximo ? `Próximo lote (${e.lote} por asignatura, ${e.lote_total} en total): ${formatoFecha(e.proximo.toISOString())}.` : 'Ya se liberó todo el banco.'}</>
               : <>Los estudiantes ven las {aprobadas.length} preguntas aprobadas del banco.</>}
           </p>
         </div>
@@ -342,10 +342,10 @@ function PlanAcceso({ grupo, preguntas, onCambio }) {
           {form.plan === 'mensual' && (
             <div className="grid grid-cols-2 gap-2">
               <div><label className="label">Inicio del plan</label><input type="date" className="input" value={form.plan_inicio} onChange={ev => setForm({ ...form, plan_inicio: ev.target.value })} /></div>
-              <div><label className="label">Preguntas por mes</label><input type="number" min="25" step="5" className="input" value={form.plan_lote} onChange={ev => setForm({ ...form, plan_lote: ev.target.value })} /></div>
+              <div><label className="label">Preguntas por asignatura y mes</label><input type="number" min="5" step="5" className="input" value={form.plan_lote} onChange={ev => setForm({ ...form, plan_lote: ev.target.value })} /></div>
             </div>
           )}
-          <p className="text-[11px] text-gray-500">El lote mensual se reparte por igual entre las cinco pruebas y se acumula: lo liberado no se quita. Al cambiar el plan, el estudiante lo ve en cuanto recargue la app.</p>
+          <p className="text-[11px] text-gray-500">Cada mes se libera ese número de preguntas en cada una de las cinco asignaturas y se acumula: lo liberado no se quita. Al cambiar el plan, el estudiante lo ve en cuanto recargue la app.</p>
           <div className="flex gap-2"><button className="btn-primary flex-1" onClick={guardar}>Guardar</button><button className="btn-secondary flex-1" onClick={() => setEditando(false)}>Cancelar</button></div>
         </div>
       )}

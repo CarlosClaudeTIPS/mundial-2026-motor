@@ -194,7 +194,7 @@ function TarjetaLiberacion({ e }) {
       <span className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0"><Unlock size={22} /></span>
       <div className="flex-1 min-w-0">
         <p className="font-semibold text-brand-navy">Material liberado: {e.liberadas.size} preguntas{e.nuevas.size ? <Badge tono="ambar">{e.nuevas.size} nuevas este mes</Badge> : null}</p>
-        <p className="text-xs text-gray-400">{e.proximo ? `El próximo lote de ${e.lote} preguntas se libera el ${formatoFecha(e.proximo.toISOString())}.` : 'Ya tienes todo el banco disponible.'}</p>
+        <p className="text-xs text-gray-400">{e.proximo ? `El próximo lote (${e.lote} por asignatura) se libera el ${formatoFecha(e.proximo.toISOString())}.` : 'Ya tienes todo el banco disponible.'}</p>
       </div>
     </div>
   )

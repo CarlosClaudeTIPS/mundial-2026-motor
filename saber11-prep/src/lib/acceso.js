@@ -3,9 +3,9 @@ import { db } from './db'
 // ─── Plan de acceso al banco por grupo ───────────────────────────────────────
 // Cada grupo tiene un plan:
 //  - "completo": sus estudiantes ven todo el banco aprobado.
-//  - "mensual": cada mes se le libera un lote nuevo (LOTE_MENSUAL preguntas,
-//    repartidas por igual entre las cinco pruebas), acumulando lo anterior y
-//    sin repetir. El lote se calcula de forma determinista a partir del orden
+//  - "mensual": cada mes se le libera un lote nuevo de LOTE_MENSUAL preguntas
+//    POR CADA PRUEBA (500 en total con el valor por defecto), acumulando lo
+//    anterior y sin repetir. El lote se calcula de forma determinista a partir del orden
 //    del banco (por prueba: primero las propias por número de id, luego las
 //    oficiales), así no hace falta guardar nada y funciona sin conexión.
 //    Las preguntas nuevas que se agreguen al banco quedan al final del orden,
@@ -13,9 +13,9 @@ import { db } from './db'
 
 export const PLANES = {
   completo: { id: 'completo', nombre: 'Completo', descripcion: 'Acceso a todo el banco desde el primer día.' },
-  mensual: { id: 'mensual', nombre: 'Mensual', descripcion: 'Un lote nuevo cada mes, acumulando el anterior.' },
+  mensual: { id: 'mensual', nombre: 'Mensual', descripcion: 'Cada mes se liberan 100 preguntas nuevas por asignatura (500 en total), acumulando las anteriores.' },
 }
-export const LOTE_MENSUAL = 100
+export const LOTE_MENSUAL = 100 // por prueba y por mes
 export const PRUEBAS = ['lectura_critica', 'matematicas', 'sociales_ciudadanas', 'ciencias_naturales', 'ingles']
 
 // Meses completos transcurridos entre dos fechas (0 el primer mes).
@@ -46,7 +46,7 @@ export function estadoLiberacion(preguntas, grupo, hoy = new Date()) {
   if (!grupo || grupo.plan !== 'mensual') return null
   const inicio = grupo.plan_inicio ?? grupo.creado ?? hoy
   const lote = Number(grupo.plan_lote) || LOTE_MENSUAL
-  const cupo = Math.max(1, Math.round(lote / PRUEBAS.length))
+  const cupo = Math.max(1, lote) // preguntas por prueba y por mes
   const meses = mesesTranscurridos(inicio, hoy)
   const liberadas = new Set(), nuevas = new Set()
   let total = 0, agotado = true
@@ -59,7 +59,7 @@ export function estadoLiberacion(preguntas, grupo, hoy = new Date()) {
     if (lista.length > hasta) agotado = false
   }
   return {
-    plan: 'mensual', meses, lote, inicio: new Date(inicio), liberadas, nuevas, total,
+    plan: 'mensual', meses, lote, lote_total: cupo * PRUEBAS.length, inicio: new Date(inicio), liberadas, nuevas, total,
     proximo: agotado ? null : fechaLote(inicio, meses + 2),
     agotado,
   }
