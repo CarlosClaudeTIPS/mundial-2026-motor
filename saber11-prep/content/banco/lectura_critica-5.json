@@ -1,0 +1,1626 @@
+[
+  {
+    "id": "LC-065",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_vor%C3%A1gine/Segunda_parte",
+      "anio": 2026,
+      "texto_autor": "José Eustasio Rivera",
+      "texto_titulo": "La vorágine",
+      "texto_anio": 1924
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "comprender",
+    "tema": "Texto literario (novela)",
+    "subtema": "Vocabulario de época en contexto: «hado»",
+    "dificultad": 1,
+    "contexto": "**Fragmento de _La vorágine_, José Eustasio Rivera (1924). Dominio público. Fuente: https://es.wikisource.org/wiki/La_vorágine/Segunda_parte**\n\n¡Oh, selva, esposa del silencio, madre de la soledad y de la neblina! ¿Qué hado maligno me dejó prisionero en tu cárcel verde? Los pabellones de tus ramajes, como inmensa bóveda, siempre están sobre mi cabeza, entre mi aspiración y el cielo claro, que sólo entreveo cuando tus copas estremecidas mueven su oleaje, a la hora de tus crepúsculos angustiosos. ¿Dónde estará la estrella querida que de tarde pasea las lomas? ¿Aquellos celajes de oro y múrice con que se viste el ángel de los ponientes, por qué no tiemblan en tu dombo? ¡Cuántas veces suspiró mi alma adivinando al través de tus laberintos el reflejo del astro que empurpura las lejanías, hacia el lado de mi país, donde hay llanuras inolvidables y cumbres de corona blanca, desde cuyos picachos me vi a la altura de las cordilleras! [...] ¡Tú me robaste el ensueño del horizonte y sólo tienes para mis ojos la monotonía de tu cenit, por donde pasa el plácido albor, que jamás alumbra las hojarascas de tus senos húmedos!\n\nTú eres la catedral de la pesadumbre, donde dioses desconocidos hablan a media voz, en el idioma de los murmullos, prometiendo longevidad a los árboles imponentes, contemporáneos del paraíso, que eran ya decanos cuando las primeras tribus aparecieron y esperan impasibles el hundimiento de los siglos venturosos. Tus vegetales forman sobre la tierra la poderosa familia que no se traiciona nunca. El abrazo que no pueden darse tus ramazones lo llevan las enredaderas y los bejucos, y eres solidaria hasta en el dolor de la hoja que cae. [...] Tú tienes la adustez de la fuerza cósmica y encarnas un misterio de la creación. No obstante, mi espíritu sólo se aviene con lo inestable, desde que soporta el peso de tu perpetuidad, y, más que a la encina de fornido gajo, aprendió a amar a la orquídea raquítica, porque es efímera como el hombre y marchitable como su ilusión.\n\n_Nota de contexto:_ Así comienza la segunda parte de la novela. Arturo Cova, el narrador, huyó de Bogotá y se internó en la selva amazónica, donde queda atrapado. Algunas ayudas: «celajes» = nubes de colores al atardecer; «múrice» = color púrpura; «dombo» = cúpula; «cenit» = punto del cielo que está justo encima de quien mira; «adustez» = severidad, dureza; «se aviene» = se acomoda, se pone de acuerdo.",
+    "estimulo": null,
+    "enunciado": "En la pregunta «¿Qué hado maligno me dejó prisionero en tu cárcel verde?», la palabra «hado» significa",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "un espíritu o duende que habita la selva.",
+        "correcta": false,
+        "explicacion": "En el fragmento no aparece ninguna criatura: el narrador se dirige a la selva y pregunta qué lo «dejó prisionero». «Hado» se parece a «hada», pero no significa un ser fantástico; si se reemplaza por «duende», la pregunta pierde el sentido de fuerza que decide su suerte.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció «hado» con «hada» por el parecido de las palabras."
+      },
+      {
+        "clave": "B",
+        "texto": "el camino o sendero que el narrador tomó.",
+        "correcta": false,
+        "explicacion": "Aunque el texto habla de «laberintos», en la oración el «hado» es quien actúa («me dejó prisionero»); un sendero no es un agente al que se le atribuya maldad («maligno»).",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Adivinó el significado por el ambiente de viaje sin comprobar que encaje en la oración."
+      },
+      {
+        "clave": "C",
+        "texto": "el destino o la suerte que determina lo que le ocurre a alguien.",
+        "correcta": true,
+        "explicacion": "«Hado» es el destino. Al sustituir la palabra, la oración conserva su sentido: «¿Qué destino maligno me dejó prisionero en tu cárcel verde?». El narrador se ve como víctima de una fuerza que no controla, lo que concuerda con «prisionero» y «cárcel».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "la culpa o el error que el narrador mismo cometió.",
+        "correcta": false,
+        "explicacion": "El sujeto de «dejó» es el hado, no el narrador: la oración pone la causa fuera de él y lo presenta como víctima («prisionero»). No hay autorreproche en el pasaje.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la pregunta como un reproche a sí mismo sin identificar el sujeto del verbo."
+      }
+    ],
+    "explicacion": "LEER: releo la oración completa y la que sigue («Los pabellones de tus ramajes [...] siempre están sobre mi cabeza»). COMPRENDER: se pide el significado de «hado» en ese contexto. INTERPRETAR: el hado es algo «maligno» que «dejó prisionero» al narrador: una fuerza que decide su suerte sin que él la elija. REPRESENTAR: hado maligno → prisión en la selva; narrador = víctima. RAZONAR: A confunde hado con hada; B propone algo que no puede ser sujeto de «dejó prisionero»; D invierte el agente. RESOLVER: la opción C. VERIFICAR: sustituyo: «¿Qué destino maligno me dejó prisionero...?»; la oración conserva su sentido.",
+    "que_identificar": "El verbo «dejó prisionero» y el adjetivo «maligno», que muestran que el hado es una fuerza que actúa sobre el narrador.",
+    "que_revisar": "Deducir el significado de palabras poco usuales a partir del contexto y comprobarlo con la prueba de sustitución.",
+    "refuerzo_ids": [
+      "LC-069",
+      "LC-078"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T18",
+      "dominio_publico",
+      "literario",
+      "novela",
+      "literatura_colombiana",
+      "siglo_xx",
+      "vocabulario_epoca"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-066",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_vor%C3%A1gine/Segunda_parte",
+      "anio": 2026,
+      "texto_autor": "José Eustasio Rivera",
+      "texto_titulo": "La vorágine",
+      "texto_anio": 1924
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (novela)",
+    "subtema": "Relación de oposición marcada por un conector («No obstante»)",
+    "dificultad": 2,
+    "contexto": "**Fragmento de _La vorágine_, José Eustasio Rivera (1924). Dominio público. Fuente: https://es.wikisource.org/wiki/La_vorágine/Segunda_parte**\n\n¡Oh, selva, esposa del silencio, madre de la soledad y de la neblina! ¿Qué hado maligno me dejó prisionero en tu cárcel verde? Los pabellones de tus ramajes, como inmensa bóveda, siempre están sobre mi cabeza, entre mi aspiración y el cielo claro, que sólo entreveo cuando tus copas estremecidas mueven su oleaje, a la hora de tus crepúsculos angustiosos. ¿Dónde estará la estrella querida que de tarde pasea las lomas? ¿Aquellos celajes de oro y múrice con que se viste el ángel de los ponientes, por qué no tiemblan en tu dombo? ¡Cuántas veces suspiró mi alma adivinando al través de tus laberintos el reflejo del astro que empurpura las lejanías, hacia el lado de mi país, donde hay llanuras inolvidables y cumbres de corona blanca, desde cuyos picachos me vi a la altura de las cordilleras! [...] ¡Tú me robaste el ensueño del horizonte y sólo tienes para mis ojos la monotonía de tu cenit, por donde pasa el plácido albor, que jamás alumbra las hojarascas de tus senos húmedos!\n\nTú eres la catedral de la pesadumbre, donde dioses desconocidos hablan a media voz, en el idioma de los murmullos, prometiendo longevidad a los árboles imponentes, contemporáneos del paraíso, que eran ya decanos cuando las primeras tribus aparecieron y esperan impasibles el hundimiento de los siglos venturosos. Tus vegetales forman sobre la tierra la poderosa familia que no se traiciona nunca. El abrazo que no pueden darse tus ramazones lo llevan las enredaderas y los bejucos, y eres solidaria hasta en el dolor de la hoja que cae. [...] Tú tienes la adustez de la fuerza cósmica y encarnas un misterio de la creación. No obstante, mi espíritu sólo se aviene con lo inestable, desde que soporta el peso de tu perpetuidad, y, más que a la encina de fornido gajo, aprendió a amar a la orquídea raquítica, porque es efímera como el hombre y marchitable como su ilusión.\n\n_Nota de contexto:_ Así comienza la segunda parte de la novela. Arturo Cova, el narrador, huyó de Bogotá y se internó en la selva amazónica, donde queda atrapado. Algunas ayudas: «celajes» = nubes de colores al atardecer; «múrice» = color púrpura; «dombo» = cúpula; «cenit» = punto del cielo que está justo encima de quien mira; «adustez» = severidad, dureza; «se aviene» = se acomoda, se pone de acuerdo.",
+    "estimulo": null,
+    "enunciado": "En el segundo párrafo, la expresión «No obstante» introduce una idea que",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "se opone a la grandeza perdurable de la selva descrita antes: el narrador prefiere lo frágil y pasajero, como la orquídea.",
+        "correcta": true,
+        "explicacion": "Antes del conector, la selva aparece imponente y eterna («la adustez de la fuerza cósmica», árboles «contemporáneos del paraíso»). Después, el narrador dice que su espíritu «sólo se aviene con lo inestable» y que aprendió a amar «a la orquídea raquítica, porque es efímera como el hombre». «No obstante» marca ese contraste.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "confirma que el narrador admira a la selva por su solidaridad y su fuerza.",
+        "correcta": false,
+        "explicacion": "La admiración está antes del conector; después, el narrador habla del «peso de tu perpetuidad» y se aparta de ella para amar lo efímero. «No obstante» es un conector adversativo: no confirma, contrapone.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No reconoció el valor adversativo del conector y leyó la oración como continuación de lo anterior."
+      },
+      {
+        "clave": "C",
+        "texto": "explica la causa por la que el narrador quedó atrapado en la selva.",
+        "correcta": false,
+        "explicacion": "La oración que sigue a «No obstante» trata de lo que ama el narrador, no de por qué está atrapado; la única alusión a esa causa es el «hado maligno» del primer párrafo. Además, «No obstante» no es un conector causal.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió un conector de oposición con uno de causa."
+      },
+      {
+        "clave": "D",
+        "texto": "resume el primer párrafo, en el que el narrador se queja de la selva.",
+        "correcta": false,
+        "explicacion": "La idea que introduce es nueva (el amor por la orquídea efímera) y se contrapone a lo que la precede inmediatamente (la fuerza y perpetuidad de la selva). No resume la queja por el horizonte perdido del primer párrafo.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió una opción coherente con el tono general sin analizar la relación local que marca el conector."
+      }
+    ],
+    "explicacion": "LEER: releo las dos oraciones anteriores y la que empieza con «No obstante». COMPRENDER: se pregunta qué relación establece el conector entre ideas. INTERPRETAR: antes se describe la selva como fuerza eterna y solidaria; después, el narrador dice amar «lo inestable», «la orquídea raquítica», «efímera como el hombre». REPRESENTAR: selva = perpetuidad, fuerza ↔ narrador = afinidad con lo efímero. RAZONAR: B lee continuidad donde hay oposición; C lo toma como causa; D lo toma como resumen. RESOLVER: la opción A. VERIFICAR: reemplazo «No obstante» por «Sin embargo» y el sentido de contraste se mantiene.",
+    "que_identificar": "El valor adversativo de «No obstante» y el contraste entre «perpetuidad» y «efímera».",
+    "que_revisar": "Conectores de oposición (no obstante, sin embargo, pero) y cómo relacionan las ideas que unen.",
+    "refuerzo_ids": [
+      "LC-067",
+      "LC-083"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T18",
+      "dominio_publico",
+      "literario",
+      "novela",
+      "literatura_colombiana",
+      "siglo_xx",
+      "conectores"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-067",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_vor%C3%A1gine/Segunda_parte",
+      "anio": 2026,
+      "texto_autor": "José Eustasio Rivera",
+      "texto_titulo": "La vorágine",
+      "texto_anio": 1924
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (novela)",
+    "subtema": "Situación de enunciación: el apóstrofe a la selva",
+    "dificultad": 2,
+    "contexto": "**Fragmento de _La vorágine_, José Eustasio Rivera (1924). Dominio público. Fuente: https://es.wikisource.org/wiki/La_vorágine/Segunda_parte**\n\n¡Oh, selva, esposa del silencio, madre de la soledad y de la neblina! ¿Qué hado maligno me dejó prisionero en tu cárcel verde? Los pabellones de tus ramajes, como inmensa bóveda, siempre están sobre mi cabeza, entre mi aspiración y el cielo claro, que sólo entreveo cuando tus copas estremecidas mueven su oleaje, a la hora de tus crepúsculos angustiosos. ¿Dónde estará la estrella querida que de tarde pasea las lomas? ¿Aquellos celajes de oro y múrice con que se viste el ángel de los ponientes, por qué no tiemblan en tu dombo? ¡Cuántas veces suspiró mi alma adivinando al través de tus laberintos el reflejo del astro que empurpura las lejanías, hacia el lado de mi país, donde hay llanuras inolvidables y cumbres de corona blanca, desde cuyos picachos me vi a la altura de las cordilleras! [...] ¡Tú me robaste el ensueño del horizonte y sólo tienes para mis ojos la monotonía de tu cenit, por donde pasa el plácido albor, que jamás alumbra las hojarascas de tus senos húmedos!\n\nTú eres la catedral de la pesadumbre, donde dioses desconocidos hablan a media voz, en el idioma de los murmullos, prometiendo longevidad a los árboles imponentes, contemporáneos del paraíso, que eran ya decanos cuando las primeras tribus aparecieron y esperan impasibles el hundimiento de los siglos venturosos. Tus vegetales forman sobre la tierra la poderosa familia que no se traiciona nunca. El abrazo que no pueden darse tus ramazones lo llevan las enredaderas y los bejucos, y eres solidaria hasta en el dolor de la hoja que cae. [...] Tú tienes la adustez de la fuerza cósmica y encarnas un misterio de la creación. No obstante, mi espíritu sólo se aviene con lo inestable, desde que soporta el peso de tu perpetuidad, y, más que a la encina de fornido gajo, aprendió a amar a la orquídea raquítica, porque es efímera como el hombre y marchitable como su ilusión.\n\n_Nota de contexto:_ Así comienza la segunda parte de la novela. Arturo Cova, el narrador, huyó de Bogotá y se internó en la selva amazónica, donde queda atrapado. Algunas ayudas: «celajes» = nubes de colores al atardecer; «múrice» = color púrpura; «dombo» = cúpula; «cenit» = punto del cielo que está justo encima de quien mira; «adustez» = severidad, dureza; «se aviene» = se acomoda, se pone de acuerdo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes opciones describe mejor la situación de enunciación del fragmento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Un narrador externo describe la selva de forma objetiva a un lector.",
+        "correcta": false,
+        "explicacion": "El texto está en primera persona («me dejó prisionero», «mi alma», «mi país») y lleno de exclamaciones y preguntas emotivas; no es externo ni objetivo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No atendió a los pronombres y posesivos de primera persona."
+      },
+      {
+        "clave": "B",
+        "texto": "Un personaje conversa con otro viajero perdido en la selva y le responde.",
+        "correcta": false,
+        "explicacion": "No hay ningún interlocutor humano ni respuestas. El «tú» se identifica desde la primera línea con la selva: «¡Oh, selva, esposa del silencio...!», «Tú eres la catedral de la pesadumbre».",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que el «tú» es otra persona sin fijarse en el vocativo inicial."
+      },
+      {
+        "clave": "C",
+        "texto": "La selva habla en primera persona y describe a los hombres que la recorren.",
+        "correcta": false,
+        "explicacion": "Se invierten los papeles: el «yo» es el prisionero que añora «mi país»; la selva es el «tú» al que se habla («Tú me robaste el ensueño del horizonte»).",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió quién es el «yo» y quién el «tú» del texto."
+      },
+      {
+        "clave": "D",
+        "texto": "Un narrador en primera persona se dirige directamente a la selva, a la que trata como un ser capaz de escucharlo.",
+        "correcta": true,
+        "explicacion": "El fragmento abre con un vocativo («¡Oh, selva...!») y sigue en segunda persona («tu cárcel verde», «Tú me robaste», «Tú eres»). Hablarle a un ser no humano como si pudiera oír es un apóstrofe, y la selva queda personificada («esposa del silencio, madre de la soledad»).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: identifico los pronombres del texto: «me», «mi» (yo) y «tu», «tú» (tú). COMPRENDER: se pregunta quién habla y a quién. INTERPRETAR: el «yo» es un prisionero que extraña su país; el «tú» es la selva, nombrada en el vocativo inicial. REPRESENTAR: emisor = narrador personaje; destinatario = selva personificada. RAZONAR: A niega la primera persona; B inventa un interlocutor humano; C invierte los papeles. RESOLVER: la opción D. VERIFICAR: cada oración con «tú» del texto puede leerse como dirigida a la selva sin contradicción.",
+    "que_identificar": "El vocativo «¡Oh, selva...!» y los pronombres de primera y segunda persona.",
+    "que_revisar": "Voces del texto: narrador, destinatario, apóstrofe y personificación.",
+    "refuerzo_ids": [
+      "LC-068",
+      "LC-075"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T18",
+      "dominio_publico",
+      "literario",
+      "novela",
+      "literatura_colombiana",
+      "siglo_xx",
+      "voces"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-068",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_vor%C3%A1gine/Segunda_parte",
+      "anio": 2026,
+      "texto_autor": "José Eustasio Rivera",
+      "texto_titulo": "La vorágine",
+      "texto_anio": 1924
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (novela)",
+    "subtema": "Metáforas y visión ambivalente de la selva",
+    "dificultad": 3,
+    "contexto": "**Fragmento de _La vorágine_, José Eustasio Rivera (1924). Dominio público. Fuente: https://es.wikisource.org/wiki/La_vorágine/Segunda_parte**\n\n¡Oh, selva, esposa del silencio, madre de la soledad y de la neblina! ¿Qué hado maligno me dejó prisionero en tu cárcel verde? Los pabellones de tus ramajes, como inmensa bóveda, siempre están sobre mi cabeza, entre mi aspiración y el cielo claro, que sólo entreveo cuando tus copas estremecidas mueven su oleaje, a la hora de tus crepúsculos angustiosos. ¿Dónde estará la estrella querida que de tarde pasea las lomas? ¿Aquellos celajes de oro y múrice con que se viste el ángel de los ponientes, por qué no tiemblan en tu dombo? ¡Cuántas veces suspiró mi alma adivinando al través de tus laberintos el reflejo del astro que empurpura las lejanías, hacia el lado de mi país, donde hay llanuras inolvidables y cumbres de corona blanca, desde cuyos picachos me vi a la altura de las cordilleras! [...] ¡Tú me robaste el ensueño del horizonte y sólo tienes para mis ojos la monotonía de tu cenit, por donde pasa el plácido albor, que jamás alumbra las hojarascas de tus senos húmedos!\n\nTú eres la catedral de la pesadumbre, donde dioses desconocidos hablan a media voz, en el idioma de los murmullos, prometiendo longevidad a los árboles imponentes, contemporáneos del paraíso, que eran ya decanos cuando las primeras tribus aparecieron y esperan impasibles el hundimiento de los siglos venturosos. Tus vegetales forman sobre la tierra la poderosa familia que no se traiciona nunca. El abrazo que no pueden darse tus ramazones lo llevan las enredaderas y los bejucos, y eres solidaria hasta en el dolor de la hoja que cae. [...] Tú tienes la adustez de la fuerza cósmica y encarnas un misterio de la creación. No obstante, mi espíritu sólo se aviene con lo inestable, desde que soporta el peso de tu perpetuidad, y, más que a la encina de fornido gajo, aprendió a amar a la orquídea raquítica, porque es efímera como el hombre y marchitable como su ilusión.\n\n_Nota de contexto:_ Así comienza la segunda parte de la novela. Arturo Cova, el narrador, huyó de Bogotá y se internó en la selva amazónica, donde queda atrapado. Algunas ayudas: «celajes» = nubes de colores al atardecer; «múrice» = color púrpura; «dombo» = cúpula; «cenit» = punto del cielo que está justo encima de quien mira; «adustez» = severidad, dureza; «se aviene» = se acomoda, se pone de acuerdo.",
+    "estimulo": null,
+    "enunciado": "El narrador llama a la selva «cárcel verde», «catedral de la pesadumbre» y «poderosa familia que no se traiciona nunca». Con estas metáforas, el narrador",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "muestra que su opinión sobre la selva es completamente negativa.",
+        "correcta": false,
+        "explicacion": "Hay imágenes negativas («cárcel», «me robaste el ensueño del horizonte»), pero también de admiración: «familia que no se traiciona nunca», «solidaria hasta en el dolor de la hoja que cae», «encarnas un misterio de la creación». Por eso no es «completamente» negativa.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó a partir del primer párrafo sin tener en cuenta el segundo."
+      },
+      {
+        "clave": "B",
+        "texto": "presenta una visión ambivalente: la selva lo oprime y lo aísla, pero a la vez le parece grandiosa, sagrada y solidaria.",
+        "correcta": true,
+        "explicacion": "Las metáforas combinan dos valoraciones: «cárcel» y «pesadumbre» expresan encierro y tristeza; «catedral», «dioses desconocidos» y «familia que no se traiciona nunca» expresan grandeza, misterio y unión. La selva es a la vez prisión y templo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "describe con precisión científica la vegetación amazónica.",
+        "correcta": false,
+        "explicacion": "El texto no da datos ni clasificaciones: usa apóstrofes, exclamaciones, personificaciones y metáforas, recursos propios de la expresión lírica, no de la descripción científica.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió la abundancia de elementos naturales con un propósito informativo."
+      },
+      {
+        "clave": "D",
+        "texto": "busca convencer al lector de que hay que proteger la selva de la explotación.",
+        "correcta": false,
+        "explicacion": "En el fragmento no se habla de explotación ni de conservación; lo que se expresa es la experiencia interior del narrador frente a la selva. Es una lectura actual que el texto no respalda.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Proyectó una idea actual (la ecología) sin apoyo en el fragmento."
+      }
+    ],
+    "explicacion": "LEER: ubico las tres metáforas y los pasajes cercanos. COMPRENDER: se pide reconocer qué efecto logran estas estrategias. INTERPRETAR: «cárcel» y «pesadumbre» connotan encierro y tristeza; «catedral», «dioses», «familia que no se traiciona» connotan grandeza, lo sagrado y la solidaridad. REPRESENTAR: selva = prisión (−) + templo y familia (+) → ambivalencia. RAZONAR: A ignora lo positivo; C confunde lírica con ciencia; D atribuye un propósito ausente. RESOLVER: la opción B. VERIFICAR: la ambivalencia se confirma al final: el narrador reconoce la fuerza de la selva y aun así prefiere lo efímero («No obstante...»).",
+    "que_identificar": "Las connotaciones opuestas de las metáforas («cárcel» frente a «catedral» y «familia»).",
+    "que_revisar": "Metáfora, personificación y connotación; cómo varias imágenes construyen una valoración compleja.",
+    "refuerzo_ids": [
+      "LC-066",
+      "LC-080"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "texto:LC-T18",
+      "dominio_publico",
+      "literario",
+      "novela",
+      "literatura_colombiana",
+      "siglo_xx",
+      "estrategias_discursivas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-069",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Lo_fatal",
+      "anio": 2026,
+      "texto_autor": "Rubén Darío",
+      "texto_titulo": "Lo fatal",
+      "texto_anio": 1905
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "comprender",
+    "tema": "Texto literario (poema)",
+    "subtema": "Vocabulario en contexto: «pesadumbre»",
+    "dificultad": 1,
+    "contexto": "**Poema _Lo fatal_, Rubén Darío (1905). Dominio público. Fuente: https://es.wikisource.org/wiki/Lo_fatal**\n\nDichoso el árbol, que es apenas sensitivo,\ny más la piedra dura porque esa ya no siente,\npues no hay dolor más grande que el dolor de ser vivo,\nni mayor pesadumbre que la vida consciente.\n\nSer y no saber nada, y ser sin rumbo cierto,\ny el temor de haber sido y un futuro terror...\nY el espanto seguro de estar mañana muerto,\ny sufrir por la vida y por la sombra y por\n\nlo que no conocemos y apenas sospechamos,\ny la carne que tienta con sus frescos racimos,\ny la tumba que aguarda con sus fúnebres ramos,\n\n¡y no saber a dónde vamos,\nni de dónde venimos!...\n\n_Nota de contexto:_ Rubén Darío (1867-1916), poeta nicaragüense e iniciador del modernismo, cerró con este poema su libro _Cantos de vida y esperanza_ (1905). Casi todos los versos son alejandrinos (de catorce sílabas); los dos últimos son más cortos. Obsérvese que la oración de la segunda estrofa continúa en la tercera («y por / lo que no conocemos»). «Sensitivo» = capaz de sentir.",
+    "estimulo": null,
+    "enunciado": "En el verso «ni mayor pesadumbre que la vida consciente», la palabra «pesadumbre» significa",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "peso físico o carga material.",
+        "correcta": false,
+        "explicacion": "Aunque la palabra se forma a partir de «pesado», el verso es paralelo al anterior: «no hay dolor más grande [...] / ni mayor pesadumbre». Se habla de un sufrimiento interior, no de un peso material.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se guio por la raíz «peso» y tomó la palabra en sentido literal."
+      },
+      {
+        "clave": "B",
+        "texto": "pena, tristeza o aflicción.",
+        "correcta": true,
+        "explicacion": "El paralelismo con el verso anterior («no hay dolor más grande que el dolor de ser vivo») muestra que «pesadumbre» funciona como sinónimo de «dolor»: una pena del alma. Sustituyendo: «ni mayor pena que la vida consciente».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "pereza o falta de voluntad.",
+        "correcta": false,
+        "explicacion": "Nada en el poema alude a la pereza; todo el texto enumera motivos de sufrimiento («temor», «terror», «espanto», «sufrir»).",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió la palabra con otras de sonido parecido o respondió sin usar el contexto."
+      },
+      {
+        "clave": "D",
+        "texto": "miedo a la muerte.",
+        "correcta": false,
+        "explicacion": "El miedo a la muerte aparece después («el espanto seguro de estar mañana muerto»); en el verso 4, «pesadumbre» nombra el pesar general de la vida consciente, no un temor concreto.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un contenido de otra estrofa y lo atribuyó a la palabra consultada."
+      }
+    ],
+    "explicacion": "LEER: releo los versos 3 y 4, que forman una sola idea. COMPRENDER: se pregunta el significado de «pesadumbre» en ese verso. INTERPRETAR: los versos están construidos en paralelo: «no hay dolor más grande» / «ni mayor pesadumbre»; «pesadumbre» ocupa el lugar de «dolor». REPRESENTAR: dolor ≈ pesadumbre = pena. RAZONAR: A toma la raíz literal; C no tiene apoyo; D traslada una idea de otra estrofa. RESOLVER: la opción B. VERIFICAR: «ni mayor pena que la vida consciente» conserva el sentido del verso.",
+    "que_identificar": "El paralelismo entre «dolor» y «pesadumbre» en los versos 3 y 4.",
+    "que_revisar": "Uso del paralelismo y la sustitución para precisar el significado de una palabra.",
+    "refuerzo_ids": [
+      "LC-065",
+      "LC-073"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T19",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "modernismo",
+      "siglo_xx",
+      "vocabulario_epoca"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-070",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Lo_fatal",
+      "anio": 2026,
+      "texto_autor": "Rubén Darío",
+      "texto_titulo": "Lo fatal",
+      "texto_anio": 1905
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (poema)",
+    "subtema": "Relación entre enunciados: la gradación árbol-piedra-ser humano",
+    "dificultad": 2,
+    "contexto": "**Poema _Lo fatal_, Rubén Darío (1905). Dominio público. Fuente: https://es.wikisource.org/wiki/Lo_fatal**\n\nDichoso el árbol, que es apenas sensitivo,\ny más la piedra dura porque esa ya no siente,\npues no hay dolor más grande que el dolor de ser vivo,\nni mayor pesadumbre que la vida consciente.\n\nSer y no saber nada, y ser sin rumbo cierto,\ny el temor de haber sido y un futuro terror...\nY el espanto seguro de estar mañana muerto,\ny sufrir por la vida y por la sombra y por\n\nlo que no conocemos y apenas sospechamos,\ny la carne que tienta con sus frescos racimos,\ny la tumba que aguarda con sus fúnebres ramos,\n\n¡y no saber a dónde vamos,\nni de dónde venimos!...\n\n_Nota de contexto:_ Rubén Darío (1867-1916), poeta nicaragüense e iniciador del modernismo, cerró con este poema su libro _Cantos de vida y esperanza_ (1905). Casi todos los versos son alejandrinos (de catorce sílabas); los dos últimos son más cortos. Obsérvese que la oración de la segunda estrofa continúa en la tercera («y por / lo que no conocemos»). «Sensitivo» = capaz de sentir.",
+    "estimulo": null,
+    "enunciado": "En la primera estrofa, el poeta afirma que el árbol es dichoso, que la piedra lo es aún más y que la vida consciente es la mayor pesadumbre. ¿Qué relación establecen estos enunciados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Cuanto más grande y duradero es un ser, más feliz es.",
+        "correcta": false,
+        "explicacion": "El poema da explícitamente el criterio: el árbol es «apenas sensitivo» y la piedra «ya no siente». Lo que decide la dicha es la capacidad de sentir, no el tamaño ni la duración.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó una característica de los objetos (dureza, tamaño) en lugar del criterio que el poema declara."
+      },
+      {
+        "clave": "B",
+        "texto": "Los seres de la naturaleza sufren más que el ser humano.",
+        "correcta": false,
+        "explicacion": "Es lo contrario: «no hay dolor más grande que el dolor de ser vivo, / ni mayor pesadumbre que la vida consciente». El que más sufre es el ser consciente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la comparación del poema."
+      },
+      {
+        "clave": "C",
+        "texto": "El árbol y la piedra envidian la conciencia del ser humano.",
+        "correcta": false,
+        "explicacion": "El poema no atribuye sentimientos al árbol ni a la piedra; es el poeta quien los considera dichosos («Dichoso el árbol»), es decir, quien los envidia a ellos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó al árbol y a la piedra una actitud que el poema no les da."
+      },
+      {
+        "clave": "D",
+        "texto": "Cuanto menos puede sentir y ser consciente un ser, menos sufre; por eso el ser humano es el que más padece.",
+        "correcta": true,
+        "explicacion": "Hay una gradación: árbol («apenas sensitivo») → dichoso; piedra («ya no siente») → más dichosa; ser humano (vida «consciente») → mayor dolor. El conector «pues» introduce la razón: sentir y ser consciente es la fuente del dolor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo la primera estrofa fijándome en «apenas sensitivo», «ya no siente», «pues» y «consciente». COMPRENDER: se pide la relación entre los tres enunciados. INTERPRETAR: el grado de dicha es inverso al grado de sensibilidad. REPRESENTAR: piedra (0 sentir) > árbol (poco sentir) > humano (sentir y conciencia) en dicha; al revés en dolor. RAZONAR: A usa un criterio no mencionado; B invierte; C inventa una envidia. RESOLVER: la opción D. VERIFICAR: el «pues» del verso 3 presenta justamente la conciencia como causa del dolor.",
+    "que_identificar": "Las expresiones «apenas sensitivo», «ya no siente», «vida consciente» y el conector «pues».",
+    "que_revisar": "Comparaciones y gradaciones entre enunciados; conectores causales.",
+    "refuerzo_ids": [
+      "LC-071",
+      "LC-072"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T19",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "modernismo",
+      "siglo_xx",
+      "relaciones_entre_enunciados"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-071",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Lo_fatal",
+      "anio": 2026,
+      "texto_autor": "Rubén Darío",
+      "texto_titulo": "Lo fatal",
+      "texto_anio": 1905
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (poema)",
+    "subtema": "Función de los versos finales en la estructura del poema",
+    "dificultad": 2,
+    "contexto": "**Poema _Lo fatal_, Rubén Darío (1905). Dominio público. Fuente: https://es.wikisource.org/wiki/Lo_fatal**\n\nDichoso el árbol, que es apenas sensitivo,\ny más la piedra dura porque esa ya no siente,\npues no hay dolor más grande que el dolor de ser vivo,\nni mayor pesadumbre que la vida consciente.\n\nSer y no saber nada, y ser sin rumbo cierto,\ny el temor de haber sido y un futuro terror...\nY el espanto seguro de estar mañana muerto,\ny sufrir por la vida y por la sombra y por\n\nlo que no conocemos y apenas sospechamos,\ny la carne que tienta con sus frescos racimos,\ny la tumba que aguarda con sus fúnebres ramos,\n\n¡y no saber a dónde vamos,\nni de dónde venimos!...\n\n_Nota de contexto:_ Rubén Darío (1867-1916), poeta nicaragüense e iniciador del modernismo, cerró con este poema su libro _Cantos de vida y esperanza_ (1905). Casi todos los versos son alejandrinos (de catorce sílabas); los dos últimos son más cortos. Obsérvese que la oración de la segunda estrofa continúa en la tercera («y por / lo que no conocemos»). «Sensitivo» = capaz de sentir.",
+    "estimulo": null,
+    "enunciado": "Los dos últimos versos, «¡y no saber a dónde vamos, / ni de dónde venimos!...», cumplen en el poema la función de",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "introducir un tema nuevo, sin relación con lo anterior.",
+        "correcta": false,
+        "explicacion": "Los versos continúan la cadena de «y...» con que se enumeran los sufrimientos y retoman el «Ser y no saber nada» de la segunda estrofa; no cambian de tema.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se guio por el cambio de forma (versos más cortos) y creyó que cambiaba el tema."
+      },
+      {
+        "clave": "B",
+        "texto": "dar una respuesta tranquilizadora a las inquietudes del poema.",
+        "correcta": false,
+        "explicacion": "Son una exclamación de angustia que afirma precisamente la falta de respuesta: «no saber». No hay consuelo en ellos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que el final de un poema debe ser una conclusión positiva."
+      },
+      {
+        "clave": "C",
+        "texto": "cerrar la enumeración de motivos de angustia con el más profundo: la ignorancia sobre el origen y el destino humanos, que retoma el «no saber nada» de la segunda estrofa.",
+        "correcta": true,
+        "explicacion": "El poema acumula causas de sufrimiento unidas por «y» (el temor, el espanto de la muerte, la carne, la tumba) y culmina con la mayor: no saber de dónde venimos ni a dónde vamos. El verso más corto y la exclamación resaltan ese remate, que conecta con «Ser y no saber nada, y ser sin rumbo cierto».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "explicar que el poeta sufre porque está perdido en un viaje.",
+        "correcta": false,
+        "explicacion": "Es una lectura literal. «A dónde vamos» y «de dónde venimos» se refieren a la existencia humana (origen y destino), y el plural incluye a todos los seres humanos, no a un viajero extraviado.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó en sentido literal una expresión figurada."
+      }
+    ],
+    "explicacion": "LEER: releo el poema completo siguiendo la cadena de «y». COMPRENDER: se pregunta qué papel cumplen los dos versos finales dentro del conjunto. INTERPRETAR: el poema es una enumeración de causas de dolor; el cierre nombra la última y más radical: la ignorancia sobre el origen y el destino. REPRESENTAR: sentir → conciencia → temor → muerte → tentación → tumba → no saber de dónde venimos ni a dónde vamos (clímax). RAZONAR: A niega la continuidad; B inventa un consuelo; D lee literalmente. RESOLVER: la opción C. VERIFICAR: el «no saber» final repite el «no saber nada» del verso 5, lo que confirma su función de cierre.",
+    "que_identificar": "La repetición de «y» a lo largo del poema y el eco entre «Ser y no saber nada» y «¡y no saber a dónde vamos».",
+    "que_revisar": "Estructura de un poema: enumeración, gradación y función del cierre.",
+    "refuerzo_ids": [
+      "LC-070",
+      "LC-072"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T19",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "modernismo",
+      "siglo_xx",
+      "estructura"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-072",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Lo_fatal",
+      "anio": 2026,
+      "texto_autor": "Rubén Darío",
+      "texto_titulo": "Lo fatal",
+      "texto_anio": 1905
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece relaciones entre un texto y otros textos o enunciados",
+    "habilidad": "razonar",
+    "tema": "Texto literario (poema)",
+    "subtema": "Relación del poema con otros enunciados",
+    "dificultad": 3,
+    "contexto": "**Poema _Lo fatal_, Rubén Darío (1905). Dominio público. Fuente: https://es.wikisource.org/wiki/Lo_fatal**\n\nDichoso el árbol, que es apenas sensitivo,\ny más la piedra dura porque esa ya no siente,\npues no hay dolor más grande que el dolor de ser vivo,\nni mayor pesadumbre que la vida consciente.\n\nSer y no saber nada, y ser sin rumbo cierto,\ny el temor de haber sido y un futuro terror...\nY el espanto seguro de estar mañana muerto,\ny sufrir por la vida y por la sombra y por\n\nlo que no conocemos y apenas sospechamos,\ny la carne que tienta con sus frescos racimos,\ny la tumba que aguarda con sus fúnebres ramos,\n\n¡y no saber a dónde vamos,\nni de dónde venimos!...\n\n_Nota de contexto:_ Rubén Darío (1867-1916), poeta nicaragüense e iniciador del modernismo, cerró con este poema su libro _Cantos de vida y esperanza_ (1905). Casi todos los versos son alejandrinos (de catorce sílabas); los dos últimos son más cortos. Obsérvese que la oración de la segunda estrofa continúa en la tercera («y por / lo que no conocemos»). «Sensitivo» = capaz de sentir.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados expresa una idea más cercana a la del poema?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "«Quien añade ciencia, añade dolor» (Eclesiastés 1:18).",
+        "correcta": true,
+        "explicacion": "Ambos textos vinculan la conciencia o el conocimiento con el sufrimiento. En el poema, el ser más dichoso es el que no siente y «no hay [...] mayor pesadumbre que la vida consciente»: saber que se existe y que se va a morir es lo que duele.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "«Carpe diem»: aprovecha el día, porque la vida es breve.",
+        "correcta": false,
+        "explicacion": "El poema menciona «la carne que tienta con sus frescos racimos», pero como otro motivo de sufrimiento («y sufrir por [...] la carne que tienta»), no como invitación a gozar el presente.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó el tema de la muerte con una invitación al goce que el poema no hace."
+      },
+      {
+        "clave": "C",
+        "texto": "«Conócete a ti mismo»: el conocimiento de uno mismo conduce a la serenidad.",
+        "correcta": false,
+        "explicacion": "El poema sostiene lo contrario: la conciencia no trae serenidad sino «pesadumbre», «temor», «terror» y «espanto».",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el tema de la conciencia con una máxima conocida sin revisar si coinciden en su valoración."
+      },
+      {
+        "clave": "D",
+        "texto": "«Después de la tormenta llega la calma»: todo sufrimiento termina en paz.",
+        "correcta": false,
+        "explicacion": "El poema no ofrece consuelo: la tumba «aguarda con sus fúnebres ramos» y la muerte produce «espanto»; el final es una exclamación de angustia, no de calma.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que el poema ofrece una salida o consuelo que no está en el texto."
+      }
+    ],
+    "explicacion": "LEER: releo la primera estrofa, que enuncia la tesis del poema. COMPRENDER: se pide comparar la idea central del poema con otros enunciados. INTERPRETAR: para Darío, sentir y ser consciente es la fuente del dolor; la piedra, que no siente, es la más dichosa. REPRESENTAR: más conciencia → más dolor. RAZONAR: A establece la misma relación (más saber → más dolor); B y D proponen goce o consuelo, que el poema no da; C afirma que el autoconocimiento da serenidad, lo opuesto. RESOLVER: la opción A. VERIFICAR: el matiz del poema es que se sufre por ser consciente y, a la vez, por no poder saber lo esencial; el Eclesiastés comparte la idea central de que la conciencia trae dolor, mientras las otras opciones la contradicen.",
+    "que_identificar": "La tesis de la primera estrofa: la «vida consciente» es la mayor pesadumbre.",
+    "que_revisar": "Relaciones intertextuales: comparar la tesis de un texto con otros enunciados y descartar los que la contradicen.",
+    "refuerzo_ids": [
+      "LC-070",
+      "LC-084"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "texto:LC-T19",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "modernismo",
+      "siglo_xx",
+      "intertextualidad"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-073",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_pobre_viejecita",
+      "anio": 2026,
+      "texto_autor": "Rafael Pombo",
+      "texto_titulo": "La pobre viejecita",
+      "texto_anio": 1867
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "comprender",
+    "tema": "Texto literario (poema narrativo humorístico)",
+    "subtema": "Vocabulario de época en contexto: «antiparras»",
+    "dificultad": 1,
+    "contexto": "**Poema _La pobre viejecita_, Rafael Pombo (1867). Dominio público. Fuente: https://es.wikisource.org/wiki/La_pobre_viejecita**\n\nÉrase una viejecita\nSin nadita que comer\nSino carnes, frutas, dulces,\nTortas, huevos, pan y pez\nBebía caldo, chocolate,\nLeche, vino, té y café,\nY la pobre no encontraba\nQué comer ni qué beber.\nY esta vieja no tenía\nNi un ranchito en que vivir\nFuera de una casa grande\nCon su huerta y su jardín\nNadie, nadie la cuidaba\nSino Andrés y Juan y Gil\nY ocho criados y dos pajes\nDe librea y corbatín\nNunca tuvo en qué sentarse\nSino sillas y sofás\nCon banquitos y cojines\nY resorte al espaldar\nNi otra cama que una grande\nMás dorada que un altar,\nCon colchón de blanda pluma,\nMucha seda y mucho olán.\nY esta pobre viejecita\nCada año, hasta su fin,\nTuvo un año más de vieja\nY uno menos que vivir\nY al mirarse en el espejo\nLa espantaba siempre allí\nOtra vieja de antiparras,\nPapalina y peluquín.\nY esta pobre viejecita\nNo tenía que vestir\nSino trajes de mil cortes\nY de telas mil y mil.\nY a no ser por sus zapatos,\nChanclas, botas y escarpín,\nDescalcita por el suelo\nAnduviera la infeliz\nApetito nunca tuvo\nAcabando de comer,\nNi gozó salud completa\nCuando no se hallaba bien\nSe murió del mal de arrugas,\nYa encorvada como un tres,\nY jamás volvió a quejarse\nNi de hambre ni de sed.\nY esta pobre viejecita\nAl morir no dejó más\nQue onzas, joyas, tierras, casas,\nOcho gatos y un turpial\nDuerma en paz, y Dios permita\nQue logremos disfrutar\nLas pobrezas de esa pobre\nY morir del mismo mal.\n\n_Nota de contexto:_ Rafael Pombo (1833-1912), poeta bogotano, incluyó este poema en sus _Cuentos pintados para niños_ (1867). Algunas ayudas: «pajes» y «librea» = sirvientes de casas ricas y el uniforme que vestían; «olán» (holán) = tela fina de lino; «papalina» = gorro; «escarpín» = zapato ligero; «onzas» = monedas de oro; «turpial» = pájaro cantor.",
+    "estimulo": null,
+    "enunciado": "En los versos «Y al mirarse en el espejo / La espantaba siempre allí / Otra vieja de antiparras, / Papalina y peluquín», la palabra «antiparras» se refiere a",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "unas cejas muy pobladas.",
+        "correcta": false,
+        "explicacion": "La construcción «de antiparras, papalina y peluquín» enumera cosas que se llevan puestas (como «de librea y corbatín»), no rasgos del cuerpo. Nada en el texto habla de cejas.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Respondió por intuición sin usar las pistas del contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "un vestido antiguo pasado de moda.",
+        "correcta": false,
+        "explicacion": "Los vestidos aparecen en otra estrofa («trajes de mil cortes»). Aquí «antiparras» se enumera junto con un gorro («papalina») y una peluca («peluquín»), objetos que se ven en la cabeza y la cara al mirarse al espejo.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el prefijo «anti-» con «antiguo»."
+      },
+      {
+        "clave": "C",
+        "texto": "otra mujer que vivía en la casa con ella.",
+        "correcta": false,
+        "explicacion": "Confunde la palabra consultada con «otra vieja», que además no es otra persona: es el propio reflejo de la viejecita en el espejo. «Antiparras» es algo que esa figura lleva puesto.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No distinguió la palabra consultada de la «otra vieja», que es su propio reflejo."
+      },
+      {
+        "clave": "D",
+        "texto": "unos anteojos o gafas.",
+        "correcta": true,
+        "explicacion": "«Antiparras» es una forma antigua y coloquial de llamar a los anteojos. El contexto lo confirma: la viejecita se mira al espejo y ve una cara con anteojos, gorro («papalina») y peluca («peluquín»).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo la estrofa del espejo completa. COMPRENDER: se pide el significado de «antiparras». INTERPRETAR: «de antiparras, papalina y peluquín» enumera cosas que se llevan puestas en la cabeza y la cara; la «otra vieja» es su reflejo. REPRESENTAR: reflejo = cara con [antiparras] + gorro + peluca. RAZONAR: A y B no encajan con lo que se ve en un espejo junto a gorro y peluca; C confunde la palabra con la «otra vieja». RESOLVER: la opción D. VERIFICAR: «otra vieja de anteojos, gorro y peluca» mantiene la imagen humorística del poema.",
+    "que_identificar": "La enumeración «antiparras, papalina y peluquín» y la situación del espejo.",
+    "que_revisar": "Vocabulario de época: usar las palabras vecinas de una enumeración para deducir el significado.",
+    "refuerzo_ids": [
+      "LC-069",
+      "LC-081"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T20",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "humor",
+      "literatura_colombiana",
+      "siglo_xix",
+      "vocabulario_epoca"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-074",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_pobre_viejecita",
+      "anio": 2026,
+      "texto_autor": "Rafael Pombo",
+      "texto_titulo": "La pobre viejecita",
+      "texto_anio": 1867
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (poema narrativo humorístico)",
+    "subtema": "Relación de contradicción entre enunciados (negación y lista)",
+    "dificultad": 2,
+    "contexto": "**Poema _La pobre viejecita_, Rafael Pombo (1867). Dominio público. Fuente: https://es.wikisource.org/wiki/La_pobre_viejecita**\n\nÉrase una viejecita\nSin nadita que comer\nSino carnes, frutas, dulces,\nTortas, huevos, pan y pez\nBebía caldo, chocolate,\nLeche, vino, té y café,\nY la pobre no encontraba\nQué comer ni qué beber.\nY esta vieja no tenía\nNi un ranchito en que vivir\nFuera de una casa grande\nCon su huerta y su jardín\nNadie, nadie la cuidaba\nSino Andrés y Juan y Gil\nY ocho criados y dos pajes\nDe librea y corbatín\nNunca tuvo en qué sentarse\nSino sillas y sofás\nCon banquitos y cojines\nY resorte al espaldar\nNi otra cama que una grande\nMás dorada que un altar,\nCon colchón de blanda pluma,\nMucha seda y mucho olán.\nY esta pobre viejecita\nCada año, hasta su fin,\nTuvo un año más de vieja\nY uno menos que vivir\nY al mirarse en el espejo\nLa espantaba siempre allí\nOtra vieja de antiparras,\nPapalina y peluquín.\nY esta pobre viejecita\nNo tenía que vestir\nSino trajes de mil cortes\nY de telas mil y mil.\nY a no ser por sus zapatos,\nChanclas, botas y escarpín,\nDescalcita por el suelo\nAnduviera la infeliz\nApetito nunca tuvo\nAcabando de comer,\nNi gozó salud completa\nCuando no se hallaba bien\nSe murió del mal de arrugas,\nYa encorvada como un tres,\nY jamás volvió a quejarse\nNi de hambre ni de sed.\nY esta pobre viejecita\nAl morir no dejó más\nQue onzas, joyas, tierras, casas,\nOcho gatos y un turpial\nDuerma en paz, y Dios permita\nQue logremos disfrutar\nLas pobrezas de esa pobre\nY morir del mismo mal.\n\n_Nota de contexto:_ Rafael Pombo (1833-1912), poeta bogotano, incluyó este poema en sus _Cuentos pintados para niños_ (1867). Algunas ayudas: «pajes» y «librea» = sirvientes de casas ricas y el uniforme que vestían; «olán» (holán) = tela fina de lino; «papalina» = gorro; «escarpín» = zapato ligero; «onzas» = monedas de oro; «turpial» = pájaro cantor.",
+    "estimulo": null,
+    "enunciado": "En los versos «Érase una viejecita / Sin nadita que comer / Sino carnes, frutas, dulces, / Tortas, huevos, pan y pez», la relación entre «sin nadita que comer» y la lista que sigue es",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "de causa: la viejecita no tenía qué comer porque solo tenía esos alimentos.",
+        "correcta": false,
+        "explicacion": "La lista no explica una carencia: la contradice. «Sino» significa «excepto»: no le faltaba nada salvo lo que sí tenía en abundancia.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó «sino» como explicación y no como corrección de lo dicho."
+      },
+      {
+        "clave": "B",
+        "texto": "de contradicción: primero se afirma una carencia y luego se enumera una abundancia que la desmiente, recurso que se repite en todo el poema.",
+        "correcta": true,
+        "explicacion": "«Sin nadita que comer / Sino carnes, frutas, dulces...» niega y luego desmiente con una lista generosa. El mismo esquema reaparece: «no tenía / Ni un ranchito [...] / Fuera de una casa grande», «Nadie, nadie la cuidaba / Sino Andrés y Juan y Gil / Y ocho criados». Ese contraste produce el humor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "de ejemplificación: la lista muestra los alimentos que le faltaban.",
+        "correcta": false,
+        "explicacion": "«Sino» equivale a «excepto»: los alimentos de la lista son los que sí tenía. El resto del poema confirma su riqueza (casa grande, ocho criados, joyas).",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "No comprendió el valor de «sino» (= excepto, salvo)."
+      },
+      {
+        "clave": "D",
+        "texto": "de consecuencia: por comer tanto, la viejecita se enfermó.",
+        "correcta": false,
+        "explicacion": "El poema no dice que enfermara por comer; dice que murió «del mal de arrugas», es decir, de vieja.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Añadió una relación de causa y efecto que el texto no establece."
+      }
+    ],
+    "explicacion": "LEER: releo los cuatro primeros versos y busco estructuras parecidas en el resto del poema. COMPRENDER: se pregunta qué relación hay entre una negación y la lista que la sigue. INTERPRETAR: «sino» (= excepto) introduce una enumeración de abundancia que desmiente la carencia. REPRESENTAR: «sin nada» + «sino [mucho]» = contradicción humorística. RAZONAR: A y D inventan causas o consecuencias; C invierte el sentido de «sino». RESOLVER: la opción B. VERIFICAR: el esquema se repite con la casa («ni un ranchito [...] fuera de una casa grande») y con los criados, lo que confirma que es el recurso central.",
+    "que_identificar": "El valor de «sino» y «fuera de» (= excepto) y la repetición del esquema negación + abundancia.",
+    "que_revisar": "Relaciones entre enunciados: contradicción, causa, consecuencia y ejemplificación; conectores de excepción.",
+    "refuerzo_ids": [
+      "LC-075",
+      "LC-076"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T20",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "humor",
+      "literatura_colombiana",
+      "siglo_xix",
+      "relaciones_entre_enunciados"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-075",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_pobre_viejecita",
+      "anio": 2026,
+      "texto_autor": "Rafael Pombo",
+      "texto_titulo": "La pobre viejecita",
+      "texto_anio": 1867
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (poema narrativo humorístico)",
+    "subtema": "La voz que cierra el poema",
+    "dificultad": 2,
+    "contexto": "**Poema _La pobre viejecita_, Rafael Pombo (1867). Dominio público. Fuente: https://es.wikisource.org/wiki/La_pobre_viejecita**\n\nÉrase una viejecita\nSin nadita que comer\nSino carnes, frutas, dulces,\nTortas, huevos, pan y pez\nBebía caldo, chocolate,\nLeche, vino, té y café,\nY la pobre no encontraba\nQué comer ni qué beber.\nY esta vieja no tenía\nNi un ranchito en que vivir\nFuera de una casa grande\nCon su huerta y su jardín\nNadie, nadie la cuidaba\nSino Andrés y Juan y Gil\nY ocho criados y dos pajes\nDe librea y corbatín\nNunca tuvo en qué sentarse\nSino sillas y sofás\nCon banquitos y cojines\nY resorte al espaldar\nNi otra cama que una grande\nMás dorada que un altar,\nCon colchón de blanda pluma,\nMucha seda y mucho olán.\nY esta pobre viejecita\nCada año, hasta su fin,\nTuvo un año más de vieja\nY uno menos que vivir\nY al mirarse en el espejo\nLa espantaba siempre allí\nOtra vieja de antiparras,\nPapalina y peluquín.\nY esta pobre viejecita\nNo tenía que vestir\nSino trajes de mil cortes\nY de telas mil y mil.\nY a no ser por sus zapatos,\nChanclas, botas y escarpín,\nDescalcita por el suelo\nAnduviera la infeliz\nApetito nunca tuvo\nAcabando de comer,\nNi gozó salud completa\nCuando no se hallaba bien\nSe murió del mal de arrugas,\nYa encorvada como un tres,\nY jamás volvió a quejarse\nNi de hambre ni de sed.\nY esta pobre viejecita\nAl morir no dejó más\nQue onzas, joyas, tierras, casas,\nOcho gatos y un turpial\nDuerma en paz, y Dios permita\nQue logremos disfrutar\nLas pobrezas de esa pobre\nY morir del mismo mal.\n\n_Nota de contexto:_ Rafael Pombo (1833-1912), poeta bogotano, incluyó este poema en sus _Cuentos pintados para niños_ (1867). Algunas ayudas: «pajes» y «librea» = sirvientes de casas ricas y el uniforme que vestían; «olán» (holán) = tela fina de lino; «papalina» = gorro; «escarpín» = zapato ligero; «onzas» = monedas de oro; «turpial» = pájaro cantor.",
+    "estimulo": null,
+    "enunciado": "En la última estrofa, la voz del poema dice: «Duerma en paz, y Dios permita / Que logremos disfrutar / Las pobrezas de esa pobre / Y morir del mismo mal». Con estas palabras, esa voz",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "se incluye junto con los lectores («logremos») y desea, con humor, tener las mismas riquezas de la viejecita y morir de vejez como ella.",
+        "correcta": true,
+        "explicacion": "«Logremos» es primera persona del plural: la voz habla por sí y por el lector. Las «pobrezas» son, en realidad, «onzas, joyas, tierras, casas», y el «mal» del que murió es el «mal de arrugas», la vejez. Desearlas es un chiste que confirma la ironía de todo el poema.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "lamenta con sinceridad que la viejecita haya muerto pobre y enferma.",
+        "correcta": false,
+        "explicacion": "Justo antes se dice que «no dejó más / Que onzas, joyas, tierras, casas»; y su «mal» fue envejecer. «Pobrezas» y «pobre» se usan irónicamente.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó al pie de la letra las palabras «pobre», «pobrezas» y «mal»."
+      },
+      {
+        "clave": "C",
+        "texto": "le cede la palabra a la viejecita, que habla desde la tumba.",
+        "correcta": false,
+        "explicacion": "La viejecita nunca habla en el poema; en la estrofa se la nombra en tercera persona («esa pobre»), y el «logremos» corresponde a quien narra junto con los lectores.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No identificó a quién corresponde la primera persona del plural."
+      },
+      {
+        "clave": "D",
+        "texto": "pide a Dios que castigue a la viejecita por haberse quejado tanto.",
+        "correcta": false,
+        "explicacion": "«Duerma en paz» es un deseo de descanso, no de castigo, y lo que se pide a Dios es algo para «nosotros»: disfrutar lo mismo que ella.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a la voz una intención de castigo sin apoyo en el texto."
+      }
+    ],
+    "explicacion": "LEER: releo la última estrofa junto con la anterior («Al morir no dejó más / Que onzas, joyas, tierras, casas»). COMPRENDER: se pregunta quién habla y qué expresa. INTERPRETAR: «logremos» incluye al narrador y a los lectores; «pobrezas» = riquezas; «mismo mal» = vejez. REPRESENTAR: voz + lectores → desean las «pobrezas» (riquezas) y la muerte por vejez de la viejecita. RAZONAR: B lee literalmente; C atribuye la voz a la viejecita; D inventa un castigo. RESOLVER: la opción A. VERIFICAR: el deseo final solo tiene sentido si «pobreza» es ironía, lo que concuerda con el resto del poema.",
+    "que_identificar": "La primera persona plural («logremos») y el uso irónico de «pobrezas» y «mal».",
+    "que_revisar": "Voces en el texto: quién habla, a quién incluye y en qué tono; reconocimiento de la ironía.",
+    "refuerzo_ids": [
+      "LC-074",
+      "LC-067"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T20",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "humor",
+      "literatura_colombiana",
+      "siglo_xix",
+      "voces",
+      "ironia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-076",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/La_pobre_viejecita",
+      "anio": 2026,
+      "texto_autor": "Rafael Pombo",
+      "texto_titulo": "La pobre viejecita",
+      "texto_anio": 1867
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (poema narrativo humorístico)",
+    "subtema": "Contenido valorativo del poema: la ironía sobre la «pobreza»",
+    "dificultad": 3,
+    "contexto": "**Poema _La pobre viejecita_, Rafael Pombo (1867). Dominio público. Fuente: https://es.wikisource.org/wiki/La_pobre_viejecita**\n\nÉrase una viejecita\nSin nadita que comer\nSino carnes, frutas, dulces,\nTortas, huevos, pan y pez\nBebía caldo, chocolate,\nLeche, vino, té y café,\nY la pobre no encontraba\nQué comer ni qué beber.\nY esta vieja no tenía\nNi un ranchito en que vivir\nFuera de una casa grande\nCon su huerta y su jardín\nNadie, nadie la cuidaba\nSino Andrés y Juan y Gil\nY ocho criados y dos pajes\nDe librea y corbatín\nNunca tuvo en qué sentarse\nSino sillas y sofás\nCon banquitos y cojines\nY resorte al espaldar\nNi otra cama que una grande\nMás dorada que un altar,\nCon colchón de blanda pluma,\nMucha seda y mucho olán.\nY esta pobre viejecita\nCada año, hasta su fin,\nTuvo un año más de vieja\nY uno menos que vivir\nY al mirarse en el espejo\nLa espantaba siempre allí\nOtra vieja de antiparras,\nPapalina y peluquín.\nY esta pobre viejecita\nNo tenía que vestir\nSino trajes de mil cortes\nY de telas mil y mil.\nY a no ser por sus zapatos,\nChanclas, botas y escarpín,\nDescalcita por el suelo\nAnduviera la infeliz\nApetito nunca tuvo\nAcabando de comer,\nNi gozó salud completa\nCuando no se hallaba bien\nSe murió del mal de arrugas,\nYa encorvada como un tres,\nY jamás volvió a quejarse\nNi de hambre ni de sed.\nY esta pobre viejecita\nAl morir no dejó más\nQue onzas, joyas, tierras, casas,\nOcho gatos y un turpial\nDuerma en paz, y Dios permita\nQue logremos disfrutar\nLas pobrezas de esa pobre\nY morir del mismo mal.\n\n_Nota de contexto:_ Rafael Pombo (1833-1912), poeta bogotano, incluyó este poema en sus _Cuentos pintados para niños_ (1867). Algunas ayudas: «pajes» y «librea» = sirvientes de casas ricas y el uniforme que vestían; «olán» (holán) = tela fina de lino; «papalina» = gorro; «escarpín» = zapato ligero; «onzas» = monedas de oro; «turpial» = pájaro cantor.",
+    "estimulo": null,
+    "enunciado": "¿Qué valoración se desprende del poema en su conjunto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Critica duramente a los ricos por explotar a sus criados.",
+        "correcta": false,
+        "explicacion": "Los criados («ocho criados y dos pajes») aparecen solo como parte de las comodidades de la viejecita; no se muestra ninguna explotación y el tono es juguetón, no de denuncia.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó una crítica social explícita donde solo hay ironía sobre la abundancia."
+      },
+      {
+        "clave": "B",
+        "texto": "Expresa compasión por la soledad y el abandono que sufren los ancianos.",
+        "correcta": false,
+        "explicacion": "«Nadie, nadie la cuidaba» se desmiente de inmediato: «Sino Andrés y Juan y Gil / Y ocho criados y dos pajes». El abandono es una negación irónica.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con las frases negativas sin leer lo que las desmiente."
+      },
+      {
+        "clave": "C",
+        "texto": "Se burla con humor de llamar «pobre» a quien lo tiene todo: sus únicas desgracias reales, envejecer y morir, son las que le tocan a cualquier persona.",
+        "correcta": true,
+        "explicacion": "Cada supuesta carencia se desmiente con abundancia, y los únicos males verdaderos son universales: «Tuvo un año más de vieja / Y uno menos que vivir», «Se murió del mal de arrugas». La palabra «pobre» queda en ridículo, y el deseo final de compartir sus «pobrezas» remata la burla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Enseña que el dinero es la única fuente de la felicidad.",
+        "correcta": false,
+        "explicacion": "El poema no presenta a la viejecita como feliz ni formula esa moraleja; el deseo final de disfrutar sus «pobrezas» es un chiste, no una tesis general sobre la felicidad.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió el deseo humorístico final en una enseñanza general."
+      }
+    ],
+    "explicacion": "LEER: recorro el poema completo identificando cada «carencia» y lo que la desmiente. COMPRENDER: se pregunta por la valoración global del texto. INTERPRETAR: la repetición de «pobre viejecita» junto a listas de riqueza produce ironía; sus únicas desgracias (vejez y muerte) son comunes a todos. REPRESENTAR: «pobre» (dicho) ↔ rica (mostrado) → burla del adjetivo. RAZONAR: A y D sacan tesis que el texto no formula; B toma en serio un abandono que se desmiente. RESOLVER: la opción C. VERIFICAR: el cierre («Dios permita / Que logremos disfrutar / Las pobrezas de esa pobre») solo es gracioso si se entiende la ironía, lo que confirma la valoración.",
+    "que_identificar": "La contradicción constante entre el adjetivo «pobre» y la riqueza enumerada, y los males universales (vejez, muerte).",
+    "que_revisar": "Contenidos valorativos e ironía: distinguir burla, denuncia, compasión y moraleja.",
+    "refuerzo_ids": [
+      "LC-074",
+      "LC-075"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "texto:LC-T20",
+      "dominio_publico",
+      "literario",
+      "poesia",
+      "humor",
+      "literatura_colombiana",
+      "siglo_xix",
+      "ironia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-077",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/El_Matadero",
+      "anio": 2026,
+      "texto_autor": "Esteban Echeverría",
+      "texto_titulo": "El matadero",
+      "texto_anio": 1871
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Identifica los eventos narrados de manera explícita en un texto (literario, descriptivo, caricatura o cómic) y los personajes involucrados",
+    "habilidad": "leer",
+    "tema": "Texto literario (relato)",
+    "subtema": "Información explícita del relato",
+    "dificultad": 1,
+    "contexto": "**Fragmento de _El matadero_, Esteban Echeverría (escrito hacia 1839; publicado en 1871). Dominio público. Fuente: https://es.wikisource.org/wiki/El_Matadero**\n\nEn efecto, el decimosexto día de la carestía, víspera del día de Dolores, entró a nado por el paso de Burgos al matadero del Alto una tropa de cincuenta novillos gordos; cosa poca por cierto para una población acostumbrada a consumir diariamente de 250 a 300, y cuya tercera parte al menos gozaría del fuero eclesiástico de alimentarse con carne. ¡Cosa extraña que haya estómagos privilegiados y estómagos sujetos a leyes inviolables y que la Iglesia tenga la llave de los estómagos!\n\nPero no es extraño, supuesto que el diablo con la carne suele meterse en el cuerpo y que la Iglesia tiene el poder de conjurarlo: el caso es reducir al hombre a una máquina cuyo móvil principal no sea su voluntad sino la de la Iglesia y el gobierno. Quizá llegue el día en que sea prohibido respirar aire libre, pasearse y hasta conversar con un amigo, sin permiso de autoridad competente. Así era, poco más o menos, en los felices tiempos de nuestros beatos abuelos que por desgracia vino a turbar la revolución de Mayo.\n\nSea como fuere; a la noticia de la providencia gubernativa, los corrales del Alto se llenaron, a pesar del barro, de carniceros, achuradores y curiosos, quienes recibieron con grandes vociferaciones y palmoteos los cincuenta novillos destinados al matadero.\n\n—Chica, pero gorda —exclamaban—. ¡Viva la Federación! ¡Viva el Restaurador!\n\nPorque han de saber los lectores que en aquel tiempo la Federación estaba en todas partes, hasta entre las inmundicias del matadero, y no había fiesta sin Restaurador como no hay sermón sin San Agustín. Cuentan que al oír tan desaforados gritos las últimas ratas que agonizaban de hambre en sus cuevas, se reanimaron y echaron a correr desatentadas conociendo que volvían a aquellos lugares la acostumbrada alegría y la algazara precursora de abundancia.\n\n_Nota de contexto:_ Esteban Echeverría (1805-1851), escritor argentino, se opuso al gobernador de Buenos Aires Juan Manuel de Rosas, a quien sus partidarios, los «federales», llamaban «el Restaurador»; sus adversarios eran los «unitarios». El relato ocurre en Cuaresma, cuando la Iglesia prohibía comer carne salvo a quienes tenían permiso. Una inundación había dejado a la ciudad quince días sin ganado, hasta que el gobierno ordenó por decreto que se trajeran reses a los corrales. «Fuero» = privilegio; «achuradores» = quienes recogen las vísceras (achuras) de las reses; la revolución de Mayo (1810) inició la independencia argentina.",
+    "estimulo": null,
+    "enunciado": "Según el narrador, la llegada de cincuenta novillos al matadero era «cosa poca» porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "la ciudad solía consumir diariamente entre 250 y 300 reses.",
+        "correcta": true,
+        "explicacion": "El texto lo dice de forma explícita: «cosa poca por cierto para una población acostumbrada a consumir diariamente de 250 a 300».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "los novillos llegaron flacos y débiles después de cruzar el agua.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: eran «cincuenta novillos gordos», y la multitud grita «Chica, pero gorda».",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso el estado de los animales por el esfuerzo de nadar, sin leer el adjetivo «gordos»."
+      },
+      {
+        "clave": "C",
+        "texto": "la Iglesia prohibía comer carne durante todo el año.",
+        "correcta": false,
+        "explicacion": "La prohibición es propia de la Cuaresma (se habla de la «víspera del día de Dolores»), no de todo el año; además, la razón que da el texto para llamarla «cosa poca» es la comparación con el consumo diario.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcló información de la nota con la pregunta sin ubicar la causa que da el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "la tercera parte de la población no podía comer carne.",
+        "correcta": false,
+        "explicacion": "Se invierte el sentido: la tercera parte «gozaría del fuero eclesiástico de alimentarse con carne», es decir, tenía el privilegio de comerla.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No entendió «gozar del fuero» (tener un privilegio) y leyó una prohibición."
+      }
+    ],
+    "explicacion": "LEER: ubico la expresión «cosa poca» en la primera oración. COMPRENDER: se pregunta por qué el narrador considera escasos los cincuenta novillos. INTERPRETAR: la oración misma da la razón: la población consumía de 250 a 300 reses al día. REPRESENTAR: 50 llegados frente a 250-300 diarios. RAZONAR: B contradice «gordos»; C generaliza la Cuaresma; D invierte «gozaría del fuero». RESOLVER: la opción A. VERIFICAR: releo la oración y confirmo que «cosa poca» va seguida de «para una población acostumbrada a consumir diariamente de 250 a 300».",
+    "que_identificar": "La oración «cosa poca por cierto para una población acostumbrada a consumir diariamente de 250 a 300».",
+    "que_revisar": "Localizar información explícita y leer con cuidado los adjetivos y las expresiones de privilegio o prohibición.",
+    "refuerzo_ids": [
+      "LC-078",
+      "LC-079"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T21",
+      "dominio_publico",
+      "literario",
+      "cuento",
+      "ironia",
+      "siglo_xix",
+      "informacion_explicita"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-078",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/El_Matadero",
+      "anio": 2026,
+      "texto_autor": "Esteban Echeverría",
+      "texto_titulo": "El matadero",
+      "texto_anio": 1871
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (relato)",
+    "subtema": "Vocabulario de época en contexto: «providencia gubernativa»",
+    "dificultad": 2,
+    "contexto": "**Fragmento de _El matadero_, Esteban Echeverría (escrito hacia 1839; publicado en 1871). Dominio público. Fuente: https://es.wikisource.org/wiki/El_Matadero**\n\nEn efecto, el decimosexto día de la carestía, víspera del día de Dolores, entró a nado por el paso de Burgos al matadero del Alto una tropa de cincuenta novillos gordos; cosa poca por cierto para una población acostumbrada a consumir diariamente de 250 a 300, y cuya tercera parte al menos gozaría del fuero eclesiástico de alimentarse con carne. ¡Cosa extraña que haya estómagos privilegiados y estómagos sujetos a leyes inviolables y que la Iglesia tenga la llave de los estómagos!\n\nPero no es extraño, supuesto que el diablo con la carne suele meterse en el cuerpo y que la Iglesia tiene el poder de conjurarlo: el caso es reducir al hombre a una máquina cuyo móvil principal no sea su voluntad sino la de la Iglesia y el gobierno. Quizá llegue el día en que sea prohibido respirar aire libre, pasearse y hasta conversar con un amigo, sin permiso de autoridad competente. Así era, poco más o menos, en los felices tiempos de nuestros beatos abuelos que por desgracia vino a turbar la revolución de Mayo.\n\nSea como fuere; a la noticia de la providencia gubernativa, los corrales del Alto se llenaron, a pesar del barro, de carniceros, achuradores y curiosos, quienes recibieron con grandes vociferaciones y palmoteos los cincuenta novillos destinados al matadero.\n\n—Chica, pero gorda —exclamaban—. ¡Viva la Federación! ¡Viva el Restaurador!\n\nPorque han de saber los lectores que en aquel tiempo la Federación estaba en todas partes, hasta entre las inmundicias del matadero, y no había fiesta sin Restaurador como no hay sermón sin San Agustín. Cuentan que al oír tan desaforados gritos las últimas ratas que agonizaban de hambre en sus cuevas, se reanimaron y echaron a correr desatentadas conociendo que volvían a aquellos lugares la acostumbrada alegría y la algazara precursora de abundancia.\n\n_Nota de contexto:_ Esteban Echeverría (1805-1851), escritor argentino, se opuso al gobernador de Buenos Aires Juan Manuel de Rosas, a quien sus partidarios, los «federales», llamaban «el Restaurador»; sus adversarios eran los «unitarios». El relato ocurre en Cuaresma, cuando la Iglesia prohibía comer carne salvo a quienes tenían permiso. Una inundación había dejado a la ciudad quince días sin ganado, hasta que el gobierno ordenó por decreto que se trajeran reses a los corrales. «Fuero» = privilegio; «achuradores» = quienes recogen las vísceras (achuras) de las reses; la revolución de Mayo (1810) inició la independencia argentina.",
+    "estimulo": null,
+    "enunciado": "En la frase «a la noticia de la providencia gubernativa, los corrales del Alto se llenaron», la expresión «providencia gubernativa» significa",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "la intervención de Dios en favor del gobierno.",
+        "correcta": false,
+        "explicacion": "«Providencia» puede referirse al cuidado de Dios, pero aquí la califica «gubernativa» (del gobierno). La nota informa que el gobierno ordenó por decreto traer reses: esa orden es la «noticia» que llena los corrales.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Conocía solo el sentido religioso de «providencia» y no lo ajustó al contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "la previsión del gobierno de guardar carne antes de la inundación.",
+        "correcta": false,
+        "explicacion": "No hubo reservas: la ciudad pasó quince días sin ganado y los novillos «entraron a nado» el día dieciséis. «Providencia» aquí no es previsión anticipada sino la medida tomada durante la carestía.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó «providencia» con «prever» y construyó una historia que el texto no cuenta."
+      },
+      {
+        "clave": "C",
+        "texto": "la medida o disposición dictada por el gobierno (la orden de traer ganado).",
+        "correcta": true,
+        "explicacion": "En el lenguaje administrativo de la época, una «providencia» es una resolución o disposición de la autoridad. «Gubernativa» indica que la dictó el gobierno; su «noticia» hace que carniceros y curiosos acudan a los corrales.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "la procesión religiosa organizada por el gobierno.",
+        "correcta": false,
+        "explicacion": "En el fragmento no hay ninguna procesión; lo que se anuncia y provoca que los corrales se llenen es la llegada de ganado ordenada por el gobierno.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió una opción asociada al ambiente religioso del texto sin comprobarla."
+      }
+    ],
+    "explicacion": "LEER: releo la frase y la nota («el gobierno ordenó por decreto que se trajeran reses»). COMPRENDER: se pide el significado de «providencia gubernativa». INTERPRETAR: «gubernativa» = del gobierno; lo que se anuncia es la orden de traer ganado; «providencia» = disposición, medida. REPRESENTAR: decreto del gobierno → noticia → corrales llenos. RAZONAR: A usa el sentido religioso; B inventa una reserva previa; D inventa una procesión. RESOLVER: la opción C. VERIFICAR: «a la noticia de la medida del gobierno, los corrales se llenaron» conserva el sentido.",
+    "que_identificar": "El adjetivo «gubernativa» y la información de la nota sobre el decreto.",
+    "que_revisar": "Palabras polisémicas y de época: elegir la acepción que exige el contexto (religiosa frente a administrativa).",
+    "refuerzo_ids": [
+      "LC-065",
+      "LC-077"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T21",
+      "dominio_publico",
+      "literario",
+      "cuento",
+      "ironia",
+      "siglo_xix",
+      "vocabulario_epoca"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-079",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/El_Matadero",
+      "anio": 2026,
+      "texto_autor": "Esteban Echeverría",
+      "texto_titulo": "El matadero",
+      "texto_anio": 1871
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (relato)",
+    "subtema": "Actitud valorativa del narrador frente al culto al Restaurador",
+    "dificultad": 2,
+    "contexto": "**Fragmento de _El matadero_, Esteban Echeverría (escrito hacia 1839; publicado en 1871). Dominio público. Fuente: https://es.wikisource.org/wiki/El_Matadero**\n\nEn efecto, el decimosexto día de la carestía, víspera del día de Dolores, entró a nado por el paso de Burgos al matadero del Alto una tropa de cincuenta novillos gordos; cosa poca por cierto para una población acostumbrada a consumir diariamente de 250 a 300, y cuya tercera parte al menos gozaría del fuero eclesiástico de alimentarse con carne. ¡Cosa extraña que haya estómagos privilegiados y estómagos sujetos a leyes inviolables y que la Iglesia tenga la llave de los estómagos!\n\nPero no es extraño, supuesto que el diablo con la carne suele meterse en el cuerpo y que la Iglesia tiene el poder de conjurarlo: el caso es reducir al hombre a una máquina cuyo móvil principal no sea su voluntad sino la de la Iglesia y el gobierno. Quizá llegue el día en que sea prohibido respirar aire libre, pasearse y hasta conversar con un amigo, sin permiso de autoridad competente. Así era, poco más o menos, en los felices tiempos de nuestros beatos abuelos que por desgracia vino a turbar la revolución de Mayo.\n\nSea como fuere; a la noticia de la providencia gubernativa, los corrales del Alto se llenaron, a pesar del barro, de carniceros, achuradores y curiosos, quienes recibieron con grandes vociferaciones y palmoteos los cincuenta novillos destinados al matadero.\n\n—Chica, pero gorda —exclamaban—. ¡Viva la Federación! ¡Viva el Restaurador!\n\nPorque han de saber los lectores que en aquel tiempo la Federación estaba en todas partes, hasta entre las inmundicias del matadero, y no había fiesta sin Restaurador como no hay sermón sin San Agustín. Cuentan que al oír tan desaforados gritos las últimas ratas que agonizaban de hambre en sus cuevas, se reanimaron y echaron a correr desatentadas conociendo que volvían a aquellos lugares la acostumbrada alegría y la algazara precursora de abundancia.\n\n_Nota de contexto:_ Esteban Echeverría (1805-1851), escritor argentino, se opuso al gobernador de Buenos Aires Juan Manuel de Rosas, a quien sus partidarios, los «federales», llamaban «el Restaurador»; sus adversarios eran los «unitarios». El relato ocurre en Cuaresma, cuando la Iglesia prohibía comer carne salvo a quienes tenían permiso. Una inundación había dejado a la ciudad quince días sin ganado, hasta que el gobierno ordenó por decreto que se trajeran reses a los corrales. «Fuero» = privilegio; «achuradores» = quienes recogen las vísceras (achuras) de las reses; la revolución de Mayo (1810) inició la independencia argentina.",
+    "estimulo": null,
+    "enunciado": "Después de citar los gritos «¡Viva la Federación! ¡Viva el Restaurador!», el narrador comenta que «la Federación estaba en todas partes, hasta entre las inmundicias del matadero». Este comentario revela que el narrador",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "comparte el entusiasmo de la multitud por el Restaurador.",
+        "correcta": false,
+        "explicacion": "Los vivas son de los carniceros, no del narrador. Él pone a la Federación junto a las «inmundicias» y compara su presencia con un lugar común («como no hay sermón sin San Agustín»): se distancia, no se entusiasma.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó los vivas citados como opinión del narrador sin distinguir su voz de la de los personajes."
+      },
+      {
+        "clave": "B",
+        "texto": "informa con neutralidad sobre la organización política de Buenos Aires.",
+        "correcta": false,
+        "explicacion": "Palabras como «inmundicias», «desaforados gritos» y la imagen de las ratas que se reaniman con la algazara cargan un juicio; no es un informe neutral.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No advirtió la carga valorativa del vocabulario."
+      },
+      {
+        "clave": "C",
+        "texto": "critica a los carniceros por trabajar en un lugar sucio.",
+        "correcta": false,
+        "explicacion": "El blanco del comentario no es la higiene sino la omnipresencia política: la suciedad sirve para rebajar a la Federación, que está «hasta» allí.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en la suciedad literal y no en lo que la comparación le hace a la Federación."
+      },
+      {
+        "clave": "D",
+        "texto": "se burla del culto al Restaurador, pues asocia la Federación con la suciedad y la muestra presente hasta en los lugares más bajos.",
+        "correcta": true,
+        "explicacion": "El «hasta» subraya que la Federación invade incluso las «inmundicias»; la comparación con San Agustín presenta los vivas como una rutina obligada; y las ratas que «se reanimaron» con los gritos ridiculizan la celebración.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo el grito citado y el párrafo que lo comenta. COMPRENDER: se pregunta qué actitud revela el comentario del narrador. INTERPRETAR: el narrador distingue su voz de la multitud y asocia la Federación con «inmundicias»; la comparación con San Agustín y las ratas refuerzan la burla. REPRESENTAR: vivas (voz de los personajes) ↔ comentario burlón (voz del narrador). RAZONAR: A confunde las voces; B ignora la carga valorativa; C se queda en lo literal. RESOLVER: la opción D. VERIFICAR: la nota confirma que Echeverría se oponía a Rosas, lo que concuerda con la burla.",
+    "que_identificar": "La palabra «hasta», el término «inmundicias», la comparación con San Agustín y la imagen de las ratas.",
+    "que_revisar": "Contenidos valorativos: distinguir la voz del narrador de las voces citadas y reconocer la burla.",
+    "refuerzo_ids": [
+      "LC-080",
+      "LC-067"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T21",
+      "dominio_publico",
+      "literario",
+      "cuento",
+      "ironia",
+      "siglo_xix",
+      "voces",
+      "ironia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-080",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/El_Matadero",
+      "anio": 2026,
+      "texto_autor": "Esteban Echeverría",
+      "texto_titulo": "El matadero",
+      "texto_anio": 1871
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (relato)",
+    "subtema": "Estrategia discursiva: la ironía («por desgracia»)",
+    "dificultad": 3,
+    "contexto": "**Fragmento de _El matadero_, Esteban Echeverría (escrito hacia 1839; publicado en 1871). Dominio público. Fuente: https://es.wikisource.org/wiki/El_Matadero**\n\nEn efecto, el decimosexto día de la carestía, víspera del día de Dolores, entró a nado por el paso de Burgos al matadero del Alto una tropa de cincuenta novillos gordos; cosa poca por cierto para una población acostumbrada a consumir diariamente de 250 a 300, y cuya tercera parte al menos gozaría del fuero eclesiástico de alimentarse con carne. ¡Cosa extraña que haya estómagos privilegiados y estómagos sujetos a leyes inviolables y que la Iglesia tenga la llave de los estómagos!\n\nPero no es extraño, supuesto que el diablo con la carne suele meterse en el cuerpo y que la Iglesia tiene el poder de conjurarlo: el caso es reducir al hombre a una máquina cuyo móvil principal no sea su voluntad sino la de la Iglesia y el gobierno. Quizá llegue el día en que sea prohibido respirar aire libre, pasearse y hasta conversar con un amigo, sin permiso de autoridad competente. Así era, poco más o menos, en los felices tiempos de nuestros beatos abuelos que por desgracia vino a turbar la revolución de Mayo.\n\nSea como fuere; a la noticia de la providencia gubernativa, los corrales del Alto se llenaron, a pesar del barro, de carniceros, achuradores y curiosos, quienes recibieron con grandes vociferaciones y palmoteos los cincuenta novillos destinados al matadero.\n\n—Chica, pero gorda —exclamaban—. ¡Viva la Federación! ¡Viva el Restaurador!\n\nPorque han de saber los lectores que en aquel tiempo la Federación estaba en todas partes, hasta entre las inmundicias del matadero, y no había fiesta sin Restaurador como no hay sermón sin San Agustín. Cuentan que al oír tan desaforados gritos las últimas ratas que agonizaban de hambre en sus cuevas, se reanimaron y echaron a correr desatentadas conociendo que volvían a aquellos lugares la acostumbrada alegría y la algazara precursora de abundancia.\n\n_Nota de contexto:_ Esteban Echeverría (1805-1851), escritor argentino, se opuso al gobernador de Buenos Aires Juan Manuel de Rosas, a quien sus partidarios, los «federales», llamaban «el Restaurador»; sus adversarios eran los «unitarios». El relato ocurre en Cuaresma, cuando la Iglesia prohibía comer carne salvo a quienes tenían permiso. Una inundación había dejado a la ciudad quince días sin ganado, hasta que el gobierno ordenó por decreto que se trajeran reses a los corrales. «Fuero» = privilegio; «achuradores» = quienes recogen las vísceras (achuras) de las reses; la revolución de Mayo (1810) inició la independencia argentina.",
+    "estimulo": null,
+    "enunciado": "Al final del segundo párrafo, el narrador habla de «los felices tiempos de nuestros beatos abuelos que por desgracia vino a turbar la revolución de Mayo». Teniendo en cuenta lo que dice justo antes, esta frase debe leerse como",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "un elogio sincero de la época colonial, cuando se obedecía a la Iglesia.",
+        "correcta": false,
+        "explicacion": "Justo antes, el narrador denuncia que se busca «reducir al hombre a una máquina» sin voluntad propia y teme que se prohíba «respirar aire libre». Quien critica eso no puede elogiar en serio una época así.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó literalmente «felices» y «por desgracia»."
+      },
+      {
+        "clave": "B",
+        "texto": "una ironía: dice lo contrario de lo que piensa, pues valora la revolución de Mayo porque trajo la libertad que ese orden quiere suprimir.",
+        "correcta": true,
+        "explicacion": "El narrador acaba de criticar la sumisión a «la Iglesia y el gobierno» y de imaginar la prohibición de «respirar aire libre». Luego dice que así era en los «felices tiempos» que «por desgracia» terminó la revolución. Como el contexto contradice esas palabras, «felices» y «por desgracia» significan lo opuesto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "una crítica a la revolución de Mayo por haber causado la inundación.",
+        "correcta": false,
+        "explicacion": "El texto no relaciona la revolución con la inundación; la inundación se menciona en la nota como causa de la escasez de ganado.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó hechos distintos del relato sin apoyo textual."
+      },
+      {
+        "clave": "D",
+        "texto": "una cita de los predicadores federales que el narrador reproduce sin comentar.",
+        "correcta": false,
+        "explicacion": "No hay comillas ni guion de diálogo: la frase pertenece al narrador («nuestros beatos abuelos») y forma parte de su comentario.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No distinguió la voz del narrador de las voces que cita."
+      }
+    ],
+    "explicacion": "LEER: releo el segundo párrafo completo. COMPRENDER: se pregunta cómo interpretar «felices tiempos» y «por desgracia». INTERPRETAR: el narrador critica que el hombre sea «una máquina» obediente y teme perder la libertad; por eso no puede lamentar en serio el fin de ese orden. REPRESENTAR: lo que dice (felices / por desgracia) ↔ lo que piensa (opresivos / por fortuna) = ironía. RAZONAR: A lee literalmente; C inventa una causa; D atribuye la frase a otros. RESOLVER: la opción B. VERIFICAR: la nota confirma que el autor se oponía a Rosas y que la revolución de Mayo inició la independencia, lo que respalda la lectura irónica.",
+    "que_identificar": "La contradicción entre la crítica a «reducir al hombre a una máquina» y las palabras «felices» y «por desgracia».",
+    "que_revisar": "La ironía como estrategia discursiva: comparar lo dicho con el contexto para descubrir el sentido opuesto.",
+    "refuerzo_ids": [
+      "LC-079",
+      "LC-068"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "texto:LC-T21",
+      "dominio_publico",
+      "literario",
+      "cuento",
+      "ironia",
+      "siglo_xix",
+      "estrategias_discursivas",
+      "ironia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-081",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Vuelva_usted_ma%C3%B1ana",
+      "anio": 2026,
+      "texto_autor": "Mariano José de Larra",
+      "texto_titulo": "Vuelva usted mañana",
+      "texto_anio": 1833
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "comprender",
+    "tema": "Texto argumentativo (artículo de costumbres)",
+    "subtema": "Vocabulario de época en contexto: «harto»",
+    "dificultad": 1,
+    "contexto": "**Fragmento de _Vuelva usted mañana_, Mariano José de Larra (1833). Dominio público. Fuente: https://es.wikisource.org/wiki/Vuelva_usted_mañana**\n\n_Contexto:_ En este artículo, el narrador, que firma como Fígaro, acompaña durante seis meses a un francés, monsieur Sans-délai, que quiere invertir su dinero en Madrid; tras muchas demoras, la oficina del gobierno le niega el permiso. Un «personaje muy grave y muy patriótico» defiende la negativa y remata:\n\n—Con esas socaliñas vienen a sacarnos la sangre.\n\n—Señor mío —exclamé, sin llevar más adelante mi paciencia—, está usted en un error harto general. Usted es como muchos que tienen la diabólica manía de empezar siempre por poner obstáculos a todo lo bueno, y el que pueda que los venza. Aquí tenemos el loco orgullo de no saber nada, de quererlo adivinar todo y no reconocer maestros. Las naciones que han tenido, ya que no el saber, deseos de él, no han encontrado otro remedio que el de recurrir a los que sabían más que ellas. Un extranjero —seguí— que corre a un país que le es desconocido, para arriesgar en él sus caudales, pone en circulación un capital nuevo, contribuye a la sociedad, a quien hace un inmenso beneficio con su talento y su dinero, si pierde es un héroe; si gana es muy justo que logre el premio de su trabajo, pues nos proporciona ventajas que no podíamos acarrearnos solos. Ese extranjero que se establece en este país, no viene a sacar de él el dinero, como usted supone; necesariamente se establece y se arraiga en él, y a la vuelta de media docena de años, ni es extranjero ya ni puede serlo; sus más caros intereses y su familia le ligan al nuevo país que ha adoptado; toma cariño al suelo donde ha hecho su fortuna, al pueblo donde ha escogido una compañera; sus hijos son españoles, y sus nietos lo serán; en vez de extraer el dinero, ha venido a dejar un capital suyo que traía, invirtiéndole y haciéndole producir; ha dejado otro capital de talento, que vale por lo menos tanto como el del dinero; ha dado de comer a los pocos o muchos naturales de quien ha tenido necesariamente que valerse; ha hecho una mejora, y hasta ha contribuido al aumento de la población con su nueva familia.\n\n_Nota:_ «socaliñas» = artimañas para sacarle algo a alguien; «caudales» = dinero, bienes; «caros» = queridos; «naturales» = personas nacidas en el país.",
+    "estimulo": null,
+    "enunciado": "Cuando Fígaro dice «está usted en un error harto general», la expresión «harto general» significa",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "cansado y aburrido.",
+        "correcta": false,
+        "explicacion": "Hoy «harto» suele significar «cansado de algo», pero aquí modifica al adjetivo «general» y funciona como «muy» o «bastante».",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Conocía solo el sentido actual de «harto» (cansado de algo)."
+      },
+      {
+        "clave": "B",
+        "texto": "muy extendido o bastante común.",
+        "correcta": true,
+        "explicacion": "«Harto» es aquí un adverbio de cantidad (= muy, bastante). Lo confirma la oración siguiente: «Usted es como muchos que tienen la diabólica manía...»: el error es común a muchos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "propio de los militares de alto rango.",
+        "correcta": false,
+        "explicacion": "En la frase, «general» es un adjetivo que califica al error (común, extendido), no el sustantivo que nombra un grado militar.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó «general» como sustantivo (grado militar)."
+      },
+      {
+        "clave": "D",
+        "texto": "exagerado y difícil de creer.",
+        "correcta": false,
+        "explicacion": "Nada en el pasaje apunta a exageración; Fígaro explica que el error lo comparten «muchos», es decir, que es común.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un significado que encaja con el tono de discusión sin verificarlo en el texto."
+      }
+    ],
+    "explicacion": "LEER: releo la frase y la siguiente («Usted es como muchos...»). COMPRENDER: se pide el significado de «harto general». INTERPRETAR: «harto» modifica a «general», por tanto intensifica: «muy general»; la oración siguiente habla de «muchos». REPRESENTAR: harto = muy; general = extendido. RAZONAR: A usa el sentido actual; C cambia la categoría de «general»; D no tiene apoyo. RESOLVER: la opción B. VERIFICAR: «está usted en un error muy común» conserva el sentido.",
+    "que_identificar": "La función de «harto» delante de un adjetivo y la pista «como muchos».",
+    "que_revisar": "Vocabulario de época: palabras que cambian de uso con el tiempo («harto» = muy).",
+    "refuerzo_ids": [
+      "LC-073",
+      "LC-082"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T22",
+      "dominio_publico",
+      "argumentativo",
+      "articulo_costumbres",
+      "siglo_xix",
+      "vocabulario_epoca"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-082",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Vuelva_usted_ma%C3%B1ana",
+      "anio": 2026,
+      "texto_autor": "Mariano José de Larra",
+      "texto_titulo": "Vuelva usted mañana",
+      "texto_anio": 1833
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las ideas o afirmaciones presentes en un texto informativo",
+    "habilidad": "comprender",
+    "tema": "Texto argumentativo (artículo de costumbres)",
+    "subtema": "Tesis del texto argumentativo",
+    "dificultad": 2,
+    "contexto": "**Fragmento de _Vuelva usted mañana_, Mariano José de Larra (1833). Dominio público. Fuente: https://es.wikisource.org/wiki/Vuelva_usted_mañana**\n\n_Contexto:_ En este artículo, el narrador, que firma como Fígaro, acompaña durante seis meses a un francés, monsieur Sans-délai, que quiere invertir su dinero en Madrid; tras muchas demoras, la oficina del gobierno le niega el permiso. Un «personaje muy grave y muy patriótico» defiende la negativa y remata:\n\n—Con esas socaliñas vienen a sacarnos la sangre.\n\n—Señor mío —exclamé, sin llevar más adelante mi paciencia—, está usted en un error harto general. Usted es como muchos que tienen la diabólica manía de empezar siempre por poner obstáculos a todo lo bueno, y el que pueda que los venza. Aquí tenemos el loco orgullo de no saber nada, de quererlo adivinar todo y no reconocer maestros. Las naciones que han tenido, ya que no el saber, deseos de él, no han encontrado otro remedio que el de recurrir a los que sabían más que ellas. Un extranjero —seguí— que corre a un país que le es desconocido, para arriesgar en él sus caudales, pone en circulación un capital nuevo, contribuye a la sociedad, a quien hace un inmenso beneficio con su talento y su dinero, si pierde es un héroe; si gana es muy justo que logre el premio de su trabajo, pues nos proporciona ventajas que no podíamos acarrearnos solos. Ese extranjero que se establece en este país, no viene a sacar de él el dinero, como usted supone; necesariamente se establece y se arraiga en él, y a la vuelta de media docena de años, ni es extranjero ya ni puede serlo; sus más caros intereses y su familia le ligan al nuevo país que ha adoptado; toma cariño al suelo donde ha hecho su fortuna, al pueblo donde ha escogido una compañera; sus hijos son españoles, y sus nietos lo serán; en vez de extraer el dinero, ha venido a dejar un capital suyo que traía, invirtiéndole y haciéndole producir; ha dejado otro capital de talento, que vale por lo menos tanto como el del dinero; ha dado de comer a los pocos o muchos naturales de quien ha tenido necesariamente que valerse; ha hecho una mejora, y hasta ha contribuido al aumento de la población con su nueva familia.\n\n_Nota:_ «socaliñas» = artimañas para sacarle algo a alguien; «caudales» = dinero, bienes; «caros» = queridos; «naturales» = personas nacidas en el país.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la idea principal que Fígaro defiende frente a su interlocutor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las naciones deben cerrar sus puertas a los extranjeros para proteger a sus habitantes.",
+        "correcta": false,
+        "explicacion": "Esa es, más bien, la postura del «personaje muy grave» («vienen a sacarnos la sangre»). Fígaro defiende lo contrario: recibir a los extranjeros que invierten.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la posición de Fígaro con la del interlocutor al que responde."
+      },
+      {
+        "clave": "B",
+        "texto": "Los extranjeros que invierten siempre ganan dinero, por lo que no necesitan ayuda.",
+        "correcta": false,
+        "explicacion": "Fígaro contempla que pueda perder («si pierde es un héroe»); su argumento no dice que siempre ganen ni habla de ayuda.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un detalle del texto y lo convirtió en afirmación absoluta."
+      },
+      {
+        "clave": "C",
+        "texto": "Los españoles deben emigrar a otros países para aprender de ellos.",
+        "correcta": false,
+        "explicacion": "El texto dice que las naciones recurren «a los que sabían más que ellas», es decir, los atraen; no propone que los españoles emigren.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generalizó la idea de aprender de otros sin fijarse en la dirección que propone el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "El extranjero que invierte en el país no le quita riqueza, sino que lo beneficia con su capital, su talento y su arraigo.",
+        "correcta": true,
+        "explicacion": "Fígaro refuta a su interlocutor: el extranjero «no viene a sacar de él el dinero, como usted supone»; «pone en circulación un capital nuevo», deja «otro capital de talento», da trabajo a los «naturales» y se arraiga con su familia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo la objeción («vienen a sacarnos la sangre») y la respuesta de Fígaro. COMPRENDER: se pide la tesis que defiende Fígaro. INTERPRETAR: toda la respuesta enumera beneficios del extranjero inversor y niega que se lleve el dinero. REPRESENTAR: tesis = el extranjero beneficia; razones = capital, talento, empleo, arraigo. RAZONAR: A es la postura contraria; B absolutiza un detalle; C invierte la dirección. RESOLVER: la opción D. VERIFICAR: la frase «no viene a sacar de él el dinero, como usted supone» resume la tesis y responde a la objeción.",
+    "que_identificar": "La objeción inicial y la frase «no viene a sacar de él el dinero, como usted supone».",
+    "que_revisar": "Identificar tesis y argumentos en un texto argumentativo; distinguir la postura del autor de la que refuta.",
+    "refuerzo_ids": [
+      "LC-083",
+      "LC-084"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T22",
+      "dominio_publico",
+      "argumentativo",
+      "articulo_costumbres",
+      "siglo_xix",
+      "tesis"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-083",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Vuelva_usted_ma%C3%B1ana",
+      "anio": 2026,
+      "texto_autor": "Mariano José de Larra",
+      "texto_titulo": "Vuelva usted mañana",
+      "texto_anio": 1833
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (artículo de costumbres)",
+    "subtema": "Función de una parte del argumento",
+    "dificultad": 2,
+    "contexto": "**Fragmento de _Vuelva usted mañana_, Mariano José de Larra (1833). Dominio público. Fuente: https://es.wikisource.org/wiki/Vuelva_usted_mañana**\n\n_Contexto:_ En este artículo, el narrador, que firma como Fígaro, acompaña durante seis meses a un francés, monsieur Sans-délai, que quiere invertir su dinero en Madrid; tras muchas demoras, la oficina del gobierno le niega el permiso. Un «personaje muy grave y muy patriótico» defiende la negativa y remata:\n\n—Con esas socaliñas vienen a sacarnos la sangre.\n\n—Señor mío —exclamé, sin llevar más adelante mi paciencia—, está usted en un error harto general. Usted es como muchos que tienen la diabólica manía de empezar siempre por poner obstáculos a todo lo bueno, y el que pueda que los venza. Aquí tenemos el loco orgullo de no saber nada, de quererlo adivinar todo y no reconocer maestros. Las naciones que han tenido, ya que no el saber, deseos de él, no han encontrado otro remedio que el de recurrir a los que sabían más que ellas. Un extranjero —seguí— que corre a un país que le es desconocido, para arriesgar en él sus caudales, pone en circulación un capital nuevo, contribuye a la sociedad, a quien hace un inmenso beneficio con su talento y su dinero, si pierde es un héroe; si gana es muy justo que logre el premio de su trabajo, pues nos proporciona ventajas que no podíamos acarrearnos solos. Ese extranjero que se establece en este país, no viene a sacar de él el dinero, como usted supone; necesariamente se establece y se arraiga en él, y a la vuelta de media docena de años, ni es extranjero ya ni puede serlo; sus más caros intereses y su familia le ligan al nuevo país que ha adoptado; toma cariño al suelo donde ha hecho su fortuna, al pueblo donde ha escogido una compañera; sus hijos son españoles, y sus nietos lo serán; en vez de extraer el dinero, ha venido a dejar un capital suyo que traía, invirtiéndole y haciéndole producir; ha dejado otro capital de talento, que vale por lo menos tanto como el del dinero; ha dado de comer a los pocos o muchos naturales de quien ha tenido necesariamente que valerse; ha hecho una mejora, y hasta ha contribuido al aumento de la población con su nueva familia.\n\n_Nota:_ «socaliñas» = artimañas para sacarle algo a alguien; «caudales» = dinero, bienes; «caros» = queridos; «naturales» = personas nacidas en el país.",
+    "estimulo": null,
+    "enunciado": "En el argumento de Fígaro, la parte que dice «a la vuelta de media docena de años, ni es extranjero ya ni puede serlo; [...] sus hijos son españoles, y sus nietos lo serán» cumple la función de",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "refutar la objeción de que el extranjero viene a llevarse el dinero, mostrando que termina arraigándose en el país.",
+        "correcta": true,
+        "explicacion": "El pasaje empieza negando la objeción («no viene a sacar de él el dinero, como usted supone») y la sustenta con el arraigo: intereses, familia, cariño al suelo, hijos y nietos españoles. Quien se queda no se lleva la riqueza.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "narrar la historia personal de monsieur Sans-délai.",
+        "correcta": false,
+        "explicacion": "Fígaro habla de «un extranjero» en general y en términos hipotéticos («sus nietos lo serán»); según el contexto, Sans-délai ni siquiera consiguió el permiso para quedarse.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que el ejemplo se refiere al personaje del artículo."
+      },
+      {
+        "clave": "C",
+        "texto": "conceder que el interlocutor tiene razón en parte.",
+        "correcta": false,
+        "explicacion": "No hay ninguna concesión («aunque», «es cierto que»); el pasaje contradice de frente lo que el interlocutor «supone».",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "No identificó que el pasaje responde directamente a la objeción."
+      },
+      {
+        "clave": "D",
+        "texto": "introducir una definición legal de quién es extranjero.",
+        "correcta": false,
+        "explicacion": "El argumento se apoya en vínculos afectivos y familiares («toma cariño al suelo», «ha escogido una compañera»), no en leyes o requisitos jurídicos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó la frase «ni es extranjero ya» en sentido jurídico."
+      }
+    ],
+    "explicacion": "LEER: releo el pasaje con la oración que lo introduce («no viene a sacar de él el dinero, como usted supone»). COMPRENDER: se pregunta qué papel cumple esa parte en el argumento. INTERPRETAR: el arraigo del extranjero (familia, cariño, descendencia) demuestra que no se lleva el dinero. REPRESENTAR: objeción (se lleva el dinero) → refutación (se queda y se arraiga). RAZONAR: B lo toma como anécdota; C ve una concesión inexistente; D lo lee como definición legal. RESOLVER: la opción A. VERIFICAR: el pasaje termina con «en vez de extraer el dinero, ha venido a dejar un capital suyo», que cierra la refutación.",
+    "que_identificar": "La expresión «como usted supone», que marca la objeción que se refuta, y las pruebas del arraigo.",
+    "que_revisar": "Estructura argumentativa: tesis, objeción, refutación y concesión; función de cada parte.",
+    "refuerzo_ids": [
+      "LC-082",
+      "LC-066"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T22",
+      "dominio_publico",
+      "argumentativo",
+      "articulo_costumbres",
+      "siglo_xix",
+      "estructura_argumentativa"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-084",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público",
+      "url": "https://es.wikisource.org/wiki/Vuelva_usted_ma%C3%B1ana",
+      "anio": 2026,
+      "texto_autor": "Mariano José de Larra",
+      "texto_titulo": "Vuelva usted mañana",
+      "texto_anio": 1833
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (artículo de costumbres)",
+    "subtema": "Validez de un argumento: qué lo debilitaría",
+    "dificultad": 3,
+    "contexto": "**Fragmento de _Vuelva usted mañana_, Mariano José de Larra (1833). Dominio público. Fuente: https://es.wikisource.org/wiki/Vuelva_usted_mañana**\n\n_Contexto:_ En este artículo, el narrador, que firma como Fígaro, acompaña durante seis meses a un francés, monsieur Sans-délai, que quiere invertir su dinero en Madrid; tras muchas demoras, la oficina del gobierno le niega el permiso. Un «personaje muy grave y muy patriótico» defiende la negativa y remata:\n\n—Con esas socaliñas vienen a sacarnos la sangre.\n\n—Señor mío —exclamé, sin llevar más adelante mi paciencia—, está usted en un error harto general. Usted es como muchos que tienen la diabólica manía de empezar siempre por poner obstáculos a todo lo bueno, y el que pueda que los venza. Aquí tenemos el loco orgullo de no saber nada, de quererlo adivinar todo y no reconocer maestros. Las naciones que han tenido, ya que no el saber, deseos de él, no han encontrado otro remedio que el de recurrir a los que sabían más que ellas. Un extranjero —seguí— que corre a un país que le es desconocido, para arriesgar en él sus caudales, pone en circulación un capital nuevo, contribuye a la sociedad, a quien hace un inmenso beneficio con su talento y su dinero, si pierde es un héroe; si gana es muy justo que logre el premio de su trabajo, pues nos proporciona ventajas que no podíamos acarrearnos solos. Ese extranjero que se establece en este país, no viene a sacar de él el dinero, como usted supone; necesariamente se establece y se arraiga en él, y a la vuelta de media docena de años, ni es extranjero ya ni puede serlo; sus más caros intereses y su familia le ligan al nuevo país que ha adoptado; toma cariño al suelo donde ha hecho su fortuna, al pueblo donde ha escogido una compañera; sus hijos son españoles, y sus nietos lo serán; en vez de extraer el dinero, ha venido a dejar un capital suyo que traía, invirtiéndole y haciéndole producir; ha dejado otro capital de talento, que vale por lo menos tanto como el del dinero; ha dado de comer a los pocos o muchos naturales de quien ha tenido necesariamente que valerse; ha hecho una mejora, y hasta ha contribuido al aumento de la población con su nueva familia.\n\n_Nota:_ «socaliñas» = artimañas para sacarle algo a alguien; «caudales» = dinero, bienes; «caros» = queridos; «naturales» = personas nacidas en el país.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes hechos, de ser cierto, debilitaría más el argumento de Fígaro?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Algunos extranjeros pierden el dinero que invierten en sus negocios.",
+        "correcta": false,
+        "explicacion": "Fígaro ya contempla esa posibilidad («si pierde es un héroe») y la integra a su argumento: aun perdiendo, el extranjero dejó su capital en el país. No lo debilita.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "No notó que el argumento ya contempla esa posibilidad."
+      },
+      {
+        "clave": "B",
+        "texto": "Los hijos de los extranjeros nacidos en el país hablan la lengua local.",
+        "correcta": false,
+        "explicacion": "Este hecho apoya la idea del arraigo («sus hijos son españoles»); no la debilita.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió un dato que respalda el argumento con uno que lo debilita."
+      },
+      {
+        "clave": "C",
+        "texto": "La mayoría de los inversionistas extranjeros regresan a su país con sus ganancias pocos años después, sin formar familia ni contratar trabajadores locales.",
+        "correcta": true,
+        "explicacion": "El argumento se apoya en que el extranjero «necesariamente se establece y se arraiga», no extrae el dinero y «ha dado de comer» a los naturales. Si la mayoría se fuera con las ganancias y sin emplear a nadie, caerían esas premisas y ganaría fuerza la objeción de que «vienen a sacarnos la sangre».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Muchos funcionarios del país tardan meses en resolver los trámites.",
+        "correcta": false,
+        "explicacion": "Esto describe el problema de la lentitud que el artículo satiriza, pero no toca el argumento sobre los beneficios de la inversión extranjera.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un hecho relacionado con el tema general del artículo, no con el argumento evaluado."
+      }
+    ],
+    "explicacion": "LEER: identifico las premisas del argumento: el extranjero se arraiga, no se lleva el dinero, deja capital y talento y da trabajo. COMPRENDER: se pide el hecho que más lo debilitaría. INTERPRETAR: debilita el argumento lo que niegue sus premisas centrales. REPRESENTAR: premisas (arraigo + empleo + no extracción) → conclusión (beneficia al país); C niega las tres. RAZONAR: A ya está contemplada; B apoya; D es irrelevante para este argumento. RESOLVER: la opción C. VERIFICAR: si C fuera cierta, la objeción del interlocutor («vienen a sacarnos la sangre») quedaría mejor sustentada que la respuesta de Fígaro.",
+    "que_identificar": "Las premisas en que se apoya la conclusión: «necesariamente se establece y se arraiga», «ha dado de comer a los [...] naturales».",
+    "que_revisar": "Evaluar la validez de un argumento: distinguir datos que lo apoyan, lo debilitan o son irrelevantes.",
+    "refuerzo_ids": [
+      "LC-082",
+      "LC-083",
+      "LC-072"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "texto:LC-T22",
+      "dominio_publico",
+      "argumentativo",
+      "articulo_costumbres",
+      "siglo_xix",
+      "validez_argumentos"
+    ],
+    "estado": "aprobada"
+  }
+]

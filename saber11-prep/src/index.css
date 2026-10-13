@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Letra un poco más grande en toda la app (todas las medidas rem crecen) */
+  html { -webkit-text-size-adjust: 100%; font-size: 17px; }
+  @media (min-width: 768px) { html { font-size: 17.5px; } }
+  body {
+    @apply bg-dark-900 text-gray-100 font-sans antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow-x: hidden;
+  }
+  .prosa, .prosa p, .card, main { overflow-wrap: anywhere; word-break: break-word; }
+  h1, h2, h3 { @apply text-brand-navy; letter-spacing: -0.01em; }
+  ::-webkit-scrollbar { @apply w-1.5; }
+  ::-webkit-scrollbar-track { @apply bg-dark-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-dark-600 rounded-full; }
+  button, [role="button"] { -webkit-tap-highlight-color: transparent; }
+}
+
+@layer components {
+  .card { @apply bg-dark-800 rounded-2xl border border-dark-700 p-4 shadow-sm shadow-slate-200/60; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-brand-blue text-[#fff] hover:bg-sky-500 shadow-md shadow-sky-200; }
+  .btn-secondary { @apply btn bg-dark-800 text-brand-navy border border-dark-600 hover:border-brand-blue hover:text-brand-blue; }
+  .btn-ghost { @apply btn text-gray-400 hover:bg-dark-700; }
+  .input { @apply w-full rounded-xl bg-dark-800 border border-dark-600 px-3 py-2.5 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-brand-blue focus:ring-2 focus:ring-sky-100; }
+  .label { @apply block text-xs font-semibold uppercase tracking-wide text-gray-400 mb-1; }
+  .badge { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium; }
+  .opcion { @apply w-full text-left rounded-xl border-2 border-dark-700 bg-dark-800 px-4 py-3 text-[15px] hover:border-brand-blue transition-colors; }
+  .opcion-elegida { @apply border-brand-blue bg-sky-50; }
+  .opcion-correcta { @apply border-brand-green bg-emerald-50; }
+  .opcion-incorrecta { @apply border-brand-red bg-red-50; }
+  .prosa p { @apply mb-2 leading-relaxed; }
+  .prosa strong { @apply text-brand-navy font-semibold; }
+  .titulo-contorno { -webkit-text-stroke: 2px #1FA9EC; color: transparent; }
+}
+
+/* Impresión (modo papel): fondo blanco, sin navegación */
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  .no-print { display: none !important; }
+  .card { border: 1px solid #999; background: #fff; color: #000; break-inside: avoid; box-shadow: none; }
+  .opcion { border: 1px solid #999; background: #fff; color: #000; }
+}

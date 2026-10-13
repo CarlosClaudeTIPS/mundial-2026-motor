@@ -1,0 +1,1428 @@
+[
+  {
+    "id": "ING-161",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Herramientas del hogar: ladder (escalera de mano)",
+    "dificultad": 1,
+    "contexto": "Description: **You use this to climb up to a high place, for example to pick fruit from a tree or to paint the top of a wall. You can carry it from one place to another.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "ladder",
+        "correcta": true,
+        "explicacion": "Una \"ladder\" (escalera de mano) sirve para subir a un lugar alto (\"climb up to a high place\"), se usa para recoger fruta o pintar la parte alta de una pared, y se puede transportar (\"carry it from one place to another\"). Las tres pistas coinciden con este objeto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "stairs",
+        "correcta": false,
+        "explicacion": "Las \"stairs\" (escaleras de un edificio) también sirven para subir, pero están fijas en la construcción: nadie las lleva de un lugar a otro ni las usa para recoger fruta de un árbol. Quien elige esta opción tradujo \"escalera\" sin leer la pista \"carry it\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las dos palabras inglesas para \"escalera\" sin atender a la pista de que se puede cargar."
+      },
+      {
+        "clave": "C",
+        "texto": "roof",
+        "correcta": false,
+        "explicacion": "El \"roof\" (techo) es un lugar alto de la casa, pero no es un objeto que se use para subir ni que se pueda cargar. Quien elige esta opción se fijó en \"high place\" y en \"paint\" y no en que la descripción habla de algo que se usa para trepar.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció \"high place\" con el techo sin notar que se describe una herramienta para subir."
+      }
+    ],
+    "explicacion": "LEER: la descripción dice que el objeto se usa para subir a un lugar alto, para recoger fruta o pintar lo alto de una pared, y que se puede cargar de un lugar a otro. COMPRENDER: se busca el nombre de una herramienta portátil para trepar. INTERPRETAR: \"climb up\" descarta el techo, que es un lugar y no una herramienta; \"carry it\" descarta las escaleras fijas de un edificio. REPRESENTAR: objeto + sirve para subir + se transporta = escalera de mano. RAZONAR: en inglés hay dos palabras para \"escalera\": \"stairs\" (fijas, dentro de un edificio) y \"ladder\" (portátil, de mano); la pista del transporte decide. RESOLVER: la opción que propone \"ladder\". VERIFICAR: recoger fruta de un árbol y pintar la parte alta de una pared son usos típicos de una escalera de mano, no de unas escaleras fijas ni de un techo.",
+    "que_identificar": "Las pistas \"climb up to a high place\" y \"carry it from one place to another\".",
+    "que_revisar": "Vocabulario de herramientas y partes de la casa: ladder, stairs, roof, wall, ceiling; diferencia entre ladder y stairs.",
+    "refuerzo_ids": [
+      "ING-141",
+      "ING-162"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "hogar",
+      "herramientas",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-162",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "interpretar",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Compras: receipt (recibo o factura de compra)",
+    "dificultad": 2,
+    "contexto": "Description: **A shop gives you this small piece of paper after you pay. It shows the date, the things you bought and how much you paid. You need it if you want to change a product.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "ticket",
+        "correcta": false,
+        "explicacion": "Un \"ticket\" (boleta o tiquete) es un papel que se compra para entrar a un evento o viajar en un transporte; se recibe antes de usar el servicio, no \"after you pay\" por varios productos, y no sirve para cambiar un artículo. Quien elige esta opción se quedó con \"small piece of paper\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció cualquier papel pequeño de una compra con \"ticket\" sin leer que muestra lo que se compró y se pagó."
+      },
+      {
+        "clave": "B",
+        "texto": "menu",
+        "correcta": false,
+        "explicacion": "Un \"menu\" (carta) es la lista de platos de un restaurante; se lee antes de pedir, no se entrega después de pagar y no registra lo que una persona compró ni cuánto pagó. Quien elige esta opción vio una lista de \"things\" y \"how much\" y pensó en precios de comida.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relacionó la lista de artículos con precios con la carta de un restaurante."
+      },
+      {
+        "clave": "C",
+        "texto": "receipt",
+        "correcta": true,
+        "explicacion": "Un \"receipt\" (recibo o factura de compra) es el papel que la tienda entrega después de pagar; muestra la fecha, los productos y el valor pagado, y se exige para cambiar o devolver un producto (\"if you want to change a product\"). Todas las pistas describen este documento.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la descripción habla de un papel pequeño que la tienda da después de pagar, con la fecha, los artículos comprados y el total, necesario para cambiar un producto. COMPRENDER: se pide el nombre de ese documento de compra. INTERPRETAR: \"after you pay\" indica que se recibe al final de la compra; \"change a product\" indica que sirve como prueba de la compra. REPRESENTAR: pago → papel con fecha, productos y total → prueba para cambios. RAZONAR: la boleta (\"ticket\") se compra para entrar o viajar y no registra productos; la carta (\"menu\") se lee antes de pedir comida; el recibo (\"receipt\") es el único que se entrega después de pagar y registra la compra. RESOLVER: la opción que propone \"receipt\". VERIFICAR: en las tiendas colombianas también se pide la factura para cambiar un producto, lo que coincide con la última pista.",
+    "que_identificar": "Las pistas \"after you pay\", \"how much you paid\" y \"if you want to change a product\".",
+    "que_revisar": "Vocabulario de compras: receipt, bill, ticket, change, refund, price tag; pronunciación de receipt (la \"p\" es muda).",
+    "refuerzo_ids": [
+      "ING-161",
+      "ING-142"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "compras",
+      "documentos",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-163",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "interpretar",
+    "tema": "Avisos y letreros",
+    "subtema": "Panadería: horarios y condición de pedido anticipado (in advance)",
+    "dificultad": 2,
+    "contexto": "Notice in the window of a bakery in Popayán:\n\n**FRESH BREAD EVERY DAY AT 6 A.M. AND 4 P.M.\nBIRTHDAY CAKES: PLEASE ORDER TWO DAYS IN ADVANCE.**",
+    "estimulo": null,
+    "enunciado": "What does this notice mean?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Birthday cakes are ready every day at 6 a.m. and at 4 p.m.",
+        "correcta": false,
+        "explicacion": "Las horas 6 a.m. y 4 p.m. corresponden al pan fresco (\"fresh bread\"), no a las tortas. La segunda línea del aviso trata las tortas de cumpleaños por separado y pide encargarlas con anticipación. Quien elige esta opción mezcló las dos líneas del aviso.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó las horas del pan a las tortas sin notar que son dos informaciones distintas."
+      },
+      {
+        "clave": "B",
+        "texto": "If you want a birthday cake, you have to ask for it two days before.",
+        "correcta": true,
+        "explicacion": "\"Please order two days in advance\" significa que la torta debe pedirse (\"order\") con dos días de anticipación (\"in advance\"). Es decir, no se puede comprar en el momento: hay que encargarla dos días antes. La opción expresa exactamente esa condición.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "The bakery sells fresh bread only two days a week, in the morning.",
+        "correcta": false,
+        "explicacion": "El aviso dice \"every day\" (todos los días) y da dos horas, una en la mañana y otra en la tarde. El número \"two days\" aparece en la línea de las tortas y se refiere a la anticipación del pedido, no a los días de venta del pan. Quien elige esta opción cruzó el \"two\" con el pan.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó \"two days\" como frecuencia de venta del pan en lugar de tiempo de anticipación del pedido."
+      }
+    ],
+    "explicacion": "LEER: el aviso tiene dos líneas: pan fresco todos los días a las 6 a.m. y a las 4 p.m., y tortas de cumpleaños que deben encargarse con dos días de anticipación. COMPRENDER: la pregunta pide el significado del aviso completo. INTERPRETAR: \"order\" es encargar o pedir, e \"in advance\" significa con anticipación; \"every day\" indica que el pan sale a diario en dos horarios. REPRESENTAR: pan → diario, 6 a.m. y 4 p.m.; torta → encargar 2 días antes. RAZONAR: la opción que pone las tortas a las 6 a.m. y 4 p.m. mezcla las dos líneas; la que dice que el pan se vende dos días a la semana contradice \"every day\" y usa el \"two days\" de la línea equivocada; la que dice que la torta debe pedirse dos días antes traduce la segunda línea. RESOLVER: la opción sobre pedir la torta con dos días de anticipación. VERIFICAR: las tortas se hacen por encargo y el pan se vende a diario, lo que confirma la lectura.",
+    "que_identificar": "La expresión \"order two days in advance\" y la separación entre la información del pan y la de las tortas.",
+    "que_revisar": "Expresiones de avisos comerciales: in advance, order, fresh, every day, daily; lectura de horarios con a.m. y p.m.",
+    "refuerzo_ids": [
+      "ING-143",
+      "ING-164"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "comercio",
+      "condiciones",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-164",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Identifica el lugar donde puede encontrarse un aviso a partir de su contenido",
+    "habilidad": "razonar",
+    "tema": "Avisos y letreros",
+    "subtema": "Ubicar el lugar de un aviso: teatro (switch off your phone, the show starts)",
+    "dificultad": 1,
+    "contexto": "Read the notice.\n\n**PLEASE SWITCH OFF YOUR PHONE.\nTHE SHOW STARTS IN FIVE MINUTES.\nNO PHOTOS DURING THE PERFORMANCE.**",
+    "estimulo": null,
+    "enunciado": "Where can you see this notice?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "In a theatre, before a play begins.",
+        "correcta": true,
+        "explicacion": "Las palabras \"show\" (espectáculo), \"performance\" (función) y la petición de apagar el teléfono y no tomar fotos son típicas de un teatro o una sala de espectáculos justo antes de que empiece la obra. \"Starts in five minutes\" confirma que el aviso se ve antes del inicio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "In a supermarket, next to the cash desk.",
+        "correcta": false,
+        "explicacion": "En un supermercado no hay un \"show\" ni una \"performance\" que empiece en cinco minutos, y tampoco es habitual pedir que se apague el teléfono. Quien elige esta opción no relacionó las palabras clave del aviso con un espectáculo.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoció \"show\" y \"performance\" como palabras de un espectáculo."
+      },
+      {
+        "clave": "C",
+        "texto": "At a bus stop, near the timetable.",
+        "correcta": false,
+        "explicacion": "En un paradero se informa de rutas y horarios, no de una función que empieza en cinco minutos ni de una prohibición de tomar fotos durante la \"performance\". Quien elige esta opción se fijó solo en \"starts in five minutes\" y pensó en la llegada de un bus.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"starts in five minutes\" con la salida de un bus sin leer \"show\" ni \"performance\"."
+      }
+    ],
+    "explicacion": "LEER: el aviso pide apagar el teléfono, anuncia que el espectáculo empieza en cinco minutos y prohíbe fotos durante la función. COMPRENDER: la pregunta pide el lugar donde se ve el aviso. INTERPRETAR: \"show\" y \"performance\" son palabras de espectáculos; apagar el teléfono y no tomar fotos son normas habituales en salas de teatro o cine. REPRESENTAR: apagar teléfono + espectáculo que empieza + sin fotos = sala donde se presenta una obra. RAZONAR: un supermercado no tiene funciones; un paradero informa horarios de buses, no prohíbe fotos de una presentación; un teatro reúne las tres características. RESOLVER: la opción del teatro antes de una obra. VERIFICAR: \"in five minutes\" indica que el aviso se muestra justo antes del inicio, lo que coincide con la frase \"before a play begins\".",
+    "que_identificar": "Las palabras \"show\", \"performance\" y la instrucción \"switch off your phone\".",
+    "que_revisar": "Vocabulario de espectáculos: show, performance, play, stage, audience; verbos de avisos: switch off, turn off, keep quiet.",
+    "refuerzo_ids": [
+      "ING-163",
+      "ING-103"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "lugar",
+      "espectaculos",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-165",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "comprender",
+    "tema": "Conversaciones cortas",
+    "subtema": "En el mercado: responder a \"How much are...?\" con un precio",
+    "dificultad": 1,
+    "contexto": "At a fruit market in Pasto.\n\nCustomer: **Good morning. How much are the strawberries?**\n\nSeller: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "They come from a farm near here.",
+        "correcta": false,
+        "explicacion": "Esta respuesta informa el origen de las fresas, no su precio. Respondería a \"Where are the strawberries from?\". Quien elige esta opción entendió que se preguntaba algo sobre las fresas, pero no identificó que \"How much\" pide una cantidad de dinero.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No asoció \"How much\" con precio y respondió con otra información sobre el producto."
+      },
+      {
+        "clave": "B",
+        "texto": "Yes, they are very fresh today.",
+        "correcta": false,
+        "explicacion": "Empezar con \"Yes\" solo tiene sentido ante una pregunta de sí o no, como \"Are the strawberries fresh?\". La pregunta del cliente empieza con \"How much\", que pide una cantidad, así que esta respuesta no encaja. Quien la elige confundió el tipo de pregunta.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió con \"Yes\" a una pregunta con palabra interrogativa."
+      },
+      {
+        "clave": "C",
+        "texto": "Eight thousand pesos a kilo.",
+        "correcta": true,
+        "explicacion": "\"How much are...?\" pregunta por el precio de un producto en plural. La respuesta adecuada da una cantidad de dinero por una medida: ocho mil pesos el kilo. Es la única opción que responde a lo que el cliente quiere saber.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el cliente saluda y pregunta \"How much are the strawberries?\". COMPRENDER: se debe elegir la respuesta del vendedor que corresponda a la intención de la pregunta. INTERPRETAR: \"How much\" seguido del verbo \"be\" y un producto pregunta por el precio. REPRESENTAR: pregunta por precio → respuesta con cantidad de dinero. RAZONAR: la respuesta sobre la finca informa el origen, no el precio; la que empieza con \"Yes\" solo sirve para una pregunta de sí o no; la que da ocho mil pesos por kilo responde directamente al precio. RESOLVER: la opción que da el precio por kilo. VERIFICAR: en un mercado, ante \"¿A cómo están las fresas?\", el vendedor responde con el precio, lo que coincide con la opción elegida.",
+    "que_identificar": "La expresión \"How much are...?\" como pregunta por el precio.",
+    "que_revisar": "Preguntas con how much (precio y cantidad no contable) y how many; respuestas con precios: a kilo, each, per bag; números grandes en inglés.",
+    "refuerzo_ids": [
+      "ING-145",
+      "ING-166"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "compras",
+      "precios",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-166",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "Entre amigos: reaccionar cuando alguien rechaza una invitación",
+    "dificultad": 2,
+    "contexto": "On the phone, in Armenia.\n\nMariana: **I'm really sorry, but I can't come to your party on Saturday. I have to work that night.**\n\nDaniel: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Great! See you on Saturday night, then.",
+        "correcta": false,
+        "explicacion": "Mariana acaba de decir que no puede ir el sábado (\"I can't come\"). Despedirse con \"see you on Saturday\" contradice lo que ella dijo. Quien elige esta opción leyó \"party on Saturday\" y no procesó la negación \"can't\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó la negación \"can't come\" y respondió como si Mariana hubiera aceptado."
+      },
+      {
+        "clave": "B",
+        "texto": "That's a pity. Maybe another time.",
+        "correcta": true,
+        "explicacion": "Cuando alguien se disculpa porque no puede asistir, la reacción natural es expresar que es una lástima (\"That's a pity\") y dejar abierta otra ocasión (\"Maybe another time\"). Esta respuesta reconoce la excusa de Mariana y mantiene la cortesía.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Yes, I'm working too, thank you.",
+        "correcta": false,
+        "explicacion": "Mariana no preguntó si Daniel trabaja; explicó por qué no puede ir. Responder \"Yes\" y agradecer no tiene relación con la disculpa recibida. Quien elige esta opción se fijó en la palabra \"work\" y repitió la idea sin atender a la intención de Mariana.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Repitió la idea de \"work\" sin reaccionar a la disculpa."
+      }
+    ],
+    "explicacion": "LEER: Mariana se disculpa (\"I'm really sorry\") y dice que no puede ir a la fiesta del sábado porque tiene que trabajar. COMPRENDER: se busca la reacción adecuada de Daniel ante una invitación rechazada con excusa. INTERPRETAR: la intención de Mariana es declinar con cortesía; la respuesta debe aceptar la excusa y mostrar comprensión. REPRESENTAR: disculpa + no puedo ir → \"qué lástima, otra vez será\". RAZONAR: decir \"see you on Saturday\" ignora que ella no irá; responder \"Yes, I'm working too\" no reacciona a la disculpa; \"That's a pity. Maybe another time\" expresa lástima y propone otra ocasión. RESOLVER: la opción que lamenta la ausencia y sugiere otra oportunidad. VERIFICAR: en español diríamos \"Qué pena, será otro día\", que es exactamente el sentido de la opción elegida.",
+    "que_identificar": "La negación \"I can't come\" y la fórmula de disculpa \"I'm really sorry\".",
+    "que_revisar": "Reacciones ante un rechazo cortés: That's a pity / What a shame / Never mind / Maybe another time; diferencia entre aceptar y declinar invitaciones.",
+    "refuerzo_ids": [
+      "ING-165",
+      "ING-146"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "invitaciones",
+      "cortesia",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-167",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Presente perfecto con \"already\": auxiliar have con el sujeto I",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(1)**.\n\n**A Letter from Camp**\n\nDear Grandma,\n\nI am writing to you from the summer camp near Guatapé. We arrived on Monday after a long bus trip, and I **(1) ______** already made two new friends, Laura and Esteban. Every morning we get up at six, **(2) ______** the lake is very calm at that time and the instructors take us kayaking. Yesterday I fell into the water twice! In the afternoons we have workshops. I chose photography, and tomorrow we **(3) ______** going to visit a village to take pictures of the colourful houses. The food is good, but I miss your arepas. I will call you on Sunday when we come back.\n\nLove,\nJuliana",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "have",
+        "correcta": true,
+        "explicacion": "La oración es \"I ___ already made two new friends\": el participio \"made\" y el adverbio \"already\" exigen el presente perfecto, cuyo auxiliar con el sujeto \"I\" es \"have\". El sentido también encaja: en pocos días la autora ya ha hecho dos amigos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "has",
+        "correcta": false,
+        "explicacion": "\"Has\" es el auxiliar del presente perfecto para he, she e it, pero el sujeto de la oración es \"I\". Quien elige esta opción reconoció el presente perfecto, pero no concordó el auxiliar con el sujeto de primera persona.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó \"has\" con el sujeto \"I\" sin revisar la concordancia del auxiliar."
+      },
+      {
+        "clave": "C",
+        "texto": "had",
+        "correcta": false,
+        "explicacion": "\"Had made\" sería pasado perfecto, que se usa para una acción anterior a otra acción pasada. Aquí la autora habla de su situación actual en el campamento (\"I am writing\", \"every morning\") y \"already\" conecta con el presente, así que corresponde el presente perfecto, no el pasado perfecto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Puso el auxiliar en pasado porque la llegada ocurrió el lunes, sin notar que \"already\" habla del resultado presente."
+      }
+    ],
+    "explicacion": "LEER: la frase con el espacio es \"We arrived on Monday ..., and I ___ already made two new friends\". COMPRENDER: se debe elegir el auxiliar correcto para el verbo \"made\" con el sujeto \"I\". INTERPRETAR: \"already\" y el participio \"made\" señalan presente perfecto: una acción reciente cuyo resultado importa ahora (ya tiene dos amigos). REPRESENTAR: I + have + participio = presente perfecto en primera persona. RAZONAR: \"has\" solo va con he, she e it; \"had\" formaría el pasado perfecto, que necesita otra acción pasada posterior como referencia y no la hay; \"have\" concuerda con \"I\" y forma el tiempo que pide \"already\". RESOLVER: la opción \"have\". VERIFICAR: el resto de la carta está en presente (\"I am writing\", \"we get up\"), lo que confirma que la autora describe su situación actual y el presente perfecto es el tiempo adecuado.",
+    "que_identificar": "El sujeto \"I\", el adverbio \"already\" y el participio \"made\" que siguen al espacio.",
+    "que_revisar": "Presente perfecto: have/has + participio; usos con already, just, yet; diferencia con el pasado perfecto (had + participio).",
+    "refuerzo_ids": [
+      "ING-147",
+      "ING-168"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "gramatica",
+      "presente_perfecto",
+      "concordancia",
+      "texto:ING-T38",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-168",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "razonar",
+    "tema": "Gramática en contexto",
+    "subtema": "Conectores de causa: because frente a so y but",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(2)**.\n\n**A Letter from Camp**\n\nDear Grandma,\n\nI am writing to you from the summer camp near Guatapé. We arrived on Monday after a long bus trip, and I **(1) ______** already made two new friends, Laura and Esteban. Every morning we get up at six, **(2) ______** the lake is very calm at that time and the instructors take us kayaking. Yesterday I fell into the water twice! In the afternoons we have workshops. I chose photography, and tomorrow we **(3) ______** going to visit a village to take pictures of the colourful houses. The food is good, but I miss your arepas. I will call you on Sunday when we come back.\n\nLove,\nJuliana",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "so",
+        "correcta": false,
+        "explicacion": "\"So\" introduce una consecuencia: \"nos levantamos a las seis, así que el lago está calmado\". Pero la calma del lago no es consecuencia de levantarse temprano; es la razón para hacerlo. Quien elige esta opción invirtió la relación entre causa y efecto.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió causa y consecuencia: trató la calma del lago como resultado de levantarse temprano."
+      },
+      {
+        "clave": "B",
+        "texto": "but",
+        "correcta": false,
+        "explicacion": "\"But\" marca un contraste entre dos ideas opuestas. Levantarse a las seis y que el lago esté calmado a esa hora no se oponen; la segunda idea explica la primera. Quien elige esta opción no identificó que la oración da una razón, no una objeción.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usó el conector de contraste sin comprobar que las dos ideas no se oponen."
+      },
+      {
+        "clave": "C",
+        "texto": "because",
+        "correcta": true,
+        "explicacion": "La segunda parte de la oración (\"the lake is very calm at that time and the instructors take us kayaking\") explica por qué se levantan a las seis. Un conector de causa es el que corresponde: \"because\" (porque). La relación lógica es \"nos levantamos temprano porque a esa hora el lago está calmado\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración es \"Every morning we get up at six, ___ the lake is very calm at that time and the instructors take us kayaking\". COMPRENDER: hay que elegir el conector que una las dos partes con la relación lógica correcta. INTERPRETAR: la segunda parte da la razón por la que se levantan tan temprano: el lago está calmado a esa hora y salen en kayak. REPRESENTAR: acción (levantarse a las seis) ← razón (lago calmado a esa hora). RAZONAR: \"so\" presentaría la calma del lago como consecuencia de madrugar, lo cual no tiene sentido; \"but\" exigiría una oposición que no existe; \"because\" introduce la causa, que es la relación real. RESOLVER: la opción \"because\". VERIFICAR: si se cambia el orden, \"Because the lake is calm at six, we get up at six\" conserva el sentido, lo que confirma que se trata de una causa.",
+    "que_identificar": "La relación lógica entre levantarse a las seis y la calma del lago a esa hora.",
+    "que_revisar": "Conectores básicos: because (causa), so (consecuencia), but (contraste), and (adición); cómo comprobar la relación entre dos ideas antes de elegir el conector.",
+    "refuerzo_ids": [
+      "ING-167",
+      "ING-169"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "gramatica",
+      "conectores",
+      "causa",
+      "texto:ING-T38",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-169",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Be going to: concordancia del auxiliar con el sujeto we y marcador \"tomorrow\"",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(3)**.\n\n**A Letter from Camp**\n\nDear Grandma,\n\nI am writing to you from the summer camp near Guatapé. We arrived on Monday after a long bus trip, and I **(1) ______** already made two new friends, Laura and Esteban. Every morning we get up at six, **(2) ______** the lake is very calm at that time and the instructors take us kayaking. Yesterday I fell into the water twice! In the afternoons we have workshops. I chose photography, and tomorrow we **(3) ______** going to visit a village to take pictures of the colourful houses. The food is good, but I miss your arepas. I will call you on Sunday when we come back.\n\nLove,\nJuliana",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "is",
+        "correcta": false,
+        "explicacion": "\"Is\" es la forma del verbo \"be\" para he, she e it, pero el sujeto de la oración es \"we\" (nosotros). Quien elige esta opción identificó la estructura \"be going to\", pero no la concordó con el sujeto plural.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó \"is\" con \"we\" sin revisar la concordancia del verbo \"be\"."
+      },
+      {
+        "clave": "B",
+        "texto": "are",
+        "correcta": true,
+        "explicacion": "La oración es \"tomorrow we ___ going to visit a village\": la estructura \"be going to\" expresa un plan futuro, y con el sujeto \"we\" la forma del verbo \"be\" en presente es \"are\". \"Tomorrow\" confirma que se habla de un plan para mañana.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "were",
+        "correcta": false,
+        "explicacion": "\"Were going to\" se usa para un plan que se tenía en el pasado (\"íbamos a...\"), pero el marcador \"tomorrow\" indica que la visita es un plan futuro vigente. Quien elige esta opción concordó bien con \"we\" pero puso el verbo en pasado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el pasado \"were\" sin atender al marcador de futuro \"tomorrow\"."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"I chose photography, and tomorrow we ___ going to visit a village\". COMPRENDER: hay que completar la estructura \"be going to\" con la forma correcta del verbo \"be\". INTERPRETAR: \"tomorrow\" indica un plan futuro, y el sujeto es \"we\". REPRESENTAR: we + are + going to + verbo = plan futuro en plural. RAZONAR: \"is\" no concuerda con \"we\"; \"were\" concuerda pero está en pasado y choca con \"tomorrow\"; \"are\" concuerda con el sujeto plural y expresa el plan en presente. RESOLVER: la opción \"are\". VERIFICAR: el verbo anterior \"I chose\" está en pasado porque la elección ya ocurrió, mientras que la visita es mañana; el cambio de tiempo tiene sentido y confirma \"are going to\".",
+    "que_identificar": "El sujeto \"we\", la estructura \"going to\" y el marcador de tiempo \"tomorrow\".",
+    "que_revisar": "Futuro con be going to: am/is/are + going to + infinitivo; concordancia de be con el sujeto; was/were going to para planes pasados.",
+    "refuerzo_ids": [
+      "ING-168",
+      "ING-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "gramatica",
+      "futuro",
+      "be_going_to",
+      "texto:ING-T38",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-170",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "leer",
+    "tema": "Comprensión de lectura",
+    "subtema": "Localizar una hora explícita entre varias horas del texto",
+    "dificultad": 1,
+    "contexto": "Read the message and answer the question.\n\n**Subject: School trip to the Tatacoa Desert – Saturday 22 March**\n\nDear parents,\n\nThe grade 11 students will travel to the Tatacoa Desert on Saturday 22 March. The bus leaves from the school gate at 5 a.m. and comes back at about 9 p.m. Students must arrive at 4:40 a.m.; the bus will not wait for anyone.\n\nThe trip costs 85,000 pesos per student. This includes transport, lunch and the entrance to the astronomical observatory, where the group will watch the stars from 7 to 8 p.m. It does not include breakfast or snacks, so please send some food and at least two litres of water for each student. The desert is very hot during the day: a hat, sun cream and comfortable shoes are necessary. Sandals are not allowed on the walks.\n\nPlease pay at the school office before Wednesday 19 March. Students who do not pay by that date will not be able to go. If a student cannot travel after paying, the school will return the money only if we receive a medical certificate.\n\nFor questions, call Mr Hernández, the science teacher, at the school between 7 a.m. and 2 p.m.\n\nKind regards,\nAna María Orozco\nCoordinator",
+    "estimulo": null,
+    "enunciado": "What time do students have to be at the school gate on the day of the trip?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "At 5 a.m., when the bus leaves the gate.",
+        "correcta": false,
+        "explicacion": "Las 5 a.m. es la hora de salida del bus, pero el texto dice \"Students must arrive at 4:40 a.m.; the bus will not wait for anyone\": deben llegar veinte minutos antes. Quien elige esta opción tomó la hora de salida como hora de llegada.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la hora de salida del bus con la hora en que deben llegar los estudiantes."
+      },
+      {
+        "clave": "B",
+        "texto": "At 9 p.m., when the bus returns.",
+        "correcta": false,
+        "explicacion": "Las 9 p.m. es la hora aproximada de regreso (\"comes back at about 9 p.m.\"), no la hora en que los estudiantes deben presentarse en la puerta del colegio. Quien elige esta opción tomó otra hora del mismo párrafo sin leer la frase con \"must arrive\".",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó una hora cualquiera del primer párrafo sin identificar la que acompaña a \"must arrive\"."
+      },
+      {
+        "clave": "C",
+        "texto": "At 7 p.m., before the observatory visit.",
+        "correcta": false,
+        "explicacion": "Las 7 p.m. es la hora en que empieza la observación de estrellas en el observatorio, en el desierto, según el segundo párrafo. No tiene relación con la llegada a la puerta del colegio. Quien elige esta opción mezcló párrafos y lugares.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la hora del observatorio como hora de encuentro en el colegio."
+      },
+      {
+        "clave": "D",
+        "texto": "At 4:40 a.m., before the bus leaves.",
+        "correcta": true,
+        "explicacion": "El primer párrafo dice \"Students must arrive at 4:40 a.m.; the bus will not wait for anyone\". \"Must arrive\" indica la obligación de estar allí a esa hora, veinte minutos antes de que el bus salga a las 5 a.m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo da tres horas: salida del bus a las 5 a.m., regreso hacia las 9 p.m. y \"Students must arrive at 4:40 a.m.\". COMPRENDER: la pregunta pide la hora a la que los estudiantes deben estar en la puerta del colegio. INTERPRETAR: \"must arrive\" expresa obligación de llegar; la hora que lo acompaña es 4:40 a.m. REPRESENTAR: 4:40 llegada → 5:00 salida → 7 a 8 p.m. observatorio → 9 p.m. regreso. RAZONAR: las 5 a.m. es la salida, no la llegada; las 9 p.m. es el regreso; las 7 p.m. pertenece al observatorio, en otro lugar; las 4:40 a.m. es la única hora ligada a \"must arrive\". RESOLVER: la opción de las 4:40 a.m. VERIFICAR: la advertencia \"the bus will not wait for anyone\" explica por qué se pide llegar antes de la salida, lo que confirma la respuesta.",
+    "que_identificar": "La frase \"Students must arrive at 4:40 a.m.\" en el primer párrafo.",
+    "que_revisar": "Diferenciar varias horas en un mismo texto: leave, arrive, come back; verbos de obligación en avisos: must, have to.",
+    "refuerzo_ids": [
+      "ING-151",
+      "ING-171"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "horarios",
+      "texto:ING-T39",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-171",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Distinguir lo que incluye y lo que no incluye un precio",
+    "dificultad": 2,
+    "contexto": "Read the message and answer the question.\n\n**Subject: School trip to the Tatacoa Desert – Saturday 22 March**\n\nDear parents,\n\nThe grade 11 students will travel to the Tatacoa Desert on Saturday 22 March. The bus leaves from the school gate at 5 a.m. and comes back at about 9 p.m. Students must arrive at 4:40 a.m.; the bus will not wait for anyone.\n\nThe trip costs 85,000 pesos per student. This includes transport, lunch and the entrance to the astronomical observatory, where the group will watch the stars from 7 to 8 p.m. It does not include breakfast or snacks, so please send some food and at least two litres of water for each student. The desert is very hot during the day: a hat, sun cream and comfortable shoes are necessary. Sandals are not allowed on the walks.\n\nPlease pay at the school office before Wednesday 19 March. Students who do not pay by that date will not be able to go. If a student cannot travel after paying, the school will return the money only if we receive a medical certificate.\n\nFor questions, call Mr Hernández, the science teacher, at the school between 7 a.m. and 2 p.m.\n\nKind regards,\nAna María Orozco\nCoordinator",
+    "estimulo": null,
+    "enunciado": "What is included in the price of 85,000 pesos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Transport, lunch and the entrance to the observatory.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo dice: \"This includes transport, lunch and the entrance to the astronomical observatory\". Son exactamente los tres elementos cubiertos por el precio; el mismo párrafo aclara después lo que no está incluido (desayuno y refrigerios).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Breakfast, lunch and two litres of water per student.",
+        "correcta": false,
+        "explicacion": "El texto dice que el precio \"does not include breakfast or snacks\" y pide a los padres enviar comida y al menos dos litros de agua. El desayuno y el agua corren por cuenta de la familia. Quien elige esta opción no procesó la negación \"does not include\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la lista de lo que deben llevar los estudiantes como si fuera lo incluido en el precio."
+      },
+      {
+        "clave": "C",
+        "texto": "Transport, snacks and a hat for the sun.",
+        "correcta": false,
+        "explicacion": "El transporte sí está incluido, pero los refrigerios (\"snacks\") están explícitamente excluidos y el sombrero es algo que cada estudiante debe llevar (\"a hat ... are necessary\"), no algo que el colegio entrega. Quien elige esta opción mezcló lo incluido con las recomendaciones.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Combinó un elemento incluido con elementos de la lista de recomendaciones."
+      },
+      {
+        "clave": "D",
+        "texto": "Lunch, dinner and the medical certificate.",
+        "correcta": false,
+        "explicacion": "El almuerzo sí está incluido, pero el texto no menciona cena, y el certificado médico es un documento que la familia debe presentar para pedir la devolución del dinero, no algo que el precio cubra. Quien elige esta opción asoció palabras sueltas del tercer párrafo con el precio.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relacionó el certificado médico del tercer párrafo con lo que cubre el precio."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo dice que el viaje cuesta 85,000 pesos y que \"This includes transport, lunch and the entrance to the astronomical observatory\"; luego añade \"It does not include breakfast or snacks\". COMPRENDER: la pregunta pide lo que cubre el precio. INTERPRETAR: hay que separar lo incluido de lo excluido y de las recomendaciones. REPRESENTAR: incluido = transporte + almuerzo + entrada al observatorio; no incluido = desayuno + refrigerios; llevar = agua, sombrero, bloqueador. RAZONAR: desayuno y agua son lo que las familias deben enviar; refrigerios y sombrero mezclan lo incluido con las recomendaciones; la cena no aparece y el certificado médico es un documento para la devolución, no un servicio. RESOLVER: la opción con transporte, almuerzo y entrada al observatorio. VERIFICAR: los tres elementos aparecen en la oración que empieza con \"This includes\".",
+    "que_identificar": "La oración \"This includes transport, lunch and the entrance to the astronomical observatory\" y la negación \"It does not include\".",
+    "que_revisar": "Vocabulario de viajes escolares: includes, does not include, entrance, snacks; leer con cuidado las frases afirmativas y negativas sobre un mismo precio.",
+    "refuerzo_ids": [
+      "ING-170",
+      "ING-172"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "precios",
+      "texto:ING-T39",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-172",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Comprender una condición con \"only if\" para la devolución del dinero",
+    "dificultad": 3,
+    "contexto": "Read the message and answer the question.\n\n**Subject: School trip to the Tatacoa Desert – Saturday 22 March**\n\nDear parents,\n\nThe grade 11 students will travel to the Tatacoa Desert on Saturday 22 March. The bus leaves from the school gate at 5 a.m. and comes back at about 9 p.m. Students must arrive at 4:40 a.m.; the bus will not wait for anyone.\n\nThe trip costs 85,000 pesos per student. This includes transport, lunch and the entrance to the astronomical observatory, where the group will watch the stars from 7 to 8 p.m. It does not include breakfast or snacks, so please send some food and at least two litres of water for each student. The desert is very hot during the day: a hat, sun cream and comfortable shoes are necessary. Sandals are not allowed on the walks.\n\nPlease pay at the school office before Wednesday 19 March. Students who do not pay by that date will not be able to go. If a student cannot travel after paying, the school will return the money only if we receive a medical certificate.\n\nFor questions, call Mr Hernández, the science teacher, at the school between 7 a.m. and 2 p.m.\n\nKind regards,\nAna María Orozco\nCoordinator",
+    "estimulo": null,
+    "enunciado": "What happens if a student pays for the trip and then cannot travel?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The school gives the money back without asking for any document.",
+        "correcta": false,
+        "explicacion": "El tercer párrafo dice que el colegio devuelve el dinero \"only if we receive a medical certificate\". La palabra \"only\" limita la devolución a ese caso; sin el documento no hay reembolso. Quien elige esta opción leyó \"return the money\" sin la condición que sigue.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detuvo en \"will return the money\" y no leyó la condición \"only if\"."
+      },
+      {
+        "clave": "B",
+        "texto": "The student can use the money for a trip on another date.",
+        "correcta": false,
+        "explicacion": "El texto no menciona ninguna otra fecha de viaje ni la posibilidad de guardar el dinero para después. La única opción que ofrece el colegio es la devolución con certificado médico. Quien elige esta opción supuso una alternativa que el mensaje no da.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó una alternativa razonable que el texto no menciona."
+      },
+      {
+        "clave": "C",
+        "texto": "The school gives the money back if it receives a medical certificate.",
+        "correcta": true,
+        "explicacion": "El tercer párrafo dice: \"If a student cannot travel after paying, the school will return the money only if we receive a medical certificate\". La devolución existe, pero está condicionada a presentar un certificado médico; la opción recoge esa condición.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "The student loses the money and cannot ask for it back in any case.",
+        "correcta": false,
+        "explicacion": "El texto sí contempla la devolución (\"the school will return the money\"), aunque solo con certificado médico. Decir que se pierde el dinero en todos los casos ignora esa posibilidad. Quien elige esta opción interpretó \"only if\" como una negativa total.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Entendió la restricción \"only if\" como si la devolución nunca fuera posible."
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo contiene la oración \"If a student cannot travel after paying, the school will return the money only if we receive a medical certificate\". COMPRENDER: la pregunta pide qué pasa cuando un estudiante paga y luego no puede viajar. INTERPRETAR: hay dos condiciones encadenadas: la situación (pagó y no puede ir) y el requisito para el reembolso (\"only if\" + certificado médico). REPRESENTAR: pagó y no viaja → ¿certificado médico? sí → devolución; no → sin devolución. RAZONAR: la devolución sin documentos ignora \"only if\"; el cambio de fecha no aparece en el texto; perder el dinero en todos los casos contradice \"will return the money\"; la devolución con certificado médico es lo que dice la oración. RESOLVER: la opción que condiciona la devolución al certificado médico. VERIFICAR: \"only if\" equivale a \"solo si\": restringe la devolución a una condición.",
+    "que_identificar": "La oración condicional del tercer párrafo con \"only if we receive a medical certificate\".",
+    "que_revisar": "Condicionales con if y only if; vocabulario administrativo: pay, return the money, refund, certificate, by that date.",
+    "refuerzo_ids": [
+      "ING-153",
+      "ING-171"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "lectura",
+      "condicion",
+      "pagos",
+      "texto:ING-T39",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-173",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "resolver",
+    "tema": "Comprensión de lectura",
+    "subtema": "Localizar datos de contacto: a quién, dónde y cuándo llamar",
+    "dificultad": 2,
+    "contexto": "Read the message and answer the question.\n\n**Subject: School trip to the Tatacoa Desert – Saturday 22 March**\n\nDear parents,\n\nThe grade 11 students will travel to the Tatacoa Desert on Saturday 22 March. The bus leaves from the school gate at 5 a.m. and comes back at about 9 p.m. Students must arrive at 4:40 a.m.; the bus will not wait for anyone.\n\nThe trip costs 85,000 pesos per student. This includes transport, lunch and the entrance to the astronomical observatory, where the group will watch the stars from 7 to 8 p.m. It does not include breakfast or snacks, so please send some food and at least two litres of water for each student. The desert is very hot during the day: a hat, sun cream and comfortable shoes are necessary. Sandals are not allowed on the walks.\n\nPlease pay at the school office before Wednesday 19 March. Students who do not pay by that date will not be able to go. If a student cannot travel after paying, the school will return the money only if we receive a medical certificate.\n\nFor questions, call Mr Hernández, the science teacher, at the school between 7 a.m. and 2 p.m.\n\nKind regards,\nAna María Orozco\nCoordinator",
+    "estimulo": null,
+    "enunciado": "What should parents do if they have a question about the trip?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Write to Ana María Orozco before Wednesday 19 March.",
+        "correcta": false,
+        "explicacion": "Ana María Orozco firma el mensaje como coordinadora, pero el texto no pide escribirle a ella; dice \"call Mr Hernández\". Además, la fecha del 19 de marzo es el plazo para pagar, no para hacer preguntas. Quien elige esta opción mezcló la firma con el párrafo de pagos.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó a la persona que firma como contacto y usó la fecha límite de pago."
+      },
+      {
+        "clave": "B",
+        "texto": "Visit the observatory between 7 and 8 p.m. and ask there.",
+        "correcta": false,
+        "explicacion": "El horario de 7 a 8 p.m. es el de la observación de estrellas durante el viaje, no un horario de atención para padres. El texto no sugiere ir al observatorio para resolver dudas. Quien elige esta opción tomó un horario del segundo párrafo.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió el horario de la actividad en el observatorio con un horario de atención."
+      },
+      {
+        "clave": "C",
+        "texto": "Call the science teacher at the school between 7 a.m. and 2 p.m.",
+        "correcta": true,
+        "explicacion": "El último párrafo dice: \"For questions, call Mr Hernández, the science teacher, at the school between 7 a.m. and 2 p.m.\". La opción reúne los tres datos: a quién (el profesor de ciencias), dónde (en el colegio) y cuándo (entre 7 a.m. y 2 p.m.).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Go to the school gate at 4:40 a.m. and talk to the driver.",
+        "correcta": false,
+        "explicacion": "Las 4:40 a.m. es la hora en que los estudiantes deben llegar el día del viaje, y el texto no menciona al conductor como persona de contacto. Quien elige esta opción tomó un dato del primer párrafo que no tiene relación con las preguntas de los padres.",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usó la hora de llegada del primer párrafo como si fuera un momento para hacer preguntas."
+      }
+    ],
+    "explicacion": "LEER: el último párrafo dice \"For questions, call Mr Hernández, the science teacher, at the school between 7 a.m. and 2 p.m.\". COMPRENDER: la pregunta pide qué deben hacer los padres si tienen dudas. INTERPRETAR: \"For questions\" introduce la instrucción; luego vienen la acción (llamar), la persona (el profesor de ciencias), el lugar (el colegio) y el horario. REPRESENTAR: duda → llamar → profesor Hernández → colegio → 7 a.m. a 2 p.m. RAZONAR: la coordinadora solo firma y el 19 de marzo es el plazo de pago; el horario del observatorio es de la actividad; las 4:40 a.m. es la hora de llegada; llamar al profesor de ciencias es lo que pide el texto. RESOLVER: la opción de llamar al profesor de ciencias entre 7 a.m. y 2 p.m. VERIFICAR: \"Mr Hernández, the science teacher\" identifica a la misma persona que la opción, y el horario coincide exactamente.",
+    "que_identificar": "El último párrafo, que empieza con \"For questions\" y da la persona, el lugar y el horario de contacto.",
+    "que_revisar": "Datos de contacto en mensajes formales: for questions, call, contact, office hours; distinguir la persona que firma de la persona de contacto.",
+    "refuerzo_ids": [
+      "ING-170",
+      "ING-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "contacto",
+      "texto:ING-T39",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-174",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir hábitos de la autora a partir de detalles del primer párrafo",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Why I Stopped Buying New Clothes**\n\nLast year my sister challenged me: twelve months without buying a single new piece of clothing. I laughed. I was the person who ordered a new T-shirt every time I felt bored, and my wardrobe in our flat in Barranquilla was so full that the door didn't close properly.\n\nThe first weeks were the hardest. Every time I opened social media, somebody was wearing something I \"needed\". I unfollowed a few accounts, and the feeling slowly disappeared. Then something unexpected happened: I started to look at what I already had. I found a jacket with the price tag still on it, and three pairs of jeans that were almost identical.\n\nI learned to sew buttons and to take trousers to Doña Esperanza, who has a tiny repair shop two blocks from my house. For 15,000 pesos she turns a boring dress into something I actually want to wear. I also went to a clothes swap organised by a group of students from the university, where I left with two shirts and a new friend.\n\nDid I save money? Yes, about 600,000 pesos according to my notes, although that was never the point. The point was that I no longer feel that strange emptiness after a purchase. My sister now says she wants to try a year without buying books. I don't think she will last a month.",
+    "estimulo": null,
+    "enunciado": "What does the writer suggest about her shopping habits before the challenge?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She bought clothes only when she really needed them.",
+        "correcta": false,
+        "explicacion": "El primer párrafo dice lo contrario: compraba una camiseta nueva \"every time I felt bored\" y su armario estaba tan lleno que la puerta no cerraba. Comprar por aburrimiento y acumular ropa no es comprar solo por necesidad. Quien elige esta opción no leyó esos detalles.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó \"every time I felt bored\" y el armario lleno con compras innecesarias."
+      },
+      {
+        "clave": "B",
+        "texto": "She bought clothes to deal with boredom, not because she needed them.",
+        "correcta": true,
+        "explicacion": "La autora se describe como \"the person who ordered a new T-shirt every time I felt bored\" y añade que su armario estaba tan lleno que la puerta no cerraba. De ahí se infiere que compraba por aburrimiento y que ya tenía más ropa de la que necesitaba. Las comillas en \"needed\" del segundo párrafo refuerzan esa idea.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "She bought clothes because her flat had a lot of free space.",
+        "correcta": false,
+        "explicacion": "El texto dice que el armario estaba tan lleno que \"the door didn't close properly\", es decir, no había espacio libre. Nada indica que el espacio motivara sus compras. Quien elige esta opción interpretó al revés el detalle del armario.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Entendió el detalle del armario como abundancia de espacio en lugar de exceso de ropa."
+      },
+      {
+        "clave": "D",
+        "texto": "She bought clothes mostly as presents for her sister and friends.",
+        "correcta": false,
+        "explicacion": "La hermana aparece como la persona que propone el reto, no como destinataria de regalos, y las compras descritas (camisetas, chaqueta, jeans) son para la propia autora. Quien elige esta opción supuso una motivación que el texto no menciona.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a la hermana un papel que el texto no le da."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo dice que la autora pedía una camiseta nueva cada vez que se aburría y que su armario estaba tan lleno que la puerta no cerraba. COMPRENDER: la pregunta pide inferir cómo eran sus hábitos de compra antes del reto. INTERPRETAR: comprar \"every time I felt bored\" señala que la compra respondía a un estado de ánimo; el armario lleno indica que no necesitaba más ropa. REPRESENTAR: aburrimiento → compra → armario que no cierra. RAZONAR: comprar solo por necesidad contradice ambos detalles; el espacio libre del apartamento es lo opuesto a lo descrito; los regalos a la hermana no aparecen; comprar para combatir el aburrimiento, sin necesidad, es lo que los detalles sugieren. RESOLVER: la opción sobre el aburrimiento y la falta de necesidad. VERIFICAR: las comillas en \"needed\" y el \"vacío después de una compra\" del final confirman que compraba sin necesidad real.",
+    "que_identificar": "Las frases \"every time I felt bored\" y \"so full that the door didn't close properly\" del primer párrafo.",
+    "que_revisar": "Inferir hábitos y motivaciones a partir de detalles concretos; uso de comillas para marcar ironía o distancia (\"needed\"); vocabulario: wardrobe, challenge, price tag.",
+    "refuerzo_ids": [
+      "ING-154",
+      "ING-175"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "habitos",
+      "texto:ING-T40",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-175",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir la causa de una acción (dejar de seguir cuentas) a partir del contexto",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**Why I Stopped Buying New Clothes**\n\nLast year my sister challenged me: twelve months without buying a single new piece of clothing. I laughed. I was the person who ordered a new T-shirt every time I felt bored, and my wardrobe in our flat in Barranquilla was so full that the door didn't close properly.\n\nThe first weeks were the hardest. Every time I opened social media, somebody was wearing something I \"needed\". I unfollowed a few accounts, and the feeling slowly disappeared. Then something unexpected happened: I started to look at what I already had. I found a jacket with the price tag still on it, and three pairs of jeans that were almost identical.\n\nI learned to sew buttons and to take trousers to Doña Esperanza, who has a tiny repair shop two blocks from my house. For 15,000 pesos she turns a boring dress into something I actually want to wear. I also went to a clothes swap organised by a group of students from the university, where I left with two shirts and a new friend.\n\nDid I save money? Yes, about 600,000 pesos according to my notes, although that was never the point. The point was that I no longer feel that strange emptiness after a purchase. My sister now says she wants to try a year without buying books. I don't think she will last a month.",
+    "estimulo": null,
+    "enunciado": "Why did the writer stop following some accounts on social media?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Because they made her want things she did not really need.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo dice que cada vez que abría las redes alguien llevaba algo que ella \"needed\" (entre comillas, es decir, que creía necesitar), y que al dejar de seguir algunas cuentas \"the feeling slowly disappeared\". Dejó de seguirlas para que no le despertaran deseos de comprar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Because those accounts published photos of her old wardrobe.",
+        "correcta": false,
+        "explicacion": "El texto no dice que nadie publicara fotos de su armario; habla de personas que llevaban ropa que ella sentía que necesitaba. El armario aparece en el primer párrafo como descripción de su exceso de ropa. Quien elige esta opción mezcló dos párrafos.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Conectó el armario del primer párrafo con las redes sociales del segundo."
+      },
+      {
+        "clave": "C",
+        "texto": "Because her sister asked her to delete them as part of the challenge.",
+        "correcta": false,
+        "explicacion": "El reto de la hermana consistía en no comprar ropa durante doce meses; el texto no menciona ninguna condición sobre redes sociales. Dejar de seguir cuentas fue una decisión propia de la autora para resistir la tentación. Quien elige esta opción atribuyó la decisión a otra persona.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que el reto incluía reglas sobre redes sociales que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "Because she wanted more time to write about the challenge online.",
+        "correcta": false,
+        "explicacion": "El texto no habla de publicar nada en línea ni de falta de tiempo. La relación que establece es entre ver ropa en redes y sentir que la necesita; esa sensación desaparece al dejar de seguir cuentas. Quien elige esta opción inventó un motivo ajeno al texto.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propuso una razón plausible en general, pero sin apoyo en el texto."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo dice: \"Every time I opened social media, somebody was wearing something I 'needed'. I unfollowed a few accounts, and the feeling slowly disappeared\". COMPRENDER: la pregunta pide la razón por la que dejó de seguir cuentas. INTERPRETAR: la causa está en la oración anterior: ver a otros con ropa le producía la sensación de necesitarla; la consecuencia de dejar de seguirlos fue que \"the feeling\" desapareció. REPRESENTAR: redes → deseo de comprar → dejar de seguir → el deseo desaparece. RAZONAR: nadie publicaba fotos de su armario; la hermana solo propuso no comprar ropa; escribir en línea no aparece; evitar el deseo de cosas innecesarias es la única causa con apoyo. RESOLVER: la opción sobre el deseo de cosas innecesarias. VERIFICAR: las comillas en \"needed\" muestran que no era una necesidad real, como dice la opción elegida.",
+    "que_identificar": "La secuencia de oraciones del segundo párrafo: ver ropa en redes, sentir que la necesita, dejar de seguir cuentas, desaparición de la sensación.",
+    "que_revisar": "Relaciones de causa y efecto implícitas entre oraciones consecutivas; vocabulario de redes sociales: follow, unfollow, account, post.",
+    "refuerzo_ids": [
+      "ING-174",
+      "ING-176"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "causa",
+      "texto:ING-T40",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-176",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Interpreta el sentido de un detalle en función de la idea del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar la función de un detalle: la chaqueta con la etiqueta del precio",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Why I Stopped Buying New Clothes**\n\nLast year my sister challenged me: twelve months without buying a single new piece of clothing. I laughed. I was the person who ordered a new T-shirt every time I felt bored, and my wardrobe in our flat in Barranquilla was so full that the door didn't close properly.\n\nThe first weeks were the hardest. Every time I opened social media, somebody was wearing something I \"needed\". I unfollowed a few accounts, and the feeling slowly disappeared. Then something unexpected happened: I started to look at what I already had. I found a jacket with the price tag still on it, and three pairs of jeans that were almost identical.\n\nI learned to sew buttons and to take trousers to Doña Esperanza, who has a tiny repair shop two blocks from my house. For 15,000 pesos she turns a boring dress into something I actually want to wear. I also went to a clothes swap organised by a group of students from the university, where I left with two shirts and a new friend.\n\nDid I save money? Yes, about 600,000 pesos according to my notes, although that was never the point. The point was that I no longer feel that strange emptiness after a purchase. My sister now says she wants to try a year without buying books. I don't think she will last a month.",
+    "estimulo": null,
+    "enunciado": "Why does the writer mention the jacket \"with the price tag still on it\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "To show that her clothes were more expensive than her sister's.",
+        "correcta": false,
+        "explicacion": "El texto no compara precios ni habla de la ropa de la hermana. La etiqueta del precio no se menciona por su valor, sino porque sigue puesta, lo que indica que la prenda nunca se usó. Quien elige esta opción se fijó en la palabra \"price\" y no en \"still on it\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"price tag\" como una referencia al costo de la ropa."
+      },
+      {
+        "clave": "B",
+        "texto": "To explain that she had decided to sell some of her clothes.",
+        "correcta": false,
+        "explicacion": "La autora no vende ropa en ningún momento; la arregla con Doña Esperanza y la intercambia en un \"clothes swap\". La etiqueta puesta no es para vender la chaqueta, sino una señal de que nunca la estrenó. Quien elige esta opción supuso una intención que el texto no indica.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció la etiqueta del precio con una venta que el texto no menciona."
+      },
+      {
+        "clave": "C",
+        "texto": "To prove that Doña Esperanza had repaired the jacket very well.",
+        "correcta": false,
+        "explicacion": "Doña Esperanza aparece en el tercer párrafo, después del hallazgo de la chaqueta, y arregla pantalones y vestidos; el texto no dice que haya tocado la chaqueta. Quien elige esta opción conectó dos párrafos que no tienen relación directa.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vinculó la chaqueta del segundo párrafo con la costurera del tercero."
+      },
+      {
+        "clave": "D",
+        "texto": "To illustrate that she had bought things she never got to use.",
+        "correcta": true,
+        "explicacion": "Una chaqueta que aún tiene la etiqueta del precio es una prenda que se compró y nunca se usó. Junto con los tres jeans casi idénticos, el detalle ilustra que la autora acumulaba ropa innecesaria, justo cuando \"started to look at what I already had\". Es un ejemplo concreto de sus compras sin sentido.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: en el segundo párrafo la autora dice que empezó a mirar lo que ya tenía y encontró \"a jacket with the price tag still on it, and three pairs of jeans that were almost identical\". COMPRENDER: la pregunta pide la función de ese detalle en el texto. INTERPRETAR: una etiqueta del precio todavía puesta significa que la prenda nunca se estrenó; tres jeans casi iguales significan compras repetidas e innecesarias. REPRESENTAR: mirar el armario → chaqueta sin estrenar + jeans repetidos → prueba de compras inútiles. RAZONAR: no se comparan precios ni se vende ropa; Doña Esperanza no arregla la chaqueta; el detalle muestra que compraba cosas que nunca usaba. RESOLVER: la opción que habla de cosas compradas y nunca usadas. VERIFICAR: el detalle sigue a \"I started to look at what I already had\" y muestra lo que descubrió: ropa comprada sin necesidad.",
+    "que_identificar": "El detalle \"with the price tag still on it\" y su vecino \"three pairs of jeans that were almost identical\".",
+    "que_revisar": "Interpretar la función de los ejemplos y detalles en un texto argumentativo; expresiones: price tag, still on, almost identical.",
+    "refuerzo_ids": [
+      "ING-175",
+      "ING-177"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "detalle",
+      "texto:ING-T40",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-177",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Reconoce la opinión o la actitud del autor a partir del tono y de las afirmaciones del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar la actitud de la autora en la frase final (duda irónica)",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Why I Stopped Buying New Clothes**\n\nLast year my sister challenged me: twelve months without buying a single new piece of clothing. I laughed. I was the person who ordered a new T-shirt every time I felt bored, and my wardrobe in our flat in Barranquilla was so full that the door didn't close properly.\n\nThe first weeks were the hardest. Every time I opened social media, somebody was wearing something I \"needed\". I unfollowed a few accounts, and the feeling slowly disappeared. Then something unexpected happened: I started to look at what I already had. I found a jacket with the price tag still on it, and three pairs of jeans that were almost identical.\n\nI learned to sew buttons and to take trousers to Doña Esperanza, who has a tiny repair shop two blocks from my house. For 15,000 pesos she turns a boring dress into something I actually want to wear. I also went to a clothes swap organised by a group of students from the university, where I left with two shirts and a new friend.\n\nDid I save money? Yes, about 600,000 pesos according to my notes, although that was never the point. The point was that I no longer feel that strange emptiness after a purchase. My sister now says she wants to try a year without buying books. I don't think she will last a month.",
+    "estimulo": null,
+    "enunciado": "What does the last sentence suggest about the writer's opinion of her sister's plan?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She is sure her sister will save a lot of money with it.",
+        "correcta": false,
+        "explicacion": "La frase final no habla de dinero sino de duración: \"I don't think she will last a month\". Además, la autora acaba de decir que el ahorro \"was never the point\". Quien elige esta opción trasladó la idea del ahorro al plan de la hermana.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la idea del ahorro de la autora al plan de la hermana sin leer la última frase."
+      },
+      {
+        "clave": "B",
+        "texto": "She doubts that her sister will keep her promise for very long.",
+        "correcta": true,
+        "explicacion": "\"I don't think she will last a month\" significa literalmente \"no creo que aguante un mes\". Frente a un plan de un año sin comprar libros, decir que no durará ni un mes expresa duda sobre la capacidad de la hermana para cumplirlo, con un tono de broma cariñosa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "She believes books are much harder to find than clothes.",
+        "correcta": false,
+        "explicacion": "El texto no compara la dificultad de encontrar libros y ropa. La duda de la autora no es sobre encontrar libros, sino sobre que su hermana resista sin comprarlos. Quien elige esta opción interpretó \"last\" como si se refiriera a los libros y no a la hermana.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No entendió \"she will last a month\" como \"ella aguantará un mes\"."
+      },
+      {
+        "clave": "D",
+        "texto": "She is upset because her sister copied her idea.",
+        "correcta": false,
+        "explicacion": "Nada en el texto indica molestia; la autora cuenta la idea de su hermana con naturalidad y cierra con una broma. Además, el reto original fue propuesto por la hermana, así que no habría copia posible. Quien elige esta opción atribuyó una emoción que el texto no muestra.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el tono de broma con enojo."
+      }
+    ],
+    "explicacion": "LEER: el texto termina: \"My sister now says she wants to try a year without buying books. I don't think she will last a month\". COMPRENDER: la pregunta pide qué revela la última frase sobre la opinión de la autora. INTERPRETAR: \"last\" como verbo significa durar o aguantar; decir que no aguantará un mes en un reto de un año es expresar escepticismo con humor. REPRESENTAR: plan de 12 meses → predicción de menos de 1 mes = duda. RAZONAR: la frase no menciona dinero; no compara libros con ropa; no muestra enojo, sino una broma; expresa duda sobre que la hermana cumpla el plan. RESOLVER: la opción que habla de dudar que mantenga la promesa por mucho tiempo. VERIFICAR: el tono general del texto es ligero y personal, y la broma final sobre la hermana que propuso el reto original cierra el círculo con ironía amable, lo que confirma la lectura.",
+    "que_identificar": "La frase final \"I don't think she will last a month\" y el verbo \"last\" con el sentido de durar.",
+    "que_revisar": "Inferir actitud y tono (duda, ironía, humor); verbo last (durar) frente al adjetivo last (último); expresiones de escepticismo en inglés.",
+    "refuerzo_ids": [
+      "ING-176",
+      "ING-157"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "lectura",
+      "opinion",
+      "tono",
+      "texto:ING-T40",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-178",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Sell vs. buy / spend: el punto de vista del vendedor",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(1)**.\n\n**The Night Market in Manizales**\n\nOnce a month, the main square of my neighbourhood in Manizales becomes a night market. About forty stalls **(1) ______** food, handmade jewellery and second-hand books from six in the evening until midnight. My favourite stall belongs to a couple from the coast who cook fish with coconut rice; the **(2) ______** of the food reaches you long before you can see the stall, and there is always a queue. Last month a local band played, and even the police officers were dancing. The market is free, but **(3) ______** your own bag: the organisers do not give plastic ones, because the whole idea is to produce as little rubbish as possible.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "buy",
+        "correcta": false,
+        "explicacion": "\"Buy\" significa comprar. El sujeto de la oración son los puestos del mercado (\"forty stalls\"), que ofrecen productos a los visitantes; los puestos venden, no compran. Quien elige esta opción no identificó quién realiza la acción.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el punto de vista: pensó en lo que hacen los visitantes y no en lo que hacen los puestos."
+      },
+      {
+        "clave": "B",
+        "texto": "spend",
+        "correcta": false,
+        "explicacion": "\"Spend\" significa gastar (dinero o tiempo) y necesita un objeto como \"money\" o \"an hour\"; no se puede \"spend food\" ni \"spend jewellery\". Además, los puestos no gastan, sino que ofrecen productos. Quien elige esta opción asoció el mercado con gastar dinero.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relacionó el mercado con la idea de gastar sin revisar el sujeto ni los objetos del verbo."
+      },
+      {
+        "clave": "C",
+        "texto": "sell",
+        "correcta": true,
+        "explicacion": "Los puestos de un mercado (\"stalls\") venden productos: comida, bisutería hecha a mano y libros de segunda mano. \"Sell\" (vender) es el verbo que corresponde al sujeto \"forty stalls\" y a los objetos enumerados.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración es \"About forty stalls ___ food, handmade jewellery and second-hand books from six in the evening until midnight\". COMPRENDER: hay que elegir el verbo que describe lo que hacen los puestos con esos productos. INTERPRETAR: el sujeto son los puestos del mercado; los objetos son productos típicos de venta. REPRESENTAR: puestos → ofrecen productos → vender. RAZONAR: \"buy\" describe la acción del cliente, no del puesto; \"spend\" se usa con dinero o tiempo y no con productos; \"sell\" es lo que hacen los puestos con comida, bisutería y libros. RESOLVER: la opción \"sell\". VERIFICAR: más adelante el texto habla de una fila (\"a queue\") frente al puesto de comida, lo que confirma que los puestos venden a los visitantes.",
+    "que_identificar": "El sujeto \"forty stalls\" y los objetos \"food, handmade jewellery and second-hand books\".",
+    "que_revisar": "Verbos de compra y venta: buy, sell, spend, pay, cost; identificar el sujeto antes de elegir el verbo.",
+    "refuerzo_ids": [
+      "ING-158",
+      "ING-179"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 70,
+    "etiquetas": [
+      "vocabulario",
+      "comercio",
+      "verbos",
+      "texto:ING-T41",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-179",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "razonar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Sustantivos de los sentidos: smell frente a taste y noise",
+    "dificultad": 3,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(2)**.\n\n**The Night Market in Manizales**\n\nOnce a month, the main square of my neighbourhood in Manizales becomes a night market. About forty stalls **(1) ______** food, handmade jewellery and second-hand books from six in the evening until midnight. My favourite stall belongs to a couple from the coast who cook fish with coconut rice; the **(2) ______** of the food reaches you long before you can see the stall, and there is always a queue. Last month a local band played, and even the police officers were dancing. The market is free, but **(3) ______** your own bag: the organisers do not give plastic ones, because the whole idea is to produce as little rubbish as possible.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "smell",
+        "correcta": true,
+        "explicacion": "La oración dice que algo de la comida \"reaches you long before you can see the stall\": lo que llega a distancia antes de ver el puesto es el olor. \"Smell\" (olor) es el sustantivo que encaja con comida que se está cocinando y que se percibe desde lejos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "taste",
+        "correcta": false,
+        "explicacion": "\"Taste\" (sabor) solo se percibe al comer; no puede llegar hasta una persona antes de que vea el puesto. Quien elige esta opción asoció la comida con el sabor sin atender a \"reaches you long before you can see the stall\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el sentido más asociado a la comida sin pensar en cuál se percibe a distancia."
+      },
+      {
+        "clave": "C",
+        "texto": "noise",
+        "correcta": false,
+        "explicacion": "\"Noise\" (ruido) puede llegar desde lejos, pero la frase habla de \"the ___ of the food\"; la comida no hace ruido, y en el texto el sonido corresponde a la banda, que se menciona después. Quien elige esta opción pensó en algo que se percibe a distancia sin revisar que se trata de la comida.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Pensó en algo que viaja a distancia sin comprobar que debía referirse a la comida."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"the ___ of the food reaches you long before you can see the stall, and there is always a queue\". COMPRENDER: hay que elegir el sustantivo que nombra lo que, viniendo de la comida, se percibe a distancia. INTERPRETAR: \"reaches you long before you can see\" indica algo que viaja por el aire antes de que la vista alcance el puesto. REPRESENTAR: comida cocinándose → algo llega a distancia → olor. RAZONAR: el sabor requiere probar la comida, no llega desde lejos; el ruido viaja, pero la comida no produce ruido y la música es de la banda; el olor de pescado con arroz de coco sí se percibe a cuadras. RESOLVER: la opción \"smell\". VERIFICAR: la consecuencia mencionada, \"there is always a queue\", es coherente con un olor que atrae a la gente antes de llegar al puesto.",
+    "que_identificar": "La frase \"reaches you long before you can see the stall\" y el complemento \"of the food\".",
+    "que_revisar": "Sustantivos y verbos de los cinco sentidos: smell, taste, sound/noise, sight, touch; colocaciones con food: the smell of food, it tastes good.",
+    "refuerzo_ids": [
+      "ING-178",
+      "ING-180"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "vocabulario",
+      "sentidos",
+      "comida",
+      "texto:ING-T41",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-180",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "verificar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Bring vs. take / carry: traer algo al lugar del que se habla",
+    "dificultad": 3,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(3)**.\n\n**The Night Market in Manizales**\n\nOnce a month, the main square of my neighbourhood in Manizales becomes a night market. About forty stalls **(1) ______** food, handmade jewellery and second-hand books from six in the evening until midnight. My favourite stall belongs to a couple from the coast who cook fish with coconut rice; the **(2) ______** of the food reaches you long before you can see the stall, and there is always a queue. Last month a local band played, and even the police officers were dancing. The market is free, but **(3) ______** your own bag: the organisers do not give plastic ones, because the whole idea is to produce as little rubbish as possible.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "carry",
+        "correcta": false,
+        "explicacion": "\"Carry\" significa cargar o llevar algo encima mientras uno se mueve; describe el acto de sostener, no el de traer algo desde casa al mercado. Como la instrucción es venir con la bolsa, hace falta el verbo de movimiento hacia el lugar. Quien elige esta opción tradujo \"llevar\" sin distinguir el matiz.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tradujo \"llevar\" por \"carry\" sin notar que la idea es traer la bolsa desde casa."
+      },
+      {
+        "clave": "B",
+        "texto": "bring",
+        "correcta": true,
+        "explicacion": "El texto habla desde el mercado y pide al visitante que venga con su propia bolsa porque los organizadores no dan bolsas plásticas. \"Bring\" (traer) es el verbo para llevar algo hacia el lugar donde está quien habla o del que se habla; \"bring your own bag\" es además una expresión fija de las campañas contra el plástico.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "take",
+        "correcta": false,
+        "explicacion": "\"Take\" indica llevar algo desde donde está el hablante hacia otro lugar, alejándose. Como el texto está escrito desde el punto de vista del mercado, al que el visitante llega, el movimiento es de acercamiento y corresponde \"bring\". Quien elige esta opción invirtió la dirección del movimiento.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la dirección: \"take\" aleja del hablante y \"bring\" acerca."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"The market is free, but ___ your own bag: the organisers do not give plastic ones\". COMPRENDER: hay que elegir el verbo que indica que el visitante debe venir con su bolsa. INTERPRETAR: el autor habla desde el mercado; la bolsa viene de la casa del visitante hacia el mercado, es decir, se acerca al lugar del que se habla. REPRESENTAR: casa → bolsa → mercado (lugar del hablante) = traer. RAZONAR: \"carry\" describe cargar algo encima, no el movimiento hacia un lugar; \"take\" indica alejarse del hablante; \"bring\" indica acercarse al hablante o al lugar del que se habla, que es el caso. RESOLVER: la opción \"bring\". VERIFICAR: la razón que sigue, \"the organisers do not give plastic ones\", confirma que el visitante debe traer la bolsa desde fuera, y \"bring your own bag\" es una expresión común en campañas ambientales.",
+    "que_identificar": "El punto de vista del texto (desde el mercado) y la razón \"the organisers do not give plastic ones\".",
+    "que_revisar": "Verbos de movimiento con objetos: bring (acercar), take (alejar), carry (cargar), fetch (ir por algo y traerlo); expresión \"bring your own\".",
+    "refuerzo_ids": [
+      "ING-179",
+      "ING-120"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "vocabulario",
+      "bring_take",
+      "medio_ambiente",
+      "texto:ING-T41",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

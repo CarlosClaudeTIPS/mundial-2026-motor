@@ -1,0 +1,146 @@
+[
+  {
+    "id": "EXP21-MAT-001",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Ejemplos de preguntas explicadas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/03_EXPLICADAS_MATEMATICAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 1"
+    },
+    "competencia": "M1",
+    "componente": null,
+    "afirmacion": "Esta pregunta evalúa la habilidad de los estudiantes para comprender y transformar la información cuantitativa y esquemática presentada en distintos formatos. Específicamente, el responder correctamente esta pregunta, el evaluado demuestra que da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas. Ejemplos de y",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": "Un octágono regular es un polígono de ocho lados y ocho ángulos internos congruentes. La figura muestra un octágono regular inscrito en una circunferencia de radio 2.",
+    "estimulo": null,
+    "enunciado": "Con la expresión x = se puede calcular en el octágono de la figura, la medida del",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "ángulo OPQ.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "segmento PQ.",
+        "correcta": true,
+        "explicacion": "Es importante notar que el octágono está compuesto por 8 triángulos congruentes, todos ellos isósceles, con las siguientes medidas: 135° P P 135° 67,5° ń 3 2 y = 67,5° 4 1 135° 2 135° Q 5 O 8 Į = 45,0° ß = 67,5° 135° 6 7 135° O 2 Q 135° Figura 1 2 3 La medida de los Como los lados OP y Como la suma de los segmentos OQ y OP es 2, OQ tienen la misma medida, ángulos internos del debido a que ambos son las medidas de los ángulos triángulo es 180°, entonces radios de la <OQP y <OPQ son iguales, el ángulo <OQP tiene una circunferencia en la que entonces, cada una de ellas medida de: se inscribe el octágono. tiene un valor de 67,5°. 180° ï 67,5° ï 67,5° = 45° Haciendo uso de la Ley del seno, se concluye correctamente que sen 67,5° = sen 45° . 2 PQ 2 sen 45° Por tanto, la expresión corresponde a la medida del segmento PQ, por lo que, la respuesta correcta a sen 67,5° esta pregunta se encuentra en la opción B.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "ángulo QOP.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "segmento OQ.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Es importante notar que el octágono está compuesto por 8 triángulos congruentes, todos ellos isósceles, con las siguientes medidas: 135° P P 135° 67,5° ń 3 2 y = 67,5° 4 1 135° 2 135° Q 5 O 8 Į = 45,0° ß = 67,5° 135° 6 7 135° O 2 Q 135° Figura 1 2 3 La medida de los Como los lados OP y Como la suma de los segmentos OQ y OP es 2, OQ tienen la misma medida, ángulos internos del debido a que ambos son las medidas de los ángulos triángulo es 180°, entonces radios de la <OQP y <OPQ son iguales, el ángulo <OQP tiene una circunferencia en la que entonces, cada una de ellas medida de: se inscribe el octágono. tiene un valor de 67,5°. 180° ï 67,5° ï 67,5° = 45° Haciendo uso de la Ley del seno, se concluye correctamente que sen 67,5° = sen 45° . 2 PQ 2 sen 45° Por tanto, la expresión corresponde a la medida del segmento PQ, por lo que, la respuesta correcta a sen 67,5° esta pregunta se encuentra en la opción B.\n\nSobre el contexto: 135° P 135° 67,5° 135° 135° Q O 135° 135° 135° Figura\n\nSobre el enunciado: 2 sen 45° sen 67,5°\n\nQué evalúa: Esta pregunta evalúa la habilidad de los estudiantes para comprender y transformar la información cuantitativa y esquemática presentada en distintos formatos. Específicamente, el responder correctamente esta pregunta, el evaluado demuestra que da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas. Ejemplos de y",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "EXP21-MAT-003",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Ejemplos de preguntas explicadas Saber 11.º – Caja de herramientas (ICFES, 2021)",
+      "url": "http://icfes.acendra.com.co/wp-content/uploads/2024/12/03_EXPLICADAS_MATEMATICAS.pdf",
+      "anio": 2021,
+      "referencia": "Pregunta 3"
+    },
+    "competencia": "M3",
+    "componente": null,
+    "afirmacion": "Esta pregunta evalúa la habilidad de los estudiantes para validar procedimientos y estrategias matemáticas utilizadas para dar solución a problemas. Específicamente, el responder correctamente esta pregunta, el evaluado demuestra que establece la validez o pertinencia de una solución propuesta a un problema dado.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": "Entre los 16 estudiantes de un salón de clases se va a rifar una boleta para ingresar a un parque de diversiones. Cada estudiante debe escoger un número del 3 al 18. El sorteo se efectúa de la siguiente manera: se depositan 6 balotas en una urna, cada una numerada del 1 al 6; se extrae una balota, se mira el número y se vuelve a depositar en la urna. El experimento se repite dos veces más. La suma de los tres puntajes obtenidos determina el número ganador de la rifa.",
+    "estimulo": null,
+    "enunciado": "Si en la primera extracción del sorteo se obtuvo 2, es más probable que el estudiante que escogió el número 10 gane la rifa a que la gane el estudiante con el número 7, porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "al ser mayor el número escogido, es mayor la probabilidad de ganar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "el primer estudiante tiene una posibilidad más de ganar que el segundo.",
+        "correcta": true,
+        "explicacion": "Como se realizan tres extracciones independientes de balotas numeradas del 1 al 6, una representación adecuada es la siguiente: 6 6 6 Cada 6 representa la cantidad de posibilidades en cada una de las tres extracciones, por tanto, hay 6 × 6 × 6 = 216 posibilidades. Por ejemplo, si en las tres extracciones se obtiene la balota marcada con el número 1, el ganador de la rifa será el estudiante que haya elegido el número 3 (1 + 1 + 1); de forma similar, si en las tres extracciones se obtiene la balota marcada con el número 6, el ganador de la rifa será el estudiante que haya elegido el número 18 (6 + 6 + 6). Además, la pregunta considera que en la primera extracción se obtiene la balota marcada con el número 2 y compara las posibilidades de ganar la rifa entre dos estudiantes, uno que elige el número 10 y otro que elige el número 7. Para el estudiante que elige el número 10, las posibilidades de ganar son: 2 2 6 2 3 5 En cada una de las 5 posibilidades, la 2 4 4 suma de los valores de las balotas 10 2 5 3 seleccionadas es 10. 2 6 2 Para el estudiante que elige el número 7, las posibilidades de ganar son: 2 1 4 2 2 3 En cada una de las 4 posibilidades, la 2 3 2 suma de los valores de las balotas 7 2 4 1 seleccionadas es 7. Por tanto, es más probable que el estudiante que escogió el número 10 gane la rifa a que la gane el estudiante con el número 7, porque el primer estudiante tiene una posibilidad más de ganar que el segundo, por lo que la respuesta correcta a esta pregunta se encuentra en la opción B.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "es más probable seguir obteniendo números pares.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "es mayor la diferencia entre 10 y 18 que entre 2 y 7.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Como se realizan tres extracciones independientes de balotas numeradas del 1 al 6, una representación adecuada es la siguiente: 6 6 6 Cada 6 representa la cantidad de posibilidades en cada una de las tres extracciones, por tanto, hay 6 × 6 × 6 = 216 posibilidades. Por ejemplo, si en las tres extracciones se obtiene la balota marcada con el número 1, el ganador de la rifa será el estudiante que haya elegido el número 3 (1 + 1 + 1); de forma similar, si en las tres extracciones se obtiene la balota marcada con el número 6, el ganador de la rifa será el estudiante que haya elegido el número 18 (6 + 6 + 6). Además, la pregunta considera que en la primera extracción se obtiene la balota marcada con el número 2 y compara las posibilidades de ganar la rifa entre dos estudiantes, uno que elige el número 10 y otro que elige el número 7. Para el estudiante que elige el número 10, las posibilidades de ganar son: 2 2 6 2 3 5 En cada una de las 5 posibilidades, la 2 4 4 suma de los valores de las balotas 10 2 5 3 seleccionadas es 10. 2 6 2 Para el estudiante que elige el número 7, las posibilidades de ganar son: 2 1 4 2 2 3 En cada una de las 4 posibilidades, la 2 3 2 suma de los valores de las balotas 7 2 4 1 seleccionadas es 7. Por tanto, es más probable que el estudiante que escogió el número 10 gane la rifa a que la gane el estudiante con el número 7, porque el primer estudiante tiene una posibilidad más de ganar que el segundo, por lo que la respuesta correcta a esta pregunta se encuentra en la opción B.\n\nQué evalúa: Esta pregunta evalúa la habilidad de los estudiantes para validar procedimientos y estrategias matemáticas utilizadas para dar solución a problemas. Específicamente, el responder correctamente esta pregunta, el evaluado demuestra que establece la validez o pertinencia de una solución propuesta a un problema dado.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente"
+  }
+]

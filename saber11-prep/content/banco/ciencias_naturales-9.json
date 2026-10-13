@@ -1,0 +1,1430 @@
+[
+  {
+    "id": "CIE-141",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica características de algunos procesos que se dan en los organismos para comprender la dinámica de lo vivo",
+    "habilidad": "interpretar",
+    "tema": "Sistema circulatorio: gasto cardíaco",
+    "subtema": "Frecuencia cardíaca, volumen por latido y ejercicio",
+    "dificultad": 1,
+    "contexto": "En una clase de educación física, los estudiantes midieron la frecuencia cardíaca de un compañero en tres situaciones. Con un sensor, la docente estimó además el volumen de sangre que el corazón expulsa en cada latido. El gasto cardíaco es el volumen de sangre que el corazón bombea por minuto y se calcula multiplicando la frecuencia cardíaca por el volumen expulsado en cada latido.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Frecuencia cardíaca y volumen por latido en tres situaciones",
+      "columnas": ["Situación","Frecuencia cardíaca (latidos/min)","Volumen por latido (mL)"],
+      "filas": [
+        ["Reposo sentado",70,70],
+        ["Caminata rápida",100,85],
+        ["Carrera intensa",150,100]
+      ],
+      "nota": "Datos estimados para una persona joven y sana."
+    },
+    "enunciado": "Según la tabla, ¿cómo cambia el gasto cardíaco del estudiante al pasar del reposo a la carrera intensa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pasa de unos 4,9 L/min a unos 15 L/min, es decir, se triplica, porque aumentan a la vez la frecuencia cardíaca y el volumen por latido.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En reposo: 70 × 70 mL = 4 900 mL/min ≈ 4,9 L/min. En carrera: 150 × 100 mL = 15 000 mL/min = 15 L/min. La razón 15 / 4,9 ≈ 3, y el aumento se debe a los dos factores de la tabla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Pasa de unos 70 L/min a unos 150 L/min, es decir, se duplica, porque el gasto cardíaco es igual a la frecuencia cardíaca medida en latidos por minuto.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto define el gasto cardíaco como frecuencia × volumen por latido; la frecuencia sola (70 y 150 latidos/min) no es un volumen y no puede expresarse en litros por minuto.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la frecuencia cardíaca con el gasto cardíaco e ignoró el volumen por latido."
+      },
+      {
+        "clave": "C",
+        "texto": "Pasa de unos 4,9 L/min a unos 10,5 L/min, porque el volumen por latido se mantiene en 70 mL y solo cambia la frecuencia con la que late el corazón.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que el volumen por latido también sube, de 70 a 100 mL. Si se usara 70 mL con 150 latidos se obtendría 10,5 L/min, pero ese no es el dato de la carrera.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el volumen por latido del reposo para calcular el gasto en la carrera."
+      },
+      {
+        "clave": "D",
+        "texto": "Pasa de unos 4,9 L/min a unos 7 L/min, porque al correr el corazón late más rápido pero cada latido expulsa menos sangre y los dos efectos casi se compensan.",
+        "correcta": false,
+        "explicacion": "No responde. En la tabla el volumen por latido aumenta con el ejercicio (70 → 85 → 100 mL), no disminuye; por eso los dos factores se refuerzan en lugar de compensarse.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que un corazón más rápido llena menos y no revisó la columna de volumen por latido."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la frecuencia cardíaca y el volumen por latido en reposo (70 latidos/min, 70 mL), caminata (100, 85 mL) y carrera (150, 100 mL). COMPRENDER: se pide el cambio del gasto cardíaco, definido en el contexto como frecuencia × volumen por latido. INTERPRETAR: ambos factores crecen con el ejercicio. REPRESENTAR: reposo = 70 × 70 = 4 900 mL/min ≈ 4,9 L/min; carrera = 150 × 100 = 15 000 mL/min = 15 L/min. RAZONAR: 15 / 4,9 ≈ 3, de modo que el gasto se triplica; el aumento proviene de un corazón más rápido y de latidos más llenos. RESOLVER: la respuesta es la opción que indica el paso de 4,9 a 15 L/min por el aumento de los dos factores. VERIFICAR: la opción de 70 a 150 L/min confunde frecuencia con gasto; la de 10,5 L/min usa el volumen del reposo; la de 7 L/min supone que el volumen por latido disminuye, lo que contradice la tabla.",
+    "que_identificar": "Que el gasto cardíaco se calcula con las dos columnas de la tabla y que ambas aumentan con el ejercicio.",
+    "que_revisar": "Sistema circulatorio; frecuencia cardíaca; volumen sistólico; gasto cardíaco; respuesta del cuerpo al ejercicio.",
+    "refuerzo_ids": ["CIE-001","CIE-048"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["sistema circulatorio","gasto cardiaco","ejercicio","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-142",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Analiza la dinámica interna de los organismos y da razón de cómo funcionan sus componentes para mantener la vida en el organismo",
+    "habilidad": "razonar",
+    "tema": "Fisiología: adaptación a la altura",
+    "subtema": "Presión de oxígeno, eritropoyetina y glóbulos rojos",
+    "dificultad": 2,
+    "contexto": "Un equipo de salud comparó la sangre de adultos sanos que han vivido toda su vida en tres municipios ubicados a distinta altitud. También registró la presión parcial de oxígeno del aire en cada lugar.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Altitud, oxígeno en el aire y glóbulos rojos de los habitantes",
+      "columnas": ["Municipio","Altitud (m)","Presión de O₂ en el aire (kPa)","Glóbulos rojos (millones/µL)","Hemoglobina (g/dL)"],
+      "filas": [
+        ["Cartagena",0,21.2,4.8,14.2],
+        ["Bogotá",2600,15.7,5.4,15.9],
+        ["Vetas (Santander)",3300,14.3,5.8,17.0]
+      ],
+      "nota": "Promedios de personas adultas sin enfermedad conocida."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que los habitantes de los municipios más altos tengan más glóbulos rojos y más hemoglobina?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A mayor altitud el aire es más frío, y el frío hace que la sangre se espese y concentre sus células, por lo que en el mismo volumen se cuentan más glóbulos rojos.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla relaciona la altitud con la presión de oxígeno, no con la temperatura; además, una sangre más espesa por frío no aumentaría la cantidad total de hemoglobina producida por el cuerpo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye el efecto a la temperatura en lugar de a la menor disponibilidad de oxígeno."
+      },
+      {
+        "clave": "B",
+        "texto": "En la altura cada bocanada de aire aporta menos oxígeno; el riñón detecta esa menor oxigenación y libera eritropoyetina, que ordena a la médula ósea producir más glóbulos rojos para transportar más oxígeno.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La presión de O₂ baja de 21,2 a 14,3 kPa, así que llega menos oxígeno a la sangre; el riñón responde con eritropoyetina y la médula fabrica más glóbulos rojos, lo que eleva la hemoglobina y compensa la escasez.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Las personas que nacen en la altura heredan un gen distinto que las obliga a producir más glóbulos rojos, de modo que alguien de Cartagena que se mude a Bogotá nunca cambiará sus valores.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla no compara genes sino lugares de residencia; además, el aumento de glóbulos rojos es una respuesta fisiológica que también ocurre en personas que se trasladan a la altura durante semanas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una aclimatación fisiológica con una herencia genética fija."
+      },
+      {
+        "clave": "D",
+        "texto": "En la altura hay más oxígeno disponible en el aire, por lo que el cuerpo fabrica más glóbulos rojos para aprovecharlo y almacenarlo en la sangre como reserva para el ejercicio.",
+        "correcta": false,
+        "explicacion": "No responde. La tercera columna muestra lo contrario: la presión de oxígeno disminuye con la altitud (21,2 → 15,7 → 14,3 kPa). El cuerpo produce más glóbulos rojos porque hay menos oxígeno, no más.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó al revés la columna de presión de oxígeno o supuso que el aire de montaña es más rico en oxígeno."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra que al subir de 0 a 3 300 m la presión de O₂ baja de 21,2 a 14,3 kPa, mientras los glóbulos rojos suben de 4,8 a 5,8 millones/µL y la hemoglobina de 14,2 a 17,0 g/dL. COMPRENDER: se pide explicar por qué más altura implica más glóbulos rojos. INTERPRETAR: menos presión de oxígeno significa que cada respiración carga menos O₂ en la sangre. REPRESENTAR: menos O₂ → el riñón libera eritropoyetina → la médula ósea produce más glóbulos rojos → más hemoglobina → más capacidad de transportar O₂. RAZONAR: es un mecanismo de compensación: el cuerpo aumenta los transportadores para captar el oxígeno escaso. RESOLVER: la respuesta es la opción que describe la cadena menor oxígeno, eritropoyetina, más glóbulos rojos. VERIFICAR: la opción del frío no usa el dato de oxígeno; la del gen fijo niega la aclimatación; la que habla de más oxígeno en la altura contradice la tabla.",
+    "que_identificar": "La relación inversa entre la presión de oxígeno del aire y la cantidad de glóbulos rojos en las tres filas de la tabla.",
+    "que_revisar": "Transporte de oxígeno por la hemoglobina; eritropoyetina; homeostasis; aclimatación a la altura.",
+    "refuerzo_ids": ["CIE-048","CIE-122"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["sistema respiratorio","hemoglobina","altitud","homeostasis","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-143",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "razonar",
+    "tema": "Plantas: transpiración y estomas",
+    "subtema": "Factores ambientales que modifican la pérdida de agua por las hojas",
+    "dificultad": 2,
+    "contexto": "Para estudiar la transpiración, un grupo de estudiantes de Manizales colocó cuatro ramas iguales de una misma planta en tubos con agua y midió cuánta agua absorbía cada rama en una hora. Cada rama se mantuvo en una condición distinta; todo lo demás (tamaño de la rama, cantidad inicial de agua, hora del día) fue igual.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Agua absorbida por la rama en una hora según la condición",
+      "columnas": ["Rama","Condición","Agua absorbida (mL/h)"],
+      "filas": [
+        ["1","Aire quieto, luz del día (control)",2.0],
+        ["2","Ventilador suave, luz del día",4.1],
+        ["3","Cubierta con bolsa plástica transparente, luz del día",0.6],
+        ["4","Aire quieto, en un armario oscuro",0.8]
+      ],
+      "nota": "El agua absorbida se toma como medida de la que la rama pierde por las hojas."
+    },
+    "enunciado": "¿Qué conclusión está respaldada por los resultados del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La luz es el único factor que afecta la transpiración, porque la rama del armario oscuro fue la que menos agua absorbió y las demás, todas con luz, absorbieron cantidades parecidas.",
+        "correcta": false,
+        "explicacion": "No responde. Las ramas con luz no absorbieron cantidades parecidas: variaron entre 0,6 y 4,1 mL/h según el viento y la humedad. Además, la rama que menos absorbió fue la de la bolsa (0,6), no la del armario (0,8).",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó solo en la condición de oscuridad y no comparó las otras tres filas entre sí."
+      },
+      {
+        "clave": "B",
+        "texto": "La bolsa plástica impidió que la luz llegara a las hojas, por eso la rama 3 transpiró tan poco como la rama 4; ambas muestran que sin luz los estomas se cierran.",
+        "correcta": false,
+        "explicacion": "No responde. La bolsa era transparente y la rama 3 estaba a la luz del día, así que la luz sí llegaba. Lo que la bolsa cambió fue la humedad del aire alrededor de las hojas, que se saturó de vapor.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No tuvo en cuenta que la bolsa era transparente y confundió el efecto de la humedad con el de la luz."
+      },
+      {
+        "clave": "C",
+        "texto": "El viento aumenta la transpiración y la humedad alta alrededor de la hoja la reduce; la oscuridad también la disminuye, probablemente porque los estomas se cierran sin luz.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Frente al control (2,0 mL/h), el ventilador duplicó la pérdida (4,1), la bolsa que acumula vapor la redujo a 0,6 y la oscuridad a 0,8. Cada condición cambió una sola variable, así que cada efecto se puede atribuir a ella.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El ventilador hizo que la rama absorbiera más agua porque el movimiento del aire empuja el agua hacia arriba por el tallo, sin relación con lo que pasa en las hojas.",
+        "correcta": false,
+        "explicacion": "No responde. El aire en movimiento no empuja agua dentro del tallo; lo que hace es retirar el vapor que rodea la hoja, de modo que esta pierde agua más rápido y el tallo la reemplaza desde el tubo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propone un mecanismo físico sin conexión con la transpiración de las hojas."
+      }
+    ],
+    "explicacion": "LEER: cuatro ramas iguales absorbieron 2,0 (control), 4,1 (ventilador), 0,6 (bolsa transparente) y 0,8 mL/h (oscuridad). COMPRENDER: se pide la conclusión que los datos respaldan sobre los factores que afectan la transpiración. INTERPRETAR: cada rama cambia un solo factor respecto al control, así que la diferencia se atribuye a ese factor. REPRESENTAR: viento → 4,1 > 2,0 (aumenta); aire húmedo encerrado → 0,6 < 2,0 (disminuye); oscuridad → 0,8 < 2,0 (disminuye). RAZONAR: el viento retira el vapor que rodea la hoja y acelera la pérdida; la bolsa satura el aire de humedad y frena la evaporación; sin luz los estomas tienden a cerrarse. RESOLVER: la respuesta es la opción que reúne estos tres efectos. VERIFICAR: la opción de la luz como único factor ignora las diferencias entre ramas iluminadas; la de la bolsa olvida que era transparente; la del ventilador propone un mecanismo que no ocurre.",
+    "que_identificar": "Que cada rama difiere del control en una sola condición, y la dirección del cambio en cada caso.",
+    "que_revisar": "Transpiración vegetal; estomas; factores que afectan la evaporación; diseño experimental con control.",
+    "refuerzo_ids": ["CIE-103","CIE-025"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["plantas","transpiracion","estomas","indagacion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-144",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Establece relaciones entre fenómenos biológicos para comprender su entorno",
+    "habilidad": "leer",
+    "tema": "Taxonomía: claves dicotómicas",
+    "subtema": "Uso de una clave para clasificar un artrópodo",
+    "dificultad": 1,
+    "contexto": "En una salida de campo al humedal de Córdoba, en Bogotá, un grupo encontró un animal pequeño y usó esta clave sencilla para clasificarlo:\n\n1a. Tiene seis patas → ir a 2.\n1b. Tiene ocho o más patas → ir a 3.\n2a. Tiene alas visibles → **insecto volador**.\n2b. No tiene alas visibles → **insecto no volador**.\n3a. Tiene ocho patas y el cuerpo dividido en dos partes → **arácnido**.\n3b. Tiene más de ocho patas y el cuerpo en muchos segmentos → **miriápodo**.\n\nEl animal observado tenía el cuerpo alargado con muchos segmentos iguales, un par de patas por segmento (más de 30 patas en total) y no tenía alas.",
+    "estimulo": null,
+    "enunciado": "Siguiendo la clave, ¿en qué grupo queda clasificado el animal y qué paso de la clave lo decide?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Insecto no volador, porque el paso 2b indica que un animal sin alas visibles pertenece a este grupo, y el animal observado no tenía alas.",
+        "correcta": false,
+        "explicacion": "No responde. Solo se llega al paso 2 si el animal tiene seis patas (paso 1a). El animal tenía más de 30 patas, así que la clave lo envía al paso 3 y la ausencia de alas no se evalúa.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Saltó al paso de las alas sin pasar primero por el conteo de patas del paso 1."
+      },
+      {
+        "clave": "B",
+        "texto": "Arácnido, porque el paso 3a corresponde a los animales con más patas que los insectos, y este tenía muchas más de seis.",
+        "correcta": false,
+        "explicacion": "No responde. El paso 3a exige exactamente ocho patas y un cuerpo dividido en dos partes. El animal tenía más de 30 patas y muchos segmentos, características que coinciden con el paso 3b.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el paso 3a de forma incompleta, sin verificar el número exacto de patas y la forma del cuerpo."
+      },
+      {
+        "clave": "C",
+        "texto": "Insecto volador, porque los animales con muchos segmentos son larvas de insecto que todavía no han desarrollado las alas que tendrán de adultos.",
+        "correcta": false,
+        "explicacion": "No responde. La clave no considera etapas de desarrollo: se aplica a lo que se observa. Con más de ocho patas el paso 1b lleva al paso 3, no al grupo de insectos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce información externa sobre larvas en lugar de seguir los pasos de la clave."
+      },
+      {
+        "clave": "D",
+        "texto": "Miriápodo, porque el paso 1b lo envía al paso 3 por tener más de ocho patas, y el paso 3b corresponde a un cuerpo con muchos segmentos y más de ocho patas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El animal tiene más de 30 patas, así que en el paso 1 se elige 1b (ocho o más patas) y se va al paso 3; allí, el cuerpo de muchos segmentos y más de ocho patas corresponde a 3b: miriápodo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la clave tiene tres pasos con dos alternativas cada uno; el animal tiene cuerpo segmentado, un par de patas por segmento, más de 30 patas y sin alas. COMPRENDER: se pide aplicar la clave en orden y nombrar el paso decisivo. INTERPRETAR: en el paso 1 la pregunta es el número de patas; con más de 30 se elige 1b (ocho o más) y se pasa al 3. REPRESENTAR: 1b → 3; en 3, 'ocho patas y cuerpo en dos partes' (3a) no coincide; 'más de ocho patas y muchos segmentos' (3b) sí coincide. RAZONAR: una clave dicotómica se recorre paso a paso; no se puede saltar al paso 2 porque ese camino es solo para animales de seis patas. RESOLVER: la respuesta es la opción que clasifica al animal como miriápodo por los pasos 1b y 3b. VERIFICAR: las opciones de insecto usan el paso 2, al que no se llega; la de arácnido ignora que 3a exige exactamente ocho patas.",
+    "que_identificar": "El número de patas como criterio del paso 1 y la descripción del cuerpo en el paso 3.",
+    "que_revisar": "Clasificación de los seres vivos; claves dicotómicas; características de insectos, arácnidos y miriápodos.",
+    "refuerzo_ids": ["CIE-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["taxonomia","clave dicotomica","artropodos","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-145",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Determina si los resultados derivados de una investigación son suficientes y pertinentes para sacar conclusiones en una situación dada",
+    "habilidad": "verificar",
+    "tema": "Ecosistemas: especies invasoras",
+    "subtema": "Pez león en el Caribe colombiano y peces nativos",
+    "dificultad": 2,
+    "contexto": "El pez león es una especie originaria del océano Índico que llegó al Caribe y no tiene depredadores naturales allí. Un grupo de biólogos registró durante cinco años, en un mismo arrecife de las islas del Rosario, la densidad de pez león y la cantidad de peces nativos juveniles. Su hipótesis era que el pez león, al alimentarse de juveniles, reduce la población de peces nativos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Pez león y juveniles de peces nativos en un arrecife (2019-2023)",
+      "columnas": ["Año","Pez león (individuos/ha)","Juveniles nativos (individuos/100 m²)"],
+      "filas": [
+        ["2019",2,60],
+        ["2020",8,55],
+        ["2021",20,41],
+        ["2022",38,28],
+        ["2023",55,17]
+      ],
+      "nota": "Durante esos años la temperatura del agua subió 0,8 °C y aumentó la pesca en la zona."
+    },
+    "enunciado": "¿Qué puede afirmarse sobre la hipótesis de los biólogos a partir de los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Queda demostrada sin lugar a dudas, porque en los cinco años el pez león aumentó y los juveniles nativos disminuyeron, y dos variables que cambian juntas siempre tienen relación de causa y efecto.",
+        "correcta": false,
+        "explicacion": "No responde. Que dos variables cambien a la vez no demuestra que una cause la otra. La nota de la tabla menciona el aumento de temperatura y de pesca, que también podrían reducir a los juveniles.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde correlación con causalidad y pasa por alto las otras variables que cambiaron."
+      },
+      {
+        "clave": "B",
+        "texto": "Los datos son coherentes con la hipótesis, pero no la demuestran: la temperatura y la pesca también cambiaron, así que haría falta comparar con un arrecife similar sin pez león para descartar esas causas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tendencia (pez león 2 → 55, juveniles 60 → 17) apoya la hipótesis, pero hay variables confundidas (temperatura, pesca). Un arrecife de control sin pez león permitiría separar los efectos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Queda refutada, porque el aumento de la temperatura del agua y de la pesca explican por completo la disminución de los juveniles, y el pez león no tuvo ninguna participación en el cambio.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos no permiten descartar al pez león: tampoco se midió cuánto afectan por sí solas la temperatura y la pesca. Afirmar que el pez león no participó es tan apresurado como afirmar que fue la única causa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasa al extremo contrario y atribuye todo el cambio a las variables mencionadas en la nota."
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede decir nada, porque cinco años es muy poco tiempo para observar cambios en un arrecife y los conteos de peces en el mar nunca son confiables, así que la tabla no sirve para evaluar la hipótesis.",
+        "correcta": false,
+        "explicacion": "No responde. Cinco años con conteos anuales sí muestran una tendencia clara y útil. El problema no es la falta de datos sino la falta de un control que separe el efecto del pez león de otros factores.",
+        "tipo_error": "verificacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descarta todo el estudio en lugar de identificar qué le falta para ser concluyente."
+      }
+    ],
+    "explicacion": "LEER: en cinco años el pez león pasó de 2 a 55 individuos/ha y los juveniles nativos bajaron de 60 a 17 por 100 m²; la nota añade que la temperatura subió 0,8 °C y aumentó la pesca. COMPRENDER: se pide evaluar qué tan respaldada queda la hipótesis. INTERPRETAR: la tendencia opuesta de las dos columnas es coherente con ella. REPRESENTAR: pez león ↑ y juveniles ↓, pero también temperatura ↑ y pesca ↑. RAZONAR: tres factores cambiaron a la vez, así que la caída no puede atribuirse solo al pez león; para aislar su efecto hace falta un arrecife comparable sin pez león. RESOLVER: la respuesta es la opción que reconoce la coherencia con la hipótesis pero señala las variables confundidas y la necesidad de un control. VERIFICAR: demostrarla confunde correlación con causa; refutarla descarta al pez león sin pruebas; invalidar todo ignora la tendencia.",
+    "que_identificar": "La tendencia opuesta de las dos columnas y la nota con las otras variables que cambiaron en el periodo.",
+    "que_revisar": "Especies invasoras; correlación y causalidad; variables confundidas; grupo de control en estudios de campo.",
+    "refuerzo_ids": ["CIE-138","CIE-046"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ecosistemas","especies invasoras","pez leon","indagacion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-146",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Interpreta y analiza datos representados en texto, gráficas, dibujos, diagramas o tablas",
+    "habilidad": "resolver",
+    "tema": "Ecología: muestreo por cuadrantes",
+    "subtema": "Estimación del tamaño de una población de plantas a partir de una muestra",
+    "dificultad": 3,
+    "contexto": "Para estimar cuántos frailejones hay en un sector de páramo de 500 m², un grupo de estudiantes no pudo contarlos todos. Lanzó al azar diez cuadrantes de 1 m² y contó los frailejones dentro de cada uno.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Frailejones contados en diez cuadrantes de 1 m²",
+      "columnas": ["Cuadrante","1","2","3","4","5","6","7","8","9","10"],
+      "filas": [
+        ["Frailejones",3,5,4,6,2,4,5,3,4,4]
+      ],
+      "nota": "Los cuadrantes se ubicaron al azar dentro de los 500 m² del sector."
+    },
+    "enunciado": "¿Cuál es la mejor estimación del número de frailejones en todo el sector y qué supuesto exige?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Unos 2 000 frailejones, obtenidos al multiplicar la densidad promedio de la muestra (4 por m²) por los 500 m²; supone que los cuadrantes representan bien todo el sector.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La suma de los diez cuadrantes es 40 frailejones en 10 m², es decir, 4 por m². Si el sector es homogéneo y la muestra fue al azar, 4 × 500 = 2 000 individuos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Unos 40 frailejones, que es la cantidad total contada en los cuadrantes; supone que los diez cuadrantes cubren todo el sector y que fuera de ellos no hay plantas.",
+        "correcta": false,
+        "explicacion": "No responde. Los diez cuadrantes suman 10 m², apenas el 2 % de los 500 m². El conteo de 40 corresponde solo a la muestra y debe extrapolarse al área total.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el total de la muestra como si fuera el total de la población."
+      },
+      {
+        "clave": "C",
+        "texto": "Unos 20 000 frailejones, obtenidos al multiplicar el total contado (40) por los 500 m²; supone que la muestra es representativa del sector.",
+        "correcta": false,
+        "explicacion": "No responde. El total de 40 corresponde a 10 m², no a 1 m². Multiplicar 40 por 500 cuenta cada planta diez veces; la densidad correcta es 40 / 10 = 4 por m².",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó dividir el conteo total por los 10 m² muestreados antes de extrapolar."
+      },
+      {
+        "clave": "D",
+        "texto": "Unos 200 frailejones, obtenidos al multiplicar el promedio por cuadrante (4) por los 50 cuadrantes que caben en el sector; supone que el sector mide 50 m².",
+        "correcta": false,
+        "explicacion": "No responde. En 500 m² caben 500 cuadrantes de 1 m², no 50. El supuesto del sector de 50 m² contradice el dato del contexto, por lo que la estimación queda diez veces por debajo.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Error de un cero al pasar del área del sector al número de cuadrantes."
+      }
+    ],
+    "explicacion": "LEER: diez cuadrantes de 1 m² con 3, 5, 4, 6, 2, 4, 5, 3, 4 y 4 frailejones; el sector mide 500 m². COMPRENDER: se pide estimar la población total y reconocer el supuesto del método. INTERPRETAR: los cuadrantes son una muestra al azar; la densidad de la muestra se extrapola al área total. REPRESENTAR: suma = 40 frailejones en 10 m² → densidad = 40 / 10 = 4 frailejones/m²; población ≈ 4 × 500 = 2 000. RAZONAR: la extrapolación solo es válida si los cuadrantes representan el sector, es decir, si las plantas están repartidas de manera parecida en toda el área. RESOLVER: la respuesta es la opción de 2 000 frailejones con el supuesto de representatividad. VERIFICAR: 40 es solo el conteo de la muestra; 20 000 multiplica sin dividir por los 10 m²; 200 usa un área de 50 m² en vez de 500 m².",
+    "que_identificar": "El área total (500 m²), el área muestreada (10 m²) y el conteo total de la muestra (40).",
+    "que_revisar": "Muestreo por cuadrantes; densidad poblacional; extrapolación y representatividad de una muestra.",
+    "refuerzo_ids": ["CIE-121","CIE-009"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ecologia","muestreo","densidad poblacional","paramo","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-147",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona los distintos factores que determinan la dinámica de un sistema o fenómeno para identificar su comportamiento, teniendo en cuenta las leyes de la física",
+    "habilidad": "comprender",
+    "tema": "Movimiento circular uniforme",
+    "subtema": "Velocidad, aceleración y fuerza en una rueda de parque",
+    "dificultad": 2,
+    "contexto": "En un parque de diversiones de Bogotá, una rueda gigante de 10 m de radio da una vuelta completa cada 40 s a ritmo constante. Una estudiante, sentada en una cabina, nota que el velocímetro de su celular marca siempre el mismo valor, cercano a 1,6 m/s, pero que su sensación de 'ser empujada' cambia a lo largo de la vuelta.",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación describe correctamente el movimiento de la cabina?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La cabina no tiene aceleración, porque su rapidez de 1,6 m/s es constante y la aceleración solo aparece cuando la rapidez aumenta o disminuye.",
+        "correcta": false,
+        "explicacion": "No responde. La velocidad es un vector: aunque la rapidez sea constante, su dirección cambia en cada punto de la vuelta, y ese cambio de dirección es una aceleración (dirigida al centro).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Identifica aceleración solo con cambio de rapidez y no con cambio de dirección."
+      },
+      {
+        "clave": "B",
+        "texto": "La cabina acelera hacia afuera de la rueda, porque la fuerza centrífuga la empuja lejos del centro y por eso la estudiante se siente presionada contra el asiento.",
+        "correcta": false,
+        "explicacion": "No responde. En un marco en reposo, la fuerza neta sobre la cabina apunta hacia el centro, no hacia afuera. La sensación de empuje es la reacción del asiento, no una fuerza real que aleje a la cabina del centro.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma la sensación de ser empujado hacia afuera como prueba de una fuerza dirigida hacia afuera."
+      },
+      {
+        "clave": "C",
+        "texto": "La cabina tiene rapidez constante pero su velocidad cambia de dirección continuamente, por lo que existe una aceleración dirigida hacia el centro de la rueda, producida por una fuerza neta hacia el centro.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con radio 10 m y periodo 40 s, la rapidez es 2π·10 / 40 ≈ 1,6 m/s y no cambia, pero la dirección de la velocidad gira sin parar; esa variación es la aceleración centrípeta, v²/r ≈ 0,25 m/s², causada por la fuerza neta hacia el centro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La cabina se mueve con velocidad constante en magnitud y dirección, porque recorre la misma distancia en cada segundo y la rueda gira a ritmo uniforme sin frenar ni acelerar.",
+        "correcta": false,
+        "explicacion": "No responde. Recorrer la misma distancia cada segundo implica rapidez constante, pero en una trayectoria circular la dirección del movimiento cambia en todo momento, así que la velocidad no es constante.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde rapidez constante con velocidad constante."
+      }
+    ],
+    "explicacion": "LEER: rueda de 10 m de radio, una vuelta cada 40 s, velocímetro fijo cerca de 1,6 m/s. COMPRENDER: se pide describir el movimiento en términos de velocidad, aceleración y fuerza. INTERPRETAR: la rapidez es constante, pero la trayectoria es circular, así que la dirección de la velocidad cambia. REPRESENTAR: v = 2πr / T = 2π·10 / 40 ≈ 1,57 m/s; a = v² / r ≈ 0,25 m/s² hacia el centro. RAZONAR: la velocidad es un vector; cambiar su dirección exige aceleración, y toda aceleración requiere una fuerza neta, aquí dirigida al centro (la ejercen la estructura y el asiento). RESOLVER: la respuesta es la opción con rapidez constante, velocidad cambiante y aceleración hacia el centro. VERIFICAR: las opciones sin aceleración o con velocidad constante confunden rapidez con velocidad; la de la fuerza hacia afuera describe una sensación, no la fuerza neta.",
+    "que_identificar": "Que la rapidez se mantiene pero la trayectoria es circular, por lo que la dirección de la velocidad cambia.",
+    "que_revisar": "Movimiento circular uniforme; velocidad como vector; aceleración centrípeta; fuerza neta en trayectorias curvas.",
+    "refuerzo_ids": ["CIE-061","CIE-029"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["movimiento circular","aceleracion centripeta","velocidad","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-148",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce los atributos que definen ciertos procesos fisicoquímicos simples (cambios de fase) y da razón de la manera en que ocurren",
+    "habilidad": "razonar",
+    "tema": "Presión atmosférica y altitud",
+    "subtema": "Punto de ebullición del agua y tiempo de cocción",
+    "dificultad": 2,
+    "contexto": "Una familia que se mudó de Cartagena a Bogotá nota que los fríjoles tardan mucho más en ablandarse en la olla destapada, aunque el agua hierve con fuerza. Buscaron datos de presión atmosférica y punto de ebullición del agua en varios lugares de Colombia.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Presión atmosférica y punto de ebullición del agua según la altitud",
+      "columnas": ["Lugar","Altitud (m)","Presión atmosférica (kPa)","Punto de ebullición del agua (°C)"],
+      "filas": [
+        ["Cartagena",0,101,100],
+        ["Medellín",1500,85,95],
+        ["Bogotá",2600,75,92],
+        ["Nevado del Ruiz (refugio)",4500,58,85]
+      ],
+      "nota": "Valores aproximados en un día típico."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que los fríjoles tarden más en Bogotá que en Cartagena?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En Bogotá el agua hierve más caliente, a 92 °C de 'temperatura de montaña', y el exceso de calor endurece la cáscara del fríjol, que luego tarda más en ablandarse.",
+        "correcta": false,
+        "explicacion": "No responde. 92 °C es menos que 100 °C, no más; la tabla muestra que en Bogotá el agua hierve a menor temperatura. El calor no endurece la cáscara: la cocción es más lenta porque el agua está menos caliente.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó 92 °C como una temperatura mayor por asociarla con 'hervir con fuerza'."
+      },
+      {
+        "clave": "B",
+        "texto": "En Bogotá la menor presión hace que el agua se evapore más rápido y la olla se seque antes de que los fríjoles se cocinen, por eso hay que agregar agua y empezar de nuevo.",
+        "correcta": false,
+        "explicacion": "No responde. Aunque en la altura la evaporación es algo mayor, el problema del contexto no es que la olla se seque sino que, aun con agua hirviendo, los fríjoles tardan: la causa es la menor temperatura de ebullición.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propone una causa secundaria y no usa la columna de punto de ebullición."
+      },
+      {
+        "clave": "C",
+        "texto": "En Bogotá el aire tiene menos oxígeno, así que la llama de la estufa es más débil y transmite menos calor al agua, que por eso nunca llega a hervir de verdad.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que el agua hierve con fuerza, es decir, sí alcanza su punto de ebullición. El límite no lo pone la llama sino la presión: a 75 kPa el agua no puede pasar de 92 °C mientras esté hirviendo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el efecto a la estufa en lugar de a la presión atmosférica sobre el agua."
+      },
+      {
+        "clave": "D",
+        "texto": "A 2 600 m la presión atmosférica es menor (75 kPa), así que el agua hierve a solo 92 °C y, mientras hierve, no se calienta más; los fríjoles se cocinan a menor temperatura y por eso tardan más.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que al bajar la presión de 101 a 75 kPa el punto de ebullición baja de 100 a 92 °C. El agua en ebullición no supera esa temperatura, y a 92 °C las reacciones de la cocción son más lentas que a 100 °C.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: al aumentar la altitud baja la presión (101 → 75 kPa entre Cartagena y Bogotá) y baja el punto de ebullición (100 → 92 °C). COMPRENDER: se pide explicar por qué la cocción es más lenta en Bogotá aunque el agua hierva. INTERPRETAR: el agua hierve cuando la presión de su vapor iguala la del aire; con menos presión hierve a menor temperatura. REPRESENTAR: Cartagena: agua hirviendo a 100 °C; Bogotá: a 92 °C; el agua que hierve no sube más de temperatura. RAZONAR: los fríjoles se ablandan por efecto de la temperatura; a 92 °C el proceso es más lento, así que se necesita más tiempo (o una olla a presión). RESOLVER: la respuesta es la opción que relaciona menor presión, ebullición a 92 °C y cocción más lenta. VERIFICAR: la opción de los 92 °C 'más calientes' lee mal la tabla; la olla seca y la llama débil no explican por qué el agua hirviendo cocina más despacio.",
+    "que_identificar": "La relación entre la columna de presión y la columna de punto de ebullición, y el dato de 92 °C en Bogotá.",
+    "que_revisar": "Presión atmosférica y altitud; punto de ebullición y presión; ollas a presión; cambios de estado.",
+    "refuerzo_ids": ["CIE-111","CIE-130"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["presion atmosferica","ebullicion","altitud","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-149",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Interpreta y analiza datos representados en texto, gráficas, dibujos, diagramas o tablas",
+    "habilidad": "interpretar",
+    "tema": "Ley de Hooke: resortes",
+    "subtema": "Proporcionalidad entre fuerza y estiramiento y límite elástico",
+    "dificultad": 2,
+    "contexto": "Un grupo colgó distintas masas de un resorte y midió cuánto se estiraba respecto a su longitud sin carga. Antes de empezar predijeron que el estiramiento sería proporcional a la masa colgada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Estiramiento de un resorte según la masa colgada",
+      "columnas": ["Masa colgada (g)","Estiramiento (cm)"],
+      "filas": [
+        [100,2.0],
+        [200,4.0],
+        [300,6.1],
+        [400,7.9],
+        [500,10.0],
+        [800,19.5]
+      ],
+      "nota": "Al retirar la masa de 800 g el resorte quedó 2 cm más largo que al comienzo."
+    },
+    "enunciado": "¿Qué conclusión sobre la predicción respaldan los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se cumple entre 100 y 500 g, donde cada 100 g añaden cerca de 2 cm; con 800 g el estiramiento (19,5 cm) supera el valor esperado (16 cm), señal de que el resorte pasó su límite elástico.",
+        "correcta": true,
+        "explicacion": "Es la correcta. De 100 a 500 g la razón estiramiento/masa se mantiene en ≈ 0,02 cm/g (2 cm por cada 100 g). Para 800 g la proporción predice 16 cm, pero se midieron 19,5 cm y el resorte quedó deformado: se superó el límite elástico.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "No se cumple en ningún tramo, porque los valores de 6,1 cm y 7,9 cm no son exactamente múltiplos de 2 cm, y una proporcionalidad exige que todos los datos caigan sobre la recta.",
+        "correcta": false,
+        "explicacion": "No responde. Desviaciones de 0,1 cm son propias de la medición con regla; 6,1 y 7,9 están muy cerca de los 6,0 y 8,0 esperados. La proporcionalidad se evalúa por la tendencia, no por coincidencias exactas.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exige exactitud absoluta y no distingue el error de medición de una desviación real."
+      },
+      {
+        "clave": "C",
+        "texto": "Se cumple en todo el rango, porque al aumentar la masa siempre aumentó el estiramiento, y con 800 g el resorte simplemente se estiró más por ser la masa más grande que se colgó.",
+        "correcta": false,
+        "explicacion": "No responde. Proporcional significa que la razón se mantiene: 800 g deberían dar 16 cm, no 19,5 cm. Que el estiramiento aumente no basta; además la nota indica una deformación permanente, que no ocurre en la zona elástica.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde 'aumenta cuando aumenta' con 'es proporcional a'."
+      },
+      {
+        "clave": "D",
+        "texto": "Se cumple solo con 100 y 200 g, porque a partir de 300 g el estiramiento deja de duplicarse cada vez que se agregan 100 g y el resorte empieza a dañarse desde ese punto.",
+        "correcta": false,
+        "explicacion": "No responde. En una proporcionalidad el estiramiento no se duplica con cada 100 g añadidos, sino que crece la misma cantidad (2 cm). De 300 a 500 g los datos siguen esa regla; el daño solo aparece con 800 g.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde crecimiento proporcional (sumar lo mismo) con duplicación."
+      }
+    ],
+    "explicacion": "LEER: estiramientos de 2,0; 4,0; 6,1; 7,9; 10,0 y 19,5 cm para 100, 200, 300, 400, 500 y 800 g; tras 800 g el resorte quedó deformado. COMPRENDER: se pide evaluar la predicción de proporcionalidad. INTERPRETAR: en una proporción directa la razón estiramiento/masa es constante. REPRESENTAR: 2,0/100 = 10,0/500 = 0,020 cm/g; 6,1/300 y 7,9/400 ≈ 0,020; 19,5/800 ≈ 0,024. RAZONAR: hasta 500 g la razón es constante dentro del error de medición (ley de Hooke); con 800 g el estiramiento supera los 16 cm esperados y el resorte no recupera su longitud: se superó el límite elástico. RESOLVER: la respuesta es la opción que acepta la predicción hasta 500 g y la rechaza para 800 g. VERIFICAR: negar todo exagera errores de 0,1 cm; aceptar todo ignora los 19,5 cm; limitarla a 200 g malinterpreta la proporcionalidad.",
+    "que_identificar": "La razón constante entre estiramiento y masa en las cinco primeras filas y su ruptura en la fila de 800 g.",
+    "que_revisar": "Ley de Hooke; proporcionalidad directa; límite elástico; error de medición.",
+    "refuerzo_ids": ["CIE-010","CIE-061"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ley de hooke","resortes","proporcionalidad","indagacion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-150",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica las características fundamentales de las ondas, así como las variables y parámetros que afectan estas características",
+    "habilidad": "interpretar",
+    "tema": "Espectro electromagnético",
+    "subtema": "Longitud de onda, frecuencia y energía de las radiaciones",
+    "dificultad": 1,
+    "contexto": "Todas las ondas electromagnéticas viajan en el vacío a la misma rapidez (300 000 km/s). Por eso, cuanto menor es la longitud de onda, mayor es la frecuencia, y la energía que transporta cada 'paquete' de radiación aumenta con la frecuencia. La tabla resume algunas regiones del espectro y un uso cotidiano de cada una.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Regiones del espectro electromagnético",
+      "columnas": ["Región","Longitud de onda aproximada","Uso cotidiano"],
+      "filas": [
+        ["Ondas de radio","1 m a varios km","Emisoras de radio"],
+        ["Microondas","1 mm a 30 cm","Horno microondas, wifi"],
+        ["Infrarrojo","700 nm a 1 mm","Control remoto del televisor"],
+        ["Luz visible","400 nm a 700 nm","Iluminación"],
+        ["Ultravioleta","10 nm a 400 nm","Lámparas para desinfectar"],
+        ["Rayos X","0,01 nm a 10 nm","Radiografías"]
+      ],
+      "nota": "1 nm = 0,000001 mm."
+    },
+    "enunciado": "De acuerdo con la tabla y el contexto, ¿qué radiación transporta más energía por paquete y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las ondas de radio, porque tienen la mayor longitud de onda y, al ser ondas más largas, acumulan más energía en cada oscilación que las ondas cortas.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que la energía aumenta con la frecuencia, y la frecuencia es mayor cuando la longitud de onda es menor. Las ondas de radio, las más largas, son las de menor frecuencia y menor energía.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia 'onda más larga' con 'más energía' e invierte la relación del contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "Los rayos X, porque tienen la menor longitud de onda de la tabla y, como todas viajan a la misma rapidez, tienen la mayor frecuencia y por tanto más energía por paquete.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con rapidez común, longitud de onda y frecuencia son inversas; los rayos X (0,01 a 10 nm) tienen la longitud de onda más corta, así que la mayor frecuencia y la mayor energía, lo que explica que atraviesen tejidos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Las microondas, porque son las que se usan para calentar alimentos en el horno, y para calentar algo se necesita la radiación de mayor energía disponible.",
+        "correcta": false,
+        "explicacion": "No responde. El horno calienta porque las microondas hacen vibrar las moléculas de agua con gran potencia total, no porque cada paquete tenga mucha energía; su longitud de onda (hasta 30 cm) es mucho mayor que la de los rayos X.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Deduce la energía por paquete a partir del uso cotidiano y no de la longitud de onda."
+      },
+      {
+        "clave": "D",
+        "texto": "La luz visible, porque es la única radiación que podemos ver, y para que el ojo la detecte debe tener más energía que las radiaciones invisibles como el infrarrojo o los rayos X.",
+        "correcta": false,
+        "explicacion": "No responde. Que el ojo detecte una radiación depende de los pigmentos de la retina, no de que sea la más energética. Su longitud de onda (400 a 700 nm) es mayor que la del ultravioleta y la de los rayos X, que tienen más energía.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma la visibilidad como indicador de energía."
+      }
+    ],
+    "explicacion": "LEER: la tabla ordena seis regiones del espectro por longitud de onda, desde kilómetros (radio) hasta 0,01 nm (rayos X); el contexto dice que todas viajan igual de rápido y que la energía por paquete crece con la frecuencia. COMPRENDER: se pide identificar la radiación de mayor energía y justificarlo. INTERPRETAR: rapidez = frecuencia × longitud de onda; con rapidez fija, menor longitud de onda implica mayor frecuencia. REPRESENTAR: radio (λ grande, f pequeña, poca energía) … rayos X (λ mínima, f máxima, mucha energía). RAZONAR: la fila con menor longitud de onda es la de rayos X, así que es la de mayor frecuencia y energía. RESOLVER: la respuesta es la opción de los rayos X por su menor longitud de onda. VERIFICAR: la opción de la radio invierte la relación; la de las microondas y la de la luz visible se basan en el uso o en la visibilidad, no en la longitud de onda.",
+    "que_identificar": "La relación inversa entre longitud de onda y frecuencia dada en el contexto y la fila con menor longitud de onda.",
+    "que_revisar": "Ondas electromagnéticas; relación v = λ·f; energía y frecuencia; regiones del espectro.",
+    "refuerzo_ids": ["CIE-068","CIE-030"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["ondas","espectro electromagnetico","frecuencia","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-151",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un sistema, argumentando a partir de los modelos básicos de la termodinámica",
+    "habilidad": "resolver",
+    "tema": "Dilatación térmica",
+    "subtema": "Juntas de dilatación en rieles y puentes",
+    "dificultad": 2,
+    "contexto": "En la construcción de un tramo de vía férrea en el Magdalena Medio, los ingenieros dejan una pequeña separación entre rieles consecutivos de acero de 25 m de largo. Un estudiante pregunta por qué no se sueldan todos sin dejar espacio. El ingeniero le explica que el acero aumenta su longitud en 0,000012 de su longitud por cada grado Celsius que sube su temperatura, y que entre la madrugada y el mediodía el riel puede pasar de 20 °C a 50 °C.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la mejor explicación de la separación que se deja entre los rieles?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al calentarse 30 °C cada riel se alarga unos 9 cm; la separación permite ese alargamiento y, de paso, deja pasar el agua lluvia para que no se oxide la base de la vía.",
+        "correcta": false,
+        "explicacion": "No responde. El cálculo da 25 m × 0,000012 × 30 = 0,009 m, es decir 9 mm y no 9 cm. Además, la función de la junta es absorber la dilatación, no drenar el agua.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Error de un factor de 10 al convertir metros a centímetros."
+      },
+      {
+        "clave": "B",
+        "texto": "Los rieles se contraen al calentarse con el sol, de modo que el espacio evita que se separen demasiado y queden huecos peligrosos para las ruedas del tren al mediodía.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que el acero aumenta su longitud al subir la temperatura; se dilata, no se contrae. Al mediodía el espacio se reduce, no se agranda.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el sentido del cambio de longitud con la temperatura."
+      },
+      {
+        "clave": "C",
+        "texto": "El espacio sirve para que el acero vibre libremente al paso del tren y disipe la energía del golpe; la temperatura no influye porque 30 °C es un cambio demasiado pequeño para mover 25 m de acero.",
+        "correcta": false,
+        "explicacion": "No responde. Aunque el cambio relativo parece pequeño, sobre 25 m produce 9 mm por riel; en una vía de cientos de rieles soldados sin juntas la fuerza acumulada puede pandear la vía. La temperatura sí es el factor.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Subestima el efecto porque el coeficiente de dilatación es un número muy pequeño."
+      },
+      {
+        "clave": "D",
+        "texto": "Al pasar de 20 °C a 50 °C cada riel se alarga cerca de 9 mm; sin espacio para crecer, los rieles se empujarían entre sí y la vía podría curvarse o levantarse por la fuerza acumulada.",
+        "correcta": true,
+        "explicacion": "Es la correcta. ΔL = 25 m × 0,000012 /°C × 30 °C = 0,009 m = 9 mm. Esa dilatación por riel, sumada a lo largo de la vía, genera fuerzas enormes si no hay espacio libre; la junta la absorbe.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: rieles de acero de 25 m; el acero se alarga 0,000012 de su longitud por cada °C; la temperatura sube de 20 a 50 °C. COMPRENDER: se pide explicar la función del espacio entre rieles. INTERPRETAR: al subir la temperatura el riel se dilata; si no tiene adónde crecer, empuja al vecino. REPRESENTAR: ΔL = L × α × ΔT = 25 m × 0,000012 × 30 = 0,009 m = 9 mm por riel. RAZONAR: 9 mm parece poco, pero el acero es muy rígido y, sin junta, el esfuerzo acumulado en cientos de rieles puede deformar la vía; la separación da espacio para la dilatación. RESOLVER: la respuesta es la opción que calcula unos 9 mm y explica el riesgo de pandeo. VERIFICAR: la opción de 9 cm tiene un error de unidades; la de la contracción invierte el fenómeno; la de la vibración niega el efecto de la temperatura, que el cálculo muestra real.",
+    "que_identificar": "El coeficiente de dilatación, la longitud del riel y el cambio de temperatura necesarios para estimar el alargamiento.",
+    "que_revisar": "Dilatación térmica lineal; coeficiente de dilatación; conversión de unidades; aplicaciones en construcción.",
+    "refuerzo_ids": ["CIE-002","CIE-031"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["dilatacion termica","calor","rieles","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-152",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Establece relaciones entre conceptos fisicoquímicos simples (separación de mezclas, solubilidad, gases ideales) con distintos fenómenos naturales",
+    "habilidad": "interpretar",
+    "tema": "Separación de mezclas: destilación",
+    "subtema": "Separación de líquidos por diferencia de punto de ebullición",
+    "dificultad": 1,
+    "contexto": "En el laboratorio, un grupo recibió una mezcla líquida transparente de agua y etanol y debía separar sus componentes. Montaron un equipo de destilación: calentaron la mezcla, el vapor pasó por un tubo enfriado con agua y el líquido condensado se recogió en un recipiente. Registraron la temperatura del vapor cada dos minutos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Propiedades de los componentes y temperatura del vapor durante la destilación",
+      "columnas": ["Dato","Valor"],
+      "filas": [
+        ["Punto de ebullición del etanol","78 °C"],
+        ["Punto de ebullición del agua","100 °C"],
+        ["Temperatura del vapor, minutos 4 a 14","se mantiene cerca de 78 °C"],
+        ["Temperatura del vapor, minutos 16 a 20","sube rápidamente hasta 100 °C"],
+        ["Temperatura del vapor, minutos 20 a 30","se mantiene cerca de 100 °C"]
+      ],
+      "nota": "Presión cercana a la del nivel del mar."
+    },
+    "enunciado": "¿Qué líquido se recoge principalmente en el recipiente durante los minutos 4 a 14 y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Agua, porque es el componente más abundante en la mezcla y lo que más hay es lo que primero se evapora cuando se empieza a calentar.",
+        "correcta": false,
+        "explicacion": "No responde. En la destilación, el orden de salida depende del punto de ebullición, no de la abundancia. El vapor está a 78 °C, la temperatura de ebullición del etanol, no la del agua.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el componente mayoritario se evapora primero."
+      },
+      {
+        "clave": "B",
+        "texto": "Una mezcla con la misma proporción de agua y etanol que la original, porque al hervir ambos líquidos se evaporan juntos y el condensador solo los vuelve a juntar.",
+        "correcta": false,
+        "explicacion": "No responde. Si los dos se evaporaran por igual, la temperatura del vapor no se mantendría en 78 °C durante diez minutos y luego saltaría a 100 °C. Esas dos mesetas muestran que los componentes salen por separado.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No interpretó las dos mesetas de temperatura como señal de separación."
+      },
+      {
+        "clave": "C",
+        "texto": "Etanol, porque su punto de ebullición (78 °C) es menor que el del agua y por eso se evapora primero; el vapor a 78 °C se condensa en el tubo frío y se recoge casi puro.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Mientras el vapor está a 78 °C, lo que hierve es principalmente etanol; el agua, que necesita 100 °C, permanece en el recipiente de calentamiento. Cuando el etanol se agota, la temperatura sube hasta 100 °C y empieza a salir agua.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Agua, porque el agua enfriada del condensador se mezcla con el vapor dentro del tubo y es la que termina goteando en el recipiente de recogida.",
+        "correcta": false,
+        "explicacion": "No responde. El agua del condensador circula por fuera del tubo y no se mezcla con el vapor; solo lo enfría. Lo que gotea es el vapor condensado, que a 78 °C es etanol.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde el agua de enfriamiento externa con el líquido destilado."
+      }
+    ],
+    "explicacion": "LEER: la mezcla es agua (hierve a 100 °C) y etanol (78 °C); el vapor se mantiene en 78 °C entre los minutos 4 y 14, sube a 100 °C hacia el minuto 20 y allí se estabiliza. COMPRENDER: se pide identificar qué se recoge en la primera meseta y justificarlo. INTERPRETAR: en una destilación cada componente sale cuando el vapor alcanza su punto de ebullición; una meseta indica que sale una sustancia casi pura. REPRESENTAR: 78 °C → etanol; 100 °C → agua. RAZONAR: el líquido de menor punto de ebullición se evapora primero, su vapor se condensa en el tubo frío y se recoge; cuando se agota, la temperatura sube hasta la del siguiente componente. RESOLVER: la respuesta es la opción que indica etanol por su menor punto de ebullición. VERIFICAR: las opciones de agua ignoran que el vapor está a 78 °C; la de la mezcla igual no explica las dos mesetas de temperatura.",
+    "que_identificar": "La coincidencia entre la temperatura del vapor en la primera meseta (78 °C) y el punto de ebullición del etanol.",
+    "que_revisar": "Separación de mezclas; destilación simple; punto de ebullición; curva de temperatura durante la destilación.",
+    "refuerzo_ids": ["CIE-003","CIE-023"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["mezclas","destilacion","punto de ebullicion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-153",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "razonar",
+    "tema": "Óxido-reducción: corrosión del hierro",
+    "subtema": "Condiciones necesarias para la oxidación de clavos de hierro",
+    "dificultad": 2,
+    "contexto": "Para averiguar qué necesita el hierro para oxidarse, un grupo colocó clavos de hierro idénticos en cinco tubos y los observó durante siete días. La formación de óxido corresponde a la reacción 4 Fe + 3 O₂ + 6 H₂O → 4 Fe(OH)₃.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Estado de los clavos después de siete días",
+      "columnas": ["Tubo","Condición","Óxido observado"],
+      "filas": [
+        ["1","Clavo seco, en aire","Ninguno"],
+        ["2","Clavo en agua destilada abierta al aire","Poco"],
+        ["3","Clavo en agua con sal abierta al aire","Abundante"],
+        ["4","Clavo en agua hervida (sin aire disuelto) y cubierta con aceite","Ninguno"],
+        ["5","Clavo sumergido en aceite","Ninguno"]
+      ],
+      "nota": "El agua hervida pierde el oxígeno disuelto; la capa de aceite impide que entre aire."
+    },
+    "enunciado": "¿Qué conclusión sobre las condiciones de la oxidación respaldan los resultados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El hierro necesita agua y oxígeno a la vez para oxidarse: con solo aire (tubo 1) o solo agua sin oxígeno (tubo 4) no hay óxido; la sal disuelta acelera el proceso (tubo 3).",
+        "correcta": true,
+        "explicacion": "Es la correcta. La ecuación exige Fe, O₂ y H₂O. El tubo 1 tiene O₂ pero no agua; el tubo 4 tiene agua pero no O₂; en ambos no hay óxido. Los tubos 2 y 3 tienen los dos y se oxidan, más con sal, que facilita el paso de los electrones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El hierro se oxida solo si está en contacto con sal, porque el tubo 3 fue el único con óxido abundante y la sal es la sustancia que ataca químicamente al metal.",
+        "correcta": false,
+        "explicacion": "No responde. El tubo 2, sin sal, también se oxidó (poco). La sal no aparece en la ecuación; acelera la reacción pero no es un reactivo necesario, así que no es la única condición.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fija solo en el tubo con más óxido y pasa por alto el tubo 2."
+      },
+      {
+        "clave": "C",
+        "texto": "El aceite es la sustancia que protege al hierro porque reacciona con su superficie y forma una capa dura; por eso ningún clavo en contacto con aceite se oxidó en siete días.",
+        "correcta": false,
+        "explicacion": "No responde. El aceite no reacciona con el hierro; según la nota, solo impide la entrada de aire. Su efecto es quitar el oxígeno, uno de los reactivos de la ecuación, y no formar una capa protectora.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye al aceite un mecanismo químico que el experimento no muestra."
+      },
+      {
+        "clave": "D",
+        "texto": "El hierro se oxida con el solo contacto con el agua, porque todos los clavos que tocaron agua formaron óxido y el del aire seco permaneció intacto durante toda la semana.",
+        "correcta": false,
+        "explicacion": "No responde. El clavo del tubo 4 estuvo en agua y no se oxidó, porque el agua hervida no tenía oxígeno disuelto y el aceite impedía que entrara aire. Falta el O₂ de la ecuación.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó el tubo 4, que tiene agua pero sin oxígeno."
+      }
+    ],
+    "explicacion": "LEER: sin óxido en aire seco (1), en agua sin oxígeno con aceite (4) y en aceite (5); poco óxido en agua destilada (2) y abundante en agua con sal (3); la ecuación es 4 Fe + 3 O₂ + 6 H₂O → 4 Fe(OH)₃. COMPRENDER: se pide concluir qué condiciones se requieren. INTERPRETAR: cada tubo controla la presencia de agua y de oxígeno. REPRESENTAR: tubo 1: O₂ sin H₂O → nada; tubo 4: H₂O sin O₂ → nada; tubos 2 y 3: ambos → óxido, más con sal. RAZONAR: el óxido aparece solo cuando están presentes agua y oxígeno, los reactivos de la ecuación; la sal no es reactivo, pero hace al agua más conductora y acelera la corrosión. RESOLVER: la respuesta es la opción que exige agua y oxígeno juntos y señala la sal como acelerador. VERIFICAR: la sal como única condición ignora el tubo 2; el aceite reactivo contradice la nota; el agua sola ignora el tubo 4.",
+    "que_identificar": "Qué tubos tienen agua, cuáles tienen oxígeno y en cuáles apareció óxido, comparados con los reactivos de la ecuación.",
+    "que_revisar": "Reacciones de óxido-reducción; corrosión del hierro; reactivos necesarios; control de variables en un experimento.",
+    "refuerzo_ids": ["CIE-011","CIE-084"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["oxidacion","corrosion","hierro","indagacion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-154",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce las razones por las cuales la materia se puede diferenciar, según su estructura y propiedades, y justifica las diferencias existentes entre distintos compuestos",
+    "habilidad": "razonar",
+    "tema": "Fuerzas intermoleculares y punto de ebullición",
+    "subtema": "Puentes de hidrógeno frente a fuerzas de dispersión",
+    "dificultad": 3,
+    "contexto": "Un estudiante comparó el punto de ebullición de varios compuestos con masas molares parecidas. Observó que los hidrocarburos hierven a temperaturas muy bajas, mientras que los alcoholes, que tienen un grupo –OH, hierven a temperaturas mucho más altas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masa molar y punto de ebullición de algunos compuestos",
+      "columnas": ["Compuesto","Fórmula","Masa molar (g/mol)","Punto de ebullición (°C)"],
+      "filas": [
+        ["Etano","CH₃–CH₃",30,-89],
+        ["Metanol","CH₃–OH",32,65],
+        ["Propano","CH₃–CH₂–CH₃",44,-42],
+        ["Etanol","CH₃–CH₂–OH",46,78]
+      ],
+      "nota": "Valores a presión del nivel del mar."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que el metanol hierva a 65 °C mientras el etano, de masa molar casi igual, hierve a –89 °C?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El metanol es un poco más pesado (32 frente a 30 g/mol), y esa masa adicional hace que sus moléculas necesiten mucha más energía para pasar al estado gaseoso.",
+        "correcta": false,
+        "explicacion": "No responde. Una diferencia de 2 g/mol no explica 154 °C de diferencia: el propano (44 g/mol) es más pesado que el metanol y aun así hierve a –42 °C. La masa no es el factor decisivo aquí.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la diferencia a la masa molar sin comparar con la fila del propano."
+      },
+      {
+        "clave": "B",
+        "texto": "El grupo –OH del metanol forma puentes de hidrógeno entre moléculas vecinas, atracciones mucho más fuertes que las débiles fuerzas de dispersión del etano, así que separar las moléculas exige más energía.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El enlace O–H es muy polar y permite puentes de hidrógeno entre moléculas de metanol; el etano, no polar, solo tiene fuerzas de dispersión. Romper las atracciones más fuertes exige más temperatura; el etanol frente al propano muestra el mismo patrón.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Al calentar el metanol se rompen los enlaces C–O y O–H dentro de cada molécula, lo que consume energía y retrasa la ebullición; en el etano los enlaces C–H se rompen con más facilidad.",
+        "correcta": false,
+        "explicacion": "No responde. En la ebullición no se rompen enlaces dentro de las moléculas, que siguen siendo metanol en el vapor; solo se separan unas de otras. Lo que cambia es la fuerza de atracción entre moléculas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el cambio de estado (romper fuerzas intermoleculares) con una reacción química (romper enlaces)."
+      },
+      {
+        "clave": "D",
+        "texto": "El metanol contiene oxígeno, un elemento que al calentarse reacciona con el carbono de la misma molécula y libera calor, lo que mantiene el líquido más tiempo antes de hervir.",
+        "correcta": false,
+        "explicacion": "No responde. El oxígeno del metanol está unido de forma estable y no reacciona con el carbono al calentar suavemente; si lo hiciera, el compuesto se descompondría y no se mediría un punto de ebullición.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa una reacción interna en lugar de pensar en las atracciones entre moléculas."
+      }
+    ],
+    "explicacion": "LEER: etano (30 g/mol) hierve a –89 °C y metanol (32) a 65 °C; propano (44) a –42 °C y etanol (46) a 78 °C. COMPRENDER: se pide explicar puntos de ebullición tan distintos con masas parecidas. INTERPRETAR: lo que diferencia a cada pareja es el grupo –OH. REPRESENTAR: hidrocarburos (solo fuerzas de dispersión) → ebullición bajo cero; alcoholes (–OH, puentes de hidrógeno) → ebullición alta. RAZONAR: hervir es separar las moléculas unas de otras; cuanto más fuertes sean las atracciones entre ellas, más temperatura se necesita, y los puentes de hidrógeno son mucho más fuertes que las fuerzas de dispersión. RESOLVER: la respuesta es la opción que explica el fenómeno por los puentes de hidrógeno del grupo –OH. VERIFICAR: la masa no sirve porque el propano, más pesado, hierve bajo cero; romper enlaces o una reacción interna son cambios químicos, no un cambio de estado.",
+    "que_identificar": "Que las parejas de la tabla tienen masas casi iguales y difieren solo por la presencia del grupo –OH.",
+    "que_revisar": "Fuerzas intermoleculares; puentes de hidrógeno; fuerzas de dispersión; polaridad; punto de ebullición.",
+    "refuerzo_ids": ["CIE-082","CIE-094"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["fuerzas intermoleculares","puentes de hidrogeno","punto de ebullicion","alcoholes","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-155",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Diferencia distintos tipos de reacciones químicas y realiza de manera adecuada cálculos teniendo en cuenta la ley de conservación de la masa",
+    "habilidad": "comprender",
+    "tema": "Ley de conservación de la masa",
+    "subtema": "Sistemas abiertos y cerrados en una reacción que produce gas",
+    "dificultad": 1,
+    "contexto": "Un grupo mezcló bicarbonato de sodio con vinagre en dos montajes y pesó cada uno antes y después de la reacción:\n\n- **Montaje 1 (vaso abierto):** masa inicial 150,0 g; masa final 149,2 g.\n- **Montaje 2 (botella cerrada con un globo en la boca):** masa inicial 150,0 g; masa final 150,0 g; el globo se infló.\n\nLa reacción es: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂.",
+    "estimulo": null,
+    "enunciado": "¿Cómo se explica que el montaje 1 perdiera 0,8 g y el montaje 2 no cambiara de masa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En el vaso abierto parte de la materia se destruyó al reaccionar, mientras que en la botella cerrada la presión del globo impidió que la reacción se completara y por eso no se perdió masa.",
+        "correcta": false,
+        "explicacion": "No responde. La materia no se destruye en una reacción química; los átomos se reorganizan. Además, el globo inflado muestra que la reacción sí ocurrió y produjo gas en el montaje 2.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la pérdida de masa indica destrucción de materia."
+      },
+      {
+        "clave": "B",
+        "texto": "El vinagre del vaso abierto se evaporó por el calor de la reacción, y en la botella el globo lo retuvo; el CO₂ no influye porque los gases no tienen masa apreciable.",
+        "correcta": false,
+        "explicacion": "No responde. Los gases sí tienen masa: 0,8 g de CO₂ equivalen a unos 0,018 mol, lo que corresponde a la cantidad de bicarbonato que reaccionó. La pérdida se debe al CO₂ que escapó, no a vinagre evaporado.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que los gases no pesan y busca otra sustancia que explique la pérdida."
+      },
+      {
+        "clave": "C",
+        "texto": "La balanza del montaje 1 estaba descalibrada, porque según la ecuación los productos pesan lo mismo que los reactivos en cualquier recipiente, abierto o cerrado, sin excepción.",
+        "correcta": false,
+        "explicacion": "No responde. La ley se cumple para el sistema completo, incluido el gas; en el vaso abierto el CO₂ sale al aire y ya no está sobre la balanza. La pérdida de 0,8 g es real y esperable, no un error del instrumento.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Aplica la ley de conservación sin considerar que una parte del sistema abandonó el recipiente."
+      },
+      {
+        "clave": "D",
+        "texto": "La masa total se conserva en ambos casos: en el vaso abierto el CO₂ producido (0,8 g) escapó al aire y no se pesó, mientras que en la botella cerrada el gas quedó atrapado en el globo y sí se pesó.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La ecuación muestra que se forma CO₂ gaseoso. En el sistema abierto el gas se va y la balanza registra 0,8 g menos; en el sistema cerrado el globo retiene el gas y la masa se mantiene en 150,0 g, como exige la ley de conservación de la masa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: dos montajes con la misma reacción; el abierto pasa de 150,0 a 149,2 g y el cerrado (con globo) se mantiene en 150,0 g; la ecuación produce CO₂ gaseoso. COMPRENDER: se pide explicar la diferencia de masa final. INTERPRETAR: el único producto que puede abandonar un vaso abierto es el gas CO₂. REPRESENTAR: abierto: reactivos (150,0 g) → productos en el vaso (149,2 g) + CO₂ en el aire (0,8 g); cerrado: reactivos (150,0 g) → productos + CO₂ en el globo (150,0 g). RAZONAR: la ley de conservación de la masa se cumple si se cuenta todo el sistema; la balanza del vaso abierto no 've' el gas que escapó, por eso parece perder masa. RESOLVER: la respuesta es la opción que atribuye los 0,8 g al CO₂ que escapó y explica la conservación en la botella cerrada. VERIFICAR: la materia no se destruye; los gases sí tienen masa; la balanza no estaba mal, porque la pérdida coincide con el gas que salió.",
+    "que_identificar": "Que la reacción produce un gas y que solo el montaje abierto permite que ese gas escape.",
+    "que_revisar": "Ley de conservación de la masa; sistemas abiertos y cerrados; productos gaseosos; lectura de ecuaciones químicas.",
+    "refuerzo_ids": ["CIE-084","CIE-112"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["conservacion de la masa","reacciones quimicas","sistema cerrado","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-156",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce los atributos que definen ciertos procesos fisicoquímicos simples (solubilidad, cambios de fase) y da razón de la manera en que ocurren",
+    "habilidad": "interpretar",
+    "tema": "Propiedades coligativas: punto de ebullición de soluciones",
+    "subtema": "Efecto de la sal disuelta en la temperatura de ebullición del agua",
+    "dificultad": 2,
+    "contexto": "En Barranquilla, una cocinera afirma que echar sal al agua hace que hierva más rápido. Un grupo de estudiantes puso a calentar, con la misma estufa, cuatro ollas con un litro de agua y cantidades distintas de sal, y midió la temperatura a la que cada una empezó a hervir.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Temperatura de ebullición del agua según la sal disuelta (Barranquilla)",
+      "eje_x": "Sal disuelta (g por litro de agua)",
+      "eje_y": "Temperatura de ebullición (°C)",
+      "series": [
+        {
+          "nombre": "Temperatura de ebullición",
+          "valores": [["0",100.0],["30",100.5],["60",101.0],["100",101.8]]
+        }
+      ]
+    },
+    "enunciado": "¿Qué muestran los datos sobre la afirmación de la cocinera?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La confirman: con más sal el agua alcanza una temperatura más alta, y una temperatura más alta significa que el agua llegó antes al punto de ebullición.",
+        "correcta": false,
+        "explicacion": "No responde. Alcanzar una temperatura más alta no significa llegar antes: con la misma estufa, calentar hasta 101,8 °C toma más tiempo que calentar hasta 100 °C, no menos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde 'hierve a mayor temperatura' con 'hierve más rápido'."
+      },
+      {
+        "clave": "B",
+        "texto": "No permiten evaluarla, porque la gráfica mide temperatura y no tiempo, y además la sal se disuelve y desaparece, de modo que no debería afectar en nada al agua.",
+        "correcta": false,
+        "explicacion": "No responde. La sal disuelta sí afecta al agua: la gráfica muestra que eleva el punto de ebullición. Y aunque no se midió el tiempo, saber que la meta de temperatura es más alta sí permite razonar sobre la rapidez.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descarta la evidencia por no ser una medición directa de tiempo."
+      },
+      {
+        "clave": "C",
+        "texto": "La contradicen: la sal eleva un poco el punto de ebullición (hasta 1,8 °C con 100 g/L), así que con la misma estufa el agua salada necesita calentarse más y tarda igual o más en hervir, no menos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Las partículas de sal disueltas dificultan que el agua pase a vapor, por lo que la ebullición ocurre a mayor temperatura (100 → 101,8 °C). Para llegar más alto con el mismo calor se requiere más tiempo, no menos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La contradicen, porque la sal hace que el agua hierva a menor temperatura: la gráfica muestra que entre 0 y 100 g/L el punto de ebullición cambia casi 2 °C, lo que acerca el agua a los 98 °C.",
+        "correcta": false,
+        "explicacion": "No responde. El cambio de casi 2 °C es hacia arriba, de 100,0 a 101,8 °C, no hacia abajo. La conclusión de que la afirmación es falsa es acertada, pero la lectura de la gráfica está invertida.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la dirección del cambio al revés aunque las barras crecen con la sal."
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra que el agua hierve a 100,0 °C sin sal y a 100,5; 101,0 y 101,8 °C con 30, 60 y 100 g de sal por litro. COMPRENDER: se pide juzgar la creencia de que la sal hace hervir el agua más rápido. INTERPRETAR: la sal disuelta eleva el punto de ebullición de forma pequeña pero sistemática. REPRESENTAR: sin sal, meta 100 °C; con 100 g/L, meta 101,8 °C; la misma estufa entrega calor al mismo ritmo. RAZONAR: si la temperatura que hay que alcanzar es mayor, el agua salada tarda igual o un poco más en hervir; la creencia confunde 'hervir más caliente' con 'hervir antes'. RESOLVER: la respuesta es la opción que indica que la sal eleva el punto de ebullición y por eso no acelera la ebullición. VERIFICAR: confirmar la creencia invierte la lógica del tiempo; decir que la gráfica no sirve ignora el efecto de la sal; hablar de 98 °C lee la gráfica al revés.",
+    "que_identificar": "La tendencia creciente de las barras y su magnitud (menos de 2 °C) frente a la pregunta de rapidez.",
+    "que_revisar": "Propiedades coligativas; elevación del punto de ebullición; soluciones; relación entre calor, temperatura y tiempo.",
+    "refuerzo_ids": ["CIE-033","CIE-111"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["soluciones","punto de ebullicion","propiedades coligativas","barras","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-157",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce posibles cambios en el entorno por la explotación de un recurso o el uso de una tecnología",
+    "habilidad": "interpretar",
+    "tema": "Ruido urbano y salud auditiva",
+    "subtema": "Escala de decibeles y exposición laboral",
+    "dificultad": 1,
+    "contexto": "El nivel de sonido se mide en decibeles (dB). La escala no es lineal: cada aumento de 10 dB multiplica por 10 la intensidad del sonido. Las normas de salud laboral indican que una exposición de 8 horas diarias a 85 dB o más puede causar pérdida de audición con los años. Un vendedor trabaja 8 horas al día en un puesto junto a una avenida de alto tráfico en Cali.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Niveles de sonido típicos",
+      "columnas": ["Fuente","Nivel (dB)"],
+      "filas": [
+        ["Biblioteca silenciosa",40],
+        ["Conversación normal",60],
+        ["Tráfico pesado a 5 m",85],
+        ["Pito de bus a 5 m",100],
+        ["Concierto junto a los parlantes",110]
+      ],
+      "nota": "Valores aproximados."
+    },
+    "enunciado": "¿Cuál afirmación sobre la situación del vendedor es correcta según la tabla y el contexto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No corre riesgo, porque 85 dB es apenas un poco más que una conversación normal (60 dB) y la diferencia de 25 dB es pequeña en una escala que llega a 110 dB.",
+        "correcta": false,
+        "explicacion": "No responde. En la escala de decibeles 25 dB más no es 'poco': el tráfico es unas 300 veces más intenso que una conversación. Además, 85 dB durante 8 horas es exactamente el límite que la norma señala como riesgoso.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trata la escala de decibeles como si fuera lineal."
+      },
+      {
+        "clave": "B",
+        "texto": "Está en el límite de riesgo, porque recibe 85 dB durante 8 horas; además, el tráfico a 85 dB es 10 veces más intenso que un sonido de 75 dB, y un pito de bus (100 dB) es unas 30 veces más intenso que el tráfico.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La exposición del vendedor (85 dB, 8 horas) coincide con el umbral de la norma. Cada 10 dB multiplica por 10 la intensidad: 85 frente a 75 dB es 10 veces; 100 frente a 85 dB son 15 dB, es decir, unas 30 veces (10 × 3,2).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Está en riesgo grave, porque 85 dB es más del doble de 40 dB de una biblioteca, y la norma prohíbe cualquier trabajo donde el sonido supere el doble del nivel de un ambiente silencioso.",
+        "correcta": false,
+        "explicacion": "No responde. La norma del contexto habla de 85 dB durante 8 horas, no de 'el doble de una biblioteca'. Además, en decibeles 85 no es 'el doble' de 40: son 45 dB de diferencia, más de 30 000 veces la intensidad.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa una regla que no está en el contexto y suma decibeles como cantidades lineales."
+      },
+      {
+        "clave": "D",
+        "texto": "No corre riesgo, porque el tráfico produce un sonido continuo y solo los sonidos repentinos, como el pito de bus o un concierto, pueden dañar la audición de una persona.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que la exposición prolongada (8 horas a 85 dB o más) causa daño con los años; es justamente el sonido continuo el que la norma regula, no solo los ruidos repentinos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que solo el ruido impulsivo afecta el oído."
+      }
+    ],
+    "explicacion": "LEER: la tabla da niveles de 40 a 110 dB; el contexto explica que cada 10 dB multiplican la intensidad por 10 y que 8 horas a 85 dB o más es riesgoso; el vendedor pasa 8 horas junto a tráfico pesado (85 dB). COMPRENDER: se pide juzgar su situación y aplicar correctamente la escala. INTERPRETAR: 85 dB por 8 horas coincide con el umbral de la norma. REPRESENTAR: +10 dB → ×10; +20 dB → ×100; +15 dB → ×10 × 10^0,5 ≈ ×30. RAZONAR: el vendedor está en el límite de riesgo; las comparaciones de intensidad deben hacerse con la regla de los 10 dB, no con restas ni dobles. RESOLVER: la respuesta es la opción que ubica al vendedor en el límite y aplica bien la escala (10 veces por 10 dB, unas 30 veces por 15 dB). VERIFICAR: las opciones que niegan el riesgo contradicen el umbral de 85 dB o la idea de exposición prolongada; la del 'doble de 40 dB' usa una regla inexistente y una escala lineal.",
+    "que_identificar": "El umbral de la norma (85 dB, 8 horas), el nivel del tráfico (85 dB) y la regla de los 10 dB.",
+    "que_revisar": "Sonido e intensidad; escala de decibeles (logarítmica); salud auditiva; contaminación sonora.",
+    "refuerzo_ids": ["CIE-030","CIE-117"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts","ruido","decibeles","salud","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-158",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Explica algunos principios para mantener la salud individual y la pública basado en principios biológicos, químicos y físicos",
+    "habilidad": "razonar",
+    "tema": "Radiación ultravioleta: índice UV",
+    "subtema": "Variación del índice UV durante el día y protección de la piel",
+    "dificultad": 2,
+    "contexto": "El índice UV mide la intensidad de la radiación ultravioleta que llega al suelo; de 8 en adelante se considera muy alto y se recomienda evitar el sol directo. Una estación meteorológica de Bogotá registró el índice UV a lo largo de un día despejado.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Índice UV en Bogotá durante un día despejado",
+      "eje_x": "Hora",
+      "eje_y": "Índice UV",
+      "series": [
+        {
+          "nombre": "Índice UV",
+          "valores": [["7:00",1],["9:00",4],["11:00",9],["13:00",11],["15:00",6],["17:00",2]]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que el índice UV sea máximo cerca de la 1:00 p. m. y tan bajo a las 7:00 a. m. y a las 5:00 p. m.?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Cerca del mediodía el Sol está casi vertical: sus rayos atraviesan un espesor menor de atmósfera, se absorben menos y se concentran en menos superficie; en la mañana y la tarde llegan inclinados, recorren más aire y se reparten en más área.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La radiación UV se atenúa al cruzar la atmósfera (en especial por el ozono); con el Sol alto el camino es corto y la energía cae casi perpendicular, por eso el índice llega a 11. Con el Sol bajo, el camino es largo y los rayos se dispersan sobre más superficie.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Al mediodía el aire está más caliente, y el calor del aire es lo que hace que la radiación ultravioleta se intensifique; por la mañana y la tarde el aire frío la debilita hasta valores cercanos a 1 o 2.",
+        "correcta": false,
+        "explicacion": "No responde. La radiación UV viene del Sol y no depende de la temperatura del aire; en Bogotá, a 2 600 m, el aire es fresco y aun así el índice llega a 11. Lo que cambia durante el día es la posición del Sol.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la sensación de calor con la intensidad de la radiación ultravioleta."
+      },
+      {
+        "clave": "C",
+        "texto": "El índice sube porque el Sol se acerca a la Tierra durante el mediodía y se aleja en la mañana y en la tarde; esa diferencia de distancia hace que la radiación llegue con mucha más fuerza a la 1:00 p. m.",
+        "correcta": false,
+        "explicacion": "No responde. La distancia Tierra-Sol no cambia de forma apreciable en unas horas; la rotación de la Tierra cambia el ángulo con el que llegan los rayos, no la distancia al Sol.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el ciclo diario a cambios de distancia en lugar de a cambios de inclinación."
+      },
+      {
+        "clave": "D",
+        "texto": "A la 1:00 p. m. la capa de ozono se abre sobre la ciudad y deja pasar la radiación, mientras que en la mañana y la tarde se cierra y la bloquea casi por completo, lo que explica los valores de 1 y 2.",
+        "correcta": false,
+        "explicacion": "No responde. La capa de ozono no se abre ni se cierra a lo largo del día; está siempre presente. Lo que varía es la longitud del trayecto de los rayos a través de ella, mayor cuando el Sol está bajo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Imagina un mecanismo de apertura del ozono que no existe."
+      }
+    ],
+    "explicacion": "LEER: el índice UV pasa de 1 a las 7:00 a 11 a las 13:00 y baja a 2 a las 17:00; de 8 en adelante es muy alto. COMPRENDER: se pide explicar la forma de la gráfica. INTERPRETAR: lo que cambia durante el día es la altura del Sol sobre el horizonte. REPRESENTAR: Sol bajo → rayos inclinados → recorrido largo por la atmósfera y energía repartida en más área; Sol alto → recorrido corto y energía concentrada. RAZONAR: la atmósfera, sobre todo el ozono, absorbe parte del UV; cuanto más aire atraviesan los rayos, más se atenúan, y un haz inclinado ilumina más superficie con la misma energía; por eso el máximo coincide con el Sol más alto. RESOLVER: la respuesta es la opción que explica el máximo por la verticalidad del Sol y el menor espesor de atmósfera. VERIFICAR: la temperatura del aire, la distancia al Sol y una 'apertura' del ozono no son mecanismos reales del ciclo diario.",
+    "que_identificar": "La forma de la gráfica, con máximo al mediodía solar, y su relación con la altura del Sol.",
+    "que_revisar": "Radiación ultravioleta; capa de ozono; ángulo de incidencia de la luz; protección solar y salud de la piel.",
+    "refuerzo_ids": ["CIE-070","CIE-117"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts","radiacion ultravioleta","indice uv","salud","barras","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-159",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "razonar",
+    "tema": "Alcohol y tiempo de reacción",
+    "subtema": "Distancia recorrida antes de frenar según el alcohol en sangre",
+    "dificultad": 2,
+    "contexto": "En un simulador de conducción, 20 voluntarios adultos realizaron la misma prueba de frenado de emergencia a 60 km/h (16,7 m/s) con distintas concentraciones de alcohol en la sangre. Se midió el tiempo promedio entre la aparición del obstáculo y el momento de pisar el freno (tiempo de reacción) y la distancia que el vehículo recorre durante ese tiempo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Tiempo de reacción y distancia recorrida antes de frenar a 60 km/h",
+      "columnas": ["Alcohol en sangre (g/L)","Tiempo de reacción promedio (s)","Distancia recorrida antes de frenar (m)"],
+      "filas": [
+        [0.0,0.75,12.5],
+        [0.2,0.85,14.2],
+        [0.5,1.05,17.5],
+        [0.8,1.30,21.7]
+      ],
+      "nota": "La distancia se calcula como rapidez × tiempo de reacción; no incluye la distancia de frenado."
+    },
+    "enunciado": "¿Qué conclusión está respaldada por los datos del simulador?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El alcohol solo afecta a partir de 0,5 g/L, porque con 0,2 g/L la distancia extra es de apenas 1,7 m, un valor tan pequeño que puede considerarse igual al del conductor sobrio.",
+        "correcta": false,
+        "explicacion": "No responde. Con 0,2 g/L el tiempo de reacción ya pasó de 0,75 a 0,85 s, un aumento del 13 %, y el vehículo recorre 1,7 m más; en una emergencia esa distancia puede ser la diferencia entre chocar o no. El efecto es progresivo desde el inicio.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Considera despreciable una diferencia que la tabla muestra como sistemática."
+      },
+      {
+        "clave": "B",
+        "texto": "El alcohol hace que el vehículo frene con menos fuerza, porque la distancia recorrida aumenta con la concentración y eso solo puede deberse a que los frenos responden peor al conductor que ha bebido.",
+        "correcta": false,
+        "explicacion": "No responde. La nota aclara que la distancia de la tabla es la recorrida antes de pisar el freno (rapidez × tiempo de reacción); los frenos no intervienen. Lo que cambia es la rapidez de respuesta del conductor.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la nota y atribuyó la distancia extra al sistema de frenos."
+      },
+      {
+        "clave": "C",
+        "texto": "Los datos no sirven para concluir nada, porque un simulador no es una carretera real y 20 voluntarios son muy pocos para representar a todos los conductores del país.",
+        "correcta": false,
+        "explicacion": "No responde. El simulador permite comparar a las mismas personas en condiciones controladas, lo que es una ventaja. Con 20 personas la tendencia es clara y constante; se puede concluir sobre el efecto, aunque convenga ampliar la muestra.",
+        "tipo_error": "verificacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descarta todo el estudio en lugar de evaluar la tendencia de los datos."
+      },
+      {
+        "clave": "D",
+        "texto": "A medida que aumenta el alcohol en sangre, el tiempo de reacción crece de forma progresiva; con 0,8 g/L el conductor recorre unos 9 m más que sobrio antes de empezar a frenar, lo que aumenta el riesgo de choque.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El tiempo de reacción sube de 0,75 a 1,30 s de manera continua; a 16,7 m/s eso equivale a pasar de 12,5 m a 21,7 m, es decir, 9,2 m adicionales sin frenar, más de dos carros de largo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: a 0; 0,2; 0,5 y 0,8 g/L los tiempos de reacción son 0,75; 0,85; 1,05 y 1,30 s, y las distancias antes de frenar 12,5; 14,2; 17,5 y 21,7 m; la nota aclara que la distancia es rapidez × tiempo de reacción. COMPRENDER: se pide la conclusión que los datos respaldan. INTERPRETAR: cada aumento de alcohol alarga el tiempo de reacción, y por tanto la distancia recorrida antes de frenar. REPRESENTAR: 16,7 m/s × 0,75 s = 12,5 m; 16,7 × 1,30 = 21,7 m; diferencia ≈ 9,2 m. RAZONAR: el efecto es progresivo desde 0,2 g/L y se traduce en metros adicionales sin frenar, lo que eleva el riesgo de colisión. RESOLVER: la respuesta es la opción que describe el aumento progresivo y los cerca de 9 m extra con 0,8 g/L. VERIFICAR: la opción de 'solo desde 0,5' ignora el cambio ya visible en 0,2; la de los frenos contradice la nota; la que invalida el estudio no evalúa la tendencia.",
+    "que_identificar": "El aumento sostenido del tiempo de reacción y la nota que define la distancia como rapidez × tiempo de reacción.",
+    "que_revisar": "Tiempo de reacción; movimiento uniforme (d = v·t); efectos del alcohol en el sistema nervioso; seguridad vial.",
+    "refuerzo_ids": ["CIE-074","CIE-026"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cts","seguridad vial","alcohol","tiempo de reaccion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-160",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Explica cómo la explotación de un recurso o el uso de una tecnología tiene efectos positivos o negativos en las personas y en el entorno",
+    "habilidad": "comprender",
+    "tema": "Residuos electrónicos y metales pesados",
+    "subtema": "Disposición de celulares y baterías en desuso",
+    "dificultad": 2,
+    "contexto": "Un colegio de Pereira organizó una campaña de recolección de celulares viejos. La cartelera informativa decía:\n\n- Un celular contiene plomo y cadmio en soldaduras y batería, además de cobre, oro y litio en cantidades pequeñas.\n- En un relleno sanitario, la humedad y los ácidos de la basura en descomposición disuelven lentamente los metales, que pueden llegar al agua subterránea.\n- El plomo y el cadmio se acumulan en el cuerpo y afectan el sistema nervioso y los riñones.\n- En una planta de reciclaje autorizada se recuperan el cobre, el oro y el litio, y los metales tóxicos se confinan de forma segura.\n- Quemar los residuos al aire libre libera humos con metales que se respiran.",
+    "estimulo": null,
+    "enunciado": "Con base en la cartelera, ¿cuál es la razón científica más sólida para llevar el celular a la campaña en lugar de botarlo a la basura ordinaria?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el celular ocupa espacio en el relleno sanitario y los rellenos de las ciudades se están llenando; reciclar reduce el volumen de basura que se debe enterrar cada día.",
+        "correcta": false,
+        "explicacion": "No responde del todo. El volumen es un problema real, pero no es lo que la cartelera destaca: un celular es pequeño. El riesgo principal señalado es la liberación de plomo y cadmio hacia el agua y las personas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Elige un argumento general sobre basura en lugar del específico de los metales tóxicos."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el oro y el cobre del celular valen dinero y el colegio puede venderlos; si se botan a la basura esos metales se pierden para siempre y nadie gana nada con ellos.",
+        "correcta": false,
+        "explicacion": "No responde del todo. Recuperar metales valiosos es una ventaja mencionada, pero la razón científica más sólida es la salud y el ambiente: evitar que el plomo y el cadmio se disuelvan y lleguen al agua o se respiren.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Prioriza el valor económico sobre el riesgo para la salud que la cartelera describe."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque en el relleno los ácidos y la humedad disuelven el plomo y el cadmio, que pueden llegar al agua subterránea y acumularse en el cuerpo; en la planta autorizada esos metales se confinan y los útiles se recuperan.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Reúne la cadena causa-efecto de la cartelera: metales tóxicos en el celular → disolución en el relleno → contaminación del agua → acumulación en el organismo y daño a nervios y riñones. El reciclaje autorizado corta esa cadena.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el litio de la batería explota al contacto con la basura húmeda del relleno y causa incendios que liberan humos tóxicos, el mismo problema que ocurre cuando se queman los residuos al aire libre.",
+        "correcta": false,
+        "explicacion": "No responde. La cartelera no menciona explosiones de litio; habla de disolución lenta de metales por la humedad y los ácidos, y de humos solo cuando los residuos se queman a propósito. Mezcla dos puntos distintos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Combina el punto de la quema con el de la humedad e inventa un riesgo no descrito."
+      }
+    ],
+    "explicacion": "LEER: según la cartelera, el celular contiene plomo, cadmio, cobre, oro y litio; en el relleno la humedad y los ácidos disuelven los metales hacia el agua subterránea; el plomo y el cadmio se acumulan y dañan nervios y riñones; la planta autorizada recupera los metales útiles y confina los tóxicos. COMPRENDER: se pide la razón científica más sólida para reciclar. INTERPRETAR: el argumento central es el riesgo de los metales pesados. REPRESENTAR: relleno → metales disueltos → agua contaminada → acumulación en el cuerpo → daño; planta → metales confinados o recuperados. RAZONAR: el espacio y el dinero son secundarios; la explosión del litio no aparece en la cartelera. RESOLVER: la respuesta es la opción que describe la ruta del plomo y el cadmio al agua y al cuerpo y su confinamiento en la planta. VERIFICAR: las opciones del espacio y del dinero no usan el riesgo descrito; la del litio añade información inexistente.",
+    "que_identificar": "La cadena de puntos de la cartelera que va de los metales tóxicos del celular al daño en la salud.",
+    "que_revisar": "Metales pesados y toxicidad; lixiviación en rellenos sanitarios; bioacumulación; gestión de residuos electrónicos.",
+    "refuerzo_ids": ["CIE-118","CIE-098"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts","residuos electronicos","metales pesados","reciclaje","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

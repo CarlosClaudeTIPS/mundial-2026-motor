@@ -1,0 +1,1389 @@
+[
+  {
+    "id": "CIE-121",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica en una curva de crecimiento poblacional la fase exponencial y la estabilización asociada a la capacidad de carga",
+    "habilidad": "interpretar",
+    "tema": "Ecología de poblaciones: crecimiento",
+    "subtema": "Curva de crecimiento de levadura en un recipiente cerrado",
+    "dificultad": 1,
+    "contexto": "En una clase de biología se cultivó levadura en un frasco con 200 mL de agua azucarada a 30 °C, sin agregar nada más durante el experimento. Cada dos horas se contó la cantidad de células por mililitro con un microscopio.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Población de levadura en el frasco",
+      "eje_x": "Tiempo (h)",
+      "eje_y": "Células (miles por mL)",
+      "series": [
+        {
+          "nombre": "Levadura",
+          "valores": [["0",10],["2",20],["4",80],["6",320],["8",900],["10",1500],["12",1800],["14",1850],["16",1850]]
+        }
+      ]
+    },
+    "enunciado": "¿Qué indica el tramo de la gráfica entre las 12 y las 16 horas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La levadura murió por completo a las 12 horas, por eso la gráfica deja de subir y se vuelve una línea horizontal.",
+        "correcta": false,
+        "explicacion": "No responde. Si todas las células hubieran muerto, el conteo de células vivas caería hacia cero, no se mantendría en 1 850 mil por mL. Una línea horizontal indica una población estable, no extinta.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta \"deja de crecer\" como \"desaparece\"."
+      },
+      {
+        "clave": "B",
+        "texto": "La población dejó de crecer porque el azúcar se agota y se acumulan desechos; el frasco alcanzó el número máximo de células que puede sostener.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Entre las 12 y las 16 horas la cantidad se estabiliza cerca de 1 850 mil células/mL. Como no se añadió alimento, los recursos se agotan y los desechos (como el alcohol) se acumulan, por lo que los nacimientos y las muertes se igualan: es la capacidad de carga del frasco.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Las células dejaron de reproducirse porque a las 12 horas la levadura completó su ciclo de vida natural, independiente de las condiciones del frasco.",
+        "correcta": false,
+        "explicacion": "No responde. La levadura se divide indefinidamente mientras haya recursos; si se pasara una parte a un frasco nuevo con azúcar, volvería a crecer. La estabilización depende de las condiciones del frasco, no de un reloj interno.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la meseta a un límite biológico fijo y no a los recursos del ambiente."
+      },
+      {
+        "clave": "D",
+        "texto": "La población sigue duplicándose cada dos horas, pero el microscopio ya no permite contar más de 1 850 mil células por mililitro.",
+        "correcta": false,
+        "explicacion": "No responde. Entre las 4 y las 6 horas la población se cuadruplicó y luego el ritmo bajó de forma gradual (900 → 1 500 → 1 800 → 1 850), lo que muestra una desaceleración real, no un límite del instrumento.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye a un error de medición un patrón que aparece de forma gradual en los datos."
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra la población de levadura cada dos horas: crece lentamente, luego muy rápido (80 → 320 → 900 mil) y se estabiliza en 1 850 mil células/mL desde la hora 12. COMPRENDER: se pide el significado del tramo plano final. INTERPRETAR: una línea horizontal significa que la cantidad de células vivas ya no cambia. REPRESENTAR: fase lenta → fase exponencial → desaceleración → meseta (capacidad de carga). RAZONAR: el frasco es un sistema cerrado: el azúcar se consume y los desechos se acumulan, de modo que nacen tantas células como mueren. RESOLVER: la respuesta es la opción que relaciona la meseta con el agotamiento de recursos y la capacidad de carga. VERIFICAR: la desaceleración es gradual desde la hora 8, lo que descarta una muerte súbita o un límite del microscopio.",
+    "que_identificar": "El cambio de pendiente de la curva y el valor constante de 1 850 mil células/mL al final.",
+    "que_revisar": "Crecimiento exponencial y logístico; capacidad de carga; factores limitantes en poblaciones.",
+    "refuerzo_ids": ["CIE-101","CIE-126"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["poblaciones","crecimiento logistico","capacidad de carga","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-122",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la regulación del volumen y la concentración de la orina como un mecanismo de homeostasis del agua corporal",
+    "habilidad": "razonar",
+    "tema": "Sistema excretor y homeostasis",
+    "subtema": "Volumen y color de la orina según la ingestión de agua",
+    "dificultad": 2,
+    "contexto": "Un estudiante de Neiva registró durante dos días cuánta agua bebió y cuánta orina produjo. El cuerpo pierde agua también por el sudor y la respiración, y los riñones ajustan cuánta agua devuelven a la sangre desde el líquido que filtran, bajo el control de la **hormona antidiurética (ADH)**: cuanto más ADH hay, más agua se reabsorbe en los túbulos del riñón.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Registro de dos días",
+      "columnas": ["Día","Agua bebida (L)","Actividad","Orina producida (L)","Color de la orina"],
+      "filas": [
+        ["Día 1 (35 °C, partido de fútbol)","1,0","Alta, mucho sudor","0,6","Amarillo oscuro"],
+        [" Día 2 (24 °C, en casa)","3,0","Baja, poco sudor","2,2","Casi transparente"]
+      ],
+      "nota": null
+    },
+    "enunciado": "¿Cuál explicación da cuenta de las diferencias entre los dos días?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El día 1 los riñones trabajaron menos por el calor, así que filtraron menos sangre y por eso se produjo menos orina y de color más oscuro; el día 2, sin calor, filtraron con normalidad.",
+        "correcta": false,
+        "explicacion": "No responde. Los riñones no \"trabajan menos\" con el calor: filtran un volumen similar cada día. Lo que cambia es cuánta agua se reabsorbe después del filtrado, regulado por la ADH, como indica el contexto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la filtración con la reabsorción y no usa la información sobre la ADH."
+      },
+      {
+        "clave": "B",
+        "texto": "El día 2 el estudiante bebió tanta agua que los riñones no alcanzaron a reabsorberla, por eso la orina fue clara; el color oscuro del día 1 se debe al sudor que entra en la orina.",
+        "correcta": false,
+        "explicacion": "No responde. El sudor sale por la piel y no llega a la orina. El color oscuro del día 1 se debe a que los desechos se disolvieron en menos agua; y el día 2 la orina fue clara porque el cuerpo decidió eliminar el exceso reduciendo la ADH, no por incapacidad.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone mecanismos anatómicamente imposibles (sudor en la orina) y describe la regulación como una falla."
+      },
+      {
+        "clave": "C",
+        "texto": "El día 1 el cuerpo perdió mucha agua por el sudor y bebió poca; aumentó la ADH, los riñones reabsorbieron más agua y produjeron poca orina y concentrada, para conservar el agua corporal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con poca agua disponible y mucho sudor, la sangre se concentra; el cuerpo responde liberando más ADH, los túbulos devuelven más agua a la sangre y la orina sale escasa (0,6 L) y oscura. El día 2 ocurre lo contrario: menos ADH, orina abundante y clara.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La diferencia se debe solo a la cantidad de agua bebida: todo lo que se bebe sale como orina sin que el cuerpo regule nada, y el día 1 se bebió menos, así que salió menos.",
+        "correcta": false,
+        "explicacion": "No responde. El día 1 se bebió 1,0 L y salieron 0,6 L; el día 2 se bebieron 3,0 L y salieron 2,2 L. En ambos casos parte del agua se perdió por sudor y respiración, y la proporción retenida fue distinta, lo que requiere una regulación activa.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No comparó las cifras de entrada y salida ni consideró las otras vías de pérdida de agua."
+      }
+    ],
+    "explicacion": "LEER: la tabla compara dos días: 1,0 L bebido con mucho sudor → 0,6 L de orina oscura; 3,0 L bebidos con poco sudor → 2,2 L de orina clara; el contexto explica el papel de la ADH. COMPRENDER: se pide explicar las diferencias. INTERPRETAR: el día 1 el cuerpo tenía déficit de agua; el día 2, exceso. REPRESENTAR: déficit de agua → más ADH → más reabsorción → poca orina concentrada; exceso de agua → menos ADH → menos reabsorción → mucha orina diluida. RAZONAR: se trata de un mecanismo de homeostasis que mantiene estable la cantidad de agua en la sangre a pesar de los cambios en la ingestión y el sudor. RESOLVER: la respuesta es la opción que explica el día 1 con aumento de ADH y mayor reabsorción. VERIFICAR: el color oscuro coincide con la misma cantidad de desechos disuelta en menos agua, lo que confirma la concentración de la orina.",
+    "que_identificar": "La relación entre agua bebida, sudor, volumen de orina y color, junto con la función de la ADH descrita en el contexto.",
+    "que_revisar": "Función del riñón: filtración y reabsorción; hormona antidiurética; homeostasis del agua.",
+    "refuerzo_ids": ["CIE-046","CIE-121"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["sistema excretor","homeostasis","adh","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-123",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Identifica las variables independiente, dependiente y controladas en un experimento sobre fotosíntesis",
+    "habilidad": "comprender",
+    "tema": "Indagación: identificación de variables",
+    "subtema": "Burbujas de oxígeno de una planta acuática según la distancia a la lámpara",
+    "dificultad": 2,
+    "contexto": "Para estudiar la fotosíntesis, un grupo sumergió ramas de una planta acuática (elodea) en frascos iguales con agua a 22 °C y contó durante 5 minutos las burbujas de oxígeno que salían de la rama, colocando una lámpara a distintas distancias. En todos los frascos se usó la misma cantidad de planta y la misma lámpara.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Burbujas producidas por la elodea en 5 minutos",
+      "columnas": ["Distancia de la lámpara (cm)","Temperatura del agua (°C)","Burbujas en 5 min"],
+      "filas": [[10,22,48],[20,22,30],[40,22,12],[80,22,3]],
+      "nota": "Cada frasco contenía 10 g de planta."
+    },
+    "enunciado": "¿Cuáles son la variable independiente y la variable dependiente del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Independiente: el número de burbujas, porque es el dato que aparece en la última columna; dependiente: la distancia de la lámpara, porque depende de dónde se coloque.",
+        "correcta": false,
+        "explicacion": "No responde. Invierte los papeles: la distancia no \"depende\" de nada, la fijó el grupo antes de medir. La cantidad de burbujas es la que responde al cambio de distancia, así que es la dependiente.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asigna las variables por el orden de las columnas o por el sentido cotidiano de \"depender\"."
+      },
+      {
+        "clave": "B",
+        "texto": "Independiente: la temperatura del agua, porque aparece en todos los ensayos; dependiente: la distancia de la lámpara, porque se ajustó en cada frasco.",
+        "correcta": false,
+        "explicacion": "No responde. La temperatura se mantuvo en 22 °C en todos los frascos justamente para que no influyera: es una variable controlada. La distancia fue la que se cambió a propósito, es decir, la independiente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una variable controlada (constante) con la variable que se manipula."
+      },
+      {
+        "clave": "C",
+        "texto": "Independiente: la cantidad de planta, porque determina cuántas burbujas se producen; dependiente: la temperatura, porque la lámpara calienta el agua.",
+        "correcta": false,
+        "explicacion": "No responde. La cantidad de planta fue la misma (10 g) en todos los frascos y la temperatura no varió (22 °C); ambas son controladas. Nada en la tabla indica que la lámpara haya calentado el agua.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó que esas dos columnas o datos permanecen constantes en todos los ensayos."
+      },
+      {
+        "clave": "D",
+        "texto": "Independiente: la distancia de la lámpara, que el grupo cambió a propósito; dependiente: el número de burbujas en 5 minutos, que se midió como respuesta.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El grupo manipuló la distancia (10, 20, 40 y 80 cm) para ver su efecto; eso la hace variable independiente. Lo que cambió como consecuencia y se contó fueron las burbujas: variable dependiente. La temperatura y la cantidad de planta se mantuvieron fijas (controladas).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: se cambia la distancia de la lámpara (10 a 80 cm), se mantiene el agua a 22 °C y 10 g de planta, y se cuentan burbujas (48, 30, 12, 3). COMPRENDER: se pide identificar la variable independiente y la dependiente. INTERPRETAR: independiente es lo que el experimentador decide cambiar; dependiente es lo que se mide como respuesta; controladas son las que se mantienen iguales. REPRESENTAR: distancia → cambia a propósito (independiente); burbujas → se miden (dependiente); temperatura y masa de planta → constantes (controladas). RAZONAR: la columna de temperatura es idéntica en todas las filas, así que no puede ser la variable estudiada. RESOLVER: la respuesta es la opción que nombra la distancia como independiente y las burbujas como dependiente. VERIFICAR: las burbujas disminuyen al alejar la lámpara, lo que muestra que la dependiente responde a la independiente.",
+    "que_identificar": "Qué columna cambia por decisión del grupo, cuál se mide como resultado y cuál permanece constante.",
+    "que_revisar": "Variables independiente, dependiente y controladas; diseño experimental; fotosíntesis y luz.",
+    "refuerzo_ids": ["CIE-103","CIE-035"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["indagacion","variables","fotosintesis","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-124",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la meiosis con la reducción del número de cromosomas en los gametos y su restablecimiento en la fecundación",
+    "habilidad": "razonar",
+    "tema": "División celular: meiosis",
+    "subtema": "Número de cromosomas en células somáticas, gametos y cigoto de un perro",
+    "dificultad": 2,
+    "contexto": "Las células del cuerpo (somáticas) de un perro tienen **78 cromosomas**, organizados en 39 pares. Para formar los espermatozoides y los óvulos, las células de los testículos y los ovarios realizan una división especial llamada **meiosis**. En la fecundación, un espermatozoide y un óvulo se unen y forman el cigoto, del cual se desarrolla el cachorro, cuyas células somáticas también tienen 78 cromosomas.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos cromosomas tiene cada gameto del perro y por qué debe ser así?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "39 cromosomas, uno de cada par, para que al unirse dos gametos el cigoto recupere los 78 y el número se mantenga constante de una generación a otra.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La meiosis reduce el número a la mitad: de 39 pares, cada gameto recibe un cromosoma de cada par, es decir, 39. Al fecundarse, 39 + 39 = 78, el número propio de la especie.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "78 cromosomas, igual que las demás células, porque el cachorro debe heredar la información completa de cada progenitor.",
+        "correcta": false,
+        "explicacion": "No responde. Si cada gameto tuviera 78, el cigoto tendría 156 cromosomas y el número se duplicaría en cada generación. El cachorro recibe la mitad de la información de cada progenitor, no toda.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que los gametos se forman por mitosis y conservan el número completo."
+      },
+      {
+        "clave": "C",
+        "texto": "156 cromosomas, porque la meiosis duplica el material genético antes de dividir la célula y los gametos quedan con el doble.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que el ADN se duplica antes de la meiosis, pero luego ocurren dos divisiones sucesivas que dejan cuatro células con la mitad del número original (39), no con el doble.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recuerda la duplicación del ADN pero no las dos divisiones de la meiosis."
+      },
+      {
+        "clave": "D",
+        "texto": "39 cromosomas en el óvulo y 78 en el espermatozoide, porque el óvulo es más grande y debe dejar espacio para el espermatozoide.",
+        "correcta": false,
+        "explicacion": "No responde. Ambos gametos se forman por meiosis y tienen 39 cromosomas; el tamaño de la célula no determina su número de cromosomas. Con 39 + 78 el cigoto tendría 117, un número incompatible con la especie.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia el tamaño de la célula con la cantidad de cromosomas."
+      }
+    ],
+    "explicacion": "LEER: células somáticas del perro con 78 cromosomas (39 pares); gametos formados por meiosis; el cigoto da origen a un cachorro con 78. COMPRENDER: se pide el número de cromosomas de cada gameto y la razón. INTERPRETAR: si el cigoto se forma uniendo dos gametos y tiene 78, cada gameto debe aportar la mitad. REPRESENTAR: 78 ÷ 2 = 39 por gameto; 39 + 39 = 78 en el cigoto. RAZONAR: la meiosis separa los pares, de modo que cada gameto lleva un cromosoma de cada par; así el número de la especie se conserva generación tras generación. RESOLVER: la respuesta es la opción que indica 39 cromosomas por gameto y explica la constancia del número. VERIFICAR: en los humanos ocurre lo mismo: 46 en las células somáticas y 23 en los gametos.",
+    "que_identificar": "El número de cromosomas de las células somáticas y el hecho de que el cigoto resulta de la unión de dos gametos.",
+    "que_revisar": "Mitosis y meiosis; células haploides y diploides; fecundación y conservación del número cromosómico.",
+    "refuerzo_ids": ["CIE-057","CIE-104"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["meiosis","cromosomas","gametos","reproduccion","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-125",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el aumento de la resistencia a un insecticida en una población de insectos mediante el mecanismo de selección natural",
+    "habilidad": "razonar",
+    "tema": "Evolución: selección natural",
+    "subtema": "Resistencia de mosquitos a un insecticida a lo largo de los años",
+    "dificultad": 3,
+    "contexto": "En un municipio del Magdalena se fumiga cada año contra el mosquito transmisor del dengue con el mismo insecticida. Un laboratorio captura mosquitos cada año, los expone en el laboratorio a una dosis estándar del insecticida, siempre del mismo lote y en las mismas condiciones, y registra el porcentaje que sobrevive.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Mosquitos que sobreviven a la dosis estándar",
+      "eje_x": "Año",
+      "eje_y": "Sobrevivientes (%)",
+      "series": [
+        {
+          "nombre": "Sobrevivientes",
+          "valores": [["2021",5],["2022",12],["2023",25],["2024",48],["2025",70]]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál es la mejor explicación del cambio que muestra la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los mosquitos se fueron acostumbrando al insecticida: cada individuo que lo recibió y sobrevivió desarrolló tolerancia durante su vida y se la transmitió a sus hijos, que nacieron ya acostumbrados.",
+        "correcta": false,
+        "explicacion": "No responde. Un mosquito no puede volverse resistente por exposición ni heredar un rasgo que adquirió en vida. La resistencia proviene de variantes genéticas que ya existían en la población y que se hicieron más frecuentes.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explica la evolución como adaptación individual heredable (idea lamarckiana)."
+      },
+      {
+        "clave": "B",
+        "texto": "El insecticida perdió potencia con los años por estar almacenado en malas condiciones, de modo que cada vez mató menos mosquitos en las pruebas, sin que la población cambiara genéticamente.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que en el laboratorio se usó siempre el mismo lote, la misma dosis y las mismas condiciones. Lo que cambió fueron los mosquitos capturados cada año, no el insecticida.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró que la prueba de laboratorio controla el insecticida y solo varía la población de mosquitos."
+      },
+      {
+        "clave": "C",
+        "texto": "Desde el inicio algunos mosquitos tenían variantes genéticas que los hacían resistentes; cada fumigación eliminó a los sensibles y los resistentes se reprodujeron, así que su proporción aumentó generación tras generación.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En 2021 ya había un 5 % de resistentes (variación previa). El insecticida actúa como presión selectiva: mata a los sensibles y deja a los resistentes, que transmiten la variante a sus descendientes. Por eso la proporción sube de 5 % a 70 %.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Los mosquitos necesitaban resistir y por eso mutaron a propósito en respuesta al peligro; el insecticida provocó directamente, en cada individuo, las mutaciones que los protegen.",
+        "correcta": false,
+        "explicacion": "No responde. Las mutaciones ocurren al azar y no en respuesta a una necesidad. El insecticida no crea la resistencia: selecciona a los que ya la tenían, lo que explica que el aumento sea gradual a lo largo de varias generaciones.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye intención a las mutaciones y confunde selección con generación de variantes."
+      }
+    ],
+    "explicacion": "LEER: cada año se fumiga con el mismo insecticida; en el laboratorio, con dosis y lote fijos, el porcentaje de mosquitos sobrevivientes sube de 5 % (2021) a 70 % (2025). COMPRENDER: se pide explicar el aumento. INTERPRETAR: como el insecticida de la prueba no cambia, cambió la población de mosquitos: hay más individuos resistentes. REPRESENTAR: variación inicial (5 % resistentes) → fumigación elimina sensibles → resistentes se reproducen → mayor proporción de resistentes en la siguiente generación → se repite cada año. RAZONAR: este es el mecanismo de selección natural: la presión del ambiente cambia la frecuencia de rasgos heredables que ya existían. RESOLVER: la respuesta es la opción que describe variación previa, eliminación de sensibles y reproducción de resistentes. VERIFICAR: el aumento gradual año a año corresponde a varias generaciones de selección, no a un cambio súbito.",
+    "que_identificar": "Que las condiciones de la prueba no cambiaron, que ya existía un 5 % de resistentes en 2021 y que el aumento es gradual.",
+    "que_revisar": "Selección natural; variación genética y mutaciones al azar; herencia de rasgos; resistencia a insecticidas y antibióticos.",
+    "refuerzo_ids": ["CIE-055","CIE-045"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["evolucion","seleccion natural","resistencia","dengue","grafica de barras","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-126",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Deriva una conclusión válida sobre la fermentación a partir de los resultados de ensayos con y sin azúcar, levadura y distinta temperatura",
+    "habilidad": "razonar",
+    "tema": "Procesos celulares: fermentación",
+    "subtema": "Producción de gas por levadura en botellas con globo",
+    "dificultad": 1,
+    "contexto": "Un grupo armó cuatro botellas con 200 mL de agua tibia, les colocó un globo en la boca y las dejó dos horas. Luego midió el perímetro del globo como indicador de la cantidad de gas producido.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Montaje y resultados de las cuatro botellas (2 horas)",
+      "columnas": ["Botella","Levadura","Azúcar","Temperatura","Perímetro del globo (cm)"],
+      "filas": [
+        ["Botella 1","Sí (5 g)","Sí (10 g)","30 °C",28],
+        ["Botella 2","Sí (5 g)","No","30 °C",0],
+        ["Botella 3","Sí (5 g)","Sí (10 g)","5 °C",6],
+        ["Botella 4","No","Sí (10 g)","30 °C",0]
+      ],
+      "nota": "Perímetro 0 = el globo no se infló."
+    },
+    "enunciado": "¿Cuál conclusión se deriva correctamente de los resultados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El azúcar se convierte en gas por sí solo cuando el agua está tibia, y la levadura solo acelera un poco el proceso.",
+        "correcta": false,
+        "explicacion": "No responde. La botella 4 tenía azúcar y agua a 30 °C pero no levadura, y el globo no se infló en absoluto. Sin levadura no hay gas, así que el azúcar no se transforma por sí solo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó el resultado de la botella sin levadura."
+      },
+      {
+        "clave": "B",
+        "texto": "La levadura produce gas únicamente cuando dispone de azúcar, y produce más gas a 30 °C que a 5 °C.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con levadura y azúcar a 30 °C el globo midió 28 cm; sin azúcar (botella 2) o sin levadura (botella 4) no se infló; con azúcar y levadura pero a 5 °C solo llegó a 6 cm. Se necesitan ambos ingredientes, y la temperatura mayor favorece el proceso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La levadura produce gas a partir del agua tibia, y el azúcar únicamente aumenta la cantidad producida.",
+        "correcta": false,
+        "explicacion": "No responde. La botella 2 tenía levadura y agua a 30 °C sin azúcar, y el globo marcó 0 cm. Si la levadura produjera gas a partir del agua, esa botella habría inflado el globo al menos un poco.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No usó el resultado de la botella con levadura y sin azúcar."
+      },
+      {
+        "clave": "D",
+        "texto": "El frío mata a la levadura, pues a 5 °C se produjo mucho menos gas que a 30 °C con los mismos ingredientes.",
+        "correcta": false,
+        "explicacion": "No responde. A 5 °C el globo sí se infló (6 cm), lo que muestra que la levadura seguía activa, solo que más lenta. Los datos indican menor actividad en frío, no muerte de las células.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Exagera el resultado: pasa de \"menos gas\" a \"levadura muerta\"."
+      }
+    ],
+    "explicacion": "LEER: cuatro botellas que combinan presencia o ausencia de levadura y azúcar y dos temperaturas; se mide el perímetro del globo. COMPRENDER: se pide la conclusión que los datos respaldan. INTERPRETAR: comparar botellas que difieren en un solo factor. REPRESENTAR: 1 frente a 2 (sin azúcar): 28 y 0 cm → el azúcar es necesario; 1 frente a 4 (sin levadura): 28 y 0 cm → la levadura es necesaria; 1 frente a 3 (frío): 28 y 6 cm → el frío reduce la producción. RAZONAR: solo cuando están levadura y azúcar hay gas, y la temperatura modifica la cantidad; nada indica que las células mueran a 5 °C, ya que algo de gas se produjo. RESOLVER: la respuesta es la opción que exige ambos ingredientes y señala mayor producción a 30 °C. VERIFICAR: las conclusiones alternativas se contradicen con la botella 2 o con la botella 4, que no inflaron el globo.",
+    "que_identificar": "Las botellas que no inflaron el globo y qué ingrediente les faltaba a cada una.",
+    "que_revisar": "Fermentación alcohólica; respiración celular; control de variables; conclusiones a partir de ensayos comparativos.",
+    "refuerzo_ids": ["CIE-003","CIE-121"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["fermentacion","levadura","indagacion","conclusiones","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-127",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Aplica la condición de equilibrio de una palanca para calcular la distancia a la que debe ubicarse una fuerza",
+    "habilidad": "resolver",
+    "tema": "Mecánica: palancas y equilibrio",
+    "subtema": "Equilibrio de un balancín en un parque",
+    "dificultad": 1,
+    "contexto": "En un parque de Villavicencio, un niño de **30 kg** se sienta en un balancín a **2 m** del punto de apoyo (el centro). Su padre, de **60 kg**, quiere sentarse al otro lado de modo que el balancín quede en equilibrio horizontal. Para que una palanca esté en equilibrio, el producto de cada peso por su distancia al apoyo debe ser igual a ambos lados.",
+    "estimulo": null,
+    "enunciado": "¿A qué distancia del punto de apoyo debe sentarse el padre?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A 1 m, porque 60 kg × 1 m es igual a 30 kg × 2 m.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Lado del niño: 30 kg × 2 m = 60 kg·m. Para igualarlo con 60 kg: 60 kg × d = 60 kg·m → d = 1 m. El padre, al pesar el doble, debe sentarse a la mitad de la distancia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "A 2 m, porque ambos deben sentarse a la misma distancia del centro para que el balancín quede nivelado.",
+        "correcta": false,
+        "explicacion": "No responde. A igual distancia, el lado del padre tendría 60 × 2 = 120 kg·m frente a 60 kg·m del niño, y el balancín se inclinaría hacia el padre. La distancia debe compensar la diferencia de peso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el equilibrio depende solo de la distancia y no del producto peso por distancia."
+      },
+      {
+        "clave": "C",
+        "texto": "A 4 m, porque el padre pesa el doble y debe ubicarse al doble de distancia para compensar.",
+        "correcta": false,
+        "explicacion": "No responde. Al doble de distancia el efecto del padre sería cuatro veces el del niño (60 × 4 = 240 frente a 60). Un peso mayor necesita menos distancia, no más, para equilibrar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación: aplicó proporcionalidad directa entre peso y distancia."
+      },
+      {
+        "clave": "D",
+        "texto": "A 0,5 m, porque la distancia debe reducirse en la misma proporción en que aumenta el peso y además restar la mitad.",
+        "correcta": false,
+        "explicacion": "No responde. Con 0,5 m el producto sería 60 × 0,5 = 30 kg·m, la mitad del lado del niño, y el balancín bajaría del lado del niño. La condición es 60 × d = 60, que da exactamente 1 m.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió dos veces por el factor de peso."
+      }
+    ],
+    "explicacion": "LEER: niño de 30 kg a 2 m del apoyo; padre de 60 kg; condición de equilibrio: peso × distancia igual a ambos lados. COMPRENDER: se pide la distancia del padre. INTERPRETAR: el producto del niño ya está definido y debe igualarse. REPRESENTAR: 30 kg × 2 m = 60 kg × d. RAZONAR: d = 60 kg·m ÷ 60 kg = 1 m; a mayor peso, menor distancia (relación inversa). RESOLVER: la respuesta es la opción que indica 1 m con la igualdad de productos. VERIFICAR: 60 × 1 = 60 y 30 × 2 = 60, los dos lados coinciden.",
+    "que_identificar": "El producto peso por distancia del lado del niño y la igualdad que debe cumplir el otro lado.",
+    "que_revisar": "Palancas; momento de una fuerza (torque); condición de equilibrio de rotación; proporcionalidad inversa.",
+    "refuerzo_ids": ["CIE-005","CIE-129"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["palancas","torque","equilibrio","calculo","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-128",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela el movimiento de un cuerpo que cae con resistencia del aire relacionando la forma de la gráfica velocidad-tiempo con las fuerzas",
+    "habilidad": "interpretar",
+    "tema": "Dinámica: caída con resistencia del aire",
+    "subtema": "Velocidad terminal de un paracaidista antes de abrir el paracaídas",
+    "dificultad": 3,
+    "contexto": "Un paracaidista salta desde un avión sobre Girardot y, antes de abrir el paracaídas, un dispositivo registra su velocidad de caída. Sobre él actúan dos fuerzas: su peso, que no cambia, y la resistencia del aire, que es mayor cuanto más rápido se mueve.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Velocidad del paracaidista antes de abrir el paracaídas",
+      "eje_x": "Tiempo (s)",
+      "eje_y": "Velocidad (m/s)",
+      "series": [
+        {
+          "nombre": "Velocidad",
+          "valores": [["0",0],["2",18],["4",32],["6",42],["8",48],["10",51],["12",52],["14",52]]
+        }
+      ]
+    },
+    "enunciado": "¿Qué modelo explica la forma de la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La gravedad se hace más débil a medida que el paracaidista desciende y se acerca al suelo, por eso la aceleración disminuye y la velocidad deja de aumentar después de los 12 segundos.",
+        "correcta": false,
+        "explicacion": "No responde. La gravedad cerca de la superficie es prácticamente constante; en unos cientos de metros de descenso no cambia de forma apreciable. El contexto indica que el peso no cambia y que la resistencia del aire sí depende de la velocidad.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la velocidad constante a una disminución de la gravedad."
+      },
+      {
+        "clave": "B",
+        "texto": "La velocidad se estabiliza porque el paracaidista abrió el paracaídas justo a los 12 segundos, lo que elimina la aceleración y mantiene la velocidad fija mientras siga abierto.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto aclara que la gráfica corresponde al tramo anterior a la apertura del paracaídas. Además, al abrirlo la velocidad disminuiría bruscamente, no se mantendría en 52 m/s.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró que los datos son previos a la apertura del paracaídas."
+      },
+      {
+        "clave": "C",
+        "texto": "La velocidad aumenta de forma uniforme como en toda caída libre; el aplanamiento final se debe a que el dispositivo de medición no registra valores mayores de 52 m/s.",
+        "correcta": false,
+        "explicacion": "No responde. En caída libre sin aire la velocidad aumentaría 9,8 m/s cada segundo (unos 20 m/s cada 2 s) de forma constante, pero aquí los incrementos bajan de 18 a 1 m/s por intervalo mucho antes de llegar a 52 m/s, lo que indica una desaceleración real.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descarta como límite del instrumento una tendencia que ya es visible en los datos intermedios."
+      },
+      {
+        "clave": "D",
+        "texto": "Al inicio casi solo actúa el peso y la velocidad crece rápido; al aumentar la velocidad crece la resistencia del aire y la fuerza neta disminuye, hasta que ambas fuerzas se igualan y la velocidad queda constante en 52 m/s.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La pendiente de la gráfica (aceleración) es máxima al comienzo (18 m/s en 2 s) y disminuye progresivamente (10, 6, 3, 1 m/s en cada intervalo) hasta hacerse cero. Eso corresponde a una fuerza neta que se reduce porque la resistencia crece con la velocidad hasta igualar al peso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la velocidad pasa de 0 a 52 m/s con incrementos cada vez menores (18, 14, 10, 6, 3, 1, 0 m/s por intervalo de 2 s); actúan el peso (constante) y la resistencia del aire (crece con la velocidad). COMPRENDER: se pide un modelo de fuerzas que explique la curva. INTERPRETAR: la pendiente de la gráfica es la aceleración, y disminuye hasta cero. REPRESENTAR: fuerza neta = peso − resistencia; al inicio resistencia ≈ 0 → aceleración ≈ 9,8 m/s²; luego resistencia ↑ → fuerza neta ↓ → aceleración ↓; cuando resistencia = peso → fuerza neta = 0 → velocidad constante. RAZONAR: la velocidad terminal es el estado en que las dos fuerzas se equilibran, y su valor (52 m/s) depende de la forma y la masa del paracaidista. RESOLVER: la respuesta es la opción que describe el equilibrio entre peso y resistencia del aire. VERIFICAR: en los primeros 2 s el aumento (18 m/s) es cercano al de caída libre (19,6 m/s), coherente con una resistencia inicial pequeña.",
+    "que_identificar": "Los incrementos decrecientes de velocidad y la relación entre pendiente y aceleración.",
+    "que_revisar": "Segunda ley de Newton; fuerza neta; resistencia del aire; velocidad terminal; gráficas velocidad-tiempo.",
+    "refuerzo_ids": ["CIE-008","CIE-107"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["dinamica","velocidad terminal","resistencia del aire","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-129",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Relaciona patrones en los datos de fricción para evaluar una hipótesis sobre el efecto del área de contacto",
+    "habilidad": "razonar",
+    "tema": "Dinámica: fricción",
+    "subtema": "Fuerza de fricción según el área de contacto y la masa del bloque",
+    "dificultad": 3,
+    "contexto": "Un grupo plantea la hipótesis: *\"Cuanto mayor sea el área de contacto entre un bloque y la mesa, mayor será la fuerza de fricción\"*. Usan bloques de madera en forma de ladrillo que pueden apoyarse sobre una cara grande (200 cm²) o una cara pequeña (100 cm²), y miden con un dinamómetro la fuerza mínima para arrastrarlos a velocidad constante sobre la misma mesa.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Fuerza necesaria para arrastrar los bloques",
+      "columnas": ["Ensayo","Masa del bloque (kg)","Cara de apoyo (cm²)","Fuerza (N)"],
+      "filas": [["1","1,0",200,"3,0"],["2","1,0",100,"3,0"],["3","2,0",200,"6,0"],["4","2,0",100,"6,1"]],
+      "nota": "Misma mesa y misma madera en todos los ensayos."
+    },
+    "enunciado": "¿Qué puede concluirse sobre la hipótesis a partir de los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La hipótesis se confirma: los bloques apoyados en la cara grande requieren más fuerza para deslizarse, como muestra la diferencia entre 6,0 N y 6,1 N, pequeña pero a favor del área mayor.",
+        "correcta": false,
+        "explicacion": "No responde. En los ensayos 3 y 4 la cara pequeña (100 cm²) dio 6,1 N, ligeramente mayor que la grande (6,0 N), lo contrario de la hipótesis, y la diferencia de 0,1 N está dentro del error de un dinamómetro. Los ensayos 1 y 2 dan exactamente lo mismo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó las áreas al revés y tomó una diferencia mínima como evidencia."
+      },
+      {
+        "clave": "B",
+        "texto": "La hipótesis se confirma, porque al duplicar la masa también se duplica el área que toca la mesa y por eso la fuerza se duplica; ambos efectos actúan juntos en los datos.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla separa las dos variables: el área de apoyo es la misma (200 o 100 cm²) para bloques de 1,0 y 2,0 kg. La fuerza se duplicó por la masa, con el área fija, lo que descarta al área como causa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcla las dos variables en lugar de comparar ensayos donde solo cambia una."
+      },
+      {
+        "clave": "C",
+        "texto": "No se puede concluir nada, porque los ensayos deberían haberse hecho con bloques de distintos materiales y sobre varias mesas antes de descartar el efecto del área.",
+        "correcta": false,
+        "explicacion": "No responde. Para probar el efecto del área hay que mantener fijo todo lo demás (material y mesa), que es justo lo que hizo el grupo. Cambiar materiales introduciría otra variable y haría imposible aislar el efecto del área.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde controlar variables con una falta de generalidad del experimento."
+      },
+      {
+        "clave": "D",
+        "texto": "La hipótesis no se sostiene: con la misma masa, duplicar el área no cambió la fricción, mientras que duplicar la masa duplicó la fuerza; la fricción depende del peso que presiona las superficies, no del área.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Ensayos 1 y 2 (misma masa, áreas 200 y 100 cm²) dan 3,0 N en ambos. Ensayos 3 y 4 dan 6,0 y 6,1 N, también iguales dentro del error. Al pasar de 1,0 a 2,0 kg la fuerza pasa de 3,0 a 6,0 N: la fricción es proporcional al peso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: hipótesis: más área, más fricción; tabla con dos masas y dos áreas de apoyo, fuerzas de 3,0, 3,0, 6,0 y 6,1 N. COMPRENDER: se pide evaluar la hipótesis con los datos. INTERPRETAR: comparar ensayos de igual masa y distinta área (1 con 2, 3 con 4) y de igual área y distinta masa (1 con 3, 2 con 4). REPRESENTAR: área ×2 con masa fija → fuerza igual (3,0 = 3,0; 6,0 ≈ 6,1); masa ×2 con área fija → fuerza ×2 (3,0 → 6,0). RAZONAR: la fricción no depende del área de contacto sino de la fuerza con que las superficies se presionan (el peso); una diferencia de 0,1 N es error de medición. RESOLVER: la respuesta es la opción que refuta la hipótesis y atribuye la fricción al peso. VERIFICAR: el cociente fuerza/peso es constante: 3,0 N / 9,8 N ≈ 0,31 y 6,0 N / 19,6 N ≈ 0,31, el coeficiente de fricción madera-mesa.",
+    "que_identificar": "Los pares de ensayos con igual masa y distinta área, y los de igual área y distinta masa, junto con el tamaño de las diferencias.",
+    "que_revisar": "Fuerza de fricción y fuerza normal; coeficiente de fricción; control de variables; error de medición.",
+    "refuerzo_ids": ["CIE-127","CIE-109"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["friccion","indagacion","hipotesis","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-130",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Usa la relación lineal entre profundidad y presión en un líquido para predecir la presión a una nueva profundidad",
+    "habilidad": "interpretar",
+    "tema": "Fluidos: presión hidrostática",
+    "subtema": "Presión sobre un buzo a distintas profundidades",
+    "dificultad": 2,
+    "contexto": "Una escuela de buceo en San Andrés enseña a sus alumnos cómo cambia la presión total que soporta el cuerpo al descender en el mar. La presión total es la suma de la presión atmosférica en la superficie y la presión que ejerce el agua que está encima del buzo, que crece con la profundidad.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Presión total sobre el buzo",
+      "columnas": ["Profundidad (m)","Presión total (kPa)"],
+      "filas": [[0,100],[10,200],[20,300]],
+      "nota": "100 kPa equivalen aproximadamente a 1 atmósfera."
+    },
+    "enunciado": "¿Qué presión total soportará el buzo a 30 m de profundidad y cómo se obtiene?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "400 kPa, porque cada 10 m de agua añaden 100 kPa a los 100 kPa de la atmósfera.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que la presión sube 100 kPa por cada 10 m: 100, 200, 300. A 30 m se añaden 3 × 100 = 300 kPa a la presión atmosférica de 100 kPa, para un total de 400 kPa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "300 kPa, porque 30 m de agua ejercen 300 kPa y esa es la presión que siente el buzo.",
+        "correcta": false,
+        "explicacion": "No responde. 300 kPa es solo la presión del agua. La tabla muestra que a profundidad cero ya hay 100 kPa de la atmósfera, que deben sumarse: 100 + 300 = 400 kPa.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó sumar la presión atmosférica que aparece en la fila de 0 m."
+      },
+      {
+        "clave": "C",
+        "texto": "600 kPa, porque al duplicar la profundidad de 10 a 20 m la presión aumentó y, siguiendo esa proporción, al llegar a 30 m se duplica otra vez.",
+        "correcta": false,
+        "explicacion": "No responde. La presión no se duplica cada 10 m: pasa de 100 a 200 (+100) y de 200 a 300 (+100). Es un aumento constante de 100 kPa por cada 10 m, no un crecimiento que se multiplica.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió un incremento constante (aditivo) con uno multiplicativo."
+      },
+      {
+        "clave": "D",
+        "texto": "130 kPa, porque la presión del agua es de 1 kPa por metro y se suma a los 100 kPa de la atmósfera.",
+        "correcta": false,
+        "explicacion": "No responde. Según la tabla, 10 m de agua añaden 100 kPa, es decir, 10 kPa por metro, no 1 kPa. A 30 m la presión del agua es 300 kPa, y el total 400 kPa.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó mal la presión por metro a partir de la tabla."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la presión total a 0, 10 y 20 m: 100, 200 y 300 kPa; la presión total es atmósfera más agua. COMPRENDER: se pide la presión a 30 m. INTERPRETAR: la presión crece de forma lineal con la profundidad: 100 kPa cada 10 m. REPRESENTAR: P = 100 kPa + 10 kPa/m × profundidad; a 30 m: 100 + 300 = 400 kPa. RAZONAR: el aumento por cada 10 m es constante porque la presión del agua depende de la altura de la columna que está encima. RESOLVER: la respuesta es la opción que da 400 kPa sumando atmósfera y agua. VERIFICAR: con la fórmula P = ρgh, 1 000 kg/m³ × 9,8 m/s² × 30 m ≈ 294 kPa ≈ 300 kPa de agua, más 100 kPa de atmósfera, da unos 400 kPa.",
+    "que_identificar": "El incremento constante de 100 kPa por cada 10 m y la presión de 100 kPa que ya existe en la superficie.",
+    "que_revisar": "Presión hidrostática; presión atmosférica; relación lineal entre profundidad y presión.",
+    "refuerzo_ids": ["CIE-004","CIE-108"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["fluidos","presion hidrostatica","buceo","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-131",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la posición aparente de un objeto sumergido a partir de la refracción de la luz al pasar del agua al aire",
+    "habilidad": "comprender",
+    "tema": "Óptica: refracción",
+    "subtema": "Posición aparente de un pez visto desde fuera del agua",
+    "dificultad": 1,
+    "contexto": "Un pescador en el río Atrato intenta atrapar con la mano un pez que ve quieto cerca del fondo, pero cuando mete el brazo, el pez está más abajo de donde lo veía. En clase le explicaron que la luz cambia de dirección (se **refracta**) cuando pasa de un medio a otro, por ejemplo, del agua al aire, porque su rapidez es distinta en cada medio. El ojo supone que la luz llegó en línea recta.",
+    "estimulo": null,
+    "enunciado": "¿Por qué el pescador ve el pez en una posición distinta a la real?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque la luz se refleja en la superficie del agua como en un espejo y forma una imagen del pez por encima de su posición real, que es la que el pescador mira.",
+        "correcta": false,
+        "explicacion": "No responde. La reflexión en la superficie formaría la imagen de objetos que están fuera del agua (el cielo, el pescador), no del pez sumergido. La luz del pez atraviesa la superficie y se refracta.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde reflexión con refracción."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la luz que sale del pez se desvía al pasar del agua al aire; el ojo prolonga en línea recta los rayos que recibe y ubica el pez más arriba de donde realmente está.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los rayos que salen del pez cambian de dirección en la superficie del agua. El cerebro no \"sabe\" de ese quiebre y ubica el objeto donde parecen venir los rayos en línea recta, es decir, a menor profundidad que la real.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el agua en movimiento arrastra al pez hacia el fondo en el momento en que el pescador introduce el brazo, y el animal queda más abajo de donde se veía.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que el pez está quieto y que el pescador lo ve en una posición equivocada antes de meter el brazo. El efecto se debe a cómo viaja la luz, no al movimiento del agua.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Busca una causa mecánica en lugar de una óptica, pese al dato de que el pez está quieto."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el agua absorbe la luz roja y hace ver los objetos más pequeños y, por tanto, más cercanos a la superficie de lo que están en realidad.",
+        "correcta": false,
+        "explicacion": "No responde. La absorción de algunos colores cambia el tono con que se ve el pez, pero no su posición aparente. Lo que desplaza la imagen es el cambio de dirección de los rayos al salir del agua.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcla el fenómeno de absorción del color con el de la ubicación aparente."
+      }
+    ],
+    "explicacion": "LEER: el pescador ve el pez más arriba de su posición real; la luz cambia de dirección al pasar del agua al aire y el ojo supone trayectorias rectas. COMPRENDER: se pide explicar la diferencia entre posición vista y real. INTERPRETAR: la luz que ilumina el pez debe salir del agua para llegar al ojo, y en esa frontera se refracta. REPRESENTAR: rayo real quebrado en la superficie → el ojo lo prolonga hacia atrás en línea recta → punto aparente más alto que el pez. RAZONAR: la imagen aparente está a menor profundidad, por eso al meter el brazo el pez está más abajo. RESOLVER: la respuesta es la opción que describe la refracción y la prolongación recta de los rayos. VERIFICAR: el mismo fenómeno hace que una piscina parezca menos profunda de lo que es y que un lápiz en un vaso de agua parezca quebrado.",
+    "que_identificar": "Que la luz del pez atraviesa la superficie agua-aire y que el ojo interpreta los rayos como rectos.",
+    "que_revisar": "Refracción de la luz; índice de refracción; diferencia entre reflexión y refracción; imágenes aparentes.",
+    "refuerzo_ids": ["CIE-027","CIE-130"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["optica","refraccion","imagen aparente","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-132",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Usa la masa molar para comparar la cantidad de moléculas presentes en muestras de distintas sustancias",
+    "habilidad": "resolver",
+    "tema": "Cantidad de sustancia: el mol",
+    "subtema": "Comparación del número de moléculas en muestras de distinta masa",
+    "dificultad": 1,
+    "contexto": "En el laboratorio se tienen cuatro muestras de sustancias puras. Un **mol** de cualquier sustancia contiene el mismo número de moléculas (6,02 × 10²³), y su masa en gramos es igual a la masa molar. La tabla muestra la masa de cada muestra y la masa molar de cada sustancia.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Muestras del laboratorio",
+      "columnas": ["Sustancia","Fórmula","Masa de la muestra (g)","Masa molar (g/mol)"],
+      "filas": [["Agua","H₂O",36,18],["Dióxido de carbono","CO₂",44,44],["Oxígeno","O₂",32,32],["Hidrógeno","H₂",4,2]],
+      "nota": null
+    },
+    "enunciado": "¿Cuáles muestras contienen el mismo número de moléculas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El agua y el dióxido de carbono, porque son las muestras de mayor masa y por eso tienen más moléculas.",
+        "correcta": false,
+        "explicacion": "No responde. La masa no indica directamente el número de moléculas, porque cada molécula pesa distinto. 36 g de agua son 2 mol, pero 44 g de CO₂ son solo 1 mol, ya que cada molécula de CO₂ pesa más del doble que una de agua.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara masas en vez de moles."
+      },
+      {
+        "clave": "B",
+        "texto": "El dióxido de carbono y el oxígeno únicamente, porque ambas muestras contienen 1 mol; ninguna otra pareja coincide.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que CO₂ y O₂ tienen 1 mol cada uno, pero también coinciden el agua (36/18 = 2 mol) y el hidrógeno (4/2 = 2 mol). La afirmación de que ninguna otra pareja coincide es falsa.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detuvo al encontrar la primera pareja y no revisó las otras filas."
+      },
+      {
+        "clave": "C",
+        "texto": "El agua y el hidrógeno, porque ambas muestras contienen 2 moles.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Moles = masa / masa molar. Agua: 36/18 = 2 mol; hidrógeno: 4/2 = 2 mol. Dióxido de carbono: 44/44 = 1 mol; oxígeno: 32/32 = 1 mol. Las muestras de agua e hidrógeno tienen el doble de moléculas que las otras dos, e igual número entre sí.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Ninguna pareja coincide, porque las cuatro muestras tienen masas distintas y cada gramo contiene el mismo número de moléculas.",
+        "correcta": false,
+        "explicacion": "No responde. Un gramo de hidrógeno contiene nueve veces más moléculas que un gramo de agua, porque la molécula de H₂ es más liviana. Lo que iguala el número de moléculas es el número de moles, no la masa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que el número de moléculas por gramo es igual para todas las sustancias."
+      }
+    ],
+    "explicacion": "LEER: la tabla da masa y masa molar de cuatro muestras; un mol tiene siempre el mismo número de moléculas. COMPRENDER: se pide qué muestras tienen igual número de moléculas, es decir, igual número de moles. INTERPRETAR: moles = masa ÷ masa molar. REPRESENTAR: H₂O: 36/18 = 2; CO₂: 44/44 = 1; O₂: 32/32 = 1; H₂: 4/2 = 2. RAZONAR: coinciden agua con hidrógeno (2 mol) y CO₂ con oxígeno (1 mol); la pregunta pide la pareja que indica la opción correcta, agua e hidrógeno con 2 mol cada una. RESOLVER: la respuesta es la opción que señala agua e hidrógeno con 2 moles. VERIFICAR: 2 mol × 6,02 × 10²³ = 1,2 × 10²⁴ moléculas en cada una de esas dos muestras.",
+    "que_identificar": "El cociente entre la masa de la muestra y la masa molar en cada fila.",
+    "que_revisar": "Concepto de mol; masa molar; número de Avogadro; relación entre masa y cantidad de sustancia.",
+    "refuerzo_ids": ["CIE-085","CIE-136"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["mol","masa molar","cantidad de sustancia","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-133",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la formación de monóxido de carbono en la combustión con poco oxígeno y su efecto en el transporte de oxígeno en la sangre",
+    "habilidad": "razonar",
+    "tema": "Reacciones químicas: combustión incompleta",
+    "subtema": "Monóxido de carbono por calentadores de gas en espacios cerrados",
+    "dificultad": 2,
+    "contexto": "Cada año se reportan intoxicaciones por **calentadores de gas** instalados en baños sin ventilación. Con suficiente oxígeno, el gas propano se quema por completo:\n\n**C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O**\n\nCuando el oxígeno escasea, parte del carbono no alcanza a oxidarse por completo:\n\n**2 C₃H₈ + 7 O₂ → 6 CO + 8 H₂O**\n\nEl **monóxido de carbono (CO)** es un gas incoloro e inodoro que se une a la hemoglobina de la sangre con una afinidad unas 200 veces mayor que la del oxígeno.",
+    "estimulo": null,
+    "enunciado": "¿Por qué un calentador en un baño cerrado resulta peligroso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque al agotarse el oxígeno del recinto la combustión se vuelve incompleta y produce CO, que ocupa los sitios de la hemoglobina destinados al oxígeno y reduce el oxígeno que llega a los tejidos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En un baño cerrado la llama consume el oxígeno disponible; con menos oxígeno por molécula de propano (7 O₂ por cada 2 C₃H₈ en vez de 10), el carbono forma CO. Como el CO se une a la hemoglobina con mayor fuerza que el O₂, la sangre deja de transportar oxígeno suficiente, sin que la persona lo perciba.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el dióxido de carbono producido en la combustión completa se acumula en el baño y es un veneno que destruye los glóbulos rojos e impide que transporten oxígeno.",
+        "correcta": false,
+        "explicacion": "No responde. El CO₂ no destruye glóbulos rojos ni es el gas responsable de estas intoxicaciones; además, el peligro surge justamente cuando la combustión deja de ser completa y aparece el CO, según el contexto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el dióxido de carbono con el monóxido de carbono."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el propano sin quemar se acumula en el baño y desplaza todo el aire, de modo que la persona se asfixia por falta de oxígeno aunque la llama siga encendida.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto describe una combustión que sí ocurre, aunque incompleta; el riesgo no es el propano sin quemar sino el CO formado. El propano, además, tiene olor añadido para detectar fugas, mientras el CO es inodoro.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye el peligro a una fuga de gas en lugar de a los productos de la combustión."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el vapor de agua de la combustión humedece el aire y dificulta la respiración, lo que produce el desmayo de la persona al no poder tomar suficiente aire.",
+        "correcta": false,
+        "explicacion": "No responde. El aire húmedo de una ducha no causa intoxicación. El contexto señala que el CO se une a la hemoglobina con afinidad 200 veces mayor que el oxígeno, y ese es el mecanismo del daño.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No usó la información sobre la afinidad del CO por la hemoglobina."
+      }
+    ],
+    "explicacion": "LEER: dos ecuaciones de combustión del propano, una completa (con CO₂) y una incompleta por falta de oxígeno (con CO); el CO se une a la hemoglobina mucho más que el O₂. COMPRENDER: se pide explicar el peligro del calentador en un baño cerrado. INTERPRETAR: en un recinto cerrado la llama consume el oxígeno y no entra aire nuevo, así que la segunda reacción empieza a predominar. REPRESENTAR: completa: 10 O₂ por cada 2 C₃H₈ → CO₂; incompleta: 7 O₂ por cada 2 C₃H₈ → CO. RAZONAR: el CO desplaza al oxígeno de la hemoglobina, los tejidos reciben menos oxígeno y, al ser un gas inodoro, la persona no lo nota. RESOLVER: la respuesta es la opción que une combustión incompleta, formación de CO y bloqueo de la hemoglobina. VERIFICAR: la ecuación incompleta está balanceada (6 C, 16 H y 14 O a cada lado), y la prevención recomendada es ventilar, lo que coincide con la falta de oxígeno como causa.",
+    "que_identificar": "La relación entre poco oxígeno y formación de CO, y la información sobre la afinidad del CO por la hemoglobina.",
+    "que_revisar": "Combustión completa e incompleta; balanceo de ecuaciones; transporte de oxígeno por la hemoglobina.",
+    "refuerzo_ids": ["CIE-084","CIE-046"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["combustion","monoxido de carbono","hemoglobina","seguridad","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-134",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Evalúa una predicción sobre la solubilidad de un gas en agua usando el patrón de los datos frente a la temperatura",
+    "habilidad": "verificar",
+    "tema": "Soluciones: solubilidad de gases",
+    "subtema": "Oxígeno disuelto en agua según la temperatura y su efecto en los peces",
+    "dificultad": 2,
+    "contexto": "Un estudiante predice: *\"Como el azúcar se disuelve mejor en agua caliente, el oxígeno también se disolverá más en el agua tibia de una ciénaga que en la de un río frío de montaña\"*. Para evaluarlo, consulta cuánta cantidad máxima de oxígeno puede disolverse en agua a distintas temperaturas, con la misma presión atmosférica.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Solubilidad del oxígeno en agua (presión de 1 atm)",
+      "eje_x": "Temperatura (°C)",
+      "eje_y": "Oxígeno disuelto máximo (mg/L)",
+      "series": [
+        {
+          "nombre": "Oxígeno",
+          "valores": [["0",14.6],["10",11.3],["20",9.1],["30",7.6],["40",6.4]]
+        }
+      ]
+    },
+    "enunciado": "¿Qué conclusión sobre la predicción permiten los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción es correcta: la gráfica muestra que la cantidad de oxígeno disuelto cambia con la temperatura, tal como anticipó el estudiante, sin importar el sentido del cambio.",
+        "correcta": false,
+        "explicacion": "No responde. El estudiante predijo que el oxígeno se disolvería más en agua tibia, pero la gráfica muestra lo contrario: a 30 °C hay 7,6 mg/L frente a 11,3 mg/L a 10 °C. Que haya un cambio no significa que sea en el sentido predicho.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confirma la predicción por el hecho de que la variable cambia, sin mirar la dirección del cambio."
+      },
+      {
+        "clave": "B",
+        "texto": "La predicción es correcta, porque el comportamiento del oxígeno debe ser igual al del azúcar: ambos se disuelven en agua y toda sustancia se disuelve mejor en caliente.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran que el oxígeno se comporta de forma distinta al azúcar: su solubilidad baja con la temperatura. Una predicción se evalúa con los datos, no con la analogía que la motivó.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mantiene la analogía inicial a pesar de que los datos la contradicen."
+      },
+      {
+        "clave": "C",
+        "texto": "No se puede evaluar, porque la gráfica se obtuvo a una presión fija y en la ciénaga y el río la presión atmosférica es diferente, lo que invalida cualquier comparación.",
+        "correcta": false,
+        "explicacion": "No responde. La predicción compara el efecto de la temperatura, y la gráfica aísla justamente esa variable al fijar la presión. La diferencia de presión entre ambos lugares puede modificar los valores, pero no invierte la tendencia observada.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usa una variable controlada como excusa para no evaluar la predicción."
+      },
+      {
+        "clave": "D",
+        "texto": "La predicción es incorrecta: la solubilidad del oxígeno disminuye al aumentar la temperatura, así que el agua tibia de la ciénaga puede contener menos oxígeno disuelto que el agua fría del río.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La curva baja de 14,6 mg/L a 0 °C hasta 6,4 mg/L a 40 °C. A diferencia de los sólidos como el azúcar, los gases se disuelven menos en agua caliente. Por eso las aguas cálidas tienen menos oxígeno disponible para los peces.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la predicción afirma que el oxígeno se disuelve más en agua tibia; la gráfica da la solubilidad del oxígeno de 0 a 40 °C a presión fija: 14,6, 11,3, 9,1, 7,6 y 6,4 mg/L. COMPRENDER: se pide evaluar la predicción. INTERPRETAR: la línea desciende de forma continua: a mayor temperatura, menos oxígeno disuelto. REPRESENTAR: río frío (≈10 °C) → hasta 11,3 mg/L; ciénaga tibia (≈30 °C) → hasta 7,6 mg/L. RAZONAR: la analogía con el azúcar falla porque los gases escapan del líquido con más facilidad cuando sus moléculas tienen más energía; la predicción queda refutada por los datos. RESOLVER: la respuesta es la opción que declara incorrecta la predicción y señala que el agua tibia contiene menos oxígeno. VERIFICAR: esto explica por qué en épocas de calor los peces de aguas quietas pueden morir por falta de oxígeno.",
+    "que_identificar": "La dirección de la tendencia de la gráfica y el sentido de la predicción del estudiante.",
+    "que_revisar": "Solubilidad de gases y de sólidos frente a la temperatura; oxígeno disuelto; evaluación de predicciones.",
+    "refuerzo_ids": ["CIE-089","CIE-081"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["solubilidad","gases","oxigeno disuelto","prediccion","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-135",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la presión y la temperatura absoluta de un gas a volumen constante para predecir el efecto de calentar un recipiente cerrado",
+    "habilidad": "resolver",
+    "tema": "Gases: ley de Gay-Lussac",
+    "subtema": "Aumento de presión en un aerosol expuesto al sol",
+    "dificultad": 2,
+    "contexto": "La etiqueta de un aerosol advierte: *\"No exponer al sol ni a temperaturas superiores a 50 °C\"*. A 27 °C, el gas dentro del envase rígido tiene una presión de **200 kPa**. En un recipiente de volumen fijo, la presión de un gas es directamente proporcional a su **temperatura absoluta** (en kelvin: K = °C + 273). El envase soporta hasta 300 kPa antes de deformarse.",
+    "estimulo": null,
+    "enunciado": "Si el aerosol se deja en el baúl de un carro y alcanza 87 °C, ¿qué presión tendrá el gas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "644 kPa, porque la temperatura pasa de 27 °C a 87 °C, es decir, se multiplica por 3,2, y la presión también.",
+        "correcta": false,
+        "explicacion": "No responde. La proporcionalidad se cumple con la temperatura absoluta en kelvin, no en grados Celsius. De 300 K a 360 K el factor es 1,2, no 3,2. Con ese cálculo el envase habría explotado, lo que no concuerda con la realidad del envase a 87 °C.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó grados Celsius en lugar de kelvin en la proporción."
+      },
+      {
+        "clave": "B",
+        "texto": "260 kPa, porque la temperatura aumentó 60 grados y cada grado añade 1 kPa a la presión inicial.",
+        "correcta": false,
+        "explicacion": "No responde. La relación es proporcional, no de suma fija por grado. El aumento por kelvin es 200/300 ≈ 0,67 kPa, así que 60 K añaden 40 kPa, no 60 kPa. El resultado correcto es 240 kPa.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventó una regla aditiva en lugar de aplicar la proporción."
+      },
+      {
+        "clave": "C",
+        "texto": "240 kPa, porque la temperatura absoluta pasa de 300 K a 360 K y la presión aumenta en la misma proporción (× 1,2).",
+        "correcta": true,
+        "explicacion": "Es la correcta. T₁ = 27 + 273 = 300 K; T₂ = 87 + 273 = 360 K. P₂ = P₁ × T₂/T₁ = 200 kPa × 360/300 = 240 kPa. El envase aún resiste (límite 300 kPa), pero la advertencia protege frente a temperaturas aún mayores.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "167 kPa, porque al calentarse el gas se expande y, al ocupar más espacio, su presión disminuye.",
+        "correcta": false,
+        "explicacion": "No responde. El envase es rígido, así que el volumen no cambia y el gas no puede expandirse. A volumen fijo, calentar aumenta la presión; 167 kPa resulta de invertir la proporción (300/360), lo que contradice la ley enunciada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la idea de expansión a un recipiente de volumen fijo e invirtió la relación."
+      }
+    ],
+    "explicacion": "LEER: aerosol rígido a 27 °C con 200 kPa; la presión es proporcional a la temperatura en kelvin; se calienta hasta 87 °C. COMPRENDER: se pide la presión final. INTERPRETAR: hay que convertir a kelvin antes de aplicar la proporción. REPRESENTAR: T₁ = 300 K, T₂ = 360 K; P₂ = 200 × 360/300. RAZONAR: la razón de temperaturas es 1,2, así que la presión sube un 20 %. RESOLVER: P₂ = 240 kPa; la respuesta es la opción que da 240 kPa con el cambio de 300 K a 360 K. VERIFICAR: 240/360 = 0,667 kPa/K, igual que 200/300 = 0,667 kPa/K, la proporción se mantiene; además 240 kPa está por debajo del límite de 300 kPa, lo que es coherente con que la etiqueta advierta sobre temperaturas más altas.",
+    "que_identificar": "La necesidad de usar kelvin y que el volumen del envase es fijo.",
+    "que_revisar": "Leyes de los gases: relación presión-temperatura a volumen constante; escala Kelvin; proporcionalidad directa.",
+    "refuerzo_ids": ["CIE-095","CIE-087"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["gases","gay-lussac","kelvin","calculo","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-136",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela la relación entre los volúmenes de gases producidos en la electrólisis del agua y la fórmula molecular H₂O",
+    "habilidad": "interpretar",
+    "tema": "Reacciones químicas: electrólisis del agua",
+    "subtema": "Proporción de hidrógeno y oxígeno producidos y la fórmula del agua",
+    "dificultad": 3,
+    "contexto": "En una práctica se hace pasar corriente eléctrica por agua con un poco de sal disuelta, usando dos electrodos. En cada electrodo se recoge el gas producido en un tubo invertido y se mide su volumen cada dos minutos. La ecuación de la reacción es **2 H₂O → 2 H₂ + O₂**. A igual temperatura y presión, volúmenes iguales de gases distintos contienen el mismo número de moléculas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Volumen de gas recogido en cada electrodo",
+      "columnas": ["Tiempo (min)","Gas en el electrodo negativo (mL)","Gas en el electrodo positivo (mL)"],
+      "filas": [[2,10,5],[4,20,10],[6,30,15],[8,40,20]],
+      "nota": "Al acercar una llama, el gas del electrodo negativo arde con un estallido; el del positivo aviva la llama."
+    },
+    "enunciado": "¿Cómo se explica que en el electrodo negativo se recoja siempre el doble de volumen que en el positivo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El hidrógeno es un gas más liviano que el oxígeno, por eso sube con más facilidad en el tubo y, al ser menos denso, ocupa el doble de espacio con la misma masa.",
+        "correcta": false,
+        "explicacion": "No responde. La masa de un gas no determina el volumen que ocupa: a igual temperatura y presión, el volumen depende del número de moléculas, según el contexto. La razón 2:1 proviene de la proporción de átomos en la fórmula del agua.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el volumen a la densidad del gas en lugar de al número de moléculas."
+      },
+      {
+        "clave": "B",
+        "texto": "En el electrodo negativo se forma hidrógeno y en el positivo oxígeno; como cada molécula de agua tiene dos átomos de H por uno de O, se producen dos moléculas de H₂ por cada O₂ y, por tanto, el doble de volumen.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La prueba de la llama identifica el hidrógeno (arde con estallido) y el oxígeno (aviva la llama). La ecuación 2 H₂O → 2 H₂ + O₂ muestra 2 moléculas de H₂ por cada O₂, y como volúmenes iguales contienen igual número de moléculas, los volúmenes están en razón 2:1, como la tabla (10:5, 20:10, 30:15, 40:20).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La corriente eléctrica llega con más intensidad al electrodo negativo, por lo que allí se descompone el doble de agua y se desprende el doble de gas en el mismo tiempo.",
+        "correcta": false,
+        "explicacion": "No responde. En un circuito en serie la misma corriente pasa por ambos electrodos. Además, la misma agua se descompone y genera ambos gases a la vez; la diferencia de volumen refleja la fórmula H₂O, no una diferencia de corriente.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Explica la proporción con una asimetría eléctrica inexistente."
+      },
+      {
+        "clave": "D",
+        "texto": "Parte del oxígeno producido se disuelve en el agua y por eso se recoge menos; si no se disolviera, ambos volúmenes serían iguales, como en cualquier reacción.",
+        "correcta": false,
+        "explicacion": "No responde. La proporción 2:1 se mantiene exacta en los cuatro tiempos, lo que sería muy improbable si se debiera a una disolución parcial. La ecuación balanceada predice precisamente esa razón de volúmenes.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propone una pérdida accidental para explicar un patrón que la teoría predice de forma exacta."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra que el gas del electrodo negativo (10, 20, 30, 40 mL) siempre duplica al del positivo (5, 10, 15, 20 mL); la ecuación es 2 H₂O → 2 H₂ + O₂; volúmenes iguales de gas tienen igual número de moléculas; la nota identifica los gases con la llama. COMPRENDER: se pide explicar la razón 2:1. INTERPRETAR: el gas que arde con estallido es hidrógeno (electrodo negativo) y el que aviva la llama es oxígeno (positivo). REPRESENTAR: 2 H₂O → 2 H₂ + 1 O₂ → razón de moléculas 2:1 → razón de volúmenes 2:1. RAZONAR: la proporción de volúmenes refleja la proporción de átomos de hidrógeno y oxígeno en la molécula de agua, no la densidad de los gases ni la corriente. RESOLVER: la respuesta es la opción que relaciona el doble de volumen con la fórmula H₂O y la ecuación balanceada. VERIFICAR: la razón es exactamente 2:1 en los cuatro tiempos, lo que confirma una causa estructural y no un accidente.",
+    "que_identificar": "La razón constante 2:1 entre los volúmenes, la identificación de los gases en la nota y los coeficientes de la ecuación.",
+    "que_revisar": "Electrólisis; ecuaciones balanceadas; hipótesis de Avogadro (volúmenes y número de moléculas); fórmula molecular del agua.",
+    "refuerzo_ids": ["CIE-132","CIE-084"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["electrolisis","estequiometria","gases","avogadro","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-137",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta la información nutricional de bebidas para compararla con una recomendación de consumo de azúcar",
+    "habilidad": "interpretar",
+    "tema": "Alimentación y salud: azúcares añadidos",
+    "subtema": "Azúcar en bebidas envasadas frente a la recomendación diaria",
+    "dificultad": 1,
+    "contexto": "La Organización Mundial de la Salud recomienda que una persona adulta consuma **menos de 25 g de azúcares añadidos al día** para obtener beneficios adicionales en la salud. Un grupo de estudiantes de Barranquilla revisó las etiquetas de cuatro bebidas que se venden en la tienda del colegio y anotó el contenido de azúcar por envase completo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Azúcar añadida en bebidas de la tienda escolar",
+      "columnas": ["Bebida","Tamaño del envase (mL)","Azúcar añadida por envase (g)"],
+      "filas": [["Gaseosa",400,42],["Jugo de caja",200,22],["Té frío",500,35],["Agua saborizada",600,18]],
+      "nota": "Una cucharadita de azúcar equivale a unos 4 g."
+    },
+    "enunciado": "¿Cuáles bebidas superan por sí solas, con un único envase, la recomendación diaria de la OMS?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El té frío y el agua saborizada, porque son los envases más grandes y por eso aportan más azúcar en total.",
+        "correcta": false,
+        "explicacion": "No responde. El tamaño del envase no determina el azúcar total: el agua saborizada es el envase más grande (600 mL) pero el que menos azúcar tiene (18 g). Hay que leer la columna de gramos de azúcar.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la columna de volumen en lugar de la de azúcar."
+      },
+      {
+        "clave": "B",
+        "texto": "La gaseosa y el té frío, porque un envase de cada una contiene más de 25 g de azúcar añadida.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Gaseosa: 42 g y té frío: 35 g superan los 25 g. El jugo (22 g) y el agua saborizada (18 g) quedan por debajo, aunque consumen buena parte del límite diario.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Solo la gaseosa, porque es la única bebida cuyo contenido de azúcar está por encima de los 40 g.",
+        "correcta": false,
+        "explicacion": "No responde. La recomendación es de 25 g, no de 40 g. El té frío, con 35 g por envase, también la supera. Comparar con 40 g deja fuera una bebida que sí excede el límite.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó con un valor distinto al de la recomendación dada en el contexto."
+      },
+      {
+        "clave": "D",
+        "texto": "Las cuatro bebidas, porque cualquier azúcar añadida es perjudicial y la OMS recomienda no consumir ninguna.",
+        "correcta": false,
+        "explicacion": "No responde. La recomendación del contexto es un límite (menos de 25 g al día), no una prohibición. El jugo (22 g) y el agua saborizada (18 g) no superan ese límite por sí solos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convierte un límite cuantitativo en una regla de \"cero azúcar\"."
+      }
+    ],
+    "explicacion": "LEER: recomendación de menos de 25 g de azúcar añadida al día; tabla con el azúcar por envase de cuatro bebidas. COMPRENDER: se pide qué bebidas superan 25 g con un solo envase. INTERPRETAR: la columna relevante es \"azúcar añadida por envase\", no el volumen. REPRESENTAR: gaseosa 42 g > 25; jugo 22 g < 25; té 35 g > 25; agua saborizada 18 g < 25. RAZONAR: solo dos bebidas exceden el límite diario por sí solas. RESOLVER: la respuesta es la opción que señala la gaseosa y el té frío. VERIFICAR: 42 g equivalen a unas 10 cucharaditas y 35 g a casi 9, mientras que 25 g son unas 6 cucharaditas.",
+    "que_identificar": "El valor de la recomendación (25 g) y la columna de azúcar por envase, sin confundirla con el tamaño del envase.",
+    "que_revisar": "Lectura de etiquetas nutricionales; azúcares añadidos y salud; comparación con valores de referencia.",
+    "refuerzo_ids": ["CIE-099","CIE-138"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["cts","nutricion","azucares","etiquetado","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-138",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Evalúa si el diseño de una prueba permite atribuir el efecto observado al producto evaluado, identificando variables no controladas",
+    "habilidad": "verificar",
+    "tema": "Indagación: variables confundidas",
+    "subtema": "Prueba de un repelente natural contra mosquitos en dos zonas distintas",
+    "dificultad": 2,
+    "contexto": "Una cooperativa de Córdoba quiere saber si su repelente a base de citronela reduce las picaduras de mosquito. Entregó el repelente a 30 personas de una vereda junto a una ciénaga, y comparó con 30 personas del casco urbano que no lo usaron. Cada persona contó sus picaduras durante una semana.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Picaduras promedio por persona en una semana",
+      "columnas": ["Grupo","Lugar","Usó repelente","Picaduras promedio"],
+      "filas": [["Grupo 1","Vereda junto a la ciénaga","Sí",8],["Grupo 2","Casco urbano","No",3]],
+      "nota": "Ambos grupos tenían 30 personas de edades similares."
+    },
+    "enunciado": "La cooperativa concluye que el repelente no sirve, porque quienes lo usaron tuvieron más picaduras. ¿Qué puede decirse de esta conclusión?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es válida: el grupo con repelente tuvo 8 picaduras y el grupo sin repelente solo 3, lo que demuestra que el producto incluso atrae mosquitos.",
+        "correcta": false,
+        "explicacion": "No responde. La comparación solo sería justa si ambos grupos vivieran en condiciones iguales. El grupo con repelente estaba junto a una ciénaga, donde abundan los mosquitos, y eso basta para explicar las picaduras adicionales.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara los promedios sin revisar que los grupos difieren en otra variable importante."
+      },
+      {
+        "clave": "B",
+        "texto": "No es válida porque una semana es poco tiempo para evaluar un repelente; con un mes de seguimiento en las mismas condiciones la conclusión sí sería correcta.",
+        "correcta": false,
+        "explicacion": "No responde. Prolongar la observación no corrige el problema: mientras un grupo viva junto a la ciénaga y el otro en la ciudad, la diferencia de exposición a mosquitos seguirá mezclada con el efecto del repelente.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Identifica una limitación secundaria y no la variable confundida."
+      },
+      {
+        "clave": "C",
+        "texto": "No es válida: los grupos difieren también en el lugar, y cerca de la ciénaga hay muchos más mosquitos, así que no se puede saber si la diferencia se debe al repelente o al sitio.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Para evaluar el repelente, los dos grupos deberían estar expuestos a la misma cantidad de mosquitos. Aquí el lugar varía junto con el uso del repelente (variable confundida): es posible que sin repelente las personas de la vereda hubieran tenido muchas más de 8 picaduras.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Es válida, porque ambos grupos tenían el mismo número de personas y edades similares, lo que garantiza una comparación justa entre quienes usaron y no usaron el producto.",
+        "correcta": false,
+        "explicacion": "No responde. Igualar el tamaño y la edad de los grupos es necesario pero no suficiente; también deben coincidir las demás condiciones que afectan las picaduras, en especial la cantidad de mosquitos del lugar, que aquí es muy diferente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que controlar algunas variables basta para que la comparación sea válida."
+      }
+    ],
+    "explicacion": "LEER: grupo con repelente en una vereda junto a una ciénaga: 8 picaduras; grupo sin repelente en el casco urbano: 3 picaduras; la cooperativa concluye que el repelente no sirve. COMPRENDER: se pide juzgar la validez de la conclusión. INTERPRETAR: los grupos difieren en dos cosas al tiempo: el uso del repelente y el lugar. REPRESENTAR: grupo 1 = repelente + muchos mosquitos; grupo 2 = sin repelente + pocos mosquitos. RAZONAR: la diferencia de picaduras puede deberse al lugar, al repelente o a ambos; sin igualar la exposición a mosquitos no se puede atribuir el resultado al producto. RESOLVER: la respuesta es la opción que señala la variable confundida (el lugar). VERIFICAR: un diseño correcto compararía personas de la misma vereda, unas con repelente y otras sin él, asignadas al azar.",
+    "que_identificar": "Que el lugar cambia junto con el uso del repelente y que cerca de la ciénaga hay más mosquitos.",
+    "que_revisar": "Variables confundidas; grupo de control; asignación al azar; validez de conclusiones causales.",
+    "refuerzo_ids": ["CIE-106","CIE-100"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts","indagacion","variables confundidas","repelente","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-139",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Explica el efecto de la cobertura forestal de una cuenca sobre la erosión y la regulación del caudal de un río",
+    "habilidad": "razonar",
+    "tema": "Deforestación y cuencas hidrográficas",
+    "subtema": "Cobertura de bosque, sedimentos y variación del caudal",
+    "dificultad": 2,
+    "contexto": "Una corporación ambiental comparó tres cuencas de tamaño y lluvia similares en la cordillera Central, con distinta proporción de bosque conservado. Midió los sedimentos que arrastra cada río y la relación entre el caudal máximo en lluvias y el caudal mínimo en sequía: cuanto mayor es esa relación, más extremas son las crecientes y las sequías.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Tres cuencas con distinta cobertura de bosque (datos hipotéticos)",
+      "columnas": ["Cuenca","Bosque conservado (%)","Sedimentos (toneladas por hectárea al año)","Caudal máximo ÷ caudal mínimo"],
+      "filas": [["Cuenca 1",80,"0,2",3],["Cuenca 2",40,"1,5",8],["Cuenca 3",10,"6,0",20]],
+      "nota": "Las tres cuencas reciben cantidades similares de lluvia anual."
+    },
+    "enunciado": "¿Cuál explicación da cuenta del patrón observado en las tres cuencas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los árboles consumen gran parte de la lluvia, así que en las cuencas con más bosque llega menos agua al río y por eso hay menos sedimentos y menos crecientes.",
+        "correcta": false,
+        "explicacion": "No responde. Si el bosque solo quitara agua al río, el caudal mínimo en sequía sería menor, no mayor; los datos muestran que la cuenca boscosa tiene caudales más estables (relación 3), lo que indica que el agua infiltrada sostiene el río en épocas secas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explica solo la reducción de crecientes y no la mayor estabilidad del caudal."
+      },
+      {
+        "clave": "B",
+        "texto": "Las cuencas con menos bosque están en zonas de mayor lluvia, y es la lluvia, no la deforestación, la que explica los sedimentos y las crecientes; el bosque es solo una coincidencia.",
+        "correcta": false,
+        "explicacion": "No responde. La nota de la tabla indica que las tres cuencas reciben cantidades similares de lluvia. Con lluvia igual, la variable que cambia entre cuencas es la cobertura de bosque.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la nota que controla la variable lluvia."
+      },
+      {
+        "clave": "C",
+        "texto": "El bosque produce sedimentos al caer sus hojas y ramas al río; con menos bosque debería haber menos sedimentos, así que los datos de la tabla deben estar invertidos.",
+        "correcta": false,
+        "explicacion": "No responde. Los sedimentos medidos son partículas de suelo arrastradas por la escorrentía, no hojas. Los datos no están invertidos: muestran de forma consistente más sedimentos cuanto menos bosque hay, un patrón ampliamente documentado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde la materia orgánica del bosque con los sedimentos minerales de la erosión."
+      },
+      {
+        "clave": "D",
+        "texto": "Las raíces y la hojarasca sujetan el suelo y permiten que el agua se infiltre lentamente; sin bosque, la lluvia arrastra el suelo y escurre de golpe, lo que aumenta los sedimentos y hace extremos los caudales.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Al pasar de 80 % a 10 % de bosque, los sedimentos se multiplican por 30 y la relación de caudales pasa de 3 a 20. El bosque actúa como esponja y como malla: infiltra agua que luego alimenta al río en sequía y evita que el suelo sea arrastrado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: tres cuencas con lluvia similar y 80, 40 y 10 % de bosque; sedimentos de 0,2, 1,5 y 6,0 t/ha al año; relación de caudales de 3, 8 y 20. COMPRENDER: se pide explicar el patrón. INTERPRETAR: a menor cobertura de bosque, más sedimentos y caudales más extremos. REPRESENTAR: bosque → raíces y hojarasca → suelo sujeto + infiltración lenta → poca erosión y caudal regulado; sin bosque → suelo expuesto + escorrentía rápida → erosión y crecientes seguidas de sequías. RAZONAR: la lluvia es igual, así que la diferencia se explica por lo que hace el bosque con esa agua y con el suelo. RESOLVER: la respuesta es la opción que describe el papel de las raíces, la hojarasca y la infiltración. VERIFICAR: ambos indicadores (sedimentos y relación de caudales) cambian en la misma dirección al reducir el bosque, lo que respalda una causa común.",
+    "que_identificar": "Que la lluvia es similar en las tres cuencas y que sedimentos y variabilidad del caudal aumentan al disminuir el bosque.",
+    "que_revisar": "Servicios ecosistémicos del bosque; erosión y escorrentía; infiltración y regulación hídrica; cuencas hidrográficas.",
+    "refuerzo_ids": ["CIE-070","CIE-118"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cts","deforestacion","cuencas","erosion","tabla","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-140",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Deriva una conclusión prudente sobre la relación entre cobertura de vacunación y casos de una enfermedad a partir de datos en el tiempo",
+    "habilidad": "razonar",
+    "tema": "Vacunas y salud pública",
+    "subtema": "Cobertura de vacunación y casos de sarampión en una región",
+    "dificultad": 3,
+    "contexto": "La secretaría de salud de un departamento registró la cobertura de vacunación contra el sarampión en niños menores de dos años y el número de casos confirmados cada año. El sarampión es muy contagioso: para que la enfermedad no circule, se estima que debe estar vacunado alrededor del 95 % de la población.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Cobertura de vacunación y casos de sarampión (datos hipotéticos)",
+      "eje_x": "Año",
+      "eje_y": "Cobertura (%) / Casos",
+      "series": [
+        {
+          "nombre": "Cobertura (%)",
+          "valores": [["2020",95],["2021",92],["2022",85],["2023",80],["2024",78],["2025",70]]
+        },
+        {
+          "nombre": "Casos confirmados",
+          "valores": [["2020",2],["2021",3],["2022",12],["2023",40],["2024",60],["2025",150]]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los datos y es prudente en lo que afirma?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al caer la cobertura por debajo del 95 %, los casos aumentaron de forma sostenida, lo que concuerda con la pérdida de protección colectiva; conviene descartar otros factores, como brotes importados, antes de hablar de causa única.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los datos muestran una relación inversa clara y sostenida, consistente con el umbral del 95 % mencionado en el contexto. Una conclusión científica señala la asociación y su coherencia con la teoría, pero reconoce que otros factores podrían contribuir.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La vacuna dejó de funcionar a partir de 2022, porque desde ese año aumentaron los casos a pesar de que la mayoría de los niños seguía vacunada; el problema está en el producto, no en la cobertura.",
+        "correcta": false,
+        "explicacion": "No responde. Que la mayoría esté vacunada no basta para una enfermedad tan contagiosa: el contexto indica que se necesita cerca del 95 %. Los casos aumentaron justo cuando la cobertura bajó de ese umbral, lo que apoya la eficacia de la vacuna, no su fracaso.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora el umbral de inmunidad colectiva e interpreta cualquier caso como falla de la vacuna."
+      },
+      {
+        "clave": "C",
+        "texto": "Los casos de sarampión hicieron que la gente dejara de vacunarse por miedo a enfermar, porque ambas curvas cambian en los mismos años y una debe ser causa de la otra.",
+        "correcta": false,
+        "explicacion": "No responde. El orden temporal no apoya esa lectura: la cobertura empezó a bajar en 2021 (92 %) cuando los casos aún eran muy pocos (3), y los casos crecieron después. Además, un brote suele aumentar la vacunación, no reducirla.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la dirección de la relación causa-efecto."
+      },
+      {
+        "clave": "D",
+        "texto": "Los datos demuestran sin lugar a dudas que la caída de la cobertura es la única causa del aumento de casos, y no es necesario investigar brotes importados ni otros factores.",
+        "correcta": false,
+        "explicacion": "No responde. La conclusión va más allá de los datos: una asociación en el tiempo, aunque sea coherente con la teoría, no descarta por sí sola factores como casos importados o cambios en la vigilancia. La prudencia exige reconocer esas posibilidades.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una correlación fuerte con una prueba definitiva de causa única."
+      }
+    ],
+    "explicacion": "LEER: la cobertura baja de 95 % a 70 % entre 2020 y 2025 y los casos suben de 2 a 150; el umbral de protección colectiva es cercano al 95 %. COMPRENDER: se pide la conclusión respaldada y prudente. INTERPRETAR: las dos curvas se mueven en sentidos opuestos, y el aumento de casos se acelera cuando la cobertura ya está lejos del umbral. REPRESENTAR: cobertura < 95 % → más personas susceptibles → el virus encuentra a quién contagiar → más casos. RAZONAR: la asociación es fuerte y coherente con la teoría, pero los datos son observacionales y no excluyen factores adicionales, así que la conclusión debe ser cuidadosa; además el orden temporal descarta que los casos hayan causado la caída de la cobertura. RESOLVER: la respuesta es la opción que describe la asociación, la relaciona con la protección colectiva y pide descartar otros factores. VERIFICAR: en 2020, con 95 % de cobertura, hubo solo 2 casos, coherente con el umbral.",
+    "que_identificar": "La tendencia opuesta de las dos series, el umbral del 95 % y el orden temporal de los cambios.",
+    "que_revisar": "Inmunidad colectiva; correlación y causalidad; conclusiones a partir de datos observacionales; vigilancia epidemiológica.",
+    "refuerzo_ids": ["CIE-044","CIE-098"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["cts","vacunas","inmunidad colectiva","correlacion","grafica de lineas","afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

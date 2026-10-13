@@ -1,0 +1,1874 @@
+[
+  {
+    "id": "LC-141",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto discontinuo (manual de uso con tabla de solución de problemas)",
+    "subtema": "Información explícita en un manual de uso",
+    "dificultad": 1,
+    "contexto": "**Olla arrocera RZ-18 · Guía rápida de uso** (fragmento del manual)\n\n**Antes del primer uso.** Lave el recipiente interior y la tapa de vidrio con agua tibia y jabón suave. No sumerja la base eléctrica en agua.\n\n**Preparación del arroz.** Mida el arroz con la taza incluida. Por cada taza de arroz agregue agua hasta la marca correspondiente del recipiente interior (la marca «2» para dos tazas, y así sucesivamente). Cierre la tapa y presione la palanca hacia abajo: se encenderá la luz roja de COCCIÓN. Cuando el agua se haya absorbido, la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE. Espere diez minutos antes de abrir la tapa para que el vapor termine de cocer los granos superiores.\n\n**Advertencias.** La función MANTENER CALIENTE no debe usarse por más de cinco horas; después de ese tiempo el arroz se reseca y la capa inferior se tuesta. Nunca presione la palanca hacia abajo si el recipiente interior está vacío o no está en su sitio: el sensor de temperatura se dañaría. Use solo la cuchara plástica incluida; los utensilios metálicos rayan el antiadherente.\n\n**Si algo no funciona**, consulte la tabla de solución de problemas antes de llamar al servicio técnico. La garantía de un año no cubre daños causados por el uso de utensilios metálicos ni por operar el equipo sin el recipiente interior.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Solución de problemas",
+      "columnas": [
+        "Problema",
+        "Causa probable",
+        "Qué hacer"
+      ],
+      "filas": [
+        [
+          "La palanca no se queda abajo",
+          "El recipiente interior está vacío o mal asentado",
+          "Retire el recipiente, vuelva a colocarlo y verifique que tenga contenido"
+        ],
+        [
+          "El arroz queda crudo en la parte superior",
+          "La tapa se abrió antes de los diez minutos de reposo",
+          "Deje reposar el arroz con la tapa cerrada"
+        ],
+        [
+          "El arroz queda tostado en el fondo",
+          "Se usó MANTENER CALIENTE más de cinco horas o faltó agua",
+          "Reduzca el tiempo en calor y verifique la marca de agua"
+        ],
+        [
+          "La luz naranja se enciende de inmediato",
+          "El sensor no detecta el recipiente",
+          "Apague, desconecte y acuda al servicio técnico"
+        ]
+      ],
+      "nota": "Si el problema persiste después de aplicar la solución, comuníquese con la línea de servicio."
+    },
+    "enunciado": "Según el manual, ¿qué indica que la palanca suba sola y se encienda la luz naranja?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el arroz ya puede servirse de inmediato, sin necesidad de esperar los diez minutos de reposo.",
+        "correcta": false,
+        "explicacion": "El manual pide esperar diez minutos después de que se encienda la luz naranja «para que el vapor termine de cocer los granos superiores»; la luz no indica que el arroz esté listo para servir.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el cambio de luz con el final del proceso y pasó por alto la instrucción de reposo."
+      },
+      {
+        "clave": "B",
+        "texto": "Que el agua ya fue absorbida y la olla pasó a la función de mantener caliente el arroz.",
+        "correcta": true,
+        "explicacion": "El texto lo dice de manera explícita: «Cuando el agua se haya absorbido, la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE». La luz naranja señala el cambio de función tras la absorción del agua.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que el recipiente interior no está bien colocado sobre el sensor de temperatura.",
+        "correcta": false,
+        "explicacion": "Esa es la causa que la tabla asigna a otro problema: que la luz naranja se encienda «de inmediato», sin cocción previa. En el proceso normal, la luz naranja aparece después de absorberse el agua.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló el funcionamiento normal descrito en el texto con la falla descrita en la última fila de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la olla detectó que faltó agua y detuvo la cocción por razones de seguridad.",
+        "correcta": false,
+        "explicacion": "El manual no describe ninguna detención por seguridad; la falta de agua aparece en la tabla como posible causa del arroz tostado, no como motivo para que se encienda la luz naranja.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso un mecanismo de seguridad que el texto no menciona."
+      }
+    ],
+    "explicacion": "LEER: ubico en la sección «Preparación del arroz» el momento en que se menciona la luz naranja. COMPRENDER: la pregunta pide el significado de una señal del aparato, es decir, información explícita. INTERPRETAR: el manual dice que cuando el agua se ha absorbido «la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE». REPRESENTAR: luz roja = cocción → agua absorbida → palanca sube → luz naranja = mantener caliente → diez minutos de reposo. RAZONAR: la luz no indica que el arroz esté listo (falta el reposo), ni una falla del sensor (eso ocurre cuando se enciende de inmediato), ni una detención por falta de agua. RESOLVER: la opción que señala la absorción del agua y el paso a mantener caliente. VERIFICAR: releo la frase y confirmo que la secuencia coincide.",
+    "que_identificar": "La oración «Cuando el agua se haya absorbido, la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE».",
+    "que_revisar": "Localizar información explícita en textos instructivos y distinguir el funcionamiento normal de las fallas descritas en una tabla.",
+    "refuerzo_ids": [
+      "LC-129",
+      "LC-142"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T40",
+      "discontinuo",
+      "manual",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-142",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo)",
+    "habilidad": "interpretar",
+    "tema": "Texto discontinuo (manual de uso con tabla de solución de problemas)",
+    "subtema": "Relación entre las advertencias y la tabla de solución de problemas",
+    "dificultad": 2,
+    "contexto": "**Olla arrocera RZ-18 · Guía rápida de uso** (fragmento del manual)\n\n**Antes del primer uso.** Lave el recipiente interior y la tapa de vidrio con agua tibia y jabón suave. No sumerja la base eléctrica en agua.\n\n**Preparación del arroz.** Mida el arroz con la taza incluida. Por cada taza de arroz agregue agua hasta la marca correspondiente del recipiente interior (la marca «2» para dos tazas, y así sucesivamente). Cierre la tapa y presione la palanca hacia abajo: se encenderá la luz roja de COCCIÓN. Cuando el agua se haya absorbido, la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE. Espere diez minutos antes de abrir la tapa para que el vapor termine de cocer los granos superiores.\n\n**Advertencias.** La función MANTENER CALIENTE no debe usarse por más de cinco horas; después de ese tiempo el arroz se reseca y la capa inferior se tuesta. Nunca presione la palanca hacia abajo si el recipiente interior está vacío o no está en su sitio: el sensor de temperatura se dañaría. Use solo la cuchara plástica incluida; los utensilios metálicos rayan el antiadherente.\n\n**Si algo no funciona**, consulte la tabla de solución de problemas antes de llamar al servicio técnico. La garantía de un año no cubre daños causados por el uso de utensilios metálicos ni por operar el equipo sin el recipiente interior.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Solución de problemas",
+      "columnas": [
+        "Problema",
+        "Causa probable",
+        "Qué hacer"
+      ],
+      "filas": [
+        [
+          "La palanca no se queda abajo",
+          "El recipiente interior está vacío o mal asentado",
+          "Retire el recipiente, vuelva a colocarlo y verifique que tenga contenido"
+        ],
+        [
+          "El arroz queda crudo en la parte superior",
+          "La tapa se abrió antes de los diez minutos de reposo",
+          "Deje reposar el arroz con la tapa cerrada"
+        ],
+        [
+          "El arroz queda tostado en el fondo",
+          "Se usó MANTENER CALIENTE más de cinco horas o faltó agua",
+          "Reduzca el tiempo en calor y verifique la marca de agua"
+        ],
+        [
+          "La luz naranja se enciende de inmediato",
+          "El sensor no detecta el recipiente",
+          "Apague, desconecte y acuda al servicio técnico"
+        ]
+      ],
+      "nota": "Si el problema persiste después de aplicar la solución, comuníquese con la línea de servicio."
+    },
+    "enunciado": "¿Qué relación existe entre la sección «Advertencias» y la tabla de solución de problemas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La tabla reemplaza las advertencias, porque explica paso a paso cómo reparar la olla en casa sin ayuda del servicio técnico.",
+        "correcta": false,
+        "explicacion": "La tabla no reemplaza nada ni enseña a reparar: ofrece verificaciones sencillas y, en el caso del sensor, remite al servicio técnico. Las advertencias siguen siendo necesarias para prevenir las fallas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la tabla es una guía de reparación y no una lista de comprobaciones previas."
+      },
+      {
+        "clave": "B",
+        "texto": "Las advertencias enumeran las fallas del aparato y la tabla las clasifica según su gravedad.",
+        "correcta": false,
+        "explicacion": "Las advertencias no enumeran fallas sino usos que deben evitarse; además, la tabla no ordena los problemas por gravedad, sino que asocia a cada uno una causa y una acción.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la función de cada sección e inventó un criterio de clasificación ausente en la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "La tabla retoma como causas de las fallas varios de los usos que las advertencias prohíben o limitan.",
+        "correcta": true,
+        "explicacion": "Las advertencias dicen que no debe usarse MANTENER CALIENTE por más de cinco horas ni operar sin el recipiente; la tabla presenta exactamente esos usos como causas probables del arroz tostado y de la palanca que no baja. La tabla aplica lo advertido a casos concretos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Las advertencias se dirigen al servicio técnico y la tabla, al usuario del electrodoméstico.",
+        "correcta": false,
+        "explicacion": "Ambas secciones se dirigen al usuario: las advertencias usan imperativos como «Nunca presione» y «Use solo», y el texto pide consultar la tabla «antes de llamar al servicio técnico».",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó un destinatario distinto a cada sección sin apoyo en el texto."
+      }
+    ],
+    "explicacion": "LEER: reviso las advertencias (tiempo máximo en calor, no operar sin recipiente, no usar metal) y las causas de la tabla. COMPRENDER: la pregunta pide la relación entre dos elementos de un texto discontinuo. INTERPRETAR: la causa del arroz tostado es haber usado MANTENER CALIENTE «más de cinco horas», y la de la palanca que no baja es el recipiente «vacío o mal asentado»; ambas corresponden a usos prohibidos en las advertencias. REPRESENTAR: advertencia (no hagas X) → tabla (si hiciste X, ocurre la falla Y; haz Z). RAZONAR: la tabla no reemplaza ni clasifica por gravedad, y las dos secciones hablan al mismo usuario. RESOLVER: la opción que dice que la tabla retoma como causas los usos limitados por las advertencias. VERIFICAR: compruebo que al menos dos filas de la tabla coinciden con advertencias.",
+    "que_identificar": "Las coincidencias entre «no debe usarse por más de cinco horas» / «si el recipiente interior está vacío o no está en su sitio» y las causas de la tabla.",
+    "que_revisar": "Relacionar las partes de un texto discontinuo (texto corrido y tabla) e identificar relaciones de causa y aplicación.",
+    "refuerzo_ids": [
+      "LC-141",
+      "LC-130"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T40",
+      "discontinuo",
+      "manual",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-143",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto discontinuo (manual de uso con tabla de solución de problemas)",
+    "subtema": "Aplicar las condiciones de la garantía a casos concretos",
+    "dificultad": 3,
+    "contexto": "**Olla arrocera RZ-18 · Guía rápida de uso** (fragmento del manual)\n\n**Antes del primer uso.** Lave el recipiente interior y la tapa de vidrio con agua tibia y jabón suave. No sumerja la base eléctrica en agua.\n\n**Preparación del arroz.** Mida el arroz con la taza incluida. Por cada taza de arroz agregue agua hasta la marca correspondiente del recipiente interior (la marca «2» para dos tazas, y así sucesivamente). Cierre la tapa y presione la palanca hacia abajo: se encenderá la luz roja de COCCIÓN. Cuando el agua se haya absorbido, la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE. Espere diez minutos antes de abrir la tapa para que el vapor termine de cocer los granos superiores.\n\n**Advertencias.** La función MANTENER CALIENTE no debe usarse por más de cinco horas; después de ese tiempo el arroz se reseca y la capa inferior se tuesta. Nunca presione la palanca hacia abajo si el recipiente interior está vacío o no está en su sitio: el sensor de temperatura se dañaría. Use solo la cuchara plástica incluida; los utensilios metálicos rayan el antiadherente.\n\n**Si algo no funciona**, consulte la tabla de solución de problemas antes de llamar al servicio técnico. La garantía de un año no cubre daños causados por el uso de utensilios metálicos ni por operar el equipo sin el recipiente interior.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Solución de problemas",
+      "columnas": [
+        "Problema",
+        "Causa probable",
+        "Qué hacer"
+      ],
+      "filas": [
+        [
+          "La palanca no se queda abajo",
+          "El recipiente interior está vacío o mal asentado",
+          "Retire el recipiente, vuelva a colocarlo y verifique que tenga contenido"
+        ],
+        [
+          "El arroz queda crudo en la parte superior",
+          "La tapa se abrió antes de los diez minutos de reposo",
+          "Deje reposar el arroz con la tapa cerrada"
+        ],
+        [
+          "El arroz queda tostado en el fondo",
+          "Se usó MANTENER CALIENTE más de cinco horas o faltó agua",
+          "Reduzca el tiempo en calor y verifique la marca de agua"
+        ],
+        [
+          "La luz naranja se enciende de inmediato",
+          "El sensor no detecta el recipiente",
+          "Apague, desconecte y acuda al servicio técnico"
+        ]
+      ],
+      "nota": "Si el problema persiste después de aplicar la solución, comuníquese con la línea de servicio."
+    },
+    "enunciado": "De acuerdo con el manual, ¿cuál de las siguientes situaciones NO estaría cubierta por la garantía?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Un sensor dañado porque la palanca se presionó con el recipiente interior fuera de su sitio.",
+        "correcta": true,
+        "explicacion": "El manual advierte que presionar la palanca sin el recipiente daña el sensor y dice que la garantía «no cubre daños causados […] por operar el equipo sin el recipiente interior». Es un caso excluido de forma explícita.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Una luz naranja que se enciende de inmediato al conectar la olla, sin que se haya tocado nada.",
+        "correcta": false,
+        "explicacion": "Esta falla aparece en la tabla con la indicación de acudir al servicio técnico y no corresponde a ninguna de las dos exclusiones de la garantía (utensilios metálicos u operar sin recipiente), por lo que sí estaría cubierta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que toda falla que exige servicio técnico queda fuera de la garantía."
+      },
+      {
+        "clave": "C",
+        "texto": "Una tapa de vidrio que se agrietó durante el lavado recomendado antes del primer uso.",
+        "correcta": false,
+        "explicacion": "El lavado con agua tibia y jabón suave es una instrucción del propio manual; seguirla no es un uso indebido y no coincide con ninguna exclusión de la garantía mencionada en el texto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que cualquier daño físico queda excluido, sin revisar las exclusiones concretas."
+      },
+      {
+        "clave": "D",
+        "texto": "Una palanca que no se queda abajo aunque el recipiente esté lleno y correctamente asentado.",
+        "correcta": false,
+        "explicacion": "Si el recipiente está lleno y bien colocado, la causa de la tabla no aplica y el defecto sería del aparato; nada en el texto lo excluye de la garantía.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la falla con la fila de la tabla sin notar que la situación descarta la causa atribuida al usuario."
+      }
+    ],
+    "explicacion": "LEER: busco la frase sobre la garantía al final del manual. COMPRENDER: la pregunta pide aplicar las exclusiones de la garantía a casos nuevos, es decir, derivar implicaciones. INTERPRETAR: la garantía «no cubre daños causados por el uso de utensilios metálicos ni por operar el equipo sin el recipiente interior». REPRESENTAR: excluido = {metal, sin recipiente}; todo lo demás, cubierto. RAZONAR: presionar la palanca con el recipiente fuera de su sitio es operar sin recipiente y, según las advertencias, daña el sensor: caso excluido. La luz naranja inmediata, la tapa agrietada en un lavado recomendado y la palanca que no baja con el recipiente bien puesto no coinciden con ninguna exclusión. RESOLVER: la opción del sensor dañado por presionar la palanca sin recipiente. VERIFICAR: cada opción descartada se contrasta con las dos exclusiones y ninguna encaja.",
+    "que_identificar": "La frase final: «La garantía de un año no cubre daños causados por el uso de utensilios metálicos ni por operar el equipo sin el recipiente interior», y la advertencia sobre el sensor.",
+    "que_revisar": "Derivar implicaciones de una condición escrita y aplicarla a casos no mencionados, sin añadir exclusiones que el texto no establece.",
+    "refuerzo_ids": [
+      "LC-131",
+      "LC-142"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T40",
+      "discontinuo",
+      "manual",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-144",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "comprender",
+    "tema": "Texto discontinuo (manual de uso con tabla de solución de problemas)",
+    "subtema": "Función de un apartado en la estructura del manual",
+    "dificultad": 2,
+    "contexto": "**Olla arrocera RZ-18 · Guía rápida de uso** (fragmento del manual)\n\n**Antes del primer uso.** Lave el recipiente interior y la tapa de vidrio con agua tibia y jabón suave. No sumerja la base eléctrica en agua.\n\n**Preparación del arroz.** Mida el arroz con la taza incluida. Por cada taza de arroz agregue agua hasta la marca correspondiente del recipiente interior (la marca «2» para dos tazas, y así sucesivamente). Cierre la tapa y presione la palanca hacia abajo: se encenderá la luz roja de COCCIÓN. Cuando el agua se haya absorbido, la palanca subirá sola y se encenderá la luz naranja de MANTENER CALIENTE. Espere diez minutos antes de abrir la tapa para que el vapor termine de cocer los granos superiores.\n\n**Advertencias.** La función MANTENER CALIENTE no debe usarse por más de cinco horas; después de ese tiempo el arroz se reseca y la capa inferior se tuesta. Nunca presione la palanca hacia abajo si el recipiente interior está vacío o no está en su sitio: el sensor de temperatura se dañaría. Use solo la cuchara plástica incluida; los utensilios metálicos rayan el antiadherente.\n\n**Si algo no funciona**, consulte la tabla de solución de problemas antes de llamar al servicio técnico. La garantía de un año no cubre daños causados por el uso de utensilios metálicos ni por operar el equipo sin el recipiente interior.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Solución de problemas",
+      "columnas": [
+        "Problema",
+        "Causa probable",
+        "Qué hacer"
+      ],
+      "filas": [
+        [
+          "La palanca no se queda abajo",
+          "El recipiente interior está vacío o mal asentado",
+          "Retire el recipiente, vuelva a colocarlo y verifique que tenga contenido"
+        ],
+        [
+          "El arroz queda crudo en la parte superior",
+          "La tapa se abrió antes de los diez minutos de reposo",
+          "Deje reposar el arroz con la tapa cerrada"
+        ],
+        [
+          "El arroz queda tostado en el fondo",
+          "Se usó MANTENER CALIENTE más de cinco horas o faltó agua",
+          "Reduzca el tiempo en calor y verifique la marca de agua"
+        ],
+        [
+          "La luz naranja se enciende de inmediato",
+          "El sensor no detecta el recipiente",
+          "Apague, desconecte y acuda al servicio técnico"
+        ]
+      ],
+      "nota": "Si el problema persiste después de aplicar la solución, comuníquese con la línea de servicio."
+    },
+    "enunciado": "¿Cuál es la función del apartado «Si algo no funciona» dentro del manual?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Describir el procedimiento de cocción que garantiza un arroz sin granos crudos en la superficie.",
+        "correcta": false,
+        "explicacion": "Ese procedimiento (medidas, palanca, diez minutos de reposo) está en el apartado «Preparación del arroz», no en el último, que no describe pasos de cocción.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al apartado final el contenido de otra sección del manual."
+      },
+      {
+        "clave": "B",
+        "texto": "Advertir sobre los utensilios que pueden rayar el recubrimiento antiadherente del recipiente interior y anular la garantía.",
+        "correcta": false,
+        "explicacion": "La advertencia sobre utensilios metálicos está en la sección «Advertencias»; el último apartado solo la retoma de manera indirecta al mencionar la garantía.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la mención de los utensilios metálicos en la garantía con el propósito del apartado."
+      },
+      {
+        "clave": "C",
+        "texto": "Explicar por qué el sensor de temperatura se daña cuando la olla trabaja con el recipiente vacío.",
+        "correcta": false,
+        "explicacion": "El manual nunca explica el mecanismo del daño; solo advierte que ocurriría. El apartado final no da explicaciones técnicas, sino indicaciones sobre a qué recurrir y qué cubre la garantía.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Esperó una explicación técnica que el manual no ofrece en ninguna parte."
+      },
+      {
+        "clave": "D",
+        "texto": "Remitir al lector a la tabla como primer recurso ante una falla y aclarar los límites de la garantía.",
+        "correcta": true,
+        "explicacion": "El apartado dice «consulte la tabla de solución de problemas antes de llamar al servicio técnico» y, enseguida, qué daños no cubre la garantía. Su función es orientar al usuario sobre qué hacer y qué esperar cuando algo falla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo el apartado «Si algo no funciona», que tiene dos oraciones. COMPRENDER: la pregunta pide la función de esa parte dentro de la estructura del manual. INTERPRETAR: la primera oración remite a la tabla «antes de llamar al servicio técnico»; la segunda delimita qué daños no cubre la garantía. REPRESENTAR: estructura del manual: primer uso → preparación → advertencias → qué hacer ante fallas (tabla + garantía). RAZONAR: el procedimiento de cocción, la advertencia sobre utensilios y el daño del sensor pertenecen a otras secciones o no se explican; el apartado final orienta al usuario cuando algo falla. RESOLVER: la opción que habla de remitir a la tabla y aclarar la garantía. VERIFICAR: cada una de las dos oraciones del apartado corresponde a una de las dos ideas de la opción elegida.",
+    "que_identificar": "Las dos oraciones del apartado: la remisión a la tabla y la delimitación de la garantía.",
+    "que_revisar": "Reconocer la función de cada sección en un texto instructivo y no atribuirle contenidos de otras partes.",
+    "refuerzo_ids": [
+      "LC-142",
+      "LC-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T40",
+      "discontinuo",
+      "manual",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-145",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (carta personal)",
+    "subtema": "Sentido de una comparación en contexto («las ramas pasan como noticias»)",
+    "dificultad": 2,
+    "contexto": "**Carta a Valentina**\n\nBarrancabermeja, 3 de junio\n\nQuerida Valentina:\n\nMe pides que te cuente cómo era el río cuando yo tenía tu edad, y me doy cuenta de que nadie me lo había preguntado nunca. Tu abuela sabía la respuesta y por eso no preguntaba; tu papá creció oyéndolo y por eso dejó de escuchar.\n\nEl río no era más ancho, como dicen los viejos cuando quieren ponerse tristes. Era más lento. Uno podía ver una rama entrar por la curva de arriba y seguirla con la vista hasta que se perdía frente a la iglesia, y en ese tiempo cabía una conversación entera. Ahora las ramas pasan como noticias.\n\nMi padre pescaba de noche y volvía al amanecer con la canoa llena o vacía, pero siempre con la misma cara, porque decía que el río no le debe nada a nadie. Yo no entendía esa frase; la repetía en la escuela para parecer hombre. La entendí mucho después, el año en que la creciente se llevó la casa de los Pardo y, dos meses más tarde, dejó en la playa la tierra más fértil que hemos tenido.\n\nNo te mando una foto porque las fotos del río son todas iguales: agua marrón y cielo. Lo que cambia no sale en la foto. Ven en diciembre y te llevo a la curva de arriba. Trae paciencia; es lo único que no se consigue por allá.\n\nTu abuelo,\nIsmael",
+    "estimulo": null,
+    "enunciado": "¿Qué quiere decir el abuelo con la expresión «Ahora las ramas pasan como noticias»?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el río corre tan rápido que ya no da tiempo de seguir nada con la mirada, igual que las noticias se suceden sin pausa.",
+        "correcta": true,
+        "explicacion": "La frase cierra un párrafo que contrasta el río lento de antes, donde «cabía una conversación entera» mientras se seguía una rama, con el de ahora. La comparación con las noticias subraya la velocidad y la falta de tiempo para detenerse en algo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Que las ramas que arrastra el río traen señales de lo que ocurre río arriba, en los pueblos de la parte alta, igual que las noticias traen información de lugares lejanos.",
+        "correcta": false,
+        "explicacion": "El párrafo no habla de lo que las ramas anuncian, sino del tiempo que uno podía dedicar a mirarlas; la idea de las ramas como mensajeras es ajena al texto.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó «noticias» en su sentido literal de información que llega desde otro lugar."
+      },
+      {
+        "clave": "C",
+        "texto": "Que la gente del pueblo comenta el paso de las ramas como si fueran sucesos importantes.",
+        "correcta": false,
+        "explicacion": "En el texto nadie comenta las ramas; el abuelo las usa como medida de la velocidad del río («seguirla con la vista hasta que se perdía»). No hay referencia a comentarios de los vecinos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Imaginó una escena colectiva que el texto no describe."
+      },
+      {
+        "clave": "D",
+        "texto": "Que el río, al igual que los noticieros, repite cada día las mismas imágenes de agua y cielo.",
+        "correcta": false,
+        "explicacion": "La repetición de «agua marrón y cielo» aparece en otro párrafo, a propósito de las fotos. La frase sobre las ramas se refiere a la rapidez, no a la monotonía.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló la comparación de las ramas con la observación posterior sobre las fotografías."
+      }
+    ],
+    "explicacion": "LEER: ubico la frase al final del segundo párrafo. COMPRENDER: debo interpretar una comparación en su contexto. INTERPRETAR: el párrafo opone el río de antes, «más lento», donde seguir una rama con la vista daba tiempo para «una conversación entera», con el de ahora, donde las ramas «pasan como noticias». REPRESENTAR: antes: rama lenta → conversación entera; ahora: rama rápida → como noticias (una tras otra, sin pausa). RAZONAR: la comparación toma de las noticias su sucesión veloz, no su contenido informativo ni su monotonía; las opciones sobre señales, comentarios y repetición de imágenes no se apoyan en el párrafo. RESOLVER: la opción que habla de la rapidez del río y la falta de tiempo para seguir algo con la mirada. VERIFICAR: la frase anterior, «Era más lento», confirma que el eje del párrafo es la velocidad.",
+    "que_identificar": "El contraste del segundo párrafo: «Era más lento» / «cabía una conversación entera» frente a «Ahora las ramas pasan como noticias».",
+    "que_revisar": "Interpretar comparaciones y metáforas a partir del párrafo en que aparecen, no de forma aislada.",
+    "refuerzo_ids": [
+      "LC-146",
+      "LC-137"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T41",
+      "literario",
+      "carta"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-146",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las diferentes voces o situaciones presentes en un texto",
+    "habilidad": "comprender",
+    "tema": "Texto literario (carta personal)",
+    "subtema": "Situación de enunciación: quién pregunta y por qué nadie lo hizo antes",
+    "dificultad": 1,
+    "contexto": "**Carta a Valentina**\n\nBarrancabermeja, 3 de junio\n\nQuerida Valentina:\n\nMe pides que te cuente cómo era el río cuando yo tenía tu edad, y me doy cuenta de que nadie me lo había preguntado nunca. Tu abuela sabía la respuesta y por eso no preguntaba; tu papá creció oyéndolo y por eso dejó de escuchar.\n\nEl río no era más ancho, como dicen los viejos cuando quieren ponerse tristes. Era más lento. Uno podía ver una rama entrar por la curva de arriba y seguirla con la vista hasta que se perdía frente a la iglesia, y en ese tiempo cabía una conversación entera. Ahora las ramas pasan como noticias.\n\nMi padre pescaba de noche y volvía al amanecer con la canoa llena o vacía, pero siempre con la misma cara, porque decía que el río no le debe nada a nadie. Yo no entendía esa frase; la repetía en la escuela para parecer hombre. La entendí mucho después, el año en que la creciente se llevó la casa de los Pardo y, dos meses más tarde, dejó en la playa la tierra más fértil que hemos tenido.\n\nNo te mando una foto porque las fotos del río son todas iguales: agua marrón y cielo. Lo que cambia no sale en la foto. Ven en diciembre y te llevo a la curva de arriba. Trae paciencia; es lo único que no se consigue por allá.\n\nTu abuelo,\nIsmael",
+    "estimulo": null,
+    "enunciado": "Según la carta, ¿por qué nadie le había hecho antes a Ismael la pregunta que le hace Valentina?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque Ismael vivió lejos del pueblo durante muchos años y su familia desconocía por completo su infancia junto al río.",
+        "correcta": false,
+        "explicacion": "La carta está fechada en Barrancabermeja y el abuelo habla del río como alguien que sigue allí («te llevo a la curva de arriba»); no hay ninguna mención de una vida lejos del pueblo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó una biografía del abuelo que el texto no sugiere."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la abuela ya conocía la respuesta y el padre de Valentina, de tanto oírla, dejó de prestar atención.",
+        "correcta": true,
+        "explicacion": "El primer párrafo lo dice de forma directa: «Tu abuela sabía la respuesta y por eso no preguntaba; tu papá creció oyéndolo y por eso dejó de escuchar». Son dos razones distintas para dos personas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque la familia evitaba hablar del río desde la creciente que destruyó la casa de los vecinos.",
+        "correcta": false,
+        "explicacion": "La creciente aparece después, como el episodio que le hizo entender la frase de su padre; el texto nunca dice que la familia evitara el tema por ese motivo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Conectó la creciente con un silencio familiar que la carta no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque Ismael es un hombre reservado que nunca aceptó hablar de su padre pescador.",
+        "correcta": false,
+        "explicacion": "El abuelo habla con naturalidad de su padre y responde con gusto a la pregunta; la carta no lo presenta como alguien reservado ni dice que se negara a hablar.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó al narrador un rasgo de carácter que contradice el tono de la carta."
+      }
+    ],
+    "explicacion": "LEER: reviso el primer párrafo, donde Ismael reflexiona sobre la pregunta. COMPRENDER: la pregunta pide la razón explícita de que nadie le hubiera preguntado antes. INTERPRETAR: «Tu abuela sabía la respuesta y por eso no preguntaba; tu papá creció oyéndolo y por eso dejó de escuchar». REPRESENTAR: abuela → ya sabía → no preguntaba; papá → lo oyó siempre → dejó de escuchar; Valentina → es la primera que pregunta. RAZONAR: las demás opciones (vida lejos del pueblo, silencio por la creciente, carácter reservado) añaden hechos que la carta no contiene. RESOLVER: la opción que reúne las dos razones del primer párrafo. VERIFICAR: la opción elegida reproduce el sentido de las dos cláusulas unidas por punto y coma.",
+    "que_identificar": "La segunda oración del primer párrafo, con las dos razones separadas por punto y coma.",
+    "que_revisar": "Identificar la situación de enunciación de una carta: quién escribe, a quién y por qué, a partir de lo que el texto dice explícitamente.",
+    "refuerzo_ids": [
+      "LC-145",
+      "LC-121"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T41",
+      "literario",
+      "carta"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-147",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (carta personal)",
+    "subtema": "Relación entre una sentencia y el episodio que la ilustra",
+    "dificultad": 3,
+    "contexto": "**Carta a Valentina**\n\nBarrancabermeja, 3 de junio\n\nQuerida Valentina:\n\nMe pides que te cuente cómo era el río cuando yo tenía tu edad, y me doy cuenta de que nadie me lo había preguntado nunca. Tu abuela sabía la respuesta y por eso no preguntaba; tu papá creció oyéndolo y por eso dejó de escuchar.\n\nEl río no era más ancho, como dicen los viejos cuando quieren ponerse tristes. Era más lento. Uno podía ver una rama entrar por la curva de arriba y seguirla con la vista hasta que se perdía frente a la iglesia, y en ese tiempo cabía una conversación entera. Ahora las ramas pasan como noticias.\n\nMi padre pescaba de noche y volvía al amanecer con la canoa llena o vacía, pero siempre con la misma cara, porque decía que el río no le debe nada a nadie. Yo no entendía esa frase; la repetía en la escuela para parecer hombre. La entendí mucho después, el año en que la creciente se llevó la casa de los Pardo y, dos meses más tarde, dejó en la playa la tierra más fértil que hemos tenido.\n\nNo te mando una foto porque las fotos del río son todas iguales: agua marrón y cielo. Lo que cambia no sale en la foto. Ven en diciembre y te llevo a la curva de arriba. Trae paciencia; es lo único que no se consigue por allá.\n\nTu abuelo,\nIsmael",
+    "estimulo": null,
+    "enunciado": "¿Qué relación hay entre la frase del padre («el río no le debe nada a nadie») y el episodio de la creciente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El episodio contradice la frase: el río compensó a los Pardo por la casa que les había quitado.",
+        "correcta": false,
+        "explicacion": "El texto no dice que la tierra fértil haya beneficiado a los Pardo, sino que quedó «en la playa» para todos («la tierra más fértil que hemos tenido»); además, Ismael afirma que gracias al episodio entendió la frase, no que la refutara.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la tierra fértil como una compensación dirigida a las víctimas."
+      },
+      {
+        "clave": "B",
+        "texto": "El episodio explica la frase: el padre la pronunció por primera vez al ver la casa de los Pardo arrastrada por el agua.",
+        "correcta": false,
+        "explicacion": "El padre decía la frase desde antes, cuando Ismael era niño y la repetía en la escuela; la creciente ocurrió «mucho después». El orden temporal descarta esta lectura.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Alteró la cronología: la frase precede en años al episodio."
+      },
+      {
+        "clave": "C",
+        "texto": "El episodio reemplaza la frase: tras la creciente, Ismael dejó de repetirla en la escuela.",
+        "correcta": false,
+        "explicacion": "Ismael repetía la frase en la escuela de niño; la creciente ocurrió cuando ya era adulto. El texto no dice que dejara de repetirla, sino que por fin la entendió.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió «la entendí» con «dejé de usarla»."
+      },
+      {
+        "clave": "D",
+        "texto": "El episodio ilustra la frase: el río destruye y luego regala sin que nadie pueda reclamarle ni agradecerle.",
+        "correcta": true,
+        "explicacion": "Ismael dice que entendió la frase «el año en que la creciente se llevó la casa de los Pardo y, dos meses más tarde, dejó en la playa la tierra más fértil». El río quita y da sin seguir ninguna cuenta: eso es no deberle nada a nadie.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: localizo la frase del padre y el párrafo donde Ismael cuenta cuándo la entendió. COMPRENDER: la pregunta pide la relación lógica entre una sentencia y un hecho narrado. INTERPRETAR: el padre volvía «con la canoa llena o vacía, pero siempre con la misma cara» porque el río «no le debe nada a nadie»; años después, la creciente destruyó una casa y luego dejó tierra fértil. REPRESENTAR: frase (el río no está obligado con nadie) → ejemplo (destruye / regala sin razón ni deuda) → «La entendí». RAZONAR: el episodio no contradice ni reemplaza la frase ni fue su origen; es el caso que le dio sentido. RESOLVER: la opción que presenta el episodio como ilustración de la frase. VERIFICAR: el verbo «La entendí» justo antes del episodio confirma la relación de ejemplificación.",
+    "que_identificar": "La secuencia «Yo no entendía esa frase […] La entendí mucho después, el año en que la creciente…».",
+    "que_revisar": "Reconocer relaciones entre partes de un texto narrativo: una idea general y el hecho que la ejemplifica, respetando la cronología.",
+    "refuerzo_ids": [
+      "LC-148",
+      "LC-124"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T41",
+      "literario",
+      "carta"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-148",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (carta personal)",
+    "subtema": "Valoración implícita en el cierre de la carta",
+    "dificultad": 2,
+    "contexto": "**Carta a Valentina**\n\nBarrancabermeja, 3 de junio\n\nQuerida Valentina:\n\nMe pides que te cuente cómo era el río cuando yo tenía tu edad, y me doy cuenta de que nadie me lo había preguntado nunca. Tu abuela sabía la respuesta y por eso no preguntaba; tu papá creció oyéndolo y por eso dejó de escuchar.\n\nEl río no era más ancho, como dicen los viejos cuando quieren ponerse tristes. Era más lento. Uno podía ver una rama entrar por la curva de arriba y seguirla con la vista hasta que se perdía frente a la iglesia, y en ese tiempo cabía una conversación entera. Ahora las ramas pasan como noticias.\n\nMi padre pescaba de noche y volvía al amanecer con la canoa llena o vacía, pero siempre con la misma cara, porque decía que el río no le debe nada a nadie. Yo no entendía esa frase; la repetía en la escuela para parecer hombre. La entendí mucho después, el año en que la creciente se llevó la casa de los Pardo y, dos meses más tarde, dejó en la playa la tierra más fértil que hemos tenido.\n\nNo te mando una foto porque las fotos del río son todas iguales: agua marrón y cielo. Lo que cambia no sale en la foto. Ven en diciembre y te llevo a la curva de arriba. Trae paciencia; es lo único que no se consigue por allá.\n\nTu abuelo,\nIsmael",
+    "estimulo": null,
+    "enunciado": "El cierre de la carta («Trae paciencia; es lo único que no se consigue por allá») permite inferir que, para Ismael,",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "el pueblo carece de comercio y de servicios básicos, por lo que la visita de su nieta resultará incómoda y poco agradable.",
+        "correcta": false,
+        "explicacion": "La frase no habla de carencias materiales; dice que lo único que no se consigue allá es la paciencia, que es una actitud, no un bien. Leerla como queja sobre servicios ignora el sentido figurado.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó «no se consigue» en sentido literal, como si se tratara de un producto."
+      },
+      {
+        "clave": "B",
+        "texto": "su nieta es una persona impaciente a la que le molesta esperar durante los viajes largos.",
+        "correcta": false,
+        "explicacion": "Nada en la carta describe el carácter de Valentina; la paciencia que pide se relaciona con mirar el río despacio en la curva de arriba, no con el viaje ni con un defecto de la nieta.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió un consejo general en un reproche personal que el texto no formula."
+      },
+      {
+        "clave": "C",
+        "texto": "ver lo que de verdad cambió en el río exige un tiempo de atención que la vida de su nieta ya no suele ofrecer.",
+        "correcta": true,
+        "explicacion": "Ismael dijo que «lo que cambia no sale en la foto» y la invita a la curva donde antes se seguía una rama con calma. Pedirle paciencia como lo único que debe traer sugiere que mirar el río bien requiere una lentitud que ya no abunda.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "la fotografía es un medio inútil para registrar paisajes porque siempre repite los mismos colores.",
+        "correcta": false,
+        "explicacion": "La observación sobre las fotos es un paso previo, pero el cierre no valora la fotografía en general; invita a ver en persona y a traer paciencia, lo que apunta a la manera de mirar.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó el comentario sobre las fotos del río a toda la fotografía y lo confundió con la conclusión de la carta."
+      }
+    ],
+    "explicacion": "LEER: releo el último párrafo: las fotos no muestran lo que cambia, la invitación a la curva de arriba y el consejo de traer paciencia. COMPRENDER: la pregunta pide reconocer un contenido valorativo implícito en el cierre. INTERPRETAR: a lo largo de la carta el cambio del río es de velocidad y la pérdida es la posibilidad de mirar despacio; por eso lo que falta allá no es un bien material sino paciencia. REPRESENTAR: foto (no sirve) → ven y mira (sirve) → condición: paciencia. RAZONAR: no es una queja sobre servicios, ni un reproche al carácter de la nieta, ni un juicio general sobre la fotografía. RESOLVER: la opción que vincula la paciencia con el tiempo de atención necesario para ver el cambio. VERIFICAR: el segundo párrafo (seguir una rama durante «una conversación entera») respalda esa lectura.",
+    "que_identificar": "La relación entre «Lo que cambia no sale en la foto», la invitación a la curva de arriba y el consejo final sobre la paciencia.",
+    "que_revisar": "Inferir valoraciones implícitas en el cierre de un texto literario, apoyándose en las ideas desarrolladas antes.",
+    "refuerzo_ids": [
+      "LC-147",
+      "LC-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T41",
+      "literario",
+      "carta"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-149",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las ideas o afirmaciones presentes en un texto informativo",
+    "habilidad": "comprender",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la promesa)",
+    "subtema": "Tesis de un ensayo filosófico",
+    "dificultad": 2,
+    "contexto": "**Prometer es inventarse un futuro**\n\nCuando alguien promete, hace algo extraño: habla en nombre de una persona que todavía no existe. El que promete hoy pagar una deuda en diciembre se compromete por el que será en diciembre, sin saber si tendrá el dinero, las ganas o siquiera la misma opinión sobre la deuda. Por eso algunos filósofos han visto en la promesa una pequeña arrogancia: ¿con qué derecho decido por mi yo futuro?\n\nCreo que esa objeción entiende la promesa al revés. No prometemos porque estemos seguros de lo que haremos; prometemos precisamente porque no lo estamos. Si el futuro fuera predecible, bastaría anunciarlo. La promesa existe porque el deseo cambia, la memoria se desgasta y las circunstancias conspiran, y aun así queremos que otros puedan contar con nosotros. Prometer es atar al yo de mañana con una cuerda hecha de palabras, sabiendo que ese yo tendrá motivos para soltarse.\n\nSe dirá que, entonces, muchas promesas se rompen. Es cierto, y no es un argumento contra la promesa sino a su favor: solo tiene sentido comprometerse con algo que puede fallar. Nadie promete que mañana saldrá el sol.\n\nLo que la promesa inventa no es el futuro, sino una identidad: la de alguien que es el mismo a través del tiempo porque decidió serlo. Sin promesas seríamos una sucesión de extraños que comparten un nombre. Con ellas, somos una historia.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la tesis que defiende el autor del texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La promesa es una forma de arrogancia, porque nadie tiene derecho a decidir por la persona que será en el futuro.",
+        "correcta": false,
+        "explicacion": "Esa es la objeción de «algunos filósofos» que el autor presenta en el primer párrafo para luego rechazarla: «esa objeción entiende la promesa al revés». No es su tesis.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la postura ajena expuesta al inicio como si fuera la del autor."
+      },
+      {
+        "clave": "B",
+        "texto": "Las promesas deberían hacerse solo cuando existe certeza razonable de que podrán cumplirse.",
+        "correcta": false,
+        "explicacion": "El autor sostiene lo contrario: «prometemos precisamente porque no lo estamos [seguros]» y «solo tiene sentido comprometerse con algo que puede fallar».",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó una idea de sentido común sobre la prudencia que el texto rechaza de forma explícita."
+      },
+      {
+        "clave": "C",
+        "texto": "La promesa tiene sentido justamente porque el futuro es incierto, y es lo que nos da una identidad continua en el tiempo.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo afirma que prometemos porque no estamos seguros del futuro, y el último concluye que la promesa inventa «una identidad: la de alguien que es el mismo a través del tiempo porque decidió serlo». Ambas ideas forman la tesis.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Romper una promesa es inevitable, por lo que conviene prometer poco y limitarse a anunciar solo lo que es seguro que ocurrirá.",
+        "correcta": false,
+        "explicacion": "El autor admite que muchas promesas se rompen, pero lo convierte en un argumento «a su favor», no en una recomendación de prometer menos; además, dice que lo seguro no se promete, se anuncia.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Derivó una recomendación práctica que el texto no hace a partir de una concesión del autor."
+      }
+    ],
+    "explicacion": "LEER: identifico la postura ajena del primer párrafo («algunos filósofos»), la respuesta del autor («Creo que esa objeción entiende la promesa al revés») y la conclusión del último párrafo. COMPRENDER: la pregunta pide la tesis, es decir, la idea que el autor defiende, no la que discute. INTERPRETAR: el autor sostiene que prometemos porque el futuro es incierto y que la promesa crea una identidad continua. REPRESENTAR: objeción (arrogancia) → refutación (prometemos por la incertidumbre) → concesión (se rompen) → conclusión (identidad). RAZONAR: la opción sobre la arrogancia es la objeción; la de la certeza y la de prometer poco contradicen el texto. RESOLVER: la opción que une incertidumbre e identidad. VERIFICAR: «Con ellas, somos una historia» confirma el cierre sobre la identidad.",
+    "que_identificar": "El marcador «Creo que…» del segundo párrafo y la conclusión «Lo que la promesa inventa no es el futuro, sino una identidad».",
+    "que_revisar": "Distinguir en un ensayo la tesis del autor de las posturas ajenas que presenta para discutirlas.",
+    "refuerzo_ids": [
+      "LC-150",
+      "LC-126"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T42",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-150",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la promesa)",
+    "subtema": "Estrategia discursiva: anticipar una objeción y convertirla en apoyo",
+    "dificultad": 2,
+    "contexto": "**Prometer es inventarse un futuro**\n\nCuando alguien promete, hace algo extraño: habla en nombre de una persona que todavía no existe. El que promete hoy pagar una deuda en diciembre se compromete por el que será en diciembre, sin saber si tendrá el dinero, las ganas o siquiera la misma opinión sobre la deuda. Por eso algunos filósofos han visto en la promesa una pequeña arrogancia: ¿con qué derecho decido por mi yo futuro?\n\nCreo que esa objeción entiende la promesa al revés. No prometemos porque estemos seguros de lo que haremos; prometemos precisamente porque no lo estamos. Si el futuro fuera predecible, bastaría anunciarlo. La promesa existe porque el deseo cambia, la memoria se desgasta y las circunstancias conspiran, y aun así queremos que otros puedan contar con nosotros. Prometer es atar al yo de mañana con una cuerda hecha de palabras, sabiendo que ese yo tendrá motivos para soltarse.\n\nSe dirá que, entonces, muchas promesas se rompen. Es cierto, y no es un argumento contra la promesa sino a su favor: solo tiene sentido comprometerse con algo que puede fallar. Nadie promete que mañana saldrá el sol.\n\nLo que la promesa inventa no es el futuro, sino una identidad: la de alguien que es el mismo a través del tiempo porque decidió serlo. Sin promesas seríamos una sucesión de extraños que comparten un nombre. Con ellas, somos una historia.",
+    "estimulo": null,
+    "enunciado": "En el tercer párrafo, al escribir «Se dirá que, entonces, muchas promesas se rompen», el autor",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "anticipa una objeción a su postura para convertirla, acto seguido, en un apoyo de su propia tesis.",
+        "correcta": true,
+        "explicacion": "La fórmula impersonal «Se dirá que» introduce lo que un crítico podría replicar; el autor lo admite («Es cierto») y lo reinterpreta: «no es un argumento contra la promesa sino a su favor». Es una concesión seguida de refutación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "reconoce una falla de su argumento y la deja sin respuesta para no debilitar su conclusión.",
+        "correcta": false,
+        "explicacion": "El autor no deja la objeción sin respuesta: inmediatamente explica por qué el hecho de que las promesas se rompan apoya su tesis. No hay silencio ni evasión.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó «Es cierto» como una rendición y no leyó la frase que sigue."
+      },
+      {
+        "clave": "C",
+        "texto": "cita la opinión de los filósofos mencionados en el primer párrafo para refutarla enseguida con un ejemplo cotidiano.",
+        "correcta": false,
+        "explicacion": "La objeción de los filósofos era sobre la arrogancia de decidir por el yo futuro; la del tercer párrafo es distinta (que las promesas se rompen) y se formula de manera impersonal, no como cita.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Fusionó dos objeciones diferentes que aparecen en párrafos distintos."
+      },
+      {
+        "clave": "D",
+        "texto": "introduce una conclusión parcial que resume lo dicho en los dos párrafos anteriores.",
+        "correcta": false,
+        "explicacion": "La frase no resume: plantea una posible réplica. La conclusión del texto llega en el último párrafo, con la idea de la identidad.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió el conector «entonces» con una señal de resumen o conclusión."
+      }
+    ],
+    "explicacion": "LEER: releo el tercer párrafo completo: «Se dirá que… Es cierto, y no es un argumento contra la promesa sino a su favor». COMPRENDER: la pregunta pide identificar la estrategia discursiva de esa frase. INTERPRETAR: «Se dirá que» presenta la voz de un posible crítico; «Es cierto» concede; «sino a su favor» invierte el sentido de la objeción. REPRESENTAR: objeción anticipada → concesión → reinterpretación como apoyo. RAZONAR: no es una falla sin respuesta, no cita a los filósofos del primer párrafo (otra objeción) y no es un resumen. RESOLVER: la opción que describe la anticipación de una objeción convertida en apoyo. VERIFICAR: el ejemplo final del párrafo («Nadie promete que mañana saldrá el sol») completa la refutación.",
+    "que_identificar": "La fórmula impersonal «Se dirá que» y la respuesta «Es cierto, y no es un argumento contra la promesa sino a su favor».",
+    "que_revisar": "Reconocer la concesión y la refutación como estrategias argumentativas, y los marcadores que las introducen.",
+    "refuerzo_ids": [
+      "LC-149",
+      "LC-128"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T42",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-151",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la promesa)",
+    "subtema": "Sentido de una metáfora en el ensayo («una cuerda hecha de palabras»)",
+    "dificultad": 1,
+    "contexto": "**Prometer es inventarse un futuro**\n\nCuando alguien promete, hace algo extraño: habla en nombre de una persona que todavía no existe. El que promete hoy pagar una deuda en diciembre se compromete por el que será en diciembre, sin saber si tendrá el dinero, las ganas o siquiera la misma opinión sobre la deuda. Por eso algunos filósofos han visto en la promesa una pequeña arrogancia: ¿con qué derecho decido por mi yo futuro?\n\nCreo que esa objeción entiende la promesa al revés. No prometemos porque estemos seguros de lo que haremos; prometemos precisamente porque no lo estamos. Si el futuro fuera predecible, bastaría anunciarlo. La promesa existe porque el deseo cambia, la memoria se desgasta y las circunstancias conspiran, y aun así queremos que otros puedan contar con nosotros. Prometer es atar al yo de mañana con una cuerda hecha de palabras, sabiendo que ese yo tendrá motivos para soltarse.\n\nSe dirá que, entonces, muchas promesas se rompen. Es cierto, y no es un argumento contra la promesa sino a su favor: solo tiene sentido comprometerse con algo que puede fallar. Nadie promete que mañana saldrá el sol.\n\nLo que la promesa inventa no es el futuro, sino una identidad: la de alguien que es el mismo a través del tiempo porque decidió serlo. Sin promesas seríamos una sucesión de extraños que comparten un nombre. Con ellas, somos una historia.",
+    "estimulo": null,
+    "enunciado": "En el texto, la expresión «atar al yo de mañana con una cuerda hecha de palabras» significa que",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "las palabras de una promesa pierden fuerza con el tiempo, como una cuerda que se desgasta con el uso.",
+        "correcta": false,
+        "explicacion": "El texto dice que el yo futuro «tendrá motivos para soltarse», no que las palabras se desgasten; la metáfora describe qué es prometer, no cómo se debilita una promesa.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Desplazó la idea de desgaste, que el texto aplica a la memoria, hacia la cuerda."
+      },
+      {
+        "clave": "B",
+        "texto": "quien promete manipula a los demás con discursos que los dejan sin libertad de decidir.",
+        "correcta": false,
+        "explicacion": "El atado es el propio yo de mañana, no otras personas; el texto no habla de manipulación sino de autocompromiso.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cambió el objeto de la metáfora: la cuerda ata al que promete, no a quien recibe la promesa."
+      },
+      {
+        "clave": "C",
+        "texto": "las promesas se escriben en documentos para que haya una prueba material de lo que se acordó.",
+        "correcta": false,
+        "explicacion": "La «cuerda hecha de palabras» subraya que el compromiso se sostiene solo en lo dicho; no menciona documentos ni pruebas. Es una imagen, no una referencia a contratos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpretó «palabras» como texto escrito con valor legal."
+      },
+      {
+        "clave": "D",
+        "texto": "al prometer, la persona se obliga a sí misma en el futuro solo mediante lo que ha dicho.",
+        "correcta": true,
+        "explicacion": "El párrafo define la promesa como atar «al yo de mañana» con palabras: el que promete queda sujeto en el futuro por lo que dijo, aunque ese yo futuro «tendrá motivos para soltarse». La cuerda es el compromiso verbal.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico la metáfora al final del segundo párrafo. COMPRENDER: debo entender el significado de una expresión figurada en su contexto. INTERPRETAR: el párrafo explica que prometemos porque el futuro es incierto y queremos que otros «puedan contar con nosotros»; la cuerda de palabras es el compromiso que sujeta al yo futuro. REPRESENTAR: yo de hoy —(palabras)→ yo de mañana atado, aunque con motivos para soltarse. RAZONAR: la imagen no habla de desgaste de las palabras, ni de manipular a otros, ni de documentos escritos. RESOLVER: la opción que dice que la persona se obliga a sí misma en el futuro mediante lo dicho. VERIFICAR: «habla en nombre de una persona que todavía no existe», en el primer párrafo, confirma que el compromiso recae sobre el propio yo futuro.",
+    "que_identificar": "La oración «Prometer es atar al yo de mañana con una cuerda hecha de palabras, sabiendo que ese yo tendrá motivos para soltarse».",
+    "que_revisar": "Interpretar metáforas en textos argumentativos identificando qué elemento del razonamiento representa cada imagen.",
+    "refuerzo_ids": [
+      "LC-149",
+      "LC-125"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "texto:LC-T42",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-152",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (ensayo filosófico sobre la promesa)",
+    "subtema": "Función de un ejemplo en la argumentación («Nadie promete que mañana saldrá el sol»)",
+    "dificultad": 3,
+    "contexto": "**Prometer es inventarse un futuro**\n\nCuando alguien promete, hace algo extraño: habla en nombre de una persona que todavía no existe. El que promete hoy pagar una deuda en diciembre se compromete por el que será en diciembre, sin saber si tendrá el dinero, las ganas o siquiera la misma opinión sobre la deuda. Por eso algunos filósofos han visto en la promesa una pequeña arrogancia: ¿con qué derecho decido por mi yo futuro?\n\nCreo que esa objeción entiende la promesa al revés. No prometemos porque estemos seguros de lo que haremos; prometemos precisamente porque no lo estamos. Si el futuro fuera predecible, bastaría anunciarlo. La promesa existe porque el deseo cambia, la memoria se desgasta y las circunstancias conspiran, y aun así queremos que otros puedan contar con nosotros. Prometer es atar al yo de mañana con una cuerda hecha de palabras, sabiendo que ese yo tendrá motivos para soltarse.\n\nSe dirá que, entonces, muchas promesas se rompen. Es cierto, y no es un argumento contra la promesa sino a su favor: solo tiene sentido comprometerse con algo que puede fallar. Nadie promete que mañana saldrá el sol.\n\nLo que la promesa inventa no es el futuro, sino una identidad: la de alguien que es el mismo a través del tiempo porque decidió serlo. Sin promesas seríamos una sucesión de extraños que comparten un nombre. Con ellas, somos una historia.",
+    "estimulo": null,
+    "enunciado": "¿Para qué usa el autor el ejemplo «Nadie promete que mañana saldrá el sol»?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Para señalar que las leyes de la naturaleza son más confiables que cualquier compromiso humano.",
+        "correcta": false,
+        "explicacion": "El autor no compara la confiabilidad de la naturaleza con la de las personas; usa el sol como caso de algo que no puede fallar y que, por eso mismo, nadie promete.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el ejemplo como una comparación de confiabilidad y no como ilustración de la condición para prometer."
+      },
+      {
+        "clave": "B",
+        "texto": "Para mostrar que un hecho seguro no se promete, lo que confirma que la promesa solo tiene sentido ante lo que puede fallar.",
+        "correcta": true,
+        "explicacion": "El ejemplo sigue a la frase «solo tiene sentido comprometerse con algo que puede fallar». La salida del sol es segura y por eso nadie la promete: el caso límite confirma que la promesa se reserva para lo incierto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Para ilustrar que hay cosas que la gente promete sin tener ningún control sobre ellas.",
+        "correcta": false,
+        "explicacion": "El ejemplo dice exactamente lo contrario: nadie promete la salida del sol. No ilustra promesas sin control, sino la ausencia de promesa ante lo seguro.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el sentido de la negación «Nadie promete»."
+      },
+      {
+        "clave": "D",
+        "texto": "Para demostrar que las promesas sobre hechos cotidianos y naturales son las que se rompen con mayor frecuencia entre las personas.",
+        "correcta": false,
+        "explicacion": "El texto no clasifica las promesas por tema ni habla de cuáles se rompen más; el ejemplo cierra el razonamiento sobre la incertidumbre como condición de la promesa.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Conectó el ejemplo con la frase anterior sobre promesas rotas sin advertir que trata de algo que nunca se promete."
+      }
+    ],
+    "explicacion": "LEER: ubico el ejemplo al final del tercer párrafo, justo después de «solo tiene sentido comprometerse con algo que puede fallar». COMPRENDER: la pregunta pide la función argumentativa del ejemplo. INTERPRETAR: la salida del sol es un hecho seguro; que nadie lo prometa muestra que lo seguro se anuncia, no se promete, idea ya enunciada en el segundo párrafo («Si el futuro fuera predecible, bastaría anunciarlo»). REPRESENTAR: seguro → se anuncia; incierto → se promete; el sol = caso extremo de lo seguro. RAZONAR: no compara confiabilidades, no habla de promesas sin control ni de frecuencia de rupturas. RESOLVER: la opción que lo lee como confirmación de que la promesa solo tiene sentido ante lo que puede fallar. VERIFICAR: la frase inmediatamente anterior enuncia la regla que el ejemplo ilustra.",
+    "que_identificar": "La regla «solo tiene sentido comprometerse con algo que puede fallar» y el ejemplo que la sigue.",
+    "que_revisar": "Evaluar la función de los ejemplos en un argumento: qué afirmación respaldan y cómo lo hacen.",
+    "refuerzo_ids": [
+      "LC-150",
+      "LC-127"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T42",
+      "argumentativo",
+      "filosofico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-153",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto expositivo (divulgación lingüística)",
+    "subtema": "Sentido de una expresión figurada («archivos vivos»)",
+    "dificultad": 1,
+    "contexto": "**Las palabras también se jubilan**\n\nNinguna lengua se queda quieta. Cada generación hereda un vocabulario y lo devuelve modificado: algunas palabras cambian de significado, otras nacen y unas cuantas, simplemente, dejan de usarse. Los lingüistas llaman a estas últimas *arcaísmos*, aunque el nombre engaña: una palabra no se vuelve vieja por el calendario, sino por la frecuencia. Mientras alguien la necesite, sigue viva.\n\n¿Por qué una palabra deja de ser necesaria? La causa más común es que desaparece la cosa que nombraba. Cuando los hogares cambiaron el fogón de leña por la estufa de gas, se fueron con él decenas de términos para sus partes y para la ceniza. La segunda causa es la competencia: dos palabras significan casi lo mismo y los hablantes, sin reunirse nunca para decidirlo, terminan prefiriendo una. La tercera es el prestigio: si una forma se asocia con el campo o con los mayores, los jóvenes de la ciudad la evitan, y lo que no se dice en la ciudad tarda poco en no decirse en ningún lado.\n\nLo curioso es que las palabras rara vez mueren del todo. Sobreviven en refranes, en apellidos, en nombres de lugares y, sobre todo, en los abuelos, que funcionan como archivos vivos. Por eso los diccionarios marcan una palabra como «desusada» con cautela: basta una canción exitosa o una serie de televisión para que vuelva a circular. El retiro de una palabra, a diferencia del de las personas, nunca es definitivo.",
+    "estimulo": null,
+    "enunciado": "En el texto, llamar a los abuelos «archivos vivos» significa que ellos",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "guardan documentos antiguos en los que aparecen escritas las palabras desusadas.",
+        "correcta": false,
+        "explicacion": "La expresión es figurada: los abuelos son archivos por lo que hablan, no por lo que guardan en papel. El texto los menciona junto a refranes y nombres de lugares como sitios donde las palabras «sobreviven».",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó «archivo» en su sentido literal de depósito de documentos."
+      },
+      {
+        "clave": "B",
+        "texto": "conservan en su habla palabras que ya casi nadie más usa.",
+        "correcta": true,
+        "explicacion": "El párrafo enumera dónde sobreviven las palabras que dejaron de usarse: refranes, apellidos, nombres de lugares «y, sobre todo, en los abuelos». Llamarlos «archivos vivos» significa que mantienen en uso ese vocabulario.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "recuerdan con exactitud la fecha en que cada palabra dejó de usarse en la comunidad.",
+        "correcta": false,
+        "explicacion": "El texto dice que una palabra no envejece «por el calendario» y nunca atribuye a los abuelos un registro de fechas; la metáfora es sobre conservación del uso, no sobre memoria de datos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció «archivo» con un registro cronológico que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "enseñan a los jóvenes de la ciudad el vocabulario correcto de la lengua.",
+        "correcta": false,
+        "explicacion": "El texto no habla de enseñanza ni de corrección; de hecho, señala que los jóvenes evitan las formas asociadas con los mayores. Los abuelos conservan palabras, no las imponen.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Añadió una función normativa que contradice lo dicho sobre el prestigio en el segundo párrafo."
+      }
+    ],
+    "explicacion": "LEER: ubico la expresión en el tercer párrafo, en la lista de lugares donde sobreviven las palabras. COMPRENDER: debo interpretar una metáfora a partir de su contexto inmediato. INTERPRETAR: las palabras «sobreviven en refranes, en apellidos, en nombres de lugares y, sobre todo, en los abuelos»; un archivo guarda lo que ya no circula, y «vivo» indica que lo guarda hablando. REPRESENTAR: palabra desusada → sigue en refranes, topónimos y en el habla de los abuelos. RAZONAR: no se trata de documentos, ni de fechas, ni de enseñar lo correcto. RESOLVER: la opción que dice que conservan en su habla palabras que casi nadie usa. VERIFICAR: la frase siguiente, sobre la cautela de los diccionarios, confirma que esas palabras pueden volver a circular porque alguien aún las dice.",
+    "que_identificar": "La enumeración del tercer párrafo que termina en «y, sobre todo, en los abuelos, que funcionan como archivos vivos».",
+    "que_revisar": "Interpretar expresiones figuradas en textos expositivos a partir de la enumeración o la explicación que las acompaña.",
+    "refuerzo_ids": [
+      "LC-154",
+      "LC-133"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T43",
+      "expositivo",
+      "lenguaje"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-154",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las ideas o afirmaciones presentes en un texto informativo",
+    "habilidad": "comprender",
+    "tema": "Texto expositivo (divulgación lingüística)",
+    "subtema": "Síntesis de las ideas de un párrafo expositivo",
+    "dificultad": 2,
+    "contexto": "**Las palabras también se jubilan**\n\nNinguna lengua se queda quieta. Cada generación hereda un vocabulario y lo devuelve modificado: algunas palabras cambian de significado, otras nacen y unas cuantas, simplemente, dejan de usarse. Los lingüistas llaman a estas últimas *arcaísmos*, aunque el nombre engaña: una palabra no se vuelve vieja por el calendario, sino por la frecuencia. Mientras alguien la necesite, sigue viva.\n\n¿Por qué una palabra deja de ser necesaria? La causa más común es que desaparece la cosa que nombraba. Cuando los hogares cambiaron el fogón de leña por la estufa de gas, se fueron con él decenas de términos para sus partes y para la ceniza. La segunda causa es la competencia: dos palabras significan casi lo mismo y los hablantes, sin reunirse nunca para decidirlo, terminan prefiriendo una. La tercera es el prestigio: si una forma se asocia con el campo o con los mayores, los jóvenes de la ciudad la evitan, y lo que no se dice en la ciudad tarda poco en no decirse en ningún lado.\n\nLo curioso es que las palabras rara vez mueren del todo. Sobreviven en refranes, en apellidos, en nombres de lugares y, sobre todo, en los abuelos, que funcionan como archivos vivos. Por eso los diccionarios marcan una palabra como «desusada» con cautela: basta una canción exitosa o una serie de televisión para que vuelva a circular. El retiro de una palabra, a diferencia del de las personas, nunca es definitivo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados sintetiza mejor el segundo párrafo del texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las palabras del campo desaparecen más rápido que las de la ciudad porque los jóvenes las consideran anticuadas.",
+        "correcta": false,
+        "explicacion": "Esto recoge solo la tercera causa (el prestigio) y la exagera; el párrafo presenta tres causas y no afirma que las palabras rurales desaparezcan más rápido.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la última causa, la más desarrollada, como si fuera el contenido de todo el párrafo."
+      },
+      {
+        "clave": "B",
+        "texto": "Los hablantes se reúnen de forma indirecta para decidir cuál de dos palabras parecidas debe conservarse.",
+        "correcta": false,
+        "explicacion": "El texto dice justamente que los hablantes prefieren una palabra «sin reunirse nunca para decidirlo»; además, esto corresponde solo a la segunda causa.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el sentido de «sin reunirse nunca» y redujo el párrafo a una de sus tres causas."
+      },
+      {
+        "clave": "C",
+        "texto": "El cambio del fogón de leña por la estufa de gas fue la principal causa de la pérdida de vocabulario doméstico en los hogares del país.",
+        "correcta": false,
+        "explicacion": "El fogón es un ejemplo de la primera causa (desaparece la cosa nombrada), no la causa en sí ni la única; una síntesis no debe quedarse en el ejemplo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el ejemplo ilustrativo con la idea que ilustra."
+      },
+      {
+        "clave": "D",
+        "texto": "Una palabra deja de usarse porque desaparece su referente, porque otra la desplaza o porque pierde prestigio social.",
+        "correcta": true,
+        "explicacion": "El párrafo abre con la pregunta «¿Por qué una palabra deja de ser necesaria?» y responde con tres causas ordenadas: la desaparición de la cosa nombrada, la competencia entre palabras y el prestigio. La opción recoge las tres sin quedarse en los ejemplos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo el segundo párrafo y marco sus partes: pregunta inicial, «La causa más común», «La segunda causa», «La tercera». COMPRENDER: la pregunta pide una síntesis fiel, que abarque todo el párrafo sin añadir ni exagerar. INTERPRETAR: las tres causas son la desaparición del referente (ejemplo: el fogón), la competencia entre sinónimos y el prestigio social. REPRESENTAR: ¿por qué muere una palabra? → 1) sin referente, 2) desplazada, 3) sin prestigio. RAZONAR: las opciones que hablan del campo, de la reunión de hablantes o del fogón se quedan en una sola causa o en un ejemplo, y dos de ellas tergiversan el texto. RESOLVER: la opción que enumera las tres causas. VERIFICAR: cada causa de la opción corresponde a un marcador ordinal del párrafo.",
+    "que_identificar": "Los marcadores «La causa más común», «La segunda causa» y «La tercera» que organizan el párrafo.",
+    "que_revisar": "Sintetizar un párrafo expositivo distinguiendo las ideas principales de los ejemplos que las ilustran.",
+    "refuerzo_ids": [
+      "LC-153",
+      "LC-135"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T43",
+      "expositivo",
+      "lenguaje"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-155",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto expositivo (divulgación lingüística)",
+    "subtema": "Función de la frase final en relación con el título",
+    "dificultad": 3,
+    "contexto": "**Las palabras también se jubilan**\n\nNinguna lengua se queda quieta. Cada generación hereda un vocabulario y lo devuelve modificado: algunas palabras cambian de significado, otras nacen y unas cuantas, simplemente, dejan de usarse. Los lingüistas llaman a estas últimas *arcaísmos*, aunque el nombre engaña: una palabra no se vuelve vieja por el calendario, sino por la frecuencia. Mientras alguien la necesite, sigue viva.\n\n¿Por qué una palabra deja de ser necesaria? La causa más común es que desaparece la cosa que nombraba. Cuando los hogares cambiaron el fogón de leña por la estufa de gas, se fueron con él decenas de términos para sus partes y para la ceniza. La segunda causa es la competencia: dos palabras significan casi lo mismo y los hablantes, sin reunirse nunca para decidirlo, terminan prefiriendo una. La tercera es el prestigio: si una forma se asocia con el campo o con los mayores, los jóvenes de la ciudad la evitan, y lo que no se dice en la ciudad tarda poco en no decirse en ningún lado.\n\nLo curioso es que las palabras rara vez mueren del todo. Sobreviven en refranes, en apellidos, en nombres de lugares y, sobre todo, en los abuelos, que funcionan como archivos vivos. Por eso los diccionarios marcan una palabra como «desusada» con cautela: basta una canción exitosa o una serie de televisión para que vuelva a circular. El retiro de una palabra, a diferencia del de las personas, nunca es definitivo.",
+    "estimulo": null,
+    "enunciado": "La frase final («El retiro de una palabra, a diferencia del de las personas, nunca es definitivo») cumple la función de",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "matizar la comparación del título: las palabras se «jubilan», pero, a diferencia de las personas, pueden volver a usarse.",
+        "correcta": true,
+        "explicacion": "El título compara el desuso con una jubilación. La frase final retoma esa imagen («retiro») y la limita: el tercer párrafo mostró que las palabras «rara vez mueren del todo» y pueden volver a circular, de modo que su jubilación no es definitiva.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "demostrar que las personas jubiladas, al igual que las palabras, pueden reincorporarse al trabajo cuando se las necesita de nuevo.",
+        "correcta": false,
+        "explicacion": "La frase marca una diferencia («a diferencia del de las personas»), no una semejanza; además, el texto no trata sobre las personas jubiladas, que solo sirven de término de comparación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la comparación como igualdad y pasó por alto «a diferencia»."
+      },
+      {
+        "clave": "C",
+        "texto": "introducir un nuevo tema sobre el envejecimiento que el texto no había tratado.",
+        "correcta": false,
+        "explicacion": "Es la última oración del texto y no abre ningún tema; cierra el razonamiento sobre la supervivencia de las palabras y remite al título.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoció que la frase final retoma una imagen ya planteada en el título."
+      },
+      {
+        "clave": "D",
+        "texto": "contradecir la afirmación inicial de que ninguna lengua se queda quieta.",
+        "correcta": false,
+        "explicacion": "Que las palabras puedan volver a usarse es otra forma de cambio, no de quietud; la frase final es coherente con la idea inicial, no la contradice.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó el regreso de una palabra como ausencia de cambio."
+      }
+    ],
+    "explicacion": "LEER: comparo el título, «Las palabras también se jubilan», con la última oración, que habla del «retiro» de una palabra. COMPRENDER: la pregunta pide la función de esa frase en la estrategia del texto. INTERPRETAR: el tercer párrafo sostiene que las palabras «rara vez mueren del todo» y pueden volver a circular; la frase final aplica esa idea a la metáfora del título y señala el límite de la comparación. REPRESENTAR: título (palabras = jubilados) → desarrollo (sobreviven, regresan) → cierre (jubilación sí, pero no definitiva). RAZONAR: no habla de personas que vuelven a trabajar, no abre un tema nuevo y no contradice la idea de cambio constante. RESOLVER: la opción que la describe como un matiz de la comparación del título. VERIFICAR: el vocabulario común («jubilan» / «retiro») confirma el vínculo entre título y cierre.",
+    "que_identificar": "La relación entre el título («se jubilan») y la última oración («El retiro de una palabra… nunca es definitivo»).",
+    "que_revisar": "Reconocer estrategias discursivas de cierre: retomar y matizar una imagen del título o del inicio.",
+    "refuerzo_ids": [
+      "LC-154",
+      "LC-156"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T43",
+      "expositivo",
+      "lenguaje"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-156",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece relaciones entre un texto y otros textos o enunciados",
+    "habilidad": "razonar",
+    "tema": "Texto expositivo (divulgación lingüística)",
+    "subtema": "Relación entre una causa explicada en el texto y un caso nuevo",
+    "dificultad": 2,
+    "contexto": "**Las palabras también se jubilan**\n\nNinguna lengua se queda quieta. Cada generación hereda un vocabulario y lo devuelve modificado: algunas palabras cambian de significado, otras nacen y unas cuantas, simplemente, dejan de usarse. Los lingüistas llaman a estas últimas *arcaísmos*, aunque el nombre engaña: una palabra no se vuelve vieja por el calendario, sino por la frecuencia. Mientras alguien la necesite, sigue viva.\n\n¿Por qué una palabra deja de ser necesaria? La causa más común es que desaparece la cosa que nombraba. Cuando los hogares cambiaron el fogón de leña por la estufa de gas, se fueron con él decenas de términos para sus partes y para la ceniza. La segunda causa es la competencia: dos palabras significan casi lo mismo y los hablantes, sin reunirse nunca para decidirlo, terminan prefiriendo una. La tercera es el prestigio: si una forma se asocia con el campo o con los mayores, los jóvenes de la ciudad la evitan, y lo que no se dice en la ciudad tarda poco en no decirse en ningún lado.\n\nLo curioso es que las palabras rara vez mueren del todo. Sobreviven en refranes, en apellidos, en nombres de lugares y, sobre todo, en los abuelos, que funcionan como archivos vivos. Por eso los diccionarios marcan una palabra como «desusada» con cautela: basta una canción exitosa o una serie de televisión para que vuelva a circular. El retiro de una palabra, a diferencia del de las personas, nunca es definitivo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes casos ejemplifica la tercera causa mencionada por el autor, el prestigio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una comunidad deja de nombrar las partes de una herramienta de labranza que ya no se fabrica.",
+        "correcta": false,
+        "explicacion": "Este caso corresponde a la primera causa: desaparece la cosa nombrada (como el fogón de leña) y con ella sus términos. No interviene la valoración social de la palabra.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el entorno rural con la causa del prestigio sin revisar cuál es el mecanismo descrito."
+      },
+      {
+        "clave": "B",
+        "texto": "Dos palabras para designar el mismo dulce coexisten durante años hasta que una de ellas se impone en las tiendas y en la publicidad.",
+        "correcta": false,
+        "explicacion": "Es la segunda causa, la competencia entre palabras que significan casi lo mismo. No hay ninguna asociación negativa con un grupo de hablantes.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la competencia entre sinónimos con el prestigio."
+      },
+      {
+        "clave": "C",
+        "texto": "Un estudiante de Bogotá deja de decir una palabra que aprendió de su abuela campesina porque sus compañeros se burlan.",
+        "correcta": true,
+        "explicacion": "El texto define el prestigio así: «si una forma se asocia con el campo o con los mayores, los jóvenes de la ciudad la evitan». La palabra de la abuela campesina evitada por burla de los compañeros urbanos cumple exactamente esa descripción.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Una palabra olvidada vuelve a usarse masivamente después de aparecer en el estribillo de una canción.",
+        "correcta": false,
+        "explicacion": "Este caso ilustra el tercer párrafo (las palabras pueden volver a circular gracias a una canción), no una causa de desuso. Es el fenómeno contrario al que se pregunta.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó un ejemplo del texto sin notar que corresponde al regreso de una palabra, no a su pérdida."
+      }
+    ],
+    "explicacion": "LEER: releo la definición de la tercera causa: «si una forma se asocia con el campo o con los mayores, los jóvenes de la ciudad la evitan». COMPRENDER: la pregunta pide relacionar esa idea con un caso externo que la ejemplifique. INTERPRETAR: el prestigio opera cuando los hablantes abandonan una palabra por la imagen social de quienes la usan. REPRESENTAR: causa 1 = sin referente; causa 2 = sinónimo rival; causa 3 = marca social negativa; regreso = canción o serie. RAZONAR: la herramienta sin fabricar es la causa 1; los dos nombres del dulce, la causa 2; la canción es el regreso descrito en el tercer párrafo. RESOLVER: la opción del estudiante que evita la palabra de su abuela campesina por la burla de sus compañeros. VERIFICAR: en ese caso aparecen los tres rasgos del texto: campo, mayores y jóvenes de la ciudad.",
+    "que_identificar": "La oración que define la tercera causa y sus tres elementos: campo, mayores y jóvenes de la ciudad.",
+    "que_revisar": "Transferir una idea del texto a casos nuevos, distinguiendo con precisión cada mecanismo descrito.",
+    "refuerzo_ids": [
+      "LC-154",
+      "LC-132"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T43",
+      "expositivo",
+      "lenguaje"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-157",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto discontinuo (boletín informativo con gráfico de líneas)",
+    "subtema": "Información explícita sobre las fases de un plan de ahorro",
+    "dificultad": 1,
+    "contexto": "**Boletín informativo n.º 14 · Empresa de Acueducto de Villanueva**\n\n**Estado del embalse La Cuchilla y medidas de ahorro**\n\nDurante el primer semestre, el nivel del embalse La Cuchilla, que abastece al 85 % de los hogares del municipio, descendió de manera sostenida por la reducción de las lluvias. La gráfica muestra el porcentaje de llenado al final de cada mes frente al nivel mínimo operativo del 40 %, por debajo del cual la planta de tratamiento no puede captar agua con normalidad.\n\nCuando el nivel baja del 50 %, la empresa activa la fase de *alerta*: campañas de ahorro voluntario y revisión de fugas en la red. Si cae por debajo del 45 %, pasa a la fase de *racionamiento preventivo*, con suspensión del servicio por sectores durante seis horas, dos días a la semana. La fase de *emergencia* se declara al llegar al mínimo operativo.\n\nGracias a las lluvias de junio y a la reducción del consumo, que bajó un 12 % respecto a mayo, el nivel se recuperó parcialmente. Sin embargo, la empresa recuerda que un solo mes de recuperación no garantiza el segundo semestre y pide a la comunidad mantener los hábitos de ahorro: cerrar la llave al cepillarse, reutilizar el agua de la lavadora para los pisos y reportar las fugas a la línea 116.\n\n*La próxima medición se publicará el último día de julio.*",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Nivel del embalse La Cuchilla al final de cada mes (porcentaje de llenado)",
+      "eje_x": "Mes",
+      "eje_y": "% de llenado",
+      "series": [
+        {
+          "nombre": "Nivel del embalse",
+          "valores": [
+            [
+              "Ene",
+              68
+            ],
+            [
+              "Feb",
+              61
+            ],
+            [
+              "Mar",
+              54
+            ],
+            [
+              "Abr",
+              48
+            ],
+            [
+              "May",
+              43
+            ],
+            [
+              "Jun",
+              51
+            ]
+          ]
+        },
+        {
+          "nombre": "Mínimo operativo",
+          "valores": [
+            [
+              "Ene",
+              40
+            ],
+            [
+              "Feb",
+              40
+            ],
+            [
+              "Mar",
+              40
+            ],
+            [
+              "Abr",
+              40
+            ],
+            [
+              "May",
+              40
+            ],
+            [
+              "Jun",
+              40
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Según el boletín, ¿qué ocurre cuando el nivel del embalse baja del 45 %?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se inician las campañas de ahorro voluntario y la revisión de fugas en la red de acueducto.",
+        "correcta": false,
+        "explicacion": "Esas son las medidas de la fase de alerta, que se activa al bajar del 50 %, no del 45 %. La pregunta se refiere al umbral siguiente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el umbral del 50 % con el del 45 % al leer las fases en orden."
+      },
+      {
+        "clave": "B",
+        "texto": "La planta de tratamiento deja de captar agua con normalidad por falta de nivel.",
+        "correcta": false,
+        "explicacion": "Eso ocurre por debajo del mínimo operativo del 40 %, según el primer párrafo; al 45 % la planta aún capta con normalidad.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el 45 % con el mínimo operativo, que es otro valor."
+      },
+      {
+        "clave": "C",
+        "texto": "Se declara la fase de emergencia y se publica una medición extraordinaria del embalse.",
+        "correcta": false,
+        "explicacion": "La emergencia se declara «al llegar al mínimo operativo» (40 %), y el boletín no menciona mediciones extraordinarias; solo anuncia la próxima medición mensual.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcló el umbral de emergencia con el racionamiento y añadió un dato ausente."
+      },
+      {
+        "clave": "D",
+        "texto": "Se suspende el servicio por sectores durante seis horas, dos días a la semana.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo lo establece: «Si cae por debajo del 45 %, pasa a la fase de racionamiento preventivo, con suspensión del servicio por sectores durante seis horas, dos días a la semana».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico en el segundo párrafo los tres umbrales: 50 %, 45 % y mínimo operativo (40 %). COMPRENDER: la pregunta pide la medida asociada a un umbral específico, el 45 %. INTERPRETAR: bajo el 50 % hay alerta (campañas y fugas); bajo el 45 %, racionamiento preventivo (cortes por sectores, seis horas, dos días a la semana); al 40 %, emergencia. REPRESENTAR: 50 → alerta; 45 → racionamiento; 40 → emergencia. RAZONAR: las campañas corresponden al 50 %, la planta deja de captar al 40 % y la emergencia también se declara al 40 %. RESOLVER: la opción de la suspensión del servicio por sectores. VERIFICAR: la frase «Si cae por debajo del 45 %» precede exactamente a esa medida.",
+    "que_identificar": "La oración «Si cae por debajo del 45 %, pasa a la fase de racionamiento preventivo, con suspensión del servicio por sectores durante seis horas, dos días a la semana».",
+    "que_revisar": "Localizar información explícita cuando el texto presenta varios umbrales o condiciones en secuencia.",
+    "refuerzo_ids": [
+      "LC-158",
+      "LC-109"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T44",
+      "discontinuo",
+      "boletin",
+      "lineas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-158",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo)",
+    "habilidad": "interpretar",
+    "tema": "Texto discontinuo (boletín informativo con gráfico de líneas)",
+    "subtema": "Relación entre las fases del texto y los valores del gráfico de líneas",
+    "dificultad": 2,
+    "contexto": "**Boletín informativo n.º 14 · Empresa de Acueducto de Villanueva**\n\n**Estado del embalse La Cuchilla y medidas de ahorro**\n\nDurante el primer semestre, el nivel del embalse La Cuchilla, que abastece al 85 % de los hogares del municipio, descendió de manera sostenida por la reducción de las lluvias. La gráfica muestra el porcentaje de llenado al final de cada mes frente al nivel mínimo operativo del 40 %, por debajo del cual la planta de tratamiento no puede captar agua con normalidad.\n\nCuando el nivel baja del 50 %, la empresa activa la fase de *alerta*: campañas de ahorro voluntario y revisión de fugas en la red. Si cae por debajo del 45 %, pasa a la fase de *racionamiento preventivo*, con suspensión del servicio por sectores durante seis horas, dos días a la semana. La fase de *emergencia* se declara al llegar al mínimo operativo.\n\nGracias a las lluvias de junio y a la reducción del consumo, que bajó un 12 % respecto a mayo, el nivel se recuperó parcialmente. Sin embargo, la empresa recuerda que un solo mes de recuperación no garantiza el segundo semestre y pide a la comunidad mantener los hábitos de ahorro: cerrar la llave al cepillarse, reutilizar el agua de la lavadora para los pisos y reportar las fugas a la línea 116.\n\n*La próxima medición se publicará el último día de julio.*",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Nivel del embalse La Cuchilla al final de cada mes (porcentaje de llenado)",
+      "eje_x": "Mes",
+      "eje_y": "% de llenado",
+      "series": [
+        {
+          "nombre": "Nivel del embalse",
+          "valores": [
+            [
+              "Ene",
+              68
+            ],
+            [
+              "Feb",
+              61
+            ],
+            [
+              "Mar",
+              54
+            ],
+            [
+              "Abr",
+              48
+            ],
+            [
+              "May",
+              43
+            ],
+            [
+              "Jun",
+              51
+            ]
+          ]
+        },
+        {
+          "nombre": "Mínimo operativo",
+          "valores": [
+            [
+              "Ene",
+              40
+            ],
+            [
+              "Feb",
+              40
+            ],
+            [
+              "Mar",
+              40
+            ],
+            [
+              "Abr",
+              40
+            ],
+            [
+              "May",
+              40
+            ],
+            [
+              "Jun",
+              40
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "De acuerdo con el texto y la gráfica, ¿en qué meses estuvo el municipio en fase de racionamiento preventivo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Solo en mayo, cuando el nivel quedó por debajo del 45 % pero por encima del mínimo operativo.",
+        "correcta": true,
+        "explicacion": "La gráfica muestra 43 % al final de mayo, el único valor entre 40 % y 45 %. Abril (48 %) corresponde a alerta y junio (51 %) está por encima de todos los umbrales. Por eso el racionamiento preventivo aplicó solo en mayo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "En abril y mayo, los dos meses en que el nivel estuvo por debajo del 50 % y la empresa aplicó medidas especiales.",
+        "correcta": false,
+        "explicacion": "Estar por debajo del 50 % activa la alerta, no el racionamiento. En abril el nivel fue 48 %, que supera el umbral del 45 % necesario para racionar.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el umbral de alerta (50 %) en lugar del de racionamiento (45 %)."
+      },
+      {
+        "clave": "C",
+        "texto": "En mayo y junio, hasta que las lluvias devolvieron el nivel por encima del 50 %.",
+        "correcta": false,
+        "explicacion": "Al final de junio la gráfica marca 51 %, por encima del 50 %; el texto además dice que el nivel «se recuperó parcialmente» ese mes. Junio no estuvo en racionamiento.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la recuperación de junio fue gradual y que el mes completo siguió en racionamiento."
+      },
+      {
+        "clave": "D",
+        "texto": "En ningún mes, porque el nivel nunca llegó al mínimo operativo del 40 %.",
+        "correcta": false,
+        "explicacion": "El mínimo operativo define la fase de emergencia, no el racionamiento preventivo, que se activa al bajar del 45 %; mayo cumplió esa condición.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el umbral de emergencia con el de racionamiento."
+      }
+    ],
+    "explicacion": "LEER: tomo los umbrales del texto (50 %, 45 %, 40 %) y los valores mensuales de la gráfica (68, 61, 54, 48, 43, 51). COMPRENDER: la pregunta pide cruzar ambos para identificar los meses de racionamiento preventivo. INTERPRETAR: racionamiento = nivel menor que 45 % y no menor que 40 %. REPRESENTAR: Ene-Mar > 50 (normal); Abr 48 (alerta); May 43 (racionamiento); Jun 51 (normal). RAZONAR: solo mayo cae en la franja de racionamiento; abril es alerta y junio ya superó el 50 %. RESOLVER: la opción que señala solo mayo. VERIFICAR: la línea del mínimo operativo (40 %) nunca es cruzada, lo que descarta la emergencia pero no el racionamiento.",
+    "que_identificar": "Los umbrales del segundo párrafo y los valores de abril (48 %), mayo (43 %) y junio (51 %) en la gráfica.",
+    "que_revisar": "Integrar condiciones escritas con los valores de un gráfico de líneas y distinguir umbrales cercanos.",
+    "refuerzo_ids": [
+      "LC-157",
+      "LC-117"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T44",
+      "discontinuo",
+      "boletin",
+      "lineas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-159",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto discontinuo (boletín informativo con gráfico de líneas)",
+    "subtema": "Validez de una conclusión causal a partir del boletín",
+    "dificultad": 3,
+    "contexto": "**Boletín informativo n.º 14 · Empresa de Acueducto de Villanueva**\n\n**Estado del embalse La Cuchilla y medidas de ahorro**\n\nDurante el primer semestre, el nivel del embalse La Cuchilla, que abastece al 85 % de los hogares del municipio, descendió de manera sostenida por la reducción de las lluvias. La gráfica muestra el porcentaje de llenado al final de cada mes frente al nivel mínimo operativo del 40 %, por debajo del cual la planta de tratamiento no puede captar agua con normalidad.\n\nCuando el nivel baja del 50 %, la empresa activa la fase de *alerta*: campañas de ahorro voluntario y revisión de fugas en la red. Si cae por debajo del 45 %, pasa a la fase de *racionamiento preventivo*, con suspensión del servicio por sectores durante seis horas, dos días a la semana. La fase de *emergencia* se declara al llegar al mínimo operativo.\n\nGracias a las lluvias de junio y a la reducción del consumo, que bajó un 12 % respecto a mayo, el nivel se recuperó parcialmente. Sin embargo, la empresa recuerda que un solo mes de recuperación no garantiza el segundo semestre y pide a la comunidad mantener los hábitos de ahorro: cerrar la llave al cepillarse, reutilizar el agua de la lavadora para los pisos y reportar las fugas a la línea 116.\n\n*La próxima medición se publicará el último día de julio.*",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Nivel del embalse La Cuchilla al final de cada mes (porcentaje de llenado)",
+      "eje_x": "Mes",
+      "eje_y": "% de llenado",
+      "series": [
+        {
+          "nombre": "Nivel del embalse",
+          "valores": [
+            [
+              "Ene",
+              68
+            ],
+            [
+              "Feb",
+              61
+            ],
+            [
+              "Mar",
+              54
+            ],
+            [
+              "Abr",
+              48
+            ],
+            [
+              "May",
+              43
+            ],
+            [
+              "Jun",
+              51
+            ]
+          ]
+        },
+        {
+          "nombre": "Mínimo operativo",
+          "valores": [
+            [
+              "Ene",
+              40
+            ],
+            [
+              "Feb",
+              40
+            ],
+            [
+              "Mar",
+              40
+            ],
+            [
+              "Abr",
+              40
+            ],
+            [
+              "May",
+              40
+            ],
+            [
+              "Jun",
+              40
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Un lector afirma: «El boletín demuestra que el ahorro de los hogares fue lo que salvó al embalse». ¿Qué debilidad tiene esta afirmación frente al texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El boletín niega de manera expresa que la reducción del consumo de los hogares haya tenido algún efecto medible sobre el nivel del embalse durante el mes de junio.",
+        "correcta": false,
+        "explicacion": "El boletín no lo niega: menciona la reducción del consumo del 12 % como uno de los factores de la recuperación. La debilidad del lector está en otra parte.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exageró la objeción hasta negar lo que el texto sí afirma."
+      },
+      {
+        "clave": "B",
+        "texto": "El boletín atribuye la recuperación a dos factores, las lluvias de junio y la reducción del consumo, sin indicar cuánto aportó cada uno.",
+        "correcta": true,
+        "explicacion": "El texto dice «Gracias a las lluvias de junio y a la reducción del consumo […] el nivel se recuperó parcialmente». El lector atribuye todo el mérito a uno de los dos factores, y además habla de «salvar» cuando el boletín habla de recuperación parcial y pide mantener el ahorro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El boletín señala que la recuperación se debió únicamente a la suspensión del servicio por sectores.",
+        "correcta": false,
+        "explicacion": "El texto no atribuye la recuperación a los cortes de servicio; menciona las lluvias y la reducción del consumo. Esta opción inventa una causa.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que la medida de racionamiento fue la causa de la recuperación, sin apoyo en el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "El boletín indica que el consumo aumentó un 12 % en junio, lo que contradice la idea de ahorro.",
+        "correcta": false,
+        "explicacion": "El texto dice que el consumo «bajó un 12 % respecto a mayo», no que aumentara. La opción invierte el dato.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el porcentaje sin fijarse en el verbo «bajó»."
+      }
+    ],
+    "explicacion": "LEER: ubico la explicación de la recuperación en el tercer párrafo. COMPRENDER: la pregunta pide evaluar la validez de una conclusión de un lector comparándola con lo que el texto afirma. INTERPRETAR: el boletín presenta dos causas unidas por «y» (lluvias de junio y reducción del consumo del 12 %), califica la recuperación de «parcial» y advierte que un mes no garantiza el semestre. REPRESENTAR: texto: lluvias + ahorro → recuperación parcial; lector: ahorro → embalse salvado. RAZONAR: el lector elimina una causa y exagera el resultado; las otras opciones atribuyen al boletín negaciones, causas o datos que no contiene. RESOLVER: la opción que señala los dos factores sin cuantificación. VERIFICAR: la expresión «Gracias a las lluvias de junio y a la reducción del consumo» confirma la doble causa.",
+    "que_identificar": "La oración «Gracias a las lluvias de junio y a la reducción del consumo, que bajó un 12 % respecto a mayo, el nivel se recuperó parcialmente».",
+    "que_revisar": "Evaluar conclusiones causales: detectar cuando se omite una causa mencionada o se exagera el efecto descrito.",
+    "refuerzo_ids": [
+      "LC-158",
+      "LC-118"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T44",
+      "discontinuo",
+      "boletin",
+      "lineas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-160",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "comprender",
+    "tema": "Texto discontinuo (boletín informativo con gráfico de líneas)",
+    "subtema": "Función del párrafo final de un boletín informativo",
+    "dificultad": 2,
+    "contexto": "**Boletín informativo n.º 14 · Empresa de Acueducto de Villanueva**\n\n**Estado del embalse La Cuchilla y medidas de ahorro**\n\nDurante el primer semestre, el nivel del embalse La Cuchilla, que abastece al 85 % de los hogares del municipio, descendió de manera sostenida por la reducción de las lluvias. La gráfica muestra el porcentaje de llenado al final de cada mes frente al nivel mínimo operativo del 40 %, por debajo del cual la planta de tratamiento no puede captar agua con normalidad.\n\nCuando el nivel baja del 50 %, la empresa activa la fase de *alerta*: campañas de ahorro voluntario y revisión de fugas en la red. Si cae por debajo del 45 %, pasa a la fase de *racionamiento preventivo*, con suspensión del servicio por sectores durante seis horas, dos días a la semana. La fase de *emergencia* se declara al llegar al mínimo operativo.\n\nGracias a las lluvias de junio y a la reducción del consumo, que bajó un 12 % respecto a mayo, el nivel se recuperó parcialmente. Sin embargo, la empresa recuerda que un solo mes de recuperación no garantiza el segundo semestre y pide a la comunidad mantener los hábitos de ahorro: cerrar la llave al cepillarse, reutilizar el agua de la lavadora para los pisos y reportar las fugas a la línea 116.\n\n*La próxima medición se publicará el último día de julio.*",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Nivel del embalse La Cuchilla al final de cada mes (porcentaje de llenado)",
+      "eje_x": "Mes",
+      "eje_y": "% de llenado",
+      "series": [
+        {
+          "nombre": "Nivel del embalse",
+          "valores": [
+            [
+              "Ene",
+              68
+            ],
+            [
+              "Feb",
+              61
+            ],
+            [
+              "Mar",
+              54
+            ],
+            [
+              "Abr",
+              48
+            ],
+            [
+              "May",
+              43
+            ],
+            [
+              "Jun",
+              51
+            ]
+          ]
+        },
+        {
+          "nombre": "Mínimo operativo",
+          "valores": [
+            [
+              "Ene",
+              40
+            ],
+            [
+              "Feb",
+              40
+            ],
+            [
+              "Mar",
+              40
+            ],
+            [
+              "Abr",
+              40
+            ],
+            [
+              "May",
+              40
+            ],
+            [
+              "Jun",
+              40
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál es la función del último párrafo del boletín, antes de la nota en cursiva?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Anunciar el fin de las fases de alerta y racionamiento gracias a la recuperación completa del embalse durante junio.",
+        "correcta": false,
+        "explicacion": "El párrafo habla de una recuperación «parcial» y pide mantener los hábitos de ahorro; no anuncia el fin de ninguna fase ni una recuperación completa.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la buena noticia de junio como el cierre del problema."
+      },
+      {
+        "clave": "B",
+        "texto": "Explicar el funcionamiento técnico de la planta de tratamiento durante la temporada seca.",
+        "correcta": false,
+        "explicacion": "La planta se menciona solo en el primer párrafo, para definir el mínimo operativo. El último párrafo no contiene explicaciones técnicas.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó al párrafo final un contenido que aparece al inicio del boletín."
+      },
+      {
+        "clave": "C",
+        "texto": "Reconocer la mejoría reciente y, a la vez, advertir que es insuficiente para abandonar las medidas de ahorro.",
+        "correcta": true,
+        "explicacion": "El párrafo tiene dos movimientos: primero informa de la recuperación por las lluvias y el menor consumo; luego, con «Sin embargo», advierte que «un solo mes de recuperación no garantiza el segundo semestre» y enumera hábitos que deben mantenerse.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Culpar a la comunidad por el descenso del nivel registrado durante el primer semestre.",
+        "correcta": false,
+        "explicacion": "El descenso se atribuye en el primer párrafo a «la reducción de las lluvias»; el último párrafo agradece implícitamente el ahorro y pide continuarlo, sin reproches.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó las recomendaciones como una acusación."
+      }
+    ],
+    "explicacion": "LEER: releo el tercer párrafo: recuperación parcial, «Sin embargo», advertencia y lista de hábitos. COMPRENDER: la pregunta pide la función de ese párrafo en la estructura del boletín. INTERPRETAR: el párrafo combina una noticia positiva con una advertencia y una petición; el conector «Sin embargo» marca el giro. REPRESENTAR: diagnóstico (párrafo 1) → fases (párrafo 2) → mejoría + advertencia + recomendaciones (párrafo 3). RAZONAR: no anuncia el fin de las fases, no explica la planta y no culpa a nadie: el descenso se atribuyó a las lluvias. RESOLVER: la opción que reúne reconocimiento de la mejoría y advertencia de que no basta. VERIFICAR: la palabra «parcialmente» y el conector «Sin embargo» sostienen la lectura.",
+    "que_identificar": "El conector «Sin embargo» y la frase «un solo mes de recuperación no garantiza el segundo semestre».",
+    "que_revisar": "Identificar la función de un párrafo a partir de sus conectores y de la relación entre sus partes.",
+    "refuerzo_ids": [
+      "LC-159",
+      "LC-144"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T44",
+      "discontinuo",
+      "boletin",
+      "lineas"
+    ],
+    "estado": "aprobada"
+  }
+]

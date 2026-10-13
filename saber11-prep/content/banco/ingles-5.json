@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "ING-065",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar un dato explícito (lugar) en un correo personal",
+    "dificultad": 1,
+    "contexto": "Read the text and answer the question.\n\n**From:** Hannah Weber\n**To:** Lukas Weber\n**Subject:** My first month in Medellín\n\nHi Lukas,\n\nI can't believe I have been in Medellín for a month already! My host family, the Restrepos, live in Envigado, a quiet area in the south of the city. Doña Marta, my host mother, makes arepas every morning, and her son Julián takes me to school on the metro. The trip takes forty minutes, but I don't mind because I practise my Spanish with him.\n\nSchool is harder than I expected. All my classes are in Spanish, and in chemistry I understand maybe half of what the teacher says. My classmates are really patient, though. A girl called Valentina lends me her notes after every class, and I help her with her English homework.\n\nLast weekend we went to Guatapé. We climbed the more than 700 steps of El Peñol, and I had to stop three times! At the top it was cold and windy, but the view of the lake was worth it.\n\nI miss you and Mom, but I'm not homesick yet. Write soon!\n\nLove,\nHannah",
+    "estimulo": null,
+    "enunciado": "Where does Hannah's host family live?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "In Guatapé, near a lake.",
+        "correcta": false,
+        "explicacion": "Guatapé y el lago aparecen en el párrafo del paseo de fin de semana (\"Last weekend we went to Guatapé\"); no es el lugar donde vive la familia.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un lugar que sí aparece en el texto, pero en otro párrafo y con otra función."
+      },
+      {
+        "clave": "B",
+        "texto": "In Envigado, in the south of the city.",
+        "correcta": true,
+        "explicacion": "Hannah escribe: \"My host family, the Restrepos, live in Envigado, a quiet area in the south of the city\". Es un dato explícito del primer párrafo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "In the center of Medellín.",
+        "correcta": false,
+        "explicacion": "El texto dice \"in the south of the city\", no en el centro. Quien elige esta opción asumió que, por decir \"Medellín\", la familia vive en el centro, sin leer la ubicación exacta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso la ubicación sin leer \"in the south of the city\"."
+      },
+      {
+        "clave": "D",
+        "texto": "Next to Hannah's school.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: el viaje a la escuela en metro dura cuarenta minutos (\"The trip takes forty minutes\"), así que la casa no queda al lado del colegio.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Imaginó un dato que el texto no da y que además contradice el tiempo de viaje."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo del correo presenta a la familia anfitriona. COMPRENDER: la pregunta pide un lugar (Where) relacionado con \"host family\". INTERPRETAR: \"live in Envigado, a quiet area in the south of the city\" responde directamente. REPRESENTAR: familia Restrepo → Envigado (sur); fin de semana → Guatapé. RAZONAR: A mezcla el paseo con la vivienda; C contradice \"south\"; D choca con los cuarenta minutos de viaje. RESOLVER: la opción B. VERIFICAR: la oración con \"live\" es la única que habla de dónde vive la familia.",
+    "que_identificar": "La oración \"My host family, the Restrepos, live in Envigado, a quiet area in the south of the city\".",
+    "que_revisar": "Buscar en el texto la palabra clave de la pregunta (live) y no confundir lugares mencionados con otra función (lugares visitados).",
+    "refuerzo_ids": [
+      "ING-066",
+      "ING-070"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "lugares",
+      "texto:ING-T10",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-066",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar quién hace qué (medio de transporte y acompañante)",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**From:** Hannah Weber\n**To:** Lukas Weber\n**Subject:** My first month in Medellín\n\nHi Lukas,\n\nI can't believe I have been in Medellín for a month already! My host family, the Restrepos, live in Envigado, a quiet area in the south of the city. Doña Marta, my host mother, makes arepas every morning, and her son Julián takes me to school on the metro. The trip takes forty minutes, but I don't mind because I practise my Spanish with him.\n\nSchool is harder than I expected. All my classes are in Spanish, and in chemistry I understand maybe half of what the teacher says. My classmates are really patient, though. A girl called Valentina lends me her notes after every class, and I help her with her English homework.\n\nLast weekend we went to Guatapé. We climbed the more than 700 steps of El Peñol, and I had to stop three times! At the top it was cold and windy, but the view of the lake was worth it.\n\nI miss you and Mom, but I'm not homesick yet. Write soon!\n\nLove,\nHannah",
+    "estimulo": null,
+    "enunciado": "How does Hannah usually get to school?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Doña Marta drives her there.",
+        "correcta": false,
+        "explicacion": "Doña Marta aparece en la misma oración, pero lo que hace es preparar arepas (\"makes arepas every morning\"). El sujeto de \"takes me to school\" es \"her son Julián\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asignó la acción al primer personaje de la oración y no al sujeto correcto."
+      },
+      {
+        "clave": "B",
+        "texto": "She walks for forty minutes.",
+        "correcta": false,
+        "explicacion": "Los \"forty minutes\" son la duración del viaje en metro, no de una caminata. El texto no dice que Hannah camine.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el número del texto y lo pegó a otra acción."
+      },
+      {
+        "clave": "C",
+        "texto": "She goes by metro with Julián.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"her son Julián takes me to school on the metro\". Julián es el hijo de Doña Marta y el medio es el metro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Valentina takes her by bus.",
+        "correcta": false,
+        "explicacion": "Valentina es una compañera del colegio que le presta apuntes; no la lleva a ninguna parte, y el texto no menciona bus.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió a los personajes o respondió de memoria sin volver al párrafo del transporte."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo menciona a Doña Marta, a Julián, el metro y los cuarenta minutos. COMPRENDER: se pregunta el medio (How) y, en las opciones, quién acompaña. INTERPRETAR: \"her son Julián takes me to school on the metro\" = Julián la lleva en metro. REPRESENTAR: Doña Marta → arepas; Julián → metro al colegio; 40 minutos → duración del viaje. RAZONAR: A cambia el sujeto; B usa el número con otra acción; D trae a un personaje de otro párrafo. RESOLVER: la opción C. VERIFICAR: medio (metro) y acompañante (Julián) coinciden con el texto.",
+    "que_identificar": "La oración \"her son Julián takes me to school on the metro\" y a quién se refiere \"her son\".",
+    "que_revisar": "Identificar el sujeto de cada verbo en oraciones con dos personas unidas por \"and\".",
+    "refuerzo_ids": [
+      "ING-065",
+      "ING-067"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "transporte",
+      "texto:ING-T10",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-067",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la distingue de afirmaciones que lo contradicen",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Distinguir quién ayuda a quién; falso cognado notes/notas",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**From:** Hannah Weber\n**To:** Lukas Weber\n**Subject:** My first month in Medellín\n\nHi Lukas,\n\nI can't believe I have been in Medellín for a month already! My host family, the Restrepos, live in Envigado, a quiet area in the south of the city. Doña Marta, my host mother, makes arepas every morning, and her son Julián takes me to school on the metro. The trip takes forty minutes, but I don't mind because I practise my Spanish with him.\n\nSchool is harder than I expected. All my classes are in Spanish, and in chemistry I understand maybe half of what the teacher says. My classmates are really patient, though. A girl called Valentina lends me her notes after every class, and I help her with her English homework.\n\nLast weekend we went to Guatapé. We climbed the more than 700 steps of El Peñol, and I had to stop three times! At the top it was cold and windy, but the view of the lake was worth it.\n\nI miss you and Mom, but I'm not homesick yet. Write soon!\n\nLove,\nHannah",
+    "estimulo": null,
+    "enunciado": "What does Valentina do for Hannah?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She lends Hannah her notes after every class.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"A girl called Valentina lends me her notes after every class\". \"Lend\" = prestar; \"notes\" = apuntes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "She shows Hannah her grades after every class.",
+        "correcta": false,
+        "explicacion": "\"Notes\" en este contexto son los apuntes de clase, no las notas o calificaciones (que en inglés serían \"grades\" o \"marks\"). Es un falso cognado.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"notes\" como \"notas\" (calificaciones) por parecido con el español."
+      },
+      {
+        "clave": "C",
+        "texto": "She helps Hannah with her English homework.",
+        "correcta": false,
+        "explicacion": "La ayuda con la tarea de inglés va en sentido contrario: \"I help her with her English homework\" = Hannah ayuda a Valentina. El sujeto \"I\" es Hannah.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No identificó a quién se refieren \"I\" y \"her\" en la oración."
+      },
+      {
+        "clave": "D",
+        "texto": "She explains every chemistry class to Hannah.",
+        "correcta": false,
+        "explicacion": "El texto dice que Hannah entiende la mitad de química y que Valentina le presta apuntes, pero no que le explique cada clase. Es inferir más de lo dicho.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Unió la dificultad en química con la ayuda de Valentina y agregó información."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo habla de las clases y de Valentina. COMPRENDER: se pregunta qué hace Valentina POR Hannah, no al revés. INTERPRETAR: \"Valentina lends me her notes\" (me = Hannah) y \"I help her with her English homework\" (I = Hannah, her = Valentina). REPRESENTAR: Valentina → Hannah: apuntes; Hannah → Valentina: inglés. RAZONAR: B cae en el falso cognado notes/notas; C invierte la dirección de la ayuda; D agrega algo no dicho. RESOLVER: la opción A. VERIFICAR: la opción conserva el verbo \"lend\" y el momento \"after every class\".",
+    "que_identificar": "Los pronombres \"me\", \"I\" y \"her\" en las dos oraciones sobre Valentina, y el significado de \"notes\".",
+    "que_revisar": "Referentes de pronombres (I, me, her) y falsos cognados frecuentes: notes (apuntes) ≠ notas (grades).",
+    "refuerzo_ids": [
+      "ING-066",
+      "ING-077"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "pronombres",
+      "falsos_cognados",
+      "texto:ING-T10",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-068",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir una experiencia a partir de detalles (esfuerzo físico)",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**From:** Hannah Weber\n**To:** Lukas Weber\n**Subject:** My first month in Medellín\n\nHi Lukas,\n\nI can't believe I have been in Medellín for a month already! My host family, the Restrepos, live in Envigado, a quiet area in the south of the city. Doña Marta, my host mother, makes arepas every morning, and her son Julián takes me to school on the metro. The trip takes forty minutes, but I don't mind because I practise my Spanish with him.\n\nSchool is harder than I expected. All my classes are in Spanish, and in chemistry I understand maybe half of what the teacher says. My classmates are really patient, though. A girl called Valentina lends me her notes after every class, and I help her with her English homework.\n\nLast weekend we went to Guatapé. We climbed the more than 700 steps of El Peñol, and I had to stop three times! At the top it was cold and windy, but the view of the lake was worth it.\n\nI miss you and Mom, but I'm not homesick yet. Write soon!\n\nLove,\nHannah",
+    "estimulo": null,
+    "enunciado": "What can we infer about Hannah's climb up El Peñol?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She did not enjoy the trip at all.",
+        "correcta": false,
+        "explicacion": "Contradice \"the view of the lake was worth it\". Que la subida fuera difícil no significa que no le gustara.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasó de \"fue difícil\" a \"no le gustó\", sin leer la valoración final."
+      },
+      {
+        "clave": "B",
+        "texto": "The weather at the top was hot and sunny.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: \"At the top it was cold and windy\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó con cuidado los adjetivos del clima o confundió \"windy\" con otra palabra."
+      },
+      {
+        "clave": "C",
+        "texto": "She climbed the steps alone.",
+        "correcta": false,
+        "explicacion": "El texto usa \"we went\" y \"We climbed\", es decir, subió acompañada.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No atendió al pronombre \"we\"."
+      },
+      {
+        "clave": "D",
+        "texto": "It was physically hard for her, but she thought it was worth it.",
+        "correcta": true,
+        "explicacion": "Tener que detenerse tres veces (\"I had to stop three times!\") indica que la subida fue exigente; y \"the view of the lake was worth it\" muestra que valió la pena.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo cuenta el paseo a Guatapé. COMPRENDER: la pregunta pide inferir (infer), es decir, sacar una conclusión que se apoya en detalles. INTERPRETAR: \"I had to stop three times!\" → cansancio; \"cold and windy, but the view... was worth it\" → dificultad compensada. REPRESENTAR: esfuerzo (paradas) + valoración positiva (worth it). RAZONAR: A ignora \"worth it\"; B contradice \"cold and windy\"; C ignora \"we\". RESOLVER: la opción D. VERIFICAR: cada parte de la opción tiene respaldo en una frase del texto.",
+    "que_identificar": "Las frases \"I had to stop three times!\" y \"but the view of the lake was worth it\".",
+    "que_revisar": "Cómo sacar inferencias apoyadas en detalles concretos y el valor de \"but\" para introducir una valoración contraria.",
+    "refuerzo_ids": [
+      "ING-069",
+      "ING-073"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "texto:ING-T10",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-069",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Interpreta la intención o la opinión expresada por una voz del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar un sentimiento expresado con \"not... yet\"",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**From:** Hannah Weber\n**To:** Lukas Weber\n**Subject:** My first month in Medellín\n\nHi Lukas,\n\nI can't believe I have been in Medellín for a month already! My host family, the Restrepos, live in Envigado, a quiet area in the south of the city. Doña Marta, my host mother, makes arepas every morning, and her son Julián takes me to school on the metro. The trip takes forty minutes, but I don't mind because I practise my Spanish with him.\n\nSchool is harder than I expected. All my classes are in Spanish, and in chemistry I understand maybe half of what the teacher says. My classmates are really patient, though. A girl called Valentina lends me her notes after every class, and I help her with her English homework.\n\nLast weekend we went to Guatapé. We climbed the more than 700 steps of El Peñol, and I had to stop three times! At the top it was cold and windy, but the view of the lake was worth it.\n\nI miss you and Mom, but I'm not homesick yet. Write soon!\n\nLove,\nHannah",
+    "estimulo": null,
+    "enunciado": "What does Hannah mean when she writes \"I miss you and Mom, but I'm not homesick yet\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She is ill and needs to go to the doctor.",
+        "correcta": false,
+        "explicacion": "\"Homesick\" no tiene que ver con estar enfermo: es nostalgia del hogar. Quien elige esta opción tomó solo la parte \"sick\" de la palabra.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"homesick\" por la palabra \"sick\" (enfermo) sin conocer la expresión."
+      },
+      {
+        "clave": "B",
+        "texto": "She thinks about her family, but so far she is not sad about being far from home.",
+        "correcta": true,
+        "explicacion": "\"Homesick\" significa sentir nostalgia o tristeza por estar lejos de casa. \"Not... yet\" = todavía no. Hannah extraña a su familia (\"I miss you and Mom\"), pero hasta ahora no siente esa tristeza.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "She wants to go back home soon.",
+        "correcta": false,
+        "explicacion": "El texto no dice que quiera volver; al contrario, dice que no siente nostalgia todavía. Es inferir más de lo dicho a partir de \"I miss you\".",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió \"te extraño\" en \"quiero regresar\"."
+      },
+      {
+        "clave": "D",
+        "texto": "She does not miss her family at all.",
+        "correcta": false,
+        "explicacion": "Contradice la primera parte de la oración: \"I miss you and Mom\". No confundir extrañar (miss) con sentir nostalgia intensa (homesick).",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Aplicó la negación de \"not homesick\" a toda la oración."
+      }
+    ],
+    "explicacion": "LEER: la oración final del correo tiene dos partes unidas por \"but\". COMPRENDER: se pide el significado de lo que Hannah quiere decir. INTERPRETAR: \"I miss you and Mom\" = extraña a su familia; \"I'm not homesick yet\" = todavía no siente nostalgia de casa. REPRESENTAR: extrañar ✔ / tristeza por estar lejos ✘ (por ahora). RAZONAR: A lee \"sick\" como enfermedad; C agrega un deseo de volver; D niega \"I miss you\". RESOLVER: la opción B. VERIFICAR: la opción conserva el contraste de \"but\" y el \"so far\" equivale a \"yet\".",
+    "que_identificar": "El contraste \"I miss you... but I'm not homesick yet\" y el significado de \"homesick\" y \"yet\".",
+    "que_revisar": "Palabras compuestas cuyo sentido no es la suma de las partes (homesick) y el uso de \"not... yet\" (todavía no).",
+    "refuerzo_ids": [
+      "ING-068",
+      "ING-074"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "vocabulario",
+      "texto:ING-T10",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-070",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar la causa explícita de un hecho (origen de la idea)",
+    "dificultad": 1,
+    "contexto": "Read the text and answer the question.\n\n**Saving Food, One Click at a Time**\n\nEvery evening, bakeries and restaurants in Bogotá throw away food that is still good to eat. An app called RescaFood wants to change that. It was created in 2024 by three university students, Camila, Andrés and Sofía, after Camila saw a bakery near her house putting bags of fresh bread in the rubbish.\n\nThe idea is simple. Shops that have food left at the end of the day publish a \"surprise bag\" on the app. Users pay about half the normal price and collect the bag before closing time. They don't know exactly what they will get, but many users say that is part of the fun.\n\nSo far, more than 300 businesses have joined, and the app says it has saved 40 tonnes of food. However, not everyone is happy. Some shop owners complain that customers now wait for the cheap bags in the evening instead of buying at full price in the morning.\n\nThe students are now working on a new function: food that nobody buys will be donated to community kitchens. \"Our goal is not to sell more,\" says Andrés. \"It is to waste less.\"",
+    "estimulo": null,
+    "enunciado": "What gave Camila the idea for the app?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She saw a bakery near her house throwing away fresh bread.",
+        "correcta": true,
+        "explicacion": "El texto dice que la app se creó \"after Camila saw a bakery near her house putting bags of fresh bread in the rubbish\" (poner pan fresco en la basura = botarlo).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "She worked in a restaurant that wasted food.",
+        "correcta": false,
+        "explicacion": "El texto menciona restaurantes en general, pero no dice que Camila trabajara en uno. Es agregar información.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la palabra \"restaurants\" del primer renglón para inventar un dato sobre Camila."
+      },
+      {
+        "clave": "C",
+        "texto": "She could not afford to buy bread.",
+        "correcta": false,
+        "explicacion": "Nada en el texto habla del dinero de Camila; el pan estaba en la basura de una panadería, no fuera de su alcance.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relacionó el precio bajo de la app con una necesidad personal que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "She visited a community kitchen with no food.",
+        "correcta": false,
+        "explicacion": "Los \"community kitchens\" aparecen al final, como destino de una función futura; no tienen que ver con el origen de la idea.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un elemento del último párrafo y lo puso como causa."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo cuenta cómo nació la app. COMPRENDER: se pregunta qué le dio la idea a Camila (causa). INTERPRETAR: \"after Camila saw a bakery... putting bags of fresh bread in the rubbish\" marca el hecho que la originó; \"rubbish\" = basura. REPRESENTAR: panadería bota pan fresco → Camila → app. RAZONAR: B y C agregan datos sobre Camila; D mueve un elemento del final. RESOLVER: la opción A. VERIFICAR: la opción parafrasea \"putting... in the rubbish\" como \"throwing away\".",
+    "que_identificar": "La cláusula \"after Camila saw a bakery near her house putting bags of fresh bread in the rubbish\".",
+    "que_revisar": "Reconocer paráfrasis (put in the rubbish = throw away) y conectores de tiempo que marcan origen (after).",
+    "refuerzo_ids": [
+      "ING-071",
+      "ING-065"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "causa",
+      "texto:ING-T11",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-071",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la distingue de afirmaciones que lo contradicen",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Distinguir información explícita de afirmaciones que la contradicen",
+    "dificultad": 1,
+    "contexto": "Read the text and answer the question.\n\n**Saving Food, One Click at a Time**\n\nEvery evening, bakeries and restaurants in Bogotá throw away food that is still good to eat. An app called RescaFood wants to change that. It was created in 2024 by three university students, Camila, Andrés and Sofía, after Camila saw a bakery near her house putting bags of fresh bread in the rubbish.\n\nThe idea is simple. Shops that have food left at the end of the day publish a \"surprise bag\" on the app. Users pay about half the normal price and collect the bag before closing time. They don't know exactly what they will get, but many users say that is part of the fun.\n\nSo far, more than 300 businesses have joined, and the app says it has saved 40 tonnes of food. However, not everyone is happy. Some shop owners complain that customers now wait for the cheap bags in the evening instead of buying at full price in the morning.\n\nThe students are now working on a new function: food that nobody buys will be donated to community kitchens. \"Our goal is not to sell more,\" says Andrés. \"It is to waste less.\"",
+    "estimulo": null,
+    "enunciado": "Which sentence about the \"surprise bag\" is TRUE according to the text?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Users can choose exactly what goes inside it.",
+        "correcta": false,
+        "explicacion": "Contradice \"They don't know exactly what they will get\": por eso se llama bolsa sorpresa.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la oración que explica por qué es \"sorpresa\"."
+      },
+      {
+        "clave": "B",
+        "texto": "The shop sends it to the user's house.",
+        "correcta": false,
+        "explicacion": "\"Collect the bag\" significa que el usuario va a recogerla; el texto no habla de envíos a domicilio.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"collect\" como \"recibir\" o pensó en el modelo de las apps de domicilios."
+      },
+      {
+        "clave": "C",
+        "texto": "Users pay about half the price and pick it up before the shop closes.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"Users pay about half the normal price and collect the bag before closing time\". \"Collect\" = recoger (pick up).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "It is free for university students.",
+        "correcta": false,
+        "explicacion": "Los universitarios son los creadores de la app, no usuarios con descuento; además, la bolsa cuesta \"about half the normal price\".",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcló a los creadores (university students) con los beneficios de la app."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo explica cómo funciona la bolsa sorpresa. COMPRENDER: se busca la única afirmación VERDADERA. INTERPRETAR: \"pay about half the normal price\" = mitad de precio; \"collect the bag before closing time\" = recogerla antes de que cierren; \"They don't know exactly what they will get\" = no eligen. REPRESENTAR: precio (½) + recogida (antes del cierre) + contenido (sorpresa). RAZONAR: A contradice la sorpresa; B cambia \"collect\" por envío; D confunde creadores con usuarios. RESOLVER: la opción C. VERIFICAR: las dos partes de la opción aparecen en la misma oración del texto.",
+    "que_identificar": "Las oraciones \"Users pay about half the normal price and collect the bag before closing time\" y \"They don't know exactly what they will get\".",
+    "que_revisar": "Verificar cada parte de una opción contra el texto; vocabulario: collect (recoger), closing time (hora de cierre).",
+    "refuerzo_ids": [
+      "ING-070",
+      "ING-072"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "compras",
+      "texto:ING-T11",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-072",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar un plan futuro descrito en el texto",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**Saving Food, One Click at a Time**\n\nEvery evening, bakeries and restaurants in Bogotá throw away food that is still good to eat. An app called RescaFood wants to change that. It was created in 2024 by three university students, Camila, Andrés and Sofía, after Camila saw a bakery near her house putting bags of fresh bread in the rubbish.\n\nThe idea is simple. Shops that have food left at the end of the day publish a \"surprise bag\" on the app. Users pay about half the normal price and collect the bag before closing time. They don't know exactly what they will get, but many users say that is part of the fun.\n\nSo far, more than 300 businesses have joined, and the app says it has saved 40 tonnes of food. However, not everyone is happy. Some shop owners complain that customers now wait for the cheap bags in the evening instead of buying at full price in the morning.\n\nThe students are now working on a new function: food that nobody buys will be donated to community kitchens. \"Our goal is not to sell more,\" says Andrés. \"It is to waste less.\"",
+    "estimulo": null,
+    "enunciado": "What will the new function of the app do?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sell the bags at full price in the morning.",
+        "correcta": false,
+        "explicacion": "Las compras \"at full price in the morning\" aparecen en la queja de los dueños de tiendas; no son la nueva función.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó una frase del párrafo anterior y la asoció a \"new function\"."
+      },
+      {
+        "clave": "B",
+        "texto": "Give money to community kitchens.",
+        "correcta": false,
+        "explicacion": "Lo que se dona es comida (\"food that nobody buys\"), no dinero. La opción conserva \"community kitchens\" pero cambia el objeto.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"donated\" y supuso que se trataba de dinero."
+      },
+      {
+        "clave": "C",
+        "texto": "Let shop owners complain about customers.",
+        "correcta": false,
+        "explicacion": "Las quejas de los dueños son un problema actual que describe el texto, no una función de la app.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió un hecho del texto (las quejas) con la función que se está desarrollando."
+      },
+      {
+        "clave": "D",
+        "texto": "Give food that nobody buys to community kitchens.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"food that nobody buys will be donated to community kitchens\". \"Donate\" = donar, regalar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el último párrafo presenta la nueva función. COMPRENDER: la pregunta usa \"will\", así que busca un plan futuro. INTERPRETAR: \"food that nobody buys will be donated to community kitchens\" = la comida que no se venda se donará a comedores comunitarios. REPRESENTAR: comida no vendida → comedores comunitarios. RAZONAR: A y C usan detalles del párrafo de las quejas; B cambia comida por dinero. RESOLVER: la opción D. VERIFICAR: el texto usa la misma estructura futura (will be donated) que la pregunta (will... do).",
+    "que_identificar": "La oración \"food that nobody buys will be donated to community kitchens\".",
+    "que_revisar": "Voz pasiva en futuro (will be donated) y ubicar en qué párrafo está la respuesta según el tiempo verbal de la pregunta.",
+    "refuerzo_ids": [
+      "ING-071",
+      "ING-074"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "alimentos",
+      "texto:ING-T11",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-073",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir la causa de una queja",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**Saving Food, One Click at a Time**\n\nEvery evening, bakeries and restaurants in Bogotá throw away food that is still good to eat. An app called RescaFood wants to change that. It was created in 2024 by three university students, Camila, Andrés and Sofía, after Camila saw a bakery near her house putting bags of fresh bread in the rubbish.\n\nThe idea is simple. Shops that have food left at the end of the day publish a \"surprise bag\" on the app. Users pay about half the normal price and collect the bag before closing time. They don't know exactly what they will get, but many users say that is part of the fun.\n\nSo far, more than 300 businesses have joined, and the app says it has saved 40 tonnes of food. However, not everyone is happy. Some shop owners complain that customers now wait for the cheap bags in the evening instead of buying at full price in the morning.\n\nThe students are now working on a new function: food that nobody buys will be donated to community kitchens. \"Our goal is not to sell more,\" says Andrés. \"It is to waste less.\"",
+    "estimulo": null,
+    "enunciado": "Why are some shop owners probably unhappy with the app?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The app charges them too much money.",
+        "correcta": false,
+        "explicacion": "El texto no habla de lo que la app les cobra a los negocios. Es una causa inventada que suena razonable.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió con una razón común para quejarse de una app, no con la del texto."
+      },
+      {
+        "clave": "B",
+        "texto": "They may sell fewer products at the normal price.",
+        "correcta": true,
+        "explicacion": "Si los clientes \"wait for the cheap bags in the evening instead of buying at full price in the morning\", las tiendas venden menos a precio completo y ganan menos. Es la consecuencia lógica de la queja.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Customers complain about the surprise bags.",
+        "correcta": false,
+        "explicacion": "Quienes se quejan son los dueños (\"Some shop owners complain\"), no los clientes; los usuarios, de hecho, dicen que la sorpresa es \"part of the fun\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cambió el sujeto de \"complain\"."
+      },
+      {
+        "clave": "D",
+        "texto": "They have to throw away more food than before.",
+        "correcta": false,
+        "explicacion": "Es lo opuesto al efecto de la app, que ha salvado \"40 tonnes of food\". La queja es por dinero, no por desperdicio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No relacionó la queja con el precio (full price vs. cheap bags)."
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo introduce el problema con \"However, not everyone is happy\". COMPRENDER: \"probably\" indica que hay que inferir la razón. INTERPRETAR: los clientes esperan las bolsas baratas de la noche en vez de comprar a precio completo por la mañana. REPRESENTAR: antes: compra a precio completo → ahora: compra barata → menos ingresos. RAZONAR: A inventa un cobro; C cambia quién se queja; D contradice las 40 toneladas salvadas. RESOLVER: la opción B. VERIFICAR: la opción se deduce directamente de \"instead of buying at full price\".",
+    "que_identificar": "La queja \"customers now wait for the cheap bags in the evening instead of buying at full price in the morning\".",
+    "que_revisar": "Inferir consecuencias a partir de \"instead of\" y del contraste que introduce \"However\".",
+    "refuerzo_ids": [
+      "ING-074",
+      "ING-068"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "causa",
+      "texto:ING-T11",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-074",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Interpreta la intención o la opinión expresada por una voz del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar la intención de una voz citada",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Saving Food, One Click at a Time**\n\nEvery evening, bakeries and restaurants in Bogotá throw away food that is still good to eat. An app called RescaFood wants to change that. It was created in 2024 by three university students, Camila, Andrés and Sofía, after Camila saw a bakery near her house putting bags of fresh bread in the rubbish.\n\nThe idea is simple. Shops that have food left at the end of the day publish a \"surprise bag\" on the app. Users pay about half the normal price and collect the bag before closing time. They don't know exactly what they will get, but many users say that is part of the fun.\n\nSo far, more than 300 businesses have joined, and the app says it has saved 40 tonnes of food. However, not everyone is happy. Some shop owners complain that customers now wait for the cheap bags in the evening instead of buying at full price in the morning.\n\nThe students are now working on a new function: food that nobody buys will be donated to community kitchens. \"Our goal is not to sell more,\" says Andrés. \"It is to waste less.\"",
+    "estimulo": null,
+    "enunciado": "What does Andrés mean when he says \"Our goal is not to sell more. It is to waste less\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The main purpose of the app is to reduce waste, not to make more money.",
+        "correcta": true,
+        "explicacion": "Andrés contrapone dos metas: vender más (not) y desperdiciar menos (is). Por eso la nueva función regala la comida en vez de venderla. La opción A recoge esa intención.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "The app will stop selling surprise bags.",
+        "correcta": false,
+        "explicacion": "Andrés no dice que dejarán de vender; dice que vender más no es el objetivo principal. Es una lectura demasiado literal de \"not to sell\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó la negación como el fin de las ventas."
+      },
+      {
+        "clave": "C",
+        "texto": "The app has not been successful with its sales.",
+        "correcta": false,
+        "explicacion": "El texto muestra lo contrario: más de 300 negocios y 40 toneladas salvadas. La frase habla de metas, no de resultados.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una declaración de propósito con una evaluación de resultados."
+      },
+      {
+        "clave": "D",
+        "texto": "Shops should produce less food every day.",
+        "correcta": false,
+        "explicacion": "La cita dice \"waste less\" (desperdiciar menos), no \"produce less\" (producir menos). Es ir más allá de lo que dice.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asumió una solución que el texto no propone."
+      }
+    ],
+    "explicacion": "LEER: la cita de Andrés cierra el artículo, justo después de anunciar las donaciones. COMPRENDER: se pregunta qué quiere decir, es decir, su intención. INTERPRETAR: \"not to sell more\" / \"to waste less\" contrapone ganancia y desperdicio; la meta es la segunda. REPRESENTAR: vender más ✘ → desperdiciar menos ✔. RAZONAR: B toma la negación literalmente; C habla de resultados, no de metas; D cambia \"waste\" por \"produce\". RESOLVER: la opción A. VERIFICAR: la intención coincide con la nueva función de donar lo que no se vende.",
+    "que_identificar": "El contraste \"not to sell more\" / \"to waste less\" y su relación con la función de donación.",
+    "que_revisar": "Interpretar citas en su contexto y distinguir metas (goal) de resultados.",
+    "refuerzo_ids": [
+      "ING-073",
+      "ING-069"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "opinion",
+      "texto:ING-T11",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-075",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/11",
+      "anio": 2026,
+      "texto_autor": "Lewis Carroll",
+      "texto_titulo": "Alice's Adventures in Wonderland"
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una razón explícita en un texto narrativo",
+    "dificultad": 1,
+    "contexto": "**Adapted from _Alice's Adventures in Wonderland_ by Lewis Carroll (1865), public domain. Source: https://www.gutenberg.org/ebooks/11**\n\nRead the text and answer the question.\n\n**Down the Rabbit-Hole**\n\nAlice was sitting by her sister on the river bank, and she was beginning to get very tired of having nothing to do. Once or twice she had looked into the book her sister was reading, but it had no pictures or conversations in it. \"And what is the use of a book without pictures or conversations?\" thought Alice.\n\nIt was a hot day, and Alice felt sleepy. Suddenly a White Rabbit with pink eyes ran close by her. There was nothing very strange in that, and Alice did not think it was very unusual to hear the Rabbit say to itself, \"Oh dear! Oh dear! I shall be late!\" But when the Rabbit took a watch out of its waistcoat pocket, looked at it, and then hurried on, Alice jumped to her feet. She had never before seen a rabbit with a pocket, or with a watch to take out of it.\n\nFull of curiosity, she ran across the field after it, just in time to see it go down a large rabbit-hole under the hedge. A moment later, down went Alice after it, never once thinking how she was going to get out again.",
+    "estimulo": null,
+    "enunciado": "Why didn't Alice like her sister's book?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "It was too difficult for her to read.",
+        "correcta": false,
+        "explicacion": "El texto no habla de la dificultad del libro. Es una razón razonable, pero no es la que da el texto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió con una razón común para que no guste un libro, no con la del texto."
+      },
+      {
+        "clave": "B",
+        "texto": "It was a book about rabbits.",
+        "correcta": false,
+        "explicacion": "El conejo aparece después y no tiene relación con el libro de la hermana.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó dos elementos del texto que no están conectados."
+      },
+      {
+        "clave": "C",
+        "texto": "Her sister did not let her read it.",
+        "correcta": false,
+        "explicacion": "Contradice \"Once or twice she had looked into the book\": sí pudo mirarlo.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No leyó la oración en la que Alice mira el libro."
+      },
+      {
+        "clave": "D",
+        "texto": "It had no pictures or conversations.",
+        "correcta": true,
+        "explicacion": "El texto dice que el libro \"had no pictures or conversations in it\" y Alice piensa: \"what is the use of a book without pictures or conversations?\"",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo presenta a Alice aburrida junto a su hermana. COMPRENDER: se pregunta por qué no le gustaba el libro. INTERPRETAR: \"it had no pictures or conversations in it\" y la pregunta retórica de Alice lo confirman. REPRESENTAR: libro sin dibujos ni diálogos → aburrimiento. RAZONAR: A inventa una causa; B mezcla el conejo; C contradice \"she had looked into the book\". RESOLVER: la opción D. VERIFICAR: la razón aparece dos veces en el párrafo.",
+    "que_identificar": "La frase \"it had no pictures or conversations in it\".",
+    "que_revisar": "Ubicar razones explícitas y reconocer preguntas retóricas (What is the use of...?) como expresión de opinión.",
+    "refuerzo_ids": [
+      "ING-076",
+      "ING-080"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "dominio_publico",
+      "texto:ING-T12",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-076",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/11",
+      "anio": 2026,
+      "texto_autor": "Lewis Carroll",
+      "texto_titulo": "Alice's Adventures in Wonderland"
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Identifica detalles específicos y los distingue de afirmaciones que contradicen o distorsionan el texto",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Distinguir el detalle que causa una reacción de otros detalles cercanos",
+    "dificultad": 2,
+    "contexto": "**Adapted from _Alice's Adventures in Wonderland_ by Lewis Carroll (1865), public domain. Source: https://www.gutenberg.org/ebooks/11**\n\nRead the text and answer the question.\n\n**Down the Rabbit-Hole**\n\nAlice was sitting by her sister on the river bank, and she was beginning to get very tired of having nothing to do. Once or twice she had looked into the book her sister was reading, but it had no pictures or conversations in it. \"And what is the use of a book without pictures or conversations?\" thought Alice.\n\nIt was a hot day, and Alice felt sleepy. Suddenly a White Rabbit with pink eyes ran close by her. There was nothing very strange in that, and Alice did not think it was very unusual to hear the Rabbit say to itself, \"Oh dear! Oh dear! I shall be late!\" But when the Rabbit took a watch out of its waistcoat pocket, looked at it, and then hurried on, Alice jumped to her feet. She had never before seen a rabbit with a pocket, or with a watch to take out of it.\n\nFull of curiosity, she ran across the field after it, just in time to see it go down a large rabbit-hole under the hedge. A moment later, down went Alice after it, never once thinking how she was going to get out again.",
+    "estimulo": null,
+    "enunciado": "What made Alice jump to her feet?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The Rabbit said, \"I shall be late!\"",
+        "correcta": false,
+        "explicacion": "El texto aclara que Alice \"did not think it was very unusual\" oír al conejo hablar. Lo que la hizo saltar vino después, con \"But\".",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el detalle más llamativo para un lector real sin atender a lo que dice el narrador."
+      },
+      {
+        "clave": "B",
+        "texto": "The Rabbit had pink eyes.",
+        "correcta": false,
+        "explicacion": "Los ojos rosados son parte de la descripción, y el texto dice \"There was nothing very strange in that\".",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un detalle descriptivo como si fuera la causa."
+      },
+      {
+        "clave": "C",
+        "texto": "The Rabbit took a watch out of its pocket.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"But when the Rabbit took a watch out of its waistcoat pocket... Alice jumped to her feet\". El \"But\" muestra que ESTO sí fue extraño para ella.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Her sister told her to get up.",
+        "correcta": false,
+        "explicacion": "La hermana no dice nada en el texto. La reacción de Alice es por el conejo.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó una causa externa sin volver al texto."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo describe tres cosas del conejo: ojos rosados, que habla y que saca un reloj. COMPRENDER: se pregunta qué la hizo levantarse de un salto. INTERPRETAR: las dos primeras \"nothing very strange\" / \"not... very unusual\"; la tercera va con \"But when...\" y luego \"Alice jumped to her feet\". REPRESENTAR: ojos → normal; habla → normal; reloj del bolsillo → ¡salto! RAZONAR: A y B son detalles que el narrador presenta como no extraños; D no está en el texto. RESOLVER: la opción C. VERIFICAR: la oración siguiente confirma que nunca había visto un conejo con bolsillo ni reloj.",
+    "que_identificar": "El conector \"But when the Rabbit took a watch out of its waistcoat pocket...\" y la oración siguiente.",
+    "que_revisar": "El papel de \"but\" para marcar el cambio y cómo el narrador indica qué es normal o extraño para el personaje.",
+    "refuerzo_ids": [
+      "ING-079",
+      "ING-075"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "detalles",
+      "causa",
+      "dominio_publico",
+      "texto:ING-T12",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-077",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/11",
+      "anio": 2026,
+      "texto_autor": "Lewis Carroll",
+      "texto_titulo": "Alice's Adventures in Wonderland"
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Identifica detalles específicos y los distingue de afirmaciones que contradicen o distorsionan el texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar el referente del pronombre demostrativo \"that\"",
+    "dificultad": 2,
+    "contexto": "**Adapted from _Alice's Adventures in Wonderland_ by Lewis Carroll (1865), public domain. Source: https://www.gutenberg.org/ebooks/11**\n\nRead the text and answer the question.\n\n**Down the Rabbit-Hole**\n\nAlice was sitting by her sister on the river bank, and she was beginning to get very tired of having nothing to do. Once or twice she had looked into the book her sister was reading, but it had no pictures or conversations in it. \"And what is the use of a book without pictures or conversations?\" thought Alice.\n\nIt was a hot day, and Alice felt sleepy. Suddenly a White Rabbit with pink eyes ran close by her. There was nothing very strange in that, and Alice did not think it was very unusual to hear the Rabbit say to itself, \"Oh dear! Oh dear! I shall be late!\" But when the Rabbit took a watch out of its waistcoat pocket, looked at it, and then hurried on, Alice jumped to her feet. She had never before seen a rabbit with a pocket, or with a watch to take out of it.\n\nFull of curiosity, she ran across the field after it, just in time to see it go down a large rabbit-hole under the hedge. A moment later, down went Alice after it, never once thinking how she was going to get out again.",
+    "estimulo": null,
+    "enunciado": "In the sentence \"There was nothing very strange in that\", what does \"that\" refer to?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The Rabbit taking a watch out of its pocket.",
+        "correcta": false,
+        "explicacion": "El reloj aparece después de \"that\", y el texto dice que eso SÍ fue extraño para Alice. Un demostrativo como \"that\" normalmente retoma algo ya dicho.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó el referente hacia adelante en lugar de en la oración anterior."
+      },
+      {
+        "clave": "B",
+        "texto": "A White Rabbit running close to Alice.",
+        "correcta": true,
+        "explicacion": "\"That\" retoma lo que se acaba de decir en la oración anterior: \"Suddenly a White Rabbit with pink eyes ran close by her\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Alice feeling sleepy on a hot day.",
+        "correcta": false,
+        "explicacion": "Esa idea está antes, pero no es la inmediatamente anterior; entre ella y \"that\" aparece el conejo. \"That\" retoma lo más cercano.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un referente anterior sin revisar cuál es el más próximo."
+      },
+      {
+        "clave": "D",
+        "texto": "The book her sister was reading.",
+        "correcta": false,
+        "explicacion": "El libro pertenece al primer párrafo y no tiene relación con \"nothing very strange\".",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un elemento del texto sin comprobar la conexión."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo empieza con el día caluroso y el conejo que pasa corriendo. COMPRENDER: se pide el referente de \"that\". INTERPRETAR: \"that\" es un demostrativo que retoma la idea inmediatamente anterior: el conejo blanco que pasa corriendo cerca de Alice. REPRESENTAR: \"Suddenly a White Rabbit... ran close by her.\" → \"nothing very strange in that\". RAZONAR: A busca hacia adelante; C salta al referente anterior; D viene de otro párrafo. RESOLVER: la opción B. VERIFICAR: sustituir \"that\" por \"a rabbit running close by\" da sentido: no era raro ver un conejo correr en el campo.",
+    "que_identificar": "La oración inmediatamente anterior a \"There was nothing very strange in that\".",
+    "que_revisar": "Referencia de pronombres demostrativos (this, that, it) hacia la idea más cercana ya mencionada.",
+    "refuerzo_ids": [
+      "ING-067",
+      "ING-076"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "referencia",
+      "pronombres",
+      "dominio_publico",
+      "texto:ING-T12",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-078",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/11",
+      "anio": 2026,
+      "texto_autor": "Lewis Carroll",
+      "texto_titulo": "Alice's Adventures in Wonderland"
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir un rasgo del personaje a partir de su acción",
+    "dificultad": 3,
+    "contexto": "**Adapted from _Alice's Adventures in Wonderland_ by Lewis Carroll (1865), public domain. Source: https://www.gutenberg.org/ebooks/11**\n\nRead the text and answer the question.\n\n**Down the Rabbit-Hole**\n\nAlice was sitting by her sister on the river bank, and she was beginning to get very tired of having nothing to do. Once or twice she had looked into the book her sister was reading, but it had no pictures or conversations in it. \"And what is the use of a book without pictures or conversations?\" thought Alice.\n\nIt was a hot day, and Alice felt sleepy. Suddenly a White Rabbit with pink eyes ran close by her. There was nothing very strange in that, and Alice did not think it was very unusual to hear the Rabbit say to itself, \"Oh dear! Oh dear! I shall be late!\" But when the Rabbit took a watch out of its waistcoat pocket, looked at it, and then hurried on, Alice jumped to her feet. She had never before seen a rabbit with a pocket, or with a watch to take out of it.\n\nFull of curiosity, she ran across the field after it, just in time to see it go down a large rabbit-hole under the hedge. A moment later, down went Alice after it, never once thinking how she was going to get out again.",
+    "estimulo": null,
+    "enunciado": "The text says Alice went down the hole \"never once thinking how she was going to get out again\". What does this suggest about her?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She acted quickly because of her curiosity, without thinking of the danger.",
+        "correcta": true,
+        "explicacion": "Alice corre \"Full of curiosity\" y baja \"A moment later\"; \"never once thinking how she was going to get out\" muestra que no pensó en las consecuencias.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "She already knew a way out of the hole.",
+        "correcta": false,
+        "explicacion": "Es lo contrario: no pensó en cómo salir, lo que implica que no lo sabía.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó la negación \"never once thinking\"."
+      },
+      {
+        "clave": "C",
+        "texto": "She was very afraid of the hole.",
+        "correcta": false,
+        "explicacion": "Nada en el texto muestra miedo; al contrario, la mueve la curiosidad y baja de inmediato.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al personaje la reacción que tendría el lector."
+      },
+      {
+        "clave": "D",
+        "texto": "She went down to look for her sister.",
+        "correcta": false,
+        "explicacion": "Baja siguiendo al conejo (\"down went Alice after it\"); \"it\" es el conejo, no la hermana.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió el referente de \"it\" o no leyó a quién sigue Alice."
+      }
+    ],
+    "explicacion": "LEER: el último párrafo describe cómo Alice persigue al conejo. COMPRENDER: la pregunta pide lo que la frase SUGIERE sobre Alice. INTERPRETAR: \"Full of curiosity\", \"A moment later\" y \"never once thinking how she was going to get out\" muestran una decisión impulsiva. REPRESENTAR: curiosidad → acción inmediata → sin pensar en salir. RAZONAR: B invierte la negación; C agrega un miedo no descrito; D cambia el referente de \"it\". RESOLVER: la opción A. VERIFICAR: la opción se apoya en tres expresiones del párrafo, no en una sola.",
+    "que_identificar": "Las expresiones \"Full of curiosity\", \"A moment later\" y \"never once thinking how she was going to get out again\".",
+    "que_revisar": "Inferir rasgos de personajes a partir de acciones y expresiones de tiempo; la negación enfática \"never once\".",
+    "refuerzo_ids": [
+      "ING-079",
+      "ING-084"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "dominio_publico",
+      "texto:ING-T12",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-079",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/11",
+      "anio": 2026,
+      "texto_autor": "Lewis Carroll",
+      "texto_titulo": "Alice's Adventures in Wonderland"
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir lo inesperado en la reacción de un personaje",
+    "dificultad": 3,
+    "contexto": "**Adapted from _Alice's Adventures in Wonderland_ by Lewis Carroll (1865), public domain. Source: https://www.gutenberg.org/ebooks/11**\n\nRead the text and answer the question.\n\n**Down the Rabbit-Hole**\n\nAlice was sitting by her sister on the river bank, and she was beginning to get very tired of having nothing to do. Once or twice she had looked into the book her sister was reading, but it had no pictures or conversations in it. \"And what is the use of a book without pictures or conversations?\" thought Alice.\n\nIt was a hot day, and Alice felt sleepy. Suddenly a White Rabbit with pink eyes ran close by her. There was nothing very strange in that, and Alice did not think it was very unusual to hear the Rabbit say to itself, \"Oh dear! Oh dear! I shall be late!\" But when the Rabbit took a watch out of its waistcoat pocket, looked at it, and then hurried on, Alice jumped to her feet. She had never before seen a rabbit with a pocket, or with a watch to take out of it.\n\nFull of curiosity, she ran across the field after it, just in time to see it go down a large rabbit-hole under the hedge. A moment later, down went Alice after it, never once thinking how she was going to get out again.",
+    "estimulo": null,
+    "enunciado": "What is surprising about Alice's reaction to the White Rabbit?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She is afraid of the Rabbit and runs away from it.",
+        "correcta": false,
+        "explicacion": "Alice no huye: corre DETRÁS del conejo (\"ran across the field after it\").",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"ran after it\" (perseguir) con huir."
+      },
+      {
+        "clave": "B",
+        "texto": "She thinks the Rabbit is her pet.",
+        "correcta": false,
+        "explicacion": "El texto no dice nada de que el conejo sea suyo. Es inventar una relación.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Agregó información para explicar por qué no le extraña el conejo."
+      },
+      {
+        "clave": "C",
+        "texto": "A talking rabbit does not surprise her, but a rabbit with a watch does.",
+        "correcta": true,
+        "explicacion": "El texto dice que a Alice no le pareció \"very unusual\" oír hablar al conejo, pero sí saltó al verlo sacar un reloj. Para un lector, lo esperable sería sorprenderse primero de que hable; ahí está lo curioso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "She is not interested in the Rabbit at all.",
+        "correcta": false,
+        "explicacion": "Contradice \"Full of curiosity\" y el hecho de que lo persigue hasta la madriguera.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generalizó \"nothing very strange\" a toda la reacción de Alice."
+      }
+    ],
+    "explicacion": "LEER: el segundo y tercer párrafos muestran qué le parece normal y qué le parece extraño a Alice. COMPRENDER: se pregunta qué resulta sorprendente en su reacción, lo que exige comparar con lo que esperaría un lector. INTERPRETAR: \"did not think it was very unusual to hear the Rabbit say...\" → hablar le parece normal; \"But when the Rabbit took a watch... Alice jumped to her feet\" → el reloj sí la sorprende. REPRESENTAR: esperado: sorpresa por el habla / real: sorpresa por el reloj. RAZONAR: A confunde perseguir con huir; B inventa una relación; D contradice la curiosidad. RESOLVER: la opción C. VERIFICAR: la opción recoge el contraste que marca \"But\".",
+    "que_identificar": "El contraste entre \"did not think it was very unusual to hear the Rabbit say...\" y \"But when the Rabbit took a watch... Alice jumped to her feet\".",
+    "que_revisar": "Reconocer la ironía o el humor de un narrador comparando lo que dice el texto con lo que esperaría el lector.",
+    "refuerzo_ids": [
+      "ING-076",
+      "ING-078"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "interpretacion",
+      "dominio_publico",
+      "texto:ING-T12",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-080",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/55",
+      "anio": 2026,
+      "texto_autor": "L. Frank Baum",
+      "texto_titulo": "The Wonderful Wizard of Oz"
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar el propósito explícito de un objeto",
+    "dificultad": 1,
+    "contexto": "**Adapted from _The Wonderful Wizard of Oz_ by L. Frank Baum (1900), public domain. Source: https://www.gutenberg.org/ebooks/55**\n\nRead the text and answer the question.\n\n**Dorothy Meets the Scarecrow**\n\nDorothy was walking along the yellow brick road when she stopped to rest near a cornfield. There she saw a Scarecrow, placed high on a pole to keep the birds away from the corn. Its head was a small sack full of straw, with eyes, nose and mouth painted on it. While she was looking at it, the Scarecrow slowly winked one eye at her.\n\n\"Good day,\" said the Scarecrow in a rough voice.\n\n\"Did you speak?\" asked the girl, in surprise.\n\n\"Certainly,\" answered the Scarecrow. \"It is very boring to be stuck up here night and day to scare away crows. Could you help me down?\"\n\nDorothy reached up both arms and lifted him off the pole, because, being stuffed with straw, he was quite light.\n\n\"Thank you very much,\" said the Scarecrow. \"I feel like a new man. Where are you going?\"\n\n\"My name is Dorothy, and I am going to the Emerald City to ask the great Oz to send me back to Kansas.\"\n\n\"I don't know anything,\" said the Scarecrow sadly. \"You see, I am stuffed, so I have no brains at all. Do you think Oz would give me some brains?\"",
+    "estimulo": null,
+    "enunciado": "Why was the Scarecrow on a pole?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Because Dorothy put him there.",
+        "correcta": false,
+        "explicacion": "Dorothy hace lo contrario: lo baja del palo (\"lifted him off the pole\").",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la acción de Dorothy (bajar ≠ poner)."
+      },
+      {
+        "clave": "B",
+        "texto": "To see the road to the Emerald City.",
+        "correcta": false,
+        "explicacion": "La Ciudad Esmeralda es el destino de Dorothy; el texto no relaciona el palo con ver el camino.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventó un propósito uniendo dos elementos del texto."
+      },
+      {
+        "clave": "C",
+        "texto": "Because he wanted to rest there.",
+        "correcta": false,
+        "explicacion": "Quien se detiene a descansar es Dorothy (\"she stopped to rest\"), y el Espantapájaros dice que estar allí es aburrido.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó la acción de otro personaje."
+      },
+      {
+        "clave": "D",
+        "texto": "To keep the birds away from the corn.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"placed high on a pole to keep the birds away from the corn\". El Espantapájaros lo repite: \"to scare away crows\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo describe al Espantapájaros en el maizal. COMPRENDER: se pregunta el propósito (Why) de que esté en un palo. INTERPRETAR: \"to keep the birds away from the corn\" expresa finalidad con \"to\" + verbo. REPRESENTAR: palo alto → espantar pájaros → proteger el maíz. RAZONAR: A invierte la acción de Dorothy; B inventa un propósito; C toma la acción de Dorothy. RESOLVER: la opción D. VERIFICAR: el propio Espantapájaros confirma el propósito con \"to scare away crows\".",
+    "que_identificar": "La frase de finalidad \"to keep the birds away from the corn\".",
+    "que_revisar": "El infinitivo de propósito (to + verbo) como respuesta a \"Why\".",
+    "refuerzo_ids": [
+      "ING-081",
+      "ING-075"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "dominio_publico",
+      "texto:ING-T13",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-081",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/55",
+      "anio": 2026,
+      "texto_autor": "L. Frank Baum",
+      "texto_titulo": "The Wonderful Wizard of Oz"
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la distingue de afirmaciones que lo contradicen",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una causa explícita introducida por \"because\"",
+    "dificultad": 2,
+    "contexto": "**Adapted from _The Wonderful Wizard of Oz_ by L. Frank Baum (1900), public domain. Source: https://www.gutenberg.org/ebooks/55**\n\nRead the text and answer the question.\n\n**Dorothy Meets the Scarecrow**\n\nDorothy was walking along the yellow brick road when she stopped to rest near a cornfield. There she saw a Scarecrow, placed high on a pole to keep the birds away from the corn. Its head was a small sack full of straw, with eyes, nose and mouth painted on it. While she was looking at it, the Scarecrow slowly winked one eye at her.\n\n\"Good day,\" said the Scarecrow in a rough voice.\n\n\"Did you speak?\" asked the girl, in surprise.\n\n\"Certainly,\" answered the Scarecrow. \"It is very boring to be stuck up here night and day to scare away crows. Could you help me down?\"\n\nDorothy reached up both arms and lifted him off the pole, because, being stuffed with straw, he was quite light.\n\n\"Thank you very much,\" said the Scarecrow. \"I feel like a new man. Where are you going?\"\n\n\"My name is Dorothy, and I am going to the Emerald City to ask the great Oz to send me back to Kansas.\"\n\n\"I don't know anything,\" said the Scarecrow sadly. \"You see, I am stuffed, so I have no brains at all. Do you think Oz would give me some brains?\"",
+    "estimulo": null,
+    "enunciado": "Why was it easy for Dorothy to lift the Scarecrow?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He was stuffed with straw, so he was light.",
+        "correcta": true,
+        "explicacion": "El texto dice: \"because, being stuffed with straw, he was quite light\". \"Light\" aquí significa liviano, no luz.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "His body was a small sack.",
+        "correcta": false,
+        "explicacion": "El texto dice que su CABEZA era un saco pequeño (\"Its head was a small sack\"), no su cuerpo, y esa no es la razón que da el texto.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un detalle físico del primer párrafo y lo aplicó a otra parte."
+      },
+      {
+        "clave": "C",
+        "texto": "He jumped down to help her.",
+        "correcta": false,
+        "explicacion": "Contradice el texto: él pide ayuda (\"Could you help me down?\") y Dorothy lo levanta con los brazos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió quién ayuda a quién."
+      },
+      {
+        "clave": "D",
+        "texto": "Dorothy was a very strong girl.",
+        "correcta": false,
+        "explicacion": "El texto no habla de la fuerza de Dorothy; la razón está en el peso del Espantapájaros.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Buscó la causa en el personaje equivocado."
+      }
+    ],
+    "explicacion": "LEER: la oración que empieza con \"Dorothy reached up both arms\". COMPRENDER: se pregunta por qué fue fácil levantarlo. INTERPRETAR: \"because, being stuffed with straw, he was quite light\" = porque, relleno de paja, era bastante liviano. REPRESENTAR: paja → liviano → fácil de levantar. RAZONAR: B cambia cabeza por cuerpo; C invierte la ayuda; D cambia de personaje. RESOLVER: la opción A. VERIFICAR: la causa está introducida por \"because\" en la misma oración de la acción.",
+    "que_identificar": "La cláusula \"because, being stuffed with straw, he was quite light\".",
+    "que_revisar": "Conectores de causa (because) y palabras polisémicas como \"light\" (liviano / luz).",
+    "refuerzo_ids": [
+      "ING-080",
+      "ING-082"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "causa",
+      "polisemia",
+      "dominio_publico",
+      "texto:ING-T13",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-082",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/55",
+      "anio": 2026,
+      "texto_autor": "L. Frank Baum",
+      "texto_titulo": "The Wonderful Wizard of Oz"
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la distingue de afirmaciones que lo contradicen",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Distinguir destino y propósito de dos personajes",
+    "dificultad": 2,
+    "contexto": "**Adapted from _The Wonderful Wizard of Oz_ by L. Frank Baum (1900), public domain. Source: https://www.gutenberg.org/ebooks/55**\n\nRead the text and answer the question.\n\n**Dorothy Meets the Scarecrow**\n\nDorothy was walking along the yellow brick road when she stopped to rest near a cornfield. There she saw a Scarecrow, placed high on a pole to keep the birds away from the corn. Its head was a small sack full of straw, with eyes, nose and mouth painted on it. While she was looking at it, the Scarecrow slowly winked one eye at her.\n\n\"Good day,\" said the Scarecrow in a rough voice.\n\n\"Did you speak?\" asked the girl, in surprise.\n\n\"Certainly,\" answered the Scarecrow. \"It is very boring to be stuck up here night and day to scare away crows. Could you help me down?\"\n\nDorothy reached up both arms and lifted him off the pole, because, being stuffed with straw, he was quite light.\n\n\"Thank you very much,\" said the Scarecrow. \"I feel like a new man. Where are you going?\"\n\n\"My name is Dorothy, and I am going to the Emerald City to ask the great Oz to send me back to Kansas.\"\n\n\"I don't know anything,\" said the Scarecrow sadly. \"You see, I am stuffed, so I have no brains at all. Do you think Oz would give me some brains?\"",
+    "estimulo": null,
+    "enunciado": "Where is Dorothy going, and why?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "To Kansas, to find the great Oz.",
+        "correcta": false,
+        "explicacion": "Invierte los lugares: Kansas es a donde quiere VOLVER; Oz está en la Ciudad Esmeralda.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió el destino y la meta final."
+      },
+      {
+        "clave": "B",
+        "texto": "To the Emerald City, to ask Oz to send her back to Kansas.",
+        "correcta": true,
+        "explicacion": "Dorothy dice: \"I am going to the Emerald City to ask the great Oz to send me back to Kansas\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "To the Emerald City, to ask Oz for some brains.",
+        "correcta": false,
+        "explicacion": "Los \"brains\" son el deseo del Espantapájaros (\"Do you think Oz would give me some brains?\"), no de Dorothy.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asignó a Dorothy el deseo de otro personaje."
+      },
+      {
+        "clave": "D",
+        "texto": "To the cornfield, to rest.",
+        "correcta": false,
+        "explicacion": "Dorothy se detiene cerca del maizal para descansar, pero ese no es su destino; es una pausa en el camino.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió una parada con el destino del viaje."
+      }
+    ],
+    "explicacion": "LEER: la respuesta de Dorothy \"My name is Dorothy, and I am going to...\". COMPRENDER: se piden dos datos: destino (Where) y propósito (why). INTERPRETAR: destino = Emerald City; propósito = que Oz la envíe de vuelta a Kansas. REPRESENTAR: Dorothy → Ciudad Esmeralda → Oz → Kansas; Espantapájaros → quiere cerebro. RAZONAR: A intercambia lugares; C toma el deseo del Espantapájaros; D confunde pausa con destino. RESOLVER: la opción B. VERIFICAR: ambas partes de la opción coinciden con la frase de Dorothy.",
+    "que_identificar": "La oración \"I am going to the Emerald City to ask the great Oz to send me back to Kansas\".",
+    "que_revisar": "Separar la información de cada personaje en un diálogo y comprobar las dos partes de una opción compuesta.",
+    "refuerzo_ids": [
+      "ING-081",
+      "ING-084"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "dialogo",
+      "dominio_publico",
+      "texto:ING-T13",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-083",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/55",
+      "anio": 2026,
+      "texto_autor": "L. Frank Baum",
+      "texto_titulo": "The Wonderful Wizard of Oz"
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Interpreta la intención o la opinión expresada por una voz del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar una expresión idiomática en contexto",
+    "dificultad": 2,
+    "contexto": "**Adapted from _The Wonderful Wizard of Oz_ by L. Frank Baum (1900), public domain. Source: https://www.gutenberg.org/ebooks/55**\n\nRead the text and answer the question.\n\n**Dorothy Meets the Scarecrow**\n\nDorothy was walking along the yellow brick road when she stopped to rest near a cornfield. There she saw a Scarecrow, placed high on a pole to keep the birds away from the corn. Its head was a small sack full of straw, with eyes, nose and mouth painted on it. While she was looking at it, the Scarecrow slowly winked one eye at her.\n\n\"Good day,\" said the Scarecrow in a rough voice.\n\n\"Did you speak?\" asked the girl, in surprise.\n\n\"Certainly,\" answered the Scarecrow. \"It is very boring to be stuck up here night and day to scare away crows. Could you help me down?\"\n\nDorothy reached up both arms and lifted him off the pole, because, being stuffed with straw, he was quite light.\n\n\"Thank you very much,\" said the Scarecrow. \"I feel like a new man. Where are you going?\"\n\n\"My name is Dorothy, and I am going to the Emerald City to ask the great Oz to send me back to Kansas.\"\n\n\"I don't know anything,\" said the Scarecrow sadly. \"You see, I am stuffed, so I have no brains at all. Do you think Oz would give me some brains?\"",
+    "estimulo": null,
+    "enunciado": "What does the Scarecrow mean when he says \"I feel like a new man\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He has changed into a real man.",
+        "correcta": false,
+        "explicacion": "Es una lectura literal: el Espantapájaros sigue relleno de paja. \"Like\" indica comparación, no transformación.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó literalmente una expresión idiomática."
+      },
+      {
+        "clave": "B",
+        "texto": "He wants new clothes and a new face.",
+        "correcta": false,
+        "explicacion": "El texto no habla de ropa ni de cambiar su cara pintada; \"new\" aquí no significa objetos nuevos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"new\" con cosas materiales."
+      },
+      {
+        "clave": "C",
+        "texto": "He feels much better now that he is off the pole.",
+        "correcta": true,
+        "explicacion": "\"I feel like a new man\" es una expresión para decir que alguien se siente mucho mejor, renovado. Lo dice justo después de que Dorothy lo baja del palo, donde se aburría \"night and day\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "He is angry because he was on the pole too long.",
+        "correcta": false,
+        "explicacion": "Dice \"Thank you very much\" justo antes; el tono es de alivio y gratitud, no de enojo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó la queja anterior (It is very boring) como el sentimiento actual."
+      }
+    ],
+    "explicacion": "LEER: la frase aparece justo después de que Dorothy lo baja y de \"Thank you very much\". COMPRENDER: se pide el significado de una expresión (lo que quiere decir, no lo literal). INTERPRETAR: \"feel like a new man\" = sentirse renovado, mucho mejor. REPRESENTAR: antes: aburrido en el palo → después: libre y agradecido. RAZONAR: A lee literalmente; B asocia \"new\" con objetos; D ignora el agradecimiento. RESOLVER: la opción C. VERIFICAR: la interpretación encaja con el alivio de quien estuvo \"stuck up here night and day\".",
+    "que_identificar": "La expresión \"I feel like a new man\" y lo que ocurre justo antes (lo bajan del palo y da las gracias).",
+    "que_revisar": "Expresiones idiomáticas con \"feel like\" y cómo usar el contexto inmediato para interpretarlas.",
+    "refuerzo_ids": [
+      "ING-084",
+      "ING-074"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "expresiones",
+      "dominio_publico",
+      "texto:ING-T13",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-084",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia sobre texto de dominio público (adaptado)",
+      "url": "https://www.gutenberg.org/ebooks/55",
+      "anio": 2026,
+      "texto_autor": "L. Frank Baum",
+      "texto_titulo": "The Wonderful Wizard of Oz"
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir la intención de un personaje a partir de su pregunta final",
+    "dificultad": 3,
+    "contexto": "**Adapted from _The Wonderful Wizard of Oz_ by L. Frank Baum (1900), public domain. Source: https://www.gutenberg.org/ebooks/55**\n\nRead the text and answer the question.\n\n**Dorothy Meets the Scarecrow**\n\nDorothy was walking along the yellow brick road when she stopped to rest near a cornfield. There she saw a Scarecrow, placed high on a pole to keep the birds away from the corn. Its head was a small sack full of straw, with eyes, nose and mouth painted on it. While she was looking at it, the Scarecrow slowly winked one eye at her.\n\n\"Good day,\" said the Scarecrow in a rough voice.\n\n\"Did you speak?\" asked the girl, in surprise.\n\n\"Certainly,\" answered the Scarecrow. \"It is very boring to be stuck up here night and day to scare away crows. Could you help me down?\"\n\nDorothy reached up both arms and lifted him off the pole, because, being stuffed with straw, he was quite light.\n\n\"Thank you very much,\" said the Scarecrow. \"I feel like a new man. Where are you going?\"\n\n\"My name is Dorothy, and I am going to the Emerald City to ask the great Oz to send me back to Kansas.\"\n\n\"I don't know anything,\" said the Scarecrow sadly. \"You see, I am stuffed, so I have no brains at all. Do you think Oz would give me some brains?\"",
+    "estimulo": null,
+    "enunciado": "What can we infer from the Scarecrow's last question?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He wants to go back to his pole.",
+        "correcta": false,
+        "explicacion": "Contradice lo que dice sobre el palo (\"It is very boring...\") y su alivio al bajar (\"I feel like a new man\").",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó la pregunta final con lo que el personaje dijo antes."
+      },
+      {
+        "clave": "B",
+        "texto": "He thinks Dorothy can give him brains.",
+        "correcta": false,
+        "explicacion": "La pregunta es sobre Oz (\"Do you think Oz would give me...\"); a Dorothy solo le pide su opinión. Es un error de referente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió a quien se dirige la pregunta (Dorothy) con quien daría el cerebro (Oz)."
+      },
+      {
+        "clave": "C",
+        "texto": "He already knows the great Oz very well.",
+        "correcta": false,
+        "explicacion": "Contradice \"I don't know anything\" y el hecho de que pregunta por Oz en vez de afirmar algo sobre él.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No tuvo en cuenta que preguntar implica no saber."
+      },
+      {
+        "clave": "D",
+        "texto": "He is hoping that he can get brains from Oz, too.",
+        "correcta": true,
+        "explicacion": "Justo después de oír que Dorothy va a pedirle algo a Oz, el Espantapájaros pregunta \"Do you think Oz would give me some brains?\". Eso muestra que espera obtener de Oz lo que le falta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el último parlamento del Espantapájaros. COMPRENDER: se pide inferir su intención a partir de la pregunta. INTERPRETAR: dice que no tiene cerebro y pregunta si Oz le daría uno, justo cuando Dorothy explica que va a pedirle un favor a Oz. REPRESENTAR: Dorothy → Oz → volver a Kansas; Espantapájaros → Oz → cerebro. RAZONAR: A contradice su alivio; B cambia el referente (Dorothy por Oz); C contradice \"I don't know anything\". RESOLVER: la opción D. VERIFICAR: la opción usa \"hoping\", que corresponde a una pregunta (\"Do you think...?\"), no a una certeza; no afirma más de lo que el texto permite.",
+    "que_identificar": "La pregunta \"Do you think Oz would give me some brains?\" y su relación con el plan de Dorothy.",
+    "que_revisar": "Inferir intenciones a partir de preguntas en un diálogo y distinguir a quién se dirige un personaje de a quién menciona.",
+    "refuerzo_ids": [
+      "ING-082",
+      "ING-078"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "referencia",
+      "dominio_publico",
+      "texto:ING-T13",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

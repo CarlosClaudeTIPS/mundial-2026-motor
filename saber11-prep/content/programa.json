@@ -1,0 +1,74 @@
+{
+  "_estado": "PROPUESTA pedagógica inicial (ver docs/02-programa-6-meses.md para la justificación y las fuentes). Editable desde Administración. Las semanas se cuentan desde la fecha de inicio del ciclo hacia la fecha del examen.",
+  "semanas_totales": 24,
+  "horas_estudiante_semana": { "clase": 1, "autonomo": 3 },
+  "sesion_docente_cada_dias": 21,
+  "fases": [
+    {
+      "id": "F1", "nombre": "Diagnóstico y hábitos de lectura", "semanas": [1, 3],
+      "objetivo": "Saber de dónde parte cada estudiante y cada grupo; instalar la rutina de LEER → COMPRENDER → VERIFICAR en toda pregunta.",
+      "actividades": [
+        "Simulacro diagnóstico a escala (sesión 1 y sesión 2 en semanas distintas).",
+        "Práctica diaria corta: 5 preguntas con retroalimentación completa.",
+        "Registro de la razón del error (¿por qué elegiste…?) en toda pregunta fallada."
+      ],
+      "mini_prueba": { "cantidad": 8, "tiempo_min": 16, "enfoque": "mezcla de las cinco pruebas, dificultad 1-2" },
+      "simulacro": { "tipo": "diagnostico", "escala": 0.25 }
+    },
+    {
+      "id": "F2", "nombre": "Comprensión disciplinar por competencia", "semanas": [4, 9],
+      "objetivo": "Trabajar cada prueba desde sus competencias oficiales, con la comprensión lectora como eje dentro de cada área.",
+      "actividades": [
+        "Cada semana enfoca dos pruebas (rotación) y una habilidad del eje transversal.",
+        "Lectura guiada: identificar qué se pregunta y qué datos sirven antes de responder.",
+        "Refuerzo automático por tipo de error (reglas simples)."
+      ],
+      "mini_prueba": { "cantidad": 10, "tiempo_min": 20, "enfoque": "las dos pruebas de la semana" },
+      "simulacro": null
+    },
+    {
+      "id": "F3", "nombre": "Aplicación y representación", "semanas": [10, 14],
+      "objetivo": "Interpretar tablas, gráficos, textos discontinuos y situaciones de contexto; traducir la información a otra representación antes de resolver.",
+      "actividades": [
+        "Práctica de representación: pasar de tabla a frase, de texto a esquema, de gráfico a dato.",
+        "Contraste de argumentos en Lectura Crítica, Sociales y Ciencias.",
+        "Primera práctica cronometrada por bloque de prueba."
+      ],
+      "mini_prueba": { "cantidad": 12, "tiempo_min": 24, "enfoque": "preguntas con estímulo (tabla, gráfico, texto discontinuo)" },
+      "simulacro": { "tipo": "por_sesion", "escala": 0.5 }
+    },
+    {
+      "id": "F4", "nombre": "Resolución, argumentación y verificación", "semanas": [15, 18],
+      "objetivo": "Sostener la precisión bajo tiempo; verificar siempre que la respuesta responde lo preguntado.",
+      "actividades": [
+        "Lista de chequeo de verificación antes de enviar.",
+        "Simulacro de la sesión 1 completo y cronometrado (semana 16).",
+        "Simulacro de la sesión 2 completo y cronometrado (semana 18)."
+      ],
+      "mini_prueba": { "cantidad": 12, "tiempo_min": 22, "enfoque": "dificultad 2-3, tiempo objetivo por pregunta" },
+      "simulacro": { "tipo": "por_sesion", "escala": 1 }
+    },
+    {
+      "id": "F5", "nombre": "Simulacros completos e intervención", "semanas": [19, 22],
+      "objetivo": "Reproducir las condiciones reales (dos sesiones de 4 h 30 min) y atacar los errores persistentes del grupo y de cada estudiante.",
+      "actividades": [
+        "Simulacro completo de dos sesiones (semana 20) y revisión de errores por tipo.",
+        "Intervención focalizada: cada estudiante trabaja sus dos tipos de error más frecuentes.",
+        "Sesión docente con los errores más frecuentes del grupo y acciones sugeridas."
+      ],
+      "mini_prueba": { "cantidad": 10, "tiempo_min": 20, "enfoque": "errores más frecuentes del estudiante" },
+      "simulacro": { "tipo": "completo", "escala": 1 }
+    },
+    {
+      "id": "F6", "nombre": "Preparación final", "semanas": [23, 24],
+      "objetivo": "Consolidar sin agotar: repasar la bitácora de errores, ajustar la estrategia de tiempo y llegar descansado.",
+      "actividades": [
+        "Repaso de 'Mis errores': volver a intentar las preguntas falladas que ya se explicaron.",
+        "Simulacro corto de calentamiento (semana 23).",
+        "Semana del examen: sin simulacros largos; instrucciones logísticas y descanso."
+      ],
+      "mini_prueba": { "cantidad": 8, "tiempo_min": 16, "enfoque": "repaso de errores ya trabajados" },
+      "simulacro": { "tipo": "corto", "escala": 0.25 }
+    }
+  ]
+}

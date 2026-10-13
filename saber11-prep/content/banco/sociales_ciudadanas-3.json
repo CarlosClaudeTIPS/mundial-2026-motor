@@ -1,0 +1,1240 @@
+[
+  {
+    "id": "SOC-025",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "comprender",
+    "tema": "Mecanismos de protección de derechos",
+    "subtema": "Acción de cumplimiento frente a tutela y acción popular",
+    "dificultad": 1,
+    "contexto": "En 2023, el concejo del municipio de Río Manso aprobó un acuerdo que **obliga a la alcaldía** a abrir una biblioteca pública en el corregimiento La Palma antes de diciembre de 2024. A mediados de 2026 la biblioteca no existe. Un grupo de padres de familia envió una carta a la alcaldía pidiendo que se cumpla el acuerdo y, pasado el plazo legal, no recibió respuesta.\n\nLa Constitución de 1991 contempla, entre otros, estos mecanismos judiciales:\n\n- **Acción de tutela** (art. 86): permite reclamar ante un juez la protección inmediata de los derechos fundamentales de una persona cuando son vulnerados o amenazados.\n- **Acción de cumplimiento** (art. 87): permite acudir ante un juez para hacer efectivo el cumplimiento de una ley o de un acto administrativo.\n- **Acción popular** (art. 88): permite proteger derechos e intereses colectivos, como el ambiente sano, el espacio público o la salubridad pública.",
+    "estimulo": null,
+    "enunciado": "Los padres quieren que un juez le ordene a la alcaldía hacer lo que el acuerdo municipal le exige. ¿Cuál mecanismo está diseñado precisamente para ese fin?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La acción de cumplimiento, porque busca que un juez haga efectivo lo que ordena una ley o un acto administrativo, como el acuerdo del concejo.",
+        "correcta": true,
+        "explicacion": "El acuerdo municipal es un acto administrativo que impone una obligación clara a la alcaldía (abrir la biblioteca antes de diciembre de 2024) y no se ha cumplido. El artículo 87, tal como lo describe el contexto, sirve justamente para acudir ante un juez y hacer efectivo ese cumplimiento. Además, los padres ya pidieron por escrito que se cumpliera y no obtuvieron respuesta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Un derecho de petición ante el concejo, porque fue el concejo el que aprobó el acuerdo.",
+        "correcta": false,
+        "explicacion": "El concejo ya hizo su parte al aprobar el acuerdo; la obligada a ejecutarlo es la alcaldía. Además, los padres ya enviaron una solicitud escrita sin respuesta y ahora buscan que un juez ordene el cumplimiento; una nueva petición no produce una orden judicial.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No distinguió entre la entidad que expide la norma y la que debe cumplirla, o no leyó que se busca la intervención de un juez."
+      },
+      {
+        "clave": "C",
+        "texto": "La acción de tutela, porque la educación es un derecho fundamental y la falta de biblioteca lo vulnera.",
+        "correcta": false,
+        "explicacion": "La tutela protege derechos fundamentales de una persona frente a una vulneración o amenaza concreta. Los padres no describen un daño inmediato a un estudiante determinado: lo que reclaman es que la alcaldía ejecute lo que ordena un acuerdo, y para eso el contexto describe otro mecanismo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier reclamo relacionado con la educación con la tutela, sin fijarse en qué se está pidiendo al juez."
+      },
+      {
+        "clave": "D",
+        "texto": "La acción popular, porque la biblioteca beneficiaría a toda la comunidad del corregimiento.",
+        "correcta": false,
+        "explicacion": "Que la obra beneficie a muchas personas no convierte el caso en acción popular. Según el contexto, la acción popular protege intereses colectivos como el ambiente o el espacio público; aquí la petición concreta es que se cumpla un acto administrativo (el acuerdo), que es el objeto de otro mecanismo.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se guió por la idea de \"comunidad\" y eligió el mecanismo que suena colectivo, sin revisar su finalidad."
+      }
+    ],
+    "explicacion": "LEER: un acuerdo del concejo obliga a la alcaldía a abrir una biblioteca antes de diciembre de 2024; no se ha hecho y la carta de los padres no tuvo respuesta. El contexto define tres acciones judiciales. COMPRENDER: se pregunta qué mecanismo sirve para que un juez ordene cumplir lo que dice el acuerdo. INTERPRETAR: el acuerdo municipal es un acto administrativo con una obligación concreta incumplida. REPRESENTAR: tutela → derecho fundamental de una persona amenazado; cumplimiento → ley o acto administrativo no ejecutado; popular → interés colectivo afectado. RAZONAR: el problema no es un daño inmediato a una persona (tutela) ni la afectación de un interés colectivo como el ambiente (popular), sino el incumplimiento de una norma. RESOLVER: opción A. VERIFICAR: la definición del artículo 87 del contexto coincide literalmente con lo que piden los padres: hacer efectivo el cumplimiento de un acto administrativo.",
+    "que_identificar": "Qué pide exactamente la comunidad (que se ejecute lo que ordena el acuerdo) y cuál definición del contexto corresponde a esa pretensión.",
+    "que_revisar": "Finalidad de las acciones constitucionales: tutela (art. 86), cumplimiento (art. 87) y acciones populares y de grupo (art. 88).",
+    "refuerzo_ids": ["SOC-026", "SOC-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["constitucion_1991", "accion_de_cumplimiento", "mecanismos_de_proteccion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-026",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "interpretar",
+    "tema": "Mecanismos de protección de derechos",
+    "subtema": "Acción popular y acción de grupo ante un daño ambiental",
+    "dificultad": 2,
+    "contexto": "En el municipio de Puerto Salitre, una fábrica de concentrados vierte sus desechos en la ciénaga El Encanto. Dos grupos quieren acudir a un juez:\n\n- **Grupo 1.** La junta de acción comunal pide que se detengan los vertimientos y que se recupere la ciénaga, que abastece de agua y pesca a todo el municipio.\n- **Grupo 2.** Cuarenta y cinco familias de pescadores perdieron sus ingresos durante seis meses porque murieron los peces; piden que se les pague el dinero que dejaron de recibir.\n\nEl artículo 88 de la Constitución y la Ley 472 de 1998 regulan dos acciones:\n\n- **Acción popular:** protege derechos e intereses colectivos, como el ambiente sano o la salubridad pública; busca evitar un daño, hacer cesar un peligro o devolver las cosas a su estado anterior.\n- **Acción de grupo:** la presenta un conjunto de al menos veinte personas que sufrieron perjuicios individuales por una misma causa; busca que se les indemnice.",
+    "estimulo": null,
+    "enunciado": "¿Cuál acción corresponde a lo que pide cada grupo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Grupo 1: acción popular; grupo 2: acción de grupo.",
+        "correcta": true,
+        "explicacion": "El grupo 1 busca detener un daño y recuperar un bien colectivo (la ciénaga), que es la finalidad de la acción popular. El grupo 2 está formado por más de veinte personas que sufrieron un perjuicio individual (pérdida de ingresos) por la misma causa y piden indemnización, que es la finalidad de la acción de grupo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Grupo 1: acción de grupo, porque la junta de acción comunal es una organización; grupo 2: acción popular, porque los pescadores son parte del pueblo.",
+        "correcta": false,
+        "explicacion": "Invierte las acciones guiándose por el nombre y no por la finalidad. La acción de grupo no depende de que quien demanda sea una organización, sino de que varias personas pidan indemnización por perjuicios individuales; la acción popular no se llama así por quienes la presentan, sino porque protege intereses colectivos.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"grupo\" y \"popular\" por su sentido cotidiano (organización, pueblo) y no por la definición del contexto."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambos grupos deben usar la acción popular, porque el daño tiene una sola causa: la contaminación de la ciénaga.",
+        "correcta": false,
+        "explicacion": "Es cierto que la causa es la misma, pero lo que pide cada grupo es distinto. La acción popular sirve para detener el daño y recuperar la ciénaga, no para pagar a cada familia lo que perdió. Para la indemnización de perjuicios individuales el contexto describe la acción de grupo.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en la causa común del daño y no en la pretensión de cada grupo."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos grupos deben usar la acción de tutela, porque el ambiente sano es un derecho y la tutela protege todos los derechos.",
+        "correcta": false,
+        "explicacion": "La tutela, según la Constitución, protege derechos fundamentales de manera inmediata; no es el mecanismo previsto para recuperar un bien colectivo ni para indemnizar a un grupo de personas. El contexto presenta dos acciones específicas para estos casos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Considera la tutela como el mecanismo universal para cualquier derecho, o no leyó las definiciones del contexto."
+      }
+    ],
+    "explicacion": "LEER: una fábrica contamina la ciénaga; el grupo 1 quiere detener la contaminación y recuperar la ciénaga; el grupo 2 (45 familias) quiere que le paguen los ingresos perdidos. COMPRENDER: hay que asignar a cada grupo la acción del artículo 88 que corresponde. INTERPRETAR: el grupo 1 defiende un bien de todos; el grupo 2 reclama un perjuicio económico de cada familia. REPRESENTAR: interés colectivo + detener o restituir → acción popular; 20 o más personas + perjuicio individual + indemnización → acción de grupo. RAZONAR: la causa común (la contaminación) no decide la acción; decide lo que se pide. B invierte las acciones por el nombre, C ignora la indemnización y D recurre a la tutela, que no está diseñada para estos fines. RESOLVER: opción A. VERIFICAR: el grupo 2 cumple el número mínimo (45 > 20) y pide indemnización; el grupo 1 pide cesar el daño y restituir.",
+    "que_identificar": "La pretensión de cada grupo (detener y restaurar frente a indemnizar) y el requisito de número de personas de la acción de grupo.",
+    "que_revisar": "Diferencias entre acción popular y acción de grupo (art. 88 de la Constitución, Ley 472 de 1998): qué protege cada una y qué se obtiene.",
+    "refuerzo_ids": ["SOC-025"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["constitucion_1991", "accion_popular", "accion_de_grupo", "derechos_colectivos", "ambiente"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-027",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce la organización del Estado: funciones y alcances de las ramas del poder y de los organismos de control",
+    "habilidad": "interpretar",
+    "tema": "Organismos de control del Estado",
+    "subtema": "Procuraduría, Contraloría, Defensoría y Registraduría",
+    "dificultad": 2,
+    "contexto": "En el municipio de Santa Bárbara del Llano, la alcaldía pagó 800 millones de pesos por adelantado para construir un puente. La obra quedó a la mitad y el contratista desapareció con el dinero. Se supo que el secretario de obras firmó todos los pagos sin revisar los avances y que, desde que estalló el escándalo, no se presenta a trabajar. La comunidad quiere dos cosas: **que se recupere el dinero público perdido** y **que el secretario sea sancionado por su conducta como servidor público**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Funciones principales de algunas entidades del Estado colombiano",
+      "columnas": ["Entidad", "Función principal"],
+      "filas": [["Procuraduría General de la Nación", "Vigila la conducta de los servidores públicos; puede investigarlos y sancionarlos disciplinariamente."], ["Contraloría General de la República y contralorías territoriales", "Vigilan la gestión fiscal, es decir, el manejo de los recursos y bienes públicos; pueden declarar responsables fiscales para recuperar el dinero perdido."], ["Defensoría del Pueblo", "Promueve, divulga y defiende los derechos humanos; orienta a las personas para ejercerlos."], ["Registraduría Nacional del Estado Civil", "Organiza las elecciones y lleva el registro civil y la identificación de las personas."]],
+      "nota": "La Procuraduría y la Defensoría hacen parte del Ministerio Público; junto con la Contraloría son órganos de control. La Registraduría hace parte de la organización electoral."
+    },
+    "enunciado": "Para lograr, en su orden, que se recupere el dinero y que se sancione al secretario por su conducta, la comunidad debería acudir a",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "la Procuraduría y la Contraloría.",
+        "correcta": false,
+        "explicacion": "Son las entidades correctas pero en el orden equivocado. El enunciado pide primero recuperar el dinero (función fiscal de la Contraloría) y luego sancionar la conducta del servidor (función disciplinaria de la Procuraduría).",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Identificó las dos entidades pero cruzó sus funciones al relacionarlas con cada objetivo."
+      },
+      {
+        "clave": "B",
+        "texto": "la Contraloría para ambas cosas, porque en los dos casos se trata del manejo del dinero público.",
+        "correcta": false,
+        "explicacion": "Aunque la conducta del secretario tiene relación con el dinero, la sanción por su comportamiento como servidor público (firmar sin revisar, abandonar el cargo) es disciplinaria, y la tabla asigna esa función a la Procuraduría. La Contraloría busca la responsabilidad fiscal, no la sanción disciplinaria.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Unificó los dos problemas por su relación con el dinero, sin distinguir responsabilidad fiscal de disciplinaria."
+      },
+      {
+        "clave": "C",
+        "texto": "la Defensoría del Pueblo y la Registraduría Nacional del Estado Civil.",
+        "correcta": false,
+        "explicacion": "Ninguna de las dos tiene las funciones que se necesitan: la Defensoría defiende los derechos humanos y la Registraduría organiza elecciones e identifica a las personas. Ninguna vigila el manejo del dinero público ni sanciona disciplinariamente a los servidores.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió entidades conocidas del Estado sin contrastarlas con la función que describe la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "la Contraloría y la Procuraduría.",
+        "correcta": true,
+        "explicacion": "Recuperar el dinero perdido es un asunto de gestión fiscal: la tabla indica que la Contraloría (en este caso, la territorial) puede declarar responsables fiscales para recuperar recursos. Sancionar al secretario por firmar pagos sin control y abandonar su cargo es un asunto disciplinario, que corresponde a la Procuraduría.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: se perdieron 800 millones en un puente inconcluso; el secretario firmó pagos sin revisar y abandonó el cargo. La comunidad busca recuperar el dinero y sancionar al secretario. La tabla describe cuatro entidades. COMPRENDER: hay que asociar cada objetivo, en orden, con la entidad que lo cumple. INTERPRETAR: recuperar dinero público = control fiscal; sancionar la conducta de un servidor = control disciplinario. REPRESENTAR: objetivo 1 → Contraloría; objetivo 2 → Procuraduría; Defensoría y Registraduría no aplican. RAZONAR: A usa entidades con otras funciones; C invierte el orden; D une dos tipos de responsabilidad distintos. RESOLVER: opción D. VERIFICAR: releer las filas de la tabla confirma que \"recuperar el dinero perdido\" aparece en la Contraloría y \"sancionarlos disciplinariamente\" en la Procuraduría.",
+    "que_identificar": "Los dos objetivos de la comunidad y el orden en que los plantea el enunciado, y la función de cada entidad en la tabla.",
+    "que_revisar": "Órganos de control en la Constitución de 1991 (Ministerio Público y Contraloría) y diferencia entre responsabilidad fiscal y disciplinaria; organización electoral.",
+    "refuerzo_ids": ["SOC-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["organos_de_control", "procuraduria", "contraloria", "organizacion_del_estado", "tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-028",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "comprender",
+    "tema": "Descentralización política en Colombia",
+    "subtema": "Elección popular de alcaldes (1988) y de gobernadores (1991)",
+    "dificultad": 1,
+    "contexto": "Para un trabajo sobre la historia de su municipio, Valentina entrevistó a su abuelo, que fue concejal. Él le contó:\n\n\"Cuando yo era joven, al alcalde no lo elegíamos: lo nombraba el gobernador, y al gobernador lo nombraba el presidente. La primera vez que votamos por alcalde fue un domingo de marzo, dos años después de que el Congreso aprobó la reforma. Y con la Constitución nueva, tres años más tarde, empezamos a elegir también al gobernador.\"\n\nValentina consultó y confirmó que el **Acto Legislativo 1 de 1986** estableció la elección popular de alcaldes, que la primera de esas elecciones se hizo en **marzo de 1988** y que la **Constitución de 1991** estableció la elección popular de gobernadores.",
+    "estimulo": null,
+    "enunciado": "Según la información, ¿cuál afirmación ubica correctamente estos cambios en el tiempo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En 1985 los habitantes ya elegían a su alcalde, pero el gobernador seguía siendo designado.",
+        "correcta": false,
+        "explicacion": "En 1985 todavía no se había aprobado la reforma (1986) y la primera elección de alcaldes fue en 1988. En 1985 el alcalde era nombrado por el gobernador.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "No ordenó las fechas: tomó 1986 o 1988 como si la elección popular hubiera existido desde antes."
+      },
+      {
+        "clave": "B",
+        "texto": "En 1989 tanto el alcalde como el gobernador eran elegidos por voto popular.",
+        "correcta": false,
+        "explicacion": "En 1989 el alcalde sí era elegido (desde 1988), pero el gobernador todavía era designado: su elección popular llegó con la Constitución de 1991, \"tres años más tarde\", como dice el abuelo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que ambas elecciones populares empezaron al mismo tiempo."
+      },
+      {
+        "clave": "C",
+        "texto": "Antes de 1986, el presidente nombraba directamente a los alcaldes de todos los municipios.",
+        "correcta": false,
+        "explicacion": "El abuelo explica que al alcalde lo nombraba el gobernador, y que el presidente nombraba al gobernador. La designación del alcalde era indirecta respecto al presidente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó rápido la cadena de nombramientos y la resumió como si todo dependiera directamente del presidente."
+      },
+      {
+        "clave": "D",
+        "texto": "En 1990 el alcalde era elegido por voto popular, mientras que el gobernador todavía era designado por el presidente.",
+        "correcta": true,
+        "explicacion": "Desde marzo de 1988 los alcaldes se eligen por voto popular; la elección de gobernadores solo se estableció con la Constitución de 1991. Por tanto, en 1990 coexistían un alcalde elegido y un gobernador designado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el testimonio describe una cadena de nombramientos (presidente → gobernador → alcalde) y dos cambios: elección de alcaldes (reforma de 1986, primera elección en 1988) y elección de gobernadores (Constitución de 1991). COMPRENDER: se pide la afirmación que ubica bien los cambios en el tiempo. INTERPRETAR: hay tres periodos: antes de 1988 (ambos designados), 1988-1991 (alcalde elegido, gobernador designado) y desde 1991 (ambos elegidos). REPRESENTAR: línea de tiempo 1986 reforma → 1988 primera elección de alcaldes → 1991 elección de gobernadores. RAZONAR: 1985 está en el primer periodo (A falla); 1989 está en el segundo, sin gobernador elegido (B falla); C altera la cadena de nombramientos. RESOLVER: opción D. VERIFICAR: 1990 cae entre 1988 y 1991, periodo en que solo el alcalde era elegido.",
+    "que_identificar": "Las fechas de 1986, 1988 y 1991 y quién nombraba a quién antes de esas reformas.",
+    "que_revisar": "Proceso de descentralización en Colombia: elección popular de alcaldes (1988) y de gobernadores (Constitución de 1991).",
+    "refuerzo_ids": ["SOC-003", "SOC-029"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["descentralizacion", "eleccion_popular_de_alcaldes", "linea_de_tiempo", "constitucion_1991"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-029",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "razonar",
+    "tema": "Organización territorial del Estado",
+    "subtema": "Competencias del municipio y del departamento",
+    "dificultad": 2,
+    "contexto": "Según el artículo 286 de la Constitución, **son entidades territoriales los departamentos, los distritos, los municipios y los territorios indígenas**. Algunas de sus funciones son:\n\n- **Municipio** (art. 311): prestar los servicios públicos que determine la ley, construir las obras que demande el progreso local y ordenar el desarrollo de su territorio.\n- **Departamento** (art. 298): planificar y promover el desarrollo económico y social dentro de su territorio; cumplir funciones de coordinación y de complementariedad de la acción municipal, y de intermediación entre la Nación y los municipios.\n\nEn una región de montaña, la única vía que une a cuatro municipios con el puerto sobre el río se destruye cada invierno. Ningún municipio tiene recursos para repararla por sí solo, y cada alcalde afirma que el tramo más dañado está en el municipio vecino. Además, en uno de esos municipios, San Juan del Monte, el barrio El Mirador no tiene alcantarillado.",
+    "estimulo": null,
+    "enunciado": "¿Cuál distribución de responsabilidades es coherente con las funciones descritas y con las características del territorio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El alcantarillado de El Mirador corresponde al municipio de San Juan del Monte; la vía, que conecta a varios municipios, requiere que el departamento coordine y complemente la acción de los cuatro municipios.",
+        "correcta": true,
+        "explicacion": "El alcantarillado es un servicio público local dentro de un solo municipio, función que el artículo 311 asigna al municipio. La vía atraviesa varios municipios, ninguno puede asumirla solo y los alcaldes no se ponen de acuerdo: es exactamente el tipo de situación en la que el departamento cumple funciones de coordinación y complementariedad.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Ambos problemas corresponden al departamento, porque tiene más recursos que los municipios.",
+        "correcta": false,
+        "explicacion": "La cantidad de recursos no define la competencia. El alcantarillado de un barrio es un servicio público local que corresponde al municipio según el artículo 311; asignarlo al departamento desconoce la autonomía municipal.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Decidió por quién tiene más dinero y no por las funciones que asigna la Constitución."
+      },
+      {
+        "clave": "C",
+        "texto": "Cada municipio debe reparar por separado el tramo de vía que pasa por su territorio, y el departamento debe construir el alcantarillado de El Mirador.",
+        "correcta": false,
+        "explicacion": "Invierte la lógica territorial: la vía funciona como un sistema regional (si un tramo falla, se incomunican todos) y los municipios no tienen recursos para actuar solos, por lo que se necesita coordinación departamental; el alcantarillado de un barrio es un asunto local del municipio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó el carácter intermunicipal de la vía con la función de coordinación del departamento."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos problemas corresponden a la Nación, porque Colombia es una república unitaria.",
+        "correcta": false,
+        "explicacion": "Ser república unitaria no significa que la Nación resuelva todo: el artículo 1 dice también que es descentralizada y con autonomía de sus entidades territoriales, y el contexto asigna funciones propias a municipios y departamentos.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el rasgo \"unitaria\" como si implicara centralización total."
+      }
+    ],
+    "explicacion": "LEER: el contexto presenta las entidades territoriales y las funciones del municipio y del departamento; luego dos problemas: una vía que une cuatro municipios y se destruye cada invierno, y un barrio sin alcantarillado. COMPRENDER: se debe asignar cada problema a la entidad que corresponde. INTERPRETAR: la vía es un problema regional (varios municipios, recursos insuficientes, desacuerdo entre alcaldes); el alcantarillado es un servicio local. REPRESENTAR: servicio público local → municipio; problema intermunicipal que exige coordinar → departamento. RAZONAR: B decide por recursos; C fragmenta un problema regional y centraliza uno local; D confunde unitaria con centralizada. RESOLVER: opción A. VERIFICAR: cada asignación de A usa una frase literal del contexto (\"prestar los servicios públicos\", \"coordinación y complementariedad de la acción municipal\").",
+    "que_identificar": "La escala territorial de cada problema (un barrio de un municipio o una vía de cuatro municipios) y las funciones de cada entidad en el contexto.",
+    "que_revisar": "Entidades territoriales (art. 286), funciones del municipio (art. 311) y del departamento (art. 298), y el principio de descentralización del artículo 1.",
+    "refuerzo_ids": ["SOC-016", "SOC-036"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["organizacion_territorial", "municipio", "departamento", "descentralizacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-030",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce el modelo de Estado Social de Derecho y su aplicación en Colombia",
+    "habilidad": "interpretar",
+    "tema": "Estado social de derecho",
+    "subtema": "Principio de solidaridad y condiciones de vida digna",
+    "dificultad": 1,
+    "contexto": "El artículo 1 de la Constitución de 1991 dice que Colombia es un **Estado social de derecho**, \"fundada en el respeto de la dignidad humana, en el trabajo y la solidaridad de las personas que la integran y en la prevalencia del interés general\". A diferencia de un Estado que solo se abstiene de violar derechos, el Estado social de derecho también **actúa para que las personas tengan condiciones materiales de vida digna**, en especial las que están en situación de vulnerabilidad.\n\nLa ciudad de Llanogrande creó un subsidio mensual para personas mayores de 65 años que no tienen pensión ni ingresos. El programa se financia con los impuestos que pagan todos los habitantes.",
+    "estimulo": null,
+    "enunciado": "¿Cuál rasgo del Estado social de derecho explica mejor esta medida?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La prevalencia del interés general, porque el subsidio beneficia por igual a todos los habitantes de la ciudad.",
+        "correcta": false,
+        "explicacion": "El subsidio no beneficia a todos por igual: se dirige a un grupo específico (mayores sin pensión ni ingresos). Además, la prevalencia del interés general se aplica cuando hay un conflicto entre un interés particular y el colectivo, y aquí no se describe ese conflicto.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el principio que sonaba más amplio sin verificar a quién beneficia la medida."
+      },
+      {
+        "clave": "B",
+        "texto": "La solidaridad y la búsqueda de condiciones de vida digna, porque la sociedad aporta recursos para proteger a un grupo en situación de vulnerabilidad.",
+        "correcta": true,
+        "explicacion": "Todos los habitantes aportan impuestos para sostener a personas mayores que no tienen cómo subsistir: eso es solidaridad. Y el Estado no se limita a no hacer daño, sino que actúa para garantizar condiciones materiales de vida digna, que es lo que el contexto señala como propio del Estado social de derecho.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La separación de poderes, porque la ciudad decide el subsidio sin intervención del Congreso.",
+        "correcta": false,
+        "explicacion": "La separación de poderes se refiere a la distribución de funciones entre las ramas del poder público; no explica por qué se protege a las personas mayores. Además, el contexto no dice nada sobre la intervención del Congreso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recurrió a un concepto de organización del Estado que no se relaciona con la finalidad de la medida."
+      },
+      {
+        "clave": "D",
+        "texto": "La organización como república unitaria, porque el subsidio es igual en todo el país.",
+        "correcta": false,
+        "explicacion": "El contexto dice que es un programa de la ciudad de Llanogrande, no del país entero. Además, \"república unitaria\" describe la forma de organización territorial del Estado, no un principio de protección social.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó que la medida es local y confundió la forma del Estado con sus fines."
+      }
+    ],
+    "explicacion": "LEER: el artículo 1 fundamenta el Estado en la dignidad humana, el trabajo, la solidaridad y el interés general; el contexto aclara que el Estado social de derecho actúa para garantizar condiciones de vida digna. Llanogrande subsidia a mayores sin pensión con impuestos de todos. COMPRENDER: se pide el rasgo que mejor explica la medida. INTERPRETAR: hay un grupo vulnerable identificado y una contribución de toda la sociedad. REPRESENTAR: todos aportan → solidaridad; el Estado garantiza mínimos de vida → Estado social. RAZONAR: A falla porque no beneficia a todos por igual; C y D son conceptos de organización del Estado, no de sus fines sociales. RESOLVER: opción B. VERIFICAR: B se apoya en dos elementos del contexto: \"solidaridad\" (art. 1) y \"condiciones materiales de vida digna\".",
+    "que_identificar": "A quién se dirige el subsidio, quién lo financia y la definición de Estado social de derecho que da el contexto.",
+    "que_revisar": "Principios fundamentales del artículo 1 de la Constitución y diferencia entre Estado de derecho y Estado social de derecho.",
+    "refuerzo_ids": ["SOC-031", "SOC-041"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["estado_social_de_derecho", "solidaridad", "constitucion_1991"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-031",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "interpretar",
+    "tema": "Constitución de 1886 y Constitución de 1991",
+    "subtema": "De la nación homogénea a la nación pluralista",
+    "dificultad": 2,
+    "contexto": "Un historiador afirma: **\"La Constitución de 1991 pasó de un modelo de nación homogénea a uno de nación pluralista\"**. Con *nación homogénea* se refiere a la idea de que el país debía compartir una sola religión, lengua y cultura; con *nación pluralista*, al reconocimiento de que en el país conviven, con igual valor, diversas creencias, culturas y pueblos.\n\nPara revisar esta afirmación, un grupo de estudiantes elaboró la tabla siguiente.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Comparación de algunos aspectos de las constituciones de 1886 y 1991",
+      "columnas": ["Aspecto", "Constitución de 1886 (texto original)", "Constitución de 1991"],
+      "filas": [["Religión", "La religión católica es la de la Nación; se permiten otros cultos que no sean contrarios a la moral cristiana.", "Libertad de cultos: todas las confesiones religiosas son igualmente libres ante la ley."], ["Diversidad", "No menciona la diversidad étnica y cultural del país.", "El Estado reconoce y protege la diversidad étnica y cultural de la Nación."], ["Participación", "La participación se limita principalmente a elegir representantes mediante el voto.", "Además del voto: plebiscito, referendo, consulta popular, cabildo abierto, iniciativa legislativa y revocatoria del mandato."], ["Protección de derechos", "No existe un mecanismo rápido y directo ante un juez para proteger derechos fundamentales.", "Acción de tutela para la protección inmediata de los derechos fundamentales."]],
+      "nota": "Resumen elaborado con fines escolares."
+    },
+    "enunciado": "¿Cuáles filas de la tabla sustentan mejor la afirmación del historiador?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Participación y Protección de derechos.",
+        "correcta": false,
+        "explicacion": "Estas filas muestran que la democracia se volvió más participativa y que los derechos quedaron mejor protegidos, pero no hablan de si se reconocen diversas creencias o culturas. Son cambios reales, pero no sustentan el paso de \"homogénea\" a \"pluralista\" en el sentido que define el contexto.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió los cambios más conocidos de 1991 sin contrastarlos con la definición de pluralismo del contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "Religión y Participación.",
+        "correcta": false,
+        "explicacion": "La fila de Religión sí sustenta la afirmación (de una religión oficial a la libertad de cultos), pero la de Participación se refiere a los mecanismos democráticos, no a la diversidad de creencias o culturas. La respuesta está a medias.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió pluralismo cultural con pluralismo político o participación."
+      },
+      {
+        "clave": "C",
+        "texto": "Religión y Diversidad.",
+        "correcta": true,
+        "explicacion": "Según el contexto, la nación homogénea implica una sola religión y cultura, y la pluralista reconoce varias con igual valor. La fila Religión muestra el paso de una religión nacional a la igualdad de todas las confesiones, y la fila Diversidad muestra el paso del silencio sobre la diversidad a su reconocimiento y protección. Ambas corresponden exactamente a la afirmación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Diversidad y Protección de derechos.",
+        "correcta": false,
+        "explicacion": "La fila Diversidad sí sustenta la afirmación, pero la de Protección de derechos muestra un nuevo mecanismo judicial (la tutela), no el reconocimiento de distintas creencias o culturas. Falta la fila de Religión, que es la otra evidencia directa.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Acertó en una fila y completó con otra que también muestra un cambio importante, sin verificar su relación con la afirmación."
+      }
+    ],
+    "explicacion": "LEER: el historiador afirma que 1991 pasó de una nación homogénea (una religión, una cultura) a una pluralista (varias creencias y culturas con igual valor). La tabla compara cuatro aspectos. COMPRENDER: se deben elegir las dos filas que prueban ese paso específico. INTERPRETAR: el concepto clave es pluralismo cultural y religioso, no cualquier cambio de 1991. REPRESENTAR: Religión (católica oficial → libertad de cultos) = sí; Diversidad (no mencionada → reconocida) = sí; Participación y Protección = cambios democráticos, no de diversidad. RAZONAR: A usa dos filas no pertinentes; B y D aciertan solo en una. RESOLVER: opción C. VERIFICAR: releer las definiciones del contexto: \"religión, lengua y cultura\" y \"creencias, culturas y pueblos\" coinciden con las filas Religión y Diversidad.",
+    "que_identificar": "La definición de nación homogénea y de nación pluralista dada en el contexto, y qué fila de la tabla habla de creencias o culturas.",
+    "que_revisar": "Cambios de la Constitución de 1991 frente a la de 1886: libertad de cultos (art. 19), diversidad étnica y cultural (art. 7), participación y tutela.",
+    "refuerzo_ids": ["SOC-003", "SOC-024"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["constitucion_1886", "constitucion_1991", "pluralismo", "libertad_de_cultos", "tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-032",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "razonar",
+    "tema": "Dilemas entre derechos",
+    "subtema": "Libertad de expresión frente a intimidad y buen nombre en redes sociales",
+    "dificultad": 2,
+    "contexto": "Mateo, estudiante de grado décimo, grabó a su compañera Laura mientras lloraba después de una discusión en el descanso y publicó el video en un grupo de mensajería de 300 personas con un comentario burlón. Estas son tres posiciones sobre el caso:\n\n- **Mateo:** \"Tengo libertad de expresión. El video es real; no inventé nada, así que puedo publicarlo.\"\n- **Madre de Laura:** \"Se violaron la intimidad y el buen nombre de mi hija. Exijo que el video se borre.\"\n- **Coordinadora:** \"Los dos derechos existen. Pero la libertad de expresión no protege exponer un momento íntimo de otra persona sin su consentimiento para burlarse de ella. El video debe retirarse y Mateo debe participar en un proceso formativo.\"\n\nLa Constitución protege la intimidad personal y el buen nombre (art. 15) y la libertad de expresar y difundir el pensamiento y las opiniones (art. 20).",
+    "estimulo": null,
+    "enunciado": "¿En qué se diferencian la perspectiva de Mateo y la de la coordinadora?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mateo reconoce el derecho a la intimidad de Laura, mientras que la coordinadora lo desconoce.",
+        "correcta": false,
+        "explicacion": "Es al revés: Mateo solo menciona su libertad de expresión y no considera la intimidad de Laura; la coordinadora es quien reconoce ambos derechos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó las posiciones a los actores equivocados."
+      },
+      {
+        "clave": "B",
+        "texto": "Mateo se basa en un derecho constitucional, mientras que la coordinadora se basa solo en el reglamento del colegio, sin referirse a derechos.",
+        "correcta": false,
+        "explicacion": "La coordinadora sí razona con derechos: dice que \"los dos derechos existen\" y explica el límite de la libertad de expresión frente a la intimidad. No menciona el reglamento del colegio como fundamento.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la autoridad escolar habla desde las normas internas y no leyó su argumento completo."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambos consideran que el video puede mantenerse publicado si se elimina el comentario burlón.",
+        "correcta": false,
+        "explicacion": "Ninguno de los dos propone eso. Mateo defiende publicar el video tal como está y la coordinadora dice que el video debe retirarse.",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Respondió con una solución intermedia que no aparece en el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "Mateo trata la libertad de expresión como un derecho sin límites cuando lo publicado es real, mientras que la coordinadora la pondera frente a la intimidad de Laura y le reconoce límites.",
+        "correcta": true,
+        "explicacion": "Mateo justifica la publicación solo porque el video es verdadero, sin considerar otros derechos. La coordinadora reconoce que ambos derechos existen y concluye que la libertad de expresión no ampara exponer un momento íntimo sin consentimiento para burlarse. Esa es la diferencia central: derecho absoluto frente a derechos que se ponderan.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: Mateo publicó sin permiso un video de Laura llorando; hay tres posiciones y dos artículos constitucionales (15 y 20). COMPRENDER: se pide comparar solo a Mateo y a la coordinadora. INTERPRETAR: Mateo argumenta con un solo derecho y con la veracidad del video; la coordinadora reconoce dos derechos y fija un límite. REPRESENTAR: Mateo → libertad de expresión absoluta; coordinadora → libertad de expresión con límites frente a la intimidad. RAZONAR: A invierte las posiciones, B ignora que la coordinadora habla de derechos, C inventa una propuesta que nadie hace. RESOLVER: opción D. VERIFICAR: la frase de la coordinadora \"Los dos derechos existen. Pero…\" confirma la ponderación, y la de Mateo \"no inventé nada, así que puedo publicarlo\" confirma que solo usa la veracidad como criterio.",
+    "que_identificar": "Qué derecho o derechos menciona cada actor y si les reconoce límites.",
+    "que_revisar": "Colisión de derechos fundamentales: intimidad y buen nombre (art. 15) frente a libertad de expresión (art. 20); idea de ponderación.",
+    "refuerzo_ids": ["SOC-034"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["dilemas_entre_derechos", "libertad_de_expresion", "intimidad", "redes_sociales", "convivencia_escolar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-033",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "interpretar",
+    "tema": "Participación juvenil",
+    "subtema": "Consejos municipales de juventud y prejuicios sobre la edad",
+    "dificultad": 2,
+    "contexto": "El Estatuto de Ciudadanía Juvenil (Ley 1622 de 2013, modificada por la Ley 1885 de 2018) considera jóvenes a las personas entre **14 y 28 años**. Crea los **consejos municipales de juventud**, integrados por jóvenes elegidos por voto popular, como mecanismos autónomos de participación, concertación, vigilancia y control de la gestión pública.\n\nEn una sesión del concejo del municipio de San Telmo, cuando se iba a leer un documento de propuestas del consejo municipal de juventud, un concejal intervino:\n\n\"Está bien que exista el consejo de juventud, pero sus propuestas no deberían ni leerse aquí. A esa edad todavía no entienden cómo funciona un presupuesto, y además todos los que se inscribieron se la pasan en las redes sociales y no en los barrios.\"",
+    "estimulo": null,
+    "enunciado": "¿Cuál prejuicio subyace a la intervención del concejal?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Supone que la edad, por sí sola, hace a los jóvenes incapaces de comprender asuntos públicos, y descalifica sus propuestas sin haberlas conocido.",
+        "correcta": true,
+        "explicacion": "El concejal afirma que \"a esa edad todavía no entienden\" un presupuesto: atribuye una incapacidad a todo un grupo por su edad, sin evidencia sobre las personas concretas. Además, pide no leer las propuestas, es decir, las rechaza antes de conocer su contenido. Eso es un prejuicio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Supone que el consejo de juventud no tiene respaldo legal y, por eso, no debería existir.",
+        "correcta": false,
+        "explicacion": "El concejal dice expresamente \"está bien que exista el consejo de juventud\"; no cuestiona su existencia legal, sino el valor de las propuestas de los jóvenes.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al concejal una idea que él mismo niega al comienzo de su intervención."
+      },
+      {
+        "clave": "C",
+        "texto": "Supone que el concejo está obligado a aprobar todo lo que proponga el consejo de juventud.",
+        "correcta": false,
+        "explicacion": "La intervención va en sentido contrario: el concejal no quiere ni siquiera escuchar las propuestas. No hay en su discurso ninguna idea de obligación de aprobarlas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el sentido de la intervención."
+      },
+      {
+        "clave": "D",
+        "texto": "Plantea una crítica basada en datos sobre el desempeño del consejo de juventud, sin prejuicios.",
+        "correcta": false,
+        "explicacion": "El concejal no presenta ningún dato: generaliza (\"todos los que se inscribieron\") y atribuye una incapacidad por la edad. Una crítica basada en evidencia examinaría las propuestas, que es justamente lo que él se niega a hacer.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la seguridad con la que habla el concejal como si fuera evidencia."
+      }
+    ],
+    "explicacion": "LEER: la ley define a los jóvenes (14 a 28 años) y a los consejos de juventud como mecanismos autónomos de participación y control. El concejal acepta su existencia pero pide no leer sus propuestas porque \"a esa edad\" no entienden y \"todos\" están en redes. COMPRENDER: se pide identificar el prejuicio de fondo. INTERPRETAR: un prejuicio es un juicio previo sobre un grupo sin evidencia sobre los individuos. REPRESENTAR: premisa oculta → \"ser joven = no entender asuntos públicos\"; consecuencia → no escuchar las propuestas. RAZONAR: B contradice la frase \"está bien que exista\"; C invierte la intención; D confunde afirmaciones generales con datos. RESOLVER: opción A. VERIFICAR: las expresiones \"a esa edad\" y \"todos los que se inscribieron\" muestran la generalización sin evidencia.",
+    "que_identificar": "Las expresiones que generalizan sobre los jóvenes (\"a esa edad\", \"todos\") y la propuesta de no leer sus documentos.",
+    "que_revisar": "Qué es un prejuicio en un argumento; Estatuto de Ciudadanía Juvenil y consejos municipales de juventud.",
+    "refuerzo_ids": ["SOC-020", "SOC-037"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["participacion_juvenil", "consejos_de_juventud", "prejuicios", "argumentacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-034",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Establece relaciones entre las perspectivas de los individuos en una situación conflictiva y las propuestas de solución",
+    "habilidad": "razonar",
+    "tema": "Dilemas entre derechos",
+    "subtema": "Libre desarrollo de la personalidad y manual de convivencia",
+    "dificultad": 3,
+    "contexto": "El manual de convivencia del colegio La Ceiba prohíbe a los estudiantes hombres llevar el cabello largo; quien lo incumpla no puede entrar a clase. Santiago, de 16 años, lleva el cabello largo desde niño y dice que es parte de su identidad. Lleva tres días sin entrar a clase.\n\n- **Rector:** \"El manual fue aprobado por el consejo directivo y quien se matricula acepta sus normas. La presentación personal forma en disciplina.\"\n- **Santiago:** \"Mi cabello no afecta a nadie. Estoy perdiendo clases y evaluaciones por algo que es mío.\"\n- **Algunas familias:** \"Si se quitan todas las reglas de presentación, se pierde el orden en el colegio.\"\n\nEl artículo 16 de la Constitución reconoce el **libre desarrollo de la personalidad**, \"sin más limitaciones que las que imponen los derechos de los demás y el orden jurídico\", y el artículo 67 reconoce la educación como derecho. La Corte Constitucional ha señalado que los manuales de convivencia pueden regular la vida escolar, pero no imponer restricciones a la apariencia personal que no protejan derechos de otros ni sancionar su ejercicio impidiendo asistir a clase.",
+    "estimulo": null,
+    "enunciado": "¿Cuál propuesta de solución tiene en cuenta las perspectivas en conflicto y es coherente con el marco constitucional descrito?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mantener la prohibición del cabello largo, pero cambiar la sanción de no entrar a clase por horas de trabajo social.",
+        "correcta": false,
+        "explicacion": "Suaviza la sanción, pero sigue castigando el ejercicio de un derecho que, según el contexto, no puede restringirse cuando no afecta derechos de otros. Atiende en parte al rector, pero no a Santiago ni al marco constitucional.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó una solución intermedia centrada en la sanción, sin revisar si la norma misma es válida."
+      },
+      {
+        "clave": "B",
+        "texto": "Revisar el manual con participación de estudiantes, familias y docentes para eliminar las restricciones de apariencia que no protegen derechos ajenos, conservar las normas que sí lo hacen (por ejemplo, llevar el cabello recogido en el laboratorio por seguridad) y reintegrar de inmediato a Santiago a clase.",
+        "correcta": true,
+        "explicacion": "Reintegra a Santiago y protege su educación y su libre desarrollo de la personalidad; responde a la preocupación de las familias por el orden, porque conserva las normas que protegen a otros; y atiende al rector, porque el cambio se hace por el procedimiento institucional del manual, con participación de la comunidad. Es coherente con el límite del artículo 16 y con lo señalado por la Corte.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Permitir que Santiago lleve el cabello largo solo si presenta un certificado que demuestre que se trata de una tradición familiar.",
+        "correcta": false,
+        "explicacion": "Convierte el ejercicio de un derecho en una excepción que hay que justificar ante el colegio, y deja la norma intacta para los demás estudiantes. El artículo 16 no exige demostrar motivos para decidir sobre la propia apariencia.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trató el derecho como un permiso especial que requiere prueba, en lugar de revisar la norma."
+      },
+      {
+        "clave": "D",
+        "texto": "Aplicar el manual tal como está, porque la matrícula es un contrato aceptado voluntariamente y prevalece sobre los derechos individuales.",
+        "correcta": false,
+        "explicacion": "La Constitución es norma de normas (art. 4): un manual o un contrato de matrícula no pueden estar por encima de los derechos fundamentales. El contexto indica además que la Corte ha señalado que estas restricciones no son válidas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que un acuerdo privado o una norma interna prevalece sobre la Constitución."
+      }
+    ],
+    "explicacion": "LEER: el manual prohíbe el cabello largo y sanciona con no entrar a clase; Santiago lleva tres días fuera del aula. Hay tres perspectivas (rector, Santiago, familias) y un marco constitucional (arts. 16 y 67, y la posición de la Corte). COMPRENDER: se busca una solución que atienda las perspectivas y sea coherente con ese marco. INTERPRETAR: el rector valora el procedimiento y la disciplina; Santiago, su identidad y su educación; las familias, el orden. El límite constitucional del libre desarrollo son los derechos de los demás. REPRESENTAR: norma que no protege a otros → no válida; norma que protege a otros (seguridad) → válida; sanción que impide la clase → vulnera la educación. RAZONAR: A mantiene la restricción; C exige justificar un derecho; D pone el manual sobre la Constitución. Solo B distingue normas válidas de inválidas, reintegra a Santiago y usa un procedimiento participativo. RESOLVER: opción B. VERIFICAR: B responde a cada perspectiva (orden, procedimiento, identidad y educación) y respeta el límite del artículo 16 citado.",
+    "que_identificar": "El límite del libre desarrollo de la personalidad (\"los derechos de los demás\"), lo señalado por la Corte y la preocupación de cada actor.",
+    "que_revisar": "Libre desarrollo de la personalidad (art. 16), derecho a la educación (art. 67), supremacía constitucional (art. 4) y límites de los manuales de convivencia.",
+    "refuerzo_ids": ["SOC-032", "SOC-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["dilemas_entre_derechos", "libre_desarrollo_de_la_personalidad", "manual_de_convivencia", "propuestas_de_solucion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-035",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Ciudadanía y sufragio en Colombia",
+    "subtema": "Primer voto de las mujeres en el plebiscito de 1957",
+    "dificultad": 1,
+    "contexto": "Fragmento de un diario personal (texto ficticio elaborado para esta pregunta a partir de hechos históricos):\n\n\"*1.º de diciembre. Hoy me levanté temprano, me puse mi mejor vestido y fui con mi mamá a la mesa de votación de la plaza. Mi papá decía que eso no era cosa de mujeres, pero mi mamá le contestó que la ley ya nos lo permitía desde hacía tres años y que no se iba a quedar en la casa. Hicimos fila con muchas señoras que, como nosotras, nunca habían votado. Nos preguntaban si estábamos de acuerdo con la reforma que se votaba en todo el país.*\"\n\nDatos históricos: el **Acto Legislativo 3 de 1954** reconoció a las mujeres el derecho al voto en Colombia. Las mujeres votaron por primera vez en una votación nacional en el **plebiscito del 1.º de diciembre de 1957**, en el que se aprobó una reforma constitucional.",
+    "estimulo": null,
+    "enunciado": "¿En cuál contexto se inscribe mejor esta fuente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En la Constitución de 1991, que amplió los mecanismos de participación ciudadana.",
+        "correcta": false,
+        "explicacion": "El diario describe a mujeres que votan por primera vez y a un padre que considera que votar \"no era cosa de mujeres\". En 1991 las mujeres votaban desde hacía más de tres décadas. La fuente corresponde a un momento muy anterior.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció cualquier ampliación de la participación con la Constitución de 1991."
+      },
+      {
+        "clave": "B",
+        "texto": "En el proceso de independencia del siglo XIX, cuando se crearon las primeras constituciones.",
+        "correcta": false,
+        "explicacion": "Nada en la fuente remite a la independencia, y el dato histórico ubica el reconocimiento del voto femenino en 1954. En el siglo XIX las mujeres no votaban en elecciones nacionales.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Ubicó la fuente en un periodo \"antiguo\" sin usar las fechas del contexto."
+      },
+      {
+        "clave": "C",
+        "texto": "En la primera participación de las mujeres en una votación nacional, el plebiscito de 1957, tres años después de que se les reconociera el derecho al voto.",
+        "correcta": true,
+        "explicacion": "La fecha (1.º de diciembre), la mención de que la ley lo permitía \"desde hacía tres años\" (1954 + 3 = 1957), las mujeres que \"nunca habían votado\" y la pregunta sobre una reforma votada en todo el país coinciden con el plebiscito de 1957 descrito en los datos históricos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "En la primera elección popular de alcaldes, porque la votación se hizo en la plaza del pueblo.",
+        "correcta": false,
+        "explicacion": "Que la mesa estuviera en la plaza no indica que se eligiera un alcalde. La fuente dice que se preguntaba si estaban de acuerdo con una reforma votada en todo el país, lo que corresponde a un plebiscito nacional, no a una elección local.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se guio por un detalle del lugar (la plaza) y no por lo que se votaba."
+      }
+    ],
+    "explicacion": "LEER: el diario narra el primer voto de una mujer y su madre un 1.º de diciembre; la ley lo permitía desde hacía tres años; se votaba una reforma en todo el país. Los datos indican 1954 (derecho al voto) y 1957 (plebiscito). COMPRENDER: se pide el contexto histórico en el que se inscribe la fuente. INTERPRETAR: las pistas internas (fecha, \"tres años\", \"nunca habían votado\", reforma nacional) deben cruzarse con los datos. REPRESENTAR: 1954 + 3 = 1957; 1.º de diciembre = fecha del plebiscito; pregunta sobre una reforma = plebiscito. RAZONAR: A y B son anacrónicas; D se apoya en un detalle irrelevante. RESOLVER: opción C. VERIFICAR: todas las pistas del diario encajan con C y ninguna contradice los datos históricos.",
+    "que_identificar": "Las pistas de tiempo dentro de la fuente (\"1.º de diciembre\", \"desde hacía tres años\", \"nunca habían votado\") y los datos históricos.",
+    "que_revisar": "Cómo ubicar una fuente primaria en su contexto; historia del sufragio femenino en Colombia (1954 y 1957).",
+    "refuerzo_ids": ["SOC-006", "SOC-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["fuentes_historicas", "voto_femenino", "siglo_xx", "ciudadania"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-036",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "interpretar",
+    "tema": "Organización territorial y actores",
+    "subtema": "Creación de un municipio por segregación de un corregimiento",
+    "dificultad": 2,
+    "contexto": "El corregimiento de El Porvenir pertenece al municipio de Monteoscuro. Está a cuatro horas por trocha de la cabecera municipal, pero a cuarenta minutos por carretera de la cabecera de un municipio vecino. Sus habitantes proponen separarse y crear un nuevo municipio. Según la Constitución (art. 300), las asambleas departamentales pueden crear municipios y segregar territorios municipales, con sujeción a los requisitos que señale la ley (entre ellos, población mínima y capacidad de generar ingresos propios).\n\n- **Líder comunal de El Porvenir:** \"Para cualquier trámite perdemos un día entero de viaje, y los recursos del municipio se quedan en la cabecera.\"\n- **Alcalde de Monteoscuro:** \"Si El Porvenir se va, perdemos los impuestos de las plantaciones que hay allí, y el resto del municipio quedaría más pobre.\"\n- **Funcionaria de planeación del departamento:** \"Un municipio nuevo debe poder pagar sus propios gastos de funcionamiento. Muchos municipios pequeños dependen casi por completo de las transferencias de la Nación.\"",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación reconoce cómo el rol de cada actor influye en su posición?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El alcalde se opone porque no conoce la distancia entre El Porvenir y la cabecera.",
+        "correcta": false,
+        "explicacion": "El alcalde no argumenta sobre la distancia; su razón es la pérdida de impuestos para el resto del municipio. Atribuirle desconocimiento es una inferencia que el texto no permite.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explicó la oposición del alcalde con una causa que no aparece en su intervención."
+      },
+      {
+        "clave": "B",
+        "texto": "El líder habla desde la experiencia de los habitantes alejados de la cabecera; el alcalde, desde su responsabilidad de administrar los recursos de todo el municipio actual; y la funcionaria, desde el criterio técnico de sostenibilidad fiscal que debe evaluar el departamento.",
+        "correcta": true,
+        "explicacion": "Cada argumento corresponde al lugar que ocupa el actor: el líder vive la distancia y la desigualdad en la inversión; el alcalde responde por las finanzas de Monteoscuro, que perdería ingresos; la funcionaria tiene la tarea de evaluar si el nuevo municipio es viable. La afirmación relaciona rol y posición sin descalificar a ninguno.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los tres actores comparten el mismo interés económico, por lo que sus posiciones son en el fondo iguales.",
+        "correcta": false,
+        "explicacion": "Aunque los tres mencionan recursos, sus intereses son distintos y hasta opuestos: el líder quiere que la inversión llegue a El Porvenir, el alcalde quiere conservar los ingresos del municipio actual y la funcionaria evalúa la viabilidad. No son posiciones iguales.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vio la palabra \"recursos\" en los tres argumentos y concluyó que las posiciones coinciden."
+      },
+      {
+        "clave": "D",
+        "texto": "Solo la posición de la funcionaria es válida, porque es técnica; el líder y el alcalde hablan únicamente por interés propio.",
+        "correcta": false,
+        "explicacion": "La pregunta no pide decidir quién tiene la razón, sino reconocer cómo influye el rol. Además, descalificar a los actores por tener intereses desconoce que la experiencia del líder (la distancia real) y la preocupación del alcalde (la pérdida de ingresos) son datos relevantes para la decisión.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió reconocer perspectivas con juzgar cuál es la correcta."
+      }
+    ],
+    "explicacion": "LEER: El Porvenir está lejos de su cabecera y cerca de la de otro municipio; quiere convertirse en municipio. Hablan un líder comunal, el alcalde y una funcionaria departamental; la asamblea decide según requisitos legales. COMPRENDER: se pide reconocer cómo el rol de cada actor influye en lo que dice. INTERPRETAR: líder → habitante que sufre la distancia; alcalde → administrador de las finanzas municipales; funcionaria → evaluadora técnica. REPRESENTAR: rol → preocupación principal → posición. RAZONAR: B iguala intereses opuestos; C juzga en vez de comprender; D inventa una causa. RESOLVER: opción B. VERIFICAR: cada parte de A se apoya en una frase textual de cada actor.",
+    "que_identificar": "El rol de cada actor y la razón principal que da en su intervención.",
+    "que_revisar": "Relación entre roles sociales y posiciones; creación de municipios por las asambleas departamentales (art. 300) y requisitos de viabilidad.",
+    "refuerzo_ids": ["SOC-029", "SOC-005"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["organizacion_territorial", "creacion_de_municipios", "actores_sociales", "perspectivas"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-037",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "razonar",
+    "tema": "Elecciones y participación electoral",
+    "subtema": "Participación electoral juvenil: alcances de una fuente estadística",
+    "dificultad": 3,
+    "contexto": "En una columna de opinión del periódico local de Villa del Carmen se lee:\n\n\"Los jóvenes no votan porque la política no les interesa. Por eso es inútil que la alcaldía siga invirtiendo en programas de participación juvenil.\"\n\nPara respaldar su argumento, el columnista publica la gráfica siguiente, elaborada con los datos oficiales de la última elección del concejo municipal.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Porcentaje de personas inscritas que votaron en la elección del concejo de Villa del Carmen, por grupo de edad",
+      "eje_x": "Grupo de edad (años)",
+      "eje_y": "Porcentaje de inscritos que votaron",
+      "series": [
+        { "nombre": "Participación (%)", "valores": [["18 a 24", 38], ["25 a 34", 46], ["35 a 49", 58], ["50 a 64", 66], ["65 o más", 55]] }
+      ]
+    },
+    "enunciado": "¿Qué se puede afirmar sobre el uso de esta gráfica para sustentar el argumento del columnista?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La gráfica demuestra el argumento completo: los jóvenes votan menos por desinterés y, por tanto, los programas de participación son inútiles.",
+        "correcta": false,
+        "explicacion": "La gráfica solo muestra cuánto votó cada grupo de edad. No contiene información sobre las razones (desinterés u otras) ni sobre el efecto de los programas de participación juvenil. El argumento va mucho más allá de lo que los datos permiten.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aceptó la conclusión porque el primer dato (los jóvenes votaron menos) sí coincide con la gráfica."
+      },
+      {
+        "clave": "B",
+        "texto": "La gráfica contradice el argumento, porque muestra que los jóvenes votaron más que las personas de 65 años o más.",
+        "correcta": false,
+        "explicacion": "Es una lectura errónea: el grupo de 18 a 24 años tiene la participación más baja (38 %), por debajo del grupo de 65 o más (55 %).",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó mal las barras o confundió los grupos de edad."
+      },
+      {
+        "clave": "C",
+        "texto": "La gráfica no sirve para nada, porque corresponde a un solo municipio y a una sola elección.",
+        "correcta": false,
+        "explicacion": "Es una conclusión exagerada. La gráfica sí es útil para mostrar que, en esa elección y en ese municipio, los más jóvenes votaron en menor proporción. Su limitación no es que sea inútil, sino que no explica causas ni permite juzgar los programas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descartó la fuente por completo en lugar de precisar qué puede y qué no puede mostrar."
+      },
+      {
+        "clave": "D",
+        "texto": "La gráfica respalda que en esa elección las personas de 18 a 24 años votaron en menor proporción que los demás grupos, pero no muestra las causas de esa diferencia ni el efecto de los programas de participación juvenil.",
+        "correcta": true,
+        "explicacion": "Esta respuesta reconoce la posibilidad y el límite de la fuente. Posibilidad: el grupo de 18 a 24 años tuvo la menor participación (38 %). Límite: la gráfica no dice por qué (podría deberse a desinterés, pero también a que estudian o trabajan en otro lugar y no trasladaron su inscripción, entre otras razones) y no tiene datos sobre los programas, así que no sustenta la conclusión de que sean inútiles.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el columnista afirma que los jóvenes no votan por desinterés y que los programas de participación son inútiles; la gráfica muestra la participación por edad en una elección del concejo (18-24: 38 %; 25-34: 46 %; 35-49: 58 %; 50-64: 66 %; 65 o más: 55 %). COMPRENDER: se pide evaluar qué puede y qué no puede sustentar la gráfica. INTERPRETAR: la gráfica describe cuánto votó cada grupo; no mide causas ni el efecto de programas. REPRESENTAR: argumento = dato (votan menos) + causa (desinterés) + conclusión (programas inútiles); la gráfica solo cubre el dato. RAZONAR: A acepta todo; B lee mal las barras; C descarta todo; D distingue lo que la fuente respalda de lo que no. RESOLVER: opción D. VERIFICAR: la barra de 18 a 24 años es la más baja (38 %) y en la gráfica no hay variables sobre motivos ni sobre programas.",
+    "que_identificar": "Qué variable mide la gráfica (porcentaje de votantes por edad) y qué partes del argumento no se relacionan con esa variable.",
+    "que_revisar": "Evaluación de fuentes: distinguir un dato descriptivo de una explicación causal y de una recomendación; participación electoral.",
+    "refuerzo_ids": ["SOC-033", "SOC-039"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["elecciones", "participacion_juvenil", "evaluacion_de_fuentes", "barras"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-038",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Decisiones de autoridades locales",
+    "subtema": "Restricción nocturna de circulación para menores de edad",
+    "dificultad": 2,
+    "contexto": "En el municipio de Puerto Carmelo aumentaron las riñas nocturnas en la zona de bares. Según la policía, en el 30 % de esas riñas había menores de edad involucrados. El alcalde estudia expedir un decreto que, durante tres meses, prohíba a los menores de 18 años permanecer en la calle después de las 10 p. m. sin la compañía de un adulto responsable. Los menores encontrados serían llevados por la policía a un centro de protección, y allí se llamaría a sus padres.\n\nEn el municipio hay jóvenes de 16 y 17 años que estudian en jornada nocturna o trabajan en turnos que terminan después de las 10 p. m. El centro de protección tiene capacidad para doce personas y la estación de policía cuenta con ocho patrulleros por turno.",
+    "estimulo": null,
+    "enunciado": "¿Cuál análisis considera los efectos de la medida en más de una dimensión?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La medida es buena porque reducirá las riñas; como la seguridad es lo más importante, no es necesario analizar otros aspectos.",
+        "correcta": false,
+        "explicacion": "Solo considera la dimensión de seguridad y descarta explícitamente las demás, que el propio contexto menciona (estudiantes nocturnos, capacidad del centro y de la policía).",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con el objetivo declarado de la medida y no analizó sus efectos secundarios."
+      },
+      {
+        "clave": "B",
+        "texto": "La medida solo afectará a los dueños de bares, que perderán clientes menores de edad.",
+        "correcta": false,
+        "explicacion": "Analiza una sola dimensión (económica) y además es dudosa: los menores no son clientes legales de los bares. Ignora los efectos sobre los jóvenes que estudian o trabajan de noche y sobre la capacidad institucional.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó \"zona de bares\" con un efecto económico y no leyó el resto del contexto."
+      },
+      {
+        "clave": "C",
+        "texto": "Podría reducir la exposición de los menores a las riñas nocturnas, pero también restringiría la libre circulación de jóvenes que estudian o trabajan de noche, y exigiría patrulleros y cupos en el centro de protección que podrían no alcanzar o dejar de atender otras tareas.",
+        "correcta": true,
+        "explicacion": "Integra tres dimensiones con base en el contexto: seguridad (menos exposición a riñas), derechos (jóvenes con razones legítimas para estar en la calle después de las 10 p. m.) e institucional (solo 12 cupos y 8 patrulleros por turno). Reconoce el posible beneficio y los costos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La medida no tendrá ningún efecto, porque la mayoría de las riñas las protagonizan adultos.",
+        "correcta": false,
+        "explicacion": "Que en el 70 % de las riñas no haya menores no significa que la medida no tenga efectos: podría afectar el 30 % de los casos con menores y, además, tendría efectos sobre derechos y recursos. La conclusión \"ningún efecto\" no se sigue de los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó que un 30 % es insignificante y no consideró otras dimensiones."
+      }
+    ],
+    "explicacion": "LEER: aumentan las riñas nocturnas (30 % con menores); el decreto prohibiría a menores estar en la calle después de las 10 p. m.; hay jóvenes que estudian o trabajan de noche; el centro tiene 12 cupos y hay 8 patrulleros por turno. COMPRENDER: se pide el análisis que considere varias dimensiones. INTERPRETAR: el contexto incluye datos de seguridad, de derechos y de capacidad institucional. REPRESENTAR: seguridad → menos exposición a riñas; derechos → restricción a la circulación; institucional → recursos limitados. RAZONAR: A y B se limitan a una dimensión; D saca una conclusión que los datos no sostienen. RESOLVER: opción C. VERIFICAR: cada efecto de C se apoya en un dato del contexto (riñas, jóvenes nocturnos, 12 cupos y 8 patrulleros).",
+    "que_identificar": "Los datos del contexto que corresponden a distintas dimensiones: riñas, jóvenes que estudian o trabajan de noche y capacidad de la policía y del centro de protección.",
+    "que_revisar": "Análisis multidimensional de una política pública: efectos en seguridad, derechos (libre circulación, art. 24) y capacidad institucional.",
+    "refuerzo_ids": ["SOC-011", "SOC-042"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["decisiones_publicas", "dimensiones", "derechos_de_los_jovenes", "seguridad"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-039",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "habilidad": "razonar",
+    "tema": "Sistema electoral colombiano",
+    "subtema": "Umbral y cifra repartidora en la elección de un concejo",
+    "dificultad": 3,
+    "contexto": "En Colombia, las curules de corporaciones como los concejos se reparten entre las listas con reglas como estas (descritas de forma simplificada para esta pregunta):\n\n1. **Votos válidos** = votos por las listas + votos en blanco.\n2. **Umbral:** solo participan en el reparto las listas que obtengan al menos el 50 % del cociente electoral (votos válidos ÷ número de curules).\n3. **Cifra repartidora:** los votos de cada lista que superó el umbral se dividen sucesivamente entre 1, 2, 3…; las curules se asignan a los resultados más altos.\n\nEl concejo del municipio de Altamira tiene 7 curules. La tabla muestra los resultados de la última elección, calculados por la Registraduría con esas reglas. Un estudiante afirma: **\"Este sistema convierte los votos en curules de manera exactamente proporcional\"**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados de la elección del concejo de Altamira (7 curules)",
+      "columnas": ["Lista", "Votos", "% de votos válidos", "Curules"],
+      "filas": [["Lista Verde", 4200, "46,2 %", 4], ["Lista Azul", 2600, "28,6 %", 2], ["Lista Roja", 1500, "16,5 %", 1], ["Lista Naranja", 400, "4,4 %", 0], ["Voto en blanco", 400, "4,4 %", "—"], ["Total votos válidos", 9100, "100 %", 7]],
+      "nota": "Cociente electoral: 9100 ÷ 7 = 1300 votos. Umbral: 50 % del cociente = 650 votos. Los porcentajes están redondeados."
+    },
+    "enunciado": "¿Qué conclusión sobre la afirmación del estudiante se obtiene al analizar la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No es exacta: la Lista Verde obtuvo menos de la mitad de los votos válidos, pero más de la mitad de las curules (4 de 7), y la Lista Naranja quedó sin representación por no alcanzar el umbral; el sistema favorece a las listas con más votos y reduce el número de listas en el concejo.",
+        "correcta": true,
+        "explicacion": "Con 46,2 % de los votos, la Lista Verde obtuvo 4 de 7 curules (cerca del 57 %). La Naranja, con 400 votos, no llegó al umbral de 650 y no participó en el reparto. Por tanto, el reparto no es exactamente proporcional: el umbral y la cifra repartidora benefician a las listas grandes y concentran la representación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Es correcta, porque cada lista obtuvo un porcentaje de curules igual a su porcentaje de votos.",
+        "correcta": false,
+        "explicacion": "Basta hacer una división: 4 de 7 curules es aproximadamente el 57 %, mientras que la Lista Verde tuvo el 46,2 % de los votos; la Lista Naranja tuvo 4,4 % de los votos y 0 % de las curules. Los porcentajes no son iguales.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No convirtió las curules a porcentaje para compararlas con los votos."
+      },
+      {
+        "clave": "C",
+        "texto": "No es exacta, porque la Lista Naranja debió recibir una curul, ya que sus 400 votos superan el umbral.",
+        "correcta": false,
+        "explicacion": "El umbral es de 650 votos (50 % de un cociente de 1300), según la nota de la tabla. Con 400 votos, la Lista Naranja no lo supera, así que la regla la excluye del reparto correctamente.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó los 400 votos con otro valor o calculó mal el umbral."
+      },
+      {
+        "clave": "D",
+        "texto": "Es correcta, porque la suma de las curules asignadas es igual al número total de curules del concejo.",
+        "correcta": false,
+        "explicacion": "Que se repartan todas las curules es una condición de cualquier sistema de reparto, no una prueba de proporcionalidad. La pregunta es si cada lista recibió curules en la misma proporción que sus votos, y eso no ocurre.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió \"se repartieron todas las curules\" con \"se repartieron de forma proporcional\"."
+      }
+    ],
+    "explicacion": "LEER: el contexto explica votos válidos, umbral y cifra repartidora; la tabla muestra votos, porcentajes y curules de cuatro listas y el voto en blanco; el estudiante afirma que el reparto es exactamente proporcional. COMPRENDER: se pide evaluar esa afirmación con los datos. INTERPRETAR: proporcional exacto significaría que % de curules = % de votos para cada lista. REPRESENTAR: Verde 46,2 % votos → 4/7 ≈ 57 % curules; Azul 28,6 % → 2/7 ≈ 29 %; Roja 16,5 % → 1/7 ≈ 14 %; Naranja 4,4 % → 0 % (400 < 650). RAZONAR: la Verde está sobrerrepresentada y la Naranja excluida, lo que muestra que el modelo favorece a las listas grandes. B no compara porcentajes; C calcula mal el umbral; D confunde reparto completo con reparto proporcional. RESOLVER: opción A. VERIFICAR: la cifra repartidora confirma 4-2-1 (4200, 2600, 2100, 1500, 1400, 1300, 1050 son los siete resultados más altos).",
+    "que_identificar": "Comparar el porcentaje de votos de cada lista con su porcentaje de curules, y el umbral (650 votos) frente a los votos de la Lista Naranja.",
+    "que_revisar": "Sistema electoral colombiano: votos válidos, voto en blanco, cociente electoral, umbral y cifra repartidora; efectos del sistema sobre la representación.",
+    "refuerzo_ids": ["SOC-037", "SOC-027"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["sistema_electoral", "elecciones", "cifra_repartidora", "umbral", "tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-040",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "comprender",
+    "tema": "Minería ilegal y territorio",
+    "subtema": "Relaciones entre contaminación por mercurio, salud, economía y seguridad",
+    "dificultad": 1,
+    "contexto": "En el río Sinuoso operan dragas de minería ilegal de oro que usan mercurio para separar el metal. Desde que empezaron a operar:\n\n- Los peces del río tienen niveles altos de mercurio.\n- En el resguardo indígena ubicado río abajo, cuya alimentación depende del pescado, aumentaron los casos de problemas neurológicos.\n- Los pescadores de la zona venden menos porque los compradores desconfían del pescado.\n- Varios jóvenes de las veredas dejaron el colegio para trabajar en las dragas, que pagan más que la pesca o la agricultura.\n- Un grupo armado cobra dinero a los dueños de las dragas para permitirles trabajar.",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación describe mejor la relación entre las dimensiones del problema?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El problema es solo ambiental, porque lo que se contamina es el río.",
+        "correcta": false,
+        "explicacion": "La contaminación del río es el punto de partida, pero el contexto muestra consecuencias en la salud, en la economía de los pescadores, en la educación de los jóvenes y en la seguridad. Reducirlo a lo ambiental deja por fuera la mayor parte de la situación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con el primer dato del contexto y no leyó la lista completa."
+      },
+      {
+        "clave": "B",
+        "texto": "La contaminación del río afecta la salud del resguardo y los ingresos de los pescadores, mientras que el dinero de la minería atrae a jóvenes que dejan el colegio y financia a un grupo armado; así, lo ambiental se conecta con lo económico, lo educativo y la seguridad.",
+        "correcta": true,
+        "explicacion": "Recoge las relaciones que aparecen en el contexto: mercurio en el río → pescado contaminado → problemas de salud y menos ventas; ingresos de la minería → deserción escolar y financiación del grupo armado. Es la única opción que conecta las dimensiones entre sí.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La deserción escolar de los jóvenes es la causa de la contaminación del río.",
+        "correcta": false,
+        "explicacion": "Invierte la relación: según el contexto, los jóvenes dejan el colegio porque las dragas pagan más, es decir, la deserción es una consecuencia de la minería, no la causa de la contaminación.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una consecuencia con una causa al relacionar dos datos de la lista."
+      },
+      {
+        "clave": "D",
+        "texto": "La minería mejora la salud del resguardo, porque genera más ingresos en la región.",
+        "correcta": false,
+        "explicacion": "El contexto dice lo contrario: en el resguardo aumentaron los problemas neurológicos. Los ingresos de la minería no llegan a mejorar la salud de quienes consumen el pescado contaminado.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una relación positiva entre ingresos y salud que el texto contradice."
+      }
+    ],
+    "explicacion": "LEER: dragas ilegales usan mercurio; los peces se contaminan; el resguardo sufre problemas de salud; los pescadores venden menos; jóvenes dejan el colegio para trabajar en las dragas; un grupo armado cobra a las dragas. COMPRENDER: se pide la afirmación que relaciona mejor las dimensiones. INTERPRETAR: hay dimensiones ambiental, de salud, económica, educativa y de seguridad. REPRESENTAR: mercurio → pescado → salud y ventas; dinero de la minería → deserción y financiación armada. RAZONAR: A omite dimensiones; C invierte causa y efecto; D contradice el texto. RESOLVER: opción B. VERIFICAR: cada relación de B corresponde a un punto de la lista del contexto.",
+    "que_identificar": "Los cinco efectos enumerados y cómo se encadenan con la contaminación y con el dinero de la minería.",
+    "que_revisar": "Análisis de problemas sociales con múltiples dimensiones (ambiental, económica, de salud, educativa y de seguridad).",
+    "refuerzo_ids": ["SOC-009", "SOC-043"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["mineria_ilegal", "ambiente", "dimensiones", "resguardos"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-041",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "interpretar",
+    "tema": "Estado social de derecho en el tiempo",
+    "subtema": "Evolución del uso de la tutela para reclamar el derecho a la salud",
+    "dificultad": 2,
+    "contexto": "La **acción de tutela** fue creada por la Constitución de 1991 como mecanismo para proteger los derechos fundamentales. Durante años se debatió si la salud era un derecho fundamental; la **Ley Estatutaria 1751 de 2015** la reconoció como derecho fundamental autónomo.\n\nUn estudio sobre un circuito judicial (datos ficticios) encontró que la mayoría de las tutelas de salud de 2020 pedían citas, medicamentos o procedimientos que **ya estaban incluidos** en los servicios que las entidades de salud debían prestar, pero que no se habían entregado a tiempo.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Tutelas recibidas en un circuito judicial, según el derecho invocado (datos ficticios)",
+      "eje_x": "Derecho invocado",
+      "eje_y": "Número de tutelas",
+      "series": [
+        { "nombre": "2000", "valores": [["Salud", 120], ["Petición", 310], ["Educación", 60], ["Otros", 90]] },
+        { "nombre": "2020", "valores": [["Salud", 780], ["Petición", 520], ["Educación", 70], ["Otros", 150]] }
+      ]
+    },
+    "enunciado": "¿Cuál interpretación relaciona mejor la dimensión jurídica con la dimensión de prestación de los servicios de salud?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las personas de 2020 son más conflictivas que las de 2000, por eso presentan más tutelas.",
+        "correcta": false,
+        "explicacion": "Es una explicación basada en un prejuicio sobre las personas, sin apoyo en los datos. El contexto ofrece otra explicación: fallas en la entrega de servicios ya incluidos y el reconocimiento legal de la salud como derecho fundamental.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explicó el aumento con un rasgo de carácter de la población en lugar de usar la información del contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "Las tutelas de salud aumentaron porque se resolvieron los problemas relacionados con el derecho de petición.",
+        "correcta": false,
+        "explicacion": "La gráfica muestra que las tutelas por derecho de petición también aumentaron (de 310 a 520); no hay evidencia de que esos problemas se resolvieran ni de que se relacionen con el aumento en salud.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "No comparó las dos barras de \"Petición\" antes de afirmar algo sobre ellas."
+      },
+      {
+        "clave": "C",
+        "texto": "El aumento de las tutelas de salud (de 120 a 780) puede relacionarse con el reconocimiento de la salud como derecho fundamental y con fallas en la entrega de servicios ya incluidos, lo que convierte a los jueces en una vía para acceder a la atención.",
+        "correcta": true,
+        "explicacion": "Relaciona las dos dimensiones pedidas: la jurídica (la tutela y el reconocimiento de la salud como derecho fundamental en 2015) y la de prestación del servicio (servicios incluidos que no se entregaban a tiempo). El dato de la gráfica (120 → 780) es coherente con esa relación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Las tutelas de salud son innecesarias desde 2015, porque la ley ya garantiza ese derecho.",
+        "correcta": false,
+        "explicacion": "Que una ley reconozca un derecho no garantiza que los servicios se presten. El contexto muestra precisamente que en 2020 muchas personas tuvieron que acudir a la tutela para obtener servicios que ya les correspondían.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el reconocimiento legal de un derecho con su cumplimiento efectivo."
+      }
+    ],
+    "explicacion": "LEER: la tutela existe desde 1991; la salud fue reconocida como derecho fundamental en 2015; en 2020 muchas tutelas pedían servicios ya incluidos no entregados. La gráfica compara 2000 y 2020: salud 120 → 780, petición 310 → 520, educación 60 → 70, otros 90 → 150. COMPRENDER: se pide la interpretación que conecte lo jurídico con la prestación del servicio. INTERPRETAR: el mayor aumento está en salud (6,5 veces), y el contexto da dos pistas para explicarlo. REPRESENTAR: dimensión jurídica (tutela + ley de 2015) ↔ dimensión de servicio (entregas tardías) → más tutelas de salud. RAZONAR: A usa un prejuicio; B lee mal la gráfica; D confunde reconocimiento con garantía. RESOLVER: opción C. VERIFICAR: C cita el dato correcto de la gráfica y las dos pistas del contexto.",
+    "que_identificar": "El cambio en las barras de salud y de petición entre 2000 y 2020, y las dos pistas del contexto (ley de 2015 y servicios incluidos no entregados).",
+    "que_revisar": "La acción de tutela como herramienta del Estado social de derecho; diferencia entre reconocer un derecho y garantizarlo en la práctica.",
+    "refuerzo_ids": ["SOC-030", "SOC-025"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["tutela", "derecho_a_la_salud", "estado_social_de_derecho", "barras"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-042",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Gobierno escolar",
+    "subtema": "Elección de los voceros del consejo de estudiantes",
+    "dificultad": 2,
+    "contexto": "Según la norma nacional (Decreto 1860 de 1994, hoy compilado en el Decreto 1075 de 2015), el **consejo de estudiantes** está integrado por un vocero de cada grado, elegido por los estudiantes de ese grado mediante **votación secreta**, y es el máximo órgano que asegura y garantiza el continuo ejercicio de la participación por parte de los estudiantes.\n\nEn el colegio Nueva Aurora, el consejo de estudiantes ha tenido baja asistencia a sus reuniones. El rector propone que el próximo año los voceros sean **designados por los directores de grupo** entre los estudiantes con mejor rendimiento académico, \"para que sean estudiantes responsables y para no perder tiempo de clase en elecciones\".",
+    "estimulo": null,
+    "enunciado": "¿Cuál análisis considera los efectos de la propuesta en distintas dimensiones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La propuesta mejorará la participación, porque los estudiantes con mejores notas son siempre los más comprometidos con su comunidad.",
+        "correcta": false,
+        "explicacion": "Parte de un supuesto no demostrado (que buen rendimiento académico equivale a compromiso con la comunidad) y considera un solo efecto. No analiza la representatividad ni la norma.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aceptó el supuesto del rector sin cuestionarlo."
+      },
+      {
+        "clave": "B",
+        "texto": "La propuesta solo tendría efectos sobre el tiempo de clase, que aumentaría.",
+        "correcta": false,
+        "explicacion": "Considera una sola dimensión (la administrativa o académica). Deja por fuera los efectos sobre la representatividad de los voceros, la inclusión de los estudiantes y la coherencia con la norma.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el argumento del ahorro de tiempo como único efecto relevante."
+      },
+      {
+        "clave": "C",
+        "texto": "La propuesta no tendría ningún efecto, porque el consejo de estudiantes no tiene funciones reales en el colegio.",
+        "correcta": false,
+        "explicacion": "El contexto indica que el consejo de estudiantes es el máximo órgano que garantiza la participación estudiantil; afirmar que no tiene funciones contradice la información dada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Desconoce el papel del consejo de estudiantes en el gobierno escolar."
+      },
+      {
+        "clave": "D",
+        "texto": "Podría ahorrar tiempo de organización, pero reduciría la representatividad y la legitimidad de los voceros ante sus compañeros, excluiría de la participación a estudiantes con menor rendimiento y contradiría la norma que establece que los voceros se eligen por votación secreta.",
+        "correcta": true,
+        "explicacion": "Analiza cuatro dimensiones: administrativa (ahorro de tiempo), política (representatividad y legitimidad: los voceros responderían a los docentes y no a sus compañeros), de equidad (exclusión según notas) y legal (la norma exige elección). Reconoce el posible beneficio y los costos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la norma dice que los voceros se eligen por votación secreta y que el consejo garantiza la participación estudiantil; el rector propone designarlos según notas para ahorrar tiempo y asegurar responsabilidad. COMPRENDER: se pide el análisis que considere efectos en varias dimensiones. INTERPRETAR: la propuesta toca lo administrativo, la representación, la inclusión y la legalidad. REPRESENTAR: beneficio → tiempo; costos → legitimidad, exclusión, choque con la norma. RAZONAR: A se basa en un supuesto; B mira una sola dimensión; C contradice el contexto. RESOLVER: opción D. VERIFICAR: D se apoya en datos del contexto (\"votación secreta\", \"mejor rendimiento académico\", \"no perder tiempo\").",
+    "que_identificar": "Cómo establece la norma la elección de los voceros y qué cambia exactamente la propuesta del rector.",
+    "que_revisar": "Gobierno escolar: consejo de estudiantes, representatividad y legitimidad; análisis de efectos de una decisión en varias dimensiones.",
+    "refuerzo_ids": ["SOC-020", "SOC-007"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["gobierno_escolar", "consejo_de_estudiantes", "participacion", "dimensiones"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-043",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Territorio, obras públicas y pueblos indígenas",
+    "subtema": "Consulta previa y alternativas de trazado de una vía",
+    "dificultad": 3,
+    "contexto": "Un departamento planea una carretera entre dos municipios. Hay dos alternativas; una de ellas atraviesa el resguardo indígena Kaima, donde se encuentran una laguna que la comunidad considera sagrada y parcelas de cultivo de las que depende su alimentación.\n\nLa **consulta previa** es un derecho fundamental de los pueblos indígenas y de otros grupos étnicos: antes de un proyecto que los afecte directamente, el Estado debe consultarlos de buena fe con el fin de llegar a un acuerdo, y los resultados de la consulta deben tenerse en cuenta en la decisión. No es un simple trámite.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Alternativas de trazado de la carretera",
+      "columnas": ["Criterio", "Ruta A (atraviesa el resguardo)", "Ruta B (bordea el resguardo)"],
+      "filas": [["Longitud", "32 km", "47 km"], ["Costo estimado", "96 000 millones de pesos", "130 000 millones de pesos"], ["Tiempo de viaje", "50 minutos", "70 minutos"], ["Afectación en el resguardo", "Cruza la zona de la laguna sagrada y 60 hectáreas de cultivos", "No entra al resguardo; pasa a 2 km de su límite"], ["Consulta previa", "Requerida", "Debe evaluarse si hay afectación directa (ruido, tránsito, acceso)"]],
+      "nota": "Datos ficticios con fines escolares."
+    },
+    "enunciado": "¿Cuál análisis de los efectos de las alternativas es más completo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La ruta A es la mejor porque es más corta, más barata y más rápida; la consulta previa es solo un requisito que se cumple informando a la comunidad.",
+        "correcta": false,
+        "explicacion": "Analiza solo la dimensión económica y reduce la consulta previa a informar, cuando el contexto dice que es un derecho fundamental que busca un acuerdo y cuyos resultados deben tenerse en cuenta. Ignora la afectación cultural y alimentaria.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se dejó llevar por las ventajas numéricas de la ruta A y no leyó la definición de consulta previa."
+      },
+      {
+        "clave": "B",
+        "texto": "La ruta A reduce costos y tiempos, pero afectaría un sitio sagrado y cultivos de los que depende la alimentación del resguardo, y requiere una consulta previa cuyo resultado puede modificar el trazado; la ruta B cuesta más y alarga el viaje, pero reduce la afectación directa, aunque también debe evaluarse su impacto sobre la comunidad. La decisión debe ponderar estas dimensiones con participación del resguardo.",
+        "correcta": true,
+        "explicacion": "Considera las dimensiones económica (costo y tiempo), cultural (laguna sagrada), alimentaria (cultivos), jurídica (consulta previa como derecho) y participativa, y lo hace para ambas rutas, sin suponer que alguna no tenga costos. Es el análisis que integra toda la información de la tabla y del contexto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La ruta B es obligatoria, porque la ley prohíbe construir cualquier obra cerca de un resguardo.",
+        "correcta": false,
+        "explicacion": "El contexto no dice que exista esa prohibición; dice que, si un proyecto afecta directamente a una comunidad étnica, debe hacerse consulta previa. Además, la ruta B también pasa cerca del resguardo, así que la supuesta prohibición la descartaría igualmente.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió la protección de los resguardos en una prohibición absoluta que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "La ruta B no tiene ningún efecto negativo, porque no entra al resguardo.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que la ruta B cuesta 34 000 millones más y alarga el viaje 20 minutos, y que debe evaluarse si causa afectación directa por ruido, tránsito o acceso. Decir que no tiene efectos negativos ignora esos datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Consideró solo la afectación territorial directa y no revisó las demás filas de la tabla."
+      }
+    ],
+    "explicacion": "LEER: dos rutas para una carretera; la A atraviesa el resguardo (laguna sagrada y 60 ha de cultivos), es más corta y barata; la B bordea el resguardo, cuesta más y es más lenta. La consulta previa es un derecho fundamental orientado al acuerdo. COMPRENDER: se pide el análisis de efectos más completo. INTERPRETAR: están en juego dimensiones económica, cultural, alimentaria, jurídica y de participación, en ambas rutas. REPRESENTAR: Ruta A → + económica / − cultural, alimentaria, requiere consulta; Ruta B → − económica / + menor afectación directa, por evaluar. RAZONAR: A reduce todo a lo económico y trivializa la consulta; C inventa una prohibición; D ignora los costos de la ruta B. RESOLVER: opción B. VERIFICAR: B menciona todas las filas de la tabla y la definición de consulta previa del contexto, y compara las dos rutas.",
+    "que_identificar": "Cada fila de la tabla para ambas rutas y la definición de consulta previa (derecho fundamental, buena fe, búsqueda de acuerdo).",
+    "que_revisar": "Consulta previa como derecho fundamental de los pueblos étnicos; análisis de alternativas con varias dimensiones (económica, cultural, ambiental, jurídica).",
+    "refuerzo_ids": ["SOC-024", "SOC-040"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["consulta_previa", "resguardos", "obras_publicas", "dimensiones", "tabla"],
+    "estado": "aprobada"
+  }
+]

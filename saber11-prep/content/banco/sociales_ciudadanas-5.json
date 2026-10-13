@@ -1,0 +1,1267 @@
+[
+  {
+    "id": "SOC-063",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Regiones naturales de Colombia",
+    "subtema": "Prácticas productivas y características físicas de la Orinoquia",
+    "dificultad": 1,
+    "contexto": "Doña Rosalba y su familia crían ganado en una finca muy extensa, de terreno **plano**, cubierta de **pastos naturales** y con franjas de árboles solo a orillas de los caños. Ella cuenta: \"De abril a noviembre llueve casi todos los días y parte de la finca se inunda; de diciembre a marzo no cae una gota, los caños se secan y tenemos que llevar el ganado hacia las orillas del río grande para que tenga agua y pasto\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Rasgos físicos generales de cuatro regiones naturales de Colombia",
+      "columnas": ["Región", "Relieve predominante", "Régimen de lluvias", "Vegetación predominante"],
+      "filas": [["Andina", "Tres cordilleras con valles entre ellas", "En muchas zonas, dos temporadas de lluvia y dos secas al año", "Bosques andinos, páramos y áreas de cultivo en laderas"], ["Pacífica", "Llanura costera estrecha y serranía", "Lluvias abundantes durante casi todo el año", "Selva húmeda y manglares"], ["Orinoquia", "Llanuras bajas y extensas", "Una temporada de lluvias larga y una temporada seca muy marcada", "Sabanas de pastos naturales y bosques de galería junto a los ríos"], ["Amazonia", "Llanura baja con algunas mesetas", "Lluvias abundantes durante casi todo el año", "Selva tropical densa"]],
+      "nota": "Descripción general y simplificada con fines escolares."
+    },
+    "enunciado": "De acuerdo con el relato y la tabla, ¿en qué región natural se encuentra, con mayor probabilidad, la finca de doña Rosalba?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Andina, porque allí se concentra buena parte de la ganadería del país y hay temporadas secas.",
+        "correcta": false,
+        "explicacion": "Aunque en la región Andina hay ganadería y temporadas secas, su relieve es montañoso y el régimen suele tener dos temporadas de lluvia; el relato describe una finca plana, con sabana y una sola temporada seca larga.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en un solo rasgo (hay ganadería y épocas secas) sin cruzar el relieve plano y el régimen de una sola temporada seca."
+      },
+      {
+        "clave": "B",
+        "texto": "Pacífica, porque es una llanura en la que parte del terreno se inunda.",
+        "correcta": false,
+        "explicacion": "La Pacífica tiene llanura costera, pero llueve casi todo el año y su vegetación es selva húmeda, no sabana; en el relato hay cuatro meses sin lluvia.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"inundación\" y \"llanura\" con la costa pacífica y no revisó la columna de régimen de lluvias."
+      },
+      {
+        "clave": "C",
+        "texto": "Orinoquia, porque combina llanuras planas, sabanas de pastos naturales, bosques junto a los ríos y una temporada seca muy marcada.",
+        "correcta": true,
+        "explicacion": "Es la única fila que coincide con los cuatro rasgos del relato: terreno plano, pastos naturales, árboles solo a orillas de los caños (bosques de galería) y una temporada de lluvias larga seguida de una seca marcada. Esas condiciones explican la ganadería extensiva y el traslado del ganado hacia los ríos en verano.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Amazonia, porque es una llanura baja con ríos grandes.",
+        "correcta": false,
+        "explicacion": "La Amazonia es llana y tiene ríos grandes, pero está cubierta de selva densa y llueve casi todo el año; no coincide con la sabana ni con la temporada seca que describe doña Rosalba.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió una región que comparte el relieve bajo, sin comprobar vegetación y lluvias."
+      }
+    ],
+    "explicacion": "LEER: el relato describe terreno plano, pastos naturales, árboles solo junto a los caños y dos temporadas (lluvias de abril a noviembre; sequía de diciembre a marzo). COMPRENDER: se pide ubicar la finca en una región natural usando la tabla. INTERPRETAR: \"árboles a orillas de los caños\" equivale a bosques de galería; \"no cae una gota\" durante cuatro meses indica una temporada seca muy marcada. REPRESENTAR: se cruzan cuatro rasgos (relieve, lluvias, vegetación, práctica) con cada fila. RAZONAR: la Andina falla en el relieve; la Pacífica y la Amazonia fallan en las lluvias y la vegetación. RESOLVER: la Orinoquia (C). VERIFICAR: la ganadería extensiva y el traslado del ganado en verano son prácticas típicas de las sabanas llaneras, coherentes con la respuesta.",
+    "que_identificar": "Los cuatro rasgos del relato (relieve plano, sabana, bosques de galería y una sola temporada seca marcada) y la fila de la tabla que los reúne todos.",
+    "que_revisar": "Regiones naturales de Colombia: relieve, clima, vegetación y actividades económicas asociadas; cruzar varios criterios antes de decidir.",
+    "refuerzo_ids": ["SOC-064", "SOC-078"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["regiones_naturales", "orinoquia", "geografia_colombia", "tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-064",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "razonar",
+    "tema": "Ecosistemas estratégicos y agua",
+    "subtema": "Páramos y regulación del abastecimiento de agua",
+    "dificultad": 2,
+    "contexto": "El municipio de Villa Serena (caso ficticio) toma el 70 % del agua de su acueducto de dos quebradas que nacen en el páramo de Guacharal. En el páramo, los musgos, los frailejones y los suelos ricos en materia orgánica **retienen el agua** de la lluvia y de la niebla y la **liberan poco a poco**, de modo que las quebradas llevan agua incluso en los meses secos. Un grupo de productores propone ampliar los cultivos de papa y los potreros para ganado dentro del páramo, retirando la vegetación nativa.",
+    "estimulo": null,
+    "enunciado": "Si la propuesta se aplicara en gran parte del páramo, ¿cuál sería la consecuencia más probable para el abastecimiento de agua de Villa Serena?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Habría más agua disponible, porque sin frailejones ni musgos las plantas ya no consumirían el agua de la lluvia.",
+        "correcta": false,
+        "explicacion": "La vegetación del páramo no \"gasta\" el agua que abastece a las quebradas; al contrario, la almacena y la regula. Quitarla reduce la regulación y no aumenta el agua disponible en los meses secos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la idea de que las plantas compiten por el agua, sin tener en cuenta la función de retención que describe el contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "El efecto sería únicamente sobre la biodiversidad, porque desaparecerían especies como el frailejón, pero el acueducto no se vería afectado.",
+        "correcta": false,
+        "explicacion": "Es cierto que se perdería biodiversidad, pero la opción ignora el dato central del contexto: el 70 % del agua del acueducto depende de quebradas reguladas por el páramo.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Reconoció un efecto real (pérdida de especies) y se quedó con él, sin conectar el ecosistema con el servicio de agua que presta a la población."
+      },
+      {
+        "clave": "C",
+        "texto": "Ninguna, porque el agua de las quebradas proviene de la lluvia y la lluvia seguiría cayendo igual sobre el páramo.",
+        "correcta": false,
+        "explicacion": "El texto explica que el páramo no solo recibe lluvia: la retiene y la libera gradualmente. Aunque llueva lo mismo, sin esa \"esponja\" el agua escurre rápido y no queda reservada para los meses secos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pensó que la cantidad de lluvia es lo único que importa y no el papel del ecosistema en regular cuándo llega el agua a las quebradas."
+      },
+      {
+        "clave": "D",
+        "texto": "El caudal de las quebradas se volvería más irregular: bajaría en los meses secos, con riesgo de desabastecimiento, y el agua de las lluvias bajaría más rápido, con más arrastre de tierra.",
+        "correcta": true,
+        "explicacion": "Si se retira la vegetación y se compacta el suelo, se pierde la capacidad de retener y liberar el agua poco a poco. El agua de las lluvias escurre de inmediato (crecientes y sedimentos) y en época seca las quebradas llevan menos agua, justo cuando el acueducto más la necesita.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el acueducto depende en un 70 % de quebradas que nacen en el páramo; el páramo retiene el agua y la libera poco a poco. COMPRENDER: se pregunta la consecuencia para el abastecimiento si se reemplaza la vegetación nativa por cultivos y potreros. INTERPRETAR: el concepto clave es regulación hídrica: el páramo funciona como una esponja que reparte el agua a lo largo del año. REPRESENTAR: vegetación y suelo del páramo → retención → caudal estable; sin vegetación → escurrimiento rápido → crecientes en lluvias y poca agua en sequía. RAZONAR: A ignora la regulación; C confunde regulación con consumo; D se queda en la biodiversidad. RESOLVER: B. VERIFICAR: la respuesta usa exactamente la función descrita en el contexto y la dependencia del acueducto.",
+    "que_identificar": "La función de retener y liberar gradualmente el agua que el texto atribuye al páramo, y la dependencia del acueducto de esas quebradas.",
+    "que_revisar": "Páramos como ecosistemas estratégicos: regulación hídrica y servicios ecosistémicos; relación entre uso del suelo y disponibilidad de agua.",
+    "refuerzo_ids": ["SOC-009", "SOC-017"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["paramos", "agua", "servicios_ecosistemicos", "caso_ficticio"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-065",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "razonar",
+    "tema": "Oferta y demanda",
+    "subtema": "Choque de oferta en un producto agrícola",
+    "dificultad": 1,
+    "contexto": "En enero, varias **heladas** afectaron los cultivos de papa del altiplano y se perdió cerca de una tercera parte de la cosecha que se esperaba recoger en febrero. Las familias de las ciudades siguen comprando papa como siempre, porque es un alimento básico en su dieta. El precio de la papa no lo fija el Gobierno: se forma en las plazas de mercado según lo que se ofrece y lo que se pide.",
+    "estimulo": null,
+    "enunciado": "¿Qué es lo más probable que ocurra con el precio de la papa en las plazas de mercado durante febrero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que suba, porque la helada hará que las familias demanden más papa que antes.",
+        "correcta": false,
+        "explicacion": "Acierta en que el precio sube, pero por una causa equivocada: el contexto indica que las familias siguen comprando como siempre; lo que cambió fue la oferta, no la demanda.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Llegó a la dirección correcta (alza) pero confundió un cambio en la oferta con un cambio en la demanda."
+      },
+      {
+        "clave": "B",
+        "texto": "Que suba, porque llegará menos papa a las plazas mientras la cantidad que las familias quieren comprar se mantiene.",
+        "correcta": true,
+        "explicacion": "La helada reduce la oferta (hay menos papa para vender) y la demanda se mantiene porque es un alimento básico. Con la misma demanda y menos oferta, los compradores compiten por una cantidad menor y el precio tiende a subir.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que baje, porque los agricultores que perdieron cosecha necesitan vender rápido lo que les quedó.",
+        "correcta": false,
+        "explicacion": "La necesidad de vender de algunos productores no cambia que la cantidad total disponible disminuyó. Con menos producto y la misma demanda, la presión es hacia el alza, no hacia la baja.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Razonó desde la situación de un productor individual y no desde el mercado completo (menos oferta total frente a igual demanda)."
+      },
+      {
+        "clave": "D",
+        "texto": "Que se mantenga igual, porque el precio de los alimentos básicos lo fija el Gobierno.",
+        "correcta": false,
+        "explicacion": "El contexto dice expresamente que el precio no lo fija el Gobierno, sino que se forma en las plazas según oferta y demanda.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó o no tuvo en cuenta la frase del contexto que descarta un precio fijado por el Gobierno."
+      }
+    ],
+    "explicacion": "LEER: la helada destruyó un tercio de la cosecha; las familias compran como siempre; el precio se forma por oferta y demanda. COMPRENDER: se pide predecir el precio en febrero. INTERPRETAR: la helada afecta a la oferta (cantidad disponible); la demanda no cambia. REPRESENTAR: oferta ↓, demanda =, precio ? RAZONAR: cuando hay menos producto para la misma cantidad de compradores, estos compiten y el precio sube; B mira a un solo productor, C contradice el contexto, D atribuye el alza a la demanda. RESOLVER: A. VERIFICAR: la opción B nombra el cambio correcto (oferta) y el que no cambió (demanda).",
+    "que_identificar": "Qué variable cambia (la oferta, por la helada) y cuál permanece (la demanda de las familias).",
+    "que_revisar": "Ley de oferta y demanda: diferencia entre un cambio en la oferta y un cambio en la demanda y su efecto sobre el precio.",
+    "refuerzo_ids": ["SOC-066", "SOC-081"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["oferta_demanda", "precios", "economia", "agricultura"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-066",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "interpretar",
+    "tema": "Inflación y poder adquisitivo",
+    "subtema": "Comparación entre aumento salarial e inflación",
+    "dificultad": 2,
+    "contexto": "La **inflación** es el aumento generalizado de los precios en un periodo. El **poder adquisitivo** de un salario es la cantidad de bienes y servicios que se pueden comprar con él. Marta trabaja en una panadería y cada año recibe un aumento de salario. La gráfica compara el porcentaje de aumento de su salario con la inflación de cada año (datos ficticios, inspirados en valores de la década de 2020).",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Aumento del salario de Marta e inflación anual (datos ficticios)",
+      "eje_x": "Año",
+      "eje_y": "Porcentaje (%)",
+      "series": [
+        { "nombre": "Aumento del salario de Marta (%)", "valores": [["2021", 4], ["2022", 6], ["2023", 8], ["2024", 9], ["2025", 7]] },
+        { "nombre": "Inflación anual (%)", "valores": [["2021", 5.6], ["2022", 13.1], ["2023", 9.3], ["2024", 5.2], ["2025", 5]] }
+      ]
+    },
+    "enunciado": "¿En qué años disminuyó el poder adquisitivo del salario de Marta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Solo en 2022, porque fue el único año en que la inflación superó el 10 %.",
+        "correcta": false,
+        "explicacion": "2022 es el caso más notorio (6 % frente a 13,1 %), pero en 2021 (4 % frente a 5,6 %) y en 2023 (8 % frente a 9,3 %) la inflación también superó el aumento salarial. El criterio no es que la inflación sea \"alta\", sino que supere el aumento del salario.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se dejó llevar por el pico más visible de la gráfica y usó un criterio (inflación mayor al 10 %) que no define la pérdida de poder adquisitivo."
+      },
+      {
+        "clave": "B",
+        "texto": "En ninguno, porque el salario de Marta aumentó todos los años.",
+        "correcta": false,
+        "explicacion": "Que el salario suba en pesos no garantiza que alcance para más cosas: si los precios suben más que el salario, con el nuevo salario se compra menos. Se confunde el aumento nominal con el aumento real.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el aumento del salario en pesos (nominal) con el aumento de lo que se puede comprar (real)."
+      },
+      {
+        "clave": "C",
+        "texto": "En 2024 y 2025, porque en esos años el salario tuvo aumentos más altos que la inflación.",
+        "correcta": false,
+        "explicacion": "Es exactamente al revés: cuando el aumento del salario supera la inflación, el poder adquisitivo crece. En 2024 (9 % frente a 5,2 %) y 2025 (7 % frente a 5 %) Marta ganó poder adquisitivo.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Identificó bien en qué años la línea del salario queda por encima, pero invirtió el significado de esa relación."
+      },
+      {
+        "clave": "D",
+        "texto": "En 2021, 2022 y 2023, porque en esos años la inflación fue mayor que el aumento de su salario.",
+        "correcta": true,
+        "explicacion": "El poder adquisitivo baja cuando los precios suben más que el salario. Eso ocurrió en 2021 (5,6 % > 4 %), 2022 (13,1 % > 6 %) y 2023 (9,3 % > 8 %). En 2024 y 2025 el aumento salarial superó la inflación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica tiene dos líneas: aumento del salario e inflación, de 2021 a 2025. COMPRENDER: se pregunta en qué años Marta pudo comprar menos con su salario. INTERPRETAR: el poder adquisitivo cae cuando la inflación es mayor que el aumento salarial (la línea de inflación queda por encima). REPRESENTAR: diferencias salario − inflación: 2021: −1,6; 2022: −7,1; 2023: −1,3; 2024: +3,8; 2025: +2,0. RAZONAR: A omite 2021 y 2023; B confunde nominal con real; C invierte la relación. RESOLVER: D. VERIFICAR: los tres años con diferencia negativa son exactamente los de la opción D.",
+    "que_identificar": "Los años en que la línea de inflación está por encima de la línea de aumento salarial.",
+    "que_revisar": "Inflación, salario nominal y salario real; cómo comparar dos series en una gráfica de líneas.",
+    "refuerzo_ids": ["SOC-065", "SOC-067"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["inflacion", "poder_adquisitivo", "salario", "lineas", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-067",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "interpretar",
+    "tema": "Impuestos y gasto público",
+    "subtema": "Impuestos progresivos y regresivos: el caso del IVA",
+    "dificultad": 2,
+    "contexto": "Un impuesto es **progresivo** cuando las personas con mayores ingresos pagan una proporción mayor de su ingreso, y **regresivo** cuando pesa proporcionalmente más sobre quienes tienen menos ingresos. El IVA (impuesto al valor agregado) se cobra con la misma tarifa a quien compra un bien gravado, sin importar su ingreso. La tabla muestra tres hogares ficticios y lo que pagan de IVA en un mes, con una tarifa del 19 %.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "IVA pagado en un mes por tres hogares (datos ficticios)",
+      "columnas": ["Hogar", "Ingreso mensual (pesos)", "Compras gravadas con IVA, antes del impuesto (pesos)", "IVA pagado (pesos)"],
+      "filas": [["Hogar 1", 1500000, 1000000, 190000], ["Hogar 2", 4000000, 1800000, 342000], ["Hogar 3", 12000000, 3000000, 570000]],
+      "nota": "El IVA pagado corresponde al 19 % de las compras gravadas. Los hogares de mayores ingresos ahorran o gastan en bienes no gravados una parte mayor de su ingreso."
+    },
+    "enunciado": "¿Cuál de las siguientes conclusiones sobre el IVA se apoya en los datos de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El IVA es progresivo, porque el hogar 3 paga más pesos de impuesto que los otros dos hogares.",
+        "correcta": false,
+        "explicacion": "Pagar más pesos no hace progresivo un impuesto; lo que importa es la proporción del ingreso. El hogar 3 paga 570.000 de 12.000.000 (4,75 %), mientras que el hogar 1 paga 190.000 de 1.500.000 (12,7 %).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó cantidades absolutas de impuesto en lugar de compararlas como porcentaje del ingreso, que es lo que define la progresividad."
+      },
+      {
+        "clave": "B",
+        "texto": "En estos hogares el IVA se comporta de forma regresiva: aunque el hogar 3 paga más pesos, el impuesto representa una parte mayor del ingreso del hogar 1.",
+        "correcta": true,
+        "explicacion": "Como porcentaje del ingreso: hogar 1: 190.000 / 1.500.000 ≈ 12,7 %; hogar 2: 342.000 / 4.000.000 ≈ 8,6 %; hogar 3: 570.000 / 12.000.000 = 4,75 %. La carga relativa baja a medida que sube el ingreso, que es la definición de impuesto regresivo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El IVA pesa igual sobre todos los hogares, porque la tarifa del 19 % es la misma para todos.",
+        "correcta": false,
+        "explicacion": "La tarifa sí es igual, pero se aplica a las compras, no al ingreso. Como los hogares de menos ingresos gastan en bienes gravados una parte mayor de lo que ganan, la carga sobre su ingreso es mayor.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió tarifa igual con carga igual, sin calcular qué parte del ingreso representa el impuesto en cada hogar."
+      },
+      {
+        "clave": "D",
+        "texto": "El hogar 1 paga más IVA en pesos que el hogar 2, por eso el impuesto es regresivo.",
+        "correcta": false,
+        "explicacion": "El hogar 1 paga 190.000 y el hogar 2 paga 342.000: el hogar 1 paga menos pesos. La conclusión sobre la regresividad es correcta, pero la razón se apoya en una lectura equivocada de la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las columnas o las filas de la tabla y justificó con un dato falso una conclusión que solo se sostiene con porcentajes."
+      }
+    ],
+    "explicacion": "LEER: definiciones de impuesto progresivo y regresivo; tabla con ingreso, compras gravadas e IVA de tres hogares. COMPRENDER: se pide la conclusión que los datos sostienen. INTERPRETAR: para saber si un impuesto es progresivo o regresivo hay que comparar el impuesto con el ingreso, no en pesos. REPRESENTAR: IVA/ingreso: 12,7 %, 8,6 % y 4,75 %. RAZONAR: A compara pesos; C confunde tarifa con carga; D usa un dato mal leído. RESOLVER: B. VERIFICAR: la proporción disminuye cuando el ingreso aumenta, lo que cumple la definición de regresivo dada en el contexto.",
+    "que_identificar": "La proporción del ingreso que cada hogar destina al IVA (IVA pagado ÷ ingreso mensual).",
+    "que_revisar": "Impuestos directos e indirectos; progresividad y regresividad; diferencia entre tarifa, cantidad pagada y carga relativa.",
+    "refuerzo_ids": ["SOC-066", "SOC-079"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["impuestos", "iva", "progresividad", "tabla", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-068",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona dimensiones históricas y geográficas de eventos y problemáticas sociales",
+    "habilidad": "razonar",
+    "tema": "Colonización antioqueña y economía cafetera",
+    "subtema": "Ampliación de la frontera agrícola en las vertientes de la cordillera Central",
+    "dificultad": 2,
+    "contexto": "Durante la segunda mitad del siglo XIX y comienzos del XX, miles de familias salieron de Antioquia hacia el sur, por las **laderas de la cordillera Central**, y fundaron poblaciones como Manizales (1849) y Armenia (1889) en lo que hoy son Caldas, Risaralda y Quindío. Los colonos talaron bosques de montaña para abrir parcelas y, con el tiempo, muchas de esas tierras de **clima medio** se dedicaron al café, que a comienzos del siglo XX se convirtió en el principal producto de exportación de Colombia. Buena parte de esa producción provenía de fincas pequeñas y medianas trabajadas por las familias.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona correctamente las dimensiones geográfica e histórica de este proceso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La colonización antioqueña fue solo un proceso de fundación de ciudades, sin relación con la ampliación de las tierras cultivables.",
+        "correcta": false,
+        "explicacion": "El texto dice que los colonos talaron bosques para abrir parcelas y que esas tierras se dedicaron al café: sí hubo ampliación de la frontera agrícola, no solo fundación de poblaciones.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la mención de Manizales y Armenia y pasó por alto la información sobre la tala y la apertura de parcelas."
+      },
+      {
+        "clave": "B",
+        "texto": "El café se consolidó en esa zona porque requería tierras planas y cálidas como las de los Llanos Orientales, adonde llegaron los colonos.",
+        "correcta": false,
+        "explicacion": "El texto ubica la colonización en las laderas de la cordillera Central, no en los Llanos, y habla de tierras de clima medio. La opción contradice la localización geográfica del proceso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tiene una idea equivocada sobre las condiciones del café y sobre dónde ocurrió la colonización, y no la contrastó con el texto."
+      },
+      {
+        "clave": "C",
+        "texto": "Los colonos se instalaron allí gracias a la titulación de tierras que ordenó la Constitución de 1991.",
+        "correcta": false,
+        "explicacion": "La colonización antioqueña ocurrió entre mediados del siglo XIX y comienzos del XX, mucho antes de 1991. La opción ubica mal el proceso en el tiempo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No ubicó el proceso en su época y lo asoció con un hecho posterior que conoce mejor."
+      },
+      {
+        "clave": "D",
+        "texto": "El clima medio de las laderas de la cordillera favorecía el cultivo de café, y la apertura de tierras por los colonos permitió que se expandiera en fincas familiares, lo que convirtió a esa región en centro de la economía exportadora a comienzos del siglo XX.",
+        "correcta": true,
+        "explicacion": "Relaciona el rasgo geográfico (laderas de clima medio, aptas para el café) con el proceso histórico (colonización y tala de bosques para abrir parcelas) y con su resultado económico (café como principal exportación, producido en fincas pequeñas y medianas).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el texto ubica la colonización en el tiempo (segunda mitad del siglo XIX a comienzos del XX) y en el espacio (laderas de clima medio de la cordillera Central), y la relaciona con el café. COMPRENDER: se pide la afirmación que une la dimensión geográfica con la histórica. INTERPRETAR: \"clima medio\" y \"laderas\" son condiciones del espacio; \"colonos\", \"tala\" y \"exportación a comienzos del siglo XX\" son el proceso histórico. REPRESENTAR: espacio (laderas de clima medio) + proceso (colonización y apertura de parcelas) → resultado (economía cafetera de fincas familiares). RAZONAR: A falla en la geografía, B en la cronología, D omite la ampliación de tierras. RESOLVER: C. VERIFICAR: cada parte de C está respaldada por una frase del texto.",
+    "que_identificar": "Dónde ocurrió la colonización (laderas de clima medio), cuándo (siglo XIX a comienzos del XX) y qué transformación produjo (apertura de parcelas y café).",
+    "que_revisar": "Colonización antioqueña, economía cafetera y frontera agrícola; ubicar procesos en el tiempo y en el espacio.",
+    "refuerzo_ids": ["SOC-077", "SOC-080"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["colonizacion_antioquena", "cafe", "frontera_agricola", "historia_economica"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-069",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "comprender",
+    "tema": "Minería y territorio",
+    "subtema": "Perspectivas de actores frente a la minería de oro en un río",
+    "dificultad": 2,
+    "contexto": "En el río Quebradón (caso ficticio) se discute la explotación de oro. Estas son cuatro posturas:\n\n**Barequero (minero artesanal):** \"Mi familia saca oro con batea desde hace tres generaciones. Es nuestro único ingreso; no usamos maquinaria y queremos seguir trabajando en el río\".\n\n**Representante de una empresa con título minero:** \"Tenemos un título legal sobre este tramo del río. Con maquinaria extraeríamos mucho más oro, generaríamos 80 empleos y pagaríamos regalías al municipio\".\n\n**Lideresa del consejo comunitario:** \"Desde que llegaron las dragas río arriba, el agua baja turbia y el pescado escasea. Varias personas tienen mercurio en la sangre. El río es nuestra comida y nuestro camino\".\n\n**Funcionaria de la autoridad ambiental:** \"La minería solo es posible con licencia ambiental, sin mercurio y con un plan para recuperar el cauce. Quien no cumpla será sancionado\".",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones compara correctamente las perspectivas de los actores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los cuatro actores rechazan la minería en el río, aunque por razones distintas.",
+        "correcta": false,
+        "explicacion": "El barequero quiere seguir extrayendo oro y la empresa quiere ampliar la extracción; solo la lideresa expresa un rechazo a sus efectos, y la funcionaria pone condiciones. No todos la rechazan.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó la preocupación de la lideresa a todos los actores sin revisar lo que dice cada uno."
+      },
+      {
+        "clave": "B",
+        "texto": "La funcionaria ambiental y la lideresa comparten la misma postura: prohibir toda minería en el río.",
+        "correcta": false,
+        "explicacion": "La lideresa denuncia los daños; la funcionaria no prohíbe la minería, sino que la permite si hay licencia, no se usa mercurio y se recupera el cauce. Son posturas cercanas, pero no iguales.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vio que ambas se preocupan por el ambiente y concluyó que proponen lo mismo, sin notar las condiciones que plantea la funcionaria."
+      },
+      {
+        "clave": "C",
+        "texto": "El barequero y la empresa tienen los mismos intereses, así que entre ellos no hay ningún conflicto.",
+        "correcta": false,
+        "explicacion": "Ambos valoran el oro como fuente de ingresos, pero la empresa tiene título sobre el tramo del río donde trabaja el barequero y propone una extracción mecanizada a gran escala: compiten por el mismo recurso y el mismo espacio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Igualó \"interés en el oro\" con \"intereses idénticos\" y no consideró que compiten por el mismo tramo del río."
+      },
+      {
+        "clave": "D",
+        "texto": "El barequero y la empresa valoran el oro como fuente de ingresos, pero difieren en la escala y la forma de extraerlo; la lideresa prioriza la salud y el río como fuente de alimento, y la funcionaria acepta la minería solo bajo condiciones legales y ambientales.",
+        "correcta": true,
+        "explicacion": "Resume con precisión lo que cada actor defiende y señala coincidencias (barequero y empresa ven en el oro un ingreso) y diferencias (escala, efectos sobre la salud, condiciones legales).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro testimonios sobre la minería de oro en el mismo río. COMPRENDER: se pide la comparación correcta entre perspectivas. INTERPRETAR: el barequero defiende la minería artesanal como sustento; la empresa, la minería mecanizada con empleo y regalías; la lideresa, la salud y el río como fuente de comida; la funcionaria, el cumplimiento de condiciones legales. REPRESENTAR: una tabla mental actor → interés → postura frente a la minería (a favor artesanal / a favor mecanizada / en contra de sus efectos / condicionada). RAZONAR: A generaliza; B iguala dos posturas distintas; C ignora la competencia por el mismo tramo. RESOLVER: D. VERIFICAR: cada parte de D se puede señalar en el testimonio correspondiente.",
+    "que_identificar": "El interés principal de cada actor y si su postura frente a la minería es a favor, en contra o condicionada.",
+    "que_revisar": "Comparación de perspectivas: coincidencias y diferencias entre actores; minería artesanal, minería mecanizada y regulación ambiental.",
+    "refuerzo_ids": ["SOC-005", "SOC-071"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["mineria", "perspectivas", "conflictos_ambientales", "caso_ficticio"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-070",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "verificar",
+    "tema": "Deforestación y uso de datos en el debate público",
+    "subtema": "Límites de una serie de datos para atribuir causas a una política",
+    "dificultad": 3,
+    "contexto": "La gobernadora del departamento de Serranía (caso ficticio) asumió su cargo en enero de 2024 y lanzó un programa contra la tala ilegal. En diciembre de 2025 publicó la gráfica siguiente con este mensaje: **\"Gracias a nuestra política, la deforestación bajó un 15 % en 2025. Los datos lo demuestran\"**.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Hectáreas deforestadas por año en el departamento de Serranía (datos ficticios)",
+      "eje_x": "Año",
+      "eje_y": "Hectáreas deforestadas",
+      "series": [
+        { "nombre": "Hectáreas deforestadas", "valores": [["2018", 21000], ["2019", 17000], ["2020", 22000], ["2021", 20000], ["2022", 12000], ["2023", 9000], ["2024", 13000], ["2025", 11000]] }
+      ]
+    },
+    "enunciado": "¿Cuál es la principal limitación de esta gráfica para apoyar la afirmación de la gobernadora?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La gráfica muestra que la deforestación bajó entre 2024 y 2025, pero no muestra sus causas; además, la mayor reducción ocurrió en 2022 y 2023, antes del programa, y en 2025 la cifra fue mayor que en 2023, así que los datos no bastan para atribuir la baja a la política.",
+        "correcta": true,
+        "explicacion": "La reducción del 15 % es real (de 13.000 a 11.000 ha ≈ 15,4 %), pero una serie de cifras no identifica causas. La caída más grande (de 20.000 a 9.000 ha) sucedió antes de 2024, y el primer año del programa (2024) la deforestación subió. Otros factores (clima, precios de la tierra, orden público) podrían explicar los cambios.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La afirmación es falsa porque la gráfica muestra que la deforestación aumentó en 2025.",
+        "correcta": false,
+        "explicacion": "De 2024 (13.000 ha) a 2025 (11.000 ha) la deforestación disminuyó cerca del 15 %. El dato de la gobernadora es correcto; el problema está en la causa que le atribuye.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó 2025 con 2023 o con la barra equivocada en lugar de comparar 2025 con 2024, que es lo que dice el mensaje."
+      },
+      {
+        "clave": "C",
+        "texto": "La gráfica no tiene limitaciones: si la deforestación bajó después de iniciar el programa, eso prueba que el programa fue la causa.",
+        "correcta": false,
+        "explicacion": "Que un hecho ocurra después de otro no demuestra que uno cause el otro. Además, la opción ignora que en 2024, con el programa ya en marcha, la deforestación subió de 9.000 a 13.000 ha.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aceptó que \"después de\" equivale a \"a causa de\" y no buscó en la gráfica datos que contradigan esa lectura."
+      },
+      {
+        "clave": "D",
+        "texto": "La gráfica no sirve porque presenta datos de un solo departamento y no de todo el país.",
+        "correcta": false,
+        "explicacion": "La afirmación de la gobernadora se refiere a su departamento, así que usar datos departamentales es pertinente. Esa no es la limitación central.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Señaló una limitación que suena técnica pero que no se relaciona con lo que la fuente pretende demostrar."
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra las hectáreas deforestadas de 2018 a 2025; la gobernadora asumió en 2024 y atribuye a su política una baja del 15 % en 2025. COMPRENDER: se pide evaluar qué tanto la gráfica sostiene esa atribución causal. INTERPRETAR: de 2024 a 2025 hubo una baja de 13.000 a 11.000 ha (≈15 %), pero de 2021 a 2023 la baja fue de 20.000 a 9.000 ha, y en 2024 la cifra subió. REPRESENTAR: antes del programa: 20.000 → 9.000; con el programa: 9.000 → 13.000 → 11.000. RAZONAR: una serie de cifras describe cambios, no identifica sus causas; B lee mal la gráfica, C confunde secuencia con causa, D señala una limitación irrelevante. RESOLVER: A. VERIFICAR: A reconoce que el dato del 15 % es cierto y explica por qué no basta como prueba de la causa.",
+    "que_identificar": "Cuándo empezó el programa (2024), cómo se comporta la serie antes y después, y qué tipo de afirmación hace la gobernadora (causal).",
+    "que_revisar": "Diferencia entre describir un cambio y explicar su causa; evaluar si una fuente sostiene una afirmación; deforestación en Colombia.",
+    "refuerzo_ids": ["SOC-018", "SOC-077"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 190,
+    "etiquetas": ["deforestacion", "uso_de_fuentes", "causalidad", "barras", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-071",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "interpretar",
+    "tema": "Globalización y tratados comerciales",
+    "subtema": "Posiciones de actores frente a la reducción de aranceles a la leche importada",
+    "dificultad": 2,
+    "contexto": "En un país ficticio se discute un tratado comercial que eliminaría el arancel (impuesto a las importaciones) a la **leche en polvo**. A cambio, el otro país eliminaría el arancel a las **flores** que se le exportan. Opinan cuatro personas:\n\n**Productora campesina de leche:** \"Si entra leche en polvo más barata, nadie nos va a comprar la leche a un precio que cubra los costos. Muchas fincas pequeñas tendrían que cerrar\".\n\n**Gerente de una fábrica de galletas:** \"Pagaríamos menos por la leche en polvo que usamos como insumo, bajaríamos costos y podríamos competir mejor\".\n\n**Madre de familia en una ciudad:** \"Si los productos lácteos bajan de precio, el mercado del mes me alcanzaría para más\".\n\n**Exportador de flores:** \"Vender sin arancel nos abriría un mercado enorme y podríamos contratar más trabajadores\".",
+    "estimulo": null,
+    "enunciado": "¿Qué explica mejor que estas personas tengan posiciones distintas frente al mismo tratado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que solo la productora campesina entiende realmente el tratado; los demás opinan sin conocer sus efectos.",
+        "correcta": false,
+        "explicacion": "Cada persona describe un efecto plausible del tratado sobre su propia situación; ninguna muestra desconocimiento. Descalificar a los demás no explica la diferencia de posiciones.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó partido por uno de los actores y juzgó a los otros en lugar de analizar de dónde surge cada posición."
+      },
+      {
+        "clave": "B",
+        "texto": "Que cada una evalúa el tratado desde su papel en la economía (productora, compradora de insumos, consumidora o exportador), y la misma medida trae pérdidas para unas y ganancias para otras.",
+        "correcta": true,
+        "explicacion": "La productora compite con la leche importada y teme perder ingresos; la fábrica compra leche como insumo y ahorraría; la madre de familia es consumidora y pagaría menos; el exportador vendería más flores. Sus roles sociales y económicos explican sus posiciones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que unas personas están a favor de la globalización por convicción ideológica y otras en contra, independientemente de cómo las afecte el tratado.",
+        "correcta": false,
+        "explicacion": "Ninguna persona apela a ideas generales sobre la globalización; todas argumentan con base en cómo el tratado afectaría sus ingresos o sus gastos. La explicación no corresponde a lo que dicen.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usó una explicación general (ideología) que puede ser cierta en otros debates, pero que no se ajusta a los argumentos de este caso."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la productora y la madre de familia coinciden, porque ambas se preocupan por el precio de la leche.",
+        "correcta": false,
+        "explicacion": "Ambas hablan del precio, pero en sentido opuesto: a la productora le perjudica que baje y a la madre de familia le conviene. Mencionar el mismo tema no es coincidir en la posición.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió hablar del mismo tema con tener la misma posición."
+      }
+    ],
+    "explicacion": "LEER: cuatro opiniones sobre un tratado que elimina aranceles a la leche en polvo (importación) y a las flores (exportación). COMPRENDER: se pregunta por qué las posiciones difieren. INTERPRETAR: cada actor ocupa un lugar distinto: produce leche, la compra como insumo, la consume o exporta otro producto. REPRESENTAR: productora → pierde; fábrica → gana; consumidora → gana; exportador → gana. RAZONAR: las posiciones dependen del rol económico de cada actor; A descalifica, C atribuye una ideología que no aparece, D confunde tema con posición. RESOLVER: B. VERIFICAR: cada argumento del contexto se refiere a ingresos o gastos propios, lo que confirma B.",
+    "que_identificar": "El papel económico de cada actor frente al tratado (productor, comprador de insumos, consumidor, exportador) y si gana o pierde.",
+    "que_revisar": "Globalización, aranceles y tratados de libre comercio; cómo los roles sociales influyen en las posiciones frente a una política.",
+    "refuerzo_ids": ["SOC-069", "SOC-080"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["globalizacion", "tlc", "aranceles", "perspectivas", "economia_campesina"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-072",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "comprender",
+    "tema": "Desempleo",
+    "subtema": "Prejuicios en explicaciones sobre el desempleo",
+    "dificultad": 1,
+    "contexto": "Según las definiciones usadas en las estadísticas laborales, una persona **desempleada** es la que no tiene trabajo, **buscó empleo activamente** en las últimas semanas y está disponible para empezar a trabajar. En una red social alguien publicó este comentario:\n\n\"En este país hay desempleo porque la gente es perezosa. El que de verdad quiere trabajar, consigue trabajo\".",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones devela el prejuicio presente en el comentario?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El comentario no contiene prejuicios, porque es una opinión personal expresada libremente.",
+        "correcta": false,
+        "explicacion": "Que algo sea una opinión y se exprese con libertad no impide que contenga un prejuicio. Lo que hay que examinar es si la afirmación generaliza sin fundamento.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el derecho a opinar con la validez de lo que se opina."
+      },
+      {
+        "clave": "B",
+        "texto": "El prejuicio está en afirmar que en el país existe desempleo.",
+        "correcta": false,
+        "explicacion": "La existencia del desempleo es un hecho que se mide; el prejuicio no está ahí, sino en la explicación que el comentario da sobre sus causas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No distinguió entre el hecho mencionado (hay desempleo) y el juicio que se hace sobre las personas desempleadas."
+      },
+      {
+        "clave": "C",
+        "texto": "El comentario atribuye el desempleo a una supuesta pereza de todas las personas desempleadas, aunque por definición un desempleado busca trabajo activamente, e ignora causas económicas como la falta de vacantes.",
+        "correcta": true,
+        "explicacion": "El prejuicio es una generalización negativa sobre un grupo (los desempleados son perezosos) que contradice la definición misma de desempleado (busca empleo activamente) y deja de lado las causas estructurales, como que haya menos puestos de trabajo que personas buscándolos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El problema del comentario es que no presenta cifras; si incluyera estadísticas de desempleo, sería un argumento válido.",
+        "correcta": false,
+        "explicacion": "Agregar cifras de desempleo no demostraría que la causa sea la pereza. El problema no es la falta de números, sino la generalización sin fundamento sobre las personas.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Pensó que cualquier afirmación se vuelve válida con datos, sin revisar si los datos sostienen la causa que se afirma."
+      }
+    ],
+    "explicacion": "LEER: definición de desempleado (sin trabajo, busca activamente, disponible) y un comentario que culpa a la \"pereza\". COMPRENDER: se pide identificar el prejuicio. INTERPRETAR: un prejuicio es un juicio negativo y generalizado sobre un grupo, sin evidencia. REPRESENTAR: comentario → \"desempleados = perezosos\"; definición → \"desempleados = buscan trabajo\". RAZONAR: la generalización choca con la definición y omite causas económicas; A confunde opinión con validez, B confunde hecho con juicio, D cree que los números arreglan una causa infundada. RESOLVER: C. VERIFICAR: C señala el grupo, el juicio y por qué carece de fundamento.",
+    "que_identificar": "La generalización sobre las personas desempleadas y su contradicción con la definición de desempleado.",
+    "que_revisar": "Concepto de desempleo; cómo reconocer prejuicios y generalizaciones en argumentos.",
+    "refuerzo_ids": ["SOC-022", "SOC-018"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["desempleo", "prejuicios", "argumentacion", "trabajo"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-073",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Reforma agraria y colonización campesina",
+    "subtema": "Inscribir en su contexto una carta de colonos de la década de 1960",
+    "dificultad": 2,
+    "contexto": "Fragmento de una carta (fuente ficticia, elaborada con fines didácticos a partir de documentos de la época):\n\n\"Señor Gerente del INCORA, Bogotá, marzo de 1963. Los abajo firmantes, colonos de la vereda La Esperanza, le exponemos que hace doce años llegamos a estas tierras baldías, tumbamos monte y sembramos maíz, plátano y yuca. Ahora se presenta un señor con unos papeles diciendo que es dueño y nos quiere sacar. Le pedimos que, conforme a la nueva ley de reforma social agraria, el Instituto nos adjudique los títulos de las parcelas que hemos trabajado con nuestras familias\".\n\nEl INCORA (Instituto Colombiano de la Reforma Agraria) fue creado por la Ley 135 de 1961.",
+    "estimulo": null,
+    "enunciado": "¿En cuál de los siguientes contextos se inscribe mejor esta carta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En los conflictos por la tierra entre colonos que abrían baldíos y personas que reclamaban la propiedad, en los años en que el Estado impulsaba una reforma agraria que prometía titular tierras a los campesinos.",
+        "correcta": true,
+        "explicacion": "La fecha (1963), la mención del INCORA y de la \"nueva ley de reforma social agraria\" (Ley 135 de 1961), los baldíos colonizados y el reclamo de un supuesto dueño ubican la carta en el contexto económico y político de la reforma agraria de los años sesenta y de los conflictos por la tierra.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "En la restitución de tierras a víctimas del conflicto armado ordenada después de la Constitución de 1991.",
+        "correcta": false,
+        "explicacion": "La restitución de tierras a víctimas es un proceso de comienzos del siglo XXI. Una carta de 1963 dirigida al INCORA no puede pertenecer a ese contexto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó \"reclamar tierras\" con un proceso reciente que conoce mejor, sin atender a la fecha de la fuente."
+      },
+      {
+        "clave": "C",
+        "texto": "En el sistema colonial de la encomienda, en el que los indígenas debían trabajar para los encomenderos.",
+        "correcta": false,
+        "explicacion": "La carta menciona una institución y una ley del siglo XX y a colonos que piden títulos al Estado; nada en ella corresponde a la época colonial.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció la palabra \"colonos\" con la época colonial, sin usar la fecha ni las instituciones que aparecen en la fuente."
+      },
+      {
+        "clave": "D",
+        "texto": "En la migración del campo a la ciudad, porque los firmantes piden vivienda en Bogotá.",
+        "correcta": false,
+        "explicacion": "La carta se envía a Bogotá porque allí está el gerente del INCORA, pero lo que piden son títulos de parcelas rurales que trabajan, no vivienda urbana.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el lugar de envío (Bogotá) como el tema de la carta y no leyó lo que realmente se solicita."
+      }
+    ],
+    "explicacion": "LEER: carta de 1963 de colonos al gerente del INCORA que piden títulos de baldíos que trabajan, frente a alguien que dice ser dueño. COMPRENDER: se pide el contexto económico y político en que se inscribe la fuente. INTERPRETAR: las pistas son la fecha, la institución (INCORA, creado en 1961), la \"ley de reforma social agraria\", los baldíos colonizados y el conflicto con un supuesto propietario. REPRESENTAR: fecha + institución + solicitud → reforma agraria de los años sesenta y conflictos por la tierra. RAZONAR: B y C son anacronismos; D confunde el destino de la carta con su contenido. RESOLVER: A. VERIFICAR: todas las pistas de la fuente son coherentes con A y ninguna con las demás.",
+    "que_identificar": "La fecha, la institución destinataria, la ley mencionada y lo que piden los firmantes.",
+    "que_revisar": "Reforma agraria de 1961 e INCORA; colonización de baldíos y conflictos por la tierra; cómo ubicar una fuente primaria en su contexto.",
+    "refuerzo_ids": ["SOC-006", "SOC-081"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["reforma_agraria", "fuente_primaria", "tierra", "economia_campesina", "fuente_ficticia"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-074",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "interpretar",
+    "tema": "Cambio climático y adaptación agrícola",
+    "subtema": "Cambios en el régimen de lluvias y riesgo para la siembra",
+    "dificultad": 2,
+    "contexto": "En San Rafael del Monte (municipio ficticio de la región Andina), las familias campesinas siembran maíz y fríjol a finales de marzo, cuando tradicionalmente empiezan las lluvias. En los últimos años se quejan de que \"la lluvia ya no llega cuando debe\": algunas siembras se pierden por falta de agua y en octubre las crecientes dañan cultivos y vías. La gráfica compara la lluvia mensual promedio de dos periodos.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Lluvia mensual promedio en San Rafael del Monte (datos ficticios)",
+      "eje_x": "Mes",
+      "eje_y": "Lluvia (milímetros)",
+      "series": [
+        { "nombre": "1981-2010", "valores": [["Ene", 60], ["Feb", 80], ["Mar", 130], ["Abr", 190], ["May", 170], ["Jun", 90], ["Jul", 60], ["Ago", 70], ["Sep", 120], ["Oct", 200], ["Nov", 170], ["Dic", 90]] },
+        { "nombre": "2016-2025", "valores": [["Ene", 40], ["Feb", 50], ["Mar", 90], ["Abr", 210], ["May", 190], ["Jun", 70], ["Jul", 35], ["Ago", 40], ["Sep", 80], ["Oct", 230], ["Nov", 190], ["Dic", 60]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona correctamente la dimensión ambiental con la económica en esta situación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Como la lluvia total del año cambió poco, el problema es solo ambiental y no afecta la economía de las familias.",
+        "correcta": false,
+        "explicacion": "Aunque la diferencia anual no es enorme, la distribución cambió: meses secos más secos y meses lluviosos más intensos. Eso afecta directamente la siembra y las cosechas, es decir, los ingresos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Miró solo el total anual y no la distribución mensual, que es la que importa para el calendario agrícola."
+      },
+      {
+        "clave": "B",
+        "texto": "Las familias deberían sembrar en julio, porque es el mes con menos lluvia y por lo tanto con menos riesgo de crecientes.",
+        "correcta": false,
+        "explicacion": "Julio es el mes más seco (35 mm): sembrar allí aumentaría el riesgo de perder la siembra por falta de agua. Evitar un riesgo lleva a otro mayor.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Consideró solo el riesgo de crecientes y olvidó que los cultivos necesitan agua para germinar."
+      },
+      {
+        "clave": "C",
+        "texto": "Los meses secos se volvieron más secos (marzo pasó de 130 a 90 mm) y los lluviosos más intensos (octubre, de 200 a 230 mm); por eso sembrar a finales de marzo es más riesgoso y las cosechas e ingresos de las familias se vuelven más inciertos.",
+        "correcta": true,
+        "explicacion": "La gráfica muestra un régimen más extremo: menos lluvia en los meses de siembra y más en los picos. Eso explica las pérdidas por falta de agua al inicio y los daños por crecientes en octubre, y conecta el cambio ambiental con la inestabilidad de la producción y los ingresos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La lluvia aumentó en todos los meses, por lo que las familias tienen más agua para sus cultivos y sus ingresos deberían mejorar.",
+        "correcta": false,
+        "explicacion": "La lluvia aumentó solo en abril, mayo, octubre y noviembre; en los demás meses disminuyó. En total, el año pasó de 1.430 mm a 1.285 mm.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en los picos, donde la línea reciente está por encima, y no revisó los demás meses."
+      }
+    ],
+    "explicacion": "LEER: dos líneas de lluvia mensual (1981-2010 y 2016-2025) y el relato de siembras perdidas y crecientes. COMPRENDER: se pide la relación correcta entre lo ambiental (lluvias) y lo económico (cosechas e ingresos). INTERPRETAR: la línea reciente está por debajo en los meses secos y por encima en los picos de abril-mayo y octubre-noviembre. REPRESENTAR: marzo 130 → 90; julio 60 → 35; octubre 200 → 230; total 1.430 → 1.285 mm. RAZONAR: A lee mal la gráfica; B ignora la distribución; C cambia un riesgo por otro peor. RESOLVER: D. VERIFICAR: los datos de D coinciden con la gráfica y explican los problemas que narran las familias.",
+    "que_identificar": "Los meses en que la lluvia reciente es menor o mayor que la histórica, en especial el mes de siembra (marzo) y el de crecientes (octubre).",
+    "que_revisar": "Cambio climático, variabilidad de lluvias y adaptación agrícola; lectura comparada de dos series en una gráfica de líneas.",
+    "refuerzo_ids": ["SOC-021", "SOC-064"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cambio_climatico", "adaptacion", "agricultura", "lineas", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-075",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Urbanización y servicios públicos",
+    "subtema": "Crecimiento acelerado de una ciudad intermedia y cobertura de acueducto",
+    "dificultad": 3,
+    "contexto": "Puerto Alegre (ciudad intermedia ficticia) creció en los últimos veinte años principalmente por la llegada de familias de las zonas rurales del departamento. Muchas se instalaron en barrios que surgieron sin planeación en la periferia. Un concejal afirma: **\"La cobertura de acueducto bajó porque la empresa dejó de trabajar: hoy atiende a menos gente que en 2005\"**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Población y acueducto en Puerto Alegre (datos ficticios)",
+      "columnas": ["Año", "Población urbana", "Población rural", "Población urbana con acueducto (%)", "Barrios de origen informal"],
+      "filas": [["2005", 80000, 40000, 92, 6], ["2015", 120000, 35000, 85, 14], ["2025", 170000, 30000, 78, 25]],
+      "nota": "Barrios de origen informal: los que surgieron sin licencia urbanística ni redes de servicios planificadas."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones establece correctamente la relación entre el crecimiento urbano y la cobertura de acueducto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El concejal tiene razón: como el porcentaje bajó de 92 % a 78 %, hoy hay menos personas con acueducto que en 2005.",
+        "correcta": false,
+        "explicacion": "En 2005 tenían acueducto unas 73.600 personas (92 % de 80.000); en 2025, unas 132.600 (78 % de 170.000). El número de personas atendidas casi se duplicó; lo que bajó fue la proporción.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la caída del porcentaje como caída del número de personas atendidas, sin multiplicar por la población de cada año."
+      },
+      {
+        "clave": "B",
+        "texto": "La empresa atiende hoy a muchas más personas que en 2005, pero la población urbana creció más rápido que la red, sobre todo en barrios informales; por eso el porcentaje de cobertura bajó.",
+        "correcta": true,
+        "explicacion": "Las personas con acueducto pasaron de unas 73.600 a unas 132.600, pero la población urbana pasó de 80.000 a 170.000 (más del doble) y los barrios informales de 6 a 25. El crecimiento rápido y no planificado, impulsado por la migración, explica la caída del porcentaje.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La población rural disminuyó, así que el campo ya no necesita inversión pública y todos los recursos deben ir a la ciudad.",
+        "correcta": false,
+        "explicacion": "La población rural bajó de 40.000 a 30.000, pero sigue siendo numerosa. Además, la opción no responde a la relación entre crecimiento urbano y acueducto: saca una recomendación que los datos no sostienen.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Extrajo una conclusión de política a partir de un solo dato y se alejó de lo que se pregunta."
+      },
+      {
+        "clave": "D",
+        "texto": "Los barrios informales aumentaron porque la población rural del municipio creció entre 2005 y 2025.",
+        "correcta": false,
+        "explicacion": "La población rural disminuyó (de 40.000 a 30.000). Lo que creció fue la población urbana, en parte por la llegada de familias rurales.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la columna de población rural en sentido contrario o la confundió con la urbana."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra población urbana y rural, porcentaje de población urbana con acueducto y número de barrios informales en 2005, 2015 y 2025; el concejal dice que hoy se atiende a menos gente. COMPRENDER: se pide la relación correcta entre crecimiento urbano y cobertura. INTERPRETAR: un porcentaje que baja no implica que baje la cantidad, si la base crece. REPRESENTAR: 2005: 0,92 × 80.000 = 73.600; 2015: 0,85 × 120.000 = 102.000; 2025: 0,78 × 170.000 = 132.600. RAZONAR: la red creció, pero menos que la población, que se asentó en buena parte en barrios informales sin redes planificadas; A no calcula, C se aleja de la pregunta, D lee mal la tabla. RESOLVER: B. VERIFICAR: las cifras calculadas contradicen al concejal y respaldan B.",
+    "que_identificar": "La diferencia entre porcentaje de cobertura y número de personas atendidas, y el ritmo de crecimiento de la población urbana y de los barrios informales.",
+    "que_revisar": "Urbanización, migración interna y servicios públicos; porcentajes frente a cantidades absolutas.",
+    "refuerzo_ids": ["SOC-002", "SOC-076"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 190,
+    "etiquetas": ["urbanizacion", "migracion_interna", "servicios_publicos", "tabla", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-076",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Desplazamiento forzado",
+    "subtema": "Municipios expulsores y receptores y presión sobre los servicios",
+    "dificultad": 2,
+    "contexto": "El **desplazamiento forzado** ocurre cuando personas deben abandonar su lugar de residencia por amenazas o violencia. Un municipio es **expulsor** cuando salen de él personas desplazadas y **receptor** cuando llegan a él. La gobernación de un departamento ficticio analiza los datos de 2024 para distribuir recursos de atención.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Desplazamiento forzado en cuatro municipios, 2024 (datos ficticios)",
+      "columnas": ["Municipio", "Población total", "Personas expulsadas", "Personas recibidas"],
+      "filas": [["El Retiro Alto", 18000, 3200, 150], ["Santa Inés", 12000, 1800, 300], ["Villanueva del Río", 140000, 400, 5600], ["San Gabriel (capital)", 420000, 200, 2100]],
+      "nota": "Cifras ficticias, redondeadas."
+    },
+    "enunciado": "Según la tabla, ¿cuál de las siguientes afirmaciones relaciona correctamente la llegada de población desplazada con la presión sobre los servicios de los municipios receptores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "San Gabriel es donde habrá más presión sobre escuelas, salud y vivienda, porque es el municipio con más habitantes.",
+        "correcta": false,
+        "explicacion": "Tener más habitantes no significa recibir más desplazados. San Gabriel recibió 2.100 personas, el 0,5 % de su población; Villanueva recibió 5.600, el 4 %.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que el municipio más grande tiene siempre los mayores problemas, sin comparar las llegadas con la población de cada municipio."
+      },
+      {
+        "clave": "B",
+        "texto": "El Retiro Alto tendrá la mayor presión sobre sus servicios, porque es el municipio con más personas desplazadas.",
+        "correcta": false,
+        "explicacion": "El Retiro Alto es el principal expulsor (salieron 3.200 personas), pero solo recibió 150. La presión por nuevas llegadas ocurre en los receptores; el Retiro Alto enfrenta otro problema: pérdida de población.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió municipio expulsor con municipio receptor al leer la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "Villanueva del Río recibió más personas que San Gabriel y, en proporción a su población, la llegada fue mucho mayor (4 % frente a 0,5 %); por eso es donde habrá más presión adicional sobre escuelas, salud y vivienda.",
+        "correcta": true,
+        "explicacion": "Villanueva recibió 5.600 personas sobre 140.000 habitantes (4 %) y San Gabriel 2.100 sobre 420.000 (0,5 %). Tanto en cifras absolutas como en proporción, Villanueva es el receptor más presionado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El desplazamiento solo afecta a los municipios expulsores; los receptores únicamente se benefician porque ganan trabajadores.",
+        "correcta": false,
+        "explicacion": "La llegada de miles de personas en poco tiempo aumenta la demanda de escuelas, salud, vivienda y empleo en los receptores; puede haber aportes a largo plazo, pero la afirmación de que solo se benefician es falsa.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó un posible efecto positivo (más mano de obra) y lo presentó como el único efecto."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra población total, personas expulsadas y recibidas en cuatro municipios. COMPRENDER: se pide relacionar la llegada de desplazados con la presión sobre los servicios de los receptores. INTERPRETAR: los receptores son Villanueva y San Gabriel; para comparar la presión hay que relacionar las llegadas con la población. REPRESENTAR: Villanueva: 5.600 / 140.000 = 4 %; San Gabriel: 2.100 / 420.000 = 0,5 %. RAZONAR: A confunde tamaño con presión, B confunde expulsor con receptor, D ignora la demanda de servicios. RESOLVER: C. VERIFICAR: Villanueva supera a San Gabriel tanto en número como en proporción de personas recibidas.",
+    "que_identificar": "Qué municipios son receptores y qué proporción de su población representan las personas recibidas.",
+    "que_revisar": "Desplazamiento forzado: municipios expulsores y receptores; comparación de cifras absolutas y relativas; efectos sociales de la llegada de población.",
+    "refuerzo_ids": ["SOC-075", "SOC-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["desplazamiento_forzado", "poblacion", "servicios_publicos", "tabla", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-077",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "habilidad": "razonar",
+    "tema": "Frontera agrícola",
+    "subtema": "Uso del modelo de frontera agrícola en una decisión de titulación",
+    "dificultad": 3,
+    "contexto": "La **frontera agrícola** es un instrumento de planificación que separa las áreas donde se permiten las actividades agropecuarias de las áreas que deben conservarse (bosques naturales, páramos, áreas protegidas, entre otras). Su propósito es **frenar la expansión de cultivos y potreros sobre ecosistemas estratégicos** y concentrar la producción en las tierras aptas.\n\nEn un departamento ficticio, unas 300 familias ocuparon hace cinco años terrenos baldíos **fuera de la frontera agrícola**, dentro de un bosque de reserva, y talaron parte de él para sembrar y criar ganado. Un diputado propone entregarles títulos de propiedad sobre esas tierras \"para formalizar su situación\".",
+    "estimulo": null,
+    "enunciado": "A la luz del modelo de frontera agrícola, ¿cuál es el análisis más consistente de la propuesta del diputado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Titular esas tierras contradice el propósito del modelo, porque legalizaría la ocupación de un bosque y podría incentivar nuevas talas con la expectativa de recibir títulos; una alternativa coherente sería atender a las familias con tierras dentro de la frontera o con acuerdos de conservación.",
+        "correcta": true,
+        "explicacion": "El modelo busca frenar la expansión agropecuaria sobre ecosistemas estratégicos. Dar propiedad sobre tierra deforestada fuera de la frontera premia esa expansión y envía la señal de que talar conduce a obtener títulos. La opción reconoce, además, la necesidad social de las familias y propone salidas compatibles con el modelo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La propuesta es coherente con el modelo, porque la frontera agrícola debe ampliarse cada vez que haya familias que necesiten tierra.",
+        "correcta": false,
+        "explicacion": "El modelo no se ajusta a la ocupación: su función es precisamente fijar un límite para que la producción no avance sobre los bosques. Ampliarlo cada vez que alguien tala lo dejaría sin sentido.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Entendió la frontera agrícola como una línea que se mueve según la demanda de tierra, y no como un límite de protección."
+      },
+      {
+        "clave": "C",
+        "texto": "El modelo solo tiene en cuenta la dimensión ambiental; por eso, cuando hay necesidades sociales, deja de aplicarse y la titulación es la única opción.",
+        "correcta": false,
+        "explicacion": "El modelo es una herramienta de ordenamiento que combina lo productivo y lo ambiental; reconocer las necesidades de las familias no obliga a renunciar a él, porque hay alternativas (reubicación dentro de la frontera, acuerdos de conservación).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Planteó las dimensiones ambiental y social como excluyentes y no buscó alternativas que atiendan ambas."
+      },
+      {
+        "clave": "D",
+        "texto": "Como las familias ya viven allí, entregar los títulos no tiene ningún efecto sobre el bosque.",
+        "correcta": false,
+        "explicacion": "La titulación sí tiene efectos: consolida el uso agropecuario en el área ya talada, facilita su ampliación y puede atraer a nuevos ocupantes que esperan el mismo trato.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Consideró solo la situación presente y no los incentivos que la decisión crea hacia el futuro."
+      }
+    ],
+    "explicacion": "LEER: definición y propósito de la frontera agrícola; 300 familias ocuparon un bosque de reserva fuera de ella; se propone titularles. COMPRENDER: se pide analizar la decisión usando el modelo. INTERPRETAR: el modelo sirve para impedir que la actividad agropecuaria avance sobre ecosistemas estratégicos. REPRESENTAR: ocupación fuera de la frontera → titulación → señal de que talar da propiedad → posible nueva deforestación. RAZONAR: B deforma el modelo, C opone lo social y lo ambiental sin buscar alternativas, D ignora los incentivos. RESOLVER: A. VERIFICAR: A usa el propósito del modelo, prevé efectos y atiende la dimensión social con alternativas compatibles.",
+    "que_identificar": "El propósito de la frontera agrícola y la ubicación de las tierras ocupadas (fuera de ella, en un bosque de reserva).",
+    "que_revisar": "Frontera agrícola y ordenamiento del suelo rural; efectos e incentivos de las decisiones públicas; cómo usar un modelo conceptual para evaluar una propuesta.",
+    "refuerzo_ids": ["SOC-012", "SOC-078"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 190,
+    "etiquetas": ["frontera_agricola", "deforestacion", "titulacion", "modelos_conceptuales", "caso_ficticio"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-078",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "interpretar",
+    "tema": "Uso del suelo",
+    "subtema": "Conflictos entre la vocación del suelo y su uso actual",
+    "dificultad": 1,
+    "contexto": "La **vocación** de un suelo es el uso para el que es más apto según su clima, pendiente y fertilidad. Cuando el uso actual no coincide con la vocación, se habla de **conflicto de uso del suelo**. La gráfica compara la vocación y el uso actual del suelo rural del municipio de El Encanto (caso ficticio), que tiene 70.000 hectáreas rurales.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Vocación y uso actual del suelo rural en El Encanto (datos ficticios)",
+      "eje_x": "Tipo de uso",
+      "eje_y": "Hectáreas",
+      "series": [
+        { "nombre": "Vocación del suelo", "valores": [["Agrícola", 30000], ["Ganadero", 15000], ["Forestal y de conservación", 25000]] },
+        { "nombre": "Uso actual", "valores": [["Agrícola", 12000], ["Ganadero", 38000], ["Forestal y de conservación", 20000]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones se apoya en la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La agricultura ocupa más hectáreas de las que tienen vocación agrícola.",
+        "correcta": false,
+        "explicacion": "Es al contrario: la vocación agrícola es de 30.000 ha y el uso agrícola actual es de 12.000 ha. La agricultura ocupa menos de la mitad del suelo apto para ella.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las series (vocación y uso actual) al leer las barras de la categoría agrícola."
+      },
+      {
+        "clave": "B",
+        "texto": "El uso del suelo es adecuado, porque tanto la vocación como el uso actual suman 70.000 hectáreas.",
+        "correcta": false,
+        "explicacion": "Que los totales coincidan no dice nada sobre si cada hectárea se usa según su vocación. La distribución entre categorías es muy distinta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó solo los totales y no la distribución por tipo de uso."
+      },
+      {
+        "clave": "C",
+        "texto": "El área forestal del municipio aumentó en los últimos años.",
+        "correcta": false,
+        "explicacion": "La gráfica compara vocación y uso en un mismo momento; no muestra cambios en el tiempo. Además, el uso forestal actual (20.000 ha) es menor que la vocación forestal (25.000 ha).",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó las dos series como dos momentos en el tiempo en lugar de dos formas de clasificar el mismo suelo."
+      },
+      {
+        "clave": "D",
+        "texto": "La ganadería ocupa 23.000 hectáreas más de las que tienen vocación ganadera, lo que indica que se ha extendido sobre suelos aptos para la agricultura y sobre áreas forestales, con posibles efectos en la producción de alimentos y en los bosques.",
+        "correcta": true,
+        "explicacion": "Uso ganadero 38.000 ha frente a vocación de 15.000 ha: sobran 23.000 ha. Esas hectáreas coinciden con las que faltan en agricultura (18.000) y en uso forestal (5.000). Relaciona la dimensión productiva (menos tierra para cultivos de alimentos) con la ambiental (pérdida de áreas de conservación).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica compara, para tres tipos de uso, las hectáreas según vocación y según uso actual. COMPRENDER: se pide la afirmación respaldada por los datos. INTERPRETAR: si una barra de uso supera a la de vocación, esa actividad ocupa suelos que no son los suyos. REPRESENTAR: diferencias uso − vocación: agrícola −18.000; ganadero +23.000; forestal −5.000 (−18.000 − 5.000 + 23.000 = 0). RAZONAR: A invierte las series, B compara solo totales, C inventa una evolución temporal. RESOLVER: D. VERIFICAR: las 23.000 ha de más en ganadería son exactamente las que faltan en agricultura y conservación.",
+    "que_identificar": "Qué uso supera su vocación (ganadero) y cuáles quedan por debajo (agrícola y forestal).",
+    "que_revisar": "Vocación y uso del suelo; conflictos de uso; ganadería extensiva y seguridad alimentaria.",
+    "refuerzo_ids": ["SOC-009", "SOC-063"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["uso_del_suelo", "ganaderia", "conflicto_de_uso", "barras", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-079",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Impuestos y gasto público",
+    "subtema": "Efectos de un aumento del impuesto predial para financiar transporte escolar rural",
+    "dificultad": 2,
+    "contexto": "El **impuesto predial** lo pagan cada año los propietarios de inmuebles urbanos y rurales, según el avalúo catastral de su predio. En el municipio ficticio de Los Almendros, los avalúos no se actualizaban desde hacía quince años. El concejo aprobó actualizarlos, lo que aumentará el predial que pagan muchos propietarios, y destinar el recaudo adicional a **transporte escolar para estudiantes de veredas lejanas**, donde la deserción escolar es alta.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes opciones analiza mejor los efectos de esta decisión en distintas dimensiones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La decisión solo tiene efectos económicos: los propietarios pagarán más impuestos y el municipio recaudará más dinero.",
+        "correcta": false,
+        "explicacion": "Los efectos económicos existen, pero la decisión busca también un efecto social (reducir la deserción) y puede tener efectos políticos (apoyo o rechazo ciudadano, exigencia de rendición de cuentas). La opción se queda en una sola dimensión.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Describió bien el efecto más visible, pero no consideró las otras dimensiones que implica la intervención."
+      },
+      {
+        "clave": "B",
+        "texto": "Económicamente, los propietarios pagarán más, sobre todo aquellos cuyos predios se valorizaron; socialmente, el transporte puede reducir la deserción en las veredas; y políticamente, puede generar rechazo de algunos contribuyentes y mayor exigencia de rendición de cuentas sobre el uso del dinero.",
+        "correcta": true,
+        "explicacion": "Identifica efectos en tres dimensiones y cómo se relacionan: el mayor pago (económico) financia un beneficio (social), y la aceptación ciudadana (político) dependerá de que ese beneficio se vea y de que se rinda cuentas del recaudo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La decisión hará que el municipio recaude menos, porque cuando sube un impuesto todos los propietarios dejan de pagarlo.",
+        "correcta": false,
+        "explicacion": "Es una generalización sin sustento: puede aumentar la evasión en algunos casos, pero no hay razón para suponer que todos dejarán de pagar. La opción convierte un riesgo posible en un resultado seguro.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó un posible efecto (algo de evasión) como si fuera inevitable y total."
+      },
+      {
+        "clave": "D",
+        "texto": "La decisión solo afectará a los propietarios de la zona urbana, porque el impuesto predial se cobra únicamente en las ciudades.",
+        "correcta": false,
+        "explicacion": "El contexto dice que el predial lo pagan los propietarios de inmuebles urbanos y rurales. La opción parte de un dato falso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tenía una idea equivocada sobre el impuesto predial y no la contrastó con la definición del contexto."
+      }
+    ],
+    "explicacion": "LEER: el concejo actualiza los avalúos, lo que sube el predial, y destina el recaudo adicional al transporte escolar rural. COMPRENDER: se pide el análisis de efectos en distintas dimensiones. INTERPRETAR: la decisión tiene un costo (más impuestos), un beneficio (acceso a la escuela) y una dimensión política (aceptación, control ciudadano). REPRESENTAR: económico → más pago y más recaudo; social → menos deserción rural; político → posible rechazo y rendición de cuentas. RAZONAR: A se queda en una dimensión; C generaliza; D contradice el contexto. RESOLVER: B. VERIFICAR: B cubre tres dimensiones y explica cómo se conectan entre sí.",
+    "que_identificar": "Quiénes pagan más, quiénes se benefician y qué reacciones políticas puede generar la decisión.",
+    "que_revisar": "Impuestos y gasto público municipal; impuesto predial y avalúo catastral; análisis multidimensional de decisiones públicas.",
+    "refuerzo_ids": ["SOC-011", "SOC-067"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["impuestos", "gasto_publico", "predial", "educacion_rural", "caso_ficticio"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-080",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Apertura económica de los años noventa",
+    "subtema": "Importaciones de alimentos y área sembrada de cultivos transitorios",
+    "dificultad": 3,
+    "contexto": "A comienzos de la década de 1990, Colombia inició la llamada **apertura económica**: se redujeron los aranceles y otras barreras a las importaciones para integrar el país a los mercados internacionales. La gráfica muestra datos ficticios, pero verosímiles, sobre la agricultura de un país que aplicó una política similar a partir de 1991. Los **cultivos transitorios** (como maíz, sorgo, trigo, cebada y algodón) se siembran y cosechan en ciclos cortos.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Área de cultivos transitorios e importaciones de cereales (datos ficticios)",
+      "eje_x": "Año",
+      "eje_y": "Miles (hectáreas o toneladas)",
+      "series": [
+        { "nombre": "Área sembrada de cultivos transitorios (miles de hectáreas)", "valores": [["1988", 2500], ["1990", 2550], ["1992", 2300], ["1994", 2050], ["1996", 1800], ["1998", 1650], ["2000", 1600]] },
+        { "nombre": "Importaciones de cereales (miles de toneladas)", "valores": [["1988", 900], ["1990", 1000], ["1992", 1600], ["1994", 2300], ["1996", 2900], ["1998", 3300], ["2000", 3500]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona de manera más consistente el contexto histórico con los datos de la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las importaciones de cereales crecieron porque aumentó el área sembrada de cultivos transitorios.",
+        "correcta": false,
+        "explicacion": "Después de 1990 las dos series se mueven en sentido opuesto: las importaciones suben y el área sembrada baja. La opción invierte la tendencia del área.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó que ambas líneas \"cambian\" y supuso que se mueven en el mismo sentido, sin verificar la dirección de cada una."
+      },
+      {
+        "clave": "B",
+        "texto": "La gráfica demuestra que la apertura económica fue la única causa de la pobreza rural en los años noventa.",
+        "correcta": false,
+        "explicacion": "La gráfica no mide pobreza y, aunque muestra una relación entre importaciones y área sembrada, no permite afirmar que la apertura sea la única causa de nada. La conclusión va mucho más allá de los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Extendió una tendencia de los datos a una conclusión causal y absoluta sobre una variable que la gráfica no muestra."
+      },
+      {
+        "clave": "C",
+        "texto": "Tras la reducción de aranceles, las importaciones de cereales se multiplicaron mientras el área de cultivos transitorios cayó cerca de un 37 %; esto es consistente con que la competencia de productos importados afectó a los productores nacionales, aunque la gráfica sola no descarta otros factores.",
+        "correcta": true,
+        "explicacion": "De 1990 a 2000 las importaciones pasaron de 1.000 a 3.500 mil toneladas (3,5 veces) y el área bajó de 2.550 a 1.600 mil hectáreas (≈ −37 %). La afirmación conecta la dimensión política (decisión de apertura), la económica (importaciones y competencia) y la productiva rural, y reconoce el límite de la evidencia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La apertura no tuvo relación con la agricultura, porque el área sembrada ya venía cayendo desde 1988.",
+        "correcta": false,
+        "explicacion": "Entre 1988 y 1990 el área subió (de 2.500 a 2.550 mil ha); la caída comienza después de 1990, cuando se inicia la apertura. La opción lee mal el inicio de la tendencia.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "No comparó los primeros puntos de la serie y supuso que la caída empezó antes de la apertura."
+      }
+    ],
+    "explicacion": "LEER: el contexto sitúa la apertura a inicios de los noventa (reducción de aranceles); la gráfica muestra área de cultivos transitorios e importaciones de cereales de 1988 a 2000. COMPRENDER: se pide la relación más consistente entre el proceso histórico y los datos. INTERPRETAR: después de 1990 las importaciones suben de forma sostenida y el área sembrada baja. REPRESENTAR: importaciones 1.000 → 3.500 (×3,5); área 2.550 → 1.600 (−950, ≈ −37 %). RAZONAR: A invierte la tendencia, B exagera la conclusión y habla de una variable ausente, D lee mal el inicio de la serie. RESOLVER: C. VERIFICAR: C cita cifras correctas, relaciona dimensiones y no afirma más de lo que los datos permiten.",
+    "que_identificar": "El año en que comienza la apertura y la dirección de cada serie antes y después de ese año.",
+    "que_revisar": "Apertura económica de los años noventa, aranceles e importaciones; relación entre globalización y economía campesina; asociación frente a causalidad.",
+    "refuerzo_ids": ["SOC-071", "SOC-068"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 190,
+    "etiquetas": ["apertura_economica", "globalizacion", "agricultura", "lineas", "datos_ficticios"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-081",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Economía campesina y vías terciarias",
+    "subtema": "Efectos de mejorar una vía terciaria en una vereda productora",
+    "dificultad": 1,
+    "contexto": "Las familias de la vereda Alto Bonito (caso ficticio) cultivan plátano, yuca y cacao en fincas pequeñas. El único camino hacia la cabecera municipal es una trocha: en temporada de lluvias, sacar una carga en mula tarda seis horas. Por eso, casi todas venden en la finca a intermediarios que pagan precios bajos, y los niños y los enfermos tienen dificultades para llegar a la escuela y al puesto de salud. La gobernación propone pavimentar ese camino con placa huella, una técnica de bajo costo para vías rurales.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes es un efecto razonable de la obra en distintas dimensiones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al bajar el tiempo y el costo del transporte, las familias podrían llevar sus productos a la cabecera y negociar mejores precios, y sería más fácil llegar a la escuela y al puesto de salud.",
+        "correcta": true,
+        "explicacion": "La obra ataca la causa de los problemas descritos (el mal estado del camino). En lo económico, permite vender directamente y con mejores precios; en lo social, mejora el acceso a educación y salud.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La obra solo beneficiaría a los intermediarios, porque ellos son los que transportan la carga.",
+        "correcta": false,
+        "explicacion": "Con un camino transitable, las familias pueden sacar sus productos por su cuenta y dependen menos de los intermediarios; además, el acceso a escuela y salud beneficia a toda la vereda.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la situación actual (dependencia de intermediarios) se mantendría igual aunque cambie la condición que la produce."
+      },
+      {
+        "clave": "C",
+        "texto": "La pavimentación eliminaría por completo la pobreza de la vereda en poco tiempo.",
+        "correcta": false,
+        "explicacion": "La vía puede mejorar ingresos y acceso a servicios, pero la pobreza depende de muchos factores (precios, tierra, crédito, empleo). La opción exagera el efecto de una sola medida.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a una intervención un efecto total y automático, sin considerar otros factores."
+      },
+      {
+        "clave": "D",
+        "texto": "La obra no cambiaría los precios que reciben las familias, porque los precios del plátano y la yuca los fija el mercado internacional.",
+        "correcta": false,
+        "explicacion": "El plátano y la yuca que venden estas familias se comercializan sobre todo en mercados locales, y el contexto muestra que los precios bajos se deben a la dependencia de intermediarios por el mal camino.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó una idea general sobre precios internacionales a productos y mercados locales donde no es la explicación principal."
+      }
+    ],
+    "explicacion": "LEER: la vereda produce plátano, yuca y cacao; el camino es una trocha; se vende barato a intermediarios y hay dificultad para llegar a la escuela y al puesto de salud; se propone placa huella. COMPRENDER: se pide un efecto razonable en distintas dimensiones. INTERPRETAR: el mal camino es la causa común de los problemas económicos y sociales. REPRESENTAR: mejor vía → menos tiempo y costo → venta directa y mejores precios (económico) + acceso a servicios (social). RAZONAR: B supone que nada cambia, C exagera, D usa una explicación ajena al caso. RESOLVER: A. VERIFICAR: A se deriva directamente de los problemas que el contexto atribuye al camino.",
+    "que_identificar": "Los problemas que el contexto atribuye al mal estado del camino (precios bajos, dependencia de intermediarios, difícil acceso a servicios).",
+    "que_revisar": "Economía campesina, intermediación y comercialización; infraestructura rural; efectos de una intervención en distintas dimensiones.",
+    "refuerzo_ids": ["SOC-065", "SOC-073"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["economia_campesina", "vias_terciarias", "infraestructura_rural", "caso_ficticio"],
+    "estado": "aprobada"
+  }
+]

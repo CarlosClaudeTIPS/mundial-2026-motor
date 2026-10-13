@@ -1,0 +1,1583 @@
+[
+  {
+    "id": "SOC-044",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "comprender",
+    "tema": "Conquista y Colonia en el Nuevo Reino de Granada",
+    "subtema": "La encomienda como institución colonial",
+    "dificultad": 1,
+    "contexto": "El siguiente fragmento resume un título otorgado en el Nuevo Reino de Granada en el siglo XVI (fuente descrita para esta pregunta, con el lenguaje típico de esos documentos):\n\n> \"Por la presente se encomiendan a vos, [nombre del conquistador], los indios del pueblo de [nombre del pueblo], con sus caciques, para que os sirvan y paguen los tributos que se tasaren, con cargo de que los hagáis doctrinar e instruir en las cosas de nuestra santa fe católica y los tratéis bien.\"\n\nEn la práctica, muchos de quienes recibían estos títulos exigieron trabajo y tributos excesivos, lo que dio lugar a denuncias y a normas de la Corona que intentaron limitar los abusos.",
+    "estimulo": null,
+    "enunciado": "¿A qué institución colonial corresponde el documento descrito?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al resguardo, porque el documento entrega tierras de propiedad colectiva a la comunidad indígena para que las administre su cabildo.",
+        "correcta": false,
+        "explicacion": "El documento no entrega tierras a los indígenas: entrega a los indígenas (su tributo y su trabajo) a un español. El resguardo fue otra institución, en la que la Corona reconocía tierras comunales inalienables a una comunidad indígena.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las dos instituciones coloniales más nombradas sobre población indígena (encomienda y resguardo)."
+      },
+      {
+        "clave": "B",
+        "texto": "A la esclavitud, porque el documento autoriza a comprar y vender a los indígenas del pueblo como propiedad del conquistador.",
+        "correcta": false,
+        "explicacion": "El texto no habla de compra ni de venta: los indígenas quedan obligados a pagar tributo y servir, pero no se vuelven propiedad transferible del español. La esclavitud legal en la Colonia recayó principalmente sobre personas africanas y sus descendientes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asimiló cualquier forma de trabajo forzado con la esclavitud, sin leer qué derechos otorgaba el documento."
+      },
+      {
+        "clave": "C",
+        "texto": "A la encomienda, porque asigna a un español un grupo de indígenas que le deben tributo y servicio, a cambio de la obligación de evangelizarlos y protegerlos.",
+        "correcta": true,
+        "explicacion": "Es la definición de la encomienda: la Corona \"encomendaba\" indígenas a un español (el encomendero), que recibía de ellos tributo en especie o trabajo y a cambio debía encargarse de su doctrina (evangelización) y buen trato. El documento contiene los dos lados: tributo/servicio y obligación de doctrinar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "A la mita, porque el documento organiza turnos obligatorios de trabajo en las minas por un tiempo fijo, pagados con un jornal.",
+        "correcta": false,
+        "explicacion": "La mita consistía en turnos rotativos de trabajo obligatorio (en minas, obras u otras labores) con un pago; el documento no menciona turnos, minas ni jornal, sino tributo y doctrina bajo un encomendero concreto.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Reconoció que se trataba de trabajo indígena obligatorio y eligió la primera institución de ese tipo que recordó."
+      }
+    ],
+    "explicacion": "LEER: el fragmento dice que se \"encomiendan\" los indios de un pueblo a un español para que le sirvan y paguen tributos, con el cargo de doctrinarlos en la fe católica y tratarlos bien. COMPRENDER: se pregunta qué institución colonial describe. INTERPRETAR: el documento crea una relación entre un español y un grupo de indígenas: él recibe tributo y trabajo; ellos deben ser evangelizados y protegidos. REPRESENTAR: encomendero → recibe tributo/servicio; indígenas → reciben doctrina y \"protección\". RAZONAR: no hay entrega de tierras comunales (resguardo), ni compraventa de personas (esclavitud), ni turnos de trabajo con jornal (mita). RESOLVER: opción C, la encomienda. VERIFICAR: la palabra clave \"se encomiendan\" y la obligación de \"doctrinar\" coinciden con la definición de encomienda.",
+    "que_identificar": "Qué recibe el español (tributo y servicio) y qué obligación asume (doctrinar y tratar bien a los indígenas).",
+    "que_revisar": "Instituciones coloniales: encomienda, resguardo, mita y esclavitud; diferencias entre ellas.",
+    "refuerzo_ids": [
+      "SOC-062",
+      "SOC-045"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "colonia",
+      "encomienda",
+      "fuente_descrita",
+      "historia_colombia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-045",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "razonar",
+    "tema": "Conquista de América y debate sobre los indígenas",
+    "subtema": "Bartolomé de las Casas como fuente: alcances y límites",
+    "dificultad": 2,
+    "contexto": "Fray Bartolomé de las Casas, fraile dominico que había sido encomendero en las Antillas, escribió en 1542 la *Brevísima relación de la destrucción de las Indias*, publicada en 1552 y dirigida al príncipe Felipe (luego rey Felipe II). Su propósito declarado era que la Corona detuviera los abusos de los conquistadores. En un pasaje escribe sobre los pueblos indígenas:\n\n> \"En estas ovejas mansas […] entraron los españoles, desde luego que las conocieron, como lobos y tigres y leones cruelísimos de muchos días hambrientos.\"\n\nEn otros pasajes da cifras de millones de indígenas muertos en pocas décadas, sin explicar cómo las calculó.",
+    "estimulo": null,
+    "enunciado": "Una estudiante quiere usar esta obra en un trabajo. ¿Para cuál de los siguientes propósitos es MÁS adecuada como fuente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Para establecer con precisión cuántos indígenas murieron en América entre 1492 y 1542.",
+        "correcta": false,
+        "explicacion": "Es justamente el uso más limitado: el autor escribe para persuadir al rey, usa un lenguaje retórico (ovejas contra lobos) y no explica cómo obtuvo sus cifras. Para cuantificar la caída demográfica se necesitan otras fuentes (tasaciones de tributo, padrones, estudios demográficos) que se contrasten.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó las cifras de una fuente primaria como datos exactos solo por ser contemporánea de los hechos."
+      },
+      {
+        "clave": "B",
+        "texto": "Para mostrar cómo un miembro de la Iglesia denunció ante la Corona los abusos de la conquista y participó en el debate sobre el trato a los indígenas.",
+        "correcta": true,
+        "explicacion": "La obra es un testimonio directo de la postura de su autor y del debate de la época: quién escribe, a quién, con qué propósito y con qué argumentos. Para eso es una fuente de primera mano muy valiosa, aunque sus cifras y su retórica deban tomarse con cautela.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Para conocer cómo los propios pueblos indígenas narraron la conquista desde su cosmovisión.",
+        "correcta": false,
+        "explicacion": "El autor es un fraile español; aunque defiende a los indígenas, la obra expresa su punto de vista y el de su orden religiosa, no la voz de los pueblos indígenas. Para esa perspectiva habría que buscar otras fuentes (relatos indígenas, códices, crónicas mestizas).",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"hablar a favor de los indígenas\" con \"ser la voz de los indígenas\"."
+      },
+      {
+        "clave": "D",
+        "texto": "Para demostrar que la Corona española aprobaba y promovía los abusos que el autor describe.",
+        "correcta": false,
+        "explicacion": "El texto se dirige a la Corona para pedirle que actúe contra los abusos; eso sugiere que el autor esperaba que el rey los corrigiera, no que los promoviera. La fuente no sirve para sostener esa conclusión.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No tuvo en cuenta el destinatario ni el propósito de la obra al decidir qué puede probar."
+      }
+    ],
+    "explicacion": "LEER: autor (fraile dominico, antiguo encomendero), fecha (1542, publicada en 1552), destinatario (el príncipe Felipe), propósito (que la Corona detuviera los abusos), estilo (metáforas de ovejas y lobos) y cifras sin método explicado. COMPRENDER: hay que decidir para qué sirve mejor la obra como fuente. INTERPRETAR: una fuente persuasiva es excelente para conocer la postura y los argumentos de su autor, pero débil para datos exactos. REPRESENTAR: alcance → testimonio de la denuncia y del debate; límites → cifras, retórica, voz no indígena. RAZONAR: A exige precisión que la fuente no ofrece; C le atribuye una voz que no es la suya; D contradice el propósito del texto. RESOLVER: opción B. VERIFICAR: B usa la fuente para lo que ella muestra directamente: quién denunció, ante quién y con qué argumentos.",
+    "que_identificar": "Autor, destinatario, propósito y tipo de lenguaje de la fuente; qué afirma sin mostrar cómo lo sabe.",
+    "que_revisar": "Crítica de fuentes: autoría, intención, contexto de producción; posibilidades y limitaciones de una fuente primaria.",
+    "refuerzo_ids": [
+      "SOC-006",
+      "SOC-044"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "conquista",
+      "fuente_primaria",
+      "critica_de_fuentes",
+      "bartolome_de_las_casas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-046",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "interpretar",
+    "tema": "Independencia y Gran Colombia",
+    "subtema": "Línea de tiempo 1810-1830: de las juntas a la disolución",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes elaboró la siguiente línea de tiempo sobre el proceso de independencia y la Gran Colombia.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Línea de tiempo: Independencia y Gran Colombia (1810-1830)",
+      "columnas": [
+        "Año",
+        "Hecho"
+      ],
+      "filas": [
+        [
+          "1810",
+          "El 20 de julio se forma en Santa Fe una junta de gobierno; se crean juntas en otras provincias."
+        ],
+        [
+          "1816",
+          "Tropas españolas al mando de Pablo Morillo retoman el territorio (Reconquista) y ejecutan a numerosos patriotas."
+        ],
+        [
+          "1819",
+          "Batalla de Boyacá (7 de agosto). En diciembre, el Congreso de Angostura proclama la República de Colombia."
+        ],
+        [
+          "1821",
+          "El Congreso de Cúcuta expide una Constitución centralista; Bolívar es presidente y Santander vicepresidente."
+        ],
+        [
+          "1826",
+          "En Venezuela, José Antonio Páez encabeza un movimiento contra el gobierno de Bogotá (La Cosiata)."
+        ],
+        [
+          "1828",
+          "Fracasa la Convención de Ocaña; Bolívar asume poderes dictatoriales y sufre un atentado en septiembre."
+        ],
+        [
+          "1830",
+          "Venezuela y Ecuador se separan; Bolívar muere en diciembre."
+        ]
+      ],
+      "nota": "Tabla elaborada para esta pregunta a partir de hechos ampliamente documentados."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones se apoya en la línea de tiempo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La Gran Colombia se disolvió porque España recuperó el control del territorio en la Reconquista.",
+        "correcta": false,
+        "explicacion": "La Reconquista ocurrió en 1816, antes de Boyacá (1819) y de la creación de la República de Colombia. No puede explicar una disolución que sucede catorce años después; además, en 1830 España ya no gobernaba el territorio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el orden temporal: usó un hecho anterior a la fundación de la república como causa de su final."
+      },
+      {
+        "clave": "B",
+        "texto": "La Constitución de Cúcuta se expidió después de la separación de Venezuela y Ecuador para reunificar el territorio.",
+        "correcta": false,
+        "explicacion": "Según la tabla, la Constitución de Cúcuta es de 1821 y la separación de Venezuela y Ecuador de 1830. La afirmación ubica los hechos en un orden que la tabla contradice.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó los hechos sin fijarse en la columna de años."
+      },
+      {
+        "clave": "C",
+        "texto": "Las juntas de 1810 proclamaron de inmediato la República de Colombia, con Bolívar como presidente.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que la República de Colombia fue proclamada en 1819 (Angostura) y que Bolívar fue presidente según la Constitución de 1821. En 1810 lo que se formó fueron juntas de gobierno provinciales.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció el 20 de julio con todo el proceso de independencia y creación de la república, comprimiendo veinte años en un solo momento."
+      },
+      {
+        "clave": "D",
+        "texto": "Después de asegurada la independencia, los conflictos internos entre regiones y en torno al poder de Bolívar precedieron a la disolución de la Gran Colombia.",
+        "correcta": true,
+        "explicacion": "La tabla muestra que, tras Boyacá (1819) y la Constitución de 1821, aparecen conflictos internos: el movimiento de Páez en Venezuela (1826), el fracaso de la Convención de Ocaña y la dictadura de Bolívar (1828). Luego, en 1830, se separan Venezuela y Ecuador. La afirmación se limita a ordenar estos hechos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla va de 1810 a 1830 y muestra juntas, Reconquista, Boyacá y Angostura, Constitución de Cúcuta, La Cosiata, Ocaña y dictadura, y la separación de 1830. COMPRENDER: hay que elegir la afirmación que la tabla respalda. INTERPRETAR: se distinguen dos etapas: guerra contra España (1810-1819) y vida de la república (1819-1830), en la que aparecen tensiones internas. REPRESENTAR: 1810 juntas → 1816 Reconquista → 1819 independencia y república → 1821 Constitución → 1826-1828 conflictos internos → 1830 disolución. RAZONAR: A invierte el orden (1816 antes de 1830 no puede ser causa del final de algo creado en 1819); B y C ubican mal los hechos. RESOLVER: opción D. VERIFICAR: cada hecho que menciona D está en la tabla y en el orden correcto.",
+    "que_identificar": "El año de cada hecho y la diferencia entre los conflictos contra España y los conflictos internos de la república.",
+    "que_revisar": "Proceso de independencia de la Nueva Granada y la Gran Colombia (1810-1830); lectura de líneas de tiempo.",
+    "refuerzo_ids": [
+      "SOC-047",
+      "SOC-053"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "independencia",
+      "gran_colombia",
+      "linea_de_tiempo",
+      "tabla",
+      "siglo_xix"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-047",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "interpretar",
+    "tema": "Federalismo y centralismo en el siglo XIX",
+    "subtema": "Constitución de Rionegro (1863) frente a la Constitución de 1886",
+    "dificultad": 2,
+    "contexto": "En el siglo XIX colombiano se enfrentaron dos modelos de organización del Estado:\n\n- **Constitución de Rionegro (1863)**, redactada por liberales radicales. Creó los *Estados Unidos de Colombia*: nueve estados soberanos con sus propias constituciones, leyes y milicias; un periodo presidencial nacional de dos años; amplias libertades individuales (de prensa, de expresión, de comercio de armas) y separación entre la Iglesia y el Estado.\n- **Constitución de 1886**, impulsada por el movimiento de la *Regeneración* (Rafael Núñez y Miguel Antonio Caro). Convirtió los estados en departamentos dependientes del gobierno central, cuyos gobernadores nombraba el presidente; amplió el periodo presidencial a seis años; reconoció la religión católica como la de la Nación y como elemento del orden social.\n\nEn 1878 Núñez había resumido su diagnóstico con la frase: *\"Regeneración administrativa fundamental o catástrofe\"*.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones explica mejor cómo las ideas de cada grupo influyeron en el modelo de Estado que defendieron?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los radicales, que ponían en el centro la libertad individual y la autonomía regional, limitaron el poder central; los regeneradores, que veían el desorden como el principal problema, fortalecieron la autoridad central y a la Iglesia como fuente de cohesión.",
+        "correcta": true,
+        "explicacion": "Cada constitución refleja la visión de sus autores: Rionegro reparte el poder entre estados soberanos, acorta el periodo presidencial y amplía libertades, coherente con la desconfianza liberal radical frente a un poder central fuerte; 1886 centraliza, alarga el periodo, nombra gobernadores desde Bogotá y apoya a la Iglesia, coherente con la idea de que el país necesitaba orden (\"regeneración o catástrofe\").",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Los dos grupos compartían las mismas ideas sobre el Estado; las constituciones fueron distintas solo porque se escribieron en años diferentes.",
+        "correcta": false,
+        "explicacion": "El contexto muestra diferencias de fondo (soberanía de los estados frente a departamentos, libertades amplias frente a orden, separación Iglesia-Estado frente a religión de la Nación). Atribuir la diferencia solo al paso del tiempo ignora la influencia de las ideologías.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No relacionó las características de cada constitución con las ideas de quienes la redactaron."
+      },
+      {
+        "clave": "C",
+        "texto": "Los regeneradores defendían la autonomía de las regiones, por eso transformaron los estados en departamentos con gobernadores nombrados por el presidente.",
+        "correcta": false,
+        "explicacion": "Nombrar gobernadores desde el centro y convertir estados soberanos en departamentos reduce la autonomía regional; es una medida centralista. La opción invierte la relación entre la idea y la medida.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"departamento\" con una forma de autonomía y atribuyó al grupo centralista la idea federalista."
+      },
+      {
+        "clave": "D",
+        "texto": "La Constitución de Rionegro fue centralista porque los liberales radicales querían que el presidente gobernara seis años para garantizar la estabilidad.",
+        "correcta": false,
+        "explicacion": "El periodo de seis años y el centralismo corresponden a la Constitución de 1886; Rionegro estableció periodos de dos años y estados soberanos. La opción mezcla las características de las dos constituciones y confunde a los actores.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió los rasgos de las dos constituciones y los grupos que las impulsaron."
+      }
+    ],
+    "explicacion": "LEER: Rionegro (1863): estados soberanos, presidente por dos años, amplias libertades, separación Iglesia-Estado. 1886: departamentos, gobernadores nombrados por el presidente, periodo de seis años, catolicismo como religión de la Nación; lema de Núñez sobre la regeneración. COMPRENDER: se pide relacionar ideas (ideologías) con el modelo de Estado. INTERPRETAR: los radicales temían la concentración del poder y valoraban la libertad; los regeneradores atribuían los males del país a la anarquía y valoraban el orden. REPRESENTAR: libertad + autonomía → federalismo; orden + autoridad + religión → centralismo. RAZONAR: B niega las diferencias; C invierte la relación entre idea y medida; D confunde los rasgos de las dos constituciones. RESOLVER: opción A. VERIFICAR: A explica cada rasgo del contexto a partir de la visión del grupo que lo impulsó.",
+    "que_identificar": "Los rasgos concretos de cada constitución y la idea central (libertad o autoridad) que los explica.",
+    "que_revisar": "Federalismo y centralismo; radicalismo liberal y Regeneración; constituciones de 1863 y 1886.",
+    "refuerzo_ids": [
+      "SOC-014",
+      "SOC-046"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "federalismo",
+      "centralismo",
+      "constitucion_1886",
+      "rionegro",
+      "siglo_xix",
+      "ideologias"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-048",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Guerra de los Mil Días y separación de Panamá",
+    "subtema": "Dimensiones política, económica e internacional de la separación (1903)",
+    "dificultad": 3,
+    "contexto": "Entre 1899 y 1902, liberales y conservadores se enfrentaron en la **Guerra de los Mil Días**, que dejó decenas de miles de muertos, una economía arruinada y un gobierno nacional debilitado; parte de los combates ocurrió en el istmo de Panamá, entonces territorio colombiano. En enero de 1903 los gobiernos de Colombia y Estados Unidos firmaron el **Tratado Herrán-Hay**, que permitía a Estados Unidos construir un canal interoceánico en Panamá; en agosto de 1903 el Senado colombiano lo rechazó. Sectores de la élite panameña, que esperaban beneficios económicos del canal, declararon la independencia el 3 de noviembre de 1903. Buques de guerra estadounidenses impidieron que tropas colombianas llegaran a sofocar el movimiento, y pocos días después Estados Unidos reconoció a Panamá y firmó con su nuevo gobierno un tratado para construir el canal, que se inauguró en 1914.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes explicaciones relaciona de manera más completa las dimensiones presentes en la separación de Panamá?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La separación se explica únicamente por la decisión del Senado colombiano de rechazar el tratado; si lo hubiera aprobado, las demás circunstancias no habrían tenido importancia.",
+        "correcta": false,
+        "explicacion": "El rechazo del tratado fue un detonante, pero la opción descarta la debilidad del Estado tras la guerra, los intereses de la élite panameña y la intervención de Estados Unidos, sin los cuales el movimiento de noviembre difícilmente habría triunfado. Es una explicación monocausal.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el detonante inmediato como si fuera la única causa."
+      },
+      {
+        "clave": "B",
+        "texto": "La separación de Panamá provocó la Guerra de los Mil Días, porque el país quedó dividido y los partidos se enfrentaron por el territorio perdido.",
+        "correcta": false,
+        "explicacion": "La guerra terminó en 1902 y la separación ocurrió en 1903. La opción invierte causa y consecuencia: la guerra debilitó al Estado antes de la separación, no al revés.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el orden temporal entre la guerra (1899-1902) y la separación (1903)."
+      },
+      {
+        "clave": "C",
+        "texto": "Un Estado debilitado por la guerra, el interés económico de la élite panameña en el canal y el interés estratégico de Estados Unidos, que apoyó militarmente el movimiento tras el rechazo del tratado, se combinaron para producir la separación.",
+        "correcta": true,
+        "explicacion": "La opción integra las tres dimensiones del contexto: política interna (gobierno debilitado por la guerra y rechazo del tratado), económica (beneficios esperados del canal por la élite panameña) e internacional (buques de Estados Unidos, reconocimiento inmediato y tratado para el canal). Además respeta el orden de los hechos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Panamá se separó para dejar de pagar el uso del canal a Colombia, que lo administraba desde el fin de la guerra.",
+        "correcta": false,
+        "explicacion": "En 1903 el canal no existía: se inauguró en 1914, construido por Estados Unidos después de la separación. La opción es un anacronismo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que el canal ya funcionaba en 1903 (anacronismo)."
+      }
+    ],
+    "explicacion": "LEER: guerra 1899-1902 (Estado debilitado, combates en el istmo); tratado Herrán-Hay (enero de 1903) rechazado por el Senado (agosto); independencia (3 de noviembre) impulsada por élites panameñas; buques de Estados Unidos, reconocimiento y tratado; canal inaugurado en 1914. COMPRENDER: se pide la explicación que relacione más completamente las dimensiones. INTERPRETAR: hay una dimensión política interna, una económica y una internacional. REPRESENTAR: guerra → Estado débil; rechazo del tratado → Estados Unidos busca otra vía; élite panameña + apoyo naval → separación exitosa → tratado y canal. RAZONAR: A es monocausal; B invierte el orden temporal; D es anacrónica. RESOLVER: opción C. VERIFICAR: C menciona las tres dimensiones, cada una respaldada por el texto, y no altera la cronología.",
+    "que_identificar": "Los factores de cada dimensión (política, económica, internacional) y el orden de los hechos entre 1899 y 1914.",
+    "que_revisar": "Guerra de los Mil Días, tratado Herrán-Hay, separación de Panamá y construcción del canal; explicaciones multicausales.",
+    "refuerzo_ids": [
+      "SOC-011",
+      "SOC-047"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "guerra_mil_dias",
+      "panama",
+      "multicausalidad",
+      "siglo_xx",
+      "dimensiones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-049",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "comprender",
+    "tema": "Hegemonía conservadora y República Liberal",
+    "subtema": "La función social de la propiedad en la reforma de 1936",
+    "dificultad": 1,
+    "contexto": "Entre 1886 y 1930 gobernó el Partido Conservador (hegemonía conservadora). En 1930 comenzó la llamada **República Liberal** (1930-1946). Durante el primer gobierno de Alfonso López Pumarejo, conocido como la \"Revolución en Marcha\", se aprobó la reforma constitucional de 1936, que incluyó esta frase:\n\n> \"La propiedad es una función social que implica obligaciones.\"\n\nEse mismo año, la Ley 200 de 1936 estableció que el Estado podía recuperar las tierras rurales privadas que sus dueños dejaran de explotar durante diez años seguidos.",
+    "estimulo": null,
+    "enunciado": "Según el fragmento y la ley descrita, ¿qué significa que la propiedad sea una \"función social\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que toda la tierra pasa a ser propiedad del Estado, que la reparte entre los campesinos.",
+        "correcta": false,
+        "explicacion": "La reforma no abolió la propiedad privada: la mantuvo, pero le agregó obligaciones. La Ley 200 solo permitía recuperar tierras no explotadas durante diez años, no toda la tierra.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la función social de la propiedad con la abolición de la propiedad privada."
+      },
+      {
+        "clave": "B",
+        "texto": "Que el derecho de propiedad no es absoluto: el dueño debe usar su bien de modo que también sirva a la sociedad, y puede perderlo si no cumple esas obligaciones.",
+        "correcta": true,
+        "explicacion": "La frase dice que la propiedad \"implica obligaciones\", y la Ley 200 concreta una: explotar la tierra; si no se explota durante diez años, el Estado puede recuperarla. La propiedad privada sigue existiendo, pero condicionada al interés social.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que los propietarios pueden hacer con sus tierras lo que quieran, incluso dejarlas sin usar, porque el Estado debe proteger la propiedad sin condiciones.",
+        "correcta": false,
+        "explicacion": "Esa es la idea contraria: la propiedad como derecho absoluto. La frase y la Ley 200 establecen justamente que dejar la tierra sin explotar tiene consecuencias.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"propiedad\" y asumió la idea tradicional de derecho absoluto, sin atender a \"implica obligaciones\"."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la propiedad debe ser administrada por organizaciones sociales como sindicatos y juntas comunales.",
+        "correcta": false,
+        "explicacion": "La palabra \"social\" no se refiere a quién administra el bien, sino al fin que debe cumplir. Nada en el texto transfiere la administración de la propiedad a organizaciones.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpretó \"social\" como \"manejado por organizaciones sociales\"."
+      }
+    ],
+    "explicacion": "LEER: la reforma de 1936 dice que la propiedad es una función social que implica obligaciones; la Ley 200 permite recuperar tierras sin explotar durante diez años. COMPRENDER: se pide el significado del concepto \"función social de la propiedad\". INTERPRETAR: la propiedad privada se mantiene, pero ya no es un derecho ilimitado; debe servir también al interés colectivo. REPRESENTAR: derecho de propiedad + obligaciones → si no se cumplen (tierra ociosa), el Estado puede intervenir. RAZONAR: A exagera (abolición); C describe la propiedad absoluta, lo opuesto; D confunde el sentido de \"social\". RESOLVER: opción B. VERIFICAR: B coincide con la frase (\"implica obligaciones\") y con la ley (pérdida de la tierra por no explotarla).",
+    "que_identificar": "La expresión \"implica obligaciones\" y la condición de explotar la tierra en la Ley 200 de 1936.",
+    "que_revisar": "República Liberal (1930-1946), Revolución en Marcha, reforma de 1936 y Ley 200; concepto de función social de la propiedad (hoy en el artículo 58 de la Constitución de 1991).",
+    "refuerzo_ids": [
+      "SOC-062",
+      "SOC-051"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "republica_liberal",
+      "funcion_social_propiedad",
+      "reforma_1936",
+      "siglo_xx",
+      "tierra"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-050",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "verificar",
+    "tema": "El 9 de abril de 1948",
+    "subtema": "Intenciones de las fuentes sobre el Bogotazo",
+    "dificultad": 3,
+    "contexto": "El 9 de abril de 1948 fue asesinado en Bogotá **Jorge Eliécer Gaitán**, dirigente liberal con amplio apoyo popular y probable candidato presidencial. Gobernaba el conservador Mariano Ospina Pérez y en la ciudad se realizaba la IX Conferencia Panamericana. La noticia desató disturbios, incendios y saqueos en Bogotá y otras ciudades (el \"Bogotazo\"), con miles de muertos. Un historiador reúne dos fuentes (descritas para esta pregunta):\n\n- **Fuente 1**: declaraciones de funcionarios del gobierno de la época, publicadas en los días siguientes, que atribuyen los disturbios principalmente a un complot organizado por agentes comunistas internacionales para sabotear la Conferencia.\n- **Fuente 2**: entrevista hecha en los años ochenta a un antiguo obrero liberal que estuvo en las calles ese día: \"Nadie nos organizó. Salimos porque habían matado al hombre que iba a ser presidente de los pobres\".",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa mejor la intención que podría tener la fuente 1?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La fuente 1 es imparcial, porque proviene del gobierno, que tenía acceso a toda la información sobre lo ocurrido.",
+        "correcta": false,
+        "explicacion": "Tener acceso a información no garantiza imparcialidad. El gobierno era parte interesada: estaba en cuestión su capacidad para mantener el orden y la situación política del país. Ser una fuente oficial no la exime de intenciones.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que una fuente oficial es neutral por el hecho de ser oficial."
+      },
+      {
+        "clave": "B",
+        "texto": "La fuente 1 debe descartarse por completo, porque todo lo que dice un gobierno sobre sí mismo es falso.",
+        "correcta": false,
+        "explicacion": "Reconocer una posible intención no equivale a declarar falsa la fuente; significa que sus afirmaciones deben contrastarse con otras evidencias. Descartarla del todo impide conocer cómo el gobierno interpretó y presentó los hechos, que también es información histórica.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió reconocer un sesgo con invalidar completamente la fuente."
+      },
+      {
+        "clave": "C",
+        "texto": "La fuente 1 y la fuente 2 coinciden en que los disturbios fueron planeados con anterioridad.",
+        "correcta": false,
+        "explicacion": "La fuente 2 dice lo contrario (\"nadie nos organizó\"): presenta la reacción como espontánea. Las fuentes no coinciden en este punto.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No leyó con atención la cita de la fuente 2."
+      },
+      {
+        "clave": "D",
+        "texto": "Al atribuir los disturbios a agentes extranjeros, la fuente 1 podía desplazar la responsabilidad fuera de las tensiones políticas internas y de la reacción popular por la muerte de Gaitán; por eso su explicación debe contrastarse con otras evidencias.",
+        "correcta": true,
+        "explicacion": "La fuente 1 proviene de un actor interesado: explicar el estallido como obra de un complot externo desvía la atención de la conflictividad partidista y del descontento popular, temas que comprometían al gobierno. Develar esa posible intención no obliga a descartarla, sino a contrastarla (con la fuente 2 y otras).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: contexto del 9 de abril (asesinato de Gaitán, gobierno conservador, Conferencia Panamericana, Bogotazo). Fuente 1: el gobierno atribuye los disturbios a un complot comunista internacional. Fuente 2: un obrero liberal dice que la reacción fue espontánea. COMPRENDER: se pide evaluar la posible intención de la fuente 1. INTERPRETAR: quién habla importa: el gobierno era parte interesada en cómo se explicara el estallido. REPRESENTAR: fuente 1 → explicación externa (complot) → quita peso a causas internas; fuente 2 → explicación interna (indignación popular). RAZONAR: A confunde oficial con imparcial; B confunde sesgo con falsedad total; C lee mal la fuente 2. RESOLVER: opción D. VERIFICAR: D señala la posible intención sin afirmar que la fuente sea falsa y propone contrastarla, que es el uso crítico adecuado.",
+    "que_identificar": "Quién produce la fuente 1, qué explicación da y a quién beneficia esa explicación.",
+    "que_revisar": "El 9 de abril de 1948 y sus antecedentes; crítica de fuentes: intención, interés del autor, contraste de testimonios.",
+    "refuerzo_ids": [
+      "SOC-018",
+      "SOC-051"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "9_de_abril",
+      "bogotazo",
+      "gaitan",
+      "critica_de_fuentes",
+      "siglo_xx",
+      "fuente_descrita"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-051",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "La Violencia en Colombia (mediados del siglo XX)",
+    "subtema": "Relaciones entre violencia partidista, tierra y migración",
+    "dificultad": 2,
+    "contexto": "Se conoce como **La Violencia** el periodo, aproximadamente entre 1946 y finales de los años cincuenta, en que seguidores de los partidos liberal y conservador se enfrentaron, sobre todo en zonas rurales. Tras el regreso de los conservadores a la presidencia en 1946 y el asesinato de Gaitán en 1948, la persecución partidista se extendió: grupos armados de uno y otro bando atacaron veredas enteras identificadas con el partido contrario. Estudios posteriores muestran que en muchas regiones las familias que huían abandonaban sus parcelas, que eran ocupadas o compradas a muy bajo precio por otras personas, y que numerosos campesinos se trasladaron a las ciudades. Las cifras de muertos más citadas rondan los 200.000.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones establece una relación adecuada entre dimensiones de La Violencia, según el texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La persecución partidista (dimensión política) facilitó el despojo de tierras (dimensión económica), y ambos impulsaron el desplazamiento de campesinos hacia las ciudades (dimensión demográfica).",
+        "correcta": true,
+        "explicacion": "El texto sostiene cada eslabón: los ataques a veredas por su filiación partidista hacían huir a las familias; las parcelas abandonadas eran ocupadas o compradas a bajo precio; y muchos campesinos migraron a las ciudades. La opción conecta tres dimensiones en el orden en que el texto las presenta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La migración de campesinos a las ciudades fue la causa que originó el enfrentamiento entre liberales y conservadores.",
+        "correcta": false,
+        "explicacion": "El texto presenta la migración como consecuencia de la persecución y el despojo, no como su origen. La opción invierte causa y consecuencia.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación causal entre violencia y migración."
+      },
+      {
+        "clave": "C",
+        "texto": "La Violencia fue una consecuencia del Frente Nacional, que excluyó a los demás partidos de la competencia política.",
+        "correcta": false,
+        "explicacion": "El Frente Nacional se pactó en 1957 y rigió entre 1958 y 1974, precisamente como respuesta a La Violencia. Presentarlo como su causa es un anacronismo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el orden entre La Violencia y el Frente Nacional (acuerdo posterior para superarla)."
+      },
+      {
+        "clave": "D",
+        "texto": "La Violencia tuvo solo una dimensión política: las disputas por la tierra y los movimientos de población no tuvieron relación con ella.",
+        "correcta": false,
+        "explicacion": "El texto afirma expresamente que las familias abandonaban sus parcelas, que estas eran ocupadas o compradas a bajo precio y que muchos campesinos migraron. Negar esas dimensiones contradice el texto.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se quedó con la etiqueta \"partidista\" y no leyó los efectos económicos y demográficos descritos."
+      }
+    ],
+    "explicacion": "LEER: La Violencia (c. 1946-finales de los cincuenta), enfrentamiento liberal-conservador en zonas rurales; ataques a veredas; parcelas abandonadas ocupadas o compradas barato; migración a las ciudades; unos 200.000 muertos. COMPRENDER: se pide una relación correcta entre dimensiones. INTERPRETAR: política (persecución partidista), económica (tierra), demográfica (desplazamiento). REPRESENTAR: persecución → huida → despojo de parcelas → migración a ciudades. RAZONAR: B invierte la causalidad; C es anacrónica (el Frente Nacional es posterior); D contradice el texto. RESOLVER: opción A. VERIFICAR: cada relación de A tiene respaldo en una frase del texto.",
+    "que_identificar": "Qué hechos del texto corresponden a cada dimensión y en qué orden se encadenan.",
+    "que_revisar": "La Violencia: periodización, actores y efectos (despojo, desplazamiento, urbanización); relación con el Frente Nacional.",
+    "refuerzo_ids": [
+      "SOC-019",
+      "SOC-002"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "la_violencia",
+      "desplazamiento",
+      "tierra",
+      "siglo_xx",
+      "dimensiones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-052",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Revolución Industrial",
+    "subtema": "Localización de las ciudades industriales británicas",
+    "dificultad": 2,
+    "contexto": "A finales del siglo XVIII y comienzos del XIX, en Gran Bretaña, la máquina de vapor se generalizó en fábricas textiles, minas y, más tarde, en ferrocarriles. Estas máquinas funcionaban quemando carbón, un mineral pesado y costoso de transportar largas distancias en esa época. Ciudades como Manchester, Birmingham y Leeds crecieron rápidamente; todas estaban cerca de yacimientos de carbón y se conectaron con canales navegables y luego con ferrocarriles. El algodón que se hilaba en Manchester no se cultivaba en Gran Bretaña: llegaba por barco, principalmente desde el sur de Estados Unidos, a través del puerto de Liverpool.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona correctamente la ubicación de estas ciudades industriales con características del espacio geográfico?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las ciudades industriales se ubicaron junto a las plantaciones de algodón, para tener la materia prima a la mano.",
+        "correcta": false,
+        "explicacion": "El texto aclara que el algodón no se cultivaba en Gran Bretaña: llegaba por barco desde Estados Unidos. La cercanía relevante no era con las plantaciones.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la materia prima textil se producía en el mismo lugar que las fábricas, sin leer la última frase."
+      },
+      {
+        "clave": "B",
+        "texto": "Las ciudades crecieron donde el clima era más cálido, porque el calor ayudaba a mover las máquinas de vapor.",
+        "correcta": false,
+        "explicacion": "Las máquinas de vapor producen su propio calor quemando carbón; el clima no las hacía funcionar. El texto no menciona el clima como factor de localización.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relacionó \"vapor\" con temperatura ambiente y no con el combustible."
+      },
+      {
+        "clave": "C",
+        "texto": "Las ciudades crecieron cerca de los yacimientos de carbón, porque ese combustible movía las máquinas y era costoso transportarlo lejos; los canales y ferrocarriles las unieron con los puertos.",
+        "correcta": true,
+        "explicacion": "El texto da las dos claves: las máquinas funcionaban con carbón y el carbón era pesado y caro de transportar; por eso convenía producir cerca de las minas. Los canales y ferrocarriles resolvían la conexión con los puertos, como Liverpool, por donde entraba el algodón y salían los productos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Las ciudades industriales surgieron donde ya existían ferrocarriles, que fueron la causa del inicio de la Revolución Industrial.",
+        "correcta": false,
+        "explicacion": "El texto indica que las máquinas se usaron primero en fábricas y minas y \"más tarde\" en ferrocarriles, y que las ciudades se conectaron \"luego\" con ellos. Poner los ferrocarriles como condición previa invierte el orden.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el orden: tomó una consecuencia posterior (el ferrocarril) como causa de la localización."
+      }
+    ],
+    "explicacion": "LEER: vapor en fábricas, minas y luego ferrocarriles; funciona con carbón, pesado y caro de transportar; Manchester, Birmingham y Leeds cerca de yacimientos de carbón, unidas por canales y luego ferrocarriles; algodón importado vía Liverpool. COMPRENDER: se pide relacionar la localización con rasgos del espacio geográfico. INTERPRETAR: el recurso natural decisivo es el carbón; el transporte condiciona la localización. REPRESENTAR: carbón cercano + costos de transporte → fábricas cerca de las minas; canales/ferrocarril → conexión con puertos. RAZONAR: A contradice el texto (algodón importado); B inventa un factor climático; D invierte la cronología del ferrocarril. RESOLVER: opción C. VERIFICAR: todos los elementos de C están en el texto.",
+    "que_identificar": "La fuente de energía de las máquinas, el costo de transportarla y el origen del algodón.",
+    "que_revisar": "Revolución Industrial: energía, localización industrial, transporte y comercio atlántico.",
+    "refuerzo_ids": [
+      "SOC-002",
+      "SOC-061"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "revolucion_industrial",
+      "localizacion",
+      "recursos_naturales",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-053",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Revolución Francesa",
+    "subtema": "La Declaración de los Derechos del Hombre y del Ciudadano (1789) y el Antiguo Régimen",
+    "dificultad": 1,
+    "contexto": "En agosto de 1789, al comienzo de la Revolución Francesa, la Asamblea Nacional aprobó la *Declaración de los Derechos del Hombre y del Ciudadano*. Su artículo 1 dice:\n\n> \"Los hombres nacen y permanecen libres e iguales en derechos. Las distinciones sociales solo pueden fundarse en la utilidad común.\"\n\nEn ese momento, la sociedad francesa estaba organizada en estamentos: el clero y la nobleza tenían privilegios por nacimiento o condición (por ejemplo, no pagaban la mayoría de los impuestos), mientras que el tercer estado —campesinos, artesanos y burguesía— cargaba con ellos. En 1793, Antonio Nariño tradujo e imprimió la Declaración en Santa Fe, por lo que fue procesado por las autoridades coloniales.",
+    "estimulo": null,
+    "enunciado": "¿Contra qué orden social se dirigía principalmente el artículo 1 de la Declaración?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Contra el capitalismo industrial, que había creado desigualdades entre dueños de fábricas y obreros.",
+        "correcta": false,
+        "explicacion": "En 1789 la industrialización apenas empezaba en Gran Bretaña y no era el orden dominante en Francia. Las críticas al capitalismo industrial y la lucha obrera son principalmente del siglo XIX. Es un anacronismo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ubicó en 1789 un conflicto social (burguesía industrial contra obreros) que es posterior."
+      },
+      {
+        "clave": "B",
+        "texto": "Contra la sociedad de estamentos del Antiguo Régimen, en la que los derechos y privilegios dependían del nacimiento o la condición.",
+        "correcta": true,
+        "explicacion": "Al afirmar que los hombres \"nacen\" iguales en derechos y que las distinciones solo pueden basarse en la \"utilidad común\", el artículo niega que el nacimiento en la nobleza o la pertenencia al clero justifique privilegios. Esa era la base del Antiguo Régimen descrito en el contexto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Contra la independencia de las colonias americanas, porque buscaba mantener unido el imperio francés.",
+        "correcta": false,
+        "explicacion": "El artículo trata de la igualdad de derechos, no de colonias. Además, el contexto muestra que en América el texto fue usado por Nariño en sentido contrario al orden colonial, por lo cual fue procesado.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcló el dato sobre Nariño con un propósito que el texto no expresa."
+      },
+      {
+        "clave": "D",
+        "texto": "Contra la burguesía, porque la Declaración buscaba quitarle sus propiedades para entregarlas a la nobleza.",
+        "correcta": false,
+        "explicacion": "La burguesía formaba parte del tercer estado, el grupo que cargaba con los privilegios de los otros; la Declaración favorecía sus aspiraciones al eliminar los privilegios de nacimiento. La opción confunde los actores y sus intereses.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió a qué estamento pertenecía la burguesía y quiénes tenían privilegios."
+      }
+    ],
+    "explicacion": "LEER: el artículo 1 afirma que los hombres nacen y permanecen libres e iguales en derechos y que las distinciones sociales solo pueden fundarse en la utilidad común; el contexto describe la sociedad de estamentos con privilegios del clero y la nobleza. COMPRENDER: hay que ubicar la fuente en su contexto y decir qué orden cuestiona. INTERPRETAR: \"nacen iguales\" niega que el nacimiento dé privilegios; \"utilidad común\" reemplaza al nacimiento como criterio. REPRESENTAR: Antiguo Régimen = privilegios por nacimiento → Declaración = igualdad de derechos. RAZONAR: A es anacrónica; C no se relaciona con el artículo; D confunde a los actores. RESOLVER: opción B. VERIFICAR: B se apoya en las palabras del artículo y en la descripción de los estamentos del contexto.",
+    "que_identificar": "Las palabras \"nacen\" e \"iguales en derechos\" y la descripción de los privilegios del clero y la nobleza.",
+    "que_revisar": "Revolución Francesa: Antiguo Régimen, estamentos, Declaración de 1789; su recepción en la Nueva Granada (Nariño).",
+    "refuerzo_ids": [
+      "SOC-054",
+      "SOC-006"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "revolucion_francesa",
+      "fuente_primaria",
+      "antiguo_regimen",
+      "narino",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-054",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "razonar",
+    "tema": "Revolución Francesa",
+    "subtema": "Olympe de Gouges y los derechos de la mujer (1791)",
+    "dificultad": 2,
+    "contexto": "Compare dos fuentes de la Revolución Francesa:\n\n- **Declaración de los Derechos del Hombre y del Ciudadano (1789)**, artículo 1: *\"Los hombres nacen y permanecen libres e iguales en derechos. Las distinciones sociales solo pueden fundarse en la utilidad común.\"*\n- **Declaración de los Derechos de la Mujer y de la Ciudadana (1791)**, escrita por Olympe de Gouges, artículo 1: *\"La mujer nace libre y permanece igual al hombre en derechos. Las distinciones sociales solo pueden estar fundadas en la utilidad común.\"*\n\nLa Constitución francesa de 1791 no concedió a las mujeres el derecho al voto. Olympe de Gouges fue ejecutada en 1793, durante el periodo del Terror.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones compara correctamente las perspectivas de los dos textos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Olympe de Gouges rechazaba los principios de la Revolución y quería volver a los privilegios del Antiguo Régimen.",
+        "correcta": false,
+        "explicacion": "Su texto conserva los mismos principios (libertad, igualdad de derechos, distinciones solo por utilidad común); lo que hace es extenderlos a las mujeres. Rechazar los privilegios de nacimiento es lo contrario de querer volver al Antiguo Régimen.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó la crítica a la Declaración de 1789 como un rechazo a toda la Revolución."
+      },
+      {
+        "clave": "B",
+        "texto": "Los dos textos difieren en que el de 1791 prohíbe toda distinción social, mientras que el de 1789 las acepta.",
+        "correcta": false,
+        "explicacion": "Ambos textos tienen la misma segunda frase: las distinciones sociales se aceptan si se fundan en la utilidad común. En este punto no hay diferencia.",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No comparó frase por frase y supuso una diferencia donde los textos coinciden."
+      },
+      {
+        "clave": "C",
+        "texto": "La Declaración de 1789 ya incluía explícitamente a las mujeres, por lo cual el texto de 1791 solo repetía lo mismo sin agregar nada.",
+        "correcta": false,
+        "explicacion": "El texto de 1789 habla de \"los hombres\" y, según el contexto, la Constitución de 1791 no dio el voto a las mujeres. El texto de Gouges agrega algo decisivo: nombra a la mujer y la declara igual al hombre en derechos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que \"hombres\" incluía en la práctica a las mujeres, sin atender a la exclusión del voto."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos parten del principio de igualdad de derechos, pero el texto de 1791 lo usa para denunciar que la Revolución excluía a las mujeres, al nombrarlas expresamente como iguales al hombre.",
+        "correcta": true,
+        "explicacion": "Gouges imita a propósito la estructura de 1789: mantiene el principio y cambia el sujeto (\"la mujer… igual al hombre\"). Con eso muestra que la igualdad proclamada no se aplicaba a las mujeres (por ejemplo, no votaban). Es una perspectiva que comparte los principios revolucionarios pero critica su alcance.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: los dos artículos 1 son casi idénticos; cambian el sujeto (\"los hombres\" frente a \"la mujer… igual al hombre\"). El contexto añade que la Constitución de 1791 no dio el voto a las mujeres. COMPRENDER: se pide comparar las perspectivas. INTERPRETAR: Gouges usa el mismo lenguaje para mostrar que la igualdad proclamada dejaba por fuera a la mitad de la población. REPRESENTAR: coincidencias → libertad, igualdad, distinciones por utilidad común; diferencia → quién es sujeto de derechos. RAZONAR: A le atribuye un rechazo que no hay; B inventa una diferencia en la segunda frase; C ignora la exclusión del voto. RESOLVER: opción D. VERIFICAR: D identifica lo común y lo distinto con base en los textos citados.",
+    "que_identificar": "Qué palabras cambian entre los dos artículos y qué dato del contexto muestra la exclusión de las mujeres.",
+    "que_revisar": "Revolución Francesa y ciudadanía; Olympe de Gouges; comparación de fuentes con estructura paralela.",
+    "refuerzo_ids": [
+      "SOC-053",
+      "SOC-008"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "revolucion_francesa",
+      "derechos_mujer",
+      "perspectivas",
+      "fuente_primaria",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-055",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "interpretar",
+    "tema": "Primera Guerra Mundial",
+    "subtema": "Crisis de julio de 1914 y sistema de alianzas",
+    "dificultad": 2,
+    "contexto": "Antes de 1914, las principales potencias europeas estaban agrupadas en dos bloques: la **Triple Entente** (Francia, Rusia y Reino Unido) y la **Triple Alianza** (Alemania, Austria-Hungría e Italia). Rusia, además, se presentaba como protectora de Serbia. La tabla resume las primeras semanas del conflicto.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Cronología del inicio de la Primera Guerra Mundial (1914)",
+      "columnas": [
+        "Fecha",
+        "Hecho"
+      ],
+      "filas": [
+        [
+          "28 de junio",
+          "Un nacionalista serbobosnio asesina en Sarajevo al archiduque Francisco Fernando, heredero de Austria-Hungría."
+        ],
+        [
+          "28 de julio",
+          "Austria-Hungría declara la guerra a Serbia."
+        ],
+        [
+          "30 de julio",
+          "Rusia ordena la movilización general de su ejército."
+        ],
+        [
+          "1 de agosto",
+          "Alemania declara la guerra a Rusia."
+        ],
+        [
+          "3 de agosto",
+          "Alemania declara la guerra a Francia."
+        ],
+        [
+          "4 de agosto",
+          "Alemania invade Bélgica; el Reino Unido declara la guerra a Alemania."
+        ]
+      ],
+      "nota": "Italia no entró en guerra en 1914; en 1915 lo hizo del lado de la Entente. Estados Unidos entró en 1917."
+    },
+    "enunciado": "¿Qué muestra la cronología sobre el inicio de la Primera Guerra Mundial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Un conflicto entre Austria-Hungría y Serbia se convirtió en pocas semanas en una guerra entre varias potencias, a medida que los compromisos entre aliados arrastraron a nuevos países.",
+        "correcta": true,
+        "explicacion": "Entre el 28 de julio y el 4 de agosto se pasa de una guerra entre dos países a una que involucra a Rusia, Alemania, Francia y el Reino Unido. Esa secuencia coincide con los bloques descritos: Rusia apoya a Serbia, Alemania apoya a Austria-Hungría, y Francia y el Reino Unido quedan involucrados frente a Alemania.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El asesinato del archiduque llevó al Reino Unido a declarar la guerra a Alemania ese mismo día.",
+        "correcta": false,
+        "explicacion": "Según la tabla, el asesinato fue el 28 de junio y la declaración del Reino Unido el 4 de agosto, después de la invasión de Bélgica. La opción salta toda la cadena intermedia.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Unió el primer y el último hecho de la tabla sin revisar fechas ni pasos intermedios."
+      },
+      {
+        "clave": "C",
+        "texto": "La guerra comenzó porque Alemania quería anular el Tratado de Versalles, que le había impuesto duras condiciones.",
+        "correcta": false,
+        "explicacion": "El Tratado de Versalles se firmó en 1919, al final de la Primera Guerra Mundial; no puede ser causa de su inicio en 1914. Esa relación corresponde a los antecedentes de la Segunda Guerra Mundial.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las causas de la Primera y la Segunda Guerra Mundial (anacronismo)."
+      },
+      {
+        "clave": "D",
+        "texto": "Todos los miembros de la Triple Alianza y Estados Unidos entraron a la guerra en agosto de 1914.",
+        "correcta": false,
+        "explicacion": "La nota aclara que Italia no entró en 1914 (lo hizo en 1915 y del lado contrario) y que Estados Unidos entró en 1917. La opción contradice la información dada.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No leyó la nota de la tabla y generalizó la entrada simultánea de todos los países."
+      }
+    ],
+    "explicacion": "LEER: bloques de alianzas antes de 1914; cronología del 28 de junio al 4 de agosto; nota sobre Italia (1915) y Estados Unidos (1917). COMPRENDER: se pregunta qué muestra la cronología. INTERPRETAR: cada fecha añade un país a la guerra siguiendo las alianzas. REPRESENTAR: Sarajevo → Austria-Hungría contra Serbia → Rusia moviliza → Alemania contra Rusia y Francia → invasión de Bélgica → Reino Unido contra Alemania. RAZONAR: B salta pasos; C es anacrónica (Versalles es de 1919); D contradice la nota. RESOLVER: opción A. VERIFICAR: A describe la expansión en pocas semanas y la relaciona con los compromisos entre aliados, tal como lo muestran la tabla y el contexto.",
+    "que_identificar": "Las fechas de cada declaración de guerra y la pertenencia de cada país a un bloque.",
+    "que_revisar": "Causas de la Primera Guerra Mundial: alianzas, nacionalismos, crisis de julio; diferencias con los antecedentes de la Segunda.",
+    "refuerzo_ids": [
+      "SOC-056",
+      "SOC-046"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "primera_guerra_mundial",
+      "linea_de_tiempo",
+      "tabla",
+      "alianzas",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-056",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Segunda Guerra Mundial",
+    "subtema": "Versalles, crisis de 1929 y ascenso del nazismo",
+    "dificultad": 3,
+    "contexto": "Tras la derrota en la Primera Guerra Mundial, Alemania firmó en 1919 el **Tratado de Versalles**: perdió territorios y colonias, tuvo que reducir su ejército, aceptar la responsabilidad de la guerra y pagar grandes reparaciones. Muchos alemanes lo consideraron una humillación. La **crisis económica de 1929**, iniciada en Estados Unidos, golpeó con fuerza a Alemania, que dependía de préstamos estadounidenses: hacia 1932 había alrededor de seis millones de desempleados. En ese contexto creció el apoyo al partido nazi, que prometía anular Versalles, recuperar territorios y dar \"espacio vital\" a Alemania. Hitler llegó a canciller en enero de 1933, estableció una dictadura y rearmó al país. La invasión de Polonia en septiembre de 1939 dio inicio a la Segunda Guerra Mundial en Europa.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes explicaciones relaciona mejor las dimensiones que el texto presenta como antecedentes de la Segunda Guerra Mundial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La Segunda Guerra Mundial provocó la crisis de 1929, porque los gastos militares arruinaron las economías europeas.",
+        "correcta": false,
+        "explicacion": "La crisis fue en 1929 y la guerra comenzó en 1939. La opción invierte el orden temporal y la relación causal.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió causa y consecuencia sin revisar las fechas."
+      },
+      {
+        "clave": "B",
+        "texto": "El resentimiento político por Versalles se agravó con el desempleo causado por la crisis de 1929, lo que aumentó el apoyo a un movimiento que prometía revertir el tratado mediante una política expansionista.",
+        "correcta": true,
+        "explicacion": "La opción conecta la dimensión política-diplomática (Versalles y la humillación), la económica (crisis y desempleo) y la ideológica-política (apoyo al nazismo y su programa de expansión), que desemboca en la invasión de Polonia. Es la relación que el texto construye.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La causa fue exclusivamente la personalidad de Hitler; sin él, las condiciones económicas y el tratado no habrían tenido ninguna importancia.",
+        "correcta": false,
+        "explicacion": "El texto muestra que el apoyo al nazismo creció en un contexto concreto (Versalles, crisis, desempleo). Atribuir todo a un individuo ignora las condiciones que hicieron posible su ascenso: es una explicación monocausal.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Redujo un proceso de varias dimensiones a la acción de un solo personaje."
+      },
+      {
+        "clave": "D",
+        "texto": "La guerra fue un enfrentamiento entre el bloque capitalista y el bloque comunista por el control de Europa oriental después de 1945.",
+        "correcta": false,
+        "explicacion": "Esa descripción corresponde a la Guerra Fría, posterior a la Segunda Guerra Mundial. Es un anacronismo que confunde dos conflictos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió la Segunda Guerra Mundial con la Guerra Fría."
+      }
+    ],
+    "explicacion": "LEER: Versalles (1919): pérdidas, reparaciones, humillación; crisis de 1929 y seis millones de desempleados; programa nazi de anular Versalles y expandirse; Hitler canciller (1933), rearme; invasión de Polonia (1939). COMPRENDER: se pide la explicación que relacione mejor las dimensiones. INTERPRETAR: hay una dimensión política-diplomática, una económica y una ideológica que se refuerzan. REPRESENTAR: Versalles → resentimiento; crisis → desempleo; resentimiento + desempleo → apoyo nazi → dictadura y rearme → expansión → guerra. RAZONAR: A invierte fechas; C es monocausal; D confunde con la Guerra Fría. RESOLVER: opción B. VERIFICAR: B respeta la cronología (1919 → 1929 → 1933 → 1939) e integra las dimensiones del texto.",
+    "que_identificar": "Los hechos de cada dimensión (tratado, crisis, ideología) y sus fechas.",
+    "que_revisar": "Periodo de entreguerras: Tratado de Versalles, crisis de 1929, totalitarismos; explicaciones multicausales.",
+    "refuerzo_ids": [
+      "SOC-055",
+      "SOC-048"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "segunda_guerra_mundial",
+      "entreguerras",
+      "crisis_1929",
+      "multicausalidad",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-057",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "interpretar",
+    "tema": "Guerra Fría",
+    "subtema": "El \"telón de acero\": perspectivas occidental y soviética (1946)",
+    "dificultad": 2,
+    "contexto": "Al terminar la Segunda Guerra Mundial, el ejército soviético ocupaba buena parte de Europa oriental, donde fueron llegando al poder gobiernos comunistas afines a la Unión Soviética. En marzo de 1946, el ex primer ministro británico Winston Churchill dijo en un discurso en Fulton (Estados Unidos):\n\n> \"Desde Stettin, en el Báltico, hasta Trieste, en el Adriático, ha caído sobre el continente un telón de acero.\"\n\nDías después, Iósif Stalin respondió en el periódico soviético *Pravda* (resumen): la Unión Soviética había sido invadida a través de esos países y había perdido millones de vidas; por eso era natural que buscara que en ellos hubiera gobiernos amigos, y el discurso de Churchill era un llamado a la guerra contra la URSS.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones compara adecuadamente las dos perspectivas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Churchill y Stalin coincidían en que los gobiernos de Europa oriental eran una amenaza para la Unión Soviética.",
+        "correcta": false,
+        "explicacion": "Churchill presenta la influencia soviética como una división impuesta sobre Europa (un \"telón de acero\"); Stalin la presenta como protección para la URSS. No coinciden en que esos gobiernos amenazaran a la Unión Soviética.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No distinguió qué dice cada autor sobre los mismos gobiernos."
+      },
+      {
+        "clave": "B",
+        "texto": "Stalin aceptó que existía un telón de acero y prometió retirarse de Europa oriental para evitar la guerra.",
+        "correcta": false,
+        "explicacion": "El resumen dice lo contrario: Stalin justifica la presencia de gobiernos amigos por razones de seguridad y acusa a Churchill de llamar a la guerra. No promete retirarse.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a Stalin una concesión que la fuente no contiene."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambos se refieren al mismo hecho —gobiernos afines a la URSS en Europa oriental—, pero Churchill lo interpreta como una división y un cierre de Europa, mientras Stalin lo justifica como una necesidad de seguridad tras las invasiones sufridas.",
+        "correcta": true,
+        "explicacion": "Esa es la clave de la comparación: el hecho es compartido, la interpretación es opuesta. Para Churchill, la línea de Stettin a Trieste separa a Europa bajo control soviético; para Stalin, los gobiernos amigos son una barrera defensiva frente a nuevas invasiones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Las dos perspectivas pertenecen al periodo de la Primera Guerra Mundial, cuando Rusia y el Reino Unido eran enemigos.",
+        "correcta": false,
+        "explicacion": "Los discursos son de 1946, después de la Segunda Guerra Mundial, y marcan el inicio de la Guerra Fría. Además, en la Primera Guerra Mundial Rusia y el Reino Unido fueron aliados en la Entente.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ubicó mal las fuentes en el tiempo y confundió los bandos de las guerras mundiales."
+      }
+    ],
+    "explicacion": "LEER: contexto de 1945-1946 (ocupación soviética y gobiernos comunistas en Europa oriental); cita de Churchill sobre el telón de acero; respuesta de Stalin sobre seguridad y acusación de llamado a la guerra. COMPRENDER: se pide comparar perspectivas. INTERPRETAR: el hecho es el mismo; cambian los valores y los intereses con que cada uno lo juzga. REPRESENTAR: hecho → gobiernos afines a la URSS; Churchill → división y amenaza a la libertad de Europa; Stalin → seguridad defensiva. RAZONAR: A y B atribuyen afirmaciones falsas a los autores; D ubica mal las fuentes en el tiempo. RESOLVER: opción C. VERIFICAR: C recoge lo que dice cada fuente sin agregar posiciones que no aparecen.",
+    "que_identificar": "El hecho común a los dos textos y cómo lo califica cada autor.",
+    "que_revisar": "Inicio de la Guerra Fría: bloques, telón de acero, seguridad soviética; comparación de perspectivas.",
+    "refuerzo_ids": [
+      "SOC-059",
+      "SOC-019"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "guerra_fria",
+      "perspectivas",
+      "fuente_primaria",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-058",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona dimensiones históricas y geográficas de eventos y problemáticas sociales",
+    "habilidad": "interpretar",
+    "tema": "Descolonización de Asia y África",
+    "subtema": "Cronología y geografía de las independencias (1947-1975)",
+    "dificultad": 1,
+    "contexto": "Después de la Segunda Guerra Mundial, las potencias europeas, debilitadas por el conflicto, enfrentaron movimientos independentistas en sus colonias de Asia y África. La tabla muestra algunos casos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Algunas independencias en Asia y África",
+      "columnas": [
+        "País",
+        "Continente",
+        "Potencia colonial",
+        "Año de independencia"
+      ],
+      "filas": [
+        [
+          "India",
+          "Asia",
+          "Reino Unido",
+          "1947"
+        ],
+        [
+          "Indonesia",
+          "Asia",
+          "Países Bajos",
+          "1949"
+        ],
+        [
+          "Ghana",
+          "África",
+          "Reino Unido",
+          "1957"
+        ],
+        [
+          "Nigeria",
+          "África",
+          "Reino Unido",
+          "1960"
+        ],
+        [
+          "Senegal",
+          "África",
+          "Francia",
+          "1960"
+        ],
+        [
+          "Congo (hoy República Democrática del Congo)",
+          "África",
+          "Bélgica",
+          "1960"
+        ],
+        [
+          "Argelia",
+          "África",
+          "Francia",
+          "1962"
+        ],
+        [
+          "Angola",
+          "África",
+          "Portugal",
+          "1975"
+        ],
+        [
+          "Mozambique",
+          "África",
+          "Portugal",
+          "1975"
+        ]
+      ],
+      "nota": "Para Indonesia se toma el año en que los Países Bajos reconocieron su independencia."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones se apoya en la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La descolonización de África ocurrió antes de la Segunda Guerra Mundial.",
+        "correcta": false,
+        "explicacion": "Todos los casos africanos de la tabla son de 1957 en adelante, después de la Segunda Guerra Mundial (1939-1945). Es un anacronismo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó los años de la tabla con la fecha de la Segunda Guerra Mundial."
+      },
+      {
+        "clave": "B",
+        "texto": "Las colonias francesas fueron las últimas en independizarse.",
+        "correcta": false,
+        "explicacion": "Según la tabla, las colonias francesas (Senegal, Argelia) se independizaron en 1960 y 1962; las últimas fueron las portuguesas (Angola y Mozambique, 1975).",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las potencias coloniales al leer la columna correspondiente."
+      },
+      {
+        "clave": "C",
+        "texto": "Todas las colonias de la tabla pertenecían al Reino Unido y se independizaron el mismo año.",
+        "correcta": false,
+        "explicacion": "La tabla muestra cinco potencias coloniales distintas y años que van de 1947 a 1975.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generalizó a partir de las primeras filas sin revisar la tabla completa."
+      },
+      {
+        "clave": "D",
+        "texto": "En los casos de la tabla, las independencias de Asia fueron anteriores a las de África, y 1960 concentró varias independencias africanas.",
+        "correcta": true,
+        "explicacion": "India (1947) e Indonesia (1949) son anteriores a todas las africanas de la tabla (desde 1957). En 1960 aparecen tres países africanos (Nigeria, Senegal y Congo). La afirmación se limita a lo que muestran las columnas de continente y año.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla tiene país, continente, potencia colonial y año (1947-1975). COMPRENDER: hay que escoger la afirmación respaldada por la tabla. INTERPRETAR: se cruzan dos dimensiones: espacial (continente) y temporal (año). REPRESENTAR: Asia → 1947-1949; África → 1957-1975, con tres casos en 1960; potencias → Reino Unido, Países Bajos, Francia, Bélgica, Portugal (esta última, la más tardía). RAZONAR: A es anacrónica; B confunde la potencia más tardía; C contradice la tabla. RESOLVER: opción D. VERIFICAR: D se comprueba fila por fila.",
+    "que_identificar": "Las columnas de continente, potencia colonial y año; el año de fin de la Segunda Guerra Mundial.",
+    "que_revisar": "Descolonización en Asia y África después de 1945; lectura cruzada de variables espaciales y temporales en tablas.",
+    "refuerzo_ids": [
+      "SOC-061",
+      "SOC-055"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "descolonizacion",
+      "tabla",
+      "africa",
+      "asia",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-059",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Guerra Fría",
+    "subtema": "Efectos del Plan Marshall en distintas dimensiones",
+    "dificultad": 2,
+    "contexto": "En 1947, Europa estaba devastada por la Segunda Guerra Mundial: escaseaban los alimentos y el combustible, y los partidos comunistas eran fuertes en países como Francia e Italia. El gobierno de Estados Unidos propuso el **Plan Marshall** (1948-1952): unos 13.000 millones de dólares de la época en ayuda para reconstruir las economías europeas, gran parte en bienes comprados a empresas estadounidenses. La ayuda se ofreció también a los países de Europa oriental, pero la Unión Soviética la rechazó e hizo que esos países la rechazaran; en 1949 creó su propio organismo de cooperación económica, el CAME (o COMECON).",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes análisis describe mejor los efectos del Plan Marshall en distintas dimensiones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Económicamente impulsó la reconstrucción de Europa occidental y abrió mercados a productos estadounidenses; políticamente buscó reducir la influencia comunista; y en lo internacional profundizó la división de Europa en dos bloques.",
+        "correcta": true,
+        "explicacion": "Cada efecto tiene respaldo en el contexto: ayuda para reconstruir y en bienes de empresas estadounidenses (económica); fortaleza de los partidos comunistas en Francia e Italia (política); rechazo soviético y creación del CAME (internacional). La opción conecta la intervención con sus efectos en tres dimensiones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Tuvo solo efectos económicos: ayudó a reconstruir fábricas y carreteras, sin ninguna relación con la competencia entre Estados Unidos y la Unión Soviética.",
+        "correcta": false,
+        "explicacion": "El contexto muestra la dimensión política e internacional: la preocupación por los partidos comunistas y la respuesta soviética con el CAME. Reducir el plan a lo económico deja por fuera efectos centrales.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Analizó una sola dimensión de la intervención."
+      },
+      {
+        "clave": "C",
+        "texto": "Unió a Europa oriental y occidental en un mismo bloque económico, porque todos los países aceptaron la ayuda.",
+        "correcta": false,
+        "explicacion": "El texto dice que la URSS rechazó la ayuda e hizo que Europa oriental la rechazara, y que creó un organismo propio. El efecto fue la división, no la unión.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la reacción soviética y supuso que la oferta a todos implicaba aceptación de todos."
+      },
+      {
+        "clave": "D",
+        "texto": "Fue una respuesta de Estados Unidos a la creación del CAME, para competir con la ayuda soviética que ya reconstruía Europa occidental.",
+        "correcta": false,
+        "explicacion": "El Plan Marshall es de 1947-1948 y el CAME de 1949; además, el CAME se dirigió a Europa oriental. La opción invierte el orden de la acción y la reacción.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Invirtió causa y consecuencia al no fijarse en las fechas."
+      }
+    ],
+    "explicacion": "LEER: Europa devastada; partidos comunistas fuertes en Francia e Italia; Plan Marshall (1948-1952), ayuda en gran parte en bienes estadounidenses; rechazo soviético; CAME en 1949. COMPRENDER: se pide un análisis de los efectos de la intervención en varias dimensiones. INTERPRETAR: la ayuda tuvo fines y consecuencias económicas, políticas e internacionales. REPRESENTAR: ayuda → reconstrucción y mercados (económica) → menor atractivo comunista (política) → rechazo soviético y CAME → dos bloques (internacional). RAZONAR: B se queda en una dimensión; C contradice el rechazo soviético; D invierte el orden temporal. RESOLVER: opción A. VERIFICAR: cada efecto de A se apoya en un dato del texto y respeta las fechas.",
+    "que_identificar": "Datos del contexto que corresponden a cada dimensión (ayuda en bienes, partidos comunistas, rechazo soviético y CAME).",
+    "que_revisar": "Guerra Fría: Plan Marshall, CAME, formación de bloques; análisis de efectos de una intervención en varias dimensiones.",
+    "refuerzo_ids": [
+      "SOC-057",
+      "SOC-011"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "guerra_fria",
+      "plan_marshall",
+      "dimensiones",
+      "intervencion",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-060",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "interpretar",
+    "tema": "Mayo del 68",
+    "subtema": "Consignas estudiantiles y rechazo a la autoridad tradicional",
+    "dificultad": 1,
+    "contexto": "En mayo de 1968, en Francia, protestas de estudiantes universitarios contra la organización de la universidad y contra la represión policial se unieron a una huelga general de millones de trabajadores. En los muros de París aparecieron consignas anónimas como estas:\n\n- *\"La imaginación al poder.\"*\n- *\"Prohibido prohibir.\"*\n- *\"Sean realistas: pidan lo imposible.\"*\n\nMovimientos juveniles con rasgos parecidos se dieron ese año en otros países.",
+    "estimulo": null,
+    "enunciado": "¿Qué visión del mundo expresan principalmente estas consignas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una defensa del orden establecido y de la obediencia a las autoridades universitarias y del gobierno.",
+        "correcta": false,
+        "explicacion": "\"Prohibido prohibir\" y \"La imaginación al poder\" cuestionan la autoridad y las normas; expresan lo opuesto a una defensa del orden establecido.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No captó la ironía de \"Prohibido prohibir\" y la leyó como un llamado a más normas."
+      },
+      {
+        "clave": "B",
+        "texto": "La exigencia de independencia de una colonia frente a su metrópoli europea.",
+        "correcta": false,
+        "explicacion": "Las consignas se escribieron en París, por estudiantes y trabajadores franceses, y no mencionan colonias ni independencia nacional. La opción confunde este movimiento con los procesos de descolonización.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció \"protesta de los años sesenta\" con descolonización sin leer quiénes protestaban y dónde."
+      },
+      {
+        "clave": "C",
+        "texto": "Un rechazo juvenil a las normas y autoridades tradicionales y la valoración de la creatividad y la libertad individual como motores de cambio social.",
+        "correcta": true,
+        "explicacion": "Las tres consignas oponen la imaginación, el deseo y la libertad a la autoridad y a lo \"realista\" establecido. Esa visión se relaciona con el rol social de sus autores —jóvenes estudiantes— que cuestionaban la universidad y las normas sociales de la época.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Un programa económico detallado para aumentar los salarios mediante una reforma tributaria.",
+        "correcta": false,
+        "explicacion": "Aunque hubo una huelga general con reclamos laborales, estas consignas no contienen propuestas económicas concretas; hablan de imaginación, prohibición y lo imposible.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó un dato del contexto (la huelga) y lo atribuyó a las consignas sin leerlas."
+      }
+    ],
+    "explicacion": "LEER: protestas estudiantiles y huelga general en Francia (mayo de 1968) y tres consignas: imaginación al poder, prohibido prohibir, pidan lo imposible. COMPRENDER: se pregunta qué visión del mundo expresan. INTERPRETAR: las consignas son paradójicas y juegan con el lenguaje para cuestionar la autoridad y lo que se considera realista. REPRESENTAR: quiénes (jóvenes estudiantes) → qué rechazan (normas, autoridad) → qué valoran (imaginación, libertad). RAZONAR: A dice lo contrario; B confunde con descolonización; D atribuye a las consignas un contenido que no tienen. RESOLVER: opción C. VERIFICAR: las tres consignas encajan con C.",
+    "que_identificar": "El sentido de cada consigna y el rol social de quienes las escribieron.",
+    "que_revisar": "Mayo del 68 y movimientos juveniles de los años sesenta; cómo roles e ideologías influyen en los discursos.",
+    "refuerzo_ids": [
+      "SOC-007",
+      "SOC-054"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "mayo_68",
+      "movimientos_sociales",
+      "perspectivas",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-061",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Descolonización de Asia y África",
+    "subtema": "La partición de la India (1947): territorio, religión y migración",
+    "dificultad": 2,
+    "contexto": "En 1947 el Reino Unido concedió la independencia a su colonia de la India, que se dividió en dos Estados: la India, de mayoría hindú, y Pakistán, de mayoría musulmana. La frontera se trazó en pocas semanas, siguiendo principalmente la religión mayoritaria de cada distrito. Sin embargo, en regiones como el Punjab y Bengala hindúes, musulmanes y sijs vivían mezclados en las mismas aldeas y ciudades. En los meses siguientes, entre diez y quince millones de personas cruzaron la nueva frontera en ambos sentidos, y la violencia entre comunidades dejó cientos de miles de muertos.",
+    "estimulo": null,
+    "enunciado": "¿Qué relación entre dimensiones explica mejor lo ocurrido tras la partición?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La migración masiva fue la causa de que el Reino Unido decidiera dividir la colonia en dos Estados.",
+        "correcta": false,
+        "explicacion": "El texto presenta la migración como posterior a la partición (\"en los meses siguientes\"), no como su causa. La opción invierte la relación.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el orden entre la decisión política y la migración."
+      },
+      {
+        "clave": "B",
+        "texto": "Una decisión política que trazó fronteras según la religión (dimensión territorial y cultural) sobre poblaciones que vivían mezcladas provocó desplazamientos masivos (dimensión demográfica) y violencia (dimensión social).",
+        "correcta": true,
+        "explicacion": "La clave está en el desajuste entre la frontera, trazada por religión mayoritaria, y la realidad de poblaciones mezcladas: millones quedaron del \"lado equivocado\" y cruzaron la frontera, en medio de violencia intercomunitaria. La opción relaciona correctamente esas dimensiones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La violencia se explica solo por diferencias religiosas antiguas; la forma en que se trazó la frontera no tuvo relación con los desplazamientos.",
+        "correcta": false,
+        "explicacion": "El texto destaca que la frontera se trazó en pocas semanas sobre regiones mezcladas y que los desplazamientos ocurrieron justo después. Desconocer esa relación ignora la dimensión política y territorial.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Buscó una causa única y cultural, dejando por fuera la decisión política."
+      },
+      {
+        "clave": "D",
+        "texto": "La partición resolvió los conflictos porque cada comunidad religiosa ya vivía en un territorio separado antes de 1947.",
+        "correcta": false,
+        "explicacion": "El texto afirma lo contrario: en el Punjab y Bengala las comunidades vivían mezcladas, y la partición fue seguida de migraciones y violencia masivas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la frontera coincidía con una separación previa de las comunidades."
+      }
+    ],
+    "explicacion": "LEER: independencia en 1947 y división en India y Pakistán; frontera trazada en semanas según la religión mayoritaria; comunidades mezcladas en el Punjab y Bengala; 10-15 millones de desplazados y cientos de miles de muertos. COMPRENDER: se pide la relación entre dimensiones que mejor explica los hechos. INTERPRETAR: el problema surge del choque entre un criterio territorial rígido y una población diversa en el mismo espacio. REPRESENTAR: decisión política → frontera religiosa → minorías del lado \"equivocado\" → migración masiva y violencia. RAZONAR: A invierte la causalidad; C es monocausal; D contradice el texto. RESOLVER: opción B. VERIFICAR: B usa cada dato del texto y respeta el orden temporal.",
+    "que_identificar": "El criterio con el que se trazó la frontera y cómo estaban distribuidas las comunidades antes de 1947.",
+    "que_revisar": "Descolonización de la India; relaciones entre fronteras, identidad cultural, migraciones y conflicto.",
+    "refuerzo_ids": [
+      "SOC-058",
+      "SOC-002"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "descolonizacion",
+      "india",
+      "migracion",
+      "fronteras",
+      "dimensiones",
+      "historia_mundial"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-062",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Conquista y Colonia en el Nuevo Reino de Granada",
+    "subtema": "Los resguardos indígenas y su disolución en el siglo XIX",
+    "dificultad": 3,
+    "contexto": "Desde finales del siglo XVI, la Corona española creó en el Nuevo Reino de Granada los **resguardos**: tierras asignadas de manera colectiva a comunidades indígenas, que no se podían vender, gobernadas por un cabildo indígena. Tras la independencia, varios dirigentes republicanos consideraron que la propiedad comunal frenaba el progreso y que los indígenas debían convertirse en ciudadanos propietarios individuales. Leyes de 1821 y, sobre todo, de 1850 ordenaron o permitieron repartir los resguardos en parcelas individuales que sus dueños podían vender. En muchas regiones, como el altiplano cundiboyacense, gran parte de esas parcelas terminó comprada a bajo precio por hacendados vecinos, y numerosos indígenas pasaron a trabajar como jornaleros o arrendatarios en tierras ajenas. En otras, como el Cauca, las comunidades resistieron y conservaron muchos resguardos.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona adecuadamente las dimensiones presentes en la disolución de los resguardos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La disolución de los resguardos fue obra de los conquistadores del siglo XVI, que repartieron las tierras indígenas entre los encomenderos.",
+        "correcta": false,
+        "explicacion": "Según el texto, los resguardos fueron creados por la Corona a finales del siglo XVI y su disolución vino con leyes republicanas de 1821 y 1850. La opción confunde a los actores y es un anacronismo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a la Conquista una política del siglo XIX republicano."
+      },
+      {
+        "clave": "B",
+        "texto": "La venta de las parcelas no tuvo efectos sociales, porque los indígenas siguieron siendo dueños de la misma tierra, solo que de manera individual.",
+        "correcta": false,
+        "explicacion": "El texto dice que muchas parcelas terminaron en manos de hacendados y que numerosos indígenas pasaron a trabajar como jornaleros o arrendatarios en tierras ajenas: perdieron la propiedad. Es un efecto social y económico directo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con el propósito de la ley y no leyó sus resultados."
+      },
+      {
+        "clave": "C",
+        "texto": "Los hacendados compraron las parcelas porque los indígenas del Cauca las vendieron masivamente, lo que explica que allí desaparecieran todos los resguardos.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario sobre el Cauca: allí las comunidades resistieron y conservaron muchos resguardos. La concentración en manos de hacendados se describe para regiones como el altiplano cundiboyacense.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió las regiones y el resultado que el texto atribuye a cada una."
+      },
+      {
+        "clave": "D",
+        "texto": "Una idea política liberal (convertir a los indígenas en propietarios individuales) creó un mercado de tierras que, en muchas regiones, concentró la propiedad en haciendas y transformó a comunidades indígenas en trabajadores sin tierra, aunque el resultado varió según la resistencia de cada territorio.",
+        "correcta": true,
+        "explicacion": "La opción encadena las dimensiones del texto: ideológica-política (crítica a la propiedad comunal), jurídica-económica (leyes que permiten vender, mercado de tierras), territorial-social (concentración en haciendas, indígenas jornaleros) y regional (diferencia entre el altiplano y el Cauca).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: resguardos coloniales (tierras colectivas, inalienables, cabildo); idea republicana de convertir a los indígenas en propietarios individuales; leyes de 1821 y 1850; en el altiplano, compra de parcelas por hacendados e indígenas convertidos en jornaleros; en el Cauca, resistencia y conservación. COMPRENDER: se pide la relación adecuada entre dimensiones. INTERPRETAR: una decisión jurídica inspirada en una ideología transformó la tenencia de la tierra y las relaciones sociales, con resultados distintos por región. REPRESENTAR: idea liberal → leyes de reparto y venta → mercado de tierras → concentración + pérdida de tierra indígena (altiplano) / resistencia (Cauca). RAZONAR: A es anacrónica y confunde actores; B ignora los efectos descritos; C invierte lo dicho sobre el Cauca. RESOLVER: opción D. VERIFICAR: D se apoya en cada parte del texto y reconoce la diferencia regional.",
+    "que_identificar": "Qué eran los resguardos, qué buscaban las leyes republicanas y qué resultados tuvieron en cada región.",
+    "que_revisar": "Resguardos coloniales, su disolución en el siglo XIX y su reconocimiento actual (Constitución de 1991); relaciones entre ideas políticas, tierra y territorio.",
+    "refuerzo_ids": [
+      "SOC-044",
+      "SOC-024"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "resguardos",
+      "colonia",
+      "siglo_xix",
+      "tierra",
+      "territorio",
+      "dimensiones"
+    ],
+    "estado": "aprobada"
+  }
+]

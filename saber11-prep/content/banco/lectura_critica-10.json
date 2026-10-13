@@ -1,0 +1,1593 @@
+[
+  {
+    "id": "LC-161",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Identifica los eventos narrados de manera explícita en un texto (literario, descriptivo, caricatura o cómic) y los personajes involucrados",
+    "habilidad": "leer",
+    "tema": "Texto literario (cuento de ciencia ficción)",
+    "subtema": "Hechos explícitos del relato: qué hizo el personaje con su cuota",
+    "dificultad": 1,
+    "contexto": "**Quince segundos**\n\nEl Ministerio de Memoria había aprobado la ley sin escándalo: a partir de enero, cada ciudadano podía borrar hasta quince segundos de su pasado al año. No más. Quince segundos bastaban, dijeron los expertos, para eliminar una frase hiriente, una caída en público, el instante exacto de una mala noticia.\n\nNora llevaba ocho meses sin usar su cuota. Sus compañeras de oficina ya habían gastado la suya en febrero y hablaban de ello como de un corte de pelo. «Te sientes más liviana», le decían. Ella asentía y guardaba el formulario en el cajón, debajo de las facturas.\n\nNo era que su año hubiera sido bueno. Era que, cuando intentaba elegir los quince segundos, se encontraba con que ninguno estaba solo. El portazo de su hermano venía pegado a la risa de la tarde anterior; la llamada del hospital, a la voz de su madre pidiéndole que no llorara, que ya había llorado ella por las dos. Cortar el segundo malo era cortar también el hilo que lo sostenía.\n\nEn diciembre, el Ministerio envió un recordatorio amable: la cuota no acumulable vencía el 31. Nora lo leyó dos veces, lo dobló y lo puso debajo de las facturas, junto al formulario del año pasado y al del anterior.\n\nAl cerrar el cajón pensó, con cierto alivio, que estaba perdiendo quince segundos de otra manera.",
+    "estimulo": null,
+    "enunciado": "Según el relato, ¿qué ha hecho Nora con su cuota de quince segundos durante el año narrado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La gastó en febrero, al mismo tiempo que sus compañeras de oficina, y se sintió más liviana.",
+        "correcta": false,
+        "explicacion": "Fueron las compañeras quienes gastaron la suya en febrero; Nora «llevaba ocho meses sin usar su cuota» y solo asentía cuando le hablaban de la ligereza.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a Nora la conducta de las compañeras descrita en la misma oración."
+      },
+      {
+        "clave": "B",
+        "texto": "La usó para borrar el portazo de su hermano y la llamada del hospital, los dos peores momentos.",
+        "correcta": false,
+        "explicacion": "Esos son los recuerdos que Nora considera y descarta borrar, porque cada uno viene «pegado» a otro valioso. El texto no narra ningún borrado.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó los ejemplos de recuerdos dolorosos como los que efectivamente fueron eliminados."
+      },
+      {
+        "clave": "C",
+        "texto": "No la ha usado: guarda el formulario en un cajón, como hizo también en los dos años anteriores.",
+        "correcta": true,
+        "explicacion": "El relato dice que Nora guarda el formulario «en el cajón, debajo de las facturas» y, en diciembre, pone el recordatorio «junto al formulario del año pasado y al del anterior». Nunca ha usado la cuota.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La acumuló para poder borrar un recuerdo más largo en el año siguiente, como permite la ley.",
+        "correcta": false,
+        "explicacion": "El recordatorio del Ministerio aclara que la cuota es «no acumulable» y vence el 31 de diciembre, de modo que no es posible guardarla para el año siguiente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasó por alto el adjetivo «no acumulable» del recordatorio."
+      }
+    ],
+    "explicacion": "LEER: busco en el relato las menciones a la cuota de Nora: «ocho meses sin usar su cuota», el formulario en el cajón, el recordatorio de diciembre. COMPRENDER: la pregunta pide un hecho explícito del relato. INTERPRETAR: Nora no usa la cuota y guarda el recordatorio junto a los formularios de dos años anteriores, lo que indica que tampoco la usó entonces. REPRESENTAR: compañeras → gastaron en febrero; Nora → formulario al cajón (este año, el pasado y el anterior). RAZONAR: no la gastó en febrero (eso fue de las compañeras), no borró nada (los recuerdos aparecen como ejemplos de lo que no logra separar) y no puede acumularla. RESOLVER: la opción que dice que no la ha usado y guarda el formulario, como en años previos. VERIFICAR: la frase sobre «el formulario del año pasado y al del anterior» confirma la repetición.",
+    "que_identificar": "Las frases «Nora llevaba ocho meses sin usar su cuota» y «junto al formulario del año pasado y al del anterior».",
+    "que_revisar": "Identificar hechos explícitos en un relato y distinguir las acciones de cada personaje cuando aparecen en la misma oración.",
+    "refuerzo_ids": [
+      "LC-162",
+      "LC-121"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T45",
+      "literario",
+      "ciencia_ficcion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-162",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (cuento de ciencia ficción)",
+    "subtema": "Relación causal entre partes del relato: por qué no elige",
+    "dificultad": 2,
+    "contexto": "**Quince segundos**\n\nEl Ministerio de Memoria había aprobado la ley sin escándalo: a partir de enero, cada ciudadano podía borrar hasta quince segundos de su pasado al año. No más. Quince segundos bastaban, dijeron los expertos, para eliminar una frase hiriente, una caída en público, el instante exacto de una mala noticia.\n\nNora llevaba ocho meses sin usar su cuota. Sus compañeras de oficina ya habían gastado la suya en febrero y hablaban de ello como de un corte de pelo. «Te sientes más liviana», le decían. Ella asentía y guardaba el formulario en el cajón, debajo de las facturas.\n\nNo era que su año hubiera sido bueno. Era que, cuando intentaba elegir los quince segundos, se encontraba con que ninguno estaba solo. El portazo de su hermano venía pegado a la risa de la tarde anterior; la llamada del hospital, a la voz de su madre pidiéndole que no llorara, que ya había llorado ella por las dos. Cortar el segundo malo era cortar también el hilo que lo sostenía.\n\nEn diciembre, el Ministerio envió un recordatorio amable: la cuota no acumulable vencía el 31. Nora lo leyó dos veces, lo dobló y lo puso debajo de las facturas, junto al formulario del año pasado y al del anterior.\n\nAl cerrar el cajón pensó, con cierto alivio, que estaba perdiendo quince segundos de otra manera.",
+    "estimulo": null,
+    "enunciado": "Según el relato, ¿por qué Nora no logra elegir los quince segundos que borraría?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque cada instante doloroso está unido a otro valioso, y borrar uno implicaría perder también el otro.",
+        "correcta": true,
+        "explicacion": "El tercer párrafo lo explica: «ninguno estaba solo»; el portazo viene «pegado» a una risa y la llamada del hospital a la voz de la madre. «Cortar el segundo malo era cortar también el hilo que lo sostenía».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque su año fue tan malo que quince segundos no alcanzan para eliminar todo lo que quisiera olvidar.",
+        "correcta": false,
+        "explicacion": "El narrador descarta esta lectura de manera directa: «No era que su año hubiera sido bueno. Era que…». El problema no es la cantidad de dolor, sino la unión entre recuerdos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la primera parte de la oración y no leyó la corrección que introduce «Era que»."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque desconfía de un Ministerio que aprobó la ley sin ninguna discusión pública ni escándalo.",
+        "correcta": false,
+        "explicacion": "La aprobación «sin escándalo» describe el contexto, no la postura de Nora; el relato no menciona desconfianza hacia el Ministerio, cuyo recordatorio incluso califica de «amable».",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió un dato del marco narrativo en un motivo del personaje."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque teme sentirse «más liviana» y volverse tan superficial como sus compañeras de oficina.",
+        "correcta": false,
+        "explicacion": "Nora asiente cuando le hablan de la ligereza y no las juzga en el texto; su dificultad aparece al intentar elegir los segundos, no al pensar en las compañeras.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso un juicio hacia las compañeras que el narrador no formula."
+      }
+    ],
+    "explicacion": "LEER: ubico el tercer párrafo, que comienza «No era que su año hubiera sido bueno. Era que…». COMPRENDER: la pregunta pide la causa, según el texto, de que Nora no elija. INTERPRETAR: al intentar elegir, «ninguno estaba solo»: cada recuerdo malo viene pegado a uno bueno, y cortar uno es cortar el hilo que lo sostiene. REPRESENTAR: portazo ↔ risa de la tarde anterior; llamada del hospital ↔ voz de la madre; borrar uno = perder el otro. RAZONAR: el narrador descarta que sea por la cantidad de dolor; la desconfianza y el temor a parecerse a las compañeras no aparecen en el texto. RESOLVER: la opción que habla de instantes unidos cuya separación implicaría perder el valioso. VERIFICAR: la metáfora del hilo confirma la relación de dependencia entre recuerdos.",
+    "que_identificar": "El tercer párrafo, en especial «ninguno estaba solo» y «Cortar el segundo malo era cortar también el hilo que lo sostenía».",
+    "que_revisar": "Reconocer relaciones causales entre partes de un relato, atendiendo a las correcciones del narrador («No era que… Era que…»).",
+    "refuerzo_ids": [
+      "LC-161",
+      "LC-163"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T45",
+      "literario",
+      "ciencia_ficcion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-163",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (cuento de ciencia ficción)",
+    "subtema": "Sentido del cierre: «perdiendo quince segundos de otra manera»",
+    "dificultad": 3,
+    "contexto": "**Quince segundos**\n\nEl Ministerio de Memoria había aprobado la ley sin escándalo: a partir de enero, cada ciudadano podía borrar hasta quince segundos de su pasado al año. No más. Quince segundos bastaban, dijeron los expertos, para eliminar una frase hiriente, una caída en público, el instante exacto de una mala noticia.\n\nNora llevaba ocho meses sin usar su cuota. Sus compañeras de oficina ya habían gastado la suya en febrero y hablaban de ello como de un corte de pelo. «Te sientes más liviana», le decían. Ella asentía y guardaba el formulario en el cajón, debajo de las facturas.\n\nNo era que su año hubiera sido bueno. Era que, cuando intentaba elegir los quince segundos, se encontraba con que ninguno estaba solo. El portazo de su hermano venía pegado a la risa de la tarde anterior; la llamada del hospital, a la voz de su madre pidiéndole que no llorara, que ya había llorado ella por las dos. Cortar el segundo malo era cortar también el hilo que lo sostenía.\n\nEn diciembre, el Ministerio envió un recordatorio amable: la cuota no acumulable vencía el 31. Nora lo leyó dos veces, lo dobló y lo puso debajo de las facturas, junto al formulario del año pasado y al del anterior.\n\nAl cerrar el cajón pensó, con cierto alivio, que estaba perdiendo quince segundos de otra manera.",
+    "estimulo": null,
+    "enunciado": "La frase final («estaba perdiendo quince segundos de otra manera») sugiere que Nora",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "se arrepiente de haber dejado vencer la cuota y planea usarla apenas comience el mes de enero.",
+        "correcta": false,
+        "explicacion": "El texto dice que piensa la frase «con cierto alivio», no con arrepentimiento, y guarda el recordatorio junto a los de años anteriores, lo que indica una decisión repetida y no un plan de cambio.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó «perder» como lamento y pasó por alto la palabra «alivio»."
+      },
+      {
+        "clave": "B",
+        "texto": "ha olvidado sin querer, por el simple paso del tiempo, los recuerdos que no quiso borrar en el Ministerio.",
+        "correcta": false,
+        "explicacion": "Nada en el relato indica que haya olvidado los recuerdos; al contrario, los tiene tan presentes que puede describir cómo se encadenan unos con otros.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpretó «perder segundos» como pérdida de memoria natural."
+      },
+      {
+        "clave": "C",
+        "texto": "calcula que leer y guardar el recordatorio del Ministerio le tomó exactamente quince segundos de su tiempo.",
+        "correcta": false,
+        "explicacion": "La coincidencia numérica es un juego del texto, pero la frase no describe una medición literal; el alivio con que lo piensa apunta a un sentido figurado sobre su decisión.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la frase en sentido literal, como un cálculo de tiempo."
+      },
+      {
+        "clave": "D",
+        "texto": "convierte el acto de no borrar en su propia forma de usar la cuota: lo que deja perder es la oportunidad, no el recuerdo.",
+        "correcta": true,
+        "explicacion": "Nora deja vencer la cuota «con cierto alivio»: perder los quince segundos de borrado es su manera de conservar los recuerdos con el hilo que los une. La frase invierte el sentido de «perder» que usan el Ministerio y las compañeras.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: releo el último párrafo: Nora cierra el cajón y piensa «con cierto alivio» que pierde quince segundos «de otra manera». COMPRENDER: la pregunta pide el sentido valorativo del cierre. INTERPRETAR: para el Ministerio, perder quince segundos es borrarlos; para Nora, dejar vencer la cuota es perder la oportunidad de borrar, y eso la alivia porque conserva los hilos entre sus recuerdos. REPRESENTAR: otros: usar cuota = perder 15 s de memoria; Nora: no usarla = perder 15 s de borrado = conservar. RAZONAR: no hay arrepentimiento (hay alivio), no hay olvido natural y la lectura literal del cálculo de tiempo ignora el sentido figurado. RESOLVER: la opción que presenta el no borrar como su propia forma de usar la cuota. VERIFICAR: el adverbio «otra» marca el contraste con la manera oficial de «perder» segundos.",
+    "que_identificar": "La frase final y la expresión «con cierto alivio», en relación con el sentido oficial de borrar quince segundos.",
+    "que_revisar": "Interpretar cierres irónicos o ambiguos en un relato a partir del tono (alivio, no lamento) y del contraste con el resto del texto.",
+    "refuerzo_ids": [
+      "LC-162",
+      "LC-164"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T45",
+      "literario",
+      "ciencia_ficcion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-164",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (cuento de ciencia ficción)",
+    "subtema": "Contenido valorativo de una comparación («como de un corte de pelo»)",
+    "dificultad": 2,
+    "contexto": "**Quince segundos**\n\nEl Ministerio de Memoria había aprobado la ley sin escándalo: a partir de enero, cada ciudadano podía borrar hasta quince segundos de su pasado al año. No más. Quince segundos bastaban, dijeron los expertos, para eliminar una frase hiriente, una caída en público, el instante exacto de una mala noticia.\n\nNora llevaba ocho meses sin usar su cuota. Sus compañeras de oficina ya habían gastado la suya en febrero y hablaban de ello como de un corte de pelo. «Te sientes más liviana», le decían. Ella asentía y guardaba el formulario en el cajón, debajo de las facturas.\n\nNo era que su año hubiera sido bueno. Era que, cuando intentaba elegir los quince segundos, se encontraba con que ninguno estaba solo. El portazo de su hermano venía pegado a la risa de la tarde anterior; la llamada del hospital, a la voz de su madre pidiéndole que no llorara, que ya había llorado ella por las dos. Cortar el segundo malo era cortar también el hilo que lo sostenía.\n\nEn diciembre, el Ministerio envió un recordatorio amable: la cuota no acumulable vencía el 31. Nora lo leyó dos veces, lo dobló y lo puso debajo de las facturas, junto al formulario del año pasado y al del anterior.\n\nAl cerrar el cajón pensó, con cierto alivio, que estaba perdiendo quince segundos de otra manera.",
+    "estimulo": null,
+    "enunciado": "Al decir que las compañeras hablaban del borrado «como de un corte de pelo», el narrador muestra que ellas",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "ocultan el dolor que les causó borrar sus recuerdos detrás de conversaciones triviales sobre apariencia.",
+        "correcta": false,
+        "explicacion": "El texto no insinúa dolor oculto: las compañeras dicen sentirse «más livianas» y el narrador no sugiere que mientan. La comparación describe ligereza, no disimulo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Añadió un sufrimiento escondido que el relato no sugiere en ningún momento."
+      },
+      {
+        "clave": "B",
+        "texto": "ven el borrado como un trámite ligero y rutinario, sin el peso que tiene para Nora.",
+        "correcta": true,
+        "explicacion": "Un corte de pelo es algo cotidiano, rápido y sin consecuencias graves. Compararlo con el borrado de recuerdos muestra la naturalidad con que ellas lo asumen, en contraste con Nora, que no logra decidir qué borrar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "critican a Nora por no cuidar su apariencia ni ocuparse de su bienestar emocional como ellas.",
+        "correcta": false,
+        "explicacion": "Las compañeras solo comentan su propia experiencia («Te sientes más liviana»); no hay reproche a Nora ni mención de su apariencia.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la mención del pelo como una alusión al aspecto físico de Nora."
+      },
+      {
+        "clave": "D",
+        "texto": "usan el borrado de recuerdos para cambiar su aspecto físico frente a los demás compañeros.",
+        "correcta": false,
+        "explicacion": "La comparación es figurada: el borrado no cambia el aspecto de nadie. Leerla literalmente confunde el término de comparación con el hecho comparado.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó la comparación de forma literal."
+      }
+    ],
+    "explicacion": "LEER: ubico la comparación en el segundo párrafo, junto a «Te sientes más liviana». COMPRENDER: la pregunta pide el contenido valorativo que la comparación transmite sobre las compañeras. INTERPRETAR: un corte de pelo es rutinario y sin trascendencia; hablar así del borrado revela que para ellas es un trámite ligero, mientras Nora lo vive como una pérdida compleja. REPRESENTAR: compañeras: borrar = corte de pelo (ligero, rutinario); Nora: borrar = cortar un hilo (grave). RAZONAR: no hay dolor oculto, ni crítica a Nora, ni cambio de aspecto literal. RESOLVER: la opción que describe el borrado como trámite ligero sin el peso que tiene para Nora. VERIFICAR: el contraste con el tercer párrafo, donde Nora no logra elegir, confirma la oposición de actitudes.",
+    "que_identificar": "La comparación «como de un corte de pelo» y la frase «Te sientes más liviana» frente a la dificultad de Nora en el tercer párrafo.",
+    "que_revisar": "Reconocer valoraciones implícitas en comparaciones y en el contraste entre personajes.",
+    "refuerzo_ids": [
+      "LC-163",
+      "LC-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T45",
+      "literario",
+      "ciencia_ficcion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-165",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto argumentativo (reseña crítica de cine)",
+    "subtema": "Sentido de una expresión figurada («un hermoso tráiler de dos horas»)",
+    "dificultad": 2,
+    "contexto": "**Relojes que no dan la hora**\nReseña de *La casa de los relojes*, dirigida por Amparo Luna\n\nHay películas que confían en su historia y películas que confían en su atmósfera. *La casa de los relojes* pertenece, sin duda, al segundo grupo, y ese es a la vez su mérito y su problema.\n\nLa trama es mínima: Elvira, una relojera de setenta años, recibe la visita de un sobrino que quiere convencerla de vender el taller familiar en el centro de Manizales. Durante noventa minutos los vemos discutir, callar, tomar café y escuchar el tictac de cuarenta relojes que nunca marcan la misma hora. La fotografía es extraordinaria: la luz entra por las persianas como si también estuviera envejeciendo, y el sonido convierte el taller en un personaje más.\n\nSin embargo, la película confunde lentitud con profundidad. Las conversaciones entre Elvira y el sobrino repiten la misma tensión sin avanzar; cuando por fin ocurre algo —una carta, una caída, un reloj que se detiene—, el guion lo resuelve en dos minutos, como si tuviera prisa por volver a la quietud. El espectador paciente encontrará belleza; el que busque una historia saldrá con la sensación de haber visto un hermoso tráiler de dos horas.\n\nCon todo, hay que agradecer que una producción nacional apueste por el silencio en lugar del grito. Luna tiene un ojo privilegiado; le falta, todavía, confiar en que sus personajes también pueden decir algo. Tres estrellas de cinco: véala en una sala, con buen sonido y sin afán.",
+    "estimulo": null,
+    "enunciado": "¿Qué quiere decir el autor con que algunos espectadores sentirán «haber visto un hermoso tráiler de dos horas»?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la película es demasiado larga y debería haberse recortado hasta la duración de un avance publicitario.",
+        "correcta": false,
+        "explicacion": "La crítica no es a la duración en sí (la película dura noventa minutos, según el texto), sino a que promete una historia que no desarrolla. «Dos horas» exagera para subrayar la paradoja.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la referencia temporal como una queja literal sobre el metraje."
+      },
+      {
+        "clave": "B",
+        "texto": "Que la publicidad de la película muestra escenas más bellas que las que aparecen en la obra terminada.",
+        "correcta": false,
+        "explicacion": "El texto no habla de la campaña publicitaria; usa «tráiler» como imagen de algo que anuncia sin cumplir. La belleza que elogia está en la película misma.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Entendió «tráiler» en sentido literal, como el avance comercial de la película."
+      },
+      {
+        "clave": "C",
+        "texto": "Que la película resume en sus primeros minutos todo lo que va a ocurrir después en la trama.",
+        "correcta": false,
+        "explicacion": "La reseña dice lo contrario: casi nada ocurre y, cuando ocurre, se resuelve en dos minutos. No hay un resumen anticipado, sino ausencia de desarrollo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció «tráiler» con un adelanto del argumento sin atender a la crítica del párrafo."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la película promete una historia que nunca llega a desarrollarse, aunque sus imágenes sean atractivas.",
+        "correcta": true,
+        "explicacion": "Un tráiler anuncia una historia sin contarla. La frase cierra un párrafo que critica que las conversaciones «repiten la misma tensión sin avanzar» y que los sucesos se resuelven «en dos minutos»; «hermoso» conserva el elogio a la fotografía.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico la frase al final del tercer párrafo, tras la crítica a las conversaciones que no avanzan y a los sucesos resueltos en dos minutos. COMPRENDER: debo interpretar una expresión figurada según su contexto. INTERPRETAR: un tráiler muestra imágenes atractivas y anuncia una historia sin desarrollarla; «hermoso» mantiene el elogio visual y «de dos horas» exagera para marcar la paradoja. REPRESENTAR: tráiler = promesa + belleza − historia; película = igual, pero larga. RAZONAR: no es una queja por la duración, ni sobre la publicidad, ni sobre un resumen anticipado. RESOLVER: la opción que habla de una historia prometida que no se desarrolla, con imágenes atractivas. VERIFICAR: el contraste previo entre «el espectador paciente» y «el que busque una historia» apoya esa lectura.",
+    "que_identificar": "La oración final del tercer párrafo y las críticas que la preceden sobre el guion.",
+    "que_revisar": "Interpretar metáforas y comparaciones en textos argumentativos a partir de las ideas que las rodean.",
+    "refuerzo_ids": [
+      "LC-166",
+      "LC-145"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T46",
+      "argumentativo",
+      "resena"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-166",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende la estructura formal de un texto y la función de sus partes",
+    "habilidad": "comprender",
+    "tema": "Texto argumentativo (reseña crítica de cine)",
+    "subtema": "Estructura de la reseña: una afirmación inicial que anticipa su organización",
+    "dificultad": 2,
+    "contexto": "**Relojes que no dan la hora**\nReseña de *La casa de los relojes*, dirigida por Amparo Luna\n\nHay películas que confían en su historia y películas que confían en su atmósfera. *La casa de los relojes* pertenece, sin duda, al segundo grupo, y ese es a la vez su mérito y su problema.\n\nLa trama es mínima: Elvira, una relojera de setenta años, recibe la visita de un sobrino que quiere convencerla de vender el taller familiar en el centro de Manizales. Durante noventa minutos los vemos discutir, callar, tomar café y escuchar el tictac de cuarenta relojes que nunca marcan la misma hora. La fotografía es extraordinaria: la luz entra por las persianas como si también estuviera envejeciendo, y el sonido convierte el taller en un personaje más.\n\nSin embargo, la película confunde lentitud con profundidad. Las conversaciones entre Elvira y el sobrino repiten la misma tensión sin avanzar; cuando por fin ocurre algo —una carta, una caída, un reloj que se detiene—, el guion lo resuelve en dos minutos, como si tuviera prisa por volver a la quietud. El espectador paciente encontrará belleza; el que busque una historia saldrá con la sensación de haber visto un hermoso tráiler de dos horas.\n\nCon todo, hay que agradecer que una producción nacional apueste por el silencio en lugar del grito. Luna tiene un ojo privilegiado; le falta, todavía, confiar en que sus personajes también pueden decir algo. Tres estrellas de cinco: véala en una sala, con buen sonido y sin afán.",
+    "estimulo": null,
+    "enunciado": "La afirmación del primer párrafo de que la atmósfera es «a la vez su mérito y su problema» anticipa la estructura de la reseña porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "los párrafos siguientes comparan la película con otras del primer grupo, las que confían en su historia.",
+        "correcta": false,
+        "explicacion": "La reseña no menciona ninguna otra película ni desarrolla la comparación con el «primer grupo»; esa clasificación solo sirve para ubicar la obra reseñada.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la clasificación inicial se desarrollaría como comparación."
+      },
+      {
+        "clave": "B",
+        "texto": "el texto se dedica después a describir únicamente la fotografía y el diseño sonoro del taller de relojes.",
+        "correcta": false,
+        "explicacion": "La fotografía y el sonido se elogian en el segundo párrafo, pero el tercero critica el guion y el cuarto da un balance; la reseña no se limita a lo técnico.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con el contenido del segundo párrafo y no consideró los siguientes."
+      },
+      {
+        "clave": "C",
+        "texto": "los párrafos siguientes desarrollan primero las virtudes de la atmósfera y luego las fallas que esa misma apuesta produce.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo elogia la atmósfera (fotografía «extraordinaria», sonido como personaje); el tercero, introducido por «Sin embargo», muestra el problema: «confunde lentitud con profundidad». La frase inicial anuncia ese doble movimiento.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "el autor abandona esa idea para concentrarse después en la biografía y la trayectoria de la directora.",
+        "correcta": false,
+        "explicacion": "La directora solo se menciona al final, en una oración sobre su «ojo privilegiado»; no hay datos biográficos y la idea del mérito y el problema se mantiene hasta el cierre.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó un desarrollo biográfico que el texto no contiene."
+      }
+    ],
+    "explicacion": "LEER: reviso el orden de los párrafos: clasificación y tesis (1), elogio de la atmósfera (2), «Sin embargo» y crítica al guion (3), balance y recomendación (4). COMPRENDER: la pregunta pide cómo la frase inicial anticipa la organización del texto. INTERPRETAR: «mérito» corresponde al segundo párrafo y «problema» al tercero; el conector «Sin embargo» marca el paso de uno a otro. REPRESENTAR: tesis doble → mérito (párr. 2) → problema (párr. 3) → balance (párr. 4). RAZONAR: no hay comparación con otras películas, ni descripción solo técnica, ni biografía de la directora. RESOLVER: la opción que describe el desarrollo de virtudes y luego fallas de la misma apuesta. VERIFICAR: «Con todo» en el último párrafo confirma que el texto sostiene ambas caras hasta el final.",
+    "que_identificar": "La frase «a la vez su mérito y su problema» y los conectores «Sin embargo» y «Con todo» que organizan los párrafos siguientes.",
+    "que_revisar": "Reconocer cómo una afirmación inicial anuncia la estructura de un texto argumentativo y cómo los conectores la hacen visible.",
+    "refuerzo_ids": [
+      "LC-165",
+      "LC-167"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T46",
+      "argumentativo",
+      "resena"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-167",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (reseña crítica de cine)",
+    "subtema": "Valoración global del crítico",
+    "dificultad": 2,
+    "contexto": "**Relojes que no dan la hora**\nReseña de *La casa de los relojes*, dirigida por Amparo Luna\n\nHay películas que confían en su historia y películas que confían en su atmósfera. *La casa de los relojes* pertenece, sin duda, al segundo grupo, y ese es a la vez su mérito y su problema.\n\nLa trama es mínima: Elvira, una relojera de setenta años, recibe la visita de un sobrino que quiere convencerla de vender el taller familiar en el centro de Manizales. Durante noventa minutos los vemos discutir, callar, tomar café y escuchar el tictac de cuarenta relojes que nunca marcan la misma hora. La fotografía es extraordinaria: la luz entra por las persianas como si también estuviera envejeciendo, y el sonido convierte el taller en un personaje más.\n\nSin embargo, la película confunde lentitud con profundidad. Las conversaciones entre Elvira y el sobrino repiten la misma tensión sin avanzar; cuando por fin ocurre algo —una carta, una caída, un reloj que se detiene—, el guion lo resuelve en dos minutos, como si tuviera prisa por volver a la quietud. El espectador paciente encontrará belleza; el que busque una historia saldrá con la sensación de haber visto un hermoso tráiler de dos horas.\n\nCon todo, hay que agradecer que una producción nacional apueste por el silencio en lugar del grito. Luna tiene un ojo privilegiado; le falta, todavía, confiar en que sus personajes también pueden decir algo. Tres estrellas de cinco: véala en una sala, con buen sonido y sin afán.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes enunciados describe mejor la valoración final del crítico sobre la película?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Reconoce el talento visual de la directora, pero considera que el guion no sostiene la película.",
+        "correcta": true,
+        "explicacion": "El balance del último párrafo lo resume: «Luna tiene un ojo privilegiado; le falta, todavía, confiar en que sus personajes también pueden decir algo». Tres estrellas de cinco expresan una valoración intermedia coherente con ese juicio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Considera que la película fracasa por completo porque no logra contar ninguna historia interesante.",
+        "correcta": false,
+        "explicacion": "El crítico elogia la fotografía, el sonido y la apuesta por el silencio, y le da tres estrellas; un fracaso total no se compadece con esos elogios ni con la recomendación de verla en sala.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó la crítica al guion del tercer párrafo como si fuera el juicio sobre toda la película."
+      },
+      {
+        "clave": "C",
+        "texto": "Celebra la película sin reservas por su valentía al apostar por el silencio en lugar del grito.",
+        "correcta": false,
+        "explicacion": "El agradecimiento por apostar por el silencio va acompañado de una reserva explícita («le falta, todavía…») y de la crítica del tercer párrafo; no es una celebración sin matices.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la frase de agradecimiento y omitió las objeciones."
+      },
+      {
+        "clave": "D",
+        "texto": "Juzga que la película es técnicamente deficiente aunque emotiva en el tratamiento de sus personajes.",
+        "correcta": false,
+        "explicacion": "Es lo contrario: la técnica (fotografía, sonido) es lo que el crítico elogia, y los personajes son justamente lo que considera poco desarrollado.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió los aspectos elogiados y los criticados."
+      }
+    ],
+    "explicacion": "LEER: releo el último párrafo: «hay que agradecer…», «Luna tiene un ojo privilegiado; le falta, todavía…», «Tres estrellas de cinco». COMPRENDER: la pregunta pide la valoración global, que debe integrar elogios y críticas. INTERPRETAR: el elogio recae en lo visual y sonoro; la crítica, en el guion y los personajes que no «dicen algo». REPRESENTAR: + fotografía, sonido, silencio; − guion, personajes; = tres estrellas. RAZONAR: no es fracaso total ni celebración sin reservas, y la técnica no es deficiente sino el punto fuerte. RESOLVER: la opción que reconoce el talento visual y señala que el guion no sostiene la película. VERIFICAR: la nota de tres sobre cinco corresponde a una valoración intermedia con virtudes y defectos.",
+    "que_identificar": "El balance del último párrafo y la calificación de tres estrellas de cinco.",
+    "que_revisar": "Integrar los juicios parciales de una reseña para determinar la valoración global del autor.",
+    "refuerzo_ids": [
+      "LC-166",
+      "LC-168"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T46",
+      "argumentativo",
+      "resena"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-168",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto argumentativo (reseña crítica de cine)",
+    "subtema": "Coherencia entre la recomendación final y los argumentos de la reseña",
+    "dificultad": 3,
+    "contexto": "**Relojes que no dan la hora**\nReseña de *La casa de los relojes*, dirigida por Amparo Luna\n\nHay películas que confían en su historia y películas que confían en su atmósfera. *La casa de los relojes* pertenece, sin duda, al segundo grupo, y ese es a la vez su mérito y su problema.\n\nLa trama es mínima: Elvira, una relojera de setenta años, recibe la visita de un sobrino que quiere convencerla de vender el taller familiar en el centro de Manizales. Durante noventa minutos los vemos discutir, callar, tomar café y escuchar el tictac de cuarenta relojes que nunca marcan la misma hora. La fotografía es extraordinaria: la luz entra por las persianas como si también estuviera envejeciendo, y el sonido convierte el taller en un personaje más.\n\nSin embargo, la película confunde lentitud con profundidad. Las conversaciones entre Elvira y el sobrino repiten la misma tensión sin avanzar; cuando por fin ocurre algo —una carta, una caída, un reloj que se detiene—, el guion lo resuelve en dos minutos, como si tuviera prisa por volver a la quietud. El espectador paciente encontrará belleza; el que busque una historia saldrá con la sensación de haber visto un hermoso tráiler de dos horas.\n\nCon todo, hay que agradecer que una producción nacional apueste por el silencio en lugar del grito. Luna tiene un ojo privilegiado; le falta, todavía, confiar en que sus personajes también pueden decir algo. Tres estrellas de cinco: véala en una sala, con buen sonido y sin afán.",
+    "estimulo": null,
+    "enunciado": "La recomendación final («véala en una sala, con buen sonido y sin afán») es coherente con la reseña porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "el crítico afirma que solo en una sala de cine la trama de la película se vuelve comprensible para el público.",
+        "correcta": false,
+        "explicacion": "La reseña no dice que la trama sea incomprensible ni que la sala la aclare; dice que la trama es «mínima». Las condiciones recomendadas tienen que ver con la atmósfera, no con entender la historia.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso un problema de comprensión que la reseña no plantea."
+      },
+      {
+        "clave": "B",
+        "texto": "las condiciones que propone corresponden a los aspectos que el crítico elogió (sonido y luz) y al ritmo lento que él mismo señaló.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo elogia la fotografía y el sonido, que se aprecian mejor en una sala; el tercero advierte sobre la lentitud, por lo que verla «sin afán» prepara al espectador. La recomendación se deriva de lo argumentado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "el crítico sugiere que ver la película en casa haría más evidente la buena calidad de sus diálogos.",
+        "correcta": false,
+        "explicacion": "La reseña no menciona la opción de verla en casa y critica, justamente, que las conversaciones repiten la misma tensión sin avanzar; no elogia los diálogos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a los diálogos un elogio que la reseña dirige a la imagen y al sonido."
+      },
+      {
+        "clave": "D",
+        "texto": "las tres estrellas indican que la película merece verse varias veces para captar completamente su historia.",
+        "correcta": false,
+        "explicacion": "Tres de cinco es una calificación intermedia, no una invitación a repetir la experiencia; además, el crítico sostiene que la película casi no tiene historia que captar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó la calificación numérica como una recomendación de repetición."
+      }
+    ],
+    "explicacion": "LEER: comparo la recomendación final con los párrafos anteriores. COMPRENDER: la pregunta pide evaluar la coherencia entre una conclusión práctica y los argumentos que la preceden. INTERPRETAR: «en una sala, con buen sonido» responde al elogio de la fotografía y del sonido; «sin afán» responde a la advertencia de que la película es lenta y recompensa al espectador paciente. REPRESENTAR: elogios (luz, sonido) → sala con buen sonido; crítica (lentitud) → sin afán. RAZONAR: la reseña no plantea problemas de comprensión de la trama, no elogia los diálogos ni sugiere verla varias veces. RESOLVER: la opción que vincula cada condición con un argumento previo. VERIFICAR: la frase «El espectador paciente encontrará belleza» anticipa el consejo de ir sin afán.",
+    "que_identificar": "La relación entre «La fotografía es extraordinaria… el sonido convierte el taller en un personaje más», «El espectador paciente encontrará belleza» y la recomendación final.",
+    "que_revisar": "Evaluar si las conclusiones o recomendaciones de un texto argumentativo se derivan de las razones expuestas.",
+    "refuerzo_ids": [
+      "LC-167",
+      "LC-127"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T46",
+      "argumentativo",
+      "resena"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-169",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto expositivo (divulgación económica)",
+    "subtema": "Sentido de un término definido en el texto («oferta rígida»)",
+    "dificultad": 1,
+    "contexto": "**¿Por qué la papa sube cuando llueve?**\n\nEn un mercado de Bogotá, un bulto de papa pastusa puede costar el doble que tres semanas antes sin que haya cambiado nada visible para el comprador. La explicación casi nunca está en la plaza, sino a cientos de kilómetros, en los páramos de Nariño, Boyacá y Cundinamarca donde se cultiva.\n\nLa papa es un cultivo de ciclo corto y oferta rígida: lo que se siembra hoy se cosecha en cinco o seis meses, y en ese lapso los agricultores no pueden acelerar ni frenar la producción. Si un invierno fuerte daña las cosechas o impide sacarlas por las vías veredales, la cantidad que llega a las centrales de abastos cae de golpe. Como la demanda de papa cambia poco —las familias no dejan de comprarla porque esté cara—, una pequeña reducción de la oferta produce un salto grande en el precio.\n\nEl efecto contrario también ocurre. Cuando los precios están altos, muchos agricultores siembran más papa a la vez; seis meses después, todas esas cosechas llegan juntas al mercado, la oferta se desborda y el precio se desploma, a veces por debajo del costo de producción. Entonces se siembra menos, y el ciclo vuelve a empezar. Los economistas lo llaman el *ciclo del cerdo*, porque se describió primero en la cría de ese animal.\n\nPor eso los expertos insisten en que el problema no es la lluvia en sí, sino la falta de información: si cada agricultor supiera cuánto están sembrando los demás, podría decidir mejor. Las vías, los centros de acopio con refrigeración y los sistemas de precios en tiempo real hacen más por estabilizar el precio de la papa que cualquier pronóstico del clima.",
+    "estimulo": null,
+    "enunciado": "En el texto, decir que la papa tiene una «oferta rígida» significa que",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "la cantidad producida no puede ajustarse con rapidez, porque depende de lo que se sembró meses antes.",
+        "correcta": true,
+        "explicacion": "El propio texto explica la expresión a continuación de los dos puntos: «lo que se siembra hoy se cosecha en cinco o seis meses, y en ese lapso los agricultores no pueden acelerar ni frenar la producción». Rígida significa que no se adapta rápido.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "los agricultores se niegan a bajar el precio aunque tengan grandes excedentes de cosecha para vender.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: cuando hay excedentes el precio «se desploma, a veces por debajo del costo de producción». La rigidez se refiere a la cantidad, no a la actitud frente al precio.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció «rígida» con una postura inflexible de los productores."
+      },
+      {
+        "clave": "C",
+        "texto": "el producto se daña con facilidad durante el transporte por las vías veredales en época de lluvias.",
+        "correcta": false,
+        "explicacion": "El daño por lluvias y vías es una de las causas de que la oferta caiga, pero no es lo que define la rigidez; esta se explica por el tiempo entre siembra y cosecha.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una causa de reducción de la oferta con la definición del término."
+      },
+      {
+        "clave": "D",
+        "texto": "la papa se vende únicamente en las centrales de abastos de las grandes ciudades del país.",
+        "correcta": false,
+        "explicacion": "Las centrales de abastos aparecen como el lugar al que llega la papa, pero el texto no dice que sea el único canal de venta ni relaciona eso con la rigidez.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó un dato del contexto como si fuera la definición."
+      }
+    ],
+    "explicacion": "LEER: ubico la expresión al inicio del segundo párrafo, seguida de dos puntos. COMPRENDER: la pregunta pide el significado del término tal como lo usa el texto. INTERPRETAR: tras los dos puntos el autor lo explica: la cosecha tarda cinco o seis meses y en ese lapso no se puede acelerar ni frenar la producción. REPRESENTAR: siembra hoy → cosecha en 5-6 meses → cantidad fija durante ese tiempo = oferta rígida. RAZONAR: no se trata de la actitud frente al precio, ni del daño en el transporte, ni del lugar de venta. RESOLVER: la opción que habla de una cantidad que no puede ajustarse con rapidez porque depende de la siembra previa. VERIFICAR: el resto del párrafo (una pequeña reducción causa un gran salto de precio) solo tiene sentido si la cantidad no puede reponerse pronto.",
+    "que_identificar": "La aclaración que sigue a los dos puntos: «lo que se siembra hoy se cosecha en cinco o seis meses, y en ese lapso los agricultores no pueden acelerar ni frenar la producción».",
+    "que_revisar": "Reconocer definiciones incorporadas en el texto (tras dos puntos, guiones o paréntesis) para entender términos técnicos.",
+    "refuerzo_ids": [
+      "LC-170",
+      "LC-133"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T47",
+      "expositivo",
+      "economia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-170",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto expositivo (divulgación económica)",
+    "subtema": "Relación causal entre enunciados del texto expositivo",
+    "dificultad": 2,
+    "contexto": "**¿Por qué la papa sube cuando llueve?**\n\nEn un mercado de Bogotá, un bulto de papa pastusa puede costar el doble que tres semanas antes sin que haya cambiado nada visible para el comprador. La explicación casi nunca está en la plaza, sino a cientos de kilómetros, en los páramos de Nariño, Boyacá y Cundinamarca donde se cultiva.\n\nLa papa es un cultivo de ciclo corto y oferta rígida: lo que se siembra hoy se cosecha en cinco o seis meses, y en ese lapso los agricultores no pueden acelerar ni frenar la producción. Si un invierno fuerte daña las cosechas o impide sacarlas por las vías veredales, la cantidad que llega a las centrales de abastos cae de golpe. Como la demanda de papa cambia poco —las familias no dejan de comprarla porque esté cara—, una pequeña reducción de la oferta produce un salto grande en el precio.\n\nEl efecto contrario también ocurre. Cuando los precios están altos, muchos agricultores siembran más papa a la vez; seis meses después, todas esas cosechas llegan juntas al mercado, la oferta se desborda y el precio se desploma, a veces por debajo del costo de producción. Entonces se siembra menos, y el ciclo vuelve a empezar. Los economistas lo llaman el *ciclo del cerdo*, porque se describió primero en la cría de ese animal.\n\nPor eso los expertos insisten en que el problema no es la lluvia en sí, sino la falta de información: si cada agricultor supiera cuánto están sembrando los demás, podría decidir mejor. Las vías, los centros de acopio con refrigeración y los sistemas de precios en tiempo real hacen más por estabilizar el precio de la papa que cualquier pronóstico del clima.",
+    "estimulo": null,
+    "enunciado": "Según el texto, ¿por qué una pequeña reducción de la oferta de papa produce un gran aumento del precio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque los comerciantes de la plaza aprovechan el invierno para subir los precios de manera arbitraria.",
+        "correcta": false,
+        "explicacion": "El texto dice que la explicación «casi nunca está en la plaza», sino en las zonas de cultivo; no atribuye el alza a decisiones arbitrarias de los comerciantes.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recurrió a una explicación común que el texto descarta de forma explícita en el primer párrafo."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la papa es el único alimento que se produce en los páramos durante la temporada de invierno.",
+        "correcta": false,
+        "explicacion": "El texto no afirma que la papa sea el único cultivo de los páramos ni relaciona el precio con la ausencia de otros alimentos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Añadió un dato sobre los páramos que el texto no proporciona."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el ciclo de siembra se acorta cuando llueve y los agricultores cosechan antes de tiempo.",
+        "correcta": false,
+        "explicacion": "El texto describe el ciclo como fijo (cinco o seis meses) y dice que la lluvia daña las cosechas o impide sacarlas; nunca menciona cosechas adelantadas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el efecto de la lluvia (daño y bloqueo de vías) con un cambio del ciclo de cultivo."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque las familias siguen comprando casi la misma cantidad de papa aunque el precio suba.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo lo señala con el conector «Como»: «Como la demanda de papa cambia poco —las familias no dejan de comprarla porque esté cara—, una pequeña reducción de la oferta produce un salto grande en el precio». La causa es la demanda estable.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: busco en el segundo párrafo la oración que contiene «una pequeña reducción de la oferta produce un salto grande en el precio». COMPRENDER: la pregunta pide la causa que el texto da para esa relación. INTERPRETAR: la oración empieza con «Como la demanda de papa cambia poco», y el inciso aclara que las familias no dejan de comprar aunque esté cara. REPRESENTAR: menos papa + misma cantidad de compradores → compiten por lo que hay → precio sube mucho. RAZONAR: el texto descarta a los comerciantes de la plaza, no habla de la papa como único alimento y describe un ciclo fijo, no acortado. RESOLVER: la opción que señala la demanda estable de las familias. VERIFICAR: el conector causal «Como» une directamente la demanda estable con el salto de precio.",
+    "que_identificar": "La oración introducida por «Como la demanda de papa cambia poco…» en el segundo párrafo.",
+    "que_revisar": "Identificar relaciones de causa y consecuencia marcadas por conectores como «como», «porque» o «por eso».",
+    "refuerzo_ids": [
+      "LC-169",
+      "LC-171"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "texto:LC-T47",
+      "expositivo",
+      "economia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-171",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica y caracteriza las ideas o afirmaciones presentes en un texto informativo",
+    "habilidad": "representar",
+    "tema": "Texto expositivo (divulgación económica)",
+    "subtema": "Representación esquemática de un proceso descrito en el texto",
+    "dificultad": 2,
+    "contexto": "**¿Por qué la papa sube cuando llueve?**\n\nEn un mercado de Bogotá, un bulto de papa pastusa puede costar el doble que tres semanas antes sin que haya cambiado nada visible para el comprador. La explicación casi nunca está en la plaza, sino a cientos de kilómetros, en los páramos de Nariño, Boyacá y Cundinamarca donde se cultiva.\n\nLa papa es un cultivo de ciclo corto y oferta rígida: lo que se siembra hoy se cosecha en cinco o seis meses, y en ese lapso los agricultores no pueden acelerar ni frenar la producción. Si un invierno fuerte daña las cosechas o impide sacarlas por las vías veredales, la cantidad que llega a las centrales de abastos cae de golpe. Como la demanda de papa cambia poco —las familias no dejan de comprarla porque esté cara—, una pequeña reducción de la oferta produce un salto grande en el precio.\n\nEl efecto contrario también ocurre. Cuando los precios están altos, muchos agricultores siembran más papa a la vez; seis meses después, todas esas cosechas llegan juntas al mercado, la oferta se desborda y el precio se desploma, a veces por debajo del costo de producción. Entonces se siembra menos, y el ciclo vuelve a empezar. Los economistas lo llaman el *ciclo del cerdo*, porque se describió primero en la cría de ese animal.\n\nPor eso los expertos insisten en que el problema no es la lluvia en sí, sino la falta de información: si cada agricultor supiera cuánto están sembrando los demás, podría decidir mejor. Las vías, los centros de acopio con refrigeración y los sistemas de precios en tiempo real hacen más por estabilizar el precio de la papa que cualquier pronóstico del clima.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes esquemas representa el «ciclo del cerdo» tal como lo describe el texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Lluvia → daño en las cosechas → precio alto → más lluvia → precio aún más alto → escasez permanente.",
+        "correcta": false,
+        "explicacion": "La lluvia aparece en el segundo párrafo como causa puntual de escasez, pero el ciclo del tercer párrafo se mueve por las decisiones de siembra de los agricultores, no por el clima, y no lleva a una escasez permanente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló la causa climática del segundo párrafo con el ciclo descrito en el tercero."
+      },
+      {
+        "clave": "B",
+        "texto": "Precio alto → muchos siembran → cosechas simultáneas → precio bajo → pocos siembran → precio alto.",
+        "correcta": true,
+        "explicacion": "El tercer párrafo describe exactamente esa secuencia: con precios altos «muchos agricultores siembran más papa a la vez», las cosechas llegan juntas, el precio «se desploma», «entonces se siembra menos, y el ciclo vuelve a empezar».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Precio bajo → los agricultores cambian la papa por la cría de cerdos → sube la papa → vuelven a sembrar papa.",
+        "correcta": false,
+        "explicacion": "El nombre «ciclo del cerdo» se debe a que el fenómeno se describió primero en la cría de ese animal; el texto no dice que los paperos pasen a criar cerdos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el nombre del ciclo en sentido literal."
+      },
+      {
+        "clave": "D",
+        "texto": "Siembra → cosecha en seis meses → venta en la central de abastos → compra familiar → nueva siembra.",
+        "correcta": false,
+        "explicacion": "Este esquema describe el recorrido normal de la papa, sin la variable que define el ciclo: la reacción de los agricultores a los precios y la alternancia entre precios altos y bajos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Esquematizó la cadena productiva en lugar del ciclo de precios."
+      }
+    ],
+    "explicacion": "LEER: releo el tercer párrafo, que describe el «efecto contrario» y el ciclo que «vuelve a empezar». COMPRENDER: la pregunta pide pasar la descripción verbal a un esquema de flechas. INTERPRETAR: precios altos → muchos siembran → seis meses después las cosechas llegan juntas → el precio se desploma → se siembra menos → el ciclo recomienza (precio alto). REPRESENTAR: alto → mucha siembra → oferta desbordada → bajo → poca siembra → alto. RAZONAR: el esquema con lluvia confunde párrafos, el de los cerdos toma el nombre al pie de la letra y el de la cadena productiva omite la alternancia de precios. RESOLVER: la opción que alterna precio alto y bajo según cuánto se siembra. VERIFICAR: cada flecha del esquema corresponde a una oración del tercer párrafo.",
+    "que_identificar": "La secuencia del tercer párrafo: «Cuando los precios están altos, muchos agricultores siembran más papa a la vez… el precio se desploma… Entonces se siembra menos, y el ciclo vuelve a empezar».",
+    "que_revisar": "Representar en esquemas de causa y efecto los procesos descritos en textos expositivos, respetando el orden de los enunciados.",
+    "refuerzo_ids": [
+      "LC-170",
+      "LC-172"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T47",
+      "expositivo",
+      "economia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-172",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto expositivo (divulgación económica)",
+    "subtema": "Implicaciones de la postura del autor para una decisión práctica",
+    "dificultad": 3,
+    "contexto": "**¿Por qué la papa sube cuando llueve?**\n\nEn un mercado de Bogotá, un bulto de papa pastusa puede costar el doble que tres semanas antes sin que haya cambiado nada visible para el comprador. La explicación casi nunca está en la plaza, sino a cientos de kilómetros, en los páramos de Nariño, Boyacá y Cundinamarca donde se cultiva.\n\nLa papa es un cultivo de ciclo corto y oferta rígida: lo que se siembra hoy se cosecha en cinco o seis meses, y en ese lapso los agricultores no pueden acelerar ni frenar la producción. Si un invierno fuerte daña las cosechas o impide sacarlas por las vías veredales, la cantidad que llega a las centrales de abastos cae de golpe. Como la demanda de papa cambia poco —las familias no dejan de comprarla porque esté cara—, una pequeña reducción de la oferta produce un salto grande en el precio.\n\nEl efecto contrario también ocurre. Cuando los precios están altos, muchos agricultores siembran más papa a la vez; seis meses después, todas esas cosechas llegan juntas al mercado, la oferta se desborda y el precio se desploma, a veces por debajo del costo de producción. Entonces se siembra menos, y el ciclo vuelve a empezar. Los economistas lo llaman el *ciclo del cerdo*, porque se describió primero en la cría de ese animal.\n\nPor eso los expertos insisten en que el problema no es la lluvia en sí, sino la falta de información: si cada agricultor supiera cuánto están sembrando los demás, podría decidir mejor. Las vías, los centros de acopio con refrigeración y los sistemas de precios en tiempo real hacen más por estabilizar el precio de la papa que cualquier pronóstico del clima.",
+    "estimulo": null,
+    "enunciado": "De acuerdo con el último párrafo, ¿cuál de las siguientes medidas sería la más coherente con la postura del autor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mejorar los pronósticos del clima para anunciar con meses de anticipación los inviernos fuertes.",
+        "correcta": false,
+        "explicacion": "El autor afirma que «el problema no es la lluvia en sí» y que la información sobre siembras y precios hace «más por estabilizar el precio […] que cualquier pronóstico del clima». Esta medida va en la dirección que él relativiza.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con el título del texto y no con la conclusión del último párrafo."
+      },
+      {
+        "clave": "B",
+        "texto": "Fijar por ley un precio único de la papa para todo el año en las centrales de abastos del país.",
+        "correcta": false,
+        "explicacion": "El texto no propone controlar el precio, sino mejorar la información y la infraestructura para que la oferta no oscile tanto; un precio fijo no aparece ni se deriva de su argumento.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propuso una solución al síntoma (precio) sin atender a la causa que el autor señala (falta de información)."
+      },
+      {
+        "clave": "C",
+        "texto": "Crear un sistema público que informe a los agricultores cuántas hectáreas de papa se están sembrando en el país.",
+        "correcta": true,
+        "explicacion": "El autor sostiene que el problema es «la falta de información: si cada agricultor supiera cuánto están sembrando los demás, podría decidir mejor», y menciona los sistemas de precios en tiempo real. Un registro de siembras responde directamente a esa idea.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Pedir a las familias que reduzcan el consumo de papa cuando el precio esté alto para bajar la demanda.",
+        "correcta": false,
+        "explicacion": "El texto describe la demanda estable como un hecho, no como un problema que haya que corregir; sus propuestas se dirigen a la oferta y a la información de los productores.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Derivó una medida sobre la demanda cuando el autor centra la solución en los productores."
+      }
+    ],
+    "explicacion": "LEER: releo el último párrafo: el problema «no es la lluvia en sí, sino la falta de información»; las vías, los centros de acopio y los sistemas de precios hacen más que cualquier pronóstico. COMPRENDER: la pregunta pide derivar la medida más coherente con esa postura. INTERPRETAR: el autor localiza la causa en que cada agricultor decide sin saber lo que siembran los demás. REPRESENTAR: falta de información → siembras simultáneas → ciclo; más información → mejores decisiones → precio estable. RAZONAR: mejorar pronósticos contradice la relativización del clima; el precio fijo y la reducción del consumo no se desprenden del texto. RESOLVER: la opción del sistema público de información sobre siembras. VERIFICAR: la frase «si cada agricultor supiera cuánto están sembrando los demás» describe exactamente esa medida.",
+    "que_identificar": "La oración «el problema no es la lluvia en sí, sino la falta de información: si cada agricultor supiera cuánto están sembrando los demás, podría decidir mejor».",
+    "que_revisar": "Derivar implicaciones prácticas de la tesis de un texto expositivo y distinguirlas de soluciones ajenas a su argumento.",
+    "refuerzo_ids": [
+      "LC-171",
+      "LC-143"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T47",
+      "expositivo",
+      "economia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-173",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "leer",
+    "tema": "Texto discontinuo (preguntas frecuentes de una biblioteca con tabla de multas)",
+    "subtema": "Información explícita en un texto de preguntas frecuentes",
+    "dificultad": 1,
+    "contexto": "**Biblioteca Pública Municipal · Preguntas frecuentes sobre el préstamo externo**\n\n**¿Quién puede llevar libros a casa?** Cualquier persona con el carné de la biblioteca, que se obtiene gratis presentando un documento de identidad y un recibo de servicios. Los menores de 14 años necesitan, además, la firma de un adulto responsable.\n\n**¿Cuántos materiales y por cuánto tiempo?** Hasta tres libros por quince días. Las películas y los audiolibros se prestan por siete días, máximo dos por persona. Los libros marcados con punto rojo (colección de referencia y novedades del último mes) solo se consultan en sala.\n\n**¿Puedo renovar?** Sí, una vez, por el mismo plazo, siempre que nadie más haya reservado el material. La renovación se hace en el mostrador, por teléfono o en la página web, antes de la fecha de vencimiento.\n\n**¿Qué pasa si me retraso?** Se cobra una multa por día y por material, según la tabla. Mientras exista una multa pendiente no se pueden hacer nuevos préstamos. Las multas se pagan en el mostrador o se *canjean* por horas de voluntariado en la biblioteca (una hora equivale a 5000 pesos de multa).\n\n**¿Y si pierdo o daño un material?** Debe reponerlo con un ejemplar igual o de valor equivalente, o pagar su costo de reposición. En ese caso no se cobra la multa por retraso acumulada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Multas por retraso (por día y por material)",
+      "columnas": [
+        "Material",
+        "Plazo de préstamo",
+        "Multa por día de retraso",
+        "Tope máximo por material"
+      ],
+      "filas": [
+        [
+          "Libro de colección general",
+          "15 días",
+          "500 pesos",
+          "15 000 pesos"
+        ],
+        [
+          "Película",
+          "7 días",
+          "1000 pesos",
+          "20 000 pesos"
+        ],
+        [
+          "Audiolibro",
+          "7 días",
+          "1000 pesos",
+          "20 000 pesos"
+        ],
+        [
+          "Libro con punto rojo",
+          "Solo consulta en sala",
+          "No aplica",
+          "No aplica"
+        ]
+      ],
+      "nota": "El tope máximo deja de aplicarse si el material se declara perdido; en ese caso rige la reposición."
+    },
+    "enunciado": "Según el texto, ¿qué debe hacer una persona de 13 años para obtener el carné de la biblioteca?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pagar el valor del carné en el mostrador y presentar un recibo de servicios a su propio nombre.",
+        "correcta": false,
+        "explicacion": "El carné «se obtiene gratis», así que no hay pago, y el texto no exige que el recibo esté a nombre del solicitante.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso un costo y una condición sobre el recibo que el texto no establece."
+      },
+      {
+        "clave": "B",
+        "texto": "Presentar únicamente su documento de identidad, pues el recibo de servicios solo se exige a los adultos.",
+        "correcta": false,
+        "explicacion": "El texto pide a cualquier persona documento y recibo, y a los menores de 14 años les añade la firma de un adulto; no los exime del recibo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó el requisito adicional de los menores como un reemplazo de los generales."
+      },
+      {
+        "clave": "C",
+        "texto": "Presentar un documento de identidad y un recibo de servicios, y contar con la firma de un adulto responsable.",
+        "correcta": true,
+        "explicacion": "La primera respuesta del texto fija los requisitos generales (documento y recibo) y agrega para los menores de 14 años la firma de un adulto responsable. Una persona de 13 años debe cumplir los tres.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Esperar a cumplir 14 años, ya que los menores de esa edad solo pueden consultar los materiales en sala.",
+        "correcta": false,
+        "explicacion": "La consulta en sala es la condición de los libros con punto rojo, no de los menores; estos sí pueden obtener el carné con la firma de un adulto.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcló la restricción de los libros de punto rojo con la de la edad."
+      }
+    ],
+    "explicacion": "LEER: ubico la primera pregunta frecuente, «¿Quién puede llevar libros a casa?». COMPRENDER: la pregunta pide los requisitos para alguien de 13 años, es decir, menor de 14. INTERPRETAR: el carné es gratis, exige documento de identidad y recibo de servicios, y los menores de 14 necesitan «además» la firma de un adulto responsable. REPRESENTAR: requisitos generales + firma de adulto (por ser menor de 14). RAZONAR: no hay pago, el recibo no se exime a los menores y la consulta en sala se refiere a los libros de punto rojo, no a la edad. RESOLVER: la opción con los tres requisitos. VERIFICAR: la palabra «además» indica que la firma se suma a los requisitos generales.",
+    "que_identificar": "La respuesta a «¿Quién puede llevar libros a casa?» y la palabra «además» que suma la firma del adulto.",
+    "que_revisar": "Localizar requisitos en textos informativos y reconocer cuándo una condición se suma a otras en lugar de reemplazarlas.",
+    "refuerzo_ids": [
+      "LC-174",
+      "LC-129"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T48",
+      "discontinuo",
+      "preguntas_frecuentes",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-174",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Identifica el tipo de relación existente entre diferentes elementos de un texto (discontinuo)",
+    "habilidad": "resolver",
+    "tema": "Texto discontinuo (preguntas frecuentes de una biblioteca con tabla de multas)",
+    "subtema": "Integrar la tabla de multas con una regla del texto para resolver un caso",
+    "dificultad": 3,
+    "contexto": "**Biblioteca Pública Municipal · Preguntas frecuentes sobre el préstamo externo**\n\n**¿Quién puede llevar libros a casa?** Cualquier persona con el carné de la biblioteca, que se obtiene gratis presentando un documento de identidad y un recibo de servicios. Los menores de 14 años necesitan, además, la firma de un adulto responsable.\n\n**¿Cuántos materiales y por cuánto tiempo?** Hasta tres libros por quince días. Las películas y los audiolibros se prestan por siete días, máximo dos por persona. Los libros marcados con punto rojo (colección de referencia y novedades del último mes) solo se consultan en sala.\n\n**¿Puedo renovar?** Sí, una vez, por el mismo plazo, siempre que nadie más haya reservado el material. La renovación se hace en el mostrador, por teléfono o en la página web, antes de la fecha de vencimiento.\n\n**¿Qué pasa si me retraso?** Se cobra una multa por día y por material, según la tabla. Mientras exista una multa pendiente no se pueden hacer nuevos préstamos. Las multas se pagan en el mostrador o se *canjean* por horas de voluntariado en la biblioteca (una hora equivale a 5000 pesos de multa).\n\n**¿Y si pierdo o daño un material?** Debe reponerlo con un ejemplar igual o de valor equivalente, o pagar su costo de reposición. En ese caso no se cobra la multa por retraso acumulada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Multas por retraso (por día y por material)",
+      "columnas": [
+        "Material",
+        "Plazo de préstamo",
+        "Multa por día de retraso",
+        "Tope máximo por material"
+      ],
+      "filas": [
+        [
+          "Libro de colección general",
+          "15 días",
+          "500 pesos",
+          "15 000 pesos"
+        ],
+        [
+          "Película",
+          "7 días",
+          "1000 pesos",
+          "20 000 pesos"
+        ],
+        [
+          "Audiolibro",
+          "7 días",
+          "1000 pesos",
+          "20 000 pesos"
+        ],
+        [
+          "Libro con punto rojo",
+          "Solo consulta en sala",
+          "No aplica",
+          "No aplica"
+        ]
+      ],
+      "nota": "El tope máximo deja de aplicarse si el material se declara perdido; en ese caso rige la reposición."
+    },
+    "enunciado": "Un usuario devolvió una película con 25 días de retraso y quiere canjear la multa por voluntariado. De acuerdo con el texto y la tabla, ¿cuántas horas debe hacer?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Cinco horas, porque 25 días de retraso a 1000 pesos por día suman 25 000 pesos de multa en total.",
+        "correcta": false,
+        "explicacion": "La multiplicación es correcta, pero la tabla fija un tope máximo de 20 000 pesos por película, de modo que la multa no puede superar esa cifra.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la multa diaria sin aplicar la columna del tope máximo."
+      },
+      {
+        "clave": "B",
+        "texto": "Cuatro horas, porque la multa se detiene en el tope de 20 000 pesos y cada hora de voluntariado equivale a 5000 pesos.",
+        "correcta": true,
+        "explicacion": "Según la tabla, la película genera 1000 pesos por día (25 000 por 25 días), pero el tope máximo por material es 20 000 pesos. El texto indica que una hora de voluntariado equivale a 5000 pesos: 20 000 ÷ 5000 = 4 horas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Tres horas, porque el tope de las películas es de 15 000 pesos, igual que el de los libros de colección general.",
+        "correcta": false,
+        "explicacion": "El tope de 15 000 pesos corresponde a los libros de colección general; para las películas la tabla indica 20 000 pesos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la fila equivocada de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "Ninguna hora, porque un material devuelto con más de 20 días de retraso se considera automáticamente perdido.",
+        "correcta": false,
+        "explicacion": "Ni el texto ni la nota de la tabla establecen que el retraso convierta el material en perdido; la pérdida es una situación distinta que el usuario declara.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió el tope máximo con un límite de días que declara perdido el material."
+      }
+    ],
+    "explicacion": "LEER: tomo de la tabla la fila «Película» (1000 pesos por día, tope 20 000) y del texto la equivalencia del canje (una hora = 5000 pesos). COMPRENDER: la pregunta pide aplicar ambas reglas a un caso concreto. INTERPRETAR: 25 días × 1000 = 25 000 pesos, pero el tope por material limita la multa a 20 000. REPRESENTAR: multa = mín(25 000, 20 000) = 20 000; horas = 20 000 ÷ 5000 = 4. RAZONAR: cinco horas ignora el tope; tres horas usa el tope de los libros; «ninguna» inventa una regla de pérdida automática. RESOLVER: cuatro horas. VERIFICAR: la nota de la tabla solo anula el tope cuando el material se declara perdido, lo que no ocurre aquí.",
+    "que_identificar": "La fila «Película» de la tabla (multa diaria y tope) y la frase «una hora equivale a 5000 pesos de multa».",
+    "que_revisar": "Integrar datos de una tabla con reglas del texto, aplicando límites o topes antes de hacer conversiones.",
+    "refuerzo_ids": [
+      "LC-173",
+      "LC-130"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "texto:LC-T48",
+      "discontinuo",
+      "preguntas_frecuentes",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-175",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_discontinuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece la validez e implicaciones de un enunciado de un texto (argumentativo o expositivo)",
+    "habilidad": "razonar",
+    "tema": "Texto discontinuo (preguntas frecuentes de una biblioteca con tabla de multas)",
+    "subtema": "Implicaciones de una regla y de la nota de la tabla para un caso",
+    "dificultad": 2,
+    "contexto": "**Biblioteca Pública Municipal · Preguntas frecuentes sobre el préstamo externo**\n\n**¿Quién puede llevar libros a casa?** Cualquier persona con el carné de la biblioteca, que se obtiene gratis presentando un documento de identidad y un recibo de servicios. Los menores de 14 años necesitan, además, la firma de un adulto responsable.\n\n**¿Cuántos materiales y por cuánto tiempo?** Hasta tres libros por quince días. Las películas y los audiolibros se prestan por siete días, máximo dos por persona. Los libros marcados con punto rojo (colección de referencia y novedades del último mes) solo se consultan en sala.\n\n**¿Puedo renovar?** Sí, una vez, por el mismo plazo, siempre que nadie más haya reservado el material. La renovación se hace en el mostrador, por teléfono o en la página web, antes de la fecha de vencimiento.\n\n**¿Qué pasa si me retraso?** Se cobra una multa por día y por material, según la tabla. Mientras exista una multa pendiente no se pueden hacer nuevos préstamos. Las multas se pagan en el mostrador o se *canjean* por horas de voluntariado en la biblioteca (una hora equivale a 5000 pesos de multa).\n\n**¿Y si pierdo o daño un material?** Debe reponerlo con un ejemplar igual o de valor equivalente, o pagar su costo de reposición. En ese caso no se cobra la multa por retraso acumulada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Multas por retraso (por día y por material)",
+      "columnas": [
+        "Material",
+        "Plazo de préstamo",
+        "Multa por día de retraso",
+        "Tope máximo por material"
+      ],
+      "filas": [
+        [
+          "Libro de colección general",
+          "15 días",
+          "500 pesos",
+          "15 000 pesos"
+        ],
+        [
+          "Película",
+          "7 días",
+          "1000 pesos",
+          "20 000 pesos"
+        ],
+        [
+          "Audiolibro",
+          "7 días",
+          "1000 pesos",
+          "20 000 pesos"
+        ],
+        [
+          "Libro con punto rojo",
+          "Solo consulta en sala",
+          "No aplica",
+          "No aplica"
+        ]
+      ],
+      "nota": "El tope máximo deja de aplicarse si el material se declara perdido; en ese caso rige la reposición."
+    },
+    "enunciado": "Según el texto y la nota de la tabla, ¿qué ocurre si un usuario declara perdido un libro que ya acumulaba multa por retraso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Debe reponer el libro o pagar su costo, y la multa acumulada por retraso deja de cobrarse.",
+        "correcta": true,
+        "explicacion": "La última respuesta del texto dice que, en caso de pérdida, se repone el material o se paga su costo y «no se cobra la multa por retraso acumulada»; la nota de la tabla confirma que entonces «rige la reposición».",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Debe pagar la multa acumulada hasta el tope de 15 000 pesos y, además, reponer el libro perdido.",
+        "correcta": false,
+        "explicacion": "El texto es explícito en que, cuando hay pérdida, «no se cobra la multa por retraso acumulada»; cobrar ambas cosas contradice esa regla.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó las dos consecuencias sin leer la frase que excluye la multa en caso de pérdida."
+      },
+      {
+        "clave": "C",
+        "texto": "Puede canjear el costo de reposición del libro por horas de voluntariado en la biblioteca.",
+        "correcta": false,
+        "explicacion": "El canje por voluntariado se ofrece únicamente para las multas; el texto no lo extiende al costo de reposición de un material perdido.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Extendió la regla del canje a una obligación distinta."
+      },
+      {
+        "clave": "D",
+        "texto": "Queda inhabilitado para nuevos préstamos hasta que pague la multa y el libro aparezca en la biblioteca.",
+        "correcta": false,
+        "explicacion": "La inhabilitación se aplica mientras exista una multa pendiente, pero al declarar la pérdida la multa se anula y la obligación pasa a ser la reposición; además, nada en el texto exige que el libro «aparezca».",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Combinó reglas de secciones distintas sin aplicar la excepción de la pérdida."
+      }
+    ],
+    "explicacion": "LEER: reviso la última respuesta del texto y la nota al pie de la tabla. COMPRENDER: la pregunta pide la consecuencia de declarar perdido un material que ya tenía multa. INTERPRETAR: en caso de pérdida se repone o se paga el costo, «no se cobra la multa por retraso acumulada», y la nota aclara que el tope deja de aplicarse porque «rige la reposición». REPRESENTAR: retraso → multa (con tope); pérdida declarada → reposición y multa anulada. RAZONAR: pagar multa y reponer contradice la exención; el canje solo aplica a multas; la inhabilitación depende de una multa pendiente que ya no existe. RESOLVER: la opción que combina reposición y anulación de la multa. VERIFICAR: la nota de la tabla y la última respuesta del texto dicen lo mismo con distintas palabras.",
+    "que_identificar": "La frase «En ese caso no se cobra la multa por retraso acumulada» y la nota de la tabla sobre la reposición.",
+    "que_revisar": "Aplicar excepciones explícitas de un reglamento a casos concretos sin combinar reglas que se excluyen.",
+    "refuerzo_ids": [
+      "LC-174",
+      "LC-131"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T48",
+      "discontinuo",
+      "preguntas_frecuentes",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-176",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC1",
+    "componente": "texto_continuo",
+    "afirmacion": "Identifica y entiende los contenidos locales que conforman un texto",
+    "evidencia": "Entiende el significado de los elementos locales que constituyen un texto",
+    "habilidad": "interpretar",
+    "tema": "Texto literario (poema contemporáneo en verso libre)",
+    "subtema": "Sentido de una imagen inicial («una mesa mal puesta»)",
+    "dificultad": 1,
+    "contexto": "**Inventario del décimo piso**\n\nDesde aquí la ciudad es una mesa mal puesta:\nalguien dejó las luces encendidas\ny se fue a dormir sin recoger los carros.\n\nConozco a mis vecinos por sus ruidos.\nEl del 1002 arrastra una silla a las seis;\nla del 1004 ríe con la televisión\ny a veces, cuando la apaga, sigue riéndose un rato\ncomo quien no quiere que la risa se enfríe.\n\nNunca los he visto de frente.\nEn el ascensor miramos los números\ncomo si fueran noticias importantes.\n\nAbajo, un hombre vende aguacates a la lluvia.\nNadie compra. Él no se va.\nDesde el décimo piso parece un faro\nque alumbra para barcos que no vienen.\n\nHe pensado bajar a comprarle uno.\nHe pensado tocar en el 1004 y preguntar\nqué era tan gracioso.\nPienso muchas cosas desde esta altura.\nDespués apago la luz\ny dejo mi carro sin recoger\nsobre la mesa de la ciudad.",
+    "estimulo": null,
+    "enunciado": "En los primeros versos, comparar la ciudad con «una mesa mal puesta» sirve para presentarla como",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "un lugar lujoso donde se celebran cenas y banquetes que el hablante no puede pagar.",
+        "correcta": false,
+        "explicacion": "La imagen no alude al lujo ni al dinero; «mal puesta» sugiere descuido, y los versos siguientes hablan de luces encendidas y carros sin recoger, no de banquetes.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció «mesa» con una cena elegante y no con el desorden que califica el adjetivo."
+      },
+      {
+        "clave": "B",
+        "texto": "una ciudad en ruinas tras un desastre que apagó todas sus luces y vació las calles.",
+        "correcta": false,
+        "explicacion": "Los versos dicen lo contrario: «alguien dejó las luces encendidas». No hay ruinas ni desastre, sino un desorden cotidiano visto desde arriba.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el dato de las luces encendidas."
+      },
+      {
+        "clave": "C",
+        "texto": "un comedor familiar donde los vecinos se reúnen cada noche para compartir la comida.",
+        "correcta": false,
+        "explicacion": "El poema insiste en lo contrario: el hablante conoce a sus vecinos «por sus ruidos» y «nunca los ha visto de frente». La mesa no reúne a nadie.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que la mesa implica reunión, cuando el poema habla de aislamiento."
+      },
+      {
+        "clave": "D",
+        "texto": "un espacio desordenado que alguien abandonó sin terminar de ordenar antes de irse a dormir.",
+        "correcta": true,
+        "explicacion": "Los dos versos siguientes desarrollan la imagen: «alguien dejó las luces encendidas / y se fue a dormir sin recoger los carros». Las luces y los carros son los platos y cubiertos de esa mesa que nadie recogió.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico los tres primeros versos. COMPRENDER: la pregunta pide el sentido de la comparación inicial. INTERPRETAR: «mal puesta» indica desorden; los versos siguientes explican la imagen: luces encendidas y carros sin recoger, como una mesa que alguien dejó a medio levantar antes de dormir. REPRESENTAR: ciudad = mesa; luces = algo que debía apagarse; carros = cosas sin recoger; «alguien se fue a dormir» = abandono. RAZONAR: no hay lujo, ni ruinas (las luces están encendidas), ni reunión (los vecinos no se ven). RESOLVER: la opción del espacio desordenado abandonado sin ordenar. VERIFICAR: el cierre del poema repite la imagen («dejo mi carro sin recoger / sobre la mesa de la ciudad»), lo que confirma la lectura.",
+    "que_identificar": "Los versos «alguien dejó las luces encendidas / y se fue a dormir sin recoger los carros», que desarrollan la comparación.",
+    "que_revisar": "Interpretar imágenes poéticas a partir de los versos que las desarrollan, no de asociaciones externas.",
+    "refuerzo_ids": [
+      "LC-177",
+      "LC-137"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "texto:LC-T49",
+      "literario",
+      "poema"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-177",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC2",
+    "componente": "texto_continuo",
+    "afirmacion": "Comprende cómo se articulan las partes de un texto para darle un sentido global",
+    "evidencia": "Comprende las relaciones entre diferentes partes o enunciados de un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (poema contemporáneo en verso libre)",
+    "subtema": "Relación entre el inicio y el cierre del poema",
+    "dificultad": 3,
+    "contexto": "**Inventario del décimo piso**\n\nDesde aquí la ciudad es una mesa mal puesta:\nalguien dejó las luces encendidas\ny se fue a dormir sin recoger los carros.\n\nConozco a mis vecinos por sus ruidos.\nEl del 1002 arrastra una silla a las seis;\nla del 1004 ríe con la televisión\ny a veces, cuando la apaga, sigue riéndose un rato\ncomo quien no quiere que la risa se enfríe.\n\nNunca los he visto de frente.\nEn el ascensor miramos los números\ncomo si fueran noticias importantes.\n\nAbajo, un hombre vende aguacates a la lluvia.\nNadie compra. Él no se va.\nDesde el décimo piso parece un faro\nque alumbra para barcos que no vienen.\n\nHe pensado bajar a comprarle uno.\nHe pensado tocar en el 1004 y preguntar\nqué era tan gracioso.\nPienso muchas cosas desde esta altura.\nDespués apago la luz\ny dejo mi carro sin recoger\nsobre la mesa de la ciudad.",
+    "estimulo": null,
+    "enunciado": "¿Qué relación hay entre los versos finales («dejo mi carro sin recoger / sobre la mesa de la ciudad») y los del comienzo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El hablante corrige el desorden inicial recogiendo su carro antes de dormir, a diferencia de los demás habitantes.",
+        "correcta": false,
+        "explicacion": "Los versos finales dicen que el hablante «deja» su carro «sin recoger»; no corrige nada, sino que repite el gesto que al inicio atribuía a otros.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el final como una acción contraria a la del comienzo."
+      },
+      {
+        "clave": "B",
+        "texto": "El hablante se incluye en el desorden que al inicio atribuía a otros: él también apaga la luz y deja todo como está.",
+        "correcta": true,
+        "explicacion": "Al comienzo, «alguien» dejó las luces y los carros sin recoger; al final, el hablante «apaga la luz» y deja su propio carro «sobre la mesa de la ciudad». La imagen se repite, pero ahora el sujeto es él mismo: forma parte de la ciudad que observaba.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El hablante descubre que la ciudad ya no parece una mesa, porque bajó a hablar con sus vecinos y compró aguacates.",
+        "correcta": false,
+        "explicacion": "El hablante solo «ha pensado» bajar y tocar en el 1004; no lo hace. Y la imagen de la mesa se mantiene hasta el último verso.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió las intenciones («He pensado») en acciones realizadas."
+      },
+      {
+        "clave": "D",
+        "texto": "Los versos finales describen una ciudad distinta, vista desde la calle y no desde el décimo piso.",
+        "correcta": false,
+        "explicacion": "No hay cambio de punto de vista: el hablante sigue arriba, apaga la luz y se acuesta. La ciudad es la misma «mesa» del inicio.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso un desplazamiento del hablante que el poema no narra."
+      }
+    ],
+    "explicacion": "LEER: comparo los tres primeros versos con los tres últimos. COMPRENDER: la pregunta pide la relación entre ambas partes. INTERPRETAR: al inicio, un «alguien» indeterminado dejó luces y carros sin recoger; al final, el hablante hace lo mismo con su propia luz y su propio carro. REPRESENTAR: inicio: ellos → desorden; final: yo → el mismo desorden. RAZONAR: no corrige el desorden, no baja a la calle (solo lo piensa) y el punto de vista no cambia. RESOLVER: la opción que señala que el hablante se incluye en el desorden que antes atribuía a otros. VERIFICAR: la repetición literal de «sin recoger» y de «mesa» une las dos partes.",
+    "que_identificar": "La repetición de «sin recoger» y de la imagen de la mesa entre el inicio y el cierre, con el cambio de sujeto («alguien» → «yo»).",
+    "que_revisar": "Reconocer la estructura circular de un poema y lo que cambia cuando una imagen se repite.",
+    "refuerzo_ids": [
+      "LC-176",
+      "LC-178"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T49",
+      "literario",
+      "poema"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-178",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce contenidos valorativos presentes en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto literario (poema contemporáneo en verso libre)",
+    "subtema": "Actitud valorativa del hablante hacia sí mismo",
+    "dificultad": 2,
+    "contexto": "**Inventario del décimo piso**\n\nDesde aquí la ciudad es una mesa mal puesta:\nalguien dejó las luces encendidas\ny se fue a dormir sin recoger los carros.\n\nConozco a mis vecinos por sus ruidos.\nEl del 1002 arrastra una silla a las seis;\nla del 1004 ríe con la televisión\ny a veces, cuando la apaga, sigue riéndose un rato\ncomo quien no quiere que la risa se enfríe.\n\nNunca los he visto de frente.\nEn el ascensor miramos los números\ncomo si fueran noticias importantes.\n\nAbajo, un hombre vende aguacates a la lluvia.\nNadie compra. Él no se va.\nDesde el décimo piso parece un faro\nque alumbra para barcos que no vienen.\n\nHe pensado bajar a comprarle uno.\nHe pensado tocar en el 1004 y preguntar\nqué era tan gracioso.\nPienso muchas cosas desde esta altura.\nDespués apago la luz\ny dejo mi carro sin recoger\nsobre la mesa de la ciudad.",
+    "estimulo": null,
+    "enunciado": "El verso «Pienso muchas cosas desde esta altura» expresa, en el conjunto del poema,",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "un orgullo: el hablante valora la perspectiva privilegiada que le da vivir en un piso tan alto.",
+        "correcta": false,
+        "explicacion": "La altura en el poema no se presenta como privilegio sino como distancia: desde ella los vecinos son ruidos y el vendedor un faro lejano. El verso aparece tras dos intenciones no cumplidas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó «altura» en sentido positivo sin atender al contexto de aislamiento."
+      },
+      {
+        "clave": "B",
+        "texto": "una queja: el hablante lamenta que el ruido de los vecinos no lo deje concentrarse en sus pensamientos.",
+        "correcta": false,
+        "explicacion": "Los ruidos de los vecinos no se presentan como molestia, sino como la única forma de conocerlos; además, el hablante sí piensa, y mucho. El problema no es pensar, sino no actuar.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventó una molestia por el ruido que el poema no expresa."
+      },
+      {
+        "clave": "C",
+        "texto": "una esperanza: el hablante anuncia que al día siguiente bajará a comprar aguacates al vendedor.",
+        "correcta": false,
+        "explicacion": "El poema no anuncia ninguna acción futura; después del verso, el hablante apaga la luz y deja todo como está. «He pensado» no equivale a «voy a hacerlo».",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió las intenciones con una promesa de acción."
+      },
+      {
+        "clave": "D",
+        "texto": "una autocrítica: el hablante reconoce que imagina acercarse a los demás, pero no lo hace.",
+        "correcta": true,
+        "explicacion": "El verso sigue a dos «He pensado» (bajar a comprar, tocar en el 1004) y precede a «Después apago la luz». Decir que piensa «muchas cosas» desde la altura subraya, con ironía, que su cercanía con los otros se queda en el pensamiento.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: ubico el verso en la última estrofa, entre «He pensado bajar… He pensado tocar…» y «Después apago la luz». COMPRENDER: la pregunta pide la actitud valorativa que el verso expresa en el conjunto del poema. INTERPRETAR: el hablante acumula intenciones de acercarse (comprar un aguacate, preguntar por la risa) y luego se acuesta sin hacerlo; «muchas cosas» y «desde esta altura» subrayan la distancia entre pensar y actuar. REPRESENTAR: pensar (bajar, tocar) → no hacer (apagar la luz) → el verso en medio comenta esa brecha. RAZONAR: no hay orgullo por la vista, ni queja por el ruido, ni anuncio de acción futura. RESOLVER: la opción que reconoce una autocrítica irónica. VERIFICAR: el verso siguiente, «Después apago la luz», confirma que las intenciones no se cumplen.",
+    "que_identificar": "La secuencia «He pensado… He pensado… Pienso muchas cosas desde esta altura. Después apago la luz».",
+    "que_revisar": "Reconocer la ironía y la autocrítica en la voz poética a partir del contraste entre lo que piensa y lo que hace.",
+    "refuerzo_ids": [
+      "LC-177",
+      "LC-148"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T49",
+      "literario",
+      "poema"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-179",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Establece relaciones entre un texto y otros textos o enunciados",
+    "habilidad": "razonar",
+    "tema": "Texto múltiple (petición comunitaria y respuesta institucional)",
+    "subtema": "Puntos de acuerdo y desacuerdo entre dos textos",
+    "dificultad": 2,
+    "contexto": "**Texto 1 · Carta de la Junta de Acción Comunal del barrio La Esperanza a la Alcaldía**\n\nSeñor alcalde: desde hace cuatro meses el parque del barrio permanece cerrado con cinta y polisombra por la «adecuación» anunciada en marzo. En ese tiempo no hemos visto una sola máquina. Los niños juegan en la calle, los adultos mayores perdieron su punto de encuentro y la cancha se convirtió en un botadero. Pedimos que se reabra el parque de inmediato, así sea sin terminar las obras, o que se nos informe una fecha concreta. Un parque cerrado sin obras es peor que un parque sin obras.\n\n**Texto 2 · Respuesta de la Secretaría de Infraestructura**\n\nApreciados vecinos: entendemos la molestia y compartimos la urgencia. La adecuación del parque hace parte de un contrato que agrupa seis parques del municipio; el contratista inició por los dos que presentaban riesgo estructural y llegará a La Esperanza en la primera semana del próximo mes, según el cronograma adjunto. Reabrir el parque antes implicaría retirar el cerramiento y volver a instalarlo, con un costo adicional y un riesgo para los menores cuando ingresen los materiales. Les proponemos una reunión el próximo martes para revisar el cronograma y acordar la limpieza inmediata de la cancha, que sí podemos adelantar con el equipo de aseo del municipio.",
+    "estimulo": null,
+    "enunciado": "¿En qué coinciden los dos textos y en qué difieren?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Coinciden en que las obras deben empezar de inmediato; difieren en quién debe pagar la limpieza de la cancha.",
+        "correcta": false,
+        "explicacion": "La Junta no pide que las obras empiecen de inmediato, sino que el parque se reabra o se dé una fecha; y la limpieza no es motivo de disputa: la Secretaría ofrece hacerla con su propio equipo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a la Junta una petición distinta de la que formula y convirtió una oferta en una disputa."
+      },
+      {
+        "clave": "B",
+        "texto": "Coinciden en que el parque debe permanecer cerrado; difieren en la fecha en que terminarán las obras.",
+        "correcta": false,
+        "explicacion": "La Junta pide que el parque se reabra «de inmediato, así sea sin terminar las obras»; no está de acuerdo con el cierre. Tampoco se discute la fecha de finalización, sino la de inicio.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la petición central de la Junta."
+      },
+      {
+        "clave": "C",
+        "texto": "Coinciden en que la situación actual del parque es un problema urgente; difieren en si debe reabrirse antes de que lleguen las obras.",
+        "correcta": true,
+        "explicacion": "La Junta describe el daño del cierre y la Secretaría responde «entendemos la molestia y compartimos la urgencia». El desacuerdo está en la reapertura inmediata: la Junta la pide y la Secretaría la rechaza por costo y seguridad.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Coinciden en culpar al contratista por el retraso; difieren en la forma de sancionarlo por incumplir el cronograma.",
+        "correcta": false,
+        "explicacion": "Ninguno de los textos culpa al contratista ni habla de sanciones: la Junta se dirige a la Alcaldía y la Secretaría explica que el contratista sigue un orden de prioridades.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una acusación al contratista que ningún texto formula."
+      }
+    ],
+    "explicacion": "LEER: identifico en el texto 1 la petición (reabrir de inmediato o dar fecha) y en el texto 2 la respuesta (compartimos la urgencia; no reabrir antes; reunión y limpieza). COMPRENDER: la pregunta pide el punto en común y el de desacuerdo. INTERPRETAR: ambos reconocen que el parque cerrado y sin obras es un problema urgente; la diferencia es si reabrir antes de las obras. REPRESENTAR: acuerdo = urgencia; desacuerdo = reapertura inmediata (sí / no). RAZONAR: la Junta no exige iniciar obras ya ni acepta el cierre, la limpieza no se disputa y nadie culpa al contratista. RESOLVER: la opción que señala la urgencia compartida y la discrepancia sobre la reapertura. VERIFICAR: «compartimos la urgencia» y «Reabrir el parque antes implicaría…» resumen acuerdo y desacuerdo.",
+    "que_identificar": "La petición «que se reabra el parque de inmediato» frente a «Reabrir el parque antes implicaría…», y la frase «compartimos la urgencia».",
+    "que_revisar": "Comparar dos textos sobre un mismo asunto para distinguir puntos de acuerdo y de desacuerdo sin atribuirles posiciones que no expresan.",
+    "refuerzo_ids": [
+      "LC-180",
+      "LC-119"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "texto:LC-T50",
+      "multiple",
+      "argumentativo"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "LC-180",
+    "prueba": "lectura_critica",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "LC3",
+    "componente": "texto_continuo",
+    "afirmacion": "Reflexiona a partir de un texto y evalúa su contenido",
+    "evidencia": "Reconoce las estrategias discursivas en un texto",
+    "habilidad": "razonar",
+    "tema": "Texto múltiple (petición comunitaria y respuesta institucional)",
+    "subtema": "Estrategia discursiva de una respuesta institucional",
+    "dificultad": 3,
+    "contexto": "**Texto 1 · Carta de la Junta de Acción Comunal del barrio La Esperanza a la Alcaldía**\n\nSeñor alcalde: desde hace cuatro meses el parque del barrio permanece cerrado con cinta y polisombra por la «adecuación» anunciada en marzo. En ese tiempo no hemos visto una sola máquina. Los niños juegan en la calle, los adultos mayores perdieron su punto de encuentro y la cancha se convirtió en un botadero. Pedimos que se reabra el parque de inmediato, así sea sin terminar las obras, o que se nos informe una fecha concreta. Un parque cerrado sin obras es peor que un parque sin obras.\n\n**Texto 2 · Respuesta de la Secretaría de Infraestructura**\n\nApreciados vecinos: entendemos la molestia y compartimos la urgencia. La adecuación del parque hace parte de un contrato que agrupa seis parques del municipio; el contratista inició por los dos que presentaban riesgo estructural y llegará a La Esperanza en la primera semana del próximo mes, según el cronograma adjunto. Reabrir el parque antes implicaría retirar el cerramiento y volver a instalarlo, con un costo adicional y un riesgo para los menores cuando ingresen los materiales. Les proponemos una reunión el próximo martes para revisar el cronograma y acordar la limpieza inmediata de la cancha, que sí podemos adelantar con el equipo de aseo del municipio.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes opciones describe la estrategia de la Secretaría para responder a la petición de reabrir el parque?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Rechaza la reapertura inmediata con razones de costo y seguridad, pero ofrece una solución parcial (la limpieza) y un espacio de diálogo.",
+        "correcta": true,
+        "explicacion": "La Secretaría explica por qué no reabre (retirar y reinstalar el cerramiento costaría más y pondría en riesgo a los menores), fija una fecha de inicio y propone una reunión y la limpieza inmediata de la cancha. Niega lo principal y concede lo posible.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Acepta reabrir el parque de inmediato a cambio de que la comunidad asuma la limpieza de la cancha con sus propios recursos.",
+        "correcta": false,
+        "explicacion": "La Secretaría no acepta reabrir («Reabrir el parque antes implicaría…») y es ella quien ofrece la limpieza «con el equipo de aseo del municipio», no la comunidad.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió quién ofrece la limpieza y supuso una aceptación que el texto niega."
+      },
+      {
+        "clave": "C",
+        "texto": "Niega que el parque haya estado cerrado sin obras durante meses y responsabiliza a los vecinos del estado de la cancha.",
+        "correcta": false,
+        "explicacion": "La Secretaría no niega los hechos; al contrario, dice «entendemos la molestia» y explica por qué el contratista no ha llegado. Tampoco culpa a los vecinos por la cancha.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Imaginó una respuesta defensiva que no corresponde al tono conciliador del texto."
+      },
+      {
+        "clave": "D",
+        "texto": "Evita responder a la petición y se limita a enviar el cronograma del contratista sin dar ninguna explicación adicional.",
+        "correcta": false,
+        "explicacion": "La respuesta sí se pronuncia sobre la petición (la rechaza con razones) y añade una fecha, una propuesta de reunión y la limpieza; no se limita al cronograma.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la mención del cronograma adjunto con el único contenido de la respuesta."
+      }
+    ],
+    "explicacion": "LEER: releo el texto 2 y marco sus movimientos: empatía («entendemos la molestia»), explicación del retraso, razones para no reabrir, fecha, propuesta de reunión y limpieza. COMPRENDER: la pregunta pide la estrategia discursiva de la respuesta. INTERPRETAR: la Secretaría niega la petición principal, pero la acompaña de razones concretas y de concesiones alcanzables. REPRESENTAR: empatía → explicación → negativa razonada → alternativa parcial → diálogo. RAZONAR: no acepta reabrir, no niega los hechos ni culpa a los vecinos, y no se limita al cronograma. RESOLVER: la opción que describe la negativa razonada con solución parcial y espacio de diálogo. VERIFICAR: la frase «que sí podemos adelantar» marca explícitamente la concesión frente a lo que no se puede hacer.",
+    "que_identificar": "Las razones «con un costo adicional y un riesgo para los menores» y la oferta «la limpieza inmediata de la cancha, que sí podemos adelantar».",
+    "que_revisar": "Reconocer estrategias de respuesta en textos institucionales: negar con razones, conceder parcialmente y proponer diálogo.",
+    "refuerzo_ids": [
+      "LC-179",
+      "LC-128"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "texto:LC-T50",
+      "multiple",
+      "argumentativo"
+    ],
+    "estado": "aprobada"
+  }
+]

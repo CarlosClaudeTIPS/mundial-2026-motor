@@ -1,0 +1,818 @@
+[
+  {
+    "id": "CIE-025",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones sobre la relación entre la intensidad de la luz y la tasa de fotosíntesis a partir de los resultados de un experimento, sin ir más allá de lo que muestran los datos",
+    "habilidad": "interpretar",
+    "tema": "Fotosíntesis y respiración",
+    "subtema": "Tasa de fotosíntesis según la intensidad de la luz: conteo de burbujas de oxígeno en una planta acuática",
+    "dificultad": 2,
+    "contexto": "En un laboratorio escolar de Popayán, un grupo colocó ramas iguales de *Elodea* (una planta acuática) en cinco tubos con agua y contó las burbujas de gas que salían de cada rama durante un minuto, con una lámpara ubicada a distintas distancias. Un tubo se mantuvo en completa oscuridad. Con un termómetro comprobaron que el agua de todos los tubos permaneció a 22 °C, y con una prueba de la astilla incandescente verificaron que el gas recogido era oxígeno.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Burbujas de oxígeno producidas por la rama según la distancia de la lámpara",
+      "columnas": ["Tubo", "Distancia de la lámpara (cm)", "Burbujas por minuto"],
+      "filas": [["1", "10", 40], ["2", "20", 22], ["3", "40", 10], ["4", "80", 3], ["5", "Oscuridad total", 0]],
+      "nota": "Temperatura del agua en todos los tubos: 22 °C. A menor distancia de la lámpara, mayor intensidad de luz sobre la planta."
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los resultados del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A mayor intensidad de luz, mayor es la tasa de fotosíntesis de la planta, lo que se evidencia en el mayor número de burbujas de oxígeno por minuto.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La fotosíntesis produce oxígeno y necesita luz. Al acercar la lámpara (más intensidad) el conteo sube de 0 a 3, 10, 22 y 40 burbujas por minuto, y en oscuridad no hay producción. Como la temperatura fue la misma en todos los tubos y el gas se identificó como oxígeno, la única variable que cambió fue la luz, así que la conclusión se apoya directamente en los datos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Las burbujas son de dióxido de carbono producido por la respiración de la planta, que aumenta cuando hay más luz.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que el gas recogido se identificó como oxígeno con la prueba de la astilla, no como dióxido de carbono. Además, la respiración celular consume oxígeno y libera CO₂ de forma continua, con o sin luz; el gas que depende de la luz es el oxígeno de la fotosíntesis.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde los gases que intercambian la fotosíntesis (libera O₂) y la respiración (libera CO₂), e ignora la verificación del gas descrita en el contexto."
+      },
+      {
+        "clave": "C",
+        "texto": "La lámpara calienta el agua y por eso salen burbujas; la luz no tiene relación con la fotosíntesis.",
+        "correcta": false,
+        "explicacion": "No responde. La nota de la tabla indica que el agua se mantuvo a 22 °C en todos los tubos, así que la temperatura no cambió y no puede explicar las diferencias en el conteo. La variable que sí cambió fue la intensidad de la luz, y con ella cambió la producción de oxígeno.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propuso una explicación alternativa (calor) sin revisar que el experimento controló la temperatura."
+      },
+      {
+        "clave": "D",
+        "texto": "En la oscuridad la planta deja de hacer fotosíntesis y, por lo tanto, también deja de respirar.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos solo muestran que en oscuridad no se producen burbujas de oxígeno, es decir, que no hay fotosíntesis. Nada en el experimento mide la respiración, que en las plantas ocurre todo el tiempo, con luz y sin ella; concluir que 'deja de respirar' va más allá de lo que muestran los datos y contradice el conocimiento científico.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Extendió el resultado del tubo en oscuridad a un proceso (la respiración) que el experimento no midió."
+      }
+    ],
+    "explicacion": "LEER: cinco tubos con Elodea, lámpara a 10, 20, 40 y 80 cm y uno en oscuridad; burbujas por minuto 40, 22, 10, 3 y 0; agua a 22 °C en todos; el gas es oxígeno. COMPRENDER: se pide la conclusión que los datos RESPALDAN, sin exagerar. INTERPRETAR: la única variable que cambió fue la intensidad de luz; la variable medida es la producción de oxígeno, indicador de fotosíntesis. REPRESENTAR: distancia ↓ (más luz) → burbujas ↑: 80 cm → 3, 40 cm → 10, 20 cm → 22, 10 cm → 40; oscuridad → 0. RAZONAR: B contradice la identificación del gas y confunde fotosíntesis con respiración; C ignora que la temperatura se controló; D concluye sobre la respiración, que no se midió; A relaciona luz y fotosíntesis exactamente como lo muestran los datos. RESOLVER: la respuesta es A. VERIFICAR: la conclusión coincide con cada fila de la tabla y con el hecho de que la fotosíntesis requiere luz y libera oxígeno.",
+    "que_identificar": "Que la temperatura se mantuvo constante, que el gas es oxígeno y que el número de burbujas crece a medida que la lámpara está más cerca.",
+    "que_revisar": "Fotosíntesis (luz + CO₂ + agua → glucosa + O₂) y respiración celular; variables independiente, dependiente y controladas en un experimento; conclusiones limitadas a lo medido.",
+    "refuerzo_ids": ["CIE-009", "CIE-005"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["fotosintesis", "respiracion", "indagacion", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-026",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la respuesta refleja con la organización del sistema nervioso (médula espinal y encéfalo)",
+    "habilidad": "comprender",
+    "tema": "Sistema nervioso",
+    "subtema": "Arco reflejo: por qué la respuesta ocurre antes que la sensación consciente",
+    "dificultad": 1,
+    "contexto": "Mientras cocinaba en su casa de Tunja, Camila tocó por accidente una olla muy caliente y retiró la mano de inmediato; solo un instante después sintió el dolor en los dedos. En clase, la profesora explicó lo que ocurrió: los receptores de la piel enviaron una señal por una **neurona sensitiva** hasta la **médula espinal**; allí la señal pasó a una **neurona motora** que ordenó a los músculos del brazo contraerse. Al mismo tiempo, otra señal siguió su camino desde la médula hasta el **cerebro**, donde se produce la sensación consciente de dolor.",
+    "estimulo": null,
+    "enunciado": "De acuerdo con la explicación, ¿por qué Camila retiró la mano antes de sentir el dolor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque los receptores de la piel envían la señal directamente al músculo, sin pasar por ninguna neurona.",
+        "correcta": false,
+        "explicacion": "No responde. La explicación menciona expresamente dos neuronas y la médula espinal en el recorrido de la señal. Los receptores no se conectan con el músculo de forma directa.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No leyó con atención el recorrido descrito en el contexto o lo simplificó en exceso."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la respuesta refleja se coordina en la médula espinal sin esperar al cerebro, mientras que la sensación de dolor requiere que la señal llegue hasta el cerebro, un recorrido más largo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El arco reflejo (receptor → neurona sensitiva → médula espinal → neurona motora → músculo) es un circuito corto que produce la respuesta de manera rápida y automática. La sensación consciente de dolor necesita que la información viaje además desde la médula hasta el cerebro y sea procesada allí, por eso se percibe un instante después de haber retirado la mano.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el cerebro procesa primero la orden de mover el brazo y después la sensación de dolor.",
+        "correcta": false,
+        "explicacion": "No responde. Según la explicación, la orden de retirar la mano no sale del cerebro: se genera en la médula espinal, donde la neurona sensitiva se conecta con la motora. El cerebro solo interviene en la sensación de dolor, que llega después.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye todas las respuestas del organismo al cerebro, sin reconocer el papel de la médula espinal en los reflejos."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el músculo se contrae por sí solo con el calor, sin que intervenga el sistema nervioso.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto describe una cadena de neuronas (sensitiva → médula → motora) que lleva la señal desde la piel hasta el músculo. Sin esa señal nerviosa el músculo no se contrae; el calor no actúa directamente sobre él.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la contracción muscular puede ocurrir sin una orden nerviosa."
+      }
+    ],
+    "explicacion": "LEER: Camila retira la mano antes de sentir dolor; la señal va de los receptores a la médula por una neurona sensitiva, pasa a una neurona motora y llega al músculo; otra señal sube al cerebro, donde se siente el dolor. COMPRENDER: se pregunta la razón del orden de los dos eventos (retirar y luego sentir). INTERPRETAR: hay dos recorridos: uno corto (arco reflejo en la médula) y uno largo (hasta el cerebro). REPRESENTAR: piel → sensitiva → médula → motora → músculo (rápido) | médula → cerebro → sensación de dolor (más tarde). RAZONAR: A ubica la orden motora en el cerebro, B elimina el sistema nervioso, C elimina las neuronas; D describe exactamente los dos recorridos. RESOLVER: la respuesta es D. VERIFICAR: la opción B es coherente con cada elemento nombrado en el contexto y explica el orden temporal observado.",
+    "que_identificar": "Los dos recorridos de la señal descritos en el contexto: el corto, que termina en el músculo, y el largo, que termina en el cerebro.",
+    "que_revisar": "Organización del sistema nervioso (encéfalo, médula espinal, nervios); arco reflejo y sus componentes; diferencia entre respuesta refleja y respuesta voluntaria o consciente.",
+    "refuerzo_ids": ["CIE-001", "CIE-017"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["sistema nervioso", "reflejos", "salud", "hogar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-027",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el cambio en la proporción de fenotipos de una población a partir de la selección natural (variación heredable, supervivencia y reproducción diferencial)",
+    "habilidad": "razonar",
+    "tema": "Evolución y selección natural",
+    "subtema": "Cambio en la proporción de polillas claras y oscuras según el color de los troncos",
+    "dificultad": 2,
+    "contexto": "En una región industrial de Europa vive una especie de polilla que descansa de día sobre los troncos de los árboles y es cazada por aves que la detectan por la vista. Existen dos variedades hereditarias: clara y oscura. La tabla resume registros históricos de la proporción de cada variedad y del aspecto de los troncos en distintas épocas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Proporción de polillas claras y oscuras y aspecto de los troncos",
+      "columnas": ["Época", "Polillas claras (%)", "Polillas oscuras (%)", "Aspecto de los troncos"],
+      "filas": [["1850, antes de las fábricas", 98, 2, "Claros, cubiertos de líquenes"], ["1900, auge industrial", 45, 55, "Oscurecidos por el hollín"], ["1950, máxima contaminación", 10, 90, "Muy oscuros, sin líquenes"], ["2000, tras leyes de aire limpio", 70, 30, "Claros, líquenes recuperados"]],
+      "nota": "Datos construidos con fines didácticos a partir del caso documentado de la polilla del abedul."
+    },
+    "enunciado": "¿Cuál explicación de los cambios registrados en la tabla es coherente con la teoría de la selección natural?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las polillas oscuras aparecieron por primera vez en 1900 como una mutación provocada por la contaminación, por eso antes no existían.",
+        "correcta": false,
+        "explicacion": "No responde. La primera fila de la tabla muestra que en 1850, antes de las fábricas, ya existía un 2 % de polillas oscuras. La contaminación no creó la variedad oscura: cambió el ambiente y con ello cuál variedad tenía ventaja frente a las aves.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó la fila de 1850 y supuso que la variedad oscura surgió con la contaminación."
+      },
+      {
+        "clave": "B",
+        "texto": "Las polillas cambiaron su color para camuflarse con los troncos oscuros y, cuando el aire se limpió, volvieron a aclararse.",
+        "correcta": false,
+        "explicacion": "No responde. La selección natural no actúa sobre individuos que 'deciden' cambiar: cada polilla nace clara u oscura y conserva ese color toda su vida. Lo que cambia es la PROPORCIÓN de cada variedad en la población, porque en cada época sobreviven y se reproducen más las que pasan desapercibidas para las aves.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explica la evolución como un cambio voluntario o adaptativo de cada individuo (idea lamarckista), no de la población."
+      },
+      {
+        "clave": "C",
+        "texto": "En cada época, las polillas cuyo color se confundía con los troncos eran menos cazadas por las aves, sobrevivían y dejaban más descendencia con ese mismo color, así que su proporción aumentó; ambas variedades ya existían desde 1850.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que en 1850 ya había un 2 % de polillas oscuras: la variación heredable existía antes de la contaminación. Cuando los troncos se oscurecieron, las oscuras quedaron camufladas y las claras se volvieron presas fáciles; las oscuras se reprodujeron más y pasaron del 2 % al 90 %. Al recuperarse los troncos claros, la ventaja se invirtió y las claras volvieron a aumentar (70 %). Es el mecanismo de la selección natural: variación, supervivencia y reproducción diferencial.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El hollín tiñó de oscuro a las polillas y, cuando el aire se limpió, el tinte desapareció de sus alas.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que el color es una característica HEREDITARIA, no una mancha externa. Un tinte adquirido no se transmite a la descendencia y no explicaría por qué la proporción de oscuras siguió cambiando entre generaciones.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde un cambio ambiental sobre el cuerpo del individuo con una característica heredable."
+      }
+    ],
+    "explicacion": "LEER: dos variedades hereditarias (clara y oscura) cazadas por aves que las ven; la tabla da la proporción de cada una y el color de los troncos en cuatro épocas. COMPRENDER: se pide la explicación coherente con la selección natural. INTERPRETAR: cuando los troncos son claros predominan las claras (98 %, 70 %); cuando son oscuros predominan las oscuras (55 %, 90 %); en 1850 ya había un 2 % de oscuras. REPRESENTAR: ambiente (color del tronco) → camuflaje → menor depredación → más descendencia → mayor proporción en la siguiente generación. RAZONAR: A supone que cada individuo cambia de color; C supone un tinte no heredable; D contradice la fila de 1850; B usa la variación previa, la supervivencia diferencial y la herencia, y explica tanto el aumento como la disminución de las oscuras. RESOLVER: la respuesta es B. VERIFICAR: la explicación B es coherente con las cuatro filas y con la reversión observada en 2000.",
+    "que_identificar": "Que en 1850 ya existía un 2 % de polillas oscuras, que el color es hereditario y que las aves cazan por la vista.",
+    "que_revisar": "Selección natural: variación heredable, presión del ambiente, supervivencia y reproducción diferencial; diferencia entre evolución de una población y cambio en un individuo.",
+    "refuerzo_ids": ["CIE-013", "CIE-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["evolucion", "seleccion natural", "polillas", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-028",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Evalúa la validez de una explicación sobre la resistencia a los antibióticos contrastándola con datos de un cultivo bacteriano y con el mecanismo de selección natural",
+    "habilidad": "verificar",
+    "tema": "Microbiología y antibióticos",
+    "subtema": "Resistencia bacteriana: efecto de interrumpir un tratamiento con antibiótico",
+    "dificultad": 3,
+    "contexto": "En un laboratorio de Bogotá se cultivaron dos muestras idénticas de una bacteria. Un análisis inicial mostró que el **3 %** de las bacterias de cada muestra era **resistente** al antibiótico X (por una característica hereditaria) y el 97 % era sensible. A ambas muestras se les agregó antibiótico X todos los días; en la muestra 2 el antibiótico se retiró después del día 3, simulando a un paciente que abandona el tratamiento cuando se siente mejor. El gráfico muestra la cantidad de bacterias en cada muestra. Al día 6, el **95 %** de las bacterias de la muestra 2 eran resistentes.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Bacterias en el cultivo (millones por mililitro)",
+      "eje_x": "Día",
+      "eje_y": "Bacterias (millones/mL)",
+      "series": [
+        { "nombre": "Muestra 1: antibiótico los 6 días", "valores": [["0", 100], ["1", 50], ["2", 20], ["3", 5], ["4", 1], ["5", 0.2], ["6", 0]] },
+        { "nombre": "Muestra 2: antibiótico solo hasta el día 3", "valores": [["0", 100], ["1", 50], ["2", 20], ["3", 5], ["4", 8], ["5", 20], ["6", 60]] }
+      ]
+    },
+    "enunciado": "Un estudiante afirma: *\"En la muestra 2 el antibiótico dejó de funcionar porque las bacterias se acostumbraron a él\"*. ¿Cuál es la evaluación adecuada de esta afirmación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La afirmación es correcta: después del día 3 el número de bacterias aumenta, lo que demuestra que cada bacteria aprendió a resistir el antibiótico.",
+        "correcta": false,
+        "explicacion": "No responde. El aumento es real, pero la explicación no: las bacterias individuales no 'aprenden'. Los datos muestran que en la muestra 2 el antibiótico se retiró el día 3, y que las pocas bacterias que quedaban (5 millones/mL, en su mayoría las resistentes que ya existían) se multiplicaron libremente. Además, si cada bacteria pudiera acostumbrarse, la muestra 1 también habría rebrotado, y en cambio llegó a cero.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la resistencia a un cambio en cada individuo (acostumbrarse o aprender), no a la selección de los individuos ya resistentes."
+      },
+      {
+        "clave": "B",
+        "texto": "La afirmación es incorrecta porque el antibiótico nunca funcionó: en las dos muestras todavía había bacterias al día 3.",
+        "correcta": false,
+        "explicacion": "No responde. El antibiótico sí funcionó: en tres días redujo la población de 100 a 5 millones/mL en ambas muestras, y en la muestra 1, donde se mantuvo, la llevó a cero. Que quedaran bacterias al día 3 solo indica que el tratamiento aún no había terminado.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en que la curva no llegaba a cero el día 3 e ignoró la caída de 100 a 5 y el resultado final de la muestra 1."
+      },
+      {
+        "clave": "C",
+        "texto": "La afirmación es imprecisa: el antibiótico eliminó a las bacterias sensibles, pero las resistentes (que ya eran el 3 % desde el inicio) sobrevivieron y, al retirarse el antibiótico, se multiplicaron hasta ser el 95 %; las bacterias no se acostumbran, la población fue seleccionada.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los datos lo muestran en tres pasos: (1) con el antibiótico, ambas muestras caen de 100 a 5 millones/mL, porque mueren las sensibles; (2) en la muestra 1 el tratamiento completo termina de eliminar la población; (3) en la muestra 2, al retirarse el antibiótico, las sobrevivientes (mayoritariamente las resistentes, presentes desde el inicio) se reproducen y pasan de 5 a 60 millones/mL, con 95 % de resistentes. Es selección natural dentro del cultivo, no una adaptación de cada bacteria.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La afirmación es correcta y demuestra que los antibióticos deben tomarse en dosis mucho más altas desde el primer día para que las bacterias no alcancen a acostumbrarse.",
+        "correcta": false,
+        "explicacion": "No responde. El experimento no comparó dosis, así que no permite concluir nada sobre dosis más altas; y acepta la idea equivocada de que las bacterias 'se acostumbran'. Lo que los datos sí muestran es la importancia de COMPLETAR el tratamiento: la muestra 1, con la misma dosis durante los 6 días, quedó sin bacterias.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Saca una recomendación sobre una variable (la dosis) que el experimento no estudió, y no cuestiona la explicación del estudiante."
+      }
+    ],
+    "explicacion": "LEER: dos muestras con 3 % de bacterias resistentes; muestra 1 con antibiótico 6 días, muestra 2 solo 3 días; curvas: ambas bajan de 100 a 5 hasta el día 3; luego la 1 llega a 0 y la 2 sube a 60; al día 6 la muestra 2 tiene 95 % de resistentes. COMPRENDER: se pide evaluar la afirmación de que 'las bacterias se acostumbraron'. INTERPRETAR: la resistencia era hereditaria y ya existía en el 3 %; el antibiótico mata a las sensibles; sin antibiótico, las sobrevivientes se reproducen. REPRESENTAR: antibiótico → mueren sensibles (100 → 5) | se retira → resistentes se multiplican (5 → 60, 95 % resistentes) | se mantiene → población eliminada (5 → 0). RAZONAR: A y D aceptan que cada bacteria 'aprende', idea contradicha por la muestra 1; B ignora la caída inicial; C describe la selección de las resistentes preexistentes y el efecto de interrumpir el tratamiento. RESOLVER: la respuesta es C. VERIFICAR: el paso de 3 % a 95 % de resistentes solo se explica si el antibiótico eliminó selectivamente a las sensibles y luego las resistentes se reprodujeron, exactamente lo que dice C.",
+    "que_identificar": "Que la resistencia existía desde el inicio (3 %), que en la muestra 2 el antibiótico se retiró el día 3 y que la muestra 1 llegó a cero bacterias.",
+    "que_revisar": "Bacterias y antibióticos; resistencia bacteriana como resultado de selección natural; por qué se debe completar un tratamiento con antibióticos; lectura de gráficos de líneas con dos series.",
+    "refuerzo_ids": ["CIE-027", "CIE-008"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["microbiologia", "antibioticos", "resistencia bacteriana", "salud", "grafico de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-029",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la relación entre fuerza, masa y aceleración a partir de datos experimentales (segunda ley de Newton) y la usa para predecir un nuevo resultado",
+    "habilidad": "razonar",
+    "tema": "Fuerza y aceleración",
+    "subtema": "Segunda ley de Newton: proporcionalidad directa con la fuerza e inversa con la masa, a partir de una tabla",
+    "dificultad": 2,
+    "contexto": "En un laboratorio de física de Armenia, un grupo empujó carritos de distinta masa sobre una pista con muy poca fricción, aplicando una fuerza constante medida con un dinamómetro, y calculó la aceleración con sensores de movimiento. Los resultados se muestran en la tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Fuerza aplicada y aceleración medida en cada ensayo",
+      "columnas": ["Ensayo", "Masa del carrito (kg)", "Fuerza aplicada (N)", "Aceleración medida (m/s²)"],
+      "filas": [["1", 2, 4, 2], ["2", 2, 8, 4], ["3", 4, 8, 2], ["4", 4, 12, 3]],
+      "nota": "La fricción de la pista es despreciable."
+    },
+    "enunciado": "En un quinto ensayo se usará un carrito de 6 kg y se aplicará una fuerza de 12 N. ¿Qué aceleración se espera medir y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2 m/s², porque la tabla muestra que la aceleración es directamente proporcional a la fuerza e inversamente proporcional a la masa: a = F ÷ m = 12 ÷ 6.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Comparando ensayos 1 y 2 (misma masa, fuerza doble → aceleración doble) se ve la proporcionalidad directa con la fuerza; comparando 2 y 3 (misma fuerza, masa doble → aceleración mitad) se ve la proporcionalidad inversa con la masa. En todos los ensayos se cumple a = F ÷ m (4 ÷ 2 = 2; 8 ÷ 2 = 4; 8 ÷ 4 = 2; 12 ÷ 4 = 3). Para 6 kg y 12 N: a = 12 ÷ 6 = 2 m/s².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "3 m/s², porque en el ensayo 4 también se aplicaron 12 N y la aceleración fue 3 m/s².",
+        "correcta": false,
+        "explicacion": "No responde. En el ensayo 4 la masa era 4 kg; en el nuevo ensayo es 6 kg. La tabla muestra que, con la misma fuerza, a mayor masa la aceleración es menor (ensayos 2 y 3), así que con 6 kg la aceleración debe ser menor que 3 m/s²: 12 ÷ 6 = 2 m/s².",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó en la tabla un ensayo con la misma fuerza y copió su aceleración sin tener en cuenta que la masa cambió."
+      },
+      {
+        "clave": "C",
+        "texto": "72 m/s², porque la aceleración se obtiene multiplicando la fuerza por la masa: 12 × 6.",
+        "correcta": false,
+        "explicacion": "No responde. Si la aceleración fuera fuerza × masa, en el ensayo 1 valdría 4 × 2 = 8 m/s², pero se midieron 2 m/s². La relación correcta es F = m × a, es decir, a = F ÷ m: la masa se opone al cambio de movimiento, no lo amplifica.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recuerda que la segunda ley relaciona F, m y a, pero invierte la operación y no la contrasta con los datos."
+      },
+      {
+        "clave": "D",
+        "texto": "0,5 m/s², porque la aceleración es la masa dividida entre la fuerza: 6 ÷ 12.",
+        "correcta": false,
+        "explicacion": "No responde. Con esa fórmula el ensayo 2 daría 2 ÷ 8 = 0,25 m/s², pero se midieron 4 m/s². Los datos muestran que la aceleración crece con la fuerza y disminuye con la masa, lo que corresponde a a = F ÷ m, no a m ÷ F.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió el cociente entre fuerza y masa sin verificar la fórmula con un ensayo de la tabla."
+      }
+    ],
+    "explicacion": "LEER: cuatro ensayos con masa, fuerza y aceleración; fricción despreciable; se pide predecir la aceleración para 6 kg y 12 N. COMPRENDER: hay que encontrar el patrón que relaciona las tres variables y aplicarlo al nuevo caso. INTERPRETAR: ensayos 1 y 2: misma masa, fuerza ×2 → aceleración ×2; ensayos 2 y 3: misma fuerza, masa ×2 → aceleración ÷2. REPRESENTAR: a = F ÷ m (segunda ley de Newton, F = m·a). RAZONAR: la fórmula se cumple en los cuatro ensayos (2, 4, 2 y 3 m/s²); B copia un ensayo con distinta masa, C y D usan operaciones que fallan al probarlas con la tabla. RESOLVER: a = 12 N ÷ 6 kg = 2 m/s². VERIFICAR: el resultado es coherente con la tendencia: con 12 N, 4 kg dieron 3 m/s², así que 6 kg (más masa) deben dar menos, y 2 m/s² lo cumple.",
+    "que_identificar": "Los pares de ensayos en los que solo cambia una variable (1 y 2; 2 y 3) y el hecho de que en el nuevo ensayo cambia la masa respecto al ensayo 4.",
+    "que_revisar": "Segunda ley de Newton (F = m·a); proporcionalidad directa e inversa; comprobación de una fórmula con datos experimentales.",
+    "refuerzo_ids": ["CIE-018", "CIE-010"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["dinamica", "segunda ley de newton", "fuerza", "aceleracion", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-030",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la rapidez del sonido, el tiempo y la distancia recorrida por la onda en el fenómeno del eco",
+    "habilidad": "resolver",
+    "tema": "Ondas y sonido",
+    "subtema": "Eco: distancia a un obstáculo a partir del tiempo de ida y vuelta del sonido",
+    "dificultad": 1,
+    "contexto": "En una caminata por un cañón cerca de San Gil, Andrés grita frente a una pared rocosa y escucha el eco de su voz **3 segundos** después. El eco se produce porque el sonido viaja hasta la pared, se refleja y regresa hasta el oído de quien gritó. En el aire, a la temperatura del lugar, el sonido viaja a **340 m/s**.",
+    "estimulo": null,
+    "enunciado": "¿A qué distancia de Andrés está la pared rocosa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "1 020 m",
+        "correcta": false,
+        "explicacion": "No responde. 1 020 m = 340 m/s × 3 s es la distancia TOTAL que recorrió el sonido, pero ese recorrido incluye la ida hasta la pared y la vuelta hasta Andrés. La pared está a la mitad: 1 020 ÷ 2 = 510 m.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó que el eco implica un recorrido de ida y vuelta y no dividió la distancia entre dos."
+      },
+      {
+        "clave": "B",
+        "texto": "113 m",
+        "correcta": false,
+        "explicacion": "No responde. 113 resulta de dividir 340 ÷ 3. La distancia se obtiene multiplicando la rapidez por el tiempo (d = v × t), no dividiéndolas; además, después habría que repartir ese recorrido entre la ida y la vuelta.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la operación equivocada entre rapidez y tiempo."
+      },
+      {
+        "clave": "C",
+        "texto": "170 m",
+        "correcta": false,
+        "explicacion": "No responde. 170 es la mitad de 340, es decir, la distancia que recorre el sonido en medio segundo, no en 3 segundos. Para usar la idea de 'mitad del recorrido' primero hay que calcular el recorrido completo: 340 × 3 = 1 020 m, y luego dividirlo entre 2.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Dividió la rapidez entre dos sin multiplicar por el tiempo, o confundió los datos al aplicar la fórmula."
+      },
+      {
+        "clave": "D",
+        "texto": "510 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. En 3 s el sonido recorre 340 m/s × 3 s = 1 020 m, pero ese trayecto es de ida y vuelta (hasta la pared y de regreso). La distancia hasta la pared es la mitad: 1 020 ÷ 2 = 510 m. Equivalente: el sonido tarda 1,5 s en llegar a la pared, y 340 × 1,5 = 510 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el eco llega 3 s después del grito; el sonido va a 340 m/s; el eco es el sonido que va a la pared y regresa. COMPRENDER: se pide la distancia entre Andrés y la pared, no la distancia total recorrida por el sonido. INTERPRETAR: los 3 s corresponden a un recorrido doble (ida + vuelta). REPRESENTAR: recorrido total = v × t = 340 × 3; distancia a la pared = recorrido total ÷ 2. RAZONAR: A da el recorrido completo, B y C aplican mal la relación entre rapidez, tiempo y distancia. RESOLVER: 340 × 3 = 1 020 m; 1 020 ÷ 2 = 510 m. VERIFICAR: si la pared está a 510 m, el sonido tarda 510 ÷ 340 = 1,5 s en llegar y 1,5 s en volver, en total 3 s, como se observó.",
+    "que_identificar": "Que los 3 segundos incluyen la ida y la vuelta del sonido, y que la rapidez es 340 m/s.",
+    "que_revisar": "Ondas sonoras y reflexión (eco); relación distancia = rapidez × tiempo; recorridos de ida y vuelta.",
+    "refuerzo_ids": ["CIE-018", "CIE-029"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["ondas", "sonido", "eco", "cinematica", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-031",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Contrasta una predicción sobre la temperatura final de una mezcla de agua con el patrón observado en ensayos previos",
+    "habilidad": "verificar",
+    "tema": "Calor y temperatura",
+    "subtema": "Temperatura de equilibrio al mezclar agua a distintas temperaturas: la temperatura no se suma",
+    "dificultad": 3,
+    "contexto": "En un laboratorio escolar de Pereira, un grupo mezcló porciones de agua fría y caliente en un recipiente aislado y midió la temperatura final una vez que dejó de cambiar. Los resultados de tres ensayos aparecen en la tabla. Antes del cuarto ensayo, en el que mezclarán **200 g de agua a 20 °C con 200 g de agua a 80 °C**, un estudiante predice:\n\n*\"La temperatura final será de 100 °C, porque 20 °C más 80 °C suman 100 °C\".*",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Mezclas de agua fría y caliente",
+      "columnas": ["Ensayo", "Agua fría", "Agua caliente", "Temperatura final (°C)"],
+      "filas": [["1", "100 g a 20 °C", "100 g a 60 °C", 40], ["2", "100 g a 20 °C", "300 g a 60 °C", 50], ["3", "300 g a 20 °C", "100 g a 60 °C", 30]],
+      "nota": "El recipiente está aislado, de modo que el intercambio de calor con el exterior es despreciable."
+    },
+    "enunciado": "¿Cuál es la evaluación correcta de la predicción del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción es correcta, porque el calor de las dos porciones se suma y la mezcla queda más caliente que cada una de ellas.",
+        "correcta": false,
+        "explicacion": "No responde. En los tres ensayos la temperatura final quedó ENTRE las dos temperaturas iniciales, nunca por encima de la más alta. El calor fluye del agua caliente a la fría hasta que ambas alcanzan la misma temperatura intermedia; las temperaturas no se suman.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde temperatura con cantidad de calor y cree que al juntar dos cuerpos sus temperaturas se acumulan."
+      },
+      {
+        "clave": "B",
+        "texto": "La predicción es incorrecta: los datos muestran que la temperatura final queda entre las dos iniciales y que, con masas iguales, es su promedio; se espera (20 + 80) ÷ 2 = 50 °C, porque el agua caliente cede calor a la fría hasta que ambas se igualan.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El ensayo 1 (masas iguales) dio exactamente el promedio de 20 y 60 (40 °C); los ensayos 2 y 3 muestran que la temperatura final se acerca a la de la porción con mayor masa (50 °C y 30 °C), pero siempre entre 20 y 60 °C. Para 200 g a 20 °C y 200 g a 80 °C, con masas iguales, la temperatura de equilibrio es el promedio: 50 °C. Físicamente, el calor que pierde el agua caliente es el que gana la fría, y el proceso termina cuando las dos tienen la misma temperatura.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La predicción es incorrecta: la temperatura final será de 60 °C, porque en los ensayos anteriores el resultado siempre se acercó a la temperatura del agua caliente.",
+        "correcta": false,
+        "explicacion": "No responde. En el ensayo 3 la temperatura final (30 °C) quedó más cerca de la del agua FRÍA, porque había más masa fría. El resultado depende de las masas: con masas iguales queda en el promedio, no cerca de la más caliente. Además, 60 °C no corresponde a ninguna de las porciones del ensayo 4.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó a partir de los ensayos 1 y 2 sin revisar el ensayo 3, que contradice la regla propuesta."
+      },
+      {
+        "clave": "D",
+        "texto": "La predicción es incorrecta: la temperatura final será de 40 °C, igual que en el ensayo 1, porque en ambos casos las masas de agua fría y caliente son iguales.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que en ambos casos las masas son iguales, pero en el ensayo 1 el agua caliente estaba a 60 °C y en el ensayo 4 estará a 80 °C. Con masas iguales el resultado es el promedio de las temperaturas, y (20 + 80) ÷ 2 = 50 °C, no 40 °C.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Copió el resultado del ensayo con masas iguales sin notar que la temperatura del agua caliente cambió."
+      }
+    ],
+    "explicacion": "LEER: tres ensayos con masas y temperaturas iniciales y la temperatura final; el ensayo 4 mezcla 200 g a 20 °C con 200 g a 80 °C; la predicción es 100 °C por suma. COMPRENDER: se pide evaluar la predicción usando el patrón de los datos. INTERPRETAR: la temperatura final siempre está entre las iniciales; con masas iguales es el promedio (ensayo 1: 40 °C); con más masa caliente sube (50 °C) y con más masa fría baja (30 °C). REPRESENTAR: masas iguales → T final = (T fría + T caliente) ÷ 2; en general, calor cedido por el agua caliente = calor ganado por la fría. RAZONAR: la suma de temperaturas viola el patrón (superaría los 80 °C de la porción más caliente); A la acepta, C usa una regla que el ensayo 3 refuta, D ignora el cambio de 60 a 80 °C. RESOLVER: T final esperada = (20 + 80) ÷ 2 = 50 °C; la respuesta es B. VERIFICAR: 50 °C está entre 20 y 80 °C, a la misma distancia de ambas (30 °C), como corresponde a masas iguales; y el criterio reproduce el ensayo 1: (20 + 60) ÷ 2 = 40 °C.",
+    "que_identificar": "Que en todos los ensayos la temperatura final queda entre las iniciales, que con masas iguales es el promedio y que en el ensayo 4 las masas son iguales pero el agua caliente está a 80 °C.",
+    "que_revisar": "Calor y temperatura como conceptos distintos; equilibrio térmico; temperatura de mezcla de porciones de agua (promedio ponderado por la masa); evaluación de predicciones con datos.",
+    "refuerzo_ids": ["CIE-002", "CIE-022"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["calor", "temperatura", "equilibrio termico", "indagacion", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-032",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Clasifica elementos como metales o no metales a partir de sus propiedades físicas y relaciona la clasificación con un uso",
+    "habilidad": "interpretar",
+    "tema": "Tabla periódica y propiedades de los elementos",
+    "subtema": "Metales y no metales: identificación por conductividad, brillo y maleabilidad",
+    "dificultad": 1,
+    "contexto": "En una práctica de química de un colegio de Cúcuta, los estudiantes recibieron muestras de cuatro elementos identificados solo con letras y registraron sus propiedades en la tabla. Luego debían decidir cuál de ellos podría usarse para fabricar el alambre de un cable eléctrico, que debe conducir bien la corriente y poder estirarse en hilos sin romperse.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Propiedades observadas de las muestras",
+      "columnas": ["Muestra", "Estado a 25 °C", "Conduce la electricidad", "Aspecto", "Al golpearla"],
+      "filas": [["W", "Sólido", "Sí, muy bien", "Brillo metálico rojizo", "Se aplana sin romperse"], ["X", "Gas", "No", "Incoloro", "No aplica"], ["Y", "Sólido", "No", "Amarillo opaco", "Se rompe en pedazos"], ["Z", "Sólido", "Muy poco", "Brillo gris", "Se rompe en pedazos"]],
+      "nota": "Todas las muestras se observaron a la misma temperatura y presión."
+    },
+    "enunciado": "¿Cuál muestra corresponde a un metal adecuado para fabricar el alambre del cable?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "X, porque los gases se distribuyen por todo el cable y transportan la corriente.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla indica que X no conduce la electricidad y es un gas: no tiene las propiedades de un metal (conductividad, brillo, maleabilidad) ni puede formar un alambre sólido.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó la columna de conductividad y se guió por una idea equivocada sobre los gases."
+      },
+      {
+        "clave": "B",
+        "texto": "Y, porque su color amarillo indica que es un metal como el oro.",
+        "correcta": false,
+        "explicacion": "No responde. El color no define a los metales: Y no conduce la electricidad, es opaco y se rompe al golpearlo, que son propiedades de los no metales (como el azufre). Un alambre de Y no conduciría ni podría estirarse.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Juzgó por el color en lugar de usar las propiedades características (conductividad, brillo, maleabilidad)."
+      },
+      {
+        "clave": "C",
+        "texto": "W, porque conduce muy bien la electricidad, tiene brillo metálico y se aplana sin romperse, lo que muestra que es maleable y podría estirarse en hilos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. W reúne las tres propiedades típicas de los metales que exige el uso: alta conductividad eléctrica, brillo metálico y maleabilidad (se deforma sin romperse), lo que permite fabricar hilos (ductilidad). Su brillo rojizo y su excelente conductividad corresponden, por ejemplo, al cobre, el metal más usado en cables.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Z, porque es sólido, tiene brillo gris y conduce algo de electricidad.",
+        "correcta": false,
+        "explicacion": "No responde. Z tiene brillo, pero conduce MUY POCO y se rompe al golpearlo: es frágil, no maleable. Esas propiedades intermedias corresponden a un metaloide (como el silicio, usado en chips), no a un metal apto para cables, que necesita conducir muy bien y estirarse sin romperse.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en el brillo y en que conduce 'algo', sin exigir buena conductividad ni maleabilidad."
+      }
+    ],
+    "explicacion": "LEER: cuatro muestras con estado, conductividad, aspecto y comportamiento al golpe; el cable necesita buena conducción y capacidad de estirarse en hilos. COMPRENDER: se pide la muestra que sea un metal adecuado para ese uso. INTERPRETAR: los metales conducen bien, tienen brillo y son maleables y dúctiles; los no metales no conducen, son opacos y frágiles; los metaloides tienen propiedades intermedias. REPRESENTAR: W: sí conduce, brillo, maleable → metal; X: gas, no conduce → no metal; Y: no conduce, opaco, frágil → no metal; Z: conduce poco, frágil → metaloide. RAZONAR: solo W cumple las dos exigencias del cable (conducir muy bien y deformarse sin romperse). RESOLVER: la respuesta es C. VERIFICAR: las tres columnas de propiedades de W coinciden con lo que se espera del cobre de los cables reales.",
+    "que_identificar": "Las columnas de conductividad y de comportamiento al golpe, y las dos exigencias del uso (conducir bien y estirarse sin romperse).",
+    "que_revisar": "Propiedades de metales, no metales y metaloides; ubicación en la tabla periódica; relación entre propiedades y usos de los materiales.",
+    "refuerzo_ids": ["CIE-034", "CIE-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tabla periodica", "metales", "no metales", "propiedades", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-033",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica cómo cambia la concentración de una solución al diluirla, relacionando la masa de soluto con el volumen de solución",
+    "habilidad": "resolver",
+    "tema": "Soluciones y concentración",
+    "subtema": "Dilución: concentración en g/L a partir de la masa de soluto y el volumen final",
+    "dificultad": 2,
+    "contexto": "En el laboratorio de un colegio de Sincelejo hay un frasco de solución de sal (cloruro de sodio) en agua con concentración de **50 g/L**. Para una práctica se necesitan 200 mL de una solución de sal de **10 g/L**. Una estudiante toma **40 mL** de la solución del frasco, los vierte en un recipiente graduado y agrega agua hasta completar **200 mL**.\n\nRecuerde: 1 L = 1 000 mL.",
+    "estimulo": null,
+    "enunciado": "¿Qué concentración tiene la solución que preparó la estudiante y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "10 g/L, porque los 40 mL tomados contienen 2 g de sal, y esos mismos 2 g quedan disueltos en 200 mL (0,2 L): 2 ÷ 0,2 = 10.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Masa de sal en los 40 mL (0,040 L) de solución a 50 g/L: 50 × 0,040 = 2 g. Al agregar agua, la sal no cambia, solo aumenta el volumen: 2 g en 0,2 L es 2 ÷ 0,2 = 10 g/L, exactamente lo que pedía la práctica. Diluir 5 veces el volumen (de 40 a 200 mL) reduce la concentración 5 veces (de 50 a 10 g/L).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "50 g/L, porque agregar agua no cambia la cantidad de sal y, por lo tanto, la concentración se mantiene.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que la cantidad de sal no cambia (siguen siendo 2 g), pero la concentración es la relación entre esa masa y el VOLUMEN de la solución, y el volumen pasó de 40 a 200 mL. Los mismos 2 g repartidos en cinco veces más volumen dan una concentración cinco veces menor: 10 g/L.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde cantidad de soluto con concentración; no reconoce que la concentración depende también del volumen."
+      },
+      {
+        "clave": "C",
+        "texto": "2 g/L, porque la solución final contiene 2 g de sal.",
+        "correcta": false,
+        "explicacion": "No responde. Los 2 g de sal están bien calculados, pero están en 200 mL, no en un litro. Para expresar la concentración en g/L hay que dividir entre el volumen en litros: 2 g ÷ 0,2 L = 10 g/L (en un litro de esa solución habría 10 g).",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la masa de soluto y la reportó como concentración sin dividirla entre el volumen en litros."
+      },
+      {
+        "clave": "D",
+        "texto": "250 g/L, porque al pasar de 40 mL a 200 mL el volumen se multiplica por 5 y la concentración también.",
+        "correcta": false,
+        "explicacion": "No responde. Al aumentar el volumen con la misma cantidad de sal, la solución queda MENOS concentrada, no más: 50 ÷ 5 = 10 g/L. Una concentración de 250 g/L sería cinco veces mayor que la del frasco original, imposible si solo se agregó agua.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación entre volumen y concentración: multiplicó en lugar de dividir."
+      }
+    ],
+    "explicacion": "LEER: solución original a 50 g/L; se toman 40 mL y se completa con agua hasta 200 mL; se buscaba 10 g/L. COMPRENDER: se pide la concentración final y la razón. INTERPRETAR: al diluir, la masa de soluto se conserva y el volumen aumenta, así que la concentración disminuye. REPRESENTAR: masa de sal = 50 g/L × 0,040 L = 2 g; concentración final = 2 g ÷ 0,200 L. RAZONAR: B ignora el cambio de volumen, C olvida dividir entre el volumen, D invierte la relación. RESOLVER: 2 ÷ 0,2 = 10 g/L; la respuesta es A. VERIFICAR: el volumen se multiplicó por 5 (40 → 200 mL) y la concentración se dividió por 5 (50 → 10 g/L), como corresponde a una dilución; y coincide con los 10 g/L que pedía la práctica.",
+    "que_identificar": "Que la masa de sal proviene únicamente de los 40 mL tomados y que la concentración final se calcula con el volumen final de 200 mL expresado en litros.",
+    "que_revisar": "Concentración en g/L; conservación del soluto en una dilución; relación inversa entre volumen y concentración (C₁V₁ = C₂V₂); conversión mL ↔ L.",
+    "refuerzo_ids": ["CIE-016", "CIE-023"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["soluciones", "concentracion", "dilucion", "laboratorio", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-034",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Infiere el tipo de enlace de una sustancia a partir de propiedades como el punto de fusión, la solubilidad y la conductividad eléctrica",
+    "habilidad": "razonar",
+    "tema": "Enlace químico",
+    "subtema": "Enlace iónico, covalente y metálico: identificación por propiedades macroscópicas",
+    "dificultad": 2,
+    "contexto": "En un laboratorio de Valledupar, un grupo estudió cuatro sustancias puras identificadas con números y registró sus propiedades en la tabla. La profesora recordó que las sustancias **iónicas** están formadas por iones que, en estado sólido, se mantienen fijos en una red y solo quedan libres para moverse cuando la sustancia se funde o se disuelve en agua; las **covalentes** están formadas por moléculas neutras; y en los **metales** los electrones se mueven libremente incluso en estado sólido.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Propiedades de las cuatro sustancias",
+      "columnas": ["Sustancia", "Punto de fusión (°C)", "Conduce en estado sólido", "Se disuelve en agua", "Conduce disuelta en agua"],
+      "filas": [["1", 801, "No", "Sí", "Sí"], ["2", -23, "No", "No", "No aplica"], ["3", 1085, "Sí", "No", "No aplica"], ["4", 186, "No", "Sí", "No"]],
+      "nota": "Todas las medidas se hicieron a presión normal."
+    },
+    "enunciado": "¿Cuál sustancia tiene enlace iónico y qué evidencia de la tabla lo sustenta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La sustancia 3, porque conduce la electricidad en estado sólido y tiene el punto de fusión más alto.",
+        "correcta": false,
+        "explicacion": "No responde. Conducir en estado SÓLIDO es propio de los metales, donde los electrones se mueven libremente; en un sólido iónico los iones están fijos y no conducen. El alto punto de fusión es compatible con ambos tipos, pero la conductividad en sólido descarta el enlace iónico: la sustancia 3 es un metal (como el cobre, que funde a 1 085 °C).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier conductividad eléctrica con el enlace iónico, sin distinguir si ocurre en sólido o en solución."
+      },
+      {
+        "clave": "B",
+        "texto": "La sustancia 4, porque se disuelve en agua y todas las sustancias solubles en agua son iónicas.",
+        "correcta": false,
+        "explicacion": "No responde. Muchas sustancias covalentes polares, como el azúcar, se disuelven en agua sin formar iones; por eso la sustancia 4 se disuelve pero NO conduce disuelta: sus moléculas permanecen neutras. Una sustancia iónica disuelta sí conduce, porque libera iones.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma la solubilidad en agua como prueba suficiente de enlace iónico e ignora la columna de conductividad en solución."
+      },
+      {
+        "clave": "C",
+        "texto": "La sustancia 2, porque su punto de fusión negativo indica que sus partículas están unidas con mucha fuerza.",
+        "correcta": false,
+        "explicacion": "No responde. Un punto de fusión muy bajo (−23 °C, es líquida a temperatura ambiente) indica lo contrario: fuerzas débiles entre moléculas, típico de sustancias covalentes moleculares. Además no conduce ni se disuelve en agua, todo lo opuesto a una sustancia iónica.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpreta al revés el significado del punto de fusión, o eligió por descarte sin usar las demás columnas."
+      },
+      {
+        "clave": "D",
+        "texto": "La sustancia 1, porque tiene un punto de fusión alto y no conduce en estado sólido, pero sí conduce cuando está disuelta en agua, lo que indica que al disolverse libera iones.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La combinación es la característica de los compuestos iónicos: punto de fusión alto (801 °C, red de iones fuertemente unidos), sin conducción en sólido (iones fijos) y con conducción al disolverse (iones libres en el agua). Es el comportamiento de la sal común, NaCl, que funde a 801 °C.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro sustancias con punto de fusión, conductividad en sólido, solubilidad y conductividad en solución; el contexto explica que los iones solo se mueven fundidos o disueltos, y que en los metales los electrones se mueven en el sólido. COMPRENDER: se pide la sustancia iónica y la evidencia. INTERPRETAR: la 'huella' iónica es: no conduce en sólido, sí conduce disuelta, punto de fusión alto. REPRESENTAR: 1 → iónica; 2 → covalente no polar (líquida, insoluble, no conduce); 3 → metal (conduce en sólido); 4 → covalente polar (soluble pero no conduce). RAZONAR: A confunde conducción en sólido (metal) con iónico; B usa la solubilidad como única prueba; C interpreta mal el punto de fusión; D usa las tres columnas de forma coherente con el contexto. RESOLVER: la respuesta es D. VERIFICAR: cada propiedad de la sustancia 1 coincide con la descripción de las sustancias iónicas dada por la profesora.",
+    "que_identificar": "La diferencia entre conducir en estado sólido y conducir disuelta, y la fila que combina alto punto de fusión, no conducción en sólido y conducción en solución.",
+    "que_revisar": "Tipos de enlace (iónico, covalente, metálico) y las propiedades que los distinguen: punto de fusión, solubilidad, conductividad en sólido, fundido y en solución.",
+    "refuerzo_ids": ["CIE-032", "CIE-019"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["enlace quimico", "ionico", "covalente", "metalico", "propiedades", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-035",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Analiza datos de producción de energía renovable para decidir sobre la fuente más adecuada para una comunidad, considerando ventajas y limitaciones de cada opción",
+    "habilidad": "razonar",
+    "tema": "Energía renovable y decisiones",
+    "subtema": "Elección entre energía solar, eólica y su combinación a partir de la producción mensual estimada frente al consumo",
+    "dificultad": 2,
+    "contexto": "Una vereda de La Guajira no está conectada a la red eléctrica y hoy usa una planta de diésel, que es costosa de abastecer y emite gases contaminantes. Con apoyo de una universidad, la comunidad midió durante un año el potencial solar y de viento del lugar y estimó cuánta energía produciría cada sistema en los meses más representativos. El **consumo de la vereda es de 750 kWh cada mes** y se mantiene estable. El gráfico muestra las estimaciones.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Producción mensual estimada de cada sistema (kWh)",
+      "eje_x": "Mes",
+      "eje_y": "Energía producida (kWh)",
+      "series": [
+        { "nombre": "Sistema solar", "valores": [["Enero", 900], ["Abril", 700], ["Julio", 800], ["Octubre", 650]] },
+        { "nombre": "Turbina eólica", "valores": [["Enero", 400], ["Abril", 300], ["Julio", 1200], ["Octubre", 500]] }
+      ]
+    },
+    "enunciado": "Con base en los datos, ¿cuál decisión está mejor sustentada para reemplazar la planta de diésel?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Instalar solo la turbina eólica, porque en julio produce 1 200 kWh, la mayor cantidad de todos los meses.",
+        "correcta": false,
+        "explicacion": "No responde. Un solo mes excelente no garantiza el suministro: en enero, abril y octubre la turbina produce 400, 300 y 500 kWh, muy por debajo de los 750 kWh que consume la vereda. Sola, dejaría a la comunidad sin energía suficiente la mayor parte del año.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Decidió con base en la barra más alta sin comparar cada mes con el consumo."
+      },
+      {
+        "clave": "B",
+        "texto": "Combinar el sistema solar con la turbina eólica, porque en cada mes mostrado la suma de ambos supera el consumo de 750 kWh, mientras que cada sistema por separado queda por debajo en algunos meses; el viento de julio compensa la menor radiación solar.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Sumas mensuales: enero 900 + 400 = 1 300; abril 700 + 300 = 1 000; julio 800 + 1 200 = 2 000; octubre 650 + 500 = 1 150 kWh, todas mayores que 750. En cambio, el solar solo no cubre abril (700) ni octubre (650), y la eólica sola no cubre enero, abril ni octubre. Combinar fuentes que se complementan reduce la dependencia de una sola condición del clima y permite abandonar el diésel.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Mantener la planta de diésel, porque los sistemas solar y eólico no producen nada de noche ni cuando no hay viento, así que no sirven para una comunidad.",
+        "correcta": false,
+        "explicacion": "No responde. La intermitencia diaria es una limitación real, que se maneja con baterías y con la combinación de fuentes, pero los datos muestran que la producción mensual combinada supera con holgura el consumo. Descartar las renovables por completo ignora los datos y mantiene los costos y la contaminación del diésel que la comunidad quiere evitar.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Rechaza la opción con un argumento general sin contrastarlo con los datos del gráfico, o desconfía de lo nuevo."
+      },
+      {
+        "clave": "D",
+        "texto": "Instalar solo el sistema solar, porque su producción promedio (762,5 kWh) es mayor que el consumo mensual.",
+        "correcta": false,
+        "explicacion": "No responde. El promedio es correcto ((900 + 700 + 800 + 650) ÷ 4 = 762,5), pero oculta que en abril (700 kWh) y octubre (650 kWh) la producción queda por debajo de los 750 kWh consumidos: esos meses habría cortes, porque la energía sobrante de enero no puede guardarse durante meses. Un promedio apenas superior al consumo no garantiza el suministro cada mes.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el promedio como si la energía de los meses buenos pudiera repartirse a los meses malos."
+      }
+    ],
+    "explicacion": "LEER: la vereda consume 750 kWh al mes; el gráfico da la producción solar (900, 700, 800, 650) y eólica (400, 300, 1 200, 500) en enero, abril, julio y octubre; el diésel es costoso y contamina. COMPRENDER: se pide la decisión mejor sustentada por los datos para reemplazar el diésel. INTERPRETAR: hay que comparar cada opción con el consumo MES A MES, no en un solo mes ni en promedio. REPRESENTAR: solar cubre 2 de 4 meses; eólica cubre 1 de 4; solar + eólica: 1 300, 1 000, 2 000 y 1 150 kWh, cubre 4 de 4. RAZONAR: A se apoya en un solo mes; D en un promedio que oculta meses deficitarios; C ignora los datos; B verifica la cobertura en todos los meses y aprovecha que las fuentes se complementan. RESOLVER: la respuesta es B. VERIFICAR: el mes más ajustado de la combinación es abril, con 1 000 kWh, todavía un 33 % por encima del consumo.",
+    "que_identificar": "El consumo mensual de 750 kWh como referencia, y en qué meses cada sistema queda por debajo de ese valor.",
+    "que_revisar": "Fuentes de energía renovable y no renovable; intermitencia y complementariedad de la energía solar y eólica; uso de promedios frente a datos mes a mes para tomar decisiones.",
+    "refuerzo_ids": ["CIE-004", "CIE-020"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["energia", "energia renovable", "solar", "eolica", "cts", "la guajira", "grafico de barras", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-036",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Evalúa la validez de una afirmación sobre la eficacia de las vacunas contrastándola con datos de cobertura de vacunación y de casos de la enfermedad",
+    "habilidad": "verificar",
+    "tema": "Vacunas y salud pública",
+    "subtema": "Cobertura de vacunación, casos de sarampión e inmunidad de rebaño: evaluación de una afirmación",
+    "dificultad": 3,
+    "contexto": "El sarampión es una enfermedad viral muy contagiosa que se previene con una vacuna. La tabla muestra, para una región, el porcentaje de niños vacunados (cobertura) y el número de casos registrados por cada 100 000 habitantes en distintos años. Según las autoridades de salud, se necesita una cobertura de **al menos el 95 %** para impedir que el virus circule en la comunidad (**inmunidad de rebaño**), lo que protege incluso a quienes no pueden vacunarse.\n\nEn redes sociales circula este mensaje: *\"Las vacunas no sirven: en 2022 la cobertura subió al 90 % y de todas maneras hubo casos de sarampión\".*",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Cobertura de vacunación contra el sarampión y casos registrados en la región",
+      "columnas": ["Año", "Cobertura de vacunación (%)", "Casos por 100 000 habitantes"],
+      "filas": [["2014", 95, "0,2"], ["2016", 92, "0,5"], ["2018", 85, "3,1"], ["2020", 78, "12,4"], ["2022", 90, "2,0"]],
+      "nota": "Datos construidos con fines didácticos a partir de patrones reportados por organismos de salud."
+    },
+    "enunciado": "¿Cuál es la evaluación correcta del mensaje que circula en redes sociales?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El mensaje es incorrecto porque la tabla muestra que la cobertura no influye en los casos: en 2014 y 2016 la cobertura fue distinta y los casos fueron casi iguales.",
+        "correcta": false,
+        "explicacion": "No responde. Entre 2014 y 2016 la cobertura solo bajó 3 puntos y los casos, aunque pocos, se duplicaron (0,2 a 0,5). Las demás filas muestran cambios grandes en la misma dirección (85 % → 3,1; 78 % → 12,4). Concluir que 'no influye' contradice el patrón general y, además, le daría la razón al mensaje en lugar de refutarlo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó solo dos filas con valores pequeños y desconoció la tendencia que muestran las cinco."
+      },
+      {
+        "clave": "B",
+        "texto": "El mensaje es correcto, porque si las vacunas funcionaran no habría ningún caso con una cobertura del 90 %.",
+        "correcta": false,
+        "explicacion": "No responde. Una cobertura del 90 % deja un 10 % de personas sin vacunar entre las que el virus puede circular, y está por debajo del 95 % necesario para la inmunidad de rebaño. Que una vacuna funcione no significa cero casos en una población parcialmente vacunada: significa muchos menos casos, que es lo que muestra la tabla (2,0 frente a 12,4 por 100 000 cuando la cobertura era del 78 %).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exige un resultado de todo o nada (cero casos) para aceptar que la vacuna funciona, ignorando el umbral del 95 %."
+      },
+      {
+        "clave": "C",
+        "texto": "El mensaje es incorrecto, porque los casos de 2022 corresponden a personas vacunadas que se enfermaron por un lote defectuoso de la vacuna.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla no indica quiénes se enfermaron ni nada sobre lotes de vacuna; esa explicación se inventa un dato. La evaluación debe apoyarse en lo que sí muestran los datos: la relación entre cobertura y casos y el umbral del 95 %.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Rechaza el mensaje con una explicación que no está respaldada por ninguna información del contexto ni de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "El mensaje no se sostiene: los datos muestran que los casos aumentan cuando la cobertura baja y disminuyen cuando sube; en 2022 aún hubo casos porque el 90 % está por debajo del 95 % necesario para frenar la circulación del virus.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra una relación inversa clara: al caer la cobertura de 95 % a 78 % (2014 a 2020), los casos subieron de 0,2 a 12,4 por 100 000; al recuperarse a 90 % en 2022, bajaron a 2,0. Eso es evidencia de que la vacuna sí protege. Los casos que persisten en 2022 son coherentes con el conocimiento científico: por debajo del umbral del 95 % el virus todavía puede circular entre los no vacunados.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da cobertura y casos por 100 000 en cinco años; el umbral de inmunidad de rebaño es 95 %; el mensaje afirma que las vacunas no sirven porque con 90 % hubo casos. COMPRENDER: se pide evaluar el mensaje con los datos y el conocimiento científico. INTERPRETAR: a menor cobertura, más casos (95 % → 0,2; 78 % → 12,4); al subir la cobertura, bajan (90 % → 2,0); 90 % sigue por debajo del 95 %. REPRESENTAR: cobertura ↓ → casos ↑; cobertura ↑ → casos ↓; casos = 0 solo se espera con cobertura ≥ 95 %. RAZONAR: A exige cero casos sin considerar el umbral; B inventa una causa que los datos no muestran; D niega una relación que cuatro de cinco filas evidencian; C describe la relación y explica los casos de 2022 con el umbral del 95 %. RESOLVER: la respuesta es C. VERIFICAR: la explicación C es coherente con cada fila y con la definición de inmunidad de rebaño dada en el contexto.",
+    "que_identificar": "La relación inversa entre cobertura y casos a lo largo de la tabla y el umbral del 95 % mencionado en el contexto.",
+    "que_revisar": "Vacunas y sistema inmune; inmunidad de rebaño y umbral de cobertura; evaluación de afirmaciones con datos; diferencia entre 'menos casos' y 'ningún caso'.",
+    "refuerzo_ids": ["CIE-008", "CIE-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["vacunas", "salud publica", "inmunidad de rebano", "cts", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

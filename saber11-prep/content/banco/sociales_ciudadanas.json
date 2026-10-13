@@ -1,0 +1,785 @@
+[
+  {
+    "id": "SOC-001",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Reconoce las características básicas de la Constitución de 1991, la organización del Estado colombiano y los mecanismos de participación ciudadana",
+    "habilidad": "comprender",
+    "tema": "Mecanismos de participación ciudadana",
+    "subtema": "Consulta popular, referendo, cabildo abierto y revocatoria del mandato",
+    "dificultad": 1,
+    "contexto": "En el municipio de San Rafael de la Loma, la alcaldía proyecta trasladar la plaza de mercado del centro del pueblo a un lote en la salida hacia la carretera principal. Un grupo de comerciantes y vecinos reunió firmas para pedir que sean los propios ciudadanos, en las urnas, quienes decidan con un **sí** o un **no** si el traslado debe hacerse. La alcaldesa acepta convocar a los habitantes del municipio para que respondan esa pregunta en una jornada de votación.",
+    "estimulo": null,
+    "enunciado": "De acuerdo con los mecanismos de participación previstos en la Constitución de 1991, lo que piden los vecinos corresponde a",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "un cabildo abierto, porque los habitantes se reúnen con el concejo para discutir el traslado de la plaza.",
+        "correcta": false,
+        "explicacion": "En el cabildo abierto los habitantes participan en una sesión pública del concejo para discutir asuntos de la comunidad, pero no se vota con sí o no en las urnas. El contexto no menciona ninguna reunión con el concejo: habla de una jornada de votación, así que no describe un cabildo abierto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió deliberar públicamente sobre un asunto con decidirlo mediante el voto."
+      },
+      {
+        "clave": "B",
+        "texto": "una revocatoria del mandato, porque los vecinos están en desacuerdo con una decisión de la alcaldesa.",
+        "correcta": false,
+        "explicacion": "La revocatoria del mandato sirve para dar por terminado el periodo de un alcalde o gobernador, no para decidir sobre un proyecto concreto. Los vecinos del contexto no piden que la alcaldesa deje el cargo, sino que se vote el traslado de la plaza; además, la propia alcaldesa convoca la votación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el desacuerdo con una decisión de la alcaldía por un intento de sacar a la alcaldesa del cargo."
+      },
+      {
+        "clave": "C",
+        "texto": "un referendo, porque los ciudadanos aprueban o rechazan una norma redactada por la alcaldía.",
+        "correcta": false,
+        "explicacion": "El referendo consiste en aprobar o rechazar un proyecto de norma jurídica, o derogar una norma vigente. En el contexto no se vota ningún texto normativo: se responde una pregunta general sobre si se hace o no el traslado. Esa diferencia (pregunta general frente a norma) es la que separa la consulta popular del referendo.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió consulta popular con referendo porque en ambos se vota sí o no, sin revisar si se decide sobre una norma."
+      },
+      {
+        "clave": "D",
+        "texto": "una consulta popular, porque una pregunta sobre un asunto de interés municipal se somete a la votación de los ciudadanos.",
+        "correcta": true,
+        "explicacion": "La consulta popular es el mecanismo mediante el cual una pregunta de carácter general sobre un asunto de trascendencia municipal es sometida por el alcalde a consideración del pueblo. El contexto describe exactamente eso: una pregunta (¿se traslada la plaza?), respondida con sí o no por los ciudadanos en las urnas, convocada por la alcaldesa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el contexto dice que los vecinos reunieron firmas para que los ciudadanos decidan en las urnas, con sí o no, si se traslada la plaza, y que la alcaldesa convoca la votación. COMPRENDER: se pregunta a qué mecanismo de participación de la Constitución de 1991 corresponde esa situación. INTERPRETAR: las claves son tres: (1) se decide una pregunta general, no una norma; (2) se decide con el voto, no en una reunión; (3) no se busca sacar a nadie del cargo. REPRESENTAR: cabildo abierto = reunión pública con el concejo; referendo = votar una norma; revocatoria = terminar el mandato; consulta popular = votar una pregunta sobre un asunto de interés local. RAZONAR: la única definición que cumple las tres claves es la consulta popular. RESOLVER: opción D. VERIFICAR: releer el contexto confirma que hay pregunta, votación en las urnas y convocatoria de la alcaldesa, y no hay norma, reunión ni cargo en juego.",
+    "que_identificar": "Que lo que se somete a votación es una pregunta general (sí/no) sobre un asunto municipal, no una norma ni la continuidad de la alcaldesa, y que se decide en las urnas y no en una reunión.",
+    "que_revisar": "Los mecanismos de participación del artículo 103 de la Constitución de 1991 (voto, plebiscito, referendo, consulta popular, cabildo abierto, iniciativa legislativa y revocatoria del mandato) y qué decide cada uno.",
+    "refuerzo_ids": ["SOC-004", "SOC-005"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["constitucion_1991", "participacion_ciudadana", "consulta_popular", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-002",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Reconoce la distribución espacial de la población y los cambios que experimenta en el tiempo",
+    "habilidad": "interpretar",
+    "tema": "Población y territorio",
+    "subtema": "Migración campo-ciudad y urbanización",
+    "dificultad": 2,
+    "contexto": "Un docente de sociales entrega a sus estudiantes la siguiente tabla, construida con datos de población de tres municipios de una misma región, y afirma que en uno de ellos se observa con claridad un proceso de **migración del campo a la ciudad** entre 2005 y 2018.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Población por zona en tres municipios (miles de habitantes)",
+      "columnas": ["Municipio", "Cabecera 2005", "Cabecera 2018", "Rural 2005", "Rural 2018"],
+      "filas": [["Las Palmas", 18, 31, 22, 14], ["El Retiro Alto", 6, 7, 15, 16], ["Puerto Nuevo", 40, 52, 9, 10]],
+      "nota": "Cabecera: zona urbana del municipio. Rural: centros poblados y población dispersa."
+    },
+    "enunciado": "¿En cuál municipio se observa con mayor claridad el proceso que menciona el docente y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En Puerto Nuevo, porque es el municipio con más población en la cabecera en 2018.",
+        "correcta": false,
+        "explicacion": "Tener la cabecera más grande no muestra que la gente se haya trasladado del campo a la ciudad. En Puerto Nuevo la población rural no bajó: pasó de 9 a 10 mil. El crecimiento urbano allí no se explica por una salida del campo, así que la tabla no muestra migración campo-ciudad en ese municipio.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó el tamaño de las cabeceras en un solo año en vez de comparar el cambio de cada zona entre los dos años."
+      },
+      {
+        "clave": "B",
+        "texto": "En Las Palmas, porque su población de cabecera aumentó mientras la población rural disminuyó.",
+        "correcta": true,
+        "explicacion": "La migración del campo a la ciudad se reconoce cuando, en un mismo periodo, la población rural disminuye y la urbana aumenta. Las Palmas es el único municipio en el que ocurre eso: la cabecera pasó de 18 a 31 mil habitantes y la zona rural bajó de 22 a 14 mil. En los otros dos municipios la población rural se mantuvo o creció.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "En El Retiro Alto, porque la mayoría de su población sigue siendo rural.",
+        "correcta": false,
+        "explicacion": "Que un municipio sea mayoritariamente rural describe cómo está distribuida su población, no un desplazamiento hacia la ciudad. En El Retiro Alto tanto la cabecera (6 a 7) como la zona rural (15 a 16) crecieron levemente, de modo que no hay señal de que la gente esté abandonando el campo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió 'municipio rural' con 'municipio del que la gente sale del campo'."
+      },
+      {
+        "clave": "D",
+        "texto": "En Las Palmas, porque su población total creció más que la de los otros dos municipios.",
+        "correcta": false,
+        "explicacion": "Señala el municipio correcto, pero con una razón que no corresponde al proceso y que además es falsa. El total de Las Palmas pasó de 40 a 45 mil (creció 5 mil), mientras que Puerto Nuevo pasó de 49 a 62 mil (creció 13 mil). El crecimiento total no indica migración campo-ciudad; lo que la indica es que la zona rural pierde población mientras la cabecera la gana.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el municipio por intuición y justificó con el crecimiento total sin sumar las columnas ni relacionarlo con el concepto."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra, para tres municipios, la población de cabecera y rural en 2005 y en 2018; el docente habla de migración del campo a la ciudad. COMPRENDER: se pide identificar el municipio en el que ese proceso se ve con claridad y la razón. INTERPRETAR: migración campo-ciudad significa que la población rural disminuye y, al mismo tiempo, la urbana aumenta en el mismo lugar. REPRESENTAR: cambio rural: Las Palmas 22→14 (baja), El Retiro Alto 15→16 (sube), Puerto Nuevo 9→10 (sube). Cambio en cabecera: 18→31, 6→7, 40→52 (todas suben). RAZONAR: solo Las Palmas combina caída rural con aumento urbano; los demás crecen en ambas zonas. RESOLVER: opción B. VERIFICAR: la opción D nombra el mismo municipio, pero su justificación (mayor crecimiento total) no es cierta —Puerto Nuevo creció más— ni corresponde al concepto; A y C usan un solo dato aislado. La respuesta B es la única coherente con el concepto y con los números.",
+    "que_identificar": "El cambio de cada zona (rural y cabecera) entre 2005 y 2018 dentro de cada municipio, no el tamaño absoluto de un año ni el total municipal.",
+    "que_revisar": "Concepto de migración campo-ciudad y urbanización; cómo leer una tabla comparando filas y columnas a lo largo del tiempo.",
+    "refuerzo_ids": ["SOC-009", "SOC-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["poblacion", "migracion", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-003",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Reconoce la secuencia y los actores de un proceso histórico y las relaciones entre sus etapas",
+    "habilidad": "leer",
+    "tema": "Constitución de 1991",
+    "subtema": "Proceso constituyente: séptima papeleta y Asamblea Nacional Constituyente",
+    "dificultad": 1,
+    "contexto": "Para una exposición del colegio sobre el origen de la Constitución de 1991, un grupo de estudiantes preparó el siguiente texto:\n\n\"En 1990, un movimiento de estudiantes universitarios promovió que, en las elecciones de marzo, los ciudadanos depositaran una papeleta adicional, conocida como la **séptima papeleta**, para expresar su apoyo a la convocatoria de una Asamblea Nacional Constituyente. Aunque esa papeleta no era oficial, el respaldo que recibió llevó a que el Gobierno, con el aval de la Corte Suprema de Justicia, permitiera que en las elecciones presidenciales de mayo de 1990 se votara formalmente la convocatoria. En diciembre de 1990 los ciudadanos eligieron a los 70 delegatarios de la Asamblea, que sesionó entre febrero y julio de 1991 y redactó la nueva Constitución, promulgada el 4 de julio de 1991. Esta reemplazó a la Constitución de 1886, que había regido al país por más de un siglo\".",
+    "estimulo": null,
+    "enunciado": "Según el texto, el papel del movimiento de la séptima papeleta en el proceso constituyente consistió en",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "redactar el texto de la nueva Constitución junto con el Gobierno.",
+        "correcta": false,
+        "explicacion": "El texto atribuye la redacción de la Constitución a la Asamblea Nacional Constituyente, integrada por los 70 delegatarios elegidos en diciembre de 1990, no al movimiento estudiantil ni al Gobierno. Confunde el actor que impulsó la convocatoria con el actor que redactó el texto.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asignó al movimiento estudiantil la acción de la Asamblea porque no distinguió los actores de cada etapa."
+      },
+      {
+        "clave": "B",
+        "texto": "reformar la Constitución de 1886 mediante una votación en el Congreso.",
+        "correcta": false,
+        "explicacion": "El texto no menciona al Congreso ni una reforma: describe la elaboración de una Constitución nueva por una Asamblea, que reemplazó a la de 1886. La opción introduce un actor y un procedimiento que no aparecen en el texto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que toda Constitución se cambia por reforma en el Congreso, sin leer que fue una Asamblea la que redactó una nueva."
+      },
+      {
+        "clave": "C",
+        "texto": "impulsar que los ciudadanos expresaran en las urnas su apoyo a convocar una Asamblea Constituyente.",
+        "correcta": true,
+        "explicacion": "El texto dice que el movimiento estudiantil promovió que los ciudadanos depositaran una papeleta adicional para expresar su apoyo a la convocatoria de una Asamblea Nacional Constituyente. Ese fue su papel: abrir el camino para que luego se votara formalmente la convocatoria y se eligiera la Asamblea.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "elegir a los 70 delegatarios que sesionaron en 1991.",
+        "correcta": false,
+        "explicacion": "Según el texto, los 70 delegatarios fueron elegidos por los ciudadanos en las elecciones de diciembre de 1990, no por el movimiento estudiantil. Esta opción mezcla la etapa de la séptima papeleta (marzo de 1990) con una etapa posterior del proceso.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcló etapas del proceso y atribuyó al movimiento una acción que ocurrió meses después y con otro actor."
+      }
+    ],
+    "explicacion": "LEER: el texto narra, en orden, cuatro momentos: séptima papeleta (marzo de 1990), votación formal de la convocatoria (mayo de 1990), elección de los 70 delegatarios (diciembre de 1990) y sesiones de la Asamblea que redactó la Constitución (febrero a julio de 1991). COMPRENDER: se pregunta cuál fue el papel del movimiento de la séptima papeleta, es decir, qué hizo ese actor específico. INTERPRETAR: el texto dice que el movimiento 'promovió que los ciudadanos depositaran una papeleta adicional para expresar su apoyo a la convocatoria'. REPRESENTAR: actor → acción: estudiantes → impulsar la papeleta de apoyo; ciudadanos → votar la convocatoria y elegir delegatarios; Asamblea → redactar la Constitución. RAZONAR: A y D atribuyen al movimiento acciones de otros actores (la Asamblea y los ciudadanos); B describe un procedimiento (reforma en el Congreso) que el texto no menciona. RESOLVER: opción C. VERIFICAR: la opción C reproduce lo que el texto afirma literalmente sobre el movimiento y respeta el orden de las etapas.",
+    "que_identificar": "La oración del texto que describe qué hizo el movimiento estudiantil, y la distinción entre ese actor y los que actuaron en las etapas siguientes (ciudadanos, Asamblea).",
+    "que_revisar": "El proceso constituyente de 1990-1991: séptima papeleta, votación de la convocatoria, elección de la Asamblea Nacional Constituyente y promulgación de la Constitución de 1991 que reemplazó a la de 1886.",
+    "refuerzo_ids": ["SOC-006", "SOC-001"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["constitucion_1991", "procesos_historicos", "septima_papeleta", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-004",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Reconoce los derechos fundamentales y los mecanismos de protección previstos en la Constitución de 1991, y los aplica a situaciones concretas",
+    "habilidad": "razonar",
+    "tema": "Derechos fundamentales y mecanismos de protección",
+    "subtema": "Acción de tutela frente a otras herramientas (derecho de petición, acción popular)",
+    "dificultad": 2,
+    "contexto": "En un colegio de Bogotá, la rectoría informó a Daniela, estudiante de grado décimo con discapacidad visual, que no podrá renovar su matrícula el próximo año porque la institución \"no cuenta con material adaptado\". Faltan tres semanas para que cierren las matrículas. El consejo estudiantil quiere apoyarla para que su derecho a la educación sea protegido de manera rápida, y discute cuál herramienta constitucional le conviene usar.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes herramientas es la más adecuada para el propósito del consejo estudiantil y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Un derecho de petición, porque obliga al colegio a explicar por escrito las razones de su decisión.",
+        "correcta": false,
+        "explicacion": "El derecho de petición garantiza recibir una respuesta a una solicitud, pero no obliga a proteger un derecho: el colegio puede responder explicando su decisión y mantenerla. El contexto pide una herramienta que proteja el derecho a la educación de manera rápida, no una que consiga una explicación.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó pedir información por proteger el derecho, porque el derecho de petición es la herramienta que más conoce."
+      },
+      {
+        "clave": "B",
+        "texto": "Una acción popular, porque la decisión del colegio afecta a toda la comunidad educativa.",
+        "correcta": false,
+        "explicacion": "La acción popular protege derechos e intereses colectivos (como el ambiente sano o el espacio público). En el contexto se vulnera un derecho fundamental de una persona concreta, Daniela, y no un derecho colectivo; que el consejo estudiantil la apoye no convierte el problema en colectivo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el apoyo de un grupo con la afectación de un derecho colectivo."
+      },
+      {
+        "clave": "C",
+        "texto": "Una acción de tutela, porque permite que un juez proteja de forma inmediata un derecho fundamental amenazado.",
+        "correcta": true,
+        "explicacion": "La acción de tutela (artículo 86 de la Constitución) permite a cualquier persona reclamar ante un juez la protección inmediata de sus derechos fundamentales cuando resulten vulnerados o amenazados, incluso por particulares que prestan un servicio público como la educación. El caso cumple las condiciones: hay un derecho fundamental (educación) amenazado, una persona afectada y urgencia (tres semanas).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Una revocatoria del mandato, porque busca cambiar la decisión de quien dirige el colegio.",
+        "correcta": false,
+        "explicacion": "La revocatoria del mandato es un mecanismo de participación política para terminar el periodo de alcaldes y gobernadores elegidos por voto popular; no aplica a rectores ni a decisiones de un colegio. La opción atribuye a un mecanismo político un alcance que no tiene.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un mecanismo que 'suena' a cambiar una decisión sin revisar a quién aplica."
+      }
+    ],
+    "explicacion": "LEER: a Daniela le niegan la renovación de matrícula por su discapacidad visual; hay tres semanas de plazo; el consejo estudiantil busca una protección rápida de su derecho a la educación. COMPRENDER: se pregunta cuál herramienta constitucional es la más adecuada para ese propósito (proteger, rápido, un derecho de una persona). INTERPRETAR: los tres requisitos son: derecho fundamental (educación), afectación individual y urgencia. REPRESENTAR: derecho de petición → obtener respuesta; acción popular → derechos colectivos; revocatoria → terminar el mandato de alcaldes o gobernadores; tutela → protección inmediata de derechos fundamentales por un juez. RAZONAR: solo la tutela cumple los tres requisitos; la petición no protege, la acción popular no aplica a un derecho individual y la revocatoria no aplica a un colegio. RESOLVER: opción C. VERIFICAR: la tutela procede contra particulares que prestan servicios públicos, como un colegio, y su trámite es rápido (el juez debe decidir en diez días), lo que responde a la urgencia del contexto.",
+    "que_identificar": "Los tres rasgos del caso que definen la herramienta: derecho fundamental amenazado, afectación de una persona concreta y necesidad de protección rápida.",
+    "que_revisar": "Diferencias entre acción de tutela (art. 86), derecho de petición (art. 23), acción popular (art. 88) y los mecanismos de participación política (art. 103) de la Constitución de 1991.",
+    "refuerzo_ids": ["SOC-001", "SOC-007"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["derechos_fundamentales", "tutela", "constitucion_1991", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-005",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Identifica las posturas e intereses de los actores involucrados en una situación y reconoce que responden a contextos particulares",
+    "habilidad": "interpretar",
+    "tema": "Perspectivas de actores sociales",
+    "subtema": "Consulta popular y conflictos por el uso del territorio",
+    "dificultad": 2,
+    "contexto": "En el municipio de Piedras Altas se realizó una consulta popular con la pregunta: \"¿Está usted de acuerdo con que en el municipio se desarrollen proyectos de minería a gran escala?\". Antes de la votación, la **asociación de campesinos** afirmó que la minería pondría en riesgo las fuentes de agua que abastecen a las veredas, mientras que la **cámara de comercio** de la cabecera sostuvo que la minería traería empleo y mayores ingresos para el municipio. Los resultados por zona fueron los siguientes.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados de la consulta popular de Piedras Altas por zona",
+      "columnas": ["Zona", "Votos Sí", "Votos No", "Total votantes", "Personas habilitadas"],
+      "filas": [["Cabecera municipal", 2140, 2610, 4750, 9800], ["Corregimiento El Salado", 310, 1920, 2230, 3400], ["Veredas del norte", 180, 1450, 1630, 2900], ["Total municipio", 2630, 5980, 8610, 16100]],
+      "nota": "Personas habilitadas: ciudadanos inscritos que podían votar en cada zona."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones sobre las perspectivas de los habitantes de Piedras Altas se apoya en los resultados de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El rechazo a la minería fue mucho más marcado en las zonas rurales que en la cabecera, lo que coincide con la preocupación por el agua expresada por la asociación de campesinos.",
+        "correcta": true,
+        "explicacion": "En El Salado el No obtuvo 1920 de 2230 votos (cerca del 86 %) y en las veredas del norte 1450 de 1630 (cerca del 89 %), mientras que en la cabecera el No ganó por un margen mucho menor: 2610 de 4750 (cerca del 55 %). Esa diferencia entre zonas rurales y cabecera es coherente con la postura de la asociación de campesinos, cuyo interés es proteger las fuentes de agua de las veredas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Los habitantes de la cabecera apoyaron la minería porque comparten los intereses de la cámara de comercio.",
+        "correcta": false,
+        "explicacion": "En la cabecera también ganó el No (2610 votos frente a 2140 por el Sí). La opción atribuye a todos los habitantes de la cabecera la postura de un actor específico, la cámara de comercio, y además contradice el dato de la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que la cabecera votó Sí porque allí está la cámara de comercio, sin comparar las columnas Sí y No de esa fila."
+      },
+      {
+        "clave": "C",
+        "texto": "Todos los campesinos del municipio se oponen a la minería, como lo había anunciado su asociación.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que en las zonas rurales hubo 490 votos por el Sí (310 + 180) y que más de 2400 personas habilitadas no votaron. Que la mayoría rural haya votado No no permite afirmar que 'todos' los campesinos se opongan; la opción generaliza más allá de lo que los datos permiten y toma la postura de la asociación como la de cada campesino.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó un resultado mayoritario a la totalidad del grupo."
+      },
+      {
+        "clave": "D",
+        "texto": "La consulta no refleja la opinión de los habitantes porque menos de la mitad de las personas habilitadas votó.",
+        "correcta": false,
+        "explicacion": "Votaron 8610 de 16 100 personas habilitadas, es decir, algo más de la mitad (cerca del 53 %). El dato en que se apoya la opción es falso; además, la afirmación no describe las perspectivas de los habitantes, que es lo que pregunta el enunciado, sino que emite un juicio sobre la validez de la consulta.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó votantes con habilitados solo en la cabecera (donde sí votó menos de la mitad) y lo extendió a todo el municipio."
+      }
+    ],
+    "explicacion": "LEER: el contexto presenta la pregunta de la consulta y las posturas de dos actores (campesinos: riesgo para el agua; cámara de comercio: empleo e ingresos); la tabla da votos Sí, No, total de votantes y habilitados por zona. COMPRENDER: se pide la afirmación sobre las perspectivas de los habitantes que se apoye en los datos, no la que suene razonable. INTERPRETAR: hay que comparar el peso del No en cada zona y contrastarlo con las posturas de los actores. REPRESENTAR: porcentaje de No: cabecera 2610/4750 ≈ 55 %; El Salado 1920/2230 ≈ 86 %; veredas del norte 1450/1630 ≈ 89 %; participación total 8610/16 100 ≈ 53 %. RAZONAR: el No ganó en todas las zonas, pero con mucha más fuerza en las rurales; eso encaja con la preocupación de los campesinos por el agua. B contradice la fila de la cabecera; C generaliza a 'todos'; D usa un dato falso y no habla de perspectivas. RESOLVER: opción A. VERIFICAR: A no afirma que todos los campesinos votaron No ni que la cabecera votó Sí; solo compara la intensidad del rechazo entre zonas, lo cual se lee directamente de la tabla.",
+    "que_identificar": "La proporción de votos No dentro de cada zona (no el número absoluto) y la relación entre esa proporción y el interés que expresó cada actor antes de la votación.",
+    "que_revisar": "Cómo comparar proporciones entre filas de una tabla y cómo distinguir la postura de un actor organizado (asociación, cámara) de la opinión de todos los habitantes de una zona.",
+    "refuerzo_ids": ["SOC-008", "SOC-001"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["consulta_popular", "actores_sociales", "tabla", "mineria", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-006",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Reconoce el tipo de una fuente (primaria o secundaria) a partir de su contexto de producción y de la relación de su autor con los hechos",
+    "habilidad": "comprender",
+    "tema": "Fuentes históricas",
+    "subtema": "Fuentes primarias y secundarias",
+    "dificultad": 1,
+    "contexto": "Para un proyecto sobre la historia de la vereda La Esperanza, Julián reunió tres documentos:\n\n1. Una **carta escrita en 1958** por su bisabuelo, en la que cuenta cómo llegó con otras familias a fundar la vereda después de abandonar su pueblo a causa de la violencia.\n2. Un **capítulo de un libro publicado en 2015** por una historiadora que analiza la colonización de la región a partir de cartas, registros parroquiales y entrevistas.\n3. Una **entrevista grabada en 2024** a la abuela de Julián, quien nació en la vereda en 1962 y narra lo que sus padres le contaron sobre la fundación.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de estos documentos es una fuente primaria sobre la fundación de la vereda y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La carta de 1958, porque fue escrita por alguien que participó directamente en los hechos que narra.",
+        "correcta": true,
+        "explicacion": "Una fuente primaria sobre un hecho es la producida por quien lo vivió o presenció, o en el momento en que ocurrió. El bisabuelo fue uno de los fundadores y escribió la carta cuando el hecho era reciente; por eso su carta es un testimonio directo de la fundación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El libro de 2015, porque fue elaborado por una historiadora profesional con muchos documentos.",
+        "correcta": false,
+        "explicacion": "Que el libro sea riguroso y esté hecho por una profesional lo hace confiable, pero no primario: la historiadora no presenció la fundación, sino que la reconstruye analizando otras fuentes (cartas, registros, entrevistas). Eso es justamente lo que define una fuente secundaria.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la calidad o autoridad de una fuente con su carácter primario."
+      },
+      {
+        "clave": "C",
+        "texto": "La entrevista de 2024, porque es un testimonio oral de una persona nacida en la vereda.",
+        "correcta": false,
+        "explicacion": "La abuela nació en 1962, después de la fundación, y el contexto dice que narra 'lo que sus padres le contaron'. Su testimonio es de segunda mano respecto de la fundación: sería fuente primaria sobre su propia vida en la vereda, pero no sobre un hecho que no presenció.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que todo testimonio oral de un habitante es fuente primaria, sin revisar si la persona vivió el hecho."
+      },
+      {
+        "clave": "D",
+        "texto": "Los tres documentos, porque todos tratan sobre la fundación de la vereda.",
+        "correcta": false,
+        "explicacion": "El tema de un documento no determina si es fuente primaria; lo determina la relación de su autor con el hecho y el momento en que se produjo. El libro y la entrevista hablan de la fundación, pero desde información recibida de otros, así que no son fuentes primarias sobre ella.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Clasificó las fuentes por su tema y no por la relación del autor con los hechos."
+      }
+    ],
+    "explicacion": "LEER: hay tres documentos con autor, fecha y relación con la fundación: carta de 1958 de un fundador; libro de 2015 de una historiadora que usa otras fuentes; entrevista de 2024 a alguien nacida en 1962 que repite lo que le contaron. COMPRENDER: se pregunta cuál es fuente primaria sobre la fundación y por qué. INTERPRETAR: el criterio es si el autor vivió o presenció el hecho (o lo registró en su momento), no cuán confiable, reciente o detallado es el documento. REPRESENTAR: bisabuelo → participó (primaria); historiadora → reconstruye a partir de fuentes (secundaria); abuela → nació después y relata lo que le contaron (testimonio indirecto). RAZONAR: solo la carta cumple el criterio. RESOLVER: opción A. VERIFICAR: la justificación de A ('participó directamente en los hechos') es exactamente el criterio que define una fuente primaria; B y C justifican con rasgos (autoridad, oralidad) que no lo definen, y D ignora el criterio.",
+    "que_identificar": "La relación de cada autor con el hecho (¿lo vivió o lo supo por otros?) y la fecha de producción de cada documento.",
+    "que_revisar": "Diferencia entre fuente primaria y secundaria; por qué la confiabilidad y el tipo (oral, escrita) no definen esa clasificación.",
+    "refuerzo_ids": ["SOC-003", "SOC-008"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["fuentes_historicas", "memoria", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-007",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Identifica la intención y los supuestos de un mensaje (afiche, caricatura) y evalúa la crítica que se le hace",
+    "habilidad": "razonar",
+    "tema": "Gobierno escolar",
+    "subtema": "Funciones del personero estudiantil y propaganda electoral",
+    "dificultad": 2,
+    "contexto": "En un colegio se acerca la elección del personero estudiantil. Uno de los candidatos pegó en la cartelera un afiche con el siguiente contenido: en el centro aparece el dibujo de un estudiante con capa de superhéroe y, en letras grandes, la frase **\"Con Mateo, ¡adiós a las tareas y al uniforme!\"**. Abajo, en letra pequeña, dice: \"El personero defiende los derechos de los estudiantes\".\n\nJunto al afiche, otra estudiante escribió a mano: *\"El personero no manda en el colegio: propone y vigila que se respeten los derechos y los deberes. Esto no lo puede cumplir\"*.",
+    "estimulo": null,
+    "enunciado": "La nota escrita a mano junto al afiche cuestiona principalmente que el afiche",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "use la imagen de un superhéroe, que no corresponde a un candidato serio.",
+        "correcta": false,
+        "explicacion": "La nota no menciona el dibujo ni la seriedad del candidato; se refiere a lo que el personero puede o no puede hacer. Esta opción responde con una opinión sobre la forma del afiche en vez de con lo que la nota dice.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió con su propia crítica al afiche en lugar de identificar la crítica que hace la nota."
+      },
+      {
+        "clave": "B",
+        "texto": "prometa decisiones que no están dentro de las funciones del personero estudiantil.",
+        "correcta": true,
+        "explicacion": "La nota afirma que el personero 'no manda en el colegio: propone y vigila' y que la promesa 'no la puede cumplir'. Es decir, cuestiona que el afiche prometa eliminar tareas y uniforme, decisiones que no le corresponden al personero (las reglas de convivencia las define la institución a través de sus órganos de gobierno, no el personero).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "no mencione los deberes de los estudiantes, sino solo sus derechos.",
+        "correcta": false,
+        "explicacion": "Es cierto que la nota nombra 'derechos y deberes' y que el afiche solo habla de derechos, pero ese no es el centro de la crítica: la nota concluye 'esto no lo puede cumplir', es decir, cuestiona la promesa, no la omisión de los deberes. La opción toma un detalle de la nota por su idea principal.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con una palabra de la nota (deberes) en vez de identificar la conclusión de la crítica."
+      },
+      {
+        "clave": "D",
+        "texto": "afirme que el personero defiende los derechos de los estudiantes, lo cual es falso.",
+        "correcta": false,
+        "explicacion": "Promover y defender los derechos de los estudiantes sí es función del personero, y la propia nota lo reconoce ('vigila que se respeten los derechos'). La nota no discute esa frase del afiche, sino la promesa de eliminar tareas y uniforme.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Desconoce la función del personero y supuso que la nota negaba la frase en letra pequeña."
+      }
+    ],
+    "explicacion": "LEER: el afiche tiene dos mensajes: la promesa grande (adiós a tareas y uniforme) y la frase pequeña (el personero defiende los derechos). La nota dice que el personero no manda, que propone y vigila, y que 'esto no lo puede cumplir'. COMPRENDER: se pregunta qué cuestiona principalmente la nota. INTERPRETAR: 'esto no lo puede cumplir' se refiere a la promesa, y la razón dada es que el personero no tiene poder de mando sino de propuesta y vigilancia. REPRESENTAR: afiche promete decidir X → nota: el personero no decide, solo propone y vigila → por tanto la promesa excede sus funciones. RAZONAR: A introduce una crítica que la nota no hace (la imagen); C toma un detalle (deberes) por la idea central; D niega una función que la nota misma acepta. RESOLVER: opción B. VERIFICAR: B es la única opción que conecta las dos partes de la nota (qué hace el personero + la promesa no se puede cumplir) con la promesa del afiche.",
+    "que_identificar": "La conclusión de la nota ('esto no lo puede cumplir') y la razón que da (el personero propone y vigila, no manda), y a cuál parte del afiche se refiere.",
+    "que_revisar": "Funciones del personero estudiantil y de los demás órganos del gobierno escolar (consejo directivo, rectoría); cómo distinguir la crítica que hace un texto de la opinión propia.",
+    "refuerzo_ids": ["SOC-008", "SOC-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["gobierno_escolar", "personero", "afiche", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-008",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Compara las posturas y los argumentos de distintos actores frente a una misma situación y reconoce coincidencias y diferencias entre ellos",
+    "habilidad": "verificar",
+    "tema": "Memoria histórica y patrimonio",
+    "subtema": "Posturas frente a monumentos y símbolos del pasado",
+    "dificultad": 3,
+    "contexto": "En el municipio de Bahía Serena se discute si se retira del parque principal la estatua de un hacendado del siglo XIX que, según documentos del archivo municipal, fundó el pueblo y también fue propietario de personas esclavizadas. La estatua fue instalada en 1920.\n\n- El **consejo comunitario afrodescendiente** pide retirarla: \"No podemos honrar en el parque a quien esclavizó a nuestros antepasados. La historia debe contarse completa, en un museo, no desde un pedestal\".\n- La **asociación de comerciantes** pide conservarla: \"La estatua es el símbolo del pueblo y atrae turistas; retirarla sería borrar nuestra historia\".\n- Una **historiadora local** propone conservarla y añadirle una placa: \"La estatua es en sí misma un documento de cómo el pueblo quiso recordarse en 1920; una placa puede contar lo que en ese momento se ocultó\".\n- La **alcaldía** anunció que decidirá después de escuchar a todos en un cabildo abierto.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la relación entre las posturas de los actores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los comerciantes y la historiadora comparten el mismo argumento, pues ambos quieren conservar la estatua para preservar la historia del pueblo.",
+        "correcta": false,
+        "explicacion": "Ambos llegan a la misma conclusión (conservar), pero con argumentos distintos: los comerciantes hablan de símbolo y turismo, y no proponen cambiar nada; la historiadora ve la estatua como un documento de 1920 y exige una placa que muestre lo ocultado. Tener la misma conclusión no es tener el mismo argumento.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió coincidir en la conclusión con coincidir en las razones."
+      },
+      {
+        "clave": "B",
+        "texto": "El consejo comunitario niega que el hacendado haya fundado el pueblo, por lo que su postura contradice los documentos del archivo.",
+        "correcta": false,
+        "explicacion": "El consejo no discute la fundación; su argumento es que no se debe honrar a quien esclavizó a sus antepasados, hecho que los mismos documentos del archivo respaldan. La opción le atribuye al actor una afirmación que no hizo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que quien pide retirar la estatua niega los hechos que la justificaron."
+      },
+      {
+        "clave": "C",
+        "texto": "La alcaldía apoya la postura de los comerciantes, ya que el cabildo abierto busca proteger la economía del turismo.",
+        "correcta": false,
+        "explicacion": "El texto solo dice que la alcaldía decidirá después de escuchar a todos en un cabildo abierto; no toma partido ni menciona el turismo. La opción inventa una postura y un propósito que el contexto no da.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a la alcaldía una posición que el texto no expresa, quizá por asociar cabildo abierto con intereses económicos."
+      },
+      {
+        "clave": "D",
+        "texto": "El consejo comunitario y la historiadora coinciden en que la historia del hacendado debe contarse completa, pero difieren sobre si la estatua debe permanecer en el parque.",
+        "correcta": true,
+        "explicacion": "El consejo dice que 'la historia debe contarse completa' y la historiadora propone una placa que cuente 'lo que en ese momento se ocultó': ambos quieren que se conozca el pasado esclavista. Sin embargo, el consejo pide retirar la estatua (llevarla a un museo) y la historiadora pide conservarla en el parque con la placa. Coincidencia en el fin, diferencia en el medio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro actores: consejo comunitario (retirar; contar la historia completa en un museo), comerciantes (conservar; símbolo y turismo), historiadora (conservar con placa; la estatua es documento, la placa cuenta lo ocultado), alcaldía (escuchar en cabildo abierto y luego decidir). COMPRENDER: se pide la afirmación que describa correctamente la relación entre posturas, así que cada opción debe contrastarse con lo que cada actor dijo. INTERPRETAR: en cada postura hay que separar la conclusión (retirar/conservar) del argumento (por qué). REPRESENTAR: tabla mental: actor / conclusión / argumento. Consejo: retirar / contar la historia completa. Comerciantes: conservar / símbolo y turismo. Historiadora: conservar + placa / la estatua es documento y hay que contar lo ocultado. Alcaldía: sin postura / escuchar. RAZONAR: A: consejo e historiadora comparten el argumento de contar lo que se ocultó, pero difieren en retirar o conservar: correcto. B: misma conclusión, distinto argumento: incorrecto. C: el consejo no niega la fundación. D: la alcaldía no apoya a nadie. RESOLVER: opción D. VERIFICAR: se comprueba frase por frase que A solo afirma lo que los dos actores dijeron y no les añade nada.",
+    "que_identificar": "Para cada actor, su conclusión (retirar o conservar) y el argumento que la sustenta, distinguiendo lo que dijo de lo que uno supone que piensa.",
+    "que_revisar": "Cómo comparar posturas de actores: separar conclusión de argumento e interés, y verificar cada afirmación contra el texto antes de aceptarla.",
+    "refuerzo_ids": ["SOC-005", "SOC-006"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["memoria_historica", "patrimonio", "actores_sociales", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-009",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones entre la dimensión económica y la dimensión ambiental de un problema a partir de información gráfica y textual",
+    "habilidad": "interpretar",
+    "tema": "Uso del suelo y ambiente",
+    "subtema": "Deforestación, ganadería y regulación del agua",
+    "dificultad": 2,
+    "contexto": "Entre 2000 y 2020, en el municipio de Aguas Claras la ganadería pasó a ser la principal actividad económica. En el mismo periodo, la alcaldía registró que varias quebradas que abastecen el acueducto redujeron su caudal en las temporadas secas y que aumentaron los deslizamientos en las laderas. El siguiente gráfico muestra el cambio en el uso del suelo del municipio.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Uso del suelo en Aguas Claras (porcentaje del área municipal)",
+      "eje_x": "Tipo de uso",
+      "eje_y": "Porcentaje del área",
+      "series": [
+        { "nombre": "2000", "valores": [["Bosque", 48], ["Pastos para ganadería", 30], ["Cultivos", 17], ["Zona urbana", 5]] },
+        { "nombre": "2020", "valores": [["Bosque", 29], ["Pastos para ganadería", 47], ["Cultivos", 16], ["Zona urbana", 8]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona de manera adecuada la información del gráfico con los problemas descritos por la alcaldía?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La expansión de la zona urbana explica la reducción del caudal, porque las ciudades consumen más agua.",
+        "correcta": false,
+        "explicacion": "La zona urbana apenas pasó de 5 % a 8 %, el cambio más pequeño del gráfico, mientras que el bosque perdió 19 puntos y los pastos ganaron 17. Además, el problema descrito es que las quebradas traen menos agua en verano y hay deslizamientos, lo que se relaciona con la cobertura del suelo y no con el consumo urbano.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó en una categoría que creció sin comparar la magnitud de los cambios entre categorías."
+      },
+      {
+        "clave": "B",
+        "texto": "Los pastos para ganadería se expandieron principalmente sobre áreas que eran bosque, y la pérdida de cobertura boscosa se relaciona con la menor regulación del agua y la inestabilidad de las laderas.",
+        "correcta": true,
+        "explicacion": "El bosque bajó de 48 % a 29 % (-19 puntos) y los pastos subieron de 30 % a 47 % (+17 puntos), mientras cultivos y zona urbana casi no cambiaron: la expansión ganadera ocurrió a costa del bosque. Los bosques retienen el agua lluvia y la liberan lentamente, y sus raíces sostienen el suelo; al perderlos, las quebradas se secan más en verano y las laderas se deslizan. Así se conecta la dimensión económica (ganadería) con la ambiental (agua y suelo).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los cultivos disminuyeron porque los campesinos vendieron sus tierras a los ganaderos, lo que causó los deslizamientos.",
+        "correcta": false,
+        "explicacion": "Los cultivos pasaron de 17 % a 16 %, un cambio mínimo que no explica nada de la magnitud del problema; la categoría que realmente cedió terreno fue el bosque. Además, ni el gráfico ni el texto dicen quién vendió tierras a quién: la opción inventa una cadena causal que los datos no muestran.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Construyó una explicación plausible desde su experiencia sin comprobarla con las barras del gráfico."
+      },
+      {
+        "clave": "D",
+        "texto": "El crecimiento de la ganadería aumentó los ingresos del municipio, por lo que los problemas ambientales son un costo aceptable.",
+        "correcta": false,
+        "explicacion": "El gráfico no muestra ingresos y el enunciado no pide valorar si los problemas son aceptables, sino relacionar el cambio en el uso del suelo con lo que registró la alcaldía. La opción responde con una opinión sobre lo que conviene, no con una relación apoyada en la información.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Emitió un juicio de valor en lugar de establecer la relación que pide la pregunta."
+      }
+    ],
+    "explicacion": "LEER: el texto describe que la ganadería creció y que aparecieron dos problemas: menos caudal en verano y más deslizamientos. El gráfico compara cuatro usos del suelo en 2000 y 2020. COMPRENDER: se pide la afirmación que relacione correctamente el cambio del uso del suelo con esos problemas. INTERPRETAR: los cambios son bosque -19 puntos, pastos +17, cultivos -1, zona urbana +3; la expansión ganadera se dio sobre el bosque. REPRESENTAR: ganadería crece → se tala bosque para pastos → menos cobertura que retenga agua y sostenga el suelo → quebradas más secas en verano y laderas inestables. RAZONAR: A y C se apoyan en las categorías que casi no cambiaron; D no relaciona sino que opina. RESOLVER: opción B. VERIFICAR: la magnitud de los cambios (bosque y pastos son los dos grandes) y la función ecológica del bosque (regulación hídrica y estabilidad de laderas) confirman que B es coherente con el gráfico y con los problemas descritos.",
+    "que_identificar": "Las dos categorías que cambiaron de manera importante (bosque y pastos) y su relación con los problemas de agua y deslizamientos mencionados por la alcaldía.",
+    "que_revisar": "Funciones ambientales del bosque (regulación del agua, estabilidad del suelo) y cómo leer un gráfico de barras comparando magnitudes de cambio entre categorías y no valores aislados.",
+    "refuerzo_ids": ["SOC-012", "SOC-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ambiente", "uso_del_suelo", "barras", "ganaderia", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-010",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "evidencia": "Contrasta explicaciones alternativas de un cambio social con la evidencia disponible y reconoce cuál es más consistente con ella",
+    "habilidad": "razonar",
+    "tema": "Modelos explicativos de cambios culturales",
+    "subtema": "Contraste de explicaciones con evidencia",
+    "dificultad": 3,
+    "contexto": "En la vereda El Roble se celebra desde 1940 la fiesta de la cosecha. En 1990 la fiesta reunía a unas 115 familias; en 2020 reunió a unas 40. En la vereda circulan dos explicaciones:\n\n- **Explicación 1 (cultural):** los jóvenes perdieron interés en la tradición por la influencia de la televisión y el internet.\n- **Explicación 2 (económica):** la caída del precio del café y la falta de empleo hicieron que muchas familias migraran a la ciudad, y quedan menos personas para organizar y asistir a la fiesta.\n\nUna estudiante consultó el censo veredal: en 1990 había 120 familias en la vereda y en 2020 había 45. Además aplicó una encuesta a los jóvenes que todavía viven en la vereda: el 70 % dijo que participa en la fiesta todos los años.",
+    "estimulo": null,
+    "enunciado": "A partir de la información recogida por la estudiante, ¿qué puede concluirse sobre las dos explicaciones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La explicación 1 se confirma, porque la fiesta reúne hoy a muchas menos personas que en 1990.",
+        "correcta": false,
+        "explicacion": "Que la fiesta reúna menos personas es el hecho que se quiere explicar, no una prueba a favor de una explicación en particular: las dos explicaciones parten de ese mismo dato. Además, la encuesta muestra que la mayoría de los jóvenes que siguen en la vereda sí participa, lo que va en contra de la idea de pérdida de interés.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el fenómeno que se quiere explicar como evidencia de su causa."
+      },
+      {
+        "clave": "B",
+        "texto": "La explicación 2 es más consistente con los datos, porque la reducción de familias en la vereda coincide con la caída en la asistencia, mientras que la mayoría de los jóvenes que permanecen sí participa.",
+        "correcta": true,
+        "explicacion": "El censo muestra que la vereda pasó de 120 a 45 familias, y la fiesta de 115 a 40: en ambos años participan casi todas las familias que viven allí. Eso encaja con la explicación económica (hay menos gente porque migró). La encuesta (70 % de los jóvenes participa) debilita la explicación cultural, que predice desinterés de los jóvenes. Los datos no prueban la explicación 2 de forma definitiva, pero la hacen claramente más consistente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas explicaciones son igualmente válidas, porque cada persona tiene derecho a tener su opinión sobre las causas.",
+        "correcta": false,
+        "explicacion": "Las explicaciones de un cambio social no valen por ser opiniones respetables, sino por su coherencia con la evidencia. El censo y la encuesta permiten diferenciar: la evidencia favorece la explicación económica y contradice la predicción de la cultural. La opción evita usar los datos.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió con un principio de respeto a las opiniones en vez de contrastar las explicaciones con los datos."
+      },
+      {
+        "clave": "D",
+        "texto": "Ninguna explicación puede evaluarse, porque el censo y la encuesta no preguntaron directamente por las causas de la disminución.",
+        "correcta": false,
+        "explicacion": "Una explicación se puede evaluar comprobando si lo que predice ocurre: la explicación 2 predice menos familias en la vereda (el censo lo confirma) y la explicación 1 predice jóvenes desinteresados (la encuesta lo contradice). No hace falta que la fuente pregunte 'por qué' para que sirva como evidencia.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Exigió a la evidencia que hablara literalmente de causas, sin ver que los datos ponen a prueba las predicciones de cada explicación."
+      }
+    ],
+    "explicacion": "LEER: la fiesta pasó de 115 a 40 familias entre 1990 y 2020; explicación 1 (desinterés juvenil por los medios) y explicación 2 (migración por crisis del café); censo: 120 familias en 1990 y 45 en 2020; encuesta: 70 % de los jóvenes que quedan participa. COMPRENDER: se pide concluir qué dicen esos datos sobre las dos explicaciones. INTERPRETAR: cada explicación hace una predicción distinta: la 1 predice que los jóvenes que viven allí no participan; la 2 predice que hay muchas menos familias en la vereda. REPRESENTAR: 1990: 115 de 120 familias asisten (≈96 %); 2020: 40 de 45 (≈89 %). La proporción de participación casi no cambió; lo que cambió fue el número de familias. RAZONAR: la predicción de la explicación 2 se cumple (menos familias) y la de la explicación 1 no (los jóvenes sí participan). A usa el fenómeno como prueba; C renuncia a evaluar; D exige que los datos hablen de causas. RESOLVER: opción B. VERIFICAR: B afirma 'más consistente', no 'demostrada', lo cual es prudente: podrían existir otras causas, pero con la evidencia disponible la económica explica mejor el cambio.",
+    "que_identificar": "Qué predice cada explicación y cuál de esas predicciones se cumple en el censo y en la encuesta; comparar la proporción de familias que asisten en cada año.",
+    "que_revisar": "Cómo poner a prueba una explicación con evidencia: identificar sus predicciones, contrastarlas con datos y distinguir entre 'consistente con' y 'demostrado'.",
+    "refuerzo_ids": ["SOC-011", "SOC-006"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["modelos_explicativos", "cambio_cultural", "migracion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-011",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos de una decisión sobre distintas dimensiones (económica, social, política) y las relaciones entre esos efectos",
+    "habilidad": "representar",
+    "tema": "Efectos de decisiones públicas",
+    "subtema": "Dimensiones económica, social y política de una decisión",
+    "dificultad": 2,
+    "contexto": "El concejo municipal de Villa Nueva aprobó un acuerdo que prohíbe el tránsito de mototaxis (transporte informal en motocicleta) en el casco urbano, con el argumento de reducir los accidentes. Un mes después, un periódico local informó lo siguiente: los accidentes de moto en el centro disminuyeron; cerca de 200 mototaxistas quedaron sin ingresos; los habitantes de los barrios altos, hasta donde no llega la ruta de bus, tardan el doble en llegar al trabajo; y varias familias de esos barrios organizaron una marcha para exigir al concejo una alternativa de transporte.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes esquemas representa mejor las relaciones entre las dimensiones del problema descritas en el texto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Decisión política (prohibición) → efecto económico (mototaxistas sin ingresos) y efecto social (barrios altos sin transporte) → nueva presión política (marcha que exige al concejo una alternativa).",
+        "correcta": true,
+        "explicacion": "El esquema sigue el orden del texto: la decisión del concejo produce efectos en dos dimensiones distintas (pérdida de ingresos y barrios sin transporte) y esos efectos generan una reacción que vuelve a la dimensión política (la marcha dirigida al concejo). Muestra que una decisión tomada por una razón (seguridad) tiene consecuencias en otras dimensiones que regresan al mismo actor que decidió.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Falta de empleo → aparición de las mototaxis → prohibición del concejo → aumento de accidentes.",
+        "correcta": false,
+        "explicacion": "El texto dice que los accidentes disminuyeron, no que aumentaron, y no habla del origen de las mototaxis ni de la falta de empleo como causa. El esquema invierte el efecto de la decisión y agrega causas que el texto no menciona.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Construyó una cadena desde lo que sabe del mototaxismo en vez de ordenar los hechos que da el texto."
+      },
+      {
+        "clave": "C",
+        "texto": "Prohibición → menos accidentes → mayor bienestar de los habitantes → apoyo de la comunidad al concejo.",
+        "correcta": false,
+        "explicacion": "Solo recoge el efecto buscado por el concejo (menos accidentes) e ignora los tres efectos negativos que reporta el periódico. Además, el texto dice que las familias marcharon para exigir una alternativa, no que apoyaron al concejo. Toma la intención de la decisión por su resultado completo.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con el objetivo de la medida y no incorporó los efectos no deseados."
+      },
+      {
+        "clave": "D",
+        "texto": "Marcha de las familias → prohibición de las mototaxis → pérdida de ingresos → menos accidentes.",
+        "correcta": false,
+        "explicacion": "Altera el orden temporal: la marcha ocurrió un mes después de la prohibición y como reacción a ella, no antes ni como su causa. También presenta la pérdida de ingresos como causa de la reducción de accidentes, cuando ambas son efectos independientes de la prohibición.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió causa y consecuencia al no ubicar los hechos en el tiempo."
+      }
+    ],
+    "explicacion": "LEER: el concejo prohíbe las mototaxis para reducir accidentes; un mes después: menos accidentes, 200 mototaxistas sin ingresos, barrios altos sin transporte y con el doble de tiempo de viaje, marcha para exigir una alternativa al concejo. COMPRENDER: se pide el esquema que mejor represente las relaciones entre dimensiones (política, económica, social) según el texto. INTERPRETAR: hay una causa inicial (decisión política) con un efecto esperado (menos accidentes) y tres efectos no esperados: económico (ingresos), social (movilidad de los barrios) y político (protesta). REPRESENTAR: decisión → efectos en varias dimensiones → reacción que regresa a la dimensión política. RAZONAR: B invierte el efecto sobre los accidentes y agrega causas ajenas al texto; C omite los efectos negativos y cambia la marcha por apoyo; D altera el orden temporal. RESOLVER: opción A. VERIFICAR: cada flecha de A corresponde a una relación mencionada en el texto y respeta la secuencia 'decisión → un mes después → marcha'.",
+    "que_identificar": "El orden temporal de los hechos (decisión, efectos, reacción) y a qué dimensión pertenece cada efecto reportado por el periódico.",
+    "que_revisar": "Cómo representar una situación social como cadena de causas y efectos, distinguiendo efectos esperados de no esperados y dimensiones económica, social y política.",
+    "refuerzo_ids": ["SOC-010", "SOC-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["decisiones_publicas", "esquema_causal", "movilidad", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-012",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Evalúa alternativas de solución a un problema territorial considerando simultáneamente criterios económicos, ambientales y sociales",
+    "habilidad": "resolver",
+    "tema": "Toma de decisiones territoriales",
+    "subtema": "Evaluación de alternativas con múltiples criterios",
+    "dificultad": 3,
+    "contexto": "El relleno sanitario del municipio de Loma Verde está a punto de llenarse. El concejo municipal debe elegir una alternativa para el manejo de las basuras y fijó tres criterios que la alternativa elegida debe cumplir **al mismo tiempo**: (1) no superar el presupuesto de inversión disponible, que es de 900 millones de pesos; (2) no afectar fuentes de agua; (3) contar con la aceptación de la comunidad del lugar donde se ubique. Un equipo técnico presentó la siguiente tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Alternativas para el manejo de residuos en Loma Verde",
+      "columnas": ["Alternativa", "Costo de inversión (millones de pesos)", "¿Afecta fuentes de agua?", "Aceptación de la comunidad cercana", "Empleos que genera"],
+      "filas": [["A1. Ampliar el relleno actual", 600, "Sí (quebrada La Chorrera)", "Baja", 10], ["A2. Nuevo relleno en la vereda El Palmar", 850, "No", "Baja (la vereda se opone)", 25], ["A3. Planta de separación y compostaje más un relleno pequeño", 880, "No", "Alta (requiere que los hogares separen residuos)", 40], ["A4. Transportar la basura al relleno de la capital del departamento", 1100, "No", "Alta", 5]],
+      "nota": "Costo de inversión: valor único que debe pagarse para poner en marcha la alternativa."
+    },
+    "enunciado": "Según los criterios fijados por el concejo, ¿cuál alternativa debería elegirse y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A2, porque genera más empleo que A1 y no afecta fuentes de agua, aunque la vereda se oponga.",
+        "correcta": false,
+        "explicacion": "A2 incumple el criterio 3: la comunidad de El Palmar se opone. La opción reemplaza ese criterio por uno que el concejo no fijó (el empleo) y decide en contra de una condición obligatoria. Que cumpla el presupuesto y el criterio ambiental no compensa el incumplimiento del social.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sustituyó un criterio obligatorio por un dato atractivo de la tabla (empleos)."
+      },
+      {
+        "clave": "B",
+        "texto": "A1, porque es la de menor costo y no requiere conseguir un terreno nuevo.",
+        "correcta": false,
+        "explicacion": "A1 cumple el criterio del presupuesto, pero incumple los otros dos: afecta la quebrada La Chorrera y tiene baja aceptación. El concejo exigió que los tres criterios se cumplieran al mismo tiempo, así que el menor costo no basta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Decidió por un solo criterio (el económico) sin revisar los otros dos."
+      },
+      {
+        "clave": "C",
+        "texto": "A3, porque cumple los tres criterios del concejo y además es la que más empleos genera.",
+        "correcta": true,
+        "explicacion": "A3 cuesta 880 millones (menos de 900), no afecta fuentes de agua y tiene alta aceptación: es la única alternativa que cumple los tres criterios a la vez. El empleo no era un criterio, pero es un beneficio adicional que refuerza la elección. La condición de que los hogares separen residuos no contradice la alta aceptación registrada.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "A4, porque no afecta fuentes de agua y es la que tiene mayor aceptación sin exigir cambios a los hogares.",
+        "correcta": false,
+        "explicacion": "A4 cumple los criterios ambiental y social, pero cuesta 1100 millones, más que el presupuesto de 900. Al incumplir el criterio 1 queda descartada, por buenas que sean sus otras características.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Revisó dos criterios y olvidó comparar el costo con el presupuesto disponible."
+      }
+    ],
+    "explicacion": "LEER: el concejo fijó tres criterios obligatorios y simultáneos: costo ≤ 900 millones, no afectar agua, aceptación de la comunidad. La tabla tiene cuatro alternativas con costo, efecto sobre el agua, aceptación y empleos. COMPRENDER: se pide la alternativa que debe elegirse según esos criterios, no la que parezca mejor por otras razones. INTERPRETAR: hay que verificar cada alternativa contra cada criterio; el empleo es información adicional, no criterio. REPRESENTAR: A1: costo sí / agua no / aceptación no. A2: sí / sí / no. A3: sí (880) / sí / sí. A4: no (1100) / sí / sí. RAZONAR: solo A3 tiene tres 'sí'; cada distractor elige una alternativa que falla al menos un criterio y lo justifica con un dato que no era criterio (menor costo, más aceptación, más empleo). RESOLVER: opción C. VERIFICAR: 880 < 900 se cumple; 'No' en agua; 'Alta' en aceptación. El requisito de separar residuos en los hogares es una condición de funcionamiento, no una objeción de la comunidad.",
+    "que_identificar": "Los tres criterios obligatorios y el valor de cada alternativa en cada uno; el presupuesto (900 millones) como límite para la columna de costo.",
+    "que_revisar": "Cómo evaluar alternativas con varios criterios simultáneos: construir una matriz alternativa × criterio y descartar toda alternativa que falle en uno, antes de considerar beneficios adicionales.",
+    "refuerzo_ids": ["SOC-009", "SOC-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["residuos", "toma_de_decisiones", "tabla", "ambiente", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

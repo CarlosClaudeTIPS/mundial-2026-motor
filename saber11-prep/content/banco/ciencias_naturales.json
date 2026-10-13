@@ -1,0 +1,819 @@
+[
+  {
+    "id": "CIE-001",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona las respuestas del organismo con las funciones de los sistemas circulatorio y respiratorio",
+    "habilidad": "interpretar",
+    "tema": "Sistemas del cuerpo humano",
+    "subtema": "Respuesta de los sistemas circulatorio y respiratorio al ejercicio",
+    "dificultad": 1,
+    "contexto": "En la clase de Biología de grado 10°, un grupo midió la frecuencia cardíaca (latidos por minuto) y la frecuencia respiratoria (respiraciones por minuto) de una compañera en tres momentos: en reposo, inmediatamente después de saltar lazo durante un minuto y cinco minutos después de terminar. Los resultados se registraron en la tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Frecuencias medidas en tres momentos",
+      "columnas": ["Momento", "Frecuencia cardíaca (latidos/min)", "Frecuencia respiratoria (respiraciones/min)"],
+      "filas": [["En reposo", 72, 16], ["Justo después de saltar 1 minuto", 130, 30], ["5 minutos después de terminar", 80, 18]],
+      "nota": "Las mediciones se hicieron el mismo día, con la misma persona y en el mismo lugar."
+    },
+    "enunciado": "¿Cuál es la explicación más adecuada del aumento simultáneo de la frecuencia cardíaca y de la frecuencia respiratoria justo después del ejercicio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los músculos en actividad consumen más oxígeno y producen más dióxido de carbono, por lo que el corazón bombea más rápido y los pulmones ventilan más para transportar e intercambiar esos gases.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Durante el ejercicio aumenta la respiración celular en los músculos; para llevar más O2 y retirar más CO2, el sistema circulatorio (130 latidos/min) y el respiratorio (30 respiraciones/min) aceleran de forma coordinada. Cuando la demanda baja, ambas frecuencias regresan casi al reposo (80 y 18), lo que confirma que la respuesta depende de la actividad muscular.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El corazón late más rápido porque el ejercicio lo debilita y entonces necesita más latidos para bombear la misma cantidad de sangre.",
+        "correcta": false,
+        "explicacion": "No responde. El ejercicio no debilita el corazón en un minuto; al contrario, la frecuencia sube porque el organismo necesita más sangre oxigenada por minuto. Además, esta opción no explica por qué también subió la frecuencia respiratoria de 16 a 30, que es el dato que la pregunta pide relacionar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta el aumento de la frecuencia cardíaca como un signo de fallo o cansancio del corazón, no como una respuesta a la mayor demanda de oxígeno."
+      },
+      {
+        "clave": "C",
+        "texto": "La respiración aumenta solo para enfriar el cuerpo, y el corazón se acelera por una causa independiente, sin relación con la respiración.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que ambas frecuencias suben y bajan juntas (72→130→80 y 16→30→18), lo que indica una respuesta coordinada a la misma causa: la demanda de oxígeno de los músculos. Además, el enfriamiento del cuerpo humano ocurre principalmente por sudoración, no por la respiración.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trata los dos sistemas como independientes y no usa el patrón conjunto que muestra la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambas frecuencias aumentaron porque la estudiante estaba nerviosa por la medición, como lo demuestra que a los 5 minutos todavía no volvieron a 72 y 16.",
+        "correcta": false,
+        "explicacion": "No responde. Los valores a los 5 minutos (80 y 18) están muy cerca del reposo y muestran una recuperación progresiva, que es lo esperado tras el ejercicio; una diferencia pequeña no demuestra nerviosismo. La tabla no ofrece ningún dato sobre el estado emocional, así que esta conclusión va más allá de lo que muestran los datos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Concluye una causa que no aparece en los datos a partir de una pequeña diferencia numérica."
+      }
+    ],
+    "explicacion": "LEER: el contexto describe tres momentos de medición y la tabla da dos frecuencias en cada uno. COMPRENDER: se pregunta por la causa del aumento simultáneo de las dos frecuencias justo después del ejercicio. INTERPRETAR: ambas suben mucho después de saltar (72→130 y 16→30) y ambas casi regresan al reposo a los 5 minutos (80 y 18); el patrón es el mismo en los dos sistemas. REPRESENTAR: ejercicio → músculos gastan más O2 y producen más CO2 → corazón bombea más sangre por minuto y pulmones ventilan más aire por minuto. RAZONAR: la única opción que conecta las dos frecuencias con una misma causa fisiológica (mayor demanda de intercambio de gases) es A; B y C no explican la coordinación de los dos sistemas y D atribuye el cambio a algo que no se midió. RESOLVER: la respuesta es A. VERIFICAR: la recuperación a los 5 minutos es coherente con A, pues al bajar la demanda de oxígeno las frecuencias vuelven casi al valor de reposo.",
+    "que_identificar": "Que las dos frecuencias cambian juntas en los tres momentos y que el máximo coincide con la actividad muscular.",
+    "que_revisar": "Función del sistema circulatorio y respiratorio en el transporte de gases; respiración celular y demanda de oxígeno durante el ejercicio.",
+    "refuerzo_ids": ["CIE-017", "CIE-008"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["salud", "sistemas del cuerpo", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-002",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta gráficas de temperatura contra tiempo y las relaciona con los cambios de estado y la transferencia de energía",
+    "habilidad": "interpretar",
+    "tema": "Calor y temperatura",
+    "subtema": "Cambios de estado y calor latente",
+    "dificultad": 2,
+    "contexto": "Un estudiante de Bogotá puso 200 g de hielo a −10 °C en una olla sobre una estufa que entrega energía a ritmo constante, y registró la temperatura con un termómetro cada minuto hasta que el agua llevaba varios minutos hirviendo. La estufa permaneció encendida y a la misma potencia durante todo el experimento.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Temperatura del contenido de la olla en función del tiempo",
+      "eje_x": "Tiempo (min)",
+      "eje_y": "Temperatura (°C)",
+      "series": [
+        { "nombre": "Temperatura", "valores": [["0", -10], ["1", 0], ["2", 0], ["3", 0], ["4", 30], ["5", 62], ["6", 92], ["7", 92], ["8", 92], ["9", 92], ["10", 92]] }
+      ],
+      "nota": "En Bogotá (unos 2600 m sobre el nivel del mar) la presión atmosférica es menor que a nivel del mar y el agua hierve cerca de 92 °C."
+    },
+    "enunciado": "Entre los minutos 6 y 10 la temperatura se mantiene en 92 °C aunque la estufa sigue entregando energía. ¿Qué ocurre con la energía transferida al agua en ese intervalo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La estufa deja de transferir energía al agua porque el agua ya alcanzó el equilibrio térmico con la olla.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto afirma que la estufa siguió encendida a la misma potencia; una temperatura constante en la gráfica no significa que no entre energía. De hecho, entre los minutos 1 y 3 también hubo un tramo horizontal (0 °C) mientras el hielo se fundía, y allí claramente la estufa seguía calentando.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee el tramo horizontal de la gráfica como ausencia de transferencia de energía."
+      },
+      {
+        "clave": "B",
+        "texto": "El termómetro llegó a su límite de medición, por eso no registra el aumento de temperatura que sigue ocurriendo en el agua.",
+        "correcta": false,
+        "explicacion": "No responde. Nada en el contexto indica un límite del instrumento, y el mismo termómetro ya había medido valores negativos y una subida continua hasta 92 °C. Un líquido en ebullición a presión constante no sube de temperatura: toda la energía que recibe se invierte en el cambio de estado, así que no hay un 'aumento oculto' que registrar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que si entra energía la temperatura debe subir siempre, y culpa al instrumento cuando los datos lo contradicen."
+      },
+      {
+        "clave": "C",
+        "texto": "La energía se usa para vencer las fuerzas de atracción entre las moléculas y pasar de líquido a gas (calor latente de vaporización), sin aumentar la energía cinética media de las moléculas, por eso la temperatura no cambia.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Durante la ebullición la energía entregada se emplea en el cambio de estado, no en aumentar la agitación media de las moléculas; la temperatura mide justamente esa agitación media, por eso permanece en 92 °C mientras haya líquido hirviendo. El tramo horizontal a 0 °C (fusión del hielo) es el mismo fenómeno en otro cambio de estado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La energía se pierde totalmente hacia el aire porque a 2600 m la presión es tan baja que el agua no puede hervir.",
+        "correcta": false,
+        "explicacion": "No responde. La menor presión en Bogotá hace que el agua hierva a menor temperatura (92 °C en lugar de 100 °C), no que deje de hervir; el contexto dice que el agua llevaba varios minutos hirviendo. Además, el ritmo de subida de temperatura entre los minutos 3 y 6 muestra que la energía sí entra al agua y no se pierde 'totalmente'.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el efecto de la presión sobre el punto de ebullición: cree que a menor presión el agua no hierve."
+      }
+    ],
+    "explicacion": "LEER: la estufa entrega energía a ritmo constante todo el tiempo; la gráfica va de −10 °C a 92 °C con dos tramos horizontales (0 °C y 92 °C). COMPRENDER: se pregunta qué pasa con la energía en el tramo horizontal de 92 °C, es decir, por qué entra energía y la temperatura no cambia. INTERPRETAR: los tramos horizontales coinciden con cambios de estado: fusión a 0 °C y ebullición a 92 °C (temperatura de ebullición del agua en Bogotá según la nota). REPRESENTAR: energía entregada → en los tramos inclinados sube la temperatura (aumenta la energía cinética media); en los tramos planos rompe las interacciones entre moléculas para cambiar de estado (calor latente). RAZONAR: A contradice el contexto (la estufa nunca se apagó); B inventa una falla del instrumento; D confunde el efecto de la presión; solo C explica el tramo plano con un concepto científico correcto. RESOLVER: la respuesta es C. VERIFICAR: la explicación también da cuenta del tramo plano a 0 °C, lo que muestra que es coherente con toda la gráfica.",
+    "que_identificar": "Los dos tramos horizontales de la gráfica y la nota sobre el punto de ebullición en Bogotá; el dato de que la estufa siguió encendida.",
+    "que_revisar": "Diferencia entre calor y temperatura; calor sensible y calor latente; efecto de la presión atmosférica sobre el punto de ebullición.",
+    "refuerzo_ids": ["CIE-006"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["energia", "cambios de estado", "grafico de lineas", "clima colombiano", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-003",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce el tipo de mezcla y el método de separación adecuado a partir de las características de sus componentes",
+    "habilidad": "comprender",
+    "tema": "Mezclas y sustancias",
+    "subtema": "Mezclas homogéneas y heterogéneas; filtración",
+    "dificultad": 1,
+    "contexto": "En un colegio rural, los estudiantes construyeron un filtro casero con una botella invertida y capas de grava, arena fina y carbón vegetal, para tratar agua de una quebrada que baja turbia después de las lluvias. Para probarlo prepararon un litro de agua con dos cucharadas de tierra y una cucharada de sal de cocina disuelta, y la pasaron por el filtro. El agua filtrada salió transparente, pero al probarla seguía teniendo sabor salado.",
+    "estimulo": null,
+    "enunciado": "¿Por qué el filtro retuvo la tierra pero no retuvo la sal?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque la sal se evapora al pasar por el carbón caliente y luego se vuelve a formar en el agua que sale del filtro.",
+        "correcta": false,
+        "explicacion": "No responde. El filtro trabaja a temperatura ambiente y el carbón no está caliente; además, la sal de cocina (cloruro de sodio) tiene un punto de fusión de unos 800 °C y no se evapora en esas condiciones. La sal simplemente pasa disuelta en el agua.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventa un cambio de estado de la sal para explicar por qué 'desaparece' y reaparece."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la tierra forma con el agua una mezcla heterogénea de partículas sólidas que quedan atrapadas en los poros del filtro, mientras que la sal está disuelta como iones en una mezcla homogénea y atraviesa el filtro junto con el agua.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La filtración separa sólidos no disueltos (mezcla heterogénea) porque sus partículas son mucho más grandes que los poros entre los granos de arena. La sal disuelta forma una mezcla homogénea: sus iones tienen tamaño comparable al de las moléculas de agua y pasan por cualquier poro. Por eso el agua sale transparente (sin tierra) pero salada.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque la sal reacciona con la arena y forma un nuevo compuesto soluble que sigue disuelto en el agua filtrada.",
+        "correcta": false,
+        "explicacion": "No responde. Disolver sal en agua y pasarla por arena son procesos físicos; no hay reacción química entre el cloruro de sodio y la arena (dióxido de silicio) en esas condiciones. El sabor salado del agua filtrada indica que sigue siendo la misma sal, no un compuesto nuevo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde un proceso físico (disolución y filtración) con una reacción química."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el filtro solo funciona con agua pura y la sal daña las capas de arena, lo que deja pasar todo.",
+        "correcta": false,
+        "explicacion": "No responde. Si la sal hubiera dañado el filtro y dejara pasar todo, la tierra también habría pasado y el agua no habría salido transparente, como dice el contexto. La sal no altera la arena ni el carbón.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propone una falla del filtro que contradice el resultado observado (agua transparente)."
+      }
+    ],
+    "explicacion": "LEER: el filtro tiene capas de grava, arena y carbón; el agua de prueba tiene tierra (no disuelta) y sal (disuelta); el resultado es agua transparente pero salada. COMPRENDER: se pregunta por qué un componente quedó retenido y el otro no. INTERPRETAR: 'transparente' significa que las partículas de tierra fueron retenidas; 'sabor salado' significa que la sal pasó. REPRESENTAR: tierra + agua = mezcla heterogénea (partículas grandes, visibles) → se separa por filtración; sal + agua = mezcla homogénea (iones dispersos entre las moléculas de agua) → no se separa por filtración, se requeriría evaporación o destilación. RAZONAR: A y C inventan cambios químicos o de estado que no ocurren a temperatura ambiente; D contradice el resultado observado; B explica ambos hechos con el concepto de tipo de mezcla y tamaño de partícula. RESOLVER: la respuesta es B. VERIFICAR: la explicación es coherente con los dos datos del resultado (transparente y salada) y con lo que hace un filtro en la vida real: quita turbidez, no salinidad.",
+    "que_identificar": "Que la tierra no está disuelta y la sal sí, y que el resultado tiene dos partes: agua transparente y sabor salado.",
+    "que_revisar": "Mezclas homogéneas y heterogéneas; métodos de separación (filtración, evaporación, destilación) y qué propiedad aprovecha cada uno.",
+    "refuerzo_ids": ["CIE-023", "CIE-007"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["agua", "mezclas", "experimento escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-004",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Usa información sobre consumo de energía para tomar decisiones fundamentadas en conceptos científicos",
+    "habilidad": "razonar",
+    "tema": "Energía en el hogar",
+    "subtema": "Potencia, energía consumida y uso responsable",
+    "dificultad": 2,
+    "contexto": "Una familia de Bogotá revisó su recibo de energía y estimó cuánta energía consume cada aparato al mes. La ducha eléctrica tiene una potencia de 4500 W y se usa en total unos 27 minutos al día entre todos los miembros; la nevera funciona de manera continua, y los seis bombillos, el televisor y la plancha se usan según la rutina de la casa. La familia quiere reducir el consumo sin que se dañen los alimentos.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Energía consumida por aparato en un mes",
+      "eje_x": "Aparato",
+      "eje_y": "Energía (kWh por mes)",
+      "series": [
+        { "nombre": "Consumo mensual", "valores": [["Ducha eléctrica", 60], ["Nevera", 45], ["Bombillos (6)", 20], ["Televisor", 15], ["Plancha", 8]] }
+      ]
+    },
+    "enunciado": "Con base en la gráfica y en el contexto, ¿cuál acción produce la mayor reducción del consumo mensual y cuál es la razón física que la sustenta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Reemplazar los seis bombillos por bombillos LED, porque la iluminación es el mayor consumo del hogar.",
+        "correcta": false,
+        "explicacion": "No responde. Cambiar a LED sí ahorra energía, pero la gráfica muestra que los bombillos consumen 20 kWh al mes, la tercera barra; el mayor consumo es la ducha eléctrica (60 kWh). La premisa de esta opción contradice la lectura de la gráfica.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asume que la iluminación es lo que más consume sin comparar las alturas de las barras."
+      },
+      {
+        "clave": "B",
+        "texto": "Desconectar la nevera durante la noche, porque es el segundo mayor consumo y de noche nadie la abre.",
+        "correcta": false,
+        "explicacion": "No responde. La nevera consume energía continuamente para mantener baja la temperatura interior, se abra o no; al desconectarla de noche el interior se calienta, los alimentos se deterioran (lo que el contexto pide evitar) y al reconectarla el compresor debe trabajar más para volver a enfriar. Además, 45 kWh es menos que los 60 kWh de la ducha.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la nevera solo consume energía cuando se abre y no considera la condición del contexto sobre los alimentos."
+      },
+      {
+        "clave": "C",
+        "texto": "Apagar el televisor desde el control remoto en lugar de dejarlo encendido, porque el modo de espera consume los 15 kWh de la gráfica.",
+        "correcta": false,
+        "explicacion": "No responde. Los 15 kWh del televisor corresponden a su uso normal, no al modo de espera; y apagarlo con el control remoto lo deja precisamente en espera, que sigue consumiendo un poco. En cualquier caso, esa barra es pequeña comparada con la de la ducha.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye a un solo aparato pequeño un ahorro que la gráfica no respalda."
+      },
+      {
+        "clave": "D",
+        "texto": "Acortar el tiempo de las duchas, porque la ducha eléctrica transforma energía eléctrica en calor con una potencia muy alta (4500 W), de modo que cada minuto de uso consume mucha más energía que cualquier otro aparato de la casa.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Energía = potencia × tiempo: 4,5 kW × 0,45 h/día × 30 días ≈ 60 kWh, la barra más alta de la gráfica. Como la potencia es muy alta, reducir unos minutos diarios de ducha produce un ahorro mayor que cualquier cambio en los aparatos de menor consumo, y no afecta la conservación de los alimentos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica da el consumo mensual de cinco aparatos; el contexto da la potencia de la ducha (4500 W), su tiempo de uso (27 min diarios) y la condición de no dañar los alimentos. COMPRENDER: se pide la acción con mayor reducción y la razón física. INTERPRETAR: la barra más alta es la ducha (60 kWh), seguida de la nevera (45), bombillos (20), televisor (15) y plancha (8). REPRESENTAR: energía = potencia × tiempo; 4,5 kW × 0,45 h × 30 días ≈ 60 kWh, lo que coincide con la gráfica. RAZONAR: A parte de una lectura equivocada de la gráfica; B incumple la condición de los alimentos y no es el mayor consumo; C atribuye al modo de espera un valor que corresponde al uso normal; D actúa sobre el mayor consumo y explica por qué la potencia alta hace que cada minuto cuente. RESOLVER: la respuesta es D. VERIFICAR: la acción elegida corresponde a la barra más alta, respeta la condición del contexto y el cálculo de potencia × tiempo confirma el valor de la gráfica.",
+    "que_identificar": "La barra más alta de la gráfica, la potencia de la ducha en el contexto y la restricción sobre los alimentos.",
+    "que_revisar": "Relación entre potencia, tiempo y energía (kWh); transformación de energía eléctrica en térmica; lectura comparativa de gráficos de barras.",
+    "refuerzo_ids": ["CIE-020", "CIE-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["energia", "hogar", "grafico de barras", "cts", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-005",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica los resultados de un experimento sobre procesos celulares a partir de conceptos como fermentación y actividad enzimática",
+    "habilidad": "razonar",
+    "tema": "Procesos celulares",
+    "subtema": "Fermentación y actividad enzimática según la temperatura",
+    "dificultad": 2,
+    "contexto": "Un grupo de grado 11° puso 5 g de levadura de panadería en cuatro botellas iguales con 100 mL de agua, tapó cada una con un globo desinflado y esperó 30 minutos. En cada botella cambió solo la cantidad de azúcar o la temperatura del agua, como se muestra en la tabla; luego midieron el diámetro que alcanzó cada globo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Condiciones y resultado de cada botella a los 30 minutos",
+      "columnas": ["Botella", "Azúcar (g)", "Temperatura del agua (°C)", "Diámetro del globo (cm)"],
+      "filas": [["1", 0, 35, 0], ["2", 10, 35, 9], ["3", 10, 5, 1], ["4", 10, 70, 0]],
+      "nota": "Todas las botellas tenían la misma cantidad de levadura y de agua, y se mantuvieron a la temperatura indicada durante los 30 minutos."
+    },
+    "enunciado": "¿Cuál explicación es consistente con los resultados de las cuatro botellas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La levadura produce gas solo cuando hay azúcar y agua caliente; por eso, a mayor temperatura del agua, más gas se produce.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que sin azúcar (botella 1) no hubo gas, pero la botella 4, la más caliente (70 °C), no infló el globo en absoluto, mientras que la de 35 °C lo infló hasta 9 cm. La relación 'a mayor temperatura más gas' contradice la fila 4 de la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generaliza a partir de las botellas 2 y 3 sin revisar el resultado de la botella 4."
+      },
+      {
+        "clave": "B",
+        "texto": "La levadura fermenta el azúcar y libera dióxido de carbono; sus enzimas funcionan mejor a temperaturas moderadas: a 5 °C la actividad es muy lenta y a 70 °C las enzimas se desnaturalizan, por eso solo la botella 2 infló el globo de manera notable.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Explica los cuatro resultados: sin azúcar no hay sustrato para fermentar (botella 1, 0 cm); a 35 °C, cerca de la temperatura óptima, la fermentación es rápida (botella 2, 9 cm); a 5 °C las reacciones enzimáticas ocurren muy despacio (botella 3, 1 cm); a 70 °C las enzimas pierden su estructura y la levadura muere (botella 4, 0 cm).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El gas de la botella 2 proviene del azúcar que se evapora con el calor; por eso, sin azúcar (botella 1) no se produce gas.",
+        "correcta": false,
+        "explicacion": "No responde. El azúcar disuelto no se evapora a 35 °C ni a 70 °C (se descompone antes de hervir), y si el gas viniera de la 'evaporación del azúcar', la botella 4, con más calor, debería haber inflado más el globo, pero el diámetro fue 0. El gas es CO2 producido por la levadura viva.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el gas a un cambio de estado del azúcar en lugar de a un proceso biológico."
+      },
+      {
+        "clave": "D",
+        "texto": "El globo de la botella 3 se infló poco porque el agua fría tiene menos oxígeno disuelto para que la levadura respire.",
+        "correcta": false,
+        "explicacion": "No responde. La fermentación de la levadura no requiere oxígeno (es un proceso anaerobio) y, además, el agua fría disuelve más oxígeno que el agua caliente, no menos. Esta opción tampoco explica el resultado nulo de la botella 4.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde fermentación con respiración aerobia e invierte la relación entre temperatura y oxígeno disuelto."
+      }
+    ],
+    "explicacion": "LEER: cuatro botellas con la misma levadura y agua; varían el azúcar (0 o 10 g) y la temperatura (5, 35 o 70 °C); se mide el diámetro del globo. COMPRENDER: se busca la explicación que sea coherente con TODAS las filas, no solo con algunas. INTERPRETAR: botella 1 (sin azúcar) → 0 cm; botella 2 (35 °C) → 9 cm; botella 3 (5 °C) → 1 cm; botella 4 (70 °C) → 0 cm. El gas necesita azúcar y aparece sobre todo a temperatura moderada; el frío lo reduce mucho y el calor excesivo lo elimina. REPRESENTAR: azúcar + levadura → (enzimas) → CO2 + etanol; velocidad de la enzima: baja en frío, máxima cerca de 35 °C, nula tras desnaturalizarse a 70 °C. RAZONAR: A falla en la fila 4; C atribuye el gas a una evaporación que no ocurre y también falla en la fila 4; D usa el oxígeno, que la fermentación no necesita, y además invierte la relación temperatura-oxígeno disuelto; B explica las cuatro filas. RESOLVER: la respuesta es B. VERIFICAR: se comprueba fila por fila que B predice 0, alto, bajo y 0, exactamente el patrón de la tabla.",
+    "que_identificar": "Que la botella 4, la más caliente, no produjo gas, y que la botella 1 sin azúcar tampoco; el patrón completo de las cuatro filas.",
+    "que_revisar": "Fermentación alcohólica; enzimas y efecto de la temperatura (óptimo y desnaturalización); diseño con variables controladas.",
+    "refuerzo_ids": ["CIE-009"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["experimento escolar", "fermentacion", "enzimas", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-006",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Explica fenómenos cotidianos relacionados con la presión en fluidos usando la relación entre presión y profundidad",
+    "habilidad": "razonar",
+    "tema": "Fluidos",
+    "subtema": "Presión hidrostática",
+    "dificultad": 2,
+    "contexto": "En un edificio de cinco pisos el agua se almacena en un tanque ubicado en la terraza, unos 3 m por encima del piso 5, y baja por una misma tubería vertical que se ramifica hacia cada apartamento. Los residentes del piso 1 (unos 15 m por debajo del nivel del agua del tanque) comentan que el chorro de la ducha sale con mucha fuerza, mientras que en el piso 5 el chorro es débil. Las tuberías de todos los pisos tienen el mismo diámetro.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la mejor explicación de la diferencia en la fuerza del chorro entre el piso 1 y el piso 5?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El agua que llega al piso 1 tiene más masa porque recorre más tubería, y a mayor masa el chorro sale con más fuerza.",
+        "correcta": false,
+        "explicacion": "No responde. La cantidad de agua que sale por una ducha no depende de cuánta tubería recorrió; lo que cambia con la posición es la presión. Esta opción confunde masa con presión y no usa el dato relevante del contexto: la diferencia de altura respecto al nivel del agua en el tanque.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la fuerza del chorro a la 'cantidad' de agua en lugar de a la presión."
+      },
+      {
+        "clave": "B",
+        "texto": "El tanque empuja el agua con la misma presión hacia todos los pisos, pero la tubería del piso 5 es más estrecha y deja pasar menos agua.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice expresamente que las tuberías de todos los pisos tienen el mismo diámetro, así que esta opción se apoya en un dato falso. Además, la presión que ejerce una columna de agua no es la misma en todos los puntos: depende de la profundidad.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce una causa que el contexto descarta explícitamente."
+      },
+      {
+        "clave": "C",
+        "texto": "La presión en un líquido en reposo aumenta con la profundidad medida desde la superficie libre (P = ρ·g·h); sobre el piso 1 hay una columna de agua unas cinco veces más alta que sobre el piso 5, por eso la presión y la fuerza del chorro son mayores.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La presión hidrostática depende de la densidad del líquido, la gravedad y la altura de la columna de líquido por encima del punto. Con h ≈ 15 m en el piso 1 y h ≈ 3 m en el piso 5, la presión debida al agua es unas cinco veces mayor en el piso 1 (≈150 kPa frente a ≈30 kPa), lo que explica el chorro más fuerte.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La presión depende del volumen de agua almacenada en el tanque; cuando el tanque está lleno, todos los pisos reciben la misma presión.",
+        "correcta": false,
+        "explicacion": "No responde. La presión hidrostática en un punto depende de la altura de líquido sobre ese punto, no del volumen total almacenado (un tanque ancho y uno angosto con el mismo nivel producen la misma presión). Y si todos los pisos recibieran la misma presión, no existiría la diferencia que describe el contexto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde volumen (o cantidad) de líquido con altura de la columna de líquido."
+      }
+    ],
+    "explicacion": "LEER: tanque en la terraza; piso 1 a unos 15 m por debajo del nivel del agua, piso 5 a unos 3 m; tuberías de igual diámetro; chorro fuerte abajo, débil arriba. COMPRENDER: se pide la explicación física de la diferencia de fuerza del chorro. INTERPRETAR: la única variable que cambia entre pisos es la altura de agua sobre cada uno (15 m frente a 3 m). REPRESENTAR: P = ρ·g·h; con ρ ≈ 1000 kg/m³ y g ≈ 10 m/s², P₁ ≈ 150 kPa y P₅ ≈ 30 kPa, una relación de 5 a 1. RAZONAR: A confunde masa con presión; B usa un dato que el contexto niega (diámetro distinto); D confunde volumen con altura y además contradice la observación; C conecta la observación con la ley de la presión hidrostática usando los datos del contexto. RESOLVER: la respuesta es C. VERIFICAR: la explicación predice que en los pisos intermedios el chorro tendrá una fuerza intermedia, lo cual es lo que ocurre en la realidad en edificios con tanque elevado.",
+    "que_identificar": "Las alturas (15 m y 3 m) respecto al nivel del agua del tanque y el dato de que las tuberías son iguales.",
+    "que_revisar": "Presión hidrostática y su dependencia de la profundidad; diferencia entre presión, fuerza, masa y volumen.",
+    "refuerzo_ids": ["CIE-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["agua", "hogar", "presion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-007",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica una reacción química cotidiana (oxidación del hierro) identificando las condiciones necesarias a partir de resultados experimentales",
+    "habilidad": "razonar",
+    "tema": "Reacciones químicas",
+    "subtema": "Oxidación del hierro y factores que la afectan",
+    "dificultad": 3,
+    "contexto": "Para entender por qué se oxidan las rejas y herramientas de hierro en un pueblo húmedo del Caribe colombiano, un grupo colocó clavos de hierro nuevos e idénticos en cuatro tubos de ensayo con distintas condiciones y los observó durante siete días. En el tubo 2 el agua se hirvió antes (para expulsar el oxígeno disuelto) y se cubrió con una capa de aceite para impedir que entrara aire.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Estado de cada clavo a los siete días",
+      "columnas": ["Tubo", "Condición", "Observación a los 7 días"],
+      "filas": [["1", "Aire seco (con un desecante que absorbe la humedad)", "Sin cambios"], ["2", "Agua hervida y cubierta con una capa de aceite", "Sin cambios"], ["3", "Agua de la llave, en contacto con el aire", "Óxido leve (manchas cafés)"], ["4", "Agua de la llave con sal disuelta, en contacto con el aire", "Óxido abundante"]]
+    },
+    "enunciado": "¿Qué conclusión sobre las condiciones necesarias para la oxidación del hierro está mejor sustentada por el conjunto de los cuatro resultados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El agua por sí sola causa la oxidación, pues los tubos que tenían agua (2, 3 y 4) fueron los que presentaron cambios.",
+        "correcta": false,
+        "explicacion": "No responde. El tubo 2 también tenía agua y el clavo no cambió; la diferencia es que en ese tubo el agua se hirvió (sin oxígeno disuelto) y se selló con aceite. Por lo tanto, el agua sola no basta: se necesita también oxígeno.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee mal la fila del tubo 2 o la pasa por alto al agrupar los tubos 'con agua'."
+      },
+      {
+        "clave": "B",
+        "texto": "La sal es la causa de la oxidación, ya que el tubo con sal fue el que presentó más óxido.",
+        "correcta": false,
+        "explicacion": "No responde. El tubo 3, sin sal, también se oxidó (aunque menos), así que la sal no es necesaria para que ocurra la reacción; comparar los tubos 3 y 4 muestra que la sal acelera el proceso, no que lo cause. Concluir que es 'la causa' va más allá de lo que muestran los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el factor que más intensifica un efecto con la causa necesaria del fenómeno."
+      },
+      {
+        "clave": "C",
+        "texto": "El oxígeno del aire es suficiente para oxidar el hierro, como lo demuestra el tubo 1, que solo tenía aire.",
+        "correcta": false,
+        "explicacion": "No responde. En el tubo 1 había aire (con oxígeno) pero sin humedad, y el clavo no cambió; ese resultado demuestra justamente lo contrario: el oxígeno sin agua no es suficiente para producir óxido en siete días.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la observación del tubo 1: cree que 'sin cambios' apoya que el aire oxida."
+      },
+      {
+        "clave": "D",
+        "texto": "Se requieren a la vez agua y oxígeno: sin agua (tubo 1) o sin oxígeno disuelto (tubo 2) no hay óxido; la sal no es necesaria, pero acelera la reacción al aumentar la conductividad de la disolución.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La oxidación del hierro es una reacción electroquímica en la que el hierro cede electrones al oxígeno en presencia de agua (Fe + O2 + H2O → óxidos hidratados de hierro). El tubo 1 elimina el agua y el tubo 2 elimina el oxígeno: en ambos no hay reacción. Los tubos 3 y 4 tienen agua y oxígeno y se oxidan; la sal en disolución facilita el movimiento de iones, por eso el tubo 4 se oxida más. Esta conclusión usa las cuatro filas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro tubos con clavos idénticos; tubo 1 sin humedad, tubo 2 sin oxígeno disuelto (agua hervida y sellada), tubo 3 con agua y aire, tubo 4 con agua salada y aire; se registra el estado a los 7 días. COMPRENDER: se pide la conclusión mejor sustentada por el CONJUNTO de resultados, es decir, la que no contradiga ninguna fila. INTERPRETAR: sin agua → nada; sin oxígeno → nada; agua + oxígeno → óxido; agua + oxígeno + sal → más óxido. REPRESENTAR: condiciones necesarias = agua Y oxígeno; sal = factor que acelera. RAZONAR: A ignora el tubo 2; B convierte un acelerador en causa y contradice el tubo 3; C invierte lo que muestra el tubo 1; D es coherente con las cuatro filas y explica el papel de cada factor. RESOLVER: la respuesta es D. VERIFICAR: se revisa fila por fila: D predice 'sin cambios' para 1 y 2, 'óxido' para 3 y 'más óxido' para 4, exactamente lo observado; además explica por qué el ambiente húmedo y salino del Caribe favorece la corrosión.",
+    "que_identificar": "Qué factor falta en cada uno de los tubos que no cambiaron (tubo 1: agua; tubo 2: oxígeno) y que el tubo 3 se oxidó sin sal.",
+    "que_revisar": "Oxidación y corrosión del hierro como reacción química; papel del oxígeno, el agua y los electrolitos; lógica de las pruebas de control.",
+    "refuerzo_ids": ["CIE-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": ["reacciones quimicas", "corrosion", "tabla", "clima colombiano", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-008",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la respuesta del sistema inmune a partir de datos sobre producción de anticuerpos",
+    "habilidad": "comprender",
+    "tema": "Sistema inmune",
+    "subtema": "Memoria inmunológica y vacunas",
+    "dificultad": 1,
+    "contexto": "En una campaña de vacunación de un colegio, la enfermera explicó por qué algunas vacunas requieren una segunda dosis. Mostró los resultados de un laboratorio que midió la cantidad de anticuerpos en la sangre de personas después de recibir por primera vez un antígeno (primera dosis) y después de recibir el mismo antígeno semanas más tarde (segunda dosis).",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Respuesta de anticuerpos ante el mismo antígeno",
+      "columnas": ["Exposición al antígeno", "Día en que se detectan anticuerpos", "Día del nivel máximo", "Nivel máximo de anticuerpos (unidades relativas)"],
+      "filas": [["Primera (primera dosis)", 7, 14, 10], ["Segunda (segunda dosis)", 2, 5, 100]],
+      "nota": "El antígeno y la cantidad aplicada fueron los mismos en ambas dosis."
+    },
+    "enunciado": "¿Cómo se explica que la respuesta a la segunda dosis sea más rápida y más intensa que la respuesta a la primera?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Durante la primera exposición el sistema inmune produjo linfocitos de memoria específicos para ese antígeno; en la segunda exposición esas células se activan de inmediato y generan anticuerpos en mayor cantidad.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En la respuesta primaria el organismo debe reconocer el antígeno, seleccionar los linfocitos adecuados y multiplicarlos, lo que tarda días (anticuerpos al día 7, máximo al día 14). Parte de esos linfocitos quedan como células de memoria; ante la segunda exposición se activan en 2 días y producen un nivel diez veces mayor. Esta memoria inmunológica es la base de las vacunas con refuerzo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "En la segunda exposición el antígeno es más débil, por lo que el cuerpo lo elimina con mayor facilidad y rapidez.",
+        "correcta": false,
+        "explicacion": "No responde. La nota de la tabla indica que el antígeno y la cantidad fueron los mismos en ambas dosis, así que lo que cambió no fue el antígeno sino el organismo, que ya lo había 'conocido'. Además, un antígeno más débil produciría menos anticuerpos, no diez veces más.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el cambio al antígeno y no al sistema inmune, ignorando la nota de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "Los anticuerpos producidos en la primera exposición permanecen intactos en la sangre y solo se suman a los que se producen en la segunda.",
+        "correcta": false,
+        "explicacion": "No responde. Los anticuerpos de la respuesta primaria disminuyen con el tiempo; y aunque permanecieran, sumar el máximo de la primera (10) a una nueva respuesta igual daría alrededor de 20, no 100. Tampoco explicaría por qué la detección pasa del día 7 al día 2.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Explica el mayor nivel por acumulación, sin comprobar que los números de la tabla lo permitan."
+      },
+      {
+        "clave": "D",
+        "texto": "La segunda respuesta es más rápida porque la segunda dosis se aplicó en mayor cantidad que la primera.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla aclara que la cantidad aplicada fue la misma en ambas dosis, de modo que esta opción se basa en un dato que el estímulo niega. La diferencia se debe a la memoria inmunológica, no a la dosis.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone una diferencia de dosis que la nota del estímulo descarta explícitamente."
+      }
+    ],
+    "explicacion": "LEER: la tabla compara la primera y la segunda exposición al mismo antígeno: día de detección (7 frente a 2), día del máximo (14 frente a 5) y nivel máximo (10 frente a 100); la nota dice que el antígeno y la cantidad fueron iguales. COMPRENDER: se pregunta por la explicación biológica de una respuesta más rápida y más intensa. INTERPRETAR: si el estímulo fue idéntico, la diferencia debe estar en el organismo, que cambió tras la primera exposición. REPRESENTAR: primera dosis → reconocimiento y multiplicación lenta de linfocitos → anticuerpos + células de memoria; segunda dosis → células de memoria ya listas → respuesta rápida e intensa. RAZONAR: B y D contradicen la nota (mismo antígeno, misma cantidad); C no cuadra con los números (10 + 10 ≠ 100) ni con la mayor rapidez; A explica los tres cambios de la tabla. RESOLVER: la respuesta es A. VERIFICAR: la explicación es coherente con la práctica de aplicar dosis de refuerzo en las vacunas, mencionada en el contexto.",
+    "que_identificar": "La nota de que el antígeno y la dosis fueron iguales, y las tres diferencias entre las filas (más rápido, máximo más temprano, nivel diez veces mayor).",
+    "que_revisar": "Respuesta inmune primaria y secundaria; linfocitos de memoria; fundamento de las vacunas y los refuerzos.",
+    "refuerzo_ids": ["CIE-001"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": ["salud", "sistema inmune", "vacunas", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-009",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones a partir de la información o las evidencias que las respaldan, sin ir más allá de lo que muestran los datos",
+    "habilidad": "interpretar",
+    "tema": "Indagación: interpretación de resultados",
+    "subtema": "Conclusiones válidas a partir de una gráfica de crecimiento",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes de una vereda cafetera quiso comparar dos abonos para el fríjol. Sembraron tres semillas en cada una de tres materas iguales, con la misma tierra, la misma cantidad de agua y la misma exposición al sol. La matera A no recibió abono; la matera B recibió un fertilizante comercial y la matera C recibió compost preparado en el colegio. Cada semana midieron la altura promedio de las plantas de cada matera.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Altura promedio de las plantas de fríjol por semana",
+      "eje_x": "Semana",
+      "eje_y": "Altura promedio (cm)",
+      "series": [
+        { "nombre": "A: sin abono", "valores": [["0", 2], ["1", 5], ["2", 9], ["3", 13], ["4", 17]] },
+        { "nombre": "B: fertilizante comercial", "valores": [["0", 2], ["1", 6], ["2", 12], ["3", 19], ["4", 26]] },
+        { "nombre": "C: compost", "valores": [["0", 2], ["1", 6], ["2", 11], ["3", 17], ["4", 23]] }
+      ]
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los datos de la gráfica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El fertilizante comercial hace que las plantas produzcan más fríjoles que el compost.",
+        "correcta": false,
+        "explicacion": "No responde. La única variable medida fue la altura promedio de las plantas; el experimento no registró producción de fríjoles ni duró hasta la cosecha. Concluir sobre la producción es ir más allá de lo que muestran los datos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Extiende el resultado sobre altura a una variable (producción) que no se midió."
+      },
+      {
+        "clave": "B",
+        "texto": "El compost no tuvo efecto, porque las plantas con compost crecieron menos que las plantas con fertilizante comercial.",
+        "correcta": false,
+        "explicacion": "No responde. Para saber si el compost tuvo efecto hay que compararlo con el control (matera A, sin abono), no con el otro abono. A la semana 4 las plantas con compost midieron 23 cm frente a 17 cm sin abono, es decir, sí crecieron más que el control.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara el tratamiento con el otro tratamiento en lugar de compararlo con el grupo de control."
+      },
+      {
+        "clave": "C",
+        "texto": "En estas condiciones, los dos abonos aumentaron la altura de las plantas respecto a las que no recibieron abono, y el fertilizante comercial produjo la mayor altura a las cuatro semanas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. A la semana 4: A = 17 cm, B = 26 cm, C = 23 cm. Ambos abonos superan al control (B y C por encima de A desde la semana 1) y B es la más alta. La conclusión se limita a la variable medida (altura), al tiempo observado (4 semanas) y a las condiciones del experimento, sin afirmar nada que la gráfica no muestre.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Las plantas crecen unos 4 cm por semana sin importar el abono, como lo muestra la primera semana.",
+        "correcta": false,
+        "explicacion": "No responde. En la primera semana los crecimientos fueron parecidos (3 cm en A y 4 cm en B y C), pero en las semanas siguientes las líneas se separan: entre las semanas 3 y 4 la matera A creció 4 cm, la C 6 cm y la B 7 cm. Un solo intervalo no permite afirmar que el abono no importa.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generaliza a partir de un solo tramo de la gráfica sin mirar las semanas posteriores."
+      }
+    ],
+    "explicacion": "LEER: tres materas con las mismas condiciones salvo el abono (ninguno, comercial, compost); se midió la altura promedio durante cuatro semanas. COMPRENDER: se pide la conclusión que los datos RESPALDAN, ni más ni menos. INTERPRETAR: las tres líneas parten de 2 cm; desde la semana 1 las materas con abono van por encima del control y a la semana 4 el orden es B (26) > C (23) > A (17). REPRESENTAR: tabla mental de la semana 4: sin abono 17, comercial 26, compost 23; diferencia respecto al control: +9 y +6. RAZONAR: A habla de producción, que no se midió; B compara contra el abono equivocado en lugar del control; D toma un solo intervalo y lo generaliza; C describe exactamente lo que muestra la gráfica en el tiempo y las condiciones del experimento. RESOLVER: la respuesta es C. VERIFICAR: cada afirmación de C se puede señalar en la gráfica (B y C sobre A; B la más alta en la semana 4) y no incluye nada que no esté en los datos.",
+    "que_identificar": "El grupo de control (matera A), los valores de la semana 4 de las tres materas y qué variable se midió realmente (altura, no producción).",
+    "que_revisar": "Grupo de control y variable dependiente; distinción entre lo que los datos muestran y lo que se supone; lectura de gráficos de líneas con varias series.",
+    "refuerzo_ids": ["CIE-005"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["cultivos", "indagacion", "grafico de lineas", "grupo de control", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-010",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Identifica en una tabla de resultados qué variables afectan a la variable dependiente comparando ensayos en los que solo cambia una variable",
+    "habilidad": "razonar",
+    "tema": "Indagación: análisis de variables",
+    "subtema": "Periodo del péndulo simple",
+    "dificultad": 3,
+    "contexto": "Antes de hacer el experimento, un grupo de grado 11° planteó la hipótesis: 'A mayor masa, mayor periodo del péndulo'. Construyeron un péndulo con un hilo y pesas intercambiables y midieron el tiempo de 10 oscilaciones completas para calcular el periodo (tiempo de una oscilación). Cambiaron la longitud del hilo y la masa, manteniendo siempre el mismo ángulo inicial de 10°.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Periodo del péndulo en cuatro ensayos",
+      "columnas": ["Ensayo", "Longitud del hilo (cm)", "Masa (g)", "Ángulo inicial (°)", "Periodo (s)"],
+      "filas": [["1", 50, 20, 10, 1.42], ["2", 50, 40, 10, 1.42], ["3", 100, 20, 10, 2.01], ["4", 100, 40, 10, 2.01]],
+      "nota": "Cada periodo es el promedio de tres mediciones."
+    },
+    "enunciado": "A partir de la tabla, ¿cuál conclusión sobre la hipótesis y sobre las variables es válida?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La hipótesis se confirma, porque el ensayo 4, que tiene más masa, presenta un periodo mayor que el ensayo 1.",
+        "correcta": false,
+        "explicacion": "No responde. Entre los ensayos 1 y 4 cambian DOS variables a la vez (masa de 20 a 40 g y longitud de 50 a 100 cm), así que esa comparación no permite atribuir la diferencia a la masa. Las comparaciones válidas para la masa son 1 con 2 y 3 con 4, donde solo cambia la masa, y en ambas el periodo es idéntico.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara ensayos en los que cambian dos variables y atribuye el efecto a la que quería probar."
+      },
+      {
+        "clave": "B",
+        "texto": "La hipótesis se rechaza: la masa no afecta el periodo (ensayos 1 y 2, y 3 y 4 son iguales), mientras que la longitud sí lo afecta, aunque duplicar la longitud no duplica el periodo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con la longitud fija, duplicar la masa deja el periodo igual (1,42 s en ambos casos y 2,01 s en ambos casos), lo que refuta la hipótesis. Con la masa fija, duplicar la longitud aumenta el periodo de 1,42 s a 2,01 s, un factor de aproximadamente 1,41 (√2), no de 2. Esto coincide con la relación T ∝ √L del péndulo simple.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El periodo es directamente proporcional a la longitud: al duplicar la longitud del hilo se duplica el periodo.",
+        "correcta": false,
+        "explicacion": "No responde. Al pasar de 50 cm a 100 cm el periodo pasa de 1,42 s a 2,01 s; si fuera directamente proporcional debería llegar a 2,84 s. La razón 2,01 / 1,42 ≈ 1,41 muestra que el periodo crece con la raíz cuadrada de la longitud, no linealmente.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ve que ambas variables aumentan y asume proporcionalidad directa sin calcular la razón entre los periodos."
+      },
+      {
+        "clave": "D",
+        "texto": "No es posible concluir nada sobre la masa, porque según la ley de gravitación una masa mayor es atraída con más fuerza y debe oscilar más rápido.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que una masa mayor recibe una fuerza gravitacional mayor, pero también tiene mayor inercia: la aceleración resultante (g) es la misma para cualquier masa, y por eso el periodo del péndulo no depende de ella. Los datos de la tabla lo muestran directamente: los ensayos 1-2 y 3-4 tienen el mismo periodo. Un razonamiento teórico no puede anular una evidencia que lo contradice.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica la idea 'más fuerza → más rápido' sin tener en cuenta la inercia, y prefiere la teoría mal aplicada a los datos."
+      }
+    ],
+    "explicacion": "LEER: hipótesis: 'a mayor masa, mayor periodo'; tabla con cuatro ensayos en los que varían longitud (50 o 100 cm) y masa (20 o 40 g), con el mismo ángulo. COMPRENDER: se pide una conclusión válida sobre la hipótesis y sobre qué variables afectan el periodo. INTERPRETAR: para aislar la masa se comparan pares donde solo cambia la masa: 1 vs 2 (1,42 = 1,42) y 3 vs 4 (2,01 = 2,01); para aislar la longitud: 1 vs 3 y 2 vs 4 (1,42 → 2,01). REPRESENTAR: masa ×2 → periodo ×1; longitud ×2 → periodo ×1,41 ≈ √2. RAZONAR: A compara ensayos que cambian dos variables; C supone proporcionalidad directa que los números no cumplen; D antepone una idea teórica equivocada a los datos; B se apoya en las comparaciones controladas y describe correctamente la relación con la longitud. RESOLVER: la respuesta es B. VERIFICAR: el modelo del péndulo simple, T = 2π√(L/g), predice 1,42 s para 50 cm y 2,01 s para 100 cm, exactamente los valores de la tabla, e independencia de la masa.",
+    "que_identificar": "Los pares de ensayos en los que cambia una sola variable (1-2 y 3-4 para la masa; 1-3 y 2-4 para la longitud) y la razón entre los periodos.",
+    "que_revisar": "Control de variables en un experimento; variables independiente, dependiente y controladas; periodo del péndulo simple y su dependencia de la longitud.",
+    "refuerzo_ids": ["CIE-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["indagacion", "variables", "pendulo", "tabla", "experimento escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-011",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Diseña un procedimiento y una forma de registro adecuados para responder una pregunta de investigación, controlando las demás variables",
+    "habilidad": "representar",
+    "tema": "Indagación: diseño experimental",
+    "subtema": "Efecto de la temperatura en la velocidad de disolución",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes de grado 10° quiere responder la pregunta: '¿La temperatura del agua afecta el tiempo que tarda en disolverse por completo una pastilla efervescente?'. Disponen de pastillas de la misma marca, vasos iguales, un termómetro, un cronómetro y agua a distintas temperaturas.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes diseños, con su tabla de registro, permite responder la pregunta de investigación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Registrar en una tabla el tiempo de disolución de una pastilla entera y de una pastilla triturada, ambas en 200 mL de agua a 20 °C.",
+        "correcta": false,
+        "explicacion": "No responde. Este diseño cambia el tamaño de los trozos de pastilla (superficie de contacto) y mantiene fija la temperatura en 20 °C; sirve para otra pregunta, pero no permite saber si la temperatura afecta el tiempo, porque la temperatura nunca varía.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cambia una variable distinta de la que plantea la pregunta de investigación."
+      },
+      {
+        "clave": "B",
+        "texto": "Registrar el tiempo de disolución de una pastilla en agua a 10, 20, 40 y 60 °C, usando en cada caso una cantidad distinta de agua para que la pastilla se disuelva mejor.",
+        "correcta": false,
+        "explicacion": "No responde. Aquí varían dos cosas a la vez: la temperatura y el volumen de agua. Si los tiempos cambian, no se podrá saber si fue por la temperatura o por la cantidad de agua; el volumen debe mantenerse igual en todos los ensayos.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No controla una variable que también puede afectar el resultado."
+      },
+      {
+        "clave": "C",
+        "texto": "Registrar la temperatura final del agua después de disolver una pastilla en vasos con 200 mL de agua que empiezan a 10, 20, 40 y 60 °C.",
+        "correcta": false,
+        "explicacion": "No responde. La pregunta pide medir el TIEMPO de disolución (variable dependiente) en función de la temperatura (variable independiente); este diseño mide la temperatura final, que es otra variable. Se invierte el papel de las variables y no se cronometra nada.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la variable dependiente: mide temperatura en lugar de tiempo."
+      },
+      {
+        "clave": "D",
+        "texto": "Una tabla con las columnas 'Temperatura del agua (°C)' con los valores 10, 20, 40 y 60, y 'Tiempo de disolución (s)', usando en cada ensayo 200 mL de agua y una pastilla entera de la misma marca, y repitiendo cada temperatura tres veces para promediar.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La variable independiente (temperatura) toma varios valores; la variable dependiente (tiempo hasta disolución completa) se mide con el cronómetro; el volumen de agua, el tipo y el tamaño de la pastilla se mantienen constantes; y las repeticiones reducen el efecto de errores de medición. La tabla registra exactamente las dos variables que relaciona la pregunta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la pregunta de investigación relaciona temperatura del agua (lo que se cambia) con tiempo de disolución (lo que se mide); hay pastillas iguales, vasos iguales, termómetro y cronómetro. COMPRENDER: se pide el diseño y la tabla que permiten responder ESA pregunta. INTERPRETAR: variable independiente = temperatura; variable dependiente = tiempo; variables que deben mantenerse constantes = volumen de agua, tipo y tamaño de la pastilla. REPRESENTAR: tabla de dos columnas: Temperatura (°C) | Tiempo (s), con varias temperaturas y repeticiones. RAZONAR: A no varía la temperatura; B varía también el volumen de agua; C mide la variable equivocada; D varía solo la temperatura, mide el tiempo y controla lo demás. RESOLVER: la respuesta es D. VERIFICAR: con la tabla de D se puede construir una gráfica tiempo contra temperatura y ver si hay tendencia, que es justamente lo que la pregunta necesita.",
+    "que_identificar": "Cuál es la variable que se cambia y cuál la que se mide según la pregunta, y qué debe mantenerse igual entre ensayos.",
+    "que_revisar": "Variables independiente, dependiente y controladas; diseño de experimentos con un solo factor; registro en tablas.",
+    "refuerzo_ids": ["CIE-010"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["indagacion", "diseno experimental", "variables", "experimento escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-012",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Evalúa la validez de conclusiones a partir de datos, distinguiendo asociación de causalidad",
+    "habilidad": "verificar",
+    "tema": "Indagación: conclusiones válidas",
+    "subtema": "Correlación y causalidad en datos de salud y clima",
+    "dificultad": 3,
+    "contexto": "En un municipio cálido del Magdalena Medio, el hospital local registró los casos de dengue atendidos cada mes y la secretaría de salud los comparó con la lluvia mensual reportada por la estación meteorológica. El dengue lo transmite el mosquito *Aedes aegypti*, cuyas larvas se desarrollan en agua acumulada (tanques, llantas, floreros) durante una a dos semanas antes de convertirse en adultos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Lluvia mensual y casos de dengue en el municipio",
+      "columnas": ["Mes", "Lluvia (mm)", "Casos de dengue"],
+      "filas": [["Enero", 40, 12], ["Febrero", 60, 15], ["Marzo", 120, 20], ["Abril", 220, 35], ["Mayo", 250, 58], ["Junio", 150, 62], ["Julio", 80, 40], ["Agosto", 70, 22]]
+    },
+    "enunciado": "¿Cuál de las siguientes conclusiones es válida a partir de los datos de la tabla y del contexto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Hay una asociación entre lluvia y casos: el máximo de casos ocurre aproximadamente un mes después del máximo de lluvia, lo cual es compatible con el tiempo que tarda el mosquito en desarrollarse en el agua acumulada; para afirmar causalidad harían falta más datos, como la cantidad de criaderos o de mosquitos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que los casos suben cuando sube la lluvia y bajan cuando baja, con un desfase: lluvia máxima en mayo (250 mm) y casos máximos en junio (62). Ese retraso coincide con el tiempo de desarrollo de las larvas descrito en el contexto. La conclusión describe la asociación, propone un mecanismo plausible y reconoce que los datos por sí solos no demuestran la causa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Los casos de dengue hacen disminuir la lluvia, ya que después de junio, cuando hubo más casos, la lluvia bajó.",
+        "correcta": false,
+        "explicacion": "No responde. Invierte la relación entre las variables: la lluvia es un fenómeno climático que no puede ser afectado por el número de enfermos. Además, la lluvia ya venía bajando desde mayo (250 → 150 mm) antes del máximo de casos en junio, así que ni siquiera el orden temporal apoya esta idea.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la dirección de la relación y toma una coincidencia temporal como causa."
+      },
+      {
+        "clave": "C",
+        "texto": "No hay relación entre las variables, porque en junio llovió menos que en mayo y sin embargo hubo más casos.",
+        "correcta": false,
+        "explicacion": "No responde. Un solo par de meses no anula la tendencia general: de enero a mayo ambas variables suben y de junio a agosto ambas bajan. La 'excepción' de junio se explica por el desfase de unas semanas entre la lluvia y la aparición de mosquitos adultos que menciona el contexto, no por ausencia de relación.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Espera una relación exacta mes a mes y descarta la asociación por una excepción explicable."
+      },
+      {
+        "clave": "D",
+        "texto": "La lluvia causa directamente el dengue, pues en los meses más lluviosos hubo más casos.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran una asociación entre lluvia y casos, pero la lluvia no produce la enfermedad: el dengue lo transmite un mosquito. Además, el mes con más lluvia (mayo, 250 mm) no es el de más casos (junio, 62), así que ni siquiera la coincidencia mes a mes es exacta. Afirmar causalidad directa concluye más de lo que muestran los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde correlación con causa directa y omite el mecanismo (el mosquito) descrito en el contexto."
+      }
+    ],
+    "explicacion": "LEER: tabla de ocho meses con lluvia y casos de dengue; contexto: el mosquito se cría en agua acumulada y tarda una a dos semanas en desarrollarse. COMPRENDER: se pide la conclusión VÁLIDA, es decir, la que los datos y el contexto respaldan sin exagerar. INTERPRETAR: lluvia sube de enero a mayo (40 → 250) y baja de junio a agosto (150 → 70); casos suben de enero a junio (12 → 62) y bajan después (40, 22); el pico de casos (junio) va un mes después del pico de lluvia (mayo). REPRESENTAR: lluvia → agua acumulada → larvas (1-2 semanas) → mosquitos adultos → casos; por eso el desfase. RAZONAR: A convierte una asociación en causa directa; C invierte las variables; D niega la relación por un solo par de meses que el desfase explica; B describe la asociación, el desfase, el mecanismo plausible y los límites de los datos. RESOLVER: la respuesta es B. VERIFICAR: se comprueba que B no afirma nada que no esté en la tabla o en el contexto y que el desfase de un mes coincide con el tiempo de desarrollo del mosquito.",
+    "que_identificar": "El mes de mayor lluvia (mayo) y el de más casos (junio), la tendencia general de ambas columnas y el dato del contexto sobre el tiempo de desarrollo del mosquito.",
+    "que_revisar": "Diferencia entre correlación y causalidad; lectura de tendencias en tablas; ciclo de vida del Aedes aegypti y prevención del dengue.",
+    "refuerzo_ids": ["CIE-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["salud", "clima colombiano", "cts", "correlacion", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

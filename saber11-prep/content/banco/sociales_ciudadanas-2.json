@@ -1,0 +1,779 @@
+[
+  {
+    "id": "SOC-013",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "razonar",
+    "tema": "Mecanismos de protección de derechos",
+    "subtema": "Derecho de petición y acción de tutela en la vida escolar",
+    "dificultad": 1,
+    "contexto": "En el colegio Alto del Viento ocurrieron dos situaciones en la misma semana:\n\n- **Sofía**, de grado once, quiere saber con qué criterios el colegio asignó las becas deportivas de este año, porque no fue seleccionada y nadie le ha explicado por qué. En secretaría le dijeron que \"eso no se le informa a los estudiantes\".\n- **Andrés**, de grado décimo, fue notificado de que queda expulsado a partir de mañana por una pelea, sin que lo hayan citado a descargos ni le hayan permitido dar su versión. Faltan dos semanas para los exámenes finales.\n\nEn Colombia, el **derecho de petición** (artículo 23 de la Constitución) permite presentar solicitudes respetuosas a las autoridades y a las organizaciones privadas que prestan servicios públicos, como los colegios, y obtener una respuesta de fondo dentro de los plazos que fija la ley. La **acción de tutela** (artículo 86) permite reclamar ante un juez la protección inmediata de un derecho fundamental que esté siendo vulnerado o amenazado.",
+    "estimulo": null,
+    "enunciado": "¿Cuál herramienta le conviene a cada estudiante y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A ambos les conviene la acción de tutela, porque los dos tienen un problema con el colegio y la tutela es la herramienta más rápida.",
+        "correcta": false,
+        "explicacion": "La tutela protege derechos fundamentales vulnerados o amenazados. Sofía no tiene un derecho amenazado: le falta información sobre unos criterios, y para eso el contexto describe justamente el derecho de petición. Usar la tutela para cualquier reclamo desconoce que es un mecanismo excepcional y no una vía para pedir explicaciones.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la tutela sirve para cualquier reclamo contra una institución, sin revisar si hay un derecho fundamental en riesgo."
+      },
+      {
+        "clave": "B",
+        "texto": "A Sofía, un derecho de petición, porque busca una respuesta con la información que le niegan; a Andrés, una acción de tutela, porque su expulsión sin ser escuchado amenaza sus derechos al debido proceso y a la educación y necesita protección inmediata.",
+        "correcta": true,
+        "explicacion": "Sofía necesita que el colegio le responda de fondo una solicitud de información; eso es exactamente lo que garantiza el derecho de petición, que aplica también a colegios privados por prestar un servicio público. Andrés enfrenta una expulsión inmediata sin proceso, lo que amenaza su derecho a la educación y al debido proceso; la urgencia (dos semanas para exámenes) y la gravedad exigen la protección inmediata de un juez, es decir, la tutela.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "A ambos les conviene el derecho de petición, porque antes de acudir a un juez siempre hay que pedirle explicaciones por escrito al colegio.",
+        "correcta": false,
+        "explicacion": "Para Sofía la petición es adecuada, pero para Andrés no basta: una petición obtiene una respuesta, no impide que la expulsión se haga efectiva mañana. El contexto dice que la tutela procede cuando un derecho fundamental está amenazado y se requiere protección inmediata, que es el caso de Andrés. No existe la regla de 'primero petición y luego tutela' cuando el daño es inminente.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó una regla de 'primero pedir por escrito' sin considerar la urgencia ni la gravedad del caso de Andrés."
+      },
+      {
+        "clave": "D",
+        "texto": "A Sofía, una acción de tutela, porque el colegio le violó el derecho a la educación al no darle la beca; a Andrés, un derecho de petición, para que el rector le explique por escrito los motivos de la expulsión.",
+        "correcta": false,
+        "explicacion": "Invierte las herramientas. No recibir una beca no vulnera el derecho a la educación de Sofía (sigue estudiando); lo que necesita es información. Andrés, en cambio, no necesita una explicación escrita sino que se impida una expulsión decidida sin proceso, y eso solo lo logra la protección inmediata que ofrece la tutela.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Invirtió las herramientas al confundir 'no recibir un beneficio' con 'vulnerar un derecho' y 'ser expulsado' con 'necesitar información'."
+      }
+    ],
+    "explicacion": "LEER: hay dos casos: Sofía quiere conocer los criterios de una beca y le niegan la información; Andrés será expulsado mañana sin descargos, a dos semanas de los exámenes. El contexto define el derecho de petición (obtener respuesta de fondo a una solicitud) y la tutela (protección inmediata de un derecho fundamental amenazado). COMPRENDER: se pide asignar a cada estudiante la herramienta adecuada y justificarla. INTERPRETAR: la clave de cada caso es distinta: Sofía necesita información; Andrés necesita evitar un daño grave e inminente a sus derechos. REPRESENTAR: petición → respuesta a una solicitud; tutela → juez protege un derecho fundamental amenazado. Sofía → petición; Andrés → tutela. RAZONAR: A usa tutela para todo (Sofía no tiene un derecho amenazado); C usa petición para todo (no detiene la expulsión de Andrés); D invierte los casos. RESOLVER: opción B. VERIFICAR: la opción B da a cada estudiante la herramienta cuya definición del contexto coincide con lo que necesita: información para Sofía, protección inmediata para Andrés.",
+    "que_identificar": "Qué necesita cada estudiante (una respuesta con información o la protección urgente de un derecho) y cuál definición del contexto corresponde a esa necesidad.",
+    "que_revisar": "Diferencia entre derecho de petición (art. 23) y acción de tutela (art. 86) de la Constitución de 1991: qué se pide, ante quién y en qué situaciones procede cada uno.",
+    "refuerzo_ids": ["SOC-004", "SOC-020"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["derechos_fundamentales", "tutela", "derecho_de_peticion", "gobierno_escolar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-014",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce la organización del Estado: funciones y alcances de las ramas del poder y de los organismos de control",
+    "habilidad": "comprender",
+    "tema": "Organización del Estado colombiano",
+    "subtema": "Ramas del poder público y separación de funciones",
+    "dificultad": 2,
+    "contexto": "Un periódico escolar resumió así un caso (los nombres de las organizaciones son ficticios):\n\n\"El **Congreso de la República** aprobó una ley que creó un impuesto a las bebidas azucaradas. Meses después, la **DIAN**, entidad de la rama ejecutiva adscrita al Ministerio de Hacienda, empezó a cobrarlo. La asociación de tenderos Tiendas Unidas presentó una demanda ante la **Corte Constitucional**, argumentando que uno de los artículos de la ley violaba la Constitución. La Corte estudió el caso y declaró inexequible (es decir, sin validez) ese artículo, de modo que la DIAN dejó de aplicarlo\".\n\nLa Constitución de 1991 establece que el poder público se organiza en las ramas **legislativa**, **ejecutiva** y **judicial**, que tienen funciones separadas pero colaboran armónicamente para cumplir los fines del Estado.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la actuación de las ramas del poder público en el caso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La Corte Constitucional invadió la función del Congreso, porque al anular un artículo de la ley actuó como si fuera un legislador.",
+        "correcta": false,
+        "explicacion": "Revisar si las leyes se ajustan a la Constitución y retirar del ordenamiento las normas que la contradicen es una función propia de la Corte Constitucional (control de constitucionalidad). La Corte no escribió una ley nueva ni creó un impuesto: verificó una norma existente. Eso no es invadir la función legislativa sino ejercer la judicial.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó el control constitucional como una invasión de funciones en vez de como una tarea propia de la rama judicial."
+      },
+      {
+        "clave": "B",
+        "texto": "La asociación de tenderos ejerció la función de la rama judicial, pues fue ella quien logró que el artículo perdiera validez.",
+        "correcta": false,
+        "explicacion": "Los ciudadanos y las organizaciones pueden presentar demandas contra las leyes, pero quien decide es la Corte Constitucional. Según el texto, la Corte 'estudió el caso y declaró inexequible' el artículo. La opción confunde a quien presenta la demanda con quien resuelve.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió a quien presenta la demanda con quien decide sobre ella."
+      },
+      {
+        "clave": "C",
+        "texto": "El Congreso (rama legislativa) creó la norma, la DIAN (rama ejecutiva) la aplicó y la Corte Constitucional (rama judicial) revisó si se ajustaba a la Constitución; cada una actuó dentro de su función y ninguna reemplazó a la otra.",
+        "correcta": true,
+        "explicacion": "El caso muestra la separación de funciones: hacer las leyes corresponde al Congreso; ejecutarlas y administrar (por ejemplo, cobrar impuestos) corresponde a la rama ejecutiva, de la que hace parte la DIAN; y decidir si una ley respeta la Constitución corresponde a la Corte Constitucional, órgano de la rama judicial. Cada actor hizo lo suyo y la decisión de la Corte fue acatada por la ejecutiva, lo que ilustra la colaboración armónica.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El Presidente creó el impuesto a través de la DIAN, y el Congreso solo lo aprobó como formalidad, porque la rama ejecutiva es la que dirige la economía del país.",
+        "correcta": false,
+        "explicacion": "El texto dice que el Congreso aprobó la ley que creó el impuesto; la DIAN solo lo cobró después. Crear impuestos mediante leyes es función de la rama legislativa, no de la ejecutiva. La opción atribuye la creación de la norma a la institución equivocada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó al Presidente la creación de la ley porque asocia 'gobierno' con todo el poder del Estado."
+      }
+    ],
+    "explicacion": "LEER: el texto narra tres acciones: el Congreso aprueba la ley del impuesto; la DIAN (rama ejecutiva) lo cobra; una asociación demanda y la Corte Constitucional declara inexequible un artículo, que la DIAN deja de aplicar. Además recuerda que las tres ramas tienen funciones separadas y colaboran armónicamente. COMPRENDER: se pide la afirmación que describa correctamente qué hizo cada rama. INTERPRETAR: legislar = Congreso; ejecutar/administrar = DIAN y Ministerio; juzgar la constitucionalidad = Corte. REPRESENTAR: legislativa → crea la norma; ejecutiva → la aplica; judicial → la revisa frente a la Constitución; ejecutiva → acata la decisión. RAZONAR: B pone la creación de la ley en la ejecutiva; C califica de invasión una función propia de la Corte; D confunde a la demandante con el juez. RESOLVER: opción C. VERIFICAR: cada oración de A corresponde a un hecho del texto y a la función que la Constitución asigna a esa rama, y la frase 'ninguna reemplazó a la otra' coincide con la idea de funciones separadas que colaboran.",
+    "que_identificar": "Qué acción realiza cada institución en el texto (aprobar, cobrar, demandar, declarar inexequible) y a qué rama pertenece cada una.",
+    "que_revisar": "Ramas del poder público en la Constitución de 1991 (art. 113): funciones del Congreso, del Presidente y las entidades del Gobierno, y de la Corte Constitucional y demás órganos judiciales; diferencia entre quien demanda y quien decide.",
+    "refuerzo_ids": ["SOC-001", "SOC-023"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["constitucion_1991", "ramas_del_poder", "organizacion_del_estado"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-015",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Abolición de la esclavitud en Colombia",
+    "subtema": "Ley de 1851, indemnización a propietarios y memoria histórica",
+    "dificultad": 2,
+    "contexto": "Para una exposición sobre memoria histórica, un grupo de estudiantes reunió la siguiente información:\n\nEn 1821, el Congreso de Cúcuta aprobó la **ley de libertad de vientres**: los hijos de mujeres esclavizadas nacidos a partir de entonces serían libres, aunque debían trabajar para el amo de su madre hasta los 18 años. Treinta años después, la **ley del 21 de mayo de 1851** dispuso que desde el 1.º de enero de 1852 serían libres todas las personas esclavizadas en el país, y ordenó que el Estado **indemnizara a los propietarios** con bonos pagaderos en varios años.\n\nEn el archivo de una notaría encontraron la carta de un hacendado del Cauca, fechada en marzo de 1852, de la que transcriben este fragmento (adaptado):\n\n*\"Se me han ido de la hacienda doce personas que hasta diciembre eran mías, y el gobierno aún no me entrega los bonos prometidos por ellas. Nadie quiere ahora trabajar en las minas por el jornal que puedo pagar. Exijo que se me reconozca el valor de lo que perdí\"*.",
+    "estimulo": null,
+    "enunciado": "¿Qué permite comprender la carta sobre el contexto en que se aplicó la abolición de 1851?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la esclavitud continuó en el Cauca después de 1852, porque el hacendado sigue llamando 'mías' a las personas que trabajaban en su hacienda.",
+        "correcta": false,
+        "explicacion": "El hacendado escribe 'hasta diciembre eran mías' y dice que 'se me han ido': reconoce que desde enero de 1852 esas personas ya no le pertenecen y que se marcharon. La carta prueba lo contrario de lo que afirma la opción: la ley se estaba aplicando.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó 'hasta diciembre' y tomó la expresión del hacendado como prueba de que la esclavitud seguía."
+      },
+      {
+        "clave": "B",
+        "texto": "Que la ley de 1851 fue innecesaria, porque desde 1821 los hijos de esclavas ya nacían libres y para 1852 casi no quedaban personas esclavizadas.",
+        "correcta": false,
+        "explicacion": "La ley de 1821 solo liberó a los nacidos después de esa fecha, y aun así los obligaba a servir hasta los 18 años; quienes ya eran esclavos siguieron siéndolo. La propia carta habla de doce personas liberadas en una sola hacienda en 1852, lo que muestra que la esclavitud seguía existiendo hasta la ley de 1851.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la libertad de vientres (parcial y gradual) con la abolición total, y no tuvo en cuenta que la carta habla de doce personas liberadas."
+      },
+      {
+        "clave": "C",
+        "texto": "Que el hacendado apoyaba la abolición, porque acepta que las personas se fueron y solo reclama el pago que le prometieron.",
+        "correcta": false,
+        "explicacion": "Aceptar que la ley se cumplió no es apoyarla. El tono de la carta ('exijo', 'lo que perdí', queja por el jornal) muestra a alguien que se siente perjudicado y reclama su compensación, no a un partidario de la abolición. La opción infiere una actitud que el texto no expresa.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpretó la aceptación forzada de la ley como apoyo a ella."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la abolición se hizo reconociendo a los propietarios una compensación económica, es decir, que hasta el momento de la liberación la ley trató a las personas esclavizadas como bienes con un valor, y que los hacendados perdieron una mano de obra que ahora debían pagar con jornal.",
+        "correcta": true,
+        "explicacion": "La carta muestra tres rasgos del contexto: el hacendado espera 'bonos prometidos' (la indemnización que ordenó la ley), habla de 'el valor de lo que perdí' (las personas eran contadas como propiedad con precio) y se queja de que nadie trabaja por el jornal que puede pagar (la mano de obra pasó de ser forzada a ser asalariada). Así, la fuente se inscribe en un contexto económico en el que la libertad se concedió sin dejar de reconocer el 'derecho' de los antiguos amos a una compensación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el contexto da dos hitos (libertad de vientres en 1821; abolición total con indemnización a propietarios en 1851, vigente desde el 1.º de enero de 1852) y una carta de marzo de 1852 en la que un hacendado reclama bonos por doce personas que 'hasta diciembre eran mías' y se queja de que nadie trabaja por su jornal. COMPRENDER: se pide qué permite comprender la carta sobre el contexto de aplicación de la abolición, es decir, inscribir la fuente en su momento económico y político. INTERPRETAR: los bonos corresponden a la indemnización de la ley; 'el valor de lo que perdí' revela que las personas eran tratadas como propiedad con precio; la queja por el jornal revela el paso del trabajo forzado al trabajo pagado. REPRESENTAR: ley 1851 → libertad + indemnización → hacendado pierde 'propiedad' y mano de obra gratuita → reclama bonos y se queja del jornal. RAZONAR: B contradice 'hasta diciembre'; C ignora que la ley de 1821 fue gradual y que la carta menciona doce personas liberadas; D convierte una queja en apoyo. RESOLVER: opción D. VERIFICAR: cada elemento de A (compensación, personas contadas como bienes, mano de obra ahora pagada) se apoya en una frase concreta de la carta y en la información del contexto sobre la ley.",
+    "que_identificar": "Las tres frases clave de la carta (bonos prometidos, 'lo que perdí', el jornal) y su relación con la disposición de la ley de 1851 sobre indemnizar a los propietarios.",
+    "que_revisar": "Proceso de abolición de la esclavitud en Colombia: ley de libertad de vientres (1821) y ley de abolición (1851, vigente desde 1852) con indemnización a los propietarios; cómo leer una fuente primaria ubicándola en su contexto.",
+    "refuerzo_ids": ["SOC-006", "SOC-019"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["fuentes_historicas", "abolicion_esclavitud", "memoria_historica", "siglo_xix"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-016",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Ordenamiento territorial y gestión del riesgo",
+    "subtema": "Zonas inundables y plan de ordenamiento territorial",
+    "dificultad": 2,
+    "contexto": "El municipio de Puerto Amparo está a orillas del río Grande. La alcaldía revisa su **plan de ordenamiento territorial (POT)**, el instrumento con el que el municipio define qué usos se permiten en cada zona (vivienda, cultivos, protección) y que, por ley, debe identificar las áreas expuestas a amenazas naturales y restringir la construcción de viviendas en las de alto riesgo. La oficina de gestión del riesgo entregó la siguiente tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Zonas de Puerto Amparo y propuesta del nuevo POT",
+      "columnas": ["Zona", "Altura sobre el nivel del río (m)", "Veces que se inundó entre 2015 y 2024", "Viviendas actuales", "Uso propuesto en el nuevo POT"],
+      "filas": [["La Playita", 1, 7, 320, "Protección: reubicar viviendas y sembrar bosque de ribera"], ["Centro", 6, 1, 1850, "Vivienda y comercio"], ["Loma del Sol", 14, 0, 640, "Vivienda: nuevos barrios"], ["Vega Baja", 2, 5, 90, "Agrícola (cultivos de ciclo corto); no se permiten viviendas"]],
+      "nota": "La Playita fue ocupada a partir de 1998 por familias que llegaron desplazadas de zonas rurales y construyeron sin licencia."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones relaciona correctamente las características del espacio con la propuesta del POT?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La propuesta busca alejar las viviendas de las zonas más bajas y cercanas al río, que son las que más se inundan, y dirigir el crecimiento urbano hacia Loma del Sol, la zona más alta y que no se ha inundado.",
+        "correcta": true,
+        "explicacion": "La tabla muestra una relación clara entre altura y frecuencia de inundación: La Playita (1 m) se inundó 7 veces y Vega Baja (2 m) 5 veces, mientras que el Centro (6 m) solo 1 y Loma del Sol (14 m) ninguna. El POT propone reubicar las viviendas de La Playita, prohibir viviendas en Vega Baja y ubicar los nuevos barrios en Loma del Sol: es decir, saca la vivienda de las zonas inundables y la lleva a la más segura, tal como exige la ley para las áreas de alto riesgo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La propuesta de reubicar La Playita se debe a que sus viviendas se construyeron sin licencia, lo cual es un problema legal y no geográfico.",
+        "correcta": false,
+        "explicacion": "La nota informa cómo se ocupó La Playita, pero la razón de la reubicación está en las otras columnas: es la zona más baja (1 m) y la que más se inundó (7 veces en diez años). El uso propuesto ('protección' y 'bosque de ribera') responde al riesgo por la cercanía al río, no a la falta de licencia.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el dato de la nota (sin licencia) como la causa de la reubicación, sin relacionar altura e inundaciones."
+      },
+      {
+        "clave": "C",
+        "texto": "El Centro debería tener el mismo uso que La Playita, porque también se inundó en el periodo y tiene muchas más viviendas expuestas.",
+        "correcta": false,
+        "explicacion": "El Centro está a 6 m del río y se inundó una sola vez en diez años, frente a 7 veces en La Playita, que está a 1 m. Tener 'alguna' inundación no equivale a ser una zona de alto riesgo; la opción iguala dos zonas muy distintas por compartir un rasgo y no compara la frecuencia ni la altura.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Igualó dos zonas porque ambas registran inundaciones, sin comparar la frecuencia ni la altura."
+      },
+      {
+        "clave": "D",
+        "texto": "Vega Baja debería destinarse a nuevos barrios, porque tiene pocas viviendas y por eso hay espacio disponible para construir.",
+        "correcta": false,
+        "explicacion": "Vega Baja está a solo 2 m del río y se inundó 5 veces en el periodo; por eso el POT propone cultivos de ciclo corto (que se pueden perder y volver a sembrar) y prohíbe viviendas. Que haya pocas casas no significa que el terreno sea apto: precisamente hay pocas porque es una vega inundable.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Decidió con el dato de 'pocas viviendas' como si fuera espacio libre, sin revisar el riesgo de inundación."
+      }
+    ],
+    "explicacion": "LEER: el POT debe identificar áreas con amenazas y restringir viviendas en las de alto riesgo. La tabla da, por zona, altura sobre el río, número de inundaciones en diez años, viviendas y uso propuesto; la nota explica el origen de La Playita. COMPRENDER: se pide la afirmación que relacione correctamente las características del espacio (altura, inundaciones) con lo que propone el POT. INTERPRETAR: a menor altura, más inundaciones: 1 m → 7; 2 m → 5; 6 m → 1; 14 m → 0. REPRESENTAR: zonas bajas e inundables (La Playita, Vega Baja) → sin viviendas (protección, agricultura); zona alta y seca (Loma del Sol) → nuevos barrios; Centro (riesgo bajo) → se mantiene. RAZONAR: B usa la nota como causa; C iguala Centro y La Playita por una sola inundación; D confunde pocas viviendas con terreno apto. RESOLVER: opción A. VERIFICAR: A describe exactamente lo que dice la columna 'uso propuesto' y lo justifica con las columnas de altura e inundaciones, que es la relación espacio-problema que pide el enunciado.",
+    "que_identificar": "La relación entre la altura sobre el río y el número de inundaciones de cada zona, y cómo el uso propuesto responde a esa relación.",
+    "que_revisar": "Qué es un plan de ordenamiento territorial y por qué incorpora la gestión del riesgo; lectura de tablas comparando varias columnas a la vez y sin tomar la nota al pie como causa principal.",
+    "refuerzo_ids": ["SOC-009", "SOC-021"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ordenamiento_territorial", "gestion_del_riesgo", "inundaciones", "tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-017",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Establece relaciones entre las perspectivas de los individuos en una situación conflictiva y las propuestas de solución",
+    "habilidad": "interpretar",
+    "tema": "Conflictos por el uso del agua",
+    "subtema": "Perspectivas de actores y propuestas de solución",
+    "dificultad": 2,
+    "contexto": "La quebrada La Cristalina nace en la parte alta de la vereda El Cedral y abastece el **acueducto comunitario** de 180 familias. Hace dos años, una **empresa de cultivo de flores** obtuvo de la autoridad ambiental una concesión para tomar agua de la quebrada, aguas arriba de la bocatoma del acueducto. En el último verano el acueducto se quedó sin agua durante varias semanas.\n\n- **Junta del acueducto**: \"La empresa toma el agua antes que nosotros y en verano no queda nada. El agua para consumo humano debe tener prioridad; pedimos que la concesión se suspenda\".\n- **Gerente de la empresa**: \"Tenemos un permiso legal y solo tomamos lo autorizado. Sin agua no hay producción y 90 personas de la vereda perderían su empleo. Proponemos construir un reservorio para almacenar agua de la temporada de lluvias y no depender de la quebrada en verano\".\n- **Autoridad ambiental**: \"La concesión se otorgó con base en el caudal promedio, pero el verano fue más seco de lo previsto. Vamos a medir los caudales y podemos ajustar la concesión para garantizar un caudal mínimo al acueducto\".\n- **Grupo de jóvenes de la vereda**: \"Muchos trabajamos en la empresa, pero nuestras familias también necesitan el agua. Queremos una mesa donde estén todos\".",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones describe correctamente la relación entre las perspectivas de los actores y las soluciones que proponen?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La junta y la empresa parten de un mismo hecho (en verano el agua no alcanza para ambos), pero proponen soluciones opuestas: la junta pide suspender la concesión y la empresa propone almacenar agua de lluvia para no competir por la quebrada en verano; la autoridad ambiental propone un punto intermedio al ajustar la concesión.",
+        "correcta": true,
+        "explicacion": "Cada solución responde al interés de quien la propone: la junta prioriza el consumo humano y por eso pide suspender; la empresa quiere conservar su producción y sus empleos y por eso propone un reservorio que la libere de la quebrada en verano; la autoridad, que debe garantizar el recurso a todos, propone ajustar la concesión con un caudal mínimo para el acueducto. Las tres reconocen la escasez de verano, pero la solución de cada una protege primero lo que a ese actor le importa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La empresa niega que exista un problema de agua, y por eso propone un reservorio en lugar de aceptar la suspensión de la concesión.",
+        "correcta": false,
+        "explicacion": "La empresa no niega el problema: propone el reservorio precisamente para 'no depender de la quebrada en verano', lo cual reconoce que en verano el agua es insuficiente. Lo que defiende es la legalidad de su permiso y sus empleos, no la inexistencia de la escasez.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que quien defiende su permiso niega el problema, sin leer que la propuesta del reservorio responde justamente a la escasez de verano."
+      },
+      {
+        "clave": "C",
+        "texto": "Los jóvenes comparten la posición de la empresa porque trabajan en ella, así que su propuesta de una mesa busca proteger los empleos.",
+        "correcta": false,
+        "explicacion": "Los jóvenes dicen dos cosas: trabajan en la empresa y sus familias necesitan el agua. Su propuesta (una mesa con todos) nace justamente de tener los dos intereses a la vez, no de alinearse con la empresa. La opción reduce su perspectiva a uno solo de sus roles.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Redujo la perspectiva de los jóvenes a su rol de empleados y no vio que expresan un doble interés."
+      },
+      {
+        "clave": "D",
+        "texto": "La autoridad ambiental le da la razón a la junta, porque reconoce que otorgó la concesión con datos equivocados y por eso la suspenderá.",
+        "correcta": false,
+        "explicacion": "La autoridad no dice que se equivocó ni que suspenderá la concesión: explica que la otorgó con el caudal promedio, que el verano fue más seco de lo previsto y que puede 'ajustar' la concesión. Ajustar (reducir lo que toma la empresa para dejar un mínimo al acueducto) es distinto de suspender, que es lo que pide la junta.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Convirtió 'medir y ajustar' en 'suspender', y 'caudal promedio' en 'datos equivocados'."
+      }
+    ],
+    "explicacion": "LEER: cuatro actores opinan sobre una quebrada que en verano no alcanza para el acueducto y para la empresa: junta (prioridad al consumo humano; suspender la concesión), empresa (permiso legal, empleos; construir reservorio), autoridad ambiental (concesión basada en caudal promedio; medir y ajustar para garantizar un mínimo al acueducto), jóvenes (trabajan en la empresa y sus familias necesitan agua; mesa con todos). COMPRENDER: se pide la afirmación que relacione correctamente cada perspectiva con la solución que propone. INTERPRETAR: en cada actor hay que separar el interés (qué protege), el hecho que reconoce y la solución que propone. REPRESENTAR: tabla mental actor / interés / solución: junta / agua para las familias / suspender; empresa / producción y empleo / reservorio; autoridad / garantizar el recurso a todos / ajustar; jóvenes / empleo y agua / mesa. RAZONAR: B atribuye a la empresa una negación que no hace; C reduce a los jóvenes a un solo rol; D confunde ajustar con suspender. RESOLVER: opción A. VERIFICAR: A solo afirma lo que cada actor dijo y describe la solución de la autoridad como intermedia, lo cual coincide con 'ajustar la concesión para garantizar un caudal mínimo'.",
+    "que_identificar": "Para cada actor, el interés que defiende y la solución concreta que propone (suspender, reservorio, ajustar, mesa), sin atribuirle intenciones que no expresó.",
+    "que_revisar": "Cómo analizar un conflicto por un recurso: identificar actores, intereses y propuestas; diferencia entre reconocer un problema y estar de acuerdo con una solución; qué es una concesión de aguas.",
+    "refuerzo_ids": ["SOC-005", "SOC-008"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["agua", "actores_sociales", "conflicto_ambiental", "concesion_de_aguas"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-018",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "verificar",
+    "tema": "Fuentes, noticias falsas y deliberación ciudadana",
+    "subtema": "Verificación de una imagen usada como prueba histórica",
+    "dificultad": 1,
+    "contexto": "En el municipio de San Isidro se discute si se demuele la vieja **casa de la cultura** para construir un centro comercial. En redes sociales circuló una publicación con miles de reenvíos: una foto en blanco y negro de una casa de dos pisos con balcones, acompañada del texto: \"Esta es nuestra casa de la cultura en 1910. ¡Es patrimonio de todos los sanisidreños! Comparte antes de que la borren\".\n\nAntes del cabildo abierto convocado para discutir el tema, una estudiante de grado once fue al **archivo municipal** y encontró lo siguiente: (1) la foto de la publicación aparece en un libro sobre otro municipio del departamento, con la leyenda \"Casa cural, 1952\"; (2) el archivo conserva tres fotografías de la casa de la cultura de San Isidro, la más antigua fechada en 1938, en las que se ve una casa de un solo piso; (3) un acta del concejo de 1961 registra la compra de la casa para destinarla a biblioteca pública.",
+    "estimulo": null,
+    "enunciado": "¿Qué muestra la verificación hecha por la estudiante sobre el uso de la foto en la publicación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la foto no sirve como prueba de la antigüedad de la casa de la cultura de San Isidro, porque corresponde a otro edificio y a otra fecha, aunque el archivo sí ofrece otras fuentes para documentar su historia.",
+        "correcta": true,
+        "explicacion": "El hallazgo (1) muestra que la imagen es de una casa cural de otro municipio y de 1952, no de San Isidro en 1910; el hallazgo (2) confirma que la casa de la cultura real es de un solo piso, distinta a la de la foto. Por tanto, la foto no puede usarse para sostener el argumento de la publicación. Sin embargo, las fotografías desde 1938 y el acta de 1961 sí son fuentes válidas sobre la historia del edificio, con las que la deliberación puede apoyarse en datos verificables.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Que la casa de la cultura no tiene valor histórico, porque la foto que la defendía resultó ser falsa.",
+        "correcta": false,
+        "explicacion": "Que una prueba sea falsa no hace falsa la afirmación que pretendía apoyar. El archivo muestra que la casa existe al menos desde 1938 y que fue biblioteca pública desde 1961; si tiene o no valor patrimonial es algo que debe discutirse con esas fuentes, no descartarse por la publicación errónea.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Concluyó que si la prueba es falsa, la afirmación que defendía también lo es, sin considerar las otras fuentes del archivo."
+      },
+      {
+        "clave": "C",
+        "texto": "Que la casa de la cultura sí existía en 1910, porque el archivo tiene fotos antiguas de ella.",
+        "correcta": false,
+        "explicacion": "La fotografía más antigua del archivo es de 1938. Con esas fuentes solo puede afirmarse que la casa existía en 1938; nada en la verificación respalda la fecha de 1910 que dio la publicación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó 'fotos antiguas' como confirmación de la fecha de la publicación, sin fijarse en que la más antigua es de 1938."
+      },
+      {
+        "clave": "D",
+        "texto": "Que quien hizo la publicación quería engañar a la comunidad para impedir la construcción del centro comercial.",
+        "correcta": false,
+        "explicacion": "La verificación establece que la foto es de otro lugar y otra fecha, pero no dice nada sobre la intención de quien la publicó: pudo equivocarse, copiar de otra fuente o reenviar sin revisar. Afirmar que 'quería engañar' es una suposición que los hallazgos del archivo no permiten sostener.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó una intención a la persona que publicó, algo que la verificación de la foto no permite establecer."
+      }
+    ],
+    "explicacion": "LEER: una publicación viral usa una foto con la leyenda 'casa de la cultura en 1910' para defender el edificio; la estudiante encuentra en el archivo que (1) la foto es de una casa cural de otro municipio en 1952, (2) la casa de la cultura de San Isidro es de un piso y su foto más antigua es de 1938, y (3) fue comprada en 1961 para biblioteca. COMPRENDER: se pregunta qué muestra la verificación sobre el uso de la foto, es decir, si la fuente sirve para el argumento. INTERPRETAR: la foto no corresponde ni al edificio ni a la fecha; las demás fuentes sí hablan del edificio, pero desde 1938. REPRESENTAR: fuente de la publicación → otro lugar, otra fecha → no sirve; fuentes del archivo → edificio real, desde 1938 y 1961 → sí sirven. RAZONAR: B salta de 'prueba falsa' a 'afirmación falsa'; C confunde 'antigua' con '1910'; D infiere una intención que los datos no muestran. RESOLVER: opción A. VERIFICAR: A distingue lo que la verificación sí establece (la foto no sirve) de lo que deja abierto (la historia del edificio, documentable con otras fuentes), que es justamente lo que se necesita para deliberar con información confiable.",
+    "que_identificar": "Qué dice cada hallazgo del archivo sobre la foto (lugar y fecha reales) y sobre el edificio (fecha más antigua documentada), y qué no dice (la intención de quien publicó).",
+    "que_revisar": "Cómo verificar una imagen o noticia (origen, fecha, contraste con archivos); diferencia entre invalidar una fuente e invalidar un argumento; deliberación ciudadana con información verificada.",
+    "refuerzo_ids": ["SOC-006", "SOC-008"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["fuentes_historicas", "noticias_falsas", "verificacion", "patrimonio", "deliberacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-019",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "razonar",
+    "tema": "Historia de Colombia en el siglo XX",
+    "subtema": "El Frente Nacional y sus efectos",
+    "dificultad": 3,
+    "contexto": "Entre finales de los años cuarenta y mediados de los cincuenta, Colombia vivió el periodo conocido como **La Violencia**: un enfrentamiento entre seguidores de los dos partidos tradicionales, liberal y conservador, que dejó cientos de miles de muertos, sobre todo en el campo. En 1957, tras la caída del gobierno militar que había asumido el poder en 1953, las dirigencias de ambos partidos acordaron el **Frente Nacional**, aprobado por los ciudadanos en el plebiscito de diciembre de 1957 (la primera votación en la que participaron las mujeres en Colombia). El acuerdo estableció que, entre 1958 y 1974, la presidencia se alternaría cada cuatro años entre los dos partidos y que los cargos públicos se repartirían por partes iguales entre ellos.\n\nDos historiadores lo evalúan así:\n\n- **Historiador 1**: \"El Frente Nacional fue un pacto de paz exitoso: desactivó la violencia entre liberales y conservadores, devolvió el poder a los civiles y dio estabilidad a las instituciones durante dieciséis años\".\n- **Historiadora 2**: \"El Frente Nacional cerró la competencia política: quien no perteneciera a los dos partidos no tenía cómo llegar al poder por las urnas. Esa exclusión, sumada a los problemas no resueltos del campo, llevó a que parte de la oposición buscara caminos por fuera de las instituciones y a que muchos ciudadanos dejaran de votar\".",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones compara correctamente las dos perspectivas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Ambos parten de hechos que no se contradicen (el pacto redujo la violencia bipartidista y limitó la competencia a dos partidos), pero valoran el periodo con criterios distintos: el historiador 1 lo juzga por la paz y la estabilidad que produjo, y la historiadora 2 por los actores que dejó por fuera y los efectos de esa exclusión.",
+        "correcta": true,
+        "explicacion": "El historiador 1 no niega que el pacto fuera entre dos partidos, ni la historiadora 2 niega que redujera la violencia entre ellos; los dos describen el mismo acuerdo (alternación y reparto entre liberales y conservadores). La diferencia está en qué consecuencias ponen en el centro: uno, la pacificación y la estabilidad; la otra, la exclusión de terceras fuerzas, la salida de parte de la oposición hacia caminos no institucionales y la abstención. Son perspectivas que privilegian efectos distintos de un mismo hecho.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La historiadora 2 niega que el Frente Nacional haya reducido la violencia, y por eso lo considera un fracaso.",
+        "correcta": false,
+        "explicacion": "La historiadora 2 no habla de la violencia bipartidista ni la niega; su crítica es que el acuerdo cerró la competencia política y excluyó a quienes no eran de los dos partidos. Criticar los efectos de la exclusión no es negar la reducción de la violencia entre liberales y conservadores.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que criticar los efectos de exclusión equivale a negar la reducción de la violencia."
+      },
+      {
+        "clave": "C",
+        "texto": "El historiador 1 tiene la razón, porque el acuerdo fue aprobado por los ciudadanos en un plebiscito y eso demuestra que fue democrático.",
+        "correcta": false,
+        "explicacion": "El enunciado pide comparar las perspectivas, no elegir una. Además, que el pacto haya sido aprobado en 1957 no responde a la crítica de la historiadora 2, que se refiere a lo que ocurrió después, durante los dieciséis años en que solo dos partidos podían gobernar. La opción toma partido con un dato que no discute lo que la otra perspectiva plantea.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó partido por una perspectiva usando un dato del contexto como prueba, en vez de comparar las perspectivas."
+      },
+      {
+        "clave": "D",
+        "texto": "Las dos perspectivas se contradicen en los hechos: el historiador 1 afirma que hubo elecciones libres y la historiadora 2 afirma que no hubo elecciones durante el Frente Nacional.",
+        "correcta": false,
+        "explicacion": "Ninguno de los dos dice eso. El historiador 1 habla de paz, poder civil y estabilidad; la historiadora 2 dice que quien no fuera de los dos partidos 'no tenía cómo llegar al poder por las urnas' y que muchos dejaron de votar, lo cual supone que sí hubo elecciones. La opción inventa una contradicción de hechos que no está en el texto.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a cada historiador afirmaciones que no hizo para presentar el desacuerdo como una contradicción de hechos."
+      }
+    ],
+    "explicacion": "LEER: el contexto explica La Violencia, el gobierno militar de 1953-1957, el plebiscito de 1957 y las reglas del Frente Nacional (alternación cada cuatro años y reparto de cargos entre liberales y conservadores, 1958-1974). El historiador 1 destaca paz, poder civil y estabilidad; la historiadora 2 destaca el cierre de la competencia política, la búsqueda de caminos por fuera de las instituciones y la abstención. COMPRENDER: se pide la afirmación que compare correctamente las dos perspectivas. INTERPRETAR: hay que separar hechos (qué pasó) de valoraciones (qué importa más) en cada historiador. REPRESENTAR: hechos compartidos: pacto bipartidista, fin de la violencia entre los dos partidos, elecciones con solo dos opciones de gobierno. Valoración 1: éxito por la paz y la estabilidad. Valoración 2: problema por la exclusión y sus efectos. RAZONAR: B le atribuye a la historiadora 2 una negación que no hace; C toma partido y no compara; D inventa afirmaciones sobre las elecciones. RESOLVER: opción A. VERIFICAR: A no dice que uno tenga razón, no añade hechos que no estén en el texto y ubica la diferencia donde realmente está: en los efectos que cada uno decide poner en el centro de su evaluación.",
+    "que_identificar": "En cada perspectiva, qué hechos reconoce y qué efectos del Frente Nacional valora como más importantes; y qué no dice cada historiador.",
+    "que_revisar": "El Frente Nacional (1958-1974): antecedentes (La Violencia, gobierno militar), plebiscito de 1957, alternación y paridad; cómo comparar interpretaciones históricas distinguiendo hechos de valoraciones.",
+    "refuerzo_ids": ["SOC-008", "SOC-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["frente_nacional", "siglo_xx", "perspectivas_historicas", "la_violencia"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-020",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Reconoce las funciones de las figuras del gobierno escolar (personero y contralor estudiantil) y las distingue de las de otras instancias de la institución",
+    "habilidad": "comprender",
+    "tema": "Gobierno escolar",
+    "subtema": "Funciones del personero y del contralor estudiantil",
+    "dificultad": 1,
+    "contexto": "El manual de convivencia del colegio Los Cerezos describe así dos figuras elegidas por los estudiantes:\n\n- **Personero estudiantil**: estudiante de último grado encargado de promover el ejercicio de los derechos y deberes de los estudiantes. Recibe y evalúa las quejas que presenten sobre lesiones a sus derechos y presenta ante el rector o el consejo directivo las solicitudes que considere necesarias. No impone sanciones ni toma decisiones administrativas.\n- **Contralor estudiantil**: estudiante encargado de promover el control social sobre el uso de los recursos y bienes del colegio (fondo de servicios educativos, restaurante escolar, laboratorios). Puede pedir información sobre los gastos y presentar observaciones a la rectoría y al consejo directivo, pero no ordena ni autoriza gastos.\n\nEsta semana llegaron dos quejas de estudiantes:\n\n1. \"Los computadores que compraron con el dinero del fondo para el laboratorio nunca llegaron al laboratorio: están en la oficina de coordinación\".\n2. \"A mi compañera le quitaron el derecho al descanso durante un mes sin escucharla y sin que el caso pasara por el comité de convivencia\".",
+    "estimulo": null,
+    "enunciado": "De acuerdo con el manual, ¿a cuál figura corresponde atender cada queja y qué puede hacer?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La queja 1 al personero, porque los computadores son un derecho de los estudiantes; la queja 2 al contralor, porque debe controlar que los profesores no abusen de su poder.",
+        "correcta": false,
+        "explicacion": "Invierte las figuras. El manual asigna al contralor el control sobre recursos y bienes (como los computadores comprados con el fondo) y al personero las quejas sobre derechos (como una sanción sin ser escuchada). 'Control' en el nombre del contralor se refiere a los recursos, no a la conducta de los profesores.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asignó las figuras por asociaciones sueltas ('derecho', 'control') sin distinguir recursos de derechos."
+      },
+      {
+        "clave": "B",
+        "texto": "La queja 1 al contralor, que puede pedir información sobre ese gasto y presentar observaciones; la queja 2 al personero, que puede evaluar la queja y presentar una solicitud al rector para que se respete el derecho de la estudiante.",
+        "correcta": true,
+        "explicacion": "La queja 1 trata del uso de recursos del colegio (dinero del fondo, computadores), que es el campo del contralor según el manual: pedir información y presentar observaciones. La queja 2 trata de una sanción impuesta sin escuchar a la estudiante, es decir, de una posible lesión a sus derechos, que es el campo del personero: evaluar la queja y presentar solicitudes al rector. Las acciones descritas son exactamente las que el manual les permite.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas quejas al personero, porque es el único representante de los estudiantes que puede intervenir ante el rector.",
+        "correcta": false,
+        "explicacion": "El manual dice que el contralor también puede presentar observaciones a la rectoría y al consejo directivo, y que su campo es el uso de los recursos, que es de lo que trata la queja 1. Enviar todo al personero ignora la división de funciones que describe el manual.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Consideró al personero como el único representante estudiantil sin leer las funciones del contralor."
+      },
+      {
+        "clave": "D",
+        "texto": "La queja 1 al contralor, que debe ordenar que los computadores se devuelvan al laboratorio; la queja 2 al personero, que debe anular la sanción.",
+        "correcta": false,
+        "explicacion": "Asigna bien las figuras pero les atribuye poderes que el manual les niega expresamente: el contralor 'no ordena ni autoriza gastos' y el personero 'no impone sanciones ni toma decisiones administrativas'. Ninguno de los dos puede ordenar ni anular; solo pueden pedir información, evaluar quejas y presentar solicitudes u observaciones.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a las dos figuras poder de decisión, cuando el manual dice que solo pueden pedir información, evaluar quejas y presentar solicitudes u observaciones."
+      }
+    ],
+    "explicacion": "LEER: el manual define al personero (derechos y deberes; recibe y evalúa quejas; presenta solicitudes; no sanciona ni decide) y al contralor (recursos y bienes; pide información; presenta observaciones; no ordena ni autoriza gastos). Llegan dos quejas: computadores del fondo que no llegaron al laboratorio, y una sanción impuesta sin escuchar a la estudiante. COMPRENDER: se pide asignar cada queja a la figura correcta y decir qué puede hacer según el manual. INTERPRETAR: la queja 1 es sobre recursos; la queja 2 es sobre un derecho (ser escuchada, debido proceso). REPRESENTAR: recursos → contralor → pedir información y observar; derechos → personero → evaluar y solicitar. RAZONAR: B envía todo al personero; C acierta en las figuras pero les da poder de decisión que el manual niega; D invierte las figuras. RESOLVER: opción B. VERIFICAR: cada acción de A ('pedir información y presentar observaciones', 'evaluar la queja y presentar una solicitud al rector') está escrita literalmente en el manual para la figura correspondiente.",
+    "que_identificar": "De qué trata cada queja (recursos o derechos) y qué acciones concretas permite el manual a cada figura, incluidas las que prohíbe.",
+    "que_revisar": "Órganos y figuras del gobierno escolar (personero, contralor estudiantil, consejo estudiantil, consejo directivo, comité de convivencia) y la diferencia entre proponer o vigilar y decidir o sancionar.",
+    "refuerzo_ids": ["SOC-007", "SOC-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["gobierno_escolar", "personero", "contralor_estudiantil", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-021",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "interpretar",
+    "tema": "Cambio climático y decisiones locales",
+    "subtema": "Presupuesto participativo y adaptación al clima",
+    "dificultad": 2,
+    "contexto": "En el municipio de Alto Viento, la estación meteorológica registró que entre 2010 y 2025 los días con lluvias muy intensas (más de 60 mm) pasaron de un promedio de 4 a 9 por año, y que las temporadas secas se alargaron de dos a casi cuatro meses. En los últimos años el municipio sufrió inundaciones en los barrios bajos y racionamiento de agua en verano. Cada año, en el **presupuesto participativo**, los habitantes votan cómo repartir una parte del presupuesto municipal entre distintos rubros. El gráfico compara la distribución que la comunidad aprobó en 2016 y en 2026; en ambos años el monto total fue el mismo (800 millones).",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Presupuesto participativo de Alto Viento por rubro (millones de pesos)",
+      "eje_x": "Rubro",
+      "eje_y": "Millones de pesos",
+      "series": [
+        { "nombre": "2016", "valores": [["Pavimentación de vías", 400], ["Drenajes y alcantarillado", 90], ["Protección de nacimientos de agua y reforestación", 40], ["Fiestas y eventos", 120], ["Deporte y cultura", 150]] },
+        { "nombre": "2026", "valores": [["Pavimentación de vías", 220], ["Drenajes y alcantarillado", 230], ["Protección de nacimientos de agua y reforestación", 170], ["Fiestas y eventos", 60], ["Deporte y cultura", 120]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones analiza adecuadamente el cambio en las decisiones de la comunidad frente al problema climático descrito?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La comunidad trasladó recursos de la pavimentación y las fiestas hacia drenajes y protección de nacimientos, es decir, hacia obras que reducen los daños de las lluvias intensas y ayudan a conservar el agua en las sequías; esa decisión implica aplazar otros beneficios, como más vías pavimentadas.",
+        "correcta": true,
+        "explicacion": "Con el mismo total, pavimentación bajó de 400 a 220 y fiestas de 120 a 60, mientras drenajes subió de 90 a 230 y protección de nacimientos de 40 a 170. Los rubros que crecieron atienden los dos problemas del contexto: los drenajes evacuan el agua de las lluvias intensas (inundaciones) y los nacimientos protegidos sostienen el caudal en verano (racionamiento). Como el dinero es el mismo, la adaptación al clima tiene un costo en otras dimensiones (menos vías, menos fiestas): la opción reconoce esa relación entre dimensiones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El aumento del dinero para reforestación hará que vuelvan a llover menos días intensos, porque los árboles regulan el clima del municipio.",
+        "correcta": false,
+        "explicacion": "Reforestar y proteger nacimientos ayuda a retener el agua, proteger los suelos y mantener caudales en verano; es decir, reduce los efectos del cambio climático en el municipio. Pero la frecuencia de lluvias intensas depende de cambios del clima a escala global, que una inversión local no revierte. La opción confunde adaptarse a un problema con eliminar su causa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a una medida local la capacidad de revertir un cambio del clima que tiene causas globales, confundiendo adaptación con eliminación de la causa."
+      },
+      {
+        "clave": "C",
+        "texto": "La comunidad dejó de invertir en vías porque ya se pavimentaron todas las que faltaban, y por eso el dinero sobrante se usó en drenajes.",
+        "correcta": false,
+        "explicacion": "Nada en el contexto ni en el gráfico dice que las vías se hayan terminado; además, la pavimentación no desapareció (sigue con 220 millones). La única causa que ofrece el contexto para el cambio de prioridades es el aumento de lluvias intensas y sequías, con sus inundaciones y racionamientos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventó una causa para la caída del rubro de vías en lugar de relacionarla con el problema climático que da el contexto."
+      },
+      {
+        "clave": "D",
+        "texto": "El cambio muestra que la comunidad ya no se interesa por la cultura ni el deporte, lo cual es un error porque esos rubros también son importantes.",
+        "correcta": false,
+        "explicacion": "Deporte y cultura pasó de 150 a 120, una reducción pequeña comparada con la de pavimentación (180 menos); decir que la comunidad 'ya no se interesa' exagera el dato. Además, el enunciado pide analizar la relación entre el cambio y el problema climático, no opinar sobre qué debería priorizarse.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Emitió un juicio sobre lo que 'debería' priorizarse en vez de analizar la relación entre el cambio del presupuesto y el problema."
+      }
+    ],
+    "explicacion": "LEER: el contexto describe más días de lluvia intensa (de 4 a 9 por año), veranos más largos (de 2 a casi 4 meses), inundaciones y racionamiento; el gráfico compara cinco rubros en 2016 y 2026 con el mismo total. COMPRENDER: se pide la afirmación que analice adecuadamente el cambio de prioridades en relación con ese problema. INTERPRETAR: calcular las diferencias por rubro: pavimentación -180, drenajes +140, nacimientos +130, fiestas -60, deporte y cultura -30. REPRESENTAR: problema (inundaciones, sequías) → rubros que lo atienden (drenajes, nacimientos) crecen → rubros que no lo atienden (vías, fiestas) bajan, porque el total es fijo. RAZONAR: B cree que la medida local cambia la lluvia; C inventa que las vías se acabaron; D exagera un cambio pequeño y opina. RESOLVER: opción A. VERIFICAR: A se apoya en los cuatro rubros que más cambiaron, conecta cada aumento con un problema del contexto y reconoce el costo en las otras dimensiones, que es lo que exige un análisis de efectos de una intervención.",
+    "que_identificar": "La diferencia de cada rubro entre 2016 y 2026, cuáles crecieron y cuáles bajaron, y qué problema del contexto atiende cada rubro que creció.",
+    "que_revisar": "Diferencia entre mitigación (reducir las causas del cambio climático) y adaptación (reducir sus efectos); presupuesto participativo; lectura de gráficos de barras con dos series comparando cambios rubro por rubro.",
+    "refuerzo_ids": ["SOC-009", "SOC-016"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cambio_climatico", "presupuesto_participativo", "adaptacion", "barras"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-022",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Población, economía informal y trabajo juvenil",
+    "subtema": "Informalidad laboral juvenil por zona del municipio",
+    "dificultad": 3,
+    "contexto": "Un trabajo es **formal** cuando hay contrato y afiliación a salud, pensión y riesgos laborales; en el trabajo **informal** no existen esas garantías. La alcaldía de Río Manso quiere diseñar un programa de empleo juvenil y encargó un diagnóstico de la población de 18 a 28 años que trabaja, por zona del municipio.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Jóvenes de 18 a 28 años que trabajan en Río Manso, por zona",
+      "columnas": ["Zona", "Jóvenes que trabajan", "Con empleo formal (%)", "Ingreso mensual promedio (miles de pesos)", "Terminaron el bachillerato (%)"],
+      "filas": [["Cabecera municipal", 3000, 50, 1400, 80], ["Centros poblados", 1200, 25, 950, 55], ["Rural disperso", 1800, 10, 700, 35]],
+      "nota": "Los porcentajes se calculan sobre los jóvenes que trabajan en cada zona."
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones establece una relación entre las dimensiones del problema que se apoya en la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Terminar el bachillerato garantiza conseguir empleo formal, porque en la cabecera el 80 % lo terminó y allí está la mayor formalidad.",
+        "correcta": false,
+        "explicacion": "Los datos muestran una asociación (más bachilleres, más formalidad), no una garantía: en la cabecera el 80 % terminó el bachillerato pero solo el 50 % tiene empleo formal, así que al menos 3 de cada 10 jóvenes terminaron el bachillerato y aun así trabajan de manera informal. La opción generaliza más allá de lo que la tabla permite.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió una asociación entre dos variables en una garantía, sin notar que en la cabecera hay muchos bachilleres sin empleo formal."
+      },
+      {
+        "clave": "B",
+        "texto": "Los jóvenes de la zona rural dispersa prefieren el empleo informal porque les permite trabajar en sus propias fincas sin depender de un patrón.",
+        "correcta": false,
+        "explicacion": "La tabla no registra preferencias ni el tipo de actividad; solo formalidad, ingresos y educación. Además, los ingresos rurales son los más bajos (700 mil), lo que no sugiere una elección ventajosa. La opción explica los datos con una idea externa en lugar de relacionar las variables que sí aparecen.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Explicó los datos con una preferencia que la tabla no registra, en vez de relacionar las variables que sí aparecen."
+      },
+      {
+        "clave": "C",
+        "texto": "La informalidad juvenil es más alta donde menos jóvenes terminan el bachillerato y donde los ingresos son menores; además, más de la mitad de los jóvenes con empleo informal del municipio (unos 2500 de 4000) viven fuera de la cabecera, así que un programa concentrado en la cabecera dejaría por fuera a la mayoría de ellos.",
+        "correcta": true,
+        "explicacion": "Las tres variables se mueven juntas de la cabecera al campo: la formalidad baja (50 %, 25 %, 10 %), el ingreso baja (1400, 950, 700) y la terminación del bachillerato baja (80 %, 55 %, 35 %). En número de personas, los informales son 1500 en la cabecera (50 % de 3000), 900 en centros poblados (75 % de 1200) y 1620 en el rural disperso (90 % de 1800): 2520 de 4020 están fuera de la cabecera. La afirmación relaciona la dimensión educativa, la económica y la espacial y saca una consecuencia correcta para el diseño del programa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La cabecera concentra el mayor número de jóvenes informales del municipio, porque allí trabaja la mayor cantidad de jóvenes.",
+        "correcta": false,
+        "explicacion": "La cabecera tiene más jóvenes trabajando, pero la mitad de ellos son formales: 1500 informales. En las otras dos zonas, aunque hay menos jóvenes, casi todos son informales: 900 + 1620 = 2520. La opción confunde el tamaño de la base con la cantidad de informales y no hace el cálculo.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que la zona con más jóvenes trabajando tiene también más informales, sin calcular el número en cada zona (50 % de 3000 = 1500 frente a 900 + 1620 = 2520)."
+      }
+    ],
+    "explicacion": "LEER: el contexto define empleo formal e informal y presenta una tabla con jóvenes que trabajan, porcentaje formal, ingreso promedio y porcentaje que terminó el bachillerato, por tres zonas. COMPRENDER: se pide la afirmación que relacione dimensiones (educativa, económica, espacial) y que se apoye en los datos. INTERPRETAR: las tres columnas de porcentaje e ingreso descienden de la cabecera al rural disperso; para saber dónde están los informales hay que pasar de porcentajes a cantidades. REPRESENTAR: informales = cabecera 3000 × 0,5 = 1500; centros 1200 × 0,75 = 900; rural 1800 × 0,9 = 1620; total 4020; fuera de la cabecera 2520 (63 %). RAZONAR: B confunde base grande con más informales; C convierte asociación en garantía; D introduce una preferencia que la tabla no mide. RESOLVER: opción C. VERIFICAR: los redondeos de A ('unos 2500 de 4000') coinciden con 2520 de 4020, y la conclusión sobre el programa se deriva directamente de ese cálculo.",
+    "que_identificar": "Cómo cambian formalidad, ingreso y educación entre zonas, y cuántos jóvenes informales hay en cada zona en números absolutos (porcentaje × cantidad), no solo en porcentaje.",
+    "que_revisar": "Conceptos de empleo formal e informal; diferencia entre porcentaje y cantidad al comparar zonas de distinto tamaño; diferencia entre asociación y garantía (causalidad) al leer datos sociales.",
+    "refuerzo_ids": ["SOC-002", "SOC-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["economia_informal", "trabajo_juvenil", "poblacion", "tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-023",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Mecanismos de participación ciudadana",
+    "subtema": "Cabildo abierto y revocatoria del mandato en un caso municipal",
+    "dificultad": 2,
+    "contexto": "En el municipio de Las Brisas, el alcalde fue elegido hace año y medio con la promesa de terminar el acueducto de las veredas del sur. La obra está detenida y las familias siguen recibiendo agua en carrotanque. Dos grupos de ciudadanos proponen caminos distintos:\n\n- El **comité de veredas** quiere promover una **revocatoria del mandato**. En Colombia, este mecanismo permite que los ciudadanos, mediante el voto, den por terminado el periodo de un alcalde o gobernador. Solo puede solicitarse después del primer año de gobierno; exige reunir un número mínimo de firmas de apoyo, que la autoridad electoral las verifique y que luego se convoque una votación en la que participe un mínimo de ciudadanos. Si prospera, el alcalde deja el cargo y se convocan nuevas elecciones.\n- La **junta de acción comunal** propone solicitar un **cabildo abierto**: una sesión pública del concejo municipal, a la que puede citarse al alcalde, en la que los habitantes exponen directamente un asunto de interés de la comunidad. Después del cabildo, las autoridades deben dar una respuesta pública y razonada a lo planteado, aunque no están obligadas a hacer lo que los ciudadanos pidan.",
+    "estimulo": null,
+    "enunciado": "Si el objetivo de los habitantes es que el acueducto se termine lo antes posible, ¿cuál de los siguientes análisis sobre los efectos de cada mecanismo es más adecuado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La revocatoria, incluso si tiene éxito, tarda meses entre firmas, verificación y votación, y su efecto directo es cambiar de alcalde, no terminar la obra; el cabildo abierto puede realizarse antes y obliga a las autoridades a responder públicamente sobre el acueducto, aunque no garantiza que la obra se reanude.",
+        "correcta": true,
+        "explicacion": "El análisis compara los dos mecanismos según el objetivo (terminar la obra pronto). La revocatoria tiene varias etapas descritas en el contexto (firmas, verificación, votación, nuevas elecciones) y su resultado es político: un alcalde nuevo, que además tendría que empezar de cero con la obra. El cabildo abierto es más rápido y produce una respuesta pública y razonada, útil para exigir compromisos, aunque el contexto aclara que no obliga a las autoridades a hacer lo pedido. La opción reconoce los alcances y los límites de cada uno.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La revocatoria es la mejor opción, porque al retirar al alcalde la obra se reanuda de inmediato con el nuevo mandatario.",
+        "correcta": false,
+        "explicacion": "Cambiar de alcalde no reanuda la obra automáticamente: el nuevo mandatario llegaría meses después (tras firmas, verificación, votación y nuevas elecciones) y la obra depende de recursos, contratos y decisiones administrativas que él tendría que retomar. La opción toma el cambio de responsable como si fuera el resultado buscado.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que cambiar al responsable produce automáticamente el resultado esperado, sin considerar el tiempo del proceso ni que la obra depende de recursos y contratos."
+      },
+      {
+        "clave": "C",
+        "texto": "El cabildo abierto es la mejor opción, porque en esa sesión los habitantes pueden votar para destituir al alcalde si no da una explicación satisfactoria.",
+        "correcta": false,
+        "explicacion": "Según el contexto, en el cabildo abierto los habitantes exponen y las autoridades responden; no hay votación para destituir a nadie. Terminar el periodo de un alcalde es lo que hace la revocatoria, mediante una votación ciudadana. La opción le atribuye a un mecanismo la función del otro.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Le atribuyó al cabildo abierto el poder de destitución, que corresponde a la revocatoria y a las urnas, no a una sesión del concejo."
+      },
+      {
+        "clave": "D",
+        "texto": "Ninguno de los dos sirve, porque el concejo municipal ya aprobó el presupuesto y solo él puede decidir sobre las obras.",
+        "correcta": false,
+        "explicacion": "El contexto no dice nada sobre el presupuesto ni sobre que solo el concejo decida, y sí describe efectos concretos de cada mecanismo: una respuesta pública obligatoria en el cabildo y un cambio de alcalde en la revocatoria. Descartar ambos con una idea ajena al texto no es analizar sus efectos.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descartó los mecanismos con una idea no apoyada por el contexto, sin analizar los efectos que el texto describe para cada uno."
+      }
+    ],
+    "explicacion": "LEER: la obra prometida está detenida a año y medio de gobierno; el contexto describe la revocatoria (voto ciudadano para terminar el periodo; después del primer año; firmas, verificación, votación con participación mínima; nuevas elecciones) y el cabildo abierto (sesión pública del concejo; se puede citar al alcalde; respuesta pública y razonada obligatoria; no obliga a cumplir lo pedido). COMPRENDER: se pide el análisis más adecuado de los efectos de cada mecanismo dado el objetivo: terminar la obra pronto. INTERPRETAR: hay que evaluar cada mecanismo en dos dimensiones: tiempo que tarda y relación de su efecto con la obra. REPRESENTAR: revocatoria → meses → nuevo alcalde (efecto político, no la obra). Cabildo → pronto → respuesta pública y posibles compromisos (sin garantía). RAZONAR: B convierte el cambio de alcalde en reanudación inmediata; C le da al cabildo un poder de destitución que no tiene; D descarta ambos con una idea que el texto no da. RESOLVER: opción A. VERIFICAR: A no dice que el cabildo garantice la obra ni que la revocatoria sea inútil; describe los alcances y límites de cada uno tal como los da el contexto, en relación con el objetivo planteado.",
+    "que_identificar": "El objetivo concreto de los habitantes (la obra, pronto) y, para cada mecanismo, cuánto tarda, qué produce y qué no garantiza según el contexto.",
+    "que_revisar": "Mecanismos de participación ciudadana (Constitución de 1991, art. 103, y Ley 1757 de 2015): revocatoria del mandato y cabildo abierto, sus requisitos y efectos; cómo evaluar una intervención según su relación con el objetivo buscado.",
+    "refuerzo_ids": ["SOC-001", "SOC-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["participacion_ciudadana", "revocatoria", "cabildo_abierto", "decisiones_publicas"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-024",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "habilidad": "razonar",
+    "tema": "Diversidad cultural y territorios colectivos",
+    "subtema": "Propiedad colectiva en consejos comunitarios y resguardos",
+    "dificultad": 3,
+    "contexto": "La Constitución de 1991 reconoce y protege la **diversidad étnica y cultural** de la nación y establece que las tierras de los **resguardos indígenas** y las tierras comunales de los grupos étnicos son **inalienables** (no se pueden vender), **imprescriptibles** (nadie adquiere su propiedad por ocuparlas mucho tiempo) e **inembargables**. La Ley 70 de 1993 permitió que las comunidades negras que han ocupado tradicionalmente tierras en la cuenca del Pacífico recibieran **títulos colectivos**; esos títulos se entregan al **consejo comunitario**, que administra el territorio según sus normas propias, y las tierras no pueden venderse a personas ajenas a la comunidad.\n\nEl consejo comunitario de Río Claro recibió su título colectivo en 2001. Una empresa de cultivo de palma ofreció comprar 40 hectáreas a **don Evaristo**, miembro de la comunidad, quien ha trabajado ese pedazo de tierra durante treinta años. Don Evaristo argumenta que la tierra es suya porque él la ha trabajado; la empresa afirma que \"cada familia tiene derecho a decidir sobre su parcela\"; la junta del consejo comunitario sostiene que ninguna familia puede vender y que cualquier decisión sobre el uso del territorio la toma la asamblea de la comunidad.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones analiza correctamente el uso del concepto de propiedad en las posiciones de los actores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Don Evaristo y la empresa aplican el concepto de propiedad individual (quien trabaja o posee una parcela puede venderla), pero el título de Río Claro es colectivo: la tierra pertenece a la comunidad como conjunto y no puede venderse a personas ajenas a ella, por lo que la decisión no depende de una familia sino de las normas propias del consejo comunitario.",
+        "correcta": true,
+        "explicacion": "Las posiciones de don Evaristo ('es mía porque la trabajé') y de la empresa ('cada familia decide sobre su parcela') suponen que la tierra es propiedad individual y, por tanto, vendible. Pero el contexto dice que el título es colectivo, que las tierras comunales de los grupos étnicos son inalienables e imprescriptibles y que no pueden venderse a personas ajenas a la comunidad. Por eso la posición de la junta es la que aplica el concepto correcto: la decisión corresponde a la comunidad según sus normas, y la venta a la empresa no es posible.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La junta del consejo comunitario se equivoca, porque treinta años de trabajo continuo hacen que don Evaristo sea el dueño legítimo de la parcela y pueda venderla.",
+        "correcta": false,
+        "explicacion": "La idea de que ocupar y trabajar una tierra por mucho tiempo da la propiedad no aplica aquí: el contexto dice que las tierras comunales de los grupos étnicos son imprescriptibles, es decir, nadie adquiere su propiedad por ocuparlas mucho tiempo. Don Evaristo puede usar la tierra como miembro de la comunidad, pero no es dueño individual ni puede venderla a la empresa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la idea de que la posesión prolongada da propiedad, que no opera sobre tierras colectivas de grupos étnicos (son imprescriptibles)."
+      },
+      {
+        "clave": "C",
+        "texto": "La empresa tiene razón, porque la Constitución protege la diversidad cultural, y eso incluye el derecho de cada persona de la comunidad a decidir libremente sobre su tierra.",
+        "correcta": false,
+        "explicacion": "La protección de la diversidad cultural es justamente lo que respalda la forma colectiva de propiedad y las normas propias del consejo comunitario. Usarla para defender la venta individual invierte su sentido: la Constitución protege el territorio de la comunidad como conjunto, no la decisión aislada de cada persona sobre una parcela.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el reconocimiento de la diversidad cultural como si protegiera la decisión individual, cuando justamente protege la forma colectiva de propiedad de la comunidad."
+      },
+      {
+        "clave": "D",
+        "texto": "Para resolver el conflicto, el Estado debería quitarle el título al consejo comunitario y repartir la tierra en parcelas individuales, para que cada familia decida.",
+        "correcta": false,
+        "explicacion": "El enunciado pide analizar cómo usan los actores el concepto de propiedad, no proponer una solución. Además, la propuesta contradice el contexto: el título colectivo y la inalienabilidad son protecciones constitucionales de las tierras de los grupos étnicos, no una decisión que el Estado pueda revertir para facilitar una venta.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Propuso una solución en vez de analizar el uso del concepto, y la propuesta desconoce que el título colectivo es una protección constitucional."
+      }
+    ],
+    "explicacion": "LEER: el contexto define las propiedades de las tierras de resguardos y comunidades étnicas (inalienables, imprescriptibles, inembargables) y el funcionamiento de los títulos colectivos de la Ley 70 (los recibe el consejo comunitario, se administran con normas propias, no se venden a personas ajenas). Luego presenta tres posiciones sobre una oferta de compra: don Evaristo (es mía porque la trabajé), la empresa (cada familia decide) y la junta (nadie vende; decide la asamblea). COMPRENDER: se pide el análisis correcto del uso del concepto de propiedad en esas posiciones. INTERPRETAR: dos actores razonan con propiedad individual; uno con propiedad colectiva; el contexto establece cuál aplica al territorio. REPRESENTAR: propiedad individual → trabajo o posesión → derecho a vender (don Evaristo, empresa); propiedad colectiva → título del consejo → inalienable, decide la comunidad (junta). RAZONAR: B usa la prescripción, excluida por 'imprescriptibles'; C invierte el sentido de la protección a la diversidad cultural; D propone en lugar de analizar y contradice la inalienabilidad. RESOLVER: opción A. VERIFICAR: A identifica el concepto que usa cada actor y explica, con las reglas del contexto, por qué el concepto colectivo es el que rige la decisión, sin añadir información externa.",
+    "que_identificar": "Qué concepto de propiedad (individual o colectiva) está detrás de cada posición y qué reglas del contexto (inalienable, imprescriptible, título al consejo comunitario) definen cuál aplica.",
+    "que_revisar": "Diversidad étnica y cultural en la Constitución de 1991 (arts. 7 y 63); resguardos indígenas y territorios colectivos de comunidades negras (Ley 70 de 1993); diferencia entre propiedad individual y propiedad colectiva.",
+    "refuerzo_ids": ["SOC-008", "SOC-017"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["diversidad_cultural", "territorios_colectivos", "consejos_comunitarios", "resguardos", "constitucion_1991"],
+    "estado": "aprobada"
+  }
+]

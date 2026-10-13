@@ -1,0 +1,1420 @@
+[
+  {
+    "id": "CIE-037",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la abundancia de organelos en una célula con la función que cumple (síntesis y secreción de proteínas, producción de energía, almacenamiento)",
+    "habilidad": "interpretar",
+    "tema": "Célula y organelos",
+    "subtema": "Retículo endoplasmático rugoso y aparato de Golgi en células secretoras de proteínas",
+    "dificultad": 1,
+    "contexto": "En un laboratorio de histología se observaron al microscopio electrónico tres tipos de células humanas (X, Y y Z) y se estimó qué porcentaje del volumen de cada célula ocupan algunos organelos. Se sabe que una de ellas es una célula del páncreas que fabrica y exporta grandes cantidades de enzimas digestivas, que son **proteínas**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Porcentaje del volumen celular ocupado por algunos organelos",
+      "columnas": ["Célula", "Mitocondrias (%)", "Retículo endoplasmático rugoso (%)", "Aparato de Golgi (%)", "Gotas de lípidos (%)"],
+      "filas": [["X", 35, 2, 1, 1], ["Y", 7, 20, 8, 1], ["Z", 3, 1, 1, 85]],
+      "nota": "Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Cuál de las células corresponde con mayor probabilidad a la célula del páncreas que produce y exporta enzimas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La célula Y, porque tiene mucho retículo endoplasmático rugoso, donde los ribosomas sintetizan proteínas, y mucho aparato de Golgi, que las modifica y empaca para exportarlas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La célula Y tiene el mayor porcentaje de retículo endoplasmático rugoso (20 %) y de aparato de Golgi (8 %). Los ribosomas adheridos al retículo rugoso sintetizan las proteínas destinadas a salir de la célula, y el Golgi las modifica y las empaca en vesículas de secreción: justo la función de una célula que exporta enzimas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La célula Y, porque el aparato de Golgi es el organelo que une los aminoácidos para fabricar las enzimas.",
+        "correcta": false,
+        "explicacion": "No responde, aunque elige la célula correcta. Los aminoácidos los unen los ribosomas (en este caso, los del retículo endoplasmático rugoso). El aparato de Golgi no sintetiza proteínas: las modifica, las clasifica y las empaca para su secreción.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Identifica bien la célula por la tabla, pero asigna al Golgi la función de síntesis que corresponde a los ribosomas."
+      },
+      {
+        "clave": "C",
+        "texto": "La célula X, porque una célula que fabrica y exporta tantas enzimas necesita, sobre todo, muchas mitocondrias que le den energía.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que la secreción consume energía, pero el rasgo distintivo de una célula secretora de proteínas es la abundancia de retículo rugoso y de Golgi. La célula X, con 35 % de mitocondrias y casi nada de retículo, es típica de un músculo que trabaja sin descanso, como el corazón.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se fija en una condición necesaria (energía) y no en el organelo específico de la función descrita."
+      },
+      {
+        "clave": "D",
+        "texto": "La célula Z, porque las gotas de lípidos son las vesículas que transportan las enzimas hacia el exterior de la célula.",
+        "correcta": false,
+        "explicacion": "No responde. Las gotas de lípidos almacenan grasas (triglicéridos); no fabrican ni transportan proteínas. Una célula ocupada en un 85 % por lípidos es típica del tejido adiposo, que almacena energía.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde las gotas de lípidos con vesículas de secreción porque ambas se ven como estructuras redondeadas."
+      }
+    ],
+    "explicacion": "LEER: tres células con distintos porcentajes de mitocondrias, retículo rugoso, Golgi y lípidos; una de ellas fabrica y exporta proteínas. COMPRENDER: se pide relacionar la función (síntesis y secreción de proteínas) con los organelos. INTERPRETAR: X destaca en mitocondrias (35 %), Y en retículo rugoso (20 %) y Golgi (8 %), Z en lípidos (85 %). REPRESENTAR: ribosomas del retículo rugoso → proteína → Golgi (modifica y empaca) → vesícula → exterior. RAZONAR: la ruta de secreción de proteínas usa justamente los dos organelos abundantes en Y; X sugiere alto gasto energético y Z almacenamiento de grasa. RESOLVER: la célula Y, opción A. VERIFICAR: la razón dada en B asigna a cada organelo su función real, a diferencia de C.",
+    "que_identificar": "Que la célula buscada fabrica y exporta proteínas y que Y es la que tiene más retículo endoplasmático rugoso y aparato de Golgi.",
+    "que_revisar": "Funciones de los organelos: ribosomas y retículo rugoso (síntesis de proteínas), aparato de Golgi (modificación y empaque), mitocondrias (respiración celular), vacuolas y gotas lipídicas (almacenamiento).",
+    "refuerzo_ids": ["CIE-005", "CIE-043"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["celula", "organelos", "secrecion", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-038",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Observar y relacionar patrones en los datos para evaluar las predicciones",
+    "evidencia": "Identifica en los datos de un experimento de ósmosis el valor de la variable independiente para el cual no hay flujo neto de agua y lo usa para evaluar una predicción",
+    "habilidad": "interpretar",
+    "tema": "Transporte celular",
+    "subtema": "Ósmosis en cilindros de papa sumergidos en soluciones de sacarosa de distinta concentración",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes de Tunja cortó cilindros de papa del mismo tamaño, cada uno con 5,0 g de masa, y sumergió cada cilindro durante 2 horas en una solución de sacarosa de distinta concentración. Luego secaron los cilindros con papel y volvieron a pesarlos. Antes del experimento, una estudiante predijo: \"La concentración de solutos dentro de las células de la papa es parecida a la de una solución de sacarosa de 0,3 mol/L\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Cambio de masa de cilindros de papa después de 2 horas",
+      "columnas": ["Concentración de sacarosa (mol/L)", "Masa inicial (g)", "Masa final (g)", "Cambio de masa (%)"],
+      "filas": [["0,0", 5, 5.6, "+12"], ["0,2", 5, 5.2, "+4"], ["0,4", 5, 4.8, "−4"], ["0,6", 5, 4.5, "−10"], ["0,8", 5, 4.3, "−14"]],
+      "nota": "La membrana de las células de la papa deja pasar el agua, pero no la sacarosa. Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Los resultados apoyan la predicción de la estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No; la concentración interna es exactamente 0,4 mol/L, porque es el valor intermedio entre las concentraciones que se usaron.",
+        "correcta": false,
+        "explicacion": "No responde. El valor intermedio del rango probado no tiene por qué coincidir con el de la célula; hay que mirar los datos. En 0,4 mol/L la papa perdió un 4 % de masa, así que esa solución es más concentrada que el interior de las células.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Escoge el punto medio del rango en lugar de buscar en la tabla dónde el cambio de masa es cero."
+      },
+      {
+        "clave": "B",
+        "texto": "No; la concentración interna es mayor que 0,8 mol/L, porque a medida que aumenta la concentración de sacarosa la papa pierde cada vez más masa.",
+        "correcta": false,
+        "explicacion": "No responde. Que la papa pierda masa en 0,4, 0,6 y 0,8 mol/L significa que esas soluciones tienen MÁS solutos que las células (son hipertónicas) y el agua sale. Si el interior tuviera más de 0,8 mol/L, la papa habría ganado masa en todas las soluciones.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la dirección del movimiento del agua: no relaciona la pérdida de masa con un medio externo más concentrado."
+      },
+      {
+        "clave": "C",
+        "texto": "Sí; el cambio de masa pasa de positivo (+4 % en 0,2 mol/L) a negativo (−4 % en 0,4 mol/L), así que el punto sin flujo neto de agua está entre esas concentraciones, cerca de 0,3 mol/L.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cuando la solución externa tiene menos solutos que la célula, entra agua y la papa gana masa; cuando tiene más, sale agua y la papa pierde masa. El cambio pasa de +4 % a −4 %, de modo que el cambio cero (solución isotónica) queda entre 0,2 y 0,4 mol/L; por simetría, cerca de 0,3 mol/L, como predijo la estudiante.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No; la concentración interna equivale a agua pura (0,0 mol/L), porque en esa solución la papa tuvo el mayor cambio de masa.",
+        "correcta": false,
+        "explicacion": "No responde. En agua pura la papa GANÓ un 12 % de masa: entró agua porque el interior de las células tiene más solutos que el exterior. La concentración interna es la de la solución en la que la papa NO gana ni pierde masa, no la del mayor cambio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia el mayor cambio con la igualdad de concentraciones, cuando es lo contrario: el mayor cambio indica la mayor diferencia."
+      }
+    ],
+    "explicacion": "LEER: cilindros de papa de 5,0 g en soluciones de sacarosa de 0,0 a 0,8 mol/L; la membrana deja pasar agua pero no sacarosa. COMPRENDER: hay que decidir si la concentración interna de la papa es cercana a 0,3 mol/L. INTERPRETAR: ganancia de masa = entró agua (medio hipotónico); pérdida = salió agua (medio hipertónico). REPRESENTAR: el cambio de masa pasa de +4 % (0,2) a −4 % (0,4); el cero está entre ambos. RAZONAR: en la solución isotónica no hay flujo neto de agua y la masa no cambia; interpolando, ocurre hacia 0,3 mol/L. RESOLVER: la predicción es coherente con los datos, opción C. VERIFICAR: con 0,3 mol/L, todas las filas tienen sentido: por debajo entra agua y por encima sale.",
+    "que_identificar": "El cambio de signo del cambio de masa entre 0,2 y 0,4 mol/L y la nota de que la sacarosa no atraviesa la membrana.",
+    "que_revisar": "Ósmosis: el agua se mueve a través de una membrana semipermeable hacia donde hay mayor concentración de solutos; soluciones hipotónicas, isotónicas e hipertónicas; lectura del punto de cambio en una tabla.",
+    "refuerzo_ids": ["CIE-010", "CIE-037"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["transporte celular", "osmosis", "experimento escolar", "tabla", "indagacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-039",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Diferencia la mitosis de la meiosis a partir de la variación de la cantidad de ADN por célula a lo largo de la división",
+    "habilidad": "interpretar",
+    "tema": "División celular",
+    "subtema": "Cantidad de ADN por célula durante la meiosis: una duplicación y dos divisiones",
+    "dificultad": 3,
+    "contexto": "Unos investigadores midieron la cantidad de ADN (en unidades arbitrarias) presente en una célula de una planta y luego en cada una de las células que se originaron a partir de ella, desde el inicio hasta el final de un proceso de división celular.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Cantidad de ADN por célula durante un proceso de división",
+      "eje_x": "Tiempo (horas)",
+      "eje_y": "ADN por célula (unidades arbitrarias)",
+      "series": [
+        { "nombre": "ADN por célula", "valores": [["0", 2], ["2", 2], ["4", 3], ["6", 4], ["8", 4], ["10", 4], ["12", 2], ["14", 2], ["16", 1], ["18", 1]] }
+      ]
+    },
+    "enunciado": "¿Qué tipo de división muestra la gráfica y cuál es la característica de las células que se obtienen al final?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Meiosis, porque el ADN se duplica una vez y luego hay dos divisiones seguidas; al final se obtienen células con la mitad del ADN que tenía la célula inicial.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El ADN pasa de 2 a 4 unidades entre las 2 y las 6 h (duplicación), baja a 2 hacia las 12 h (primera división) y baja otra vez a 1 hacia las 16 h (segunda división, sin nueva duplicación). Una duplicación seguida de dos divisiones es la meiosis, que produce células con la mitad del material genético, como los gametos o las esporas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Mitosis, porque el ADN se duplica antes de la división; al final se obtienen células con la misma cantidad de ADN que la célula inicial.",
+        "correcta": false,
+        "explicacion": "No responde. En la mitosis el ADN se duplica (2 → 4) y luego baja una sola vez (4 → 2). La gráfica muestra una segunda caída, de 2 a 1, a partir de las 14 h: las células finales tienen la MITAD del ADN inicial.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reconoce la duplicación y la primera división, pero no lee la gráfica hasta el final."
+      },
+      {
+        "clave": "C",
+        "texto": "Meiosis, porque el ADN se duplica dos veces; al final se obtienen células con el doble del ADN que la célula inicial.",
+        "correcta": false,
+        "explicacion": "No responde. En la gráfica solo hay un aumento (de 2 a 4); las otras dos variaciones son disminuciones. Además, el valor final (1) es menor que el inicial (2), no el doble.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cuenta los cambios de nivel de la línea sin fijarse si son subidas o bajadas."
+      },
+      {
+        "clave": "D",
+        "texto": "Mitosis, porque al final se obtienen células con la mitad del ADN, que es lo que ocurre cada vez que una célula se divide para crecer.",
+        "correcta": false,
+        "explicacion": "No responde. La mitosis, usada en el crecimiento, produce células con la MISMA cantidad de ADN que la célula madre, gracias a la duplicación previa. Obtener células con la mitad del ADN es propio de la meiosis.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que cualquier división reparte el ADN a la mitad, sin considerar la duplicación previa de la mitosis."
+      }
+    ],
+    "explicacion": "LEER: gráfica de ADN por célula contra tiempo durante una división. COMPRENDER: se pide el tipo de división y el contenido de ADN de las células finales. INTERPRETAR: 2 → 4 (de 2 a 6 h), 4 → 2 (hacia las 12 h), 2 → 1 (hacia las 16 h). REPRESENTAR: una subida y dos bajadas. RAZONAR: la mitosis tiene una duplicación y una división (termina con 2); la meiosis tiene una duplicación y dos divisiones (termina con 1, la mitad). RESOLVER: meiosis con células de la mitad del ADN, opción A. VERIFICAR: el valor final de la gráfica (1) es la mitad del inicial (2).",
+    "que_identificar": "Que la línea sube una sola vez y baja dos veces, y que el valor final (1) es la mitad del inicial (2).",
+    "que_revisar": "Mitosis y meiosis: número de duplicaciones del ADN y de divisiones, número de células y cantidad de material genético resultante; función de cada una (crecimiento y reparación frente a formación de gametos).",
+    "refuerzo_ids": ["CIE-040", "CIE-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["division celular", "meiosis", "mitosis", "adn", "grafico de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-040",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Asocia la aparición de un fenotipo intermedio en los heterocigotos con la dominancia incompleta y predice las proporciones de un cruce",
+    "habilidad": "comprender",
+    "tema": "Genética: herencia no mendeliana",
+    "subtema": "Dominancia incompleta en el color de las flores de la planta buenas tardes",
+    "dificultad": 1,
+    "contexto": "En la planta ornamental conocida como \"buenas tardes\" (*Mirabilis jalapa*), común en jardines de Colombia, un cultivador cruzó plantas de raza pura de flores rojas con plantas de raza pura de flores blancas. Todas las plantas hijas (F1) tuvieron flores **rosadas**. Se sabe que el color depende de un solo gen con dos alelos.",
+    "estimulo": null,
+    "enunciado": "Si el cultivador cruza entre sí dos plantas rosadas de la F1, ¿qué proporción de colores se espera en la descendencia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "3 rojas : 1 blanca.",
+        "correcta": false,
+        "explicacion": "No responde. Esa proporción corresponde a la dominancia completa, en la que el heterocigoto se ve igual que el dominante. Aquí el heterocigoto es rosado, distinto de ambos padres, así que cada genotipo tiene su propio color.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica la proporción 3:1 de Mendel sin notar que la F1 tiene un color intermedio."
+      },
+      {
+        "clave": "B",
+        "texto": "Todas rosadas, porque los padres son rosados.",
+        "correcta": false,
+        "explicacion": "No responde. Las plantas rosadas son heterocigotas (Rr): cada una forma gametos con R y gametos con r. Al combinarse, reaparecen los genotipos RR (roja) y rr (blanca).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que los hijos siempre se parecen a los padres, sin analizar los gametos de un heterocigoto."
+      },
+      {
+        "clave": "C",
+        "texto": "1 roja : 2 rosadas : 1 blanca.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La F1 rosada es heterocigota (Rr) porque ningún alelo domina por completo. El cruce Rr × Rr da 1 RR : 2 Rr : 1 rr; como cada genotipo tiene un fenotipo distinto, la proporción de colores es 1 roja : 2 rosadas : 1 blanca.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "3 rosadas : 1 blanca, porque el rosado domina sobre el blanco.",
+        "correcta": false,
+        "explicacion": "No responde. El rosado no es un alelo: es el fenotipo del heterocigoto. Los genotipos posibles son RR, Rr y rr, y el RR (rojo) también aparece en la descendencia.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trata el fenotipo intermedio como si fuera un alelo dominante."
+      }
+    ],
+    "explicacion": "LEER: rojas puras × blancas puras dan toda la F1 rosada; un gen con dos alelos. COMPRENDER: se pide la proporción de colores del cruce rosada × rosada. INTERPRETAR: el heterocigoto tiene un color intermedio, así que hay dominancia incompleta. REPRESENTAR: cuadro de Punnett Rr × Rr → RR, Rr, Rr, rr. RAZONAR: RR = roja, Rr = rosada, rr = blanca. RESOLVER: 1 roja : 2 rosadas : 1 blanca, opción C. VERIFICAR: las cuatro casillas del cuadro suman 1 + 2 + 1 = 4.",
+    "que_identificar": "Que la F1 es rosada, un color distinto de ambos padres, lo que indica dominancia incompleta.",
+    "que_revisar": "Dominancia completa frente a dominancia incompleta y codominancia; uso del cuadro de Punnett con fenotipos intermedios.",
+    "refuerzo_ids": ["CIE-014", "CIE-041"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["genetica", "dominancia incompleta", "cuadro de punnett", "jardin", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-041",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela la transmisión de un rasgo ligado al cromosoma X y predice su aparición en hijos e hijas",
+    "habilidad": "razonar",
+    "tema": "Genética: herencia ligada al sexo",
+    "subtema": "Daltonismo: probabilidad en hijos de una madre portadora",
+    "dificultad": 2,
+    "contexto": "El daltonismo rojo-verde se debe a un alelo recesivo (d) ubicado en el cromosoma X; el cromosoma Y no tiene este gen. Laura tiene visión normal de los colores, pero su padre era daltónico. Laura y su pareja, un hombre con visión normal, planean tener hijos.",
+    "estimulo": null,
+    "enunciado": "¿Qué se espera en la descendencia de Laura y su pareja?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Ningún hijo varón será daltónico, porque el padre tiene visión normal.",
+        "correcta": false,
+        "explicacion": "No responde. Los hijos varones reciben del padre el cromosoma Y (que no tiene el gen) y de la madre el cromosoma X. Por eso el daltonismo de un hijo depende del X de la madre, no de la visión del padre.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que los hijos varones heredan el cromosoma X del padre."
+      },
+      {
+        "clave": "B",
+        "texto": "Las hijas tendrán un 50 % de probabilidad de ser daltónicas, porque la madre es portadora.",
+        "correcta": false,
+        "explicacion": "No responde. Para ser daltónica, una hija necesita dos alelos d, uno de cada progenitor. Como el padre tiene visión normal, siempre le da un XD, así que ninguna hija será daltónica; el 50 % corresponde a hijas PORTADORAS.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde ser portadora con manifestar el rasgo recesivo."
+      },
+      {
+        "clave": "C",
+        "texto": "Tanto hijos como hijas tendrán la misma probabilidad de ser daltónicos: 25 % cada uno.",
+        "correcta": false,
+        "explicacion": "No responde. El 25 % es la proporción de un cruce entre heterocigotos para un gen en un cromosoma no sexual. Aquí el gen está en el X, por lo que el resultado depende del sexo: 0 % en hijas y 50 % en hijos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Resuelve el cruce como si el gen estuviera en un autosoma e ignora que está en el cromosoma X."
+      },
+      {
+        "clave": "D",
+        "texto": "Ninguna hija será daltónica, pero cada hijo varón tendrá un 50 % de probabilidad de serlo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Laura recibió el X con el alelo d de su padre daltónico y, como ve normal, es portadora (XDXd). Su pareja es XDY. Todas las hijas reciben el XD del padre, así que ven normal (la mitad serán portadoras). Cada hijo varón recibe el Y del padre y uno de los dos X de la madre: 1/2 XDY (normal) y 1/2 XdY (daltónico).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: alelo recesivo d en el X; Laura ve normal y su padre era daltónico; su pareja ve normal. COMPRENDER: se pide qué se espera en hijos e hijas. INTERPRETAR: Laura recibió de su padre un Xd, así que es XDXd; la pareja es XDY. REPRESENTAR: cuadro de Punnett con gametos XD, Xd (madre) y XD, Y (padre): XDXD, XDXd, XDY, XdY. RAZONAR: las dos hijas posibles tienen al menos un XD (ven normal); de los dos hijos posibles, uno es XdY. RESOLVER: 0 % de hijas daltónicas y 50 % de hijos daltónicos, opción D. VERIFICAR: es el patrón típico de los rasgos recesivos ligados al X, más frecuentes en varones.",
+    "que_identificar": "Que el gen está en el cromosoma X, que Laura heredó el X de su padre daltónico y que su pareja tiene visión normal.",
+    "que_revisar": "Herencia ligada al cromosoma X: portadoras, por qué los rasgos recesivos ligados al X son más frecuentes en hombres; cuadro de Punnett con cromosomas sexuales.",
+    "refuerzo_ids": ["CIE-040", "CIE-042"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["genetica", "herencia ligada al sexo", "daltonismo", "salud", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-042",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva el patrón de herencia más probable de un rasgo a partir de los datos de una genealogía, descartando los patrones que las evidencias contradicen",
+    "habilidad": "razonar",
+    "tema": "Genética: análisis de genealogías",
+    "subtema": "Árbol genealógico en tabla: herencia autosómica recesiva del albinismo",
+    "dificultad": 3,
+    "contexto": "Un grupo de genetistas estudió la aparición del albinismo en una familia. En lugar de dibujar el árbol genealógico, organizaron la información en una tabla. La generación I son los abuelos; II-3 es una persona que no pertenece a la familia original y que se casó con II-1.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Genealogía de una familia con albinismo",
+      "columnas": ["Individuo", "Sexo", "Padre", "Madre", "¿Presenta albinismo?"],
+      "filas": [["I-1", "Hombre", "—", "—", "No"], ["I-2", "Mujer", "—", "—", "No"], ["II-1", "Mujer", "I-1", "I-2", "Sí"], ["II-2", "Hombre", "I-1", "I-2", "No"], ["II-3", "Hombre", "—", "—", "No"], ["III-1", "Hombre", "II-3", "II-1", "No"], ["III-2", "Mujer", "II-3", "II-1", "No"]],
+      "nota": "\"—\" indica que no se registraron los padres de ese individuo."
+    },
+    "enunciado": "¿Qué patrón de herencia del albinismo es coherente con TODOS los datos de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Autosómico dominante, porque el rasgo aparece en una sola persona de la familia.",
+        "correcta": false,
+        "explicacion": "No responde. Si el albinismo fuera dominante, toda persona con el rasgo tendría al menos un progenitor con el rasgo. II-1 lo presenta y sus padres (I-1 e I-2) no, lo cual contradice este patrón.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relaciona \"dominante\" con \"poco frecuente\" en vez de revisar si los padres del afectado presentan el rasgo."
+      },
+      {
+        "clave": "B",
+        "texto": "Recesivo ligado al cromosoma X, porque el rasgo aparece en una mujer que recibió un X de cada progenitor.",
+        "correcta": false,
+        "explicacion": "No responde. Para que una mujer manifieste un rasgo recesivo ligado al X, debe recibir el alelo recesivo también de su padre; y un hombre con ese alelo en su único X presentaría el rasgo. Pero I-1, padre de II-1, no tiene albinismo. Este dato descarta el patrón ligado al X.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recuerda que las mujeres tienen dos X, pero no comprueba qué implicaría eso para el padre de II-1."
+      },
+      {
+        "clave": "C",
+        "texto": "Autosómico recesivo, porque II-1 lo presenta aunque sus padres no, y su padre no tiene el rasgo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Dos padres sin el rasgo con una hija que lo presenta indican que el alelo es recesivo y que ambos padres son portadores (Aa × Aa → aa). Además, como el padre (I-1) no tiene albinismo, el gen no puede estar en el X: debe estar en un autosoma. Los hijos de II-1 (aa) con II-3 no lo presentan, lo que es coherente si II-3 es AA; todos serían portadores (Aa).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Ligado al cromosoma Y, porque se transmite de padres a hijos varones.",
+        "correcta": false,
+        "explicacion": "No responde. Un rasgo ligado al Y solo puede aparecer en hombres. En la tabla, la única persona con albinismo es una mujer (II-1), que no tiene cromosoma Y.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó la columna de sexo de la persona que presenta el rasgo."
+      }
+    ],
+    "explicacion": "LEER: tabla con individuos, sexo, padres y presencia de albinismo; solo II-1 (mujer) lo presenta. COMPRENDER: se pide el patrón compatible con todos los datos. INTERPRETAR: II-1 es hija de I-1 e I-2, ninguno con el rasgo; sus hijos III-1 y III-2 no lo presentan. REPRESENTAR: árbol I-1 × I-2 → II-1 (afectada), II-2; II-1 × II-3 → III-1, III-2. RAZONAR: padres sanos con hija afectada → recesivo (descarta dominante). Un recesivo ligado al X exigiría que I-1 estuviera afectado → descartado. El ligado al Y exige varones afectados → descartado. RESOLVER: autosómico recesivo, opción C. VERIFICAR: I-1 y I-2 serían Aa, II-1 aa, II-3 AA, III-1 y III-2 Aa: todos los fenotipos de la tabla coinciden.",
+    "que_identificar": "Que II-1 presenta el rasgo, que sus padres no, que su padre (I-1) es hombre sin el rasgo y que II-1 es mujer.",
+    "que_revisar": "Análisis de genealogías: criterios para reconocer herencia dominante o recesiva y autosómica o ligada a los cromosomas sexuales; comprobación con genotipos.",
+    "refuerzo_ids": ["CIE-041", "CIE-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["genetica", "arbol genealogico", "albinismo", "tabla", "indagacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-043",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica el efecto de una mutación puntual sobre una proteína a partir del código genético (codones, aminoácidos y redundancia del código)",
+    "habilidad": "razonar",
+    "tema": "ADN y síntesis de proteínas",
+    "subtema": "Mutaciones puntuales silenciosas y de cambio de sentido en el gen de la β-globina (anemia falciforme)",
+    "dificultad": 2,
+    "contexto": "La hemoglobina contiene una proteína llamada β-globina. En el ARN mensajero (ARNm) normal de esta proteína, el sexto codón es **GAG**. Se analizó ese codón en dos personas con un cambio en el ADN del gen: en la persona 1 el codón es **GAA** y su hemoglobina funciona normalmente; en la persona 2 el codón es **GUG** y presenta anemia falciforme, en la que los glóbulos rojos se deforman.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Fragmento del código genético",
+      "columnas": ["Codón del ARNm", "Aminoácido o señal"],
+      "filas": [["GAG", "Ácido glutámico"], ["GAA", "Ácido glutámico"], ["GUG", "Valina"], ["GCG", "Alanina"], ["UAG", "Señal de terminación"]],
+      "nota": "Fragmento real del código genético estándar."
+    },
+    "enunciado": "¿Qué explica que el cambio en el ADN afecte la hemoglobina de la persona 2 pero no la de la persona 1?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "GAA codifica el mismo aminoácido que GAG (ácido glutámico), así que la proteína de la persona 1 no cambia; GUG codifica valina, de modo que la β-globina de la persona 2 tiene un aminoácido distinto que altera su forma y su función.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Según la tabla, GAG y GAA codifican ácido glutámico: el código genético es redundante y la mutación de la persona 1 es silenciosa. En la persona 2, GUG codifica valina: la proteína cambia un aminoácido, lo que modifica su forma y hace que la hemoglobina se agrupe y deforme los glóbulos rojos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La persona 1 no tiene ningún cambio en el ADN; el cambio de GAG a GAA solo ocurrió en el ARNm, por eso no se hereda ni afecta la proteína.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que ambas personas tienen un cambio en el ADN del gen. El ARNm es una copia (transcripción) del ADN: si el codón del ARNm cambió, es porque cambió la secuencia del ADN.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relaciona la secuencia del ARNm con la del ADN del que se transcribe."
+      },
+      {
+        "clave": "C",
+        "texto": "En la persona 2, el codón GUG es una señal de terminación que corta la proteína, mientras que en la persona 1 la proteína se fabrica completa.",
+        "correcta": false,
+        "explicacion": "No responde. Según la tabla, la señal de terminación es UAG; GUG codifica valina. La proteína de la persona 2 se fabrica completa, pero con un aminoácido distinto en la posición 6.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió en la tabla la fila de GUG con la de UAG."
+      },
+      {
+        "clave": "D",
+        "texto": "Los cambios en la tercera letra de un codón nunca se copian al ARNm, mientras que los cambios en la segunda letra sí.",
+        "correcta": false,
+        "explicacion": "No responde. En la transcripción se copian todas las bases del gen, sin importar su posición. La diferencia está en que, por la redundancia del código, algunos cambios en la tercera base producen el mismo aminoácido.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generaliza a partir de este caso particular una regla que no existe sobre la transcripción."
+      }
+    ],
+    "explicacion": "LEER: codón 6 normal GAG; persona 1 GAA (sin efecto), persona 2 GUG (anemia falciforme); tabla con codones y aminoácidos. COMPRENDER: se pide explicar por qué un cambio afecta la proteína y el otro no. INTERPRETAR: GAG → ácido glutámico, GAA → ácido glutámico, GUG → valina. REPRESENTAR: ADN → (transcripción) ARNm → (traducción) secuencia de aminoácidos → forma y función de la proteína. RAZONAR: si el aminoácido no cambia, la proteína es igual (mutación silenciosa); si cambia, la proteína puede alterar su función (mutación de cambio de sentido). RESOLVER: opción A. VERIFICAR: la explicación usa las tres filas relevantes de la tabla y es coherente con los síntomas descritos.",
+    "que_identificar": "Los aminoácidos que corresponden a GAG, GAA y GUG en la tabla del código genético.",
+    "que_revisar": "Flujo de la información genética (ADN → ARNm → proteína), codones, redundancia del código genético y tipos de mutación puntual (silenciosa, de cambio de sentido y sin sentido).",
+    "refuerzo_ids": ["CIE-037", "CIE-057"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["adn", "sintesis de proteinas", "mutaciones", "codigo genetico", "salud", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-044",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Elabora conclusiones sobre la fijación biológica del nitrógeno a partir de los resultados de un experimento con grupos de comparación, sin ir más allá de lo que muestran los datos",
+    "habilidad": "interpretar",
+    "tema": "Ciclo del nitrógeno",
+    "subtema": "Fijación de nitrógeno por bacterias Rhizobium en nódulos de raíces de fríjol",
+    "dificultad": 2,
+    "contexto": "En una granja experimental de Boyacá se sembró fríjol en un suelo esterilizado y pobre en nitrógeno, dividido en cuatro lotes. A algunos lotes se les agregaron bacterias del género *Rhizobium*, que pueden vivir en nódulos de las raíces; a otros, fertilizante nitrogenado. Todos recibieron la misma agua y luz. Seis semanas después se midieron los resultados.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados promedio por planta a las seis semanas",
+      "columnas": ["Lote", "Rhizobium", "Fertilizante nitrogenado", "Nódulos en la raíz", "Masa seca (g)", "Nitrógeno en hojas (%)"],
+      "filas": [["1", "No", "No", 0, 2.1, 1.5], ["2", "Sí", "No", 38, 4.6, 3.4], ["3", "No", "Sí", 0, 4.8, 3.5], ["4", "Sí", "Sí", 9, 5, 3.6]],
+      "nota": "El aire contiene cerca de 78 % de nitrógeno gaseoso (N₂). Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los resultados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las plantas de fríjol toman por sí mismas el nitrógeno del aire a través de las hojas, sin necesidad de las bacterias.",
+        "correcta": false,
+        "explicacion": "No responde. En el lote 1, sin bacterias ni fertilizante, las plantas tuvieron el menor nitrógeno en hojas (1,5 %) y la menor masa, aunque el aire tenía el mismo N₂ que en los demás lotes. Las plantas no aprovechan directamente el N₂ del aire.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que las plantas absorben el nitrógeno del aire como absorben el CO₂."
+      },
+      {
+        "clave": "B",
+        "texto": "En un suelo pobre en nitrógeno, las bacterias de los nódulos aportan a la planta un nitrógeno que le permite crecer casi tanto como con fertilizante; cuando hay fertilizante, la planta forma menos nódulos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Comparando los lotes 1 y 2 (solo cambia la presencia de Rhizobium), los nódulos se asocian con más nitrógeno en hojas (1,5 % → 3,4 %) y más masa (2,1 → 4,6 g), valores cercanos a los del lote 3 con fertilizante. Comparando 2 y 4, con fertilizante los nódulos bajan de 38 a 9. Esto concuerda con la fijación biológica: las bacterias convierten el N₂ del aire en compuestos que la planta puede usar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Usar al mismo tiempo bacterias y fertilizante duplica el crecimiento de la planta respecto a usar solo bacterias.",
+        "correcta": false,
+        "explicacion": "No responde. La masa seca pasa de 4,6 g (lote 2) a 5,0 g (lote 4), un aumento cercano al 9 %, muy lejos del doble.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó el lote 4 con el lote 1 (sin nada) en lugar de compararlo con el lote 2."
+      },
+      {
+        "clave": "D",
+        "texto": "Los nódulos perjudican el crecimiento, porque el lote 4 tiene menos nódulos que el lote 2 y aun así creció más.",
+        "correcta": false,
+        "explicacion": "No responde. La diferencia entre los lotes 2 y 4 se explica por el fertilizante añadido, no por tener menos nódulos. Además, el lote 2, con muchos nódulos, creció más del doble que el lote 1, sin nódulos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye un resultado a una variable sin controlar las otras que cambian entre los lotes."
+      }
+    ],
+    "explicacion": "LEER: cuatro lotes de fríjol en suelo pobre en nitrógeno, con o sin Rhizobium y con o sin fertilizante; se midieron nódulos, masa y nitrógeno. COMPRENDER: se pide la conclusión respaldada. INTERPRETAR: lote 1 (nada) crece poco; lote 2 (bacterias) y lote 3 (fertilizante) crecen parecido; lote 4 (ambos) forma menos nódulos. REPRESENTAR: N₂ del aire → bacterias de los nódulos → compuestos nitrogenados → proteínas y ADN de la planta. RAZONAR: comparar lotes que difieren en una sola variable: 1 vs. 2 (efecto de las bacterias), 2 vs. 4 (efecto del fertilizante sobre los nódulos). RESOLVER: opción B. VERIFICAR: B no afirma nada que la tabla no muestre; A, C y D contradicen algún dato.",
+    "que_identificar": "La comparación entre los lotes 1 y 2 (efecto de las bacterias) y entre los lotes 2 y 4 (efecto del fertilizante en el número de nódulos).",
+    "que_revisar": "Ciclo del nitrógeno: fijación biológica, nitrificación, asimilación y desnitrificación; mutualismo entre leguminosas y Rhizobium; comparación de grupos experimentales que difieren en una sola variable.",
+    "refuerzo_ids": ["CIE-009", "CIE-046"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ciclo del nitrogeno", "ecologia", "cultivos", "boyaca", "experimento", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-045",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Asocia la disminución de energía entre niveles tróficos con la regla aproximada del 10 % y con las pérdidas por respiración y calor",
+    "habilidad": "resolver",
+    "tema": "Ecosistemas: flujo de energía",
+    "subtema": "Pirámide de energía y transferencia aproximada del 10 % entre niveles tróficos",
+    "dificultad": 1,
+    "contexto": "En un pastizal de los Llanos Orientales, un equipo midió la energía disponible en cada nivel trófico de una cadena alimentaria: pastos → saltamontes → ranas → serpientes. Los pastos almacenan 20 000 kcal por metro cuadrado al año; los saltamontes, 2 000 kcal; y las serpientes, 20 kcal. No se pudo medir el valor de las ranas.",
+    "estimulo": null,
+    "enunciado": "¿Cuánta energía cabe esperar en el nivel de las ranas y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Unas 1 000 kcal, porque cada nivel recibe la mitad de la energía del nivel anterior.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran que de los pastos a los saltamontes queda el 10 % (de 20 000 a 2 000), no la mitad. Con 1 000 kcal en las ranas, las serpientes tendrían que recibir solo el 2 % para quedar en 20 kcal, lo que no mantiene el patrón.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone una disminución a la mitad sin calcular la proporción que muestran los datos."
+      },
+      {
+        "clave": "B",
+        "texto": "Unas 200 kcal, porque el 90 % restante de la energía regresa a los pastos a través de los descomponedores y se vuelve a usar.",
+        "correcta": false,
+        "explicacion": "No responde, aunque el valor numérico es correcto. La energía no se recicla: los descomponedores devuelven al suelo la materia (nutrientes), pero la energía se pierde finalmente como calor. Por eso los ecosistemas necesitan un aporte continuo de energía solar.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el ciclo de la materia con el flujo de energía, que es unidireccional."
+      },
+      {
+        "clave": "C",
+        "texto": "Unas 2 000 kcal, porque la energía no se crea ni se destruye y pasa completa de un nivel al siguiente.",
+        "correcta": false,
+        "explicacion": "No responde. La energía se conserva en el universo, pero no pasa completa al siguiente nivel trófico: la mayor parte sale del ecosistema como calor. Además, si pasara completa, las serpientes no tendrían solo 20 kcal.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica la conservación de la energía como si toda la energía quedara dentro de la cadena alimentaria."
+      },
+      {
+        "clave": "D",
+        "texto": "Unas 200 kcal, porque en cada nivel solo pasa alrededor del 10 % de la energía; el resto se gasta en la respiración y se pierde como calor, o queda en partes no consumidas y en desechos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. De 20 000 a 2 000 kcal hay un paso del 10 %; aplicando el mismo patrón, 2 000 × 0,1 = 200 kcal en las ranas y 200 × 0,1 = 20 kcal en las serpientes, que coincide con el dato medido. La energía restante se usa en las actividades de cada organismo y se disipa como calor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: pastos 20 000 kcal, saltamontes 2 000 kcal, serpientes 20 kcal; falta el valor de las ranas. COMPRENDER: se pide estimar la energía de las ranas y justificarla. INTERPRETAR: 2 000/20 000 = 0,1: pasa el 10 %. REPRESENTAR: pirámide de energía 20 000 → 2 000 → ? → 20. RAZONAR: con el mismo patrón, 2 000 × 0,1 = 200; la energía que no pasa se pierde como calor, no se recicla. RESOLVER: 200 kcal por pérdidas en respiración y calor, opción D. VERIFICAR: 200 × 0,1 = 20 kcal, igual al valor medido en las serpientes.",
+    "que_identificar": "La proporción entre la energía de los pastos y la de los saltamontes, y el valor de las serpientes para comprobar.",
+    "que_revisar": "Flujo de energía y pirámides ecológicas: regla aproximada del 10 %, pérdidas por respiración y calor; diferencia entre el ciclo de la materia y el flujo de la energía.",
+    "refuerzo_ids": ["CIE-013", "CIE-046"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["ecologia", "piramide de energia", "niveles troficos", "llanos orientales", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-046",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva el tipo de relación interespecífica entre dos poblaciones a partir de los resultados de un experimento de remoción",
+    "habilidad": "interpretar",
+    "tema": "Relaciones interespecíficas",
+    "subtema": "Mutualismo entre el yarumo (Cecropia) y las hormigas Azteca: experimento de remoción",
+    "dificultad": 1,
+    "contexto": "En los bosques andinos de Colombia, el yarumo (*Cecropia*) tiene tallos huecos donde viven colonias de hormigas del género *Azteca*, que se alimentan de pequeños cuerpos nutritivos que produce la planta. Se ha observado que estas colonias no se establecen si no hay yarumos. Para estudiar el efecto de las hormigas sobre la planta, unos biólogos retiraron las hormigas de un grupo de yarumos jóvenes y compararon, durante seis meses, con yarumos similares que conservaron sus hormigas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados después de seis meses",
+      "columnas": ["Grupo de yarumos", "Hojas dañadas por insectos herbívoros (%)", "Crecimiento en altura (cm)", "Hormigas por planta al final"],
+      "filas": [["Con hormigas", 8, 45, 350], ["Sin hormigas (retiradas)", 41, 18, 0]],
+      "nota": "Datos construidos con fines didácticos."
+    },
+    "enunciado": "Con base en el contexto y en los resultados, ¿qué tipo de relación hay entre el yarumo y las hormigas Azteca?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Parasitismo, porque las hormigas viven dentro de la planta y se alimentan de lo que ella produce.",
+        "correcta": false,
+        "explicacion": "No responde. En el parasitismo el hospedero resulta perjudicado. Los datos muestran lo contrario: los yarumos con hormigas tienen menos daño en las hojas (8 % frente a 41 %) y crecen más (45 cm frente a 18 cm).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Clasifica la relación solo porque una especie vive dentro de la otra y se alimenta de ella, sin revisar el efecto sobre el hospedero."
+      },
+      {
+        "clave": "B",
+        "texto": "Comensalismo, porque solo las hormigas obtienen un beneficio (refugio y alimento) y la planta no se ve afectada.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que la planta SÍ se ve afectada: sin hormigas sufre cinco veces más daño por herbívoros y crece menos de la mitad.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tuvo en cuenta el beneficio de las hormigas descrito en el contexto, pero no leyó los resultados de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "Mutualismo, porque las hormigas obtienen refugio y alimento de la planta, y la planta queda protegida de los herbívoros y crece más.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El contexto indica que las hormigas dependen del yarumo para refugio y alimento (+ para las hormigas). La tabla muestra que, al retirarlas, aumenta el daño en las hojas y disminuye el crecimiento (+ para la planta). Una relación en la que ambas especies se benefician es un mutualismo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Competencia, porque las hormigas y los insectos herbívoros pelean por las hojas del yarumo.",
+        "correcta": false,
+        "explicacion": "No responde. La pregunta es por la relación entre el yarumo y las hormigas, no entre las hormigas y los herbívoros. Además, las hormigas no comen hojas: se alimentan de los cuerpos nutritivos y ahuyentan a los herbívoros.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Responde sobre un par de especies distinto al que pregunta el enunciado."
+      }
+    ],
+    "explicacion": "LEER: las hormigas viven en los tallos huecos y comen cuerpos nutritivos del yarumo; se retiraron hormigas de un grupo de plantas. COMPRENDER: se pide el tipo de relación yarumo-hormigas. INTERPRETAR: sin hormigas, el daño sube de 8 % a 41 % y el crecimiento baja de 45 a 18 cm. REPRESENTAR: hormigas (+: refugio y alimento), yarumo (+: protección y crecimiento). RAZONAR: +/+ es mutualismo; +/− sería parasitismo; +/0, comensalismo; −/−, competencia. RESOLVER: mutualismo, opción C. VERIFICAR: el grupo sin hormigas funciona como comparación y confirma el beneficio para la planta.",
+    "que_identificar": "El beneficio de las hormigas descrito en el contexto y el efecto sobre la planta que muestra la comparación de los dos grupos.",
+    "que_revisar": "Relaciones interespecíficas (mutualismo, comensalismo, parasitismo, depredación, competencia) según el efecto (+, 0, −) sobre cada especie; experimentos de remoción como evidencia.",
+    "refuerzo_ids": ["CIE-013", "CIE-044"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["ecologia", "relaciones interespecificas", "mutualismo", "bosque andino", "tabla", "indagacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-047",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica la función de la bilis en la digestión de las grasas a partir de los resultados de un experimento con y sin enzima",
+    "habilidad": "razonar",
+    "tema": "Sistema digestivo",
+    "subtema": "Emulsificación de las grasas por las sales biliares y acción de la lipasa",
+    "dificultad": 3,
+    "contexto": "En un laboratorio escolar se prepararon cuatro tubos con leche entera (que contiene grasa) y un indicador de color que cambia cuando se acumulan ácidos grasos, productos de la digestión de las grasas. Se midió cuánto tardaba el indicador en cambiar de color a 37 °C. La lipasa es una enzima del páncreas y las sales biliares son componentes de la bilis producida por el hígado.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Tiempo de cambio de color del indicador a 37 °C",
+      "columnas": ["Tubo", "Contenido además de leche e indicador", "Tiempo hasta el cambio de color"],
+      "filas": [["1", "Lipasa", "12 min"], ["2", "Lipasa + sales biliares", "4 min"], ["3", "Sales biliares", "Sin cambio en 30 min"], ["4", "Agua", "Sin cambio en 30 min"]],
+      "nota": "Los cuatro tubos tenían el mismo volumen de leche y la misma cantidad de indicador. Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Qué explicación sobre la función de las sales biliares es coherente con los resultados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las sales biliares son enzimas que digieren las grasas más rápido que la lipasa.",
+        "correcta": false,
+        "explicacion": "No responde. En el tubo 3, con sales biliares pero sin lipasa, el indicador no cambió en 30 minutos: por sí solas no producen ácidos grasos, así que no digieren la grasa.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó solo los tubos 1 y 2 y no tuvo en cuenta el tubo 3."
+      },
+      {
+        "clave": "B",
+        "texto": "La lipasa solo puede digerir la grasa cuando hay sales biliares.",
+        "correcta": false,
+        "explicacion": "No responde. En el tubo 1, con lipasa y sin sales biliares, el indicador sí cambió (en 12 min): la lipasa funciona sola, aunque más despacio. Las sales biliares aceleran la digestión, pero no son indispensables para que ocurra.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convierte \"acelera\" en \"es necesario para\", generalizando más allá de lo que muestran los datos."
+      },
+      {
+        "clave": "C",
+        "texto": "Las sales biliares cambian por sí solas el color del indicador, y por eso el tubo 2 cambia antes.",
+        "correcta": false,
+        "explicacion": "No responde. Si las sales biliares cambiaran el color del indicador, el tubo 3 habría cambiado de color; no lo hizo en 30 minutos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone una explicación alternativa sin comprobarla con el tubo de control correspondiente."
+      },
+      {
+        "clave": "D",
+        "texto": "Las sales biliares no digieren la grasa, pero la dividen en gotas muy pequeñas; así aumenta la superficie sobre la que actúa la lipasa y la digestión es más rápida.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El tubo 3 muestra que las sales biliares solas no producen ácidos grasos; el tubo 2 muestra que, junto con la lipasa, la digestión es tres veces más rápida (4 min frente a 12 min). La explicación es la emulsificación: las sales biliares separan la grasa en gotitas, aumentando el área de contacto con la enzima, que es la que realmente la descompone.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro tubos con leche e indicador; se varía la presencia de lipasa y de sales biliares y se mide el tiempo de cambio de color (digestión de grasa). COMPRENDER: se pide la función de las sales biliares. INTERPRETAR: lipasa sola 12 min; lipasa + sales 4 min; sales solas y agua, sin cambio. REPRESENTAR: grasa en gotas grandes → (sales biliares) gotitas → más superficie → (lipasa) ácidos grasos + glicerol. RAZONAR: tubo 3 descarta que las sales digieran o cambien el indicador; tubo 1 descarta que la lipasa las necesite; tubo 2 muestra que aceleran. RESOLVER: emulsificación, opción D. VERIFICAR: D es coherente con los cuatro tubos, incluido el control con agua.",
+    "que_identificar": "Que el tubo 3 (solo sales biliares) no cambia de color, que el tubo 1 (solo lipasa) sí cambia y que el tubo 2 es el más rápido.",
+    "que_revisar": "Digestión química y mecánica; función de la bilis (emulsificación) y de la lipasa pancreática; uso de tubos de control para descartar explicaciones.",
+    "refuerzo_ids": ["CIE-005", "CIE-053"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["sistema digestivo", "bilis", "enzimas", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-048",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica las respuestas del sistema respiratorio y de la sangre a la altitud a partir de la presión parcial de oxígeno y del intercambio de gases en los alvéolos",
+    "habilidad": "razonar",
+    "tema": "Sistema respiratorio",
+    "subtema": "Intercambio de gases y adaptación a la altitud en ciudades colombianas",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes recopiló datos de tres ciudades colombianas ubicadas a distinta altitud. Incluyeron la presión parcial del oxígeno en el aire (que indica cuánto oxígeno hay en cada litro de aire inhalado), la frecuencia respiratoria en reposo de visitantes provenientes de Santa Marta durante su primer día en cada ciudad y la concentración de hemoglobina de los residentes adultos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Altitud, oxígeno disponible y respuestas del organismo",
+      "columnas": ["Ciudad", "Altitud (m)", "Presión parcial de O₂ (mmHg)", "Frecuencia respiratoria de visitantes (respiraciones/min)", "Hemoglobina de residentes (g/dL)"],
+      "filas": [["Santa Marta", 0, 159, 14, 14.5], ["Medellín", 1500, 134, 15, 15.2], ["Bogotá", 2600, 118, 17, 16.1]],
+      "nota": "En las tres ciudades el oxígeno es cerca del 21 % de los gases del aire. Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Qué explica que un visitante de Santa Marta respire más rápido en Bogotá y que los residentes de Bogotá tengan más hemoglobina?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En Bogotá el aire tiene un porcentaje de oxígeno menor que el 21 %, y por eso se necesita respirar más.",
+        "correcta": false,
+        "explicacion": "No responde. La nota de la tabla indica que en las tres ciudades el oxígeno es cerca del 21 % del aire. Lo que cambia con la altitud es la presión: el aire está menos comprimido y cada litro contiene menos moléculas de oxígeno.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la nota y atribuye la diferencia a la composición del aire en lugar de a la presión."
+      },
+      {
+        "clave": "B",
+        "texto": "Con menor presión parcial de oxígeno, cada respiración aporta menos oxígeno y pasa menos a la sangre en los alvéolos; el cuerpo compensa respirando más rápido a corto plazo y produciendo más hemoglobina a largo plazo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La presión parcial de O₂ baja de 159 a 118 mmHg con la altitud, así que se difunde menos oxígeno de los alvéolos a la sangre en cada respiración. De inmediato, el visitante aumenta la frecuencia respiratoria (14 → 17); quienes viven allí producen más glóbulos rojos y hemoglobina (16,1 g/dL), que transporta más oxígeno.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los residentes de Bogotá tienen más hemoglobina porque el clima frío hace que la sangre produzca más glóbulos rojos para calentar el cuerpo.",
+        "correcta": false,
+        "explicacion": "No responde. La hemoglobina transporta oxígeno, no produce calor. La tabla relaciona el aumento de hemoglobina con la disminución del oxígeno disponible, que es el estímulo real; la temperatura no aparece en los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relaciona el resultado con otra característica de la ciudad (el frío) que no está en los datos."
+      },
+      {
+        "clave": "D",
+        "texto": "El visitante respira más rápido para expulsar el exceso de oxígeno que entra a los pulmones en la altura.",
+        "correcta": false,
+        "explicacion": "No responde. En la altura entra MENOS oxígeno en cada respiración, no más. Respirar más rápido sirve para captar más oxígeno.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación entre altitud y oxígeno disponible."
+      }
+    ],
+    "explicacion": "LEER: tres ciudades; al aumentar la altitud baja la presión parcial de O₂ (159 → 118 mmHg), sube la frecuencia respiratoria de los visitantes (14 → 17) y la hemoglobina de los residentes (14,5 → 16,1). COMPRENDER: se pide explicar ambas respuestas. INTERPRETAR: el porcentaje de O₂ es el mismo, pero la presión parcial es menor. REPRESENTAR: menos O₂ por litro → menos difusión en los alvéolos → menos O₂ en la sangre → respuestas: más ventilación (rápida) y más hemoglobina (lenta). RAZONAR: A contradice la nota; C usa una variable no medida y una función falsa; D invierte la relación. RESOLVER: opción B. VERIFICAR: B explica las dos tendencias de la tabla con un solo mecanismo.",
+    "que_identificar": "La disminución de la presión parcial de O₂ con la altitud y la nota de que el porcentaje de oxígeno no cambia.",
+    "que_revisar": "Intercambio de gases por difusión en los alvéolos, presión parcial, transporte de oxígeno por la hemoglobina y aclimatación a la altitud.",
+    "refuerzo_ids": ["CIE-001", "CIE-054"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["sistema respiratorio", "altitud", "hemoglobina", "bogota", "salud", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-049",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica la diferencia entre la inmunidad pasiva y la activa a partir del origen de los anticuerpos y de la formación de células de memoria",
+    "habilidad": "comprender",
+    "tema": "Sistema inmune",
+    "subtema": "Inmunidad pasiva: el suero antiofídico frente a una vacuna",
+    "dificultad": 2,
+    "contexto": "En Colombia, el Instituto Nacional de Salud produce suero antiofídico: se inyectan dosis pequeñas de veneno de serpiente a caballos, cuyo sistema inmune fabrica anticuerpos; luego se extraen y purifican esos anticuerpos de la sangre de los caballos. Un campesino mordido por una serpiente talla X (*Bothrops asper*) recibe el suero y se recupera. El médico le advierte que, si vuelve a ser mordido meses después, necesitará suero otra vez.",
+    "estimulo": null,
+    "enunciado": "¿Por qué el suero actúa de inmediato pero no protege al campesino frente a una mordedura futura?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el suero trae anticuerpos ya fabricados que neutralizan el veneno de inmediato, pero el sistema inmune del campesino no los produjo ni formó células de memoria, y esos anticuerpos se eliminan con el tiempo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Es inmunidad pasiva: los anticuerpos vienen de otro organismo (el caballo), por eso actúan sin esperar a que el cuerpo responda. Como los linfocitos del campesino no participaron, no se forman células de memoria, y los anticuerpos recibidos se degradan en semanas. Una nueva mordedura requiere una nueva dosis.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el suero contiene veneno debilitado que estimula al campesino a fabricar sus propios anticuerpos, y estos tardan en aparecer.",
+        "correcta": false,
+        "explicacion": "No responde. Así funciona una vacuna, no el suero. El suero contiene anticuerpos ya fabricados por el caballo; si estimulara al cuerpo del campesino a producirlos, generaría memoria y lo protegería en el futuro, al contrario de lo que dice el médico.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el suero (inmunidad pasiva) con la vacuna (inmunidad activa)."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque los anticuerpos del caballo destruyen los glóbulos blancos del campesino, y así queda sin defensas.",
+        "correcta": false,
+        "explicacion": "No responde. Los anticuerpos del suero se unen al veneno (su antígeno específico), no a los glóbulos blancos. El sistema inmune del campesino sigue funcionando; simplemente no fabricó anticuerpos contra el veneno.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Desconoce la especificidad de los anticuerpos por su antígeno."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el veneno es un microorganismo que cambia rápidamente, así que los anticuerpos dejan de reconocerlo.",
+        "correcta": false,
+        "explicacion": "No responde. El veneno de serpiente no es un microorganismo: es una mezcla de toxinas (proteínas) que no se reproduce ni muta en el cuerpo. La falta de protección futura se debe al origen externo de los anticuerpos.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una toxina con un patógeno como un virus o una bacteria."
+      }
+    ],
+    "explicacion": "LEER: los anticuerpos del suero se fabrican en caballos; el campesino se recupera, pero no queda protegido para el futuro. COMPRENDER: se pide explicar la acción rápida y la falta de protección duradera. INTERPRETAR: el suero aporta anticuerpos ya hechos (inmunidad pasiva). REPRESENTAR: vacuna → antígeno → linfocitos propios → anticuerpos + memoria (lenta, duradera); suero → anticuerpos ajenos → neutralización (rápida, temporal). RAZONAR: sin participación de los linfocitos propios no hay memoria; los anticuerpos recibidos se degradan. RESOLVER: opción A. VERIFICAR: A explica las dos observaciones del contexto: la recuperación y la advertencia del médico.",
+    "que_identificar": "Que los anticuerpos del suero los fabrica el caballo, no el campesino.",
+    "que_revisar": "Inmunidad activa y pasiva, natural y artificial; anticuerpos, antígenos y células de memoria; diferencia entre suero y vacuna.",
+    "refuerzo_ids": ["CIE-008", "CIE-036"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["sistema inmune", "inmunidad pasiva", "suero antiofidico", "salud", "zona rural", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-050",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Identifica en una gráfica la regulación hormonal de la glucosa en sangre (insulina) como un mecanismo de retroalimentación negativa que mantiene la homeostasis",
+    "habilidad": "interpretar",
+    "tema": "Sistema endocrino y homeostasis",
+    "subtema": "Regulación de la glucosa en sangre por la insulina después de una comida",
+    "dificultad": 2,
+    "contexto": "A una joven sana se le midieron la concentración de glucosa y la de insulina en la sangre antes de desayunar (minuto 0) y durante las tres horas siguientes a un desayuno con arepa y chocolate. La insulina es una hormona producida por el páncreas.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Glucosa e insulina en sangre después de un desayuno",
+      "eje_x": "Tiempo después del desayuno (min)",
+      "eje_y": "Glucosa (mg/dL) e insulina (µU/mL)",
+      "series": [
+        { "nombre": "Glucosa (mg/dL)", "valores": [["0", 85], ["30", 140], ["60", 120], ["90", 100], ["120", 90], ["180", 85]] },
+        { "nombre": "Insulina (µU/mL)", "valores": [["0", 8], ["30", 55], ["60", 40], ["90", 22], ["120", 12], ["180", 8]] }
+      ]
+    },
+    "enunciado": "¿Qué interpretación de la gráfica es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El aumento de la glucosa estimula la liberación de insulina, que favorece la entrada de glucosa a las células; al bajar la glucosa, también baja la insulina y la glucosa vuelve a su valor normal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La insulina sube justo después de la glucosa (máximo a los 30 minutos) y, mientras está alta, la glucosa desciende porque la insulina promueve que las células la capten y que el hígado y los músculos la almacenen como glucógeno. Cuando la glucosa se normaliza, la insulina deja de secretarse: es una retroalimentación negativa que mantiene la homeostasis.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La glucosa disminuye después del minuto 30 porque se elimina por la orina.",
+        "correcta": false,
+        "explicacion": "No responde. En una persona sana, los riñones no eliminan glucosa en la orina con estos valores. La disminución coincide con la insulina alta, que hace que las células capten y almacenen la glucosa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Desconoce el papel de la insulina y propone otra vía de salida de la glucosa."
+      },
+      {
+        "clave": "C",
+        "texto": "La insulina hace que la glucosa aumente en la sangre, porque las dos curvas suben al mismo tiempo después del desayuno.",
+        "correcta": false,
+        "explicacion": "No responde. La glucosa sube por la digestión del desayuno, y la insulina sube como respuesta. Después, mientras la insulina sigue alta, la glucosa BAJA: el efecto de la insulina es disminuir la glucosa en sangre. Subir juntas no significa que una cause la subida de la otra en esa dirección.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta la coincidencia de las curvas como causa en la dirección equivocada."
+      },
+      {
+        "clave": "D",
+        "texto": "La insulina alcanza su valor máximo cuando la glucosa ya ha vuelto al nivel inicial.",
+        "correcta": false,
+        "explicacion": "No responde. En la gráfica, ambas curvas alcanzan su máximo a los 30 minutos (140 mg/dL y 55 µU/mL). Cuando la glucosa vuelve a 85 mg/dL (minuto 180), la insulina también está en su nivel más bajo.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "No ubicó correctamente el punto máximo de cada curva en el eje del tiempo."
+      }
+    ],
+    "explicacion": "LEER: glucosa e insulina antes y durante tres horas después de un desayuno. COMPRENDER: se pide la interpretación correcta de la gráfica. INTERPRETAR: ambas curvas llegan al máximo a los 30 min; luego descienden juntas hasta sus valores iniciales a los 180 min. REPRESENTAR: glucosa alta → páncreas libera insulina → células captan glucosa → glucosa baja → menos insulina. RAZONAR: la glucosa baja mientras la insulina está alta; la regulación se \"apaga\" cuando se corrige el cambio (retroalimentación negativa). RESOLVER: opción A. VERIFICAR: la glucosa final (85 mg/dL) es igual a la inicial: el sistema recuperó el equilibrio.",
+    "que_identificar": "El momento del máximo de cada curva y que la glucosa desciende mientras la insulina está elevada.",
+    "que_revisar": "Homeostasis y retroalimentación negativa; hormonas pancreáticas (insulina y glucagón) y su efecto sobre la glucosa en sangre; lectura de gráficas con dos series.",
+    "refuerzo_ids": ["CIE-017", "CIE-054"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["sistema endocrino", "homeostasis", "insulina", "glucosa", "grafico de lineas", "salud", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-051",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Comprender que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Reconoce que la conclusión sobre si dos poblaciones son especies distintas se construye a partir de varias evidencias de aislamiento reproductivo obtenidas en la investigación",
+    "habilidad": "razonar",
+    "tema": "Evolución y especiación",
+    "subtema": "Especiación alopátrica: aislamiento reproductivo de ranas separadas por la cordillera Oriental",
+    "dificultad": 2,
+    "contexto": "Hace miles de años, el levantamiento de la cordillera Oriental separó en dos una población de ranas: una quedó en la vertiente del Magdalena (población A) y otra en la de la Orinoquía (población B). Hoy, unos investigadores quieren saber si A y B siguen siendo una misma especie. Para ello, llevaron individuos de ambas poblaciones a un laboratorio y realizaron varias pruebas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados de las pruebas con ranas de las poblaciones A y B",
+      "columnas": ["Prueba", "Resultado"],
+      "filas": [["Frecuencia del canto de apareamiento de los machos", "A: 2 800 Hz; B: 4 100 Hz"], ["Hembras que se acercan al canto de machos de su propia población", "85 %"], ["Hembras que se acercan al canto de machos de la otra población", "3 %"], ["Renacuajos híbridos (fecundación asistida A × B) que llegan a adultos", "40 %"], ["Adultos híbridos que resultan fértiles", "0 %"]],
+      "nota": "Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Qué conclusión es la más adecuada según la evidencia obtenida?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A y B siguen siendo la misma especie, porque en el laboratorio se lograron obtener renacuajos híbridos que llegaron a adultos.",
+        "correcta": false,
+        "explicacion": "No responde. Obtener híbridos no basta: la tabla muestra que ningún adulto híbrido es fértil, así que no pueden dejar descendencia. Además, en condiciones naturales casi no habría apareamientos entre A y B (3 %).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa una sola evidencia (hay híbridos) e ignora las demás filas de la tabla."
+      },
+      {
+        "clave": "B",
+        "texto": "A y B se comportan como especies distintas: las hembras casi no responden al canto de la otra población y los híbridos son estériles; la separación geográfica permitió que acumularan estas diferencias.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Hay dos barreras de aislamiento reproductivo: una antes de la fecundación (las hembras rechazan el canto distinto: 3 % frente a 85 %) y otra después (0 % de híbridos fértiles). Como no pueden producir descendencia fértil entre sí, no hay flujo de genes: son especies distintas. La cordillera impidió el intercambio de genes durante miles de años y cada población acumuló diferencias (especiación alopátrica).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La cordillera causó directamente las mutaciones que cambiaron el canto de los machos en cada población.",
+        "correcta": false,
+        "explicacion": "No responde. Una barrera geográfica no produce mutaciones; lo que hace es impedir el cruce entre poblaciones. Las mutaciones aparecen al azar en ambas, y la selección natural y la deriva génica las fijan de forma distinta en cada lado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el papel de la barrera geográfica (aislar) con el origen de la variación (mutación)."
+      },
+      {
+        "clave": "D",
+        "texto": "Solo la frecuencia del canto es suficiente para concluir que son especies distintas, sin necesidad de las demás pruebas.",
+        "correcta": false,
+        "explicacion": "No responde. Dos poblaciones pueden diferir en una característica y seguir cruzándose con éxito. La conclusión se apoya en la evidencia de aislamiento reproductivo (rechazo del canto e híbridos estériles), no solo en una diferencia física.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Considera que una diferencia observable, por sí sola, prueba que hay especies distintas."
+      }
+    ],
+    "explicacion": "LEER: dos poblaciones de ranas separadas por la cordillera; pruebas de canto, preferencia de las hembras e híbridos. COMPRENDER: se pide la conclusión mejor apoyada sobre si son una misma especie. INTERPRETAR: las hembras prefieren su propio canto (85 % frente a 3 %); los híbridos sobreviven en parte (40 %), pero son estériles (0 %). REPRESENTAR: barrera geográfica → sin flujo de genes → diferencias acumuladas → aislamiento reproductivo → nuevas especies. RAZONAR: el concepto biológico de especie exige producir descendencia fértil en la naturaleza; ambas barreras lo impiden. RESOLVER: opción B. VERIFICAR: B usa todas las filas de la tabla y la historia geográfica del contexto sin atribuirle a la cordillera un papel que no tiene.",
+    "que_identificar": "Los porcentajes de respuesta de las hembras a cada canto y el 0 % de híbridos fértiles.",
+    "que_revisar": "Concepto biológico de especie, aislamiento reproductivo precigótico y poscigótico, especiación alopátrica; papel de la mutación, la selección natural y la deriva.",
+    "refuerzo_ids": ["CIE-027", "CIE-028"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["evolucion", "especiacion", "ranas", "cordillera oriental", "biodiversidad colombiana", "tabla", "indagacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-052",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva conclusiones sobre el intercambio de CO₂ en la fotosíntesis y la respiración a partir de los cambios de color de un indicador ácido-base en un experimento con controles",
+    "habilidad": "interpretar",
+    "tema": "Ciclo del carbono",
+    "subtema": "Azul de bromotimol como indicador del CO₂: fotosíntesis y respiración en tubos cerrados",
+    "dificultad": 2,
+    "contexto": "El azul de bromotimol es un indicador ácido-base: es azul en soluciones neutras o ligeramente básicas y amarillo en soluciones ácidas. Cuando el CO₂ se disuelve en agua forma ácido carbónico (CO₂ + H₂O → H₂CO₃), que acidifica la solución. En una clase de ciencias se prepararon seis tubos cerrados con agua e indicador azul, se colocaron distintos organismos acuáticos y se dejaron seis horas en la luz o en la oscuridad.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Color del indicador después de seis horas",
+      "columnas": ["Tubo", "Contenido", "Condición", "Color final"],
+      "filas": [["1", "Solo agua con indicador", "Luz", "Azul"], ["2", "Caracol", "Luz", "Amarillo"], ["3", "Planta acuática", "Luz", "Azul"], ["4", "Planta acuática", "Oscuridad", "Amarillo"], ["5", "Caracol + planta acuática", "Luz", "Azul"], ["6", "Caracol + planta acuática", "Oscuridad", "Amarillo"]],
+      "nota": "Todos los tubos empezaron con color azul. Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Cuál conclusión es coherente con los resultados de los seis tubos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las plantas solo respiran en la oscuridad; en la luz hacen fotosíntesis en lugar de respirar.",
+        "correcta": false,
+        "explicacion": "No responde. Las plantas respiran siempre, de día y de noche. En la luz, la fotosíntesis consume más CO₂ del que la respiración libera, por eso el efecto neto es una disminución del CO₂; los datos no muestran que la respiración se detenga.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que fotosíntesis y respiración se alternan, en vez de ocurrir a la vez en la luz."
+      },
+      {
+        "clave": "B",
+        "texto": "El caracol libera oxígeno al agua, y el oxígeno acidifica la solución y la vuelve amarilla.",
+        "correcta": false,
+        "explicacion": "No responde. El caracol consume oxígeno y libera CO₂ al respirar. Según el contexto, lo que acidifica la solución es el CO₂ al formar ácido carbónico, no el oxígeno.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde los gases que intervienen en la respiración celular."
+      },
+      {
+        "clave": "C",
+        "texto": "En la luz, la planta consume por fotosíntesis el CO₂ que ella y el caracol liberan al respirar; en la oscuridad solo hay respiración, el CO₂ se acumula y la solución se acidifica.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El tubo 2 muestra que el caracol libera CO₂ (se pone amarillo). Los tubos 3 y 5 muestran que, en la luz, la planta mantiene el azul aun con el caracol: consume CO₂ por fotosíntesis (6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂). Los tubos 4 y 6 muestran que, sin luz, la planta no hace fotosíntesis y su propia respiración acidifica el agua.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La luz, por sí sola, hace que el indicador permanezca azul, sin importar qué organismos haya en el tubo.",
+        "correcta": false,
+        "explicacion": "No responde. El tubo 2, con el caracol en la luz, se puso amarillo. La luz no mantiene el color azul; lo hace la fotosíntesis de la planta, que necesita luz.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó solo en los tubos 1, 3 y 5 y no revisó el tubo 2."
+      }
+    ],
+    "explicacion": "LEER: indicador azul (neutro) y amarillo (ácido); el CO₂ disuelto forma ácido carbónico; seis tubos con distintos organismos en luz u oscuridad. COMPRENDER: se pide la conclusión coherente con todos los tubos. INTERPRETAR: amarillo = aumentó el CO₂; azul = no aumentó. Tubo 1 (control) azul; caracol en la luz, amarillo; planta en la luz, azul; planta en la oscuridad, amarillo. REPRESENTAR: respiración: glucosa + O₂ → CO₂ + H₂O (libera CO₂); fotosíntesis: CO₂ + H₂O → glucosa + O₂ (consume CO₂, requiere luz). RAZONAR: la planta en la luz consume más CO₂ del que se produce en el tubo; en la oscuridad solo hay respiración. RESOLVER: opción C. VERIFICAR: C explica los seis resultados; el tubo 1 descarta que el indicador cambie solo.",
+    "que_identificar": "Que el color amarillo indica acumulación de CO₂ y la comparación de los tubos 2, 3, 4, 5 y 6 frente al control (tubo 1).",
+    "que_revisar": "Ciclo del carbono: fotosíntesis y respiración celular como procesos opuestos; formación de ácido carbónico; indicadores ácido-base; uso de tubos de control.",
+    "refuerzo_ids": ["CIE-025", "CIE-016"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["ciclo del carbono", "fotosintesis", "respiracion", "indicadores", "acidos y bases", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-053",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Identifica las biomoléculas presentes en una muestra a partir de los resultados de pruebas químicas de reconocimiento",
+    "habilidad": "interpretar",
+    "tema": "Biomoléculas",
+    "subtema": "Pruebas de Lugol, Biuret, Benedict y Sudán III para reconocer biomoléculas en alimentos",
+    "dificultad": 1,
+    "contexto": "En el laboratorio del colegio, Andrés recibió una muestra líquida desconocida (X) y le aplicó cuatro pruebas químicas. Cada reactivo cambia a un color característico solo si la biomolécula que detecta está presente; si no está, conserva su propio color. La tabla muestra los resultados.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Pruebas de reconocimiento de biomoléculas en la muestra X",
+      "columnas": ["Reactivo", "Biomolécula que detecta", "Color si la prueba es positiva", "Color observado en X"],
+      "filas": [["Lugol", "Almidón", "Azul oscuro a negro", "Amarillo-café (color del reactivo)"], ["Biuret", "Proteínas", "Violeta", "Violeta"], ["Benedict (con calentamiento)", "Azúcares reductores, como la glucosa", "Rojo ladrillo", "Azul (color del reactivo)"], ["Sudán III", "Lípidos", "Gotas teñidas de rojo-naranja", "Sin gotas teñidas"]],
+      "nota": "Colores de referencia de las pruebas escolares habituales."
+    },
+    "enunciado": "¿Cuál de las siguientes sustancias podría ser la muestra X?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Agua con almidón de yuca, porque el Lugol quedó de color amarillo-café.",
+        "correcta": false,
+        "explicacion": "No responde. El amarillo-café es el color propio del Lugol, es decir, la prueba resultó NEGATIVA. Si la muestra tuviera almidón, se habría vuelto azul oscuro o negra.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el color observado como positivo sin compararlo con la columna del color esperado."
+      },
+      {
+        "clave": "B",
+        "texto": "Aceite de cocina, porque la prueba de Biuret de color violeta indica la presencia de lípidos.",
+        "correcta": false,
+        "explicacion": "No responde. Según la tabla, Biuret detecta proteínas, no lípidos. Los lípidos se reconocen con Sudán III, que en la muestra X no tiñó ninguna gota.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia el reactivo con una biomolécula equivocada."
+      },
+      {
+        "clave": "C",
+        "texto": "Jugo de naranja, porque el reactivo de Benedict quedó azul, lo que indica azúcares.",
+        "correcta": false,
+        "explicacion": "No responde. El azul es el color del reactivo de Benedict sin reaccionar: la prueba fue negativa. Un jugo de naranja, rico en azúcares reductores, habría dado un color rojo ladrillo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el color inicial del reactivo con el resultado positivo."
+      },
+      {
+        "clave": "D",
+        "texto": "Clara de huevo disuelta en agua, porque solo la prueba de Biuret resultó positiva.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La única prueba en la que el color observado coincide con el color positivo es Biuret (violeta), que detecta proteínas. La clara de huevo está formada principalmente por agua y proteínas (como la albúmina), sin almidón, prácticamente sin azúcares ni grasas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro reactivos, la biomolécula que detecta cada uno, su color positivo y el color observado en X. COMPRENDER: se pide qué sustancia puede ser X. INTERPRETAR: una prueba es positiva solo si el color observado coincide con el color positivo. REPRESENTAR: Lugol (−), Biuret (+), Benedict (−), Sudán III (−). RAZONAR: X tiene proteínas y no tiene almidón, azúcares reductores ni lípidos; la clara de huevo cumple esas condiciones. RESOLVER: opción D. VERIFICAR: el almidón, el jugo y el aceite habrían dado positivo en Lugol, Benedict y Sudán III, respectivamente.",
+    "que_identificar": "En qué filas el color observado coincide con el color positivo esperado.",
+    "que_revisar": "Biomoléculas (carbohidratos, lípidos, proteínas) y sus pruebas de reconocimiento; diferencia entre el color del reactivo y el color de una reacción positiva.",
+    "refuerzo_ids": ["CIE-047", "CIE-032"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["biomoleculas", "pruebas quimicas", "alimentos", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-054",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela el efecto de la ventilación pulmonar sobre el pH de la sangre usando el equilibrio químico entre el dióxido de carbono y el ácido carbónico",
+    "habilidad": "razonar",
+    "tema": "Equilibrio químico y homeostasis",
+    "subtema": "pH de la sangre: sistema CO₂ / ácido carbónico / bicarbonato durante la hiperventilación",
+    "dificultad": 3,
+    "contexto": "El pH de la sangre se mantiene entre 7,35 y 7,45 gracias, en parte, al siguiente equilibrio químico:\n\n**CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻**\n\nEl CO₂ que producen las células por la respiración celular se disuelve en la sangre y se elimina por los pulmones. Durante un ataque de ansiedad, una persona hiperventila: respira muy rápido y profundo, y expulsa más CO₂ del que producen sus células.",
+    "estimulo": null,
+    "enunciado": "¿Qué le ocurre al pH de la sangre de esta persona y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Aumenta, porque al disminuir el CO₂ el equilibrio se desplaza hacia la izquierda, disminuye la concentración de H⁺ y la sangre se vuelve más básica.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Al retirar CO₂ (un reactivo), el sistema se desplaza para reponerlo: el H⁺ se combina con HCO₃⁻ y forma H₂CO₃, que se descompone en CO₂ y H₂O. Así baja la concentración de H⁺. Como el pH es mayor cuando hay menos H⁺, el pH sube por encima de lo normal (alcalosis respiratoria), lo que causa síntomas como hormigueo y mareo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Disminuye, porque al haber menos CO₂ el equilibrio se desplaza hacia la derecha y se producen más H⁺.",
+        "correcta": false,
+        "explicacion": "No responde. Al quitar un reactivo, el equilibrio se desplaza hacia el lado donde está ese reactivo para compensar la pérdida (hacia la izquierda), no hacia los productos. Por eso los H⁺ disminuyen.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica el principio de Le Châtelier en la dirección contraria."
+      },
+      {
+        "clave": "C",
+        "texto": "Disminuye, porque cuando baja la concentración de H⁺ también baja el pH.",
+        "correcta": false,
+        "explicacion": "No responde. El pH y la concentración de H⁺ varían en sentido opuesto: menos H⁺ significa un pH MAYOR (más básico). Una concentración alta de H⁺ corresponde a un pH bajo (ácido).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el pH aumenta y disminuye en el mismo sentido que la concentración de H⁺."
+      },
+      {
+        "clave": "D",
+        "texto": "No cambia, porque el oxígeno adicional que entra a los pulmones compensa la pérdida de CO₂.",
+        "correcta": false,
+        "explicacion": "No responde. El oxígeno no participa en este equilibrio; el pH depende de las concentraciones de CO₂, H₂CO₃, H⁺ y HCO₃⁻. Además, el contexto indica que se expulsa más CO₂ del que se produce, así que el sistema sí cambia.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supone que los gases que entran y salen se compensan sin revisar cuáles intervienen en el equilibrio."
+      }
+    ],
+    "explicacion": "LEER: equilibrio CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻; la hiperventilación elimina más CO₂ del que se produce. COMPRENDER: se pide el cambio del pH y su causa. INTERPRETAR: disminuye un reactivo (CO₂). REPRESENTAR: menos CO₂ → el equilibrio se desplaza a la izquierda → H⁺ + HCO₃⁻ forman H₂CO₃ → baja [H⁺]. RAZONAR: por el principio de Le Châtelier el sistema contrarresta la pérdida de CO₂; menos H⁺ implica mayor pH. RESOLVER: el pH aumenta (alcalosis), opción A. VERIFICAR: el razonamiento inverso explica por qué retener CO₂ (respirar muy poco) acidifica la sangre.",
+    "que_identificar": "Que el CO₂ es un reactivo del equilibrio y que la hiperventilación lo elimina.",
+    "que_revisar": "Equilibrio químico y principio de Le Châtelier; relación inversa entre pH y concentración de H⁺; regulación del pH sanguíneo por la respiración.",
+    "refuerzo_ids": ["CIE-016", "CIE-048"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["equilibrio quimico", "ph", "homeostasis", "sistema respiratorio", "salud", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-055",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Evalúa una afirmación sobre una aplicación biotecnológica (maíz transgénico Bt) contrastándola con datos de varios años y con el mecanismo de selección natural",
+    "habilidad": "verificar",
+    "tema": "Biotecnología y sociedad",
+    "subtema": "Maíz transgénico Bt: reducción de insecticidas y aparición de resistencia en el gusano cogollero",
+    "dificultad": 3,
+    "contexto": "El maíz Bt es una planta transgénica: se le insertó un gen de la bacteria *Bacillus thuringiensis* que le permite fabricar una proteína tóxica para algunas larvas de insectos, como el gusano cogollero (*Spodoptera frugiperda*). En Colombia se siembra con autorización y control del ICA. Una asociación de agricultores de un municipio registró los datos de la tabla y afirmó: \"El maíz Bt resolvió definitivamente el problema del cogollero; ya no tendremos que volver a usar insecticidas\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Datos de la asociación de agricultores",
+      "columnas": ["Año", "Área sembrada con maíz Bt (%)", "Aplicaciones de insecticida por cosecha", "Rendimiento (t/ha)", "Larvas que sobreviven a la proteína Bt en pruebas de laboratorio (%)"],
+      "filas": [["2010", 10, 5, 4, 1], ["2013", 45, 3, 5.1, 2], ["2016", 80, 2, 5.6, 8], ["2019", 90, 3, 5.2, 25]],
+      "nota": "Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Cuál evaluación de la afirmación de la asociación está mejor sustentada en los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La afirmación es correcta, porque el rendimiento en 2019 es mayor que en 2010 y el área con maíz Bt siguió creciendo.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que el rendimiento de 2019 supera al de 2010, pero la afirmación habla de resolver \"definitivamente\" el problema. Entre 2016 y 2019 el rendimiento bajó, las aplicaciones de insecticida volvieron a subir y la supervivencia de larvas a la proteína Bt pasó de 8 % a 25 %.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se apoya en un dato favorable e ignora la tendencia de los últimos años."
+      },
+      {
+        "clave": "B",
+        "texto": "Los datos no la sustentan: al principio disminuyeron los insecticidas y aumentó el rendimiento, pero la proporción de larvas que sobreviven a la proteína Bt creció de 1 % a 25 %, lo que indica que la población de cogollero se está volviendo resistente.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Hasta 2016 la tecnología funcionó: las aplicaciones bajaron de 5 a 2 y el rendimiento subió. Sin embargo, al sembrar maíz Bt en casi toda el área, las pocas larvas que ya toleraban la proteína sobrevivieron y se reprodujeron más (selección natural): la supervivencia en pruebas pasó de 1 % a 25 % y en 2019 volvieron a necesitarse más insecticidas. Por eso se recomiendan medidas como las zonas de refugio con maíz no transgénico.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los datos muestran que el maíz Bt es peligroso para la salud humana, así que debería prohibirse.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla no incluye ningún dato sobre la salud de las personas; la evaluación debe basarse en la información disponible. La discusión sobre la salud requiere otro tipo de estudios.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Introduce una conclusión que los datos no abordan, a partir de una opinión previa sobre los transgénicos."
+      },
+      {
+        "clave": "D",
+        "texto": "La proteína Bt provocó que las larvas mutaran para poder resistirla, y por eso cada año sobreviven más.",
+        "correcta": false,
+        "explicacion": "No responde. La proteína no dirige las mutaciones. Las variantes resistentes ya existían en baja proporción (1 % en 2010); el maíz Bt eliminó a las larvas sensibles y favoreció que las resistentes se multiplicaran. Es selección de variación preexistente.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explica la resistencia como un cambio provocado por el ambiente, no como resultado de la selección natural."
+      }
+    ],
+    "explicacion": "LEER: datos de 2010 a 2019 sobre área con maíz Bt, aplicaciones de insecticida, rendimiento y larvas que sobreviven a la proteína; afirmación de que el problema se resolvió \"definitivamente\". COMPRENDER: se pide evaluar la afirmación con los datos. INTERPRETAR: hasta 2016, menos insecticida y más rendimiento; en 2019, más insecticida, menor rendimiento y 25 % de larvas sobrevivientes. REPRESENTAR: presión de selección (maíz Bt en 90 % del área) → sobreviven las larvas tolerantes → aumenta su proporción → la tecnología pierde eficacia. RAZONAR: la afirmación ignora la tendencia reciente; C no se basa en los datos; D describe mal el mecanismo. RESOLVER: opción B. VERIFICAR: B reconoce el beneficio inicial y el problema posterior, sin concluir nada que la tabla no muestre.",
+    "que_identificar": "La tendencia de la columna de larvas que sobreviven (1 % → 25 %) y el aumento de aplicaciones de insecticida entre 2016 y 2019.",
+    "que_revisar": "Organismos transgénicos: cómo se obtienen, beneficios y riesgos; resistencia de las plagas como caso de selección natural; evaluación de afirmaciones con datos en contextos de ciencia, tecnología y sociedad.",
+    "refuerzo_ids": ["CIE-028", "CIE-027"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["biotecnologia", "transgenicos", "maiz bt", "resistencia", "cultivos", "cts", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-056",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analizar el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Analiza los efectos que tendría un cambio en el uso del suelo de un páramo sobre la biodiversidad y sobre el agua disponible para una comunidad",
+    "habilidad": "razonar",
+    "tema": "Biodiversidad colombiana y servicios ecosistémicos",
+    "subtema": "Páramos: regulación hídrica y riqueza de especies frente a la ganadería y el cultivo de papa",
+    "dificultad": 2,
+    "contexto": "Colombia alberga una gran parte de los páramos del mundo. Sus suelos y plantas, como los frailejones y los musgos, retienen el agua de la lluvia y de la niebla y la liberan poco a poco hacia las quebradas que abastecen a muchos municipios. El concejo de un municipio discute ampliar los cultivos de papa y la ganadería en la zona de páramo que surte su acueducto. Una universidad midió en parcelas de ese páramo:",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Mediciones en parcelas del páramo según el uso del suelo",
+      "columnas": ["Uso del suelo", "Agua retenida por el suelo (L/m²)", "Especies de plantas en 100 m²", "Caudal de la quebrada en época seca (L/s)"],
+      "filas": [["Páramo conservado", 60, 35, 12], ["Páramo con ganadería", 35, 18, 7], ["Páramo con cultivo de papa", 20, 8, 4]],
+      "nota": "Datos construidos con fines didácticos."
+    },
+    "enunciado": "¿Cuál análisis de la propuesta del concejo está mejor sustentado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Conviene ampliar el cultivo de papa, porque produce alimento y el caudal de la quebrada depende de la lluvia, no del suelo del páramo.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran que el caudal en época seca sí depende del uso del suelo: baja de 12 L/s en el páramo conservado a 4 L/s con cultivo de papa. Cuando no llueve, el agua que llega a la quebrada es la que el suelo retuvo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Desconoce la función de regulación hídrica del suelo y la vegetación del páramo."
+      },
+      {
+        "clave": "B",
+        "texto": "Ampliar la papa y la ganadería traería ingresos, pero reduciría la retención de agua, el caudal en época seca y la diversidad de plantas; esto afectaría el abastecimiento del municipio, por lo que ese costo debe pesarse frente al beneficio económico.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Frente al páramo conservado, la ganadería y la papa reducen el agua retenida (60 → 35 → 20 L/m²), el caudal en época seca (12 → 7 → 4 L/s) y las especies de plantas (35 → 18 → 8). Como la quebrada surte el acueducto, el beneficio económico de la propuesta tendría un costo para el agua de toda la comunidad y para la biodiversidad.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La ganadería aumenta la biodiversidad del páramo, porque agrega nuevas especies de animales, como las vacas.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que el número de especies de plantas baja de 35 a 18 con ganadería. Introducir una especie doméstica no compensa la pérdida de especies nativas; el pisoteo y el pastoreo compactan el suelo y eliminan vegetación.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Responde con una idea previa en lugar de leer la columna de especies."
+      },
+      {
+        "clave": "D",
+        "texto": "Como el páramo conservado no produce alimentos ni ingresos, no ofrece ningún beneficio a la comunidad.",
+        "correcta": false,
+        "explicacion": "No responde. El páramo conservado ofrece un beneficio medible: retiene más agua y mantiene el mayor caudal en época seca (12 L/s), que abastece el acueducto. Es un servicio ecosistémico, aunque no se venda.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Solo reconoce como beneficio lo que genera ingresos directos."
+      }
+    ],
+    "explicacion": "LEER: tres usos del suelo en el páramo que surte el acueducto; se midieron agua retenida, especies de plantas y caudal en época seca. COMPRENDER: se pide el análisis mejor sustentado de la propuesta. INTERPRETAR: las tres variables disminuyen de páramo conservado a ganadería y a cultivo de papa. REPRESENTAR: vegetación y suelo del páramo → retención de agua → liberación lenta → caudal en época seca → agua para el municipio. RAZONAR: la propuesta tiene un beneficio económico y costos en agua y biodiversidad; A, C y D contradicen los datos o ignoran un beneficio. RESOLVER: opción B. VERIFICAR: B cita las tres columnas y considera tanto la economía como el entorno y la salud de la comunidad.",
+    "que_identificar": "Que las tres variables disminuyen con la ganadería y el cultivo, y que la quebrada abastece el acueducto del municipio.",
+    "que_revisar": "Servicios ecosistémicos de los páramos (regulación hídrica, biodiversidad); efectos del cambio de uso del suelo; análisis de decisiones que involucran beneficios y costos para una comunidad.",
+    "refuerzo_ids": ["CIE-024", "CIE-035"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["biodiversidad colombiana", "paramos", "agua", "servicios ecosistemicos", "cts", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-057",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Asocia una aplicación de la ingeniería genética (producción de insulina humana en microorganismos) con la universalidad del código genético y con sus beneficios para la salud",
+    "habilidad": "comprender",
+    "tema": "Biotecnología y sociedad",
+    "subtema": "Insulina humana recombinante producida por bacterias",
+    "dificultad": 1,
+    "contexto": "Las personas con diabetes tipo 1 necesitan inyectarse insulina. Durante décadas, la insulina se extrajo del páncreas de cerdos y vacas; era costosa, dependía del número de animales sacrificados y difería en uno o pocos aminoácidos de la humana, por lo que algunos pacientes tenían reacciones. Desde los años ochenta se inserta el gen de la insulina humana en bacterias o levaduras, que se cultivan en grandes tanques y fabrican insulina idéntica a la humana.",
+    "estimulo": null,
+    "enunciado": "¿Qué permite que una bacteria fabrique una proteína humana y cuál es un beneficio de esta tecnología?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las bacterias ya tenían el gen de la insulina humana; la tecnología solo aumentó su cantidad, lo que abarata el medicamento.",
+        "correcta": false,
+        "explicacion": "No responde. Según el contexto, el gen de la insulina humana se INSERTA en las bacterias: ellas no lo tenían. Lo que hace posible que lo usen es que leen el ADN con el mismo código genético que las células humanas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó con atención que el gen se introduce desde fuera."
+      },
+      {
+        "clave": "B",
+        "texto": "Las bacterias transforman la insulina de cerdo en insulina humana, lo que permite seguir usando los mismos animales.",
+        "correcta": false,
+        "explicacion": "No responde. Las bacterias no modifican insulina animal: fabrican la proteína desde cero siguiendo las instrucciones del gen humano. Además, esta tecnología reduce la dependencia de los animales.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde la producción de una proteína a partir de un gen con la modificación química de otra proteína."
+      },
+      {
+        "clave": "C",
+        "texto": "Las bacterias tienen páncreas y necesitan insulina, por eso pueden fabricarla cuando reciben el gen humano.",
+        "correcta": false,
+        "explicacion": "No responde. Las bacterias son organismos unicelulares: no tienen órganos como el páncreas ni usan insulina. Fabrican la proteína solo porque se les insertó el gen y lo traducen con su maquinaria celular.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a las bacterias estructuras propias de organismos pluricelulares."
+      },
+      {
+        "clave": "D",
+        "texto": "El código genético es universal: la bacteria \"lee\" el gen humano y une los mismos aminoácidos en el mismo orden; así se produce insulina idéntica a la humana en gran cantidad, con menos reacciones que la insulina animal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Todos los seres vivos usan prácticamente el mismo código genético, así que los ribosomas de la bacteria traducen el gen humano en la misma secuencia de aminoácidos. El beneficio para la sociedad es doble: se puede producir mucha insulina sin depender de animales, y al ser idéntica a la humana causa menos reacciones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: antes la insulina se extraía de animales, con costos y reacciones; hoy se inserta el gen humano en bacterias que la fabrican. COMPRENDER: se pide qué hace posible la técnica y un beneficio. INTERPRETAR: el gen viene del ser humano; la maquinaria (ribosomas) es de la bacteria. REPRESENTAR: gen humano → plásmido → bacteria → transcripción y traducción → insulina humana. RAZONAR: si la bacteria usa el mismo código genético, produce la misma secuencia de aminoácidos; el cultivo en tanques permite una gran producción. RESOLVER: opción D. VERIFICAR: D es coherente con los dos problemas que el contexto atribuye a la insulina animal (disponibilidad y reacciones).",
+    "que_identificar": "Que el gen de la insulina humana se inserta en la bacteria y los problemas de la insulina de origen animal.",
+    "que_revisar": "Ingeniería genética y ADN recombinante; universalidad del código genético; beneficios y retos de la biotecnología en la salud.",
+    "refuerzo_ids": ["CIE-043", "CIE-055"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["biotecnologia", "ingenieria genetica", "insulina", "salud", "cts", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

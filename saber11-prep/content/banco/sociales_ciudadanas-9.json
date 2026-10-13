@@ -1,0 +1,1819 @@
+[
+  {
+    "id": "SOC-141",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Pueblos precolombinos y territorio: los muiscas",
+    "subtema": "Intercambio de productos según el piso térmico",
+    "dificultad": 1,
+    "contexto": "Antes de la llegada de los españoles, los **muiscas** habitaban el altiplano cundiboyacense, una región fría situada entre 2 500 y 3 000 metros sobre el nivel del mar. Los cronistas describen mercados periódicos en los que llegaban productos de tierras bajas y cálidas, y en los que la sal, extraída en Zipaquirá y Nemocón, funcionaba como un bien muy apreciado. Un grupo de estudiantes resumió en una tabla lo que producía cada zona.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Zonas y productos en el intercambio muisca (síntesis escolar)",
+      "columnas": [
+        "Zona",
+        "Altitud aproximada",
+        "Productos que ofrecía"
+      ],
+      "filas": [
+        [
+          "Altiplano (Zipaquirá, Nemocón, Bacatá)",
+          "2 500 a 3 000 m",
+          "Sal, mantas de algodón tejidas, papa, esmeraldas de zonas cercanas"
+        ],
+        [
+          "Vertientes templadas (valle del Magdalena medio)",
+          "800 a 1 800 m",
+          "Algodón en rama, frutas, yuca"
+        ],
+        [
+          "Tierras cálidas (valle del Magdalena bajo)",
+          "Menos de 800 m",
+          "Oro en polvo, pescado seco, coca, caracoles marinos"
+        ]
+      ],
+      "nota": "Los muiscas no tenían minas de oro en el altiplano, pero elaboraban piezas de orfebrería."
+    },
+    "enunciado": "A partir de la tabla, ¿qué relación entre el territorio y la práctica del intercambio explica mejor que los muiscas tuvieran oro para su orfebrería?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El altiplano frío no producía oro, pero sí sal y mantas, bienes que los muiscas cambiaban por el oro que llegaba de las tierras cálidas del Magdalena.",
+        "correcta": true,
+        "explicacion": "La tabla ubica el oro en polvo en las tierras cálidas y la sal y las mantas en el altiplano; la nota aclara que no había minas de oro en el altiplano. El intercambio entre pisos térmicos explica la materia prima de la orfebrería.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El altiplano frío concentraba minas de oro muy ricas, y por eso los muiscas podían vender el metal a los pueblos de las tierras cálidas del Magdalena.",
+        "correcta": false,
+        "explicacion": "La tabla sitúa el oro en polvo entre los productos de las tierras cálidas y la nota señala expresamente que los muiscas no tenían minas de oro en el altiplano.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia la orfebrería muisca con la existencia de minas propias sin revisar en qué fila aparece el oro."
+      },
+      {
+        "clave": "C",
+        "texto": "Los muiscas bajaban cada año a las tierras cálidas para extraer ellos mismos el oro de los ríos, pues la sal y las mantas se vendían solo dentro del altiplano.",
+        "correcta": false,
+        "explicacion": "Nada en el contexto o en la tabla habla de desplazamientos para extraer oro; el contexto describe mercados a los que llegaban productos de tierras bajas, es decir, un intercambio.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa un mecanismo (viajar a extraer) en lugar de usar el que el contexto sí menciona (mercados e intercambio)."
+      },
+      {
+        "clave": "D",
+        "texto": "La sal de Zipaquirá y Nemocón se usaba para fabricar el oro de las piezas, porque en el altiplano las esmeraldas y la sal se fundían juntas en los talleres.",
+        "correcta": false,
+        "explicacion": "La sal no se transforma en oro; la tabla la presenta como un producto propio del altiplano que se intercambiaba, no como materia prima de la orfebrería.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el valor de la sal como bien de intercambio con un supuesto uso técnico en la metalurgia."
+      }
+    ],
+    "explicacion": "LEER: el contexto dice que los muiscas vivían en el altiplano frío, que había mercados con productos de tierras cálidas y que la sal era un bien apreciado. COMPRENDER: se pregunta cómo el territorio y el intercambio explican que tuvieran oro sin producirlo. INTERPRETAR: la tabla reparte los productos por altitud: sal y mantas arriba; oro en polvo, pescado y coca abajo. REPRESENTAR: altiplano (sal, mantas) ↔ tierras cálidas (oro): cada zona ofrece lo que la otra no tiene. RAZONAR: la nota confirma que no había minas de oro en el altiplano, así que el metal debió llegar por intercambio a cambio de sal y mantas. RESOLVER: la opción que señala que la sal y las mantas se cambiaban por el oro de las tierras cálidas. VERIFICAR: ninguna fila ubica oro en el altiplano, lo que descarta las opciones que suponen minas propias o extracción directa.",
+    "que_identificar": "En qué fila de la tabla aparece el oro y en cuál la sal y las mantas, junto con la nota sobre la ausencia de minas en el altiplano.",
+    "que_revisar": "Pueblos precolombinos de Colombia: los muiscas, la economía de la sal y los mercados de intercambio entre pisos térmicos.",
+    "refuerzo_ids": [
+      "SOC-147",
+      "SOC-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "muiscas",
+      "precolombino",
+      "intercambio",
+      "pisos_termicos",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-142",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "razonar",
+    "tema": "Encuestas electorales y confiabilidad de fuentes",
+    "subtema": "Ficha técnica, muestra y margen de error",
+    "dificultad": 2,
+    "contexto": "Faltan tres semanas para la elección de alcalde en una ciudad (ficticia) de 400 000 habitantes. Un medio local publica el titular **“Candidata Ruiz ya ganó: 38 % contra 35 %”**. Al final de la nota aparece la ficha técnica de la encuesta: realizada por internet, con 600 respuestas voluntarias de personas que ingresaron a la página del medio entre el 2 y el 4 de octubre; margen de error de 4 puntos porcentuales; 20 % de los encuestados dijo no haber decidido su voto.",
+    "estimulo": null,
+    "enunciado": "¿Cuál evaluación del uso que hace el titular de la encuesta es la más adecuada?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El titular es correcto, porque una diferencia de tres puntos entre dos candidatos es suficiente para afirmar quién ganará, dado que la muestra superó las 500 personas.",
+        "correcta": false,
+        "explicacion": "Con un margen de error de 4 puntos, una diferencia de 3 puntos queda dentro del error: los dos candidatos podrían estar empatados. El tamaño de la muestra no corrige ese problema.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara los porcentajes como si fueran cifras exactas y no considera el margen de error."
+      },
+      {
+        "clave": "B",
+        "texto": "El titular exagera lo que la encuesta permite afirmar: la diferencia está dentro del margen de error, la muestra no es representativa y una quinta parte aún no ha decidido su voto.",
+        "correcta": true,
+        "explicacion": "Tres puntos de diferencia con 4 de margen de error no permiten declarar un ganador; además, los participantes se autoseleccionaron en una página web, lo que no representa a toda la ciudad, y el 20 % de indecisos puede cambiar el resultado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El titular es correcto, porque la ficha técnica fue publicada y eso demuestra que la encuesta cumplió con las normas y que sus datos pueden tomarse como un resultado seguro.",
+        "correcta": false,
+        "explicacion": "Publicar la ficha técnica es un requisito de transparencia, pero no convierte los datos en una predicción segura; justamente la ficha revela las limitaciones de la muestra y del margen de error.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la transparencia sobre el método con la calidad o la certeza del resultado."
+      },
+      {
+        "clave": "D",
+        "texto": "La encuesta no sirve para nada, porque las encuestas por internet siempre están manipuladas por los medios y ninguna cifra que publiquen merece ser considerada.",
+        "correcta": false,
+        "explicacion": "La fuente sí tiene un uso: muestra tendencias entre quienes respondieron y declara sus límites. Descalificarla por completo es una generalización sin apoyo en la ficha técnica.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Pasa del extremo de creer todo al extremo de descartar todo, sin evaluar los límites concretos de la fuente."
+      }
+    ],
+    "explicacion": "LEER: el titular declara ganadora a una candidata con 38 % frente a 35 %; la ficha técnica dice que fue una encuesta por internet, con participantes voluntarios, margen de error de 4 puntos y 20 % de indecisos. COMPRENDER: se pide evaluar si el titular usa bien la fuente. INTERPRETAR: la diferencia (3 puntos) es menor que el margen de error (4 puntos), así que la encuesta no distingue entre ambos candidatos. REPRESENTAR: Ruiz podría estar entre 34 % y 42 %; su rival, entre 31 % y 39 %: los intervalos se cruzan. RAZONAR: además, quienes entran voluntariamente a una página no representan a los 400 000 habitantes, y una quinta parte no ha decidido. RESOLVER: la opción que afirma que el titular exagera y enumera esas tres limitaciones. VERIFICAR: ni el tamaño de la muestra ni la publicación de la ficha eliminan esos problemas, y tampoco se justifica descartar la fuente por completo.",
+    "que_identificar": "La diferencia entre candidatos (3 puntos) frente al margen de error (4 puntos), el modo de selección de la muestra y el porcentaje de indecisos.",
+    "que_revisar": "Evaluación de fuentes cuantitativas: muestra representativa, margen de error y diferencia entre lo que dice el dato y lo que afirma el titular.",
+    "refuerzo_ids": [
+      "SOC-109"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "encuestas",
+      "fuentes",
+      "elecciones",
+      "margen_de_error",
+      "medios"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-143",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Vivienda de interés social y localización urbana",
+    "subtema": "Efectos de ubicar viviendas en la periferia",
+    "dificultad": 2,
+    "contexto": "La alcaldía de una ciudad (ficticia) debe decidir dónde construir 2 000 viviendas de interés social para familias que hoy pagan arriendo en barrios centrales. Tiene dos lotes: uno en el centro, caro, y otro en la periferia, barato y sin transporte masivo. Con el presupuesto disponible, en el lote central caben 1 200 viviendas y en el periférico, 2 000. Una universidad comparó cuánto gastarían las familias en tiempo y dinero según el lote.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Costo mensual estimado de transporte y tiempo diario de viaje por familia (datos ficticios)",
+      "eje_x": "Lote",
+      "eje_y": "Valor",
+      "series": [
+        {
+          "nombre": "Transporte (miles de pesos al mes)",
+          "valores": [
+            [
+              "Lote central",
+              90
+            ],
+            [
+              "Lote periférico",
+              260
+            ]
+          ]
+        },
+        {
+          "nombre": "Tiempo de viaje ida y vuelta (minutos por día)",
+          "valores": [
+            [
+              "Lote central",
+              40
+            ],
+            [
+              "Lote periférico",
+              150
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Si la alcaldía elige el lote periférico, ¿cuál análisis describe mejor los efectos de la decisión en distintas dimensiones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Más familias reciben casa propia y, como la vivienda es nueva, sus gastos totales bajan de inmediato, pues el transporte es un costo menor comparado con el arriendo.",
+        "correcta": false,
+        "explicacion": "El gráfico muestra que el transporte desde la periferia costaría 260 mil pesos al mes, casi el triple que desde el centro; no se puede afirmar que los gastos totales bajen sin considerar ese dato.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se queda con la ventaja de las 2 000 viviendas y no cruza el dato de transporte del gráfico."
+      },
+      {
+        "clave": "B",
+        "texto": "Se benefician menos familias que con el lote central, pero las que reciban vivienda tendrán ventajas en tiempo y en transporte, porque la periferia tiene menos tráfico.",
+        "correcta": false,
+        "explicacion": "Invierte los datos: el lote periférico permite más viviendas (2 000 frente a 1 200) y, según el gráfico, implica más tiempo (150 minutos) y más gasto de transporte, no menos.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde las barras de los dos lotes o supone que vivir lejos del centro siempre ahorra tiempo."
+      },
+      {
+        "clave": "C",
+        "texto": "Se benefician 800 familias más, pero cada familia gastaría unos 170 mil pesos adicionales al mes en transporte y perdería casi dos horas diarias, lo que presiona a la ciudad a extender el transporte masivo.",
+        "correcta": true,
+        "explicacion": "El lote periférico permite 2 000 viviendas frente a 1 200 (800 más); el gráfico muestra 260 mil frente a 90 mil pesos (170 mil de diferencia) y 150 frente a 40 minutos (110 minutos, casi dos horas). Esa carga en dinero y tiempo crea una demanda de transporte que la ciudad deberá atender.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La decisión solo tiene efectos económicos para la alcaldía, que ahorra en el precio del lote, porque la ubicación de la vivienda no cambia la vida cotidiana de las familias.",
+        "correcta": false,
+        "explicacion": "El gráfico demuestra lo contrario: la ubicación cambia el gasto en transporte (de 90 a 260 mil pesos) y el tiempo de viaje (de 40 a 150 minutos), es decir, afecta la dimensión social y familiar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Reduce el problema a la dimensión fiscal y no reconoce los efectos sobre las familias."
+      }
+    ],
+    "explicacion": "LEER: hay dos lotes; el periférico permite 2 000 viviendas y el central 1 200; el gráfico compara costo de transporte y tiempo de viaje. COMPRENDER: se pide el análisis de los efectos de escoger la periferia en varias dimensiones. INTERPRETAR: en la periferia el transporte cuesta 260 mil pesos frente a 90 mil, y el viaje toma 150 minutos frente a 40. REPRESENTAR: ganancia: 800 familias más con casa; costo: 170 mil pesos más al mes y 110 minutos más al día por familia; consecuencia urbana: demanda de transporte masivo. RAZONAR: la opción que niega efectos sobre las familias contradice el gráfico; la que dice que los gastos bajan ignora el transporte; la que habla de menos familias invierte los datos. RESOLVER: la opción que cuantifica las 800 familias más, el sobrecosto y el tiempo, y anticipa la presión sobre el transporte. VERIFICAR: 260 − 90 = 170 y 150 − 40 = 110.",
+    "que_identificar": "El número de viviendas en cada lote y las dos series del gráfico: costo de transporte y minutos de viaje.",
+    "que_revisar": "Decisiones urbanas y sus dimensiones: cobertura de vivienda, costo de transporte, tiempo de las familias y demanda de servicios públicos.",
+    "refuerzo_ids": [
+      "SOC-104"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "vivienda",
+      "ciudad",
+      "transporte",
+      "periferia",
+      "barras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-144",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "interpretar",
+    "tema": "Reforma de la Constitución",
+    "subtema": "Acto legislativo, referendo y asamblea constituyente",
+    "dificultad": 1,
+    "contexto": "Un colectivo ciudadano (ficticio) quiere que la Constitución incluya de forma expresa el derecho al acceso a internet. Para saber cómo lograrlo, consultó el artículo 374 de la Constitución de 1991, según el cual la Constitución puede ser reformada por el Congreso, por una asamblea constituyente o por el pueblo mediante referendo, y organizó esta tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Vías para reformar la Constitución de 1991 (síntesis escolar)",
+      "columnas": [
+        "Vía",
+        "¿Quién la impulsa?",
+        "¿Cómo se aprueba?"
+      ],
+      "filas": [
+        [
+          "Acto legislativo",
+          "Congresistas, Gobierno, ciudadanos (5 % del censo electoral) u otras autoridades",
+          "El Congreso lo discute en dos periodos ordinarios consecutivos"
+        ],
+        [
+          "Referendo constitucional",
+          "Gobierno o ciudadanos (5 % del censo electoral), con ley aprobada por el Congreso",
+          "Votación popular; debe participar más de la cuarta parte del censo electoral"
+        ],
+        [
+          "Asamblea constituyente",
+          "Ley del Congreso que la convoca",
+          "El pueblo decide en votación si la convoca; la asamblea redacta la reforma"
+        ]
+      ],
+      "nota": "Una ley ordinaria o un decreto no pueden cambiar el texto constitucional."
+    },
+    "enunciado": "El colectivo cuenta con más de dos millones de firmas y quiere que la decisión final la tomen los ciudadanos en las urnas. Según la tabla, ¿qué vía corresponde a su propósito?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pedir al presidente que expida un decreto que reconozca el derecho, porque con tantas firmas el Gobierno está obligado a modificar la Constitución directamente.",
+        "correcta": false,
+        "explicacion": "La nota de la tabla indica que un decreto no puede cambiar el texto constitucional; las firmas sirven para impulsar una vía de reforma, no para reemplazarla.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye al Ejecutivo un poder de reforma constitucional que la Constitución no le otorga."
+      },
+      {
+        "clave": "B",
+        "texto": "Presentar un acto legislativo con las firmas, porque es la única vía en la que participan los ciudadanos y el Congreso decide por ellos en una sola votación.",
+        "correcta": false,
+        "explicacion": "El acto legislativo sí admite iniciativa ciudadana, pero la decisión la toma el Congreso en dos periodos, no en una sola votación, y el colectivo quiere que decidan los ciudadanos en las urnas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detiene en la columna de quién impulsa la vía y no revisa cómo se aprueba."
+      },
+      {
+        "clave": "C",
+        "texto": "Tramitar una ley ordinaria en el Congreso que declare el acceso a internet como derecho, porque reformar la Constitución es un trámite demasiado largo para un solo derecho.",
+        "correcta": false,
+        "explicacion": "La nota aclara que una ley ordinaria no modifica la Constitución; el colectivo quiere que el derecho quede en el texto constitucional, no en una ley.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde reconocer un derecho por ley con incluirlo en la Constitución."
+      },
+      {
+        "clave": "D",
+        "texto": "Promover un referendo constitucional con las firmas, porque la tabla indica que esa vía la pueden impulsar los ciudadanos y la reforma se aprueba en una votación popular.",
+        "correcta": true,
+        "explicacion": "La fila del referendo señala que lo pueden impulsar ciudadanos con el 5 % del censo electoral y que se aprueba en votación popular, que es justamente lo que el colectivo busca: que la decisión final sea de los ciudadanos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el colectivo tiene millones de firmas y quiere que los ciudadanos decidan en las urnas una reforma constitucional. COMPRENDER: se pide elegir, con la tabla, la vía que coincide con ese propósito. INTERPRETAR: la columna “¿Cómo se aprueba?” es la clave: el acto legislativo lo aprueba el Congreso; el referendo se aprueba en votación popular; la asamblea la redacta un cuerpo elegido. REPRESENTAR: firmas ciudadanas + decisión en las urnas = referendo constitucional. RAZONAR: el decreto y la ley ordinaria quedan descartados por la nota; el acto legislativo deja la decisión en el Congreso. RESOLVER: la opción del referendo constitucional. VERIFICAR: la fila del referendo menciona iniciativa ciudadana del 5 % del censo y votación popular, que coinciden con los dos elementos del propósito.",
+    "que_identificar": "Las dos condiciones del colectivo (firmas ciudadanas y decisión en las urnas) y la columna que dice cómo se aprueba cada vía.",
+    "que_revisar": "Reforma de la Constitución (artículos 374 a 379): acto legislativo, referendo constitucional y asamblea nacional constituyente.",
+    "refuerzo_ids": [
+      "SOC-101",
+      "SOC-105"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "constitucion_1991",
+      "reforma_constitucional",
+      "referendo",
+      "participacion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-145",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "interpretar",
+    "tema": "Caricatura política como fuente histórica",
+    "subtema": "Intención de una caricatura sobre la Ley de Tierras de 1936",
+    "dificultad": 2,
+    "contexto": "En 1936, durante el gobierno de Alfonso López Pumarejo, el Congreso aprobó la **Ley 200**, conocida como Ley de Tierras, que buscaba que las tierras sin explotar pudieran pasar a quienes las trabajaran y exigía a los propietarios demostrar el dominio de sus predios. Un periódico liberal (ficticio) de ese año publicó una caricatura que un historiador describe así:\n\n“En primer plano, un hacendado gordo, de sombrero y reloj de cadena, duerme en una hamaca colgada entre dos postes de una cerca que se pierde en el horizonte; detrás de la cerca, hasta donde alcanza la vista, no hay un solo surco. Del otro lado, en una franja estrecha, una familia campesina siembra maíz con azadones. El título dice: *¿De quién es la tierra que nadie trabaja?*”.",
+    "estimulo": null,
+    "enunciado": "¿Cuál era la intención más probable del caricaturista al publicar esta imagen en 1936?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mostrar de manera neutral cómo se distribuía la propiedad rural en Colombia, sin tomar partido en el debate que ocurría en el Congreso sobre la nueva ley.",
+        "correcta": false,
+        "explicacion": "La caricatura exagera rasgos (el hacendado gordo y dormido, la cerca infinita, la familia en una franja estrecha) y plantea una pregunta retórica: es un recurso para persuadir, no una descripción neutral.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trata la caricatura como si fuera una fotografía o un dato estadístico, sin reconocer la exageración como recurso de opinión."
+      },
+      {
+        "clave": "B",
+        "texto": "Respaldar la Ley de Tierras, presentando al gran propietario que no cultiva como ocioso y a los campesinos que trabajan como quienes merecen la tierra.",
+        "correcta": true,
+        "explicacion": "El hacendado duerme frente a tierras sin surcos mientras los campesinos siembran en una franja estrecha; el título pregunta de quién es la tierra que nadie trabaja. Todo apunta a defender la idea de la ley: la tierra para quien la trabaja. Además, se publicó en un periódico liberal, afín al gobierno que impulsó la ley.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Denunciar que los campesinos invadían las haciendas y destruían cercas, para que el gobierno de López Pumarejo protegiera la propiedad de los hacendados.",
+        "correcta": false,
+        "explicacion": "En la imagen los campesinos están de su lado de la cerca, sembrando; no hay invasión ni destrucción. La figura ridiculizada es el hacendado, no la familia campesina.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la crítica y atribuye al dibujo una defensa del propietario que la descripción no sostiene."
+      },
+      {
+        "clave": "D",
+        "texto": "Burlarse de los campesinos que sembraban maíz con azadones en lugar de usar maquinaria moderna, para promover la tecnificación de la agricultura.",
+        "correcta": false,
+        "explicacion": "La descripción no ridiculiza a los campesinos ni menciona tecnología; la exageración recae en el hacendado dormido y en la cerca sin fin, y el título habla de la tierra que nadie trabaja.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se fija en un detalle (los azadones) y construye una intención ajena al mensaje central de la imagen."
+      }
+    ],
+    "explicacion": "LEER: el contexto explica la Ley 200 de 1936 (tierras sin explotar para quienes las trabajan) y describe una caricatura con un hacendado dormido frente a tierras vacías, campesinos sembrando en una franja estrecha y el título “¿De quién es la tierra que nadie trabaja?”. COMPRENDER: se pide la intención del autor. INTERPRETAR: la caricatura exagera para ridiculizar al propietario ocioso y dignificar al campesino que trabaja. REPRESENTAR: ocio + tierra vacía (hacendado) frente a trabajo + poca tierra (campesinos) = argumento a favor de redistribuir la tierra. RAZONAR: un periódico liberal en 1936 apoyaba al gobierno de López Pumarejo, lo que refuerza esa lectura. RESOLVER: la opción que señala el respaldo a la Ley de Tierras. VERIFICAR: las opciones que ven neutralidad, denuncia de invasiones o burla de los campesinos contradicen los elementos descritos.",
+    "que_identificar": "Los elementos exagerados (hacendado dormido, cerca infinita, franja estrecha), el título en forma de pregunta y la orientación del periódico.",
+    "que_revisar": "La caricatura como fuente histórica: exageración, símbolos e intención; la República Liberal y la Ley 200 de 1936.",
+    "refuerzo_ids": [
+      "SOC-106",
+      "SOC-121"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "caricatura",
+      "fuentes",
+      "republica_liberal",
+      "ley_200_1936",
+      "tierra"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-146",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Subsidios a los combustibles",
+    "subtema": "Dimensiones fiscal, social y ambiental de un subsidio",
+    "dificultad": 2,
+    "contexto": "En un país (ficticio) el Estado paga la diferencia entre el precio internacional de la gasolina y el precio que se cobra en las estaciones, de modo que el galón cuesta un 40 % menos de lo que costaría sin subsidio. Un informe oficial presenta estos datos: el subsidio cuesta cada año lo mismo que el presupuesto nacional de educación superior; el 20 % más rico de los hogares consume el 55 % de la gasolina subsidiada, mientras que el 20 % más pobre consume el 3 %; el transporte de alimentos y los buses también usan combustible subsidiado; y las emisiones del transporte han crecido 25 % en diez años.",
+    "estimulo": null,
+    "enunciado": "¿Cuál análisis reconoce correctamente cómo se relacionan las dimensiones presentes en el problema del subsidio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El subsidio beneficia sobre todo a los hogares de mayores ingresos y estimula las emisiones, pero retirarlo de golpe encarecería el transporte de alimentos y los pasajes, lo que golpearía a los hogares pobres.",
+        "correcta": true,
+        "explicacion": "Los datos muestran que el 20 % más rico recibe más de la mitad del subsidio (dimensión de equidad), que las emisiones crecen (dimensión ambiental) y que alimentos y buses dependen del combustible barato (dimensión social): las dimensiones se tensionan entre sí.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El subsidio es una medida puramente ambiental, pues al abaratar la gasolina reduce el uso de leña y carbón en los hogares, y por eso debe mantenerse sin cambios para proteger el aire.",
+        "correcta": false,
+        "explicacion": "El informe no habla de leña ni carbón, y sí registra que las emisiones del transporte crecieron 25 %: el subsidio no mejora la dimensión ambiental, sino que la empeora al estimular el consumo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce un beneficio ambiental que el texto no menciona y omite el dato de las emisiones."
+      },
+      {
+        "clave": "C",
+        "texto": "El subsidio es una política social eficaz porque el combustible barato llega por igual a ricos y pobres, y por eso su costo fiscal se justifica aunque equivalga al presupuesto de educación superior.",
+        "correcta": false,
+        "explicacion": "El dato del informe desmiente la igualdad: el 20 % más rico consume el 55 % del combustible subsidiado y el 20 % más pobre solo el 3 %; el beneficio está concentrado en los hogares con más ingresos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No lee las cifras de distribución por quintiles y asume que un precio igual para todos implica un beneficio igual."
+      },
+      {
+        "clave": "D",
+        "texto": "El subsidio solo afecta la dimensión fiscal, pues su único problema es lo que le cuesta al Estado; si se elimina, el ahorro puede ir a educación sin ningún efecto sobre las familias.",
+        "correcta": false,
+        "explicacion": "El informe señala que alimentos y buses usan combustible subsidiado; eliminarlo tendría efectos sociales en precios y pasajes, de modo que el problema no se reduce a la dimensión fiscal.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aisla una sola dimensión y no reconoce los efectos encadenados sobre transporte y alimentos."
+      }
+    ],
+    "explicacion": "LEER: el subsidio abarata la gasolina 40 %, cuesta como la educación superior, lo aprovecha sobre todo el 20 % más rico, lo usan alimentos y buses, y las emisiones crecen. COMPRENDER: se pide el análisis que relaciona correctamente las dimensiones. INTERPRETAR: hay una dimensión fiscal (costo), una de equidad (concentración en los ricos), una ambiental (emisiones) y una social (transporte de alimentos y pasajes). REPRESENTAR: mantener el subsidio = alto costo + inequidad + más emisiones; retirarlo de golpe = alimentos y pasajes más caros para los pobres. RAZONAR: un buen análisis muestra esa tensión, no una sola dimensión. RESOLVER: la opción que reconoce que el subsidio favorece a los ricos y a las emisiones, pero que su retiro brusco afectaría a los hogares pobres por la vía de alimentos y transporte. VERIFICAR: cada afirmación de esa opción se apoya en un dato del informe.",
+    "que_identificar": "Las cifras de distribución por quintiles, el dato de emisiones y la mención del transporte de alimentos y de los buses.",
+    "que_revisar": "Análisis multidimensional de políticas económicas: costo fiscal, equidad, ambiente y efectos encadenados sobre precios.",
+    "refuerzo_ids": [
+      "SOC-123",
+      "SOC-107"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "subsidios",
+      "combustibles",
+      "politica_fiscal",
+      "equidad",
+      "dimensiones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-147",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Pisos térmicos y producción agrícola",
+    "subtema": "Relación entre altitud, temperatura y cultivos",
+    "dificultad": 1,
+    "contexto": "En Colombia, por estar cerca del ecuador, la temperatura depende más de la altitud que de la época del año: en promedio, baja cerca de 6 °C por cada 1 000 metros que se asciende. En un municipio (ficticio) de la cordillera Central, el territorio va desde el río, a 500 metros sobre el nivel del mar, hasta el páramo, a 3 600 metros. La oficina agropecuaria registró los cultivos principales de cuatro veredas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Veredas del municipio según altitud, temperatura media y cultivo principal (datos ficticios)",
+      "columnas": [
+        "Vereda",
+        "Altitud (m s. n. m.)",
+        "Temperatura media (°C)",
+        "Cultivo principal"
+      ],
+      "filas": [
+        [
+          "La Playa",
+          550,
+          27,
+          "Plátano y cacao"
+        ],
+        [
+          "El Mirador",
+          1650,
+          20,
+          "Café"
+        ],
+        [
+          "Alto Frío",
+          2800,
+          13,
+          "Papa"
+        ],
+        [
+          "Las Lagunas",
+          3400,
+          9,
+          "Sin cultivos; ganadería escasa y frailejones"
+        ]
+      ],
+      "nota": "Las cuatro veredas reciben lluvias parecidas a lo largo del año."
+    },
+    "enunciado": "Una familia de La Playa quiere sembrar papa en su finca porque “se vende bien en el mercado”. Según la tabla y el contexto, ¿qué explica que el cultivo no prospere allí?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En La Playa llueve mucho menos que en Alto Frío y la papa necesita lluvias abundantes durante todo el año para desarrollarse.",
+        "correcta": false,
+        "explicacion": "La nota de la tabla indica que las cuatro veredas reciben lluvias parecidas, así que la diferencia entre La Playa y Alto Frío no está en la lluvia.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Busca una causa climática conocida (la lluvia) sin leer la nota que iguala las lluvias en las veredas."
+      },
+      {
+        "clave": "B",
+        "texto": "La papa es un cultivo que solo prospera en suelos cercanos a los páramos, porque necesita el agua de los frailejones para crecer.",
+        "correcta": false,
+        "explicacion": "La fila de Las Lagunas, donde hay frailejones, no registra cultivos; la papa aparece en Alto Frío, a 2 800 metros, con 13 °C, y la tabla no relaciona el cultivo con los frailejones.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia la papa con el páramo por cercanía en la tabla y construye una relación que los datos no muestran."
+      },
+      {
+        "clave": "C",
+        "texto": "El mercado de La Playa está demasiado lejos de los centros de consumo de papa, de modo que el problema es de transporte y no del clima de la vereda.",
+        "correcta": false,
+        "explicacion": "El contexto y la tabla no dan información sobre distancias ni mercados; sí muestran una diferencia de 14 °C entre La Playa y la vereda papera, que es el dato pertinente.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Desvía la explicación hacia un factor económico no mencionado en lugar de usar los datos geográficos disponibles."
+      },
+      {
+        "clave": "D",
+        "texto": "La Playa está a 550 metros y tiene 27 °C de temperatura media, mientras que la papa se cultiva en la vereda de 2 800 metros y 13 °C: la altitud define un clima distinto al que requiere ese cultivo.",
+        "correcta": true,
+        "explicacion": "La tabla muestra que la papa es el cultivo de Alto Frío (2 800 m, 13 °C) y que La Playa está a 550 m con 27 °C; el contexto explica que la temperatura baja con la altitud. El clima cálido de La Playa no corresponde al de la papa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el contexto dice que en Colombia la temperatura depende de la altitud (unos 6 °C menos por cada 1 000 m); la tabla relaciona cuatro veredas con su altitud, temperatura y cultivo. COMPRENDER: se pide por qué la papa no prospera en La Playa. INTERPRETAR: la papa aparece en Alto Frío (2 800 m, 13 °C); La Playa está a 550 m con 27 °C. REPRESENTAR: 2 800 − 550 ≈ 2 250 m de diferencia, equivalentes a unos 14 °C: climas distintos. RAZONAR: la nota descarta la lluvia como causa; la tabla no vincula la papa con los frailejones ni menciona mercados. RESOLVER: la opción que atribuye el problema a la diferencia de altitud y temperatura. VERIFICAR: 27 − 13 = 14 °C, coherente con la regla de 6 °C por cada 1 000 m aplicada a 2 250 m.",
+    "que_identificar": "La altitud y la temperatura de La Playa frente a las de la vereda donde sí se cultiva papa, y la nota sobre lluvias parecidas.",
+    "que_revisar": "Pisos térmicos en la zona ecuatorial: relación entre altitud, temperatura y tipos de cultivo en Colombia.",
+    "refuerzo_ids": [
+      "SOC-141",
+      "SOC-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "pisos_termicos",
+      "altitud",
+      "agricultura",
+      "geografia",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-148",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "comprender",
+    "tema": "Apartheid en Sudáfrica",
+    "subtema": "Ideologías detrás de la segregación y de la resistencia",
+    "dificultad": 3,
+    "contexto": "Entre 1948 y 1994, Sudáfrica vivió el **apartheid**, un sistema legal que clasificaba a las personas por “raza” y separaba dónde podían vivir, estudiar, trabajar y con quién podían casarse; la minoría blanca conservaba el poder político y la mayoría negra no podía votar. Dos declaraciones (ficticias) de 1960:\n\n- **Funcionario del gobierno:** “Cada pueblo tiene su propio camino de desarrollo. Al separar las razas no hacemos daño a nadie: les damos a los nativos sus propias tierras para que se gobiernen según sus costumbres, mientras nosotros cuidamos la civilización que trajimos a este país”.\n- **Dirigente del movimiento contra el apartheid:** “Nacimos en esta tierra y la trabajamos; las minas y las ciudades se levantaron con nuestras manos. No pedimos favores: exigimos el voto y el derecho de vivir donde queramos, porque la dignidad no se reparte por el color de la piel”.",
+    "estimulo": null,
+    "enunciado": "¿Qué idea de fondo distingue las dos posiciones y explica que lleguen a conclusiones opuestas sobre la separación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El funcionario defiende la separación por razones económicas, pues quiere conservar las minas, mientras que el dirigente la rechaza porque prefiere que cada grupo tenga su propia tierra.",
+        "correcta": false,
+        "explicacion": "Es el dirigente quien menciona las minas, y lo hace para reclamar lo que su pueblo construyó; además, no pide tierras separadas, sino vivir donde quiera y votar. La opción mezcla las voces.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde quién dice qué e invierte las reivindicaciones de los dos actores."
+      },
+      {
+        "clave": "B",
+        "texto": "Ambos comparten la idea de que los pueblos deben vivir separados según sus costumbres, pero discrepan sobre cuántas tierras deben entregarse a cada grupo para gobernarse.",
+        "correcta": false,
+        "explicacion": "El dirigente rechaza por completo la separación: exige vivir donde quiera y votar en el mismo Estado. No hay acuerdo sobre la separación, sino oposición frontal a ella.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Busca un punto de acuerdo donde el texto muestra una contradicción de principios."
+      },
+      {
+        "clave": "C",
+        "texto": "El funcionario parte de una jerarquía entre razas y culturas que presenta la separación como natural y hasta benévola, mientras el dirigente parte de la igualdad de dignidad de todas las personas y de su derecho a participar.",
+        "correcta": true,
+        "explicacion": "El funcionario habla de “la civilización que trajimos” y de que “cada pueblo tiene su propio camino”, lo que supone una jerarquía cultural y racial; el dirigente afirma que la dignidad “no se reparte por el color de la piel” y exige el voto: su base es la igualdad de derechos. Esa diferencia ideológica explica las conclusiones opuestas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El funcionario reconoce que la separación causa daño pero la considera necesaria por seguridad, mientras que el dirigente niega que el apartheid tenga efectos sobre la vida cotidiana de su pueblo.",
+        "correcta": false,
+        "explicacion": "El funcionario afirma expresamente que “no hacemos daño a nadie” y no menciona la seguridad; el dirigente describe efectos concretos: no poder votar ni elegir dónde vivir.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye a los hablantes afirmaciones contrarias a las que hacen, por leer con prisa."
+      }
+    ],
+    "explicacion": "LEER: el contexto define el apartheid y presenta dos declaraciones: un funcionario que justifica la separación como “camino propio” de cada pueblo y un dirigente que exige voto y libertad de residencia. COMPRENDER: se pide la idea de fondo que distingue ambas posiciones. INTERPRETAR: “la civilización que trajimos” y “les damos sus tierras” suponen superioridad de un grupo y tutela sobre el otro; “la dignidad no se reparte por el color de la piel” supone igualdad. REPRESENTAR: jerarquía racial y cultural → separación “benévola”; igualdad de dignidad → derechos iguales. RAZONAR: las conclusiones opuestas nacen de esos supuestos distintos, no de una discusión sobre cantidad de tierras ni de razones de seguridad. RESOLVER: la opción que contrasta jerarquía con igualdad. VERIFICAR: ninguna de las dos voces habla de seguridad ni de repartir tierras entre grupos como solución compartida.",
+    "que_identificar": "Las frases que revelan los supuestos de cada hablante: “la civilización que trajimos” y “la dignidad no se reparte por el color de la piel”.",
+    "que_revisar": "Apartheid en Sudáfrica (1948-1994): ideología de la segregación, resistencia y relación entre cosmovisión y argumentos.",
+    "refuerzo_ids": [
+      "SOC-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "apartheid",
+      "sudafrica",
+      "siglo_xx",
+      "ideologias",
+      "derechos_humanos"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-149",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "interpretar",
+    "tema": "Estereotipos de género en la publicidad",
+    "subtema": "Prejuicios implícitos en un anuncio",
+    "dificultad": 1,
+    "contexto": "Un supermercado (ficticio) lanzó una campaña por el inicio del año escolar. El anuncio de radio dice:\n\n“Mamá, sabemos que tu misión es tener la lonchera lista y la casa en orden. Por eso, esta semana, todo lo que necesitas para cuidar a los tuyos con 20 % de descuento. Y para papá, que llega cansado del trabajo, su bebida favorita a mitad de precio”.\n\nUna organización de consumidores pidió retirar el anuncio y el gerente respondió que “solo describe la vida real de las familias colombianas”.",
+    "estimulo": null,
+    "enunciado": "¿Qué prejuicio contiene el anuncio y por qué la respuesta del gerente no lo resuelve?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El anuncio discrimina a las familias sin hijos, porque solo ofrece descuentos en productos escolares, y el gerente no responde porque esos productos son los que más se venden en esa época.",
+        "correcta": false,
+        "explicacion": "El anuncio incluye bebidas para “papá” y productos para “cuidar a los tuyos”, no solo escolares; la queja de la organización apunta a los papeles asignados a madre y padre, no a la gama de productos.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Desplaza el problema hacia un asunto comercial y no identifica los roles de género del mensaje."
+      },
+      {
+        "clave": "B",
+        "texto": "El anuncio presenta a las madres como las únicas compradoras, lo cual es un prejuicio económico; el gerente tiene razón en que así ocurre en la realidad, por lo que no hay nada que corregir.",
+        "correcta": false,
+        "explicacion": "El problema no es solo quién compra: el anuncio asigna a la madre la “misión” del hogar y al padre el descanso. Que algo sea frecuente no impide que el mensaje refuerce una desigualdad, que es lo que señala la organización.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Acepta el argumento de “así es la realidad” sin notar que describir una desigualdad como misión natural la refuerza."
+      },
+      {
+        "clave": "C",
+        "texto": "El anuncio asigna a la madre el deber de cuidar y ordenar la casa y al padre el descanso tras el trabajo; decir que “describe la vida real” no responde, porque convierte una desigualdad en un deber natural y la refuerza.",
+        "correcta": true,
+        "explicacion": "Las palabras “tu misión” y “cuidar a los tuyos” para la madre, frente a “llega cansado del trabajo” para el padre, reparten los roles por género. La respuesta del gerente presenta esa división como un hecho inevitable, con lo cual normaliza el estereotipo en vez de cuestionarlo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El anuncio ofende a los padres al presentarlos como personas que solo beben, y el gerente debió aclarar que las bebidas en descuento también incluyen jugos y productos saludables.",
+        "correcta": false,
+        "explicacion": "El reproche de la organización no es sobre el tipo de bebida; el anuncio asocia al padre con el descanso y a la madre con la obligación doméstica. La aclaración sobre jugos no toca el prejuicio de roles.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se fija en un detalle (la bebida) y pierde de vista el reparto de roles que estructura el anuncio."
+      }
+    ],
+    "explicacion": "LEER: el anuncio habla a la madre de su “misión” de tener la lonchera y la casa en orden, y al padre le ofrece una bebida porque “llega cansado del trabajo”; el gerente dice que solo describe la vida real. COMPRENDER: se pide identificar el prejuicio y evaluar la respuesta. INTERPRETAR: el mensaje asigna el cuidado y el orden doméstico a la mujer y el trabajo remunerado y el descanso al hombre. REPRESENTAR: madre = deber doméstico; padre = descanso merecido: estereotipo de roles de género. RAZONAR: afirmar que “así es la realidad” no resuelve nada, porque presenta la desigualdad como natural y la refuerza; además, una desigualdad frecuente sigue siendo una desigualdad. RESOLVER: la opción que describe los roles asignados y explica por qué la respuesta del gerente los normaliza. VERIFICAR: las demás opciones desvían la crítica hacia productos, bebidas o familias sin hijos.",
+    "que_identificar": "Las expresiones “tu misión”, “cuidar a los tuyos” y “llega cansado del trabajo”, y el argumento del gerente de que el anuncio describe la realidad.",
+    "que_revisar": "Prejuicios y estereotipos de género en los discursos públicos; diferencia entre describir una situación y presentarla como natural o deseable.",
+    "refuerzo_ids": [
+      "SOC-109"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "genero",
+      "estereotipos",
+      "publicidad",
+      "prejuicios",
+      "discurso"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-150",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Retroceso de los glaciares colombianos",
+    "subtema": "Relaciones entre clima, agua y actividades humanas",
+    "dificultad": 3,
+    "contexto": "Colombia conserva seis glaciares de alta montaña, entre ellos los de la Sierra Nevada de Santa Marta y los nevados de la cordillera Central. El IDEAM ha documentado que su superficie se ha reducido de manera sostenida desde finales del siglo XIX. Un grupo de estudiantes construyó una gráfica con cifras aproximadas del área glaciar del país y la presentó en un foro sobre el agua en una ciudad andina que se abastece de ríos de alta montaña.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Área glaciar total de Colombia (km², cifras aproximadas)",
+      "eje_x": "Año",
+      "eje_y": "km²",
+      "series": [
+        {
+          "nombre": "Área glaciar",
+          "valores": [
+            [
+              "1850",
+              350
+            ],
+            [
+              "1950",
+              110
+            ],
+            [
+              "1990",
+              70
+            ],
+            [
+              "2010",
+              45
+            ],
+            [
+              "2022",
+              33
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "En el foro, alguien afirmó: “Si los glaciares desaparecen, la ciudad se quedará sin agua”. ¿Cuál análisis relaciona de forma más precisa las dimensiones del problema?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El retroceso glaciar es un indicador del calentamiento del clima andino; el agua de la ciudad depende sobre todo de páramos y lluvias, que ese mismo calentamiento también afecta, por lo que el riesgo es real aunque no provenga solo del hielo.",
+        "correcta": true,
+        "explicacion": "La gráfica muestra una pérdida de más del 90 % del área glaciar desde 1850, señal de un clima más cálido. Los glaciares aportan poca agua directa a las ciudades, que dependen de páramos y precipitaciones; pero el mismo cambio climático que derrite el hielo altera esos ecosistemas. El análisis conecta las dimensiones ambiental, hídrica y urbana sin exagerar ni minimizar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La afirmación es exacta: los 33 km² de hielo que quedan son la reserva de agua que consume la ciudad, de modo que, cuando se derritan por completo, los ríos de alta montaña dejarán de llevar agua.",
+        "correcta": false,
+        "explicacion": "Los glaciares ocupan hoy un área muy pequeña y no son la fuente principal de agua urbana; los ríos andinos se alimentan sobre todo de lluvias y páramos. Tomar el hielo como única reserva exagera la relación.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Traslada de manera directa la pérdida de hielo a la pérdida de agua, sin considerar de dónde proviene el agua de una ciudad andina."
+      },
+      {
+        "clave": "C",
+        "texto": "La afirmación es falsa y el problema no existe: la gráfica muestra que la pérdida de hielo se ha desacelerado, pues entre 2010 y 2022 se perdieron solo 12 km², mucho menos que entre 1850 y 1950.",
+        "correcta": false,
+        "explicacion": "En términos absolutos se pierde menos porque queda menos hielo; en proporción, 12 km² sobre 45 es más del 25 % en doce años, un ritmo muy alto. Además, negar el problema ignora el vínculo entre calentamiento y páramos.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara pérdidas absolutas de periodos de distinta duración y con distinto punto de partida, sin calcular proporciones."
+      },
+      {
+        "clave": "D",
+        "texto": "La afirmación es falsa porque el retroceso glaciar es un fenómeno natural que ocurre desde 1850, antes de que existieran los carros y las fábricas, y por tanto no tiene relación con las actividades humanas ni con el agua.",
+        "correcta": false,
+        "explicacion": "El retroceso se acelera en el siglo XX, cuando crece el uso de combustibles fósiles; además, que haya causas naturales no elimina la relación entre un clima más cálido y la disponibilidad de agua, que es lo que preocupa en el foro.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usa la fecha de inicio del retroceso para descartar toda influencia humana y toda consecuencia sobre el agua."
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra el área glaciar colombiana cayendo de 350 km² en 1850 a 33 km² en 2022; el foro trata sobre el agua de una ciudad andina que se abastece de ríos de alta montaña. COMPRENDER: se pide el análisis más preciso de la relación entre la desaparición de los glaciares y el agua de la ciudad. INTERPRETAR: el hielo es hoy un área muy pequeña; su valor principal es indicar que el clima se calienta. REPRESENTAR: calentamiento → retroceso glaciar y, a la vez, cambios en páramos y lluvias (fuente real del agua) → riesgo para la ciudad. RAZONAR: las otras lecturas exageran el papel del hielo, niegan el problema con pérdidas absolutas o descartan toda causa humana. RESOLVER: la opción que presenta el glaciar como indicador y conecta el calentamiento con páramos y lluvias. VERIFICAR: 12 km² sobre 45 km² equivale a más del 25 % en doce años, lo que confirma un ritmo alto.",
+    "que_identificar": "La tendencia completa de la gráfica, la proporción perdida en el último tramo y el dato del contexto sobre de dónde toma el agua la ciudad.",
+    "que_revisar": "Cambio climático en los Andes: glaciares como indicadores, páramos como reguladores del agua y relaciones entre dimensiones ambiental y urbana.",
+    "refuerzo_ids": [
+      "SOC-136",
+      "SOC-114"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": [
+      "glaciares",
+      "cambio_climatico",
+      "paramos",
+      "agua",
+      "lineas",
+      "revisar_docente"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-151",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona dimensiones históricas y geográficas de eventos y problemáticas sociales",
+    "habilidad": "interpretar",
+    "tema": "Crisis de 1929 y economía cafetera",
+    "subtema": "Efectos de la Gran Depresión en un país exportador",
+    "dificultad": 2,
+    "contexto": "En octubre de 1929 se desplomó la bolsa de Nueva York y comenzó la **Gran Depresión**, que redujo el comercio mundial. Colombia dependía entonces de las exportaciones de café, vendidas sobre todo a Estados Unidos, y de préstamos externos que financiaban obras públicas como ferrocarriles y carreteras. Un docente presentó esta tabla con cifras aproximadas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Colombia: café y préstamos externos alrededor de 1929 (cifras aproximadas con fines escolares)",
+      "columnas": [
+        "Año",
+        "Precio del café (centavos de dólar por libra)",
+        "Sacos exportados (millones)",
+        "Nuevos préstamos externos recibidos"
+      ],
+      "filas": [
+        [
+          "1928",
+          23,
+          2.7,
+          "Abundantes"
+        ],
+        [
+          "1930",
+          13,
+          3.1,
+          "Casi nulos"
+        ],
+        [
+          "1932",
+          10,
+          3.2,
+          "Nulos"
+        ]
+      ],
+      "nota": "Síntesis escolar; las cifras están redondeadas."
+    },
+    "enunciado": "¿Cuál afirmación describe correctamente la relación entre la crisis internacional y la economía colombiana que muestra la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La crisis hizo que Colombia dejara de exportar café, pues los sacos vendidos cayeron a la mitad entre 1928 y 1932, y por eso el Estado tuvo que recurrir a nuevos préstamos externos.",
+        "correcta": false,
+        "explicacion": "La tabla muestra lo contrario en ambas columnas: los sacos exportados subieron de 2,7 a 3,2 millones y los préstamos pasaron de abundantes a nulos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que una crisis siempre reduce la cantidad exportada y no revisa la columna de sacos."
+      },
+      {
+        "clave": "B",
+        "texto": "Aunque Colombia exportó más sacos, el derrumbe del precio redujo los ingresos del café, y al mismo tiempo se cortaron los préstamos externos, lo que afectó obras públicas financiadas con esos recursos.",
+        "correcta": true,
+        "explicacion": "El precio cayó de 23 a 10 centavos (menos de la mitad) mientras los sacos solo subieron de 2,7 a 3,2 millones: el ingreso total bajó. Los préstamos pasaron de abundantes a nulos, y el contexto dice que financiaban ferrocarriles y carreteras.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El aumento de los sacos exportados compensó la baja del precio, de modo que los ingresos por café se mantuvieron estables y la crisis solo afectó a Colombia por la falta de préstamos.",
+        "correcta": false,
+        "explicacion": "Multiplicando precio por cantidad: en 1928, 23 × 2,7 ≈ 62; en 1932, 10 × 3,2 = 32. El ingreso se redujo casi a la mitad; el aumento de sacos no compensó la caída del precio.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ve que una columna sube y otra baja y supone que se anulan sin estimar el producto de ambas."
+      },
+      {
+        "clave": "D",
+        "texto": "La crisis de 1929 no llegó a Colombia porque el país vendía café a Europa y no a Estados Unidos, lo que explica que las exportaciones siguieran creciendo durante esos años.",
+        "correcta": false,
+        "explicacion": "El contexto indica que el café se vendía sobre todo a Estados Unidos; además, la tabla muestra que el precio se desplomó y los préstamos desaparecieron, señales claras de que la crisis sí llegó.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Contradice un dato explícito del contexto y lee el aumento de sacos como ausencia de crisis."
+      }
+    ],
+    "explicacion": "LEER: la Gran Depresión redujo el comercio mundial; Colombia dependía del café vendido a Estados Unidos y de préstamos externos para obras. COMPRENDER: se pide la afirmación que describe bien la relación que muestra la tabla. INTERPRETAR: el precio del café cae de 23 a 10 centavos, los sacos suben levemente de 2,7 a 3,2 millones y los préstamos pasan de abundantes a nulos. REPRESENTAR: ingreso ≈ precio × cantidad: 23 × 2,7 ≈ 62 en 1928 frente a 10 × 3,2 = 32 en 1932. RAZONAR: exportar más sacos no compensó el desplome del precio; sin préstamos, las obras públicas perdieron financiación. RESOLVER: la opción que combina más sacos, menos ingresos y corte de préstamos con efectos en las obras. VERIFICAR: las opciones que hablan de exportaciones a la mitad, ingresos estables o ausencia de crisis contradicen la tabla o el contexto.",
+    "que_identificar": "La dirección de cada columna: precio a la baja, sacos al alza, préstamos de abundantes a nulos, y el dato de que el café se vendía a Estados Unidos.",
+    "que_revisar": "Crisis de 1929 y sus efectos en América Latina: dependencia de un producto de exportación, precios internacionales y crédito externo.",
+    "refuerzo_ids": [
+      "SOC-129"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "crisis_1929",
+      "cafe",
+      "siglo_xx",
+      "economia",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-152",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "comprender",
+    "tema": "Rellenos sanitarios y conflictos entre municipios",
+    "subtema": "Perspectivas de la ciudad que produce basura y del municipio que la recibe",
+    "dificultad": 2,
+    "contexto": "Una ciudad (ficticia) de un millón de habitantes envía sus basuras a un relleno sanitario ubicado en un municipio vecino de 15 000 habitantes. El contrato vence en un año y el municipio pequeño anunció que no quiere renovarlo. En una reunión se escucharon estas voces (testimonios ficticios):\n\n- **Secretaria de Ambiente de la ciudad:** “Cerrar el relleno sería una emergencia sanitaria: no hay otro sitio autorizado a menos de 200 kilómetros y las tarifas de aseo subirían para todos”.\n- **Alcalde del municipio pequeño:** “Llevamos veinte años recibiendo la basura de otros. Los olores, los camiones y la contaminación de la quebrada son nuestros, y la compensación que nos pagan no alcanza ni para el acueducto”.\n- **Gerente de la empresa operadora:** “El relleno cumple las normas y genera 300 empleos en la zona; podemos ampliar la compensación si el contrato se renueva por veinte años más”.\n- **Vocera de las familias vecinas al relleno:** “Nadie nos ha preguntado nada en veinte años. Queremos que lo cierren o, al menos, que la plata llegue a nuestras veredas y no se quede en el centro del pueblo”.",
+    "estimulo": null,
+    "enunciado": "¿Qué tienen en común las posiciones del alcalde del municipio pequeño y de la vocera de las familias vecinas, y en qué se diferencian?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Ambos quieren cerrar el relleno de inmediato sin importar las consecuencias para la ciudad; se diferencian en que el alcalde quiere construir uno nuevo en otro municipio y la vocera prefiere reciclar.",
+        "correcta": false,
+        "explicacion": "La vocera admite una alternativa al cierre (que el dinero llegue a las veredas) y el alcalde solo anuncia que no renovará; ninguno habla de un relleno en otro municipio ni de reciclaje.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye a los actores propuestas que no aparecen en sus testimonios."
+      },
+      {
+        "clave": "B",
+        "texto": "Ambos defienden los 300 empleos que genera el relleno; se diferencian en que el alcalde quiere que la empresa amplíe la compensación y la vocera quiere que se mantenga la actual.",
+        "correcta": false,
+        "explicacion": "Los empleos los menciona el gerente, no ellos; y la vocera no pide mantener la compensación, sino que llegue a las veredas o que el relleno se cierre.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la voz de la empresa con la de los habitantes del municipio."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambos reconocen que el relleno cumple las normas ambientales; se diferencian en que el alcalde se preocupa por las tarifas de aseo de la ciudad y la vocera por los olores y los camiones.",
+        "correcta": false,
+        "explicacion": "Quien afirma que el relleno cumple las normas es el gerente, y quien habla de tarifas es la secretaria de la ciudad; el alcalde, por el contrario, menciona la contaminación de la quebrada.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcla los argumentos de los cuatro actores sin fijarse en quién pronuncia cada frase."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos consideran que el municipio carga con los daños de la basura ajena y recibe poco a cambio; se diferencian en que el alcalde reclama más recursos para el municipio y la vocera cuestiona que esos recursos lleguen a las veredas afectadas.",
+        "correcta": true,
+        "explicacion": "El alcalde habla de olores, camiones, quebrada contaminada y una compensación insuficiente; la vocera también sufre esos daños, pero añade que “la plata se queda en el centro del pueblo” y que nadie les ha consultado: su diferencia está en la distribución de la compensación y en la participación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: hay cuatro voces: el alcalde del municipio pequeño denuncia daños y compensación insuficiente; la empresa ofrece más compensación y recuerda los empleos; las familias vecinas piden cierre o que el dinero llegue a las veredas. COMPRENDER: se pide lo común y lo distinto entre el alcalde y la vocera. INTERPRETAR: los dos viven los daños y consideran insuficiente lo que reciben. REPRESENTAR: coincidencia = carga injusta y poca compensación; diferencia = el alcalde pide más dinero para el municipio, la vocera cuestiona que llegue a las veredas. RAZONAR: las opciones que les atribuyen empleos, normas, tarifas o reciclaje confunden las voces. RESOLVER: la opción que señala la carga compartida y la diferencia sobre la distribución de los recursos. VERIFICAR: la frase “no se quede en el centro del pueblo” marca la tensión entre la vocera y la administración municipal.",
+    "que_identificar": "Las palabras exactas del alcalde (compensación que no alcanza) y de la vocera (la plata que se queda en el centro, nadie nos ha preguntado).",
+    "que_revisar": "Comparación de perspectivas en conflictos socioambientales: coincidencias, diferencias y distribución de costos y beneficios en el territorio.",
+    "refuerzo_ids": [
+      "SOC-103"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "residuos",
+      "relleno_sanitario",
+      "conflicto_territorial",
+      "perspectivas",
+      "municipios"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-153",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "habilidad": "razonar",
+    "tema": "Cultura ciudadana y regulación de comportamientos",
+    "subtema": "Modelo de los tres sistemas reguladores: ley, moral y cultura",
+    "dificultad": 3,
+    "contexto": "Un modelo usado en políticas de **cultura ciudadana** sostiene que el comportamiento de las personas está regulado por tres sistemas: la **ley** (normas escritas con sanciones del Estado), la **moral** (la conciencia de cada persona) y la **cultura** (lo que el grupo aprueba o reprueba). Según el modelo, las normas se cumplen más cuando los tres sistemas coinciden y se incumplen más cuando lo que la ley prohíbe es aprobado por el grupo o por la conciencia individual.\n\nEn una ciudad (ficticia), el 70 % de los peatones cruza las avenidas por fuera de la cebra aunque hay multas vigentes. Una encuesta mostró que la mayoría considera que cruzar donde sea “no le hace daño a nadie” y que “todo el mundo lo hace”. La alcaldía debe escoger una intervención.",
+    "estimulo": null,
+    "enunciado": "Según el modelo descrito, ¿cuál intervención es la más coherente con el diagnóstico del problema?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una campaña en la que actores y vecinos reconocidos aplaudan públicamente a quienes cruzan por la cebra y muestren el riesgo real de los cruces indebidos, para que el grupo y la conciencia individual dejen de aprobar la conducta.",
+        "correcta": true,
+        "explicacion": "El diagnóstico indica que la ley existe pero la cultura (“todo el mundo lo hace”) y la moral (“no le hace daño a nadie”) aprueban la infracción. El modelo dice que la norma se cumple cuando los tres sistemas coinciden, así que la intervención debe actuar sobre la aprobación social y la conciencia, no sobre la ley que ya existe.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Duplicar el valor de las multas y poner más agentes de tránsito en las avenidas, porque el modelo sostiene que las personas solo cambian su comportamiento cuando la sanción legal es suficientemente alta y segura.",
+        "correcta": false,
+        "explicacion": "El modelo no dice que la ley sea el único regulador; al contrario, señala que la ley ya existe y se incumple porque el grupo y la conciencia aprueban la conducta. Endurecer la sanción deja intactos los otros dos sistemas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce el modelo de tres sistemas a uno solo, el legal, y propone la respuesta más habitual sin usar el diagnóstico."
+      },
+      {
+        "clave": "C",
+        "texto": "Eliminar las multas por cruzar fuera de la cebra, porque el modelo indica que cuando la mayoría aprueba una conducta la ley debe adaptarse a la cultura para que los tres sistemas vuelvan a coincidir.",
+        "correcta": false,
+        "explicacion": "El modelo describe que la coincidencia favorece el cumplimiento, pero no ordena ajustar la ley a cualquier costumbre; en este caso la conducta aprobada pone en riesgo la vida, así que lo coherente es cambiar la aprobación cultural y moral, no la norma.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la coincidencia de los tres sistemas como una regla para bajar la ley al nivel de la costumbre."
+      },
+      {
+        "clave": "D",
+        "texto": "Construir puentes peatonales en todas las avenidas, porque el modelo sostiene que los comportamientos dependen de la infraestructura disponible y no de normas, creencias o costumbres de las personas.",
+        "correcta": false,
+        "explicacion": "El modelo descrito no habla de infraestructura, sino de ley, moral y cultura; además, el problema diagnosticado es que la gente aprueba cruzar donde sea, lo que no se resuelve solo con puentes.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Sustituye el modelo del contexto por otra explicación y no verifica si encaja con el diagnóstico."
+      }
+    ],
+    "explicacion": "LEER: el modelo plantea tres reguladores (ley, moral y cultura) y afirma que la norma se cumple más cuando coinciden; en la ciudad, la ley multa el cruce indebido, pero la mayoría cree que no hace daño y que todos lo hacen. COMPRENDER: se pide la intervención más coherente con el modelo y el diagnóstico. INTERPRETAR: la ley ya está; fallan la moral (“no hace daño”) y la cultura (“todos lo hacen”). REPRESENTAR: ley ✔, moral ✖, cultura ✖ → actuar sobre moral y cultura. RAZONAR: subir multas refuerza lo que ya existe; eliminar multas adapta la ley a una costumbre riesgosa; los puentes cambian de modelo. RESOLVER: la opción que busca que el grupo deje de aprobar la conducta y que las personas comprendan el riesgo. VERIFICAR: esa opción menciona explícitamente la aprobación del grupo y la conciencia individual, los dos sistemas que el diagnóstico señala como fallidos.",
+    "que_identificar": "Los tres sistemas del modelo y las dos frases de la encuesta que revelan cuáles de ellos aprueban la infracción.",
+    "que_revisar": "Modelos conceptuales en políticas públicas: cultura ciudadana, regulación legal, moral y cultural; coherencia entre diagnóstico e intervención.",
+    "refuerzo_ids": [
+      "SOC-120",
+      "SOC-107"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 160,
+    "etiquetas": [
+      "cultura_ciudadana",
+      "modelos_conceptuales",
+      "normas",
+      "politica_publica"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-154",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "interpretar",
+    "tema": "Sistema interamericano y organismos internacionales",
+    "subtema": "A qué organismo acudir cuando se agotan los recursos internos",
+    "dificultad": 1,
+    "contexto": "Una organización de víctimas (ficticia) acompaña a una familia cuyo hijo fue desaparecido por agentes del Estado hace doce años. La familia ya presentó denuncias penales, una tutela y recursos ante los jueces colombianos sin obtener respuesta sobre el paradero del joven ni sanción a los responsables. Un abogado les mostró esta tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Algunos organismos internacionales y lo que hacen (síntesis escolar)",
+      "columnas": [
+        "Organismo",
+        "¿Qué hace?"
+      ],
+      "filas": [
+        [
+          "Asamblea General de la ONU",
+          "Reúne a todos los Estados miembros; aprueba resoluciones y declaraciones sin fuerza de sentencia"
+        ],
+        [
+          "Comisión Interamericana de Derechos Humanos (CIDH)",
+          "Recibe peticiones de personas que alegan violaciones de derechos humanos por un Estado americano, cuando ya agotaron los recursos en su país; puede llevar el caso a la Corte Interamericana"
+        ],
+        [
+          "Corte Interamericana de Derechos Humanos",
+          "Juzga a los Estados por violaciones a la Convención Americana en casos que le presenta la Comisión; sus sentencias son obligatorias"
+        ],
+        [
+          "Organización Mundial del Comercio (OMC)",
+          "Resuelve disputas comerciales entre Estados"
+        ],
+        [
+          "Organización Internacional del Trabajo (OIT)",
+          "Fija normas laborales internacionales y recibe quejas de sindicatos y empleadores"
+        ]
+      ],
+      "nota": "Colombia es parte de la Convención Americana sobre Derechos Humanos."
+    },
+    "enunciado": "Según la tabla y la situación de la familia, ¿cuál es el paso adecuado para buscar justicia en el ámbito internacional?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pedir a la Asamblea General de la ONU que condene a Colombia y ordene la liberación del joven, porque es el organismo con más países y por tanto el de mayor autoridad sobre un Estado.",
+        "correcta": false,
+        "explicacion": "La tabla indica que la Asamblea General aprueba resoluciones y declaraciones sin fuerza de sentencia; no juzga casos individuales ni puede ordenar nada a un Estado sobre una persona concreta.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia el tamaño del organismo con su poder de decidir casos y no lee la función descrita."
+      },
+      {
+        "clave": "B",
+        "texto": "Presentar una queja ante la OIT, porque el joven desaparecido estaba en edad de trabajar y la desaparición le impidió ejercer sus derechos laborales y sindicales.",
+        "correcta": false,
+        "explicacion": "La OIT trata normas laborales y quejas de sindicatos o empleadores; la desaparición forzada por agentes del Estado es una violación de derechos humanos, no un asunto laboral.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Fuerza una conexión laboral para encajar el caso en un organismo que no corresponde."
+      },
+      {
+        "clave": "C",
+        "texto": "Demandar directamente a Colombia ante la Corte Interamericana, porque sus sentencias son obligatorias y la familia ya lleva doce años esperando una respuesta de los jueces del país.",
+        "correcta": false,
+        "explicacion": "La tabla señala que la Corte juzga los casos que le presenta la Comisión; una familia no puede acudir directamente a la Corte, aunque sus sentencias sean obligatorias.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Salta el paso de la Comisión porque la Corte parece el organismo más poderoso."
+      },
+      {
+        "clave": "D",
+        "texto": "Presentar una petición ante la Comisión Interamericana, porque la familia ya agotó los recursos en Colombia y la Comisión puede llevar el caso a la Corte Interamericana.",
+        "correcta": true,
+        "explicacion": "La fila de la CIDH describe exactamente la situación: personas que alegan violaciones por un Estado americano y que ya agotaron los recursos internos; además, la nota confirma que Colombia es parte de la Convención. La Comisión es la puerta de entrada al sistema.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la familia agotó denuncias, tutela y recursos en Colombia sin resultado; la tabla describe cinco organismos. COMPRENDER: se pide el paso adecuado en el ámbito internacional. INTERPRETAR: el caso es una violación de derechos humanos por agentes del Estado; la fila de la Comisión Interamericana menciona peticiones de personas que agotaron recursos internos. REPRESENTAR: recursos internos agotados → petición a la CIDH → eventual demanda ante la Corte Interamericana. RAZONAR: la Asamblea General no dicta sentencias; la OIT y la OMC tratan asuntos laborales y comerciales; la Corte recibe casos solo a través de la Comisión. RESOLVER: la opción de la petición ante la Comisión Interamericana. VERIFICAR: la nota indica que Colombia es parte de la Convención Americana, requisito para usar ese sistema.",
+    "que_identificar": "El requisito de haber agotado los recursos internos y la fila que dice quién puede llevar un caso ante la Corte Interamericana.",
+    "que_revisar": "Sistema interamericano de derechos humanos: Comisión y Corte; diferencia con organismos de la ONU, la OIT y la OMC.",
+    "refuerzo_ids": [
+      "SOC-113",
+      "SOC-142"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "derechos_humanos",
+      "sistema_interamericano",
+      "organismos_internacionales",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-155",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Rebelión de los Comuneros de 1781",
+    "subtema": "Contexto de las reformas borbónicas y los impuestos",
+    "dificultad": 2,
+    "contexto": "Fragmento (ficticio, inspirado en el lenguaje de la época) de un pliego enviado por vecinos de una villa del Nuevo Reino de Granada, 1781:\n\n“Que se quite para siempre el nuevo impuesto de la Armada de Barlovento y que la alcabala vuelva a cobrarse como se cobraba antes. Que no se persiga a quien siembre tabaco en su propia tierra ni se nos obligue a comprar el aguardiente del rey. Que los empleos de la tierra se den a los nacidos en ella y no a los que vienen de España a enriquecerse. Esto pedimos como vasallos fieles de Su Majestad, a quien no desconocemos”.",
+    "estimulo": null,
+    "enunciado": "¿En qué contexto económico y político se inscribe esta fuente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En las guerras de independencia de 1810 a 1819, cuando los criollos ya no reconocían al rey de España y buscaban formar repúblicas independientes con sus propios gobiernos.",
+        "correcta": false,
+        "explicacion": "La fecha es 1781 y el texto termina reconociendo al rey como “Su Majestad, a quien no desconocemos”; se piden cambios en impuestos y empleos, no la independencia.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier protesta colonial con la independencia e ignora la fecha y la declaración de fidelidad al rey."
+      },
+      {
+        "clave": "B",
+        "texto": "En las reformas borbónicas del siglo XVIII, cuando la Corona aumentó impuestos, estableció monopolios sobre el tabaco y el aguardiente y reservó cargos para funcionarios peninsulares, lo que provocó protestas de los vasallos sin romper con el rey.",
+        "correcta": true,
+        "explicacion": "Los reclamos coinciden con las medidas borbónicas: nuevo impuesto de Armada de Barlovento, alza de la alcabala, monopolios (estancos) de tabaco y aguardiente y preferencia por españoles en los empleos. La frase final muestra que la protesta era contra las medidas, no contra la monarquía.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "En la Conquista del siglo XVI, cuando los encomenderos reclamaban a la Corona el derecho a cobrar tributos a los indígenas y a repartirse las tierras recién sometidas.",
+        "correcta": false,
+        "explicacion": "El fragmento es de 1781, habla de impuestos como la alcabala y la Armada de Barlovento, de tabaco y aguardiente, y de empleos para los nacidos en la tierra; nada remite a encomiendas ni a la Conquista.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde cualquier mención de tributos coloniales con el sistema de encomienda del siglo XVI."
+      },
+      {
+        "clave": "D",
+        "texto": "En las guerras civiles del siglo XIX entre federalistas y centralistas, cuando las provincias se quejaban de que Bogotá concentraba los empleos y los impuestos del aguardiente y el tabaco.",
+        "correcta": false,
+        "explicacion": "En el siglo XIX ya no había rey ni funcionarios venidos de España a quienes reclamar; el texto habla de “Su Majestad” y de empleos para los nacidos en la tierra frente a los peninsulares, lo que ubica la fuente en la Colonia.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma el reclamo contra el centralismo como si fuera republicano, sin notar las referencias al rey y a España."
+      }
+    ],
+    "explicacion": "LEER: el pliego de 1781 pide eliminar el impuesto de la Armada de Barlovento, bajar la alcabala, dejar sembrar tabaco, no obligar a comprar el aguardiente del rey y dar los empleos a los nacidos en la tierra, y declara fidelidad al rey. COMPRENDER: se pide el contexto en que se inscribe la fuente. INTERPRETAR: impuestos nuevos, monopolios (estancos) de tabaco y aguardiente y cargos para peninsulares son rasgos de las reformas borbónicas del siglo XVIII. REPRESENTAR: 1781 + reclamos fiscales + fidelidad al rey = Rebelión de los Comuneros, protesta contra las reformas sin ruptura con la monarquía. RAZONAR: la independencia (1810-1819) niega al rey; la Conquista y las guerras del XIX no encajan con la fecha ni con los impuestos nombrados. RESOLVER: la opción de las reformas borbónicas. VERIFICAR: la frase “vasallos fieles de Su Majestad” confirma que no se buscaba la independencia.",
+    "que_identificar": "La fecha, los impuestos y monopolios mencionados, el reclamo por los empleos y la declaración final de fidelidad al rey.",
+    "que_revisar": "Reformas borbónicas y Rebelión de los Comuneros de 1781: causas fiscales, capitulaciones de Zipaquirá y diferencia con la independencia.",
+    "refuerzo_ids": [
+      "SOC-135",
+      "SOC-141"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "comuneros",
+      "colonia",
+      "reformas_borbonicas",
+      "fuente_primaria",
+      "siglo_xviii"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-156",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Agricultura de exportación y uso del agua",
+    "subtema": "Efectos de expandir un cultivo de exportación en un municipio",
+    "dificultad": 2,
+    "contexto": "Un municipio (ficticio) del centro del país vive un auge de **aguacate Hass** para exportación. La alcaldía propone dar exención de impuestos a quien siembre más hectáreas. Una universidad entregó al concejo esta tabla comparativa entre el aguacate y los cultivos campesinos que ocupaban antes la misma tierra.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Comparación por hectárea entre cultivos en el municipio (datos ficticios)",
+      "columnas": [
+        "Indicador",
+        "Aguacate Hass para exportación",
+        "Maíz, fríjol y hortalizas para el mercado local"
+      ],
+      "filas": [
+        [
+          "Ingreso anual por hectárea (millones de pesos)",
+          28,
+          9
+        ],
+        [
+          "Agua usada al año por hectárea (metros cúbicos)",
+          9000,
+          3500
+        ],
+        [
+          "Empleos permanentes por cada 10 hectáreas",
+          3,
+          7
+        ],
+        [
+          "Destino de la producción",
+          "Puertos y exportación",
+          "Plaza de mercado del municipio"
+        ]
+      ],
+      "nota": "El municipio tiene racionamiento de agua en los meses secos."
+    },
+    "enunciado": "Si la exención logra que muchas hectáreas de cultivos campesinos pasen a aguacate, ¿cuál análisis anticipa mejor los efectos en distintas dimensiones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Aumentan los ingresos por hectárea y, como el aguacate emplea a más personas y usa menos agua que los cultivos campesinos, el municipio gana en todas las dimensiones sin ningún costo.",
+        "correcta": false,
+        "explicacion": "La tabla muestra lo contrario en dos filas: el aguacate usa 9 000 m³ frente a 3 500 y genera 3 empleos frente a 7 por cada 10 hectáreas. El beneficio es solo en ingresos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee solo la fila de ingresos y supone que los demás indicadores acompañan la misma dirección."
+      },
+      {
+        "clave": "B",
+        "texto": "Disminuyen los ingresos del municipio, porque el aguacate se exporta y el dinero se queda en los puertos, mientras que los cultivos locales dejan todo su valor en la plaza de mercado del pueblo.",
+        "correcta": false,
+        "explicacion": "El ingreso por hectárea del aguacate es más del triple (28 frente a 9 millones) y lo recibe quien cultiva en el municipio; que la fruta se exporte no significa que el ingreso se quede en el puerto.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde el lugar donde se vende el producto con el lugar donde queda el ingreso del productor."
+      },
+      {
+        "clave": "C",
+        "texto": "Crecen los ingresos de los productores, pero se multiplica la demanda de agua en un municipio con racionamiento, se pierden empleos permanentes y la comida del mercado local tendría que traerse de otros lugares.",
+        "correcta": true,
+        "explicacion": "La tabla y la nota permiten anticipar cada efecto: ingresos de 28 frente a 9 millones (económico); agua de 9 000 frente a 3 500 m³ con racionamiento en meses secos (ambiental); 3 empleos frente a 7 (social); y la producción deja de ir a la plaza local (seguridad alimentaria).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El cambio de cultivo no afecta el agua ni el empleo, porque una hectárea sigue siendo una hectárea; el único efecto es que el municipio tendrá más impuestos gracias a los mayores ingresos de los agricultores.",
+        "correcta": false,
+        "explicacion": "La tabla muestra diferencias claras en agua y empleo por hectárea; además, la propuesta es una exención de impuestos, así que el municipio recaudaría menos, no más, por esas hectáreas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que la misma superficie implica el mismo impacto y pasa por alto que la medida exime de impuestos."
+      }
+    ],
+    "explicacion": "LEER: la alcaldía quiere eximir de impuestos a quien siembre aguacate; la tabla compara ingresos, agua, empleo y destino de la producción, y la nota señala racionamiento de agua. COMPRENDER: se pide anticipar los efectos en varias dimensiones si muchas hectáreas cambian de cultivo. INTERPRETAR: el aguacate triplica los ingresos, pero usa más del doble de agua, emplea a menos de la mitad de personas y no abastece la plaza local. REPRESENTAR: económica (+), ambiental (−, con racionamiento), social (− empleos), alimentaria (− oferta local). RAZONAR: las opciones que afirman ganancias en todo, pérdida de ingresos o ausencia de efectos contradicen alguna fila de la tabla. RESOLVER: la opción que combina más ingresos con más presión sobre el agua, menos empleos y necesidad de traer alimentos. VERIFICAR: cada efecto de esa opción corresponde a una fila de la tabla o a la nota.",
+    "que_identificar": "Las cuatro filas de la tabla, la nota sobre racionamiento y el hecho de que la propuesta es una exención de impuestos.",
+    "que_revisar": "Efectos multidimensionales de la expansión de cultivos de exportación: agua, empleo rural, seguridad alimentaria e ingresos.",
+    "refuerzo_ids": [
+      "SOC-114",
+      "SOC-117"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "agricultura",
+      "exportacion",
+      "agua",
+      "aguacate",
+      "dimensiones",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-157",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Migración interna y departamentos",
+    "subtema": "Saldo migratorio y características del territorio",
+    "dificultad": 2,
+    "contexto": "El **saldo migratorio interno** de un departamento es la diferencia entre las personas que llegaron a vivir en él desde otros departamentos y las que se fueron a otros departamentos en un periodo. Un valor positivo indica que llegó más gente de la que se fue. Un geógrafo presentó el saldo de cinco departamentos (ficticios) entre 2015 y 2025, junto con una breve descripción de cada uno.\n\n- **Dpto. 1:** capital grande con universidades, industria y servicios.\n- **Dpto. 2:** llanura ganadera con pocas vías y escasa oferta de educación superior.\n- **Dpto. 3:** costa con puertos, turismo y zona franca en expansión.\n- **Dpto. 4:** zona de montaña con minifundios y presencia de grupos armados.\n- **Dpto. 5:** área metropolitana industrial con alto costo de vivienda.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Saldo migratorio interno 2015-2025 (miles de personas, datos ficticios)",
+      "eje_x": "Departamento",
+      "eje_y": "Miles de personas",
+      "series": [
+        {
+          "nombre": "Saldo migratorio",
+          "valores": [
+            [
+              "Dpto. 1",
+              120
+            ],
+            [
+              "Dpto. 2",
+              -35
+            ],
+            [
+              "Dpto. 3",
+              60
+            ],
+            [
+              "Dpto. 4",
+              -80
+            ],
+            [
+              "Dpto. 5",
+              15
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál afirmación relaciona correctamente los saldos del gráfico con las características de los territorios?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El Dpto. 4 atrajo más población que cualquier otro, pues su barra es la más alta en valor absoluto, lo que se explica por la disponibilidad de tierra en los minifundios de montaña.",
+        "correcta": false,
+        "explicacion": "La barra del Dpto. 4 es de −80 mil: un saldo negativo indica que se fue más gente de la que llegó. El signo cambia por completo el sentido del dato.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee el tamaño de la barra sin fijarse en el signo negativo."
+      },
+      {
+        "clave": "B",
+        "texto": "El Dpto. 5 recibió más migrantes que el Dpto. 3 porque la industria siempre atrae más población que el turismo y los puertos, sin importar el costo de la vivienda.",
+        "correcta": false,
+        "explicacion": "El gráfico muestra 15 mil para el Dpto. 5 y 60 mil para el Dpto. 3; además, la descripción del Dpto. 5 menciona el alto costo de vivienda, que puede frenar la llegada de personas.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Parte de una idea previa sobre la industria y no compara los valores de las dos barras."
+      },
+      {
+        "clave": "C",
+        "texto": "Los dos departamentos con saldo negativo son los que tienen puertos y zonas francas, porque los empleos portuarios son temporales y las personas terminan regresando a sus lugares de origen.",
+        "correcta": false,
+        "explicacion": "El departamento con puertos y zona franca es el Dpto. 3, cuyo saldo es positivo (60 mil). Los saldos negativos corresponden al Dpto. 2 (llanura con pocas vías) y al Dpto. 4 (montaña con grupos armados).",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Cruza mal las descripciones con las barras y construye una causa que los datos no respaldan."
+      },
+      {
+        "clave": "D",
+        "texto": "Los departamentos con saldo negativo son los de menor oferta educativa, pocas vías o presencia de grupos armados, mientras que los de saldo positivo concentran servicios, industria, puertos o turismo.",
+        "correcta": true,
+        "explicacion": "Dpto. 2 (−35 mil) y Dpto. 4 (−80 mil) son la llanura con pocas vías y escasa educación superior y la montaña con grupos armados; los saldos positivos corresponden a la capital con universidades e industria (120 mil), la costa con puertos y turismo (60 mil) y el área industrial (15 mil). La relación entre oferta de oportunidades y seguridad y atracción de población es coherente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el saldo migratorio positivo indica llegada neta y el negativo salida neta; el gráfico da los saldos de cinco departamentos y el contexto los describe. COMPRENDER: se pide la afirmación que relaciona bien los saldos con las características. INTERPRETAR: saldos positivos: Dpto. 1 (120), Dpto. 3 (60) y Dpto. 5 (15); negativos: Dpto. 2 (−35) y Dpto. 4 (−80). REPRESENTAR: oportunidades (universidades, industria, puertos, turismo) ↔ atracción; pocas vías, poca educación superior, conflicto armado ↔ expulsión. RAZONAR: la lectura del Dpto. 4 como el más atractivo ignora el signo; la comparación entre Dpto. 5 y Dpto. 3 invierte los valores. RESOLVER: la opción que asocia los saldos negativos con la falta de oportunidades y el conflicto, y los positivos con servicios, industria, puertos y turismo. VERIFICAR: cada departamento de esa opción coincide con el signo de su barra.",
+    "que_identificar": "El signo de cada barra y la descripción correspondiente de cada departamento en el contexto.",
+    "que_revisar": "Migración interna: saldo migratorio, factores de atracción y expulsión, y relación con las características del territorio.",
+    "refuerzo_ids": [
+      "SOC-110",
+      "SOC-122"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "migracion_interna",
+      "poblacion",
+      "departamentos",
+      "barras",
+      "territorio"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-158",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Establece relaciones entre las perspectivas de los individuos en una situación conflictiva y las propuestas de solución",
+    "habilidad": "razonar",
+    "tema": "Derecho de huelga y negociación colectiva",
+    "subtema": "Perspectivas de sindicato y empresa frente a una propuesta de acuerdo",
+    "dificultad": 3,
+    "contexto": "En una empresa de alimentos (ficticia) con 800 trabajadores, el sindicato inició una huelga, derecho reconocido en el artículo 56 de la Constitución, tras fracasar la negociación del pliego de peticiones. Posiciones expresadas:\n\n- **Sindicato:** “Pedimos un aumento del 12 %, porque la empresa reportó utilidades récord, y que se acabe la contratación por tres meses: hay compañeros que llevan cinco años renovando contratos temporales sin prestaciones completas”.\n- **Gerencia:** “Las utilidades fueron altas por un año excepcional de exportaciones que no se repetirá. Podemos ofrecer 7 %, pero necesitamos contratos temporales para las cosechas, que duran pocos meses”.\n\nUn mediador del Ministerio del Trabajo propuso: aumento del 9 %, conversión a contrato indefinido de quienes lleven más de dos años renovando contratos temporales, y mantenimiento de contratos temporales solo para los picos de cosecha.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la reacción más probable de cada parte frente a la propuesta del mediador y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El sindicato la rechaza por completo, porque no alcanza el 12 % solicitado, y la gerencia la acepta de inmediato, porque el 9 % está más cerca de su oferta que de la petición sindical.",
+        "correcta": false,
+        "explicacion": "La propuesta atiende el segundo reclamo del sindicato (los contratos temporales prolongados), lo que hace improbable un rechazo total; y para la gerencia el 9 % y la conversión de contratos implican costos, así que una aceptación inmediata tampoco es evidente.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Evalúa la propuesta solo por el porcentaje y olvida la segunda petición del pliego."
+      },
+      {
+        "clave": "B",
+        "texto": "Ambas partes la rechazan, porque el mediador no tiene autoridad para proponer cifras y la Constitución establece que las huelgas solo pueden terminar con la victoria total de una de las partes.",
+        "correcta": false,
+        "explicacion": "Nada en el contexto indica que el mediador carezca de autoridad para proponer, y la Constitución no exige la victoria de una parte; la negociación colectiva busca justamente acuerdos intermedios.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa una regla constitucional sobre el fin de las huelgas y descarta la mediación como mecanismo."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas partes podrían aceptarla con reservas: el sindicato obtiene estabilidad para los temporales de larga duración y un aumento superior a la oferta inicial, y la gerencia conserva los contratos cortos para las cosechas y un aumento inferior al pedido.",
+        "correcta": true,
+        "explicacion": "La propuesta cruza los intereses: el 9 % está entre el 7 % y el 12 %; la conversión a indefinido responde al reclamo sobre compañeros con cinco años de contratos temporales; y mantener temporales en picos de cosecha atiende la necesidad que expresó la gerencia. Cada parte cede en algo y gana en algo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La gerencia la rechaza porque pierde la posibilidad de contratar personal temporal, y el sindicato la acepta porque logra que todos los trabajadores pasen a contrato indefinido.",
+        "correcta": false,
+        "explicacion": "La propuesta mantiene los contratos temporales para los picos de cosecha, que es lo que pidió la gerencia, y no convierte a todos los trabajadores, sino solo a quienes lleven más de dos años renovando contratos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la propuesta del mediador de forma incompleta y atribuye a cada parte una pérdida o ganancia total."
+      }
+    ],
+    "explicacion": "LEER: el sindicato pide 12 % y el fin de los contratos de tres meses prolongados; la gerencia ofrece 7 % y necesita temporales para cosechas; el mediador propone 9 %, conversión a indefinido para quienes lleven más de dos años como temporales y temporales solo en picos de cosecha. COMPRENDER: se pide anticipar la reacción de cada parte y su razón. INTERPRETAR: cada punto de la propuesta toma algo de cada posición. REPRESENTAR: sindicato: gana estabilidad para los antiguos y un aumento mayor que el ofrecido; gerencia: conserva temporales de cosecha y paga menos que lo pedido. RAZONAR: un rechazo total o una aceptación total de alguna parte no corresponde a una propuesta que reparte concesiones. RESOLVER: la opción que prevé aceptación con reservas de ambas partes. VERIFICAR: ningún elemento de la propuesta contradice una necesidad esencial declarada por las partes.",
+    "que_identificar": "Los dos reclamos del sindicato, la necesidad de la gerencia (temporales para cosechas) y los tres puntos de la propuesta del mediador.",
+    "que_revisar": "Derecho de huelga y negociación colectiva (artículos 55 y 56 de la Constitución); relación entre intereses de las partes y propuestas de solución.",
+    "refuerzo_ids": [
+      "SOC-118",
+      "SOC-123"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 160,
+    "etiquetas": [
+      "huelga",
+      "sindicato",
+      "negociacion_colectiva",
+      "trabajo",
+      "perspectivas",
+      "solucion_de_conflictos"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-159",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Acueductos comunitarios y gestión del agua",
+    "subtema": "Dimensiones de una decisión sobre la administración del agua rural",
+    "dificultad": 1,
+    "contexto": "En muchas veredas de Colombia el agua la administran **acueductos comunitarios**: asociaciones de vecinos que construyeron la bocatoma y las redes con trabajo voluntario, cobran una cuota baja y deciden en asamblea. En un municipio (ficticio), la alcaldía propone que la empresa de servicios públicos del casco urbano asuma los 14 acueductos veredales, con el argumento de que la empresa tiene laboratorio para controlar la calidad del agua, mientras que varias asociaciones no hacen análisis periódicos. Los vecinos temen que la tarifa pase de 8 000 a 35 000 pesos mensuales y que las decisiones se tomen en el pueblo.",
+    "estimulo": null,
+    "enunciado": "¿Cuál análisis identifica correctamente las dimensiones en tensión en esta situación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se enfrentan la dimensión sanitaria (mejor control de calidad con la empresa) y las dimensiones económica y política (tarifa más alta y pérdida de la decisión comunitaria en asamblea).",
+        "correcta": true,
+        "explicacion": "El contexto presenta exactamente esas tres dimensiones: la empresa aporta laboratorio y control de calidad; los vecinos perderían la cuota baja (de 8 000 a 35 000 pesos) y la capacidad de decidir en asamblea. La decisión favorece una dimensión a costa de otras.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Se enfrentan la dimensión ambiental (la empresa contaminaría las quebradas) y la dimensión cultural (las asambleas son una tradición antigua), sin que haya efectos sobre la salud o la economía de las familias.",
+        "correcta": false,
+        "explicacion": "El contexto no dice que la empresa contamine; sí habla de calidad del agua, tarifa y decisión comunitaria, es decir, de dimensiones sanitaria, económica y política.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce una dimensión que el texto no menciona y niega las que sí aparecen."
+      },
+      {
+        "clave": "C",
+        "texto": "Solo hay una dimensión en juego, la económica, pues el único cambio real es que la tarifa sube; el control de calidad y las asambleas son detalles administrativos sin relevancia para las familias.",
+        "correcta": false,
+        "explicacion": "El control de calidad del agua afecta la salud de quienes la beben y la asamblea define quién decide sobre el servicio; reducir todo a la tarifa ignora dos dimensiones que el contexto describe.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma el dato numérico (la tarifa) como el único relevante y descarta lo que no se mide en pesos."
+      },
+      {
+        "clave": "D",
+        "texto": "La tensión es solo política, entre la alcaldía y las asociaciones, porque la calidad del agua ya está garantizada en todas las veredas y la tarifa nueva sería igual a la actual.",
+        "correcta": false,
+        "explicacion": "El contexto afirma que varias asociaciones no hacen análisis periódicos del agua y que la tarifa pasaría de 8 000 a 35 000 pesos; ambas afirmaciones de la opción contradicen el texto.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Niega datos explícitos del contexto para simplificar el problema a una pelea de poder."
+      }
+    ],
+    "explicacion": "LEER: los acueductos comunitarios cobran poco y deciden en asamblea; la alcaldía quiere que la empresa urbana los asuma porque tiene laboratorio; los vecinos temen una tarifa más alta y perder la decisión. COMPRENDER: se pide identificar las dimensiones en tensión. INTERPRETAR: calidad del agua = dimensión sanitaria; tarifa = dimensión económica; asamblea frente a decisiones en el pueblo = dimensión política. REPRESENTAR: ganancia en salud ↔ pérdida en costo y en autonomía comunitaria. RAZONAR: las opciones que hablan de contaminación, de una sola dimensión o de una tensión solo política omiten o contradicen datos del contexto. RESOLVER: la opción que nombra la dimensión sanitaria frente a las dimensiones económica y política. VERIFICAR: la tarifa de 8 000 a 35 000 pesos y la falta de análisis periódicos aparecen literalmente en el contexto.",
+    "que_identificar": "El argumento de la alcaldía (laboratorio y calidad) y los dos temores de los vecinos (tarifa y lugar de las decisiones).",
+    "que_revisar": "Dimensiones de una decisión pública: salud, economía familiar y participación comunitaria; gestión comunitaria del agua en Colombia.",
+    "refuerzo_ids": [
+      "SOC-130",
+      "SOC-150"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "agua",
+      "acueductos_comunitarios",
+      "servicios_publicos",
+      "participacion",
+      "dimensiones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-160",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "leer",
+    "tema": "Fin de la Guerra Fría y disolución de la URSS",
+    "subtema": "Secuencia de 1985 a 1991",
+    "dificultad": 1,
+    "contexto": "Para una línea de tiempo del siglo XX, un grupo de estudiantes organizó los hechos que marcaron el final de la Guerra Fría.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Hechos del final de la Guerra Fría",
+      "columnas": [
+        "Año",
+        "Hecho"
+      ],
+      "filas": [
+        [
+          "1985",
+          "Mijaíl Gorbachov llega al poder en la URSS e inicia reformas económicas (perestroika) y de apertura (glásnost)"
+        ],
+        [
+          "1989",
+          "Caída del Muro de Berlín; gobiernos comunistas de Europa oriental pierden el poder"
+        ],
+        [
+          "1990",
+          "Reunificación de Alemania"
+        ],
+        [
+          "Dic. 1991",
+          "Disolución de la URSS; surgen quince repúblicas independientes, entre ellas Rusia y Ucrania"
+        ]
+      ],
+      "nota": "Cronología simplificada."
+    },
+    "enunciado": "¿Cuál afirmación es coherente con la cronología de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La disolución de la URSS provocó la caída del Muro de Berlín, porque sin Unión Soviética los gobiernos de Europa oriental quedaron sin respaldo.",
+        "correcta": false,
+        "explicacion": "La tabla ubica la caída del Muro en 1989 y la disolución de la URSS en diciembre de 1991: el Muro cayó dos años antes, así que no pudo ser consecuencia de la disolución.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el orden de dos hechos cercanos porque la relación causal parece lógica."
+      },
+      {
+        "clave": "B",
+        "texto": "Alemania se reunificó cuando la URSS todavía existía, un año después de la caída del Muro y antes de la disolución soviética.",
+        "correcta": true,
+        "explicacion": "La reunificación es de 1990; el Muro cayó en 1989 y la URSS se disolvió en diciembre de 1991. La reunificación ocurrió entre esos dos hechos, con la URSS aún existente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Las reformas de Gorbachov comenzaron después de la caída del Muro, como respuesta a la pérdida de los gobiernos aliados de Europa oriental.",
+        "correcta": false,
+        "explicacion": "Según la tabla, Gorbachov llegó al poder y comenzó la perestroika y la glásnost en 1985, cuatro años antes de la caída del Muro en 1989.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Presenta las reformas como reacción a 1989 sin revisar la primera fila de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "Rusia y Ucrania se independizaron de la URSS en 1989, al mismo tiempo que los países de Europa oriental cambiaban de gobierno.",
+        "correcta": false,
+        "explicacion": "La tabla sitúa el surgimiento de las quince repúblicas independientes, incluidas Rusia y Ucrania, en diciembre de 1991, no en 1989.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Funde los cambios de Europa oriental con la disolución de la URSS en un solo momento."
+      }
+    ],
+    "explicacion": "LEER: la tabla ordena cuatro hechos: reformas de Gorbachov (1985), caída del Muro (1989), reunificación alemana (1990) y disolución de la URSS (diciembre de 1991). COMPRENDER: se pide la afirmación que respeta ese orden. INTERPRETAR: las reformas preceden al Muro; la reunificación está entre el Muro y la disolución; las repúblicas surgen al final. REPRESENTAR: 1985 → 1989 → 1990 → 1991. RAZONAR: la disolución no pudo causar la caída del Muro (es posterior); las reformas no fueron respuesta a 1989 (son de 1985); Rusia y Ucrania no se independizaron en 1989 (fue en 1991). RESOLVER: la opción que ubica la reunificación de Alemania en 1990, después del Muro y antes de la disolución, con la URSS aún existente. VERIFICAR: 1990 está efectivamente entre 1989 y 1991.",
+    "que_identificar": "El año de cada fila y, en especial, que la reunificación (1990) está entre la caída del Muro (1989) y la disolución de la URSS (1991).",
+    "que_revisar": "Final de la Guerra Fría: reformas de Gorbachov, caída del Muro de Berlín, reunificación alemana y disolución de la URSS.",
+    "refuerzo_ids": [
+      "SOC-102",
+      "SOC-111"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "guerra_fria",
+      "urss",
+      "muro_de_berlin",
+      "cronologia",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  }
+]

@@ -1,0 +1,11 @@
+/* Barra común del portal: aparece arriba de cada sección */
+#portal-barra{--pb-bg:#1D2433;--pb-fg:#fff;--pb-muted:#B8C2D6;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--pb-bg);color:var(--pb-fg);font-size:14px;line-height:1;position:relative;z-index:1000}
+#portal-barra .pb-in{max-width:1160px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:14px;height:40px}
+#portal-barra a{color:var(--pb-muted);text-decoration:none;padding:6px 10px;border-radius:999px;white-space:nowrap;font-weight:600}
+#portal-barra a:hover{color:var(--pb-fg)}
+#portal-barra a.activa{background:rgba(255,255,255,.14);color:var(--pb-fg)}
+#portal-barra .pb-marca{font-weight:800;color:var(--pb-fg);padding-left:0;display:flex;align-items:center;gap:8px}
+#portal-barra .pb-marca i{width:18px;height:18px;border-radius:5px;background:linear-gradient(135deg,#2F4D8C,#1E9E7A);display:inline-block}
+#portal-barra nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+#portal-barra nav::-webkit-scrollbar{display:none}
+@media (max-width:600px){#portal-barra .pb-in{gap:8px}#portal-barra a{padding:6px 8px;font-size:13px}#portal-barra .pb-marca span{display:none}}

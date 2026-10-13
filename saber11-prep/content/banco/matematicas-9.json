@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "MAT-141",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "leer",
+    "tema": "Tablas de frecuencia con intervalos",
+    "subtema": "Sumar las frecuencias de los intervalos que cumplen una condición (\"menos de 30 minutos\") y pasarlas a porcentaje del total",
+    "dificultad": 1,
+    "contexto": "El comité estudiantil de un colegio de Pasto preguntó a **40 estudiantes** cuánto tiempo tardan en llegar al colegio cada mañana. Organizó las respuestas en intervalos de tiempo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Tiempo de desplazamiento al colegio",
+      "columnas": [
+        "Tiempo (minutos)",
+        "Número de estudiantes"
+      ],
+      "filas": [
+        [
+          "De 0 a 14",
+          6
+        ],
+        [
+          "De 15 a 29",
+          14
+        ],
+        [
+          "De 30 a 44",
+          12
+        ],
+        [
+          "De 45 a 59",
+          5
+        ],
+        [
+          "60 o más",
+          3
+        ]
+      ],
+      "nota": "Total: 40 estudiantes encuestados."
+    },
+    "enunciado": "¿Qué porcentaje de los estudiantes encuestados tarda menos de 30 minutos en llegar al colegio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "50 %",
+        "correcta": true,
+        "explicacion": "Es la correcta. Tardan menos de 30 minutos quienes están en los intervalos \"de 0 a 14\" y \"de 15 a 29\": 6 + 14 = 20 estudiantes. Como el total es 40, el porcentaje es 20 ÷ 40 × 100 = 50 %.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "35 %",
+        "correcta": false,
+        "explicacion": "No responde. 35 % = 14 ÷ 40 × 100 toma únicamente el intervalo \"de 15 a 29\", pero los 6 estudiantes que tardan de 0 a 14 minutos también tardan menos de 30 y deben sumarse.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó solo la fila que termina en 29 y olvidó el intervalo anterior, que también cumple la condición."
+      },
+      {
+        "clave": "C",
+        "texto": "80 %",
+        "correcta": false,
+        "explicacion": "No responde. 80 % = (6 + 14 + 12) ÷ 40 × 100 incluye el intervalo \"de 30 a 44\", pero quienes tardan 30 minutos o más no cumplen la condición \"menos de 30\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"menos de 30\" como si incluyera el intervalo que empieza en 30."
+      },
+      {
+        "clave": "D",
+        "texto": "20 %",
+        "correcta": false,
+        "explicacion": "No responde. 20 es el número de estudiantes que tardan menos de 30 minutos (6 + 14), no el porcentaje. Para obtener el porcentaje hay que dividir ese conteo entre los 40 encuestados y multiplicar por 100.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la frecuencia absoluta (20 estudiantes) con el porcentaje y no dividió entre el total."
+      }
+    ],
+    "explicacion": "LEER: la tabla agrupa a 40 estudiantes en cinco intervalos de tiempo; las dos primeras filas (0 a 14 y 15 a 29 minutos) tienen 6 y 14 estudiantes. COMPRENDER: se pide el porcentaje de estudiantes que tardan menos de 30 minutos. INTERPRETAR: \"menos de 30\" cubre exactamente los dos primeros intervalos; el de 30 a 44 queda fuera porque empieza en 30. REPRESENTAR: porcentaje = (6 + 14) ÷ 40 × 100. RAZONAR: primero se suma la frecuencia de los intervalos que cumplen la condición y después se compara con el total. RESOLVER: 6 + 14 = 20; 20 ÷ 40 = 0,5; 0,5 × 100 = 50 %. VERIFICAR: los demás intervalos suman 12 + 5 + 3 = 20 estudiantes, el otro 50 %, y 50 % + 50 % = 100 %, lo que confirma el total de 40.",
+    "que_identificar": "Los intervalos que están completamente por debajo de 30 minutos (0 a 14 y 15 a 29) y el total de encuestados (40).",
+    "que_revisar": "Lectura de tablas de frecuencia con intervalos; paso de frecuencia absoluta a porcentaje.",
+    "refuerzo_ids": [
+      "MAT-081",
+      "MAT-002"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "tablas",
+      "frecuencias",
+      "intervalos",
+      "porcentajes",
+      "transporte"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-142",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Área de polígonos regulares (apotema)",
+    "subtema": "Área de un hexágono regular como perímetro × apotema ÷ 2, o como seis triángulos iguales",
+    "dificultad": 2,
+    "contexto": "En un parque de Armenia se construirá una jardinera con forma de **hexágono regular** de **2 m de lado**. La distancia desde el centro del hexágono hasta el punto medio de cada lado (la **apotema**) mide aproximadamente **1,73 m**. Se necesita el área para calcular la cantidad de tierra.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es, aproximadamente, el área de la jardinera?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "20,76 m²",
+        "correcta": false,
+        "explicacion": "No responde. 20,76 = 12 × 1,73 es el perímetro multiplicado por la apotema, pero falta dividir entre 2: cada uno de los seis triángulos tiene área base × altura ÷ 2, no base × altura.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó perímetro por apotema y olvidó la división entre 2 de la fórmula del triángulo."
+      },
+      {
+        "clave": "B",
+        "texto": "10,38 m²",
+        "correcta": true,
+        "explicacion": "Es la correcta. El hexágono regular se divide en 6 triángulos de base 2 m y altura 1,73 m (la apotema). Área = 6 × (2 × 1,73 ÷ 2) = perímetro × apotema ÷ 2 = 12 × 1,73 ÷ 2 = 10,38 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "3,46 m²",
+        "correcta": false,
+        "explicacion": "No responde. 3,46 = 2 × 1,73 es el producto de un lado por la apotema, es decir, el área de dos de los seis triángulos en que se divide el hexágono; falta considerar la figura completa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó un lado por la apotema como si eso fuera el área de toda la figura."
+      },
+      {
+        "clave": "D",
+        "texto": "12 m²",
+        "correcta": false,
+        "explicacion": "No responde. 12 = 12 × 2 ÷ 2 usa el lado (2 m) en lugar de la apotema (1,73 m) como altura de los triángulos; la altura de cada triángulo es la distancia del centro al lado, no el lado mismo.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la apotema con el lado al aplicar la fórmula perímetro × apotema ÷ 2."
+      }
+    ],
+    "explicacion": "LEER: hexágono regular de lado 2 m y apotema 1,73 m. COMPRENDER: se pide el área total de la jardinera. INTERPRETAR: un hexágono regular se descompone en seis triángulos congruentes con vértice en el centro; la base de cada uno es un lado (2 m) y su altura es la apotema (1,73 m). REPRESENTAR: A = 6 × (base × altura ÷ 2) = 6 × (2 × 1,73 ÷ 2), que equivale a perímetro × apotema ÷ 2 con perímetro 6 × 2 = 12 m. RAZONAR: cada triángulo mide 2 × 1,73 ÷ 2 = 1,73 m², y hay seis. RESOLVER: 6 × 1,73 = 10,38 m². VERIFICAR: el hexágono cabe dentro de un cuadrado de unos 4 m × 3,46 m (13,8 m²) y contiene un círculo de radio 1,73 m (≈ 9,4 m²); 10,38 m² está entre esos dos valores, como debe ser.",
+    "que_identificar": "El lado (2 m), la apotema (1,73 m) y que un hexágono regular tiene seis lados iguales.",
+    "que_revisar": "Área de polígonos regulares: descomposición en triángulos y fórmula perímetro × apotema ÷ 2.",
+    "refuerzo_ids": [
+      "MAT-071",
+      "MAT-012"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "hexagono",
+      "apotema",
+      "area",
+      "poligonos_regulares",
+      "jardineria"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-143",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "razonar",
+    "tema": "Trabajo conjunto (tasas combinadas)",
+    "subtema": "Dos llaves que llenan un tanque: los tiempos no se promedian, se suman las fracciones del tanque que llena cada una por hora",
+    "dificultad": 2,
+    "contexto": "En una finca de Boyacá, una llave llena un tanque en **2 horas** y otra llave llena el mismo tanque en **3 horas**. El encargado afirma: *\"Si abro las dos llaves a la vez, el tanque se llena en 2,5 horas, el promedio de los dos tiempos\"*.",
+    "estimulo": null,
+    "enunciado": "¿Es válida la afirmación del encargado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque al usar dos llaves el tiempo queda entre 2 y 3 horas, y el promedio 2,5 h es el valor justo entre ambos.",
+        "correcta": false,
+        "explicacion": "No es válida. Dos llaves juntas llenan más rápido que la más rápida sola, así que el tiempo debe ser menor que 2 horas, no estar entre 2 y 3; el promedio de los tiempos no modela el trabajo conjunto.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que combinar dos tiempos equivale a promediarlos sin pensar que juntas aportan más agua por hora."
+      },
+      {
+        "clave": "B",
+        "texto": "Sí, porque en 2,5 horas la primera llave llena 1,25 tanques y la segunda 0,83, lo que alcanza para el tanque completo.",
+        "correcta": false,
+        "explicacion": "No es válida. El cálculo muestra que en 2,5 h entrarían 1,25 + 0,83 ≈ 2,08 tanques, es decir, el tanque se habría llenado mucho antes; eso confirma que 2,5 h es demasiado tiempo, no que sea el correcto.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Hizo una comprobación pero no notó que sobraba más de un tanque, señal de que el tiempo era excesivo."
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque por hora la primera llena 1/2 del tanque y la segunda 1/3, es decir 5/6 juntas, y el tanque se llena en 6/5 h = 1,2 h.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Lo que se suma es la fracción de tanque que cada llave aporta por hora: 1/2 + 1/3 = 5/6 del tanque por hora. El tiempo es el inverso: 6/5 h = 1,2 h = 72 minutos, menos que cualquiera de las dos llaves sola.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No, porque el tiempo correcto es 2 + 3 = 5 horas, ya que cada llave necesita su propio tiempo para aportar su parte.",
+        "correcta": false,
+        "explicacion": "No es válida. Sumar los tiempos daría más que usar una sola llave, lo cual no tiene sentido si las dos funcionan al mismo tiempo; el trabajo conjunto reduce el tiempo, no lo aumenta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los tiempos como si las llaves trabajaran una después de la otra."
+      }
+    ],
+    "explicacion": "LEER: una llave tarda 2 h y otra 3 h en llenar el tanque; el encargado propone 2,5 h para las dos juntas. COMPRENDER: hay que decidir si promediar los tiempos es un procedimiento válido. INTERPRETAR: lo que se puede sumar es el caudal, es decir, la fracción del tanque que entra por hora con cada llave, no los tiempos. REPRESENTAR: llave 1 aporta 1/2 tanque por hora; llave 2 aporta 1/3 tanque por hora; juntas 1/2 + 1/3 = 3/6 + 2/6 = 5/6 tanque por hora. RAZONAR: si en una hora entra 5/6 del tanque, el tanque completo tarda 1 ÷ (5/6) = 6/5 h. RESOLVER: 6/5 h = 1,2 h = 72 minutos, menor que 2 h. VERIFICAR: en 1,2 h la primera llave aporta 1,2/2 = 0,6 del tanque y la segunda 1,2/3 = 0,4; 0,6 + 0,4 = 1 tanque exacto. La afirmación de 2,5 h no es válida.",
+    "que_identificar": "Los tiempos individuales (2 h y 3 h) y que las dos llaves funcionan simultáneamente.",
+    "que_revisar": "Problemas de trabajo conjunto: sumar tasas (fracción por hora), no tiempos; suma de fracciones con distinto denominador.",
+    "refuerzo_ids": [
+      "MAT-017",
+      "MAT-073"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "tasas",
+      "fracciones",
+      "trabajo_conjunto",
+      "argumentacion",
+      "agua"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-144",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Dominio y rango de una función en contexto",
+    "subtema": "Distinguir el rango (valores que toma la variable dependiente) del dominio (valores de la variable independiente) en una gráfica",
+    "dificultad": 1,
+    "contexto": "Una estación meteorológica de Manizales registró la **temperatura** cada 3 horas durante un día. La gráfica muestra la temperatura (en °C) según la hora del día.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Temperatura durante el día",
+      "eje_x": "Hora del día",
+      "eje_y": "Temperatura (°C)",
+      "series": [
+        {
+          "nombre": "Temperatura",
+          "valores": [
+            [
+              "0 h",
+              12
+            ],
+            [
+              "3 h",
+              11
+            ],
+            [
+              "6 h",
+              10
+            ],
+            [
+              "9 h",
+              15
+            ],
+            [
+              "12 h",
+              19
+            ],
+            [
+              "15 h",
+              20
+            ],
+            [
+              "18 h",
+              16
+            ],
+            [
+              "21 h",
+              13
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Si se considera la temperatura como función de la hora, ¿cuál es el rango de la función, es decir, el conjunto de valores que tomó la temperatura ese día?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "De 0 a 21 horas",
+        "correcta": false,
+        "explicacion": "No responde. \"De 0 a 21 horas\" describe el dominio, los valores de la variable independiente (hora) para los que hay registro; el rango se refiere a los valores de la temperatura, que están en el eje vertical.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió rango con dominio y leyó el eje horizontal en lugar del vertical."
+      },
+      {
+        "clave": "B",
+        "texto": "De 12 a 13 °C",
+        "correcta": false,
+        "explicacion": "No responde. 12 °C y 13 °C son la primera y la última temperatura registradas (a las 0 h y a las 21 h), pero entre ellas la temperatura bajó hasta 10 °C y subió hasta 20 °C, valores que también pertenecen al rango.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó los extremos de la gráfica (primer y último punto) en vez del valor mínimo y el máximo."
+      },
+      {
+        "clave": "C",
+        "texto": "De 10 a 21 °C",
+        "correcta": false,
+        "explicacion": "No responde. 10 °C es el mínimo correcto, pero 21 no es una temperatura: es la última hora del eje horizontal. El máximo de temperatura es 20 °C, registrado a las 15 h.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló un valor del eje vertical (10) con uno del eje horizontal (21)."
+      },
+      {
+        "clave": "D",
+        "texto": "De 10 a 20 °C",
+        "correcta": true,
+        "explicacion": "Es la correcta. El rango reúne los valores de la variable dependiente: la temperatura mínima fue 10 °C (a las 6 h) y la máxima 20 °C (a las 15 h), así que todos los valores registrados están entre 10 y 20 °C.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica de líneas tiene la hora en el eje horizontal (0 a 21 h) y la temperatura en el vertical; los puntos van de 10 °C (6 h) a 20 °C (15 h). COMPRENDER: se pide el rango de la función temperatura, no las horas. INTERPRETAR: en una función, el dominio son los valores de entrada (horas) y el rango los valores de salida (temperaturas). REPRESENTAR: rango = [temperatura mínima, temperatura máxima] = [10, 20]. RAZONAR: basta ubicar el punto más bajo y el más alto de la línea y leer sus alturas en el eje vertical. RESOLVER: mínimo 10 °C a las 6 h, máximo 20 °C a las 15 h; el rango va de 10 a 20 °C. VERIFICAR: todos los valores registrados (12, 11, 10, 15, 19, 20, 16, 13) están dentro de ese intervalo, y ningún valor del eje horizontal se usó como temperatura.",
+    "que_identificar": "El punto más bajo (10 °C a las 6 h) y el más alto (20 °C a las 15 h) de la línea, leídos en el eje vertical.",
+    "que_revisar": "Dominio y rango de una función; lectura de valores en el eje vertical de una gráfica de líneas.",
+    "refuerzo_ids": [
+      "MAT-026",
+      "MAT-008"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "funciones",
+      "dominio",
+      "rango",
+      "lineas",
+      "clima"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-145",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Combinaciones sin orden",
+    "subtema": "Número de grupos de 3 personas que se pueden formar con 6 candidatos cuando el orden no importa",
+    "dificultad": 2,
+    "contexto": "En un colegio de Cali se elegirá un **comité de 3 estudiantes** entre **6 candidatos**. Los tres integrantes tendrán exactamente las mismas funciones, así que **no importa el orden** en que se elijan.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos comités distintos se pueden formar?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "120 comités",
+        "correcta": false,
+        "explicacion": "No responde. 120 = 6 × 5 × 4 cuenta las formas de elegir tres personas en orden (primera, segunda, tercera). Como el comité es el mismo sin importar el orden, cada grupo quedó contado 3 × 2 × 1 = 6 veces.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó una permutación (importa el orden) cuando los integrantes son indistinguibles en funciones."
+      },
+      {
+        "clave": "B",
+        "texto": "20 comités",
+        "correcta": true,
+        "explicacion": "Es la correcta. Las elecciones ordenadas son 6 × 5 × 4 = 120, pero cada grupo de tres personas aparece en 3 × 2 × 1 = 6 órdenes distintos. Comités distintos: 120 ÷ 6 = 20.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "18 comités",
+        "correcta": false,
+        "explicacion": "No responde. 18 = 6 × 3 multiplica los candidatos por el tamaño del comité, una operación que no cuenta grupos: por ejemplo, con 6 candidatos y comités de 6 daría 36, cuando solo existe un comité posible.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó los dos números del enunciado sin un modelo de conteo."
+      },
+      {
+        "clave": "D",
+        "texto": "216 comités",
+        "correcta": false,
+        "explicacion": "No responde. 216 = 6 × 6 × 6 supone que cada puesto puede ocuparlo cualquiera de los seis, incluso la misma persona repetida, pero un estudiante no puede ocupar dos puestos del mismo comité.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Permitió repeticiones al aplicar el principio multiplicativo."
+      }
+    ],
+    "explicacion": "LEER: 6 candidatos, comités de 3, el orden no importa. COMPRENDER: hay que contar cuántos grupos distintos de 3 personas se pueden escoger. INTERPRETAR: como los puestos son iguales, {Ana, Luis, Sara} es el mismo comité que {Sara, Ana, Luis}; se trata de combinaciones. REPRESENTAR: C(6,3) = (6 × 5 × 4) ÷ (3 × 2 × 1). RAZONAR: primero se cuentan las elecciones ordenadas (120) y luego se divide entre las 6 formas de ordenar un mismo trío para no contarlo varias veces. RESOLVER: 120 ÷ 6 = 20 comités. VERIFICAR: elegir a los 3 que entran equivale a elegir a los 3 que quedan fuera, y C(6,3) = C(6,3) es coherente; además, un listado sistemático con candidatos 1 a 6 (123, 124, 125, 126, 134, 135, 136, 145, 146, 156, 234, 235, 236, 245, 246, 256, 345, 346, 356, 456) da exactamente 20.",
+    "que_identificar": "El número de candidatos (6), el tamaño del comité (3) y la aclaración de que el orden no importa.",
+    "que_revisar": "Combinaciones frente a permutaciones; división entre los órdenes repetidos de un mismo grupo.",
+    "refuerzo_ids": [
+      "MAT-085",
+      "MAT-083"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "conteo",
+      "combinaciones",
+      "comite",
+      "elecciones_escolares"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-146",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Ángulos de un paralelogramo",
+    "subtema": "En un paralelogramo los ángulos opuestos son iguales y los consecutivos suman 180°; refutar una generalización con un caso concreto",
+    "dificultad": 3,
+    "contexto": "Una estudiante de Tunja diseña baldosas con forma de **paralelogramo** (lados opuestos paralelos). Mide uno de los ángulos y obtiene **70°**. Su compañero afirma: *\"Entonces los cuatro ángulos miden 70°, porque en un paralelogramo todos los ángulos son iguales\"*.",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación refuta correctamente lo dicho por el compañero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los ángulos consecutivos de un paralelogramo suman 180°; si uno mide 70°, sus vecinos miden 110° y solo el opuesto mide 70°.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los lados paralelos cortados por un tercer lado forman ángulos suplementarios: 70° + 110° = 180°. Así, la baldosa tiene dos ángulos de 70° (opuestos) y dos de 110°; además 70 + 110 + 70 + 110 = 360°, la suma de un cuadrilátero.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Los cuatro ángulos no pueden medir 70°, porque la suma de los ángulos de un paralelogramo es 180° y 4 × 70° = 280° la supera.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. La suma de los ángulos interiores de cualquier cuadrilátero es 360°, no 180°; el dato de 180° corresponde a un triángulo. El argumento usa una propiedad equivocada aunque llegue a negar la afirmación.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la suma de ángulos del triángulo (180°) a un cuadrilátero."
+      },
+      {
+        "clave": "C",
+        "texto": "Los cuatro ángulos sí miden 70°, porque los lados opuestos son paralelos y las paralelas forman ángulos iguales con cualquier recta.",
+        "correcta": false,
+        "explicacion": "No refuta: respalda el error. Las paralelas cortadas por una recta forman ángulos iguales (correspondientes) y también ángulos suplementarios (conjugados); en el paralelogramo los consecutivos son de este segundo tipo y suman 180°.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recordó solo la igualdad de ángulos entre paralelas y olvidó los pares que suman 180°."
+      },
+      {
+        "clave": "D",
+        "texto": "Los ángulos miden 70°, 70°, 90° y 130°, porque todo paralelogramo tiene al menos un ángulo recto y el resto completa 360°.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. Un paralelogramo solo tiene ángulos rectos si es rectángulo, y entonces los cuatro miden 90°; además 70 + 70 + 90 + 130 = 360 no respeta que los ángulos opuestos deben ser iguales.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventó un ángulo recto y repartió el resto sin usar las propiedades del paralelogramo."
+      }
+    ],
+    "explicacion": "LEER: baldosa en forma de paralelogramo con un ángulo de 70°; el compañero afirma que los cuatro ángulos miden 70°. COMPRENDER: se pide la afirmación que muestre por qué eso es falso. INTERPRETAR: en un paralelogramo los lados opuestos son paralelos; una recta que corta dos paralelas produce ángulos que, de un mismo lado, suman 180°. REPRESENTAR: si un ángulo mide 70°, el consecutivo mide 180° − 70° = 110°; los opuestos son iguales: 70°, 110°, 70°, 110°. RAZONAR: la única manera de que los cuatro sean iguales es 70° = 110°, imposible; cuatro ángulos iguales solo ocurren en el rectángulo, con 90° cada uno. RESOLVER: la afirmación correcta es la que dice que los consecutivos suman 180° y solo el opuesto mide 70°. VERIFICAR: 70 + 110 + 70 + 110 = 360°, la suma de los ángulos interiores de todo cuadrilátero, mientras que 4 × 70 = 280° no la alcanza.",
+    "que_identificar": "Que la figura es un paralelogramo (lados opuestos paralelos) y que uno de sus ángulos mide 70°.",
+    "que_revisar": "Propiedades angulares del paralelogramo; ángulos entre paralelas cortadas por una secante; suma de ángulos interiores de un cuadrilátero (360°).",
+    "refuerzo_ids": [
+      "MAT-035",
+      "MAT-117"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "paralelogramo",
+      "angulos",
+      "paralelas",
+      "argumentacion",
+      "diseño"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-147",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Precio unitario y comparación de presentaciones",
+    "subtema": "Llevar presentaciones de distinto tamaño a una misma unidad (precio por kilogramo) para decidir cuál es más económica",
+    "dificultad": 2,
+    "contexto": "En un supermercado de Villavicencio, una misma marca de arroz se vende en tres presentaciones. Una familia quiere saber **cuál presentación tiene el menor precio por kilogramo**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Presentaciones de arroz",
+      "columnas": [
+        "Presentación",
+        "Contenido",
+        "Precio"
+      ],
+      "filas": [
+        [
+          "Pequeña",
+          "500 g",
+          "$ 4 200"
+        ],
+        [
+          "Mediana",
+          "1 kg",
+          "$ 7 800"
+        ],
+        [
+          "Grande",
+          "2,5 kg",
+          "$ 20 000"
+        ]
+      ],
+      "nota": "1 kg = 1 000 g."
+    },
+    "enunciado": "¿Cuál presentación tiene el menor precio por kilogramo y cuánto cuesta ese kilogramo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La pequeña, a $ 4 200 por kilogramo",
+        "correcta": false,
+        "explicacion": "No responde. $ 4 200 es el precio de 500 g, medio kilogramo; por kilogramo la presentación pequeña cuesta 4 200 × 2 = $ 8 400, el precio más alto de las tres.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó los precios totales sin convertir los 500 g a kilogramo y eligió el número más bajo."
+      },
+      {
+        "clave": "B",
+        "texto": "La grande, a $ 8 000 por kilogramo",
+        "correcta": false,
+        "explicacion": "No responde. El cálculo 20 000 ÷ 2,5 = $ 8 000 por kilogramo es correcto, pero la presentación mediana cuesta $ 7 800 por kilogramo, 200 pesos menos; el paquete grande no es el más barato aquí.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que el paquete más grande siempre es el más económico por unidad sin comparar los tres cocientes."
+      },
+      {
+        "clave": "C",
+        "texto": "La grande, a $ 5 000 por kilogramo",
+        "correcta": false,
+        "explicacion": "No responde. 5 000 resulta de dividir 20 000 entre 4 o de tomar 2,5 kg como si fueran 4 kg; el cociente correcto es 20 000 ÷ 2,5 = $ 8 000, que no es el menor.",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Dividió mal entre un decimal (2,5) o confundió el contenido del paquete grande."
+      },
+      {
+        "clave": "D",
+        "texto": "La mediana, a $ 7 800 por kilogramo",
+        "correcta": true,
+        "explicacion": "Es la correcta. Precio por kilogramo: pequeña 4 200 ÷ 0,5 = $ 8 400; mediana 7 800 ÷ 1 = $ 7 800; grande 20 000 ÷ 2,5 = $ 8 000. El menor es el de la presentación mediana.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: tres presentaciones: 500 g a $ 4 200, 1 kg a $ 7 800 y 2,5 kg a $ 20 000. COMPRENDER: se pide la presentación con menor precio por kilogramo y ese precio. INTERPRETAR: los precios totales no se pueden comparar directamente porque los contenidos son distintos; hay que llevar todo a la misma unidad. REPRESENTAR: precio por kg = precio ÷ contenido en kg, con 500 g = 0,5 kg. RAZONAR: pequeña: 4 200 ÷ 0,5 = 8 400; mediana: 7 800 ÷ 1 = 7 800; grande: 20 000 ÷ 2,5 = 8 000. RESOLVER: el menor es $ 7 800 por kilogramo, la presentación mediana. VERIFICAR: 2,5 paquetes medianos costarían 2,5 × 7 800 = $ 19 500, menos que los $ 20 000 del grande, y dos pequeños costarían $ 8 400, más que un mediano.",
+    "que_identificar": "El contenido de cada presentación en kilogramos (0,5; 1; 2,5) y su precio.",
+    "que_revisar": "Razón precio/cantidad; conversión de gramos a kilogramos; división entre decimales.",
+    "refuerzo_ids": [
+      "MAT-032",
+      "MAT-119"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "tablas",
+      "precio_unitario",
+      "razones",
+      "compras",
+      "division"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-148",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Rotación de 180° en el plano cartesiano",
+    "subtema": "Una rotación de 180° alrededor del origen cambia el signo de ambas coordenadas: (x, y) → (−x, −y)",
+    "dificultad": 1,
+    "contexto": "Un diseñador de Medellín dibuja un logo en el plano cartesiano (unidades en centímetros). Para crear la versión invertida, **gira toda la figura 180° alrededor del origen** (0, 0). Uno de los vértices del logo está en el punto **P(3, −2)**.",
+    "estimulo": null,
+    "enunciado": "¿En qué punto queda ese vértice después de la rotación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "(3, 2)",
+        "correcta": false,
+        "explicacion": "No responde. (3, 2) cambia solo el signo de la segunda coordenada: es la reflexión de P respecto al eje x, no un giro de media vuelta alrededor del origen, que cambia ambos signos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la rotación de 180° con una reflexión respecto al eje horizontal."
+      },
+      {
+        "clave": "B",
+        "texto": "(−3, −2)",
+        "correcta": false,
+        "explicacion": "No responde. (−3, −2) cambia solo el signo de la primera coordenada: es la reflexión de P respecto al eje y. Al girar 180°, el punto pasa al lado opuesto del origen en ambas direcciones.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la rotación de 180° con una reflexión respecto al eje vertical."
+      },
+      {
+        "clave": "C",
+        "texto": "(−3, 2)",
+        "correcta": true,
+        "explicacion": "Es la correcta. Girar 180° alrededor del origen lleva cada punto al punto diametralmente opuesto: (x, y) → (−x, −y). Para P(3, −2) queda (−3, 2); el origen es el punto medio entre P y su imagen.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "(2, 3)",
+        "correcta": false,
+        "explicacion": "No responde. (2, 3) corresponde a una rotación de 90° en sentido antihorario, que intercambia las coordenadas y cambia un signo: (x, y) → (−y, x). El giro pedido es de 180°, media vuelta completa.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la regla de un giro de un cuarto de vuelta en lugar de media vuelta."
+      }
+    ],
+    "explicacion": "LEER: vértice P(3, −2); rotación de 180° con centro en el origen. COMPRENDER: se pide la posición del vértice después del giro. INTERPRETAR: media vuelta alrededor del origen envía cada punto al lado opuesto, a la misma distancia del centro; el origen queda justo en la mitad entre el punto y su imagen. REPRESENTAR: (x, y) → (−x, −y). RAZONAR: la primera coordenada 3 pasa a −3 y la segunda −2 pasa a 2. RESOLVER: la imagen es (−3, 2). VERIFICAR: el punto medio entre (3, −2) y (−3, 2) es ((3 − 3)/2, (−2 + 2)/2) = (0, 0), el centro de giro, y ambos puntos están a la misma distancia del origen (√13), lo que confirma la rotación.",
+    "que_identificar": "Las coordenadas de P (3, −2), el centro de giro (origen) y el ángulo (180°).",
+    "que_revisar": "Transformaciones en el plano: rotación de 180° frente a reflexiones respecto a los ejes y rotación de 90°.",
+    "refuerzo_ids": [
+      "MAT-067",
+      "MAT-110"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "rotacion",
+      "plano_cartesiano",
+      "transformaciones",
+      "coordenadas",
+      "diseño"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-149",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "verificar",
+    "tema": "Promedio frente a punto medio del rango",
+    "subtema": "El promedio de varios datos no es (máximo + mínimo) ÷ 2; hay que sumar todos los valores y dividir entre la cantidad de datos",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes de Quibdó registró la **lluvia mensual** (en milímetros) del primer semestre. Para hallar el promedio mensual, uno de ellos propone: *\"Basta tomar el mes más lluvioso y el menos lluvioso y sacar la mitad: (200 + 40) ÷ 2 = 120 mm\"*.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Lluvia mensual, primer semestre",
+      "eje_x": "Mes",
+      "eje_y": "Lluvia (mm)",
+      "series": [
+        {
+          "nombre": "Lluvia",
+          "valores": [
+            [
+              "Ene",
+              40
+            ],
+            [
+              "Feb",
+              60
+            ],
+            [
+              "Mar",
+              120
+            ],
+            [
+              "Abr",
+              200
+            ],
+            [
+              "May",
+              180
+            ],
+            [
+              "Jun",
+              80
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Es adecuado el procedimiento propuesto para hallar el promedio mensual de lluvia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No; el promedio exige sumar los seis valores y dividir entre 6: 680 ÷ 6 ≈ 113,3 mm, distinto de 120 mm.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La media aritmética usa todos los datos: 40 + 60 + 120 + 200 + 180 + 80 = 680 mm en seis meses, 680 ÷ 6 ≈ 113,3 mm. El punto medio entre el máximo y el mínimo (120) ignora los cuatro meses intermedios y por eso no coincide.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Sí; el máximo y el mínimo encierran a todos los demás datos, así que su mitad siempre coincide con el promedio.",
+        "correcta": false,
+        "explicacion": "No es adecuado. Que los demás datos estén entre el máximo y el mínimo no significa que se repartan por igual alrededor de 120; aquí tres meses están por debajo de 120 (40, 60, 80) y solo dos por encima, y la media real es 113,3 mm.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Creyó que el centro del intervalo [mínimo, máximo] es siempre el promedio."
+      },
+      {
+        "clave": "C",
+        "texto": "Sí; con el gráfico de barras no se pueden leer los valores intermedios con precisión y la mitad del rango es la mejor aproximación.",
+        "correcta": false,
+        "explicacion": "No es adecuado. Las seis barras tienen valores legibles (40, 60, 120, 200, 180, 80), así que el promedio se puede calcular exactamente; recurrir a la mitad del rango no es necesario ni correcto.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Evitó leer las barras intermedias y justificó un atajo que no corresponde a la definición de promedio."
+      },
+      {
+        "clave": "D",
+        "texto": "No; el promedio es la mediana del gráfico, que corresponde al mes de marzo con 120 mm, igual al valor hallado.",
+        "correcta": false,
+        "explicacion": "No es adecuado. Promedio y mediana son medidas distintas; además, la mediana de los seis valores ordenados (40, 60, 80, 120, 180, 200) es (80 + 120) ÷ 2 = 100 mm, no 120 mm, y tampoco es la media.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la media con la mediana y asignó la mediana al mes que está en la mitad del gráfico."
+      }
+    ],
+    "explicacion": "LEER: seis barras con lluvia mensual: 40, 60, 120, 200, 180 y 80 mm; se propone promediar solo el máximo (200) y el mínimo (40). COMPRENDER: hay que decidir si ese atajo da el promedio mensual. INTERPRETAR: el promedio o media aritmética reparte el total entre todos los meses, por lo que depende de los seis valores, no solo de los extremos. REPRESENTAR: media = (40 + 60 + 120 + 200 + 180 + 80) ÷ 6. RAZONAR: la suma es 680 mm; (200 + 40) ÷ 2 = 120 solo sería igual a la media si los demás datos se compensaran exactamente alrededor de 120, lo que no ocurre. RESOLVER: 680 ÷ 6 ≈ 113,3 mm, distinto de 120 mm; el procedimiento no es adecuado. VERIFICAR: si todos los meses hubieran tenido 113,3 mm, el total sería 6 × 113,3 ≈ 680 mm, el total real; con 120 mm el total sería 720 mm, que no coincide.",
+    "que_identificar": "Los seis valores de las barras y que el procedimiento propuesto usa solo dos de ellos.",
+    "que_revisar": "Definición de media aritmética; diferencia entre media, mediana y punto medio del rango.",
+    "refuerzo_ids": [
+      "MAT-003",
+      "MAT-004"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "barras",
+      "media",
+      "rango",
+      "argumentacion",
+      "clima"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-150",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Suma de una progresión aritmética",
+    "subtema": "Hallar el último término (a₁ + (n − 1)d) y sumar n × (primero + último) ÷ 2 para contar los asientos de un teatro",
+    "dificultad": 3,
+    "contexto": "Un teatro de Ibagué tiene **15 filas**. La primera fila tiene **12 asientos** y cada fila siguiente tiene **2 asientos más** que la anterior. El administrador necesita el número total de asientos para imprimir la boletería.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos asientos tiene el teatro en total?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "780 asientos",
+        "correcta": false,
+        "explicacion": "No responde. 780 = 15 × (12 + 40) es la suma de todas las parejas fila 1 + fila 15, fila 2 + fila 14, etc., pero cada pareja se contó dos veces; falta dividir entre 2 para obtener 390.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó n × (primero + último) y olvidó dividir entre 2."
+      },
+      {
+        "clave": "B",
+        "texto": "390 asientos",
+        "correcta": true,
+        "explicacion": "Es la correcta. La fila 15 tiene 12 + 14 × 2 = 40 asientos. La suma de una progresión aritmética es n × (primero + último) ÷ 2 = 15 × (12 + 40) ÷ 2 = 15 × 26 = 390 asientos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "600 asientos",
+        "correcta": false,
+        "explicacion": "No responde. 600 = 15 × 40 supone que las 15 filas tienen 40 asientos, el tamaño de la última; las primeras filas son más pequeñas, así que el total real es menor.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó el número de filas por los asientos de la fila más grande."
+      },
+      {
+        "clave": "D",
+        "texto": "405 asientos",
+        "correcta": false,
+        "explicacion": "No responde. 405 = 15 × (12 + 42) ÷ 2 toma la fila 15 con 12 + 15 × 2 = 42 asientos, pero desde la fila 1 hasta la 15 hay 14 aumentos de 2, no 15: la última fila tiene 40 asientos.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Contó 15 incrementos en vez de 14 al calcular el último término."
+      }
+    ],
+    "explicacion": "LEER: 15 filas; la primera con 12 asientos; cada fila suma 2 más que la anterior. COMPRENDER: se pide el total de asientos, es decir, la suma 12 + 14 + 16 + … hasta la fila 15. INTERPRETAR: las cantidades forman una progresión aritmética con primer término 12 y diferencia 2. REPRESENTAR: último término a₁₅ = 12 + (15 − 1) × 2 = 40; suma S = n × (a₁ + a₁₅) ÷ 2. RAZONAR: al emparejar la fila 1 con la 15, la 2 con la 14, etc., cada pareja suma 12 + 40 = 52; hay 15 ÷ 2 = 7,5 parejas, así que S = 7,5 × 52. RESOLVER: S = 15 × 52 ÷ 2 = 390 asientos. VERIFICAR: el promedio de asientos por fila es (12 + 40) ÷ 2 = 26, y 26 × 15 = 390; además la fila central (la 8.ª) tiene 12 + 7 × 2 = 26 asientos, igual al promedio, como corresponde a una progresión aritmética.",
+    "que_identificar": "El primer término (12), la diferencia constante (2) y el número de filas (15), que determina 14 incrementos.",
+    "que_revisar": "Progresiones aritméticas: término general y suma de los primeros n términos.",
+    "refuerzo_ids": [
+      "MAT-019",
+      "MAT-052"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "sucesiones",
+      "progresion_aritmetica",
+      "suma",
+      "teatro"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-151",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Cuartiles y rango intercuartílico",
+    "subtema": "Comparar la dispersión del 50 % central de dos grupos con el rango intercuartílico (Q3 − Q1) a partir de un resumen de cinco números",
+    "dificultad": 2,
+    "contexto": "Un banco de Bucaramanga midió el **tiempo de espera** (en minutos) de sus clientes en dos sedes durante una semana y presentó un resumen con el mínimo, el primer cuartil (Q1), la mediana, el tercer cuartil (Q3) y el máximo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resumen de tiempos de espera (minutos)",
+      "columnas": [
+        "Sede",
+        "Mínimo",
+        "Q1",
+        "Mediana",
+        "Q3",
+        "Máximo"
+      ],
+      "filas": [
+        [
+          "Centro",
+          2,
+          5,
+          8,
+          12,
+          30
+        ],
+        [
+          "Norte",
+          4,
+          7,
+          9,
+          10,
+          14
+        ]
+      ],
+      "nota": "Entre Q1 y Q3 se encuentra el 50 % central de los datos."
+    },
+    "enunciado": "Al comparar las dos sedes con el rango intercuartílico (Q3 − Q1), ¿cuál afirmación es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En la sede Centro el 50 % central espera entre 2 y 30 minutos, un rango de 28 minutos, mucho mayor que en la sede Norte.",
+        "correcta": false,
+        "explicacion": "No es correcta. 2 y 30 son el mínimo y el máximo de la sede Centro, no Q1 y Q3; el 50 % central está entre 5 y 12 minutos. Los 28 minutos son el rango total, que incluye los casos extremos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó las columnas de mínimo y máximo en lugar de las de los cuartiles."
+      },
+      {
+        "clave": "B",
+        "texto": "La sede Norte tiene mayor dispersión central, porque su mediana (9 minutos) es mayor que la de la sede Centro (8 minutos).",
+        "correcta": false,
+        "explicacion": "No es correcta. La mediana indica el centro de los datos, no su dispersión; que la mediana de Norte sea mayor dice que la espera típica es un poco más larga, no que los tiempos estén más repartidos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una medida de posición (mediana) con una medida de dispersión."
+      },
+      {
+        "clave": "C",
+        "texto": "Los tiempos de la sede Centro son más homogéneos, porque su rango intercuartílico (7 minutos) es mayor que el de la sede Norte (3 minutos).",
+        "correcta": false,
+        "explicacion": "No es correcta. Los valores 7 y 3 están bien calculados, pero un rango intercuartílico mayor indica datos más dispersos, no más homogéneos; la conclusión invierte el significado de la medida.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó bien, pero interpretó al revés qué significa un rango intercuartílico grande."
+      },
+      {
+        "clave": "D",
+        "texto": "El 50 % central de los tiempos está menos disperso en la sede Norte (10 − 7 = 3 minutos) que en la sede Centro (12 − 5 = 7 minutos).",
+        "correcta": true,
+        "explicacion": "Es la correcta. Rango intercuartílico: Centro 12 − 5 = 7 minutos; Norte 10 − 7 = 3 minutos. Como la medida es menor en Norte, allí la mitad central de los clientes tiene tiempos de espera más parecidos entre sí.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da, para cada sede, mínimo, Q1, mediana, Q3 y máximo; Centro: 2, 5, 8, 12, 30; Norte: 4, 7, 9, 10, 14. COMPRENDER: se pide comparar la dispersión usando Q3 − Q1. INTERPRETAR: entre Q1 y Q3 está el 50 % central de los datos; cuanto menor sea esa distancia, más concentrados están los tiempos típicos. REPRESENTAR: RIC Centro = 12 − 5; RIC Norte = 10 − 7. RAZONAR: el rango intercuartílico no usa el mínimo ni el máximo, por lo que no lo afectan los casos extremos como el de 30 minutos. RESOLVER: RIC Centro = 7 minutos; RIC Norte = 3 minutos; la sede Norte tiene el 50 % central menos disperso. VERIFICAR: el rango total también es menor en Norte (14 − 4 = 10 frente a 30 − 2 = 28), lo que es coherente con la conclusión, aunque la pregunta se refiere específicamente al rango intercuartílico.",
+    "que_identificar": "Las columnas Q1 y Q3 de cada sede (5 y 12; 7 y 10) y la nota de que entre ellas está el 50 % central.",
+    "que_revisar": "Cuartiles, rango intercuartílico y su interpretación como medida de dispersión; diferencia entre posición y dispersión.",
+    "refuerzo_ids": [
+      "MAT-134",
+      "MAT-038"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "tablas",
+      "cuartiles",
+      "dispersion",
+      "rango_intercuartilico",
+      "servicios"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-152",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Ángulos entre rectas paralelas cortadas por una secante",
+    "subtema": "Ángulos suplementarios y correspondientes que forma una avenida diagonal al cruzar dos calles paralelas",
+    "dificultad": 1,
+    "contexto": "En Bogotá, la Calle 10 y la Calle 11 son **paralelas**. Una avenida diagonal las cruza. En el cruce con la Calle 10, el **ángulo agudo** entre la avenida y la calle mide **65°**.",
+    "estimulo": null,
+    "enunciado": "¿Cuánto mide el ángulo obtuso que forma la avenida con la Calle 11?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "65°",
+        "correcta": false,
+        "explicacion": "No responde. 65° es la medida del ángulo agudo: por ser las calles paralelas, el agudo se repite en la Calle 11 (ángulos correspondientes), pero la pregunta pide el ángulo obtuso, que es su suplemento.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trasladó el ángulo igual a la otra paralela sin notar que se pedía el ángulo obtuso."
+      },
+      {
+        "clave": "B",
+        "texto": "25°",
+        "correcta": false,
+        "explicacion": "No responde. 25° = 90° − 65° es el complemento del ángulo agudo, pero en una esquina el agudo y el obtuso forman un ángulo llano (180°), no un ángulo recto; además 25° no es un ángulo obtuso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Restó de 90° en lugar de 180°, confundiendo complementario con suplementario."
+      },
+      {
+        "clave": "C",
+        "texto": "115°",
+        "correcta": true,
+        "explicacion": "Es la correcta. En el cruce con la Calle 10 el agudo (65°) y el obtuso suman 180°, así que el obtuso mide 115°. Como las calles son paralelas, la avenida forma los mismos ángulos en la Calle 11: el obtuso también mide 115°.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "130°",
+        "correcta": false,
+        "explicacion": "No responde. 130° = 2 × 65° duplica el ángulo agudo, pero no hay ninguna relación geométrica que indique que el obtuso sea el doble del agudo; ambos deben sumar 180°, y 65° + 130° = 195°.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que el ángulo obtuso es el doble del agudo o sumó mal los ángulos del cruce."
+      }
+    ],
+    "explicacion": "LEER: dos calles paralelas cruzadas por una avenida; el ángulo agudo en la Calle 10 mide 65°. COMPRENDER: se pide el ángulo obtuso entre la avenida y la Calle 11. INTERPRETAR: en cualquier cruce de dos rectas, los ángulos adyacentes suman 180°; y cuando una recta cruza dos paralelas, los ángulos que forma con una se repiten en la otra. REPRESENTAR: obtuso en Calle 10 = 180° − 65°; obtuso en Calle 11 = obtuso en Calle 10 (correspondientes). RAZONAR: basta calcular el suplemento del agudo y trasladarlo a la otra paralela. RESOLVER: 180° − 65° = 115°. VERIFICAR: 115° es mayor que 90°, así que es obtuso, y 65° + 115° = 180°, como corresponde a dos ángulos adyacentes en un cruce.",
+    "que_identificar": "Que las calles son paralelas y que el ángulo dado (65°) es el agudo del cruce.",
+    "que_revisar": "Ángulos suplementarios; ángulos correspondientes y alternos entre paralelas cortadas por una secante.",
+    "refuerzo_ids": [
+      "MAT-117",
+      "MAT-035"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "angulos",
+      "paralelas",
+      "secante",
+      "suplementarios",
+      "ciudad"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-153",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "razonar",
+    "tema": "Promedio de velocidades",
+    "subtema": "La velocidad media de un viaje de ida y vuelta no es el promedio simple de las velocidades, porque el tramo lento dura más tiempo",
+    "dificultad": 3,
+    "contexto": "Un conductor viaja de Medellín a Rionegro a **60 km/h** y regresa por la misma ruta a **40 km/h**. Al llegar afirma: *\"Mi velocidad media en todo el recorrido fue de 50 km/h, el promedio de 60 y 40\"*.",
+    "estimulo": null,
+    "enunciado": "¿Es válida la afirmación del conductor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí; la velocidad media es el promedio de las velocidades, (60 + 40) ÷ 2 = 50 km/h, porque recorrió la misma distancia a cada velocidad.",
+        "correcta": false,
+        "explicacion": "No es válida. Promediar velocidades solo funciona cuando se viaja el mismo tiempo a cada una. Aquí la distancia es la misma, pero a 40 km/h se tarda más, así que esa velocidad pesa más en la media y el resultado es menor que 50.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Promedió las velocidades sin considerar que el tramo lento consume más tiempo."
+      },
+      {
+        "clave": "B",
+        "texto": "No; si la ruta mide d km, el tiempo total es d/60 + d/40 = d/24 horas para 2d km, lo que da 2d ÷ (d/24) = 48 km/h.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Velocidad media = distancia total ÷ tiempo total. Con una ruta de d km: tiempo = d/60 + d/40 = 2d/120 + 3d/120 = 5d/120 = d/24 h; distancia = 2d; media = 2d ÷ (d/24) = 48 km/h, menor que 50 porque el regreso lento duró más.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No; la velocidad media es 24 km/h, porque la suma de tiempos d/60 + d/40 = d/24 indica que recorre 24 km por cada hora de viaje.",
+        "correcta": false,
+        "explicacion": "No es válida esa corrección. d/24 es el tiempo total en horas, no una velocidad; la distancia recorrida en ese tiempo es 2d (ida y vuelta), así que la velocidad media es 2d ÷ (d/24) = 48 km/h, el doble de 24.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó bien el tiempo total pero olvidó que la distancia total es el doble de la ruta."
+      },
+      {
+        "clave": "D",
+        "texto": "Sí; como la ida y la vuelta duran lo mismo, los dos tramos pesan igual y el promedio simple de 60 y 40 es exacto: 50 km/h.",
+        "correcta": false,
+        "explicacion": "No es válida. La ida y la vuelta no duran lo mismo: a 60 km/h un tramo de 120 km toma 2 h y a 40 km/h toma 3 h. Como el tiempo a 40 km/h es mayor, esa velocidad pesa más y la media baja a 48 km/h.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Partió de una premisa falsa (tiempos iguales) porque confundió igual distancia con igual duración."
+      }
+    ],
+    "explicacion": "LEER: ida a 60 km/h, regreso a 40 km/h por la misma ruta; el conductor afirma una media de 50 km/h. COMPRENDER: hay que validar si el promedio simple de las velocidades es la velocidad media. INTERPRETAR: la velocidad media es distancia total entre tiempo total; el promedio simple solo coincide con ella si cada velocidad se mantiene durante el mismo tiempo, no la misma distancia. REPRESENTAR: ruta de d km; tiempo total = d/60 + d/40; distancia total = 2d. RAZONAR: d/60 + d/40 = (2d + 3d)/120 = 5d/120 = d/24 h; el tramo lento ocupa 3/5 del tiempo total. RESOLVER: velocidad media = 2d ÷ (d/24) = 48 km/h; la afirmación de 50 km/h no es válida. VERIFICAR: con d = 120 km, ida 2 h y vuelta 3 h: 240 km en 5 h = 48 km/h, el mismo resultado sin importar la distancia elegida.",
+    "que_identificar": "Que la distancia de ida y vuelta es la misma y que las velocidades son distintas, lo que implica tiempos distintos.",
+    "que_revisar": "Velocidad media como distancia total sobre tiempo total; por qué no se promedian velocidades cuando los tiempos difieren.",
+    "refuerzo_ids": [
+      "MAT-124",
+      "MAT-028"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "velocidad",
+      "promedio",
+      "fracciones",
+      "argumentacion",
+      "transporte"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-154",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "comprender",
+    "tema": "Contenencia de conjuntos",
+    "subtema": "Cuando un conjunto está contenido en otro, la unión es el conjunto mayor y no se suman los tamaños",
+    "dificultad": 1,
+    "contexto": "Un colegio de Neiva tiene **120 estudiantes** matriculados en grado once y dos clubes extracurriculares. El coordinador aclara que **todos los integrantes del club de lectura también están inscritos en el club de deportes**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Inscripciones en clubes",
+      "columnas": [
+        "Club",
+        "Integrantes"
+      ],
+      "filas": [
+        [
+          "Deportes",
+          50
+        ],
+        [
+          "Lectura",
+          30
+        ]
+      ],
+      "nota": "Todos los del club de lectura pertenecen también al club de deportes."
+    },
+    "enunciado": "¿Cuántos estudiantes de grado once están inscritos en al menos uno de los dos clubes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "50 estudiantes",
+        "correcta": true,
+        "explicacion": "Es la correcta. Como el club de lectura está contenido en el de deportes, los 30 lectores ya están contados entre los 50 deportistas. Estar en al menos un club equivale a estar en deportes: 50 estudiantes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "80 estudiantes",
+        "correcta": false,
+        "explicacion": "No responde. 80 = 50 + 30 cuenta dos veces a los 30 del club de lectura, que también están en deportes según la nota de la tabla; al sumar sin descontar la parte común se infla el total.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los integrantes de ambos clubes sin tener en cuenta que un grupo está contenido en el otro."
+      },
+      {
+        "clave": "C",
+        "texto": "20 estudiantes",
+        "correcta": false,
+        "explicacion": "No responde. 20 = 50 − 30 son los deportistas que no están en lectura, es decir, los que pertenecen solo a un club; la pregunta incluye también a quienes están en los dos clubes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"al menos uno\" como \"exactamente uno\" y restó los que están en ambos."
+      },
+      {
+        "clave": "D",
+        "texto": "70 estudiantes",
+        "correcta": false,
+        "explicacion": "No responde. 70 = 120 − 50 es el número de estudiantes que no están en ningún club. La pregunta pide el complemento: los que sí participan en alguno, que son 50.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó los que no están en ningún club en lugar de los que están en alguno."
+      }
+    ],
+    "explicacion": "LEER: 120 estudiantes; deportes 50; lectura 30; todos los de lectura están en deportes. COMPRENDER: se pide cuántos están en al menos un club, es decir, en la unión de los dos conjuntos. INTERPRETAR: la nota indica contenencia: lectura es un subconjunto de deportes, así que no hay nadie que esté en lectura sin estar en deportes. REPRESENTAR: unión = deportes ∪ lectura = deportes, porque lectura ⊂ deportes; en la fórmula general, 50 + 30 − 30 = 50. RAZONAR: la intersección es todo el club de lectura (30), de modo que al sumar 50 + 30 hay que descontar esos 30. RESOLVER: 50 estudiantes están en al menos un club. VERIFICAR: 50 en algún club + 70 en ninguno = 120 matriculados; y dentro de los 50 hay 30 en ambos clubes y 20 solo en deportes, 30 + 20 = 50.",
+    "que_identificar": "La nota de que todo el club de lectura está dentro del de deportes, y los tamaños 50 y 30.",
+    "que_revisar": "Contenencia, unión e intersección de conjuntos; evitar el doble conteo.",
+    "refuerzo_ids": [
+      "MAT-139",
+      "MAT-025"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "conjuntos",
+      "contenencia",
+      "union",
+      "tablas",
+      "clubes"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-155",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Área entre figuras (región sombreada)",
+    "subtema": "Área de un cuadrado menos el área del círculo inscrito; el radio es la mitad del lado",
+    "dificultad": 3,
+    "contexto": "Una plaza cuadrada de **20 m de lado** en Popayán tendrá en el centro una fuente **circular que toca los cuatro lados** de la plaza. El resto de la plaza se cubrirá con adoquín. Para el presupuesto se usa **π ≈ 3,14**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es, aproximadamente, el área que se cubrirá con adoquín?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "856 m²",
+        "correcta": false,
+        "explicacion": "No responde. 856 = 3,14 × 20² − 400 toma el diámetro (20 m) como radio y además resta el cuadrado al círculo. Un círculo que cabe dentro del cuadrado no puede tener más área que él; el radio es 10 m.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el diámetro en lugar del radio en πr² y restó en el orden equivocado."
+      },
+      {
+        "clave": "B",
+        "texto": "314 m²",
+        "correcta": false,
+        "explicacion": "No responde. 314 = 3,14 × 10² es el área de la fuente circular, no la del adoquín. La pregunta pide la parte de la plaza que queda fuera de la fuente: 400 − 314.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el área del círculo y la reportó sin restarla del cuadrado."
+      },
+      {
+        "clave": "C",
+        "texto": "86 m²",
+        "correcta": true,
+        "explicacion": "Es la correcta. La fuente toca los cuatro lados, así que su diámetro es 20 m y su radio 10 m. Área del cuadrado: 20² = 400 m²; área del círculo: 3,14 × 10² = 314 m²; adoquín: 400 − 314 = 86 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "337,2 m²",
+        "correcta": false,
+        "explicacion": "No responde. 337,2 = 400 − 3,14 × 20 resta la longitud de la circunferencia (2πr = 62,8 m), que es una medida de longitud, no de área; el área del círculo es πr² = 314 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la fórmula de la circunferencia con la del área del círculo."
+      }
+    ],
+    "explicacion": "LEER: plaza cuadrada de lado 20 m; fuente circular que toca los cuatro lados; π ≈ 3,14. COMPRENDER: se pide el área de la plaza que no ocupa la fuente. INTERPRETAR: si el círculo toca los cuatro lados, su diámetro es igual al lado del cuadrado, 20 m, y su radio es 10 m. REPRESENTAR: área adoquín = lado² − π r² = 20² − 3,14 × 10². RAZONAR: el área buscada es una diferencia de áreas, y el círculo inscrito ocupa aproximadamente el 78,5 % del cuadrado (π/4), así que debe quedar algo más del 20 % para el adoquín. RESOLVER: 400 − 314 = 86 m². VERIFICAR: 86 ÷ 400 = 0,215, es decir, el 21,5 % de la plaza, coherente con el 100 % − 78,5 % esperado para las esquinas que quedan fuera del círculo.",
+    "que_identificar": "Que el círculo toca los cuatro lados (diámetro = 20 m, radio = 10 m) y que se pide la diferencia de áreas.",
+    "que_revisar": "Área del cuadrado y del círculo; relación entre diámetro y radio; áreas de regiones compuestas por diferencia.",
+    "refuerzo_ids": [
+      "MAT-021",
+      "MAT-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "area",
+      "circulo",
+      "cuadrado",
+      "region_sombreada",
+      "plaza"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-156",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Traducción de enunciados a ecuaciones",
+    "subtema": "Expresar una razón 2:3 entre dos cantidades como una ecuación en una variable, con el total conocido",
+    "dificultad": 2,
+    "contexto": "En un vivero de Fusagasugá hay plantas de café y de plátano. Por **cada 2 plantas de café hay 3 de plátano**, y en total hay **450 plantas**. Se quiere hallar el número de plantas de café, que se representa con la letra **c**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál ecuación permite hallar el número de plantas de café?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "c + 3c = 450",
+        "correcta": false,
+        "explicacion": "No representa la situación. 3c supone que hay tres plantas de plátano por cada planta de café, pero la razón es 3 de plátano por cada 2 de café, es decir, 3/2 de c; con esta ecuación resultaría c = 112,5, que ni siquiera es entero.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"por cada 2 café hay 3 plátano\" como \"hay 3 plátano por cada café\"."
+      },
+      {
+        "clave": "B",
+        "texto": "2c + 3c = 450",
+        "correcta": false,
+        "explicacion": "No representa la situación. Aquí 2c sería el café y 3c el plátano, pero la variable c ya es el número de plantas de café, así que el café no puede ser 2c; esta ecuación da c = 90, y 90 plantas de café con 135 de plátano no suman 450.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó los números de la razón como coeficientes sin respetar que c es el total de café."
+      },
+      {
+        "clave": "C",
+        "texto": "c + 2c/3 = 450",
+        "correcta": false,
+        "explicacion": "No representa la situación. 2c/3 corresponde a 2 de plátano por cada 3 de café, la razón invertida; con ella habría menos plátano que café, al contrario del enunciado.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la razón al escribir la cantidad de plátano en función del café."
+      },
+      {
+        "clave": "D",
+        "texto": "c + 3c/2 = 450",
+        "correcta": true,
+        "explicacion": "Es la correcta. Si por cada 2 plantas de café hay 3 de plátano, el plátano es 3/2 del café: plátano = 3c/2. Café más plátano da el total: c + 3c/2 = 450, de donde c = 180 y plátano = 270.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: razón café : plátano = 2 : 3; total 450 plantas; c = número de plantas de café. COMPRENDER: se pide la ecuación, no el valor; hay que expresar el plátano en términos de c. INTERPRETAR: \"por cada 2 de café hay 3 de plátano\" significa que el plátano es 3/2 veces el café. REPRESENTAR: plátano = (3/2) c = 3c/2; café + plátano = total: c + 3c/2 = 450. RAZONAR: la ecuación debe dar un valor entero y una razón 2:3 al resolverse; c + 3c/2 = 5c/2 = 450 lleva a c = 180. RESOLVER: la ecuación correcta es c + 3c/2 = 450. VERIFICAR: con c = 180, plátano = 270; 180 + 270 = 450 y 180 : 270 = 2 : 3, como dice el enunciado.",
+    "que_identificar": "La dirección de la razón (2 de café por 3 de plátano), el total (450) y qué representa c.",
+    "que_revisar": "Traducción de razones a expresiones algebraicas; planteamiento de ecuaciones lineales a partir de un enunciado.",
+    "refuerzo_ids": [
+      "MAT-132",
+      "MAT-016"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "ecuaciones",
+      "razones",
+      "representacion",
+      "agricultura"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-157",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "razonar",
+    "tema": "Selección aleatoria frente a tamaño de la muestra",
+    "subtema": "Una muestra pequeña elegida al azar de toda la población es preferible a una muestra grande tomada de un grupo con intereses particulares",
+    "dificultad": 3,
+    "contexto": "La alcaldía de Popayán quiere conocer la **opinión de todos sus habitantes** sobre ampliar la red de ciclorrutas. Tres funcionarios proponen maneras distintas de hacer la encuesta.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Propuestas de encuesta",
+      "columnas": [
+        "Propuesta",
+        "A quién se encuesta",
+        "Personas"
+      ],
+      "filas": [
+        [
+          "Primera",
+          "Usuarios de la aplicación de bicicletas compartidas",
+          "2 000"
+        ],
+        [
+          "Segunda",
+          "Personas elegidas al azar del censo de habitantes",
+          "400"
+        ],
+        [
+          "Tercera",
+          "Quienes respondan un formulario en la página web de la alcaldía",
+          "5 000"
+        ]
+      ]
+    },
+    "enunciado": "¿Cuál propuesta permite generalizar mejor los resultados a todos los habitantes y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La tercera, porque tiene la muestra más grande y, con más respuestas, el resultado siempre se acerca más a la opinión de toda la ciudad.",
+        "correcta": false,
+        "explicacion": "No es la mejor. El tamaño no corrige el sesgo: quienes entran a la página de la alcaldía y deciden responder tienen más interés en el tema que el habitante promedio, así que 5 000 respuestas pueden estar sistemáticamente desviadas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Creyó que una muestra grande compensa el hecho de que las personas se autoseleccionan."
+      },
+      {
+        "clave": "B",
+        "texto": "La primera, porque los usuarios de bicicleta conocen el tema y sus respuestas son más informadas que las de cualquier otro grupo.",
+        "correcta": false,
+        "explicacion": "No es la mejor. Que un grupo conozca el tema no lo hace representativo: los usuarios de bicicleta tienen un interés directo en más ciclorrutas, y su opinión no refleja la de quienes no usan bicicleta, que también son habitantes.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió estar informado con ser representativo de la población."
+      },
+      {
+        "clave": "C",
+        "texto": "La segunda, porque elegir al azar entre todos los habitantes evita que el grupo encuestado tenga una opinión sistemáticamente distinta de la población.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La selección aleatoria del censo da a cada habitante la misma oportunidad de ser encuestado, de modo que la muestra, aunque sea de 400 personas, refleja la mezcla real de ciclistas y no ciclistas; eso es lo que permite generalizar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La primera y la tercera juntas, porque al sumar 7 000 respuestas de dos fuentes distintas se compensan los sesgos de cada grupo.",
+        "correcta": false,
+        "explicacion": "No es la mejor. Juntar dos muestras sesgadas en la misma dirección (personas interesadas en el tema) no produce una muestra representativa; el sesgo se mantiene y el tamaño solo da una falsa sensación de precisión.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que sesgos de distinto origen se anulan al combinar las muestras."
+      }
+    ],
+    "explicacion": "LEER: tres propuestas: 2 000 usuarios de una app de bicicletas, 400 personas al azar del censo y 5 000 voluntarios en la web. COMPRENDER: se pide cuál permite generalizar a todos los habitantes. INTERPRETAR: generalizar exige una muestra representativa, y eso depende de cómo se eligen las personas, no solo de cuántas son. REPRESENTAR: representativa = cada habitante tiene la misma probabilidad de ser elegido; voluntarios o usuarios interesados = sesgo de selección. RAZONAR: la primera y la tercera encuestan a grupos interesados en las ciclorrutas, así que se desvían sin importar el tamaño; la segunda usa el azar sobre el censo. RESOLVER: la segunda propuesta es la adecuada. VERIFICAR: si el 20 % de la ciudad usa bicicleta, una muestra aleatoria de 400 tendría cerca de 80 ciclistas, mientras que la primera tendría 100 %: solo la aleatoria conserva la proporción real.",
+    "que_identificar": "Cómo se elige a las personas en cada propuesta (usuarios interesados, azar del censo, voluntarios en la web) y no solo el número de encuestados.",
+    "que_revisar": "Población y muestra; muestreo aleatorio; sesgo de selección y autoselección; por qué el tamaño no corrige el sesgo.",
+    "refuerzo_ids": [
+      "MAT-040",
+      "MAT-098"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "tablas",
+      "muestreo",
+      "sesgo",
+      "encuestas",
+      "argumentacion",
+      "ciudad"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-158",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Fracciones de un total",
+    "subtema": "Restar de un total las partes expresadas como fracciones con distinto denominador (1/3 y 1/4 de 24 horas)",
+    "dificultad": 1,
+    "contexto": "Un estudiante de Montería organiza su día de **24 horas**: dedica **1/3 del día a dormir** y **1/4 del día al colegio**. El resto lo reparte entre tareas, comidas y tiempo libre.",
+    "estimulo": null,
+    "enunciado": "¿Cuántas horas del día le quedan después de dormir y asistir al colegio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "10 horas",
+        "correcta": true,
+        "explicacion": "Es la correcta. Dormir: 24 ÷ 3 = 8 horas; colegio: 24 ÷ 4 = 6 horas. Quedan 24 − 8 − 6 = 10 horas. Equivalentemente, 1/3 + 1/4 = 7/12 del día, y el resto es 5/12 × 24 = 10 horas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "14 horas",
+        "correcta": false,
+        "explicacion": "No responde. 14 = 8 + 6 es el tiempo que ocupa dormir y asistir al colegio (7/12 del día), no el tiempo que queda; la pregunta pide el resto: 24 − 14 = 10 horas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el tiempo ocupado en vez del tiempo restante."
+      },
+      {
+        "clave": "C",
+        "texto": "16 horas",
+        "correcta": false,
+        "explicacion": "No responde. 16 = 24 − 8 descuenta únicamente las horas de sueño; faltan las 6 horas de colegio (1/4 de 24), que también deben restarse.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Restó solo una de las dos fracciones del día."
+      },
+      {
+        "clave": "D",
+        "texto": "12 horas",
+        "correcta": false,
+        "explicacion": "No responde. 12 horas resulta de suponer que 1/3 + 1/4 = 1/2 del día. En realidad 1/3 + 1/4 = 4/12 + 3/12 = 7/12, que son 14 horas, y quedan 10.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó las fracciones de forma incorrecta (como si 1/3 + 1/4 fuera 1/2)."
+      }
+    ],
+    "explicacion": "LEER: día de 24 horas; 1/3 para dormir y 1/4 para el colegio. COMPRENDER: se pide el tiempo que queda después de esas dos actividades. INTERPRETAR: cada fracción se aplica al mismo total de 24 horas, y luego se resta del total. REPRESENTAR: restante = 24 − 24/3 − 24/4, o bien 24 × (1 − 1/3 − 1/4). RAZONAR: 1/3 + 1/4 necesita denominador común 12: 4/12 + 3/12 = 7/12; el resto del día es 5/12. RESOLVER: 24/3 = 8 h, 24/4 = 6 h, 24 − 8 − 6 = 10 horas; también 5/12 × 24 = 10. VERIFICAR: 8 + 6 + 10 = 24 horas, el día completo; y 10/24 = 5/12, que coincide con 1 − 7/12.",
+    "que_identificar": "Que ambas fracciones se refieren al mismo total (24 h) y que se pide lo que queda, no lo ocupado.",
+    "que_revisar": "Fracción de una cantidad; suma de fracciones con distinto denominador; complemento de una fracción respecto a la unidad.",
+    "refuerzo_ids": [
+      "MAT-032",
+      "MAT-002"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "fracciones",
+      "tiempo",
+      "rutina",
+      "operaciones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-159",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Caras, aristas y vértices de poliedros",
+    "subtema": "Reconocer en una tabla la relación caras + vértices − aristas = 2 y usarla para completar un dato faltante",
+    "dificultad": 2,
+    "contexto": "En una clase de geometría en Pereira, los estudiantes contaron las **caras, los vértices y las aristas** de varios sólidos y registraron los datos en una tabla. Para el prisma hexagonal contaron caras y vértices, pero no alcanzaron a contar las aristas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Elementos de algunos poliedros",
+      "columnas": [
+        "Poliedro",
+        "Caras",
+        "Vértices",
+        "Aristas"
+      ],
+      "filas": [
+        [
+          "Cubo",
+          6,
+          8,
+          12
+        ],
+        [
+          "Pirámide de base cuadrada",
+          5,
+          5,
+          8
+        ],
+        [
+          "Prisma de base triangular",
+          5,
+          6,
+          9
+        ],
+        [
+          "Prisma de base hexagonal",
+          8,
+          12,
+          "?"
+        ]
+      ]
+    },
+    "enunciado": "Según la regularidad que cumplen los tres primeros poliedros, ¿cuántas aristas tiene el prisma de base hexagonal?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "22 aristas",
+        "correcta": false,
+        "explicacion": "No responde. 22 = 8 + 12 + 2 aplica la relación con el signo cambiado. En los tres primeros sólidos se cumple caras + vértices = aristas + 2 (6 + 8 = 12 + 2; 5 + 5 = 8 + 2; 5 + 6 = 9 + 2), así que aristas = 8 + 12 − 2.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó 2 en lugar de restarlo al aplicar la relación entre caras, vértices y aristas."
+      },
+      {
+        "clave": "B",
+        "texto": "20 aristas",
+        "correcta": false,
+        "explicacion": "No responde. 20 = 8 + 12 suma caras y vértices sin el ajuste de 2 que muestran las otras filas: en el cubo, 6 + 8 = 14 no es igual a 12, sino a 12 + 2.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que las aristas son la suma de caras y vértices sin verificar con las filas conocidas."
+      },
+      {
+        "clave": "C",
+        "texto": "12 aristas",
+        "correcta": false,
+        "explicacion": "No responde. 12 cuenta solo las aristas de las dos bases hexagonales (6 + 6) y deja fuera las 6 aristas laterales que unen una base con la otra; además no cumple 8 + 12 − 12 = 8 ≠ 2.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Imaginó el sólido de forma incompleta o copió el número de vértices como si fuera el de aristas."
+      },
+      {
+        "clave": "D",
+        "texto": "18 aristas",
+        "correcta": true,
+        "explicacion": "Es la correcta. En las tres primeras filas, caras + vértices − aristas = 2 (6 + 8 − 12; 5 + 5 − 8; 5 + 6 − 9). Para el prisma hexagonal: 8 + 12 − aristas = 2, así que aristas = 18. Coincide con el conteo directo: 6 + 6 en las bases y 6 laterales.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da caras, vértices y aristas de un cubo (6, 8, 12), una pirámide cuadrada (5, 5, 8) y un prisma triangular (5, 6, 9); del prisma hexagonal se conocen 8 caras y 12 vértices. COMPRENDER: se pide el número de aristas usando la regularidad de las filas completas. INTERPRETAR: en cada fila, caras más vértices supera a las aristas en 2: 14 − 12, 10 − 8, 11 − 9. REPRESENTAR: C + V − A = 2, es decir, A = C + V − 2. RAZONAR: la relación se cumple en los tres sólidos conocidos, así que es razonable aplicarla al cuarto. RESOLVER: A = 8 + 12 − 2 = 18 aristas. VERIFICAR: contando directamente, un prisma hexagonal tiene dos bases de 6 aristas cada una y 6 aristas laterales: 6 + 6 + 6 = 18, igual al resultado.",
+    "que_identificar": "La relación constante C + V − A = 2 en las filas completas y los datos del prisma hexagonal (8 caras, 12 vértices).",
+    "que_revisar": "Elementos de un poliedro; fórmula de Euler (C + V − A = 2); reconocimiento de patrones en tablas.",
+    "refuerzo_ids": [
+      "MAT-094",
+      "MAT-062"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "poliedros",
+      "euler",
+      "tablas",
+      "patrones",
+      "solidos"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-160",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Perímetro fijo y área variable",
+    "subtema": "Rectángulos con el mismo perímetro pueden tener áreas distintas; la máxima se logra con el cuadrado",
+    "dificultad": 3,
+    "contexto": "Un agricultor de Sincelejo tiene **40 m de malla** para cercar un corral rectangular. Su vecino le dice: *\"No importa cómo lo hagas: si usas los 40 m completos, el corral siempre tendrá la misma área\"*.",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación refuta correctamente lo dicho por el vecino?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El vecino tiene razón: un corral de 18 m × 2 m y uno de 15 m × 5 m usan los mismos 40 m de malla y por eso ambos encierran 40 m².",
+        "correcta": false,
+        "explicacion": "No refuta: respalda el error y además calcula mal. Las áreas son 18 × 2 = 36 m² y 15 × 5 = 75 m², distintas entre sí y distintas de 40; el número 40 es la longitud de la malla (perímetro), no un área.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el perímetro (40 m) como si fuera el área de cada corral."
+      },
+      {
+        "clave": "B",
+        "texto": "Con 40 m de perímetro, 18 m × 2 m da 36 m², 15 m × 5 m da 75 m² y 10 m × 10 m da 100 m²; el área cambia con la forma y es máxima en el cuadrado.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los tres rectángulos tienen perímetro 2 × (18 + 2) = 2 × (15 + 5) = 2 × (10 + 10) = 40 m, pero sus áreas son 36, 75 y 100 m². Un solo contraejemplo basta para refutar la afirmación, y el cuadrado es la forma que más área encierra.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El vecino tiene razón, porque área y perímetro son proporcionales: al duplicar el perímetro se duplica el área, así que a 40 m le corresponde una única área.",
+        "correcta": false,
+        "explicacion": "No refuta: respalda el error con una relación falsa. El área no es proporcional al perímetro; por ejemplo, 18 m × 2 m y 10 m × 10 m tienen el mismo perímetro (40 m) y áreas de 36 m² y 100 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió una proporcionalidad entre perímetro y área que no existe."
+      },
+      {
+        "clave": "D",
+        "texto": "El vecino se equivoca, porque el área de un rectángulo de 40 m de perímetro es siempre 40 ÷ 4 = 10 m², sin importar sus lados.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. 40 ÷ 4 = 10 m es el lado del cuadrado de perímetro 40, no un área; y la afirmación de que el área es siempre la misma repite el error del vecino con otro número.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el lado del cuadrado con el área y mantuvo la idea de un área única."
+      }
+    ],
+    "explicacion": "LEER: 40 m de malla para un corral rectangular; el vecino afirma que el área será siempre la misma. COMPRENDER: hay que refutar la afirmación, es decir, mostrar que con el mismo perímetro pueden salir áreas distintas. INTERPRETAR: el perímetro fija la suma largo + ancho = 20 m, pero no el producto largo × ancho, que es el área. REPRESENTAR: si el largo es x, el ancho es 20 − x y el área es x(20 − x). RAZONAR: basta un contraejemplo con dos rectángulos de perímetro 40 y áreas distintas; el área x(20 − x) es una parábola con máximo en x = 10. RESOLVER: 18 × 2 = 36 m², 15 × 5 = 75 m², 10 × 10 = 100 m², todos con perímetro 40 m; la afirmación es falsa y el cuadrado da el área máxima. VERIFICAR: 2 × (18 + 2) = 40, 2 × (15 + 5) = 40 y 2 × (10 + 10) = 40, así que los tres usan exactamente la malla disponible.",
+    "que_identificar": "Que el dato fijo es el perímetro (40 m) y que la afirmación habla del área, una magnitud distinta.",
+    "que_revisar": "Relación entre perímetro y área de rectángulos; uso de contraejemplos para refutar; el cuadrado como rectángulo de área máxima para un perímetro dado.",
+    "refuerzo_ids": [
+      "MAT-012",
+      "MAT-058"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "perimetro",
+      "area",
+      "rectangulos",
+      "contraejemplo",
+      "argumentacion"
+    ],
+    "estado": "aprobada"
+  }
+]
