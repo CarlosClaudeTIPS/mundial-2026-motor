@@ -1,0 +1,618 @@
+[
+  {
+    "id": "udea",
+    "nombre": "Universidad de Antioquia",
+    "sigla": "UdeA",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "pública",
+    "sedes": ["Medellín", "Apartadó (Urabá)", "Caucasia (Bajo Cauca)", "Turbo", "Puerto Berrío (Magdalena Medio)", "Carmen de Viboral (Oriente)", "Santa Fe de Antioquia (Occidente)", "Andes (Suroeste)", "Amalfi (Nordeste)", "Segovia", "Yarumal (Norte)", "Sonsón"],
+    "web": "https://www.udea.edu.co",
+    "admisiones_url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado/calendario-guias-admision",
+    "uso_saber11": "examen_propio",
+    "uso_saber11_detalle": "Admite únicamente con su propio examen de admisión (dos pruebas: Competencia lectora y Razonamiento lógico, 80 preguntas en total, cada prueba vale 50 %, duración máxima 3 horas). El Saber 11 es requisito: hay que acreditar haberlo presentado, pero el Consejo Académico eliminó el puntaje mínimo y el resultado no cuenta para la selección. Los cupos se asignan en estricto orden descendente del puntaje total estandarizado; se puede inscribir una primera y una segunda opción de programa.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Leer la guía de inscripción vigente", "detalle": "Cada semestre la UdeA publica la 'Guía de inscripción para aspirantes nuevos' y la 'Guía técnica' (hay guías aparte para admisión especial, comunidades indígenas y NARP, Facultad de Artes y Licenciatura en Pedagogía de la Madre Tierra).", "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado/calendario-guias-admision" },
+      { "paso": "Diligenciar el formulario en línea y pagar", "detalle": "Ruta: udea.edu.co > Estudiar en la UdeA > Pregrado > Inscripción y pago. Se registra el código SNP/AC del Saber 11 (quienes cursan 11° en calendario A pueden inscribirse sin resultado; la UdeA lo valida con el ICFES). Se eligen primera y segunda opción, campus y modalidad de examen (presencial o virtual). Pago en línea o en banco.", "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado/inscripcion-pago" },
+      { "paso": "Descargar la constancia de inscripción definitiva", "detalle": "Tras el pago llega un correo; la constancia se descarga en 'Admisiones de Pregrado' con el documento de identidad." },
+      { "paso": "Registro biométrico (solo examen virtual)", "detalle": "Entre el cierre de inscripciones y el examen; la UdeA envía instrucciones por correo." },
+      { "paso": "Imprimir la credencial", "detalle": "Se habilita unos días antes del examen en 'Inscripción y pago'; sin credencial y documento de identidad no se puede ingresar al aula." },
+      { "paso": "Presentar el examen de admisión", "detalle": "Dos jornadas (dos días). Medicina solo puede presentarse de forma presencial en Medellín. Programas de Artes tienen pruebas específicas adicionales." },
+      { "paso": "Consultar resultados", "detalle": "En el portal, por documento de identidad; los admitidos continúan con la liquidación y matrícula.", "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado/inscripcion-pago" }
+    ],
+    "calendario": "Dos convocatorias al año. Convocatoria 2027-1: inscripciones del 14 de agosto al 18 de septiembre de 2026; registro biométrico 25-30 de septiembre; credenciales 14-22 de octubre; examen 26 y 27 de octubre de 2026; resultados 11 de noviembre de 2026. La convocatoria para segundo semestre suele abrir en febrero-marzo con examen en mayo.",
+    "costo_inscripcion": "$90.800 para programas del Campus Medellín y $28.200 para programas en regiones (convocatoria 2027-1). Hay aspirantes exentos de pago (víctimas, comunidades indígenas y NARP, entre otros).",
+    "becas_programas": [
+      "Admisión especial para comunidades indígenas y población negra, afrocolombiana, raizal y palenquera (cupos por programa, con aval de la comunidad)",
+      "Admisión especial para víctimas del conflicto, excombatientes y desmovilizados (exentos de pago)",
+      "Mejores bachilleres distinguidos por el ICFES (Decreto 644 de 2001): ingreso garantizado y exentos del examen",
+      "Aspirantes de municipios sin oferta de educación superior o de difícil acceso (Ley 1084 de 2006)",
+      "Deportistas con reconocimientos oficiales",
+      "Política de gratuidad en la matrícula (Gobierno Nacional) para estudiantes de estratos 1-3 / Sisbén IV"
+    ],
+    "notas": "Verificado en octubre de 2026 con la Guía de inscripción 2027-1 (V3). No existe puntaje mínimo de Saber 11 y el examen propio es el único criterio de selección. Las fechas y tarifas cambian cada semestre. Correo: procesoinscripcion@udea.edu.co.",
+    "fuentes": [
+      "https://www.udea.edu.co/wps/wcm/connect/udea/ed5f45da-003d-4db7-85c3-5f519cca3f74/Gu%C3%ADa+aspirantes+nuevos+2027-1+V3.pdf?MOD=AJPERES&CVID=q0UTesf",
+      "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado/calendario-guias-admision"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unal-medellin",
+    "nombre": "Universidad Nacional de Colombia - Sede Medellín",
+    "sigla": "UNAL Medellín",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "pública",
+    "sedes": ["Medellín", "Bogotá", "Manizales", "Palmira", "De La Paz", "Amazonia", "Caribe", "Orinoquia", "Tumaco"],
+    "web": "https://medellin.unal.edu.co",
+    "admisiones_url": "https://admisiones.unal.edu.co/pregrado/",
+    "uso_saber11": "examen_propio",
+    "uso_saber11_detalle": "La admisión regular se decide con la prueba de admisión propia de la UNAL (120 preguntas de opción múltiple: matemáticas, ciencias naturales, ciencias sociales, análisis textual y análisis de imagen). El Saber 11 es requisito legal para matricularse. Arquitectura, Artes Plásticas, Cine y Televisión, Música y Música Instrumental tienen pruebas específicas que se presentan en la sede que ofrece el programa (Bogotá o Medellín). Desde 2027-1 (Resolución 019 de 2026) los aspirantes de los programas de admisión especial PEAMA y PAET pueden ser evaluados con el resultado del Saber 11 en lugar del examen.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Consultar la normativa y la oferta de programas", "detalle": "Revisar programas con cupo en la sede Medellín (Administración, Arquitectura, Ingenierías, Ciencias, Zootecnia, Construcción, etc.) y los requisitos de PAES/PEAMA/PAET.", "url": "https://admisiones.unal.edu.co/pregrado/" },
+      { "paso": "Pagar los derechos de inscripción", "detalle": "Pago virtual desde el formulario o presencial. Los aspirantes PAES (indígenas, mejores bachilleres, municipios pobres, NARP, víctimas) tienen gratuidad en la inscripción.", "url": "https://admisiones.unal.edu.co/pregrado/guia-paso-a-paso/" },
+      { "paso": "Formalizar la inscripción por internet", "detalle": "Registrar datos personales y académicos, incluido el número de registro del Saber 11 (SNP/AC) cuando aplique; elegir sede y ciudad donde presentará la prueba." },
+      { "paso": "Consultar la citación y presentar la prueba de admisión", "detalle": "Un domingo, en la ciudad elegida. Los programas con prueba específica tienen fechas adicionales.", "url": "https://admisiones.unal.edu.co/pregrado/demostraciones-interactivas/" },
+      { "paso": "Consultar el puntaje e inscribir el programa curricular", "detalle": "Con el puntaje obtenido se inscribe el programa (una ventana de ~6 días); luego hay segunda y tercera asignación de cupos disponibles." },
+      { "paso": "Consultar resultados y enviar documentos", "detalle": "Los admitidos envían documentos a la División de Registro y Matrícula de la Sede Medellín y pagan sistematización.", "url": "https://registroymatricula.medellin.unal.edu.co" }
+    ],
+    "calendario": "Dos convocatorias al año. Convocatoria 2027-1: pago y formalización del 6 de julio al 24 de agosto de 2026 (el afiche inicial indicaba hasta el 19 de agosto); citación desde el 31 de agosto; prueba de admisión domingo 20 de septiembre de 2026; puntaje desde el 1 de octubre; inscripción de programa 1-6 de octubre; resultados desde el 9 de octubre; segunda asignación 15-22 de octubre; última asignación 9-13 de noviembre. La convocatoria para segundo semestre suele abrir en febrero con prueba en abril-mayo.",
+    "costo_inscripcion": "$175.000 (convocatoria 2027-1; US$87,5 desde el exterior). Gratuito para aspirantes de los Programas de Admisión Especial (PAES).",
+    "becas_programas": [
+      "PAES: comunidades indígenas, mejores bachilleres, mejores bachilleres de municipios pobres, población negra/afrocolombiana/palenquera/raizal, víctimas del conflicto armado",
+      "PEAMA: Programa Especial de Admisión y Movilidad Académica (Amazonia, Caribe, Orinoquia, Tumaco)",
+      "PAET: Programa de Admisión Especial con Enfoque Territorial (sedes Medellín, Palmira y Manizales)",
+      "Política de Inclusión Educativa para personas con discapacidad (ajustes razonables en la prueba)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 en admisiones.unal.edu.co (calendario 2027-01 y afiche). Las sedes Medellín y Manizales comparten el mismo proceso nacional. La prensa (julio de 2026) indica que la admisión con Saber 11 sin examen aplica a PEAMA/PAET, con énfasis en sedes de presencia nacional; verificar en la Resolución 019 de 2026 si cubre el PAET de Medellín.",
+    "fuentes": [
+      "https://admisiones.unal.edu.co/pregrado/",
+      "https://admisiones.unal.edu.co/fileadmin/ArchivosDNA/afiches/AI_Afiche_PREGRADO_2027-01_v5.pdf",
+      "https://admisiones.unal.edu.co/pregrado/guia-paso-a-paso/",
+      "https://www.publimetro.co/estilo-vida/2026/07/08/universidad-nacional-elimina-examen-de-admision-para-algunos-aspirantes-quienes-podran-entrar-con-el-saber-11/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "eafit",
+    "nombre": "Universidad EAFIT",
+    "sigla": "EAFIT",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "privada",
+    "sedes": ["Medellín", "Bogotá", "Pereira", "Llanogrande (Rionegro)"],
+    "web": "https://www.eafit.edu.co",
+    "admisiones_url": "https://www.eafit.edu.co/pregrados",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "Exige el resultado del Saber 11 (o el número de registro/código AC si aún no hay resultado) como documento de inscripción, junto con las notas de los dos últimos años de bachillerato, y decide la admisión con una entrevista. No publica puntaje mínimo de Saber 11 ni ponderación para la admisión general; sí hay puntajes mínimos para algunas becas (p. ej., Nutresa Acceso ≥ 300, Fundación Educación Suiza ≥ 345).",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Crear usuario y contraseña", "detalle": "Se crea el acceso institucional para entrar al formulario de inscripción (quienes ya tomaron cursos de Idiomas o Educación Continua pueden tener usuario).", "url": "https://www.eafit.edu.co/pregrados" },
+      { "paso": "Completar el formulario en Epik", "detalle": "Elegir programa y diligenciar datos personales y académicos." },
+      { "paso": "Pagar los derechos de inscripción", "detalle": "$224.300 COP (convocatoria 2027-1); pago en línea." },
+      { "paso": "Adjuntar documentos", "detalle": "Certificado de notas de los dos últimos años cursados y aprobados (grado 10 y 11, o 11 y 12 según el colegio), documento de identidad y resultado del Saber 11 o número de registro (código AC)." },
+      { "paso": "Presentar la entrevista", "detalle": "La citación llega al correo registrado. EAFIT evalúa el perfil en 'cortes' semanales y publica el resultado cinco días después de cada corte." },
+      { "paso": "Matrícula", "detalle": "Pago de matrícula e inicio de clases según el calendario (2027-1: pago hasta el 12 de enero, clases desde el 18 de enero de 2027)." }
+    ],
+    "calendario": "Inscripciones abiertas por programa según disponibilidad de cupos, con cortes semanales de evaluación. Para 2027-1: primer corte de entrevistas hasta el 4 de septiembre de 2026 (resultado 9 de septiembre) y así cada semana hasta el séptimo corte (entrevista hasta el 16 de octubre, resultado 21 de octubre de 2026). Para segundo semestre la ventana suele ir de marzo a junio.",
+    "costo_inscripcion": "$224.300 COP (pregrado 2027-1).",
+    "becas_programas": [
+      "Becas Talento EAFIT (postulación desde el 7 de septiembre de 2026 para 2027-1)",
+      "Becas Aliados: ANDI-EAFIT, Nutresa Acceso, Beca Tech-EAFIT, Fundación Educación Suiza-EAFIT, Deportistas de Alto Rendimiento (cubren entre 40 % y 100 % de la matrícula; varias exigen Saber 11 mínimo y estratos 1-3)",
+      "Beca Sapiencia mejores bachilleres de Medellín (Saber 11)",
+      "Sapiencia Becas mejores deportistas",
+      "Financiación directa y con entidades aliadas"
+    ],
+    "notas": "Verificado en octubre de 2026 en eafit.edu.co/pregrados y eafit.edu.co/becas-y-financiacion. EAFIT no publica puntaje mínimo de Saber 11 para la admisión general; la selección es por entrevista. El valor de inscripción corresponde a 2027-1.",
+    "fuentes": [
+      "https://www.eafit.edu.co/pregrados",
+      "https://www.eafit.edu.co/becas-y-financiacion"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "upb-medellin",
+    "nombre": "Universidad Pontificia Bolivariana",
+    "sigla": "UPB",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "privada",
+    "sedes": ["Medellín", "Bucaramanga", "Montería", "Palmira", "Bogotá"],
+    "web": "https://www.upb.edu.co",
+    "admisiones_url": "https://www.upb.edu.co/es/carrera-profesional",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El 'bachiller colombiano' debe haber presentado el Saber 11 (o su equivalente homologable) y lo adjunta en la inscripción, pero la admisión general se decide con una entrevista; para la mayoría de carreras no hay examen de admisión ni puntaje mínimo publicado. Medicina (Medellín) es la excepción: examen de admisión presencial propio (30 %) más componente de inglés (30 %) en la fase inicial (60 %); los 200 mejores pasan a entrevista (40 %).",
+    "puntaje_minimo": null,
+    "ponderacion": "Medicina Medellín: fase inicial 60 % (examen de admisión 30 % + componente de inglés 30 %) y entrevista 40 %; los primeros 200 puntajes de la fase inicial pasan a entrevista. Para las demás carreras no hay ponderación del Saber 11 publicada.",
+    "proceso": [
+      { "paso": "Crear Acceso ID y NIP", "detalle": "En el sistema de admisiones se crea un usuario de 9 caracteres y una clave numérica de 6 dígitos que solo sirven para el proceso de admisión.", "url": "https://www.upb.edu.co/es/paso-a-paso-general-pregrados-medellin" },
+      { "paso": "Diligenciar el formulario y pagar los derechos de admisión", "detalle": "Se eligen carrera y sede; el sistema genera el pago (internet o banco). Los derechos de admisión no son reembolsables." },
+      { "paso": "Adjuntar documentos", "detalle": "Documento de identidad, resultado del Saber 11 (o constancia de inscripción a la prueba), notas de los últimos dos años y, para Medicina, hoja de vida y certificados de actividades extracurriculares.", "url": "https://www.upb.edu.co/es/inscripciones-universidad-upb" },
+      { "paso": "Entrevista", "detalle": "La Facultad cita por correo o llamada (en Medellín: línea 448 83 88 ext. 13579) e indica fecha, hora, lugar y entrevistador. Medicina presenta antes el examen de admisión presencial." },
+      { "paso": "Resultado y matrícula", "detalle": "La Facultad comunica el resultado; el admitido recibe la liquidación de matrícula." }
+    ],
+    "calendario": "Inscripciones abiertas la mayor parte del año para cada semestre (primer semestre: julio-noviembre; segundo: enero-junio). Medicina Medellín 2027-1: inscripciones del 5 de agosto al 6 de octubre de 2026, examen presencial el 11 de octubre de 2026, llamados a segunda fase el 14 de octubre y entrevistas el 16 y 19 de octubre de 2026.",
+    "costo_inscripcion": "$245.800 (derechos de admisión 2026, sede Medellín). No reembolsables.",
+    "becas_programas": [
+      "Reglamento de becas y descuentos de la Sede Central (Medellín): becas por mérito, descuentos por hermanos, segundo pregrado y otros",
+      "Oferta de becas y convocatorias externas (upb.edu.co/es/oferta-becas-convocatorias-externas)",
+      "Asesoría vocacional gratuita (entrevista con psicología)"
+    ],
+    "notas": "Verificado en octubre de 2026 en upb.edu.co (pasos generales de pregrado Medellín, página de inscripciones de Medicina y 'Conoce qué necesitas antes de una inscripción'). La UPB no publica puntaje mínimo de Saber 11 para pregrado general; fechas exactas de cierre de inscripciones 2027-1 para las demás carreras no aparecen publicadas.",
+    "fuentes": [
+      "https://www.upb.edu.co/es/carrera-profesional",
+      "https://www.upb.edu.co/es/inscripciones-universidad-upb",
+      "https://www.upb.edu.co/es/inscripciones-carrera-medicina-medellin"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "udemedellin",
+    "nombre": "Universidad de Medellín",
+    "sigla": "UdeMedellín",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "privada",
+    "sedes": ["Medellín"],
+    "web": "https://udemedellin.edu.co",
+    "admisiones_url": "https://admisiones.udemedellin.edu.co",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El resultado del Saber 11 (PDF completo descargado del ICFES) es documento obligatorio del aspirante nuevo, pero la admisión se decide en una entrevista con un docente de la facultad (presencial o virtual por Teams). Según el Reglamento Académico (Acuerdo 75), los cupos sobrantes de un programa se asignan entre aceptados en entrevista en orden descendente del puntaje del examen de Estado. No publica puntaje mínimo.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Identificar el tipo de aspirante y diligenciar el formulario", "detalle": "Ruta: udemedellin.edu.co > Inscríbete ahora > Paso 1: Inscripción y admisión. Se ingresa con el documento de identidad, se crea contraseña y se elige el programa.", "url": "https://admisiones.udemedellin.edu.co" },
+      { "paso": "Pagar los derechos de inscripción", "detalle": "Liquidación generada al final del formulario: pago en línea (PSE, efectivo en una hora) o en banco aliado (hasta 2 días hábiles)." },
+      { "paso": "Consultar la citación a la entrevista", "detalle": "Tras el pago se consulta fecha, hora, lugar y docente. Quienes viven fuera del Valle de Aburrá pueden pedir cita virtual por Teams." },
+      { "paso": "Anexar documentos", "detalle": "Documento de identidad, acta o diploma de bachiller (o certificado de grado 11), resultado del Saber 11 (PDF), foto y registro civil, por la ruta de Aspirantes > Anexa tus documentos." },
+      { "paso": "Asistir a la entrevista y consultar la admisión", "detalle": "El resultado se consulta al día siguiente en 'Consultar resultado de admisión'; la carta indica los pasos siguientes." },
+      { "paso": "Prueba diagnóstica virtual y matrícula", "detalle": "Los admitidos nuevos presentan en U-virtual una prueba diagnóstica (pensamiento lógico, comprensión lectora, inglés y estrategias de aprendizaje) que no afecta la admisión; luego pagan la liquidación y registran horarios." }
+    ],
+    "calendario": "Inscripciones abiertas la mayor parte del año para cada semestre, con entrevistas continuas; la UdeMedellín publica una guía de inscripción por periodo (2025-2 y nuevo micrositio 2025). Fechas exactas de cierre para 2027-1 no publicadas en la guía.",
+    "costo_inscripcion": null,
+    "becas_programas": [
+      "Becas, descuentos y financiación de pregrado (descuentos reglamentarios y por convenio; se solicitan a admisiones-registro@udemedellin.edu.co antes de pagar la matrícula)",
+      "Inscripción gratuita para reingresos y transferencia interna"
+    ],
+    "notas": "Verificado en octubre de 2026 con la Guía de inscripción de pregrado (micrositio 2025). El valor vigente de la inscripción no aparece publicado en la guía (en 2022 el Decreto 5 fijó $185.000 con descuentos posteriores del 40 %); consultar la liquidación en el formulario o la Mesa de Servicios (604) 590 45 00.",
+    "fuentes": [
+      "https://admisiones.udemedellin.edu.co/wp-content/uploads/2025/09/GUIA-INSCRIPCION-PREGRADO-nuevo-micrositio-2025.pdf",
+      "https://admisiones.udemedellin.edu.co",
+      "https://ingenierias.udemedellin.edu.co/wp-content/uploads/2021/12/Acuerdo_75_Reglamento_Académico_y_Disciplinario_de_Pregrado_Para_Publicaractualizado_2019.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "ces",
+    "nombre": "Universidad CES",
+    "sigla": "CES",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "privada",
+    "sedes": ["Medellín", "Envigado (Sabaneta/El Poblado - campus)"],
+    "web": "https://www.ces.edu.co",
+    "admisiones_url": "https://www.ces.edu.co/admisiones/",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El resultado del Saber 11 (o la citación/constancia de inscripción a la prueba si aún no hay resultado) es documento obligatorio, pero la selección se hace por entrevista programada por cada facultad. Medicina tiene el 'Programa Talentos Medicina': valoración integral en fases (retos presenciales y entrevista). No publica puntaje mínimo ni ponderación del Saber 11.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Preinscripción en línea", "detalle": "Se elige facultad, programa y periodo, se registran datos y se genera el recibo de pago (en línea, banco o caja).", "url": "http://extensionprd.ces.edu.co/sap/bc/webdynpro/sap/zwdslcm_preins_form" },
+      { "paso": "Inscripción con el PIN", "detalle": "Con el PIN del pago se completa la segunda parte del formulario; al terminar se genera una credencial que llega al correo con fecha y hora de la entrevista.", "url": "http://extensionprd.ces.edu.co/sap/bc/webdynpro/sap/zform_inscripcion_app" },
+      { "paso": "Enviar documentos a admisiones@ces.edu.co", "detalle": "Documento de identidad, foto 3x4, calificaciones de los tres últimos años de bachillerato, acta de grado (o constancia de grado 11), resultado del Saber 11 (o citación) y certificado de afiliación a salud. Sin documentos no se puede presentar la entrevista." },
+      { "paso": "Entrevista / proceso de selección", "detalle": "Entrevista con la facultad (Medicina: Programa Talentos con retos presenciales y entrevista)." },
+      { "paso": "Resultados y matrícula", "detalle": "Admitidos notificados por SMS/WhatsApp un día hábil después; prematrícula, liquidación y pago (descuento por pronto pago).", "url": "https://www.ces.edu.co/plan-de-financiacion-directo-con-la-u/" }
+    ],
+    "calendario": "Dos periodos al año. Pregrados 2026-2 (excepto Medicina): inscripciones y entrevistas del 19 de enero al 3 de julio de 2026; matrícula ordinaria 2 de junio-5 de julio; clases 6 de julio de 2026. Medicina 2026-1: inscripciones del 8 de julio al 30 de septiembre de 2025 con proceso Talentos en octubre. Para 2027-1 consultar las guías vigentes.",
+    "costo_inscripcion": "2026-2: $236.800 (Tecnología en Atención Prehospitalaria $103.000). Medicina 2026-1: $454.400.",
+    "becas_programas": [
+      "Plan de financiación directo con la Universidad",
+      "Descuento por pronto pago y otros descuentos de matrícula",
+      "Reserva de cupo hasta un año pagando el 20 % de la matrícula"
+    ],
+    "notas": "Verificado en octubre de 2026 con las guías de inscripción GU-DC-001 (pregrados 2026-2 y Medicina 2026-1). Cupos por programa publicados en la guía (p. ej., Medicina 100, Odontología 80, Psicología 80, Derecho 40). Las guías 2027-1 pueden cambiar fechas y tarifas.",
+    "fuentes": [
+      "https://www.ces.edu.co/content/uploads/2025/02/GU-DC-001-2026-002-Guia-inscripciones-pregrado-APH-BIOL-DCHO-ECOL-ENF-FISIO-ING-BIOM-MVZ-NYD-OD-OPTOM-PSIC-QF-2026-2-002.pdf",
+      "https://www.ces.edu.co/content/uploads/2025/02/GU-DC-001-2025-034-Guia-inscripciones-pregrado-Medicina-2026-1-1.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "itm",
+    "nombre": "Instituto Tecnológico Metropolitano",
+    "sigla": "ITM",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "pública",
+    "sedes": ["Medellín (Robledo, Fraternidad, Castilla, Prado)", "Itagüí"],
+    "web": "https://www.itm.edu.co",
+    "admisiones_url": "https://www.itm.edu.co/admisiones/nuevo-pregrado/",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "Exige haber presentado el Saber 11 y adjuntar el resultado completo (o la citación a la prueba) en la inscripción. El ITM eliminó el PIN, el examen de admisión y los puntajes mínimos de Saber 11; la selección se hace entre inscritos que cumplen requisitos y cargan la documentación, según cupos. Algunos programas de Artes y Humanidades aplican pruebas específicas.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Crear cuenta en el portal de inscripciones", "detalle": "Desde itm.edu.co > Aspirantes > Inscripciones estudiantes nuevos pregrado; se activa el perfil desde el correo.", "url": "https://www.itm.edu.co/admisiones/nuevo-pregrado/" },
+      { "paso": "Diligenciar el formulario", "detalle": "Datos personales, de residencia, colegio y resultados del Saber 11; luego 'Nueva inscripción' para elegir el programa." },
+      { "paso": "Cargar documentos", "detalle": "Documento de identidad, resultado completo del Saber 11 (o citación), acta de grado o diploma (o certificado de estar cursando 11°) y última cuenta de servicios públicos con estrato y dirección.", "url": "https://www.itm.edu.co/aspirantes/" },
+      { "paso": "Consultar admitidos y matricularse", "detalle": "Publicación en itm.edu.co; los admitidos pueden aplicar a Matrícula Cero (Sapiencia / Gobierno Nacional).", "url": "https://www.itm.edu.co/guias-de-matricula-estudiantes-pregrado/" }
+    ],
+    "calendario": "Dos convocatorias al año. 2027-1: inscripciones del 5 de octubre al 9 de diciembre de 2026 (ciclo complementario tecnología→ingeniería: 16 de diciembre de 2026 al 8 de enero de 2027). 2026-2: inscripciones del 6 de abril al 16 de junio de 2026 con resultados el 16 de julio de 2026.",
+    "costo_inscripcion": "Gratuita ($0): el ITM no cobra derechos de inscripción ni PIN.",
+    "becas_programas": [
+      "Matrícula Cero (Sapiencia - Alcaldía de Medellín y Política de Gratuidad del Gobierno Nacional)",
+      "Fondos de Sapiencia para sostenimiento"
+    ],
+    "notas": "Verificado en octubre de 2026. El sitio itm.edu.co bloqueó el acceso automatizado, así que fechas y requisitos 2027-1 se tomaron de la información oficial del ITM reproducida por Minuto30 (5 de octubre de 2026) y de la Alcaldía de Medellín; confirmar en itm.edu.co/aspirantes. No hay puntaje mínimo publicado.",
+    "fuentes": [
+      "https://www.itm.edu.co/admisiones/nuevo-pregrado/",
+      "https://www.itm.edu.co/aspirantes/",
+      "https://www.minuto30.com/pilas-no-lo-deje-para-ultima-hora-el-itm-ya-abrio-inscripciones-para-el-primer-semestre-2027/1721676/",
+      "https://www.medellin.gov.co/es/?p=454221"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "politecnico-jic",
+    "nombre": "Politécnico Colombiano Jaime Isaza Cadavid",
+    "sigla": "Poli JIC",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "pública",
+    "sedes": ["Medellín (El Poblado)", "Rionegro (Centro Regional Oriente)", "Apartadó (Urabá)", "Bello (Niquía)"],
+    "web": "https://www.politecnicojic.edu.co",
+    "admisiones_url": "https://www.politecnicojic.edu.co/inscripcion-pregrados",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La admisión se hace 100 % con los resultados del Saber 11, ponderados según las áreas de conocimiento definidas por el Consejo de Facultad de cada programa. No hay examen de admisión ni entrevista. Se puede inscribir una segunda opción de programa. Los datos del ICFES (número SNP) deben ser exactos o el aspirante queda fuera del proceso.",
+    "puntaje_minimo": null,
+    "ponderacion": "Ponderación por áreas del Saber 11 definida por cada Consejo de Facultad según la naturaleza del programa; los porcentajes por programa no están publicados en la guía 2027-1 (consultar con Admisiones).",
+    "proceso": [
+      { "paso": "Leer la guía del perfil de aspirante", "detalle": "Guías 2027-1 para nuevos, reingreso, graduados y transferencias, por sede Medellín y Centros Regionales.", "url": "https://www.politecnicojic.edu.co/inscripcion-pregrados" },
+      { "paso": "Diligenciar el formulario web", "detalle": "Datos personales, datos del Saber 11 (número SNP), programa, sede y segunda opción; solo una inscripción por convocatoria. Resultados del Saber 11 o comprobante de citación si aún no hay resultado.", "url": "https://www.politecnicojic.edu.co/images/downloads/admisiones/inscripciones/2027-1/guia-pregrados-2027-1-nuevos-medellin.pdf" },
+      { "paso": "Descargar el comprobante", "detalle": "PDF de evidencia para reclamaciones; la inscripción para nuevos es gratuita." },
+      { "paso": "Consultar admitidos", "detalle": "Publicación en politecnicojic.edu.co; segunda opción si no se admite en el primer llamado." },
+      { "paso": "Matrícula", "detalle": "Cargar documentos (diploma/acta, Saber 11, servicios públicos, Sisbén IV para gratuidad) y pagar o aplicar Matrícula Cero.", "url": "https://www.politecnicojic.edu.co/calendario-academico" }
+    ],
+    "calendario": "Dos convocatorias al año. 2027-1: inscripciones de nuevos hasta el 6 de noviembre de 2026 (sede Medellín y Centros Regionales); resultados 24 de noviembre de 2026; inicio de clases 1 de febrero de 2027.",
+    "costo_inscripcion": "Gratuita ($0) para aspirantes nuevos en 2027-1 (reingresos y transferencia externa $74.392; graduados $49.079).",
+    "becas_programas": [
+      "Política de Gratuidad / Matrícula Cero (Sisbén IV grupos A, B o C; estratos 1-3)",
+      "Admisión especial (víctimas, comunidades étnicas, deportistas y otras; ver guía)",
+      "Convenios de becas con alcaldías (p. ej., Itagüí)"
+    ],
+    "notas": "Verificado en octubre de 2026 con la Guía de pregrados 2027-1 para nuevos (sede Medellín) y la página de inscripciones. El Poli no publica tabla de ponderaciones por programa ni puntajes de corte.",
+    "fuentes": [
+      "https://www.politecnicojic.edu.co/inscripcion-pregrados",
+      "https://www.politecnicojic.edu.co/images/downloads/admisiones/inscripciones/2027-1/guia-pregrados-2027-1-nuevos-medellin.pdf",
+      "https://www.politecnicojic.edu.co/images/downloads/admisiones/inscripciones/2022-1/guia-apirantes-nuevos-pregrado-medellin-2022-1.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "tdea",
+    "nombre": "Tecnológico de Antioquia - Institución Universitaria",
+    "sigla": "TdeA",
+    "ciudad": "Medellín",
+    "departamento": "Antioquia",
+    "tipo": "pública",
+    "sedes": ["Medellín (Robledo)", "Itagüí", "Copacabana", "Urrao", "Marinilla", "Ciudad Bolívar"],
+    "web": "https://tdea.edu.co",
+    "admisiones_url": "https://tdea.edu.co/aspirantes",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "Exige haber presentado el Saber 11 y adjuntar el resultado (año, código SNP y puntajes). Según el trámite oficial para aspirantes de regiones, 'para ser admitido se pondera el resultado del test de selección con los resultados de las Pruebas Saber 11'. Las preguntas frecuentes vigentes describen solo formulario, pago, datos del ICFES, documentos y publicación de admitidos; no publican puntaje mínimo ni porcentajes.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Formulario en línea", "detalle": "Proceso 100 % virtual en el campus de inscripciones: tipo y número de documento, nivel PREGRADO, vinculación NUEVO - PRIMERA VEZ, datos personales y programa/jornada.", "url": "https://inscripcionestdea.com/" },
+      { "paso": "Pagar la inscripción", "detalle": "Imprimir la factura o pagar en línea por PSE." },
+      { "paso": "Completar información académica y documentos", "detalle": "Tras el pago se ingresa de nuevo: datos del Saber 11, adjuntar documento de identidad, acta o diploma, cuenta de servicios con estrato, Saber 11 y certificado Sisbén IV (o carta si no lo tiene) y encuesta de caracterización.", "url": "https://tdea.edu.co/aspirantes" },
+      { "paso": "Publicación de admitidos", "detalle": "En tdea.edu.co en las fechas del calendario académico; luego matrícula (Política de Gratuidad si aplica)." }
+    ],
+    "calendario": "Dos convocatorias al año; fechas en el calendario académico publicado en tdea.edu.co. Fechas exactas 2027-1 no confirmadas en esta verificación.",
+    "costo_inscripcion": null,
+    "becas_programas": [
+      "Política de Gratuidad en la Matrícula (Gobierno Nacional; requiere Sisbén IV)",
+      "Programas para regiones (Urrao, Marinilla, Ciudad Bolívar)"
+    ],
+    "notas": "Verificado en octubre de 2026 en tdea.edu.co/aspirantes (preguntas frecuentes) y en el documento 'Trámite aspirante regiones' (sin fecha, posiblemente anterior a 2023). El valor de la inscripción y la existencia actual del 'test de selección' no aparecen publicados; confirmar con Admisiones.",
+    "fuentes": [
+      "https://tdea.edu.co/aspirantes",
+      "https://www.tdea.edu.co/images/tdea/galeria/atencion_usuario/documents/tramite_aspirante_regiones.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "ucaldas",
+    "nombre": "Universidad de Caldas",
+    "sigla": "UCaldas",
+    "ciudad": "Manizales",
+    "departamento": "Caldas",
+    "tipo": "pública",
+    "sedes": ["Manizales", "La Dorada"],
+    "web": "https://www.ucaldas.edu.co",
+    "admisiones_url": "https://viceacademica.ucaldas.edu.co/pregrados-presenciales/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "Admite por el ponderado del Saber 11 calculado con los porcentajes por área aprobados para cada programa; la Universidad pide la base de datos al ICFES y ordena a los inscritos de mayor a menor hasta llenar los cupos. No hay puntaje mínimo ni se comparan cortes anteriores. Licenciatura en Educación Física, Recreación y Deportes y Artes Plásticas/Artes Escénicas agregan prueba de aptitud; Medicina (Manizales) usa el Saber 11 como preselección (los 300 mejores) y luego un examen de admisión propio (Resolución 1015 de 2026).",
+    "puntaje_minimo": null,
+    "ponderacion": "Escala Saber 11 desde 2014-2. Ejemplos: Medicina: Matemáticas 40 %, Lectura Crítica 40 %, Ciencias Naturales 10 %, Sociales y Ciudadanas 10 % (preselección de 300 para examen propio). Derecho: Lectura Crítica 35 %, Matemáticas 35 %, Sociales 20 %, Naturales 10 %. Ingeniería en Sistemas y Computación: Matemáticas 40 %, Lectura Crítica 30 %, Naturales 20 %, Sociales 10 %. Enfermería: Naturales 40 %, Lectura 30 %, Matemáticas 20 %, Sociales 10 %. Biología: Naturales 40 %, Matemáticas 25 %, Lectura 20 %, Sociales 15 %. Lic. Educación Física: ponderado 70 % + prueba de aptitud 30 %. Artes Plásticas y Lic. Artes Escénicas: 50 % Saber 11 + 50 % prueba de aptitud. Tabla completa en las FAQ de selección.",
+    "proceso": [
+      { "paso": "Revisar el calendario y la oferta", "detalle": "Resolución de calendario de admisiones por periodo y programas ofertados (Manizales y La Dorada).", "url": "https://viceacademica.ucaldas.edu.co/pregrados-presenciales/" },
+      { "paso": "Diligenciar en línea el formulario de inscripción", "detalle": "Crear usuario en el aplicativo (sugerido: número de documento) y registrar datos; se puede inscribir sin resultado del Saber 11 registrando el código SNP (AC/VG) de la citación. Los aspirantes especiales usan el formulario gratuito y cargan soportes.", "url": "https://viceacademica.ucaldas.edu.co/proceso-de-inscripcion-como/" },
+      { "paso": "Pagar el formulario", "detalle": "Recibo del sistema pagado en Davivienda o por PSE dentro de las fechas (no se aceptan Nequi, Daviplata ni corresponsales); sin pago oportuno no se participa." },
+      { "paso": "Prueba de aptitud o examen de admisión (solo algunos programas)", "detalle": "Lic. Educación Física (aptitud) y Medicina Manizales (examen propio para los 300 preseleccionados)." },
+      { "paso": "Consultar resultados", "detalle": "Listas de admitidos y no admitidos en la página de admisiones.", "url": "https://viceacademica.ucaldas.edu.co/pregrados-presenciales/" },
+      { "paso": "Matrícula en el SIA", "detalle": "Carga de documentos en Gestión Documental del SIA y legalización de matrícula." }
+    ],
+    "calendario": "Dos convocatorias al año. 2027-1 (Resolución 3155 de 2026): formulario del 18 de septiembre al 21 de octubre de 2026, pago hasta el 22 de octubre; formulario gratuito para aspirantes especiales hasta el 16 de octubre; preseleccionados a pruebas de aptitud/examen y lista general de admitidos el 13 de noviembre de 2026; matrícula general 17 de noviembre; resultados de programas con prueba/examen 20-25 de noviembre y matrícula 26 de noviembre de 2026. La convocatoria para segundo semestre suele ir de mayo a junio/julio.",
+    "costo_inscripcion": "No confirmado para 2027-1. Referencias oficiales: $138.200 (2025-2) y $170.000 publicado en la página de la sede La Dorada para 2026-2. Gratuito para aspirantes especiales.",
+    "becas_programas": [
+      "Cupos especiales: víctimas del conflicto armado, comunidades indígenas, comunidades afrodescendientes, mejores bachilleres (formulario gratuito)",
+      "Una unidad adicional al ponderado para aspirantes con diversidad funcional acreditada",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 con las FAQ de selección (abril 2025), la Resolución 1015 de 2026 (Medicina) y la Resolución 3155 de 2026 (calendario 2027-1). El valor exacto del formulario 2027-1 no se encontró publicado en el sitio de la Vicerrectoría Académica.",
+    "fuentes": [
+      "https://viceacademica.ucaldas.edu.co/wp-content/uploads/2025/04/FAQS-SELECCION-Abril-2025.pdf",
+      "https://www.ucaldas.edu.co/portal/wp-content/uploads/2026/07/RESOLUCION_1015_EXAMEN_DE_ADMISION_MEDICINA-CORREG.pdf",
+      "https://viceacademica.ucaldas.edu.co/wp-content/uploads/2026/09/3155_2026_09_08_CALENDARIO_ADMISIONES_2027-1-1-1.pdf",
+      "https://viceacademica.ucaldas.edu.co/pregrados-presenciales/",
+      "https://viceacademica.ucaldas.edu.co/proceso-de-inscripcion-como/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unal-manizales",
+    "nombre": "Universidad Nacional de Colombia - Sede Manizales",
+    "sigla": "UNAL Manizales",
+    "ciudad": "Manizales",
+    "departamento": "Caldas",
+    "tipo": "pública",
+    "sedes": ["Manizales", "Bogotá", "Medellín", "Palmira", "De La Paz", "Amazonia", "Caribe", "Orinoquia", "Tumaco"],
+    "web": "https://manizales.unal.edu.co",
+    "admisiones_url": "https://admisiones.unal.edu.co/pregrado/",
+    "uso_saber11": "examen_propio",
+    "uso_saber11_detalle": "Mismo proceso nacional de la UNAL: prueba de admisión propia de 120 preguntas (matemáticas, ciencias naturales, ciencias sociales, análisis textual y análisis de imagen); el Saber 11 es requisito de ley para matricularse y no se usa en la admisión regular. Oferta en Manizales: Administración de Empresas (diurna y nocturna), Administración de Sistemas Informáticos, Arquitectura, Ingenierías (Civil, Eléctrica, Electrónica, Física, Industrial, Química), Matemáticas, Gestión Cultural y Comunicativa, entre otros. Desde 2027-1 los programas especiales PEAMA y PAET pueden evaluarse con el Saber 11 (Resolución 019 de 2026).",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Consultar la normativa y la oferta de la sede", "detalle": "Programas y cupos de la Sede Manizales y requisitos de PAES/PAET.", "url": "https://admisiones.unal.edu.co/pregrado/" },
+      { "paso": "Pagar los derechos de inscripción", "detalle": "Pago virtual desde el formulario; gratuidad para aspirantes PAES.", "url": "https://admisiones.unal.edu.co/pregrado/guia-paso-a-paso/" },
+      { "paso": "Formalizar la inscripción por internet", "detalle": "Datos personales y académicos, número de registro Saber 11 (SNP/AC) y ciudad de presentación de la prueba (Manizales es sitio de aplicación)." },
+      { "paso": "Consultar la citación y presentar la prueba de admisión", "detalle": "Un domingo; la UNAL ofrece demostraciones interactivas para familiarizarse con la prueba.", "url": "https://admisiones.unal.edu.co/pregrado/demostraciones-interactivas/" },
+      { "paso": "Consultar el puntaje e inscribir el programa curricular", "detalle": "Con el puntaje se inscribe el programa en la ventana publicada; luego segunda y última asignación de cupos." },
+      { "paso": "Consultar resultados y enviar documentos", "detalle": "Admitidos envían documentos a Registro y Matrícula de la Sede Manizales y pagan sistematización.", "url": "https://registro.manizales.unal.edu.co" }
+    ],
+    "calendario": "Dos convocatorias al año. 2027-1: pago y formalización del 6 de julio al 24 de agosto de 2026; prueba de admisión domingo 20 de septiembre de 2026; puntaje desde el 1 de octubre; inscripción de programa 1-6 de octubre; resultados 9 de octubre; asignaciones adicionales 15-22 de octubre y 9-13 de noviembre de 2026.",
+    "costo_inscripcion": "$175.000 (convocatoria 2027-1). Gratuito para aspirantes PAES.",
+    "becas_programas": [
+      "PAES: comunidades indígenas, mejores bachilleres, mejores bachilleres de municipios pobres, población NARP, víctimas del conflicto",
+      "PAET: Programa de Admisión Especial con Enfoque Territorial (sedes Manizales, Medellín y Palmira)",
+      "PEAMA (sedes de presencia nacional)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 en admisiones.unal.edu.co. Entrada separada de la sede Medellín para facilitar el filtro por departamento; el proceso, el costo y el calendario son los mismos de la convocatoria nacional. Verificar en la Resolución 019 de 2026 el alcance exacto de la admisión con Saber 11 para el PAET de Manizales.",
+    "fuentes": [
+      "https://admisiones.unal.edu.co/pregrado/",
+      "https://admisiones.unal.edu.co/fileadmin/ArchivosDNA/afiches/AI_Afiche_PREGRADO_2027-01_v5.pdf",
+      "https://admisiones.unal.edu.co/pregrado/guia-paso-a-paso/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "umanizales",
+    "nombre": "Universidad de Manizales",
+    "sigla": "UManizales",
+    "ciudad": "Manizales",
+    "departamento": "Caldas",
+    "tipo": "privada",
+    "sedes": ["Manizales"],
+    "web": "https://umanizales.edu.co",
+    "admisiones_url": "https://umanizales.edu.co/admision",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La selección de aspirantes se hace con base en los puntajes del Saber 11 'según la tabla de ponderaciones (Pruebas Saber 100 %)' publicada por programa en la página de admisión. No publica puntaje mínimo. A pruebas de septiembre de 2010 se aplica la tabla de equivalencias del ICFES.",
+    "puntaje_minimo": null,
+    "ponderacion": "Tabla de ponderaciones por programa (Lectura Crítica, Matemáticas, Ciencias Naturales, Sociales y Ciudadanas, Inglés) publicada en la pestaña 'Ponderaciones de puntajes para Pruebas Saber 11' de umanizales.edu.co/admision; los porcentajes exactos no se pudieron extraer en esta verificación.",
+    "proceso": [
+      { "paso": "Preinscripción en línea", "detalle": "Registro del aspirante en la página de la Universidad (procedimiento RAA-PRO-001 de la oficina ARCA).", "url": "https://umanizales.edu.co/admision" },
+      { "paso": "Inscripción y pago", "detalle": "Formulario completo, registro de datos del Saber 11 y pago de derechos de inscripción." },
+      { "paso": "Selección de admitidos", "detalle": "Cálculo del ponderado del Saber 11 por programa y publicación del listado de admitidos." },
+      { "paso": "Matrícula", "detalle": "Liquidación y pago en las fechas de la agenda; valores de matrícula publicados en 'Derechos pecuniarios y valores de matrícula'.", "url": "https://umanizales.edu.co/admision" }
+    ],
+    "calendario": "Agenda publicada para primer semestre: inscripciones del 1 de septiembre al 18 de noviembre; selección de admitidos del 23 al 27 de noviembre; publicación de admitidos el 30 de noviembre; matrículas del 1 al 7 de diciembre (agenda vigente en octubre de 2026 para 2027-1).",
+    "costo_inscripcion": null,
+    "becas_programas": [
+      "Programa de becas MEMO para bachilleres con altos puntajes Saber 11 (referencia de prensa 2022; confirmar vigencia)",
+      "Financiación y convenios publicados en umanizales.edu.co"
+    ],
+    "notas": "Verificado en octubre de 2026 en umanizales.edu.co/admision. La tabla de ponderaciones y el valor de la inscripción se cargan de forma dinámica y no pudieron leerse; consultar la página o la oficina de Admisiones (ARCA).",
+    "fuentes": [
+      "https://umanizales.edu.co/admision",
+      "https://sgc.umanizales.edu.co/documentos/RAA/RAA-PRO-001-Procedimiento-para-la-preinscripci%c3%b3n-e-inscripci%c3%b3n-de-aspirantes-V-2.docx-1.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uam",
+    "nombre": "Universidad Autónoma de Manizales",
+    "sigla": "UAM",
+    "ciudad": "Manizales",
+    "departamento": "Caldas",
+    "tipo": "privada",
+    "sedes": ["Manizales"],
+    "web": "https://www.autonoma.edu.co",
+    "admisiones_url": "https://www.autonoma.edu.co/aspirantes",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "El resultado del Saber 11 es documento obligatorio del proceso de admisión, pero la UAM indica que no se necesita un puntaje específico para estudiar sus carreras. Se puede inscribir sin el resultado, que debe presentarse antes de pagar la matrícula.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Registro en el portal de inscripciones", "detalle": "Ingresar al portal de inscripciones de la UAM y seguir el paso a paso del formulario.", "url": "https://www.autonoma.edu.co/aspirantes" },
+      { "paso": "Pago de la inscripción en línea", "detalle": "El pago se hace desde el mismo portal." },
+      { "paso": "Entrega de documentos", "detalle": "Acta de grado (o constancia de estar cursando 11°), resultado del Saber 11, documento de identidad por ambos lados y foto tamaño cédula fondo blanco." },
+      { "paso": "Admisión y matrícula", "detalle": "Una vez admitido se presentan documentos adicionales (los de Salud: carné de vacunas y exámenes) y se paga la matrícula." }
+    ],
+    "calendario": "Inscripciones abiertas para pregrados 2027 - primer semestre (anuncio en el portal en septiembre-octubre de 2026). Fechas de cierre no publicadas en la página de aspirantes.",
+    "costo_inscripcion": "$304.100 para carreras profesionales y $184.450 para tecnologías (publicado en octubre de 2026).",
+    "becas_programas": [
+      "Becas por mérito académico y talento deportivo (ver sección Becas)",
+      "Para tecnologías: becas Mejor Bachiller, Puedo Estudiar y Jóvenes Más Pro",
+      "Financiación directa con la Universidad y con entidades aliadas"
+    ],
+    "notas": "Verificado en octubre de 2026 en autonoma.edu.co/aspirantes (preguntas frecuentes). No se encontró publicado si hay entrevista o prueba adicional por programa.",
+    "fuentes": [
+      "https://www.autonoma.edu.co/aspirantes",
+      "https://www.autonoma.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "utp",
+    "nombre": "Universidad Tecnológica de Pereira",
+    "sigla": "UTP",
+    "ciudad": "Pereira",
+    "departamento": "Risaralda",
+    "tipo": "pública",
+    "sedes": ["Pereira"],
+    "web": "https://www.utp.edu.co",
+    "admisiones_url": "https://www.utp.edu.co/inscripciones",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La admisión en todos los regímenes (general, resto del departamento de Risaralda y especial) 'se hace por ponderación de pruebas ICFES'; la selección es de mayor a menor puntaje entre los inscritos a cada programa, según los cupos fijados por resolución de Rectoría. No hay puntaje mínimo; la UTP publica los rangos de puntaje de los admitidos de semestres anteriores para orientar al aspirante.",
+    "puntaje_minimo": null,
+    "ponderacion": "Ponderación de las pruebas Saber 11 definida por la Universidad (los porcentajes por programa no están publicados en el documento de rangos). Referencia de rangos de puntaje global de admitidos 2026-1: Medicina 464 máximo / 412 mínimo; Ingeniería de Sistemas y Computación 401 / 350; Medicina Veterinaria y Zootecnia 396 / 322 (ver PDF 'Rango ICFES admitidos').",
+    "proceso": [
+      { "paso": "Ingresar al aplicativo de inscripción", "detalle": "Portal de inscripciones de la UTP (opción A: aspirante nuevo), seleccionar el programa.", "url": "https://www.utp.edu.co/inscripciones" },
+      { "paso": "Descargar el PIN", "detalle": "El PIN se genera en el sistema; para 2026-1 y 2026-2 fue gratuito y solo se cobra a los admitidos que se matriculan.", "url": "https://app4.utp.edu.co/MatAcad/menu_inscripcion/" },
+      { "paso": "Diligenciar el formulario", "detalle": "Información personal, académica (código Saber 11) y socioeconómica; indicar circunscripción (general, resto de Risaralda o régimen especial) y adjuntar el certificado que la acredite." },
+      { "paso": "Consultar admitidos", "detalle": "Publicación en utp.edu.co en la fecha del calendario." },
+      { "paso": "Matrícula", "detalle": "Liquidación, pago (o gratuidad) y registro de asignaturas." }
+    ],
+    "calendario": "Dos convocatorias al año. 2026-1: inscripciones del 23 de septiembre al 4 de noviembre de 2025, admitidos el 14 de noviembre, matrícula del 24 de noviembre al 15 de diciembre, clases 2 de febrero de 2026. 2026-2: inscripciones del 26 de marzo al 2 de junio de 2026. Para 2027-1 la convocatoria suele abrir a finales de septiembre.",
+    "costo_inscripcion": "Reglamentariamente 0,10 SMMLV por periodo; en 2026-1 y 2026-2 el PIN fue gratuito por acuerdo del Consejo Superior (solo lo pagan los admitidos que formalizan matrícula).",
+    "becas_programas": [
+      "Circunscripción 'Resto del Departamento de Risaralda': 12 cupos por programa (uno por municipio, excepto Pereira y Dosquebradas)",
+      "Régimen especial: 5 cupos por programa (minoría étnica, comunidad indígena, desplazado, reinsertado, deportista de alto rendimiento)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional",
+      "Pre ICFES de la UTP para preparar el Saber 11"
+    ],
+    "notas": "Verificado en octubre de 2026 con el documento 'Inscripción aspirantes nuevos 2026 / Rango ICFES admitidos 2026-1' y los comunicados oficiales de la UTP. Los porcentajes de ponderación por programa no aparecen publicados; consultar Admisiones, Registro y Control Académico.",
+    "fuentes": [
+      "https://media2.utp.edu.co/oficinas/7/Rango-ICFES-Admitidos-20261.pdf",
+      "https://comunicaciones.utp.edu.co/106408/vicerrectorias/vicerrectorias-vicerrectorias-2/la-utp-abre-inscripciones-de-pregrado-para-segundo-semestre-2026/",
+      "https://comunicaciones.utp.edu.co/93989/vicerrectorias/vicerrectorias-vicerrectorias-2/utp-abre-inscripciones-2026-1-con-nuevo-portal-y-gratuidad-en-el-pin/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "ucp",
+    "nombre": "Universidad Católica de Pereira",
+    "sigla": "UCP",
+    "ciudad": "Pereira",
+    "departamento": "Risaralda",
+    "tipo": "privada",
+    "sedes": ["Pereira"],
+    "web": "https://www.ucp.edu.co",
+    "admisiones_url": "https://www.ucp.edu.co/inscripciones/",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El Reglamento Académico exige título de bachiller y certificado vigente de pruebas de Estado (Saber 11; si estudió en el exterior, documento equivalente del ICFES). El portal de inscripciones muestra el flujo de admisión: pago de inscripción, inscripción, prueba psicotécnica y entrevista. No publica puntaje mínimo ni ponderación.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Pago de inscripción", "detalle": "En el Portal de Inscripciones (matriculas.ucp.edu.co) con el número de identificación; pago en línea.", "url": "https://matriculas.ucp.edu.co/se/inscriptions.aspx" },
+      { "paso": "Inscripción y documentos", "detalle": "Documento de identidad legible (PDF), resultado del Saber 11 (PDF), foto fondo blanco y certificado de afiliación a salud (o compromiso).", "url": "https://www.ucp.edu.co/preguntas-frecuentes/" },
+      { "paso": "Prueba psicotécnica", "detalle": "Fase del proceso de admisión según el portal (aplica por programa)." },
+      { "paso": "Entrevista", "detalle": "Con el programa; luego se publica la admisión." },
+      { "paso": "Matrícula", "detalle": "Pago de matrícula financiera y registro académico.", "url": "https://www.ucp.edu.co/admisiones-y-registro/" }
+    ],
+    "calendario": "Las inscripciones se abren por programa en el portal (en octubre de 2026 no había programas con inscripciones abiertas). Según el Reglamento, se realizan en el periodo fijado por el Calendario Académico; fechas 2027-1 no publicadas.",
+    "costo_inscripcion": null,
+    "becas_programas": [
+      "Financiación (sección 'Financiación' del sitio)",
+      "Preuniversitario UCP"
+    ],
+    "notas": "Verificado en octubre de 2026 en ucp.edu.co (inscripciones, preguntas frecuentes, reglamento) y en el portal matriculas.ucp.edu.co. Costo de inscripción y calendario 2027-1 no publicados en el momento de la consulta; ver 'Valores pecuniarios' en ucp.edu.co/pecuniarios/.",
+    "fuentes": [
+      "https://www.ucp.edu.co/inscripciones/",
+      "https://matriculas.ucp.edu.co/se/inscriptions.aspx",
+      "https://www.ucp.edu.co/preguntas-frecuentes/",
+      "https://www.ucp.edu.co/wp-content/uploads/2025/04/Reglamento-Academico-de-Pregrado.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uniquindio",
+    "nombre": "Universidad del Quindío",
+    "sigla": "Uniquindío",
+    "ciudad": "Armenia",
+    "departamento": "Quindío",
+    "tipo": "pública",
+    "sedes": ["Armenia"],
+    "web": "https://www.uniquindio.edu.co",
+    "admisiones_url": "https://www.uniquindio.edu.co/aspirantes/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "Usa los resultados del Saber 11 (pruebas desde 2000) para calcular un puntaje de ingreso: combinación de los puntajes por área con un vector de ponderación específico para cada programa; los admitidos se eligen en orden descendente. No existe puntaje mínimo: el corte depende de los inscritos y del cupo de cada programa. El 20 % de los cupos de cada programa se reserva a egresados de colegios oficiales de municipios del Quindío (excepto Armenia) y el 10 % a colegios oficiales de Armenia.",
+    "puntaje_minimo": null,
+    "ponderacion": "Vector de ponderación por programa (combinación de Lectura Crítica, Matemáticas, Sociales y Ciudadanas, Ciencias Naturales e Inglés); la Universidad ofrece un simulador de puntaje de ingreso para pruebas 2014-2 en adelante en la página de aspirantes. Los vectores exactos por programa no están en la página consultada.",
+    "proceso": [
+      { "paso": "Preinscripción", "detalle": "En el sistema SAC de la Uniquindío.", "url": "https://sac.uniquindio.edu.co/sgacampus/services/inscripciones/home" },
+      { "paso": "Pago del recibo de inscripción (PIN)", "detalle": "Un PIN por cada programa al que se postule." },
+      { "paso": "Inscripción", "detalle": "Formulario con documento, correo personal, código SNP del Saber 11, colegio y foto 4x5 fondo blanco. Si registra varios resultados del ICFES el sistema toma el último." },
+      { "paso": "Envío de documentos", "detalle": "Documento de identidad y resultados Saber 11 en PDF (y soportes de condición especial hasta el último día de inscripciones); no se reciben documentos físicos.", "url": "https://www.uniquindio.edu.co/aspirantes/publicaciones/375/requisitos-de-inscripcion/" },
+      { "paso": "Publicación de admitidos y matrícula", "detalle": "Resultados en la página; matrícula financiera en llamados y luego matrícula académica." }
+    ],
+    "calendario": "Dos convocatorias al año. 2026-1: venta de PINES hasta el 12 de diciembre de 2025; entrega de documentos hasta el 15 de diciembre; admitidos hasta el 19 de diciembre de 2025; matrícula financiera (primer llamado) del 9 al 14 de enero de 2026; clases desde el 2 de febrero de 2026. Para 2027-1 la convocatoria suele abrir en octubre-noviembre.",
+    "costo_inscripcion": "$131.200 por programa (PIN, convocatoria 2026-1).",
+    "becas_programas": [
+      "Cupos del 20 % para colegios oficiales de municipios del Quindío (excepto Armenia) y 10 % para colegios oficiales de Armenia",
+      "Condiciones especiales que influyen en la selección (soportes al inscribirse)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 en uniquindio.edu.co/aspirantes (preguntas frecuentes) y en la noticia oficial de inscripciones 2026-1. Fechas y valor del PIN para 2027-1 aún no publicados.",
+    "fuentes": [
+      "https://www.uniquindio.edu.co/aspirantes/",
+      "https://www.uniquindio.edu.co/noticias/publicaciones/5881/ya-estan-abiertas-las-inscripciones-2026-1-en-la-uniquindio/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "iue-envigado",
+    "nombre": "Institución Universitaria de Envigado",
+    "sigla": "IUE",
+    "ciudad": "Envigado",
+    "departamento": "Antioquia",
+    "tipo": "pública",
+    "sedes": ["Envigado"],
+    "web": "https://www.iue.edu.co",
+    "admisiones_url": "https://www.iue.edu.co/la-iue/admisiones/",
+    "uso_saber11": "examen_propio",
+    "uso_saber11_detalle": "Exige haber presentado el Saber 11 (resultado completo obligatorio), pero selecciona con una prueba de admisión virtual propia que evalúa competencias ciudadanas, razonamiento cuantitativo, inglés y comunicación escrita; se admiten los puntajes más altos hasta agotar los cupos de cada programa. Administración de Negocios Internacionales exige además nivel A1 en la prueba de inglés del Saber 11.",
+    "puntaje_minimo": { "ingles": "A1 (solo para Administración de Negocios Internacionales)" },
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Inscripción en línea", "detalle": "iue.edu.co > La IUE > Admisiones > 'Inscríbete aquí'; formulario en appsai.iue.edu.co.", "url": "https://appsai.iue.edu.co/inscripciones/" },
+      { "paso": "Pago de derechos de inscripción", "detalle": "PSE al terminar el formulario, o recibo para pagar en AV Villas, Banco Popular, Banco de Bogotá, Caja Social o en Tesorería (tarjeta)." },
+      { "paso": "Envío de documentos", "detalle": "PDF por correo a documentosadmision@iue.edu.co: documento de identidad al 150 %, resultados completos del Saber 11, diploma o acta de bachiller, cuenta de servicios con estrato y constancia del grupo Sisbén IV." },
+      { "paso": "Prueba de admisión virtual", "detalle": "Instrucciones por correo dos días antes; plataforma habilitada de 6:00 a. m. a 6:00 p. m. con 4 horas para el examen." },
+      { "paso": "Publicación de admitidos y matrícula", "detalle": "Listado en iue.edu.co; liquidación de matrícula (política de gratuidad si aplica) y pago.", "url": "https://www.iue.edu.co/la-iue/admisiones/" }
+    ],
+    "calendario": "Dos convocatorias al año. 2026-2: inscripciones del 13 de abril al 13 de mayo de 2026; documentos 13-18 de mayo; prueba de admisión 25 de mayo; admitidos 1 de junio; matrícula 12-19 de junio; clases 3 de agosto de 2026. 2026-1: inscripciones del 1 al 30 de octubre de 2025. Para 2027-1 revisar la guía vigente en octubre-noviembre de 2026.",
+    "costo_inscripcion": "$97.900 (derechos pecuniarios 2026; 2026-1 fue $90.600).",
+    "becas_programas": [
+      "Política de gratuidad en la matrícula (Gobierno Nacional, Sisbén IV)",
+      "Descuento electoral del 10 % y otros descuentos de matrícula (no acumulables, máximo 50 %)",
+      "Oficina de Apoyo Financiero: alternativas de pago y crédito"
+    ],
+    "notas": "Verificado en octubre de 2026 con la Guía de inscripción aspirantes nuevos pregrado 2026-2 y la página de admisiones. El nombre oficial es Institución Universitaria de Envigado (IUE), no 'Universidad de Envigado'.",
+    "fuentes": [
+      "https://www.iue.edu.co/download/42/pregrado/46247/guia-de-inscripcion-aspirantes-nuevos-pregrado-2026-2-3.pdf",
+      "https://www.iue.edu.co/la-iue/admisiones/"
+    ],
+    "verificado": "2026-10"
+  }
+]
