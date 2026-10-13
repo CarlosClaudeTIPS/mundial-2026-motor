@@ -4,6 +4,8 @@ Fuente de verdad: el repo **https://github.com/CarlosClaudeTIPS/saber11-prep**, 
 
 ## Arrancar en el otro PC
 
+Nada depende de un PC anterior ni de una sesión de Claude concreta: todo lo necesario está en este repositorio. Solo se requiere tener instalados Git y Node.js LTS.
+
 ```powershell
 git clone https://github.com/CarlosClaudeTIPS/saber11-prep.git Saber11
 cd Saber11

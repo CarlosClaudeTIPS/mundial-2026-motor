@@ -25,6 +25,9 @@ if not exist .env.local (
     echo VITE_SUPABASE_ANON_KEY=sb_publishable_zgOdGFF-rxuYkVDYNwpp4A_GYRFoKtO
   ) > .env.local
 )
+rem Identidad de git para poder guardar cambios (solo si no esta configurada)
+git config user.name >nul 2>nul || git config user.name "CarlosClaudeTIPS"
+git config user.email >nul 2>nul || git config user.email "293462398+CarlosClaudeTIPS@users.noreply.github.com"
 start "" "http://localhost:5180"
 call npm run dev -- --port 5180
 pause
