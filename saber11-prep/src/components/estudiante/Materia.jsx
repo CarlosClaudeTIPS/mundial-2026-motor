@@ -19,7 +19,7 @@ export default function Materia({ usuario, params }) {
 
   useEffect(() => {
     (async () => {
-      const [preguntas, intentos] = await Promise.all([listarPreguntas({ prueba: m.id }), esEst ? intentosDe(usuario.id) : []])
+      const [preguntas, intentos] = await Promise.all([listarPreguntas({ prueba: m.id, usuario }), esEst ? intentosDe(usuario.id) : []])
       const ultimo = {}
       for (const i of [...intentos].sort((a, b) => (a.fecha < b.fecha ? -1 : 1))) ultimo[i.pregunta_id] = i
       const its = intentos.filter(i => i.prueba === m.id)

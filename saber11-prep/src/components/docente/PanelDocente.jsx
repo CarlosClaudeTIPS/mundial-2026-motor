@@ -59,7 +59,7 @@ export default function PanelDocente({ usuario }) {
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0">
                 <p className="font-medium flex items-center gap-2"><Users size={16} /> {g.nombre}</p>
-                <p className="text-xs text-gray-400">{[g.colegio, g.curso !== g.nombre && g.curso, `código ${g.codigo}`].filter(Boolean).join(' · ')}</p>
+                <p className="text-xs text-gray-400">{[g.colegio, g.curso !== g.nombre && g.curso, `código ${g.codigo}`, g.plan === 'mensual' ? 'plan mensual' : 'plan completo'].filter(Boolean).join(' · ')}</p>
               </div>
               <div className="text-right shrink-0">
                 <p className="text-lg font-medium">{g.resumen.promedio ?? '—'}{g.resumen.promedio != null && '%'}</p>

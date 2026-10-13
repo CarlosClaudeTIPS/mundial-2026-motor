@@ -60,12 +60,22 @@ function codigoGrupo() {
   return Array.from({ length: 6 }, () => letras[Math.floor(Math.random() * letras.length)]).join('')
 }
 
-export async function crearGrupo({ nombre, docente_id, colegio = '', curso = '', ciclo_id = null }) {
-  const g = { id: uuid(), nombre: nombre.trim(), docente_id, colegio, curso, ciclo_id, codigo: codigoGrupo(), creado: ahora(), sincronizado: 0 }
+export async function crearGrupo({ nombre, docente_id, colegio = '', curso = '', ciclo_id = null, plan = 'completo', plan_inicio = null }) {
+  const g = { id: uuid(), nombre: nombre.trim(), docente_id, colegio, curso, ciclo_id, codigo: codigoGrupo(), plan, plan_inicio: plan_inicio ?? ahora(), creado: ahora(), sincronizado: 0 }
   await db.grupos.add(g)
   await encolar('grupos', g)
   await sincronizar() // el grupo debe existir en la nube antes de asignarle estudiantes
   return g
+}
+
+// Cambia datos del grupo (plan de acceso, fechas, nombre…) y lo sube a la nube.
+export async function actualizarGrupo(id, cambios) {
+  const g = await db.grupos.get(id)
+  if (!g) throw new Error('Grupo no encontrado')
+  const nuevo = { ...g, ...cambios, sincronizado: 0 }
+  await db.grupos.put(nuevo)
+  await encolar('grupos', nuevo)
+  return nuevo
 }
 
 // Pasa un estudiante a otro grupo (su historial de respuestas se va con él).

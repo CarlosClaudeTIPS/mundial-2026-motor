@@ -45,9 +45,9 @@ export default function Practica({ usuario, params }) {
         if (params.enfoque === 'carrera' && !filtros.prueba && modoCarreraActivo(usuario)) {
           // Práctica enfocada: reparte las preguntas entre materias según las prioridades de la carrera.
           const reparto = mezclaPorPrueba(prioridadesDeUsuario(usuario), n)
-          const porPrueba = await Promise.all(Object.entries(reparto).filter(([, k]) => k > 0).map(([prueba, k]) => elegirPreguntas({ n: k, vistas, ...filtros, prueba })))
+          const porPrueba = await Promise.all(Object.entries(reparto).filter(([, k]) => k > 0).map(([prueba, k]) => elegirPreguntas({ n: k, vistas, usuario, ...filtros, prueba })))
           lista = porPrueba.flat()
-        } else lista = await elegirPreguntas({ n, vistas, ...filtros })
+        } else lista = await elegirPreguntas({ n, vistas, usuario, ...filtros })
       }
       setCola(lista.slice(1)); setActual(lista[0] ?? null); inicio.current = Date.now()
     })()

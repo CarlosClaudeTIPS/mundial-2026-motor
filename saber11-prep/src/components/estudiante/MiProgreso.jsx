@@ -10,7 +10,7 @@ export default function MiProgreso({ usuario }) {
   const [d, setD] = useState(null)
   useEffect(() => {
     (async () => {
-      const [intentos, preguntas] = await Promise.all([intentosDe(usuario.id), listarPreguntas()])
+      const [intentos, preguntas] = await Promise.all([intentosDe(usuario.id), listarPreguntas({ usuario })])
       const porId = Object.fromEntries(preguntas.map(p => [p.id, p]))
       setD({ r: resumen(intentos, porId), evo: evolucionSemanal(intentos), recs: recomendar(intentos, { preguntasPorId: porId, reglas: await reglasVigentes() }), n: intentos.length })
     })()

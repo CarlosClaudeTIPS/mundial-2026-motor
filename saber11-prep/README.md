@@ -30,6 +30,8 @@ Usuarios de demostración (modo local, PIN `1234`): `admin`, `docente`, `est1` �
 - `content/carreras.json` — catálogo de carreras por área con el peso (1-3) de cada prueba. Alimenta el **modo carrera**: al entrar por primera vez el estudiante elige hasta 3 carreras y la app prioriza (orden de materias, práctica enfocada, horas en Mi ruta) sin dejar ninguna prueba por fuera. Se cambia en Inicio → Mi carrera. En nube requiere `supabase/migracion-003-carreras.sql`.
 - `content/banco/*.json` — banco de preguntas (esquema en `content/ESQUEMA-PREGUNTA.md`). Cada distractor trae explicación, tipo de error y nivel de diagnóstico.
 
+Plan de acceso por grupo: cada grupo puede ver todo el banco (`completo`) o recibir un lote mensual acumulado (`mensual`, 100 preguntas, 20 por prueba) desde la fecha de inicio del plan; se configura en el panel del grupo y los estudiantes ven en Inicio cuánto tienen liberado y cuándo llega el próximo lote. En nube requiere `supabase/migracion-004-planes.sql`.
+
 Importar preguntas: en el panel del docente, Banco → **Importar** admite PDF o texto (cuadernillos del ICFES, guías); detecta preguntas numeradas con opciones A-D y la hoja de respuestas, y las guarda como pendientes. Con la nube y la variable `ANTHROPIC_API_KEY` en Vercel, el botón **Completar con IA** clasifica cada pregunta y escribe las explicaciones de cada opción, y **Generar con IA** redacta preguntas nuevas a partir de un texto (`api/ia-preguntas.js`, modelo `claude-opus-5-5`). Todo queda pendiente hasta que el docente lo apruebe.
 
 Validar el banco:

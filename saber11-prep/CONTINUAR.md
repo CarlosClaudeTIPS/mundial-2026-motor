@@ -19,7 +19,8 @@ Para la nube real, copia `.env.example` a `.env.local` con `VITE_SUPABASE_URL` y
 ## Qué hay (13-oct-2026)
 
 - **App:** modo carrera (el estudiante elige hasta 3 carreras y la app prioriza materias), banco con letras repartidas, sincronización robusta (un cambio fallido no bloquea la cola; el estado muestra errores en rojo), recarga automática al publicar versión nueva (PWA).
-- **Nube:** migraciones aplicadas hasta `supabase/migracion-003-carreras.sql`.
+- **Plan de acceso por grupo** (`src/lib/acceso.js`): `completo` (todo el banco) o `mensual` (lotes de 100, 20 por prueba, acumulados desde `plan_inicio`; determinista, sin guardar nada). Se configura en Grupo → Resumen → Plan de acceso. Requiere `supabase/migracion-004-planes.sql` en la nube.
+- **Nube:** migraciones aplicadas hasta `supabase/migracion-003-carreras.sql`; la 004 (planes) hay que ejecutarla en el SQL Editor.
 - **Banco:** 995 preguntas aprobadas en `content/banco/` (500 originales + 420 nuevas + 75 oficiales del ICFES explicadas). Convención: `<prueba>-N.json` para lotes propios, `<prueba>-oficial-N.json` para preguntas liberadas del ICFES.
 - **Importados pendientes** (`content/importados/`, no se cargan en la app): ~310 preguntas oficiales del ICFES (Matemáticas 2026 y 2021, Inglés 2024 y 2021, cuadernillos 2021 de Sociales, Lectura y Ciencias, guías 2017) que faltan por clasificar y explicar.
 

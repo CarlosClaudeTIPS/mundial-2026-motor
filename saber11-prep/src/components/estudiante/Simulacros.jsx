@@ -23,7 +23,7 @@ export default function Simulacros({ usuario }) {
     (async () => {
       setEst(await estructuraExamen())
       setHistorial(await sesionesDe(usuario.id))
-      const ps = await listarPreguntas()
+      const ps = await listarPreguntas({ usuario })
       const c = {}; for (const p of ps) c[p.prueba] = (c[p.prueba] ?? 0) + 1
       setConteo(c)
       const ciclo = await cicloActivo(); const prog = await programa()

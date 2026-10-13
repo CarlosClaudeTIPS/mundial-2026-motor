@@ -12,7 +12,7 @@ import { resumen } from './analitica'
 export async function crearMiniPrueba({ estudiante, cantidad = 10, tiempo_min = null, filtros = {}, asignacion_id = null, titulo = null, ids = null }) {
   let preguntas
   if (ids?.length) preguntas = (await Promise.all(ids.map(obtenerPregunta))).filter(Boolean)
-  else preguntas = await elegirPreguntas({ n: cantidad, vistas: await preguntasVistas(estudiante.id), ...filtros })
+  else preguntas = await elegirPreguntas({ n: cantidad, vistas: await preguntasVistas(estudiante.id), usuario: estudiante, ...filtros })
   if (!preguntas.length) throw new Error('No hay preguntas disponibles con esos filtros')
   const s = {
     id: uuid(), estudiante_id: estudiante.id, tipo: 'mini', titulo: titulo ?? 'Mini-prueba',
@@ -30,7 +30,7 @@ export async function crearDiagnostico({ estudiante, porPrueba = 5, tiempo_min =
   const pruebas = ['lectura_critica', 'matematicas', 'sociales_ciudadanas', 'ciencias_naturales', 'ingles']
   const ids = []
   for (const prueba of pruebas) {
-    const disponibles = (await listarPreguntas({ prueba })).filter(p => p.dificultad <= 2)
+    const disponibles = (await listarPreguntas({ prueba, usuario: estudiante })).filter(p => p.dificultad <= 2)
     // Para el diagnóstico se prefieren preguntas independientes (sin texto compartido), así cada una se entiende sola
     const sueltas = disponibles.filter(p => !grupoTexto(p))
     const todas = mezclar(sueltas.length >= porPrueba ? sueltas : disponibles)
@@ -70,7 +70,7 @@ export async function crearSimulacro({ estudiante, sesion_examen = 1, escala = 0
   let faltantes = []
   for (const b of ses.bloques) {
     const objetivo = Math.max(1, Math.round(b.preguntas * escala))
-    const elegidas = await elegirPreguntas({ n: objetivo, vistas, prueba: b.prueba })
+    const elegidas = await elegirPreguntas({ n: objetivo, vistas, prueba: b.prueba, usuario: estudiante })
     if (elegidas.length < objetivo) faltantes.push({ prueba: b.prueba, objetivo, disponibles: elegidas.length })
     bloques.push({ prueba: b.prueba, ids: elegidas.map(p => p.id) })
   }

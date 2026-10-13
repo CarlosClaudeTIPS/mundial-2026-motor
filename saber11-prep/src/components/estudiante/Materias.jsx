@@ -12,7 +12,7 @@ export default function Materias({ usuario }) {
   const [d, setD] = useState(null)
   useEffect(() => {
     (async () => {
-      const [preguntas, intentos] = await Promise.all([listarPreguntas(), usuario.rol === 'estudiante' ? intentosDe(usuario.id) : []])
+      const [preguntas, intentos] = await Promise.all([listarPreguntas({ usuario }), usuario.rol === 'estudiante' ? intentosDe(usuario.id) : []])
       const est = {}
       for (const m of MATERIAS) {
         const ps = preguntas.filter(p => p.prueba === m.id)

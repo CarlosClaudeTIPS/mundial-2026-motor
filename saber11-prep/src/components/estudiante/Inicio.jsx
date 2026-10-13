@@ -12,19 +12,21 @@ import { MATERIAS, ICONO_PRUEBA } from '../Login'
 import { Stethoscope, Compass } from 'lucide-react'
 import { modoCarreraActivo, prioridadesDeUsuario, carreraPorId, NOMBRE_NIVEL } from '../../lib/carreras'
 import { VistaPrioridades } from './Carreras'
+import { estadoLiberacion, grupoDe } from '../../lib/acceso'
+import { Unlock } from 'lucide-react'
 
 export default function Inicio({ usuario }) {
   const [datos, setDatos] = useState(null)
 
   useEffect(() => {
     (async () => {
-      const [intentos, ciclo, prog, preguntas, pendientes, diagnostico] = await Promise.all([intentosDe(usuario.id), cicloActivo(), programa(), listarPreguntas(), asignacionesPendientes(usuario), diagnosticoDe(usuario.id)])
+      const [intentos, ciclo, prog, preguntas, pendientes, diagnostico, grupo, todas] = await Promise.all([intentosDe(usuario.id), cicloActivo(), programa(), listarPreguntas({ usuario }), asignacionesPendientes(usuario), diagnosticoDe(usuario.id), grupoDe(usuario), listarPreguntas()])
       const preguntasPorId = Object.fromEntries(preguntas.map(p => [p.id, p]))
       setDatos({
         intentos, ciclo, estado: estadoCiclo(ciclo, prog), pendientes,
         resumen: resumen(intentos, preguntasPorId),
         recs: recomendar(intentos, { preguntasPorId, reglas: await reglasVigentes() }).slice(0, 2),
-        totalBanco: preguntas.length, diagnostico,
+        totalBanco: preguntas.length, diagnostico, liberacion: estadoLiberacion(todas, grupo),
       })
     })()
   }, [usuario.id])
@@ -79,6 +81,7 @@ export default function Inicio({ usuario }) {
       </div>
 
       <TarjetaCarrera usuario={usuario} prioridades={prioridades} activo={enModoCarrera} />
+      {datos.liberacion && <TarjetaLiberacion e={datos.liberacion} />}
 
       <div className="card">
         <div className="flex justify-between text-sm mb-1">
@@ -179,6 +182,19 @@ function TarjetaCarrera({ usuario, prioridades, activo }) {
       <p className="text-xs text-gray-400 mt-1">{carreras.map(c => c.nombre).join(' · ')}</p>
       <div className="mt-3"><VistaPrioridades prioridades={prioridades} activo={activo} compacta /></div>
       <p className="text-[11px] text-gray-500 mt-2">{activo ? 'Practicas más de lo que más pesa para tus carreras, sin dejar ninguna materia: la meta sigue siendo subir las cinco.' : 'Con el modo apagado todas las materias pesan igual. Actívalo en "Cambiar".'}</p>
+    </div>
+  )
+}
+
+// Plan mensual: cuánto material tiene liberado el grupo y cuándo llega el siguiente lote.
+function TarjetaLiberacion({ e }) {
+  return (
+    <div className="card flex items-center gap-3">
+      <span className="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0"><Unlock size={22} /></span>
+      <div className="flex-1 min-w-0">
+        <p className="font-semibold text-brand-navy">Material liberado: {e.liberadas.size} preguntas{e.nuevas.size ? <Badge tono="ambar">{e.nuevas.size} nuevas este mes</Badge> : null}</p>
+        <p className="text-xs text-gray-400">{e.proximo ? `El próximo lote de ${e.lote} preguntas se libera el ${formatoFecha(e.proximo.toISOString())}.` : 'Ya tienes todo el banco disponible.'}</p>
+      </div>
     </div>
   )
 }

@@ -22,7 +22,7 @@ export default function Refuerzo({ usuario }) {
 
   useEffect(() => {
     (async () => {
-      const [intentos, diag, preguntas, recursos] = await Promise.all([intentosDe(usuario.id), diagnosticoDe(usuario.id), listarPreguntas(), listarRecursos({ estado: 'aprobado' })])
+      const [intentos, diag, preguntas, recursos] = await Promise.all([intentosDe(usuario.id), diagnosticoDe(usuario.id), listarPreguntas({ usuario }), listarRecursos({ estado: 'aprobado' })])
       const porId = Object.fromEntries(preguntas.map(p => [p.id, p]))
       const r = resumen(intentos, porId)
       const conteoBanco = {}

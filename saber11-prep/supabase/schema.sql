@@ -33,6 +33,9 @@ create table if not exists grupos (
   curso text,
   ciclo_id text,
   codigo text unique,
+  plan text not null default 'completo' check (plan in ('completo', 'mensual')), -- acceso al banco (migración 004)
+  plan_inicio timestamptz default now(),
+  plan_lote int default 100,
   creado timestamptz default now()
 );
 alter table perfiles add constraint perfiles_grupo_fk foreign key (grupo_id) references grupos(id) on delete set null;

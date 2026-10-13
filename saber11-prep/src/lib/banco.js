@@ -36,13 +36,18 @@ export async function sembrarBanco() {
   return { cargadas, total: await db.preguntas.count() }
 }
 
-// Filtros: { prueba, competencia, habilidad, componente, dificultad, tipo_error, excluirIds, estado }
+// Filtros: { prueba, competencia, habilidad, componente, dificultad, tipo_error, excluirIds, estado, usuario }
+// `usuario`: si es un estudiante cuyo grupo tiene plan mensual, solo devuelve las preguntas ya liberadas.
 export async function listarPreguntas(f = {}) {
   let col = db.preguntas.toCollection()
   if (f.prueba) col = db.preguntas.where('prueba').equals(f.prueba)
   let lista = await col.toArray()
   const estado = f.estado ?? 'aprobada'
   if (estado !== 'todas') lista = lista.filter(p => p.estado === estado)
+  if (f.usuario) {
+    const { filtrarParaUsuario } = await import('./acceso')
+    lista = await filtrarParaUsuario(lista, f.usuario)
+  }
   if (f.competencia) lista = lista.filter(p => p.competencia === f.competencia)
   if (f.habilidad) lista = lista.filter(p => p.habilidad === f.habilidad)
   if (f.componente) lista = lista.filter(p => p.componente === f.componente)

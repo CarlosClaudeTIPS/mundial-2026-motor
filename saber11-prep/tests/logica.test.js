@@ -167,3 +167,59 @@ describe('carreras.mezclaPorPrueba', () => {
     expect(h[0].minutos).toBeGreaterThan(h[h.length - 1].minutos)
   })
 })
+
+// ─── Plan de acceso por grupo ────────────────────────────────────────────────
+import { estadoLiberacion, mesesTranscurridos, fechaLote } from '../src/lib/acceso'
+
+const bancoFicticio = () => {
+  const out = []
+  for (const prueba of ['lectura_critica', 'matematicas', 'sociales_ciudadanas', 'ciencias_naturales', 'ingles']) {
+    for (let i = 1; i <= 50; i++) out.push({ id: `${prueba.slice(0, 3).toUpperCase()}-${String(i).padStart(3, '0')}`, prueba, estado: 'aprobada', origen: i > 45 ? 'oficial' : 'estilo' })
+  }
+  return out
+}
+
+describe('acceso.mesesTranscurridos', () => {
+  it('cuenta meses completos', () => {
+    expect(mesesTranscurridos('2026-10-15', new Date('2026-10-20'))).toBe(0)
+    expect(mesesTranscurridos('2026-10-15', new Date('2026-11-14'))).toBe(0)
+    expect(mesesTranscurridos('2026-10-15', new Date('2026-11-15'))).toBe(1)
+    expect(mesesTranscurridos('2026-10-15', new Date('2027-01-16'))).toBe(3)
+  })
+  it('fechaLote respeta el día y los meses cortos', () => {
+    expect(fechaLote('2026-01-31', 2).getMonth()).toBe(1) // febrero
+    expect(fechaLote('2026-01-31', 2).getDate()).toBe(28)
+  })
+})
+
+describe('acceso.estadoLiberacion', () => {
+  it('plan completo no restringe', () => {
+    expect(estadoLiberacion(bancoFicticio(), { plan: 'completo' })).toBeNull()
+    expect(estadoLiberacion(bancoFicticio(), null)).toBeNull()
+  })
+  it('primer mes libera 100 repartidas 20 por prueba y las propias antes que las oficiales', () => {
+    const e = estadoLiberacion(bancoFicticio(), { plan: 'mensual', plan_inicio: '2026-10-01' }, new Date('2026-10-05'))
+    expect(e.liberadas.size).toBe(100)
+    expect(e.nuevas.size).toBe(100)
+    expect([...e.liberadas].filter(id => id.startsWith('MAT')).length).toBe(20)
+    expect(e.liberadas.has('MAT-001')).toBe(true)
+    expect(e.liberadas.has('MAT-046')).toBe(false)
+    expect(e.proximo.toISOString().slice(0, 10)).toBe('2026-11-01')
+  })
+  it('el tercer mes acumula 300 y solo 100 son nuevas; lo anterior sigue liberado', () => {
+    const grupo = { plan: 'mensual', plan_inicio: '2026-10-01' }
+    const e1 = estadoLiberacion(bancoFicticio(), grupo, new Date('2026-10-05'))
+    const e3 = estadoLiberacion(bancoFicticio(), grupo, new Date('2026-12-05'))
+    expect(e3.liberadas.size).toBe(250) // 50 por prueba es el máximo del banco ficticio
+    expect([...e1.liberadas].every(id => e3.liberadas.has(id))).toBe(true)
+    expect(e3.agotado).toBe(true)
+    expect(e3.proximo).toBeNull()
+  })
+  it('agregar preguntas nuevas al banco no cambia lo ya liberado', () => {
+    const grupo = { plan: 'mensual', plan_inicio: '2026-10-01' }
+    const antes = estadoLiberacion(bancoFicticio(), grupo, new Date('2026-10-05'))
+    const mas = [...bancoFicticio(), ...[51, 52, 53].map(i => ({ id: `MAT-${i}`, prueba: 'matematicas', estado: 'aprobada', origen: 'estilo' }))]
+    const despues = estadoLiberacion(mas, grupo, new Date('2026-10-05'))
+    expect([...antes.liberadas].sort()).toEqual([...despues.liberadas].sort())
+  })
+})

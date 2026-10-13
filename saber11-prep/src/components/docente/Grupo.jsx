@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { UserPlus, ClipboardList, Printer, Lightbulb } from 'lucide-react'
 import { db } from '../../lib/db'
-import { intentosDeGrupo, agregarEstudiante, importarEstudiantes, crearAsignacion, asignacionesDeGrupo, sesionesDocenteDe, prepararSesionDocente, guardarSesionDocente } from '../../lib/datos'
+import { intentosDeGrupo, agregarEstudiante, importarEstudiantes, crearAsignacion, asignacionesDeGrupo, sesionesDocenteDe, prepararSesionDocente, guardarSesionDocente, actualizarGrupo } from '../../lib/datos'
+import { PLANES, LOTE_MENSUAL, estadoLiberacion } from '../../lib/acceso'
+import { formatoFecha } from '../../lib/ciclo'
 import { listarPreguntas } from '../../lib/banco'
 import { resumenGrupo, estadisticasPreguntas } from '../../lib/analitica'
 import { generarIntentosDemo } from '../../lib/demo'
@@ -81,6 +83,7 @@ export default function Grupo({ usuario, params }) {
 
       {pestana === 'resumen' && (
         <>
+          <PlanAcceso grupo={grupo} preguntas={Object.values(d.porId)} onCambio={cargar} />
           <div className="grid grid-cols-3 gap-2">
             <Metrica etiqueta="Promedio" valor={r.promedio} sufijo="%" />
             <Metrica etiqueta="Activos" valor={`${r.n_activos}/${r.n_estudiantes}`} />
@@ -297,6 +300,54 @@ function AsignacionFila({ a, miembros }) {
         <div><p className="text-sm font-medium">{a.titulo}</p><p className="text-xs text-gray-500">{a.tipo === 'diagnostico' ? 'Prueba diagnóstica · 25 preguntas · 40 min' : a.tipo === 'simulacro' ? `Simulacro sesión ${a.config.sesion_examen} · ${Math.round(a.config.escala * 100)} %` : `Mini-prueba · ${a.config.cantidad} preguntas${a.config.tiempo_min ? ` · ${a.config.tiempo_min} min` : ''}`}{a.fecha_limite ? ` · hasta ${a.fecha_limite}` : ''}</p></div>
         <div className="text-right shrink-0"><p className="text-sm font-medium">{prom != null ? `${prom}%` : '—'}</p><p className="text-xs text-gray-500">{hechas?.length ?? 0}/{miembros.length} hechas</p></div>
       </div>
+    </div>
+  )
+}
+
+// ─── Plan de acceso al banco: completo o mensual (lotes de LOTE_MENSUAL) ─────
+function PlanAcceso({ grupo, preguntas, onCambio }) {
+  const [editando, setEditando] = useState(false)
+  const [form, setForm] = useState({ plan: grupo.plan ?? 'completo', plan_inicio: (grupo.plan_inicio ?? grupo.creado ?? '').slice(0, 10), plan_lote: grupo.plan_lote ?? LOTE_MENSUAL })
+  const aprobadas = preguntas.filter(p => p.estado === 'aprobada')
+  const e = estadoLiberacion(aprobadas, grupo)
+  const guardar = async () => {
+    try {
+      await actualizarGrupo(grupo.id, { plan: form.plan, plan_inicio: form.plan_inicio ? new Date(form.plan_inicio + 'T00:00:00').toISOString() : grupo.plan_inicio, plan_lote: Number(form.plan_lote) || LOTE_MENSUAL })
+      setEditando(false); onCambio?.()
+    } catch (err) { alert(err.message) }
+  }
+  return (
+    <div className="card">
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="font-medium">Plan de acceso al banco <Badge tono={e ? 'ambar' : 'verde'}>{PLANES[grupo.plan ?? 'completo']?.nombre ?? grupo.plan}</Badge></p>
+          <p className="text-xs text-gray-400 mt-1">
+            {e
+              ? <>Mes {e.meses + 1} · liberadas {e.liberadas.size} de {e.total} preguntas ({e.nuevas.size} nuevas este mes). {e.proximo ? `Próximo lote de ${e.lote}: ${formatoFecha(e.proximo.toISOString())}.` : 'Ya se liberó todo el banco.'}</>
+              : <>Los estudiantes ven las {aprobadas.length} preguntas aprobadas del banco.</>}
+          </p>
+        </div>
+        <button className="text-xs font-semibold text-brand-blue shrink-0" onClick={() => setEditando(v => !v)}>{editando ? 'Cerrar' : 'Cambiar'}</button>
+      </div>
+      {editando && (
+        <div className="mt-3 space-y-2">
+          <div className="grid sm:grid-cols-2 gap-2">
+            {Object.values(PLANES).map(p => (
+              <button key={p.id} onClick={() => setForm({ ...form, plan: p.id })} className={`text-left rounded-xl border p-3 ${form.plan === p.id ? 'border-brand-blue bg-sky-50' : 'border-dark-600'}`}>
+                <p className="text-sm font-medium">{p.nombre}</p><p className="text-xs text-gray-400">{p.descripcion}</p>
+              </button>
+            ))}
+          </div>
+          {form.plan === 'mensual' && (
+            <div className="grid grid-cols-2 gap-2">
+              <div><label className="label">Inicio del plan</label><input type="date" className="input" value={form.plan_inicio} onChange={ev => setForm({ ...form, plan_inicio: ev.target.value })} /></div>
+              <div><label className="label">Preguntas por mes</label><input type="number" min="25" step="5" className="input" value={form.plan_lote} onChange={ev => setForm({ ...form, plan_lote: ev.target.value })} /></div>
+            </div>
+          )}
+          <p className="text-[11px] text-gray-500">El lote mensual se reparte por igual entre las cinco pruebas y se acumula: lo liberado no se quita. Al cambiar el plan, el estudiante lo ve en cuanto recargue la app.</p>
+          <div className="flex gap-2"><button className="btn-primary flex-1" onClick={guardar}>Guardar</button><button className="btn-secondary flex-1" onClick={() => setEditando(false)}>Cancelar</button></div>
+        </div>
+      )}
     </div>
   )
 }
