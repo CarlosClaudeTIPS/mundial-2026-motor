@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de administración · Tienda</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin">
+<header class="admin-cabecera">
+  <div class="contenedor admin-barra">
+    <a class="logo" href="index.html">⚙️ <span>Panel de administración</span></a>
+    <div class="admin-acciones">
+      <span class="estado" id="estado-guardado">Sin cambios</span>
+      <button class="btn btn-contorno btn-sm" id="btn-previsualizar">👁️ Vista previa</button>
+      <button class="btn btn-primario btn-sm" id="btn-descargar">⬇️ Descargar archivos</button>
+    </div>
+  </div>
+</header>
+<main class="contenedor admin-layout">
+  <nav class="admin-nav" aria-label="Secciones">
+    <button class="activo" data-tab="productos">📦 Productos</button>
+    <button data-tab="categorias">🗂️ Categorías</button>
+    <button data-tab="config">🏪 Configuración</button>
+    <button data-tab="contenido">✍️ Generador de contenido</button>
+    <button data-tab="datos">🔄 Importar / Exportar</button>
+    <button data-tab="metricas">📊 Métricas locales</button>
+    <button data-tab="ayuda">❓ Cómo funciona</button>
+  </nav>
+  <section class="admin-panel">
+    <div class="aviso-pendiente" id="aviso-borrador" style="margin-bottom:1rem">
+      <strong>Cómo se guardan los cambios:</strong> este panel edita una copia local en tu navegador (borrador). Para publicarlos, descarga <code>catalogo.json</code> y <code>config.json</code> y reemplázalos en la carpeta <code>data/</code> del sitio publicado. Lee la pestaña «Cómo funciona».
+    </div>
+
+    <div class="tab" id="tab-productos">
+      <div class="admin-toolbar">
+        <input type="search" id="buscar-admin" placeholder="Buscar producto…" class="campo">
+        <select id="filtro-cat-admin" class="campo"><option value="">Todas las categorías</option></select>
+        <button class="btn btn-acento btn-sm" id="btn-nuevo">+ Nuevo producto</button>
+      </div>
+      <div class="tabla-wrap"><table class="tabla-admin" id="tabla-productos"><thead><tr><th>Orden</th><th>Producto</th><th>Precio</th><th>Estado</th><th>Etiquetas</th><th>Acciones</th></tr></thead><tbody></tbody></table></div>
+    </div>
+
+    <div class="tab" id="tab-categorias" hidden>
+      <div class="admin-toolbar"><button class="btn btn-acento btn-sm" id="btn-nueva-cat">+ Nueva categoría</button></div>
+      <div class="tabla-wrap"><table class="tabla-admin" id="tabla-categorias"><thead><tr><th>Orden</th><th>Icono</th><th>Nombre</th><th>ID</th><th>Productos</th><th>Visible</th><th>Acciones</th></tr></thead><tbody></tbody></table></div>
+    </div>
+
+    <div class="tab" id="tab-config" hidden><form id="form-config" class="formulario"></form></div>
+
+    <div class="tab" id="tab-contenido" hidden>
+      <p>Genera borradores de textos comerciales usando <strong>solo los datos del producto</strong>. Las plantillas señalan la información faltante y no inventan reseñas, resultados ni características. Revisa y ajusta antes de publicar.</p>
+      <div class="admin-toolbar"><select id="gen-producto" class="campo"></select><select id="gen-tono" class="campo"><option value="cercano">Tono cercano</option><option value="directo">Tono directo</option><option value="profesional">Tono profesional</option></select><button class="btn btn-primario btn-sm" id="btn-generar">Generar borradores</button></div>
+      <div id="gen-faltantes"></div>
+      <div id="gen-resultados" class="gen-grid"></div>
+    </div>
+
+    <div class="tab" id="tab-datos" hidden>
+      <div class="bloque"><h2>Exportar</h2><p>Descarga los archivos para publicarlos o como copia de seguridad.</p>
+        <div class="atajos"><button class="btn btn-primario btn-sm" data-exportar="catalogo">catalogo.json</button><button class="btn btn-primario btn-sm" data-exportar="config">config.json</button><button class="btn btn-suave btn-sm" data-exportar="csv">Productos en CSV (Excel)</button></div></div>
+      <div class="bloque"><h2>Importar</h2><p>Carga un <code>catalogo.json</code>, <code>config.json</code> o un CSV con el mismo formato del exportado. Los productos del CSV se agregan o actualizan según su ID.</p>
+        <input type="file" id="archivo-importar" accept=".json,.csv" class="campo">
+        <p class="nota-legal">Antes de importar un CSV editado en Excel, guárdalo como «CSV UTF-8 (delimitado por comas)». Listas (beneficios, imágenes, etc.) se separan con «|» y las especificaciones con «clave: valor | clave: valor».</p></div>
+      <div class="bloque"><h2>Borrador local</h2><p>Si quieres volver a los datos publicados y descartar los cambios locales:</p><button class="btn btn-suave btn-sm" id="btn-descartar">Descartar borrador y recargar desde data/</button></div>
+    </div>
+
+    <div class="tab" id="tab-metricas" hidden>
+      <div class="bloque"><h2>Métricas locales</h2><p class="nota-legal">Cuenta únicamente los clics hechos <strong>en este navegador</strong>. Para medir visitas reales de todos tus clientes, configura Google Analytics 4 o Meta Pixel en Configuración → Analítica: los mismos eventos (view_item, whatsapp_click, add_to_cart, buscar) se envían allí automáticamente.</p><div id="metricas"></div><button class="btn btn-suave btn-sm" id="btn-limpiar-metricas" style="margin-top:.8rem">Reiniciar contador local</button></div>
+    </div>
+
+    <div class="tab" id="tab-ayuda" hidden><div class="bloque" id="ayuda"></div></div>
+  </section>
+</main>
+
+<!-- Editor de producto -->
+<div class="capa" id="capa-editor"></div>
+<aside class="editor" id="editor" aria-hidden="true">
+  <div class="editor-cabecera"><h2 id="editor-titulo">Producto</h2><button class="icono-btn" id="editor-cerrar" aria-label="Cerrar">✕</button></div>
+  <form id="form-producto" class="editor-cuerpo formulario"></form>
+  <div class="editor-pie">
+    <button class="btn btn-suave btn-sm" id="editor-enlace" type="button">🔗 Copiar enlace</button>
+    <button class="btn btn-suave btn-sm" id="editor-duplicar" type="button">Duplicar</button>
+    <button class="btn btn-primario" id="editor-guardar" type="button">Guardar producto</button>
+  </div>
+</aside>
+<script src="js/app.js"></script>
+<script src="js/generador.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
