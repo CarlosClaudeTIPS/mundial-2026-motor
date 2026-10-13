@@ -128,3 +128,25 @@ No incluido (y por qué):
 - Segunda foto al pasar el cursor sobre la tarjeta y descripción corta en la tarjeta.
 - Carruseles horizontales en la portada móvil y sección «Vistos recientemente».
 - Contenido completo visible en la ficha (sin esconderlo en subpáginas, un error frecuente en móvil según Baymard).
+
+## 9. Seguir trabajando desde otro computador
+
+El código vive en el repositorio `CarlosClaudeTIPS/mundial-2026-motor`, rama `claude/gifted-clarke-y62a56`, carpeta `tienda/`. En el otro PC:
+
+```bash
+git clone https://github.com/CarlosClaudeTIPS/mundial-2026-motor.git
+cd mundial-2026-motor
+git checkout claude/gifted-clarke-y62a56
+cd tienda
+python3 -m http.server 8080      # abre http://localhost:8080
+```
+
+Para guardar cambios:
+
+```bash
+git add tienda
+git commit -m "Describe el cambio"
+git push
+```
+
+Para moverla a su propio repositorio (recomendado cuando la publiques): crea un repositorio vacío en GitHub, copia la carpeta `tienda/` dentro, y ejecuta `git init && git add . && git commit -m "Tienda digital" && git branch -M main && git remote add origin URL && git push -u origin main`. No depende de ningún otro archivo del repositorio actual.
