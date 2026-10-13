@@ -223,3 +223,58 @@ describe('acceso.estadoLiberacion', () => {
     expect([...antes.liberadas].sort()).toEqual([...despues.liberadas].sort())
   })
 })
+
+// ─── Informes ────────────────────────────────────────────────────────────────
+import { nivelDe, puntajeGlobal, percentilNacional, percentilLocal, informeEstudiante, informeGrupo, csvInformeGrupo } from '../src/lib/informes'
+
+const intentoDe = (estudiante_id, pregunta_id, prueba, correcta, tipo_error = null) => ({ uid: `${estudiante_id}-${pregunta_id}`, estudiante_id, pregunta_id, prueba, competencia: 'X', correcta, tipo_error: correcta ? null : tipo_error, fecha: '2026-10-01T00:00:00Z' })
+const preguntasInforme = { P1: { id: 'P1', prueba: 'matematicas', competencia: 'M1', afirmacion: 'Interpreta gráficas' }, P2: { id: 'P2', prueba: 'matematicas', competencia: 'M1', afirmacion: 'Interpreta gráficas' }, P3: { id: 'P3', prueba: 'matematicas', competencia: 'M2', afirmacion: 'Resuelve problemas' }, P4: { id: 'P4', prueba: 'lectura_critica', competencia: 'LC1', afirmacion: 'Contenidos locales' } }
+
+describe('informes.niveles y escalas', () => {
+  it('asigna niveles según los cortes', () => {
+    expect(nivelDe('matematicas', 35)).toBe('1'); expect(nivelDe('matematicas', 36)).toBe('2'); expect(nivelDe('matematicas', 71)).toBe('4')
+    expect(nivelDe('lectura_critica', 66)).toBe('4'); expect(nivelDe('ingles', 60)).toBe('A2'); expect(nivelDe('ingles', 90)).toBe('B+')
+  })
+  it('global con ponderación 3-3-3-3-1 en 0-500', () => {
+    expect(puntajeGlobal({ lectura_critica: 50, matematicas: 50, sociales_ciudadanas: 50, ciencias_naturales: 50, ingles: 50 })).toBe(250)
+    expect(puntajeGlobal({ lectura_critica: 100, matematicas: 100, sociales_ciudadanas: 100, ciencias_naturales: 100, ingles: 100 })).toBe(500)
+    expect(puntajeGlobal({ matematicas: 60 })).toBe(300)
+    expect(puntajeGlobal({})).toBeNull()
+  })
+  it('percentil nacional crece con el puntaje y la media queda cerca del 50', () => {
+    expect(percentilNacional('global', 100)).toBeLessThan(5)
+    expect(percentilNacional('global', 250)).toBeGreaterThan(40)
+    expect(percentilNacional('global', 250)).toBeLessThan(60)
+    expect(percentilNacional('global', 450)).toBeGreaterThan(99)
+    expect(percentilNacional('matematicas', 80)).toBeGreaterThan(percentilNacional('matematicas', 50))
+  })
+  it('percentil local', () => {
+    expect(percentilLocal(50, [10, 20, 30, 40, 50, 60, 70, 80, 90, 100])).toBe(45)
+    expect(percentilLocal(50, [50])).toBeNull()
+  })
+})
+
+describe('informes.informeEstudiante / informeGrupo', () => {
+  const intentos = [intentoDe('E1', 'P1', 'matematicas', false, 'lectura_grafico'), intentoDe('E1', 'P2', 'matematicas', false, 'lectura_grafico'), intentoDe('E1', 'P3', 'matematicas', true), intentoDe('E1', 'P4', 'lectura_critica', true),
+    intentoDe('E2', 'P1', 'matematicas', true), intentoDe('E2', 'P2', 'matematicas', true), intentoDe('E2', 'P3', 'matematicas', true), intentoDe('E2', 'P4', 'lectura_critica', false, 'comprension')]
+  it('individual: puntajes, nivel, prioridades y fortalezas', () => {
+    const inf = informeEstudiante({ intentos: intentos.filter(i => i.estudiante_id === 'E1'), preguntasPorId: preguntasInforme })
+    const mat = inf.pruebas.find(p => p.prueba === 'matematicas')
+    expect(mat.puntaje).toBe(33); expect(mat.nivel).toBe('1')
+    expect(inf.global).toBe(Math.round(((33 * 3 + 100 * 3) / 6) * 5))
+    expect(inf.mas_debil.prueba).toBe('matematicas')
+    expect(inf.pruebas.find(p => p.prueba === 'ingles').puntaje).toBeNull()
+    expect(inf.percentil_nacional).toBeGreaterThan(0)
+  })
+  it('grupo: medias, distribución de niveles, percentil local y CSV', () => {
+    const inf = informeGrupo({ miembros: [{ id: 'E1', nombre: 'Ana', usuario: 'ana' }, { id: 'E2', nombre: 'Beto', usuario: 'beto' }, { id: 'E3', nombre: 'Cami', usuario: 'cami' }], intentos, preguntasPorId: preguntasInforme })
+    expect(inf.n_activos).toBe(2)
+    const mat = inf.pruebas.find(p => p.prueba === 'matematicas')
+    expect(mat.media).toBe(67)
+    expect(mat.distribucion_niveles.reduce((a, d) => a + d.n, 0)).toBe(2)
+    expect(inf.estudiantes[0].nombre).toBe('Ana') // 333 global (lectura 100, mate 33) > Beto 250
+    expect(inf.estudiantes.find(e => e.nombre === 'Ana').percentil_local).toBeGreaterThan(inf.estudiantes.find(e => e.nombre === 'Beto').percentil_local)
+    expect(inf.estudiantes.find(e => e.nombre === 'Cami').global).toBeNull()
+    expect(csvInformeGrupo(inf).split('\n')).toHaveLength(4)
+  })
+})

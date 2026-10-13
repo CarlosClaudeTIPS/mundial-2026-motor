@@ -32,6 +32,8 @@ Usuarios de demostración (modo local, PIN `1234`): `admin`, `docente`, `est1` �
 
 Plan de acceso por grupo: cada grupo puede ver todo el banco (`completo`) o recibir un lote mensual acumulado (`mensual`, 100 preguntas, 20 por prueba) desde la fecha de inicio del plan; se configura en el panel del grupo y los estudiantes ven en Inicio cuánto tienen liberado y cuándo llega el próximo lote. En nube requiere `supabase/migracion-004-planes.sql`.
 
+Informes de mejoramiento (individual y por grupo, ruta `#/informe`): puntajes estimados por prueba y global con la ponderación oficial, niveles de desempeño, percentil nacional (distribución real de los datos abiertos del ICFES en `content/referencia-nacional.json`) y percentil local, aprendizajes por mejorar y fortalezas por afirmación, evolución por simulacro, exportación a PDF y CSV.
+
 Importar preguntas: en el panel del docente, Banco → **Importar** admite PDF o texto (cuadernillos del ICFES, guías); detecta preguntas numeradas con opciones A-D y la hoja de respuestas, y las guarda como pendientes. Con la nube y la variable `ANTHROPIC_API_KEY` en Vercel, el botón **Completar con IA** clasifica cada pregunta y escribe las explicaciones de cada opción, y **Generar con IA** redacta preguntas nuevas a partir de un texto (`api/ia-preguntas.js`, modelo `claude-opus-5-5`). Todo queda pendiente hasta que el docente lo apruebe.
 
 Validar el banco:

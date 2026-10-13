@@ -54,7 +54,10 @@ export default function EstudianteDetalle({ params }) {
           </select>
         </label>
       )}
-      <button className="btn-secondary w-full" onClick={() => ir('historial', { id: e.id })}>Ver historial completo (cada prueba y cada pregunta)</button>
+      <div className="grid sm:grid-cols-2 gap-2">
+        <button className="btn-primary w-full" onClick={() => ir('informe', { estudiante: e.id })}>Informe de mejoramiento</button>
+        <button className="btn-secondary w-full" onClick={() => ir('historial', { id: e.id })}>Historial completo</button>
+      </div>
       <div className="grid grid-cols-3 gap-2">
         <Metrica etiqueta="Aciertos" valor={r.precision} sufijo="%" />
         <Metrica etiqueta="Respuestas" valor={r.total} />

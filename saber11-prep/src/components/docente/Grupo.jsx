@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { UserPlus, ClipboardList, Printer, Lightbulb } from 'lucide-react'
+import { UserPlus, ClipboardList, Printer, Lightbulb, FileBarChart } from 'lucide-react'
 import { db } from '../../lib/db'
 import { intentosDeGrupo, agregarEstudiante, importarEstudiantes, crearAsignacion, asignacionesDeGrupo, sesionesDocenteDe, prepararSesionDocente, guardarSesionDocente, actualizarGrupo } from '../../lib/datos'
 import { PLANES, LOTE_MENSUAL, estadoLiberacion } from '../../lib/acceso'
@@ -83,6 +83,7 @@ export default function Grupo({ usuario, params }) {
 
       {pestana === 'resumen' && (
         <>
+          <button className="btn-primary w-full" onClick={() => ir('informe', { grupo: grupo.id })}><FileBarChart size={16} /> Informe de mejoramiento del grupo (puntajes, niveles, percentiles)</button>
           <PlanAcceso grupo={grupo} preguntas={Object.values(d.porId)} onCambio={cargar} />
           <div className="grid grid-cols-3 gap-2">
             <Metrica etiqueta="Promedio" valor={r.promedio} sufijo="%" />
