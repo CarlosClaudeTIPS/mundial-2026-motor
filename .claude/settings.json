@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git fetch -q origin master 2>/dev/null && git merge -q --ff-only origin/master 2>/dev/null; echo 'Repositorio sincronizado con origin/master'"
+          }
+        ]
+      }
+    ]
+  }
+}
