@@ -1,0 +1,160 @@
+import { useMemo, useState } from 'react'
+import { BookOpenCheck, ExternalLink, MapPin, Search, ChevronRight, ArrowLeft } from 'lucide-react'
+import { Titulo, Badge, Md, Vacio } from './ui'
+
+// ─── Guía del ICFES ──────────────────────────────────────────────────────────
+// Qué es el examen, cómo se califica, para qué sirve y qué piden las universidades
+// de cada ciudad. Contenido en content/guia/*.json (ver content/guia/ESQUEMA.md).
+
+const archivos = import.meta.glob('../../content/guia/*.json', { eager: true, import: 'default' })
+const general = Object.entries(archivos).find(([k]) => k.endsWith('/general.json'))?.[1] ?? null
+const SECCIONES = Array.isArray(general) ? general : (general?.secciones ?? [])
+const UNIVERSIDADES = Object.entries(archivos).filter(([k]) => k.includes('/universidades-')).flatMap(([, v]) => (Array.isArray(v) ? v : v?.universidades ?? []))
+
+const USO = {
+  requisito: { nombre: 'Solo requisito', tono: 'gris', texto: 'Exige haber presentado el Saber 11, sin puntaje mínimo publicado.' },
+  puntaje_minimo: { nombre: 'Puntaje mínimo', tono: 'ambar', texto: 'Pide un puntaje mínimo global o por prueba.' },
+  ponderado: { nombre: 'Admite por puntaje', tono: 'azul', texto: 'Admite según el puntaje Saber 11, ponderado por programa.' },
+  examen_propio: { nombre: 'Examen propio', tono: 'morado', texto: 'Tiene su propio examen de admisión; el Saber 11 es requisito.' },
+  entrevista_o_mixto: { nombre: 'Mixto', tono: 'verde', texto: 'Combina Saber 11 con entrevista, prueba o promedio del colegio.' },
+}
+const sinTildes = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+
+export default function Guia({ params }) {
+  const [pestana, setPestana] = useState(params.seccion ?? (SECCIONES[0]?.id ?? 'universidades'))
+  const [ciudad, setCiudad] = useState('')
+  const [uso, setUso] = useState('')
+  const [busqueda, setBusqueda] = useState('')
+  const [abierta, setAbierta] = useState(null)
+
+  const ciudades = useMemo(() => [...new Set(UNIVERSIDADES.map(u => u.ciudad).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es')), [])
+  const lista = useMemo(() => UNIVERSIDADES.filter(u =>
+    (!ciudad || u.ciudad === ciudad || (u.sedes ?? []).includes(ciudad)) &&
+    (!uso || u.uso_saber11 === uso) &&
+    (!busqueda || sinTildes(`${u.nombre} ${u.sigla ?? ''} ${u.ciudad} ${u.departamento ?? ''}`).includes(sinTildes(busqueda)))
+  ).sort((a, b) => a.nombre.localeCompare(b.nombre, 'es')), [ciudad, uso, busqueda])
+
+  if (abierta) return <DetalleUniversidad u={abierta} volver={() => setAbierta(null)} />
+
+  const pestanas = [...SECCIONES.map(s => [s.id, s.titulo]), ['universidades', 'Universidades por ciudad']]
+  const seccion = SECCIONES.find(s => s.id === pestana)
+
+  return (
+    <div className="space-y-4">
+      <Titulo sub="Qué es el examen Saber 11, cómo se califica, para qué sirve y qué piden las universidades">Guía del ICFES</Titulo>
+      <div className="flex gap-1.5 overflow-x-auto -mx-4 px-4 pb-1">
+        {pestanas.map(([k, n]) => (
+          <button key={k} onClick={() => setPestana(k)} className={`badge shrink-0 border px-3 py-1 ${pestana === k ? 'border-brand-blue text-brand-blue bg-sky-50' : 'border-dark-600 text-gray-400'}`}>{n}</button>
+        ))}
+      </div>
+
+      {pestana !== 'universidades' && (
+        !seccion ? <Vacio>Esta sección aún no tiene contenido.</Vacio> : (
+          <div className="card space-y-3">
+            <p className="font-semibold text-brand-navy flex items-center gap-2"><BookOpenCheck size={18} className="text-brand-blue" /> {seccion.titulo}</p>
+            {seccion.parrafos?.map((p, i) => <Md key={i} texto={p} className="text-sm text-gray-300" />)}
+            {seccion.preguntas?.map((q, i) => (
+              <div key={i} className="rounded-lg bg-dark-900 p-3"><p className="text-sm font-medium">{q.pregunta}</p><Md texto={q.respuesta} className="text-sm text-gray-300 mt-1" /></div>
+            ))}
+            {seccion.enlaces?.length > 0 && (
+              <div className="flex flex-wrap gap-2 pt-1">
+                {seccion.enlaces.map((e, i) => <a key={i} href={e.url} target="_blank" rel="noreferrer" className="badge border border-dark-600 text-brand-blue hover:border-brand-blue"><ExternalLink size={12} /> {e.texto}</a>)}
+              </div>
+            )}
+          </div>
+        )
+      )}
+
+      {pestana === 'universidades' && (
+        <>
+          <div className="card space-y-2">
+            <div className="grid sm:grid-cols-3 gap-2">
+              <select className="input" value={ciudad} onChange={e => setCiudad(e.target.value)}>
+                <option value="">Todas las ciudades</option>
+                {ciudades.map(c => <option key={c} value={c}>{c}</option>)}
+              </select>
+              <select className="input" value={uso} onChange={e => setUso(e.target.value)}>
+                <option value="">Cualquier forma de admisión</option>
+                {Object.entries(USO).map(([k, v]) => <option key={k} value={k}>{v.nombre}</option>)}
+              </select>
+              <div className="relative"><Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" /><input className="input !pl-9" placeholder="Buscar universidad" value={busqueda} onChange={e => setBusqueda(e.target.value)} /></div>
+            </div>
+            <p className="text-[11px] text-gray-500">{lista.length} instituciones. Los datos salen de los sitios oficiales de admisiones y pueden cambiar cada semestre: confirma siempre en el enlace de cada universidad.</p>
+          </div>
+          {UNIVERSIDADES.length === 0 && <Vacio>La lista de universidades aún no está cargada.</Vacio>}
+          <div className="grid sm:grid-cols-2 gap-2">
+            {lista.map(u => { const us = USO[u.uso_saber11] ?? { nombre: u.uso_saber11, tono: 'gris' }; return (
+              <button key={u.id} onClick={() => setAbierta(u)} className="card text-left hover:-translate-y-0.5 transition-transform">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <p className="font-semibold text-brand-navy leading-tight">{u.nombre}{u.sigla ? <span className="text-gray-400 font-normal"> · {u.sigla}</span> : null}</p>
+                    <p className="text-xs text-gray-400 flex items-center gap-1 mt-0.5"><MapPin size={12} /> {u.ciudad}{u.departamento ? `, ${u.departamento}` : ''} · {u.tipo}</p>
+                  </div>
+                  <ChevronRight size={18} className="text-gray-500 shrink-0" />
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5"><Badge tono={us.tono}>{us.nombre}</Badge>{u.puntaje_minimo?.global && <Badge tono="ambar">global ≥ {u.puntaje_minimo.global}</Badge>}</div>
+              </button>) })}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
+function DetalleUniversidad({ u, volver }) {
+  const us = USO[u.uso_saber11] ?? { nombre: u.uso_saber11, tono: 'gris', texto: '' }
+  const minimos = u.puntaje_minimo && typeof u.puntaje_minimo === 'object' ? Object.entries(u.puntaje_minimo) : []
+  const nombreMin = { global: 'Global', lectura_critica: 'Lectura Crítica', matematicas: 'Matemáticas', sociales_ciudadanas: 'Sociales', ciencias_naturales: 'Ciencias', ingles: 'Inglés' }
+  return (
+    <div className="space-y-4">
+      <div className="flex items-start gap-2">
+        <button onClick={volver} className="no-print mt-1 text-gray-400 hover:text-brand-navy"><ArrowLeft size={20} /></button>
+        <div>
+          <h1 className="text-xl font-semibold leading-tight">{u.nombre}{u.sigla ? <span className="text-gray-400 font-normal"> · {u.sigla}</span> : null}</h1>
+          <p className="text-sm text-gray-400">{u.ciudad}{u.departamento ? `, ${u.departamento}` : ''} · {u.tipo}{u.sedes?.length ? ` · sedes: ${u.sedes.join(', ')}` : ''}</p>
+        </div>
+      </div>
+
+      <div className="card space-y-2">
+        <p className="font-medium flex items-center gap-2">¿Cómo usa el Saber 11? <Badge tono={us.tono}>{us.nombre}</Badge></p>
+        <p className="text-sm text-gray-300">{u.uso_saber11_detalle || us.texto}</p>
+        {minimos.length > 0 && <p className="text-sm">Puntaje mínimo: {minimos.map(([k, v]) => `${nombreMin[k] ?? k} ${v}`).join(' · ')}</p>}
+        {u.ponderacion && <Md texto={`Ponderación: ${u.ponderacion}`} className="text-sm text-gray-300" />}
+      </div>
+
+      {u.proceso?.length > 0 && (
+        <div className="card">
+          <p className="font-medium mb-2">Proceso de admisión, paso a paso</p>
+          <ol className="space-y-2">
+            {u.proceso.map((p, i) => (
+              <li key={i} className="flex gap-3">
+                <span className="w-6 h-6 rounded-full bg-sky-50 text-brand-blue text-xs font-semibold flex items-center justify-center shrink-0">{i + 1}</span>
+                <div className="min-w-0">
+                  <p className="text-sm font-medium">{p.paso}</p>
+                  {p.detalle && <Md texto={p.detalle} className="text-sm text-gray-300" />}
+                  {p.url && <a href={p.url} target="_blank" rel="noreferrer" className="text-xs text-brand-blue underline inline-flex items-center gap-1"><ExternalLink size={11} /> {p.url.replace(/^https?:\/\//, '').slice(0, 60)}</a>}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      <div className="grid sm:grid-cols-2 gap-2">
+        {u.calendario && <div className="card"><p className="text-xs text-gray-500">Calendario</p><Md texto={u.calendario} className="text-sm" /></div>}
+        {u.costo_inscripcion && <div className="card"><p className="text-xs text-gray-500">Costo de inscripción</p><Md texto={u.costo_inscripcion} className="text-sm" /></div>}
+      </div>
+      {u.becas_programas?.length > 0 && (
+        <div className="card"><p className="font-medium mb-1">Becas y admisión especial</p><ul className="list-disc pl-5 text-sm text-gray-300 space-y-0.5">{u.becas_programas.map((b, i) => <li key={i}>{b}</li>)}</ul></div>
+      )}
+      {u.notas && <div className="card"><p className="text-xs text-gray-500">Notas</p><Md texto={u.notas} className="text-sm text-gray-300" /></div>}
+      <div className="card">
+        <div className="flex flex-wrap gap-2">
+          {u.admisiones_url && <a href={u.admisiones_url} target="_blank" rel="noreferrer" className="btn-primary !py-2 text-sm"><ExternalLink size={14} /> Admisiones</a>}
+          {u.web && <a href={u.web} target="_blank" rel="noreferrer" className="btn-secondary !py-2 text-sm"><ExternalLink size={14} /> Sitio oficial</a>}
+        </div>
+        <p className="text-[11px] text-gray-500 mt-2">Verificado {u.verificado ?? 's. f.'} en fuentes oficiales{u.fuentes?.length ? `: ${u.fuentes.length} enlace(s)` : ''}. Las condiciones cambian cada convocatoria: confirma en el sitio de admisiones antes de inscribirte.</p>
+      </div>
+    </div>
+  )
+}

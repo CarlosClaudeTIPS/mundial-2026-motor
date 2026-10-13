@@ -9,7 +9,7 @@ import { ir } from '../../lib/nav'
 import { Barra, Badge } from '../ui'
 import { crearMiniPrueba, crearSimulacro, crearSimulacroCompleto, crearDiagnostico, diagnosticoDe } from '../../lib/pruebas'
 import { MATERIAS, ICONO_PRUEBA } from '../Login'
-import { Stethoscope, Compass, FileBarChart } from 'lucide-react'
+import { Stethoscope, Compass, FileBarChart, BookOpenCheck } from 'lucide-react'
 import { modoCarreraActivo, prioridadesDeUsuario, carreraPorId, NOMBRE_NIVEL } from '../../lib/carreras'
 import { VistaPrioridades } from './Carreras'
 import { estadoLiberacion, grupoDe } from '../../lib/acceso'
@@ -118,6 +118,7 @@ export default function Inicio({ usuario }) {
         <Accion icono={Timer} titulo="Simulacros" sub="por sesión, cronometrados" onClick={() => ir('simulacros')} />
         <Accion icono={Map} titulo="Mi ruta" sub="programa de 6 meses" onClick={() => ir('ruta')} />
         <Accion icono={FileBarChart} titulo="Mi informe" sub="puntajes, niveles y qué mejorar" onClick={() => ir('informe')} />
+        <Accion icono={BookOpenCheck} titulo="Guía ICFES" sub="qué es, para qué sirve, universidades" onClick={() => ir('guia')} />
       </div>
 
       <div className="card">
