@@ -68,6 +68,17 @@ y abre http://localhost:8090
 | Nombre, WhatsApp y productos de la tienda | `tienda/data/config.json` y `tienda/data/catalogo.json` (o `tienda/admin.html` en el navegador) |
 | Banco de preguntas del ICFES | `saber11-prep/content/banco/` |
 
+## 4b. Si cambiaste un proyecto en su propia conversación
+
+Cada proyecto puede seguir editándose en su propia rama. Para que el portal
+incluya esos cambios, desde la rama `claude/portal-unificado`:
+
+```bash
+node portal/actualizar-proyectos.mjs
+node portal/build.mjs
+git add . && git commit -m "actualizar proyectos en el portal" && git push
+```
+
 ## 5. Guardar cambios en GitHub
 
 ```bash
@@ -76,9 +87,12 @@ git commit -m "describe lo que cambiaste"
 git push
 ```
 
-## 6. Seguir con Claude Code desde el otro PC
+## 6. Seguir con Claude Code desde el otro PC (o desde la web)
 
-Abre Claude Code dentro de la carpeta del repositorio y pídele lo que necesites.
+Nada depende de un computador en particular: todo se lee de GitHub.
+- **Claude Code en la web** (claude.ai/code): elige el repositorio `mundial-2026-motor`
+  y pide trabajar en la rama `claude/portal-unificado`. No necesitas descargar nada.
+- **Claude Code instalado en el otro PC**: abre la carpeta del repositorio y pídele lo que necesites.
 Verá las mismas carpetas y ramas. Si quieres seguir una conversación anterior,
 dile en qué rama trabajar (por ejemplo: «trabaja en la rama claude/portal-unificado»).
 
