@@ -69,6 +69,8 @@ Conclusión: el problema principal es real y está localizado: `src/lib/banco.js
 | CLS | 0,002 | 0,001 |
 | INP | No medido (no hay interacción automatizable comparable); los cambios no añaden trabajo en el hilo principal al interactuar |
 
+Nota: el build local de la tabla no incluye el cliente de Supabase (sin claves en el entorno de medición); el build publicado en Vercel sí lo incluye y su JS principal es de 851 KB sin comprimir / 246 KB gzip (verificado el 14-oct-2026 descargando `assets/index-*.js` de saber11-prep.vercel.app). Sigue siendo 7 veces menor que antes y sin ninguna pregunta ni dato de la guía dentro.
+
 Entorno: `vite preview` del build de producción en el mismo servidor; CDP `Network.emulateNetworkConditions` y `Emulation.setCPUThrottlingRate`. No es Lighthouse ni medición de campo; sirve para comparar antes/después. En campo, el primer arranque además descarga el banco en segundo plano (~1,2 MB comprimidos, con barra de progreso); las visitas siguientes no lo descargan (queda en IndexedDB) y los trozos se cachean en el service worker si se pidieron.
 
 ### 5.2 Problemas encontrados y qué se hizo
