@@ -1,0 +1,594 @@
+[
+  {
+    "id": "uis",
+    "nombre": "Universidad Industrial de Santander",
+    "sigla": "UIS",
+    "ciudad": "Bucaramanga",
+    "departamento": "Santander",
+    "tipo": "pública",
+    "sedes": ["Bucaramanga", "Barrancabermeja", "Socorro", "Málaga", "Barbosa", "Piedecuesta (Guatiguará)", "IPRED (a distancia y virtual)"],
+    "web": "https://uis.edu.co",
+    "admisiones_url": "https://inscripciones.uis.edu.co/pregrado-bucaramanga/index.html",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La UIS no tiene examen propio: selecciona a los aspirantes de pregrado presencial únicamente con el puntaje del Saber 11 ponderado por programa (Acuerdo 222 de 2014 del Consejo Académico). Cada programa asigna un porcentaje a Matemáticas, Lectura Crítica, Ciencias Naturales, Sociales y Ciudadanas e Inglés; los puntajes ponderados se ordenan de mayor a menor y los cupos se asignan en ese orden. Requisitos para Bucaramanga 2027-1: Saber 11 presentado desde 2021 en adelante (vigencia máxima de cinco años) y mínimo 31 puntos en cada una de las cinco áreas. Un solo pago permite inscribir hasta dos programas; el puntaje se usa para la segunda opción solo si no fue admitido en la primera. Para los programas a distancia y virtuales del IPRED solo se exige haber presentado el Saber 11, sin importar el año.",
+    "puntaje_minimo": { "matematicas": 31, "lectura_critica": 31, "sociales_ciudadanas": 31, "ciencias_naturales": 31, "ingles": 31 },
+    "ponderacion": "Publicada por programa (orden: Ciencias Naturales / Lectura Crítica / Matemáticas / Sociales y Ciudadanas / Inglés). Ejemplos: Medicina 30/25/20/15/10; Ingeniería Civil, Eléctrica, Electrónica, Química, de Petróleos, Metalúrgica, Mecánica (30/10/40/10/10), Geología y Diseño Industrial 30/20/30/10/10; Ingeniería de Sistemas 25/20/35/10/10; Ingeniería Industrial 25/20/25/15/15; Matemáticas y Lic. en Matemáticas 10/20/50/10/10; Física 20/25/25/20/10; Química 40/15/25/10/10; Biología 35/20/25/10/10; Economía 10/25/30/25/10; Derecho 10/40/20/20/10; Trabajo Social 10/40/10/30/10; Filosofía 20/20/20/20/20; Historia y Archivística 10/35/20/25/10; Lic. en Lenguas Extranjeras 10/25/10/20/35; Lic. en Literatura 10/40/15/20/15; Lic. en Música 10/30/20/20/20; Lic. en Educación Básica Primaria 22/22/22/22/12; Enfermería 30/20/15/20/15; Microbiología 40/20/20/10/10; Nutrición 30/20/20/20/10; Fisioterapia 40/20/15/15/10; Ing. Biomédica 30/20/30/10/10; Ing. en Ciencia de Datos 25/20/30/10/15; Ing. en Inteligencia Artificial 20/25/30/10/15. La tabla completa está en la página de criterios de selección.",
+    "proceso": [
+      { "paso": "Revisar requisitos y criterios de selección", "detalle": "Verificar que el Saber 11 sea de 2021 en adelante y que cada área tenga mínimo 31 puntos. Consultar la tabla de ponderación del programa de interés y la oferta de programas.", "url": "https://inscripciones.uis.edu.co/criterios-seleccion-pregrado/index.html" },
+      { "paso": "Pagar los derechos de inscripción", "detalle": "En el portal de pagos: registrarse, buscar el servicio 'BUCARAMANGA', elegir la tarifa según grupo del Sisbén y si inscribirá uno o dos programas. Pago electrónico o recibo para bancos autorizados (Bancolombia, Bogotá, Davivienda, Comultrasan, Itaú, Occidente, Scotiabank Colpatria). Solo se permite un pago y no hay devoluciones.", "url": "https://inscripciones.uis.edu.co/pago-inscripcion-pregrado/index.html" },
+      { "paso": "Esperar la activación del pago", "detalle": "Dos días hábiles después del pago (sábados, domingos y festivos no cuentan) se habilita la inscripción web." },
+      { "paso": "Formalizar la inscripción web", "detalle": "Tener en PDF: documento de identidad, resultados del Saber 11 o la citación individual al examen, certificado Sisbén y certificado electoral (si aplica). Elegir sede, modalidad, modo de ingreso y hasta dos programas (la primera opción debe ser la de mayor interés). Sin constancia de inscripción no se participa; los datos no se pueden modificar después del cierre.", "url": "https://inscripciones.uis.edu.co/inscripcion-web-pregrado/index.html" },
+      { "paso": "Admisión especial (si aplica)", "detalle": "Después de la inscripción general, registrar la inscripción especial y cargar en PDF los documentos de la categoría (indígenas, NARP, víctimas, desmovilizados, municipios de difícil acceso, departamentos sin IES, mujeres víctimas de violencia de género).", "url": "https://inscripciones.uis.edu.co/admisiones-especiales-pregrado/index.html" },
+      { "paso": "Prueba adicional solo para Licenciatura en Música", "detalle": "Prueba de aptitud y conocimientos musicales (17 de noviembre de 2026 para 2027-1).", "url": "https://inscripciones.uis.edu.co/requisitos-aspirantes-licenciatura-musica/index.html" },
+      { "paso": "Consultar lista de preinscritos y resultados", "detalle": "Lista de preinscritos el 13 de noviembre de 2026; resultados de admisión el 25 de noviembre de 2026 (admisiones especiales el 2 de diciembre). Luego liquidación y legalización de matrícula.", "url": "https://inscripciones.uis.edu.co/resultados-admision-pregrado/index.html" }
+    ],
+    "calendario": "Dos convocatorias al año. Pregrado presencial Bucaramanga 2027-1: pago de inscripción del 23 de septiembre al 10 de noviembre de 2026; inscripción web del 24 de septiembre al 12 de noviembre; lista de preinscritos 13 de noviembre; prueba de Lic. en Música 17 de noviembre; resultados 25 de noviembre de 2026 (admisiones especiales 2 de diciembre). Pregrado a distancia y virtual (IPRED) 2027-1: pago del 28 de septiembre al 24 de noviembre, inscripción web del 29 de septiembre al 26 de noviembre, resultados 10 de diciembre de 2026. La convocatoria para segundo semestre suele abrir hacia marzo-abril.",
+    "costo_inscripcion": "Según grupo del Sisbén (Acuerdo 056 de 2023 del Consejo Superior), convocatoria 2027-1: Sisbén A $38.100 (1 programa) / $57.100 (2 programas); Sisbén B $76.200 / $114.300; Sisbén C1-C10 $114.300 / $171.500; Sisbén C11 en adelante, D o sin Sisbén $152.500 / $228.700. Aspirantes de comunidades indígenas pagan la tarifa A ($38.100 / $57.100).",
+    "becas_programas": [
+      "Admisión especial con cupos para comunidades indígenas, población negra/afrocolombiana/palenquera/raizal, víctimas del conflicto armado, desmovilizados, municipios de difícil acceso o con problemas de orden público, departamentos sin instituciones de educación superior y mujeres víctimas de violencia de género (Acuerdo 282 de 2017)",
+      "Tarifas de inscripción diferenciadas por Sisbén",
+      "Política de gratuidad en la matrícula del Gobierno Nacional (estratos 1-3, Sisbén A, B y C, poblaciones priorizadas) y programas de apoyo UIS",
+      "Proceso de articulación con colegios sin costo de inscripción (IPRED)"
+    ],
+    "notas": "Verificado en octubre de 2026 en inscripciones.uis.edu.co (convocatoria 2027-1). La UIS no aplica examen de admisión propio; la admisión es solo por Saber 11 ponderado. Los aspirantes eximidos de la prueba de inglés se evalúan con las otras cuatro áreas. Fisioterapia admitida en 2027-1 inicia clases en 2027-2. Contacto: inscripciones@uis.edu.co, +57 (607) 634 4000 ext. 2925.",
+    "fuentes": [
+      "https://inscripciones.uis.edu.co/pregrado-bucaramanga/index.html",
+      "https://inscripciones.uis.edu.co/criterios-seleccion-pregrado/index.html",
+      "https://inscripciones.uis.edu.co/pago-inscripcion-pregrado/index.html",
+      "https://inscripciones.uis.edu.co/inscripcion-web-pregrado/index.html",
+      "https://inscripciones.uis.edu.co/admisiones-especiales-pregrado/index.html",
+      "https://inscripciones.uis.edu.co/pregrado-a-distancia-y-virtual/index.html",
+      "https://comunicaciones.uis.edu.co/inscripciones-uis-2027-1-bucaramanga/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unab",
+    "nombre": "Universidad Autónoma de Bucaramanga",
+    "sigla": "UNAB",
+    "ciudad": "Bucaramanga",
+    "departamento": "Santander",
+    "tipo": "privada",
+    "sedes": ["Bucaramanga (El Jardín, Bosque, Centro de Servicios Universitarios)", "San Gil y Yopal (convenio Unisangil)", "Programas virtuales"],
+    "web": "https://unab.edu.co",
+    "admisiones_url": "https://unab.edu.co/admisiones/",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El proceso se inicia en admisiones.unab.edu.co y, tras cargar los documentos, el aspirante debe cumplir 'los criterios de selección establecidos en cada programa', que incluyen entrevista y/o prueba. La página de admisiones no publica un puntaje mínimo de Saber 11 ni una ponderación para la admisión general; el Saber 11 sí es requisito legal y se usa para becas: la Beca Mejor Prueba Saber 11 cubre hasta el 100 % de la matrícula para bachilleres con puntaje global entre 400 y 500 (resultados de máximo dos años de antigüedad).",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Seleccionar carrera y tipo de admisión", "detalle": "El proceso inicia en el portal de admisiones, donde se completan los primeros datos.", "url": "https://admisiones.unab.edu.co/" },
+      { "paso": "Crear usuario y enviar documentos", "detalle": "Se genera un ID (usuario) y un NIP (contraseña) y se cargan los documentos del programa elegido.", "url": "https://admisiones.unab.edu.co/modulos/paso1.php" },
+      { "paso": "Verificar el estado del proceso", "detalle": "En admisiones.unab.edu.co se consulta en qué etapa va la solicitud." },
+      { "paso": "Presentar la entrevista y/o prueba", "detalle": "Cada programa define sus criterios de selección (entrevista y/o prueba)." },
+      { "paso": "Solicitar apoyo financiero o becas (si aplica)", "detalle": "Una vez admitido, se puede acceder a becas, descuentos y planes de financiación; algunas becas se solicitan al momento de la admisión a través de MiPortalU.", "url": "https://unab.edu.co/becas/pregrado/" }
+    ],
+    "calendario": "La página de admisiones no publica un cronograma con fechas de cierre; las inscripciones se gestionan por programa en admisiones.unab.edu.co. Las convocatorias de becas tienen cronogramas semestrales que deben consultarse en la página de becas.",
+    "costo_inscripcion": "No publicado en la página oficial de admisiones (la resolución de tarifas enlazada es un PDF escaneado sin texto legible); consultar en admisiones.",
+    "becas_programas": [
+      "Beca Mejor Prueba Saber 11: hasta 100 % de la matrícula para puntaje global entre 400 y 500 (renovable con PGA >= 4.00)",
+      "Becas por excelencia académica semestral (50 %) y general (90 %) para estudiantes activos",
+      "Beca Mejor Bachiller Caldista y Mención Carlos Gómez Albarracín (100 %, graduados del Instituto Caldas)",
+      "Becas por mérito deportivo, científico y artístico; beneficios para la comunidad UNAB y descuentos comerciales",
+      "Fondo de becas Rafael Ardila Duarte y planes de financiación (Apoyo financiero)"
+    ],
+    "notas": "Verificado en octubre de 2026 en unab.edu.co/admisiones y unab.edu.co/becas/pregrado. El portal admisiones.unab.edu.co requiere JavaScript y no muestra texto sin navegador. No se encontró publicado el valor de la inscripción, el calendario ni un puntaje mínimo de Saber 11 para la admisión general. Contacto: 018000-931170, contactenos@unab.edu.co.",
+    "fuentes": [
+      "https://unab.edu.co/admisiones/",
+      "https://unab.edu.co/becas/pregrado/",
+      "https://unab.edu.co/pregrados/",
+      "https://admisiones.unab.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "upb-bucaramanga",
+    "nombre": "Universidad Pontificia Bolivariana - Seccional Bucaramanga",
+    "sigla": "UPB Bucaramanga",
+    "ciudad": "Bucaramanga (campus en Piedecuesta, km 7 vía Piedecuesta)",
+    "departamento": "Santander",
+    "tipo": "privada",
+    "sedes": ["Medellín (sede central)", "Bucaramanga", "Montería", "Palmira"],
+    "web": "https://www.upb.edu.co",
+    "admisiones_url": "https://www.upb.edu.co/es/carrera-profesional",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El proceso UPB tiene tres fases: inscripción en línea, admisión por entrevista (y examen de admisión solo en algunas carreras, según la página de cada programa) y matrícula. El Saber 11 es documento obligatorio de matrícula ('Pruebas Saber 11 Icfes o su equivalente en otro país'), pero la página de admisiones no publica puntaje mínimo ni ponderación. La Beca Juan Pablo II de la Seccional Bucaramanga indica expresamente que no se requiere puntaje mínimo de Saber 11, aunque exige presentar una Prueba de Competencias Genéricas de la seccional.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Elegir carrera e inscribirse en línea", "detalle": "Crear usuario y contraseña en el formulario de admisión, diligenciar la información (se recomienda incluir una carta de presentación) y enviar el formulario.", "url": "https://formularioadmision.upb.edu.co/#/usuario/iniciar-sesion" },
+      { "paso": "Pagar los derechos de admisión", "detalle": "El sistema muestra la pantalla de pago (Internet o banco). Para Bucaramanga la página publica un valor de $0 en 2026 (marcado con asterisco); no son reembolsables.", "url": "https://www.upb.edu.co/es/carrera-profesional" },
+      { "paso": "Revisar el correo", "detalle": "Llega un correo con usuario, contraseña y pasos a seguir; con ellos se hace seguimiento al proceso en 'Revisa tu proceso de inscripción'.", "url": "https://www.upb.edu.co/es/inscripciones-abiertas" },
+      { "paso": "Entrevista de admisión", "detalle": "La UPB cita por correo o llamada a una entrevista según carrera y ciudad; en algunas carreras hay examen de admisión (consultar la página del programa).", "url": "https://www.upb.edu.co/es/central-blogs/admisiones/entrevista-de-universidad" },
+      { "paso": "Resultado y matrícula", "detalle": "Se informa el resultado; el admitido registra cursos en el sistema, se genera el recibo, paga por Internet o banco y el día de la matrícula presenta comprobante, documento de identidad, Saber 11, diploma o acta de bachiller y dos fotos 3x4." }
+    ],
+    "calendario": "Inscripciones por semestre a través del formulario de admisión; la página 'Inscripciones abiertas' muestra la convocatoria vigente pero no publica fechas de cierre por seccional. Contacto Bucaramanga: Departamento de Admisiones, Registro y Control Académico, Campus km 7 vía Piedecuesta, Edificio J oficina 200, admisiones.bga@upb.edu.co, (607) 679 6220 ext. 20517.",
+    "costo_inscripcion": "Derechos de admisión 2026 publicados: Bucaramanga $0 (con asterisco, condiciones no detalladas en la página); Medellín $245.800; Montería $266.962; Palmira $176.731.",
+    "becas_programas": [
+      "Beca Juan Pablo II (Bucaramanga): 80 % de la matrícula, dos por programa cada año (una para bachiller de colegio público y una de colegio privado de Santander); sin puntaje mínimo de Saber 11, con prueba de competencias genéricas; postulación a becasacademicas.bga@upb.edu.co",
+      "Beca al Mérito Científico, Cultural y Deportivo (10 % a 50 % de la matrícula del siguiente semestre)",
+      "Becas y beneficios con Generación E, Icetex y entidades aliadas (ver buscador de becas por ciudad)",
+      "Alternativas de financiación y beneficios económicos UPB Contigo"
+    ],
+    "notas": "Verificado en octubre de 2026 en upb.edu.co/es/carrera-profesional y portal.upb.edu.co/apoyo-financiero/becas-estudiantes. No se publica puntaje mínimo de Saber 11, ponderación ni calendario con fechas exactas para Bucaramanga; el valor $0 de admisión en Bucaramanga aparece con asterisco sin nota explicativa. La página upb.edu.co/es/admisiones-bucaramanga no existe (404).",
+    "fuentes": [
+      "https://www.upb.edu.co/es/carrera-profesional",
+      "https://www.upb.edu.co/es/inscripciones-abiertas",
+      "https://portal.upb.edu.co/apoyo-financiero/becas-estudiantes",
+      "https://www.upb.edu.co/es/estudiar-en-universidad-upb"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "usta-bucaramanga",
+    "nombre": "Universidad Santo Tomás - Seccional Bucaramanga",
+    "sigla": "USTA Bucaramanga",
+    "ciudad": "Bucaramanga (campus Floridablanca)",
+    "departamento": "Santander",
+    "tipo": "privada",
+    "sedes": ["Bogotá (sede principal)", "Bucaramanga", "Medellín", "Tunja", "Villavicencio", "Educación a distancia (CAU en todo el país)"],
+    "web": "https://www.ustabuca.edu.co",
+    "admisiones_url": "https://admisiones.ustabuca.edu.co/",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "Los criterios de selección publicados para pregrados presenciales son tres: resultados de la Prueba Saber 11, antecedentes académicos de la educación secundaria y entrevista de admisión (virtual, con el decano, un docente de la facultad o el director de admisiones). La entrevista 'determina la continuidad en el proceso'. No se publica puntaje mínimo ni ponderación del Saber 11. Existe una 'Beca Saber 11' cuyos requisitos aparecen solo como imagen en la página.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Inscribirse en línea", "detalle": "Formulario de inscripción del sistema académico SAC (sin costo para pregrado).", "url": "https://oas.usta.edu.co/sgacampus/services/inscripciones/home" },
+      { "paso": "Cargar los documentos antes de la entrevista", "detalle": "Haber presentado el Saber 11 (o equivalente en el exterior), acreditar título de bachiller y adjuntar en la plataforma los documentos exigidos.", "url": "https://admisiones.ustabuca.edu.co/index.php/pregrado/requisitos-y-documentos" },
+      { "paso": "Presentar la entrevista de admisión", "detalle": "Revisar en la credencial de inscripción la fecha y hora; se realiza de forma virtual.", "url": "https://admisiones.ustabuca.edu.co/index.php/pregrado/proceso-de-seleccion" },
+      { "paso": "Recibir el resultado", "detalle": "El Departamento de Admisiones y Mercadeo informa por correo dentro de los 2 días hábiles siguientes a la entrevista; la admisión positiva se reserva un semestre." },
+      { "paso": "Pagar la matrícula", "detalle": "El proceso se cierra con el pago de la matrícula (hay programas con cupos limitados). Becas y financiación se aplican con la fecha límite indicada en el recibo.", "url": "https://admisiones.ustabuca.edu.co/index.php/matriculas" }
+    ],
+    "calendario": "Inscripciones semestrales con entrevistas continuas; la página de admisiones no publica fechas de apertura y cierre para 2027-1 (el calendario académico institucional se publica como documento). Contacto: 314 218 81 78, admisiones.mercadeo@ustabuca.edu.co.",
+    "costo_inscripcion": "Sin costo: los lineamientos oficiales indican que la Seccional Bucaramanga no cobra inscripción para aspirantes de pregrado.",
+    "becas_programas": [
+      "Beca Saber 11 (requisitos publicados como imagen en admisiones.ustabuca.edu.co; consultar en admisiones)",
+      "Becas y descuentos institucionales (página 'Becas' del Departamento de Admisiones)",
+      "Aliados financieros y planes de financiación (Icetex y entidades aliadas)"
+    ],
+    "notas": "Verificado en octubre de 2026 en admisiones.ustabuca.edu.co. No se publican puntaje mínimo de Saber 11, ponderación ni calendario de inscripciones en texto; los detalles de la Beca Saber 11 están en imagen y no se pudieron leer. El sitio www.ustabuca.edu.co sirve un certificado TLS con cadena incompleta (puede dar advertencia en algunos navegadores).",
+    "fuentes": [
+      "https://admisiones.ustabuca.edu.co/",
+      "https://admisiones.ustabuca.edu.co/index.php/pregrado/proceso-de-seleccion",
+      "https://admisiones.ustabuca.edu.co/index.php/pregrado/requisitos-y-documentos",
+      "https://admisiones.ustabuca.edu.co/index.php/becas"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "ufps",
+    "nombre": "Universidad Francisco de Paula Santander",
+    "sigla": "UFPS",
+    "ciudad": "Cúcuta",
+    "departamento": "Norte de Santander",
+    "tipo": "pública",
+    "sedes": ["Cúcuta (sede central)", "Ocaña (seccional)", "Programas a distancia y virtuales"],
+    "web": "https://ww2.ufps.edu.co",
+    "admisiones_url": "https://ww2.ufps.edu.co/universidad/admisiones-registro-academico/2690",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La UFPS admite por 'Puntaje de Competencia': el resultado del Saber 11 ponderado con los porcentajes que cada programa asigna a Lectura Crítica, Matemáticas, Ciencias Naturales, Sociales y Ciudadanas e Inglés (tabla publicada en 'Resultados Pruebas Saber 11'). Para programas presenciales de jornada diurna el Saber 11 debe tener máximo cinco años de vigencia (Acuerdo 051 de 2019, art. 8 parágrafo 3); para programas nocturnos no hay límite de tiempo. No se publica un puntaje mínimo global.",
+    "puntaje_minimo": null,
+    "ponderacion": "Publicada por programa (orden: Lectura Crítica / Matemáticas / Ciencias Naturales / Sociales y Ciudadanas / Inglés, resultados desde 2014-2). Ejemplos presenciales: Ingeniería Civil, Mecánica y Electromecánica 20/40/20/10/10; Ingeniería de Sistemas 30/30/10/10/20; Ingeniería Electrónica 20/35/20/15/10; Ingeniería Industrial 20/30/30/10/10; Ingeniería de Minas 20/30/15/15/20; Administración de Empresas 30/30/0/30/10; Contaduría Pública 30/25/0/30/15; Comercio Internacional 30/20/0/25/25; Derecho, Trabajo Social y Comunicación Social 30/10/10/40/10; Arquitectura 20/30/0/30/20; Enfermería 30/30/20/10/10; Ingeniería Ambiental 25/25/25/15/10; Ingeniería Agronómica 20/20/35/10/15; Zootecnia 25/25/15/20/15; Lic. en Matemáticas 30/40/0/20/10; Lic. en Educación Infantil 25/25/15/25/10. La tabla completa está en el PDF enlazado desde la sección 'Resultados Pruebas Saber 11'.",
+    "proceso": [
+      { "paso": "Registrarse en el portal de inscripciones", "detalle": "Crear cuenta con documento y correo; llega un enlace de activación.", "url": "https://inscripciones.ufps.edu.co/" },
+      { "paso": "Generar y pagar el PIN", "detalle": "Desde el panel se genera el recibo con PIN único ($157.600 en 2026-2027); hay que pagarlo dentro de las 24 horas siguientes. La segunda opción de programa tiene un formulario adicional ($26.300 según derechos pecuniarios 2026)." },
+      { "paso": "Cargar documentos y diligenciar el formulario", "detalle": "Entre 24 y 42 horas después del pago se habilita el cargue: recibo de servicio público (estrato), documento de identidad, registro civil, resultado del Saber 11, diploma de bachiller o certificado del colegio (formato de compromiso si aún no se gradúa), foto y certificados de ingresos según condición.", "url": "https://ww2.ufps.edu.co/universidad/admisiones-registro-academico/2690" },
+      { "paso": "Admisión especial (si aplica)", "detalle": "Consultar la sección 'Admisiones Especiales' del menú de Admisiones y Registro Académico y la Política de Gratuidad (estratos 1-3, Sisbén A, B o C, indígenas, NARP, víctimas, discapacidad, campesinos).", "url": "https://ww2.ufps.edu.co/unoticia/ufps-inscripciones-pregrado-2027-1" },
+      { "paso": "Consultar la lista de admitidos", "detalle": "Se publica en el portal de inscripciones ('Ver lista de admitidos'); el admitido carga el formato de aceptación y realiza la matrícula.", "url": "https://inscripciones.ufps.edu.co/" }
+    ],
+    "calendario": "Pregrado presencial 2027-1: compra del PIN hasta el 30 de octubre de 2026 y cargue de documentos hasta el 6 de noviembre de 2026 (27 programas presenciales ofertados). La UFPS acompaña el proceso con la estrategia COA (presencial en Admisiones, virtual por Meet vía admisiones@ufps.edu.co y pestaña 'Inquietudes' del portal). La convocatoria para segundo semestre suele abrir hacia abril-mayo.",
+    "costo_inscripcion": "$157.600 (formulario y derechos de inscripción, 2027-1); formulario de segunda opción $26.300 (Derechos pecuniarios 2026).",
+    "becas_programas": [
+      "Política de Gratuidad en la matrícula (estratos 1, 2 y 3 o sin estrato; Sisbén IV grupos A, B o C; indígenas, Rrom, NARP, víctimas, discapacidad, campesinos, privados de la libertad)",
+      "Admisiones especiales (sección del menú de Admisiones y Registro Académico)",
+      "Matrícula liquidada por rango de ingresos familiares (desde $875.500 para ingresos de 0 a 2 SMMLV en 2026)",
+      "Cursos preuniversitarios y estrategia COA de acompañamiento"
+    ],
+    "notas": "Verificado en octubre de 2026 en ww2.ufps.edu.co (noticia de inscripciones 2027-1, menú de Admisiones y Registro Académico y PDFs de ponderación y derechos pecuniarios). No se publica puntaje mínimo global. Las páginas internas del menú cargan su contenido en PDF embebido. Las URLs ww2.ufps.edu.co/admisiones no existen (404).",
+    "fuentes": [
+      "https://ww2.ufps.edu.co/unoticia/ufps-inscripciones-pregrado-2027-1",
+      "https://ww2.ufps.edu.co/universidad/admisiones-registro-academico/2690",
+      "https://ww2.ufps.edu.co/public/archivos/pdf/72ad1ded9419fb44ecdcb1f4d44323ac.pdf",
+      "https://ww2.ufps.edu.co/public/archivos/contenido/c6b683c9803b8cad57249fdd9e0ca6ba.pdf",
+      "https://ww2.ufps.edu.co/public/archivos/pdf/f73683876d973d9759badf32e56d4034.pdf",
+      "https://inscripciones.ufps.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unipamplona",
+    "nombre": "Universidad de Pamplona",
+    "sigla": "Unipamplona",
+    "ciudad": "Pamplona",
+    "departamento": "Norte de Santander",
+    "tipo": "pública",
+    "sedes": ["Pamplona (sede principal)", "Villa del Rosario - Cúcuta", "CREAD Norte de Santander (Cúcuta)", "CREAD Cundinamarca (Bogotá)", "Programas a distancia, híbridos y virtuales"],
+    "web": "https://www.unipamplona.edu.co",
+    "admisiones_url": "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/contenidos_subgeneral/inscripciones_presencial/04112009/inscripcionenlinea.jsp",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La admisión depende solo de criterios académicos: cada programa define las áreas del Saber 11 que tiene en cuenta y les asigna un porcentaje; el puntaje total es la suma de los puntajes por área multiplicados por esos pesos y los cupos se asignan en orden descendente (Acuerdo 054 de 2018 del Consejo Académico). Los empates se resuelven con el puntaje global. La Licenciatura en Educación Física, Recreación y Deportes aplica además una prueba de aptitud física, fisiológica y cognitiva con peso del 50 %. Los aspirantes extranjeros pueden presentar la prueba de Estado de su país, salvo para Medicina, que exige Saber 11 colombiano.",
+    "puntaje_minimo": null,
+    "ponderacion": "Por programa, en el Acuerdo 054 de 2018 (criterios de selección). Ejemplo publicado: Biología (Saber 11 desde 2014-2) Ciencias Naturales 60 %, Lectura Crítica 20 %, Matemáticas 10 %, Inglés 10 %, Sociales 0 %. Las demás tablas están en el PDF del acuerdo.",
+    "proceso": [
+      { "paso": "Revisar la oferta y los requisitos", "detalle": "Consultar los programas vigentes y los requisitos para aspirantes nuevos (se recomienda usar Firefox).", "url": "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/contenidos_subgeneral/inscripciones_presencial/03112009/req_nuevos.jsp" },
+      { "paso": "Preinscribirse en línea y pagar", "detalle": "Diligenciar la preinscripción en Academusoft; al finalizar se genera el recibo de pago de inscripción, que se paga en bancos (los pagos se reflejan dos o tres días hábiles después).", "url": "https://academusoft.unipamplona.edu.co/unipamplona/academusoft/inscripcion/academico/inscripcionLineaGeneral4/ind_ins_pub_seguro.jsp" },
+      { "paso": "Completar el formulario y cargar documentos", "detalle": "Con el pago verificado: documento de identidad (ambas caras), resultados del Saber 11 (con nombre, número de registro y fecha), última factura de servicios públicos de la residencia familiar (estrato legible), diploma o acta de bachiller, foto 3x4 fondo azul en JPG." },
+      { "paso": "Prueba adicional solo para Lic. en Educación Física", "detalle": "Prueba de aptitud física, fisiológica y cognitiva (4 y 5 de diciembre de 2026 para 2027-1)." },
+      { "paso": "Consultar la lista de admitidos y matricularse", "detalle": "La lista incluye el código de inscripción; luego se liquida la matrícula financiera, se paga y la matrícula académica es automática. Hay listas de espera.", "url": "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/15062023/calendarios_academicos.jsp" }
+    ],
+    "calendario": "Pregrado presencial 2027-1 (Acuerdo 087 del 11 de septiembre de 2026, sedes Pamplona y Villa del Rosario): inscripciones en línea hasta el 30 de diciembre de 2026 (Lic. en Educación Física hasta el 1 de diciembre); pago de inscripción hasta el 4 de enero de 2027; cargue de documentos hasta el 8 de enero de 2027; publicación de admitidos desde el 28 de enero de 2027; reclamaciones 1 de febrero; pago de matrícula del 28 de enero al 8 de febrero de 2027; admitidos por lista de espera desde el 10 de febrero. Modalidades a distancia y virtual: Acuerdo 088 de 2026.",
+    "costo_inscripcion": "No publicado en la página oficial de inscripciones (el valor aparece en el recibo generado al preinscribirse); consultar en admisiones.",
+    "becas_programas": [
+      "Descuentos en matrícula y becas (secciones 'Descuentos Matrículas' y 'Becas' del menú Aspirantes)",
+      "Financiación de matrícula",
+      "Cursos preuniversitario y premédico (Acuerdos 036 de 2021 y 030 de 2018)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional para universidades públicas"
+    ],
+    "notas": "Verificado en octubre de 2026 en el portal de la Oficina de Admisiones, Registro y Control Académico (inscripciones 2027-1). El costo de inscripción no está publicado en texto. La ponderación por programa está en el Acuerdo 054 de 2018 (PDF escaneado, solo parcialmente legible). Contacto: Pamplona 315 3430020, Villa del Rosario 318 2432033.",
+    "fuentes": [
+      "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/contenidos_subgeneral/inscripciones_presencial/04112009/inscripcionenlinea.jsp",
+      "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/contenidos_subgeneral/inscripciones_presencial/03112009/req_nuevos.jsp",
+      "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/15062023/calendarios_academicos.jsp",
+      "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/documentos/17092026/acuerdo_cal_pre_ins_2027_1.pdf",
+      "https://www.unipamplona.edu.co/unipamplona/portalIG/home_11/recursos/general/08102015/normatividad_inscripciones_adm.jsp",
+      "https://www.unipamplona.edu.co/unipamplona/portalIG/home_1/recursos/universidad/consejo_academico/acuerdos/2018/junio/27062018/acuerdo_054.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uptc",
+    "nombre": "Universidad Pedagógica y Tecnológica de Colombia",
+    "sigla": "UPTC",
+    "ciudad": "Tunja",
+    "departamento": "Boyacá",
+    "tipo": "pública",
+    "sedes": ["Tunja (sede central)", "Duitama", "Sogamoso", "Chiquinquirá", "Aguazul (Casanare)", "FESAD - Facultad de Estudios a Distancia (CREAD)"],
+    "web": "https://www.uptc.edu.co",
+    "admisiones_url": "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pre/index.html",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La selección 'se hace únicamente con base en los resultados de las pruebas Saber 11'. Cada programa pondera Lectura Crítica, Ciencias Naturales, Sociales y Ciudadanas, Matemáticas e Inglés según la tabla de ponderaciones (Resolución 19 de 2014): el puntaje de cada área se multiplica por el porcentaje y se suman los resultados. Para inscribirse ya se debe contar con resultados y el código SNP; nombres y apellidos deben coincidir con el ICFES. Los programas de la Facultad de Estudios a Distancia (FESAD) exigen un promedio de las áreas igual o superior a 31 puntos (o 220 puntos para pruebas anteriores a 2000). Artes Plásticas, Lic. en Educación Física y Lic. en Música aplican además pruebas especiales. La UPTC publica un simulador y resultados de referencia de admitidos por programa.",
+    "puntaje_minimo": { "promedio_areas_fesad": 31 },
+    "ponderacion": "Tabla publicada por programa (orden: Lectura Crítica / Ciencias Naturales / Sociales y Ciudadanas / Matemáticas / Inglés). Ejemplos: Medicina 30/25/20/15/10; Derecho 40/0/40/10/10; Psicología 25/25/25/15/10; Enfermería 30/23/23/15/9; Ingeniería Civil 20/25/10/30/15; Ingeniería de Sistemas y Computación 20/20/10/40/10; Ingeniería Electrónica 25/20/15/30/10; Ingeniería Industrial (Sogamoso) 15/35/7/35/8; Ingeniería Ambiental 25/30/10/30/5; Ingeniería Electromecánica 25/25/10/30/10; Medicina Veterinaria y Zootecnia 20/55/8/12/5; Biología 15/45/10/15/15; Química 10/55/5/15/15; Física 9/30/11/27/23; Matemáticas 20/20/5/45/10; Economía 30/5/25/30/10; Administración de Empresas 35/0/20/30/15; Contaduría Pública 30/5/30/25/10; Arquitectura 25/20/20/25/10; Lic. en Lenguas Modernas con énfasis en Inglés 35/0/20/5/40; Lic. en Educación Infantil 52/15/18/10/5; Lic. en Educación Básica Primaria (FESAD) 25/20/20/20/15. Ejemplo oficial para Medicina: LC 55x0,30 + CN 60x0,25 + SC 65x0,20 + M 60x0,15 + I 60x0,10 = 59,5.",
+    "proceso": [
+      { "paso": "Consultar la oferta y la ponderación", "detalle": "Revisar la oferta de pregrado presencial o a distancia y usar el simulador de puntaje con la tabla de ponderaciones y los resultados de referencia de admitidos.", "url": "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pas/asp_simpunt.html" },
+      { "paso": "Adquirir el PIN de inscripción", "detalle": "Pago en línea a través del recaudo electrónico (eCollect); el PIN de pregrado cuesta $262.600 en 2026.", "url": "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pre/pap_preg.html" },
+      { "paso": "Registrarse e inscribirse en SIRA", "detalle": "Diligenciar la inscripción en la plataforma SIRA con el PIN, el código SNP del Saber 11 y los datos idénticos a los del ICFES; se puede elegir primera y segunda opción. Luego 'Consulta tu inscripción'.", "url": "https://apps4.uptc.edu.co/sira-inscripciones-web/" },
+      { "paso": "Cargar soportes de cupo especial (si aplica)", "detalle": "Junto con la inscripción y dentro de las fechas: normalistas, víctimas de desplazamiento, comunidades indígenas, población raizal, zonas de difícil acceso, personas con discapacidad (Acuerdo 015 de 2021).", "url": "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pas/p1_cupsaesp.html" },
+      { "paso": "Pruebas especiales (solo algunos programas)", "detalle": "Artes Plásticas y Visuales, Lic. en Educación Física, Recreación y Deporte y Lic. en Música: 28 y 29 de octubre de 2026 para 2027-1." },
+      { "paso": "Consultar resultados, diligenciar el ISE y matricularse", "detalle": "Consultar la lista de admitidos; los admitidos registran el formulario de Información Socioeconómica (ISE), que define el valor de la matrícula (puntaje ISE x 3,5 % del SMMLV por punto), descargan el recibo y formalizan la matrícula. Hay un llamado posterior a 'opcionados'.", "url": "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/resadm.html" }
+    ],
+    "calendario": "Primer semestre de 2027 (Resoluciones 111 y 112 de 2026). Presencial: venta de pines del 21 de septiembre al 21 de octubre de 2026; inscripciones hasta el 23 de octubre; pruebas especiales 28 y 29 de octubre; resultados 13 de noviembre; registro del formulario ISE del 17 al 27 de noviembre; derechos pecuniarios y matrícula del 23 de noviembre al 10 de diciembre; llamado a opcionados del 9 al 15 de diciembre. FESAD (distancia): pines del 21 de septiembre al 30 de octubre; inscripciones hasta el 6 de noviembre; resultados 20 de noviembre; ISE del 23 de noviembre al 4 de diciembre; matrícula del 24 de noviembre al 11 de diciembre de 2026.",
+    "costo_inscripcion": "PIN para inscripción de pregrado: $262.600 (Tarifas 2026, Acuerdo 040 de 2013).",
+    "becas_programas": [
+      "Cupos de admisión especial: normalistas superiores (licenciaturas), población víctima de desplazamiento, comunidades indígenas (mejor bachiller indígena), población raizal, zonas de difícil acceso y personas con discapacidad (Acuerdo 015 de 2021, Resolución 5362 de 2025)",
+      "Política de Gratuidad en la Educación Superior (Ley 2307 de 2023, Decreto 2271 de 2023)",
+      "Matrícula liquidada por Índice Socioeconómico (ISE), con valores según la situación de cada familia"
+    ],
+    "notas": "Verificado en octubre de 2026 en el sitio del Departamento de Admisiones y Control de Registro Académico (ACRA). El sitio www.uptc.edu.co sirve un certificado TLS con cadena incompleta (puede dar advertencia en algunos navegadores). Las fechas se tomaron del cuadro 'Fechas importantes' 2027-1; la tabla de ponderaciones es de la Resolución 19 de 2014 y puede tener programas nuevos no listados.",
+    "fuentes": [
+      "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pre/index.html",
+      "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pas/asp_simpunt.html",
+      "https://www.uptc.edu.co/sitio/export/sites/default/portal/sitios/universidad/vic_aca/adm_reg/.content/doc/sim/ponderados_v3.pdf",
+      "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/1aspi/pas/p1_cupsaesp.html",
+      "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/derpec.html",
+      "https://www.uptc.edu.co/sitio/export/sites/default/portal/sitios/universidad/vic_aca/adm_reg/.content/doc/derpecun/2026/tarifas_2026.pdf",
+      "https://www.uptc.edu.co/sitio/portal/sitios/universidad/vic_aca/adm_reg/polgra.html"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uniboyaca",
+    "nombre": "Universidad de Boyacá",
+    "sigla": "UdeB",
+    "ciudad": "Tunja",
+    "departamento": "Boyacá",
+    "tipo": "privada",
+    "sedes": ["Tunja", "Sogamoso", "Oficina en Bogotá", "Programas virtuales"],
+    "web": "https://www.uniboyaca.edu.co",
+    "admisiones_url": "https://www.uniboyaca.edu.co/es/admisiones",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "Los resultados del Saber 11 (PDF) son requisito de inscripción junto con el documento de identidad y una foto, y la admisión se decide con una entrevista presencial (o remota en casos excepcionales) y la evaluación del Comité de Admisiones. No se publica puntaje mínimo ni ponderación para la admisión; sí existe una 'Beca por Pruebas Saber 11' para estudiantes nuevos.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Registrarse en el Módulo de Inscripción de Aspirantes", "detalle": "Con número de documento y contraseña (conservarlos). La inscripción no tiene costo.", "url": "https://www.uniboyaca.edu.co/es/proceso-de-inscripcion-pregrado" },
+      { "paso": "Diligenciar el formulario y cargar documentos", "detalle": "Documento de identidad por ambas caras (PDF), foto reciente fondo blanco (JPG) y resultados del Saber 11 (PDF); cada archivo máximo 2 MB salvo el Saber 11.", "url": "https://www.uniboyaca.edu.co/es/requisitos-de-inscripcion-pregrado" },
+      { "paso": "Agendar la entrevista", "detalle": "En el módulo, 'Información de entrevista' > 'Seleccionar disponibilidad' (lunes a viernes, 8:00 a. m. a 5:30 p. m.); la facultad confirma por correo.", "url": "https://www.uniboyaca.edu.co/es/entrevista" },
+      { "paso": "Presentar la entrevista", "detalle": "Presencial (llegar 20 minutos antes) o virtual con cámara y micrófono; la realiza un docente." },
+      { "paso": "Respuesta de admisión", "detalle": "El Comité de Admisiones responde por correo o en el módulo en 1 a 3 días hábiles.", "url": "https://www.uniboyaca.edu.co/es/admision-respuesta" },
+      { "paso": "Matrícula y activaciones", "detalle": "Pago de matrícula, activación de correo, carné, asignaturas y horarios." }
+    ],
+    "calendario": "Inscripciones y matrículas abiertas para programas de pregrado 2027 (evento publicado en el portal), con entrevistas durante todo el periodo. Para 2026-2 la postulación a becas de estudiantes nuevos fue del 15 de mayo al 30 de julio de 2026, con inicio de clases el 3 de agosto; consultar el calendario académico para 2027.",
+    "costo_inscripcion": "Sin costo (la inscripción a pregrado es gratuita).",
+    "becas_programas": [
+      "Beca por Pruebas Saber 11 y Beca de Excelencia para ingresar",
+      "Beca Familias Universidad de Boyacá, Becas por Convenio, Beca Studium, Beca para técnicos y tecnólogos egresados del SENA",
+      "Becas durante la carrera: mejor promedio semestral y acumulado, representación deportiva y mérito cultural",
+      "Financiación de matrícula (División Financiera)"
+    ],
+    "notas": "Verificado en octubre de 2026 en uniboyaca.edu.co (Admisiones, requisitos, entrevista, becas). No se publican puntaje mínimo de Saber 11 ni porcentajes de la Beca Saber 11 en la página consultada. Contacto: atencionudeb@uniboyaca.edu.co, 608 7450000.",
+    "fuentes": [
+      "https://www.uniboyaca.edu.co/es/admisiones",
+      "https://www.uniboyaca.edu.co/es/requisitos-de-inscripcion-pregrado",
+      "https://www.uniboyaca.edu.co/es/proceso-de-inscripcion-pregrado",
+      "https://www.uniboyaca.edu.co/es/entrevista",
+      "https://www.uniboyaca.edu.co/es/admision-respuesta",
+      "https://www.uniboyaca.edu.co/es/micrositio/becas-de-estudio",
+      "https://www.uniboyaca.edu.co/es/centro-informacion/evento/inscripciones-y-matriculas-abiertas-programas-de-pregrado-2027"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unillanos",
+    "nombre": "Universidad de los Llanos",
+    "sigla": "Unillanos",
+    "ciudad": "Villavicencio",
+    "departamento": "Meta",
+    "tipo": "pública",
+    "sedes": ["Villavicencio - Campus Barcelona (km 12 vía Puerto López)", "Villavicencio - Campus San Antonio", "Granada - Campus Boquemonte"],
+    "web": "https://www.unillanos.edu.co",
+    "admisiones_url": "https://www.unillanos.edu.co/inscripciones/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "El criterio de admisión es el mérito académico medido con el Saber 11: se seleccionan los inscritos con mayores puntajes según la ponderación de las áreas del examen definida para cada programa (Acuerdo Académico 009 de 2024). Las áreas más afines al programa ('fundamentales') tienen mayor porcentaje y las demás son 'complementarias'. Si quedan cupos tras la matrícula se publican nuevos admitidos en orden descendente de puntaje. No se publica puntaje mínimo. Los aspirantes de categorías especiales quedan exonerados del pago de inscripción y tienen prioridad en los cupos reservados.",
+    "puntaje_minimo": null,
+    "ponderacion": "Por programa según el Acuerdo Académico 009 de 2024 (el PDF publicado es un documento escaneado sin texto; los porcentajes por área no están en la página web). Consultar el acuerdo en la página del Consejo Académico.",
+    "proceso": [
+      { "paso": "Preinscripción", "detalle": "Diligenciar el formulario de preinscripción con los datos básicos del aspirante (hay video tutorial).", "url": "https://www.unillanos.edu.co/inscripciones/" },
+      { "paso": "Pagar los derechos de inscripción", "detalle": "Descargar el recibo que genera la plataforma y pagar en línea por PSE o en los bancos indicados (del 30 de septiembre al 3 de diciembre de 2026 para 2027-1). Las categorías especiales están exoneradas." },
+      { "paso": "Inscripción en SIAU", "detalle": "Entre 24 y 48 horas después del pago, consultar usuario y contraseña y diligenciar completamente el formulario de inscripción en el Sistema de Información Institucional (SIAU), cargando soportes de gratuidad o admisión especial si aplica (cierre 7 de diciembre de 2026, 11:50 p. m.).", "url": "https://tutorialessiau.unillanos.edu.co/index.php/siau/roles/pregrado/aspirante-estudiante-pregrado" },
+      { "paso": "Consultar resultados", "detalle": "Publicación de admitidos en la página institucional (11 de diciembre de 2026 para 2027-1).", "url": "https://www.unillanos.edu.co/inscripciones/Listado_admision.html" },
+      { "paso": "Cargar documentos y pagar la matrícula", "detalle": "Cargue de documentos de admitidos (11 al 15 de diciembre), revisión por Admisiones (11 al 18), subsanación (19 al 22 de diciembre), recibo de liquidación el 15 de enero de 2027 y pago del 15 al 28 de enero; jornada de primer encuentro del 1 al 5 de febrero de 2027.", "url": "https://www.unillanos.edu.co/inscripciones/cronograma.html" }
+    ],
+    "calendario": "Primer periodo 2027: venta de formularios e inscripción del 30 de septiembre al 3 de diciembre de 2026; cierre de la plataforma SIAU el 7 de diciembre de 2026 (11:50 p. m.); resultados 11 de diciembre de 2026; cargue de documentos de admitidos del 11 al 15 de diciembre; liquidación de matrícula 15 de enero de 2027; pago del 15 al 28 de enero de 2027; primer encuentro con la Universidad del 1 al 5 de febrero de 2027. La convocatoria para segundo semestre suele abrir hacia marzo-abril.",
+    "costo_inscripcion": "No publicado en la página oficial (el valor aparece en el recibo que genera la plataforma); consultar en admisiones. Las categorías de admisión especial están exoneradas del pago.",
+    "becas_programas": [
+      "Admisión especial con exoneración de inscripción y prioridad en cupos: comunidades indígenas, víctimas de la violencia o desplazamiento, departamentos sin instituciones de educación superior, personas con discapacidad (Acuerdos 010 de 2024, 006 y 008 de 2026), municipios de la Orinoquia de difícil acceso o PDET (Macarena-Guaviare y Arauca), deportistas destacados, población NARP y Rrom, reservistas de honor y veteranos, bachilleres del área de influencia del campus Boquemonte (Granada)",
+      "Política de gratuidad en la matrícula (Ley 2307 de 2023 y Decreto 2271 de 2023): estratos 1-3 o sin estrato, Sisbén IV A, B o C, indígenas, Rrom, NARP, víctimas, discapacidad, campesinos",
+      "Financiación y renovación de créditos (admisiones.unillanos.edu.co)",
+      "Descuento electoral"
+    ],
+    "notas": "Verificado en octubre de 2026 en unillanos.edu.co/inscripciones (calendario 2027-1 publicado como imagen) y en la página de proceso de selección. El costo de inscripción y la tabla de ponderación por programa no están publicados en texto. Contacto: PBX (608) 661 1623, WhatsApp +57 322 292 31 94.",
+    "fuentes": [
+      "https://www.unillanos.edu.co/inscripciones/",
+      "https://www.unillanos.edu.co/inscripciones/seleccion.html",
+      "https://www.unillanos.edu.co/inscripciones/cronograma.html",
+      "https://www.unillanos.edu.co/index.php/usted-es/aspirante",
+      "https://admisiones.unillanos.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "ut",
+    "nombre": "Universidad del Tolima",
+    "sigla": "UT",
+    "ciudad": "Ibagué",
+    "departamento": "Tolima",
+    "tipo": "pública",
+    "sedes": ["Ibagué (sede principal)", "IDEAD - Instituto de Educación a Distancia con CAT en Ibagué, Bogotá, Cali, Medellín, Neiva, Pereira, Popayán, Barranquilla, Girardot, Chaparral, Honda, Mariquita, Melgar, Purificación, Planadas, Icononzo, Mocoa, Urabá, entre otros"],
+    "web": "https://ut.edu.co",
+    "admisiones_url": "https://aspirantes.ut.edu.co/procesos/inscripcion/inscribete-aqui.html",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "La admisión se hace con el Saber 11: los cupos se asignan en estricto orden descendente de un puntaje ponderado según el peso que cada programa da a las áreas del examen (hay un simulador de puntaje en la página de aspirantes). Modalidad presencial: Saber 11 desde 2006 y mínimo 30 puntos en cada área; los cupos se reparten proporcionalmente entre inscritos con ICFES 2006 a 2014-1 e ICFES 2014-2 en adelante. Modalidad a distancia: Saber 11 desde 1980, sin puntaje mínimo. Todas las inscripciones requieren tener ya los resultados del Saber 11.",
+    "puntaje_minimo": { "cada_area_presencial": 30 },
+    "ponderacion": "Por programa, aplicada mediante el 'Simulador de puntaje' de la página de aspirantes (los pesos por área de cada programa no se publican como tabla en texto).",
+    "proceso": [
+      { "paso": "Revisar el calendario, la oferta y los criterios de selección", "detalle": "Oferta 2027-A con cupos por programa (presencial, híbrida y distancia) y criterios de selección.", "url": "https://aspirantes.ut.edu.co/procesos/inscripcion/criterios-de-seleccion.html" },
+      { "paso": "Elegir la modalidad de inscripción", "detalle": "Corriente, Distinción Andrés Bello, mejores bachilleres, comunidades étnicas (indígenas y afrocolombianos), Ley del deporte, víctimas del conflicto armado, transferencia externa o extranjeros; las modalidades especiales exigen enviar documentos adicionales.", "url": "https://aspirantes.ut.edu.co/procesos/inscripcion/modalidades-de-inscripcion.html" },
+      { "paso": "Preinscribirse en línea", "detalle": "En el aplicativo de inscripciones: nivel pregrado, 'Realizar inscripción', documento, metodología (presencial o distancia), programa y sede, tipo de inscripción y datos del Saber 11 (deben coincidir con el documento; no se pueden corregir después).", "url": "https://sigeins.ut.edu.co/inscripciones/niveleducativo/" },
+      { "paso": "Pagar la inscripción", "detalle": "Únicamente por el portal único de pagos de la UT (en línea) o con el recibo en puntos autorizados; el estado cambia de 'Preinscrito' a 'Inscrito' en 1 a 20 minutos.", "url": "https://portalpagos.ut.edu.co/" },
+      { "paso": "Consultar listados de admitidos y legalizar la matrícula", "detalle": "Primer listado 15 de enero de 2027, reclamaciones hasta el 18 de enero, matrícula del 19 de enero al 5 de febrero; segundo listado 12 de febrero y matrícula del 16 al 26 de febrero de 2027.", "url": "https://aspirantes.ut.edu.co/procesos/inscripcion/listado-de-admitidos.html" }
+    ],
+    "calendario": "Semestre A de 2027 (presencial, distancia e híbrida): inscripciones en línea del 19 de octubre al 18 de diciembre de 2026; primer listado de admitidos 15 de enero de 2027; matrícula del 19 de enero al 5 de febrero; segundo listado 12 de febrero; matrícula del 16 al 26 de febrero; inducción entre el 11 y el 26 de febrero de 2027. Semestre B de 2027: inscripciones del 5 de abril al 4 de junio de 2027, primer listado 30 de junio de 2027.",
+    "costo_inscripcion": "$209.000 por programa (2026). Al legalizar: seguro estudiantil $13.000 por semestre, carné $52.200 (una vez) y examen de aptitud física $153.700 (una vez, solo presencial).",
+    "becas_programas": [
+      "Gratuidad educativa: la UT la otorga a todos los admitidos en el primer semestre mientras el Ministerio de Educación valida los requisitos (no tener título profesional ni gratuidad en otra institución)",
+      "Modalidad 'Mejores bachilleres' (distinción del ICFES): exoneración de derechos de matrícula",
+      "Modalidades especiales: Distinción Andrés Bello, comunidades étnicas indígenas y afrocolombianas, Ley del deporte, víctimas del conflicto armado",
+      "Descuentos por certificado electoral y por hermanos matriculados"
+    ],
+    "notas": "Verificado en octubre de 2026 en aspirantes.ut.edu.co (calendario 2027, criterios de selección, modalidades y precios). Los pesos por área de cada programa se aplican en el simulador y no se publican como tabla. El sitio www.ut.edu.co tiene un certificado TLS que no cubre el subdominio 'www'; usar ut.edu.co o aspirantes.ut.edu.co. Contacto: (608) 277 1212 ext. 411-412, WhatsApp +57 317 368 6404.",
+    "fuentes": [
+      "https://aspirantes.ut.edu.co/procesos/inscripcion/inscribete-aqui.html",
+      "https://aspirantes.ut.edu.co/procesos/inscripcion/calendario-academico.html",
+      "https://aspirantes.ut.edu.co/procesos/inscripcion/criterios-de-seleccion.html",
+      "https://aspirantes.ut.edu.co/procesos/inscripcion/modalidades-de-inscripcion.html",
+      "https://aspirantes.ut.edu.co/11-precios-y-gratuidad-educativa.html",
+      "https://aspirantes.ut.edu.co/pregrado.html"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unibague",
+    "nombre": "Universidad de Ibagué",
+    "sigla": "Unibagué",
+    "ciudad": "Ibagué",
+    "departamento": "Tolima",
+    "tipo": "privada",
+    "sedes": ["Ibagué (campus Ambalá)"],
+    "web": "https://www.unibague.edu.co",
+    "admisiones_url": "https://registroacademico.unibague.edu.co/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "Para ingreso a primer semestre la selección corre diariamente desde la apertura: se revisan los puntajes del Saber 11 y con ellos se calcula un 'índice'; los aspirantes con índice mayor o igual al umbral de admisión del programa son admitidos y los demás reciben la opción de cursos libres. La Universidad publica un simulador para calcular el índice con los puntajes del Saber 11, pero no publica los umbrales por programa ni los pesos por área. Transferencias y readmisiones tienen entrevista obligatoria.",
+    "puntaje_minimo": null,
+    "ponderacion": "Índice calculado con los puntajes del Saber 11 (simulador descargable en registroacademico.unibague.edu.co); los pesos por área y los umbrales por programa no están publicados.",
+    "proceso": [
+      { "paso": "Inscribirse en línea", "detalle": "Formulario de inscripción en la plataforma SIGA; cargar en PDF el Saber 11, el documento de identidad, el recibo de energía y la autorización de tratamiento de datos para menores de edad (quienes vienen de otra universidad agregan certificado de notas y contenidos programáticos).", "url": "https://siga.unibague.edu.co/sgacampus/services/inscripciones/home" },
+      { "paso": "Consultar el resultado de admisión", "detalle": "Con el número de documento y el formulario asignado; el proceso de selección corre diariamente.", "url": "https://registroacademico.unibague.edu.co/" },
+      { "paso": "Guía de matrícula", "detalle": "El admitido recibe usuario y contraseña de SIGA por correo y carga el acta o diploma de bachiller y una foto 3x3 fondo azul." },
+      { "paso": "Pagar los derechos de matrícula", "detalle": "Del 11 de noviembre de 2026 al 29 de enero de 2027 para 2027-A; solicitudes de becas y descuentos para estudiantes nuevos según el procedimiento publicado.", "url": "https://www.unibague.edu.co/futuros-estudiantes" },
+      { "paso": "Registro de asignaturas e inducción", "detalle": "La Universidad registra las asignaturas de los nuevos admitidos; la jornada de inducción se publica en la web." }
+    ],
+    "calendario": "Semestre A de 2027: inscripciones desde el 2 de septiembre de 2026 hasta el 22 de enero de 2027, con admisión diaria desde el 2 de septiembre; pago de matrícula del 11 de noviembre de 2026 al 29 de enero de 2027; solicitudes de transferencia y readmisión hasta el 7 de diciembre de 2026.",
+    "costo_inscripcion": "No publicado en la página oficial; consultar en admisiones.",
+    "becas_programas": [
+      "Beca 30 % Talento Tolima: para 5 de los mejores 10 puntajes Saber 11 (superiores a 321 puntos) de cada institución del Tolima, estratos 1, 2 y 3 (convocatoria publicada con resultados de 2024)",
+      "Beca Rumbo (Fundación Grupo Bancolombia) para jóvenes rurales de Alvarado, Cunday, Falan, Ortega, Saldaña, San Luis y Herveo en Biología Ambiental, Ingeniería Electrónica o Ingeniería de Sistemas",
+      "Descuentos de primer semestre: 10 % por afiliación a Comfenalco o Comfatolima, 10 % hijo de egresado, 10 % hijo de miembros de las FF. MM., 15 % por presentar el ICFES en otro departamento, 25 % tercer hermano",
+      "Becas de Filantropía para estratos 1, 2 y 3 y financiación directa con la Universidad, Icetex y entidades aliadas"
+    ],
+    "notas": "Verificado en octubre de 2026 en unibague.edu.co/futuros-estudiantes y registroacademico.unibague.edu.co. No se publica el valor de la inscripción ni los umbrales de admisión por programa. El sitio www.unibague.edu.co sirve un certificado TLS con cadena incompleta (puede dar advertencia en algunos navegadores). Contacto: PBX (608) 279 5225, registroacademico@unibague.edu.co.",
+    "fuentes": [
+      "https://registroacademico.unibague.edu.co/",
+      "https://www.unibague.edu.co/futuros-estudiantes",
+      "https://apoyofinanciero.unibague.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "ucc",
+    "nombre": "Universidad Cooperativa de Colombia",
+    "sigla": "UCC",
+    "ciudad": "Multicampus (Bucaramanga, Villavicencio, Ibagué-Espinal, Arauca, Barrancabermeja, Neiva, entre otros)",
+    "departamento": "Varios (Santander, Meta, Tolima, Arauca, Huila y más)",
+    "tipo": "privada",
+    "sedes": ["Apartadó", "Arauca", "Barrancabermeja", "Bogotá - Funza", "Bucaramanga", "Cali", "Ibagué - Espinal", "Medellín - Envigado", "Montería", "Neiva", "Pasto", "Pereira - Cartago", "Popayán", "Santa Marta", "Villavicencio"],
+    "web": "https://www.ucc.edu.co",
+    "admisiones_url": "https://www.ucc.edu.co/inscripciones/Paginas/default.aspx",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "El resultado del Saber 11 es requisito obligatorio para inscribirse (no se puede inscribir sin él). Según las preguntas frecuentes para aspirantes, la admisión combina el Saber 11 (70 %) con una entrevista (30 %) realizada por un docente entrevistador certificado, que evalúa trabajo en equipo, expresión oral, solución de problemas y claridad en la elección profesional. No se publica un puntaje mínimo de Saber 11 ni la ponderación por áreas.",
+    "puntaje_minimo": null,
+    "ponderacion": "70 % resultado del Saber 11 y 30 % desempeño en la entrevista (sin detalle por áreas).",
+    "proceso": [
+      { "paso": "Revisar las fechas de inscripción", "detalle": "Calendario 2027 fijado por la Resolución Rectoral 091 de 2026.", "url": "https://www.ucc.edu.co/inscripciones/Paginas/default.aspx" },
+      { "paso": "Validar los requisitos", "detalle": "Título o acta de bachiller en PDF (o acta de compromiso FD071-4 si aún no lo tiene), documento de identidad y resultado del Saber 11 en PDF." },
+      { "paso": "Inscribirse en línea", "detalle": "Formulario de inscripción desde la página 'Inscríbete' del campus elegido.", "url": "https://www.ucc.edu.co/aspirante" },
+      { "paso": "Entrevista de admisión", "detalle": "Con un docente entrevistador certificado; para Medicina hay cortes de admisión en fechas fijas." },
+      { "paso": "Admisión y pago de matrícula", "detalle": "Las admisiones son permanentes y las fechas de pago dependen del día de la admisión; tarifas por campus en 'Tarifas y financiación'.", "url": "https://www.ucc.edu.co/tarifas-y-financiacion" }
+    ],
+    "calendario": "2027-1: inscripción para programas distintos a Medicina del 7 de septiembre de 2026 al 30 de enero de 2027, con admisiones permanentes desde el 22 de septiembre de 2026. Medicina: inscripción del 7 de septiembre al 18 de noviembre de 2026 con cortes de admisión el 23 de octubre, 13 de noviembre y 27 de noviembre de 2026. Programas trimestrales (presenciales y virtuales): primer trimestre del 23 de septiembre de 2026 al 27 de enero de 2027; segundo del 10 de febrero al 26 de mayo de 2027; tercero del 10 de junio al 15 de septiembre de 2027.",
+    "costo_inscripcion": "No publicado en la página de inscripciones (los derechos pecuniarios por campus están en resoluciones rectorales en PDF que no se pudieron descargar); consultar en admisiones del campus.",
+    "becas_programas": [
+      "Alternativas de financiación (crédito Comuna con simulador, Icetex y entidades aliadas)",
+      "Descuentos y beneficios para alumni y convenios",
+      "Convocatorias y becas de internacionalización",
+      "Premédico en campus Medellín como ruta de ingreso a Medicina"
+    ],
+    "notas": "Verificado en octubre de 2026 en ucc.edu.co/inscripciones y ucc.edu.co/aspirante. La ponderación 70/30 proviene de las preguntas frecuentes para aspirantes y no detalla pesos por área. Los valores de inscripción y matrícula por campus no se pudieron verificar.",
+    "fuentes": [
+      "https://www.ucc.edu.co/inscripciones/Paginas/default.aspx",
+      "https://www.ucc.edu.co/aspirante",
+      "https://www.ucc.edu.co/tarifas-y-financiacion",
+      "https://www.ucc.edu.co/estudiante/admisiones-registro-cad/Paginas/admisiones-registro-cad.aspx"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unad",
+    "nombre": "Universidad Nacional Abierta y a Distancia",
+    "sigla": "UNAD",
+    "ciudad": "Bogotá (sede nacional); centros en todo el país, incluidos Bucaramanga, Cúcuta, Tunja, Villavicencio, Yopal, Arauca e Ibagué",
+    "departamento": "Nacional (virtual y a distancia)",
+    "tipo": "pública",
+    "sedes": ["Zona Centro Oriente (Santander y Norte de Santander)", "Zona Centro Boyacá", "Zona Amazonía y Orinoquía (Meta, Casanare, Arauca, Vichada, Guaviare, Amazonas)", "Zona Centro Bogotá-Cundinamarca", "Zona Sur (Tolima, Huila)", "Zona Caribe", "Zona Occidente", "UNAD Florida"],
+    "web": "https://www.unad.edu.co",
+    "admisiones_url": "https://estudios.unad.edu.co/inscripciones-y-matriculas",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "Para inscribirse a pregrado solo se exige ser bachiller, haber presentado el examen de Estado y diligenciar el formulario (en él se registra el código SNP del ICFES). No hay puntaje mínimo ni ponderación; la UNAD aplica una prueba de caracterización que no condiciona el ingreso. Solo algunos programas tienen proceso de admisión previo: Tecnología en Radiología e Imágenes Diagnósticas, Derecho, Psicología y los doctorados.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Consultar la oferta y el calendario", "detalle": "Elegir programa (tecnológico o profesional) y revisar las fechas del periodo según el calendario académico vigente.", "url": "https://informacion.unad.edu.co/index.php/calendarios/calendario-academico-educacion-superior" },
+      { "paso": "Revisar costos, requisitos, descuentos y financiación", "detalle": "El valor de la matrícula depende de los créditos inscritos; hay convenios de descuento, certificado electoral y crédito educativo (los soportes se llevan a registro y control del centro).", "url": "https://estudios.unad.edu.co/requisitos" },
+      { "paso": "Diligenciar el formulario de inscripción en línea", "detalle": "Datos básicos, código SNP del ICFES, programa y centro (CEAD) elegidos; se imprime el formato con los cursos seleccionados.", "url": "https://estudios.unad.edu.co/inscripciones-y-matriculas" },
+      { "paso": "Generar el recibo y pagar", "detalle": "Liquidación de la matrícula con 'Generar recibo de pago'; pago en banco o en línea. Postularse a la Política de Gratuidad en las fechas del centro si cumple requisitos.", "url": "https://estudios.unad.edu.co/politica-de-gratuidad-unad" },
+      { "paso": "Generar el acta de matrícula y legalizar", "detalle": "48 horas hábiles después del pago se genera el acta en Registro y Control; luego se entregan los documentos en el centro (diploma y acta de bachiller, foto, certificado del ICFES, documento de identidad), se recibe usuario del campus virtual y se asiste a la inducción (unas 3 horas)." }
+    ],
+    "calendario": "Primer periodo académico 16-01 de 2027 (16 semanas): inscripción y matrícula de nuevos y antiguos del 29 de septiembre de 2026 al 20 de enero de 2027 (hasta las 3:00 p. m.); inicio de clases 4 de febrero de 2027 y cierre 9 de junio de 2027. La UNAD tiene varios periodos al año (16-01, 16-02, 08-03, 16-04, 16-05); consultar el calendario 2027.",
+    "costo_inscripcion": "$245.000 (Costos 2026, programas tecnológicos y profesionales). Crédito académico 2026: $152.000 en tecnologías y $170.000 en programas profesionales (10 % más en cursos disciplinares de Salud, Ciencias Básicas e Ingeniería y Ciencias Agrícolas).",
+    "becas_programas": [
+      "Política de Gratuidad en la matrícula (Decreto 2271 de 2023) con postulación por correo del centro más cercano en cada periodo",
+      "Descuentos por convenios interinstitucionales y por certificado electoral",
+      "Financiación con Icetex, Banco Agrario, Bancoomeva, Davivienda, Comultrasan, Fincomercio y SUFI",
+      "Convenio SENA para homologación de técnicos y tecnólogos"
+    ],
+    "notas": "Verificado en octubre de 2026 en estudios.unad.edu.co (inscripciones, requisitos, costos 2026 y gratuidad). El sitio unad.edu.co sirve una cadena de certificados TLS incompleta (puede dar advertencia en algunos navegadores). Las fechas de gratuidad publicadas corresponden al periodo 2026-II (16-04); para 2027 se publican nuevas circulares. Contacto: 323 264 1617.",
+    "fuentes": [
+      "https://estudios.unad.edu.co/inscripciones-y-matriculas",
+      "https://estudios.unad.edu.co/requisitos",
+      "https://estudios.unad.edu.co/costos",
+      "https://estudios.unad.edu.co/politica-de-gratuidad-unad",
+      "https://www.unad.edu.co/aspirantes/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unal-orinoquia",
+    "nombre": "Universidad Nacional de Colombia - Sede Orinoquia (PEAMA)",
+    "sigla": "UNAL Orinoquia",
+    "ciudad": "Arauca",
+    "departamento": "Arauca",
+    "tipo": "pública",
+    "sedes": ["Orinoquia (Arauca, km 9 vía Caño Limón)", "Amazonia (Leticia)", "Caribe (San Andrés)", "Tumaco", "De La Paz", "Bogotá", "Medellín", "Manizales", "Palmira"],
+    "web": "https://orinoquia.unal.edu.co",
+    "admisiones_url": "https://admisiones.unal.edu.co/pregrado/amazonia-caribe-orinoquia-y-tumaco/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "En las Sedes de Presencia Nacional la UNAL admite por el Programa Especial de Admisión y Movilidad Académica (PEAMA): los aspirantes se evalúan con los resultados del Saber 11 presentado desde 2020 (o citados a presentarlo en el año en curso), no con la prueba de admisión que aplica la admisión regular (Resolución 19 de 2026 de Vicerrectoría Académica). Se cursan los primeros semestres en la Sede Orinoquia y luego se continúa en la sede andina del programa (Bogotá, Medellín, Manizales o Palmira). Los programas con pruebas específicas (Música, Artes, Cine) exigen presentarlas en la sede que los ofrece. La Universidad no publica puntaje mínimo ni la fórmula de ponderación del Saber 11 para el PEAMA.",
+    "puntaje_minimo": null,
+    "ponderacion": "No publicada en la página oficial (la normativa es la Resolución 19 de 2026 de Vicerrectoría Académica).",
+    "proceso": [
+      { "paso": "Verificar los requisitos del PEAMA", "detalle": "Haber cursado los dos últimos años de bachillerato en un colegio de la región de influencia y residir allí desde al menos dos años antes; no haber sido estudiante de la UNAL; Saber 11 de 2020 en adelante. Región de influencia de Orinoquia: Arauca, Casanare, Guaviare, Guainía y Vichada, Cubará (Boyacá), Samoré y Gibraltar en Toledo (Norte de Santander) y La Macarena, Mapiripán y Puerto Concordia (Meta).", "url": "https://admisiones.unal.edu.co/pregrado/amazonia-caribe-orinoquia-y-tumaco/" },
+      { "paso": "Verificar la oferta de programas PEAMA de la Sede Orinoquia", "detalle": "Los programas pertenecen a las sedes andinas y varían según la Sede de Presencia Nacional elegida.", "url": "https://admisiones.unal.edu.co/pregrado/oferta-de-programas-curriculares/" },
+      { "paso": "Pagar los derechos de inscripción (o usar la gratuidad)", "detalle": "En la convocatoria 2027-1 el pago y la formalización fueron del 6 de julio al 24 de agosto de 2026; la Sede Orinoquia entregó pines gratuitos a aspirantes de la región (más de 3.000 en 2025). Quienes cumplen requisitos PEAMA y PAES solo pueden usar la gratuidad del PEAMA.", "url": "https://admisiones.unal.edu.co/pregrado/politica-de-gratuidad-en-la-inscripcion/" },
+      { "paso": "Formalizar la inscripción por Internet", "detalle": "Según la Guía paso a paso, dentro del cronograma, registrando el número de registro del Saber 11 y eligiendo la Sede de Presencia Nacional.", "url": "https://admisiones.unal.edu.co/pregrado/guia-paso-a-paso-pregrado/" },
+      { "paso": "Consultar resultados y enviar documentos", "detalle": "Los admitidos entregan certificado de residencia (máximo dos meses de expedido) y certificado del colegio de la región de influencia, y cumplen los demás requisitos de matrícula.", "url": "https://admisiones.unal.edu.co/pregrado/" }
+    ],
+    "calendario": "Dos convocatorias al año, con el mismo cronograma nacional de la UNAL. Convocatoria 2027-1: pago e inscripción del 6 de julio al 24 de agosto de 2026; prueba de admisión (admisión regular) el 20 de septiembre de 2026; inscripción de programa del 1 al 6 de octubre; resultados desde el 9 de octubre; segunda asignación 15-22 de octubre; última asignación 9-13 de noviembre de 2026. La convocatoria 2027-2 suele abrir en febrero.",
+    "costo_inscripcion": "Convocatoria nacional 2027-1: $175.000 según la guía de la UNAL (ver entrada de la Sede Medellín); gratuito para PAES y con pines gratuitos del PEAMA para aspirantes de la región de influencia de Orinoquia. El Decreto 0617 de 2026 del MEN prevé gratuidad progresiva de la inscripción para jóvenes de 14 a 28 años del Sisbén A, B o C cuando se reglamente.",
+    "becas_programas": [
+      "PEAMA Orinoquia: cupos reservados para bachilleres de la región de influencia, con movilidad posterior a las sedes andinas",
+      "PAES: comunidades indígenas, mejores bachilleres, mejores bachilleres de municipios pobres, población NARP y víctimas del conflicto armado (inscripción gratuita)",
+      "Política de gratuidad en la inscripción (Decreto 0617 de 2026, pendiente de reglamento operativo)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 en admisiones.unal.edu.co (página del PEAMA para Sedes de Presencia Nacional) y orinoquia.unal.edu.co. La UNAL no publica puntaje mínimo ni ponderación del Saber 11 para el PEAMA. El sitio orinoquia.unal.edu.co sirve una cadena TLS incompleta. Contacto: sec_orinoquia@unal.edu.co, +57 (607) 885 3004.",
+    "fuentes": [
+      "https://admisiones.unal.edu.co/pregrado/amazonia-caribe-orinoquia-y-tumaco/",
+      "https://admisiones.unal.edu.co/pregrado/",
+      "https://admisiones.unal.edu.co/pregrado/guia-paso-a-paso-pregrado/",
+      "https://admisiones.unal.edu.co/pregrado/politica-de-gratuidad-en-la-inscripcion/",
+      "https://orinoquia.unal.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "sena-santander",
+    "nombre": "SENA - Servicio Nacional de Aprendizaje (Regional Santander y oferta nacional)",
+    "sigla": "SENA",
+    "ciudad": "Bucaramanga y centros de formación en todo el país",
+    "departamento": "Nacional (33 regionales, 118 centros de formación)",
+    "tipo": "pública",
+    "sedes": ["Regional Santander (Bucaramanga, Floridablanca, Girón, Piedecuesta, Barrancabermeja, San Gil, Málaga, Vélez)", "Regional Norte de Santander", "Regional Boyacá", "Regional Meta", "Regional Casanare", "Regional Arauca", "Regional Tolima", "Formación virtual en todo el país"],
+    "web": "https://www.sena.edu.co",
+    "admisiones_url": "https://betowa.sena.edu.co/",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "La formación titulada del SENA (técnicos y tecnólogos) es gratuita y no usa el puntaje del Saber 11: la selección se hace con las pruebas propias del SENA (fase 1 en línea) aplicadas por la plataforma Betowa, con cronograma por tipo de documento. Para tecnólogos se exige ser bachiller (haber presentado el Saber 11 es requisito legal del título de bachiller); muchos cursos complementarios admiten desde los 14 años. No hay puntaje mínimo de Saber 11.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      { "paso": "Buscar el programa en Betowa", "detalle": "Portal oficial de oferta e inscripción: filtrar por modalidad (virtual, presencial o a distancia), tipo de formación (titulada o complementaria), ciudad y centro de formación (más de 550 programas presenciales y a distancia listados).", "url": "https://betowa.sena.edu.co/oferta?modality=A&modality=P" },
+      { "paso": "Crear la cuenta en Betowa", "detalle": "Registrarse con tipo y número de documento, lugar y fecha de expedición y aceptar los términos.", "url": "https://betowa.sena.edu.co/registrarse" },
+      { "paso": "Inscribirse en la convocatoria vigente", "detalle": "Consultar el cronograma de cada convocatoria (fechas de inscripción, pruebas y publicación de resultados) y verificar la inscripción.", "url": "https://betowa.sena.edu.co/cronograma" },
+      { "paso": "Presentar las pruebas de selección", "detalle": "Fase 1 en línea según el último dígito del documento (por ejemplo, oferta regular virtual IV-2026: 14 y 15 de octubre de 2026, con reprogramación del 16 al 19 de octubre)." },
+      { "paso": "Consultar resultados y matricularse", "detalle": "Los seleccionados formalizan la matrícula en el centro de formación o en línea; los trámites administrativos posteriores se hacen en SOFIA Plus.", "url": "https://portal.senasofiaplus.edu.co/" },
+      { "paso": "Solicitar apoyo socioeconómico (opcional)", "detalle": "Convocatorias de apoyos de sostenimiento para aprendices, elegidas y registradas en Betowa.", "url": "https://betowa.sena.edu.co/apoyo-socioeconomico" }
+    ],
+    "calendario": "Convocatorias trimestrales durante todo el año (oferta regular I, II, III y IV); el cronograma 2026 se publica en Betowa. Ejemplo: selección fase 1 de la oferta regular virtual IV-2026 los días 14 y 15 de octubre de 2026. Atención: lunes a viernes 7:00 a. m. a 7:00 p. m. y sábados 8:00 a. m. a 1:00 p. m.; línea gratuita 018000 910270, WhatsApp 305 809 2444.",
+    "costo_inscripcion": "Gratuito (toda la formación del SENA es gratuita; no hay pago de inscripción ni matrícula).",
+    "becas_programas": [
+      "Formación titulada y complementaria 100 % gratuita",
+      "Apoyos socioeconómicos de sostenimiento para aprendices (convocatorias en Betowa)",
+      "Contrato de aprendizaje con empresas en la etapa práctica",
+      "Convenios de articulación con la media y homologación en universidades (por ejemplo UNAD y Universidad de Boyacá reconocen técnicos y tecnólogos del SENA)"
+    ],
+    "notas": "Verificado en octubre de 2026 en betowa.sena.edu.co (portal oficial de oferta e inscripción). Las páginas de sena.edu.co (regional Santander, 'Cómo ingresar') cargan su contenido con JavaScript y no se pudieron leer, por eso no se incluyen detalles de los centros de la Regional Santander. Las fechas de cada convocatoria cambian; consultar siempre el cronograma vigente.",
+    "fuentes": [
+      "https://betowa.sena.edu.co/",
+      "https://betowa.sena.edu.co/cronograma",
+      "https://betowa.sena.edu.co/oferta?modality=A&modality=P",
+      "https://betowa.sena.edu.co/apoyo-socioeconomico",
+      "https://betowa.sena.edu.co/registrarse"
+    ],
+    "verificado": "2026-10"
+  }
+]
