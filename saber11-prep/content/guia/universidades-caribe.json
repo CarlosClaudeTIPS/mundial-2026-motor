@@ -1,0 +1,749 @@
+[
+  {
+    "id": "uninorte",
+    "nombre": "Universidad del Norte",
+    "sigla": "Uninorte",
+    "ciudad": "Barranquilla (Puerto Colombia)",
+    "departamento": "Atlántico",
+    "tipo": "privada",
+    "sedes": ["Barranquilla (Km 5 vía Puerto Colombia)"],
+    "web": "https://www.uninorte.edu.co",
+    "admisiones_url": "https://www.uninorte.edu.co/web/admisiones-pregrado/nuevos-ingresos",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "La página de 'Nuevos ingresos' no exige adjuntar el resultado del Saber 11 a los bachilleres colombianos: los documentos de inscripción son el documento de identidad y el certificado de notas definitivas de uno de los dos últimos años de bachillerato (10.º u 11.º). La decisión de admisión se toma a partir de esa documentación; Lenguas Modernas y Cultura, Relaciones Internacionales y Negocios Internacionales exigen además una prueba de inglés, y Música una prueba de aptitudes musicales, cuyo resultado define la admisión. El Saber 11 sigue siendo requisito legal para matricularse en cualquier universidad; para bachilleres del exterior se pide el examen de Estado equivalente. No se publica puntaje mínimo ni ponderación.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Diligenciar el formulario de inscripción web",
+        "detalle": "Se llena en línea desde la página de Nuevos ingresos. Hay que adjuntar en PDF o JPG (máx. 10 MB) el documento de identidad por ambas caras y el certificado de notas definitivas de uno de los dos últimos grados aprobados. Solo se estudian las solicitudes con documentación completa (se acepta en español o inglés).",
+        "url": "https://www.uninorte.edu.co/web/admisiones-pregrado/nuevos-ingresos"
+      },
+      {
+        "paso": "Pagar el valor de la inscripción",
+        "detalle": "$150.000 COP, no reembolsables. El volante de pago se descarga con el usuario y contraseña creados en la inscripción."
+      },
+      {
+        "paso": "Pruebas adicionales (solo algunos programas)",
+        "detalle": "Prueba de inglés para Lenguas Modernas y Cultura, Relaciones Internacionales y Negocios Internacionales; prueba de aptitudes musicales para Música. Los normalistas que aspiren a Licenciatura en Educación Infantil presentan documentos adicionales de la formación complementaria."
+      },
+      {
+        "paso": "Consultar la decisión de admisión",
+        "detalle": "Se consulta en línea con el usuario Uninorte. Para 2027-1 las decisiones se publican a partir del 20 de agosto de 2026."
+      },
+      {
+        "paso": "Pagar matrícula, exámenes médicos e idiomas",
+        "detalle": "La Oficina de Financiamiento Estudiantil envía por correo los volantes de matrícula de pregrado, de idiomas (según programa) y de exámenes médicos. Luego se presenta el examen de clasificación de inglés (gratuito antes del primer semestre) y se carga el diploma de bachiller en el portal Aurora."
+      },
+      {
+        "paso": "Bienvenida Uninorte",
+        "detalle": "Jornadas de inducción para estudiantes y padres de familia antes del inicio de clases (enero de 2027 para el primer semestre).",
+        "url": "https://www.uninorte.edu.co/web/admisiones-pregrado/nuevos-ingresos"
+      }
+    ],
+    "calendario": "Para el primer semestre de 2027: inscripciones del 18 de agosto al 27 de noviembre de 2026; decisiones de admisión desde el 20 de agosto de 2026 (se evalúan a medida que llegan las solicitudes); bienvenida e inicio de clases en enero de 2027 (incluye Medicina y Enfermería). La convocatoria para segundo semestre suele abrir en el primer semestre del año.",
+    "costo_inscripcion": "$150.000 COP (inscripción para 2027-1), no reembolsable.",
+    "becas_programas": [
+      "Programa de Becas y Apoyo Financiero de Uninorte (financiación hasta del 100 % de la matrícula, según la página de Becas y apoyo financiero)",
+      "Convenio con ICETEX (crédito de pregrado)",
+      "Programa Generación E (Gobierno Nacional)",
+      "Entidades financieras aliadas y crédito empresa"
+    ],
+    "notas": "Verificado en octubre de 2026. El sitio uninorte.edu.co bloquea el acceso automatizado (página de verificación Radware), por lo que el contenido se leyó a través de un servicio intermedio de lectura; las URL devuelven 200 pero conviene abrirlas en un navegador. La página de becas carga su contenido con JavaScript y no fue posible leer el detalle de cada beca ni sus requisitos de Saber 11: consultar directamente. No se publica puntaje mínimo de Saber 11.",
+    "fuentes": [
+      "https://www.uninorte.edu.co/web/admisiones-pregrado/nuevos-ingresos",
+      "https://www.uninorte.edu.co/pagos-y-financiacion",
+      "https://www.uninorte.edu.co/web/apoyo-financiero/becas"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uniatlantico",
+    "nombre": "Universidad del Atlántico",
+    "sigla": "UA",
+    "ciudad": "Barranquilla (Puerto Colombia)",
+    "departamento": "Atlántico",
+    "tipo": "pública",
+    "sedes": ["Puerto Colombia (Ciudadela Universitaria)", "Barranquilla (Bellas Artes, Centro)", "Suan", "Sabanalarga"],
+    "web": "https://www.uniatlantico.edu.co",
+    "admisiones_url": "https://www.uniatlantico.edu.co/admisiones-y-registro-academico/",
+    "uso_saber11": "puntaje_minimo",
+    "uso_saber11_detalle": "Admite por mérito académico medido con el PUNTAJE GLOBAL del Saber 11 (presentado desde 2014 en adelante): en cada programa se ordenan los inscritos de mayor a menor puntaje global y se asignan los cupos en estricto orden descendente. No hay un puntaje mínimo numérico publicado: el 'mínimo' lo define cada semestre el último admitido. Se eligen una primera y una segunda opción de programa. Programas con prueba específica: Bellas Artes (Música, Lic. en Música, Artes Plásticas, Danza, Arte Dramático; se convoca a 8 veces el cupo y hay que aprobar la prueba con mínimo 3,0/5,0), Lic. en Cultura Física, Recreación y Deportes (prueba física = 50 % y Saber 11 = 50 %) y Medicina (prueba psicotécnica + entrevista = 20 % y Saber 11 = 80 %; se convoca a 2 veces el cupo). Desempate: mayor puntaje en lectura crítica, luego matemáticas, sociales, ciencias naturales e inglés (en Medicina primero ciencias naturales).",
+    "puntaje_minimo": null,
+    "ponderacion": "Programas regulares: 100 % puntaje global Saber 11. Lic. en Cultura Física, Recreación y Deportes: 50 % Saber 11 + 50 % prueba física. Medicina: 80 % Saber 11 + 20 % prueba psicotécnica y entrevista. Bellas Artes: puntaje global Saber 11 solo cuenta si se aprueba la prueba específica (mín. 3,0/5,0).",
+    "proceso": [
+      {
+        "paso": "Leer la Guía para el proceso de inscripción del semestre",
+        "detalle": "El Departamento de Admisiones y Registro publica cada semestre la guía (p. ej., 'Guía para el proceso de inscripción 2026-2'), el paso a paso del formulario y las guías de pruebas específicas (Música, Artes Plásticas, Danza, Arte Dramático, Lic. en Educación Física y Medicina).",
+        "url": "https://www.uniatlantico.edu.co/wp-content/uploads/2026/04/GUIA-PARA-EL-PROCESO-DE-INSCRIPCION-2026-2.pdf"
+      },
+      {
+        "paso": "Verificar si aplica a inscripción gratuita",
+        "detalle": "Es gratuita para quien tiene título de bachiller o está terminando 11.º, presentó el Saber 11 desde 2014, nunca ha sido estudiante de la UA y nunca ha usado antes la inscripción gratuita (Resolución Rectoral 001620 de 2013). Quien no cumpla debe comprar un PIN en el Banco Popular o en línea."
+      },
+      {
+        "paso": "Diligenciar el formulario 'Inscripciones en línea UA'",
+        "detalle": "Desde el micrositio de Admisiones (se recomienda Firefox). Se registra el código SNP/AC del Saber 11 (los bachilleres 2026 pueden inscribirse con el registro AC de la citación), datos socioeconómicos y las dos opciones de programa. Si pertenece a un criterio diferencial debe marcarlo en la sección 'Circunscripción'. El enlace 'Inscripciones en línea UA' (servidor inscripciones.uniatlantico.edu.co) solo responde en fechas de convocatoria.",
+        "url": "https://www.uniatlantico.edu.co/admisiones-y-registro-academico/"
+      },
+      {
+        "paso": "Cargar soportes de criterio diferencial (si aplica)",
+        "detalle": "Afrocolombianos (con aval de organización registrada), indígenas (aval de cabildo), deportistas, artistas, personas con discapacidad, víctimas del conflicto, bachilleres de municipios de menos de 50 mil o de 5 mil habitantes. Se adjuntan en PDF dentro del formulario en las fechas de la guía."
+      },
+      {
+        "paso": "Revisar inscritos definitivos y pruebas específicas",
+        "detalle": "La UA publica el listado de inscritos para corregir el registro SNP/AC y luego el listado de convocados a pruebas específicas (Bellas Artes, Medicina y Lic. en Educación Física; Danza y Educación Física exigen exámenes médicos previos)."
+      },
+      {
+        "paso": "Consultar admitidos y cargar documentos",
+        "detalle": "El listado de admitidos se publica en la web; los admitidos cargan documentos en Academusoft y siguen la 'Guía para nuevos admitidos'. Después hay una reasignación de cupos entre los 'opcionados'.",
+        "url": "https://www.uniatlantico.edu.co/admisiones-y-registro-academico/"
+      }
+    ],
+    "calendario": "Dos convocatorias al año. Convocatoria 2026-2 (la última guía publicada): inscripción gratuita en línea del 21 de abril al 4 de mayo de 2026; publicación de anuladas 5 de mayo; compra de PIN y cierre de inscripción con PIN del 6 al 19 de mayo; corrección de registro SNP del 20 al 21 de mayo; convocados a pruebas específicas 28 de mayo; pruebas de aptitud (Bellas Artes y Medicina) del 1 al 6 de junio; prueba física 6 de junio; admitidos 11 de junio; cargue de documentos del 12 al 16 de junio; reasignación de cupos 8 de julio de 2026. La convocatoria para 2027-1 debería abrir hacia octubre-noviembre de 2026: revisar el micrositio de Admisiones.",
+    "costo_inscripcion": "Gratuita para la mayoría de aspirantes nuevos (primera inscripción). Quien no cumpla los requisitos de gratuidad paga un PIN de $233.500 COP (valor 2026-2, Banco Popular o pago en línea).",
+    "becas_programas": [
+      "Cupos con criterio diferencial por programa: afrocolombianos 2 %, indígenas 2 %, artistas 1 %, deportistas 1 %, discapacidad 1 %, víctimas de la violencia 1 %, bachilleres de municipios de menos de 50 mil habitantes 7 % y de menos de 5 mil habitantes 1 %; Medicina reserva 30 % para bachilleres de municipios del Atlántico",
+      "Inscripción gratuita para aspirantes nuevos (Resolución Rectoral 001620 de 2013) y para los programas regionalizados de Suan y Sabanalarga y el proyecto Juventud a la UA (PIC)",
+      "Política de gratuidad en la matrícula (Gobierno Nacional) con guía y reglamento operativo propios",
+      "Descuentos en matrícula por hermanos y por certificado electoral (10 %); descuento para población afrocolombiana (Resolución Rectoral 002717 de 2015)"
+    ],
+    "notas": "Verificado en octubre de 2026 con la 'Guía para el proceso de inscripción 2026-2' (PDF oficial) y el micrositio del Departamento de Admisiones y Registro. En la guía la UA habla de 'puntaje global' sin ponderar por áreas; la selección es un ranking por puntaje global, así que no existe un mínimo fijo publicado. Las fechas corresponden a 2026-2; la guía 2027-1 aún no estaba publicada al verificar.",
+    "fuentes": [
+      "https://www.uniatlantico.edu.co/admisiones-y-registro-academico/",
+      "https://www.uniatlantico.edu.co/wp-content/uploads/2026/04/GUIA-PARA-EL-PROCESO-DE-INSCRIPCION-2026-2.pdf",
+      "https://www.uniatlantico.edu.co/wp-content/uploads/2026/05/GUIA-PRUEBA-ESPECIFICA-PROGRAMA-DE-MEDICINA.pdf",
+      "https://www.uniatlantico.edu.co/wp-content/uploads/2026/07/GUIA-POLITICA-DE-GRATUIDAD.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unisimon",
+    "nombre": "Universidad Simón Bolívar",
+    "sigla": "Unisimón",
+    "ciudad": "Barranquilla",
+    "departamento": "Atlántico",
+    "tipo": "privada",
+    "sedes": ["Barranquilla", "Cúcuta"],
+    "web": "https://www.unisimon.edu.co",
+    "admisiones_url": "https://www.unisimon.edu.co/aspirantes/admisionespregrado",
+    "uso_saber11": "entrevista_o_mixto",
+    "uso_saber11_detalle": "Exige el resultado del Saber 11 como documento de inscripción para todos los pregrados. Para Medicina, Enfermería, Fisioterapia, Psicología y Nutrición y Dietética la admisión combina la evaluación de las pruebas Saber 11 con una entrevista personal (profesor del programa y psicóloga; en Psicología solo entrevista con psicólogo) y pruebas psicológicas. Para el resto de programas la página solo lista los documentos de inscripción. No publica puntaje mínimo ni ponderación.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Inscripción en línea",
+        "detalle": "Se entra como 'usuario nuevo' en el portal de inscripción, se elige nivel (pregrado) y programa y se completa el formulario. Si ya está registrado, usa su usuario.",
+        "url": "https://www.unisimon.edu.co/aspirantes/inscripciones"
+      },
+      {
+        "paso": "Subir documentos en la plataforma Gestión de Ingreso",
+        "detalle": "Resultado de las pruebas ICFES/Saber 11, fotocopia del documento de identidad y comprobante de pago de derechos de inscripción (cuando corresponda). No es necesario ir a la oficina de Admisiones (calle 59 N.º 59-81). Los extranjeros presentan un examen homologable por el ICFES.",
+        "url": "https://www.unisimon.edu.co/aspirantes/admisionespregrado"
+      },
+      {
+        "paso": "Admisión y selección",
+        "detalle": "En Medicina, Enfermería, Fisioterapia, Psicología y Nutrición y Dietética: entrevista personal, evaluación del Saber 11 y pruebas psicológicas. La lista de admitidos se publica en la web (enlace 'Admitidos' de la sección Aspirantes; el servidor barranquillas.unisimon.edu.co no respondió al verificar).",
+        "url": "https://www.unisimon.edu.co/aspirantes/admisionespregrado"
+      },
+      {
+        "paso": "Matrícula",
+        "detalle": "Presentar fotocopia del diploma de bachiller o acta de grado autenticada, una foto y el pago de la matrícula financiera (los extranjeros, además, visa de estudiante y diploma apostillado/convalidado)."
+      }
+    ],
+    "calendario": "La universidad publica en 'Aspirantes > Calendario académico' el calendario de pregrados 2026-2 y 2026-1 (archivos PDF); las fechas exactas de inscripción no aparecen en texto en la página. Inscripciones abiertas durante buena parte del año; consultar el calendario vigente.",
+    "costo_inscripcion": "No publicado en la página oficial; consultar en admisiones (la página indica 'pago de derechos de inscripción cuando corresponda').",
+    "becas_programas": [
+      "Becas educativas institucionales (sección 'Becas Educativas' de Apoyo Financiero)",
+      "Crédito institucional Unisimón y crédito ICETEX (convocatoria 2026-2 enlazada en la página)",
+      "Convenios con entidades financieras, cooperativas, fondos de empleados y cajas de compensación",
+      "La Beca de tu Vida (Alcaldía de Barranquilla, convocatoria 2027 enlazada desde la portada)"
+    ],
+    "notas": "Verificado en octubre de 2026 en unisimon.edu.co/aspirantes. La página 'Valores de matrícula y pecuniarios' devolvía error 404 al verificar y los calendarios se abren con JavaScript, por lo que no se pudieron leer costos ni fechas exactas. No publica puntaje mínimo de Saber 11.",
+    "fuentes": [
+      "https://www.unisimon.edu.co/aspirantes/admisionespregrado",
+      "https://www.unisimon.edu.co/aspirantes/inscripciones",
+      "https://www.unisimon.edu.co/aspirantes/apoyofinanciero",
+      "https://www.unisimon.edu.co/aspirantes/calendario"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "cuc",
+    "nombre": "Universidad de la Costa",
+    "sigla": "CUC",
+    "ciudad": "Barranquilla",
+    "departamento": "Atlántico",
+    "tipo": "privada",
+    "sedes": ["Barranquilla (Calle 58 # 55-66)"],
+    "web": "https://www.cuc.edu.co",
+    "admisiones_url": "https://www.cuc.edu.co/admisiones",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "Pide el resultado de las pruebas Saber 11/ICFES como documento para inscribirse a pregrado, junto con el documento de identidad y el acta de grado o diploma (o certificado de estar cursando 11.º). No publica puntaje mínimo, ponderación ni examen propio para la admisión general. Sí hay puntajes mínimos para algunas becas: 'La Beca de tu Vida' (Alcaldía de Barranquilla) exige puntaje global mínimo de 370 y la Beca Talento premia los mejores puntajes Saber 11.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Reunir los documentos",
+        "detalle": "Documento de identidad o contraseña, acta de grado o diploma de bachiller (o certificado de estar cursando 11.º) y resultados del Saber 11/ICFES.",
+        "url": "https://www.cuc.edu.co/inscripciones"
+      },
+      {
+        "paso": "Inscribirse en línea (plataforma Emma)",
+        "detalle": "El botón 'Inscríbete aquí' lleva a la plataforma de inscripción; también hay pagos en línea desde la misma página.",
+        "url": "https://emma.cuc.edu.co/inscripcion"
+      },
+      {
+        "paso": "Postularse a becas (opcional)",
+        "detalle": "La mayoría de becas exigen estar admitido y cumplir requisitos de inglés (Multidiomas o nivel B1) y promedio; se consultan en 'Becas institucionales'.",
+        "url": "https://www.cuc.edu.co/becas-institucionales"
+      },
+      {
+        "paso": "Matrícula financiera y académica",
+        "detalle": "Según el calendario académico 2026: matrícula financiera hasta el 16 de enero (2026-1) y hasta el 17 de julio (2026-2); luego matrícula académica en línea.",
+        "url": "https://www.cuc.edu.co/wp-content/uploads/2026/01/AC-No.-CD-645-CALENDARIO-ACADEMICO-2026-11.pdf"
+      }
+    ],
+    "calendario": "Calendario académico 2026 (Acuerdo CD 645): inscripciones abiertas hasta el 15 de enero de 2026 para 2026-1 (inicio de clases 2 de febrero) y hasta el 16 de julio de 2026 para 2026-2 (inicio de clases 3 de agosto). Para 2027-1 las inscripciones deberían ir hasta mediados de enero de 2027; confirmar en el calendario nuevo.",
+    "costo_inscripcion": "No publicado en la página oficial; consultar en admisiones (605 3198929, WhatsApp +57 350 5887101).",
+    "becas_programas": [
+      "La Beca de tu Vida (Alcaldía de Barranquilla): 100 % de la matrícula para egresados de colegios oficiales del Distrito con puntaje global Saber 11 mínimo de 370 y admitidos en la CUC",
+      "Beca Talento: hasta 100 % de la matrícula para los mejores puntajes Saber 11 (mantener promedio 4,0 e inglés)",
+      "Beca de Excelencia Académica (2 becas del 50 % y 4 del 25 % por programa) y Beca Opción Atlántico (hasta 100 % para 22 jóvenes del departamento)",
+      "Beca Primer Semestre (hasta 40 % de descuento), Beca para Deportistas y Participación Cultural (25-50 %), Beca para Minorías y Población Especial (hasta 50 %), Beca Colegios en Convenio (15 %), Beca Grupos Familiares (hasta 50 %)"
+    ],
+    "notas": "Verificado en octubre de 2026 en cuc.edu.co (Admisiones, Inscripciones, Becas institucionales y calendario académico 2026 en PDF). El formulario de inscripción (emma.cuc.edu.co) funciona solo con JavaScript. No se publica puntaje mínimo de Saber 11 para la admisión general ni el valor de la inscripción.",
+    "fuentes": [
+      "https://www.cuc.edu.co/admisiones",
+      "https://www.cuc.edu.co/inscripciones",
+      "https://www.cuc.edu.co/becas-institucionales",
+      "https://www.cuc.edu.co/wp-content/uploads/2026/01/AC-No.-CD-645-CALENDARIO-ACADEMICO-2026-11.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uac",
+    "nombre": "Universidad Autónoma del Caribe",
+    "sigla": "UAC",
+    "ciudad": "Barranquilla",
+    "departamento": "Atlántico",
+    "tipo": "privada",
+    "sedes": ["Barranquilla (Calle 90 # 46-112)"],
+    "web": "https://www.uac.edu.co",
+    "admisiones_url": "https://www.uac.edu.co/inscripciones/",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "Para postularse a un pregrado es obligatorio contar con el resultado de las pruebas ICFES (Saber 11) y el documento de identidad; la documentación se carga en digital en la plataforma Épica y la admisión se notifica por correo tras verificarla (un día hábil). No publica puntaje mínimo, ponderación ni entrevista para pregrado (la entrevista aplica a posgrado).",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Crear usuario en el sistema",
+        "detalle": "En 'Inscríbete aquí' se elige el tipo de usuario (nuevo o registrado, si ya tuvo vínculo con la universidad) y se registra el número de documento.",
+        "url": "https://www.uac.edu.co/inscripciones/"
+      },
+      {
+        "paso": "Inscribirse al programa y pagar",
+        "detalle": "Con el usuario creado se valida en el sistema, se inscribe el programa y se paga la inscripción ($80.000 COP para pregrado en 2027-1).",
+        "url": "https://portaldepagos.uac.edu.co/matriculas.html"
+      },
+      {
+        "paso": "Cargar documentos en Épica",
+        "detalle": "Resultado del Saber 11 y documento de identidad en digital. Pasado un día hábil se notifica al correo el estado de la postulación."
+      },
+      {
+        "paso": "Recibir la admisión y la orden financiera",
+        "detalle": "Al correo llega la notificación de admisión y el enlace para descargar la orden financiera de matrícula; luego se paga en el portal de pagos.",
+        "url": "https://www.uac.edu.co/admisiones/"
+      }
+    ],
+    "calendario": "Inscripciones para 2027-1 (ingreso por primera vez, transferencias y reingresos) abiertas desde el 1 de septiembre de 2026. La fecha de cierre no aparece en la página; consultar el calendario académico en 'Admisiones'.",
+    "costo_inscripcion": "$80.000 COP para pregrado (período 2027-1); $100.000 COP para posgrado.",
+    "becas_programas": [
+      "Becas y auxilios institucionales (sección 'Financiación': becas y auxilios, descuentos educativos y auxilios de cajas de compensación)",
+      "Financiamiento estudiantil y crédito con entidades aliadas (Oficina de Crédito y Cartera)"
+    ],
+    "notas": "Verificado en octubre de 2026 en uac.edu.co/inscripciones y uac.edu.co/financiacion. La página de financiación solo enumera las categorías de becas, sin requisitos ni porcentajes. No se publica puntaje mínimo de Saber 11.",
+    "fuentes": [
+      "https://www.uac.edu.co/inscripciones/",
+      "https://www.uac.edu.co/admisiones/",
+      "https://www.uac.edu.co/financiacion/",
+      "https://www.uac.edu.co/admisiones/valores-de-matricula-pregrados/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unicartagena",
+    "nombre": "Universidad de Cartagena",
+    "sigla": "UdeC",
+    "ciudad": "Cartagena",
+    "departamento": "Bolívar",
+    "tipo": "pública",
+    "sedes": ["Cartagena (San Agustín, San Pablo, Zaragocilla, Piedra de Bolívar)", "Centros tutoriales (programas a distancia)"],
+    "web": "https://www.unicartagena.edu.co",
+    "admisiones_url": "https://www.unicartagena.edu.co/convocatorias-pregrado-presencial",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "NO VERIFICADO: el sitio unicartagena.edu.co no respondió desde nuestra red (conexión rechazada) y solo pudo leerse la portada a través de un servicio intermedio, que enlaza las convocatorias de 'Pregrado Presencial' y 'Pregrado Distancia'. Como universidad pública del Caribe, su admisión regular se basa en el Saber 11, pero no pudimos confirmar en la página oficial si usa puntaje global, ponderación por programa o puntaje mínimo. Se registra solo el requisito legal de haber presentado el examen.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Consultar la convocatoria de pregrado presencial",
+        "detalle": "En la portada: Estudia con nosotros > Convocatorias > Pregrado Presencial (también hay convocatoria de Pregrado Distancia para Cartagena y centros tutoriales). Allí se publican el calendario, los cupos, el valor de la inscripción y los criterios de selección del semestre.",
+        "url": "https://www.unicartagena.edu.co/convocatorias-pregrado-presencial"
+      },
+      {
+        "paso": "Inscribirse en la plataforma académica",
+        "detalle": "La portada enlaza 'Inscripciones Plataforma Académica SMA' y 'Soporte Admisiones' para dudas del proceso.",
+        "url": "https://www.unicartagena.edu.co/aspirante"
+      },
+      {
+        "paso": "Revisar admitidos y matricularse",
+        "detalle": "Los listados de admitidos y las fechas de matrícula se publican dentro de la misma convocatoria. No verificado directamente."
+      }
+    ],
+    "calendario": "No verificado: las fechas se publican en la convocatoria de Pregrado Presencial de cada semestre.",
+    "costo_inscripcion": "No publicado en la página oficial consultada (no se pudo abrir la convocatoria); consultar en admisiones.",
+    "becas_programas": [
+      "Sección 'Becas' dentro de Otras convocatorias (no se pudo leer el detalle)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional (aplica a universidades públicas)"
+    ],
+    "notas": "Octubre de 2026: www.unicartagena.edu.co cerró la conexión en todos los intentos directos (curl) y las subpáginas de convocatorias fallaron también a través del servicio intermedio; solo se leyó la portada. Las URL de este registro son las que enlaza la portada oficial, pero NO devolvieron 200 en nuestra verificación. Toda la información de criterios, costos y fechas debe confirmarse en el sitio oficial o en el correo/teléfono de admisiones.",
+    "fuentes": [
+      "https://www.unicartagena.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "utb",
+    "nombre": "Universidad Tecnológica de Bolívar",
+    "sigla": "UTB",
+    "ciudad": "Cartagena",
+    "departamento": "Bolívar",
+    "tipo": "privada",
+    "sedes": ["Cartagena - Campus Tecnológico (Km 1 vía Turbaco)", "Cartagena - Campus Casa Lemaitre (Manga)"],
+    "web": "https://www.utb.edu.co",
+    "admisiones_url": "https://www.utb.edu.co/inscripciones-y-admisiones/inscripciones-pregrado/",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "Requisitos publicados: tener título de bachiller (o equivalente avalado) y haber presentado el examen de Estado ICFES Saber 11; el resultado se carga como documento de inscripción (los graduados en el exterior presentan un examen homologado por el ICFES). La admisión se decide tras verificar los requisitos y documentos; la página no menciona puntaje mínimo, ponderación, entrevista ni examen propio.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Paso 1: Conocer los requisitos",
+        "detalle": "Título de bachiller colombiano (o equivalente) y haber presentado el Saber 11.",
+        "url": "https://www.utb.edu.co/inscripciones-y-admisiones/inscripciones-pregrado/"
+      },
+      {
+        "paso": "Paso 2: Preparar los documentos",
+        "detalle": "Documento de identidad (ambas caras), foto 3x4 fondo blanco en JPG, acta de grado (o certificado de estar cursando 11.º; el acta se exige para la matrícula del segundo semestre), resultados del Saber 11, certificado de afiliación a EPS o consulta ADRES. Extranjeros: pasaporte, visa de estudiante, acta apostillada y seguro internacional."
+      },
+      {
+        "paso": "Paso 3: Diligenciar el formulario de inscripción",
+        "detalle": "Elegir la opción 'primera vez', crear usuario (Acceso ID) y NIP, e imprimir o guardar la carta de inscripción que aparece al final."
+      },
+      {
+        "paso": "Paso 4: Conocer el resultado de la admisión",
+        "detalle": "Tras verificar los requisitos, llega al correo una carta con fecha de inicio de clases, inducción y usuario/clave para el pago."
+      },
+      {
+        "paso": "Paso 5 y 6: Pagar la matrícula y consultar el horario",
+        "detalle": "Pago en el portal de pagos con el usuario de la carta de admisión; la UTB matricula todas las materias del primer semestre y el horario se consulta en Banner."
+      }
+    ],
+    "calendario": "La página de inscripciones no publica fechas en texto; la UTB mantiene inscripciones abiertas por período académico. Consultar 'Inscripciones y admisiones' o escribir a infoinscripciones@utb.edu.co (tel. 605 6931919).",
+    "costo_inscripcion": "No publicado en la página de inscripciones; consultar en admisiones (la lista de documentos menciona un recibo de pago de estudio de homologación solo para quienes homologan asignaturas).",
+    "becas_programas": [
+      "Programa de Becas de la UTB y acompañamiento para aplicar a becas de otras entidades",
+      "Crédito ICETEX y financiación con Secretarías de Educación y otras entidades estatales",
+      "Portafolio financiero propio (sección Apoyo financiero)"
+    ],
+    "notas": "Verificado en octubre de 2026. El sitio utb.edu.co devuelve 403 a los accesos automatizados, por lo que el contenido se leyó mediante un servicio intermedio de lectura; las URL son las oficiales enlazadas desde utb.edu.co/admisiones. La página de becas no cargó su contenido. No se publica puntaje mínimo de Saber 11 ni valor de inscripción.",
+    "fuentes": [
+      "https://www.utb.edu.co/admisiones",
+      "https://www.utb.edu.co/inscripciones-y-admisiones/inscripciones-pregrado/",
+      "https://www.utb.edu.co/apoyo-financiero/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unimagdalena",
+    "nombre": "Universidad del Magdalena",
+    "sigla": "Unimagdalena",
+    "ciudad": "Santa Marta",
+    "departamento": "Magdalena",
+    "tipo": "pública",
+    "sedes": ["Santa Marta (Calle 29H3 No. 22-01)", "Centros regionales (programas a distancia y virtuales - CREO)"],
+    "web": "https://www.unimagdalena.edu.co",
+    "admisiones_url": "https://admisiones.unimagdalena.edu.co/VistaAdmisiones.jsp",
+    "uso_saber11": "puntaje_minimo",
+    "uso_saber11_detalle": "Exige un puntaje global mínimo de 180 sobre 500 en el Saber 11 (o su equivalente convertido a la escala actual) para que la inscripción sea válida (Acuerdo Superior 09 de 2019, art. 3). Los cupos ordinarios se asignan a los inscritos con MAYOR PUNTAJE GLOBAL del Saber 11 en cada programa (Acuerdo Académico 10 de 2026, art. 8-9): el mérito académico se mide con el resultado individual de la prueba, sin ponderación por áreas. Desempate: mayor puntaje en lectura crítica, matemáticas, sociales y ciudadanas, ciencias naturales, inglés; luego bachiller de institución rural y del municipio con menos habitantes. Los habilitados entregan documentos y asisten a una entrevista presencial antes de la publicación de admitidos; deportistas y artistas con cupo especial se seleccionan por pruebas de rendimiento.",
+    "puntaje_minimo": { "global": 180 },
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Revisar el cronograma y la normatividad (pasos 1 y 2 del portal)",
+        "detalle": "El portal de Admisiones muestra por pasos el proceso de cada semestre: cronograma, Acuerdo Académico que reglamenta la admisión (No. 10 de 2026 para 2026-II), instructivo y normas de cupos especiales.",
+        "url": "https://admisiones.unimagdalena.edu.co/VistaAdmisiones.jsp"
+      },
+      {
+        "paso": "Reunir requisitos y documentos (paso 3)",
+        "detalle": "Documento de identidad en JPG, diploma o acta de bachiller (o constancia de estar cursando 11.º), resultados del Saber 11 en PDF con puntaje global mínimo de 180, y soportes del cupo especial si aplica (desplazado, indígena, afrocolombiano, mujer cabeza de familia, deportista, artista, pescador artesanal, discapacidad).",
+        "url": "https://admisiones.unimagdalena.edu.co/filecomp/documentos/Acuerdo%20Acad%C3%A9mico%20No.%2010%20de%202026.pdf"
+      },
+      {
+        "paso": "Diligenciar el formulario en línea (paso 5)",
+        "detalle": "Solo se admite una inscripción por período. Se registran datos socioeconómicos (estrato, colegio, pensión pagada) que sirven para liquidar la matrícula."
+      },
+      {
+        "paso": "Pagar los derechos de inscripción (paso 6)",
+        "detalle": "$124.500 COP en 2026-II, no reembolsables. Pago por PSE o en Bancolombia/Banco de Occidente con el volante generado; el pago puede tardar hasta dos días hábiles en reflejarse.",
+        "url": "https://pagos.unimagdalena.edu.co/Volante/Index/17"
+      },
+      {
+        "paso": "Verificar la inscripción válida y los habilitados",
+        "detalle": "Se publica el listado de inscritos válidos y después el de habilitados para entrega de documentos y entrevista presencial, con un día para reclamos."
+      },
+      {
+        "paso": "Entrega de documentos, entrevista y admitidos",
+        "detalle": "Los habilitados entregan la carpeta de admisión y asisten a la entrevista; luego se publican la primera lista de admitidos, la reasignación de cupos (en estricto orden de la lista de inscritos válidos) y la segunda lista."
+      }
+    ],
+    "calendario": "Dos convocatorias al año. Cronograma 2026-II (último publicado): formulario de inscripción hasta el 18 de junio de 2026; pago hasta el 19 de junio; pruebas de talento/rendimiento (artistas y deportistas) del 24 al 27 de junio; habilitados y citación a entrevistas 1 de julio; documentos y entrevistas del 7 al 10 de julio; primera lista de admitidos 14 de julio; reasignados del 15 al 17 de julio; segunda lista 23 de julio; inducción del 28 al 31 de julio de 2026. La convocatoria 2027-I suele abrir entre octubre y diciembre; revisar el portal.",
+    "costo_inscripcion": "$124.500 COP (período 2026-II), no reembolsable.",
+    "becas_programas": [
+      "Un cupo especial por programa para: desplazados del Magdalena, indígenas y afrocolombianos del Magdalena, mujeres cabeza de familia, bachilleres deportistas (2 cupos) y artistas, pescadores artesanales de la costa Caribe (Ingeniería Pesquera, 2 cupos) y aspirantes con discapacidad; quien entra por cupo especial conserva los beneficios de beca aunque alcance cupo regular",
+      "Ingreso facilitado para becarios del programa Colegios Amigos del Turismo (Acuerdo Superior 12 de 2018) y promoción del ingreso de mujeres a Ingeniería Marino-Costera (Acuerdo Superior 13 de 2023)",
+      "Exoneraciones por hermanos (Acuerdo Superior 17 de 2012) y estímulo al sufragante (Ley 815 de 2003)",
+      "Política de gratuidad en la matrícula (Decreto 1667 de 2021)"
+    ],
+    "notas": "Verificado en octubre de 2026 en admisiones.unimagdalena.edu.co (pasos 1-7 del proceso 2026-II y Acuerdo Académico 10 de 2026 en PDF). El servidor usa un cifrado TLS antiguo que algunos navegadores o herramientas rechazan. Las fechas y el valor corresponden a 2026-II.",
+    "fuentes": [
+      "https://admisiones.unimagdalena.edu.co/VistaAdmisiones.jsp",
+      "https://admisiones.unimagdalena.edu.co/filecomp/documentos/Acuerdo%20Acad%C3%A9mico%20No.%2010%20de%202026.pdf",
+      "https://www.unimagdalena.edu.co/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "sergio-arboleda-santa-marta",
+    "nombre": "Universidad Sergio Arboleda - Sede Santa Marta",
+    "sigla": "Sergio Arboleda SM",
+    "ciudad": "Santa Marta",
+    "departamento": "Magdalena",
+    "tipo": "privada",
+    "sedes": ["Santa Marta", "Bogotá", "Barranquilla"],
+    "web": "https://www.usergioarboleda.edu.co",
+    "admisiones_url": "https://www.usergioarboleda.edu.co/santa-marta/",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "NO VERIFICADO: el sitio usergioarboleda.edu.co no respondió desde nuestra red (la conexión se cerró) ni a través de un servicio intermedio, por lo que no pudimos leer el proceso de admisión de la sede Santa Marta. Se registra únicamente el requisito legal de haber presentado el Saber 11; no se conoce si exige puntaje mínimo, entrevista o prueba propia.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Consultar la página de la sede Santa Marta",
+        "detalle": "Buscar la sección de admisiones/inscripciones de pregrado de la sede y el formulario de inscripción en línea. No verificado.",
+        "url": "https://www.usergioarboleda.edu.co/santa-marta/"
+      },
+      {
+        "paso": "Contactar a admisiones",
+        "detalle": "Confirmar requisitos, costos y fechas directamente con la oficina de admisiones de la sede."
+      }
+    ],
+    "calendario": "No verificado.",
+    "costo_inscripcion": "No publicado en la página oficial consultada (no se pudo abrir); consultar en admisiones.",
+    "becas_programas": [],
+    "notas": "Octubre de 2026: www.usergioarboleda.edu.co no respondió a ningún intento (conexión cerrada; también falló mediante un servicio intermedio). Las URL de este registro son el dominio oficial conocido y NO devolvieron 200 en nuestra verificación. Todo debe confirmarse en el sitio oficial.",
+    "fuentes": [],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unicordoba",
+    "nombre": "Universidad de Córdoba",
+    "sigla": "Unicórdoba",
+    "ciudad": "Montería",
+    "departamento": "Córdoba",
+    "tipo": "pública",
+    "sedes": ["Montería (Carrera 6 No. 77-305)", "Berástegui (Ciénaga de Oro)", "Lorica", "Sahagún", "Montelíbano"],
+    "web": "https://unicordoba.edu.co",
+    "admisiones_url": "https://unicordoba.edu.co/admisiones-y-registro/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "Admite por el PROMEDIO PONDERADO del Saber 11: cada programa tiene una tabla de pesos por área aprobada por el Consejo Académico (publicadas por facultad en 'Puntajes de referencia') y la universidad ofrece un simulador en Excel para calcular el promedio ponderado por programa. Los cupos se asignan en orden descendente de ese promedio. Los puntajes de referencia (promedios de admitidos de semestres anteriores) también están publicados. No hay puntaje mínimo general publicado.",
+    "puntaje_minimo": null,
+    "ponderacion": "Tablas por programa para pruebas 2014-II en adelante (ejemplos publicados): Enfermería: 30 % lectura crítica, 35 % ciencias naturales, 15 % sociales y ciudadanas, 10 % matemáticas, 10 % inglés. Ingeniería Industrial: 30 % matemáticas y pesos menores en las demás áreas (ver PDF de la Facultad de Ingenierías). Las demás facultades (Ciencias Básicas, Educación, Salud, Económicas, MVZ) tienen su propio PDF de ponderación.",
+    "proceso": [
+      {
+        "paso": "Paso 1: Iniciar la inscripción en línea",
+        "detalle": "Desde 'Admisiones y registro' (botón 'Inscríbete aquí') se entra al formulario de Academusoft. Hay un instructivo oficial de inscripción en línea (IGAR-004) con cada pantalla.",
+        "url": "https://academico.unicordoba.edu.co/unicordoba/academusoft/academico/inscripcionLineaCordoba/ind_ins_pub_seguro.jsp"
+      },
+      {
+        "paso": "Paso 2: Completar el formulario y cargar documentos",
+        "detalle": "Datos personales, información del colegio y del Saber 11 (año de presentación: define la tabla de ponderación), información socioeconómica y condiciones personales. Quienes aspiran por grupos poblacionales (Acuerdo 062 de 2020) marcan la circunscripción y cargan los soportes.",
+        "url": "https://unicordoba.edu.co/wp-content/uploads/2026/04/IGAR-004_Instructivoinscripcinenlinea_1-1.pdf"
+      },
+      {
+        "paso": "Paso 3: Pagar la inscripción",
+        "detalle": "Pago en línea por PSE o con el volante en los bancos indicados; la inscripción solo queda efectiva cuando se registra el pago."
+      },
+      {
+        "paso": "Paso 4: Verificar el estado 'Inscrito' y seguir el proceso",
+        "detalle": "En el formulario se confirma que el estado pasó a 'Inscrito'; los listados de admitidos se publican en unicordoba.edu.co ('Admitidos pregrado').",
+        "url": "https://unicordoba.edu.co/admisiones-y-registro/puntajes-de-referencia/"
+      },
+      {
+        "paso": "Legalizar matrícula e inducción",
+        "detalle": "Para 2027-I: legalización de matrícula del 13 al 20 de enero de 2027, inducción del 27 al 30 de enero e inicio de clases el 1 de febrero de 2027.",
+        "url": "https://unicordoba.edu.co/calendario-academico/"
+      }
+    ],
+    "calendario": "Dos convocatorias al año. Calendario 2027-I (Acuerdos 384 y 406 de 2026): inscripciones del 15 de octubre al 27 de noviembre de 2026; legalización de matrícula del 13 al 20 de enero de 2027; inducción del 27 al 30 de enero; inicio de clases 1 de febrero de 2027.",
+    "costo_inscripcion": "No publicado en texto en la página oficial (el valor se muestra dentro del formulario de Academusoft al elegir el programa); consultar en admisiones.",
+    "becas_programas": [
+      "Acuerdo 062 de 2020 (reglamento único de ingreso de grupos poblacionales): un cupo adicional por programa y exoneración de matrícula para víctimas del conflicto armado, indígenas, afrodescendientes, rrom, raizales y palenqueros del departamento, mejor bachiller de colegios públicos de cada municipio de Córdoba, deportistas y artistas; en cada caso se asigna al aspirante con mayor puntaje Saber 11 entre los postulados (los artistas pasan una prueba de talento)",
+      "Convocatoria semestral a 'Bachilleres con mejores pruebas Saber 11 del departamento de Córdoba' (carta a secretarías de educación municipales)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 en unicordoba.edu.co (Admisiones y registro, Puntajes de referencia, Casos especiales, Calendario académico, instructivo IGAR-004 y Acuerdo 062 de 2020). El calendario 2027 en PDF está escaneado; las fechas se tomaron del texto de la página de admisiones. Los aspirantes por grupos poblacionales también pagan inscripción.",
+    "fuentes": [
+      "https://unicordoba.edu.co/admisiones-y-registro/",
+      "https://unicordoba.edu.co/admisiones-y-registro/puntajes-de-referencia/",
+      "https://www.unicordoba.edu.co/wp-content/uploads/2024/11/ponderacion-salud.pdf",
+      "https://unicordoba.edu.co/admisiones-y-registro/casos-especiales/",
+      "https://www.unicordoba.edu.co/wp-content/uploads/2020/09/Acuerdo-N%C2%BA062-de-2020.-Acuerdo-grupos-poblacionales.-pdf.pdf",
+      "https://unicordoba.edu.co/wp-content/uploads/2026/04/IGAR-004_Instructivoinscripcinenlinea_1-1.pdf",
+      "https://unicordoba.edu.co/calendario-academico/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unisucre",
+    "nombre": "Universidad de Sucre",
+    "sigla": "Unisucre",
+    "ciudad": "Sincelejo",
+    "departamento": "Sucre",
+    "tipo": "pública",
+    "sedes": ["Sincelejo (Puerta Roja, Ciencias de la Salud)", "Sede Eco-Región Mojana (Majagual)", "Nodos y PIC: Ovejas, San Onofre, Golfo de Morrosquillo"],
+    "web": "https://unisucre.edu.co",
+    "admisiones_url": "https://www.unisucre.edu.co/inscripciones/",
+    "uso_saber11": "ponderado",
+    "uso_saber11_detalle": "Requiere haber presentado el ICFES/Saber 11 desde el año 2000 y registrar el código SNP en el formulario. La universidad calcula para cada aspirante un puntaje de admisión a partir de los resultados del Saber 11 'de acuerdo con las tablas de ponderación establecidas para cada programa académico' (Resolución 95 de 2026 del Consejo Académico) y asigna los cupos en orden descendente. Si el SNP o el documento no coinciden con la base del ICFES, el puntaje queda en 0,0. Publica un 'Simulador ICFES' (Excel) para estimar el puntaje guía por programa y los puntajes históricos máximos y mínimos de admitidos 2020-2026-2 (escala 0-100; por ejemplo Administración de Empresas, 2024-1: mínimo 58,1). No hay puntaje mínimo fijo.",
+    "puntaje_minimo": null,
+    "ponderacion": "Tablas de ponderación por programa (no se publican en texto en la página; se aplican en el Simulador ICFES en Excel que ofrece Admisiones).",
+    "proceso": [
+      {
+        "paso": "Leer los documentos del proceso 2027-1",
+        "detalle": "En 'Inscripciones' están el Instructivo del proceso de inscripción, el Simulador ICFES, el instructivo para certificar circunscripción (indígenas, afrodescendientes, mejor bachiller, Andrés Bello, bachilleres de San Andrés), los puntajes históricos y las fechas importantes.",
+        "url": "https://www.unisucre.edu.co/inscripciones/"
+      },
+      {
+        "paso": "Inscribirse en línea (Academusoft)",
+        "detalle": "Aceptar el tratamiento de datos, registrar el documento, elegir 'Universidad de Sucre' y el programa (allí aparece el valor de inscripción), llenar los datos obligatorios y el código SNP del Saber 11, y cargar los soportes si aspira por circunscripción especial.",
+        "url": "https://academusoft.unisucre.edu.co/academico/inscripcionLinea4/ind_ins_pub_seguro.jsp"
+      },
+      {
+        "paso": "Pagar los derechos de inscripción",
+        "detalle": "$107.000 COP (2027-1). Se descarga el formato de pago para el banco o se paga por PSE; luego se puede ver el estado del pago en línea.",
+        "url": "https://www.unisucre.edu.co/inscripciones/2027-1/Instructivo-Proceso-Inscripcion-Pregrado-Unisucre-2027-1.pdf"
+      },
+      {
+        "paso": "Revisar la lista de inscritos y pedir correcciones",
+        "detalle": "Publicación de inscritos el 11 de noviembre de 2026, correcciones el 11 y 12 de noviembre, lista corregida el 17 de noviembre."
+      },
+      {
+        "paso": "Admitidos, descuentos y matrícula",
+        "detalle": "Admitidos el 1 de diciembre de 2026; solicitudes de descuento 1 y 2 de diciembre; matrícula financiera ordinaria del 4 al 16 de diciembre y extraordinaria 17 y 18; exámenes médicos del 1 al 15 de diciembre; segundo llamado el 14 de enero de 2027.",
+        "url": "https://www.unisucre.edu.co/inscripciones/2027-1/Fechas-Importantes-Proceso-Inscripcion-Pregrado-2027-1.pdf"
+      }
+    ],
+    "calendario": "Convocatoria 2027-1: cargue de documentos por circunscripción del 14 de septiembre al 30 de octubre de 2026; pago e inscripción en línea del 14 de septiembre al 6 de noviembre de 2026; inscritos 11 de noviembre; admitidos 1 de diciembre de 2026; matrícula financiera del 4 al 18 de diciembre; segundo llamado 14 de enero de 2027 y tercer llamado a finales de enero. Hay dos convocatorias al año.",
+    "costo_inscripcion": "$107.000 COP (proceso 2027-1).",
+    "becas_programas": [
+      "Cupos especiales por circunscripción: población indígena y afrodescendiente del departamento de Sucre, mejor bachiller, Distinción Andrés Bello y bachilleres de San Andrés, Providencia y Santa Catalina",
+      "Cupos adicionales de admisión especial para egresados 2026 de la Normal Superior de Sincelejo y Planes Integrales de Cobertura (PIC) en Golfo de Morrosquillo, San Onofre y Ovejas",
+      "Descuentos en matrícula (solicitud en fechas del calendario) y política de gratuidad del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 con el Instructivo 2027-1, las Fechas importantes 2027-1, la Resolución 95 de 2026 y los puntajes históricos (PDF oficiales). Las tablas de ponderación por programa no están publicadas en texto: usar el Simulador ICFES de la página. Correo: admisiones@unisucre.edu.co.",
+    "fuentes": [
+      "https://www.unisucre.edu.co/inscripciones/",
+      "https://www.unisucre.edu.co/inscripciones/2027-1/Instructivo-Proceso-Inscripcion-Pregrado-Unisucre-2027-1.pdf",
+      "https://www.unisucre.edu.co/inscripciones/2027-1/Fechas-Importantes-Proceso-Inscripcion-Pregrado-2027-1.pdf",
+      "https://gestiondocumental.unisucre.edu.co/GestorUnisucre/storage/data/1/Consejo%20Academico/Resoluciones/2026/Resolucion_95.pdf",
+      "https://www.unisucre.edu.co/inscripciones/2027-1/Puntajes-Historicos-Admitidos-Pregrados-Unisucre.pdf",
+      "https://www.unisucre.edu.co/inscripciones/2027-1/Instructivo-Certificar-Circunscripcion-Proceso-Inscripcion-Pregrado-2027-1.pdf"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unicesar",
+    "nombre": "Universidad Popular del Cesar",
+    "sigla": "UPC",
+    "ciudad": "Valledupar",
+    "departamento": "Cesar",
+    "tipo": "pública",
+    "sedes": ["Valledupar", "Aguachica (seccional)"],
+    "web": "https://www.unicesar.edu.co",
+    "admisiones_url": "https://www.unicesar.edu.co",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "NO VERIFICADO: el sitio unicesar.edu.co no respondió desde nuestra red (conexión cerrada) ni a través de un servicio intermedio. Como universidad pública, su admisión regular se basa en el Saber 11, pero no pudimos confirmar en la página oficial si usa puntaje global, ponderación por programa o un mínimo. Se registra solo el requisito legal de haber presentado el examen.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Consultar la convocatoria de admisiones en el sitio oficial",
+        "detalle": "Buscar la sección de Admisiones, Registro y Control para ver el calendario, cupos, valor de inscripción y criterios de selección del semestre. No verificado.",
+        "url": "https://www.unicesar.edu.co"
+      },
+      {
+        "paso": "Contactar a admisiones",
+        "detalle": "Confirmar requisitos, costos y fechas directamente con la oficina de admisiones de la universidad."
+      }
+    ],
+    "calendario": "No verificado.",
+    "costo_inscripcion": "No publicado en la página oficial consultada (no se pudo abrir); consultar en admisiones.",
+    "becas_programas": [
+      "Política de gratuidad en la matrícula del Gobierno Nacional (aplica a universidades públicas)"
+    ],
+    "notas": "Octubre de 2026: www.unicesar.edu.co cerró la conexión en todos los intentos (directos y mediante un servicio intermedio). La URL de este registro es el dominio oficial conocido y NO devolvió 200 en nuestra verificación. Toda la información debe confirmarse en el sitio oficial.",
+    "fuentes": [],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "uniguajira",
+    "nombre": "Universidad de La Guajira",
+    "sigla": "Uniguajira",
+    "ciudad": "Riohacha",
+    "departamento": "La Guajira",
+    "tipo": "pública",
+    "sedes": ["Riohacha", "Maicao", "Fonseca", "Villanueva"],
+    "web": "https://www.uniguajira.edu.co",
+    "admisiones_url": "https://www.uniguajira.edu.co",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "NO VERIFICADO: el sitio uniguajira.edu.co está protegido por una verificación anti-bots de Cloudflare y devolvió 403 a todos los intentos, por lo que no pudimos leer el proceso de admisión. Como universidad pública, su admisión regular se basa en el Saber 11, pero no se pudo confirmar si usa puntaje global, ponderación o un mínimo. Se registra solo el requisito legal.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Abrir el sitio oficial en un navegador",
+        "detalle": "La página exige pasar una verificación de seguridad; una vez dentro, buscar la sección de Admisiones y la convocatoria de pregrado vigente. No verificado.",
+        "url": "https://www.uniguajira.edu.co"
+      },
+      {
+        "paso": "Contactar a admisiones",
+        "detalle": "Confirmar requisitos, costos y fechas directamente con la oficina de admisiones."
+      }
+    ],
+    "calendario": "No verificado.",
+    "costo_inscripcion": "No publicado en la página oficial consultada (no se pudo abrir); consultar en admisiones.",
+    "becas_programas": [
+      "Política de gratuidad en la matrícula del Gobierno Nacional (aplica a universidades públicas)"
+    ],
+    "notas": "Octubre de 2026: www.uniguajira.edu.co devolvió 403 (Cloudflare) en todos los intentos. Es la URL oficial conocida, pero el contenido no pudo verificarse. Toda la información debe confirmarse en el sitio oficial.",
+    "fuentes": [
+      "https://www.uniguajira.edu.co"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "unal-caribe",
+    "nombre": "Universidad Nacional de Colombia - Sede Caribe (PEAMA y PAET)",
+    "sigla": "UNAL Caribe",
+    "ciudad": "San Andrés",
+    "departamento": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+    "tipo": "pública",
+    "sedes": ["San Andrés (Sede Caribe)", "De La Paz (Cesar)", "Bogotá", "Medellín", "Manizales", "Palmira", "Amazonia", "Orinoquia", "Tumaco"],
+    "web": "https://caribe.unal.edu.co",
+    "admisiones_url": "https://admisiones.unal.edu.co/pregrado/",
+    "uso_saber11": "examen_propio",
+    "uso_saber11_detalle": "La UNAL admite con su propia prueba de admisión (120 preguntas), que organiza la Dirección Nacional de Admisiones en las mismas fechas para todo el país; el Saber 11 es requisito legal. En la Sede Caribe se ingresa por dos programas especiales: el PEAMA (Programa Especial de Admisión y Movilidad Académica, Acuerdo 025 de 2007 y Ley 1084 de 2006), para residentes del Archipiélago que cursaron los dos últimos años de bachillerato en colegios de las islas y tienen tarjeta OCCRE: el admitido, 'previa presentación del examen', cursa entre 1 y 3 semestres en San Andrés, luego se moviliza a la sede andina donde eligió la carrera (unas 50 plazas semestrales en cerca de 49 carreras, incluidas Medicina, Terapia Ocupacional y Fonoaudiología) y puede retornar para el trabajo de grado; y el PAET (Programa de Admisión Especial con Enfoque Territorial, Resolución 098 de 2024 de Rectoría) para personas domiciliadas en el área de influencia, con Ingeniería Ambiental y Enfermería en la Sede Caribe. La Dirección Nacional de Admisiones anunció que desde 2027-1 los aspirantes PEAMA/PAET pueden ser evaluados con el Saber 11 en lugar del examen (ver registro de la UNAL Medellín); verificar en la convocatoria vigente.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Verificar si cumple el perfil PEAMA o PAET",
+        "detalle": "PEAMA Caribe: residente del Archipiélago con tarjeta OCCRE y los dos últimos años de secundaria en colegios de las islas. PAET: domicilio en el territorio de influencia de la sede. Informes: peama_caribe@unal.edu.co.",
+        "url": "https://caribe.unal.edu.co/formacion/pregrado-peama.html"
+      },
+      {
+        "paso": "Inscribirse en la convocatoria nacional de pregrado",
+        "detalle": "Pago de derechos e inscripción en línea en admisiones.unal.edu.co, eligiendo el programa especial (PEAMA/PAET) y la sede. Los aspirantes PAES tienen inscripción gratuita.",
+        "url": "https://admisiones.unal.edu.co/pregrado/"
+      },
+      {
+        "paso": "Presentar la prueba de admisión (o ser evaluado con Saber 11 cuando aplique)",
+        "detalle": "La prueba se presenta en la ciudad elegida en la fecha nacional (para 2027-1 fue el domingo 20 de septiembre de 2026). Consultar citación y puntaje en el portal."
+      },
+      {
+        "paso": "Inscribir programa, consultar resultados y matricularse",
+        "detalle": "Con el puntaje se inscribe la carrera; los admitidos envían documentos a Registro y Matrícula. Los PEAMA inician en San Andrés (etapa de ingreso), luego movilidad a la sede andina y retorno opcional.",
+        "url": "https://caribe.unal.edu.co/formacion/pregrado-paet.html"
+      }
+    ],
+    "calendario": "Sigue el calendario nacional de la UNAL (dos convocatorias al año). Convocatoria 2027-1: inscripciones del 6 de julio al 24 de agosto de 2026, prueba el 20 de septiembre de 2026, resultados desde el 9 de octubre de 2026. La convocatoria 2027-2 debería abrir en febrero de 2027 con prueba en abril-mayo.",
+    "costo_inscripcion": "$175.000 COP en la convocatoria nacional 2027-1 (gratuito para aspirantes de los Programas de Admisión Especial PAES). Confirmar el valor para PEAMA/PAET en la convocatoria vigente.",
+    "becas_programas": [
+      "PEAMA Caribe: cupos reservados por la Ley 1084 de 2006 (1 % para departamentos sin universidades y 1 % para municipios de difícil acceso) con primer año en San Andrés",
+      "PAET Sede Caribe: Ingeniería Ambiental y Enfermería (Resolución 098 de 2024)",
+      "PAES: comunidades indígenas, mejores bachilleres, mejores bachilleres de municipios pobres, población negra/afrocolombiana/palenquera/raizal y víctimas del conflicto (inscripción gratuita)",
+      "Política de gratuidad en la matrícula del Gobierno Nacional"
+    ],
+    "notas": "Verificado en octubre de 2026 en caribe.unal.edu.co (páginas PEAMA y PAET) y admisiones.unal.edu.co. El certificado TLS de caribe.unal.edu.co no fue aceptado por nuestra herramienta y el contenido se leyó mediante un servicio intermedio; abrirlo en un navegador. La UNAL también tiene la Sede De La Paz (Cesar), con admisión propia por la convocatoria nacional. La sede Caribe no publica fechas propias: rigen las nacionales.",
+    "fuentes": [
+      "https://caribe.unal.edu.co/formacion/pregrado-peama.html",
+      "https://caribe.unal.edu.co/formacion/pregrado-paet.html",
+      "https://admisiones.unal.edu.co/pregrado/"
+    ],
+    "verificado": "2026-10"
+  },
+  {
+    "id": "sena-atlantico",
+    "nombre": "SENA - Servicio Nacional de Aprendizaje (Regional Atlántico)",
+    "sigla": "SENA",
+    "ciudad": "Barranquilla",
+    "departamento": "Atlántico",
+    "tipo": "pública",
+    "sedes": ["Regional Atlántico (Barranquilla y municipios)", "33 regionales y 118 centros de formación en todo el país"],
+    "web": "https://www.sena.edu.co",
+    "admisiones_url": "https://betowa.sena.edu.co/oferta",
+    "uso_saber11": "requisito",
+    "uso_saber11_detalle": "El SENA no usa el puntaje del Saber 11 para seleccionar: la inscripción a programas técnicos y tecnólogos se hace en la plataforma Betowa y la selección se realiza con pruebas propias en línea por fases ('Selección Fase 1', con calendario por último dígito del documento). Para los tecnólogos se exige título de bachiller (y haber presentado el Saber 11, que es requisito legal de la educación media). La formación es gratuita.",
+    "puntaje_minimo": null,
+    "ponderacion": null,
+    "proceso": [
+      {
+        "paso": "Registrarse en Betowa",
+        "detalle": "Crear usuario en la plataforma oficial de oferta e inscripción del SENA (Betowa reemplaza la inscripción de SOFIA Plus; SOFIA Plus sigue para trámites administrativos).",
+        "url": "https://betowa.sena.edu.co/"
+      },
+      {
+        "paso": "Buscar la oferta e inscribirse",
+        "detalle": "En 'Oferta' se filtra por programa, modalidad (presencial, a distancia o virtual) y ciudad/regional, por ejemplo Regional Atlántico (Barranquilla). Cada convocatoria indica requisitos (p. ej., bachiller para tecnólogos) y fechas.",
+        "url": "https://betowa.sena.edu.co/oferta"
+      },
+      {
+        "paso": "Presentar las pruebas de selección",
+        "detalle": "Las pruebas se hacen en línea por fases y por grupos según el último dígito del documento (p. ej., Selección Fase 1 IV-2026: 14 y 15 de octubre de 2026; reprogramación del 16 al 19 de octubre). Se accede desde el enlace de evaluaciones.",
+        "url": "https://seleccion.senasofiaplus.edu.co/sofia-evaluacion/evaluaciones.html"
+      },
+      {
+        "paso": "Verificar resultados y matricularse",
+        "detalle": "En Betowa se verifica si quedó inscrito y seleccionado; luego se formaliza la matrícula en el centro de formación. También hay apoyos socioeconómicos para aprendices."
+      }
+    ],
+    "calendario": "Cuatro convocatorias de oferta regular al año (I, II, III y IV). En octubre de 2026 estaba en curso la oferta regular IV-2026 con pruebas de selección Fase 1 del 14 al 15 de octubre y reprogramaciones del 16 al 19 de octubre de 2026. Las fechas se publican en el cronograma de Betowa.",
+    "costo_inscripcion": "Gratuito: la inscripción y la formación del SENA no tienen costo.",
+    "becas_programas": [
+      "Formación titulada (técnicos y tecnólogos) y complementaria totalmente gratuita",
+      "Apoyos socioeconómicos para aprendices (sección 'Apoyos Socioeconómicos' en Betowa)",
+      "Contrato de aprendizaje con empresas durante la etapa práctica"
+    ],
+    "notas": "Verificado en octubre de 2026 en betowa.sena.edu.co (portal oficial de oferta e inscripción) y sena.edu.co. Las páginas de sena.edu.co cargan su contenido con JavaScript; el detalle del proceso se tomó de Betowa. La Regional Atlántico se consulta filtrando la oferta en Betowa; el cronograma exacto de cada convocatoria cambia en cada trimestre.",
+    "fuentes": [
+      "https://betowa.sena.edu.co/",
+      "https://betowa.sena.edu.co/oferta",
+      "https://www.sena.edu.co/es-co/formacion/Paginas/inscripciones.aspx",
+      "https://www.sena.edu.co/es-co/regionales/zonaCaribe/Paginas/atlantico.aspx"
+    ],
+    "verificado": "2026-10"
+  }
+]
