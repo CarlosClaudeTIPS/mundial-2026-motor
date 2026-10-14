@@ -1,14 +1,26 @@
 import { db, ahora, encolar } from './db'
 
 // ─── Banco de preguntas ──────────────────────────────────────────────────────
-// Los archivos content/banco/*.json se empaquetan con la app y se cargan en
-// IndexedDB la primera vez (y cada vez que cambia su contenido). Así el banco
-// está disponible sin conexión. Preguntas creadas o editadas en la app quedan
-// marcadas con `editada_local` y no se sobreescriben con la semilla.
-const archivos = import.meta.glob('../../content/banco/*.json', { eager: true, import: 'default' })
+// Los archivos content/banco/*.json se publican como archivos aparte (con hash
+// en el nombre) y se descargan SOLO cuando hay que sembrar IndexedDB: la primera
+// vez y cada vez que cambia su contenido. Así la app arranca liviana y el banco
+// sigue disponible sin conexión desde IndexedDB. Preguntas creadas o editadas en
+// la app quedan marcadas con `editada_local` y no se sobreescriben con la semilla.
+const urls = import.meta.glob('../../content/banco/*.json', { eager: true, query: '?url', import: 'default' })
 
-export function preguntasSemilla() {
-  return Object.values(archivos).flat()
+export async function preguntasSemilla() {
+  const listas = await Promise.all(Object.values(urls).map(u => fetch(u).then(r => {
+    if (!r.ok) throw new Error(`No se pudo cargar el banco: ${u}`)
+    return r.json()
+  })))
+  return listas.flat()
+}
+
+// Conteo de preguntas aprobadas por prueba, leído de IndexedDB (para la portada).
+export async function contarPorPrueba() {
+  const c = {}
+  await db.preguntas.each(p => { if (p.estado === 'aprobada' || !p.estado) c[p.prueba] = (c[p.prueba] ?? 0) + 1 })
+  return c
 }
 
 function huella(texto) {
@@ -18,23 +30,32 @@ function huella(texto) {
 }
 
 export async function sembrarBanco() {
-  const lista = preguntasSemilla()
-  const version = huella(JSON.stringify(lista))
+  // En producción los nombres de archivo llevan hash de contenido: basta con
+  // ellos para saber si el banco cambió, sin descargar nada. En desarrollo no
+  // hay hash, así que se descarga y se compara el contenido.
   const previa = await db.config.get('banco_version')
+  let version = huella(JSON.stringify(Object.values(urls).sort()))
+  let lista = null
+  if (import.meta.env.DEV) { lista = await preguntasSemilla(); version = huella(JSON.stringify(lista)) }
   if (previa?.valor === version) return { cargadas: 0, total: await db.preguntas.count() }
+  lista ??= await preguntasSemilla()
 
   let cargadas = 0
   await db.transaction('rw', db.preguntas, db.config, async () => {
-    for (const p of lista) {
-      const existente = await db.preguntas.get(p.id)
-      if (existente?.editada_local) continue
-      await db.preguntas.put({ ...p, semilla: true, fecha_carga: ahora() })
-      cargadas++
-    }
+    const editadas = new Set(await db.preguntas.filter(p => !!p.editada_local).primaryKeys())
+    const fecha = ahora()
+    const nuevas = lista.filter(p => !editadas.has(p.id)).map(p => ({ ...p, semilla: true, fecha_carga: fecha }))
+    await db.preguntas.bulkPut(nuevas)
+    cargadas = nuevas.length
     await db.config.put({ clave: 'banco_version', valor: version })
   })
   return { cargadas, total: await db.preguntas.count() }
 }
+
+// Siembra en segundo plano (no bloquea la pantalla de entrada). Quien necesite
+// el banco completo espera `iniciarSiembra()`.
+let bancoListo = null
+export function iniciarSiembra() { bancoListo ??= sembrarBanco(); return bancoListo }
 
 // Filtros: { prueba, competencia, habilidad, componente, dificultad, tipo_error, excluirIds, estado }
 export async function listarPreguntas(f = {}) {

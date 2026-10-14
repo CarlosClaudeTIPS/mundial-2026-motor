@@ -5,7 +5,7 @@
   var s = document.currentScript || document.querySelector('script[src*="shared/barra.js"]');
   var root = s ? s.getAttribute("src").replace(/shared\/barra\.js.*$/, "") : "../";
   var path = location.pathname;
-  var html = '<div class="pb-in"><a class="pb-marca" href="' + root + '"><i></i><span>' + cfg.marca.nombre + '</span></a><nav>' +
+  var html = '<div class="pb-in"><a class="pb-marca" href="' + root + '" aria-label="' + cfg.marca.nombre + ', ir al inicio"><i></i><span>' + cfg.marca.nombre + '</span></a><nav>' +
     '<a href="' + root + '">Inicio</a>' +
     cfg.secciones.map(function (x) {
       var act = path.indexOf("/" + x.carpeta.replace(/\/$/, "") + "/") !== -1 ? ' class="activa"' : "";

@@ -3,7 +3,7 @@ import { useSesion, iniciarSesionGuardada, LLEGO_POR_ENLACE } from './lib/sesion
 import { ir } from './lib/nav'
 import CrearContrasena from './components/CrearContrasena'
 import Pendiente from './components/Pendiente'
-import { sembrarBanco } from './lib/banco'
+import { iniciarSiembra } from './lib/banco'
 import { sembrarRecursos } from './lib/recursos'
 import { asegurarCiclos } from './lib/ciclo'
 import { asegurarDatosIniciales } from './lib/demo'
@@ -39,7 +39,6 @@ let arranque = null
 function arrancar() {
   arranque ??= (async () => {
     aplicarExtension(await getConfig('taxonomia_extension'))
-    await sembrarBanco()
     await sembrarRecursos()
     await asegurarCiclos()
     await asegurarDatosIniciales()
@@ -54,13 +53,18 @@ export default function App() {
   const { ruta, params } = useRuta()
   const [listo, setListo] = useState(false)
   const [errorArranque, setErrorArranque] = useState(null)
+  const [bancoOk, setBancoOk] = useState(false)
   const [contrasenaLista, setContrasenaLista] = useState(false)
   // Docente/admin: previsualizar la app como la ve un estudiante
   const [vistaEstudiante, setVistaEstudianteRaw] = useState(() => { try { return localStorage.getItem('vista_estudiante') === '1' } catch { return false } })
   const setVistaEstudiante = (v) => { setVistaEstudianteRaw(v); try { localStorage.setItem('vista_estudiante', v ? '1' : '0') } catch {} ; ir('inicio') }
 
   useEffect(() => {
-    arrancar().then(() => setListo(true)).catch(e => { console.error(e); setErrorArranque(e.message) })
+    arrancar().then(() => {
+      setListo(true)
+      // El banco se siembra después del primer dibujado para no retrasar la portada.
+      setTimeout(() => iniciarSiembra().then(() => setBancoOk(true)).catch(e => { console.error(e); setErrorArranque(e.message) }), 600)
+    }).catch(e => { console.error(e); setErrorArranque(e.message) })
   }, [])
 
   useEffect(() => { if (sesion.usuario) descargarDeNube(sesion.usuario) }, [sesion.usuario?.id])
@@ -68,6 +72,7 @@ export default function App() {
   if (errorArranque) return <Pantalla>No se pudo iniciar la aplicación: {errorArranque}</Pantalla>
   if (!listo || sesion.cargando) return <Pantalla>Cargando…</Pantalla>
   if (!sesion.usuario) return <Login />
+  if (!bancoOk) return <Pantalla>Preparando el banco de preguntas…</Pantalla>
   if (LLEGO_POR_ENLACE && !contrasenaLista) return <CrearContrasena onLista={() => { setContrasenaLista(true); ir('inicio') }} />
 
   const u = sesion.usuario

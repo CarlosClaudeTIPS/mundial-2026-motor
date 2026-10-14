@@ -246,6 +246,7 @@
     if (!c) return;
     c.classList.toggle('abierto', abrir); capa.classList.toggle('abierta', abrir);
     c.setAttribute('aria-hidden', abrir ? 'false' : 'true');
+    if (abrir) c.removeAttribute('inert'); else c.setAttribute('inert', '');
     if (abrir) T.renderCarrito();
   };
 
@@ -536,7 +537,9 @@
       T.autocompletar();
       if (fn) await fn(T.datos);
       T.renderPie();
+      document.documentElement.classList.remove('cargando');
     } catch (err) {
+      document.documentElement.classList.remove('cargando');
       console.error(err);
       const m = $('main') || document.body;
       m.innerHTML = '<div class="contenedor"><div class="vacio" style="margin:2rem 0">No se pudo cargar el catálogo. Si abriste el archivo directamente (file://), usa un servidor local o publica la carpeta. Detalle: ' + T.esc(err.message) + '</div></div>';

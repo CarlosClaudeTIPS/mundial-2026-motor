@@ -9,7 +9,7 @@
 <meta property="og:description" content="ICFES, apoyo docente y tienda. Entra por la puerta que te corresponde.">
 <link rel="icon" href="shared/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Source+Sans+3:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
 <style>
 :root{--bg:#FBFAF7;--fg:#1D2433;--muted:#5B6474;--line:#E4E2DA;--card:#fff;--font-head:'Nunito',system-ui,sans-serif;--font-body:'Source Sans 3',system-ui,sans-serif}
 *{box-sizing:border-box}
@@ -35,7 +35,7 @@ header{background:var(--card);border-bottom:1px solid var(--line)}
 .door .who{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .door h2{font-size:1.35rem}
 .door p{margin:0;color:var(--muted);font-size:.98rem}
-.door .go{margin-top:auto;font-family:var(--font-head);font-weight:800;padding:10px 16px;border-radius:999px;color:#fff;text-align:center;background:var(--c)}
+.door .go{margin-top:auto;font-family:var(--font-head);font-weight:800;padding:10px 16px;border-radius:999px;color:#fff;text-align:center;background:color-mix(in srgb,var(--c) 70%,#000)}
 footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:40px}
 @media (max-width:760px){.tabs{margin-left:0;width:100%}.tabs a{flex:1;text-align:center;padding:8px 6px;font-size:.82rem}.hero{padding:28px 0 20px}}
 @media (prefers-reduced-motion:reduce){.door{transition:none}}

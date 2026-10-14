@@ -1,9 +1,9 @@
-import { useMemo, useRef, useState } from 'react'
+import { useMemo, useRef, useState , useEffect} from 'react'
 import { BookOpenCheck, Timer, LineChart, Calculator, BookOpen, Globe2, FlaskConical, Languages, Star, ChevronLeft, ChevronRight } from 'lucide-react'
 import { entrarLocal, entrarNube, pedirRecuperacion, registrarEstudiante, baseUsuario } from '../lib/sesion'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { USUARIOS_DEMO } from '../lib/demo'
-import { preguntasSemilla } from '../lib/banco'
+import { contarPorPrueba, iniciarSiembra } from '../lib/banco'
 
 // ─── Portada pública + acceso ────────────────────────────────────────────────
 
@@ -21,9 +21,8 @@ export const MATERIAS = [
 export default function Login() {
   const [tipo, setTipo] = useState('estudiante')
   const acceso = useRef(null)
-  const conteo = useMemo(() => {
-    const c = {}; for (const p of preguntasSemilla()) c[p.prueba] = (c[p.prueba] ?? 0) + 1; return c
-  }, [])
+  const [conteo, setConteo] = useState({})
+  useEffect(() => { iniciarSiembra().then(contarPorPrueba).then(setConteo).catch(() => {}) }, [])
   const irAcceso = (t) => { setTipo(t); acceso.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }) }
 
   return (

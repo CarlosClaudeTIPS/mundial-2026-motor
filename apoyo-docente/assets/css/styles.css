@@ -7,8 +7,8 @@
   --c-accent:#F4845F;  --c-accent-dark:#D96A46;
   --c-mint:#DDF3EA;    --c-green:#2BB58A;
   --c-yellow:#FFD166;
-  --c-wa:#25D366;      --c-wa-dark:#1DA851;
-  --c-ink:#1D2433; --c-ink-2:#4A5568; --c-ink-3:#7A8599;
+  --c-wa:#128C45;      --c-wa-dark:#0F7A3E;
+  --c-ink:#1D2433; --c-ink-2:#4A5568; --c-ink-3:#5B6474;
   --c-bg:#FFFFFF; --c-bg-soft:#F6F8FC; --c-line:#E2E8F2;
   --radius:16px; --radius-sm:10px;
   --shadow:0 10px 30px rgba(31,45,85,.10); --shadow-sm:0 2px 10px rgba(31,45,85,.08);
@@ -126,7 +126,7 @@ button{font:inherit}
 .service-panel header{margin-bottom:22px}
 .service-panel header p{color:var(--c-ink-2);font-size:1.05rem;margin:0}
 .service-cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px}
-.service-cols h4{font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:var(--c-ink-3);margin-bottom:10px}
+.service-cols h4{font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;color:#4A5568;margin-bottom:10px}
 .check-list{list-style:none}
 .check-list li{position:relative;padding-left:26px;margin-bottom:8px;color:var(--c-ink-2)}
 .check-list li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--c-mint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%232BB58A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
