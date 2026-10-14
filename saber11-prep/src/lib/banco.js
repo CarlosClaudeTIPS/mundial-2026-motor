@@ -116,3 +116,27 @@ export async function elegirPreguntas({ n, vistas = new Set(), ...filtros }) {
   }
   return ordenarPorTexto(elegidas.flat())
 }
+
+// ─── Pregunta de verificación ────────────────────────────────────────────────
+// Después de fallar y explicar la razón, el estudiante comprueba con una pregunta
+// NUEVA (no la misma): primero las de refuerzo que no haya visto, luego una de la
+// misma competencia y habilidad (sin texto compartido, dificultad no mayor, tema
+// igual si se puede). Devuelve null si no hay nada nuevo.
+export function elegirVerificacion(pregunta, candidatas, vistas = new Set()) {
+  const noVista = (p) => p && p.id !== pregunta.id && !vistas.has(p.id)
+  const porId = Object.fromEntries(candidatas.map(p => [p.id, p]))
+  for (const rid of pregunta.refuerzo_ids ?? []) if (noVista(porId[rid])) return porId[rid]
+  const base = candidatas.filter(p => noVista(p) && p.competencia === pregunta.competencia && (p.estado ?? 'aprobada') === 'aprobada' && !grupoTexto(p) && (p.dificultad ?? 2) <= (pregunta.dificultad ?? 2))
+  const puntaje = (p) => (p.habilidad === pregunta.habilidad ? 2 : 0) + (p.tema && p.tema === pregunta.tema ? 1 : 0) + (p.dificultad === pregunta.dificultad ? 0.5 : 0)
+  const orden = mezclar(base).sort((a, b) => puntaje(b) - puntaje(a))
+  if (orden.length) return orden[0]
+  // Último recurso: cualquier pregunta no vista de la competencia (aunque tenga texto compartido o sea más difícil)
+  const resto = mezclar(candidatas.filter(p => noVista(p) && p.competencia === pregunta.competencia && (p.estado ?? 'aprobada') === 'aprobada'))
+  return resto[0] ?? null
+}
+
+export async function preguntaVerificacion(pregunta, { vistas = new Set(), usuario = null } = {}) {
+  const refuerzos = (await Promise.all((pregunta.refuerzo_ids ?? []).map(obtenerPregunta))).filter(Boolean)
+  const mismas = await listarPreguntas({ competencia: pregunta.competencia, usuario })
+  return elegirVerificacion(pregunta, [...refuerzos, ...mismas], vistas)
+}

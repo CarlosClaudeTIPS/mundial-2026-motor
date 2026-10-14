@@ -2,7 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { Clock, ChevronLeft, ChevronRight, Flag } from 'lucide-react'
 import { obtenerSesion, responderEnSesion, acumularTiempo, guardarIndice, terminarSesion, sesion2DeCompleto, sesionesDeCompleto } from '../../lib/pruebas'
 import { resumen } from '../../lib/analitica'
-import { obtenerPregunta, grupoTexto } from '../../lib/banco'
+import { obtenerPregunta, grupoTexto, preguntaVerificacion } from '../../lib/banco'
+import { preguntasVistas } from '../../lib/datos'
+import { perfilDiagnostico, NIVELES_COMPETENCIA } from '../../lib/diagnostico'
+import { prioridadesDeUsuario, modoCarreraActivo } from '../../lib/carreras'
 import { db } from '../../lib/db'
 import { estructuraExamen } from '../../lib/ciclo'
 import { evaluar } from '../../lib/feedback'
@@ -195,6 +198,8 @@ function Resultados({ sesion, preguntas, usuario }) {
         </div>
       )}
 
+      {sesion.config?.diagnostico && intentos.length > 0 && <PerfilInicial intentos={intentos} usuario={usuario} />}
+
       <div className="grid grid-cols-3 gap-2">
         <Metrica etiqueta="Aciertos" valor={r.precision} sufijo="%" />
         <Metrica etiqueta="Correctas" valor={`${r.aciertos}/${r.total}`} />
@@ -235,7 +240,7 @@ function Resultados({ sesion, preguntas, usuario }) {
             <div className="space-y-3 border-t border-dark-700 pt-3">
               <PreguntaVista pregunta={q} elegida={it?.opcion ?? null} modo="revisar" />
               <p className="text-xs text-gray-500">Tiempo en esta pregunta: {formatoTiempo(it?.tiempo_seg)} (sugerido {formatoTiempo(q.tiempo_sugerido_seg)})</p>
-              <Retro pregunta={q} evaluacion={ev} intento={it} onRefuerzo={(id) => ir('practica', { ids: id, modo: 'refuerzo' })} />
+              <Retro pregunta={q} evaluacion={ev} intento={it} onRefuerzo={(id) => ir('practica', { ids: id, modo: 'refuerzo', de: it?.uid })} onVerificar={async (q, it2) => { const p = await preguntaVerificacion(q, { vistas: await preguntasVistas(usuario.id), usuario }); if (!p) return alert('Ya respondiste todas las preguntas disponibles de esta competencia.'); ir('practica', { ids: p.id, modo: 'verificacion', de: it2?.uid }) }} />
             </div>
           )
         })()}
@@ -246,6 +251,33 @@ function Resultados({ sesion, preguntas, usuario }) {
         <button className={sesion.config?.diagnostico ? 'btn-secondary flex-1' : 'btn-primary flex-1'} onClick={() => ir('errores')}>Ir a mis errores</button>
         <button className="btn-secondary flex-1" onClick={() => ir(usuario.rol === 'estudiante' ? 'inicio' : 'simulacros')}>Volver</button>
       </div>
+    </div>
+  )
+}
+
+// Perfil inicial a partir de la prueba diagnóstica: nivel por prueba y las 3 competencias por las que empezar.
+function PerfilInicial({ intentos, usuario }) {
+  const perfil = perfilDiagnostico(intentos, { prioridadesCarrera: modoCarreraActivo(usuario) ? prioridadesDeUsuario(usuario) : null })
+  return (
+    <div className="card border-brand-blue/50">
+      <p className="font-semibold">Tu perfil inicial</p>
+      <p className="text-sm text-gray-300 mt-1">{perfil.mensaje}</p>
+      <div className="grid grid-cols-5 gap-1.5 mt-3">
+        {perfil.pruebas.map(p => { const nv = NIVELES_COMPETENCIA[p.nivel]; return (
+          <div key={p.id} className="rounded-xl bg-dark-900 p-2 text-center">
+            <p className="text-lg font-semibold">{p.precision ?? '—'}{p.precision != null && <span className="text-xs">%</span>}</p>
+            <p className="text-[10px] text-gray-400 leading-tight">{p.nombre.replace(' y Ciudadanas', '')}</p>
+            <div className="mt-1"><Badge tono={nv.tono}>{p.nivel === 'floja' ? 'refuerzo' : p.nivel === 'proceso' ? 'proceso' : p.nivel === 'fuerte' ? 'fuerte' : 's/d'}</Badge></div>
+          </div>) })}
+      </div>
+      {perfil.prioridades.length > 0 && (
+        <div className="mt-3">
+          <p className="text-xs uppercase tracking-wide text-gray-400 mb-1">Por dónde empezar</p>
+          <ol className="list-decimal pl-5 text-sm space-y-0.5">{perfil.prioridades.map(c => <li key={c.id}>{c.nombre} <span className="text-gray-400">· {c.precision != null ? `${c.precision} % en ${c.total}` : 'sin datos'}</span></li>)}</ol>
+        </div>
+      )}
+      <p className="text-[11px] text-gray-500 mt-2">Con 25 preguntas el perfil es una primera lectura (5 por materia): se afina con cada práctica. Tu ruta semanal usa estas prioridades.</p>
+      <button className="btn-primary w-full mt-3" onClick={() => ir('ruta')}>Armar mi ruta para mejorar</button>
     </div>
   )
 }

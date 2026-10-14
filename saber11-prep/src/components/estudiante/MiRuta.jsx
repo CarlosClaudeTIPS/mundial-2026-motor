@@ -5,11 +5,13 @@ import { Compass } from 'lucide-react'
 import { modoCarreraActivo, prioridadesDeUsuario, horasPorPrueba, formatoMinutos, carreraPorId, NOMBRE_NIVEL } from '../../lib/carreras'
 import { MATERIAS } from '../Login'
 import { ir } from '../../lib/nav'
+import RutaMejorar from './RutaMejorar'
 
 // ─── Mi ruta: el programa de ~6 meses aplicado al ciclo activo ───────────────
 
 export default function MiRuta({ usuario }) {
   const [d, setD] = useState(null)
+  const [verPrograma, setVerPrograma] = useState(false)
   useEffect(() => {
     (async () => {
       const ciclos = await listarCiclos()
@@ -20,11 +22,14 @@ export default function MiRuta({ usuario }) {
   }, [usuario.id])
   if (!d) return <p className="text-sm text-gray-400">Cargando…</p>
   const { ciclo, prog, estado } = d
-  if (!ciclo) return <><Titulo>Mi ruta</Titulo><p className="text-sm text-gray-400">No hay un ciclo configurado. El administrador puede crearlo.</p></>
+  if (!ciclo) return <><Titulo>Mi ruta</Titulo>{usuario.rol === 'estudiante' && <RutaMejorar usuario={usuario} />}<p className="text-sm text-gray-400">No hay un ciclo configurado. El administrador puede crearlo.</p></>
 
   return (
     <div className="space-y-4">
       <Titulo sub={`${ciclo.nombre} · examen el ${formatoFecha(ciclo.fecha_examen)}`}>Mi ruta</Titulo>
+      {usuario.rol === 'estudiante' && <RutaMejorar usuario={usuario} />}
+      <button onClick={() => setVerPrograma(v => !v)} className="btn-ghost w-full text-sm">{verPrograma ? 'Ocultar' : 'Ver'} el programa general del ciclo (fases y semanas)</button>
+      {!verPrograma && usuario.rol === 'estudiante' ? null : <>
       {ciclo.fecha_provisional && <p className="text-xs text-brand-amber">La fecha del examen es provisional: el ICFES aún no publica el cronograma. Se actualizará desde Administración cuando salga la fecha oficial.</p>}
       <div className="card">
         <div className="flex justify-between text-sm mb-1"><span>Avance del ciclo</span><span className="text-gray-300">{Math.round(estado.progreso * 100)}%</span></div>
@@ -55,6 +60,7 @@ export default function MiRuta({ usuario }) {
         })}
       </div>
       <p className="text-xs text-gray-500">{prog._estado}</p>
+      </>}
     </div>
   )
 }

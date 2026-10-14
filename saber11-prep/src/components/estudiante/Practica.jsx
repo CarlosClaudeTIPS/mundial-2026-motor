@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
-import { elegirPreguntas, obtenerPregunta, grupoTexto } from '../../lib/banco'
+import { elegirPreguntas, obtenerPregunta, grupoTexto, preguntaVerificacion } from '../../lib/banco'
 import { registrarIntento, preguntasVistas } from '../../lib/datos'
 import { ir } from '../../lib/nav'
 import PreguntaVista from '../PreguntaVista'
@@ -30,10 +30,15 @@ export default function Practica({ usuario, params }) {
   const inicio = useRef(Date.now())
   const conVerificacion = params.verificacion === '1'
   const modo = params.modo ?? 'practica'
-  const refuerzoDe = useRef(null)
+  // refuerzoDe: uid del intento fallado que motiva esta pregunta (refuerzo o verificación).
+  // Llega por params.de cuando se abre desde Resultados, Historial o Mis errores.
+  const refuerzoDe = useRef(params.de ?? null)
+  const modoActual = useRef(modo)
+  const [sinVerificacion, setSinVerificacion] = useState(false)
 
   useEffect(() => {
-    setCola(null); setActual(null); setElegida(null); setResultado(null); setHechas([]); setAnterior(null); setChequeo(false)
+    setCola(null); setActual(null); setElegida(null); setResultado(null); setHechas([]); setAnterior(null); setChequeo(false); setSinVerificacion(false)
+    refuerzoDe.current = params.de ?? null; modoActual.current = modo
     ;(async () => {
       let lista
       if (params.ids) lista = (await Promise.all(params.ids.split(',').map(obtenerPregunta))).filter(Boolean)
@@ -60,8 +65,8 @@ export default function Practica({ usuario, params }) {
     if (!elegida || !actual) return
     if (conVerificacion && !chequeo) { setChequeo(true); return }
     const tiempo = Math.round((Date.now() - inicio.current) / 1000)
-    const res = await registrarIntento({ estudiante_id: usuario.id, pregunta: actual, clave: elegida, tiempo_seg: tiempo, modo, refuerzo_de: refuerzoDe.current })
-    refuerzoDe.current = null
+    const res = await registrarIntento({ estudiante_id: usuario.id, pregunta: actual, clave: elegida, tiempo_seg: tiempo, modo: modoActual.current, refuerzo_de: refuerzoDe.current })
+    refuerzoDe.current = null; modoActual.current = modo === 'verificacion' || modo === 'refuerzo' ? 'practica' : modo
     setResultado(res)
     setHechas(h => [...h, res.intento])
   }
@@ -75,7 +80,18 @@ export default function Practica({ usuario, params }) {
   const refuerzo = async (id) => {
     const p = await obtenerPregunta(id)
     if (!p) return siguiente()
-    refuerzoDe.current = resultado?.intento?.uid ?? null
+    refuerzoDe.current = resultado?.intento?.uid ?? null; modoActual.current = 'refuerzo'
+    siguiente(p)
+  }
+
+  // Pregunta de verificación: una NUEVA de la misma competencia (primero las de refuerzo no vistas).
+  // Se registra con modo 'verificacion' y refuerzo_de = intento fallado; así se mide aprendizaje real.
+  const verificar = async (pregunta, intento) => {
+    const vistas = await preguntasVistas(usuario.id)
+    const p = await preguntaVerificacion(pregunta, { vistas, usuario })
+    if (!p) { setSinVerificacion(true); return }
+    refuerzoDe.current = intento?.uid ?? resultado?.intento?.uid ?? null; modoActual.current = 'verificacion'
+    setSinVerificacion(false)
     siguiente(p)
   }
 
@@ -90,6 +106,7 @@ export default function Practica({ usuario, params }) {
           <p className="text-4xl font-semibold">{aciertos}/{hechas.length}</p>
           <p className="text-sm text-gray-400 mt-1">aciertos en esta ronda</p>
           {hechas.length > 0 && <p className="text-xs text-gray-500 mt-2">Tiempo promedio: {formatoTiempo(hechas.reduce((a, i) => a + (i.tiempo_seg ?? 0), 0) / hechas.length)} por pregunta</p>}
+          {hechas.some(i => i.modo === 'verificacion') && (() => { const v = hechas.filter(i => i.modo === 'verificacion'); const ok = v.filter(i => i.correcta).length; return <p className="text-sm mt-2">{ok === v.length ? '✅ ' : ''}Verificaciones con pregunta nueva: <b>{ok}/{v.length}</b>{ok === v.length ? ' · ya lo tienes' : ' · todavía hay que seguir trabajando lo que fallaste'}</p> })()}
         </div>
         <div className="flex gap-2">
           <button className="btn-primary flex-1" onClick={otraRonda}>Otra ronda</button>
@@ -101,7 +118,7 @@ export default function Practica({ usuario, params }) {
 
   return (
     <div className="space-y-4">
-      <Titulo volver sub={`${resultado ? hechas.length : hechas.length + 1} de ${hechas.length + (resultado ? 0 : 1) + cola.length}${refuerzoDe.current ? ' · refuerzo' : ''}`}>Práctica</Titulo>
+      <Titulo volver sub={`${resultado ? hechas.length : hechas.length + 1} de ${hechas.length + (resultado ? 0 : 1) + cola.length}${refuerzoDe.current ? (modoActual.current === 'verificacion' ? ' · pregunta de verificación' : ' · refuerzo') : ''}`}>Práctica</Titulo>
 
       <div className="card">
         <PreguntaVista pregunta={actual} elegida={resultado ? (resultado.intento.opcion) : elegida} onElegir={setElegida} modo={resultado ? 'revisar' : 'responder'} contextoRepetido={!!anterior && !!grupoTexto(actual) && grupoTexto(anterior) === grupoTexto(actual)} />
@@ -125,7 +142,8 @@ export default function Practica({ usuario, params }) {
       {resultado && (
         <>
           <div className="card">
-            <Retro pregunta={actual} evaluacion={resultado.evaluacion} intento={resultado.intento} onRefuerzo={refuerzo} />
+            <Retro pregunta={actual} evaluacion={resultado.evaluacion} intento={resultado.intento} onRefuerzo={refuerzo} onVerificar={verificar} />
+            {sinVerificacion && <p className="text-xs text-brand-amber mt-2">Ya respondiste todas las preguntas disponibles de esta competencia: no hay una nueva para verificar. Sigue con la siguiente.</p>}
           </div>
           <button className="btn-primary w-full" onClick={() => siguiente()}>{cola.length ? 'Siguiente pregunta' : 'Terminar'} <ArrowRight size={16} /></button>
         </>

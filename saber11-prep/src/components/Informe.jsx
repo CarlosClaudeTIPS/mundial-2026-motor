@@ -9,6 +9,8 @@ import { ir } from '../lib/nav'
 import { Titulo, Badge, Barra, Vacio, fechaCorta } from './ui'
 import { MATERIAS } from './Login'
 import { formatoFecha } from '../lib/ciclo'
+import { medirAprendizaje } from '../lib/aprendizaje'
+import { AprendizajeReal } from './estudiante/MiProgreso'
 
 // ─── Informe de mejoramiento (individual o de grupo) ─────────────────────────
 // params: { estudiante: id } o { grupo: id }. base: 'todo' | 'sesion:<id>' | 'desde:<fecha>'
@@ -51,7 +53,7 @@ export default function Informe({ usuario, params }) {
           poblacion = { global: otros.map(x => x.global) }
           for (const p of PRUEBAS) poblacion[p] = otros.map(x => x.pruebas.find(q => q.prueba === p).puntaje)
         }
-        setD({ tipo: 'estudiante', est, informe: informeEstudiante({ intentos: filtrar(intentos), preguntasPorId: porId, poblacion, sesiones }), sesiones: sesiones.filter(s => s.estado === 'terminada') })
+        setD({ tipo: 'estudiante', est, informe: informeEstudiante({ intentos: filtrar(intentos), preguntasPorId: porId, poblacion, sesiones }), sesiones: sesiones.filter(s => s.estado === 'terminada'), aprendizaje: medirAprendizaje(filtrar(intentos)) })
       } else setD({ tipo: 'vacio' })
     })()
   }, [estudianteId, grupoId, base])
@@ -144,6 +146,8 @@ function CuerpoEstudiante({ inf }) {
           ))}
         </div>
       </div>
+
+      {d.aprendizaje && <AprendizajeReal ap={d.aprendizaje} compacto />}
 
       <div className="card">
         <p className="font-medium mb-2">Fortalezas</p>

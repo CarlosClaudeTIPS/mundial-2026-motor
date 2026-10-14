@@ -79,7 +79,7 @@ export async function sincronizar() {
 // Campos que no van a la nube o que cambian de forma.
 function aFilaNube(tabla, d) {
   const { sincronizado, semilla, ...resto } = d
-  if (tabla === 'usuarios') { const { pin_hash, demo, ...u } = resto; return u }
+  if (tabla === 'usuarios') { const { pin_hash, demo, ruta_config, ...u } = resto; return u } // ruta_config viaja por la función guardar_ruta (migración 005)
   if (tabla === 'preguntas') { const { editada_local, fecha_carga, fecha_edicion, ...p } = resto; return { ...p, actualizado: fecha_edicion ?? ahora() } }
   if (tabla === 'recursos') { const { editado_local, ...r } = resto; return r }
   return resto

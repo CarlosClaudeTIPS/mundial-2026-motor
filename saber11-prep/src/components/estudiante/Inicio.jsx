@@ -14,6 +14,7 @@ import { modoCarreraActivo, prioridadesDeUsuario, carreraPorId, NOMBRE_NIVEL } f
 import { VistaPrioridades } from './Carreras'
 import { estadoLiberacion, grupoDe } from '../../lib/acceso'
 import { Unlock } from 'lucide-react'
+import RutaMejorar from './RutaMejorar'
 
 export default function Inicio({ usuario }) {
   const [datos, setDatos] = useState(null)
@@ -70,6 +71,7 @@ export default function Inicio({ usuario }) {
       </div>
 
       <TarjetaDiagnostico diagnostico={datos.diagnostico} usuario={usuario} />
+      <RutaMejorar usuario={usuario} modo="hoy" />
 
       <div className="grid grid-cols-5 gap-2">
         {materias.map(m => { const I = ICONO_PRUEBA[m.id]; const nivel = nivelDe[m.id]; return (
@@ -116,7 +118,7 @@ export default function Inicio({ usuario }) {
         <Accion icono={AlertCircle} titulo="Mis errores" sub={`${errores} para revisar`} onClick={() => ir('errores')} />
         <Accion icono={BarChart3} titulo="Refuerzo" sub="lo que está flojo, explicado" onClick={() => ir('refuerzo')} />
         <Accion icono={Timer} titulo="Simulacros" sub="por sesión, cronometrados" onClick={() => ir('simulacros')} />
-        <Accion icono={Map} titulo="Mi ruta" sub="programa de 6 meses" onClick={() => ir('ruta')} />
+        <Accion icono={Map} titulo="Mi ruta" sub="tu plan semanal para mejorar" onClick={() => ir('ruta')} />
         <Accion icono={FileBarChart} titulo="Mi informe" sub="puntajes, niveles y qué mejorar" onClick={() => ir('informe')} />
         <Accion icono={BookOpenCheck} titulo="Guía ICFES" sub="qué es, para qué sirve, universidades" onClick={() => ir('guia')} />
       </div>
@@ -145,6 +147,9 @@ export async function lanzarAccion(accion, usuario) {
   if (!accion) return
   if (accion.tipo === 'practica') return ir('practica', { ...accion.filtros, n: accion.n ?? 5, verificacion: accion.verificacion ? '1' : undefined })
   if (accion.tipo === 'ids') return ir('practica', { ids: accion.ids.join(',') })
+  if (accion.tipo === 'errores') return accion.ids?.length ? ir('practica', { ids: accion.ids.join(','), modo: 'refuerzo' }) : ir('errores')
+  if (accion.tipo === 'diagnostico') { const d = await diagnosticoDe(usuario.id); if (d?.estado === 'en_curso') return ir('sesion', { id: d.id }); const s = await crearDiagnostico({ estudiante: usuario }); return ir('sesion', { id: s.id }) }
+  if (accion.tipo === 'simulacro') { const s = await crearSimulacro({ estudiante: usuario, sesion_examen: accion.sesion_examen ?? 1, escala: accion.escala ?? 0.25, titulo: 'Simulacro de mi ruta' }); return ir('sesion', { id: s.id }) }
   if (accion.tipo === 'mini') {
     const s = await crearMiniPrueba({ estudiante: usuario, cantidad: accion.config?.cantidad ?? 8, tiempo_min: accion.config?.cronometro ? Math.round((accion.config?.cantidad ?? 8) * 1.5) : accion.config?.tiempo_min ?? null, filtros: accion.config?.filtros ?? {}, titulo: 'Mini-prueba recomendada' })
     return ir('sesion', { id: s.id })

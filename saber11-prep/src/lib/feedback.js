@@ -1,4 +1,5 @@
 import { nombreHabilidad, nombreTipoError, practicaParaError } from './taxonomia'
+import lecciones from '../../content/lecciones.json'
 
 // ─── Retroalimentación ───────────────────────────────────────────────────────
 // Construye lo que se le muestra al estudiante después de responder. Nunca
@@ -97,4 +98,31 @@ export function razonesPosibles(pregunta, elegida) {
     { id: 'azar', texto: 'Adiviné', tipo_error: null },
   )
   return base
+}
+
+// ─── Consejo según la razón que dio el estudiante ────────────────────────────
+// La razón la elige el estudiante (razonesPosibles). Aquí se traduce en un
+// mensaje corto, una estrategia y qué habilidad del eje transversal trabajar.
+// El texto vive en content/lecciones.json (clave `razones`) para poder editarlo.
+
+export function consejoPorRazon(razon, pregunta = null) {
+  if (!razon) return null
+  const base = lecciones.razones?.[razon.id] ?? lecciones.razones?.otra
+  if (!base) return null
+  const hab = lecciones.habilidades?.[base.habilidad]
+  return {
+    id: razon.id, titulo: base.titulo, consejo: base.consejo, estrategia: base.estrategia,
+    habilidad: base.habilidad, consejo_habilidad: hab?.consejo ?? null, practica_habilidad: hab?.practica ?? null,
+    tipo_error: razon.tipo_error ?? null, practica: razon.tipo_error ? practicaParaError(razon.tipo_error) : (base.habilidad === 'verificar' ? 'verificacion' : 'ejercitacion'),
+    competencia: pregunta?.competencia ?? null,
+  }
+}
+
+// Lección "desde cero" para la competencia y la habilidad de una pregunta (sin conexión, sin IA).
+export function leccionDe(pregunta) {
+  if (!pregunta) return null
+  const comp = lecciones.competencias?.[pregunta.competencia] ?? null
+  const hab = lecciones.habilidades?.[pregunta.habilidad] ?? null
+  if (!comp && !hab) return null
+  return { competencia: pregunta.competencia, habilidad: pregunta.habilidad, ...(comp ?? {}), habilidad_consejo: hab?.consejo ?? null, habilidad_practica: hab?.practica ?? null }
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Check, X } from 'lucide-react'
 import { db } from '../../lib/db'
-import { intentosDe } from '../../lib/datos'
+import { intentosDe, preguntasVistas } from '../../lib/datos'
 import { sesionesDe } from '../../lib/pruebas'
-import { listarPreguntas } from '../../lib/banco'
+import { listarPreguntas, preguntaVerificacion } from '../../lib/banco'
 import { evaluar } from '../../lib/feedback'
 import { useSync } from '../../lib/sync'
 import { ir } from '../../lib/nav'
@@ -17,7 +17,7 @@ import { nombrePrueba, taxonomia } from '../../lib/taxonomia'
 // pregunta con todos sus intentos, acertados o no. El docente lo abre para un
 // estudiante suyo con ?id=.
 
-const MODOS = { practica: 'práctica', refuerzo: 'refuerzo', mini: 'mini-prueba', simulacro: 'simulacro', diagnostico: 'diagnóstica', papel: 'en papel' }
+const MODOS = { practica: 'práctica', refuerzo: 'refuerzo', verificacion: 'verificación', mini: 'mini-prueba', simulacro: 'simulacro', diagnostico: 'diagnóstica', papel: 'en papel' }
 const PASO = 40
 
 export default function Historial({ usuario, params }) {
@@ -109,7 +109,7 @@ export default function Historial({ usuario, params }) {
                       ))}
                     </div>
                     <PreguntaVista pregunta={p} elegida={ultimo.opcion} modo="revisar" mostrarMeta={false} />
-                    <Retro pregunta={p} evaluacion={evaluar(p, ultimo.opcion, { tiempoSeg: ultimo.tiempo_seg, razon: ultimo.razon })} intento={ultimo} onRefuerzo={ajeno ? null : (rid) => ir('practica', { ids: rid, modo: 'refuerzo' })} />
+                    <Retro pregunta={p} evaluacion={evaluar(p, ultimo.opcion, { tiempoSeg: ultimo.tiempo_seg, razon: ultimo.razon })} intento={ultimo} onRefuerzo={ajeno ? null : (rid) => ir('practica', { ids: rid, modo: 'refuerzo', de: ultimo.uid })} onVerificar={ajeno ? null : async (q, it) => { const nueva = await preguntaVerificacion(q, { vistas: await preguntasVistas(usuario.id), usuario }); if (!nueva) return alert('Ya respondiste todas las preguntas disponibles de esta competencia.'); ir('practica', { ids: nueva.id, modo: 'verificacion', de: it?.uid }) }} />
                     {!ajeno && <button className="btn-secondary w-full" onClick={() => ir('practica', { ids: p.id, modo: 'refuerzo' })}>Volver a intentar esta pregunta</button>}
                   </div>
                 )}

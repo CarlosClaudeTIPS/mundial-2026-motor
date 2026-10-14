@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { intentosDe } from '../../lib/datos'
-import { listarPreguntas } from '../../lib/banco'
+import { intentosDe, preguntasVistas } from '../../lib/datos'
+import { listarPreguntas, preguntaVerificacion } from '../../lib/banco'
 import { evaluar } from '../../lib/feedback'
 import { ir } from '../../lib/nav'
 import PreguntaVista from '../PreguntaVista'
@@ -70,7 +70,7 @@ export default function MisErrores({ usuario }) {
             {abierto === i.uid && (
               <div className="mt-3 border-t border-dark-700 pt-3 space-y-3">
                 <PreguntaVista pregunta={p} elegida={i.opcion} modo="revisar" mostrarMeta={false} />
-                <Retro pregunta={p} evaluacion={evaluar(p, i.opcion, { tiempoSeg: i.tiempo_seg, razon: i.razon })} intento={i} onRefuerzo={(id) => ir('practica', { ids: id, modo: 'refuerzo' })} />
+                <Retro pregunta={p} evaluacion={evaluar(p, i.opcion, { tiempoSeg: i.tiempo_seg, razon: i.razon })} intento={i} onRefuerzo={(id) => ir('practica', { ids: id, modo: 'refuerzo', de: i.uid })} onVerificar={async (q, it) => { const nueva = await preguntaVerificacion(q, { vistas: await preguntasVistas(usuario.id), usuario }); if (!nueva) return alert('Ya respondiste todas las preguntas disponibles de esta competencia.'); ir('practica', { ids: nueva.id, modo: 'verificacion', de: it?.uid }) }} />
                 <button className="btn-secondary w-full" onClick={() => ir('practica', { ids: p.id, modo: 'refuerzo' })}>Volver a intentar esta pregunta</button>
               </div>
             )}
