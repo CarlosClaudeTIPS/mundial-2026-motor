@@ -13,7 +13,7 @@ import { Stethoscope, Compass, FileBarChart, BookOpenCheck } from 'lucide-react'
 import { modoCarreraActivo, prioridadesDeUsuario, carreraPorId, NOMBRE_NIVEL } from '../../lib/carreras'
 import { VistaPrioridades } from './Carreras'
 import { estadoLiberacion, grupoDe } from '../../lib/acceso'
-import { Unlock } from 'lucide-react'
+import { Unlock, Rocket } from 'lucide-react'
 import RutaMejorar from './RutaMejorar'
 
 export default function Inicio({ usuario }) {
@@ -121,6 +121,7 @@ export default function Inicio({ usuario }) {
         <Accion icono={Map} titulo="Mi ruta" sub="tu plan semanal para mejorar" onClick={() => ir('ruta')} />
         <Accion icono={FileBarChart} titulo="Mi informe" sub="puntajes, niveles y qué mejorar" onClick={() => ir('informe')} />
         <Accion icono={BookOpenCheck} titulo="Guía ICFES" sub="qué es, para qué sirve, universidades" onClick={() => ir('guia')} />
+        <Accion icono={Rocket} titulo="Mi futuro" sub="intereses, opciones y proyecto de vida" onClick={() => ir('futuro')} />
       </div>
 
       <div className="card">

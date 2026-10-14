@@ -1,0 +1,103 @@
+{
+  "_nota": "Cuestionario ORIGINAL de intereses para adolescentes. Toma como referencia conceptual las seis áreas del modelo RIASEC de Holland (realista, investigativa, artística, social, emprendedora, convencional), pero NO es una prueba psicométrica validada: sus resultados son orientativos y pueden cambiar. 36 ítems, 6 por área, respuesta en escala de 0 (no me llama la atención) a 3 (me encantaría).",
+  "escala": [{ "valor": 0, "texto": "No me llama" }, { "valor": 1, "texto": "Un poco" }, { "valor": 2, "texto": "Me gusta" }, { "valor": 3, "texto": "Me encantaría" }],
+  "areas": {
+    "R": { "nombre": "Hacer y construir", "descripcion": "Trabajar con las manos, herramientas, máquinas, plantas, animales o al aire libre; ver resultados concretos.", "actividades": ["Construir y reparar", "Trabajar con naturaleza y animales", "Operar máquinas y equipos", "Instalar, armar, cultivar"] },
+    "I": { "nombre": "Investigar y entender", "descripcion": "Hacer preguntas, analizar datos, experimentar y entender cómo funcionan las cosas.", "actividades": ["Investigar y descubrir", "Resolver problemas matemáticos o técnicos", "Analizar información", "Experimentar y comprobar"] },
+    "A": { "nombre": "Crear y expresar", "descripcion": "Imaginar, diseñar, escribir, actuar, componer; expresar ideas y emociones con formas, sonidos o palabras.", "actividades": ["Crear y diseñar", "Expresarse artísticamente", "Comunicar ideas y contar historias", "Inventar formas nuevas de hacer algo"] },
+    "S": { "nombre": "Ayudar y enseñar", "descripcion": "Acompañar, cuidar, enseñar, escuchar y trabajar con personas para que estén mejor.", "actividades": ["Ayudar y acompañar a otras personas", "Enseñar y explicar", "Cuidar la salud y el bienestar", "Mediar y resolver conflictos"] },
+    "E": { "nombre": "Liderar y emprender", "descripcion": "Convencer, organizar equipos, tomar decisiones, vender ideas o productos, asumir riesgos.", "actividades": ["Liderar, negociar y emprender", "Vender y convencer", "Organizar proyectos y recursos", "Representar a un grupo"] },
+    "C": { "nombre": "Organizar y precisar", "descripcion": "Ordenar información, seguir procedimientos, cuidar detalles, manejar cuentas y registros.", "actividades": ["Organizar proyectos y recursos", "Analizar información", "Llevar cuentas y registros", "Desarrollar soluciones digitales con reglas claras"] }
+  },
+  "items": [
+    { "id": 1, "area": "R", "texto": "Armar o reparar un aparato (una bicicleta, un ventilador, un computador)." },
+    { "id": 2, "area": "I", "texto": "Averiguar por qué pasa algo raro (por qué una planta se marchita, por qué un celular se calienta)." },
+    { "id": 3, "area": "A", "texto": "Diseñar la portada de un cuaderno, un afiche o el logo de un equipo." },
+    { "id": 4, "area": "S", "texto": "Explicarle a un compañero un tema que no entendió hasta que le quede claro." },
+    { "id": 5, "area": "E", "texto": "Organizar una venta, una rifa o un evento del colegio y convencer a la gente de participar." },
+    { "id": 6, "area": "C", "texto": "Llevar las cuentas de un negocio pequeño y que todo cuadre al final del día." },
+    { "id": 7, "area": "R", "texto": "Cuidar animales o sembrar y mantener una huerta." },
+    { "id": 8, "area": "I", "texto": "Hacer un experimento en casa para comprobar una idea." },
+    { "id": 9, "area": "A", "texto": "Escribir un cuento, una canción o un guion para un video." },
+    { "id": 10, "area": "S", "texto": "Acompañar a alguien que está pasando por un mal momento." },
+    { "id": 11, "area": "E", "texto": "Proponer una idea de negocio y defenderla ante un grupo." },
+    { "id": 12, "area": "C", "texto": "Organizar archivos, fotos o documentos para que cualquiera los encuentre fácil." },
+    { "id": 13, "area": "R", "texto": "Trabajar al aire libre, con herramientas o maquinaria." },
+    { "id": 14, "area": "I", "texto": "Resolver un problema de matemáticas o de lógica difícil por gusto." },
+    { "id": 15, "area": "A", "texto": "Actuar, bailar, tocar un instrumento o grabar contenido creativo." },
+    { "id": 16, "area": "S", "texto": "Participar en una campaña para ayudar a personas de tu barrio o vereda." },
+    { "id": 17, "area": "E", "texto": "Ser quien toma las decisiones en un trabajo en grupo." },
+    { "id": 18, "area": "C", "texto": "Revisar un trabajo con mucho cuidado para encontrar errores de ortografía o de cálculo." },
+    { "id": 19, "area": "R", "texto": "Instalar algo siguiendo un manual (un estante, una red, un circuito)." },
+    { "id": 20, "area": "I", "texto": "Leer sobre ciencia, tecnología, historia o economía por curiosidad." },
+    { "id": 21, "area": "A", "texto": "Decorar un espacio o combinar colores y formas para que se vea bien." },
+    { "id": 22, "area": "S", "texto": "Cuidar niños pequeños, personas mayores o enfermas." },
+    { "id": 23, "area": "E", "texto": "Negociar un mejor precio o un acuerdo entre dos partes." },
+    { "id": 24, "area": "C", "texto": "Hacer una tabla o una hoja de cálculo para organizar datos." },
+    { "id": 25, "area": "R", "texto": "Entender cómo funciona un motor, una máquina o una red eléctrica." },
+    { "id": 26, "area": "I", "texto": "Analizar datos (encuestas, estadísticas, resultados) para sacar conclusiones." },
+    { "id": 27, "area": "A", "texto": "Tomar fotos o hacer videos buscando que queden bonitos y digan algo." },
+    { "id": 28, "area": "S", "texto": "Escuchar a las personas y ayudarles a resolver un conflicto." },
+    { "id": 29, "area": "E", "texto": "Vender un producto o servicio y conseguir clientes." },
+    { "id": 30, "area": "C", "texto": "Seguir un procedimiento paso a paso sin saltarte nada." },
+    { "id": 31, "area": "R", "texto": "Practicar deporte o actividad física exigente como parte del trabajo." },
+    { "id": 32, "area": "I", "texto": "Programar o entender cómo funciona por dentro una aplicación." },
+    { "id": 33, "area": "A", "texto": "Inventar una forma nueva de contar una historia o presentar una idea." },
+    { "id": 34, "area": "S", "texto": "Enseñar o entrenar a un grupo (clases, talleres, un equipo)." },
+    { "id": 35, "area": "E", "texto": "Hablar en público para convencer o motivar." },
+    { "id": 36, "area": "C", "texto": "Planear un cronograma y controlar que todo se cumpla a tiempo." }
+  ],
+  "habilidades": [
+    "Explicar cosas con claridad", "Trabajar con números", "Dibujar o diseñar", "Escribir bien", "Hablar en público", "Escuchar a los demás", "Organizar y planear", "Resolver problemas técnicos", "Programar o manejar tecnología", "Trabajar con las manos", "Liderar un grupo", "Vender o convencer", "Investigar y buscar información", "Cuidar a otras personas", "Trabajar bajo presión", "Idiomas", "Deporte o actividad física", "Creatividad e ideas nuevas", "Paciencia y constancia", "Trabajo en equipo"
+  ],
+  "estados_habilidad": [
+    { "id": "se", "texto": "Ya lo sé hacer" },
+    { "id": "reconocen", "texto": "Otros lo reconocen en mí" },
+    { "id": "aprendiendo", "texto": "Lo estoy aprendiendo" },
+    { "id": "quiero", "texto": "Me gustaría aprenderlo" },
+    { "id": "no_probado", "texto": "No lo he probado" }
+  ],
+  "valores": [
+    { "id": "ingresos", "nombre": "Estabilidad económica", "descripcion": "Ganar lo suficiente y con regularidad." },
+    { "id": "creatividad", "nombre": "Creatividad", "descripcion": "Poder inventar, diseñar, proponer." },
+    { "id": "ayudar", "nombre": "Ayudar a los demás", "descripcion": "Que mi trabajo mejore la vida de otras personas." },
+    { "id": "autonomia", "nombre": "Autonomía", "descripcion": "Decidir yo cómo y cuándo hago las cosas." },
+    { "id": "estabilidad", "nombre": "Estabilidad laboral", "descripcion": "Un empleo seguro y de largo plazo." },
+    { "id": "horarios", "nombre": "Flexibilidad de horarios", "descripcion": "Manejar mi tiempo." },
+    { "id": "equipo", "nombre": "Trabajo en equipo", "descripcion": "Trabajar con otras personas todos los días." },
+    { "id": "reconocimiento", "nombre": "Reconocimiento profesional", "descripcion": "Que mi trabajo sea valorado y visible." },
+    { "id": "aprender", "nombre": "Aprendizaje continuo", "descripcion": "Estar siempre aprendiendo cosas nuevas." },
+    { "id": "emprender", "nombre": "Emprendimiento", "descripcion": "Tener mi propio negocio o proyecto." },
+    { "id": "equilibrio", "nombre": "Equilibrio vida y trabajo", "descripcion": "Tiempo para mi familia, amigos y descanso." },
+    { "id": "impacto", "nombre": "Impacto social o ambiental", "descripcion": "Aportar a un problema del país o del planeta." }
+  ],
+  "conflictos": [
+    { "entre": ["ingresos", "creatividad"], "texto": "Quieres ingresos estables y mucha creatividad. Existen trabajos que combinan ambas (diseño, publicidad, desarrollo de software, arquitectura), pero en muchos campos creativos los ingresos son variables al principio. Vale la pena investigar cómo es el inicio en cada opción." },
+    { "entre": ["autonomia", "estabilidad"], "texto": "Quieres autonomía y a la vez estabilidad laboral. Los empleos más estables suelen tener horarios y jefes; la autonomía total (independiente, emprendimiento) suele traer inestabilidad al comienzo. Pregúntate cuál pesa más hoy y cuál en cinco años." },
+    { "entre": ["emprender", "estabilidad"], "texto": "Emprender y tener estabilidad inmediata rara vez van juntos al principio. Muchas personas trabajan empleadas unos años mientras preparan su proyecto. Es una ruta válida, no una renuncia." },
+    { "entre": ["horarios", "ingresos"], "texto": "Horarios flexibles e ingresos altos desde el inicio no suelen coincidir en los primeros años de una carrera. Investiga en qué ocupaciones la flexibilidad llega con la experiencia." },
+    { "entre": ["equilibrio", "reconocimiento"], "texto": "El reconocimiento profesional alto suele exigir muchas horas, sobre todo al comienzo. No es imposible tener equilibrio, pero conviene elegir sectores y empresas con esa cultura." },
+    { "entre": ["ayudar", "ingresos"], "texto": "Ayudar a otros e ingresos altos pueden ir juntos (medicina, algunas ingenierías sociales, derecho), pero en muchas ocupaciones de cuidado y educación los salarios son más bajos de lo que merecen. Es importante saberlo antes, no para descartar, sino para planear." }
+  ],
+  "entorno": {
+    "_nota": "Todas las preguntas son opcionales. Sirven para que las opciones sugeridas sean realistas. No se comparten con el docente ni con otros estudiantes.",
+    "campos": [
+      { "id": "municipio", "tipo": "texto", "etiqueta": "Municipio o región donde vives", "ayuda": "Solo el nombre; sirve para filtrar opciones cercanas." },
+      { "id": "desplazarse", "tipo": "opcion", "etiqueta": "¿Podrías estudiar en otra ciudad?", "opciones": ["Sí, sin problema", "Tal vez, si consigo apoyo", "No, debo quedarme cerca", "No lo sé todavía"] },
+      { "id": "modalidad", "tipo": "multi", "etiqueta": "Modalidad que te sirve", "opciones": ["Presencial", "Virtual", "A distancia", "Nocturna o fines de semana"] },
+      { "id": "tiempo", "tipo": "opcion", "etiqueta": "Tiempo que podrías dedicar a estudiar después del colegio", "opciones": ["Tiempo completo", "Medio tiempo", "Solo noches o fines de semana", "No lo sé"] },
+      { "id": "trabajar", "tipo": "opcion", "etiqueta": "¿Necesitarías trabajar mientras estudias?", "opciones": ["Sí, desde el principio", "Probablemente", "No", "No lo sé"] },
+      { "id": "presupuesto", "tipo": "opcion", "etiqueta": "Presupuesto aproximado para la matrícula de un semestre", "opciones": ["Solo opciones gratuitas", "Hasta 1 salario mínimo", "Entre 1 y 3 salarios mínimos", "Más de 3 salarios mínimos", "Prefiero no decirlo"] },
+      { "id": "internet", "tipo": "opcion", "etiqueta": "Acceso a internet y dispositivos", "opciones": ["Internet y computador en casa", "Solo celular con datos", "Acceso limitado o compartido", "Casi nunca"] },
+      { "id": "responsabilidades", "tipo": "opcion", "etiqueta": "Responsabilidades en casa que ocupan tiempo", "opciones": ["Pocas", "Algunas (cuidar a alguien, oficios, trabajo)", "Muchas", "Prefiero no decirlo"] },
+      { "id": "apoyos", "tipo": "texto", "etiqueta": "¿Necesitas algún apoyo o ajuste (accesibilidad, salud, otro)?", "ayuda": "Opcional. Sirve para buscar programas con esos apoyos." }
+    ]
+  },
+  "reflexion": [
+    "¿Cuál de las áreas que te salieron altas ya aparece en lo que haces un fin de semana cualquiera?",
+    "¿Hay alguna que te sorprendió? ¿Por qué crees que salió alta o baja?",
+    "Piensa en una persona que conozcas que trabaje en algo parecido a tus áreas altas: ¿qué hace un día normal?",
+    "¿Qué actividad de las que marcaste con 3 podrías probar de verdad en las próximas dos semanas?",
+    "Si tus intereses cambiaran el próximo año, ¿qué de lo que estás descubriendo hoy seguiría sirviendo?"
+  ]
+}

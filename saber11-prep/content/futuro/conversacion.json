@@ -1,0 +1,24 @@
+{
+  "_nota": "Herramienta opcional para preparar conversaciones sobre el futuro con la familia u otro adulto de confianza (docente, orientador, familiar, mentor). Nada de lo que el estudiante escriba aquí se comparte: solo él decide qué contar.",
+  "introduccion": "Hablar del futuro con la familia a veces es difícil: ellos tienen expectativas, miedos y experiencias que pesan. Tú tienes intereses que quizá no conocen. Una buena conversación no busca ganar: busca que ambos lados tengan información y se escuchen. Si en casa no hay con quién hablar de esto con calma, elige a otro adulto de confianza: un docente, el orientador del colegio, un familiar lejano, un entrenador.",
+  "bloques": [
+    { "titulo": "Antes de la conversación: aclara lo tuyo", "preguntas": ["¿Qué quiero explorar y por qué me interesa? (dos o tres razones concretas, no «porque me gusta»)", "¿Qué he averiguado ya? (programas, costos, duración, qué hace alguien en ese trabajo)", "¿Qué todavía no sé y podríamos investigar juntos?", "¿Qué me preocupa a mí de esta decisión?"] },
+    { "titulo": "Entender su lado", "preguntas": ["¿Qué les preocupa de la opción que me interesa? (dinero, trabajo, que esté lejos, que no me vaya bien)", "¿Qué esperan ellos y de dónde viene esa expectativa? (su propia historia, lo que ven en otras familias)", "¿Qué expectativas económicas hay: cuánto pueden apoyar, por cuánto tiempo, y qué esperan que yo aporte?", "¿Qué saben realmente de la carrera que prefieren para mí?"] },
+    { "titulo": "Buscar terreno común", "preguntas": ["¿Qué alternativas podemos investigar juntos antes de decidir? (dos opciones mías, una de ellos)", "¿Qué apoyos concretos necesito: tiempo, dinero, transporte, que me acompañen a una visita, que confíen?", "¿Podemos acordar una prueba? (un curso corto, una visita, hablar con alguien que trabaje en eso) y volver a hablar con lo que aprenda", "¿Qué decisiones me corresponden a mí y cuáles son de la familia (por ejemplo, el presupuesto)?"] }
+  ],
+  "recomendaciones": [
+    "Habla desde ti: «a mí me interesa…», «yo averigüé que…», en vez de «ustedes no entienden».",
+    "Lleva datos: costos publicados, duración, qué hace alguien en ese trabajo, opciones gratuitas o cercanas. La información baja la temperatura.",
+    "Reconoce lo válido de su preocupación antes de responderla: «entiendo que les preocupe el dinero; por eso miré estas becas».",
+    "No tienes que decidir todo en una conversación. Proponer «averiguo más y volvemos a hablar en dos semanas» es un buen cierre.",
+    "Si la conversación se calienta, pausa. Volver otro día no es perder.",
+    "Pide una segunda opinión a un docente u orientador y cuéntales a ambos lados lo que te dijo.",
+    "Si sientes que tu voz no cuenta en casa, busca a un adulto de confianza fuera de ella. Tu futuro sigue siendo tuyo."
+  ],
+  "frases": [
+    { "situacion": "Quieren que estudie otra cosa", "frase": "Entiendo por qué les parece mejor esa opción. Me gustaría que miráramos las dos con la misma información y que me dejen probar la mía con un curso corto antes de decidir." },
+    { "situacion": "Dicen que «eso no da plata»", "frase": "Puede que al principio no. Averigüé cómo son los ingresos en los primeros años y qué otras salidas tiene. ¿Podemos revisarlo juntos?" },
+    { "situacion": "No pueden pagar lo que quiero", "frase": "Lo sé, y por eso busqué opciones gratuitas o con beca y una ruta en la que pueda trabajar mientras estudio. Quiero mostrárselas." },
+    { "situacion": "Cambié de idea y temo decepcionarlos", "frase": "Después de averiguar más, me di cuenta de que esto me interesa más que lo que dije antes. No es que no sepa lo que quiero: es que ahora sé más." }
+  ]
+}

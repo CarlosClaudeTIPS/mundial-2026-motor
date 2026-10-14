@@ -1,4 +1,4 @@
-import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History, UserCheck, Compass, FileBarChart, BookOpenCheck } from 'lucide-react'
+import { Home, BookOpen, GraduationCap, AlertCircle, BarChart3, Map, Users, Library, Printer, Settings, LogOut, Wifi, WifiOff, RefreshCw, Timer, LayoutGrid, Eye, EyeOff, History, UserCheck, Compass, FileBarChart, BookOpenCheck, Rocket } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { salir, solicitudesPendientes } from '../lib/sesion'
 import { useSync, sincronizar } from '../lib/sync'
@@ -30,7 +30,7 @@ const MENU = {
   ],
 }
 const EXTRA_ESCRITORIO = {
-  estudiante: [{ ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 }, { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }, { ruta: 'carreras', nombre: 'Mi carrera', icono: Compass }, { ruta: 'informe', nombre: 'Mi informe', icono: FileBarChart }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
+  estudiante: [{ ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 }, { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }, { ruta: 'carreras', nombre: 'Mi carrera', icono: Compass }, { ruta: 'futuro', nombre: 'Mi futuro', icono: Rocket }, { ruta: 'informe', nombre: 'Mi informe', icono: FileBarChart }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
   docente: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
   admin: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
 }

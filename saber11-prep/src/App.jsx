@@ -26,6 +26,7 @@ import Materia from './components/estudiante/Materia'
 import Refuerzo from './components/estudiante/Refuerzo'
 import Historial from './components/estudiante/Historial'
 import Carreras from './components/estudiante/Carreras'
+import MiFuturo from './components/estudiante/MiFuturo'
 import Informe from './components/Informe'
 import Guia from './components/Guia'
 import PanelDocente from './components/docente/PanelDocente'
@@ -101,6 +102,7 @@ function elegirVista(rol, ruta, params, usuario) {
       case 'progreso': return <MiProgreso usuario={usuario} params={params} />
       case 'ruta': return <MiRuta usuario={usuario} params={params} />
       case 'carreras': return <Carreras usuario={usuario} params={params} />
+      case 'futuro': return <MiFuturo usuario={usuario} params={params} />
       default: return <Inicio usuario={usuario} params={params} />
     }
   }
