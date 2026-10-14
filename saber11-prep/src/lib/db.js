@@ -41,6 +41,8 @@ export function uuid() {
 export async function encolar(tabla, datos) {
   if (!NUBE_DISPONIBLE) return
   await db.cola.add({ tabla, accion: 'upsert', datos, fecha: ahora() })
+  // Avisa a la sincronización para que suba el cambio enseguida (ver sync.js), sin esperar al minuto.
+  if (typeof window !== 'undefined') window.dispatchEvent(new Event('saber11:cola'))
 }
 
 export async function getConfig(clave, porDefecto = null) {

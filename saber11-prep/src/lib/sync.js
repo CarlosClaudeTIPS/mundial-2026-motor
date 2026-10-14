@@ -132,10 +132,21 @@ async function todasLasFilas(tabla, filtrar = q => q) {
   }
 }
 
+// Sincronización automática: al arrancar, al recuperar la conexión, cada minuto, al volver a la app
+// y unos segundos después de cada respuesta registrada. Lo que falle se reintenta solo en el
+// siguiente ciclo; el botón de la barra lateral es solo para forzarlo a mano.
+let temporizador = null
+export function programarSync(ms = 4_000) {
+  clearTimeout(temporizador)
+  temporizador = setTimeout(() => sincronizar(), ms)
+}
+
 export function iniciarSync() {
   if (typeof window === 'undefined') return
   window.addEventListener('online', () => { set({ enLinea: true }); sincronizar() })
   window.addEventListener('offline', () => set({ enLinea: false }))
+  window.addEventListener('saber11:cola', () => programarSync())
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') sincronizar() })
   contarPendientes()
   sincronizar()
   setInterval(sincronizar, 60_000)
