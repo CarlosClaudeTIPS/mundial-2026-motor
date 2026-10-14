@@ -52,7 +52,7 @@ Los textos de la portada, el proceso de 4 pasos, las condiciones y la política 
 Si `foto` queda vacío, se muestra la ilustración incluida.
 
 ### Agregar un ejemplo real al portafolio
-1. Guarda la captura en `assets/portafolio/` (ej. `guia-ciencias.png`) y, si quieres, el PDF (`guia-ciencias.pdf`).
+1. Guarda la captura en `assets/portafolio/` (ej. `guia-ciencias.webp` o `.png`) y, si quieres, el PDF (`guia-ciencias.pdf`).
 2. En `config.js`, bloque `portafolio`, copia un bloque y edítalo:
 ```js
 { categoria: "Guías y talleres", nombre: "Guía de ciencias: la célula",
@@ -65,6 +65,26 @@ Valores posibles de `tipo` (define la ilustración cuando no hay imagen): `plane
 Las categorías se crean solas a partir del campo `categoria`.
 
 **Importante:** usa documentos demostrativos o reales autorizados, siempre con datos ficticios o anonimizados. Nunca publiques información identificable de estudiantes.
+
+## 2b. Catálogo de ejemplos con buscador
+
+Los ejemplos del portafolio se pueden buscar por texto y filtrar por área, grado y tipo de recurso. Esos filtros salen
+de los campos `area`, `grados`, `tipoRecurso`, `duracion`, `modalidad` y `adaptacion` de cada ejemplo en `config.js`.
+Si agregas un ejemplo nuevo, llena esos campos para que aparezca en los filtros.
+
+## 2c. Plantillas editables (sin IA, sin servidor)
+
+La sección «Plantillas» permite al docente generar un plan de clase, guía, taller, evaluación, rúbrica, actividad
+diferenciada o material de refuerzo a partir de sus datos (área, grado, tema…). El documento se edita en la misma página,
+se copia, se descarga como Word (`.doc`) o se imprime. El borrador se guarda en el navegador del docente.
+Las estructuras están en `assets/js/plantillas.js`; para cambiar un texto o agregar un tipo, edita ese archivo.
+Los referentes curriculares (DBA, estándares) se dejan como espacio en blanco: no se inventan.
+
+## 2d. WhatsApp pendiente
+
+Mientras `contacto.whatsapp` esté vacío en `config.js`, la página no muestra un número falso: los botones de WhatsApp
+avisan que el número está pendiente y copian el mensaje al portapapeles; el resumen del formulario ofrece copiarlo.
+En cuanto escribas el número real, todo queda activo sin tocar nada más.
 
 ## 3. Cómo funciona el formulario (sin costo)
 
@@ -108,6 +128,15 @@ Un dominio `.com` o `.com.co` cuesta aproximadamente entre $40.000 y $80.000 COP
 | Dominio propio | De pago (anual) |
 | Adjuntar archivos desde la página | No incluido. Alternativa gratuita: enviar por WhatsApp o correo. Si se quiere en el futuro: Formspree de pago o un formulario de Google |
 | Pagos en línea, usuarios, agenda | No incluidos a propósito. Se cotiza y se cobra por WhatsApp/transferencia |
+
+## 5b. Pruebas automáticas
+
+```bash
+cd apoyo-docente
+npm test
+```
+Corre con el ejecutor de pruebas de Node (sin dependencias). Cubre la lógica del formulario y del WhatsApp
+(`assets/js/logica.js`) y el generador de plantillas (`assets/js/plantillas.js`).
 
 ## 6. Probar en tu computador
 

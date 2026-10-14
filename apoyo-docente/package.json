@@ -1,0 +1,9 @@
+{
+  "name": "apoyo-docente",
+  "private": true,
+  "description": "Sitio estático de apoyo docente personalizado. Sin dependencias.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "start": "python3 -m http.server 8080"
+  }
+}

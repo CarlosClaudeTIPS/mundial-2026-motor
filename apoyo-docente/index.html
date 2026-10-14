@@ -46,6 +46,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Cómo trabajamos</a>
       <a href="#portafolio">Ejemplos</a>
+      <a href="#plantillas">Plantillas</a>
       <a href="#cotizacion">Cotización</a>
       <a href="#faq">Preguntas</a>
       <a href="#formulario" class="btn btn-primary btn-sm">Cuéntame qué necesitas</a>
@@ -57,9 +58,10 @@
 </header>
 
 <main id="inicio">
+<div class="view-bar" id="viewBar" hidden><div class="container"><a href="#inicio" class="view-back">← Volver al inicio</a><span class="view-title" id="viewTitle"></span><a href="#formulario" class="btn btn-primary btn-sm view-cta">Cuéntame qué necesitas</a></div></div>
 
 <!-- ========== PORTADA ========== -->
-<section class="hero">
+<section class="hero" data-view="home">
   <div class="container hero-grid">
     <div class="hero-copy reveal">
       <span class="eyebrow pill"><span class="dot"></span>Apoyo personalizado para docentes en Colombia</span>
@@ -67,7 +69,7 @@
       <p class="lead">Planeaciones, materiales, evaluaciones y documentación educativa desarrollados según tu asignatura, tus estudiantes, tu institución y el tiempo del que dispones.</p>
       <div class="hero-actions">
         <a href="#formulario" class="btn btn-primary btn-lg">Cuéntame qué necesitas</a>
-        <a href="#servicios" class="btn btn-ghost btn-lg">Conoce los servicios</a>
+        <a href="#plantillas" class="btn btn-ghost btn-lg">Crear una plantilla ahora</a>
       </div>
       <ul class="hero-badges" aria-label="Características del servicio">
         <li>Sin paquetes genéricos</li>
@@ -128,8 +130,29 @@
   </div></div>
 </section>
 
+<!-- ========== MAPA: por dónde empezar ========== -->
+<section class="section mapa-section" data-view="home" id="mapa">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Elige por dónde empezar</span>
+      <h2>Todo en un vistazo. Toca lo que necesitas.</h2>
+      <p>Seis puertas. Cada una abre solo esa parte, para que no tengas que leerlo todo.</p>
+    </div>
+    <div class="mapa reveal">
+      <svg class="mapa-ruta" viewBox="0 0 1000 420" aria-hidden="true" preserveAspectRatio="none"><path d="M90 110 C 300 10, 450 220, 500 110 S 760 10, 910 110 M910 110 C 760 300, 560 170, 500 310 S 300 420, 90 310" fill="none" stroke="#C9D3E8" stroke-width="3" stroke-dasharray="10 10"/></svg>
+      <a class="mapa-item" href="#servicios" style="--n:1;--mc:#2F4D8C"><span class="mapa-ico" data-icon="layers"></span><b>Servicios</b><small>Planeación, material, evaluación, PIAR y documentos</small><span class="mapa-go">Ver qué puedo pedir</span></a>
+      <a class="mapa-item" href="#proceso" style="--n:2;--mc:#2BB58A"><span class="mapa-ico" data-icon="refresh"></span><b>Cómo trabajamos</b><small>Primero entendemos tu contexto; después proponemos</small><span class="mapa-go">Ver el proceso</span></a>
+      <a class="mapa-item" href="#portafolio" style="--n:3;--mc:#F4845F"><span class="mapa-ico" data-icon="search"></span><b>Ejemplos</b><small>Once muestras reales: busca por grado, área o tipo</small><span class="mapa-go">Explorar ejemplos</span></a>
+      <a class="mapa-item" href="#plantillas" style="--n:4;--mc:#6B4FBB"><span class="mapa-ico" data-icon="edit"></span><b>Plantillas</b><small>Arma tú mismo un plan, guía, taller o rúbrica en 2 minutos</small><span class="mapa-go">Crear ahora</span></a>
+      <a class="mapa-item" href="#cotizacion" style="--n:5;--mc:#B8860B"><span class="mapa-ico" data-icon="scale"></span><b>Cotización</b><small>Qué se tiene en cuenta y qué modalidades hay</small><span class="mapa-go">Ver cómo se cotiza</span></a>
+      <a class="mapa-item destacado" href="#formulario" style="--n:6;--mc:#F4845F"><span class="mapa-ico" data-icon="chat"></span><b>Cuéntame qué necesitas</b><small>Cinco pasos cortos y te respondo con una propuesta</small><span class="mapa-go">Empezar</span></a>
+    </div>
+    <p class="note reveal">¿Dudas? <a href="#faq">Preguntas frecuentes y condiciones</a>.</p>
+  </div>
+</section>
+
 <!-- ========== PERSONALIZACIÓN ========== -->
-<section class="section section-persona" id="personalizado">
+<section class="section section-persona" data-view="proceso" id="personalizado">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Lo que nos diferencia</span>
@@ -248,7 +271,7 @@
 </section>
 
 <!-- ========== SERVICIOS DETALLADOS ========== -->
-<section class="section section-soft" id="servicios">
+<section class="section section-soft" data-view="servicios" id="servicios">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">¿En qué podemos apoyarte?</span>
@@ -261,7 +284,7 @@
 </section>
 
 <!-- ========== PROCESO ========== -->
-<section class="section section-dark" id="proceso">
+<section class="section section-dark" data-view="proceso" id="proceso">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow light">La parte más importante</span>
@@ -302,21 +325,68 @@
 </section>
 
 <!-- ========== PORTAFOLIO ========== -->
-<section class="section" id="portafolio">
+<section class="section" data-view="portafolio" id="portafolio">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Ejemplos de trabajo</span>
       <h2>Explora lo que se puede elaborar</h2>
       <p>Documentos demostrativos con datos ficticios. Toca uno para ver la muestra completa. <span class="only-mobile">Desliza para ver más →</span></p>
     </div>
-    <div class="filters reveal" id="portfolioFilters" role="group" aria-label="Filtrar ejemplos"></div>
+    <form class="catalogo-filtros reveal" id="catalogoFiltros" role="search" aria-label="Buscar ejemplos" onsubmit="return false">
+      <label class="cf-buscar"><span class="sr-only">Buscar</span><input type="search" id="cfQ" placeholder="Buscar: fracciones, rúbrica, 5°…" autocomplete="off"></label>
+      <label><span class="sr-only">Área</span><select id="cfArea"><option value="">Todas las áreas</option></select></label>
+      <label><span class="sr-only">Grado</span><select id="cfGrado"><option value="">Todos los grados</option></select></label>
+      <label><span class="sr-only">Tipo</span><select id="cfTipo"><option value="">Todos los tipos</option></select></label>
+      <button type="button" class="btn btn-link" id="cfLimpiar">Limpiar</button>
+    </form>
+    <div class="filters reveal" id="portfolioFilters" role="group" aria-label="Filtrar por categoría"></div>
+    <p class="catalogo-estado" id="catalogoEstado" aria-live="polite"></p>
     <div class="portfolio-grid" id="portfolioGrid"></div>
+    <div class="catalogo-vacio" id="catalogoVacio" hidden>No hay ejemplos con esos filtros. <button type="button" class="btn btn-ghost btn-sm" data-cf-limpiar>Quitar filtros</button> o <a href="#formulario">pídeme uno a tu medida</a>.</div>
     <p class="note reveal">¿Quieres ver un ejemplo concreto para tu área? <a href="#" class="wa-link" data-wa="Me gustaría ver un ejemplo de material para mi área">Pídelo por WhatsApp</a>.</p>
   </div>
 </section>
 
+<!-- ========== PLANTILLAS EDITABLES ========== -->
+<section class="section" data-view="plantillas" id="plantillas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Hazlo tú en dos minutos</span>
+      <h2>Plantillas editables para tu clase</h2>
+      <p>Elige el tipo, escribe los datos de tu grupo y obtén un documento con la estructura lista. Lo editas aquí mismo, lo copias, lo descargas en Word o lo imprimes. Sin registro y sin enviar nada.</p>
+    </div>
+    <div class="pl-wrap reveal">
+      <div class="pl-tipos" role="radiogroup" aria-label="Tipo de plantilla" id="plTipos"></div>
+      <form class="pl-form" id="plForm" novalidate>
+        <div class="pl-campos" id="plCampos"></div>
+        <p class="form-error" id="plError" role="alert" hidden></p>
+        <div class="pl-acciones">
+          <button type="submit" class="btn btn-primary">Generar plantilla</button>
+          <span class="pl-hint">Los espacios entre [corchetes] quedan para que los completes.</span>
+        </div>
+      </form>
+      <div class="pl-resultado" id="plResultado" hidden>
+        <div class="pl-toolbar">
+          <span class="pl-estado" id="plEstado">Puedes editar el texto directamente.</span>
+          <div class="pl-botones">
+            <button type="button" class="btn btn-ghost btn-sm" id="plCopiar">Copiar</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="plWord">Descargar Word</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="plImprimir">Imprimir / PDF</button>
+            <button type="button" class="btn btn-link btn-sm" id="plNuevo">Nueva</button>
+          </div>
+        </div>
+        <div class="pl-doc" id="plDoc" contenteditable="true" spellcheck="true" aria-label="Documento editable"></div>
+        <div class="pl-ayuda">
+          <strong>¿Prefieres que lo elabore por ti, con tu formato institucional?</strong>
+          <a href="#formulario" class="btn btn-primary btn-sm" data-preselect="Planeación">Pedir este material</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ========== COTIZACIÓN ========== -->
-<section class="section section-soft" id="cotizacion">
+<section class="section section-soft" data-view="cotizacion" id="cotizacion">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Cotización personalizada</span>
@@ -348,7 +418,7 @@
 </section>
 
 <!-- ========== FORMULARIO ========== -->
-<section class="section" id="formulario">
+<section class="section" data-view="formulario" id="formulario">
   <div class="container narrow">
     <div class="section-head reveal">
       <span class="eyebrow">Diagnóstico inicial</span>
@@ -514,6 +584,7 @@
       <dl class="summary-list" id="summaryList"></dl>
       <div class="summary-actions">
         <a href="#" class="btn btn-wa btn-lg" id="summaryWa" target="_blank" rel="noopener">Continuar por WhatsApp</a>
+        <span class="wa-pendiente-aviso" id="summaryWaPendiente" hidden>El número de WhatsApp aún no está configurado. Copia el resumen y envíalo por el medio que prefieras.</span>
         <button type="button" class="btn btn-ghost" id="summaryCopy">Copiar resumen</button>
         <button type="button" class="btn btn-link" id="summaryEdit">Editar respuestas</button>
       </div>
@@ -524,7 +595,7 @@
 </section>
 
 <!-- ========== FAQ ========== -->
-<section class="section section-soft" id="faq">
+<section class="section section-soft" data-view="faq" id="faq">
   <div class="container narrow">
     <div class="section-head reveal">
       <span class="eyebrow">Preguntas frecuentes</span>
@@ -535,7 +606,7 @@
 </section>
 
 <!-- ========== CONFIANZA ========== -->
-<section class="section" id="confianza">
+<section class="section" data-view="faq" id="confianza">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Confianza y claridad</span>
@@ -577,7 +648,7 @@
 </section>
 
 <!-- ========== CTA FINAL ========== -->
-<section class="section cta-final">
+<section class="section cta-final" data-view="home servicios proceso portafolio plantillas cotizacion faq">
   <div class="container reveal">
     <h2>¿Hablamos de lo que necesitas?</h2>
     <p>Sin compromiso. Primero entendemos tu situación; después te decimos cómo podemos ayudarte.</p>
@@ -600,12 +671,12 @@
       <p data-cfg="marca.lema">Tu trabajo docente, organizado según tus necesidades.</p>
     </div>
     <div>
-      <h4>Contacto</h4>
+      <h3 class="foot-h">Contacto</h3>
       <p id="footerContact"></p>
       <p class="small" data-cfg="contacto.horario"></p>
     </div>
     <div>
-      <h4>Información</h4>
+      <h3 class="foot-h">Información</h3>
       <a href="#privacidad" data-modal="privacidad">Política de privacidad</a><br>
       <a href="#condiciones" data-modal="condiciones">Condiciones del servicio</a><br>
       <a href="#faq">Preguntas frecuentes</a>
@@ -657,6 +728,8 @@
 </template>
 
 <script src="config.js"></script>
+<script src="assets/js/logica.js"></script>
+<script src="assets/js/plantillas.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

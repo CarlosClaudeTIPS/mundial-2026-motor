@@ -58,24 +58,38 @@
   }
 
   /* ---------- WhatsApp ---------- */
-  const WA = (get("contacto.whatsapp") || "").replace(/\D/g, "");
-  const waUrl = (text) => `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
-  const waMessage = (necesidad) => (get("contacto.mensajeInicial") || "Hola, quisiera información.").replace("[necesidad]", necesidad || "mi trabajo docente");
+  const L = window.Logica;
+  const WA = L.limpiarNumero(get("contacto.whatsapp"));
+  const WA_OK = L.whatsappConfigurado(WA);
+  const PLANTILLA_WA = get("contacto.mensajeInicial");
+  const waUrl = (text) => L.waUrl(WA, text);
+  const waMessage = (necesidad) => L.waMessage(PLANTILLA_WA, necesidad);
   // data-wa="" → mensaje estándar. data-wa="frase corta" → se inserta como [necesidad].
   // data-wa="Frase con mayúscula inicial" → se añade como línea adicional al mensaje estándar.
+  // Si el número no está configurado, el enlace no engaña: avisa y ofrece copiar el mensaje.
   function bindWaLinks(root = document) {
     $$(".wa-link", root).forEach((a) => {
-      const custom = (a.dataset.wa || "").trim();
-      const isSentence = /^[A-ZÁÉÍÓÚÑ]/.test(custom);
-      const text = isSentence ? `${waMessage("")}\n\n${custom}.` : waMessage(custom);
-      a.href = waUrl(text); a.target = "_blank"; a.rel = "noopener";
+      const text = L.waTextoDesde(PLANTILLA_WA, a.dataset.wa);
+      if (WA_OK) { a.href = waUrl(text); a.target = "_blank"; a.rel = "noopener"; }
+      else { a.href = "#contacto"; a.removeAttribute("target"); a.classList.add("wa-pendiente"); a.dataset.waTexto = text; a.title = "Número de WhatsApp pendiente de configurar"; }
     });
   }
   bindWaLinks();
+  document.addEventListener("click", async (e) => {
+    const a = e.target.closest(".wa-pendiente"); if (!a) return;
+    e.preventDefault();
+    let aviso = $("#waAviso");
+    if (!aviso) { aviso = document.createElement("div"); aviso.id = "waAviso"; aviso.className = "wa-aviso"; aviso.setAttribute("role", "status"); document.body.appendChild(aviso); }
+    let copiado = false; try { await navigator.clipboard.writeText(a.dataset.waTexto || ""); copiado = true; } catch (_) { }
+    aviso.innerHTML = `<strong>El número de WhatsApp aún no está configurado.</strong> ${copiado ? "Copiamos el mensaje al portapapeles para que lo envíes por el medio que prefieras." : "Usa el formulario «Cuéntame qué necesitas» y copia el resumen."} <button type="button" class="btn btn-link btn-sm" data-cerrar-aviso>Cerrar</button>`;
+    aviso.hidden = false; clearTimeout(aviso._t); aviso._t = setTimeout(() => { aviso.hidden = true; }, 7000);
+  });
+  document.addEventListener("click", (e) => { if (e.target.closest("[data-cerrar-aviso]")) $("#waAviso").hidden = true; });
   const contactBits = [];
-  if (WA) contactBits.push(`<a href="${waUrl(waMessage(""))}" target="_blank" rel="noopener">WhatsApp: +${esc(WA)}</a>`);
+  if (WA_OK) contactBits.push(`<a href="${waUrl(waMessage(""))}" target="_blank" rel="noopener">WhatsApp: +${esc(WA)}</a>`);
+  else contactBits.push(`<span class="pendiente">WhatsApp: pendiente de configurar</span>`);
   if (get("contacto.correo")) contactBits.push(`<a href="mailto:${esc(get("contacto.correo"))}">${esc(get("contacto.correo"))}</a>`);
-  $("#footerContact").innerHTML = contactBits.join("<br>") || "Configura tu número de WhatsApp en config.js";
+  $("#footerContact").innerHTML = contactBits.join("<br>");
 
   /* ---------- Menú móvil ---------- */
   const nav = $("#mainNav"), toggle = $("#navToggle");
@@ -87,44 +101,67 @@
   const areaIcon = (id) => ((CFG.areas || []).find((a) => a.id === id) || {}).icono || "doc";
   $("#serviceTabs").innerHTML = servicios.map((s, i) => `<button class="tab" role="tab" id="tab-${esc(s.id)}" aria-selected="${i === 0}" aria-controls="panel-${esc(s.id)}" data-id="${esc(s.id)}">${icon(areaIcon(s.id))}<span>${esc(s.titulo)}</span></button>`).join("");
   $("#servicePanels").innerHTML = servicios.map((s, i) => `
-    <article class="service-panel${i === 0 ? " active" : ""}" id="panel-${esc(s.id)}" role="tabpanel" aria-labelledby="tab-${esc(s.id)}">
+    <div class="service-panel${i === 0 ? " active" : ""}" id="panel-${esc(s.id)}" role="tabpanel" aria-labelledby="tab-${esc(s.id)}" tabindex="0">
       <header><h3>${esc(s.titulo)}</h3><p>${esc(s.descripcion)}</p></header>
       <div class="service-cols">
-        <div><h4>Qué puedes solicitar</h4><ul class="check-list">${s.puedes.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
-        <div><h4>Para qué sirve</h4><p>${esc(s.sirve)}</p></div>
-        <div><h4>Qué necesitamos de ti</h4><ul class="info-list">${s.necesitamos.map((n) => `<li>${esc(n)}</li>`).join("")}</ul></div>
+        <div><h3 class="sub">Qué puedes solicitar</h3><ul class="check-list">${s.puedes.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></div>
+        <div><h3 class="sub">Para qué sirve</h3><p>${esc(s.sirve)}</p></div>
+        <div><h3 class="sub">Qué necesitamos de ti</h3><ul class="info-list">${s.necesitamos.map((n) => `<li>${esc(n)}</li>`).join("")}</ul></div>
       </div>
       ${s.nota ? `<div class="service-note${s.alerta ? " alert" : ""}">${icon("info")}<span>${esc(s.nota)}</span></div>` : ""}
       <footer>
         <a class="btn btn-primary" href="#formulario" data-preselect="${esc(s.titulo)}">Solicitar este apoyo</a>
         <a class="btn btn-ghost wa-link" href="#" data-wa="${esc(s.titulo.toLowerCase())}">Consultar por WhatsApp</a>
       </footer>
-    </article>`).join("");
+    </div>`).join("");
   function showService(id) {
-    $$(".tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.id === id)));
+    $$(".tab").forEach((t) => { const on = t.dataset.id === id; t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1; });
     $$(".service-panel").forEach((p) => p.classList.toggle("active", p.id === `panel-${id}`));
   }
   $("#serviceTabs").addEventListener("click", (e) => { const t = e.target.closest(".tab"); if (t) showService(t.dataset.id); });
+  $("#serviceTabs").addEventListener("keydown", (e) => {
+    const tabs = $$(".tab"), i = tabs.indexOf(document.activeElement); if (i < 0) return;
+    const j = e.key === "ArrowRight" ? (i + 1) % tabs.length : e.key === "ArrowLeft" ? (i - 1 + tabs.length) % tabs.length : e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : -1;
+    if (j >= 0) { e.preventDefault(); tabs[j].focus(); showService(tabs[j].dataset.id); }
+  });
+  showService((servicios[0] || {}).id);
   bindWaLinks($("#servicePanels"));
 
   /* ---------- Ejemplos de flexibilidad y modalidades ---------- */
-  $("#flexGrid").innerHTML = (CFG.ejemplosFlexibilidad || []).map((e) => `<div class="flex-card reveal"><h4>${esc(e.titulo)}</h4><p>${esc(e.texto)}</p></div>`).join("");
-  $("#modalidades").innerHTML = (CFG.modalidades || []).map((m) => `<div class="mod reveal"><div class="mod-icon">${icon(m.icono)}</div><h4>${esc(m.titulo)}</h4><p>${esc(m.texto)}</p><span class="ej">${esc(m.ejemplo)}</span></div>`).join("");
+  $("#flexGrid").innerHTML = (CFG.ejemplosFlexibilidad || []).map((e) => `<div class="flex-card reveal"><h3>${esc(e.titulo)}</h3><p>${esc(e.texto)}</p></div>`).join("");
+  $("#modalidades").innerHTML = (CFG.modalidades || []).map((m) => `<div class="mod reveal"><div class="mod-icon">${icon(m.icono)}</div><h3>${esc(m.titulo)}</h3><p>${esc(m.texto)}</p><span class="ej">${esc(m.ejemplo)}</span></div>`).join("");
 
   /* ---------- Portafolio ---------- */
   const port = CFG.portafolio || [];
   const cats = ["Todos", ...new Set(port.map((p) => p.categoria))];
-  $("#portfolioFilters").innerHTML = cats.map((c, i) => `<button class="filter" aria-pressed="${i === 0}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
-  $("#portfolioGrid").innerHTML = port.map((p, i) => `
-    <button class="pcard reveal" data-index="${i}" data-cat="${esc(p.categoria)}" type="button" aria-haspopup="dialog">
+  $("#portfolioFilters").innerHTML = cats.map((c, i) => `<button class="filter" type="button" aria-pressed="${i === 0}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+  const fill = (sel, vals) => { $(sel).insertAdjacentHTML("beforeend", vals.map((v) => `<option>${esc(v)}</option>`).join("")); };
+  fill("#cfArea", L.opciones(port, "area")); fill("#cfTipo", L.opciones(port, "tipoRecurso"));
+  const ordenGrado = ["Preescolar", "1°", "2°", "3°", "4°", "5°", "6°", "7°", "8°", "9°", "10°", "11°"];
+  fill("#cfGrado", L.opciones(port, "grados").sort((a, b) => ordenGrado.indexOf(a) - ordenGrado.indexOf(b)));
+  let catActiva = "Todos";
+  function renderCatalogo() {
+    const f = { q: $("#cfQ").value, area: $("#cfArea").value, grado: $("#cfGrado").value, tipoRecurso: $("#cfTipo").value, categoria: catActiva };
+    const lista = L.filtrarRecursos(port, f);
+    $("#portfolioGrid").innerHTML = lista.map((p) => `
+    <button class="pcard reveal in" data-index="${port.indexOf(p)}" type="button" aria-haspopup="dialog">
       <div class="preview">${preview(p)}</div>
-      <div class="body"><span class="cat">${esc(p.categoria)}</span><h3>${esc(p.nombre)}</h3><p>${esc(p.necesidad)}</p>${p.contexto ? `<span class="ctx">${esc(p.contexto)}</span>` : ""}</div>
+      <div class="body"><span class="cat">${esc(p.categoria)}</span><h3>${esc(p.nombre)}</h3><p>${esc(p.necesidad)}</p>
+        <span class="ctx">${esc(p.contexto || "")}</span>${p.duracion ? `<span class="ctx ctx-2">${esc(p.duracion)}</span>` : ""}</div>
     </button>`).join("");
+    const activos = [f.q && `«${f.q}»`, f.area, f.grado, f.tipoRecurso, catActiva !== "Todos" && catActiva].filter(Boolean);
+    $("#catalogoEstado").textContent = `${lista.length} de ${port.length} ejemplos${activos.length ? " · " + activos.join(" · ") : ""}`;
+    $("#catalogoVacio").hidden = lista.length > 0;
+  }
   $("#portfolioFilters").addEventListener("click", (e) => {
     const b = e.target.closest(".filter"); if (!b) return;
-    $$(".filter").forEach((f) => f.setAttribute("aria-pressed", String(f === b)));
-    $$(".pcard").forEach((c) => c.classList.toggle("hidden", b.dataset.cat !== "Todos" && c.dataset.cat !== b.dataset.cat));
+    catActiva = b.dataset.cat; $$(".filter").forEach((f) => f.setAttribute("aria-pressed", String(f === b))); renderCatalogo();
   });
+  ["#cfQ", "#cfArea", "#cfGrado", "#cfTipo"].forEach((sel) => $(sel).addEventListener("input", renderCatalogo));
+  const limpiarFiltros = () => { ["#cfQ", "#cfArea", "#cfGrado", "#cfTipo"].forEach((sel) => { $(sel).value = ""; }); catActiva = "Todos"; $$(".filter").forEach((f) => f.setAttribute("aria-pressed", String(f.dataset.cat === "Todos"))); renderCatalogo(); };
+  $("#cfLimpiar").addEventListener("click", limpiarFiltros);
+  document.addEventListener("click", (e) => { if (e.target.closest("[data-cf-limpiar]")) limpiarFiltros(); });
+  renderCatalogo();
 
   /* ---------- Modal ---------- */
   const modal = $("#modal"), modalBody = $("#modalBody");
@@ -148,7 +185,12 @@
       <dl class="modal-meta">
         <dt>Necesidad que resuelve</dt><dd>${esc(p.necesidad)}</dd>
         ${p.contexto ? `<dt>Grado o contexto</dt><dd>${esc(p.contexto)}</dd>` : ""}
+        ${p.tipoRecurso ? `<dt>Tipo de recurso</dt><dd>${esc(p.tipoRecurso)}${p.area ? " · " + esc(p.area) : ""}</dd>` : ""}
+        ${p.duracion ? `<dt>Duración estimada</dt><dd>${esc(p.duracion)}</dd>` : ""}
+        ${p.modalidad ? `<dt>Modalidad de uso</dt><dd>${esc(p.modalidad)}</dd>` : ""}
+        ${p.adaptacion ? `<dt>Adaptación</dt><dd>${esc(p.adaptacion)}</dd>` : ""}
         <dt>Cómo se personaliza</dt><dd>${esc(p.personalizacion)}</dd>
+        <dt>Fuente</dt><dd>Documento propio, demostrativo, con datos ficticios.</dd>
       </dl>
       <p class="small" style="color:var(--c-ink-3)">Documento demostrativo con datos ficticios. El resultado final depende de tu contexto.</p>
       <div class="modal-actions">
@@ -203,16 +245,7 @@
   form.addEventListener("input", saveDraft);
   form.addEventListener("change", saveDraft);
 
-  function collect() {
-    const fd = new FormData(form), many = (n) => fd.getAll(n).filter(Boolean);
-    return {
-      "Nombre / contacto": fd.get("nombre"), "Correo": fd.get("correo") || "", "Medio de contacto preferido": fd.get("medio"),
-      "Asignatura o área": fd.get("area") || "", "Grados": many("grados").join(", "), "Tipo de institución": fd.get("institucion") || "",
-      "Tipo de apoyo": many("apoyo").join("; "), "Descripción de la necesidad": fd.get("descripcion"),
-      "Materiales que ya tiene": fd.get("tienes") || "", "Formatos disponibles": many("formatos").join(", "),
-      "Duración del apoyo": fd.get("duracion"), "Fecha límite": fd.get("fecha") || "", "Presupuesto estimado": fd.get("presupuesto") || ""
-    };
-  }
+  const collect = () => L.resumenDesdeFormulario(new FormData(form));
   function saveDraft() { try { const o = {}; new FormData(form).forEach((v, k) => { (o[k] ||= []).push(v); }); localStorage.setItem(DRAFT_KEY, JSON.stringify(o)); } catch (_) { } }
   function loadDraft() {
     try {
@@ -227,16 +260,15 @@
   }
   loadDraft();
 
-  const summaryText = (d) => {
-    const lines = Object.entries(d).filter(([, v]) => v).map(([k, v]) => `• ${k}: ${v}`);
-    return `Hola, quisiera conocer más sobre el servicio de apoyo docente. Te comparto el resumen de mi solicitud:\n\n${lines.join("\n")}\n\nMe gustaría saber cómo podemos organizar una propuesta personalizada.`;
-  };
+  const summaryText = L.textoResumen;
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault(); if (!validateStep()) return;
     const data = collect(), text = summaryText(data);
     $("#summaryList").innerHTML = Object.entries(data).filter(([, v]) => v).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join("");
-    $("#summaryWa").href = waUrl(text);
+    const waBtn = $("#summaryWa");
+    if (WA_OK) { waBtn.href = waUrl(text); waBtn.hidden = false; $("#summaryWaPendiente").hidden = true; }
+    else { waBtn.hidden = true; $("#summaryWaPendiente").hidden = false; }
     const status = $("#summaryStatus"); status.hidden = true; status.className = "summary-status";
     form.hidden = true; const sum = $("#summary"); sum.hidden = false; sum.scrollIntoView({ behavior: "smooth", block: "start" });
     // Envío opcional por correo (solo si hay endpoint configurado). Nunca afirmamos envío sin confirmación real.
@@ -327,14 +359,86 @@
     new IntersectionObserver((en) => { document.body.classList.toggle("past-hero", !en[0].isIntersecting); }).observe($(".hero"));
   }
 
+  /* ---------- Vistas: la portada muestra el mapa; cada sección se abre sola ---------- */
+  const VISTAS = { home: "Inicio", servicios: "Servicios", proceso: "Cómo trabajamos", portafolio: "Ejemplos", plantillas: "Plantillas", cotizacion: "Cotización", formulario: "Cuéntame qué necesitas", faq: "Preguntas y condiciones" };
+  const ALIAS = { inicio: "home", mapa: "home", personalizado: "proceso", confianza: "faq", simulador: "proceso", summary: "formulario" };
+  function vistaDesdeHash() { const h = (location.hash || "").replace("#", ""); const v = ALIAS[h] || h; return VISTAS[v] ? v : "home"; }
+  function setView(v) {
+    document.body.dataset.view = v;
+    const bar = $("#viewBar"); bar.hidden = v === "home"; $("#viewTitle").textContent = VISTAS[v] || "";
+    $$(".main-nav a").forEach((a) => a.classList.toggle("on", a.getAttribute("href") === "#" + v));
+    document.title = `${v === "home" ? "" : VISTAS[v] + " · "}${get("marca.nombre") || "Apoyo docente"} | Apoyo docente personalizado`;
+  }
+  function irAVista() {
+    const v = vistaDesdeHash(), h = (location.hash || "").replace("#", "");
+    const cambio = document.body.dataset.view !== v; setView(v);
+    const objetivo = h && h !== v && !ALIAS[h] ? document.getElementById(h) : null;
+    if (objetivo && objetivo.closest("[data-view]")) objetivo.scrollIntoView({ behavior: "smooth", block: "start" });
+    else if (cambio) window.scrollTo({ top: 0, behavior: v === "home" ? "auto" : "smooth" });
+    setTimeout(observeAll, 60);
+  }
+  window.addEventListener("hashchange", irAVista);
+
+  /* ---------- Plantillas editables (un solo generador configurable) ---------- */
+  (function () {
+    const P = window.Plantillas; if (!P || !$("#plantillas")) return;
+    const BORRADOR = "apoyo-docente-plantilla";
+    let tipo = "plan";
+    const tipos = $("#plTipos"), campos = $("#plCampos"), form = $("#plForm"), res = $("#plResultado"), doc = $("#plDoc"), err = $("#plError"), estado = $("#plEstado");
+    tipos.innerHTML = Object.entries(P.TIPOS).map(([id, t]) => `<label class="pl-tipo"><input type="radio" name="pl_tipo" value="${id}"${id === tipo ? " checked" : ""}><span><b>${esc(t.nombre)}</b><small>${esc(t.descripcion)}</small></span></label>`).join("");
+    function renderCampos(valores = {}) {
+      campos.innerHTML = P.TIPOS[tipo].campos.map((c) => {
+        const v = esc(valores[c.id] ?? c.valor ?? "");
+        const id = "pl_" + c.id, req = c.requerido ? ' <span class="req">*</span>' : "";
+        if (c.tipo === "textarea") return `<div class="field"><label for="${id}">${esc(c.etiqueta)}${req}</label><textarea id="${id}" name="${c.id}" rows="2" placeholder="${esc(c.placeholder || "")}">${v}</textarea></div>`;
+        if (c.tipo === "select") return `<div class="field"><label for="${id}">${esc(c.etiqueta)}</label><select id="${id}" name="${c.id}">${c.opciones.map((o) => `<option${o === (valores[c.id] ?? "") ? " selected" : ""}>${esc(o)}</option>`).join("")}</select></div>`;
+        if (c.tipo === "number") return `<div class="field field-corto"><label for="${id}">${esc(c.etiqueta)}</label><input type="number" id="${id}" name="${c.id}" value="${v}" min="${c.min}" max="${c.max}"></div>`;
+        return `<div class="field"><label for="${id}">${esc(c.etiqueta)}${req}</label><input type="text" id="${id}" name="${c.id}" value="${v}" placeholder="${esc(c.placeholder || "")}"${c.requerido ? " required" : ""}></div>`;
+      }).join("");
+    }
+    const datos = () => Object.fromEntries(new FormData(form).entries());
+    function guardar(html) { try { localStorage.setItem(BORRADOR, JSON.stringify({ tipo, datos: datos(), html: html ?? (res.hidden ? "" : doc.innerHTML) })); } catch (_) { } }
+    $("#plTipos").addEventListener("change", (e) => { if (e.target.name === "pl_tipo") { const prev = datos(); tipo = e.target.value; renderCampos(prev); } });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const d = datos(), faltan = P.validar(tipo, d);
+      $$("[required]", form).forEach((el) => el.classList.toggle("invalid", !el.value.trim()));
+      if (faltan.length) { err.textContent = faltan.join(" "); err.hidden = false; return; }
+      err.hidden = true;
+      const r = P.generar(tipo, d);
+      doc.innerHTML = r.html; doc.dataset.titulo = r.titulo; res.hidden = false; estado.textContent = "Listo. Puedes editar el texto directamente antes de copiar o descargar.";
+      guardar(r.html); res.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    doc.addEventListener("input", () => { estado.textContent = "Cambios guardados en este navegador."; guardar(); });
+    const aviso = (t) => { estado.textContent = t; };
+    $("#plCopiar").addEventListener("click", async () => {
+      const texto = P.aTexto(doc.innerHTML);
+      try { await navigator.clipboard.writeText(texto); aviso("Copiado al portapapeles."); } catch (_) { window.prompt("Copia el texto:", texto); }
+    });
+    $("#plWord").addEventListener("click", () => {
+      const titulo = doc.dataset.titulo || "plantilla", html = P.documentoHtml(titulo, doc.innerHTML);
+      const blob = new Blob(["\ufeff", html], { type: "application/msword" });
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = titulo.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/°/g, "").replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-").slice(0, 80) + ".doc";
+      document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      aviso("Descarga iniciada. Word, LibreOffice y Google Docs abren este archivo.");
+    });
+    $("#plImprimir").addEventListener("click", () => { document.body.classList.add("imprimiendo-plantilla"); window.print(); setTimeout(() => document.body.classList.remove("imprimiendo-plantilla"), 1000); });
+    $("#plNuevo").addEventListener("click", () => { res.hidden = true; doc.innerHTML = ""; try { localStorage.removeItem(BORRADOR); } catch (_) { } form.scrollIntoView({ behavior: "smooth" }); });
+    // Recuperar borrador
+    let b = null; try { b = JSON.parse(localStorage.getItem(BORRADOR) || "null"); } catch (_) { }
+    if (b && P.TIPOS[b.tipo]) { tipo = b.tipo; const r = tipos.querySelector(`input[value="${tipo}"]`); if (r) r.checked = true; renderCampos(b.datos || {}); if (b.html) { doc.innerHTML = b.html; doc.dataset.titulo = (b.html.match(/<h1>([^<]*)<\/h1>/) || [])[1] || ""; res.hidden = false; estado.textContent = "Recuperamos tu último borrador de este navegador."; } }
+    else renderCampos();
+  })();
+
   /* ---------- Animaciones al hacer scroll ---------- */
   const io = "IntersectionObserver" in window ? new IntersectionObserver((entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: .08, rootMargin: "0px 0px -40px 0px" }) : null;
   const observeAll = () => $$(".reveal:not(.in)").forEach((el) => io ? io.observe(el) : el.classList.add("in"));
   observeAll();
+  irAVista();
   // Los paneles ocultos deben revelarse al cambiar de pestaña
   $("#serviceTabs").addEventListener("click", observeAll);
   $("#portfolioFilters").addEventListener("click", observeAll);
 
   /* ---------- Aviso si falta configurar WhatsApp ---------- */
-  if (!WA || /^5730{9}$/.test(WA)) console.warn("[Apoyo Docente] Configura tu número real de WhatsApp en config.js → contacto.whatsapp");
+  if (!WA_OK) console.warn("[Apoyo Docente] Configura tu número real de WhatsApp en config.js → contacto.whatsapp (la página lo muestra como pendiente).");
 })();
