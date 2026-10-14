@@ -183,21 +183,32 @@
   };
 
   /* ---------- Carrito ---------- */
+  const MAX_CANT = 99;
   T.carrito = {
     items: T.leerLS(LS.carrito, []),
+    /* Sanea lo que venga del almacenamiento local: productos inexistentes/ocultos y cantidades fuera de rango */
+    sanear() {
+      if (!T.datos) return;
+      const antes = JSON.stringify(this.items);
+      this.items = (Array.isArray(this.items) ? this.items : []).filter(i => { const p = i && T.producto(i.id); return p && p.visible !== false && p.disponible; })
+        .map(i => ({ clave: i.clave || this.clave(i.id, i.variantes), id: i.id, variantes: (i.variantes && typeof i.variantes === 'object') ? i.variantes : {}, cantidad: Math.min(MAX_CANT, Math.max(1, Math.round(Number(i.cantidad)) || 1)) }));
+      if (JSON.stringify(this.items) !== antes) this.guardar();
+    },
     guardar() { T.guardarLS(LS.carrito, this.items); T.renderContador(); },
     clave(id, variantes) { return id + '|' + JSON.stringify(variantes || {}); },
     agregar(p, variantes, cant) {
       const k = this.clave(p.id, variantes);
       const ex = this.items.find(i => i.clave === k);
-      if (ex) ex.cantidad += (cant || 1);
-      else this.items.push({ clave: k, id: p.id, variantes: variantes || {}, cantidad: cant || 1 });
+      if (!p.disponible) { T.toast('Este producto está agotado por ahora.'); return; }
+      cant = Math.min(MAX_CANT, Math.max(1, Math.round(Number(cant)) || 1));
+      if (ex) ex.cantidad = Math.min(MAX_CANT, ex.cantidad + cant);
+      else this.items.push({ clave: k, id: p.id, variantes: variantes || {}, cantidad: cant });
       this.guardar(); T.registrar('add_to_cart', { producto: p.id });
       T.toast('Agregado al carrito');
     },
     cambiar(k, delta) {
       const it = this.items.find(i => i.clave === k); if (!it) return;
-      it.cantidad += delta; if (it.cantidad <= 0) this.items = this.items.filter(i => i.clave !== k);
+      it.cantidad = Math.min(MAX_CANT, it.cantidad + delta); if (it.cantidad <= 0) this.items = this.items.filter(i => i.clave !== k);
       this.guardar(); T.renderCarrito();
     },
     quitar(k) { this.items = this.items.filter(i => i.clave !== k); this.guardar(); T.renderCarrito(); },
@@ -246,7 +257,8 @@
     if (!c) return;
     c.classList.toggle('abierto', abrir); capa.classList.toggle('abierta', abrir);
     c.setAttribute('aria-hidden', abrir ? 'false' : 'true');
-    if (abrir) T.renderCarrito();
+    if (abrir) { c.removeAttribute('inert'); T.renderCarrito(); setTimeout(() => $('#cerrar-carrito').focus(), 50); }
+    else { c.setAttribute('inert', ''); const b = $('#btn-carrito'); if (b && c.contains(document.activeElement)) b.focus(); }
   };
 
   /* ---------- Iconos ---------- */
@@ -309,10 +321,15 @@
         <a href="${T.ruta('catalogo.html?f=nuevos')}" ${act('nuevos')}>Novedades</a>
         <a href="${T.ruta('preguntas.html')}" ${act('preguntas')}>Preguntas</a>`;
     const avisos = [];
-    if (!T.hayWA()) avisos.push(`<div class="aviso-config"><div class="contenedor">⚠️ Falta configurar el número de WhatsApp. Los botones de pedido no funcionarán hasta hacerlo en <a href="${T.ruta('admin.html')}">el panel de administración</a>.</div></div>`);
-    if (T.modoBorrador) avisos.push(`<div class="aviso-demo">👁️ Estás viendo el <strong>borrador local</strong> del panel admin. <a href="#" id="salir-preview">Salir de la vista previa</a></div>`);
-    else if ((cfg.sitio || {}).avisoDemo) avisos.push(`<div class="aviso-demo">Catálogo de demostración: los productos marcados (DEMO) son ejemplos. Reemplázalos desde el panel admin.</div>`);
-    el.innerHTML = `${avisos.join('')}
+    if (!T.hayWA()) avisos.push(`<div class="aviso-config" role="status"><span>Falta configurar el número de WhatsApp: los botones de pedido no funcionarán. Hazlo en <a href="${T.ruta('admin.html')}">el panel de administración</a>.</span></div>`);
+    if (T.modoBorrador) avisos.push(`<div class="aviso-demo" role="status"><span>Estás viendo el <strong>borrador local</strong> del panel admin. <a href="#" id="salir-preview">Salir de la vista previa</a></span></div>`);
+    else if ((cfg.sitio || {}).avisoDemo) avisos.push(`<div class="aviso-demo" role="status"><span>Catálogo de demostración: los productos marcados (DEMO) son ejemplos y no están a la venta.</span><button type="button" data-cerrar-aviso aria-label="Cerrar aviso">✕</button></div>`);
+    if (avisos.length && !T.leerLS('tienda_avisos_cerrados', false)) {
+      const caja = document.createElement('div'); caja.className = 'avisos-fijos'; caja.innerHTML = avisos.join('');
+      document.body.appendChild(caja);
+      caja.addEventListener('click', (e) => { if (e.target.closest('[data-cerrar-aviso]')) { e.target.closest('div').remove(); } });
+    }
+    el.innerHTML = `
       <div class="contenedor">
         <div class="encabezado-barra">
           <button class="icono-btn solo-movil" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">${T.ico.menu}</button>
@@ -372,7 +389,7 @@
     if (!$('#carrito')) {
       const wrap = document.createElement('div');
       wrap.innerHTML = `<div class="capa" id="capa"></div>
-        <aside class="carrito" id="carrito" aria-hidden="true" aria-label="Carrito">
+        <aside class="carrito" id="carrito" aria-hidden="true" inert aria-label="Carrito">
           <div class="carrito-cabecera"><h2>Tu pedido</h2><button class="icono-btn" id="cerrar-carrito" aria-label="Cerrar">${T.ico.cerrar}</button></div>
           <div class="carrito-lista" id="carrito-lista"></div>
           <div class="carrito-pie">
@@ -530,6 +547,8 @@
   T.iniciar = async (activa, fn) => {
     try {
       await T.cargar();
+      T.carrito.sanear();
+      if (!$('link[rel="canonical"]')) { const l = document.createElement('link'); l.rel = 'canonical'; l.href = location.origin + location.pathname + (location.pathname.endsWith('producto.html') && T.param('p') ? '?p=' + encodeURIComponent(T.param('p')) : ''); document.head.appendChild(l); }
       T.renderEncabezado(activa);
       T.renderGlobales();
       T.renderBarraInferior(activa);
@@ -539,7 +558,7 @@
     } catch (err) {
       console.error(err);
       const m = $('main') || document.body;
-      m.innerHTML = '<div class="contenedor"><div class="vacio" style="margin:2rem 0">No se pudo cargar el catálogo. Si abriste el archivo directamente (file://), usa un servidor local o publica la carpeta. Detalle: ' + T.esc(err.message) + '</div></div>';
+      m.innerHTML = '<div class="contenedor"><div class="vacio" style="margin:2rem 0"><h1 style="font-size:1.3rem">No pudimos cargar el catálogo</h1><p>Revisa tu conexión e inténtalo de nuevo. Si el problema continúa, escríbenos por WhatsApp.</p><button class="btn btn-primario" onclick="location.reload()">Reintentar</button><p class="nota-legal" style="margin-top:1rem">Detalle técnico: ' + T.esc(err.message) + (location.protocol === 'file:' ? ' (la tienda debe abrirse desde un servidor, no con doble clic)' : '') + '</p></div></div>';
     }
   };
 })();

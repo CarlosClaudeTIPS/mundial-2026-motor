@@ -116,10 +116,10 @@
         ${campo('palabrasClave', 'Palabras clave (separadas por coma)', 'text', (p.palabrasClave || []).join(', '), { ayuda: 'Ayudan al buscador: sinónimos, usos, marcas compatibles.' })}
         ${campo('relacionados', 'Productos relacionados (IDs separados por coma)', 'text', (p.relacionados || []).join(', '), { ayuda: 'Si se deja vacío se muestran otros de la misma categoría.' })}
       </fieldset>`;
-    $('#editor').classList.add('abierto'); $('#capa-editor').classList.add('abierta'); $('#editor').setAttribute('aria-hidden', 'false');
+    $('#editor').classList.add('abierto'); $('#capa-editor').classList.add('abierta'); $('#editor').setAttribute('aria-hidden', 'false'); $('#editor').removeAttribute('inert');
     $('#editor-cuerpo, .editor-cuerpo').scrollTop = 0;
   }
-  const cerrarEditor = () => { $('#editor').classList.remove('abierto'); $('#capa-editor').classList.remove('abierta'); $('#editor').setAttribute('aria-hidden', 'true'); };
+  const cerrarEditor = () => { $('#editor').classList.remove('abierto'); $('#capa-editor').classList.remove('abierta'); $('#editor').setAttribute('aria-hidden', 'true'); $('#editor').setAttribute('inert', ''); };
   $('#editor-cerrar').addEventListener('click', cerrarEditor); $('#capa-editor').addEventListener('click', cerrarEditor);
   $('#form-producto').addEventListener('click', (e) => {
     const b = e.target.closest('button'); if (!b) return;

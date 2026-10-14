@@ -1,7 +1,7 @@
 (function () {
   const T = window.Tienda;
   T.iniciar('catalogo', ({ config }) => {
-    const id = window.PRODUCTO_ID || T.param('p');
+    const id = document.body.dataset.producto || T.param('p');
     const p = T.producto(id);
     const main = T.$('#producto');
     if (!p || p.visible === false) {

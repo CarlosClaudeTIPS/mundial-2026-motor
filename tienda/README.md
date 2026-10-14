@@ -117,6 +117,12 @@ No incluido (y por qué):
 4. Catálogo de WhatsApp Business sincronizado a mano con el CSV exportado.
 5. Si el volumen crece: CMS gratuito (Decap CMS) sobre los mismos JSON para editar con usuario y contraseña y subir fotos desde el navegador.
 
+## 7b. Seguridad y despliegue
+
+- `_headers`: cabeceras de seguridad (CSP compatible con Google Fonts, GA4 y Meta Pixel) para Netlify y Cloudflare Pages.
+- `netlify.toml`: publica la carpeta, **excluye el panel admin del sitio público** y genera las páginas `p/` con la URL real.
+- `AUDITORIA.md`: auditoría completa, métricas antes/después, pruebas y pendientes legales.
+
 ## 8. Prácticas de conversión aplicadas (basadas en investigación de usabilidad)
 
 - Barra de navegación inferior en móvil (Inicio, Catálogo, Buscar, Carrito, WhatsApp), como las apps de Mercado Libre y Amazon.

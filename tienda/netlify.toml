@@ -1,0 +1,5 @@
+# Despliegue en Netlify: publica esta carpeta y excluye el panel de administración del sitio público.
+# (El panel no puede modificar el sitio publicado, pero no hace falta exponerlo.)
+[build]
+  publish = "."
+  command = "rm -f admin.html css/admin.css js/admin.js js/generador.js && node generar-paginas.mjs ${URL}/"

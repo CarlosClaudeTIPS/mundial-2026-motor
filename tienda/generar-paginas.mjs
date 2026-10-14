@@ -27,7 +27,7 @@ let n = 0;
 for (const p of catalogo.productos) {
   if (p.visible === false) continue;
   const desc = (p.descripcionCorta || p.descripcion || '').slice(0, 155);
-  const imagen = abs((p.imagenes && p.imagenes[0]) || 'img/og-default.png');
+  const imagen = abs((p.imagenes && p.imagenes[0]) || 'img/og-default.jpg');
   const titulo = `${p.nombre} · ${config.negocio?.nombre || ''}`;
   const html = `<!doctype html>
 <html lang="es">
@@ -50,13 +50,12 @@ for (const p of catalogo.productos) {
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=optional" rel="stylesheet">
 <link rel="stylesheet" href="css/estilos.css">
-<script>window.PRODUCTO_ID = ${JSON.stringify(p.id)};</script>
 </head>
-<body>
+<body data-producto="${esc(p.id)}">
 <header class="encabezado" id="encabezado"></header>
-<main class="contenedor" id="producto"><div class="esqueleto" style="margin:1.5rem 0"></div></main>
+<main class="contenedor" id="producto"><div class="ficha-esqueleto"><div class="esqueleto"></div><div class="esqueleto"></div></div></main>
 <footer class="pie" id="pie"></footer>
 <script src="js/app.js"></script>
 <script src="js/producto.js"></script>

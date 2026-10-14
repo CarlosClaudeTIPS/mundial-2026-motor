@@ -81,7 +81,7 @@ ul, ol { padding-left: 1.25rem; margin: 0 0 .75rem; }
 
 /* ---------- Encabezado ---------- */
 .encabezado {
-  position: sticky; top: 0; z-index: 40;
+  position: sticky; top: 0; z-index: 40; min-height: 64px;
   background: rgba(255,255,255,.92); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--borde);
 }
@@ -125,7 +125,7 @@ ul, ol { padding-left: 1.25rem; margin: 0 0 .75rem; }
 /* ---------- Hero ---------- */
 .hero { padding: 1.5rem 0 1rem; }
 .hero-caja {
-  position: relative; overflow: hidden; border-radius: 22px;
+  position: relative; overflow: hidden; border-radius: 22px; min-height: 400px;
   background: linear-gradient(135deg, var(--primario) 0%, var(--primario-oscuro) 70%, #0b1220 100%);
   color: #fff; padding: clamp(1.6rem, 4vw, 3rem);
   display: grid; gap: 1.5rem; grid-template-columns: 1fr; align-items: center;
@@ -144,7 +144,7 @@ ul, ol { padding-left: 1.25rem; margin: 0 0 .75rem; }
 .hero-imagen { display: none; justify-self: center; }
 .hero-imagen img { width: 100%; max-width: 380px; border-radius: 18px; box-shadow: var(--sombra-alta); }
 @media (min-width: 800px) {
-  .hero-caja { grid-template-columns: 1.3fr 1fr; }
+  .hero-caja { grid-template-columns: 1.3fr 1fr; min-height: 476px; }
   .hero-imagen { display: block; }
 }
 
@@ -443,3 +443,25 @@ details.faq p { margin: .5rem 0 0; color: var(--texto-suave); }
 .barra-fija.visible { transform: none; }
 .horario { font-size: .8rem; color: var(--texto-suave); display: flex; align-items: center; gap: .35rem; margin-top: .4rem; }
 .horario svg { width: 15px; height: 15px; }
+
+/* ---------- Estabilidad de diseño (CLS) ---------- */
+main { min-height: calc(100vh - 64px); }
+.grid-categorias:empty { min-height: 132px; }
+.grid-productos:empty { min-height: 320px; }
+#f-categorias:empty { min-height: 200px; }
+.esqueleto { min-height: 320px; }
+.ficha-esqueleto { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-top: 3.2rem; }
+@media (min-width: 900px) { .ficha-esqueleto { grid-template-columns: 1.1fr 1fr; } }
+.ficha-esqueleto .esqueleto { aspect-ratio: 1 / 1; min-height: 0; }
+.ficha-esqueleto .esqueleto + .esqueleto { aspect-ratio: auto; min-height: 420px; }
+[inert] { pointer-events: none; }
+/* Avisos para el dueño: superpuestos, no desplazan contenido */
+.avisos-fijos { position: fixed; left: 12px; right: 12px; top: 72px; z-index: 39; display: grid; gap: .4rem; pointer-events: none; }
+.avisos-fijos > div { pointer-events: auto; border-radius: 10px; padding: .5rem .8rem; font-size: .82rem; box-shadow: var(--sombra); display: flex; gap: .6rem; align-items: center; justify-content: space-between; }
+.avisos-fijos .aviso-config { background: #fef3c7; color: #78350f; border: 1px solid #fcd34d; }
+.avisos-fijos .aviso-demo { background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; text-align: left; padding: .5rem .8rem; }
+.avisos-fijos button { border: 0; background: transparent; font-weight: 800; color: inherit; cursor: pointer; padding: .2rem .4rem; }
+@media (min-width: 900px) { .avisos-fijos { left: auto; max-width: 420px; } }
+.chips:empty { min-height: 34px; }
+#conteo:empty { min-height: 1.4em; display: inline-block; min-width: 90px; }
+.barra-resultados { min-height: 40px; }
