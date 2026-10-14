@@ -57,7 +57,7 @@ export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
     <div className="card space-y-3">
       <div className="flex items-center justify-between">
         <p className="font-semibold flex items-center gap-2"><FileText size={18} /> Importar preguntas desde PDF o texto</p>
-        <button className="btn-ghost !p-1" onClick={onCerrar}><X size={18} /></button>
+        <button className="btn-ghost !p-1" aria-label="Cerrar" onClick={onCerrar}><X size={18} /></button>
       </div>
       <p className="text-xs text-gray-400">Sube cuadernillos liberados del ICFES, guías o documentos con preguntas numeradas (1., 2., …) y opciones A-D. Todo queda <b>pendiente</b> hasta que lo revises. Respeta los términos de uso de cada fuente: el ICFES permite uso académico con cita.</p>
 

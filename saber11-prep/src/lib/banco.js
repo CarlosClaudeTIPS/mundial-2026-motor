@@ -5,40 +5,72 @@ import { db, ahora, encolar } from './db'
 // IndexedDB la primera vez (y cada vez que cambia su contenido). Así el banco
 // está disponible sin conexión. Preguntas creadas o editadas en la app quedan
 // marcadas con `editada_local` y no se sobreescriben con la semilla.
-const archivos = import.meta.glob('../../content/banco/*.json', { eager: true, import: 'default' })
+// Carga PEREZOSA: cada archivo es un trozo que se descarga solo cuando hace falta
+// (primera vez o cuando cambia el banco). Así el paquete inicial no lleva las preguntas.
+const archivos = import.meta.glob('../../content/banco/*.json', { import: 'default' })
+// Huella del contenido del banco calculada al compilar (vite.config.js). En pruebas no existe.
+const VERSION_BANCO = typeof __BANCO_VERSION__ !== 'undefined' ? __BANCO_VERSION__ : 'dev'
 
-export function preguntasSemilla() {
-  return Object.values(archivos).flat()
+export async function preguntasSemilla(onProgreso = null) {
+  const claves = Object.keys(archivos).sort()
+  const lista = []
+  for (const [i, k] of claves.entries()) {
+    const datos = await archivos[k]()
+    lista.push(...(Array.isArray(datos) ? datos : datos?.preguntas ?? []))
+    onProgreso?.({ hechos: i + 1, total: claves.length, archivo: k.split('/').pop() })
+  }
+  return lista
 }
 
-function huella(texto) {
-  let h = 0
-  for (let i = 0; i < texto.length; i++) h = (Math.imul(31, h) + texto.charCodeAt(i)) | 0
-  return String(h)
-}
+// Estado de la siembra, observable desde la interfaz (barra "preparando el banco…").
+let estadoSiembra = { fase: 'pendiente', hechos: 0, total: 0, cargadas: 0, error: null }
+const oyentes = new Set()
+const setSiembra = (c) => { estadoSiembra = { ...estadoSiembra, ...c }; oyentes.forEach(f => f(estadoSiembra)) }
+export const observarSiembra = (f) => { oyentes.add(f); f(estadoSiembra); return () => oyentes.delete(f) }
+export const estadoDeSiembra = () => estadoSiembra
 
+let promesaSiembra = null
+// Promesa que se resuelve cuando el banco local está listo (ya estaba al día, o terminó de sembrarse).
+export const esperarBanco = () => promesaSiembra ?? sembrarBanco()
+
+// Siembra el banco en IndexedDB solo si la versión compilada cambió. Descarga los
+// trozos uno a uno e informa el progreso; nunca bloquea el arranque de la app.
 export async function sembrarBanco() {
-  const lista = preguntasSemilla()
-  const version = huella(JSON.stringify(lista))
-  const previa = await db.config.get('banco_version')
-  if (previa?.valor === version) return { cargadas: 0, total: await db.preguntas.count() }
-
-  let cargadas = 0
-  await db.transaction('rw', db.preguntas, db.config, async () => {
-    for (const p of lista) {
-      const existente = await db.preguntas.get(p.id)
-      if (existente?.editada_local) continue
-      await db.preguntas.put({ ...p, semilla: true, fecha_carga: ahora() })
-      cargadas++
+  if (promesaSiembra) return promesaSiembra
+  promesaSiembra = (async () => {
+    const previa = await db.config.get('banco_version')
+    const total = await db.preguntas.count()
+    if (previa?.valor === VERSION_BANCO && total > 0) { setSiembra({ fase: 'lista', cargadas: 0 }); return { cargadas: 0, total } }
+    setSiembra({ fase: 'descargando', hechos: 0, total: Object.keys(archivos).length, error: null })
+    try {
+      const lista = await preguntasSemilla(p => setSiembra(p))
+      setSiembra({ fase: 'guardando' })
+      let cargadas = 0
+      await db.transaction('rw', db.preguntas, db.config, async () => {
+        for (const p of lista) {
+          const existente = await db.preguntas.get(p.id)
+          if (existente?.editada_local) continue
+          await db.preguntas.put({ ...p, semilla: true, fecha_carga: ahora() })
+          cargadas++
+        }
+        await db.config.put({ clave: 'banco_version', valor: VERSION_BANCO })
+      })
+      setSiembra({ fase: 'lista', cargadas })
+      return { cargadas, total: await db.preguntas.count() }
+    } catch (e) {
+      // Sin red y sin banco previo: la app sigue funcionando con lo que haya en IndexedDB.
+      setSiembra({ fase: 'error', error: e.message })
+      promesaSiembra = null
+      return { cargadas: 0, total: await db.preguntas.count(), error: e.message }
     }
-    await db.config.put({ clave: 'banco_version', valor: version })
-  })
-  return { cargadas, total: await db.preguntas.count() }
+  })()
+  return promesaSiembra
 }
 
 // Filtros: { prueba, competencia, habilidad, componente, dificultad, tipo_error, excluirIds, estado, usuario }
 // `usuario`: si es un estudiante cuyo grupo tiene plan mensual, solo devuelve las preguntas ya liberadas.
 export async function listarPreguntas(f = {}) {
+  await esperarBanco()
   let col = db.preguntas.toCollection()
   if (f.prueba) col = db.preguntas.where('prueba').equals(f.prueba)
   let lista = await col.toArray()

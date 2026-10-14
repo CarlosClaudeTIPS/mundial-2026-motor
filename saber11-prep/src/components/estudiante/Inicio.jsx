@@ -217,11 +217,11 @@ function TarjetaDiagnostico({ diagnostico, usuario }) {
   }
   if (diagnostico?.estado === 'terminada') {
     return (
-      <button onClick={() => ir('sesion', { id: diagnostico.id })} className="card w-full text-left flex items-center gap-3">
+      <div className="card w-full flex items-center gap-3">
         <span className="w-11 h-11 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center shrink-0"><Stethoscope size={22} /></span>
-        <div className="flex-1"><p className="font-semibold text-brand-navy">Prueba diagnóstica realizada</p><p className="text-xs text-gray-400">Resultado: {diagnostico.resultado?.precision ?? '—'}% de aciertos. Toca para ver el detalle; tu plan está en Refuerzo.</p></div>
-        <button onClick={e => { e.stopPropagation(); crearDiagnostico({ estudiante: usuario }).then(s => ir('sesion', { id: s.id })) }} className="text-xs font-semibold text-brand-blue shrink-0">Repetir</button>
-      </button>
+        <button onClick={() => ir('sesion', { id: diagnostico.id })} className="flex-1 text-left"><p className="font-semibold text-brand-navy">Prueba diagnóstica realizada</p><p className="text-xs text-gray-400">Resultado: {diagnostico.resultado?.precision ?? '—'}% de aciertos. Toca para ver el detalle; tu plan está en Refuerzo.</p></button>
+        <button onClick={() => crearDiagnostico({ estudiante: usuario }).then(s => ir('sesion', { id: s.id }))} className="text-xs font-semibold text-brand-blue shrink-0">Repetir</button>
+      </div>
     )
   }
   return (

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { BookOpenCheck, ExternalLink, MapPin, Search, ChevronRight, ArrowLeft, Printer } from 'lucide-react'
 import { Titulo, Badge, Md, Vacio } from './ui'
 
@@ -6,10 +6,20 @@ import { Titulo, Badge, Md, Vacio } from './ui'
 // Qué es el examen, cómo se califica, para qué sirve y qué piden las universidades
 // de cada ciudad. Contenido en content/guia/*.json (ver content/guia/ESQUEMA.md).
 
-const archivos = import.meta.glob('../../content/guia/*.json', { eager: true, import: 'default' })
-const general = Object.entries(archivos).find(([k]) => k.endsWith('/general.json'))?.[1] ?? null
-const SECCIONES = Array.isArray(general) ? general : (general?.secciones ?? [])
-const UNIVERSIDADES = Object.entries(archivos).filter(([k]) => k.includes('/universidades-')).flatMap(([, v]) => (Array.isArray(v) ? v : v?.universidades ?? []))
+// Los JSON de la guía (~360 KB) se descargan solo al abrir esta pantalla, no en el paquete inicial.
+const archivos = import.meta.glob('../../content/guia/*.json', { import: 'default' })
+let DATOS = null // { SECCIONES, UNIVERSIDADES } una vez cargados
+async function cargarDatos() {
+  if (DATOS) return DATOS
+  const entradas = await Promise.all(Object.entries(archivos).map(async ([k, f]) => [k, await f()]))
+  const general = entradas.find(([k]) => k.endsWith('/general.json'))?.[1] ?? null
+  DATOS = {
+    SECCIONES: Array.isArray(general) ? general : (general?.secciones ?? []),
+    UNIVERSIDADES: entradas.filter(([k]) => k.includes('/universidades-')).flatMap(([, v]) => (Array.isArray(v) ? v : v?.universidades ?? [])),
+  }
+  return DATOS
+}
+let SECCIONES = [], UNIVERSIDADES = []
 
 const USO = {
   requisito: { nombre: 'Solo requisito', tono: 'gris', texto: 'Exige haber presentado el Saber 11, sin puntaje mínimo publicado.' },
@@ -21,6 +31,16 @@ const USO = {
 const sinTildes = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
 export default function Guia({ params }) {
+  const [cargado, setCargado] = useState(Boolean(DATOS))
+  const [errorCarga, setErrorCarga] = useState(null)
+  useEffect(() => { cargarDatos().then(d => { SECCIONES = d.SECCIONES; UNIVERSIDADES = d.UNIVERSIDADES; setCargado(true) }).catch(e => setErrorCarga(e.message)) }, [])
+  if (DATOS) { SECCIONES = DATOS.SECCIONES; UNIVERSIDADES = DATOS.UNIVERSIDADES }
+  return !cargado
+    ? (errorCarga ? <div className="card" role="alert"><p className="text-sm">No se pudo cargar la guía ({errorCarga}).</p><button className="btn-secondary mt-2" onClick={() => { setErrorCarga(null); cargarDatos().then(() => setCargado(true)).catch(e => setErrorCarga(e.message)) }}>Reintentar</button></div> : <div className="space-y-3" role="status"><Titulo sub="Cargando la guía…">Guía del ICFES</Titulo><div className="card h-24 animate-pulse" /><div className="card h-40 animate-pulse" /></div>)
+    : <GuiaCargada params={params} />
+}
+
+function GuiaCargada({ params }) {
   const [pestana, setPestana] = useState(params.seccion ?? (SECCIONES[0]?.id ?? 'universidades'))
   const [ciudad, setCiudad] = useState('')
   const [uso, setUso] = useState('')
@@ -110,7 +130,7 @@ function DetalleUniversidad({ u, volver }) {
   return (
     <div className="space-y-4">
       <div className="flex items-start gap-2">
-        <button onClick={volver} className="no-print mt-1 text-gray-400 hover:text-brand-navy"><ArrowLeft size={20} /></button>
+        <button onClick={volver} aria-label="Volver" className="no-print mt-1 text-gray-400 hover:text-brand-navy"><ArrowLeft size={20} /></button>
         <div>
           <h1 className="text-xl font-semibold leading-tight">{u.nombre}{u.sigla ? <span className="text-gray-400 font-normal"> · {u.sigla}</span> : null}</h1>
           <p className="text-sm text-gray-400">{u.ciudad}{u.departamento ? `, ${u.departamento}` : ''} · {u.tipo}{u.sedes?.length ? ` · sedes: ${u.sedes.join(', ')}` : ''}</p>

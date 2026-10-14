@@ -70,7 +70,7 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
               <p className="text-sm font-medium truncate text-brand-navy">{usuario.nombre}</p>
               <p className="text-xs text-gray-500 capitalize">{usuario.rol}{usuario.curso ? ` · ${usuario.curso}` : ''}</p>
             </div>
-            <button onClick={salir} className="text-gray-500 hover:text-brand-red" title="Salir"><LogOut size={17} /></button>
+            <button onClick={salir} className="text-gray-500 hover:text-brand-red" title="Salir" aria-label="Salir"><LogOut size={17} /></button>
           </div>
         </div>
       </aside>
@@ -93,7 +93,7 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
               <button onClick={() => onVistaEstudiante?.(!vistaEstudiante)} className="text-brand-blue" title={vistaEstudiante ? 'Volver a mi vista' : 'Ver como estudiante'}>{vistaEstudiante ? <EyeOff size={19} /> : <Eye size={19} />}</button>
             )}
             <EstadoSync compacto />
-            <button onClick={salir} className="text-gray-500" title="Salir"><LogOut size={17} /></button>
+            <button onClick={salir} className="text-gray-500" title="Salir" aria-label="Salir"><LogOut size={17} /></button>
           </div>
         </header>
 
@@ -137,9 +137,11 @@ function AvisoSolicitudes({ ruta, esAdmin }) {
 function EstadoSync({ compacto = false }) {
   const s = useSync()
   if (!NUBE_DISPONIBLE) {
+    // Sin nube también se avisa cuando no hay conexión: la app sigue funcionando con IndexedDB.
+    const off = !s.enLinea
     return compacto
-      ? <span className="text-[10px] text-gray-500">local</span>
-      : <p className="text-xs text-gray-500 px-2">Modo local · sin nube</p>
+      ? <span className={`text-[10px] ${off ? 'text-brand-amber' : 'text-gray-500'}`} role="status">{off ? 'Sin conexión' : 'local'}</span>
+      : <p className={`text-xs px-2 ${off ? 'text-brand-amber' : 'text-gray-500'}`} role="status">{off ? 'Sin conexión · todo se guarda en este dispositivo' : 'Modo local · sin nube'}</p>
   }
   const Icono = s.enLinea ? Wifi : WifiOff
   const texto = !s.enLinea ? `Sin conexión · ${s.pendientes} por sincronizar` : s.pendientes ? `${s.pendientes} por sincronizar` : 'Sincronizado'

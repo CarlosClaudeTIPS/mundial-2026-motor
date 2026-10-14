@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import { useSesion, iniciarSesionGuardada, LLEGO_POR_ENLACE } from './lib/sesion'
 import { ir } from './lib/nav'
 import CrearContrasena from './components/CrearContrasena'
 import Pendiente from './components/Pendiente'
-import { sembrarBanco } from './lib/banco'
+import { sembrarBanco, observarSiembra, estadoDeSiembra } from './lib/banco'
 import { sembrarRecursos } from './lib/recursos'
 import { asegurarCiclos } from './lib/ciclo'
 import { asegurarDatosIniciales } from './lib/demo'
@@ -20,21 +20,21 @@ import Simulacros from './components/estudiante/Simulacros'
 import MisErrores from './components/estudiante/MisErrores'
 import MiProgreso from './components/estudiante/MiProgreso'
 import MiRuta from './components/estudiante/MiRuta'
-import Biblioteca from './components/Biblioteca'
+const Biblioteca = lazy(() => import('./components/Biblioteca'))
 import Materias from './components/estudiante/Materias'
 import Materia from './components/estudiante/Materia'
 import Refuerzo from './components/estudiante/Refuerzo'
-import Historial from './components/estudiante/Historial'
+const Historial = lazy(() => import('./components/estudiante/Historial'))
 import Carreras from './components/estudiante/Carreras'
-import MiFuturo from './components/estudiante/MiFuturo'
-import Informe from './components/Informe'
-import Guia from './components/Guia'
-import PanelDocente from './components/docente/PanelDocente'
-import Grupo from './components/docente/Grupo'
-import EstudianteDetalle from './components/docente/EstudianteDetalle'
-import Banco from './components/docente/Banco'
-import Imprimir from './components/docente/Imprimir'
-import Admin from './components/admin/Admin'
+const MiFuturo = lazy(() => import('./components/estudiante/MiFuturo'))
+const Informe = lazy(() => import('./components/Informe'))
+const Guia = lazy(() => import('./components/Guia'))
+const PanelDocente = lazy(() => import('./components/docente/PanelDocente'))
+const Grupo = lazy(() => import('./components/docente/Grupo'))
+const EstudianteDetalle = lazy(() => import('./components/docente/EstudianteDetalle'))
+const Banco = lazy(() => import('./components/docente/Banco'))
+const Imprimir = lazy(() => import('./components/docente/Imprimir'))
+const Admin = lazy(() => import('./components/admin/Admin'))
 
 // El arranque se ejecuta una sola vez aunque React (en desarrollo, StrictMode)
 // monte el componente dos veces.
@@ -42,7 +42,7 @@ let arranque = null
 function arrancar() {
   arranque ??= (async () => {
     aplicarExtension(await getConfig('taxonomia_extension'))
-    await sembrarBanco()
+    sembrarBanco() // en segundo plano: descarga los trozos del banco y los vuelca a IndexedDB sin bloquear la pantalla
     await sembrarRecursos()
     await asegurarCiclos()
     await asegurarDatosIniciales()
@@ -80,7 +80,7 @@ export default function App() {
   // Primera vez: el estudiante elige sus carreras (o decide hacerlo después) antes de ver el inicio.
   if (u.rol === 'estudiante' && !u.carreras_definidas) return <Carreras usuario={u} inicial />
   const vista = elegirVista(uVista.rol, ruta, params, uVista)
-  return <Layout usuario={u} rolVista={uVista.rol} ruta={ruta} vistaEstudiante={previsualizando} onVistaEstudiante={setVistaEstudiante}>{vista}</Layout>
+  return <Layout usuario={u} rolVista={uVista.rol} ruta={ruta} vistaEstudiante={previsualizando} onVistaEstudiante={setVistaEstudiante}><BarraSiembra /><Suspense fallback={<p className="text-sm text-gray-400" role="status">Cargando…</p>}>{vista}</Suspense></Layout>
 }
 
 function elegirVista(rol, ruta, params, usuario) {
@@ -119,6 +119,21 @@ function elegirVista(rol, ruta, params, usuario) {
     }
   }
   return <Pantalla>Rol desconocido</Pantalla>
+}
+
+// Estado de la siembra del banco (descarga de los trozos y volcado a IndexedDB), visible pero sin bloquear.
+function BarraSiembra() {
+  const [s, setS] = useState(estadoDeSiembra())
+  useEffect(() => observarSiembra(setS), [])
+  if (s.fase === 'lista' || s.fase === 'pendiente') return null
+  if (s.fase === 'error') return <div className="no-print rounded-xl border border-amber-200 bg-amber-50 text-amber-800 text-xs px-3 py-2 mb-3 flex items-center justify-between gap-2" role="alert"><span>No se pudo descargar el banco de preguntas ({s.error}). Si tienes conexión, reintenta.</span><button className="font-semibold underline" onClick={() => sembrarBanco()}>Reintentar</button></div>
+  const pct = s.total ? Math.round((s.hechos / s.total) * 100) : 0
+  return (
+    <div className="no-print rounded-xl border border-sky-200 bg-sky-50 text-xs text-brand-navy px-3 py-2 mb-3" role="status" aria-live="polite">
+      <div className="flex justify-between"><span>{s.fase === 'guardando' ? 'Guardando el banco de preguntas en tu dispositivo…' : `Preparando el banco de preguntas (${s.hechos} de ${s.total})…`}</span><span>{s.fase === 'guardando' ? '' : `${pct} %`}</span></div>
+      <div className="h-1.5 rounded-full bg-sky-100 mt-1 overflow-hidden"><div className="h-full bg-brand-blue transition-all" style={{ width: `${s.fase === 'guardando' ? 100 : pct}%` }} /></div>
+    </div>
+  )
 }
 
 function Pantalla({ children }) {

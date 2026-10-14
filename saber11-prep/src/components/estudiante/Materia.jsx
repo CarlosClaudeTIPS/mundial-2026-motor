@@ -34,6 +34,8 @@ export default function Materia({ usuario, params }) {
   if (!d) return <p className="text-sm text-gray-400">Cargando…</p>
 
   const estadoDe = (p) => { const u = d.ultimo[p.id]; return !u ? 'nueva' : u.correcta ? 'acertada' : 'fallada' }
+  // Temas con al menos 3 preguntas, ordenados por cantidad
+  const temas = Object.entries(d.preguntas.reduce((acc, p) => { if (p.tema) acc[p.tema] = (acc[p.tema] ?? 0) + 1; return acc }, {})).filter(([, n]) => n >= 3).sort((a, b) => b[1] - a[1]).slice(0, 24)
   const lista = d.preguntas
     .filter(p => !filtro.competencia || p.competencia === filtro.competencia)
     .filter(p => !filtro.dificultad || p.dificultad === Number(filtro.dificultad))
@@ -69,6 +71,16 @@ export default function Materia({ usuario, params }) {
         <button className="btn-secondary !py-3" onClick={mini}><Timer size={18} /> Mini-prueba 10</button>
       </div>
       {error && <p className="text-sm text-brand-red">{error}</p>}
+
+      {temas.length > 1 && (
+        <div className="card">
+          <p className="text-sm font-medium">Practicar por tema</p>
+          <p className="text-[11px] text-gray-500 mb-2">5 preguntas de un tema concreto, con explicación. Entre paréntesis, cuántas hay en el banco.</p>
+          <div className="flex flex-wrap gap-1.5">
+            {temas.map(([t, n]) => <button key={t} onClick={() => ir('practica', { prueba: m.id, tema: t, n: 5 })} className="badge border border-dark-600 text-gray-300 hover:border-brand-blue hover:text-brand-blue">{t} <span className="text-gray-500">({n})</span></button>)}
+          </div>
+        </div>
+      )}
 
       <div className="card">
         <p className="font-semibold mb-2">Competencias</p>

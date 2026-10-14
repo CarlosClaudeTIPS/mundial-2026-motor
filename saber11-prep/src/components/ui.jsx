@@ -7,7 +7,7 @@ export function Titulo({ children, volver = false, accion = null, sub = null }) 
   return (
     <div className="flex items-start justify-between gap-3 mb-4">
       <div className="flex items-start gap-2 min-w-0">
-        {volver && <button onClick={atras} className="no-print mt-0.5 text-gray-400 hover:text-white"><ArrowLeft size={20} /></button>}
+        {volver && <button onClick={atras} aria-label="Volver" className="no-print mt-0.5 text-gray-400 hover:text-white"><ArrowLeft size={20} /></button>}
         <div className="min-w-0">
           <h1 className="text-xl font-semibold leading-tight">{children}</h1>
           {sub && <p className="text-sm text-gray-400 mt-0.5">{sub}</p>}

@@ -25,6 +25,10 @@ Para la nube real, copia `.env.example` a `.env.local` con `VITE_SUPABASE_URL` y
 - **Banco:** 995 preguntas aprobadas en `content/banco/` (500 originales + 420 nuevas + 75 oficiales del ICFES explicadas). Convención: `<prueba>-N.json` para lotes propios, `<prueba>-oficial-N.json` para preguntas liberadas del ICFES.
 - **Importados pendientes** (`content/importados/`, no se cargan en la app): ~310 preguntas oficiales del ICFES (Matemáticas 2026 y 2021, Inglés 2024 y 2021, cuadernillos 2021 de Sociales, Lectura y Ciencias, guías 2017) que faltan por clasificar y explicar.
 
+## Rendimiento (14-oct-2026)
+
+Auditoría y resultados en `docs/18-auditoria-icfes.md`. El banco ya NO va en el paquete inicial: cada archivo de `content/banco/` es un trozo que se descarga bajo demanda y se vuelca a IndexedDB en segundo plano (`src/lib/banco.js`, `vite.config.js` calcula la huella `__BANCO_VERSION__` y el conteo `__BANCO_CONTEO__`). JS inicial: 612 KB (181 KB gzip); LCP en 4G lento 2,1 s (antes 11,4 s). Guión de medición: `scratchpad/perf.mjs` (Playwright + CDP) — reproducible con `npx vite preview` y un script similar.
+
 ## Comandos de calidad del banco
 
 ```bash

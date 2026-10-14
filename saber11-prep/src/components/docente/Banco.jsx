@@ -73,7 +73,7 @@ export default function Banco({ usuario }) {
 
   return (
     <div className="space-y-4">
-      <Titulo sub={`${lista.length} preguntas`} accion={<div className="flex gap-1"><button className="btn-ghost !px-2" title="Exportar" onClick={exportar}><Download size={16} /></button><label className="btn-ghost !px-2 cursor-pointer" title="Importar JSON"><Upload size={16} /><input type="file" accept=".json" className="hidden" onChange={e => e.target.files[0] && importar(e.target.files[0])} /></label><button className="btn-secondary" onClick={() => setImportando(true)}><FileText size={16} /> Importar</button><button className="btn-secondary" onClick={nueva}><Plus size={16} /> Nueva</button></div>}>Banco de preguntas</Titulo>
+      <Titulo sub={`${lista.length} preguntas`} accion={<div className="flex gap-1"><button className="btn-ghost !px-2" title="Exportar" aria-label="Exportar banco" onClick={exportar}><Download size={16} /></button><label className="btn-ghost !px-2 cursor-pointer" title="Importar JSON"><Upload size={16} /><input type="file" accept=".json" className="hidden" onChange={e => e.target.files[0] && importar(e.target.files[0])} /></label><button className="btn-secondary" onClick={() => setImportando(true)}><FileText size={16} /> Importar</button><button className="btn-secondary" onClick={nueva}><Plus size={16} /> Nueva</button></div>}>Banco de preguntas</Titulo>
 
       <div className="grid grid-cols-2 gap-2">
         <select className="input" value={f.prueba} onChange={e => setF({ ...f, prueba: e.target.value, competencia: '' })}><option value="">Todas las pruebas</option>{tax.pruebas.map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}</select>

@@ -3,7 +3,6 @@ import { BookOpenCheck, Timer, LineChart, Calculator, BookOpen, Globe2, FlaskCon
 import { entrarLocal, entrarNube, pedirRecuperacion, registrarEstudiante, baseUsuario } from '../lib/sesion'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { USUARIOS_DEMO } from '../lib/demo'
-import { preguntasSemilla } from '../lib/banco'
 
 // ─── Portada pública + acceso ────────────────────────────────────────────────
 
@@ -22,7 +21,8 @@ export default function Login() {
   const [tipo, setTipo] = useState('estudiante')
   const acceso = useRef(null)
   const conteo = useMemo(() => {
-    const c = {}; for (const p of preguntasSemilla()) c[p.prueba] = (c[p.prueba] ?? 0) + 1; return c
+    // Conteo calculado al compilar (vite.config.js): no hace falta descargar el banco para la portada.
+    return typeof __BANCO_CONTEO__ !== 'undefined' ? __BANCO_CONTEO__ : {}
   }, [])
   const irAcceso = (t) => { setTipo(t); acceso.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }) }
 

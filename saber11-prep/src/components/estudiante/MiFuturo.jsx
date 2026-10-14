@@ -331,7 +331,7 @@ function FichaOcupacion({ o, f, toggle, volver }) {
   const carreras = carrerasDeOcupacion(o)
   return (
     <div className="space-y-3">
-      <div className="flex items-start gap-2"><button onClick={volver} className="no-print mt-1 text-gray-400"><ArrowLeft size={20} /></button><div className="flex-1"><h2 className="text-lg font-semibold leading-tight">{o.nombre}</h2><p className="text-xs text-gray-400">{o.areas.map(a => AREAS[a].nombre).join(' · ')}</p></div><button onClick={() => toggle(`ocupacion:${o.id}`)} className={`btn-secondary !py-1.5 text-xs ${guardada ? 'text-brand-blue' : ''}`}>{guardada ? <BookmarkCheck size={14} /> : <Bookmark size={14} />} {guardada ? 'Guardada' : 'Guardar'}</button></div>
+      <div className="flex items-start gap-2"><button onClick={volver} aria-label="Volver" className="no-print mt-1 text-gray-400"><ArrowLeft size={20} /></button><div className="flex-1"><h2 className="text-lg font-semibold leading-tight">{o.nombre}</h2><p className="text-xs text-gray-400">{o.areas.map(a => AREAS[a].nombre).join(' · ')}</p></div><button onClick={() => toggle(`ocupacion:${o.id}`)} className={`btn-secondary !py-1.5 text-xs ${guardada ? 'text-brand-blue' : ''}`}>{guardada ? <BookmarkCheck size={14} /> : <Bookmark size={14} />} {guardada ? 'Guardada' : 'Guardar'}</button></div>
       {[['Qué hace', o.que_hace], ['Cómo puede ser un día de trabajo', o.jornada], ['Qué problemas resuelve', o.problemas]].map(([t, x]) => <div key={t} className="card !p-3"><p className="text-xs uppercase tracking-wide text-gray-400 mb-1">{t}</p><p className="text-sm">{x}</p></div>)}
       <div className="card !p-3"><p className="text-xs uppercase tracking-wide text-gray-400 mb-1">Actividades frecuentes</p><div className="flex flex-wrap gap-1.5">{o.actividades.map(a => <Badge key={a}>{a}</Badge>)}</div></div>
       <div className="card !p-3"><p className="text-xs uppercase tracking-wide text-gray-400 mb-1">Conocimientos y habilidades que usa</p><div className="flex flex-wrap gap-1.5">{o.habilidades.map(a => <Badge key={a} tono="azul">{a}</Badge>)}</div></div>
@@ -482,7 +482,7 @@ function Metas({ f, actualizar }) {
             {m.estado === 'en_curso' && <button className="btn-secondary !py-1 text-xs" onClick={() => cambiarEstado(m, 'lograda')}>Lograda</button>}
             {m.estado === 'en_curso' && <button className="btn-secondary !py-1 text-xs" onClick={() => cambiarEstado(m, 'pausada')}>Pausar</button>}
             {m.estado !== 'replanteada' && <button className="btn-secondary !py-1 text-xs" onClick={() => { const nota = prompt(PREGUNTAS_CAMBIO.join('\n\n') + '\n\nEscribe lo que pensaste (opcional):') ?? ''; cambiarEstado(m, 'replanteada', nota) }}>Replantear</button>}
-            <button className="btn-ghost !py-1 text-xs text-brand-red" onClick={() => borrar(m.id)}><Trash2 size={12} /></button>
+            <button className="btn-ghost !py-1 text-xs text-brand-red" aria-label="Borrar meta" onClick={() => borrar(m.id)}><Trash2 size={12} /></button>
           </div>
           {m.estado === 'replanteada' && <p className="text-xs text-gray-400 mt-2">Cambiar de rumbo no es fracasar: es usar información nueva. {m.alternativa ? `Tu alternativa era: ${m.alternativa}.` : 'Si quieres, crea una meta nueva con lo que aprendiste.'}</p>}
           {(m.historial ?? []).length > 0 && <p className="text-[11px] text-gray-500 mt-1">{m.historial.length} cambio(s) de estado registrados.</p>}
@@ -553,7 +553,7 @@ function FichaActividad({ act, previas, onRegistrar, volver }) {
   const [registro, setRegistro] = useState('')
   return (
     <div className="space-y-3">
-      <div className="flex items-start gap-2"><button onClick={volver} className="no-print mt-1 text-gray-400"><ArrowLeft size={20} /></button><div><h2 className="text-lg font-semibold leading-tight">{act.titulo}</h2><p className="text-xs text-gray-400">~{act.minutos} min · {act.descubre}</p></div></div>
+      <div className="flex items-start gap-2"><button onClick={volver} aria-label="Volver" className="no-print mt-1 text-gray-400"><ArrowLeft size={20} /></button><div><h2 className="text-lg font-semibold leading-tight">{act.titulo}</h2><p className="text-xs text-gray-400">~{act.minutos} min · {act.descubre}</p></div></div>
       <div className="card"><p className="font-medium mb-1">Pasos</p><ol className="list-decimal pl-5 text-sm space-y-1">{act.pasos.map(p => <li key={p}>{p}</li>)}</ol><p className="text-xs text-gray-500 mt-2">Cómo registrarlo: {act.registro}</p></div>
       <div className="card">
         <p className="font-medium">Cuando la hayas hecho, cuéntate qué pasó</p>
