@@ -86,7 +86,7 @@ export default function Informe({ usuario, params }) {
         </select>
       </div>
 
-      {(inf.respuestas === 0 || inf.n_activos === 0) ? <Vacio>Todavía no hay respuestas registradas para esta base.</Vacio> : d.tipo === 'estudiante' ? <CuerpoEstudiante inf={inf} /> : <CuerpoGrupo inf={inf} grupoId={grupoId} />}
+      {(inf.respuestas === 0 || inf.n_activos === 0) ? <Vacio>Todavía no hay respuestas registradas para esta base.</Vacio> : d.tipo === 'estudiante' ? <CuerpoEstudiante inf={inf} aprendizaje={d.aprendizaje} /> : <CuerpoGrupo inf={inf} grupoId={grupoId} />}
 
       <p className="text-[11px] text-gray-500">Puntajes estimados: cada prueba es el porcentaje de aciertos en la plataforma (0-100) y el global usa la ponderación oficial 3-3-3-3-1 (0-500). El ICFES calcula sus puntajes con un modelo estadístico sobre toda la población, así que estas cifras son una aproximación para orientar el estudio, no un pronóstico oficial. Percentil nacional: {inf.referencia.fuente}, aplicación {inf.referencia.periodo}. Niveles según la Guía de interpretación de resultados del ICFES.</p>
     </div>
@@ -103,7 +103,7 @@ function Puntaje({ etiqueta, valor, sufijo = '', sub = null, color }) {
   )
 }
 
-function CuerpoEstudiante({ inf }) {
+function CuerpoEstudiante({ inf, aprendizaje = null }) {
   return (
     <>
       <div className="card">
@@ -147,7 +147,7 @@ function CuerpoEstudiante({ inf }) {
         </div>
       </div>
 
-      {d.aprendizaje && <AprendizajeReal ap={d.aprendizaje} compacto />}
+      {aprendizaje && <AprendizajeReal ap={aprendizaje} compacto />}
 
       <div className="card">
         <p className="font-medium mb-2">Fortalezas</p>
