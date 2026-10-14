@@ -182,7 +182,7 @@ function ResumenSaber11({ abrir }) {
         <p className="font-semibold text-brand-navy">¿Qué piden del Saber 11 las universidades?</p>
         <p className="text-sm text-gray-300">Presentar el Saber 11 es requisito legal para entrar a cualquier programa de educación superior en Colombia (Ley 1324 de 2009 y Decreto 869 de 2010). Lo que cambia entre instituciones es <b>si el puntaje decide la admisión</b> y con qué mínimo:</p>
         <div className="grid sm:grid-cols-2 gap-1.5 text-xs">
-          {Object.entries(USO).map(([k, v]) => <div key={k} className="rounded-lg bg-dark-900 p-2 flex items-start gap-2"><Badge tono={v.tono}>{v.nombre}</Badge><span className="text-gray-300">{v.texto} <span className="text-gray-500">({conteo[k] ?? 0})</span></span></div>)}
+          {Object.entries(USO).map(([k, v]) => <div key={k} className="rounded-lg bg-dark-900 p-2 flex items-start gap-2"><span className="shrink-0 whitespace-nowrap"><Badge tono={v.tono}>{v.nombre}</Badge></span><span className="text-gray-300">{v.texto} <span className="text-gray-500">({conteo[k] ?? 0})</span></span></div>)}
         </div>
         <p className="text-[11px] text-gray-500">Para fijar tu meta: las públicas que admiten por puntaje definen cortes por programa (Medicina e Ingenierías suelen ser los más altos); las que tienen "puntaje mínimo" lo publican; las de examen propio no usan tu puntaje para admitir. "No verificado" significa que el sitio oficial no se pudo consultar desde el servidor: confirma en admisiones.</p>
       </div>
@@ -199,7 +199,7 @@ function ResumenSaber11({ abrir }) {
               <tr key={u.id} className="border-t border-dark-700 align-top">
                 <td className="py-1.5 pr-2"><button className="text-left font-medium hover:text-brand-blue" onClick={() => abrir(u)}>{u.nombre}</button><span className="block text-[10px] text-gray-500">{u.tipo}{noVerificada(u) ? ' · no verificado' : ''}</span></td>
                 <td className="pr-2">{u.ciudad}</td>
-                <td className="pr-2"><Badge tono={us.tono}>{us.nombre}</Badge></td>
+                <td className="pr-2 whitespace-nowrap"><Badge tono={us.tono}>{us.nombre}</Badge></td>
                 <td className="pr-2">{minimo(u) || <span className="text-gray-500">no publica</span>}</td>
                 <td className="pr-2 text-gray-400">{u.ponderacion ? (u.ponderacion.length > 90 ? u.ponderacion.slice(0, 90) + '…' : u.ponderacion) : (u.uso_saber11 === 'ponderado' ? 'por programa (ver ficha)' : '—')}</td>
               </tr>) })}
