@@ -84,11 +84,18 @@
   <div class="editor-cabecera"><h2 id="editor-titulo">Producto</h2><button class="icono-btn" id="editor-cerrar" aria-label="Cerrar">✕</button></div>
   <form id="form-producto" class="editor-cuerpo formulario"></form>
   <div class="editor-pie">
+    <button class="btn btn-acento btn-sm" id="editor-ia" type="button">✨ Completar con IA</button>
     <button class="btn btn-suave btn-sm" id="editor-enlace" type="button">🔗 Copiar enlace</button>
     <button class="btn btn-suave btn-sm" id="editor-duplicar" type="button">Duplicar</button>
     <button class="btn btn-primario" id="editor-guardar" type="button">Guardar producto</button>
   </div>
 </aside>
+<div class="capa" id="capa-ia"></div>
+<div class="dialogo" id="dialogo-ia" role="dialog" aria-modal="true" aria-labelledby="dialogo-ia-titulo" hidden>
+  <h2 id="dialogo-ia-titulo">Completar ficha con IA</h2>
+  <div id="dialogo-ia-cuerpo"></div>
+  <div class="dialogo-pie"><button class="btn btn-suave btn-sm" id="dialogo-ia-cerrar" type="button">Cerrar</button></div>
+</div>
 <script src="js/app.js"></script>
 <script src="js/generador.js"></script>
 <script src="js/admin.js"></script>

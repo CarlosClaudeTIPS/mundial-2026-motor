@@ -117,10 +117,24 @@ No incluido (y por qué):
 4. Catálogo de WhatsApp Business sincronizado a mano con el CSV exportado.
 5. Si el volumen crece: CMS gratuito (Decap CMS) sobre los mismos JSON para editar con usuario y contraseña y subir fotos desde el navegador.
 
+## 7a. Completar fichas con IA
+
+En el editor de producto hay un botón **✨ Completar con IA**. Con solo nombre, categoría y precio rellena descripción, problema, beneficios, especificaciones (marcando «Pendiente de confirmar» lo que no pueda saber), qué incluye, instrucciones, precauciones, preguntas y palabras clave. Nunca pisa lo que ya escribiste; tú revisas y guardas.
+
+Dos modos:
+
+1. **Automático** (sitio publicado en Netlify). La función `netlify/functions/completar-producto.mjs` llama a la API de Claude con tu clave, que nunca sale del servidor. Configura en Netlify → Site configuration → Environment variables:
+   - `ANTHROPIC_API_KEY`: clave creada en console.anthropic.com (requiere comprar créditos prepagados; el mínimo suele ser USD 5).
+   - `ADMIN_SECRET`: una contraseña que inventes. La escribes una vez en el panel (botón → «¿Prefieres que sea automático?») y queda guardada en tu navegador. Sin ella nadie puede usar la función ni gastar tus créditos.
+   Costo aproximado por producto con el modelo Claude Opus 5.5: USD 0,03 (unos 120 COP). 100 productos ≈ USD 3. Netlify Functions es gratis hasta 125 000 llamadas al mes.
+2. **Manual** (gratis, sin publicar). Si la función no está disponible, el botón muestra un prompt para copiar en ChatGPT, Claude o Gemini y un cuadro para pegar la respuesta JSON, que se aplica al formulario.
+
+También puedes pedirle a Claude Code en el chat: «agrega el producto X a $Y con esta foto» y él completa la ficha y la sube al repositorio.
+
 ## 7b. Seguridad y despliegue
 
 - `_headers`: cabeceras de seguridad (CSP compatible con Google Fonts, GA4 y Meta Pixel) para Netlify y Cloudflare Pages.
-- `netlify.toml`: publica la carpeta, **excluye el panel admin del sitio público** y genera las páginas `p/` con la URL real.
+- `netlify.toml`: publica la carpeta, genera las páginas `p/` con la URL real y despliega la función de IA. El panel admin se publica (no puede modificar el sitio; la función de IA exige `ADMIN_SECRET`).
 - `AUDITORIA.md`: auditoría completa, métricas antes/después, pruebas y pendientes legales.
 
 ## 8. Prácticas de conversión aplicadas (basadas en investigación de usabilidad)

@@ -158,6 +158,68 @@
   $('#editor-enlace').addEventListener('click', () => { const id = $('#form-producto [name=id]').value; copiar(T.urlProducto({ id }, true)); });
   $('#btn-nuevo').addEventListener('click', () => abrirEditor(null));
 
+
+  /* ---------- Completar ficha con IA ---------- */
+  const LS_SECRET = 'tienda_admin_secret';
+  const datosFormulario = () => {
+    const f = $('#form-producto'), v = (n) => f.elements[n] ? f.elements[n].value.trim() : '';
+    const cat = T.categoria(v('categoria'));
+    const imgs = leerLista('imagenes');
+    return { nombre: v('nombre'), categoria: cat ? cat.nombre : v('categoria'), precio: Number(v('precio')) || null, descripcionCorta: v('descripcionCorta'), descripcion: v('descripcion'),
+      variantes: leerLista('variantes'), imagenUrl: (imgs.find(i => /^https:\/\//.test(i)) || null), notas: v('problema') };
+  };
+  const setLista = (id, items) => { const cont = $(`[data-lista="${id}"]`); if (!cont) return; cont.querySelectorAll('.item').forEach(x => x.remove()); const btn = cont.querySelector('[data-agregar]'); (items || []).forEach(v => { const d = document.createElement('div'); d.className = 'item'; d.innerHTML = '<input type="text"><button type="button" data-quitar aria-label="Quitar">✕</button>'; d.querySelector('input').value = v; btn.before(d); }); };
+  /* Aplica la ficha generada al formulario SIN pisar lo que el dueño ya escribió */
+  function aplicarFicha(fi) {
+    const f = $('#form-producto'), set = (n, val) => { if (f.elements[n] && !f.elements[n].value.trim() && val) f.elements[n].value = val; };
+    set('descripcionCorta', fi.descripcionCorta); set('descripcion', fi.descripcion); set('problema', fi.problema);
+    const vacia = (id) => !leerLista(id).length;
+    if (vacia('beneficios')) setLista('beneficios', fi.beneficios);
+    if (vacia('especificaciones')) setLista('especificaciones', (fi.especificaciones || []).map(e => Array.isArray(e) ? e.join(': ') : (e.clave ? `${e.clave}: ${e.valor}` : String(e))));
+    if (vacia('incluye')) setLista('incluye', fi.incluye);
+    if (vacia('instrucciones')) setLista('instrucciones', fi.instrucciones);
+    if (vacia('precauciones')) setLista('precauciones', fi.precauciones);
+    if (vacia('preguntas')) setLista('preguntas', (fi.preguntas || []).map(q => `${q.p} | ${q.r}`));
+    if (!f.elements.palabrasClave.value.trim() && fi.palabrasClave) f.elements.palabrasClave.value = fi.palabrasClave.join(', ');
+    const pend = (fi.pendientes || []).length ? ' Pendientes de confirmar: ' + fi.pendientes.join('; ') : '';
+    T.toast('Ficha completada. Revisa cada campo antes de guardar.' + pend);
+  }
+  const abrirDialogoIA = (html) => { $('#dialogo-ia-cuerpo').innerHTML = html; $('#dialogo-ia').hidden = false; $('#capa-ia').classList.add('abierta'); };
+  const cerrarDialogoIA = () => { $('#dialogo-ia').hidden = true; $('#capa-ia').classList.remove('abierta'); };
+  $('#dialogo-ia-cerrar').addEventListener('click', cerrarDialogoIA); $('#capa-ia').addEventListener('click', cerrarDialogoIA);
+
+  const promptManual = (d) => `Actúa como copywriter de una tienda colombiana que vende por WhatsApp. Completa la ficha de este producto usando SOLO estos datos y el conocimiento general del tipo de producto. No inventes materiales, medidas, certificaciones, reseñas ni descuentos: donde no sepas, escribe exactamente "Pendiente de confirmar". Responde ÚNICAMENTE con un JSON con estas claves: descripcionCorta (string, máx. 110 caracteres), descripcion (string), problema (string), beneficios (array de strings), especificaciones (array de {"clave","valor"}), incluye (array), instrucciones (array de pasos), precauciones (array), preguntas (array de {"p","r"}), palabrasClave (array), pendientes (array de datos que el vendedor debe confirmar).\n\nDATOS: ${JSON.stringify(d)}`;
+
+  function vistaManual(d, motivo) {
+    abrirDialogoIA(`<p class="aviso-pendiente">${esc(motivo)}</p>
+      <div class="paso-ia"><strong>1. Copia este prompt y pégalo en ChatGPT, Claude o Gemini</strong><textarea id="ia-prompt" readonly>${esc(promptManual(d))}</textarea><button class="btn btn-primario btn-sm" type="button" id="ia-copiar">Copiar prompt</button></div>
+      <div class="paso-ia"><strong>2. Pega aquí la respuesta (el JSON) y aplícala al formulario</strong><textarea id="ia-json" placeholder='{"descripcionCorta": "...", ...}'></textarea><button class="btn btn-acento btn-sm" type="button" id="ia-aplicar">Aplicar al formulario</button></div>
+      <details><summary>¿Prefieres que sea automático?</summary><p class="nota-legal">Publica la tienda en Netlify y configura las variables ANTHROPIC_API_KEY y ADMIN_SECRET. Luego escribe tu clave de administración aquí:</p><input class="campo" id="ia-secret" type="password" placeholder="Clave de administración (ADMIN_SECRET)" value="${esc(T.leerLS(LS_SECRET, ''))}"><button class="btn btn-suave btn-sm" type="button" id="ia-guardar-secret" style="margin-top:.4rem">Guardar clave en este navegador</button></details>`);
+    $('#ia-copiar').addEventListener('click', async () => { try { await navigator.clipboard.writeText($('#ia-prompt').value); T.toast('Prompt copiado'); } catch (e) { $('#ia-prompt').select(); } });
+    $('#ia-aplicar').addEventListener('click', () => {
+      let txt = $('#ia-json').value.trim(); const m = txt.match(/\{[\s\S]*\}/); if (m) txt = m[0];
+      try { aplicarFicha(JSON.parse(txt)); cerrarDialogoIA(); } catch (e) { T.toast('No se pudo leer el JSON. Copia solo la respuesta JSON de la IA.'); }
+    });
+    $('#ia-guardar-secret').addEventListener('click', () => { T.guardarLS(LS_SECRET, $('#ia-secret').value.trim()); T.toast('Clave guardada. Vuelve a pulsar «Completar con IA».'); });
+  }
+
+  $('#editor-ia').addEventListener('click', async () => {
+    const d = datosFormulario();
+    if (!d.nombre) { T.toast('Escribe primero el nombre del producto.'); return; }
+    const secret = T.leerLS(LS_SECRET, '');
+    const b = $('#editor-ia'); b.disabled = true; b.innerHTML = '<span class="cargando"></span>Generando…';
+    try {
+      const r = await fetch('/.netlify/functions/completar-producto', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': secret }, body: JSON.stringify(d) });
+      if (r.status === 404 || r.status === 503) { vistaManual(d, 'La generación automática no está disponible en este sitio (no está publicado en Netlify o faltan las claves). Usa la vía manual:'); return; }
+      if (r.status === 401) { vistaManual(d, 'La clave de administración no es válida. Corrígela abajo o usa la vía manual:'); return; }
+      const data = await r.json();
+      if (!r.ok) { vistaManual(d, 'Error del servicio: ' + (data.error || r.status) + '. Puedes usar la vía manual:'); return; }
+      aplicarFicha(data.ficha);
+    } catch (e) {
+      vistaManual(d, 'No se pudo conectar con el servicio de IA. Usa la vía manual:');
+    } finally { b.disabled = false; b.innerHTML = '✨ Completar con IA'; }
+  });
+
   /* ---------- Categorías ---------- */
   function renderCategorias() {
     const cats = catalogo.categorias.slice().sort((a, b) => (a.orden || 0) - (b.orden || 0));
