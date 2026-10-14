@@ -1,4 +1,5 @@
 import referencia from '../../content/referencia-nacional.json'
+import niveles from '../../content/niveles-desempeno.json'
 import { nombrePrueba, nombreCompetencia, nombreTipoError, practicaParaError, taxonomia } from './taxonomia'
 
 // ─── Informes de mejoramiento al estilo del reporte Saber 11 ─────────────────
@@ -59,6 +60,51 @@ export function percentilNacional(escala, puntaje) {
   return Math.round(e.acumulado[s] + e.frecuencia[s] / 2)
 }
 
+// ── Formato oficial ICFES: descriptores, desviación, comparaciones ─────────────
+// Descriptores de nivel de desempeño (Guía de orientación Saber 11.°, transcripción en content/niveles-desempeno.json).
+export function descriptorNivel(prueba, nivel) {
+  const d = niveles[prueba]?.[nivel]
+  return d ? { nivel, rango: d.rango, general: d.general, especificos: d.especificos } : null
+}
+
+export function desviacion(vals) {
+  const v = vals.filter(x => x != null)
+  if (v.length < 2) return null
+  const m = v.reduce((a, b) => a + b, 0) / v.length
+  return Math.round(Math.sqrt(v.reduce((a, b) => a + (b - m) ** 2, 0) / (v.length - 1)) * 10) / 10
+}
+
+// Comparación de un promedio contra un nivel de agregación, con la lógica del tamaño del efecto
+// que usa el reporte del ICFES: ▲ considerablemente mayor, ▼ considerablemente menor, • similar.
+// d de Cohen con la desviación del nivel de agregación de referencia; |d| < 0,2 se considera similar.
+export function compararPromedio(media, mediaRef, sdRef) {
+  if (media == null || mediaRef == null || !sdRef) return null
+  const d = (media - mediaRef) / sdRef
+  return d >= 0.2 ? '▲' : d <= -0.2 ? '▼' : '•'
+}
+// Desviación: ▲ resultados más dispersos que la referencia, ▼ más homogéneos, • similar (razón de desviaciones ±20 %).
+export function compararDesviacion(sd, sdRef) {
+  if (sd == null || !sdRef) return null
+  const r = sd / sdRef
+  return r >= 1.2 ? '▲' : r <= 0.8 ? '▼' : '•'
+}
+// Porcentajes por nivel: comparación directa, como en la Tabla 3.2 del reporte oficial.
+export const compararPorcentaje = (a, b) => (a == null || b == null ? null : a > b ? '▲' : a < b ? '▼' : '•')
+export const textoComparacion = { '▲': 'Mayor', '▼': 'Menor', '•': 'Similar' }
+
+// Porcentaje nacional de estudiantes en cada nivel de desempeño (a partir de la distribución acumulada de datos abiertos).
+export function distribucionNacionalNiveles(prueba) {
+  const e = referencia.escalas[prueba]
+  if (!e) return null
+  const acumHasta = (s) => (s >= e.acumulado.length ? 100 : e.acumulado[s])
+  return (NIVELES[prueba] ?? []).map(([a, b, n]) => ({ nivel: n, pct: Math.round(acumHasta(b + 1) - acumHasta(a)) }))
+}
+export const desviacionNacional = (escala) => referencia.escalas[escala]?.desviacion ?? null
+export const nNacional = (escala) => referencia.escalas[escala]?.n ?? null
+
+// Color del porcentaje de respuestas incorrectas por aprendizaje (Figura 3.4 del reporte oficial).
+export const colorIncorrectas = (pctIncorrectas) => (pctIncorrectas == null ? 'gris' : pctIncorrectas < 20 ? 'verde' : pctIncorrectas < 40 ? 'amarillo' : pctIncorrectas < 70 ? 'naranja' : 'rojo')
+
 // Percentil dentro de una población local (valores de los demás).
 export function percentilLocal(valor, poblacion) {
   const vals = poblacion.filter(v => v != null)
@@ -110,6 +156,7 @@ export function informeEstudiante({ intentos, preguntasPorId = {}, poblacion = n
       percentil_nacional: percentilNacional(prueba, puntaje),
       percentil_local: poblacion ? percentilLocal(puntaje, poblacion[prueba] ?? []) : null,
       media_nacional: referencia.escalas[prueba]?.media ?? null,
+      descriptor: descriptorNivel(prueba, nivelDe(prueba, puntaje)),
       aprendizajes: aps,
       por_mejorar: aps.filter(a => a.estado === 'por_mejorar'),
       fortalezas: aps.filter(a => a.estado === 'fortaleza'),
@@ -157,19 +204,30 @@ export function informeGrupo({ miembros, intentos, preguntasPorId = {} }) {
     const niveles = {}
     for (const p of puntajes) niveles[p.nivel] = (niveles[p.nivel] ?? 0) + 1
     const aps = aprendizajes(intentos.filter(i => i.prueba === prueba), preguntasPorId, 6)
+    const sd = desviacion(puntajes.map(p => p.puntaje))
+    const nacional = distribucionNacionalNiveles(prueba) ?? []
     return {
-      prueba, nombre: nombrePrueba(prueba), evaluados: puntajes.length, media,
+      prueba, nombre: nombrePrueba(prueba), evaluados: puntajes.length, media, desviacion: sd,
       nivel_medio: nivelDe(prueba, media), percentil_nacional: percentilNacional(prueba, media), media_nacional: referencia.escalas[prueba]?.media ?? null,
-      distribucion_niveles: (NIVELES[prueba] ?? []).map(([, , n]) => ({ nivel: n, nombre: NOMBRE_NIVEL[n], n: niveles[n] ?? 0, pct: pct(niveles[n] ?? 0, puntajes.length) })),
+      desviacion_nacional: desviacionNacional(prueba),
+      comparacion_media: compararPromedio(media, referencia.escalas[prueba]?.media, desviacionNacional(prueba)),
+      comparacion_desviacion: compararDesviacion(sd, desviacionNacional(prueba)),
+      distribucion_niveles: (NIVELES[prueba] ?? []).map(([, , n]) => { const pctGrupo = pct(niveles[n] ?? 0, puntajes.length); const pctNal = nacional.find(x => x.nivel === n)?.pct ?? null; return { nivel: n, nombre: NOMBRE_NIVEL[n], n: niveles[n] ?? 0, pct: pctGrupo, pct_nacional: pctNal, comparacion: compararPorcentaje(pctGrupo, pctNal) } }),
       aprendizajes: aps, por_mejorar: aps.filter(a => a.estado === 'por_mejorar'), fortalezas: aps.filter(a => a.estado === 'fortaleza'),
       estudiantes_bajos: puntajes.filter(p => ORDEN_NIVEL[p.nivel] <= 2).length,
     }
   })
   const globales = activos.map(x => x.informe.global)
   const mediaGlobal = promedio(globales)
+  const sdGlobal = desviacion(globales)
   return {
     n_estudiantes: miembros.length, n_activos: activos.length,
-    global: mediaGlobal, percentil_nacional: percentilNacional('global', mediaGlobal), media_nacional_global: referencia.escalas.global.media,
+    // Ficha técnica (equivalente a matriculados / inscritos / presentes / con resultados publicados)
+    ficha: { matriculados: miembros.length, inscritos: miembros.filter(m => (m.estado ?? 'activo') === 'activo').length, presentes: activos.length, con_resultados: activos.filter(x => x.informe.pruebas_con_datos === PRUEBAS.length).length, n_nacional: nNacional('global') },
+    global: mediaGlobal, desviacion_global: sdGlobal, percentil_nacional: percentilNacional('global', mediaGlobal), media_nacional_global: referencia.escalas.global.media,
+    desviacion_nacional_global: desviacionNacional('global'),
+    comparacion_global: compararPromedio(mediaGlobal, referencia.escalas.global.media, desviacionNacional('global')),
+    comparacion_desviacion_global: compararDesviacion(sdGlobal, desviacionNacional('global')),
     pruebas,
     prioridades: pruebas.flatMap(p => p.por_mejorar.map(a => ({ ...a, nombre_prueba: p.nombre }))).sort((a, b) => b.pct_error - a.pct_error).slice(0, 10),
     estudiantes: individuales.map(x => ({ id: x.estudiante.id, nombre: x.estudiante.nombre, usuario: x.estudiante.usuario, respuestas: x.informe.respuestas, global: x.informe.global, percentil_local: x.informe.percentil_local, percentil_nacional: x.informe.percentil_nacional, pruebas: Object.fromEntries(x.informe.pruebas.map(p => [p.prueba, { puntaje: p.puntaje, nivel: p.nivel }])), mas_debil: x.informe.mas_debil?.nombre ?? null }))

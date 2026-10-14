@@ -10,6 +10,7 @@ import { Titulo, Badge, Barra, Vacio, fechaCorta } from './ui'
 import { MATERIAS } from './Login'
 import { formatoFecha } from '../lib/ciclo'
 import { medirAprendizaje } from '../lib/aprendizaje'
+import { ReporteEstudiante, ReporteGrupo } from './InformeOficial'
 import { AprendizajeReal } from './estudiante/MiProgreso'
 
 // ─── Informe de mejoramiento (individual o de grupo) ─────────────────────────
@@ -25,6 +26,7 @@ export default function Informe({ usuario, params }) {
   const estudianteId = esEstudiante ? usuario.id : params.estudiante
   const grupoId = esEstudiante ? null : params.grupo
   const [base, setBase] = useState(params.base ?? 'todo')
+  const [formato, setFormato] = useState(params.formato ?? 'icfes')
   const [d, setD] = useState(null)
 
   useEffect(() => {
@@ -53,7 +55,8 @@ export default function Informe({ usuario, params }) {
           poblacion = { global: otros.map(x => x.global) }
           for (const p of PRUEBAS) poblacion[p] = otros.map(x => x.pruebas.find(q => q.prueba === p).puntaje)
         }
-        setD({ tipo: 'estudiante', est, informe: informeEstudiante({ intentos: filtrar(intentos), preguntasPorId: porId, poblacion, sesiones }), sesiones: sesiones.filter(s => s.estado === 'terminada'), aprendizaje: medirAprendizaje(filtrar(intentos)) })
+        const grupoEst = est.grupo_id ? await db.grupos.get(est.grupo_id) : null
+        setD({ tipo: 'estudiante', est, grupo: grupoEst, informe: informeEstudiante({ intentos: filtrar(intentos), preguntasPorId: porId, poblacion, sesiones }), sesiones: sesiones.filter(s => s.estado === 'terminada'), aprendizaje: medirAprendizaje(filtrar(intentos)) })
       } else setD({ tipo: 'vacio' })
     })()
   }, [estudianteId, grupoId, base])
@@ -78,6 +81,12 @@ export default function Informe({ usuario, params }) {
 
       {/* Base del informe */}
       <div className="no-print card !py-2.5 flex flex-wrap items-center gap-2 text-sm">
+        <span className="text-gray-400">Formato:</span>
+        <select className="input !w-auto !py-1.5 text-sm" value={formato} onChange={e => setFormato(e.target.value)}>
+          <option value="icfes">Formato ICFES (reporte oficial)</option>
+          <option value="mejoramiento">Informe de mejoramiento</option>
+          <option value="ambos">Ambos</option>
+        </select>
         <span className="text-gray-400">Base:</span>
         <select className="input !w-auto !py-1.5 text-sm" value={base} onChange={e => setBase(e.target.value)}>
           <option value="todo">Toda la práctica</option>
@@ -86,11 +95,26 @@ export default function Informe({ usuario, params }) {
         </select>
       </div>
 
-      {(inf.respuestas === 0 || inf.n_activos === 0) ? <Vacio>Todavía no hay respuestas registradas para esta base.</Vacio> : d.tipo === 'estudiante' ? <CuerpoEstudiante inf={inf} aprendizaje={d.aprendizaje} /> : <CuerpoGrupo inf={inf} grupoId={grupoId} />}
+      {(inf.respuestas === 0 || inf.n_activos === 0) ? <Vacio>Todavía no hay respuestas registradas para esta base.</Vacio> : (
+        <>
+          {formato !== 'mejoramiento' && (d.tipo === 'estudiante'
+            ? <ReporteEstudiante inf={inf} est={d.est} grupo={d.grupo} fechaAplicacion={fechaAplicacion(base, d.sesiones)} />
+            : <ReporteGrupo inf={inf} grupo={d.grupo} docente={usuario.rol !== 'estudiante' ? usuario.nombre : null} fechaAplicacion={fechaAplicacion(base, d.sesiones)} />)}
+          {formato === 'ambos' && <p className="text-sm font-semibold text-brand-navy pt-2 border-t border-dark-600">Anexo: informe de mejoramiento (no hace parte del reporte ICFES)</p>}
+          {formato !== 'icfes' && (d.tipo === 'estudiante' ? <CuerpoEstudiante inf={inf} aprendizaje={d.aprendizaje} /> : <CuerpoGrupo inf={inf} grupoId={grupoId} />)}
+        </>
+      )}
 
       <p className="text-[11px] text-gray-500">Puntajes estimados: cada prueba es el porcentaje de aciertos en la plataforma (0-100) y el global usa la ponderación oficial 3-3-3-3-1 (0-500). El ICFES calcula sus puntajes con un modelo estadístico sobre toda la población, así que estas cifras son una aproximación para orientar el estudio, no un pronóstico oficial. Percentil nacional: {inf.referencia.fuente}, aplicación {inf.referencia.periodo}. Niveles según la Guía de interpretación de resultados del ICFES.</p>
     </div>
   )
+}
+
+// Fecha de aplicación para el encabezado: la sesión elegida como base, o la última sesión terminada.
+function fechaAplicacion(base, sesiones) {
+  if (base.startsWith('sesion:')) { const s = sesiones.find(x => x.id === base.slice(7)); return s?.fecha_fin ?? s?.fecha_inicio ?? null }
+  const ult = [...sesiones].sort((a, b) => ((a.fecha_fin ?? a.fecha_inicio) < (b.fecha_fin ?? b.fecha_inicio) ? 1 : -1))[0]
+  return ult?.fecha_fin ?? ult?.fecha_inicio ?? null
 }
 
 function Puntaje({ etiqueta, valor, sufijo = '', sub = null, color }) {

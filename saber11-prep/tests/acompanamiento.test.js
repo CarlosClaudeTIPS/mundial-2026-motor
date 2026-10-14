@@ -142,3 +142,39 @@ describe('ruta.planSemana', () => {
     expect(p.dias.filter(d => !d.descanso).at(-1).tipo).toBe('simulacro')
   })
 })
+
+import { descriptorNivel, desviacion, compararPromedio, compararDesviacion, compararPorcentaje, distribucionNacionalNiveles, colorIncorrectas, informeGrupo } from '../src/lib/informes'
+
+describe('informes: formato oficial ICFES', () => {
+  it('trae los descriptores oficiales del nivel alcanzado', () => {
+    const d = descriptorNivel('lectura_critica', '3')
+    expect(d.rango).toEqual([51, 65]); expect(d.especificos.length).toBe(10); expect(d.general).toMatch(/inferir contenidos implícitos/)
+    expect(descriptorNivel('ingles', 'B1').especificos.length).toBe(3)
+    expect(descriptorNivel('matematicas', '9')).toBeNull()
+  })
+  it('desviación muestral y comparaciones por tamaño del efecto', () => {
+    expect(desviacion([2, 4, 4, 4, 5, 5, 7, 9])).toBe(2.1)
+    expect(desviacion([5])).toBeNull()
+    expect(compararPromedio(259, 250, 50)).toBe('•'); expect(compararPromedio(260, 250, 50)).toBe('▲'); expect(compararPromedio(230, 250, 50)).toBe('▼')
+    expect(compararDesviacion(30, 50)).toBe('▼'); expect(compararDesviacion(62, 50)).toBe('▲'); expect(compararDesviacion(50, 50)).toBe('•')
+    expect(compararPorcentaje(10, 5)).toBe('▲'); expect(compararPorcentaje(5, 5)).toBe('•')
+  })
+  it('la distribución nacional por niveles suma ~100 y los colores siguen los rangos del reporte', () => {
+    const d = distribucionNacionalNiveles('matematicas')
+    expect(d.map(x => x.nivel)).toEqual(['1', '2', '3', '4'])
+    const suma = d.reduce((a, x) => a + x.pct, 0); expect(suma).toBeGreaterThanOrEqual(98); expect(suma).toBeLessThanOrEqual(102)
+    expect([colorIncorrectas(10), colorIncorrectas(20), colorIncorrectas(40), colorIncorrectas(70)]).toEqual(['verde', 'amarillo', 'naranja', 'rojo'])
+  })
+  it('el informe de grupo incluye ficha técnica, desviaciones y comparaciones', () => {
+    const miembros = [{ id: 'a', nombre: 'A' }, { id: 'b', nombre: 'B' }, { id: 'c', nombre: 'C', estado: 'pendiente' }]
+    const mk = (est, prueba, ok) => ({ uid: Math.random() + '', estudiante_id: est, pregunta_id: 'P' + Math.random(), prueba, competencia: 'X', correcta: ok, fecha: '2026-10-01T00:00:00Z' })
+    const intentos = []
+    for (const est of ['a', 'b']) for (const pr of ['lectura_critica', 'matematicas', 'sociales_ciudadanas', 'ciencias_naturales', 'ingles']) for (let k = 0; k < 4; k++) intentos.push(mk(est, pr, est === 'a' ? k < 3 : k < 1))
+    const g = informeGrupo({ miembros, intentos })
+    expect(g.ficha).toMatchObject({ matriculados: 3, inscritos: 2, presentes: 2, con_resultados: 2 })
+    expect(g.desviacion_global).toBeGreaterThan(0)
+    expect(['▲', '▼', '•']).toContain(g.comparacion_global)
+    const lc = g.pruebas.find(p => p.prueba === 'lectura_critica')
+    expect(lc.desviacion).toBeGreaterThan(0); expect(lc.distribucion_niveles[0].pct_nacional).not.toBeNull()
+  })
+})
