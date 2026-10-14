@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { BookOpenCheck, ExternalLink, MapPin, Search, ChevronRight, ArrowLeft } from 'lucide-react'
+import { BookOpenCheck, ExternalLink, MapPin, Search, ChevronRight, ArrowLeft, Printer } from 'lucide-react'
 import { Titulo, Badge, Md, Vacio } from './ui'
 
 // ─── Guía del ICFES ──────────────────────────────────────────────────────────
@@ -36,7 +36,7 @@ export default function Guia({ params }) {
 
   if (abierta) return <DetalleUniversidad u={abierta} volver={() => setAbierta(null)} />
 
-  const pestanas = [...SECCIONES.map(s => [s.id, s.titulo]), ['universidades', 'Universidades por ciudad']]
+  const pestanas = [...SECCIONES.map(s => [s.id, s.titulo]), ['universidades', 'Universidades por ciudad'], ['saber11', '¿Qué piden del Saber 11?']]
   const seccion = SECCIONES.find(s => s.id === pestana)
 
   return (
@@ -48,7 +48,7 @@ export default function Guia({ params }) {
         ))}
       </div>
 
-      {pestana !== 'universidades' && (
+      {pestana !== 'universidades' && pestana !== 'saber11' && (
         !seccion ? <Vacio>Esta sección aún no tiene contenido.</Vacio> : (
           <div className="card space-y-3">
             <p className="font-semibold text-brand-navy flex items-center gap-2"><BookOpenCheck size={18} className="text-brand-blue" /> {seccion.titulo}</p>
@@ -64,6 +64,8 @@ export default function Guia({ params }) {
           </div>
         )
       )}
+
+      {pestana === 'saber11' && <ResumenSaber11 abrir={setAbierta} />}
 
       {pestana === 'universidades' && (
         <>
@@ -154,6 +156,56 @@ function DetalleUniversidad({ u, volver }) {
           {u.web && <a href={u.web} target="_blank" rel="noreferrer" className="btn-secondary !py-2 text-sm"><ExternalLink size={14} /> Sitio oficial</a>}
         </div>
         <p className="text-[11px] text-gray-500 mt-2">Verificado {u.verificado ?? 's. f.'} en fuentes oficiales{u.fuentes?.length ? `: ${u.fuentes.length} enlace(s)` : ''}. Las condiciones cambian cada convocatoria: confirma en el sitio de admisiones antes de inscribirte.</p>
+      </div>
+    </div>
+  )
+}
+
+// ─── Resumen: cómo usa cada institución el Saber 11 ──────────────────────────
+// Presentar el examen es requisito legal para ingresar a la educación superior;
+// lo que cambia es si el puntaje decide la admisión y con qué mínimo.
+const noVerificada = (u) => /no verificad/i.test(`${u.notas ?? ''} ${u.uso_saber11_detalle ?? ''}`)
+const nombreMin = { global: 'Global', lectura_critica: 'Lectura Crítica', matematicas: 'Matemáticas', sociales_ciudadanas: 'Sociales', ciencias_naturales: 'Ciencias', ingles: 'Inglés' }
+const ORDEN_USO = { puntaje_minimo: 0, ponderado: 1, entrevista_o_mixto: 2, examen_propio: 3, requisito: 4 }
+function ResumenSaber11({ abrir }) {
+  const [ciudad, setCiudad] = useState('')
+  const [modo, setModo] = useState('')
+  const ciudades = useMemo(() => [...new Set(UNIVERSIDADES.map(u => u.ciudad).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es')), [])
+  const lista = UNIVERSIDADES.filter(u => (!ciudad || u.ciudad === ciudad || (u.sedes ?? []).includes(ciudad)) && (!modo || u.uso_saber11 === modo))
+    .sort((a, b) => (ORDEN_USO[a.uso_saber11] ?? 9) - (ORDEN_USO[b.uso_saber11] ?? 9) || a.ciudad.localeCompare(b.ciudad, 'es') || a.nombre.localeCompare(b.nombre, 'es'))
+  const conteo = {}
+  for (const u of UNIVERSIDADES) conteo[u.uso_saber11] = (conteo[u.uso_saber11] ?? 0) + 1
+  const minimo = (u) => (u.puntaje_minimo && typeof u.puntaje_minimo === 'object' ? Object.entries(u.puntaje_minimo).map(([k, v]) => `${nombreMin[k] ?? k.replace(/_/g, ' ')} ${v}`).join(' · ') : '')
+  return (
+    <div className="space-y-3">
+      <div className="card space-y-2">
+        <p className="font-semibold text-brand-navy">¿Qué piden del Saber 11 las universidades?</p>
+        <p className="text-sm text-gray-300">Presentar el Saber 11 es requisito legal para entrar a cualquier programa de educación superior en Colombia (Ley 1324 de 2009 y Decreto 869 de 2010). Lo que cambia entre instituciones es <b>si el puntaje decide la admisión</b> y con qué mínimo:</p>
+        <div className="grid sm:grid-cols-2 gap-1.5 text-xs">
+          {Object.entries(USO).map(([k, v]) => <div key={k} className="rounded-lg bg-dark-900 p-2 flex items-start gap-2"><Badge tono={v.tono}>{v.nombre}</Badge><span className="text-gray-300">{v.texto} <span className="text-gray-500">({conteo[k] ?? 0})</span></span></div>)}
+        </div>
+        <p className="text-[11px] text-gray-500">Para fijar tu meta: las públicas que admiten por puntaje definen cortes por programa (Medicina e Ingenierías suelen ser los más altos); las que tienen "puntaje mínimo" lo publican; las de examen propio no usan tu puntaje para admitir. "No verificado" significa que el sitio oficial no se pudo consultar desde el servidor: confirma en admisiones.</p>
+      </div>
+      <div className="card no-print grid sm:grid-cols-3 gap-2">
+        <select className="input" value={ciudad} onChange={e => setCiudad(e.target.value)}><option value="">Todas las ciudades</option>{ciudades.map(c => <option key={c} value={c}>{c}</option>)}</select>
+        <select className="input" value={modo} onChange={e => setModo(e.target.value)}><option value="">Todas las formas de admisión</option>{Object.entries(USO).map(([k, v]) => <option key={k} value={k}>{v.nombre}</option>)}</select>
+        <button className="btn-secondary !py-2 text-sm" onClick={() => window.print()}><Printer size={16} /> Imprimir tabla</button>
+      </div>
+      <div className="card overflow-x-auto">
+        <table className="w-full text-xs">
+          <thead><tr className="text-gray-500 text-left"><th className="py-1 pr-2">Institución</th><th className="pr-2">Ciudad</th><th className="pr-2">Uso del Saber 11</th><th className="pr-2">Mínimo publicado</th><th className="pr-2">Ponderación</th></tr></thead>
+          <tbody>
+            {lista.map(u => { const us = USO[u.uso_saber11] ?? { nombre: u.uso_saber11, tono: 'gris' }; return (
+              <tr key={u.id} className="border-t border-dark-700 align-top">
+                <td className="py-1.5 pr-2"><button className="text-left font-medium hover:text-brand-blue" onClick={() => abrir(u)}>{u.nombre}</button><span className="block text-[10px] text-gray-500">{u.tipo}{noVerificada(u) ? ' · no verificado' : ''}</span></td>
+                <td className="pr-2">{u.ciudad}</td>
+                <td className="pr-2"><Badge tono={us.tono}>{us.nombre}</Badge></td>
+                <td className="pr-2">{minimo(u) || <span className="text-gray-500">no publica</span>}</td>
+                <td className="pr-2 text-gray-400">{u.ponderacion ? (u.ponderacion.length > 90 ? u.ponderacion.slice(0, 90) + '…' : u.ponderacion) : (u.uso_saber11 === 'ponderado' ? 'por programa (ver ficha)' : '—')}</td>
+              </tr>) })}
+          </tbody>
+        </table>
+        <p className="text-[11px] text-gray-500 mt-2">{lista.length} instituciones. Toca el nombre para ver la ficha completa con proceso, calendario y enlaces oficiales. Datos verificados en octubre de 2026; cambian cada convocatoria.</p>
       </div>
     </div>
   )

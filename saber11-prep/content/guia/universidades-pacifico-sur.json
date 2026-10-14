@@ -1,847 +1,922 @@
 [
-  {
-    "id": "univalle",
-    "nombre": "Universidad del Valle",
-    "sigla": "Univalle",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "pública",
-    "sedes": [
-      "Cali (Meléndez y San Fernando)",
-      "Buga",
-      "Caicedonia",
-      "Cartago",
-      "Norte del Cauca (Santander de Quilichao)",
-      "Pacífico (Buenaventura)",
-      "Palmira",
-      "Tuluá",
-      "Yumbo",
-      "Zarzal"
-    ],
-    "web": "https://www.univalle.edu.co",
-    "admisiones_url": "https://admisiones.univalle.edu.co/new/",
-    "uso_saber11": "ponderado",
-    "uso_saber11_detalle": "Admite a todos sus pregrados con el resultado del Saber 11 (presentado desde 2016) y exige un puntaje global mínimo de 190 para poder inscribirse. Cada programa pondera las cinco pruebas (lectura crítica, matemáticas, ciencias naturales, sociales y ciudadanas e inglés): el puntaje de cada prueba se multiplica por su porcentaje, se suman los productos y se ordenan los aspirantes de mayor a menor hasta llenar los cupos. Algunos programas (Arquitectura, Diseño Gráfico e Industrial, Música, Licenciatura en Música, Licenciatura en Artes Visuales, Primera Infancia, Construcción, entre otros) aplican además una prueba específica de aptitud; en unos pocos esa prueba vale el 100 %. Solo se puede inscribir un programa por sede y periodo.",
-    "puntaje_minimo": { "global": 190 },
-    "ponderacion": "Cada programa publica sus porcentajes en la columna POND de la oferta académica (admisiones.univalle.edu.co). Ejemplo verificado para 2027-1, Ingeniería de Sistemas (Cali, diurno): 21 % lectura crítica, 26 % matemáticas, 15 % ciencias naturales, 15 % sociales y ciudadanas, 23 % inglés. Los porcentajes cambian según el programa y la sede.",
-    "proceso": [
-      {
-        "paso": "Revisar la oferta, el calendario y los requisitos",
-        "detalle": "En admisiones.univalle.edu.co, sección 'Pregrado - Bachilleres', se publica la oferta 2027-1 (programas, jornada, código, ponderaciones, cupos) y el manual 'Pasos para inscripción y admisión'. Requisitos: Saber 11 presentado desde 2016 y puntaje global mínimo de 190.",
-        "url": "https://admisiones.univalle.edu.co/new/index.php?action=filtrado&valorProceso=1"
-      },
-      {
-        "paso": "Solicitar revisión de condición de excepción (si aplica)",
-        "detalle": "Quien pertenezca a un grupo poblacional especial (indígenas, comunidades afrocolombianas, víctimas del conflicto, mejores bachilleres, bachilleres de zonas rurales de difícil acceso o de departamentos sin universidad, desmovilizados, atletas de rendimiento, damnificados por terremoto) pide la revisión de documentos dentro del calendario; si se aprueba, la inscripción a una sede es sin pago.",
-        "url": "https://sira.univalle.edu.co/sra/paquetes/admisiones/GestionArchivosCE/index.php?accion=SolicitudCondicion"
-      },
-      {
-        "paso": "Crear la cuenta y diligenciar el formulario de inscripción",
-        "detalle": "Se registra el número SNP/AC del Saber 11, el documento con el que se presentó y el puntaje global; la Universidad lo valida con el ICFES y elimina las inscripciones que no alcancen el mínimo. Los menores de edad deben estar acompañados por un adulto.",
-        "url": "https://sira.univalle.edu.co/sra/paquetes/admisiones/preinscripcion/login.php"
-      },
-      {
-        "paso": "Pagar los derechos de inscripción y descargar la constancia",
-        "detalle": "Pago en línea (PSE, tarjeta) o en Banco de Bogotá/corresponsales. La constancia de inscripción indica si hay prueba específica y sus fechas; es el único comprobante válido. Mientras estén abiertas las inscripciones se puede cambiar de programa dentro de la misma sede o entre sedes regionales."
-      },
-      {
-        "paso": "Presentar la prueba específica (solo programas que la exigen)",
-        "detalle": "Programas de artes, diseño, arquitectura, construcción y Primera Infancia aplican prueba de aptitud en las fechas del calendario."
-      },
-      {
-        "paso": "Consultar resultados y cargar documentos de matrícula",
-        "detalle": "Los resultados se consultan en la misma plataforma (ruta Pregrado - Bachilleres > Resultados); la Universidad no envía correos con resultados. Los admitidos cargan documento de identidad, diploma o acta de bachiller, foto, recibo de servicios públicos y constancia del colegio (si es privado) para la liquidación de matrícula.",
-        "url": "https://matriculafinanciera.univalle.edu.co/10-general/29-documentos-exigidos-para-aspirantes-admitidos-de-pregrado"
-      }
-    ],
-    "calendario": "Dos convocatorias al año. Convocatoria 2027-1 (oferta publicada el 21 de septiembre de 2026): inscripciones para pregrados de Cali del 23 de septiembre al 10 de noviembre de 2026 y para el Sistema de Regionalización del 23 de septiembre al 18 de noviembre de 2026. Las fechas de pruebas específicas, publicación de admitidos y matrícula se indican en el calendario de cada sede dentro del portal de admisiones. Como referencia, la convocatoria 2026-2 de sedes regionales tuvo inscripciones del 29 de abril al 23 de junio de 2026, pruebas específicas el 1 y 2 de julio y publicación de admitidos el 10 de julio de 2026.",
-    "costo_inscripcion": "$140.000 (2027-1). Para programas con prueba específica (Construcción, Arquitectura, Diseño Gráfico, Diseño Industrial, Música, Licenciatura en Música y Licenciatura en Artes Visuales) el valor incluyendo la prueba es $170.000. Sin costo para aspirantes con condición de excepción aprobada (una sede).",
-    "becas_programas": [
-      "Cupos por condición de excepción: indígenas (IN), comunidades afrocolombianas (CA-CAC), víctimas del conflicto armado (VC), desmovilizados o reincorporados (DR), mejores bachilleres de colegios oficiales del Valle (MPM) y mejores puntajes nacionales/departamentales (MAP), bachilleres de departamentos sin universidad (DNI), bachilleres de zonas rurales de difícil acceso (BIDA), atletas de rendimiento (AR) y damnificados por terremoto (DAT)",
-      "Inscripción gratuita para quienes obtienen aprobación de una condición de excepción",
-      "Apoyos socioeconómicos de Bienestar Universitario y política de gratuidad en la matrícula del Gobierno Nacional (universidad pública)"
-    ],
-    "notas": "Verificado en octubre de 2026 en admisiones.univalle.edu.co (manual 'Pasos para inscripción y admisión 2027-1', oferta y calendario). El proceso está reglamentado por la Resolución 080 de 2024 del Consejo Académico. Los puntajes promedio de admitidos de periodos anteriores se consultan en 'Puntajes de referencia Cali/Sedes' del mismo portal. Correo: admisiones@correounivalle.edu.co; teléfono +57 602 3212101.",
-    "fuentes": [
-      "https://admisiones.univalle.edu.co/new/",
-      "https://admisiones.univalle.edu.co/new/index.php?action=filtrado&valorProceso=1",
-      "https://admisiones.univalle.edu.co/new/v2/pregrado/pregrado_cali/Anexos/2027_1-PASO%20A%20PASO%20PREGRADO.pdf",
-      "https://admisiones.univalle.edu.co/new/v2/pregrado/pregrado_cali/Anexos/RCA_080_Reglamento_inscripcion_y_admision-Pregrado_2024.pdf",
-      "https://www.univalle.edu.co/formacion/pregrado"
-    ],
-    "verificado": "2026-10"
+ {
+  "id": "univalle",
+  "nombre": "Universidad del Valle",
+  "sigla": "Univalle",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "pública",
+  "sedes": [
+   "Cali (Meléndez y San Fernando)",
+   "Buga",
+   "Caicedonia",
+   "Cartago",
+   "Norte del Cauca (Santander de Quilichao)",
+   "Pacífico (Buenaventura)",
+   "Palmira",
+   "Tuluá",
+   "Yumbo",
+   "Zarzal"
+  ],
+  "web": "https://www.univalle.edu.co",
+  "admisiones_url": "https://admisiones.univalle.edu.co/new/",
+  "uso_saber11": "ponderado",
+  "uso_saber11_detalle": "Admite a todos sus pregrados con el resultado del Saber 11 (presentado desde 2016) y exige un puntaje global mínimo de 190 para poder inscribirse. Cada programa pondera las cinco pruebas (lectura crítica, matemáticas, ciencias naturales, sociales y ciudadanas e inglés): el puntaje de cada prueba se multiplica por su porcentaje, se suman los productos y se ordenan los aspirantes de mayor a menor hasta llenar los cupos. Algunos programas (Arquitectura, Diseño Gráfico e Industrial, Música, Licenciatura en Música, Licenciatura en Artes Visuales, Primera Infancia, Construcción, entre otros) aplican además una prueba específica de aptitud; en unos pocos esa prueba vale el 100 %. Solo se puede inscribir un programa por sede y periodo.",
+  "puntaje_minimo": {
+   "global": 190
   },
-  {
-    "id": "icesi",
-    "nombre": "Universidad Icesi",
-    "sigla": "Icesi",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "privada",
-    "sedes": ["Cali (Pance)"],
-    "web": "https://www.icesi.edu.co",
-    "admisiones_url": "https://www.icesi.edu.co/admisiones-de-pregrado/",
-    "uso_saber11": "entrevista_o_mixto",
-    "uso_saber11_detalle": "Exige registrar el número de registro del Saber 11 (código AC) en el formulario y adjuntar la imagen del resultado; quienes aún no tienen resultado pueden inscribirse sin puntaje. También pide el boletín o certificado de notas de al menos uno de los tres últimos años de bachillerato (los tres años completos para Medicina). La decisión la toma un comité de admisión con esa información; la página oficial no publica puntaje mínimo de Saber 11 ni ponderación.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Iniciar el proceso y crear la cuenta",
-        "detalle": "Desde 'Inscripción y forma de pago pregrados' se diligencia el formulario inicial y se crea la cuenta en el portal de aspirantes (icesi.my.site.com); el acceso llega al correo registrado.",
-        "url": "https://www.icesi.edu.co/inscripcion-y-forma-de-pago-pregrados/"
-      },
-      {
-        "paso": "Completar el formulario de inscripción",
-        "detalle": "Se elige programa y periodo de ingreso, se registran los datos del Saber 11 (tipo de examen ICFES, número de registro, documento y puntaje global), la información del colegio, datos personales y de los padres.",
-        "url": "https://icesi.my.site.com/contact/s/login/"
-      },
-      {
-        "paso": "Adjuntar documentos y pagar la inscripción",
-        "detalle": "Certificado o boletín de notas (8.º, 9.º y 10.º para Medicina; al menos uno de esos años para los demás programas), documento de identidad, foto 3x4 fondo blanco, última factura de energía, acueducto o teléfono (y Sisbén si lo tiene), imagen del resultado Saber 11 y recibo de pago de inscripción si es estrato 4 o superior."
-      },
-      {
-        "paso": "Esperar la respuesta del comité de admisión",
-        "detalle": "El comité revisa la solicitud y comunica el resultado al aspirante."
-      },
-      {
-        "paso": "Matrícula financiera",
-        "detalle": "Una vez admitido se realiza la matrícula; también existe la reserva de admisión para el semestre siguiente y la separación de cupo con un abono mínimo del 30 % de la matrícula."
-      }
-    ],
-    "calendario": "Para el primer semestre de 2027: inscripciones abiertas desde el 3 de agosto de 2026; semana de inducción del 26 al 29 de enero de 2027 e inicio de clases el 1 de febrero de 2027. Las fechas de cierre y de los comités no están publicadas en la página; se informan al aspirante en el proceso.",
-    "costo_inscripcion": "$307.000 (precios 2026 publicados para el ingreso 2027-1). Reserva de admisión para el semestre siguiente: $981.000. El pago de inscripción se exige a aspirantes de estrato 4 en adelante.",
-    "becas_programas": [
-      "Beca Icesi Cree en Ti (calendario A, 40 cupos)",
-      "Beca Talento Excepcional (calendario A, 85 cupos)",
-      "Beca a la Excelencia Académica (calendario B, 75 cupos)",
-      "Beca Icesi Inspira (calendario B, 40 cupos) y Beca Icesi Conecta (A y B, 30 cupos)",
-      "Becas Yo Quiero ser Profe, Yo Elijo ser Profe y Yo Amo ser Profe (licenciaturas)",
-      "Becas Icesos, becas empresariales, Beca Crédito Fundación Bolívar-Davivienda, becas de honor y monitorías",
-      "Financiación directa e ICETEX (Oficina de Apoyo Financiero, apoyofinanciero@icesi.edu.co)"
-    ],
-    "notas": "Verificado en octubre de 2026 en icesi.edu.co (admisiones de pregrado, inscripción y forma de pago, becas y la guía PDF 'Proceso de inscripción a pregrado'). La universidad no publica puntaje mínimo de Saber 11 ni criterios cuantitativos del comité; algunas becas pueden tener requisitos de puntaje que se consultan en cada convocatoria. Valor del semestre según programa (p. ej., Ingeniería Industrial $16.950.000 en 2026).",
-    "fuentes": [
-      "https://www.icesi.edu.co/admisiones-de-pregrado/",
-      "https://www.icesi.edu.co/inscripcion-y-forma-de-pago-pregrados/",
-      "https://www.icesi.edu.co/wp-content/uploads/2024/10/Proceso-de-inscripcion-a-pregrado.pdf",
-      "https://www.icesi.edu.co/becas/"
-    ],
-    "verificado": "2026-10"
+  "ponderacion": "Cada programa publica sus porcentajes en la columna POND de la oferta académica (admisiones.univalle.edu.co). Ejemplo verificado para 2027-1, Ingeniería de Sistemas (Cali, diurno): 21 % lectura crítica, 26 % matemáticas, 15 % ciencias naturales, 15 % sociales y ciudadanas, 23 % inglés. Los porcentajes cambian según el programa y la sede.",
+  "proceso": [
+   {
+    "paso": "Revisar la oferta, el calendario y los requisitos",
+    "detalle": "En admisiones.univalle.edu.co, sección 'Pregrado - Bachilleres', se publica la oferta 2027-1 (programas, jornada, código, ponderaciones, cupos) y el manual 'Pasos para inscripción y admisión'. Requisitos: Saber 11 presentado desde 2016 y puntaje global mínimo de 190.",
+    "url": "https://admisiones.univalle.edu.co/new/index.php?action=filtrado&valorProceso=1"
+   },
+   {
+    "paso": "Solicitar revisión de condición de excepción (si aplica)",
+    "detalle": "Quien pertenezca a un grupo poblacional especial (indígenas, comunidades afrocolombianas, víctimas del conflicto, mejores bachilleres, bachilleres de zonas rurales de difícil acceso o de departamentos sin universidad, desmovilizados, atletas de rendimiento, damnificados por terremoto) pide la revisión de documentos dentro del calendario; si se aprueba, la inscripción a una sede es sin pago.",
+    "url": "https://sira.univalle.edu.co/sra/paquetes/admisiones/GestionArchivosCE/index.php?accion=SolicitudCondicion"
+   },
+   {
+    "paso": "Crear la cuenta y diligenciar el formulario de inscripción",
+    "detalle": "Se registra el número SNP/AC del Saber 11, el documento con el que se presentó y el puntaje global; la Universidad lo valida con el ICFES y elimina las inscripciones que no alcancen el mínimo. Los menores de edad deben estar acompañados por un adulto.",
+    "url": "https://sira.univalle.edu.co/sra/paquetes/admisiones/preinscripcion/login.php"
+   },
+   {
+    "paso": "Pagar los derechos de inscripción y descargar la constancia",
+    "detalle": "Pago en línea (PSE, tarjeta) o en Banco de Bogotá/corresponsales. La constancia de inscripción indica si hay prueba específica y sus fechas; es el único comprobante válido. Mientras estén abiertas las inscripciones se puede cambiar de programa dentro de la misma sede o entre sedes regionales."
+   },
+   {
+    "paso": "Presentar la prueba específica (solo programas que la exigen)",
+    "detalle": "Programas de artes, diseño, arquitectura, construcción y Primera Infancia aplican prueba de aptitud en las fechas del calendario."
+   },
+   {
+    "paso": "Consultar resultados y cargar documentos de matrícula",
+    "detalle": "Los resultados se consultan en la misma plataforma (ruta Pregrado - Bachilleres > Resultados); la Universidad no envía correos con resultados. Los admitidos cargan documento de identidad, diploma o acta de bachiller, foto, recibo de servicios públicos y constancia del colegio (si es privado) para la liquidación de matrícula.",
+    "url": "https://matriculafinanciera.univalle.edu.co/10-general/29-documentos-exigidos-para-aspirantes-admitidos-de-pregrado"
+   }
+  ],
+  "calendario": "Dos convocatorias al año. Convocatoria 2027-1 (oferta publicada el 21 de septiembre de 2026): inscripciones para pregrados de Cali del 23 de septiembre al 10 de noviembre de 2026 y para el Sistema de Regionalización del 23 de septiembre al 18 de noviembre de 2026. Las fechas de pruebas específicas, publicación de admitidos y matrícula se indican en el calendario de cada sede dentro del portal de admisiones. Como referencia, la convocatoria 2026-2 de sedes regionales tuvo inscripciones del 29 de abril al 23 de junio de 2026, pruebas específicas el 1 y 2 de julio y publicación de admitidos el 10 de julio de 2026.",
+  "costo_inscripcion": "$140.000 (2027-1). Para programas con prueba específica (Construcción, Arquitectura, Diseño Gráfico, Diseño Industrial, Música, Licenciatura en Música y Licenciatura en Artes Visuales) el valor incluyendo la prueba es $170.000. Sin costo para aspirantes con condición de excepción aprobada (una sede).",
+  "becas_programas": [
+   "Cupos por condición de excepción: indígenas (IN), comunidades afrocolombianas (CA-CAC), víctimas del conflicto armado (VC), desmovilizados o reincorporados (DR), mejores bachilleres de colegios oficiales del Valle (MPM) y mejores puntajes nacionales/departamentales (MAP), bachilleres de departamentos sin universidad (DNI), bachilleres de zonas rurales de difícil acceso (BIDA), atletas de rendimiento (AR) y damnificados por terremoto (DAT)",
+   "Inscripción gratuita para quienes obtienen aprobación de una condición de excepción",
+   "Apoyos socioeconómicos de Bienestar Universitario y política de gratuidad en la matrícula del Gobierno Nacional (universidad pública)"
+  ],
+  "notas": "Verificado en octubre de 2026 en admisiones.univalle.edu.co (manual 'Pasos para inscripción y admisión 2027-1', oferta y calendario). El proceso está reglamentado por la Resolución 080 de 2024 del Consejo Académico. Los puntajes promedio de admitidos de periodos anteriores se consultan en 'Puntajes de referencia Cali/Sedes' del mismo portal. Correo: admisiones@correounivalle.edu.co; teléfono +57 602 3212101.",
+  "fuentes": [
+   "https://admisiones.univalle.edu.co/new/",
+   "https://admisiones.univalle.edu.co/new/index.php?action=filtrado&valorProceso=1",
+   "https://admisiones.univalle.edu.co/new/v2/pregrado/pregrado_cali/Anexos/2027_1-PASO%20A%20PASO%20PREGRADO.pdf",
+   "https://admisiones.univalle.edu.co/new/v2/pregrado/pregrado_cali/Anexos/RCA_080_Reglamento_inscripcion_y_admision-Pregrado_2024.pdf",
+   "https://www.univalle.edu.co/formacion/pregrado"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "icesi",
+  "nombre": "Universidad Icesi",
+  "sigla": "Icesi",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "privada",
+  "sedes": [
+   "Cali (Pance)"
+  ],
+  "web": "https://www.icesi.edu.co",
+  "admisiones_url": "https://www.icesi.edu.co/admisiones-de-pregrado/",
+  "uso_saber11": "entrevista_o_mixto",
+  "uso_saber11_detalle": "Exige registrar el número de registro del Saber 11 (código AC) en el formulario y adjuntar la imagen del resultado; quienes aún no tienen resultado pueden inscribirse sin puntaje. También pide el boletín o certificado de notas de al menos uno de los tres últimos años de bachillerato (los tres años completos para Medicina). La decisión la toma un comité de admisión con esa información; la página oficial no publica puntaje mínimo de Saber 11 ni ponderación.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Iniciar el proceso y crear la cuenta",
+    "detalle": "Desde 'Inscripción y forma de pago pregrados' se diligencia el formulario inicial y se crea la cuenta en el portal de aspirantes (icesi.my.site.com); el acceso llega al correo registrado.",
+    "url": "https://www.icesi.edu.co/inscripcion-y-forma-de-pago-pregrados/"
+   },
+   {
+    "paso": "Completar el formulario de inscripción",
+    "detalle": "Se elige programa y periodo de ingreso, se registran los datos del Saber 11 (tipo de examen ICFES, número de registro, documento y puntaje global), la información del colegio, datos personales y de los padres.",
+    "url": "https://icesi.my.site.com/contact/s/login/"
+   },
+   {
+    "paso": "Adjuntar documentos y pagar la inscripción",
+    "detalle": "Certificado o boletín de notas (8.º, 9.º y 10.º para Medicina; al menos uno de esos años para los demás programas), documento de identidad, foto 3x4 fondo blanco, última factura de energía, acueducto o teléfono (y Sisbén si lo tiene), imagen del resultado Saber 11 y recibo de pago de inscripción si es estrato 4 o superior."
+   },
+   {
+    "paso": "Esperar la respuesta del comité de admisión",
+    "detalle": "El comité revisa la solicitud y comunica el resultado al aspirante."
+   },
+   {
+    "paso": "Matrícula financiera",
+    "detalle": "Una vez admitido se realiza la matrícula; también existe la reserva de admisión para el semestre siguiente y la separación de cupo con un abono mínimo del 30 % de la matrícula."
+   }
+  ],
+  "calendario": "Para el primer semestre de 2027: inscripciones abiertas desde el 3 de agosto de 2026; semana de inducción del 26 al 29 de enero de 2027 e inicio de clases el 1 de febrero de 2027. Las fechas de cierre y de los comités no están publicadas en la página; se informan al aspirante en el proceso.",
+  "costo_inscripcion": "$307.000 (precios 2026 publicados para el ingreso 2027-1). Reserva de admisión para el semestre siguiente: $981.000. El pago de inscripción se exige a aspirantes de estrato 4 en adelante.",
+  "becas_programas": [
+   "Beca Icesi Cree en Ti (calendario A, 40 cupos)",
+   "Beca Talento Excepcional (calendario A, 85 cupos)",
+   "Beca a la Excelencia Académica (calendario B, 75 cupos)",
+   "Beca Icesi Inspira (calendario B, 40 cupos) y Beca Icesi Conecta (A y B, 30 cupos)",
+   "Becas Yo Quiero ser Profe, Yo Elijo ser Profe y Yo Amo ser Profe (licenciaturas)",
+   "Becas Icesos, becas empresariales, Beca Crédito Fundación Bolívar-Davivienda, becas de honor y monitorías",
+   "Financiación directa e ICETEX (Oficina de Apoyo Financiero, apoyofinanciero@icesi.edu.co)"
+  ],
+  "notas": "Verificado en octubre de 2026 en icesi.edu.co (admisiones de pregrado, inscripción y forma de pago, becas y la guía PDF 'Proceso de inscripción a pregrado'). La universidad no publica puntaje mínimo de Saber 11 ni criterios cuantitativos del comité; algunas becas pueden tener requisitos de puntaje que se consultan en cada convocatoria. Valor del semestre según programa (p. ej., Ingeniería Industrial $16.950.000 en 2026).",
+  "fuentes": [
+   "https://www.icesi.edu.co/admisiones-de-pregrado/",
+   "https://www.icesi.edu.co/inscripcion-y-forma-de-pago-pregrados/",
+   "https://www.icesi.edu.co/wp-content/uploads/2024/10/Proceso-de-inscripcion-a-pregrado.pdf",
+   "https://www.icesi.edu.co/becas/"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "javeriana-cali",
+  "nombre": "Pontificia Universidad Javeriana Cali",
+  "sigla": "Javeriana Cali",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "privada",
+  "sedes": [
+   "Cali (Pance)"
+  ],
+  "web": "https://www.javerianacali.edu.co",
+  "admisiones_url": "https://www.javerianacali.edu.co/admisiones",
+  "uso_saber11": "puntaje_minimo",
+  "uso_saber11_detalle": "Para inscribirse a una carrera se exige un puntaje global mínimo en el Saber 11: 250 puntos para todas las carreras (Administración, Arquitectura, Derecho, Ingenierías, Psicología, Economía, Comunicación, Biología, etc.) y 300 puntos para Medicina. Quien presentó el examen entre 2000 y marzo de 2014 debe sumar las áreas del núcleo común (sin inglés ni interdisciplinar): 310 en general y 370 para Medicina. Después de la inscripción, la admisión se decide con una entrevista con el director del programa, que califica según los criterios de selección y emite el acta de admisión. Artes Visuales exige además portafolio.",
+  "puntaje_minimo": {
+   "global": 250,
+   "medicina_global": 300
   },
-  {
-    "id": "javeriana-cali",
-    "nombre": "Pontificia Universidad Javeriana Cali",
-    "sigla": "Javeriana Cali",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "privada",
-    "sedes": ["Cali (Pance)"],
-    "web": "https://www.javerianacali.edu.co",
-    "admisiones_url": "https://www.javerianacali.edu.co/admisiones",
-    "uso_saber11": "puntaje_minimo",
-    "uso_saber11_detalle": "Para inscribirse a una carrera se exige un puntaje global mínimo en el Saber 11: 250 puntos para todas las carreras (Administración, Arquitectura, Derecho, Ingenierías, Psicología, Economía, Comunicación, Biología, etc.) y 300 puntos para Medicina. Quien presentó el examen entre 2000 y marzo de 2014 debe sumar las áreas del núcleo común (sin inglés ni interdisciplinar): 310 en general y 370 para Medicina. Después de la inscripción, la admisión se decide con una entrevista con el director del programa, que califica según los criterios de selección y emite el acta de admisión. Artes Visuales exige además portafolio.",
-    "puntaje_minimo": { "global": 250, "medicina_global": 300 },
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Verificar el puntaje mínimo de Saber 11 de la carrera",
-        "detalle": "La tabla oficial indica 250 puntos globales (300 para Medicina) para inscribirse.",
-        "url": "https://www.javerianacali.edu.co/admisiones/puntaje-minimo-en-tu-prueba-saber-11"
-      },
-      {
-        "paso": "Diligenciar el formulario de inscripción en línea",
-        "detalle": "Se elige el tipo de inscripción (ingreso normal, traslado, transferencia o múltiple programa) y se completan los datos.",
-        "url": "https://www.javerianacali.edu.co/admisiones/formularios-de-inscripcion"
-      },
-      {
-        "paso": "Pagar los derechos de inscripción",
-        "detalle": "$167.000 por PSE; los aspirantes por traslado o múltiple programa están exentos."
-      },
-      {
-        "paso": "Cargar los documentos y formalizar la inscripción",
-        "detalle": "Documento de identidad por ambos lados, certificados o boletines finales de 9.º a 11.º (o 12.º), constancia del colegio si cursa último año, resultados del Saber 11 (o citación/certificado de presentación si aún no hay resultados) y comprobante de pago."
-      },
-      {
-        "paso": "Presentar la entrevista de admisión",
-        "detalle": "El sistema programa la entrevista con el director del programa y la cita llega por correo (fecha, hora y lugar). El director califica al aspirante y emite el acta de admisión con el resultado."
-      }
-    ],
-    "calendario": "Inscripciones abiertas durante el año para cada semestre; la página no publica fechas de cierre de inscripción ni de entrevistas, que se informan al aspirante. El calendario institucional 2026 (Circular SG n.º 4 de 2025) se consulta en la sección 'Calendario académico y administrativo'.",
-    "costo_inscripcion": "$167.000 (valor vigente publicado en octubre de 2026). Exentos: traslado y múltiple programa.",
-    "becas_programas": [
-      "Becas Magis (Futuro, Excelencia, Esperanza)",
-      "Beca Indígenas y Afrodescendientes",
-      "Beca CREEmos y becas de donantes (p. ej., Beca Tatiana María Mejía)",
-      "Becas colegios (Bahía Buenaventura, Acodesi San Juan Berchmans, Acodesi San Luis Gonzaga) y Beca Fe y Alegría",
-      "Generación E y becas por programa; postulación por el sistema SIBEC",
-      "Financiación Javeriana y crédito ICETEX"
-    ],
-    "notas": "Verificado en octubre de 2026 en javerianacali.edu.co (admisiones, puntaje mínimo Saber 11, formularios y becas). Los requisitos de cada beca (puntajes, estratos, cupos) se consultan en la ficha de cada beca. Informes: (602) 485 1192 / 321 8200.",
-    "fuentes": [
-      "https://www.javerianacali.edu.co/admisiones",
-      "https://www.javerianacali.edu.co/admisiones/puntaje-minimo-en-tu-prueba-saber-11",
-      "https://www.javerianacali.edu.co/admisiones/formularios-de-inscripcion",
-      "https://www.javerianacali.edu.co/becas",
-      "https://www.javerianacali.edu.co/institucional/calendario-academico-y-administrativo"
-    ],
-    "verificado": "2026-10"
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Verificar el puntaje mínimo de Saber 11 de la carrera",
+    "detalle": "La tabla oficial indica 250 puntos globales (300 para Medicina) para inscribirse.",
+    "url": "https://www.javerianacali.edu.co/admisiones/puntaje-minimo-en-tu-prueba-saber-11"
+   },
+   {
+    "paso": "Diligenciar el formulario de inscripción en línea",
+    "detalle": "Se elige el tipo de inscripción (ingreso normal, traslado, transferencia o múltiple programa) y se completan los datos.",
+    "url": "https://www.javerianacali.edu.co/admisiones/formularios-de-inscripcion"
+   },
+   {
+    "paso": "Pagar los derechos de inscripción",
+    "detalle": "$167.000 por PSE; los aspirantes por traslado o múltiple programa están exentos."
+   },
+   {
+    "paso": "Cargar los documentos y formalizar la inscripción",
+    "detalle": "Documento de identidad por ambos lados, certificados o boletines finales de 9.º a 11.º (o 12.º), constancia del colegio si cursa último año, resultados del Saber 11 (o citación/certificado de presentación si aún no hay resultados) y comprobante de pago."
+   },
+   {
+    "paso": "Presentar la entrevista de admisión",
+    "detalle": "El sistema programa la entrevista con el director del programa y la cita llega por correo (fecha, hora y lugar). El director califica al aspirante y emite el acta de admisión con el resultado."
+   }
+  ],
+  "calendario": "Inscripciones abiertas durante el año para cada semestre; la página no publica fechas de cierre de inscripción ni de entrevistas, que se informan al aspirante. El calendario institucional 2026 (Circular SG n.º 4 de 2025) se consulta en la sección 'Calendario académico y administrativo'.",
+  "costo_inscripcion": "$167.000 (valor vigente publicado en octubre de 2026). Exentos: traslado y múltiple programa.",
+  "becas_programas": [
+   "Becas Magis (Futuro, Excelencia, Esperanza)",
+   "Beca Indígenas y Afrodescendientes",
+   "Beca CREEmos y becas de donantes (p. ej., Beca Tatiana María Mejía)",
+   "Becas colegios (Bahía Buenaventura, Acodesi San Juan Berchmans, Acodesi San Luis Gonzaga) y Beca Fe y Alegría",
+   "Generación E y becas por programa; postulación por el sistema SIBEC",
+   "Financiación Javeriana y crédito ICETEX"
+  ],
+  "notas": "Verificado en octubre de 2026 en javerianacali.edu.co (admisiones, puntaje mínimo Saber 11, formularios y becas). Los requisitos de cada beca (puntajes, estratos, cupos) se consultan en la ficha de cada beca. Informes: (602) 485 1192 / 321 8200.",
+  "fuentes": [
+   "https://www.javerianacali.edu.co/admisiones",
+   "https://www.javerianacali.edu.co/admisiones/puntaje-minimo-en-tu-prueba-saber-11",
+   "https://www.javerianacali.edu.co/admisiones/formularios-de-inscripcion",
+   "https://www.javerianacali.edu.co/becas",
+   "https://www.javerianacali.edu.co/institucional/calendario-academico-y-administrativo"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "uao",
+  "nombre": "Universidad Autónoma de Occidente",
+  "sigla": "UAO",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "privada",
+  "sedes": [
+   "Cali (Valle del Lili, vía Cali-Jamundí)"
+  ],
+  "web": "https://www.uao.edu.co",
+  "admisiones_url": "https://www.uao.edu.co/inscripcion-online-pregrado/",
+  "uso_saber11": "requisito",
+  "uso_saber11_detalle": "El Saber 11 forma parte de los documentos de inscripción a primer semestre, pero la página de admisiones no publica puntaje mínimo, ponderación ni examen propio para la admisión general. El puntaje sí define becas: la Beca Mérito Académico se otorga a bachilleres con 335 puntos o más (80 % de la matrícula en primer semestre y 40 % desde el segundo) y la Beca PAEM Arquitectura Sostenible exige 310 puntos o más.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Consultar la oferta y las fechas clave",
+    "detalle": "La página 'Inscripción online pregrado' muestra las fechas por tipo de programa (semestral, cuatrimestral, virtual) y los documentos exigidos (PDF de requisitos 2026).",
+    "url": "https://www.uao.edu.co/inscripcion-online-pregrado/"
+   },
+   {
+    "paso": "Pagar los derechos de inscripción",
+    "detalle": "Se descarga el recibo o se paga en línea con tarjeta o PSE. En octubre de 2026 la UAO anunció inscripción sin costo a pregrado por tiempo limitado.",
+    "url": "https://www.uao.edu.co/vive-la-uao/inscripcion-pregrado-sin-costo/"
+   },
+   {
+    "paso": "Diligenciar el formulario y adjuntar documentos",
+    "detalle": "Una vez pagado, se completa el formulario en línea y se cargan los documentos del listado 'Requisitos pregrado 2026 - primer semestre'.",
+    "url": "https://www.uao.edu.co/wp-content/uploads/2026/05/requisitos-pregrado-uao-2026-primer.pdf"
+   },
+   {
+    "paso": "Confirmar la admisión y hacer la matrícula financiera",
+    "detalle": "Al confirmarse la admisión se genera el recibo de matrícula (pago en bancos Bogotá, Davivienda, Occidente o AV Villas, o en línea) y luego la matrícula académica; el horario se consulta en el portal estudiantil."
+   }
+  ],
+  "calendario": "Para 2027-1: programas presenciales e híbridos semestrales con inscripciones desde el 10 de agosto de 2026 e inicio de clases el 25 de enero de 2027; Contaduría Pública (cuatrimestral) inscripciones desde el 7 de septiembre de 2026 y clases el 12 de enero de 2027; programas virtuales (bimestrales) inscripciones desde el 1 de septiembre de 2026 y clases desde el 26 de octubre de 2026. No se publica fecha de cierre.",
+  "costo_inscripcion": "$149.800 para pregrado 2026 (transferencia externa $717.000; Administración de Empresas modelo dual $211.200). En octubre de 2026 la inscripción a pregrado estaba sin costo por tiempo limitado. Valor 2027 no publicado en la página oficial; consultar en admisiones.",
+  "becas_programas": [
+   "Beca Mérito Académico: Saber 11 igual o superior a 335 puntos (80 % primer semestre, 40 % en adelante)",
+   "Premio a la Excelencia Académica para Bachilleres (hasta 100 % primer semestre y hasta 80 % después)",
+   "Becas por programa: Ingeniería Ambiental (30 %/50 %), Psicología (30 %), Derecho (30 %/40 %), Ingeniería Eléctrica (30 %), Contaduría Pública (30 %)",
+   "Beca Somos UAO (20 %) para colegios aliados con clasificación ICFES A+ y A; becas PAEM para colegios del convenio",
+   "Beca hijos de egresados (20 %) y Beca Conexión U de Gases de Occidente (100 %, por convocatoria)",
+   "Convenio ICETEX, crédito directo con la Universidad y entidades financieras aliadas"
+  ],
+  "notas": "Verificado en octubre de 2026 en uao.edu.co (aspirante, inscripción online pregrado, becas UAO y nota 'Inscríbete sin costo'). El PDF de requisitos 2026 no se pudo leer como texto en esta verificación. No se publica puntaje mínimo de Saber 11 para admitir. PBX (602) 318 8000.",
+  "fuentes": [
+   "https://www.uao.edu.co/aspirante/",
+   "https://www.uao.edu.co/inscripcion-online-pregrado/",
+   "https://www.uao.edu.co/becasuao/",
+   "https://www.uao.edu.co/vive-la-uao/inscripcion-pregrado-sin-costo/",
+   "https://www.uao.edu.co/wp-content/uploads/2026/05/requisitos-pregrado-uao-2026-primer.pdf"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "usb-cali",
+  "nombre": "Universidad de San Buenaventura Cali",
+  "sigla": "USB Cali",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "privada",
+  "sedes": [
+   "Cali (La Umbría, Pance)"
+  ],
+  "web": "https://usbcali.edu.co",
+  "admisiones_url": "https://usbcali.edu.co/inscripciones/",
+  "uso_saber11": "requisito",
+  "uso_saber11_detalle": "Pide el resultado del Saber 11 (o carta de compromiso y citación si aún no lo ha presentado) como documento obligatorio de la inscripción a primer semestre. La página oficial no publica puntaje mínimo, ponderación ni examen de admisión; la Universidad se reserva verificar la autenticidad de los resultados.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Diligenciar el formulario de inscripción",
+    "detalle": "Se elige grado académico (pregrado), programa, ciclo lectivo y tipo de admisión (estudiante nuevo, transferencia externa o interna).",
+    "url": "https://usbcali.edu.co/pasos-registro/"
+   },
+   {
+    "paso": "Generar y pagar el recibo de inscripción",
+    "detalle": "$130.000; pago en Davivienda, Banco de Occidente o en línea por PSE."
+   },
+   {
+    "paso": "Cargar los documentos",
+    "detalle": "Formulario de inscripción, documento de identidad, recibo de pago, acta de grado, diploma o certificado de grado 11, resultado del Saber 11 (o carta de compromiso y citación), foto 3x4 fondo azul, recibo de servicios públicos y, opcional, certificado de EPS."
+   },
+   {
+    "paso": "Verificar los pasos y esperar la respuesta",
+    "detalle": "La plataforma permite revisar que formulario, pago y documentos quedaron completos. Informes: registroacademico@usbcali.edu.co, PBX 602 488 2222.",
+    "url": "https://usbcali.edu.co/inscripciones/"
+   }
+  ],
+  "calendario": "No publicado en la página oficial; consultar en admisiones (la Universidad abre inscripciones para cada semestre y publica las fechas de matrícula en 'Inscripción y Matrícula').",
+  "costo_inscripcion": "$130.000 (publicado en el paso a paso de inscripción, 2026).",
+  "becas_programas": [
+   "Beca Excelencia Académica y Beca Preclarus",
+   "Becas Oro, Platino y Diamante",
+   "Beca de Apoyo para el Ingreso y la Continuidad",
+   "Beca Comunidades Negras ICETEX y Beca Comunidades Indígenas ICETEX",
+   "Beca por Solidaridad Familiar, Hijos de Egresados, Fraternidad Franciscana, Yo Amo Educar",
+   "Beca por Monitorías y Beca Reconocimiento al Mérito Deportivo, Artístico o Desarrollo Cultural y Humano",
+   "Convenios de descuento en matrícula y opciones de financiación"
+  ],
+  "notas": "Verificado en octubre de 2026 en usbcali.edu.co (inscripciones, pasos de registro, becas y PDF de valores de matrícula 2026). Las becas se rigen por la Resolución de Rectoría S.1.1-1936 de 2025 y deben solicitarse cada periodo a servicios_financieros@usbcali.edu.co. Valores de matrícula 2026 por programa en el PDF 'Valores pregrado 2026' (p. ej., Derecho $9.009.000, Psicología $9.337.000).",
+  "fuentes": [
+   "https://usbcali.edu.co/inscripciones/",
+   "https://usbcali.edu.co/pasos-registro/",
+   "https://usbcali.edu.co/becas/",
+   "https://usbcali.edu.co/wp-content/uploads/2026/01/VALORES-PREGRADO-2026.pdf"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "usc",
+  "nombre": "Universidad Santiago de Cali",
+  "sigla": "USC",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "privada",
+  "sedes": [
+   "Cali (Pampalinda)",
+   "Cali (Centro)",
+   "Palmira (seccional)"
+  ],
+  "web": "https://www.usc.edu.co",
+  "admisiones_url": "https://sinu.usc.edu.co/sinugwt/services/inscripciones/home",
+  "uso_saber11": "requisito",
+  "uso_saber11_detalle": "La inscripción se hace en el sistema SINU; el sitio oficial no publica puntaje mínimo de Saber 11, ponderación ni examen de admisión para pregrado. El Saber 11 es requisito legal para matricularse en educación superior.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Elegir el programa en la oferta de pregrados",
+    "detalle": "La USC ofrece pregrados en Salud (Medicina, Enfermería, Odontología, Psicología, etc.), Ingeniería, Derecho, Educación, Ciencias Básicas, Humanidades y Artes y Ciencias Económicas, en Cali y en la seccional Palmira, además de programas virtuales.",
+    "url": "https://www.usc.edu.co/pregrados/"
+   },
+   {
+    "paso": "Iniciar la inscripción en SINU",
+    "detalle": "En 'Nueva inscripción' se selecciona el programa y se obtiene un número de formulario, que llega al correo registrado.",
+    "url": "https://sinu.usc.edu.co/sinugwt/services/inscripciones/home"
+   },
+   {
+    "paso": "Continuar y completar el formulario",
+    "detalle": "Con documento, correo y número de formulario se retoma la inscripción; se elige periodo académico y modalidad de estudios. Hay consulta del estado de inscripción."
+   },
+   {
+    "paso": "Consultar el calendario académico",
+    "detalle": "La Resolución 011 del 4 de agosto de 2026 modificó el calendario del periodo 2026B para pregrado; el calendario se publica en PDF.",
+    "url": "https://www.usc.edu.co/calendario-academico/"
+   }
+  ],
+  "calendario": "No publicado como fechas de inscripción en las páginas consultadas; el calendario académico 2026 (pregrado) está en PDF escaneado en 'Calendario Académico'. Consultar en admisiones.",
+  "costo_inscripcion": "No publicado en la página oficial; consultar en admisiones (los derechos pecuniarios se publican en un documento externo en Calameo).",
+  "becas_programas": [
+   "No se encontró una sección de becas para aspirantes nuevos en la página oficial; consultar con Bienestar o admisiones"
+  ],
+  "notas": "Verificado en octubre de 2026 en usc.edu.co (pregrados, calendario académico, registro y control académico) y en el portal SINU. La USC no publica en estas páginas criterios de admisión, costos de inscripción ni fechas de convocatoria; la información sale al diligenciar la inscripción en SINU. PBX +57 (602) 518 3000.",
+  "fuentes": [
+   "https://www.usc.edu.co/pregrados/",
+   "https://sinu.usc.edu.co/sinugwt/services/inscripciones/home",
+   "https://www.usc.edu.co/calendario-academico/",
+   "https://www.usc.edu.co/registro-y-control-academico/"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "unal-palmira",
+  "nombre": "Universidad Nacional de Colombia - Sede Palmira",
+  "sigla": "UNAL Palmira",
+  "ciudad": "Palmira",
+  "departamento": "Valle del Cauca",
+  "tipo": "pública",
+  "sedes": [
+   "Palmira",
+   "Bogotá",
+   "Medellín",
+   "Manizales",
+   "De La Paz",
+   "Amazonia",
+   "Caribe",
+   "Orinoquia",
+   "Tumaco"
+  ],
+  "web": "https://palmira.unal.edu.co",
+  "admisiones_url": "https://admisiones.unal.edu.co/pregrado/",
+  "uso_saber11": "examen_propio",
+  "uso_saber11_detalle": "La admisión regular se decide con la prueba de admisión nacional de la UNAL (opción múltiple: matemáticas, ciencias naturales, ciencias sociales, análisis textual y análisis de imagen), igual para todas las sedes. El Saber 11 es requisito legal para matricularse y no define el puntaje de admisión. Para la Sede Palmira existe el Programa de Admisión Especial con Enfoque Territorial (PAET), con cupos reservados para bachilleres de estratos 1, 2 o 3 que cursaron los dos últimos años de bachillerato y residen en Cauca, Nariño, Putumayo o Valle del Cauca.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Revisar la oferta de programas de la Sede Palmira",
+    "detalle": "Programas como Ingeniería Agronómica, Ingeniería Agroindustrial, Ingeniería Ambiental, Diseño Industrial, Zootecnia y Administración de Empresas, entre otros; la oferta y los cupos se publican en cada convocatoria.",
+    "url": "https://admisiones.unal.edu.co/pregrado/oferta-de-programas-curriculares/"
+   },
+   {
+    "paso": "Pagar los derechos de inscripción",
+    "detalle": "$175.000 (convocatoria 2027-01), pago virtual desde el formulario o presencial. Hay gratuidad en la inscripción para aspirantes de los programas de admisión especial (PAES y PAET).",
+    "url": "https://admisiones.unal.edu.co/pregrado/politica-de-gratuidad-en-la-inscripcion/"
+   },
+   {
+    "paso": "Formalizar la inscripción por internet",
+    "detalle": "Registrar datos personales y académicos (incluido el registro del Saber 11 cuando aplique) y elegir la ciudad donde presentará la prueba. Los aspirantes PAET deben cumplir los requisitos de estrato, colegio y residencia de la región de influencia.",
+    "url": "https://admisiones.unal.edu.co/pregrado/sedes-medellin-palmira-y-manizales/"
+   },
+   {
+    "paso": "Consultar la citación y presentar la prueba de admisión",
+    "detalle": "Se presenta un domingo en la ciudad elegida; la UNAL publica demostraciones interactivas de la prueba.",
+    "url": "https://admisiones.unal.edu.co/pregrado/prueba-de-admision/"
+   },
+   {
+    "paso": "Consultar puntaje, inscribir programa y resultados",
+    "detalle": "Con el puntaje se inscribe el programa en la ventana indicada; luego hay segunda y tercera asignación de cupos. Los admitidos envían documentos y pagan sistematización; los admitidos PAET entregan además certificado de residencia y certificado del colegio."
+   }
+  ],
+  "calendario": "Dos convocatorias al año (proceso nacional). Convocatoria 2027-01: pago y formalización de la inscripción del 6 de julio al 24 de agosto de 2026; citación desde el 31 de agosto; prueba de admisión domingo 20 de septiembre de 2026; puntaje desde el 1 de octubre; resultados de admisión desde el 9 de octubre, 22 de octubre y 13 de noviembre de 2026 (asignaciones sucesivas); envío de documentos y pago de sistematización del 26 al 30 de octubre. La convocatoria para segundo semestre suele abrir en febrero con prueba en abril o mayo.",
+  "costo_inscripcion": "$175.000 (convocatoria 2027-01). Gratuito para aspirantes de programas de admisión especial (PAES y PAET).",
+  "becas_programas": [
+   "PAET: Programa de Admisión Especial con Enfoque Territorial (Sede Palmira: Cauca, Nariño, Putumayo y Valle del Cauca; estratos 1-3)",
+   "PAES: comunidades indígenas, mejores bachilleres, mejores bachilleres de municipios pobres, población negra/afrocolombiana/palenquera/raizal, víctimas del conflicto armado",
+   "PEAMA: Programa Especial de Admisión y Movilidad Académica (sedes de presencia nacional, incluida Tumaco)",
+   "Política de inclusión para aspirantes con discapacidad (ajustes razonables en la prueba)",
+   "Política de gratuidad en la matrícula del Gobierno Nacional"
+  ],
+  "notas": "Verificado en octubre de 2026 en admisiones.unal.edu.co (calendario 2027-01, afiche de la convocatoria y página de Sedes Medellín, Palmira y Manizales). El PAET está reglamentado por el Acuerdo 019 de 2023 del CSU y las resoluciones de Rectoría 098 de 2024, 011 de 2025 y 258 de 2025. Correo: inscripcion_nal@unal.edu.co.",
+  "fuentes": [
+   "https://admisiones.unal.edu.co/pregrado/",
+   "https://admisiones.unal.edu.co/pregrado/sedes-medellin-palmira-y-manizales/",
+   "https://admisiones.unal.edu.co/fileadmin/ArchivosDNA/afiches/AI_Afiche_PREGRADO_2027-01_v5.pdf",
+   "https://palmira.unal.edu.co"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "unicauca",
+  "nombre": "Universidad del Cauca",
+  "sigla": "Unicauca",
+  "ciudad": "Popayán",
+  "departamento": "Cauca",
+  "tipo": "pública",
+  "sedes": [
+   "Popayán",
+   "Santander de Quilichao (Regionalización Norte del Cauca)",
+   "Otros municipios del Cauca (programas de regionalización y extensión)"
+  ],
+  "web": "https://www.unicauca.edu.co",
+  "admisiones_url": "https://www.unicauca.edu.co/vicerrectoria-academica/darca/inscripcionesap/",
+  "uso_saber11": "ponderado",
+  "uso_saber11_detalle": "Admite con el resultado del Saber 11 (presentado desde el segundo semestre de 2012). Para inscribirse se exige un puntaje global igual o superior a 160 en los programas de Popayán y a 150 en los de Regionalización. La selección se hace con el puntaje ponderado: cada programa asigna porcentajes a lectura crítica, matemáticas, sociales y ciudadanas, ciencias naturales e inglés, y los cupos se asignan en estricto orden descendente; quien no alcanza el mínimo queda excluido. Algunos programas (artes, educación física, música) aplican pruebas adicionales. El Programa de Tránsito Inmediato a la Educación Superior (PTIES) admite con una prueba propia y el Saber 11 solo como requisito.",
+  "puntaje_minimo": {
+   "global": 160,
+   "regionalizacion_global": 150
   },
-  {
-    "id": "uao",
-    "nombre": "Universidad Autónoma de Occidente",
-    "sigla": "UAO",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "privada",
-    "sedes": ["Cali (Valle del Lili, vía Cali-Jamundí)"],
-    "web": "https://www.uao.edu.co",
-    "admisiones_url": "https://www.uao.edu.co/inscripcion-online-pregrado/",
-    "uso_saber11": "requisito",
-    "uso_saber11_detalle": "El Saber 11 forma parte de los documentos de inscripción a primer semestre, pero la página de admisiones no publica puntaje mínimo, ponderación ni examen propio para la admisión general. El puntaje sí define becas: la Beca Mérito Académico se otorga a bachilleres con 335 puntos o más (80 % de la matrícula en primer semestre y 40 % desde el segundo) y la Beca PAEM Arquitectura Sostenible exige 310 puntos o más.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Consultar la oferta y las fechas clave",
-        "detalle": "La página 'Inscripción online pregrado' muestra las fechas por tipo de programa (semestral, cuatrimestral, virtual) y los documentos exigidos (PDF de requisitos 2026).",
-        "url": "https://www.uao.edu.co/inscripcion-online-pregrado/"
-      },
-      {
-        "paso": "Pagar los derechos de inscripción",
-        "detalle": "Se descarga el recibo o se paga en línea con tarjeta o PSE. En octubre de 2026 la UAO anunció inscripción sin costo a pregrado por tiempo limitado.",
-        "url": "https://www.uao.edu.co/vive-la-uao/inscripcion-pregrado-sin-costo/"
-      },
-      {
-        "paso": "Diligenciar el formulario y adjuntar documentos",
-        "detalle": "Una vez pagado, se completa el formulario en línea y se cargan los documentos del listado 'Requisitos pregrado 2026 - primer semestre'.",
-        "url": "https://www.uao.edu.co/wp-content/uploads/2026/05/requisitos-pregrado-uao-2026-primer.pdf"
-      },
-      {
-        "paso": "Confirmar la admisión y hacer la matrícula financiera",
-        "detalle": "Al confirmarse la admisión se genera el recibo de matrícula (pago en bancos Bogotá, Davivienda, Occidente o AV Villas, o en línea) y luego la matrícula académica; el horario se consulta en el portal estudiantil."
-      }
-    ],
-    "calendario": "Para 2027-1: programas presenciales e híbridos semestrales con inscripciones desde el 10 de agosto de 2026 e inicio de clases el 25 de enero de 2027; Contaduría Pública (cuatrimestral) inscripciones desde el 7 de septiembre de 2026 y clases el 12 de enero de 2027; programas virtuales (bimestrales) inscripciones desde el 1 de septiembre de 2026 y clases desde el 26 de octubre de 2026. No se publica fecha de cierre.",
-    "costo_inscripcion": "$149.800 para pregrado 2026 (transferencia externa $717.000; Administración de Empresas modelo dual $211.200). En octubre de 2026 la inscripción a pregrado estaba sin costo por tiempo limitado. Valor 2027 no publicado en la página oficial; consultar en admisiones.",
-    "becas_programas": [
-      "Beca Mérito Académico: Saber 11 igual o superior a 335 puntos (80 % primer semestre, 40 % en adelante)",
-      "Premio a la Excelencia Académica para Bachilleres (hasta 100 % primer semestre y hasta 80 % después)",
-      "Becas por programa: Ingeniería Ambiental (30 %/50 %), Psicología (30 %), Derecho (30 %/40 %), Ingeniería Eléctrica (30 %), Contaduría Pública (30 %)",
-      "Beca Somos UAO (20 %) para colegios aliados con clasificación ICFES A+ y A; becas PAEM para colegios del convenio",
-      "Beca hijos de egresados (20 %) y Beca Conexión U de Gases de Occidente (100 %, por convocatoria)",
-      "Convenio ICETEX, crédito directo con la Universidad y entidades financieras aliadas"
-    ],
-    "notas": "Verificado en octubre de 2026 en uao.edu.co (aspirante, inscripción online pregrado, becas UAO y nota 'Inscríbete sin costo'). El PDF de requisitos 2026 no se pudo leer como texto en esta verificación. No se publica puntaje mínimo de Saber 11 para admitir. PBX (602) 318 8000.",
-    "fuentes": [
-      "https://www.uao.edu.co/aspirante/",
-      "https://www.uao.edu.co/inscripcion-online-pregrado/",
-      "https://www.uao.edu.co/becasuao/",
-      "https://www.uao.edu.co/vive-la-uao/inscripcion-pregrado-sin-costo/",
-      "https://www.uao.edu.co/wp-content/uploads/2026/05/requisitos-pregrado-uao-2026-primer.pdf"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "usb-cali",
-    "nombre": "Universidad de San Buenaventura Cali",
-    "sigla": "USB Cali",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "privada",
-    "sedes": ["Cali (La Umbría, Pance)"],
-    "web": "https://usbcali.edu.co",
-    "admisiones_url": "https://usbcali.edu.co/inscripciones/",
-    "uso_saber11": "requisito",
-    "uso_saber11_detalle": "Pide el resultado del Saber 11 (o carta de compromiso y citación si aún no lo ha presentado) como documento obligatorio de la inscripción a primer semestre. La página oficial no publica puntaje mínimo, ponderación ni examen de admisión; la Universidad se reserva verificar la autenticidad de los resultados.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Diligenciar el formulario de inscripción",
-        "detalle": "Se elige grado académico (pregrado), programa, ciclo lectivo y tipo de admisión (estudiante nuevo, transferencia externa o interna).",
-        "url": "https://usbcali.edu.co/pasos-registro/"
-      },
-      {
-        "paso": "Generar y pagar el recibo de inscripción",
-        "detalle": "$130.000; pago en Davivienda, Banco de Occidente o en línea por PSE."
-      },
-      {
-        "paso": "Cargar los documentos",
-        "detalle": "Formulario de inscripción, documento de identidad, recibo de pago, acta de grado, diploma o certificado de grado 11, resultado del Saber 11 (o carta de compromiso y citación), foto 3x4 fondo azul, recibo de servicios públicos y, opcional, certificado de EPS."
-      },
-      {
-        "paso": "Verificar los pasos y esperar la respuesta",
-        "detalle": "La plataforma permite revisar que formulario, pago y documentos quedaron completos. Informes: registroacademico@usbcali.edu.co, PBX 602 488 2222.",
-        "url": "https://usbcali.edu.co/inscripciones/"
-      }
-    ],
-    "calendario": "No publicado en la página oficial; consultar en admisiones (la Universidad abre inscripciones para cada semestre y publica las fechas de matrícula en 'Inscripción y Matrícula').",
-    "costo_inscripcion": "$130.000 (publicado en el paso a paso de inscripción, 2026).",
-    "becas_programas": [
-      "Beca Excelencia Académica y Beca Preclarus",
-      "Becas Oro, Platino y Diamante",
-      "Beca de Apoyo para el Ingreso y la Continuidad",
-      "Beca Comunidades Negras ICETEX y Beca Comunidades Indígenas ICETEX",
-      "Beca por Solidaridad Familiar, Hijos de Egresados, Fraternidad Franciscana, Yo Amo Educar",
-      "Beca por Monitorías y Beca Reconocimiento al Mérito Deportivo, Artístico o Desarrollo Cultural y Humano",
-      "Convenios de descuento en matrícula y opciones de financiación"
-    ],
-    "notas": "Verificado en octubre de 2026 en usbcali.edu.co (inscripciones, pasos de registro, becas y PDF de valores de matrícula 2026). Las becas se rigen por la Resolución de Rectoría S.1.1-1936 de 2025 y deben solicitarse cada periodo a servicios_financieros@usbcali.edu.co. Valores de matrícula 2026 por programa en el PDF 'Valores pregrado 2026' (p. ej., Derecho $9.009.000, Psicología $9.337.000).",
-    "fuentes": [
-      "https://usbcali.edu.co/inscripciones/",
-      "https://usbcali.edu.co/pasos-registro/",
-      "https://usbcali.edu.co/becas/",
-      "https://usbcali.edu.co/wp-content/uploads/2026/01/VALORES-PREGRADO-2026.pdf"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "usc",
-    "nombre": "Universidad Santiago de Cali",
-    "sigla": "USC",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "privada",
-    "sedes": ["Cali (Pampalinda)", "Cali (Centro)", "Palmira (seccional)"],
-    "web": "https://www.usc.edu.co",
-    "admisiones_url": "https://sinu.usc.edu.co/sinugwt/services/inscripciones/home",
-    "uso_saber11": "requisito",
-    "uso_saber11_detalle": "La inscripción se hace en el sistema SINU; el sitio oficial no publica puntaje mínimo de Saber 11, ponderación ni examen de admisión para pregrado. El Saber 11 es requisito legal para matricularse en educación superior.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Elegir el programa en la oferta de pregrados",
-        "detalle": "La USC ofrece pregrados en Salud (Medicina, Enfermería, Odontología, Psicología, etc.), Ingeniería, Derecho, Educación, Ciencias Básicas, Humanidades y Artes y Ciencias Económicas, en Cali y en la seccional Palmira, además de programas virtuales.",
-        "url": "https://www.usc.edu.co/pregrados/"
-      },
-      {
-        "paso": "Iniciar la inscripción en SINU",
-        "detalle": "En 'Nueva inscripción' se selecciona el programa y se obtiene un número de formulario, que llega al correo registrado.",
-        "url": "https://sinu.usc.edu.co/sinugwt/services/inscripciones/home"
-      },
-      {
-        "paso": "Continuar y completar el formulario",
-        "detalle": "Con documento, correo y número de formulario se retoma la inscripción; se elige periodo académico y modalidad de estudios. Hay consulta del estado de inscripción."
-      },
-      {
-        "paso": "Consultar el calendario académico",
-        "detalle": "La Resolución 011 del 4 de agosto de 2026 modificó el calendario del periodo 2026B para pregrado; el calendario se publica en PDF.",
-        "url": "https://www.usc.edu.co/calendario-academico/"
-      }
-    ],
-    "calendario": "No publicado como fechas de inscripción en las páginas consultadas; el calendario académico 2026 (pregrado) está en PDF escaneado en 'Calendario Académico'. Consultar en admisiones.",
-    "costo_inscripcion": "No publicado en la página oficial; consultar en admisiones (los derechos pecuniarios se publican en un documento externo en Calameo).",
-    "becas_programas": [
-      "No se encontró una sección de becas para aspirantes nuevos en la página oficial; consultar con Bienestar o admisiones"
-    ],
-    "notas": "Verificado en octubre de 2026 en usc.edu.co (pregrados, calendario académico, registro y control académico) y en el portal SINU. La USC no publica en estas páginas criterios de admisión, costos de inscripción ni fechas de convocatoria; la información sale al diligenciar la inscripción en SINU. PBX +57 (602) 518 3000.",
-    "fuentes": [
-      "https://www.usc.edu.co/pregrados/",
-      "https://sinu.usc.edu.co/sinugwt/services/inscripciones/home",
-      "https://www.usc.edu.co/calendario-academico/",
-      "https://www.usc.edu.co/registro-y-control-academico/"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "unal-palmira",
-    "nombre": "Universidad Nacional de Colombia - Sede Palmira",
-    "sigla": "UNAL Palmira",
-    "ciudad": "Palmira",
-    "departamento": "Valle del Cauca",
-    "tipo": "pública",
-    "sedes": ["Palmira", "Bogotá", "Medellín", "Manizales", "De La Paz", "Amazonia", "Caribe", "Orinoquia", "Tumaco"],
-    "web": "https://palmira.unal.edu.co",
-    "admisiones_url": "https://admisiones.unal.edu.co/pregrado/",
-    "uso_saber11": "examen_propio",
-    "uso_saber11_detalle": "La admisión regular se decide con la prueba de admisión nacional de la UNAL (opción múltiple: matemáticas, ciencias naturales, ciencias sociales, análisis textual y análisis de imagen), igual para todas las sedes. El Saber 11 es requisito legal para matricularse y no define el puntaje de admisión. Para la Sede Palmira existe el Programa de Admisión Especial con Enfoque Territorial (PAET), con cupos reservados para bachilleres de estratos 1, 2 o 3 que cursaron los dos últimos años de bachillerato y residen en Cauca, Nariño, Putumayo o Valle del Cauca.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Revisar la oferta de programas de la Sede Palmira",
-        "detalle": "Programas como Ingeniería Agronómica, Ingeniería Agroindustrial, Ingeniería Ambiental, Diseño Industrial, Zootecnia y Administración de Empresas, entre otros; la oferta y los cupos se publican en cada convocatoria.",
-        "url": "https://admisiones.unal.edu.co/pregrado/oferta-de-programas-curriculares/"
-      },
-      {
-        "paso": "Pagar los derechos de inscripción",
-        "detalle": "$175.000 (convocatoria 2027-01), pago virtual desde el formulario o presencial. Hay gratuidad en la inscripción para aspirantes de los programas de admisión especial (PAES y PAET).",
-        "url": "https://admisiones.unal.edu.co/pregrado/politica-de-gratuidad-en-la-inscripcion/"
-      },
-      {
-        "paso": "Formalizar la inscripción por internet",
-        "detalle": "Registrar datos personales y académicos (incluido el registro del Saber 11 cuando aplique) y elegir la ciudad donde presentará la prueba. Los aspirantes PAET deben cumplir los requisitos de estrato, colegio y residencia de la región de influencia.",
-        "url": "https://admisiones.unal.edu.co/pregrado/sedes-medellin-palmira-y-manizales/"
-      },
-      {
-        "paso": "Consultar la citación y presentar la prueba de admisión",
-        "detalle": "Se presenta un domingo en la ciudad elegida; la UNAL publica demostraciones interactivas de la prueba.",
-        "url": "https://admisiones.unal.edu.co/pregrado/prueba-de-admision/"
-      },
-      {
-        "paso": "Consultar puntaje, inscribir programa y resultados",
-        "detalle": "Con el puntaje se inscribe el programa en la ventana indicada; luego hay segunda y tercera asignación de cupos. Los admitidos envían documentos y pagan sistematización; los admitidos PAET entregan además certificado de residencia y certificado del colegio."
-      }
-    ],
-    "calendario": "Dos convocatorias al año (proceso nacional). Convocatoria 2027-01: pago y formalización de la inscripción del 6 de julio al 24 de agosto de 2026; citación desde el 31 de agosto; prueba de admisión domingo 20 de septiembre de 2026; puntaje desde el 1 de octubre; resultados de admisión desde el 9 de octubre, 22 de octubre y 13 de noviembre de 2026 (asignaciones sucesivas); envío de documentos y pago de sistematización del 26 al 30 de octubre. La convocatoria para segundo semestre suele abrir en febrero con prueba en abril o mayo.",
-    "costo_inscripcion": "$175.000 (convocatoria 2027-01). Gratuito para aspirantes de programas de admisión especial (PAES y PAET).",
-    "becas_programas": [
-      "PAET: Programa de Admisión Especial con Enfoque Territorial (Sede Palmira: Cauca, Nariño, Putumayo y Valle del Cauca; estratos 1-3)",
-      "PAES: comunidades indígenas, mejores bachilleres, mejores bachilleres de municipios pobres, población negra/afrocolombiana/palenquera/raizal, víctimas del conflicto armado",
-      "PEAMA: Programa Especial de Admisión y Movilidad Académica (sedes de presencia nacional, incluida Tumaco)",
-      "Política de inclusión para aspirantes con discapacidad (ajustes razonables en la prueba)",
-      "Política de gratuidad en la matrícula del Gobierno Nacional"
-    ],
-    "notas": "Verificado en octubre de 2026 en admisiones.unal.edu.co (calendario 2027-01, afiche de la convocatoria y página de Sedes Medellín, Palmira y Manizales). El PAET está reglamentado por el Acuerdo 019 de 2023 del CSU y las resoluciones de Rectoría 098 de 2024, 011 de 2025 y 258 de 2025. Correo: inscripcion_nal@unal.edu.co.",
-    "fuentes": [
-      "https://admisiones.unal.edu.co/pregrado/",
-      "https://admisiones.unal.edu.co/pregrado/sedes-medellin-palmira-y-manizales/",
-      "https://admisiones.unal.edu.co/fileadmin/ArchivosDNA/afiches/AI_Afiche_PREGRADO_2027-01_v5.pdf",
-      "https://palmira.unal.edu.co"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "unicauca",
-    "nombre": "Universidad del Cauca",
-    "sigla": "Unicauca",
-    "ciudad": "Popayán",
-    "departamento": "Cauca",
-    "tipo": "pública",
-    "sedes": ["Popayán", "Santander de Quilichao (Regionalización Norte del Cauca)", "Otros municipios del Cauca (programas de regionalización y extensión)"],
-    "web": "https://www.unicauca.edu.co",
-    "admisiones_url": "https://www.unicauca.edu.co/vicerrectoria-academica/darca/inscripcionesap/",
-    "uso_saber11": "ponderado",
-    "uso_saber11_detalle": "Admite con el resultado del Saber 11 (presentado desde el segundo semestre de 2012). Para inscribirse se exige un puntaje global igual o superior a 160 en los programas de Popayán y a 150 en los de Regionalización. La selección se hace con el puntaje ponderado: cada programa asigna porcentajes a lectura crítica, matemáticas, sociales y ciudadanas, ciencias naturales e inglés, y los cupos se asignan en estricto orden descendente; quien no alcanza el mínimo queda excluido. Algunos programas (artes, educación física, música) aplican pruebas adicionales. El Programa de Tránsito Inmediato a la Educación Superior (PTIES) admite con una prueba propia y el Saber 11 solo como requisito.",
-    "puntaje_minimo": { "global": 160, "regionalizacion_global": 150 },
-    "ponderacion": "Cada programa publica su tabla en el aplicativo de inscripciones. Ejemplo publicado para 2026-2: Ingeniería en Inteligencia Artificial y Ciencia de Datos (virtual) 25 % lectura crítica, 35 % matemáticas, 10 % sociales y ciudadanas, 20 % ciencias naturales, 10 % inglés. Las tablas de los demás programas se muestran al abrir cada convocatoria.",
-    "proceso": [
-      {
-        "paso": "Leer el manual y la guía de inscripción de la convocatoria",
-        "detalle": "La División de Admisiones, Registro y Control Académico (DARCA) publica para cada periodo el manual del proceso, la guía de inscripción y el calendario de admisiones (resolución de la Vicerrectoría Académica).",
-        "url": "https://www.unicauca.edu.co/vicerrectoria-academica/darca/inscripcionesap/"
-      },
-      {
-        "paso": "Crear la cuenta y registrarse en el aplicativo de inscripciones",
-        "detalle": "Se registran el número de registro ICFES (AC), el tipo y número de documento con el que presentó el Saber 11, datos del recibo de energía de la residencia familiar y el programa (hasta dos, ambos de Popayán o ambos de Regionalización). Se elige modalidad: regular, enfoque territorial-departamental, PTIES o caso especial.",
-        "url": "https://www.unicauca.edu.co/inscripciones/"
-      },
-      {
-        "paso": "Pagar los derechos de inscripción",
-        "detalle": "Pago en línea por la plataforma GOU (PSE) o en Banco Popular, Bogotá, Davivienda, Occidente y Supergiros, por cada programa inscrito; luego verificar el estado en 'Mis inscripciones'."
-      },
-      {
-        "paso": "Entregar documentos de modalidad o caso especial (si aplica)",
-        "detalle": "Solo los aspirantes por enfoque territorial, PTIES o casos especiales envían documentos (formato PA-GA-4.2-FOR-39) por la herramienta virtual en las fechas del calendario; si no acreditan la condición pasan a aspirantes regulares.",
-        "url": "https://www.unicauca.edu.co/vicerrectoria-academica/darca/casos-especiales/"
-      },
-      {
-        "paso": "Consultar la primera y segunda lista de admitidos",
-        "detalle": "Se publican en la web; los admitidos y la lista de espera actualizan datos, entregan documentos (formato PA-GA-4.2-FOR-6) y pagan la matrícula financiera en las fechas indicadas."
-      }
-    ],
-    "calendario": "Dos periodos al año. En octubre de 2026 el portal mostraba el proceso especial 2026-2 del nuevo pregrado virtual Ingeniería en Inteligencia Artificial y Ciencia de Datos (Resolución VRA 594 de 2026): entrega de documentos de modalidades del 20 al 22 de octubre, primera lista de admitidos el 26 de octubre y documentos de matrícula del 28 al 30 de octubre de 2026. El calendario de la convocatoria regular 2027-1 no estaba publicado al verificar; la convocatoria regular suele abrir en el segundo semestre del año para el periodo siguiente.",
-    "costo_inscripcion": "$96.000 (manual del proceso de admisión 2026-2). Descuento para hijos y cónyuges de docentes, funcionarios y pensionados (Acuerdo 085 de 2008).",
-    "becas_programas": [
-      "Modalidad de enfoque territorial-departamental: cupos por municipios priorizados del Cauca (requiere diploma de bachiller del Cauca; víctimas desplazadas pueden acreditarlo de otra forma)",
-      "Programa de Tránsito Inmediato a la Educación Superior (PTIES) para bachilleres de municipios donde se aplica la prueba PTIES",
-      "Casos especiales de admisión: comunidades indígenas, afrodescendientes, víctimas, bachilleres de los 13 municipios del norte del Cauca, normalistas, distinción Andrés Bello, personas con discapacidad (Decreto 1421 de 2017)",
-      "Política de Gratuidad 'Puedo Estudiar': matrícula gratuita para estratos 1-3 o sin estrato, Sisbén IV grupos A-C, indígenas, NARP, víctimas, discapacidad, campesinos y otros",
-      "Apoyos del Gobierno (ICETEX, Generación E) listados en la sección de aspirantes"
-    ],
-    "notas": "Verificado en octubre de 2026 en unicauca.edu.co (DARCA: inscripciones aspirantes pregrado, modalidad regular, casos especiales, política de gratuidad y manual 2026-2). El proceso se rige por el Acuerdo Académico 013 de 2018. Los puntajes mínimos (160/150) y el valor de inscripción corresponden a lo publicado para 2026; confirmar en la resolución de la convocatoria 2027-1. Correo: admisionespregrado@unicauca.edu.co; WhatsApp 313 664 3334.",
-    "fuentes": [
-      "https://www.unicauca.edu.co/aspirantes/",
-      "https://www.unicauca.edu.co/vicerrectoria-academica/darca/inscripcionesap/",
-      "https://www.unicauca.edu.co/vicerrectoria-academica/darca/casos-especiales/modalidad-regular-de-admision/",
-      "https://www.unicauca.edu.co/vicerrectoria-academica/darca/politica-de-gratuidad/",
-      "https://www.unicauca.edu.co/inscripciones/",
-      "https://www.unicauca.edu.co/wp-content/uploads/2026/10/HhManual-proceso-de-admisiones-2026.2-IAyCD-1_compressed.pdf"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "udenar",
-    "nombre": "Universidad de Nariño",
-    "sigla": "Udenar",
-    "ciudad": "Pasto",
-    "departamento": "Nariño",
-    "tipo": "pública",
-    "sedes": ["Pasto (Torobajo y VIPRI)", "Ipiales", "Túquerres", "Tumaco", "La Unión (programas por convenio)"],
-    "web": "https://www.udenar.edu.co",
-    "admisiones_url": "https://www.udenar.edu.co/ocara/admisiones/",
-    "uso_saber11": "ponderado",
-    "uso_saber11_detalle": "La Oficina de Control y Registro Académico y Admisiones (OCARA) admite por puntaje ponderado del Saber 11: cada programa define sus porcentajes por área ('Ponderados', publicados antes de la inscripción) y los cupos se adjudican en orden descendente de puntaje ponderado, en primer, segundo y tercer corte según los admitidos que se matriculen. Algunos programas (Licenciatura en Artes Visuales, Música, Educación Física) aplican pruebas de aptitud, y los cupos especiales de deportista destacado tienen prueba deportiva. No se encontró publicado un puntaje global mínimo.",
-    "puntaje_minimo": null,
-    "ponderacion": "Porcentajes por programa publicados en el botón 'Ponderados' de udenar.edu.co/ocara/admisiones (la tabla se carga dentro del portal y no se pudo extraer en esta verificación). La selección usa el puntaje ponderado en estricto orden descendente.",
-    "proceso": [
-      {
-        "paso": "Leer los requisitos, la reglamentación y los ponderados",
-        "detalle": "En el portal OCARA Admisiones 2027A: Resolución 0566 de 2026 (calendario), 'Procedimiento y Reglamentación de Admisiones A 2027', 'Ponderados' y 'Programas en oferta' para Pasto, Ipiales, Túquerres y Tumaco.",
-        "url": "https://www.udenar.edu.co/ocara/admisiones/"
-      },
-      {
-        "paso": "Generar y pagar el PIN de inscripción",
-        "detalle": "Del 13 al 28 de octubre de 2026 (hasta las 3:00 p. m.) para 2027-A; el PIN se genera con el documento actual del aspirante y se paga siguiendo las 'Instrucciones de pago'."
-      },
-      {
-        "paso": "Diligenciar el formulario de inscripción",
-        "detalle": "Del 13 al 30 de octubre de 2026 (hasta las 5:00 p. m.); hay que completar todo el formulario y generar el reporte de inscripción, único soporte para reclamaciones."
-      },
-      {
-        "paso": "Subsanar documentos y presentar pruebas (si aplica)",
-        "detalle": "Proceso de subsanación del 11 al 17 de noviembre de 2026. Prueba para deportista destacado el 6 de noviembre de 2026; pruebas de aptitud según el programa.",
-        "url": "https://www.udenar.edu.co/calendario-de-ingreso-a-primer-semestre-inscripciones-admisiones-y-matriculas-periodo-academico-2027-a/"
-      },
-      {
-        "paso": "Consultar admitidos y matricularse",
-        "detalle": "Primer corte de admitidos el 24 de noviembre de 2026; luego segundo y tercer corte si quedan cupos. Los admitidos cargan documentos para la liquidación de matrícula en 'Proceso para admitidos' y presentan una prueba diagnóstica de lenguaje y herramientas informáticas al ingresar."
-      }
-    ],
-    "calendario": "Dos convocatorias al año. Convocatoria 2027-A (Resolución 0566 del 9 de octubre de 2026): generación y pago del PIN del 13 al 28 de octubre de 2026; formulario del 13 al 30 de octubre; prueba de deportista destacado el 6 de noviembre; subsanación del 11 al 17 de noviembre; primer corte de admitidos el 24 de noviembre de 2026; listados en firme el 18 de diciembre de 2026; segundo y tercer corte de matrícula en diciembre de 2026 y enero de 2027. La convocatoria B suele publicarse en abril.",
-    "costo_inscripcion": "No publicado en la página oficial consultada (el valor del PIN aparece al generarlo en el portal OCARA); consultar en admisiones.",
-    "becas_programas": [
-      "Cupos especiales del Estatuto Estudiantil (artículo 19, literal k): deportista destacado, entre otros",
-      "Programas en sedes regionales (Ipiales, Túquerres, Tumaco) y municipios por convenio (La Unión, Barbacoas, El Charco)",
-      "Matrícula liquidada según documentos socioeconómicos y política de gratuidad del Gobierno Nacional (universidad pública)",
-      "Matrículas de honor y distinción Luis Eduardo Mora Osejo para estudiantes antiguos"
-    ],
-    "notas": "Verificado en octubre de 2026 en udenar.edu.co (OCARA Admisiones 2027A, Resolución 0566 de 2026 y sección de calendarios). Los ponderados por programa y el reglamento 2027-A se cargan dentro del portal OCARA y no se pudieron leer como texto; el valor del PIN tampoco se publica en la página. Oferta 2027-A en Pasto incluye Medicina, Psicología, Derecho (anual), ingenierías, licenciaturas, Biología, Química, Economía, Contaduría, Sociología y Zootecnia, entre otros.",
-    "fuentes": [
-      "https://www.udenar.edu.co/ocara/admisiones/",
-      "https://www.udenar.edu.co/calendario-de-ingreso-a-primer-semestre-inscripciones-admisiones-y-matriculas-periodo-academico-2027-a/",
-      "https://www.udenar.edu.co/recursos/wp-content/uploads/2026/10/0566-CALENDARIO-DE-INGRESO-A-PRIMER-SEMESTRE-2027-A.pdf",
-      "https://www.udenar.edu.co/calendarios/"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "umariana",
-    "nombre": "Universidad Mariana",
-    "sigla": "Unimar",
-    "ciudad": "Pasto",
-    "departamento": "Nariño",
-    "tipo": "privada",
-    "sedes": ["Pasto"],
-    "web": "https://www.umariana.edu.co",
-    "admisiones_url": "https://www.umariana.edu.co/proceso-de-inscripcion.php",
-    "uso_saber11": "entrevista_o_mixto",
-    "uso_saber11_detalle": "Pide ingresar el resultado del Saber 11 (número SNP, código AC o VG) en el formulario de inscripción y luego programar una entrevista con el programa; la admisión se publica después de las entrevistas. La página no publica puntaje mínimo ni ponderación.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Registro inicial y pago del PIN",
-        "detalle": "En la sección Inscripciones se elige tipo de programa (pregrado), programa académico y datos básicos; se guarda el número de formulario y se genera el recibo del PIN ($130.000 para pregrado). El pago en bancos o PSE puede tardar hasta 24 horas en activarse.",
-        "url": "https://fenix.umariana.edu.co/sgacampus/services/inscripciones/home"
-      },
-      {
-        "paso": "Finalizar la inscripción",
-        "detalle": "Con documento y número de formulario se completa la información personal, datos del colegio y de un familiar, se ingresa el resultado del Saber 11 y se elige fecha y hora de entrevista.",
-        "url": "https://www.umariana.edu.co/instructivos/inscripciones.pdf"
-      },
-      {
-        "paso": "Presentar la entrevista",
-        "detalle": "En la fecha elegida; si no puede asistir debe avisar a la dirección del programa para reprogramarla."
-      },
-      {
-        "paso": "Consultar la publicación de admitidos y matricularse",
-        "detalle": "Si no es admitido puede usar el mismo PIN para postularse a otro programa con inscripciones abiertas (solicitud a marcasdepago@umariana.edu.co). Soporte: inscripciones@umariana.edu.co, WhatsApp 312 730 6850."
-      }
-    ],
-    "calendario": "Calendario de admisiones publicado para el periodo 2026-B: inicio de inscripciones el 15 de abril de 2026, cierre de inscripciones de pregrado el 7 de junio de 2026, entrevistas del 5 al 9 de junio, publicación de admitidos el 10 de junio e inicio de clases el 27 de julio de 2026. Las fechas para 2027-A no estaban publicadas al verificar.",
-    "costo_inscripcion": "$130.000 el PIN de pregrado (2026); $165.000 para posgrado.",
-    "becas_programas": [
-      "No se encontró una sección de becas para aspirantes nuevos en la página de inscripción; consultar en Bienestar Universitario o en la dirección del programa"
-    ],
-    "notas": "Verificado en octubre de 2026 en umariana.edu.co (proceso de inscripción, instructivo PDF y portal Fénix). Universidad privada católica con 23 pregrados en Ingeniería, Humanidades, Educación, Ciencias de la Salud y Ciencias Contables, Económicas y Administrativas. Teléfono (602) 724 4460.",
-    "fuentes": [
-      "https://www.umariana.edu.co/proceso-de-inscripcion.php",
-      "https://www.umariana.edu.co/instructivos/inscripciones.pdf",
-      "https://fenix.umariana.edu.co/sgacampus/services/inscripciones/home",
-      "https://www.umariana.edu.co/calendario-academico/calendario-academico-UM2026.pdf"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "usco",
-    "nombre": "Universidad Surcolombiana",
-    "sigla": "USCO",
-    "ciudad": "Neiva",
-    "departamento": "Huila",
-    "tipo": "pública",
-    "sedes": ["Neiva", "Garzón", "Pitalito", "La Plata"],
-    "web": "https://www.usco.edu.co/es/",
-    "admisiones_url": "https://www.usco.edu.co/es/ingreso-a-la-usco/",
-    "uso_saber11": "ponderado",
-    "uso_saber11_detalle": "La página 'Ingreso a la USCO' indica que los aspirantes deben haber presentado el Saber 11 y que los cupos se otorgan con las ponderaciones que establece cada programa académico, seleccionando en estricto orden de puntaje de mayor a menor. Hay modalidades de ingreso por estricto puntaje y por regímenes especiales (comunidades negras, indígenas, desplazados, reinsertados, normalistas, transferencia); Licenciatura en Educación Física y Licenciatura en Educación Artística aplican pruebas específicas obligatorias. No se publica puntaje mínimo.",
-    "puntaje_minimo": null,
-    "ponderacion": "Cada programa define porcentajes por área del Saber 11, publicados en el PDF 'Ponderaciones de la prueba de Estado' de cada convocatoria (la última tabla visible en la página corresponde a convocatorias anteriores, no a 2027-1).",
-    "proceso": [
-      {
-        "paso": "Leer la guía de la convocatoria",
-        "detalle": "Cada semestre el Centro de Admisiones, Registro y Control Académico publica una 'Guía paso a paso' con oferta, valor de inscripción, modalidades, cupos, fechas, documentos y ponderaciones.",
-        "url": "https://www.usco.edu.co/es/ingreso-a-la-usco/"
-      },
-      {
-        "paso": "Generar el comprobante y pagar los derechos de inscripción (PIN)",
-        "detalle": "El PIN se habilita un día hábil después del pago en banco."
-      },
-      {
-        "paso": "Diligenciar el formulario de inscripción en línea",
-        "detalle": "Formulario de 20 numerales; se elige el programa y la modalidad (estricto puntaje o régimen especial) y se registra el número de registro ICFES; la Universidad no acepta correcciones posteriores.",
-        "url": "https://www.usco.edu.co/es/inscripciones/"
-      },
-      {
-        "paso": "Entregar documentos de régimen especial y presentar pruebas específicas (si aplica)",
-        "detalle": "Los aspirantes de regímenes especiales entregan sus certificados dentro del periodo de inscripción; Educación Física tiene valoración médica y pruebas de aptitud física y Educación Artística prueba de aptitud artística."
-      },
-      {
-        "paso": "Consultar admitidos por orden de puntaje ponderado y entregar documentos de matrícula",
-        "detalle": "Los admitidos se publican por programa y hay llamados sucesivos si quedan cupos."
-      }
-    ],
-    "calendario": "No publicado para 2027-1 en las páginas consultadas (la sección 'Inscripciones' muestra convocatorias anteriores). La USCO abre inscripciones cada semestre, normalmente entre septiembre y noviembre para el primer periodo y entre marzo y mayo para el segundo; consultar la guía vigente en 'Ingreso a la USCO'.",
-    "costo_inscripcion": "No publicado para la convocatoria vigente en la página oficial; consultar en admisiones (la página de inscripciones solo muestra valores de convocatorias antiguas).",
-    "becas_programas": [
-      "Regímenes especiales de ingreso: comunidades negras, comunidades indígenas (con prueba de idioma propio y de cultura), desplazados por la violencia, reinsertados de procesos de paz y convenio con Escuelas Normales",
-      "Programas en las sedes de Garzón, Pitalito y La Plata",
-      "Política de gratuidad en la matrícula del Gobierno Nacional y programa Renta Joven (universidad pública)"
-    ],
-    "notas": "Verificado en octubre de 2026 en usco.edu.co (Ingreso a la USCO, Inscripciones, Registro y Control Académico y Estudia en la USCO). El contenido detallado de la sección de inscripciones corresponde a convocatorias anteriores (2016-2021), por lo que fechas, valor de inscripción y tabla de ponderaciones vigentes quedan como no verificados; el reglamento es el Acuerdo 003 de 2016 del Consejo Académico. Correo: registro@usco.edu.co.",
-    "fuentes": [
-      "https://www.usco.edu.co/es/ingreso-a-la-usco/",
-      "https://www.usco.edu.co/es/inscripciones/",
-      "https://www.usco.edu.co/es/la-universidad/dependencias/vicerrectoria-academica/registro-y-control-academico/",
-      "https://www.usco.edu.co/es/estudia-en-la-usco/programas-pregrado/"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "uniamazonia",
-    "nombre": "Universidad de la Amazonia",
-    "sigla": "Uniamazonia",
-    "ciudad": "Florencia",
-    "departamento": "Caquetá",
-    "tipo": "pública",
-    "sedes": ["Florencia", "San José del Guaviare (programas en Guaviare)", "Putumayo (programas en extensión)"],
-    "web": "https://www.uniamazonia.edu.co",
-    "admisiones_url": "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html",
-    "uso_saber11": "ponderado",
-    "uso_saber11_detalle": "Para inscribirse hay que pagar los derechos, diligenciar el formato y haber presentado el examen de Estado. La selección la hace el Consejo Académico con base en los resultados del Saber 11: el Acuerdo 46 de 2014 del Consejo Académico adoptó criterios de selección y una ponderación específica de las áreas para cada programa (según el modelo de prueba vigente desde 2014-II). La página no publica puntaje mínimo.",
-    "puntaje_minimo": null,
-    "ponderacion": "Ponderación por programa definida en el Acuerdo 46 de 2014 del Consejo Académico (PDF escaneado, publicado en la página de inscripciones; no se pudo extraer la tabla en esta verificación).",
-    "proceso": [
-      {
-        "paso": "Revisar la oferta de pregrado y el calendario académico",
-        "detalle": "Programas presenciales en Florencia (Medicina Veterinaria y Zootecnia, Biología, Química, Derecho, Ingenierías, licenciaturas, Enfermería, Psicología, etc.) y a distancia; el calendario de cada semestre se aprueba por acuerdo del Consejo Académico (I-2027: Acuerdo 34 de 2026).",
-        "url": "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/233-calendario-academico/35-cuales-son-las-fechas-academicas-mas-importantes-de-cada-semestre.html"
-      },
-      {
-        "paso": "Realizar la inscripción como estudiante nuevo",
-        "detalle": "En la página de inscripciones de la División de Admisión, Registro y Control Académico se accede al enlace 'Realizar inscripción como estudiante nuevo' (sistema Chairá) y al instructivo IN-M-DC-04-01 y video guía.",
-        "url": "https://chaira.uniamazonia.edu.co"
-      },
-      {
-        "paso": "Pagar los derechos de inscripción",
-        "detalle": "La inscripción es válida solo para el periodo y programa elegidos y no es reembolsable (Acuerdo 09 de 2007, Estatuto Estudiantil)."
-      },
-      {
-        "paso": "Selección y publicación de admitidos",
-        "detalle": "El Consejo Académico determina los admitidos según el Saber 11 ponderado; los regímenes especiales (indígenas, afrocolombianos, víctimas, desmovilizados, deportistas) tienen mecanismos de acceso propios (Acuerdo 021 de 2018)."
-      },
-      {
-        "paso": "Entregar documentos para la liquidación de matrícula",
-        "detalle": "Documento de identidad, registro civil (menores o dependientes), diploma o acta de bachiller, resultados Saber 11, constancia de EPS y soportes de ingresos (declaración de renta, certificado de ingresos o formato de no declarante); la matrícula se liquida según ingresos familiares (Acuerdo 01 de 2012)."
-      }
-    ],
-    "calendario": "Las fechas de inscripción y admisión están en los acuerdos de calendario de cada periodo (I-2027: Acuerdo 34 de 2026 para pregrado presencial y 35 de 2026 para distancia), publicados en PDF; no se pudieron leer como texto en esta verificación. Consultar la página de calendario académico.",
-    "costo_inscripcion": "No publicado en las páginas consultadas; consultar en admisiones (sección 'Tarifas / Derechos Pecuniarios').",
-    "becas_programas": [
-      "Regímenes especiales de admisión (Acuerdo 021 de 2018): indígenas, afrocolombianos, víctimas del conflicto armado, desmovilizados/desvinculados/reinsertados y deportistas con reconocimientos oficiales",
-      "Política de gratuidad en la matrícula: estratos 1-3 o sin estrato, Sisbén IV grupos A-C, indígenas, Rrom, NARP, víctimas, discapacidad, campesinos",
-      "Matrícula liquidada según ingresos del núcleo familiar y descuento del 10 % por certificado electoral",
-      "Articulación educativa con la media (Convenio 031 de 2016)"
-    ],
-    "notas": "Verificado en octubre de 2026 en uniamazonia.edu.co (inscripciones, calendario académico, preguntas frecuentes de admisión). Los PDF del Acuerdo 46 de 2014 (ponderaciones) y del Acuerdo 34 de 2026 (calendario I-2027) están escaneados y no se pudieron transcribir; el valor de inscripción no aparece en las páginas revisadas.",
-    "fuentes": [
-      "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html",
-      "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/233-calendario-academico/35-cuales-son-las-fechas-academicas-mas-importantes-de-cada-semestre.html",
-      "https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/preguntas-y-respuestas-frecuentes/relacionadas-con-procesos-de-admision.html",
-      "https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado.html"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "utch",
-    "nombre": "Universidad Tecnológica del Chocó Diego Luis Córdoba",
-    "sigla": "UTCH",
-    "ciudad": "Quibdó",
-    "departamento": "Chocó",
-    "tipo": "pública",
-    "sedes": ["Quibdó", "Istmina (San Juan)", "Bahía Solano (Pacífico)", "Riosucio (Darién)", "Carmen de Atrato", "Baudó", "Medio Atrato"],
-    "web": "https://utch.edu.co/nueva/",
-    "admisiones_url": "https://utch.edu.co/nueva/admisiones",
-    "uso_saber11": "examen_propio",
-    "uso_saber11_detalle": "El principal requisito de inscripción es haber presentado el Saber 11 (se adjunta el resultado). Según las preguntas frecuentes oficiales, para ser admitido se tiene en cuenta el puntaje del examen de admisión de la UTCH más la entrevista en el programa, y la suma debe ser mínimo 55/100; el examen se presenta en Quibdó y en los centros de Istmina, Bahía Solano, Riosucio y Buenaventura. La guía paso a paso vigente habla de 'evaluación' de los inscritos y publicación de admitidos sin detallar el instrumento; no hay puntaje mínimo de Saber 11 publicado.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Descargar el calendario del periodo",
-        "detalle": "La página de admisiones enlaza los calendarios de pregrado (2025-2, 2026-1 y el especial de profesionalización) aprobados por acuerdos y resoluciones.",
-        "url": "https://utch.edu.co/nueva/admisiones"
-      },
-      {
-        "paso": "Entrar a la plataforma académica e iniciar la inscripción en línea",
-        "detalle": "En academico.utch.edu.co ('Consulta UTCH', plataforma Academusoft) se hace clic en el ícono de inscripción en línea, se lee la ventana informativa y se aceptan los términos."
-      },
-      {
-        "paso": "Diligenciar el formulario y adjuntar documentos",
-        "detalle": "Formulario con foto 3x4, diploma y acta de bachiller (o certificado de que cursa 11.º), resultado del Saber 11 y documento de identidad."
-      },
-      {
-        "paso": "Pagar el valor de inscripción",
-        "detalle": "Se descarga el recibo y se paga en las entidades financieras indicadas; valor $195.000."
-      },
-      {
-        "paso": "Verificación, examen/entrevista y publicación de admitidos",
-        "detalle": "La Universidad publica el listado de inscritos por programa, evalúa a los aspirantes (examen de admisión y entrevista según las preguntas frecuentes) y publica los admitidos en la web; los admitidos entregan documentos en Admisiones, Registro y Control.",
-        "url": "https://utch.edu.co/nueva/preguntas-frecuentes-atencion-al-cuidadano"
-      }
-    ],
-    "calendario": "Dos periodos al año; las fechas de inscripción y admisión están en los calendarios académicos por acuerdo (2026-1: Acuerdo 0009 y modificaciones; 2026-2: Acuerdo 0010), publicados como PDF escaneados que no se pudieron transcribir. En octubre de 2026 la UTCH informaba la reanudación de clases y una suspensión temporal de matrículas de 2026-1 y 2026-2 por una semana desde el 25 de septiembre. Consultar la sección Calendario Académico.",
-    "costo_inscripcion": "$195.000 (guía paso a paso vigente en la página de admisiones). Las preguntas frecuentes indican que el valor equivale al 15 % del salario mínimo y se ajusta cada año.",
-    "becas_programas": [
-      "Calendario especial de admisión para comunidades indígenas y afro (Acuerdo 0008 de 2026) y Programa de Educación Cultural Territorial Indígena",
-      "Programa de Permanencia Estudiantil y convocatoria de alimentación y transporte de Bienestar Universitario",
-      "Descuento por hermanos matriculados (requiere haber aprobado todas las asignaturas del semestre anterior)",
-      "Política de gratuidad en la matrícula del Gobierno Nacional (universidad pública)",
-      "Centros de desarrollo subregional (Darién, Pacífico, Baudó, Carmen de Atrato, San Juan, Medio Atrato)"
-    ],
-    "notas": "Verificado en octubre de 2026 en utch.edu.co (admisiones, admisión-registro-control, calendario académico y preguntas frecuentes). Los criterios de examen + entrevista (mínimo 55/100) provienen de las preguntas frecuentes, cuyos ejemplos de fechas son de 2020; no se pudo confirmar si siguen vigentes. La plataforma academico.utch.edu.co no respondió durante la verificación. Teléfono (604) 672 6565 ext. 4097-4099; línea gratuita 01 8000 938 824.",
-    "fuentes": [
-      "https://utch.edu.co/nueva/admisiones",
-      "https://utch.edu.co/nueva/calendario-academico-academico",
-      "https://utch.edu.co/nueva/preguntas-frecuentes-atencion-al-cuidadano",
-      "https://utch.edu.co/nueva/"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "unipacifico",
-    "nombre": "Universidad del Pacífico",
-    "sigla": "Unipacífico",
-    "ciudad": "Buenaventura",
-    "departamento": "Valle del Cauca",
-    "tipo": "pública",
-    "sedes": ["Buenaventura (campus vía al aeropuerto)", "Bajo Baudó (Chocó)", "Guapi (Cauca)", "Dagua (Valle del Cauca)", "Tumaco (Nariño)"],
-    "web": "https://www.unipacifico.edu.co",
-    "admisiones_url": "https://www.unipacifico.edu.co/p/34/registro-y-control-academico/admisiones",
-    "uso_saber11": "ponderado",
-    "uso_saber11_detalle": "El criterio único de selección es la ponderación de las áreas del Saber 11 (100 % en todos los programas); la entrevista y la prueba específica ya no deciden la admisión. Se acepta el examen de cualquier año y con cualquier puntaje (también validaciones del bachillerato aprobadas y pruebas extranjeras homologadas por el ICFES). Con el puntaje ponderado se ordena a los aspirantes de mayor a menor por programa y jornada y se traza la línea de corte según los cupos (40 por grupo).",
-    "puntaje_minimo": null,
-    "ponderacion": "Saber 11 desde 2012 (lectura crítica / matemáticas / ciencias naturales / sociales y ciudadanas): Administración de Negocios Internacionales 20/20/20/40; Agronomía 25/30/30/15; Arquitectura 30/30/15/25; Ingeniería Civil 25/40/25/10; Ingeniería de Sistemas 20/60/5/15; Sociología 30/10/20/40; Turismo 40/10/20/30; Tecnología en Construcciones Civiles 50 % lectura crítica y 50 % matemáticas; Tecnología en Producción Piscícola 20/25/35/20. Hay tablas distintas para exámenes de 2000-2011 (Reglamento de admisión 2026-2).",
-    "proceso": [
-      {
-        "paso": "Leer el reglamento de admisión del periodo",
-        "detalle": "La Oficina de Registro y Control Académico publica la 'Guía / Reglamento de Admisión' con oferta, cupos, ponderaciones, condiciones especiales y cronograma.",
-        "url": "https://www.unipacifico.edu.co/storage/documentos/GUIA_2026-2.pdf"
-      },
-      {
-        "paso": "Registrarse en línea en 'Proceso de Admisión'",
-        "detalle": "Se registran los datos y el programa (primera opción) en el enlace de inscripciones y se imprimen el comprobante de registro y la factura de inscripción. Tener a mano documento de identidad, diploma o acta de bachiller, resultados del Saber 11, recibo de servicios públicos y dos fotos 3x4.",
-        "url": "https://www.unipacifico.edu.co/p/34/registro-y-control-academico/admisiones"
-      },
-      {
-        "paso": "Pagar la inscripción y enviar los soportes",
-        "detalle": "Pago en Banco de Occidente o en línea ('Paga aquí tu factura'); luego se envía en un solo PDF el comprobante de pago, el Saber 11 y el documento de identidad por el formulario indicado en la guía. Sin este paso la inscripción se anula. Quienes aplican a condiciones especiales (Ley 1084 de 2006, mejores bachilleres, víctimas, discapacidad) adjuntan los soportes."
-      },
-      {
-        "paso": "Consultar la lista de seleccionados y reinscribirse si no fue admitido",
-        "detalle": "Se publica la lista de selección por programa; quien no quede en su primera opción puede reinscribirse a un programa con cupos (segunda opción) y su Saber 11 se recalcula con la ponderación de ese programa."
-      },
-      {
-        "paso": "Matrícula financiera, exámenes médicos y entrega de documentos",
-        "detalle": "Los admitidos descargan el recibo de matrícula, presentan exámenes médicos de ingreso y entregan documentos en las fechas del cronograma."
-      }
-    ],
-    "calendario": "Dos periodos al año. Proceso 2026-2 (sede Buenaventura): inscripciones por internet del 6 al 31 de julio de 2026 (soportes hasta el 31 de julio a las 6:00 p. m.); publicación de seleccionados el 5 de agosto; reinscripciones a segunda opción del 5 al 6 de agosto; recibos de matrícula desde el 11 de agosto; exámenes médicos del 10 al 21 de agosto; matrícula ordinaria hasta el 24 de agosto y extraordinaria hasta el 31 de agosto; inicio de clases el 1 de septiembre de 2026. El cronograma 2027-1 no estaba publicado al verificar.",
-    "costo_inscripcion": "$73.100 (Reglamento de admisión 2026-2).",
-    "becas_programas": [
-      "Mejores bachilleres (Decreto 644 de 2001): ingreso sin exámenes adicionales, sin límite de cupos, con constancia del ICFES",
-      "Ley 1084 de 2006: un cupo por programa para bachilleres de departamentos sin universidades, municipios de difícil acceso o con problemas de orden público",
-      "Víctimas del conflicto (Registro Único de Víctimas): 4 cupos por programa",
-      "Personas con discapacidad: 3 cupos por programa (con soporte médico)",
-      "Programas en regiones: Bajo Baudó, Guapi, Dagua y Tumaco (oferta 2026-2)",
-      "Política de gratuidad en la matrícula del Gobierno Nacional (universidad pública)"
-    ],
-    "notas": "Verificado en octubre de 2026 en unipacifico.edu.co (Registro y Control Académico > Admisiones, oferta 2026-2 y Reglamento de Admisión 2026-2 en PDF). La inscripción en línea se hace en la plataforma Academusoft de la Universidad (enlace 'Inscripciones' de la página de admisiones). Informes: regconacademico@unipacifico.edu.co, (602) 240 5555 ext. 3905.",
-    "fuentes": [
-      "https://www.unipacifico.edu.co/p/34/registro-y-control-academico/admisiones",
-      "https://www.unipacifico.edu.co/storage/documentos/GUIA_2026-2.pdf"
-    ],
-    "verificado": "2026-10"
-  },
-  {
-    "id": "sena-valle",
-    "nombre": "SENA - Regional Valle (formación titulada gratuita)",
-    "sigla": "SENA Valle",
-    "ciudad": "Cali",
-    "departamento": "Valle del Cauca",
-    "tipo": "pública",
-    "sedes": ["Cali", "Buga", "Tuluá", "Palmira", "Cartago", "Buenaventura", "Yumbo", "Zarzal (centros de formación de la Regional Valle)"],
-    "web": "https://www.sena.edu.co",
-    "admisiones_url": "https://betowa.sena.edu.co/",
-    "uso_saber11": "examen_propio",
-    "uso_saber11_detalle": "El SENA selecciona a sus aprendices de formación titulada (técnicos y tecnólogos) con pruebas propias en línea por fases (p. ej., 'Selección Fase 1'), no con el Saber 11; la plataforma de oferta no menciona el Saber 11 como requisito ni puntaje mínimo. La formación es gratuita.",
-    "puntaje_minimo": null,
-    "ponderacion": null,
-    "proceso": [
-      {
-        "paso": "Buscar el programa en la oferta",
-        "detalle": "En Betowa (portal oficial que reemplazó la oferta de Sofia Plus) se filtra por modalidad (presencial y a distancia, virtual, idiomas, empresarial) y por ubicación; cada ficha indica duración, tipo de formación (titulada o complementaria) y restricción de edad.",
-        "url": "https://betowa.sena.edu.co/oferta"
-      },
-      {
-        "paso": "Registrarse e inscribirse",
-        "detalle": "Crear la cuenta en Betowa ('Registrarme') con el documento de identidad y luego inscribirse al programa dentro de las fechas de la convocatoria.",
-        "url": "https://betowa.sena.edu.co/registrarse"
-      },
-      {
-        "paso": "Presentar las pruebas de selección",
-        "detalle": "La selección se hace en línea por fases y por terminación del documento de identidad; hay reprogramación para quienes no presenten en la fecha asignada. Convocatoria IV-2026: Fase 1 el 14 y 15 de octubre de 2026 (documentos terminados en 0 a 9) y reprogramación del 16 al 19 de octubre de 2026.",
-        "url": "https://betowa.sena.edu.co/cronograma"
-      },
-      {
-        "paso": "Consultar resultados y matricularse en el centro de formación",
-        "detalle": "Los seleccionados formalizan la matrícula en el centro de formación; la plataforma permite verificar si ya está inscrito. Para servicios administrativos se usa Sofia Plus."
-      },
-      {
-        "paso": "Solicitar apoyo socioeconómico (opcional)",
-        "detalle": "Convocatorias de apoyo económico para que los aprendices terminen su formación.",
-        "url": "https://betowa.sena.edu.co/apoyo-socioeconomico"
-      }
-    ],
-    "calendario": "Cuatro convocatorias de oferta regular al año (I a IV). En octubre de 2026 el cronograma mostraba la 'Selección Fase 1 IV-2026' de oferta regular virtual del 14 al 15 de octubre de 2026 y reprogramación de pruebas del 16 al 19 de octubre de 2026. El cronograma completo 2026 se consulta en Betowa; las fechas de la oferta presencial de la Regional Valle se publican por convocatoria.",
-    "costo_inscripcion": "Gratuito. La formación titulada del SENA no tiene costo de inscripción ni de matrícula.",
-    "becas_programas": [
-      "Apoyo socioeconómico para aprendices (convocatorias en Betowa)",
-      "Formación complementaria y bilingüismo virtual gratuitos (Zajuna)",
-      "Programas presenciales y a distancia en los centros de formación de la Regional Valle",
-      "Orientación vocacional en línea (orientacionvocacional.sena.edu.co)"
-    ],
-    "notas": "Verificado en octubre de 2026 en betowa.sena.edu.co (oferta, cronograma, apoyo socioeconómico). El sitio sena.edu.co y la página de la Regional Valle (sena.edu.co/es-co/regionales/zonaPacifico/Paginas/valle.aspx) cargan su contenido con JavaScript y no se pudieron leer; portal.senasofiaplus.edu.co no respondió. Las sedes listadas corresponden a municipios con centros de formación del SENA en el Valle y deben confirmarse en la oferta. Línea gratuita 01 8000 910 270, WhatsApp 305 809 2444.",
-    "fuentes": [
-      "https://betowa.sena.edu.co/",
-      "https://betowa.sena.edu.co/oferta",
-      "https://betowa.sena.edu.co/cronograma",
-      "https://betowa.sena.edu.co/apoyo-socioeconomico",
-      "https://zajuna.sena.edu.co/",
-      "https://www.sena.edu.co/es-co/regionales/zonaPacifico/Paginas/valle.aspx"
-    ],
-    "verificado": "2026-10"
-  }
+  "ponderacion": "Cada programa publica su tabla en el aplicativo de inscripciones. Ejemplo publicado para 2026-2: Ingeniería en Inteligencia Artificial y Ciencia de Datos (virtual) 25 % lectura crítica, 35 % matemáticas, 10 % sociales y ciudadanas, 20 % ciencias naturales, 10 % inglés. Las tablas de los demás programas se muestran al abrir cada convocatoria.",
+  "proceso": [
+   {
+    "paso": "Leer el manual y la guía de inscripción de la convocatoria",
+    "detalle": "La División de Admisiones, Registro y Control Académico (DARCA) publica para cada periodo el manual del proceso, la guía de inscripción y el calendario de admisiones (resolución de la Vicerrectoría Académica).",
+    "url": "https://www.unicauca.edu.co/vicerrectoria-academica/darca/inscripcionesap/"
+   },
+   {
+    "paso": "Crear la cuenta y registrarse en el aplicativo de inscripciones",
+    "detalle": "Se registran el número de registro ICFES (AC), el tipo y número de documento con el que presentó el Saber 11, datos del recibo de energía de la residencia familiar y el programa (hasta dos, ambos de Popayán o ambos de Regionalización). Se elige modalidad: regular, enfoque territorial-departamental, PTIES o caso especial.",
+    "url": "https://www.unicauca.edu.co/inscripciones/"
+   },
+   {
+    "paso": "Pagar los derechos de inscripción",
+    "detalle": "Pago en línea por la plataforma GOU (PSE) o en Banco Popular, Bogotá, Davivienda, Occidente y Supergiros, por cada programa inscrito; luego verificar el estado en 'Mis inscripciones'."
+   },
+   {
+    "paso": "Entregar documentos de modalidad o caso especial (si aplica)",
+    "detalle": "Solo los aspirantes por enfoque territorial, PTIES o casos especiales envían documentos (formato PA-GA-4.2-FOR-39) por la herramienta virtual en las fechas del calendario; si no acreditan la condición pasan a aspirantes regulares.",
+    "url": "https://www.unicauca.edu.co/vicerrectoria-academica/darca/casos-especiales/"
+   },
+   {
+    "paso": "Consultar la primera y segunda lista de admitidos",
+    "detalle": "Se publican en la web; los admitidos y la lista de espera actualizan datos, entregan documentos (formato PA-GA-4.2-FOR-6) y pagan la matrícula financiera en las fechas indicadas."
+   }
+  ],
+  "calendario": "Dos periodos al año. En octubre de 2026 el portal mostraba el proceso especial 2026-2 del nuevo pregrado virtual Ingeniería en Inteligencia Artificial y Ciencia de Datos (Resolución VRA 594 de 2026): entrega de documentos de modalidades del 20 al 22 de octubre, primera lista de admitidos el 26 de octubre y documentos de matrícula del 28 al 30 de octubre de 2026. El calendario de la convocatoria regular 2027-1 no estaba publicado al verificar; la convocatoria regular suele abrir en el segundo semestre del año para el periodo siguiente.",
+  "costo_inscripcion": "$96.000 (manual del proceso de admisión 2026-2). Descuento para hijos y cónyuges de docentes, funcionarios y pensionados (Acuerdo 085 de 2008).",
+  "becas_programas": [
+   "Modalidad de enfoque territorial-departamental: cupos por municipios priorizados del Cauca (requiere diploma de bachiller del Cauca; víctimas desplazadas pueden acreditarlo de otra forma)",
+   "Programa de Tránsito Inmediato a la Educación Superior (PTIES) para bachilleres de municipios donde se aplica la prueba PTIES",
+   "Casos especiales de admisión: comunidades indígenas, afrodescendientes, víctimas, bachilleres de los 13 municipios del norte del Cauca, normalistas, distinción Andrés Bello, personas con discapacidad (Decreto 1421 de 2017)",
+   "Política de Gratuidad 'Puedo Estudiar': matrícula gratuita para estratos 1-3 o sin estrato, Sisbén IV grupos A-C, indígenas, NARP, víctimas, discapacidad, campesinos y otros",
+   "Apoyos del Gobierno (ICETEX, Generación E) listados en la sección de aspirantes"
+  ],
+  "notas": "Verificado en octubre de 2026 en unicauca.edu.co (DARCA: inscripciones aspirantes pregrado, modalidad regular, casos especiales, política de gratuidad y manual 2026-2). El proceso se rige por el Acuerdo Académico 013 de 2018. Los puntajes mínimos (160/150) y el valor de inscripción corresponden a lo publicado para 2026; confirmar en la resolución de la convocatoria 2027-1. Correo: admisionespregrado@unicauca.edu.co; WhatsApp 313 664 3334.",
+  "fuentes": [
+   "https://www.unicauca.edu.co/aspirantes/",
+   "https://www.unicauca.edu.co/vicerrectoria-academica/darca/inscripcionesap/",
+   "https://www.unicauca.edu.co/vicerrectoria-academica/darca/casos-especiales/modalidad-regular-de-admision/",
+   "https://www.unicauca.edu.co/vicerrectoria-academica/darca/politica-de-gratuidad/",
+   "https://www.unicauca.edu.co/inscripciones/",
+   "https://www.unicauca.edu.co/wp-content/uploads/2026/10/HhManual-proceso-de-admisiones-2026.2-IAyCD-1_compressed.pdf"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "udenar",
+  "nombre": "Universidad de Nariño",
+  "sigla": "Udenar",
+  "ciudad": "Pasto",
+  "departamento": "Nariño",
+  "tipo": "pública",
+  "sedes": [
+   "Pasto (Torobajo y VIPRI)",
+   "Ipiales",
+   "Túquerres",
+   "Tumaco",
+   "La Unión (programas por convenio)"
+  ],
+  "web": "https://www.udenar.edu.co",
+  "admisiones_url": "https://www.udenar.edu.co/ocara/admisiones/",
+  "uso_saber11": "ponderado",
+  "uso_saber11_detalle": "La Oficina de Control y Registro Académico y Admisiones (OCARA) admite por puntaje ponderado del Saber 11: cada programa define sus porcentajes por área ('Ponderados', publicados antes de la inscripción) y los cupos se adjudican en orden descendente de puntaje ponderado, en primer, segundo y tercer corte según los admitidos que se matriculen. Algunos programas (Licenciatura en Artes Visuales, Música, Educación Física) aplican pruebas de aptitud, y los cupos especiales de deportista destacado tienen prueba deportiva. No se encontró publicado un puntaje global mínimo.",
+  "puntaje_minimo": null,
+  "ponderacion": "Porcentajes por programa publicados en el botón 'Ponderados' de udenar.edu.co/ocara/admisiones (la tabla se carga dentro del portal y no se pudo extraer en esta verificación). La selección usa el puntaje ponderado en estricto orden descendente.",
+  "proceso": [
+   {
+    "paso": "Leer los requisitos, la reglamentación y los ponderados",
+    "detalle": "En el portal OCARA Admisiones 2027A: Resolución 0566 de 2026 (calendario), 'Procedimiento y Reglamentación de Admisiones A 2027', 'Ponderados' y 'Programas en oferta' para Pasto, Ipiales, Túquerres y Tumaco.",
+    "url": "https://www.udenar.edu.co/ocara/admisiones/"
+   },
+   {
+    "paso": "Generar y pagar el PIN de inscripción",
+    "detalle": "Del 13 al 28 de octubre de 2026 (hasta las 3:00 p. m.) para 2027-A; el PIN se genera con el documento actual del aspirante y se paga siguiendo las 'Instrucciones de pago'."
+   },
+   {
+    "paso": "Diligenciar el formulario de inscripción",
+    "detalle": "Del 13 al 30 de octubre de 2026 (hasta las 5:00 p. m.); hay que completar todo el formulario y generar el reporte de inscripción, único soporte para reclamaciones."
+   },
+   {
+    "paso": "Subsanar documentos y presentar pruebas (si aplica)",
+    "detalle": "Proceso de subsanación del 11 al 17 de noviembre de 2026. Prueba para deportista destacado el 6 de noviembre de 2026; pruebas de aptitud según el programa.",
+    "url": "https://www.udenar.edu.co/calendario-de-ingreso-a-primer-semestre-inscripciones-admisiones-y-matriculas-periodo-academico-2027-a/"
+   },
+   {
+    "paso": "Consultar admitidos y matricularse",
+    "detalle": "Primer corte de admitidos el 24 de noviembre de 2026; luego segundo y tercer corte si quedan cupos. Los admitidos cargan documentos para la liquidación de matrícula en 'Proceso para admitidos' y presentan una prueba diagnóstica de lenguaje y herramientas informáticas al ingresar."
+   }
+  ],
+  "calendario": "Dos convocatorias al año. Convocatoria 2027-A (Resolución 0566 del 9 de octubre de 2026): generación y pago del PIN del 13 al 28 de octubre de 2026; formulario del 13 al 30 de octubre; prueba de deportista destacado el 6 de noviembre; subsanación del 11 al 17 de noviembre; primer corte de admitidos el 24 de noviembre de 2026; listados en firme el 18 de diciembre de 2026; segundo y tercer corte de matrícula en diciembre de 2026 y enero de 2027. La convocatoria B suele publicarse en abril.",
+  "costo_inscripcion": "No publicado en la página oficial consultada (el valor del PIN aparece al generarlo en el portal OCARA); consultar en admisiones.",
+  "becas_programas": [
+   "Cupos especiales del Estatuto Estudiantil (artículo 19, literal k): deportista destacado, entre otros",
+   "Programas en sedes regionales (Ipiales, Túquerres, Tumaco) y municipios por convenio (La Unión, Barbacoas, El Charco)",
+   "Matrícula liquidada según documentos socioeconómicos y política de gratuidad del Gobierno Nacional (universidad pública)",
+   "Matrículas de honor y distinción Luis Eduardo Mora Osejo para estudiantes antiguos"
+  ],
+  "notas": "Verificado en octubre de 2026 en udenar.edu.co (OCARA Admisiones 2027A, Resolución 0566 de 2026 y sección de calendarios). Los ponderados por programa y el reglamento 2027-A se cargan dentro del portal OCARA y no se pudieron leer como texto; el valor del PIN tampoco se publica en la página. Oferta 2027-A en Pasto incluye Medicina, Psicología, Derecho (anual), ingenierías, licenciaturas, Biología, Química, Economía, Contaduría, Sociología y Zootecnia, entre otros.",
+  "fuentes": [
+   "https://www.udenar.edu.co/ocara/admisiones/",
+   "https://www.udenar.edu.co/calendario-de-ingreso-a-primer-semestre-inscripciones-admisiones-y-matriculas-periodo-academico-2027-a/",
+   "https://www.udenar.edu.co/recursos/wp-content/uploads/2026/10/0566-CALENDARIO-DE-INGRESO-A-PRIMER-SEMESTRE-2027-A.pdf",
+   "https://www.udenar.edu.co/calendarios/"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "umariana",
+  "nombre": "Universidad Mariana",
+  "sigla": "Unimar",
+  "ciudad": "Pasto",
+  "departamento": "Nariño",
+  "tipo": "privada",
+  "sedes": [
+   "Pasto"
+  ],
+  "web": "https://www.umariana.edu.co",
+  "admisiones_url": "https://www.umariana.edu.co/proceso-de-inscripcion.php",
+  "uso_saber11": "entrevista_o_mixto",
+  "uso_saber11_detalle": "Pide ingresar el resultado del Saber 11 (número SNP, código AC o VG) en el formulario de inscripción y luego programar una entrevista con el programa; la admisión se publica después de las entrevistas. La página no publica puntaje mínimo ni ponderación.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Registro inicial y pago del PIN",
+    "detalle": "En la sección Inscripciones se elige tipo de programa (pregrado), programa académico y datos básicos; se guarda el número de formulario y se genera el recibo del PIN ($130.000 para pregrado). El pago en bancos o PSE puede tardar hasta 24 horas en activarse.",
+    "url": "https://fenix.umariana.edu.co/sgacampus/services/inscripciones/home"
+   },
+   {
+    "paso": "Finalizar la inscripción",
+    "detalle": "Con documento y número de formulario se completa la información personal, datos del colegio y de un familiar, se ingresa el resultado del Saber 11 y se elige fecha y hora de entrevista.",
+    "url": "https://www.umariana.edu.co/instructivos/inscripciones.pdf"
+   },
+   {
+    "paso": "Presentar la entrevista",
+    "detalle": "En la fecha elegida; si no puede asistir debe avisar a la dirección del programa para reprogramarla."
+   },
+   {
+    "paso": "Consultar la publicación de admitidos y matricularse",
+    "detalle": "Si no es admitido puede usar el mismo PIN para postularse a otro programa con inscripciones abiertas (solicitud a marcasdepago@umariana.edu.co). Soporte: inscripciones@umariana.edu.co, WhatsApp 312 730 6850."
+   }
+  ],
+  "calendario": "Calendario de admisiones publicado para el periodo 2026-B: inicio de inscripciones el 15 de abril de 2026, cierre de inscripciones de pregrado el 7 de junio de 2026, entrevistas del 5 al 9 de junio, publicación de admitidos el 10 de junio e inicio de clases el 27 de julio de 2026. Las fechas para 2027-A no estaban publicadas al verificar.",
+  "costo_inscripcion": "$130.000 el PIN de pregrado (2026); $165.000 para posgrado.",
+  "becas_programas": [
+   "No se encontró una sección de becas para aspirantes nuevos en la página de inscripción; consultar en Bienestar Universitario o en la dirección del programa"
+  ],
+  "notas": "Verificado en octubre de 2026 en umariana.edu.co (proceso de inscripción, instructivo PDF y portal Fénix). Universidad privada católica con 23 pregrados en Ingeniería, Humanidades, Educación, Ciencias de la Salud y Ciencias Contables, Económicas y Administrativas. Teléfono (602) 724 4460.",
+  "fuentes": [
+   "https://www.umariana.edu.co/proceso-de-inscripcion.php",
+   "https://www.umariana.edu.co/instructivos/inscripciones.pdf",
+   "https://fenix.umariana.edu.co/sgacampus/services/inscripciones/home",
+   "https://www.umariana.edu.co/calendario-academico/calendario-academico-UM2026.pdf"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "usco",
+  "nombre": "Universidad Surcolombiana",
+  "sigla": "USCO",
+  "ciudad": "Neiva",
+  "departamento": "Huila",
+  "tipo": "pública",
+  "sedes": [
+   "Neiva",
+   "Garzón",
+   "Pitalito",
+   "La Plata"
+  ],
+  "web": "https://www.usco.edu.co/es/",
+  "admisiones_url": "https://www.usco.edu.co/es/ingreso-a-la-usco/",
+  "uso_saber11": "ponderado",
+  "uso_saber11_detalle": "Admite por el puntaje del Saber 11 ponderado por programa. La tabla oficial «Ponderaciones prueba de Estado» de la convocatoria 2026-2 publica los porcentajes por área: por ejemplo Derecho pondera Lectura Crítica 55 %, Sociales y Ciudadanas 20 %, Inglés 15 %, Matemáticas 10 % y Ciencias Naturales 0 %. Cada convocatoria publica su propia tabla en la página de inscripciones.",
+  "puntaje_minimo": null,
+  "ponderacion": "Por programa, según la tabla oficial de cada convocatoria. Ejemplo 2026-2, Derecho: Lectura Crítica 55 %, Sociales 20 %, Inglés 15 %, Matemáticas 10 %, Ciencias 0 %.",
+  "proceso": [
+   {
+    "paso": "Leer la guía de la convocatoria",
+    "detalle": "Cada semestre el Centro de Admisiones, Registro y Control Académico publica una 'Guía paso a paso' con oferta, valor de inscripción, modalidades, cupos, fechas, documentos y ponderaciones.",
+    "url": "https://www.usco.edu.co/es/ingreso-a-la-usco/"
+   },
+   {
+    "paso": "Generar el comprobante y pagar los derechos de inscripción (PIN)",
+    "detalle": "El PIN se habilita un día hábil después del pago en banco."
+   },
+   {
+    "paso": "Diligenciar el formulario de inscripción en línea",
+    "detalle": "Formulario de 20 numerales; se elige el programa y la modalidad (estricto puntaje o régimen especial) y se registra el número de registro ICFES; la Universidad no acepta correcciones posteriores.",
+    "url": "https://www.usco.edu.co/es/inscripciones/"
+   },
+   {
+    "paso": "Entregar documentos de régimen especial y presentar pruebas específicas (si aplica)",
+    "detalle": "Los aspirantes de regímenes especiales entregan sus certificados dentro del periodo de inscripción; Educación Física tiene valoración médica y pruebas de aptitud física y Educación Artística prueba de aptitud artística."
+   },
+   {
+    "paso": "Consultar admitidos por orden de puntaje ponderado y entregar documentos de matrícula",
+    "detalle": "Los admitidos se publican por programa y hay llamados sucesivos si quedan cupos."
+   }
+  ],
+  "calendario": "No publicado para 2027-1 en las páginas consultadas (la sección 'Inscripciones' muestra convocatorias anteriores). La USCO abre inscripciones cada semestre, normalmente entre septiembre y noviembre para el primer periodo y entre marzo y mayo para el segundo; consultar la guía vigente en 'Ingreso a la USCO'.",
+  "costo_inscripcion": "No publicado para la convocatoria vigente en la página oficial; consultar en admisiones (la página de inscripciones solo muestra valores de convocatorias antiguas).",
+  "becas_programas": [
+   "Regímenes especiales de ingreso: comunidades negras, comunidades indígenas (con prueba de idioma propio y de cultura), desplazados por la violencia, reinsertados de procesos de paz y convenio con Escuelas Normales",
+   "Programas en las sedes de Garzón, Pitalito y La Plata",
+   "Política de gratuidad en la matrícula del Gobierno Nacional y programa Renta Joven (universidad pública)"
+  ],
+  "notas": "Verificado en octubre de 2026 en usco.edu.co (Ingreso a la USCO, Inscripciones, Registro y Control Académico y Estudia en la USCO). El contenido detallado de la sección de inscripciones corresponde a convocatorias anteriores (2016-2021), por lo que fechas, valor de inscripción y tabla de ponderaciones vigentes quedan como Correo: registro@usco.edu.co. Ponderaciones verificadas en el PDF oficial de la convocatoria 2026-2 (octubre de 2026); la tabla 2027-1 debe confirmarse cuando se publique.",
+  "fuentes": [
+   "https://www.usco.edu.co/es/ingreso-a-la-usco/",
+   "https://www.usco.edu.co/es/inscripciones/",
+   "https://www.usco.edu.co/es/la-universidad/dependencias/vicerrectoria-academica/registro-y-control-academico/",
+   "https://www.usco.edu.co/es/estudia-en-la-usco/programas-pregrado/",
+   "https://www.usco.edu.co/contenido/inscripciones-2026-2/documents/PONDERACIONES-PRUEBA-DE-ESTADO.pdf"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "uniamazonia",
+  "nombre": "Universidad de la Amazonia",
+  "sigla": "Uniamazonia",
+  "ciudad": "Florencia",
+  "departamento": "Caquetá",
+  "tipo": "pública",
+  "sedes": [
+   "Florencia",
+   "San José del Guaviare (programas en Guaviare)",
+   "Putumayo (programas en extensión)"
+  ],
+  "web": "https://www.uniamazonia.edu.co",
+  "admisiones_url": "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html",
+  "uso_saber11": "ponderado",
+  "uso_saber11_detalle": "Para inscribirse hay que pagar los derechos, diligenciar el formato y haber presentado el examen de Estado. La selección la hace el Consejo Académico con base en los resultados del Saber 11: el Acuerdo 46 de 2014 del Consejo Académico adoptó criterios de selección y una ponderación específica de las áreas para cada programa (según el modelo de prueba vigente desde 2014-II). La página no publica puntaje mínimo.",
+  "puntaje_minimo": null,
+  "ponderacion": "Ponderación por programa definida en el Acuerdo 46 de 2014 del Consejo Académico (PDF escaneado, publicado en la página de inscripciones; no se pudo extraer la tabla en esta verificación).",
+  "proceso": [
+   {
+    "paso": "Revisar la oferta de pregrado y el calendario académico",
+    "detalle": "Programas presenciales en Florencia (Medicina Veterinaria y Zootecnia, Biología, Química, Derecho, Ingenierías, licenciaturas, Enfermería, Psicología, etc.) y a distancia; el calendario de cada semestre se aprueba por acuerdo del Consejo Académico (I-2027: Acuerdo 34 de 2026).",
+    "url": "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/233-calendario-academico/35-cuales-son-las-fechas-academicas-mas-importantes-de-cada-semestre.html"
+   },
+   {
+    "paso": "Realizar la inscripción como estudiante nuevo",
+    "detalle": "En la página de inscripciones de la División de Admisión, Registro y Control Académico se accede al enlace 'Realizar inscripción como estudiante nuevo' (sistema Chairá) y al instructivo IN-M-DC-04-01 y video guía.",
+    "url": "https://chaira.uniamazonia.edu.co"
+   },
+   {
+    "paso": "Pagar los derechos de inscripción",
+    "detalle": "La inscripción es válida solo para el periodo y programa elegidos y no es reembolsable (Acuerdo 09 de 2007, Estatuto Estudiantil)."
+   },
+   {
+    "paso": "Selección y publicación de admitidos",
+    "detalle": "El Consejo Académico determina los admitidos según el Saber 11 ponderado; los regímenes especiales (indígenas, afrocolombianos, víctimas, desmovilizados, deportistas) tienen mecanismos de acceso propios (Acuerdo 021 de 2018)."
+   },
+   {
+    "paso": "Entregar documentos para la liquidación de matrícula",
+    "detalle": "Documento de identidad, registro civil (menores o dependientes), diploma o acta de bachiller, resultados Saber 11, constancia de EPS y soportes de ingresos (declaración de renta, certificado de ingresos o formato de no declarante); la matrícula se liquida según ingresos familiares (Acuerdo 01 de 2012)."
+   }
+  ],
+  "calendario": "Las fechas de inscripción y admisión están en los acuerdos de calendario de cada periodo (I-2027: Acuerdo 34 de 2026 para pregrado presencial y 35 de 2026 para distancia), publicados en PDF; no se pudieron leer como texto en esta verificación. Consultar la página de calendario académico.",
+  "costo_inscripcion": "No publicado en las páginas consultadas; consultar en admisiones (sección 'Tarifas / Derechos Pecuniarios').",
+  "becas_programas": [
+   "Regímenes especiales de admisión (Acuerdo 021 de 2018): indígenas, afrocolombianos, víctimas del conflicto armado, desmovilizados/desvinculados/reinsertados y deportistas con reconocimientos oficiales",
+   "Política de gratuidad en la matrícula: estratos 1-3 o sin estrato, Sisbén IV grupos A-C, indígenas, Rrom, NARP, víctimas, discapacidad, campesinos",
+   "Matrícula liquidada según ingresos del núcleo familiar y descuento del 10 % por certificado electoral",
+   "Articulación educativa con la media (Convenio 031 de 2016)"
+  ],
+  "notas": "Verificado en octubre de 2026 en uniamazonia.edu.co (inscripciones, calendario académico, preguntas frecuentes de admisión). Los PDF del Acuerdo 46 de 2014 (ponderaciones) y del Acuerdo 34 de 2026 (calendario I-2027) están escaneados y no se pudieron transcribir; el valor de inscripción no aparece en las páginas revisadas.",
+  "fuentes": [
+   "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/118-inscripciones.html",
+   "https://www.uniamazonia.edu.co/inicio/index.php/es/la-universidad/dependencias/departamentos/direccion-de-admision-registro-y-control-academico/233-calendario-academico/35-cuales-son-las-fechas-academicas-mas-importantes-de-cada-semestre.html",
+   "https://www.uniamazonia.edu.co/inicio/index.php/es/servicios-de-informacion/preguntas-y-respuestas-frecuentes/relacionadas-con-procesos-de-admision.html",
+   "https://www.uniamazonia.edu.co/inicio/index.php/es/programas/pregrado.html"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "utch",
+  "nombre": "Universidad Tecnológica del Chocó Diego Luis Córdoba",
+  "sigla": "UTCH",
+  "ciudad": "Quibdó",
+  "departamento": "Chocó",
+  "tipo": "pública",
+  "sedes": [
+   "Quibdó",
+   "Istmina (San Juan)",
+   "Bahía Solano (Pacífico)",
+   "Riosucio (Darién)",
+   "Carmen de Atrato",
+   "Baudó",
+   "Medio Atrato"
+  ],
+  "web": "https://utch.edu.co/nueva/",
+  "admisiones_url": "https://utch.edu.co/nueva/admisiones",
+  "uso_saber11": "examen_propio",
+  "uso_saber11_detalle": "El principal requisito de inscripción es haber presentado el Saber 11 (se adjunta el resultado). Según las preguntas frecuentes oficiales, para ser admitido se tiene en cuenta el puntaje del examen de admisión de la UTCH más la entrevista en el programa, y la suma debe ser mínimo 55/100; el examen se presenta en Quibdó y en los centros de Istmina, Bahía Solano, Riosucio y Buenaventura. La guía paso a paso vigente habla de 'evaluación' de los inscritos y publicación de admitidos sin detallar el instrumento; no hay puntaje mínimo de Saber 11 publicado.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Descargar el calendario del periodo",
+    "detalle": "La página de admisiones enlaza los calendarios de pregrado (2025-2, 2026-1 y el especial de profesionalización) aprobados por acuerdos y resoluciones.",
+    "url": "https://utch.edu.co/nueva/admisiones"
+   },
+   {
+    "paso": "Entrar a la plataforma académica e iniciar la inscripción en línea",
+    "detalle": "En academico.utch.edu.co ('Consulta UTCH', plataforma Academusoft) se hace clic en el ícono de inscripción en línea, se lee la ventana informativa y se aceptan los términos."
+   },
+   {
+    "paso": "Diligenciar el formulario y adjuntar documentos",
+    "detalle": "Formulario con foto 3x4, diploma y acta de bachiller (o certificado de que cursa 11.º), resultado del Saber 11 y documento de identidad."
+   },
+   {
+    "paso": "Pagar el valor de inscripción",
+    "detalle": "Se descarga el recibo y se paga en las entidades financieras indicadas; valor $195.000."
+   },
+   {
+    "paso": "Verificación, examen/entrevista y publicación de admitidos",
+    "detalle": "La Universidad publica el listado de inscritos por programa, evalúa a los aspirantes (examen de admisión y entrevista según las preguntas frecuentes) y publica los admitidos en la web; los admitidos entregan documentos en Admisiones, Registro y Control.",
+    "url": "https://utch.edu.co/nueva/preguntas-frecuentes-atencion-al-cuidadano"
+   }
+  ],
+  "calendario": "Dos periodos al año; las fechas de inscripción y admisión están en los calendarios académicos por acuerdo (2026-1: Acuerdo 0009 y modificaciones; 2026-2: Acuerdo 0010), publicados como PDF escaneados que no se pudieron transcribir. En octubre de 2026 la UTCH informaba la reanudación de clases y una suspensión temporal de matrículas de 2026-1 y 2026-2 por una semana desde el 25 de septiembre. Consultar la sección Calendario Académico.",
+  "costo_inscripcion": "$195.000 (guía paso a paso vigente en la página de admisiones). Las preguntas frecuentes indican que el valor equivale al 15 % del salario mínimo y se ajusta cada año.",
+  "becas_programas": [
+   "Calendario especial de admisión para comunidades indígenas y afro (Acuerdo 0008 de 2026) y Programa de Educación Cultural Territorial Indígena",
+   "Programa de Permanencia Estudiantil y convocatoria de alimentación y transporte de Bienestar Universitario",
+   "Descuento por hermanos matriculados (requiere haber aprobado todas las asignaturas del semestre anterior)",
+   "Política de gratuidad en la matrícula del Gobierno Nacional (universidad pública)",
+   "Centros de desarrollo subregional (Darién, Pacífico, Baudó, Carmen de Atrato, San Juan, Medio Atrato)"
+  ],
+  "notas": "Verificado en octubre de 2026 en utch.edu.co (admisiones, admisión-registro-control, calendario académico y preguntas frecuentes). Los criterios de examen + entrevista (mínimo 55/100) provienen de las preguntas frecuentes, cuyos ejemplos de fechas son de 2020; no se pudo confirmar si siguen vigentes. La plataforma academico.utch.edu.co no respondió durante la verificación. Teléfono (604) 672 6565 ext. 4097-4099; línea gratuita 01 8000 938 824.",
+  "fuentes": [
+   "https://utch.edu.co/nueva/admisiones",
+   "https://utch.edu.co/nueva/calendario-academico-academico",
+   "https://utch.edu.co/nueva/preguntas-frecuentes-atencion-al-cuidadano",
+   "https://utch.edu.co/nueva/"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "unipacifico",
+  "nombre": "Universidad del Pacífico",
+  "sigla": "Unipacífico",
+  "ciudad": "Buenaventura",
+  "departamento": "Valle del Cauca",
+  "tipo": "pública",
+  "sedes": [
+   "Buenaventura (campus vía al aeropuerto)",
+   "Bajo Baudó (Chocó)",
+   "Guapi (Cauca)",
+   "Dagua (Valle del Cauca)",
+   "Tumaco (Nariño)"
+  ],
+  "web": "https://www.unipacifico.edu.co",
+  "admisiones_url": "https://www.unipacifico.edu.co/p/34/registro-y-control-academico/admisiones",
+  "uso_saber11": "ponderado",
+  "uso_saber11_detalle": "El criterio único de selección es la ponderación de las áreas del Saber 11 (100 % en todos los programas); la entrevista y la prueba específica ya no deciden la admisión. Se acepta el examen de cualquier año y con cualquier puntaje (también validaciones del bachillerato aprobadas y pruebas extranjeras homologadas por el ICFES). Con el puntaje ponderado se ordena a los aspirantes de mayor a menor por programa y jornada y se traza la línea de corte según los cupos (40 por grupo).",
+  "puntaje_minimo": null,
+  "ponderacion": "Saber 11 desde 2012 (lectura crítica / matemáticas / ciencias naturales / sociales y ciudadanas): Administración de Negocios Internacionales 20/20/20/40; Agronomía 25/30/30/15; Arquitectura 30/30/15/25; Ingeniería Civil 25/40/25/10; Ingeniería de Sistemas 20/60/5/15; Sociología 30/10/20/40; Turismo 40/10/20/30; Tecnología en Construcciones Civiles 50 % lectura crítica y 50 % matemáticas; Tecnología en Producción Piscícola 20/25/35/20. Hay tablas distintas para exámenes de 2000-2011 (Reglamento de admisión 2026-2).",
+  "proceso": [
+   {
+    "paso": "Leer el reglamento de admisión del periodo",
+    "detalle": "La Oficina de Registro y Control Académico publica la 'Guía / Reglamento de Admisión' con oferta, cupos, ponderaciones, condiciones especiales y cronograma.",
+    "url": "https://www.unipacifico.edu.co/storage/documentos/GUIA_2026-2.pdf"
+   },
+   {
+    "paso": "Registrarse en línea en 'Proceso de Admisión'",
+    "detalle": "Se registran los datos y el programa (primera opción) en el enlace de inscripciones y se imprimen el comprobante de registro y la factura de inscripción. Tener a mano documento de identidad, diploma o acta de bachiller, resultados del Saber 11, recibo de servicios públicos y dos fotos 3x4.",
+    "url": "https://www.unipacifico.edu.co/p/34/registro-y-control-academico/admisiones"
+   },
+   {
+    "paso": "Pagar la inscripción y enviar los soportes",
+    "detalle": "Pago en Banco de Occidente o en línea ('Paga aquí tu factura'); luego se envía en un solo PDF el comprobante de pago, el Saber 11 y el documento de identidad por el formulario indicado en la guía. Sin este paso la inscripción se anula. Quienes aplican a condiciones especiales (Ley 1084 de 2006, mejores bachilleres, víctimas, discapacidad) adjuntan los soportes."
+   },
+   {
+    "paso": "Consultar la lista de seleccionados y reinscribirse si no fue admitido",
+    "detalle": "Se publica la lista de selección por programa; quien no quede en su primera opción puede reinscribirse a un programa con cupos (segunda opción) y su Saber 11 se recalcula con la ponderación de ese programa."
+   },
+   {
+    "paso": "Matrícula financiera, exámenes médicos y entrega de documentos",
+    "detalle": "Los admitidos descargan el recibo de matrícula, presentan exámenes médicos de ingreso y entregan documentos en las fechas del cronograma."
+   }
+  ],
+  "calendario": "Dos periodos al año. Proceso 2026-2 (sede Buenaventura): inscripciones por internet del 6 al 31 de julio de 2026 (soportes hasta el 31 de julio a las 6:00 p. m.); publicación de seleccionados el 5 de agosto; reinscripciones a segunda opción del 5 al 6 de agosto; recibos de matrícula desde el 11 de agosto; exámenes médicos del 10 al 21 de agosto; matrícula ordinaria hasta el 24 de agosto y extraordinaria hasta el 31 de agosto; inicio de clases el 1 de septiembre de 2026. El cronograma 2027-1 no estaba publicado al verificar.",
+  "costo_inscripcion": "$73.100 (Reglamento de admisión 2026-2).",
+  "becas_programas": [
+   "Mejores bachilleres (Decreto 644 de 2001): ingreso sin exámenes adicionales, sin límite de cupos, con constancia del ICFES",
+   "Ley 1084 de 2006: un cupo por programa para bachilleres de departamentos sin universidades, municipios de difícil acceso o con problemas de orden público",
+   "Víctimas del conflicto (Registro Único de Víctimas): 4 cupos por programa",
+   "Personas con discapacidad: 3 cupos por programa (con soporte médico)",
+   "Programas en regiones: Bajo Baudó, Guapi, Dagua y Tumaco (oferta 2026-2)",
+   "Política de gratuidad en la matrícula del Gobierno Nacional (universidad pública)"
+  ],
+  "notas": "Verificado en octubre de 2026 en unipacifico.edu.co (Registro y Control Académico > Admisiones, oferta 2026-2 y Reglamento de Admisión 2026-2 en PDF). La inscripción en línea se hace en la plataforma Academusoft de la Universidad (enlace 'Inscripciones' de la página de admisiones). Informes: regconacademico@unipacifico.edu.co, (602) 240 5555 ext. 3905.",
+  "fuentes": [
+   "https://www.unipacifico.edu.co/p/34/registro-y-control-academico/admisiones",
+   "https://www.unipacifico.edu.co/storage/documentos/GUIA_2026-2.pdf"
+  ],
+  "verificado": "2026-10"
+ },
+ {
+  "id": "sena-valle",
+  "nombre": "SENA - Regional Valle (formación titulada gratuita)",
+  "sigla": "SENA Valle",
+  "ciudad": "Cali",
+  "departamento": "Valle del Cauca",
+  "tipo": "pública",
+  "sedes": [
+   "Cali",
+   "Buga",
+   "Tuluá",
+   "Palmira",
+   "Cartago",
+   "Buenaventura",
+   "Yumbo",
+   "Zarzal (centros de formación de la Regional Valle)"
+  ],
+  "web": "https://www.sena.edu.co",
+  "admisiones_url": "https://betowa.sena.edu.co/",
+  "uso_saber11": "examen_propio",
+  "uso_saber11_detalle": "El SENA selecciona a sus aprendices de formación titulada (técnicos y tecnólogos) con pruebas propias en línea por fases (p. ej., 'Selección Fase 1'), no con el Saber 11; la plataforma de oferta no menciona el Saber 11 como requisito ni puntaje mínimo. La formación es gratuita.",
+  "puntaje_minimo": null,
+  "ponderacion": null,
+  "proceso": [
+   {
+    "paso": "Buscar el programa en la oferta",
+    "detalle": "En Betowa (portal oficial que reemplazó la oferta de Sofia Plus) se filtra por modalidad (presencial y a distancia, virtual, idiomas, empresarial) y por ubicación; cada ficha indica duración, tipo de formación (titulada o complementaria) y restricción de edad.",
+    "url": "https://betowa.sena.edu.co/oferta"
+   },
+   {
+    "paso": "Registrarse e inscribirse",
+    "detalle": "Crear la cuenta en Betowa ('Registrarme') con el documento de identidad y luego inscribirse al programa dentro de las fechas de la convocatoria.",
+    "url": "https://betowa.sena.edu.co/registrarse"
+   },
+   {
+    "paso": "Presentar las pruebas de selección",
+    "detalle": "La selección se hace en línea por fases y por terminación del documento de identidad; hay reprogramación para quienes no presenten en la fecha asignada. Convocatoria IV-2026: Fase 1 el 14 y 15 de octubre de 2026 (documentos terminados en 0 a 9) y reprogramación del 16 al 19 de octubre de 2026.",
+    "url": "https://betowa.sena.edu.co/cronograma"
+   },
+   {
+    "paso": "Consultar resultados y matricularse en el centro de formación",
+    "detalle": "Los seleccionados formalizan la matrícula en el centro de formación; la plataforma permite verificar si ya está inscrito. Para servicios administrativos se usa Sofia Plus."
+   },
+   {
+    "paso": "Solicitar apoyo socioeconómico (opcional)",
+    "detalle": "Convocatorias de apoyo económico para que los aprendices terminen su formación.",
+    "url": "https://betowa.sena.edu.co/apoyo-socioeconomico"
+   }
+  ],
+  "calendario": "Cuatro convocatorias de oferta regular al año (I a IV). En octubre de 2026 el cronograma mostraba la 'Selección Fase 1 IV-2026' de oferta regular virtual del 14 al 15 de octubre de 2026 y reprogramación de pruebas del 16 al 19 de octubre de 2026. El cronograma completo 2026 se consulta en Betowa; las fechas de la oferta presencial de la Regional Valle se publican por convocatoria.",
+  "costo_inscripcion": "Gratuito. La formación titulada del SENA no tiene costo de inscripción ni de matrícula.",
+  "becas_programas": [
+   "Apoyo socioeconómico para aprendices (convocatorias en Betowa)",
+   "Formación complementaria y bilingüismo virtual gratuitos (Zajuna)",
+   "Programas presenciales y a distancia en los centros de formación de la Regional Valle",
+   "Orientación vocacional en línea (orientacionvocacional.sena.edu.co)"
+  ],
+  "notas": "Verificado en octubre de 2026 en betowa.sena.edu.co (oferta, cronograma, apoyo socioeconómico). El sitio sena.edu.co y la página de la Regional Valle (sena.edu.co/es-co/regionales/zonaPacifico/Paginas/valle.aspx) cargan su contenido con JavaScript y no se pudieron leer; portal.senasofiaplus.edu.co no respondió. Las sedes listadas corresponden a municipios con centros de formación del SENA en el Valle y deben confirmarse en la oferta. Línea gratuita 01 8000 910 270, WhatsApp 305 809 2444.",
+  "fuentes": [
+   "https://betowa.sena.edu.co/",
+   "https://betowa.sena.edu.co/oferta",
+   "https://betowa.sena.edu.co/cronograma",
+   "https://betowa.sena.edu.co/apoyo-socioeconomico",
+   "https://zajuna.sena.edu.co/",
+   "https://www.sena.edu.co/es-co/regionales/zonaPacifico/Paginas/valle.aspx"
+  ],
+  "verificado": "2026-10"
+ }
 ]
