@@ -66,3 +66,45 @@ No existe una API pública documentada para SNIES ni para la oferta del SENA que
 **Etapa 3:** recursos para docentes/orientadores, instrumentos breves antes/después para medir si ayuda a decidir, comparación avanzada de escenarios.
 
 Riesgos: contenido vocacional es texto propio (riesgo de imprecisión: cada ficha cita fuentes para ampliar); datos variables (costos, convocatorias) no se inventan y se marcan «pendiente de verificar»; privacidad: los datos de Mi futuro no se muestran al docente ni al grupo.
+
+## 6. Informe final (Etapa 1, 14-oct-2026)
+
+### Funciones reutilizadas y mejoradas
+- Perfil del estudiante y patrón de persistencia (RPC + respaldo local), igual que carreras y ruta: `lib/futuro.js leerFuturo/guardarFuturo`.
+- Catálogo `content/carreras.json`: cada ocupación enlaza sus rutas a esas carreras; desde la ficha se puede activar el modo carrera y ver las pruebas ICFES que pesan (complementario, nunca excluyente).
+- Guía ICFES (universidades) enlazada desde Oportunidades; «Mi ruta» y «Carreras» siguen intactas.
+- Menú del estudiante, Inicio y enrutador (`#/futuro`, `?area=…&ocupacion=…&actividad=…`).
+
+### Funciones nuevas (y por qué)
+- Cuestionario de intereses original (no existía ningún instrumento). 36 ítems, 6 áreas; resultado con áreas, actividades, ocupaciones afines, «para abrir el panorama» y preguntas de reflexión; nunca «carrera ideal».
+- Habilidades (5 estados), valores con detección de conflictos, entorno opcional sin datos sensibles.
+- Explorador: 24 fichas de ocupaciones (qué hace, jornada, problemas, actividades, habilidades, lo difícil, sectores, rutas, especializaciones, fuentes); 9 tipos de formación; fuentes oficiales con estado de verificación; 8 oportunidades con vigencia y fecha de consulta.
+- Comparador de 2 a 4 opciones con 11 criterios ponderados por el estudiante; «sin dato» explícito y cobertura; sin ranking definitivo.
+- Proyecto de vida: dimensiones, punto de partida, visión 1/3/5 años, metas con 11 campos y estados (idea, en curso, pausa, lograda, replanteada) con historial; plan 30/90 días generado según circunstancias; impresión.
+- Pasa a la acción: 12 actividades con pasos, duración, registro y 5 preguntas de reflexión; módulo de conversación con familia/mentor con frases y recomendaciones.
+- «Siguiente paso recomendado» por reglas (sin IA).
+
+### Archivos
+Creados: `content/futuro/{cuestionario,ocupaciones,formacion,fuentes,oportunidades,actividades,conversacion}.json`, `src/lib/futuro.js`, `src/components/estudiante/MiFuturo.jsx`, `supabase/migracion-006-futuro.sql`, `tests/futuro.test.js`, `docs/17-mi-futuro.md`. Modificados: `src/App.jsx`, `src/components/Layout.jsx`, `src/components/estudiante/Inicio.jsx`, `src/lib/sync.js`, `CONTINUAR.md`.
+
+### Base de datos
+Opcional: `migracion-006-futuro.sql` (columna `perfiles.futuro` jsonb + función `guardar_futuro`, solo escribe la fila propia). Sin ella, todo queda en el dispositivo y la app avisa. `sync.js` excluye `futuro` del upsert de perfiles. El docente no lee esta columna desde la app.
+
+### Fuentes externas
+Enlazadas (no integradas por API, porque no existe una pública): ver §4. No se copió contenido de los portales. «Descubre TÚ»: solo se confirmó el comunicado oficial; la herramienta no respondió desde el servidor, se marca «no verificada».
+
+### Pruebas
+- Unitarias: 71 pasan (11 nuevas de `futuro`).
+- `vite build` sin errores.
+- Extremo a extremo (Playwright, modo demo, pantalla de 400 px): escenarios A (indeciso), B (recursos limitados), C (valores contradictorios), D (presión familiar), E (información incompleta), F (cambio de rumbo), G (continuidad al salir y volver), H (regresión de Inicio, Práctica, Refuerzo, Guía, Informe). Todos pasan, sin errores de JavaScript.
+
+### Criterios de aceptación (§18)
+1 sin formulario largo (bloques de 6, retomable) ✔ · 2 guarda y produce resultado ✔ · 3 no definitivo ✔ · 4 explora ocupaciones y rutas ✔ · 5 fichas con fuentes y «pendiente de verificar» ✔ · 6 comparador con criterios ✔ · 7-8 proyecto y metas ✔ · 9 actividades con registro ✔ · 10 IA: no aplica en Etapa 1 (no hay IA; el contenido está escrito y citado) · 11 persistencia ✔ (local; nube con migración 006) · 12 móvil ✔ · 13 privacidad ✔ (fila propia, no visible al docente) · 14 regresión ✔ · 15 errores corregidos antes de publicar ✔ (bloque del cuestionario que saltaba al responder).
+
+### Pendiente / limitaciones
+- Asistente conversacional con IA (Etapa 2): requiere `ANTHROPIC_API_KEY` en Vercel, control de costo y las 12 reglas en el prompt; mientras tanto el «orientador por reglas» cubre interpretación, siguiente paso y preguntas de reflexión.
+- Catálogo de programas por ciudad (solo 17 universidades en la Guía); costos no se muestran (varían por institución).
+- Métricas (§16): los datos para medirlas ya existen en el objeto `futuro` (áreas identificadas, alternativas guardadas, criterios valorados, metas con primer paso, actividades registradas, metas replanteadas). Falta un instrumento breve antes/después y un panel agregado y anónimo; no se implementó para no convertirlo en etiquetas.
+- Panel de administración: el contenido se edita en los JSON versionados; no se amplió `Admin.jsx`.
+- Servicio Público de Empleo, Mintrabajo, Sapiencia y Jóvenes a la U no respondieron desde el servidor; quedan como «no verificadas».
+- Riesgo emocional: el pie de la sección remite a un adulto de confianza y al orientador; no hay detección automática de riesgo (no hay chat).
