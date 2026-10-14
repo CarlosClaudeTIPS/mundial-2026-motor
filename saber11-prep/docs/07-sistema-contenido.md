@@ -1,3 +1,5 @@
+> **Nota (14-oct-2026):** la aplicación no usa inteligencia artificial en ningún componente, por decisión del proyecto. Las menciones a IA en este documento son históricas (diseño inicial) y no se implementarán.
+
 # PARTE 7 — Sistema de contenido
 
 Cómo entra, se clasifica, se valida y se distribuye el material. Fuentes: `content/ESQUEMA-PREGUNTA.md`, `content/taxonomia.json`, `scripts/validar-banco.mjs`, `src/lib/banco.js`, `src/components/docente/Banco.jsx`, `src/components/Biblioteca.jsx`, `src/lib/datos.js`.
@@ -59,7 +61,7 @@ Trazabilidad por pregunta: `origen`, `fuente {nombre, url, anio}`, `estado`, `ed
 |---|---|---|---|
 | `oficial` | Pregunta liberada por el ICFES | `fuente.url` obligatoria; al duplicar pasa a `estilo` y pierde la URL | Badge verde "Oficial ICFES" |
 | `estilo` | Elaboración propia siguiendo la estructura de las guías | `fuente.nombre` | Badge "Estilo Saber 11" |
-| `generada` | Creada por IA o importada sin origen declarado | Entra como `pendiente` | Badge ámbar "Generada por IA" |
+| `generada` | Importada sin origen declarado | Entra como `pendiente` | Badge ámbar "Sin origen declarado" |
 
 Las 66 preguntas actuales son `estilo`. Regla del esquema: **nunca marcar como oficial lo que no lo es**.
 

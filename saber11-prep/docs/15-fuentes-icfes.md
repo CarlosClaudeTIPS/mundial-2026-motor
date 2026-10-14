@@ -89,7 +89,7 @@ Pistas de terceros (solo para localizar la URL oficial; no se usan como fuente):
    - Formato genérico numerado (p. ej. Evaluar para Avanzar): `node scripts/importar-cuadernillo.mjs <pdf> --prueba <id> --prefijo <PREFIJO> --url <url> --anio <año>`
    Salida: `content/importados/<prefijo>.json` (estado `pendiente`, sin explicaciones por opción).
 3. Deduplicar: comparar enunciado + opciones normalizados contra `content/importados/*.json` y `content/banco/*.json` (la opción `--sin-duplicados` del script de guías lo hace sola). Pendiente de resolver: CIEO25 vs CIEO26 (39 repetidas).
-4. Completar clasificación y explicaciones (IA desde la app con `Completar con IA`, o un lote de revisión) y mover al banco con `estado: "aprobada"` solo lo revisado. Las etiquetadas `revisar_estimulo` necesitan reconstruir tabla/gráfico o descartarse.
+4. Completar clasificación y explicaciones (revisión manual del docente; la app no usa IA) y mover al banco con `estado: "aprobada"` solo lo revisado. Las etiquetadas `revisar_estimulo` necesitan reconstruir tabla/gráfico o descartarse.
 5. `npm run validar-banco` y `npm run revisar-banco`.
 
 Prefijos: `LCO26`, `MATO26`, `CIEO26`, `CIEO25`, `INGO24`, `SOCO<año>`; guías: `G17-1-*`, `G17-2-*`; Evaluar para Avanzar: `EPA21-LC`, `EPA23-MAT`, etc.

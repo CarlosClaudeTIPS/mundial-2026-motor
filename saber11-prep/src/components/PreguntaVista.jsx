@@ -23,7 +23,7 @@ export default function PreguntaVista({ pregunta, elegida = null, onElegir = nul
           <Badge tono="morado">{nombrePrueba(p.prueba)}</Badge>
           <Badge>{nombreCompetencia(p.competencia)}</Badge>
           <Badge tono="azul">{nombreHabilidad(p.habilidad)}</Badge>
-          {p.origen === 'oficial' ? <Badge tono="verde">Oficial ICFES</Badge> : p.origen === 'generada' ? <Badge tono="ambar">Generada por IA</Badge> : <Badge>Estilo Saber 11</Badge>}
+          {p.origen === 'oficial' ? <Badge tono="verde">Oficial ICFES</Badge> : p.origen === 'generada' ? <Badge tono="ambar">Sin origen declarado</Badge> : <Badge>Estilo Saber 11</Badge>}
         </div>
       )}
       {mostrarContexto && p.contexto && !contextoRepetido && <Md texto={p.contexto} className="text-[16px] text-gray-200 bg-dark-900 rounded-xl p-4 border border-dark-700" />}

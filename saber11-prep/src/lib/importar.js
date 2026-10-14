@@ -1,6 +1,5 @@
-import { supabase, NUBE_DISPONIBLE } from './supabase'
 
-// ─── Importar preguntas desde PDF / texto y completar con IA ─────────────────
+// ─── Importar preguntas desde PDF / texto ────────────────────────────────────
 
 // Extrae el texto de un PDF en el navegador (pdf.js).
 export async function textoDePdf(archivo) {
@@ -97,43 +96,4 @@ export function borradorAPregunta(b, { prueba, origen, fuente, prefijo }) {
     explicacion: '', que_identificar: '', que_revisar: '', refuerzo_ids: [], recurso_ids: [], tiempo_sugerido_seg: 120,
     etiquetas: ['importada', ...(b.correcta ? [] : ['sin_clave'])], estado: 'pendiente', claves_detectadas: claves,
   }
-}
-
-// ── IA (función de servidor) ──────────────────────────────────────────────────
-const BASE = import.meta.env.VITE_API_BASE ?? ''
-
-async function llamarIA(cuerpo) {
-  if (!NUBE_DISPONIBLE) throw new Error('La IA necesita la nube (Supabase) y la clave en Vercel; en modo local no está disponible.')
-  const { data } = await supabase.auth.getSession()
-  const token = data.session?.access_token
-  if (!token) throw new Error('Inicia sesión como docente para usar la IA')
-  const res = await fetch(`${BASE}/api/ia-preguntas`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }, body: JSON.stringify(cuerpo) })
-  const json = await res.json().catch(() => ({}))
-  if (!res.ok) throw new Error(json.error ?? `Error ${res.status}`)
-  return json
-}
-
-// Completa una pregunta del banco (clasificación + explicaciones) y la devuelve lista para guardar (pendiente).
-export async function completarConIA(pregunta) {
-  const { pregunta: c } = await llamarIA({ accion: 'completar', prueba: pregunta.prueba, pregunta: { enunciado: pregunta.enunciado, contexto: pregunta.contexto, opciones: pregunta.opciones.map(o => ({ clave: o.clave, texto: o.texto })), correcta: pregunta.opciones.find(o => o.correcta)?.clave ?? null } })
-  const etiquetas = new Set([...(pregunta.etiquetas ?? []).filter(e => e !== 'sin_clave'), 'completada_ia', ...(c.advertencias ?? []).map(a => a.includes('afirmacion') ? 'afirmacion_por_verificar' : 'revisar')])
-  return {
-    ...pregunta,
-    competencia: c.competencia, componente: c.componente, afirmacion: c.afirmacion, evidencia: c.evidencia, habilidad: c.habilidad,
-    tema: c.tema, subtema: c.subtema, dificultad: c.dificultad, contexto: c.contexto ?? pregunta.contexto, enunciado: c.enunciado || pregunta.enunciado,
-    opciones: c.opciones, explicacion: c.explicacion, que_identificar: c.que_identificar, que_revisar: c.que_revisar,
-    tiempo_sugerido_seg: c.tiempo_sugerido_seg, etiquetas: [...etiquetas], advertencias_ia: c.advertencias ?? [], estado: 'pendiente',
-  }
-}
-
-// Genera preguntas nuevas a partir de un texto fuente (quedan pendientes, origen "generada").
-export async function generarConIA({ prueba, texto, cantidad, fuente, prefijo }) {
-  const { preguntas } = await llamarIA({ accion: 'generar', prueba, texto, cantidad })
-  return preguntas.map((c, i) => ({
-    id: `${prefijo}-${String(i + 1).padStart(3, '0')}`, prueba, origen: 'generada',
-    fuente: { nombre: fuente.nombre || 'Generada por IA a partir de material del docente', url: fuente.url || null, anio: new Date().getFullYear() },
-    competencia: c.competencia, componente: c.componente, afirmacion: c.afirmacion, evidencia: c.evidencia, habilidad: c.habilidad, tema: c.tema, subtema: c.subtema, dificultad: c.dificultad,
-    contexto: c.contexto, estimulo: null, enunciado: c.enunciado, opciones: c.opciones, explicacion: c.explicacion, que_identificar: c.que_identificar, que_revisar: c.que_revisar,
-    refuerzo_ids: [], recurso_ids: [], tiempo_sugerido_seg: c.tiempo_sugerido_seg, etiquetas: ['generada_ia', ...(c.advertencias?.length ? ['revisar'] : [])], advertencias_ia: c.advertencias ?? [], estado: 'pendiente',
-  }))
 }

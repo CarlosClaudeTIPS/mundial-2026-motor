@@ -1,3 +1,5 @@
+> **Nota (14-oct-2026):** la aplicación no usa inteligencia artificial en ningún componente, por decisión del proyecto. Las menciones a IA en este documento son históricas (diseño inicial) y no se implementarán.
+
 # PARTE 10 — Roadmap
 
 Fases según la sección 55 del prompt. Prioridad: **P1** imprescindible · **P2** importante · **P3** deseable. Dificultad: baja / media / alta para un desarrollador.

@@ -118,7 +118,7 @@ export function consejoPorRazon(razon, pregunta = null) {
   }
 }
 
-// Lección "desde cero" para la competencia y la habilidad de una pregunta (sin conexión, sin IA).
+// Lección "desde cero" para la competencia y la habilidad de una pregunta (sin conexión).
 export function leccionDe(pregunta) {
   if (!pregunta) return null
   const comp = lecciones.competencias?.[pregunta.competencia] ?? null

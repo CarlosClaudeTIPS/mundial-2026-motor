@@ -1,3 +1,5 @@
+> **Nota (14-oct-2026):** la aplicación no usa inteligencia artificial en ningún componente, por decisión del proyecto. Las menciones a IA en este documento son históricas (diseño inicial) y no se implementarán.
+
 # PARTE 4 — MVP: qué se construyó
 
 Estado verificado contra el código el 25-sep-2026. Leyenda: ✅ funciona de extremo a extremo · ⚠️ funciona con limitaciones · ❌ no existe.

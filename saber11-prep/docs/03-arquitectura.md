@@ -1,3 +1,5 @@
+> **Nota (14-oct-2026):** la aplicación no usa inteligencia artificial en ningún componente, por decisión del proyecto. Las menciones a IA en este documento son históricas (diseño inicial) y no se implementarán.
+
 # PARTE 3 — Arquitectura del producto
 
 Documenta la arquitectura **tal como está implementada** en el repositorio (no la ideal). Referencias de código: `vite.config.js`, `src/lib/db.js`, `src/lib/sync.js`, `src/lib/sesion.js`, `src/lib/supabase.js`, `supabase/schema.sql`, `api/estudiantes.js`, `.env.example`.

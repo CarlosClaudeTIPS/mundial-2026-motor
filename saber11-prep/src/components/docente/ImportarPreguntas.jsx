@@ -1,17 +1,15 @@
 import { useState } from 'react'
-import { FileText, Sparkles, Save, X } from 'lucide-react'
-import { textoDePdf, detectarPreguntas, borradorAPregunta, completarConIA, generarConIA } from '../../lib/importar'
+import { FileText, Save, X } from 'lucide-react'
+import { textoDePdf, detectarPreguntas, borradorAPregunta } from '../../lib/importar'
 import { guardarPregunta } from '../../lib/banco'
 import { taxonomia } from '../../lib/taxonomia'
-import { NUBE_DISPONIBLE } from '../../lib/supabase'
 import { Badge } from '../ui'
 
-// ─── Importar preguntas desde PDF/texto y completar o generar con IA ─────────
+// ─── Importar preguntas desde PDF/texto ──────────────────────────────────────
 // 1) Sube un PDF o pega texto (cuadernillo ICFES, guía, documento).
 // 2) La app detecta las preguntas numeradas con opciones A-D y la hoja de respuestas.
-// 3) Guardas los borradores (estado pendiente) y, si quieres, la IA los clasifica y
-//    escribe las explicaciones de cada opción. Tú revisas y apruebas en el banco.
-// También: "Generar con IA" redacta preguntas nuevas a partir del texto pegado.
+// 3) Guardas los borradores (estado pendiente). Tú completas la clasificación y las
+//    explicaciones de cada opción en el banco, y apruebas. Sin inteligencia artificial.
 
 export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
   const tax = taxonomia()
@@ -22,7 +20,6 @@ export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
   const [texto, setTexto] = useState('')
   const [borradores, setBorradores] = useState([])
   const [estado, setEstado] = useState('')
-  const [cantidad, setCantidad] = useState(5)
   const [ocupado, setOcupado] = useState(false)
 
   const leerArchivo = async (archivo) => {
@@ -36,10 +33,10 @@ export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
   const detectar = () => {
     const d = detectarPreguntas(texto)
     setBorradores(d.map(b => ({ ...b, incluir: true })))
-    setEstado(d.length ? `${d.length} preguntas detectadas (${d.filter(b => b.correcta).length} con clave). Revisa y guarda.` : 'No se detectaron preguntas numeradas con opciones A-D. Puedes usar "Generar con IA" con este texto.')
+    setEstado(d.length ? `${d.length} preguntas detectadas (${d.filter(b => b.correcta).length} con clave). Revisa y guarda.` : 'No se detectaron preguntas numeradas con opciones A-D. Revisa el formato (número, punto, opciones A-D).')
   }
 
-  const guardarBorradores = async (conIA) => {
+  const guardarBorradores = async () => {
     const sel = borradores.filter(b => b.incluir)
     if (!sel.length) return setEstado('No hay preguntas seleccionadas')
     if (!fuente.nombre.trim()) return setEstado('Escribe el nombre de la fuente (p. ej. "Cuadernillo Saber 11 Lectura Crítica 2025, ICFES")')
@@ -48,25 +45,12 @@ export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
     for (const b of sel) {
       let p = borradorAPregunta(b, { prueba, origen, fuente, prefijo })
       try {
-        if (conIA) { setEstado(`IA completando pregunta ${b.numero}… (${ok + 1}/${sel.length})`); p = await completarConIA(p) }
         await guardarPregunta(p); ok++
       } catch (e) { fallos.push(`P${b.numero}: ${e.message}`); try { await guardarPregunta(p) } catch {} }
     }
     setOcupado(false)
     setEstado(`${ok} preguntas guardadas en estado pendiente${fallos.length ? `. Fallos: ${fallos.join(' · ')}` : ''}. Revísalas en el banco (filtro "pendiente") y apruébalas.`)
     onGuardado?.()
-  }
-
-  const generar = async () => {
-    if (texto.trim().length < 80) return setEstado('Pega o carga primero un texto fuente')
-    setOcupado(true); setEstado(`IA redactando ${cantidad} preguntas…`)
-    try {
-      const ps = await generarConIA({ prueba, texto, cantidad, fuente, prefijo: prefijo + '-G' })
-      for (const p of ps) await guardarPregunta(p)
-      setEstado(`${ps.length} preguntas generadas y guardadas en estado pendiente. Revísalas en el banco antes de aprobar.`)
-      onGuardado?.()
-    } catch (e) { setEstado('Error: ' + e.message) }
-    setOcupado(false)
   }
 
   return (
@@ -94,10 +78,6 @@ export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
 
       <div className="flex flex-wrap gap-2">
         <button className="btn-primary" onClick={detectar} disabled={!texto.trim() || ocupado}>Detectar preguntas</button>
-        <div className="flex items-center gap-1 ml-auto">
-          <input className="input !w-16" type="number" min="1" max="10" value={cantidad} onChange={e => setCantidad(e.target.value)} />
-          <button className="btn-secondary" onClick={generar} disabled={ocupado || !NUBE_DISPONIBLE} title={NUBE_DISPONIBLE ? '' : 'Solo con la nube configurada'}><Sparkles size={16} /> Generar con IA desde este texto</button>
-        </div>
       </div>
       {estado && <p className="text-sm text-gray-300">{estado}</p>}
 
@@ -115,10 +95,9 @@ export default function ImportarPreguntas({ usuario, onCerrar, onGuardado }) {
             ))}
           </div>
           <div className="flex flex-wrap gap-2">
-            <button className="btn-secondary" disabled={ocupado} onClick={() => guardarBorradores(false)}><Save size={16} /> Guardar como pendientes</button>
-            <button className="btn-primary" disabled={ocupado || !NUBE_DISPONIBLE} onClick={() => guardarBorradores(true)} title={NUBE_DISPONIBLE ? '' : 'Solo con la nube configurada'}><Sparkles size={16} /> Guardar y completar con IA</button>
+            <button className="btn-primary" disabled={ocupado} onClick={guardarBorradores}><Save size={16} /> Guardar como pendientes</button>
           </div>
-          <p className="text-[11px] text-gray-500">"Completar con IA" clasifica cada pregunta (competencia, habilidad, dificultad) y escribe la explicación de cada opción; marca con "revisar" lo que no pudo determinar con certeza. Sin clave en la fuente, la IA propone una y lo advierte.</p>
+          <p className="text-[11px] text-gray-500">Las preguntas quedan pendientes: en el banco completas competencia, habilidad, dificultad y la explicación de cada opción antes de aprobarlas. Sin clave en la fuente, la pregunta queda marcada "sin clave".</p>
         </div>
       )}
     </div>

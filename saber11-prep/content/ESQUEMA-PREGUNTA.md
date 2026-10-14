@@ -38,7 +38,7 @@ Cada archivo del banco es un arreglo JSON de preguntas. Todas las claves en espa
 
 ## Reglas
 
-- `origen`: `oficial` (pregunta liberada por el ICFES, con URL), `estilo` (elaboración propia siguiendo la estructura oficial) o `generada` (creada por IA). NUNCA marcar como `oficial` algo que no lo sea.
+- `origen`: `oficial` (pregunta liberada por el ICFES, con URL), `estilo` (elaboración propia siguiendo la estructura oficial) o `generada` (importada sin origen declarado; la app no usa inteligencia artificial). NUNCA marcar como `oficial` algo que no lo sea.
 - `prueba`: `lectura_critica` | `matematicas` | `sociales_ciudadanas` | `ciencias_naturales` | `ingles`.
 - `competencia` y `componente`: ids de `content/taxonomia.json`.
 - `habilidad`: la habilidad del eje transversal que MÁS pesa en la pregunta: `leer` | `comprender` | `interpretar` | `representar` | `razonar` | `resolver` | `verificar`.

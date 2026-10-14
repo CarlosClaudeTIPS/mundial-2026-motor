@@ -28,7 +28,7 @@ No revisado a fondo: `Materia.jsx`, `Historial.jsx`, `Simulacros.jsx`, panel doc
 | Guía del ICFES (qué es, cómo se califica, para qué sirve, calendario, cómo prepararse, FAQ, universidades) | Funciona (contenido parcial) | `Guia.jsx`, `content/guia/*.json` | Solo Antioquia y Eje Cafetero en universidades. No hay sección de manejo del tiempo y ansiedad el día del examen | Agregar sección "Mente y tiempo" en `general.json` |
 | Panel docente (grupo, estudiante, asignaciones, sesiones cada 21 días, informes) | Funciona | `docente/*` | Ninguno en este alcance | Sin cambios; los nuevos datos (razón, verificación) ya llegan por `intentos` |
 | Registro de intentos y sincronización local → nube | Funciona | `datos.js registrarIntento()`, `sync.js` | Ninguno | Reutilizar; los campos nuevos viajan en el mismo JSON del intento |
-| IA (completar/generar preguntas) | Implementado, no verificado en producción | `api/ia-preguntas.js` | Solo para docentes; no hay tutor para estudiantes | Fuera de esta fase: el tutor funciona sin IA con las lecciones; un endpoint de IA queda como pendiente documentado |
+| Inteligencia artificial | Retirada (14-oct-2026) | Se eliminó `api/ia-preguntas.js` y los botones «Completar/Generar con IA» | Decisión del proyecto: ningún componente usa IA | El tutor son las lecciones escritas |
 | Equidad: sin conexión (PWA + IndexedDB), móvil primero, todo gratis | Funciona | `vite.config.js`, `db.js` | Ninguno | Mantener: todo lo nuevo debe funcionar sin red |
 
 ## 3. Cobertura de las 18 necesidades del estudiante
@@ -100,7 +100,7 @@ Modificados: `src/lib/{feedback,banco,sync}.js`, `src/components/{Retro,Informe}
 - Prueba de extremo a extremo con Playwright en el modo demo (estudiante est1): Inicio muestra "Arma tu ruta"; formulario de la ruta → semana con 5 sesiones; Inicio muestra "Hoy en mi ruta"; en práctica, al fallar aparece "¿Por qué me equivoqué?", al elegir una razón sale el consejo, "Explícame desde cero" abre la lección y "Comprobar…" lleva a una pregunta de verificación nueva; Mi progreso muestra Constancia y aprendizaje real; la Guía muestra "Mente y tiempo". Sin errores de JavaScript en consola.
 
 ### Qué NO se hizo o no se pudo verificar
-- **Tutor con IA** ("Explícame desde cero" con respuestas generadas): no se implementó. El tutor actual usa las lecciones escritas en `content/lecciones.json` (14 competencias, 7 habilidades), que funcionan sin conexión. Un endpoint de IA requeriría `ANTHROPIC_API_KEY` en Vercel, control de costo por estudiante y verificación en producción, cosas que no se pueden comprobar desde aquí.
+- **Tutor con IA**: descartado de forma definitiva (14-oct-2026): la aplicación no usa inteligencia artificial en ningún componente. «Explícame desde cero» usa las lecciones escritas en `content/lecciones.json`.
 - **Diagnóstico adaptativo** (que cambie la dificultad según las respuestas): descartado por ahora; con 25 preguntas y el refinamiento continuo con la práctica no aporta lo suficiente frente a su complejidad.
 - **Notificaciones** (recordatorio de la sesión del día): no hay canal definido (correo, WhatsApp, push). Pendiente de decisión.
 - **Panel docente**: no se agregó una vista específica de "ruta" o "aprendizaje real" por estudiante; los datos ya están en los intentos (modo verificación) y el informe individual muestra el bloque de aprendizaje real.

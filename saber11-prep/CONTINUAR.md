@@ -57,10 +57,10 @@ Auditoría, plan e informe final en `docs/16-acompanamiento.md`. Resumen de lo q
 - Guía: sección "Mente y tiempo".
 - Pruebas: `tests/acompanamiento.test.js`. Migración opcional: `supabase/migracion-005-ruta.sql`.
 
-Pendientes de ese sistema: tutor con IA (hoy solo lecciones escritas), notificaciones (falta decidir canal), vista de ruta/aprendizaje en el panel docente.
+Pendientes de ese sistema: notificaciones (falta decidir canal), vista de ruta/aprendizaje en el panel docente. **Decisión: la app no usa inteligencia artificial en ningún componente**; el tutor son las lecciones escritas en `content/lecciones.json`.
 
 ## «Mi futuro»: orientación vocacional y proyecto de vida (Etapa 1 hecha el 14-oct-2026)
 
-Auditoría, plan e informe en `docs/17-mi-futuro.md`. Ruta `#/futuro`; lógica en `src/lib/futuro.js`; contenido en `content/futuro/*.json` (fuentes con fecha de verificación: revisarlas cada semestre); pruebas en `tests/futuro.test.js`. Migración opcional `supabase/migracion-006-futuro.sql`. Etapa 2 pendiente: asistente con IA (`api/ia-orientador.js`), catálogo de programas por ciudad, métricas antes/después.
+Auditoría, plan e informe en `docs/17-mi-futuro.md`. Ruta `#/futuro`; lógica en `src/lib/futuro.js`; contenido en `content/futuro/*.json` (fuentes con fecha de verificación: revisarlas cada semestre); pruebas en `tests/futuro.test.js`. Migración opcional `supabase/migracion-006-futuro.sql`. Etapa 2 pendiente: catálogo de programas por ciudad, métricas antes/después. Sin asistente con IA (decisión del proyecto).
 
 Otros pendientes: correr `supabase/migracion-005-ruta.sql` y `migracion-006-futuro.sql` (opcional, para que la ruta siga al estudiante entre dispositivos); guía ICFES solo tiene Antioquia y Eje Cafetero (faltan Bogotá, Caribe, Pacífico/sur, Oriente/Llanos; enlaces de `content/guia/*.json` aún sin verificar uno a uno); la migración `supabase/migracion-004-planes.sql` debe correrla Carlos en el SQL Editor de Supabase.

@@ -11,7 +11,7 @@ import conversacionJson from '../../content/futuro/conversacion.json'
 import { carreraPorId } from './carreras'
 
 // ─── Mi futuro: orientación vocacional y proyecto de vida ────────────────────
-// Lógica pura (sin IA) + persistencia. Todo el estado del estudiante vive en un
+// Lógica pura + persistencia. Todo el estado del estudiante vive en un
 // solo objeto `futuro` guardado en el dispositivo (db.config) y, si la nube tiene
 // la migración 006, en perfiles.futuro mediante la función guardar_futuro.
 // Nada de esto se muestra al docente ni a otros estudiantes.
@@ -191,7 +191,7 @@ export const PREGUNTAS_CAMBIO = [
   '¿Cuál sería un siguiente paso pequeño en la nueva dirección?',
 ]
 
-// ── Siguiente paso recomendado (orientador por reglas, sin IA) ──────────────
+// ── Siguiente paso recomendado (orientador por reglas) ──────────────
 export function siguientePaso(futuro) {
   const f = futuro ?? FUTURO_VACIO()
   const perfil = perfilIntereses(f.intereses.respuestas)
