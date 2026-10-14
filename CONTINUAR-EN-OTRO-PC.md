@@ -16,16 +16,16 @@ cd mundial-2026-motor
 
 | Rama | Qué contiene |
 |---|---|
-| `claude/portal-unificado` | **La más completa.** Portal con las tres puertas + apoyo docente + tienda + ICFES. Empieza por aquí. |
+| `main` | **La principal y la más completa.** Portal con las tres puertas + apoyo docente + tienda + ICFES (+ el Motor Mundial, que no se toca). Empieza por aquí. |
+| `claude/portal-unificado` | Copia de trabajo del portal; lo mismo que `main`. |
 | `claude/relaxed-ptolemy-h4qeca` | Solo la página de apoyo docente (`apoyo-docente/`). |
 | `claude/compassionate-euler-iilze8` | Solo la app del ICFES (`saber11-prep/`). |
 | `claude/gifted-clarke-y62a56` | Solo la tienda (`tienda/`). |
-| `main` | Motor Mundial 2026 (otro proyecto, no se toca). |
 
 Para ponerte en la rama del portal:
 
 ```bash
-git checkout claude/portal-unificado
+git checkout main
 ```
 
 ## 3. Ver cada cosa en el navegador
@@ -71,7 +71,7 @@ y abre http://localhost:8090
 ## 4b. Si cambiaste un proyecto en su propia conversación
 
 Cada proyecto puede seguir editándose en su propia rama. Para que el portal
-incluya esos cambios, desde la rama `claude/portal-unificado`:
+incluya esos cambios, desde `main`:
 
 ```bash
 node portal/actualizar-proyectos.mjs
@@ -91,10 +91,10 @@ git push
 
 Nada depende de un computador en particular: todo se lee de GitHub.
 - **Claude Code en la web** (claude.ai/code): elige el repositorio `mundial-2026-motor`
-  y pide trabajar en la rama `claude/portal-unificado`. No necesitas descargar nada.
+  y pide trabajar en la rama `main`. No necesitas descargar nada.
 - **Claude Code instalado en el otro PC**: abre la carpeta del repositorio y pídele lo que necesites.
 Verá las mismas carpetas y ramas. Si quieres seguir una conversación anterior,
-dile en qué rama trabajar (por ejemplo: «trabaja en la rama claude/portal-unificado»).
+dile en qué rama trabajar (por ejemplo: «trabaja en la rama main, carpeta portal»).
 
 ## 7. Vistas previas publicadas
 

@@ -35,8 +35,6 @@ for (const f of walk(join(tmp, "src")).filter((f) => /\.jsx?$/.test(f))) {
 }
 execSync(`npx vite build --base=${BASE} --outDir ${JSON.stringify(join(dist, "icfes"))} --emptyOutDir`, { cwd: tmp, stdio: "inherit" });
 rmSync(tmp, { recursive: true, force: true });
-// funciones de servidor del ICFES (solo aplican en Vercel)
-if (existsSync(join(src, "api"))) cpSync(join(src, "api"), join(dist, "api"), { recursive: true });
 
 // 5. Barra común en cada página de las secciones
 for (const f of walk(dist).filter((f) => f.endsWith(".html") && relative(dist, f) !== "index.html")) {
@@ -46,11 +44,7 @@ for (const f of walk(dist).filter((f) => f.endsWith(".html") && relative(dist, f
   if (!html.includes("shared/barra.js")) writeFileSync(f, html.replace(/<\/head>/i, tag + "\n</head>"));
 }
 
-// 6. Configuración de Vercel: la app del ICFES es de una sola página
-writeFileSync(join(dist, "vercel.json"), JSON.stringify({
-  rewrites: [{ source: "/icfes/:path((?!.*\\.).*)", destination: "/icfes/index.html" }],
-  functions: { "api/*.js": { maxDuration: 30 } }
-}, null, 2));
+// 6. Vercel: la configuración vive en portal/vercel.json y las funciones en portal/api (reexportan las del ICFES)
 
 console.log("Portal listo en", relative(root, dist), "· base ICFES:", BASE, "·", walk(dist).length, "archivos");
 
