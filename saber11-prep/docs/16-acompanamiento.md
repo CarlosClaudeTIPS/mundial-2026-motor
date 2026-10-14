@@ -66,6 +66,42 @@ No revisado a fondo: `Materia.jsx`, `Historial.jsx`, `Simulacros.jsx`, panel doc
 
 Riesgos: el perfil en Supabase necesita columna `ruta_config` (migración 005) o se guarda solo local con aviso, igual que carreras; se hace con RPC y respaldo local. Nada de lo nuevo rompe lo existente si la migración no se corre.
 
-## 5. Informe final
+## 5. Informe final (14-oct-2026)
 
-(Se completa al terminar; ver abajo.)
+### Funciones existentes mejoradas
+- **Retroalimentación de la pregunta** (`src/components/Retro.jsx`): la pregunta "¿Por qué me equivoqué?" ahora produce un consejo y una estrategia según la razón elegida (textos en `content/lecciones.json → razones`, editables), muestra la lección "Explícame desde cero" de la competencia y la habilidad de esa pregunta (sin conexión, sin IA), y el botón de refuerzo pasó a ser "Comprobar que ya lo entendí con una pregunta nueva".
+- **Práctica** (`Practica.jsx`): acepta `modo=verificacion&de=<uid>`; la verificación se registra como intento con `modo: 'verificacion'` y `refuerzo_de` (columnas ya existentes en Supabase; sin migración). Al terminar la ronda muestra cuántas verificaciones salieron bien. Resultados, Historial y Mis errores también abren la verificación.
+- **Resultados de la prueba diagnóstica** (`SesionPrueba.jsx`): tarjeta "Tu perfil inicial" (nivel por prueba, 3 competencias por donde empezar, botón a la ruta).
+- **Mi ruta** (`MiRuta.jsx`): arriba va "Mi ruta para mejorar" (personal); el programa general del ciclo queda plegado.
+- **Inicio**: tarjeta "Hoy en mi ruta" con la sesión del día, racha y botón "Hacer la sesión de hoy"; `lanzarAccion` entiende diagnóstico, simulacro y errores.
+- **Mi progreso**: bloques "Constancia" y "¿Estás aprendiendo de verdad?". **Informe de mejoramiento**: el mismo bloque de aprendizaje real, compacto.
+- **Guía ICFES**: sección "Mente y tiempo el día del examen" (tiempo por pregunta, orden, ansiedad, semana previa, día del examen, FAQ).
+- **Historial**: etiqueta "verificación" para ese modo.
+
+### Funciones nuevas
+- `src/lib/diagnostico.js`: `perfilDiagnostico()`, `nivelCompetencia()`, `NIVELES_COMPETENCIA`.
+- `src/lib/aprendizaje.js`: `medirAprendizaje()` (superado / en proceso / sin verificar, verificaciones, tendencia por tipo de error) y `constancia()`.
+- `src/lib/ruta.js`: `planSemana()`, `normalizarConfig()`, `diasDeEstudio()`, `preguntasPorSesion()`, `leerRutaConfig()`, `guardarRutaConfig()`.
+- `src/lib/banco.js`: `elegirVerificacion()` (pura) y `preguntaVerificacion()`.
+- `src/lib/feedback.js`: `consejoPorRazon()`, `leccionDe()`.
+- `src/components/estudiante/RutaMejorar.jsx`: formulario de configuración, vista semanal, tarjeta "Hoy".
+
+### Archivos creados o modificados
+Creados: `src/lib/diagnostico.js`, `src/lib/aprendizaje.js`, `src/lib/ruta.js`, `src/components/estudiante/RutaMejorar.jsx`, `supabase/migracion-005-ruta.sql`, `tests/acompanamiento.test.js`, `docs/16-acompanamiento.md`.
+Modificados: `src/lib/{feedback,banco,sync}.js`, `src/components/{Retro,Informe}.jsx`, `src/components/estudiante/{Practica,SesionPrueba,Historial,MisErrores,MiRuta,Inicio,MiProgreso}.jsx`, `content/lecciones.json`, `content/guia/general.json`, `CONTINUAR.md`.
+
+### Cambios en la base de datos
+- Ninguno obligatorio. Los intentos de verificación usan columnas existentes (`modo`, `refuerzo_de`).
+- Opcional: `supabase/migracion-005-ruta.sql` agrega `perfiles.ruta_config` y la función `guardar_ruta` para que la configuración de la ruta siga al estudiante entre dispositivos. Sin correrla, la ruta se guarda en el dispositivo y la app lo avisa. `sync.js` no envía `ruta_config` en el upsert de perfiles (viaja solo por la función), así que nada falla si la migración no está.
+
+### Pruebas realizadas
+- Unitarias (vitest): 56 pasan (30 previas + 26 nuevas): consejos por razón, lección, elección de la pregunta de verificación, niveles y prioridades del perfil, aprendizaje real (nueva vs. repetida, verificaciones, tendencias), constancia, configuración de la ruta, plan semanal (diagnóstico primero sin datos, prioridades, repaso de errores, simulacro en recta final, marcado de lo hecho, meta y puntos por semana).
+- `vite build` sin errores.
+- Prueba de extremo a extremo con Playwright en el modo demo (estudiante est1): Inicio muestra "Arma tu ruta"; formulario de la ruta → semana con 5 sesiones; Inicio muestra "Hoy en mi ruta"; en práctica, al fallar aparece "¿Por qué me equivoqué?", al elegir una razón sale el consejo, "Explícame desde cero" abre la lección y "Comprobar…" lleva a una pregunta de verificación nueva; Mi progreso muestra Constancia y aprendizaje real; la Guía muestra "Mente y tiempo". Sin errores de JavaScript en consola.
+
+### Qué NO se hizo o no se pudo verificar
+- **Tutor con IA** ("Explícame desde cero" con respuestas generadas): no se implementó. El tutor actual usa las lecciones escritas en `content/lecciones.json` (14 competencias, 7 habilidades), que funcionan sin conexión. Un endpoint de IA requeriría `ANTHROPIC_API_KEY` en Vercel, control de costo por estudiante y verificación en producción, cosas que no se pueden comprobar desde aquí.
+- **Diagnóstico adaptativo** (que cambie la dificultad según las respuestas): descartado por ahora; con 25 preguntas y el refinamiento continuo con la práctica no aporta lo suficiente frente a su complejidad.
+- **Notificaciones** (recordatorio de la sesión del día): no hay canal definido (correo, WhatsApp, push). Pendiente de decisión.
+- **Panel docente**: no se agregó una vista específica de "ruta" o "aprendizaje real" por estudiante; los datos ya están en los intentos (modo verificación) y el informe individual muestra el bloque de aprendizaje real.
+- **Producción**: lo publicado se verificó con el build y en el modo demo local; no se probó con una cuenta real en Supabase (la verificación de que la función `guardar_ruta` existe la hace la app al guardar, con aviso si falta).

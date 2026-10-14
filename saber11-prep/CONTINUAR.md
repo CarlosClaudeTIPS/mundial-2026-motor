@@ -47,12 +47,16 @@ npm run balancear-banco   # reparte la letra correcta cuando es seguro (añade -
 
 Para retomar con Claude en el otro PC basta con abrir la carpeta del repo y pedir: "continúa el banco según CONTINUAR.md".
 
-## Siguiente gran tarea: sistema inteligente de acompañamiento (pedido 13-oct-2026, sin empezar)
+## Sistema inteligente de acompañamiento (hecho el 14-oct-2026)
 
-Carlos pidió implementarlo con una **Fase 0 obligatoria de auditoría** antes de tocar código:
-1. Inventario de funciones existentes (estado / evidencia / problema / acción). Ya existen y deben reutilizarse, no duplicarse: `src/components/Retro.jsx` + `src/lib/feedback.js` (retroalimentación y "¿Por qué elegiste X?"), `content/lecciones.json` (mini-lecciones), `src/lib/reglas.js` (recomendaciones), `src/lib/analitica.js`, `src/components/estudiante/MiRuta.jsx` (ruta genérica de 24 semanas), `src/lib/pruebas.js` (`crearDiagnostico`, 25 preguntas), `src/lib/informes.js` (informes), `src/lib/acceso.js` (planes), modo carrera (`src/lib/carreras.js`).
-2. Comparar con las 18 necesidades del estudiante y presentar el plan de intervención (escribirlo en `docs/16-acompanamiento.md`).
-3. Implementar por prioridad: (1) diagnóstico inteligente y "¿Por qué me equivoqué?" con pregunta de verificación nueva; (2) "Mi ruta para mejorar" personalizada (grado, fecha del examen, meta, tiempo/día, sesiones diarias) y medición del aprendizaje con preguntas nuevas; luego tutor "Explícame desde cero", preparación mental, panel de progreso.
-4. Informe final verificable (no afirmar como hecha una función que solo tiene interfaz).
+Auditoría, plan e informe final en `docs/16-acompanamiento.md`. Resumen de lo que ya está en producción:
+- "¿Por qué me equivoqué?" con consejo por razón, "Explícame desde cero" (lecciones sin conexión) y pregunta de verificación NUEVA (`modo: 'verificacion'`).
+- Perfil inicial al terminar el diagnóstico (`src/lib/diagnostico.js`).
+- Aprendizaje real y constancia en Mi progreso e Informe (`src/lib/aprendizaje.js`).
+- "Mi ruta para mejorar": `src/lib/ruta.js` + `src/components/estudiante/RutaMejorar.jsx`; tarjeta "Hoy en mi ruta" en Inicio.
+- Guía: sección "Mente y tiempo".
+- Pruebas: `tests/acompanamiento.test.js`. Migración opcional: `supabase/migracion-005-ruta.sql`.
 
-Otros pendientes: guía ICFES solo tiene Antioquia y Eje Cafetero (faltan Bogotá, Caribe, Pacífico/sur, Oriente/Llanos; enlaces de `content/guia/*.json` aún sin verificar uno a uno); la migración `supabase/migracion-004-planes.sql` debe correrla Carlos en el SQL Editor de Supabase.
+Pendientes de ese sistema: tutor con IA (hoy solo lecciones escritas), notificaciones (falta decidir canal), vista de ruta/aprendizaje en el panel docente.
+
+Otros pendientes: correr `supabase/migracion-005-ruta.sql` (opcional, para que la ruta siga al estudiante entre dispositivos); guía ICFES solo tiene Antioquia y Eje Cafetero (faltan Bogotá, Caribe, Pacífico/sur, Oriente/Llanos; enlaces de `content/guia/*.json` aún sin verificar uno a uno); la migración `supabase/migracion-004-planes.sql` debe correrla Carlos en el SQL Editor de Supabase.
