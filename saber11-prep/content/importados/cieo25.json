@@ -1,0 +1,2928 @@
+[
+  {
+    "id": "CIEO25-002",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 2"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "análisis de información y en conceptos propios del conocimiento científico. Asociar fenómenos naturales con conceptos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La siguiente ecuación representa la reacción química de la formación de agua (H2O).\n                   2H2       +       O2                             2H2O\n                             +                                        +\n¿Cuál de las siguientes opciones muestra correctamente los reactivos de la anterior reacción?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "H4 y O2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "H4 y O4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "H2 y O2.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "H2 y O4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-003",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 3"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "propios del conocimiento científico. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante analiza cómo cambia la solubilidad de una sal de sodio; para esto, disuelve distintas\ncantidades de la sal en 20 gramos de agua destilada y registra la temperatura exacta a la cual se\nlogra disolver completamente.\nLos resultados se muestran a continuación.\n          Masa de la sal de        Masa de agua        Temperatura a la cual se logra disolver\n             sodio (g)             destilada (g)            completamente la sal (°C)\n                 20                     20                               57\n                 25                     20                               65\n                 30                     20                               73\n                 35                     20                               83\nTeniendo en cuenta lo observado con 20 gramos de agua destilada, el estudiante cree que si a\n83 °C se agregan 50 gramos de la sal de sodio en 40 gramos de agua destilada no se solubilizará\ncompletamente esta cantidad de sal. ¿La suposición del estudiante es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque para disolver esta cantidad de la sal de sodio en 40 gramos de agua también se necesitaría el doble de temperatura, es decir, 166 °C.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque al tener el doble de agua, es más probable que la sal de sodio solo necesite la mitad de la temperatura para disolverse, es decir, 42 °C.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque a partir de 65 °C se pueden disolver completamente 50 g de la sal de sodio en 40 gramos de agua, por lo que a 83 °C la sal estará completamente disuelta.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Sí, porque con masas mayores a 35 gramos de la sal de sodio, se necesitarían temperaturas mayores que 83 °C para disolverla en esa cantidad de agua.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-004",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 4"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un bloque de hielo seco, CO2 sólido, cambia del estado sólido al gaseoso en condiciones ambientales. Este cambio de estado determina un cambio en la densidad del CO2. Teniendo en cuenta la información anterior, tras el cambio de estado, ¿por qué disminuye la densidad del CO2?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque la masa de CO2 disminuye.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la distancia entre partículas y el volumen aumentan.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque la distancia entre partículas disminuye.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque la distancia entre partículas aumenta y su masa disminuye.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-005",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 5"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "conceptos propios del conocimiento científico. Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En el modelo se presenta el proceso de síntesis de proteínas en una célula.\n                                      Núcleo\n                                                      ADN\n                                          Transcripción   ARNm\n                                                               Ribosoma\n                                        Citoplasma\n                                                                 Aminoácido\n                                                                   ARNt\n                                                  Proteína       Traducción\nDe acuerdo con el modelo, si no se copia correctamente la información del ADN al ARNm en el\nproceso de transcripción, ¿qué puede sucederle al proceso de síntesis de proteínas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se produciría una cadena de ARNm doble, como la molécula de ADN.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El ribosoma no podría entrar al núcleo a leer la información del ADN.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los aminoácidos no podrían unirse al ARNt en el citoplasma.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Se unirían aminoácidos que no corresponden con la secuencia de ADN.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-007",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 7"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "evaluar las predicciones. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Unos investigadores quieren saber si el agua de la llave está contaminada con dos tipos de contaminantes (X y W). Los investigadores únicamente disponen de un método que permite medir la cantidad de contaminante X, pero saben que existe una reacción química mediante la cual pueden convertir todo el contaminante W en el contaminante X. Teniendo en cuenta esta información, si se quiere saber cuál es el contenido de los contaminantes X y W, por separado, en una muestra de agua de la llave, ¿cuál sería el procedimiento adecuado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Llevar a cabo la Medir el contenido de reacción que convierte contaminante W con el todo el contaminante X método disponible, ya que en el contaminante W. esta medición corresponde a la medición del contenido de ambos contaminantes.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Medir el contenido de Llevar a cabo la reacción Volver a medir el contenido contaminante X con que convierte todo el de contaminante X, ya el método disponible contaminante W en el que esta última medición y separarlo de la contaminante X. corresponderá a la muestra. medición del contenido de contaminante W.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Llevar a cabo la Medir el contenido de reacción que convierte contaminante X con el todo el contaminante método disponible, ya que W en el contaminante esta medición corresponde X. a la medición del contenido de ambos contaminantes.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Medir el contenido de Llevar a cabo la reacción Volver a medir el contenido contaminante W con que convierte todo el de contaminante W, ya el método disponible contaminante X en el que esta última medición y separarlo de la contaminante W. corresponderá a la muestra. medición del contenido de contaminante X.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-008",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 8"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Identificar las características de algunos fenómenos de la naturaleza con base en el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante quiere clasificar dos sustancias de acuerdo con el tipo de mezclas que son. Al buscar, encuentra que las mezclas homogéneas son uniformes en todas sus partes, pero las mezclas heterogéneas no lo son. La estudiante realiza los procedimientos que se muestran en la tabla con las sustancias 1 y 2. La sustencia 1 es un líquido de una sola Vapor fase, que al ser calentado produce Fase 1 vapor, quedando un sólido blanco en el Sólido blanco fondo. La sustencia 2 es un líquido que al ser Fase 1 Fase 1 introducido en un recipiente, se observa Fase 2 la separación de dos fases. Fase 2 Teniendo en cuenta lo observado, ¿qué tipos de mezclas son las sustancias 1 y 2?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La sustancia 1 es una mezcla homogénea y la sustancia 2 es una mezcla heterogénea.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La sustancia 1 es una mezcla heterogénea y la sustancia 2 es una mezcla homogénea.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas sustancias son mezclas homogéneas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Ambas sustancias son mezclas heterogéneas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-009",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 9"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "análisis de información y en conceptos propios del conocimiento científico. Asociar fenómenos naturales con conceptos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un investigador sumerge un detector de sonido en agua para grabar los sonidos emitidos por los animales. El detector muestra la longitud de onda, la frecuencia, la velocidad de propagación y la distancia a la que se produce el sonido emitido por los animales. El investigador saca el detector del agua y registra un sonido. ¿Cuál cambio de las variables mencionadas le permite asegurar al investigador que el sonido se trasmite por el aire y no por el agua?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La longitud de onda.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La frecuencia de la onda.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La forma de la onda.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La velocidad de la onda.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-011",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 11"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "científicos y en la evidencia de su propia investigación y la de otros. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": "El dengue es una enfermedad tropical producida por la infección con un virus, que se transmite a través de las picaduras de algunos mosquitos hembra del género Aedes. Este tipo de mosquito se reproduce principalmente en aguas estancadas. Algunas de las medidas que recomiendan las entidades estatales para disminuir los casos de personas infectadas son: » Tapar los recipientes con agua al aire libre; eliminar llantas, botellas, barriles u otros recipientes que puedan retener agua. » Usar insecticidas para mosquitos. Investigaciones recientes han demostrado que adultos de algunas especies de mosquito del género Aedes son más resistentes que otras a algunos insecticidas, sin importar su concentración, de manera que el uso de estos no garantiza un 100 % de protección frente al dengue.",
+    "estimulo": null,
+    "enunciado": "Al observar la manera como se transmite el dengue, un estudiante afirma que para garantizarse una protección del 100 % frente al dengue con el uso de insecticidas, debe aumentarse la frecuencia con la que estos se aplican. De acuerdo con la información del contexto, ¿la hipótesis del estudiante debería mantenerse o cambiarse?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Debe mantenerse, porque los mosquitos resistentes pueden dejar de serlo si se disminuye la concentración de insecticida reduciendo la frecuencia de aplicación.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Debe mantenerse, porque aunque haya algunos mosquitos resistentes, la cantidad de individuos resistentes es tan pequeña que la cantidad de picaduras será insignificante.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Debe cambiarse, porque aunque al aumentar la frecuencia de aplicación se pueden eliminar todos los huevos de mosquitos, aún existirán larvas de otros insectos que probablemente trasmitan la enfermedad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Debe cambiarse, porque al ser resistentes a los insecticidas, sin importar su concentración, aunque se apliquen más dosis, estas probablemente no tendrán efecto sobre los mosquitos resistentes.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-012",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 12"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Analizar el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": "El dengue es una enfermedad tropical producida por la infección con un virus, que se transmite a través de las picaduras de algunos mosquitos hembra del género Aedes. Este tipo de mosquito se reproduce principalmente en aguas estancadas. Algunas de las medidas que recomiendan las entidades estatales para disminuir los casos de personas infectadas son: » Tapar los recipientes con agua al aire libre; eliminar llantas, botellas, barriles u otros recipientes que puedan retener agua. » Usar insecticidas para mosquitos. Investigaciones recientes han demostrado que adultos de algunas especies de mosquito del género Aedes son más resistentes que otras a algunos insecticidas, sin importar su concentración, de manera que el uso de estos no garantiza un 100 % de protección frente al dengue.",
+    "estimulo": null,
+    "enunciado": "Teniendo en cuenta lo anterior, ¿por qué reducir el número de lugares donde el agua se estanca es un buen método de prevención contra el dengue?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque al reducir el número de lugares donde el agua se estanca, disminuirán los casos de personas infectadas por beber este tipo de agua.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque al reducir el número de lugares donde el agua se estanca, disminuirán los hábitats del mosquito y, por tanto, no habrá tantas picaduras de mosquito que transmitan el virus a las personas.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque al reducir el número de lugares donde el agua se estanca, el agua no producirá mal olor y se favorecerá el crecimiento y reproducción de los mosquitos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque al reducir el número de lugares donde el agua se estanca, disminuirán los hábitats del virus y, por tanto, estos empezarán a infectar a las personas directamente sin necesitar de los mosquitos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-013",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 13"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "salud, así como las posibilidades de desarrollo para las comunidades. Comprender que a partir de la investigación científica se construyen explicaciones sobre el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El profesor de Juan le entrega tres objetos de igual volumen y forma, pero de diferente material, y le pide que los deje caer desde la altura de sus hombros y observe el tiempo de caída al suelo, de cada uno de ellos. Juan observa que los tres tardan tiempos diferentes para llegar al suelo, a pesar de que los tres están sometidos a la misma aceleración gravitacional. Teniendo en cuenta la información anterior, ¿cuál de las siguientes preguntas se puede contestar a partir de las observaciones que realizó Juan?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "¿El tiempo de caída de los objetos depende de la altura de lanzamiento?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "¿La fuerza gravitacional es proporcional a la masa de los objetos?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "¿La fuerza neta que actúa sobre cada uno de los objetos es diferente?",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "¿La forma de los objetos está relacionada con diferencias en la fuerza de fricción?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-015",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 15"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas. Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En la extracción minera de oro se emplean cianuro de sodio, zinc y ácidos fuertes durante el proceso de purificación. Los ácidos fuertes que pueden emplearse son ácido sulfúrico (H2SO4) de una concentración volumen-volumen del 78 % o ácido nítrico (HNO3) que contenga 112 mL de ácido por cada 200 mL de solución. Si en la extracción del oro se requiere usar el ácido de mayor concentración, ¿cuál ácido debería emplearse?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "HNO3, porque como su volumen es mayor que el de la solución de H2SO4 tiene una mayor concentración.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "H2SO4, porque la concentración volumen-volumen del HNO3 es del 56 %.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "HNO3, porque su concentración volumen-volumen es del 112 %.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "H2SO4, porque como su volumen es menor que el de la solución de HNO3 se encuentra más concentrado.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-016",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 16"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "conceptos propios del conocimiento científico. Identificar las características de algunos fenómenos de la naturaleza con base en el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "A partir de las cadenas de ARN mensajero se forman las proteínas. En este proceso, por cada tres nucleótidos consecutivos de ARN mensajero se codifica un aminoácido. A continuación, se muestra una secuencia de ARN mensajero. AUGGCAAGAAACGACCACAUCUAGGUAUGC Los nucleótidos AUG codifican únicamente para indicar el inicio de la formación de la proteína y los nucleótidos UAG codifican únicamente para indicar su terminación. Con base en esta información, ¿cuántos aminoácidos conformarán la proteína?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "8",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "18",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "6",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "10",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-017",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 17"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "análisis de información y en conceptos propios del conocimiento científico. Asociar fenómenos naturales con conceptos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El salto bungee es un deporte que se practica generalmente en puentes, como se muestra a continuación. En uno de estos saltos, el deportista se lanzará desde un puente de 65 metros de altura, utilizando una banda elástica que tiene una longitud sin estirar de 30 metros y que puede estirarse 30 metros más. Cuando el deportista ha descendido apenas 20 metros de altura, ¿cuál de las siguientes transformaciones de energía se habrá dado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "De energía cinética a potencial elástica.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "De energía cinética a potencial gravitacional.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "De energía potencial gravitacional a potencial elástica.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "De energía potencial gravitacional a cinética.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-018",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 18"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "propios del conocimiento científico. Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Considere la siguiente reacción y las masas molares de reactivos y productos:\n                                      P4 + 6 Cl2         4 PCl3\n                               Compuesto            Masa molar (g/mol)\n                                    P4                   124\n                                   Cl2                    70\n                                   PCl3                  137\nDe acuerdo con la información anterior, si reaccionan 124 g de P4 con 210 g de Cl2, ¿cuál es el\nreactivo límite?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El Cl2, porque reaccionan en su totalidad 210 gramos de Cl2 y queda la mitad de P4 sin reaccionar.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El P4, porque su masa en gramos es menor que la del Cl2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El Cl2, porque según la relación estequiométrica siempre se necesitan 6 moles de Cl2, sin importar la cantidad de P4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El P4, porque su masa molar es casi el doble que la del Cl2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-019",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 19"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "conceptos propios del conocimiento científico. Posición Afirmación Asociar fenómenos naturales con conceptos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En un metal que pierde electrones, la cantidad de protones es mayor que la de electrones y, por\ntanto, la carga total es positiva y se representa con signos +.\nSe tienen dos esferas metálicas idénticas: una esfera (1) inicialmente con carga + Q y otra esfera\n(2) inicialmente neutra. Al ponerlas en contacto y luego separarlas, se observa que las dos esferas\nquedan con cargas iguales + Q/2, como muestra la figura.\n                                             Antes del contacto\n                                                 +Q\n                                                 +\n                                        +          +\n                                        +        1    +       2\n                                         +           +\n                                                 +\n                                        Después del contacto\n                                        + Q/2                 + Q/2\n                                          +\n                                                          +       +\n                                    +        1       +        2\n                                                          +       +\n                                             +\nCon base en la información anterior, ¿qué sucedió al poner las esferas en contacto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "De la esfera 2 pasaron electrones hacia la esfera 1.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "De la esfera 2 pasaron protones hacia la esfera 1.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "De la esfera 1 pasaron electrones hacia la esfera 2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "De la esfera 1 pasaron protones hacia la esfera 2.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-020",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 20"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "propios del conocimiento científico. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un grupo de científicos aisló cepas de la bacteria Streptococcus pneumoniae obtenidas en\npacientes enfermos de neumonía, las cultivaron con diferentes antibióticos de prueba y midieron el\nporcentaje de supervivencia de las cepas. La tabla muestra los resultados.\n                                                     Porcentaje (%) de\n                          Antibiótico\n                                                 supervivencia de las cepas\n                              1                              97\n                              2                              89\n                              3                              76\n                              4                              70\n                           Ninguno                           99\nDe acuerdo con la información anterior, ¿cuál de las siguientes hipótesis se relaciona con los\nresultados del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A los enfermos de neumonía no deberían recetarles antibióticos, porque la supervivencia de las bacterias es mínima.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El Streptococcus pneumoniae es más sensible al antibiótico 4 que a los otros tres antibióticos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los pacientes enfermos de neumonía pueden sufrir de alergia a los antibióticos y empeorar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El Streptococcus pneumoniae es una bacteria que habita libremente por el aire y puede contaminar a cualquier ser vivo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-021",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 21"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El modelo muestra una red trófica marina. La pesca indiscriminada de varias especies de atún ha llevado a las organizaciones ambientales a implementar estrategias para impedir su extinción. Con base en la información anterior, ¿qué le sucedería al ecosistema marino, a mediano plazo, si se extingue el atún?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Disminuirían las poblaciones de pez loro debido al aumento de su principal depredador.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Aumentarían las poblaciones de tiburones, porque podrán alimentarse de todos los otros niveles tróficos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Aumentaría la cantidad de zooplancton, porque disminuiría la presión de sus depredadores.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Disminuiría la abundancia de productores, porque aumentarían los consumidores primarios.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-022",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 22"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas. Asociar fenómenos naturales con conceptos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante calentó en una estufa, durante 1 minuto, un litro de agua que inicialmente estaba a 15 °C. La temperatura final del agua fue 17 °C. Si ahora calienta 2 litros de agua que inicialmente están a 15 °C, en la misma estufa durante un minuto, ¿cuál será la temperatura final de los 2 litros de agua?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "19 ºC.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "17 ºC.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "16 ºC.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "15 ºC.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-023",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 23"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "propios del conocimiento científico. Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En la tabla se muestra la configuración electrónica de un átomo neutro y de un ion de aluminio.\n                                            Aluminio neutro                                 Ion de aluminio\n     Configuración\n                                            1s22s22p63s23p1                                     1s22s22p6\n      electrónica\nTeniendo en cuenta que el estado de oxidación de un átomo se determina conociendo los cambios\nen el número de electrones de la configuración electrónica respecto al átomo neutro, ¿por qué es\ncorrecto afirmar que el estado de oxidación del ion de aluminio es 3+?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el último nivel de energía de su configuración electrónica es 3.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque tiene 3 electrones menos en su configuración electrónica que el aluminio neutro.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque tiene 3 electrones más en su configuración electrónica que el aluminio neutro.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el número total de electrones en su configuración electrónica es 3.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-025",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 25"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "evaluar las predicciones. Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En tres instantes diferentes, un estudiante dibuja el diagrama de cuerpo libre para una piedra que cae en un estanque de agua, como se muestra en la siguiente figura. Si el estudiante mide la aceleración de la piedra después del tercer instante, ¿cómo será su magnitud, respecto a los otros instantes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mayor que la del primer instante, porque el peso hace que la piedra se acelere hacia abajo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Mayor que la del primer instante, porque el peso de la piedra disminuye cuando la fuerza de resistencia comienza a aumentar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Constante, porque la aceleración de la piedra siempre es igual que la aceleración de la gravedad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Nula, porque después del tercer instante, el peso de la piedra y la fuerza de resistencia se cancelan.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-026",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 26"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas. Explicar cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, en patrones",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante sopla una pelota por un tubo vertical y esta sube aceleradamente por el tubo, como se muestra en la siguiente figura: Teniendo en cuenta lo anterior, ¿por qué ocurre esto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el peso de la pelota cambia cuando el estudiante sopla aire por el tubo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la fuerza que ejerce el aire que sopla el estudiante es igual que el peso de la pelota.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el peso de la pelota es mayor que la fuerza del aire que sopla el estudiante.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque la fuerza que ejerce el aire que sopla el estudiante es mayor que el peso de la pelota.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-027",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 27"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "y en conceptos propios del conocimiento científico. Modelar fenómenos de la naturaleza basado en el análisis de variables, la relación entre dos o",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El siguiente modelo representa la relación entre la altura y la cantidad de partículas de aire. Una olla con agua hierve a una temperatura de 100 °C, cuando la altura es de 0 km. Teniendo en cuenta que el punto de ebullición corresponde a la temperatura a la cual la presión de vapor del líquido iguala a la presión atmosférica, si se pone a calentar la misma cantidad de agua a una altura de 25 km, ¿qué le sucede al agua?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Hierve a una temperatura menor que 100 °C, porque la presión es menor en esta altura.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Hierve a una temperatura mayor que 100 °C, porque la presión es menor en esta altura.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Nunca hierve, porque en esta altura hay muy poca cantidad de aire.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Se congela, porque al no haber aire el agua pasará a estado sólido.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-028",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 28"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas. Explicar cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, en patrones",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La materia puede clasificarse analizando su composición como se muestra en el diagrama.\n                                  Mezcla\n                                                       variable?\n                                                                   Mezcla\nEl acero es un material que contiene los elementos hierro y carbono. Dos muestras distintas de\nacero tienen diferentes cantidades de estos elementos, pero ambas muestras tienen composición\nuniforme. Usando el diagrama anterior, ¿cómo clasificaría al acero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Como una mezcla homogénea, porque está formado por diferentes elementos y es uniforme.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Como una sustancia pura, porque tiene composición uniforme y es un solo compuesto.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Como una mezcla heterogénea, porque está formado por diferentes elementos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Como una sustancia pura, porque muestras distintas tienen composición diferente.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-029",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 29"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "y en conceptos propios del conocimiento científico. Posición Afirmación Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un grupo de estudiantes realizó un experimento que consistía en sumergir una esponja en líquidos de diferente densidad, para luego medir su volumen y masa. En la gráfica se presentan los resultados de este experimento marcados con puntos, y una línea de tendencia. Un estudiante afirma que, si se usa un líquido con una densidad extremadamente baja, la masa registrada será diferente de cero. ¿Esta afirmación puede considerarse una predicción basada en los datos experimentales?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque la línea de tendencia cruza en un punto diferente de cero.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque no se observa ningún patrón entre la densidad y la masa.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque no existen datos que usen líquidos con muy baja densidad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Sí, porque todos los datos presentan masas diferentes de cero.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-030",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 30"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "científicos y en la evidencia de su propia investigación y de la de otros. Comprender que a partir de la investigación científica se construyen explicaciones sobre el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La conductividad de una disolución es la capacidad que tiene esta para conducir la corriente eléctrica. Un estudiante realiza una serie de experimentos para estudiar la conductividad del sulfato de magnesio (MgSO4) disuelto en agua, y obtiene los siguientes resultados: Con base en la información anterior, ¿qué se buscaba estudiar con este experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La influencia de la temperatura sobre la conductividad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El efecto de la conductividad de la disolución sobre la concentración de la sal.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La influencia de la carga de los iones sobre la conductividad.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El efecto de la concentración de la sal sobre la conductividad de la disolución.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-031",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 31"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "mundo natural. Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La siguiente gráfica muestra la relación entre la resistencia eléctrica y la temperatura para cuatro resistencias eléctricas (R1, R2, R3 y R4). Un estudiante realiza actividades experimentales y encuentra que la corriente eléctrica en un circuito es inversamente proporcional a la resistencia eléctrica. Se le solicita al estudiante construir un circuito usando una de estas resistencias, de forma que pase la menor cantidad de corriente eléctrica a 90 °C. Si las tendencias de resistencia como función de la temperatura se mantienen, ¿cuál resistencia se debe utilizar?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "R1, porque tiene la mayor resistencia eléctrica desde los 40 °C hasta los 80 °C.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "R2, porque su resistencia eléctrica será la mayor a 90 °C.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "R3, porque tiene la menor resistencia desde los 40 °C hasta los 80 °C.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "R4, porque su resistencia eléctrica no depende de la temperatura.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-032",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 32"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "científicos y en la evidencia de su propia investigación y de la de otros. Explicar cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, en patrones",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Los rayos de luz emitidos por objetos luminosos viajan en línea recta dentro de un mismo medio, como se muestra en la Figura 1. Si un rayo de luz pasa de aire a agua cambia su dirección, como se muestra en la Figura 2. llena de agua Cuando una piscina está vacía, un nadador observa el farol que está en el borde, como se observa en la figura 1; luego, cuando se llena la piscina como se muestra en la figura 2, ¿cómo verá el nadador el farol?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Más bajo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "De la misma altura.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Más alto.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Invertido. 23",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-033",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 33"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "y en conceptos propios del conocimiento científico. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un estudiante desea comparar los valores de las densidades de tres líquidos (agua, etanol y aceite)\ny para ello hace tres mediciones de una misma masa de líquido (100 g) a tres temperaturas. Los\nresultados obtenidos se muestran en la tabla.\n                   Agua                          Etanol                           Aceite\n        Temperatura     Densidad      Temperatura         Densidad     Temperatura         Densidad\n           (°C)          (g/cm3)         (°C)              (g/cm3)        (°C)              (g/cm3)\n             6            0,99999           3             0,80374           10             0,92252\n            17            0,99886           8             0,79956           20             0,91553\n            22            0,99786           34            0,77756           30             0,90852\nCon base en la información anterior, ¿por qué el experimento está mal planteado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque las temperaturas empleadas no son las mismas, por lo que no se pueden hacer comparaciones entre las densidades de los tres líquidos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque no se pueden hacer comparaciones sin medir diferentes volúmenes de los tres líquidos en las temperaturas indicadas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque es necesario realizar otras mediciones a temperaturas más altas, para saber si el valor de la densidad sigue cambiando.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el aceite posee propiedades físicas y químicas muy diferentes del agua y del etanol y esto hace que no se puedan comparar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-034",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 34"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El objetivo de una práctica de laboratorio es la detección de almidón en la papa, utilizando lugol\ncomo colorante. Se realizan cuatro experimentos con las condiciones que se muestran en la tabla.\n        Experimento Agua (mL)       Lugol (mL)    Papa (g)          Solución de almidón 10 % (mL)\n             1             10           1            10                          0\n             2             10           1             0                          0\n             3             10           0             5                          0\n             4             10           1             0                          2\nEn esta práctica, ¿por qué es importante el experimento 4?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque permite que el almidón se encuentre soluble.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque contiene el colorante con el cual se logra la detección de almidón.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque contiene más almidón que el que contiene la papa.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque permite establecer el color esperado para la detección de almidón.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-035",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 35"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Identificar las características de algunos fenómenos de la naturaleza basado en el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En un experimento, un sólido de identidad desconocida se calienta y se mide su temperatura hasta\nque se evapora, obteniendo la siguiente gráfica.\nPara identificar el sólido se cuenta con los datos de la tabla.\n             Sustancia      Temperatura de fusión (ºC)      Temperatura de ebullición (ºC)\n              Benceno                     6                              80\n                Agua                      0                              100\n            Acetonitrilo                 -45                             82\n             2-butanol                   -115                            100\nTeniendo en cuenta la información anterior, ¿a qué sustancia corresponde el sólido inicial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Benceno.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Agua.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Acetonitrilo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "2-butanol.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-036",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 36"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "análisis de información y conceptos propios del conocimiento científico. Identifica características de algunos procesos que se dan en los organismos para comprender la",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En las células animales, los lisosomas son los organelos encargados de digerir con enzimas los nutrientes que la célula consume. Si todos los lisosomas de una célula se rompieran, ¿qué le sucedería inicialmente a la célula?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se degradarían moléculas en su interior.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Perdería toda el agua del citoplasma.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No habría respiración celular.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No se formarían proteínas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-037",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 37"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "dinámica de lo vivo. Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante realiza diferentes ensayos con el objetivo de determinar el efecto de la concentración de los reactivos sobre la velocidad de formación de Z en la reacción X + Y → Z. En cada ensayo mide la velocidad de formación de Z manteniendo constante la concentración de uno de los reactivos y variando la del otro, como se muestra en las siguientes gráficas: Z Z Teniendo en cuenta la información anterior, ¿qué se puede concluir del cambio en la velocidad de formación de Z?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El cambio de la velocidad de formación de Z no depende de la concentración de los reactivos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El cambio de la velocidad de formación de Z depende de la concentración de ambos reactivos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El cambio de la velocidad de formación de Z depende solamente de la concentración de X.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El cambio de la velocidad de formación de Z depende solamente de la concentración de Y.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-038",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 38"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "científicos y en la evidencia de su propia investigación y de la de otros. Posición Afirmación Asociar fenómenos naturales con conceptos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En una especie de pato se pueden encontrar individuos con cuello corto e individuos con cuello largo. En esta especie hay una mayor cantidad de patos con cuello largo. En un experimento se aparearon una hembra y un macho de cuello largo; de sus hijos 3/4 son de cuello largo y 1/4 son de cuello corto. Teniendo en cuenta lo anterior, ¿cuál afirmación es correcta sobre el genotipo de los padres?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Ambos padres eran heterocigotos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El macho era heterocigoto y la hembra era homocigoto recesivo.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El macho era heterocigoto y la hembra era homocigoto dominante.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos padres eran homocigotos dominantes.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-039",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 39"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "propios del conocimiento científico. Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una estudiante desea conocer las proteínas presentes en la sangre. Para ello, emplea una técnica que las separa de acuerdo con su peso molecular y produce una respuesta en diferentes instantes de tiempo cada vez que una proteína es detectada. Ella obtiene los resultados mostrados en la siguiente gráfica, en donde cada pico representa una proteína diferente. ¿En qué tiempo podrá separar una proteína de 120 kDa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Entre 25 y 35 minutos.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Entre 5 y 25 minutos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Entre 35 y 45 minutos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Después de 45 minutos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-040",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 40"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "científicos y en la evidencia de su propia investigación y de la de otros. Comprender que a partir de la investigación científica se construyen explicaciones sobre el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "La polilla grande de la cera es un patógeno que mata las larvas de las abejas y causa grandes pérdidas económicas a los apicultores de todo el mundo, por la gran cantidad de panales que destruye. Según la información anterior, ¿cuál de las siguientes preguntas está relacionada con la problemática descrita y puede resolverse mediante una investigación en el campo de las Ciencias Naturales?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "¿En qué etapa del ciclo biológico la polilla afecta los panales de las abejas?",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "¿Cómo se afecta la economía de los apicultores por causa de la polilla?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "¿Cuáles son las características morfológicas de las abejas usadas en la apicultura?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "¿Cuánto invierten al año los apicultores para el control de la polilla en la región?",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-041",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 41"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "mundo natural. Modelar fenómenos de la naturaleza basado en el análisis de variables, la relación entre dos o",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Los alcoholes pueden ser oxidados a cetonas, aldehídos o ácidos carboxílicos de acuerdo con el tipo\nde alcohol que reacciona, como se muestra en la imagen.\nPara reconocer el tipo de compuesto que se forma en una oxidación se realizan las siguientes\npruebas.\n                                                       Prueba de        Prueba de Yoduro-\n            Prueba de Tollens    Prueba de Lucas\n                                                       yodoformo             Yodato\n                Reconoce la\n                                   Reconoce la\n               presencia de\n                                   presencia de        Reconoce la          Reconoce la\n              aldehídos, si se\n                                   alcoholes, si       presencia de     presencia de ácidos,\n             forma un espejo\n                                    se forma un     cetonas, si aparece si una solución con\n              de plata (color\n                                    precipitado      un precipitado de   almidón se torna de\n              plateado) en el\n                                  insoluble en la     color amarillo.   color morado oscuro.\n            fondo del tubo de\n                                     reacción.\n                  ensayo.\nSi en un laboratorio se oxida un alcohol de 6 carbonos y se aplican las pruebas de reconocimiento\nde grupos funcionales obteniendo un espejo de plata y coloración morada con almidón, ¿cuál es la\nmezcla que se espera se haya formado después de la oxidación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "B",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "C",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "D",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-045",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 45"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas. Identificar las características de algunos fenómenos de la naturaleza basado en el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Al agitar una cuerda extendida horizontalmente, cada sección de la cuerda se mueve de arriba abajo en dirección perpendicular a la dirección de propagación de la onda generada; este es un ejemplo de una onda transversal. En contraste, en una onda longitudinal, las partículas del medio vibran en la misma dirección de propagación de la onda. Un grupo de personas quiere representar una onda longitudinal; para esto, se ubican como muestra la figura. La fila representa el medio de propagación y las personas representan las partículas del medio. Para lograr la representación, ¿cuál es el movimiento que debe hacer la primera persona y que las demás deben repetir sucesivamente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Alzar y bajar lateralmente los brazos.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Sentarse y ponerse de pie.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Balancearse de izquierda a derecha.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Moverse hacia adelante y atrás.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-046",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 46"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "análisis de información y conceptos propios del conocimiento científico. Utilizar algunas habilidades de pensamiento y de",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Unos estudiantes analizaron el agua de un río y encontraron que contenía altos niveles de cadmio y plomo, que son metales tóxicos. Al estudiar el origen de la contaminación, descubrieron que los metales provenían de filtraciones de la descomposición de pilas en un botadero de basura cercano. Los estudiantes proponen que, a futuro, se deberían separar las pilas del resto de los desechos en contenedores completamente aislados. Con base en la información anterior, ¿se puede afirmar que la propuesta de los estudiantes es apropiada o inapropiada?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Inapropiada, porque es mejor desarmar las pilas y luego desecharlas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Apropiada, porque se evitaría la presencia de metales pesados en el agua.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Apropiada, porque luego se podrían reutilizar las pilas desechadas.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Inapropiada, porque es mejor quemarlas ya que no entrarían en contacto con el agua.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-047",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 47"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "procedimiento para evaluar predicciones. Posición Afirmación Observar y relacionar patrones en los datos para",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Un investigador somete dos grupos de ratones a las siguientes condiciones. Grupo con ejercicio antes del experimento. Grupo sin ejercicio antes del experimento. Él quiere evaluar la capacidad que tienen estos dos grupos de ratones de recordar un lugar, guiados por objetos ubicados en el espacio. Para esto mete los ratones de cada grupo en un tanque con agua durante un minuto por 7 días consecutivos, para que encuentren un recipiente transparente que flota en el tanque y que está señalizado con un triángulo en la pared. El último día registra la trayectoria que recorre cada ratón, como se muestra en la figura. Grupo con ejercicio Grupo sin ejercicio De acuerdo con el experimento, ¿por qué los ratones del grupo con ejercicio ubicaron tan fácilmente el recipiente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el triángulo los guio hasta el recipiente.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque nadaron más rápido que los ratones del grupo sin ejercicio.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque permanecieron más tiempo en el tanque que los ratones del grupo sin ejercicio.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el ejercicio mejoró su capacidad de memorizar.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-049",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 49"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "evaluar las predicciones. Explicar cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, en patrones",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "El anabolismo es una forma de metabolismo que requiere energía y da como resultado la elaboración de moléculas complejas a partir de moléculas simples. Por el contrario, el catabolismo transforma moléculas complejas en moléculas simples y produce energía. El siguiente esquema muestra los procesos de fotosíntesis y respiración en plantas. Con base en la información anterior, ¿qué se puede afirmar?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la fotosíntesis es un proceso anabólico porque produce glucosa como molécula compleja.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Que la fotosíntesis es un proceso catabólico porque requiere energía en forma de luz solar.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que la respiración es un proceso anabólico porque produce energía en forma de ATP.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Que la respiración es un proceso catabólico porque produce moléculas complejas como CO2 y agua.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes"
+    ],
+    "estado": "pendiente"
+  },
+  {
+    "id": "CIEO25-050",
+    "prueba": "ciencias_naturales",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Cuadernillo de preguntas Saber 11.º (ICFES, 2025)",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2025/12/22-diciembre-cuadernillo-de-preguntas-ciencias-naturales-saber-11-2025.pdf",
+      "anio": 2025,
+      "referencia": "Pregunta 50"
+    },
+    "competencia": null,
+    "componente": null,
+    "afirmacion": "y en conceptos propios del conocimiento científico. Identificar las características de algunos fenómenos de la naturaleza basado en el",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En clase, el profesor explica que la acidez de un alcohol está relacionada con su estructura y\nmuestra la siguiente tabla con la estructura de los alcoholes de mayor a menor acidez:\n                                                        Alcohol      Estructura\n                                                                      general\n                                                                         H\n                                    Aumenta la acidez   Primario     R   C      OH\n                                                                         H\n                                                                         R’\n                                                        Secundario R     C      OH\n                                                                         H\n                                                                         R’\n                                                        Terciario    R   C      OH\n                                                                         R’’\n                                                                          Tabla 1\nLuego le pide a sus estudiantes que revisen la siguiente tabla con la estructura de cuatro alcoholes:\n                               H H CH3                      H                  CH3               CH3\n                  Estructura H C   C C OH CH3               C OH         CH3   C     OH    CH3   C     OH\n                               H H H                        H                  CH3               H\n                   Nombre     2 - butanol                etanol     2 - metil -2 - propanol 2 - propanol\n                                                                                                 Tabla 2\nDe acuerdo con lo anterior, ¿cuál es el alcohol que presenta la menor acidez?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2-butanol.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Etanol.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "2-metil-2-propanol.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "2-propanol.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente"
+  }
+]

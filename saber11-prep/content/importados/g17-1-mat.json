@@ -1,0 +1,754 @@
+[
+  {
+    "id": "G17-1-MAT-001",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 1"
+    },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": "En la figura se presenta un mapa de la vista aérea de las En la figura se presenta un calles mapa de dela una vista parte delasuna aérea de ciudad. calles de una Se parte de una ciudad. muestran Se muestran tres puntos A, B ytres C; puntos A, Bde y la medida yC ; y segmentos dos la medida sobre de dosel mapa. Cada uno de los cuadriláterossegmentos sobre el mapa. ilustrados corresponde Cada uno de los cua- a un cuadrado. driláteros ilustrados corresponde a un cuadrado.\n\n                                  10 CM                             CA\n                                                                         LL\n                                                      15 CM                   E\n                            A\n                                                                                      DIAG. 80\n\n                                                  C             B\n                          E\n                         LL\n                       CA\n\nFigura 1",
+    "estimulo": null,
+    "enunciado": "Una persona debe ir del punto A al punto B en la ciudad. Se le sugieren las tres posibles rutas que muestra la figura 2.\n\nI. II. III.\n\n                        A\n                                 C       B                    A       C       B                 A        C       B\n\nFigura 2\n\n¿Cuál(es) de la(s) ruta(s) presentada(s) es (son) de longitud igual a la mostrada en la figura 1?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Solamente I.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Solamente I y III.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Solamente II.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Solamente II y III.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad de los estudiantes de extraer información y realizar comparaciones en un contexto geométrico-espacial. En la figura 1 se observa que la longitud sobre el mapa de la ruta que va de A a C es 25 cm y que cada cuadrado del mapa tiene un lado de longitud 5 cm. Teniendo en cuenta Una persona esto, debe las obtenemos punto A al punto ir delsiguientes B en lapara longitudes ciudad. Se leruta cada sugieren lasfigura de la tres posibles",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Interpretación y representación",
+      "contenido": "Geometría (genérico)",
+      "afirmación": "",
+      "nivel de desempeño": "3",
+      "respuesta correcta": "B"
+    }
+  },
+  {
+    "id": "G17-1-MAT-002",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 2"
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "plantea e implementa estrategias que lleven a soluciones Frente a un problema que involucre información cuantitativa, adecuadas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 3,
+    "contexto": "En la figura se presenta un mapa de la vista aérea de las En la figura se presenta un calles mapa de dela una vista parte delasuna aérea de ciudad. calles de una Se parte de una ciudad. muestran Se muestran tres puntos A, B ytres C; puntos A, Bde y la medida yC ; y segmentos dos la medida sobre de dosel mapa. Cada uno de los cuadriláterossegmentos sobre el mapa. ilustrados corresponde Cada uno de los cua- a un cuadrado. driláteros ilustrados corresponde a un cuadrado.\n\n                                  10 CM                             CA\n                                                                         LL\n                                                      15 CM                   E\n                            A\n                                                                                      DIAG. 80\n\n                                                  C             B\n                          E\n                         LL\n                       CA\n\nFigura 1",
+    "estimulo": null,
+    "enunciado": "rutas que muestra la figura 2.\n\nI. II. III.\n\n                   A\n                             C       B                    A       C       B                 A        C       B\n\nLongitud total: 25 cm Longitud total:2 35 cm Figura Longitud total: 25 cm\n\nTeniendo en cuenta lo anterior, solo las rutas I y III tienen la misma longitud que la ruta de la ¿Cuál(es) figura 1,dede la(s) ruta(s)que modo presentada(s) es (son) la respuesta de longitud correcta es B.igual a la mostrada en la figura 1?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Solamente I.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Solamente I y III.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Solamente II.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Solamente II y III. 2. Una representación de los posibles caminos entre dos puntos, X y Y, en la ciudad se da al establecer el número de posibilidades entre ellos. Por ejemplo, si entre los puntos X y Y hay tres caminos posibles se escribe X(3)Y. La representación de los posibles caminos de A a B de longitud igual a 25 cm, pasando por C, es",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "A",
+        "texto": "A(1)C(1)B.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "A(2)C(1)B.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "A(3)C(2)B.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "A(4)C(2)B.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad de los estudiantes de diseñar y aplicar estrategias de solución de un problema en un contexto geométrico-espacial, teniendo en cuenta restricciones dadas. Para que un camino de A a B tenga 25 cm de longitud sobre el mapa, es necesario que de A a C la longitud sea de 15 cm y que de C a B la longitud sea de 10 cm. Teniendo en cuenta lo anterior, solo hay tres caminos de A a C de 15 cm de longitud y solo 2 caminos de C a B con 10 cm de longitud, por lo cual, la forma de representar la información requerida es A(3)C(2)B.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Formulación",
+      "contenido": "Geometría (genérico)",
+      "afirmación": "plantea e implementa estrategias que lleven a soluciones",
+      "nivel de desempeño": "4",
+      "respuesta correcta": "C"
+    }
+  },
+  {
+    "id": "G17-1-MAT-003",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 3"
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Al hacer una encuesta en un curso, se determinó que la mayoría de estudiantes tienen 15 años de edad. ¿Cuál de las siguientes gráficas NO puede corresponder a la distribución de los estudiantes de curso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 41]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 41]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 41]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 41]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad del estudiante de extraer información y realizar comparaciones entre distintos conjuntos de datos. La información dada en el enunciado indica que el estudiante debe seleccionar la gráfica en la que la moda del número de estudiantes sea diferente de 15. Dado que en las gráficas de las opciones A, B y D la moda es 15, pero en la opción C la moda corresponde a 13, esta última es entonces la opción correcta.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Interpretación y representación",
+      "contenido": "Estadística (genérico)",
+      "afirmación": "",
+      "nivel de desempeño": "2",
+      "respuesta correcta": "C"
+    }
+  },
+  {
+    "id": "G17-1-MAT-004",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 4"
+    },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 3,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Dos vidrios iguales de forma cuadrada, cada uno de área x cm2, se ponen juntos en una ventana (ver figura).\n\nFigura\n\nUna persona afirma que el resultado es una ventana de área 2x cm2. Esta afirmación es",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "cierta, pues basta multiplicar el área de uno de los vidrios por 2.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "falsa, pues se desconocen las dimensiones de la ventana resultante.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "cierta, pues la ventana resultante tiene un lado de medida 2x.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "falsa, pues el área de la ventana resultante es x2 cm4.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad del estudiante de encontrar argumentos que validan o refutan una afirmación hecha usando lenguaje algebraico. Puesto que aparecen expresiones algebraicas en esta pregunta, el contenido se considera no genérico. Dado que el área de uno solo de los vidrios es x centímetros cuadrados, el área de los dos vidrios se obtiene multiplicando x por 2, como lo indica la opción A.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Argumentación",
+      "contenido": "Álgebra y cálculo (no genérico)",
+      "afirmación": "",
+      "nivel de desempeño": "4",
+      "respuesta correcta": "A"
+    }
+  },
+  {
+    "id": "G17-1-MAT-005",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 5"
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": "La gráfica muestra el costo de producción y el precio de venta de un videojuego (una unidad) en el año 2010. Por otro lado, la tabla muestra el número de videojuegos vendidos por una empresa del año 2008 al 2012.\n\n             $90.000\n                                                              Año              Número de\n                                                                          videojuegos vendidos\n             $70.000\n                                                              2008               20.000\n                                                Costo de\n             $50.000                            producción    2009               15.000\n                                                              2010               10.000\n             $30.000                            Precio de\n                                                venta         2011               25.000\n             $10.000                                          2012               30.000\n\n2010 Tabla\n\nGráfica",
+    "estimulo": null,
+    "enunciado": "Con base en la información presentada, ¿cuál de las siguientes gráficas muestra el número de videojuegos vendidos durante el periodo 2008 - 2012?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "[Opción A: figura, ver PDF p. 43]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "[Opción B: figura, ver PDF p. 43]",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "[Opción C: figura, ver PDF p. 43]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "[Opción D: figura, ver PDF p. 43]",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Aquí se evalúa la capacidad del estudiante para realizar representaciones de información dada en una tabla. Toda la información está explícita y no es necesario realizar procesos Con base adicionales, en la información más allá delpresentada, ¿cuál de las siguientes gráficas muestra el cambio de representación. número deLa videojuegos altura de cada vendidos barra en ladurante el periodo gráfica debe 2008con corresponder - 2012? la información dada en la tabla del contexto. La siguiente figura muestra la correspondencia entre las filas de la tabla y las barras de la gráfica de la opción B. A. B. 30.000 30.000 25.000 25.000 20.000 20.000 15.000 15.000 10.000 10.000 sto de producción y 5.000 el precio de venta de un videojuego (una 5.000 Por otro lado, la tabla muestra el número de videojuegos 0 2008 2009 esa del año 2008 al 2012. 2010 2011 2008 2009 2012 2010 2011 2012 Año C. Número de D. 30.000 videojuegos vendidos 30.000 25.000 2008 20.000 25.000 Costo de producción 20.000 2009 15.000 20.000 15.000 2010 10.000 15.000 Precio de venta 10.000 2011 25.000 10.000 5.000 2012 30.000 5.000 0 0 Tabla 010 2008 2009 2008 2009 2010 2011 2010 2011 fica 2012 2012",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Interpretación y representación",
+      "contenido": "Estadística (genérico)",
+      "afirmación": "",
+      "nivel de desempeño": "2",
+      "respuesta correcta": "B"
+    }
+  },
+  {
+    "id": "G17-1-MAT-006",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 6"
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "plantea e implementa estrategias que lleven a soluciones Frente a un problema que involucre información cuantitativa, adecuadas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 1,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Una tienda de electrodomésticos fija el siguiente anuncio publicitario:\n\nTelevisor HD 32” $1.200.000 Nevera 327 L $1.000.000 Lavadora 13 kg $1.100.000 ●Pague sus productos hasta en 12 cuotas mensuales sin intereses.\n\nGustavo lee el anuncio y hace la operación 1.000.000 + 1.200.000 . Con esta operación, él halla",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "el costo promedio de una lavadora.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "el costo promedio de una nevera y un televisor.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "la cuota mensual, si compra una lavadora a doce meses.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "la cuota mensual, si compra una nevera y un televisor a seis meses.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad del estudiante en la formulación de procedimientos para encontrar la solución a un problema. En este caso, cada opción corresponde a un valor relacionado con el contexto y se busca determinar si la operación dada en el enunciado corresponde a alguno de esos valores. El costo de una nevera y un televisor es 1.000.000+1.200.000, si el costo se difiere a 6 cuotas mensuales, sin interés, cada cuota corresponde a 1.000.000 + 1.200.000 como aparece en el enunciado.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Formulación",
+      "contenido": "Álgebra y cálculo (genérico)",
+      "afirmación": "plantea e implementa estrategias que lleven a soluciones",
+      "nivel de desempeño": "2",
+      "respuesta correcta": "D"
+    }
+  },
+  {
+    "id": "G17-1-MAT-007",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 7"
+    },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Carlos quiere aprender un nuevo idioma. En un instituto le informan que para adquirir cierto nivel existen dos opciones: un curso intensivo con clases de tres horas y otro extensivo con clases de una hora pero con mayor cantidad de clases.\n\nEn la tabla se muestra el precio de la inscripción, del libro de estudio de cada una de las clases y el porcentaje de descuento que se hace sobre el valor de la inscripción.\n\n                                                      Curso          Curso\n                                    Concepto\n                                                    intensivo      extensivo\n                                    Inscripción      100.000        100.000\n                                       Libro          50.000         50.000\n                                     Una clase        30.000         10.000\n                                    Descuento          20 %           10 %\n                                  Tabla. Cotización de los cursos de idiomas.\n\nCarlos quiere determinar cuál opción le resulta más económica, y para esto decide obtener el total de costos de ambos cursos.\n\nPara este propósito la información que tiene es insuficiente porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "no conoce las formas de pago de cada curso y, por tanto, no puede calcular el precio final de cada uno.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "necesita saber la cantidad de clases que ofrece cada curso para determinar el precio total de las clases.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "no sabe cuánto es el descuento por cada clase; luego no podrá conocer el precio final de cada curso.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "necesita conocer primero el valor total de cada curso para poder aplicar el descuento ofrecido.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad del estudiante para justificar una afirmación hecha sobre la información disponible para solucionar un problema. El costo total de un curso se calcula así: Puesto que se desconoce la cantidad de clases de cada curso, no es posible determinar cuáles son los costos totales.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Argumentación",
+      "contenido": "Álgebra y cálculo (genérico)",
+      "afirmación": "",
+      "nivel de desempeño": "3",
+      "respuesta correcta": "B"
+    }
+  },
+  {
+    "id": "G17-1-MAT-008",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 8"
+    },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "plantea e implementa estrategias que lleven a soluciones Frente a un problema que involucre información cuantitativa, adecuadas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 2,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "Dos mil personas se encuestarán para conocer su intención de voto en futuras elecciones. El 60 % de las personas que votarán tienen entre 18 y 38 años, y el 40 % restante son mayores de 39 años.\n\nLa encuesta representará la intención de voto de toda la población, cuando la cantidad de encuestados entre los 18 y 38 años sea",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2.000",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "1.200",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "1.000",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "600",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad del estudiante para solucionar problemas relacionados con la inferencia muestral y muestreo estratificado. Si se desea que el grupo de personas con edades entre 18 y 38 años esté representado adecuadamente en la muestra, la cantidad de personas que se encuesten en este rango de edades debe ser proporcional al número de personas de este grupo en la población total, es decir, el 60 % de las 2.000 personas encuestadas debe tener entre 18 y 38 años de edad: 2.000 × =1 .200",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Formulación",
+      "contenido": "Estadística (no genérico)",
+      "afirmación": "plantea e implementa estrategias que lleven a soluciones",
+      "nivel de desempeño": "3",
+      "respuesta correcta": "B"
+    }
+  },
+  {
+    "id": "G17-1-MAT-009",
+    "prueba": "matematicas",
+    "origen": "oficial",
+    "fuente": {
+      "nombre": "Guía de orientación Saber 11.º 2017 (ICFES) · ejemplos de preguntas explicadas",
+      "url": "https://www.icfes.gov.co/wp-content/uploads/2024/11/Guia-de-orientacion-saber-11-2017-1.pdf",
+      "anio": 2017,
+      "referencia": "Matemáticas, ejemplo 9"
+    },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas.",
+    "evidencia": "",
+    "habilidad": "comprender",
+    "tema": "",
+    "subtema": "",
+    "dificultad": 3,
+    "contexto": null,
+    "estimulo": null,
+    "enunciado": "En la figura se representa el cuadrilátero MNOP con la medida de algunos de sus lados, ángulos y de una de sus diagonales.\n\nP O δ = 40° ε = 110° γ = 70° NO = 7,8 cm PM = 7,8 cm MO = 11,4 cm\n\nα = 40° β = 70° M MN = 11,4 cm N\n\nFigura\n\nLos lados PO y MN del cuadrilátero son paralelos porque",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "MO es congruente con MN.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "γ es congruente con β.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "PM es congruente con NO.",
+        "correcta": false,
+        "explicacion": "",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "α es congruente con δ.",
+        "correcta": true,
+        "explicacion": "",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Esta pregunta evalúa la capacidad del estudiante para justificar una característica de una construcción geométrica dada. Puesto que los ángulos α y δ son alternos internos con respecto a los segmentos PO y MN con transversal MO, estos dos ángulos son congruentes, si y solo si, los lados PO y MN son paralelos. Si bien las otras opciones de respuesta corresponden a características del cuadrilátero MNOP y de la construcción realizada, estas otras características son información que por sí misma no permite garantizar o explicar por qué PO es paralelo a MN . C. Prueba de Sociales y Ciudadanas La prueba de Sociales y Ciudadanas evalúa los conocimientos y habilidades del estudiante que le permiten comprender el mundo social desde la perspectiva propia de las ciencias sociales y situar esta comprensión como referente del ejercicio de su rol como ciudadano. Evalúa también su habilidad para analizar distintos eventos, argumentos, posturas, conceptos, modelos, dimensiones y contextos, así como su capacidad de reflexionar y emitir juicios críticos sobre estos. En concordancia con esto, la prueba no le pide al estudiante que responda desde su opinión, ni desde lo que se considera “políticamente correcto” o desde el “deber ser”9. 1. Competencias evaluadas En la prueba Sociales y Ciudadanas se evalúan tres competencias básicas: Pensamiento social, Interpretación y análisis de perspectivas, y Pensamiento reflexivo y sistémico. Estas competencias están alineadas con lo propuesto en los Estándares Básicos de Competencias en Ciencias y Competencias Ciudadanas, publicados por el Ministerio de Educación Nacional en 2006. La competencia Pensamiento social evalúa la capacidad del estudiante para usar conceptos básicos de las ciencias sociales10, y su conocimiento de los principios constitucionales y del ordenamiento político colombiano con el fin de analizar situaciones sociales. Además, se espera que pueda analizar las dimensiones históricas y geográficas de sucesos, procesos y fenómenos sociales. La segunda competencia, Interpretación y análisis de perspectivas, evalúa la habilidad del estudiante para analizar la información que circula en la sociedad sobre asuntos políticos, económicos y culturales, para valorar argumentos y explicaciones sobre problemáticas sociales y para identificar diversos intereses, opiniones y perspectivas de personas y grupos sociales que interactúan en un momento dado. Finalmente, la competencia Pensamiento reflexivo y sistémico involucra la capacidad del estudiante de comprender diferentes dimensiones presentes en una situación de interacción social. De igual manera, respecto de esta competencia se espera que el estudiante comprenda modelos sociales y sus posibles usos en determinados contextos. A continuación se describe cada una de estas competencias en mayor detalle. 9 Entendido como una forma correcta de actuar o pensar que es aceptada o valorada positivamente por la sociedad. 10 Conceptos que sirven de fundamento al estudiante para analizar, comparar y explicar situaciones económicas, políticas, culturales y geográficas. Algunos de ellos son: oferta, demanda, monopolio, impuestos, competitividad, subsidios, revolución social, democracia participativa, democracia representativa, dictadura, sociedad civil, partidos políticos, Estado, soberanía, federalismo, centralismo, clientelismo, nación, desplazamiento forzado, etnia, clase social, gremios, sindicatos, nomadismo, sedentarismo, colonización, movimiento social, rural, urbano, región, frontera, territorio, monocultivos, uso de la tierra, marginación social, segregación espacial, prácticas culturales, xenofobia, discriminación, tradición, representaciones sociales, entre otros. a. Pensamiento social La competencia pensamiento social hace referencia a la habilidad del estudiante para comprender su realidad mediante el uso de conceptos, y a su capacidad de ubicar y establecer relaciones espacio-temporales de acontecimientos y procesos. Esta competencia supone que los eventos sociales11 históricos y contemporáneos adquieren significado para los estudiantes cuando pueden relacionarlos con conceptos, contextos y otros eventos e inscribirlos dentro de procesos sociales12 más amplios. Esta competencia está integrada por conocimientos, conceptos y habilidades de pensamiento que posibilitan la comprensión de problemáticas sociales13 y fenómenos políticos, económicos, culturales y geográficos, como también los principios básicos de la Constitución, y la estructura y el funcionamiento del sistema político colombiano. Así, por un lado, con las preguntas de esta competencia el estudiante se enfrenta a diferentes situaciones sociales que deberá analizar usando para ello conceptos básicos de las ciencias sociales. Hacen parte de esta competencia: la comprensión de dimensiones temporales y espaciales de eventos y prácticas sociales14; la habilidad del estudiante para analizar las dimensiones históricas de eventos o problemáticas; y la capacidad de relacionar sucesos o procesos con contextos geográficos y sus características, es decir, de conectar eventos e identificar razones que justifiquen esas conexiones. Por otro lado, en relación con esta competencia se evalúa el conocimiento que el estudiante tiene acerca de los fundamentos del modelo de Estado social de derecho15 y sus particularidades en nuestro país; los derechos y deberes ciudadanos establecidos en la Constitución; la organización del Estado; las funciones y los alcances de las diferentes ramas del poder y de los organismos de control; así como el marco básico que fundamenta la participación ciudadana en Colombia. 11 Se entiende por evento social un suceso cuya ubicación temporal puede establecerse con relativa exactitud. 12 Se entiende por proceso social un conjunto de eventos relacionados entre sí de forma dinámica. 13 Se entiende por problemática social un asunto definido como problemático en un espacio-tiempo particular. Asuntos tales como la distribución de la tierra, el uso de la tierra, la descentralización política y la participación política pueden considerarse problemáticos en un contexto histórico y geográfico específico. Otros ejemplos de problemáticas sociales son: la desigualdad social, la discriminación social, el desplazamiento forzado, el desempleo, la crisis alimentaria, la pobreza, la injusticia social, la violación de los Derechos Humanos, la exclusión y los abusos de poder, entre otros. 14 Se entiende por práctica social cualquier tipo de acción (orientada por objetivos, normas o tradiciones) que se da en una sociedad, incluidas las prácticas discursivas. 15 Modelo adoptado por Colombia en su Constitución Política, artículo c1, el cual implica una serie de características del Estado colombiano, como son la “amplia gama de derechos fundamentales reconocidos, mecanismos de protección de estos, la preservación continua del principio democrático, la posibilidad de participación ciudadana en la toma de decisiones política”, así como el respeto por la dignidad humana y el principio de solidaridad. Tomado y adaptado de: Gómez Sierra, F. (2015), Constitución Política de Colombia anotada, ed. Leyer; Corte Constitucional de Colombia (1992), Sentencia T-401. b. Interpretación y análisis de perspectivas Esta competencia hace referencia a la capacidad del estudiante para pensar analítica y críticamente sobre las problemáticas y fenómenos sociales. A través de esta competencia se evalúan principalmente dos habilidades: el reconocimiento de diversas opiniones, posturas e intereses y el análisis crítico de fuentes16 y argumentos17. La primera habilidad hace referencia a la capacidad del estudiante de analizar una problemática según las perspectivas de diferentes actores sociales18 o colectivos involucrados en ella. Las preguntas correspondientes a esta habilidad requieren que los estudiantes, a propósito de un conflicto, estén en capacidad de comprender su origen, entender qué buscan los diferentes actores, identificar las coincidencias y diferencias entre sus intereses, y valorar la reacción (de aceptación o rechazo) de las partes ante una propuesta de solución. La segunda habilidad da cuenta de la capacidad del estudiante de evaluar fuentes primarias y secundarias19, corroborar y contextualizar la información que suministran, y valorar la pertinencia y solidez de los enunciados o argumentos que exponen. Se espera que el estudiante valore la credibilidad de las fuentes y analice los argumentos y perspectivas que allí se presentan. Si bien existen diferentes formas para evaluar el uso o la información proveniente de una fuente, una de ellas consiste en valorar la experticia de un autor para hablar de un tema. También se busca que el estudiante pueda inscribir una fuente en un contexto económico, político o cultural y pueda considerar otras fuentes para determinar si respaldan o contradicen la información que la fuente inicial presenta. Respecto a esta segunda habilidad, además se espera que los estudiantes que culminan grado 11 estén en capacidad de evaluar qué tan fuertes son las razones aducidas para apoyar una conclusión presentada en una fuente, si las evidencias que apoyan una conclusión son hechos objetivos (por ejemplo, investigaciones), o si un argumento tiene sesgos, prejuicios o generalizaciones no justificadas. Esta competencia resulta fundamental para el ejercicio de la ciudadanía en la medida en que demuestra la habilidad del estudiante para ponderar argumentos que conduzcan, por ejemplo, a decisiones tales como seleccionar un candidato a partir de su programa de gobierno, o el análisis de problemáticas sociales o económicas a través de la lectura crítica del editorial de un periódico de gran relevancia nacional. 16 En la prueba se le presentan al estudiante diferentes tipos de fuentes como discursos, entrevistas, testimonios, diarios, caricaturas, artículos de prensa, explicaciones o interpretaciones sobre eventos o problemáticas sociales elaboradas según las disciplinas de las ciencias sociales, fragmentos de planes de desarrollo nacionales, leyes, discursos, informes de organizaciones internacionales, documentos de organizaciones sociales, entre otros. 17 En su forma más sencilla, un argumento consiste en un razonamiento, una conclusión que se deriva lógicamente de dos razones/ premisas dadas anteriormente. 18 Se entiende por actor social un individuo o grupo de personas que se comportan siguiendo los referentes, normas o intereses de un determinado grupo social. 19 Una fuente primaria es aquella que contiene información de primera mano sobre un evento, tema, problemática social, o sobre un uso de modelo conceptual. Por su parte, una fuente secundaria contiene explicaciones, interpretaciones o información de segunda mano sobre estos mismos asuntos. c. Pensamiento reflexivo y sistémico Esta competencia se entiende como la capacidad de comprender la realidad social desde una perspectiva sistémica. Es decir, de reconocer distintas formas de aproximarse a los problemas, de identificar las complejas relaciones que los configuran, de adelantar procesos de indagación flexibles y reflexivos, y de adoptar posturas críticas frente a los usos sociales de las ciencias sociales. Para ello, el estudiante debe contar con dos habilidades: identificar modelos conceptuales20 que orientan decisiones sociales21 y establecer relaciones entre las distintas dimensiones22 presentes en las problemáticas sociales y en sus posibles alternativas de solución. La primera habilidad hace referencia al conocimiento de modelos conceptuales y de sus posibles usos en determinados contextos. Así, hacen parte de esta la identificación de las características propias de un modelo, de los principios que lo sustentan y de valorar decisiones como coherentes o incoherentes con los objetivos o postulados del modelo. La segunda habilidad involucra la capacidad de los estudiantes para identificar distintas dimensiones o ámbitos de la vida social, y para analizar los posibles efectos que tendría una medida o intervención sobre tales dimensiones. Esto implica el reconocimiento de las relaciones entre los ámbitos (social, económico, ambiental y político, entre otros) que están presentes en un problema o decisión. Se considera que para entender una situación problemática es necesario identificar sus dimensiones y reconocer que en cada una puede haber diferentes valores o ideas que se privilegian en un momento dado. Se espera entonces que el estudiante comprenda que cada situación involucra diferentes dimensiones y que, en ocasiones, pueden contraponerse entre sí. Por ende, debe comprender que las decisiones que se toman pueden favorecer unas dimensiones e ir en detrimento de otras. Ahora bien, cada una de las competencias evaluadas en la prueba de Sociales y Ciudadanas cuenta con dos afirmaciones. Las afirmaciones son “enunciados que se realizan acerca de los conocimientos, habilidades y capacidades que se pretende inferir a partir de las respuestas dadas por los estudiantes en las pruebas”23, es decir, se trata de descripciones de aquello que se espera que un estudiante esté en capacidad de hacer cuando ha desarrollado una competencia. 20 Se entiende por modelo conceptual una agrupación de conceptos que tiene como propósito describir, comprender u ofrecer alternativas de solución a una determinada problemática social. Algunos de ellos son: democracia, liberalismo, proteccionismo, neoliberalismo, apertura económica, multiculturalismo, crecimiento económico, modernización, desarrollo local y regional, desarrollo humano, capitalismo, socialismo, Derechos Humanos, desarrollo sostenible, desarrollo sustentable y globalización (económica, política y cultural). 21 Se entiende por decisiones sociales aquellas acciones orientadas a mejorar las condiciones de vida de un determinado grupo social o de la sociedad en su conjunto. 22 Se entiende por dimensiones sociales aquellos aspectos económicos, políticos, sociales, culturales, entre otros, que están en juego en una situación dada. 23 Icfes. (2014). ¿Cómo se elaboran las pruebas? Disponible en http://www.icfes.gov.co/instituciones-educativas/acerca-de-las- evaluaciones/como-se-elaboran-las-pruebas La tabla que sigue a continuación presenta, entonces, las afirmaciones correspondientes a las competencias que se evalúan mediante la prueba de Sociales y Ciudadanas: Tabla 11. Competencias y afirmaciones de la prueba. Competencia Afirmación (El estudiante…) • Comprende modelos conceptuales, sus características y contextos de aplicación. Pensamiento social • Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales. • Contextualiza y evalúa usos de fuentes y argumentos. Interpretación y análisis de perspectivas • Comprende perspectivas de distintos actores y grupos sociales. • Evalúa usos sociales de las ciencias sociales. Pensamiento reflexivo y • Comprende que los problemas y sus soluciones sistémico involucran distintas dimensiones y reconoce relaciones entre estas. 2. Estructura de la prueba La prueba de Sociales y Ciudadanas consta de 50 preguntas de selección múltiple con única respuesta. La Tabla 12 muestra la distribución de preguntas por competencia. Tabla 12. Distribución de preguntas por competencias. Pensamiento social Interpretación y análisis de perspectivas Pensamiento reflexivo y sistémico 30% 40% 30% 3. Niveles de desempeño Los niveles de desempeño se establecieron con el objetivo de complementar el puntaje numérico que se otorga a los estudiantes. Consisten en una descripción cualitativa de las habilidades y conocimientos que podrían tener si se ubican en determinado nivel. Los siguientes son los niveles de desempeño definidos para la prueba de Sociales y Ciudadanas del examen Saber 11.°. Tabla 13. Descripción de los niveles de desempeño. Nivel de Descripción desempeño El estudiante que se ubica en este nivel podría reconocer algunos derechos ciudadanos en situaciones sencillas. Adicionalmente, podría reconocer factores que generan un conflicto e Puntaje en la identificar creencias que explican algunos comportamientos. Este estudiante probablemente prueba de no está en capacidad de utilizar conceptos de las ciencias sociales o modelos conceptuales, 0 a 40 ni de reconocer principios constitucionales o de analizar enunciados. Nivel de Descripción desempeño Además de lo descrito en el nivel anterior, el estudiante que se ubica en este nivel reconoce deberes del Estado colombiano y situaciones de protección o vulneración de derechos en el marco del Estado Para clasificar en este nivel, el estudiante: social de derecho; identifica relaciones entre conductas de las personas • Identifica derechos ciudadanos y deberes del y sus cosmovisiones; y reconoce Estado establecidos en la Constitución Política las dimensiones presentes en una de Colombia. 2 • Relaciona la conducta de una persona con su situación, problema, decisión tomada Puntaje en la forma de ver la vida. o propuesta de solución. Además, prueba de contextualiza fuentes y procesos • Reconoce los efectos de una solución y las 41 a 55 sociales. dimensiones que privilegia. • Identifica contextos o procesos en los que se En este nivel, se presentan contextos inscribe una fuente o evento. cuya descripción es corta, con pocos actores, enunciados directos y posturas o posiciones explícitas, sencillas y claras. Además, se presentan situaciones cercanas a la cotidianidad del estudiante o de conocimiento y amplia discusión pública. Nivel de Descripción desempeño Además de lo descrito en los Para clasificar en este nivel, el estudiante: niveles anteriores, el estudiante • Reconoce intenciones y prejuicios, así como que se ubica en este nivel argumentos similares o diferentes dados en un identifica prejuicios o intenciones contexto o una situación específica. contenidos en una afirmación • Identifica dimensiones (económicas, políticas, y reconoce las dimensiones e culturales, ambientales, etc.) involucradas en intereses involucrados en un situaciones, problemáticas o propuestas de problema o alternativa de solución. solución. Asimismo, identifica algunos conceptos básicos de las ciencias • Identifica y compara opiniones e intereses de 3 diferentes actores involucrados en una situación sociales y modelos conceptuales, Puntaje en la problemática y establece relaciones entre esas y valora y contextualiza la prueba de posturas y posibles soluciones. información presentada en una 56 a 70 fuente. • Reconoce algunos conceptos básicos de las ciencias sociales. En este nivel, las competencias • Identifica supuestos y usos de algunos modelos se evalúan tanto en situaciones conceptuales. cotidianas o de amplio • Relaciona contextos históricos y/o geográficos con conocimiento y discusión pública fuentes, situaciones y prácticas sociales. como en contextos más lejanos y complejos, algunos de ellos con • Valora la información contenida en una fuente y descripciones más largas que las reconoce sus alcances. del nivel anterior. Nivel de Descripción desempeño Además de lo descrito en los niveles anteriores, el estudiante que se ubica en este nivel conoce algunas disposiciones de la Constitución Política de Colombia que posibilitan la participación ciudadana y el control a los poderes públicos; analiza y compara enunciados, intereses y Para clasificar en este nivel, el estudiante: argumentos; y evalúa alternativas • Conoce los procedimientos de reforma a la de solución a un problema. Constitución Política de Colombia, los mecanismos Este estudiante analiza situaciones de participación ciudadana y las funciones de los a partir de conceptos básicos organismos de control. de las ciencias sociales o • Compara enunciados o argumentos, así como de contextos históricos y/o intereses y posiciones de actores en contextos en geográficos. A su vez, relaciona los que se discuten situaciones problemáticas o sus fuentes y políticas con modelos alternativas de solución. conceptuales, y valora los contenidos de una fuente. • Relaciona propuestas de solución a un problema 4 con su contexto de implementación, o con Puntaje en la En este nivel, las competencias sus posibles impactos en ciertas dimensiones prueba de se evalúan principalmente en (económicas, políticas, culturales, ambientales, etc.). 71 a 100 contextos que pueden estar • Entiende problemáticas, eventos o procesos alejados de la cotidianidad sociales a partir del uso de conceptos básicos del estudiante y que no de las ciencias sociales, o a partir de contextos necesariamente son de amplia históricos y/o geográficos. discusión pública. Se incluyen preguntas con contextos • Analiza fuentes (primarias y secundarias) para cortos que requieren ciertos valorar inferencias o identificar intenciones, conocimientos sociales, históricos, características de los actores involucrados y políticos, culturales y económicos contextos en los que se ubican dichas fuentes. adicionales para ser respondidas • Establece relaciones entre modelos conceptuales y correctamente. El estudiante de fuentes que los abordan o decisiones sociales que este nivel es capaz de abordar los aplican. las preguntas de manera objetiva y realizar el ejercicio cognitivo esperado, independientemente de su posición personal. Finalmente, el estudiante logra identificar diferencias sutiles entre conceptos, entre intenciones y entre intereses de diferentes actores.",
+    "que_identificar": "",
+    "que_revisar": "",
+    "refuerzo_ids": [],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "importada",
+      "icfes",
+      "explicada_oficial",
+      "revisar_estimulo"
+    ],
+    "estado": "pendiente",
+    "_meta_oficial": {
+      "competencia": "Argumentación",
+      "contenido": "Geometría (no genérico)",
+      "afirmación": "",
+      "nivel de desempeño": "4",
+      "respuesta correcta": "D"
+    }
+  }
+]

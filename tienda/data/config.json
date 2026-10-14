@@ -1,0 +1,162 @@
+{
+  "negocio": {
+    "nombre": "Mi Tienda",
+    "eslogan": "Productos útiles, novedosos y a buen precio",
+    "descripcion": "Catálogo digital de productos para el hogar, tecnología, cuidado personal y más. Pedidos por WhatsApp.",
+    "logo": "img/logo-ejemplo.svg",
+    "ciudad": "",
+    "horario": ""
+  },
+  "whatsapp": {
+    "numero": "",
+    "mensajeProducto": "Hola, estoy interesado en el producto {nombre}. ¿Me pueden confirmar disponibilidad, precio y costo de envío?\n{variantes}{enlace}",
+    "mensajeDisponibilidad": "Hola, ¿tienen disponible el producto {nombre}?\n{variantes}{enlace}",
+    "mensajeGeneral": "Hola, quiero más información sobre sus productos.",
+    "mensajeEnvios": "Hola, ¿me pueden informar los costos y tiempos de envío?",
+    "mensajePagos": "Hola, ¿qué métodos de pago aceptan?",
+    "mensajeCarrito": "Hola, quiero pedir estos productos:\n{items}\nTotal estimado: {total}\n¿Me confirman disponibilidad y costo de envío?"
+  },
+  "redes": {
+    "facebook": "",
+    "instagram": "",
+    "tiktok": "",
+    "marketplace": ""
+  },
+  "marca": {
+    "colorPrimario": "#1e3a5f",
+    "colorAcento": "#d97706"
+  },
+  "portada": {
+    "titulo": "Productos que resuelven cosas de todos los días",
+    "subtitulo": "Explora el catálogo, pregunta por WhatsApp y recibe tu pedido sin complicaciones.",
+    "imagen": "img/portada.png",
+    "etiqueta": "Catálogo actualizado"
+  },
+  "confianza": [
+    {
+      "icono": "svg:camion",
+      "titulo": "Entregas",
+      "texto": ""
+    },
+    {
+      "icono": "svg:tarjeta",
+      "titulo": "Pagos",
+      "texto": ""
+    },
+    {
+      "icono": "svg:chat",
+      "titulo": "Atención",
+      "texto": "Respondemos tus preguntas por WhatsApp antes de que compres."
+    }
+  ],
+  "politicas": {
+    "entregas": "",
+    "pagos": "",
+    "cambios": "",
+    "garantia": "",
+    "privacidad": ""
+  },
+  "preguntasFrecuentes": [
+    {
+      "grupo": "Pedidos",
+      "destacada": true,
+      "p": "¿Cómo hago un pedido?",
+      "r": "Elige el producto, toca «Pedir por WhatsApp» y se abre un chat con nosotros con el nombre del producto ya escrito. Te confirmamos disponibilidad, precio final y costo de envío antes de que pagues nada. Abrir WhatsApp no te compromete a comprar."
+    },
+    {
+      "grupo": "Pedidos",
+      "destacada": true,
+      "p": "¿Puedo pedir varios productos a la vez?",
+      "r": "Sí. Agrega los productos al carrito (botón «+» en cada tarjeta o «Agregar al carrito» en la ficha) y envía el resumen completo por WhatsApp con un solo botón. El total que ves es estimado y no incluye envío."
+    },
+    {
+      "grupo": "Pedidos",
+      "p": "¿Cómo elijo el color, la talla o el modelo?",
+      "r": "En la ficha del producto, selecciona la opción antes de tocar «Pedir por WhatsApp». La opción elegida viaja en el mensaje para que no haya confusiones."
+    },
+    {
+      "grupo": "Pedidos",
+      "p": "¿Qué pasa si el producto aparece como agotado?",
+      "r": "Toca «Avísame cuando esté disponible» y te escribimos cuando vuelva a haber unidades. No cobramos ni reservamos sin confirmarte primero."
+    },
+    {
+      "grupo": "Pedidos",
+      "p": "¿El precio de la página es el precio final?",
+      "r": "Es el precio del producto. El costo de envío depende de tu ciudad y te lo confirmamos por WhatsApp antes de cerrar el pedido. Solo mostramos descuentos cuando son reales."
+    },
+    {
+      "grupo": "Pagos y seguridad",
+      "destacada": true,
+      "p": "¿Es seguro comprar aquí?",
+      "r": "Esta página es un catálogo: no pide tarjetas ni datos bancarios y no guarda información personal. Todo el pedido se acuerda por WhatsApp con una persona real, y nunca te pediremos un pago sin antes confirmarte disponibilidad y valor total."
+    },
+    {
+      "grupo": "Pagos y seguridad",
+      "p": "¿Qué métodos de pago aceptan?",
+      "r": "Los métodos disponibles están en la página de Políticas y te los confirmamos por WhatsApp antes de pagar. Si tienes dudas sobre un método, pregúntanos: preferimos explicarte a que te quedes con la duda."
+    },
+    {
+      "grupo": "Pagos y seguridad",
+      "p": "¿Cómo sé que no es una estafa?",
+      "r": "Solo compartimos nuestro número de WhatsApp oficial en esta página y en nuestras redes. Te enviamos fotos reales del producto, respondemos todas tus preguntas y acordamos el pago y la entrega por escrito en el chat. Si algo te genera desconfianza, no pagues: escríbenos y lo aclaramos."
+    },
+    {
+      "grupo": "Envíos y entregas",
+      "destacada": true,
+      "p": "¿Hacen envíos a mi ciudad y cuánto tarda?",
+      "r": "Consulta la cobertura y los tiempos en la página de Políticas o pregúntanos por WhatsApp con tu ciudad. Te confirmamos el costo y el tiempo estimado antes de que decidas."
+    },
+    {
+      "grupo": "Envíos y entregas",
+      "p": "¿Cómo sé en qué va mi pedido?",
+      "r": "Te mantenemos informado por el mismo chat de WhatsApp: cuándo se despacha y cómo hacerle seguimiento si va por transportadora."
+    },
+    {
+      "grupo": "Envíos y entregas",
+      "p": "¿Qué pasa si el producto llega dañado o no es lo que pedí?",
+      "r": "Escríbenos por WhatsApp apenas lo recibas, con fotos, y lo resolvemos según nuestra política de cambios. Revisa el paquete al recibirlo."
+    },
+    {
+      "grupo": "Cambios y garantías",
+      "p": "¿Puedo cambiar o devolver un producto?",
+      "r": "Las condiciones de cambios, plazos y garantías están en la página de Políticas. Si tienes un caso puntual, cuéntanos por WhatsApp y buscamos la solución."
+    },
+    {
+      "grupo": "Privacidad",
+      "p": "¿Qué hacen con mis datos?",
+      "r": "Solo usamos la información que nos escribes por WhatsApp (nombre, dirección, teléfono) para gestionar tu pedido. No la vendemos ni la compartimos con terceros ajenos a la entrega. Puedes pedirnos eliminarla cuando quieras. Más detalles en Políticas → Privacidad."
+    },
+    {
+      "grupo": "Privacidad",
+      "p": "¿Por qué no puedo pagar directamente en la página?",
+      "r": "Preferimos atenderte persona a persona: así confirmamos existencias, resolvemos dudas y evitamos cobros por productos que no estén disponibles. Es más simple y más seguro para ti."
+    }
+  ],
+  "analitica": {
+    "ga4": "",
+    "metaPixel": ""
+  },
+  "sitio": {
+    "moneda": "COP",
+    "paginasEstaticas": false,
+    "avisoDemo": true
+  },
+  "pasosCompra": [
+    {
+      "titulo": "Elige",
+      "texto": "Explora el catálogo y abre la ficha del producto que te interesa."
+    },
+    {
+      "titulo": "Escríbenos",
+      "texto": "Toca «Pedir por WhatsApp». El mensaje sale listo con el nombre del producto."
+    },
+    {
+      "titulo": "Confirmamos",
+      "texto": "Te confirmamos disponibilidad, precio final y envío antes de que pagues."
+    },
+    {
+      "titulo": "Recibe",
+      "texto": "Acordamos pago y entrega por el chat y te avisamos cuando salga tu pedido."
+    }
+  ]
+}

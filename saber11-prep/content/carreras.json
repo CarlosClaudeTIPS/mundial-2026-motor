@@ -1,0 +1,106 @@
+{
+  "_estado": "Catálogo orientativo de carreras y del peso de cada prueba Saber 11 para ellas. Los pesos (1 = base, 2 = importante, 3 = fundamental) son una guía pedagógica para priorizar la práctica, no los criterios de admisión de ninguna universidad: cada institución pondera a su manera y la meta del estudiante sigue siendo subir las cinco pruebas. Editable desde Administración → Examen y programa (próximamente) o directamente en este archivo.",
+  "pruebas": ["lectura_critica", "matematicas", "sociales_ciudadanas", "ciencias_naturales", "ingles"],
+  "areas": [
+    {
+      "id": "salud",
+      "nombre": "Salud y ciencias de la vida",
+      "carreras": [
+        { "id": "medicina", "nombre": "Medicina", "pesos": { "lectura_critica": 2, "matematicas": 2, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 2 } },
+        { "id": "enfermeria", "nombre": "Enfermería", "pesos": { "lectura_critica": 2, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "odontologia", "nombre": "Odontología", "pesos": { "lectura_critica": 2, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "psicologia", "nombre": "Psicología", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 2, "ingles": 1 } },
+        { "id": "veterinaria", "nombre": "Medicina veterinaria y zootecnia", "pesos": { "lectura_critica": 1, "matematicas": 2, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "nutricion", "nombre": "Nutrición y dietética", "pesos": { "lectura_critica": 2, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "fisioterapia", "nombre": "Fisioterapia", "pesos": { "lectura_critica": 2, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } }
+      ]
+    },
+    {
+      "id": "ingenieria",
+      "nombre": "Ingeniería y tecnología",
+      "carreras": [
+        { "id": "ing_sistemas", "nombre": "Ingeniería de sistemas / software", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "ing_civil", "nombre": "Ingeniería civil", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 2, "ingles": 1 } },
+        { "id": "ing_industrial", "nombre": "Ingeniería industrial", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "ing_electronica", "nombre": "Ingeniería electrónica / eléctrica", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 2 } },
+        { "id": "ing_mecanica", "nombre": "Ingeniería mecánica / mecatrónica", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "ing_ambiental", "nombre": "Ingeniería ambiental", "pesos": { "lectura_critica": 2, "matematicas": 2, "sociales_ciudadanas": 2, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "ing_quimica", "nombre": "Ingeniería química / de alimentos", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "ing_agronomica", "nombre": "Ingeniería agronómica / agropecuaria", "pesos": { "lectura_critica": 1, "matematicas": 2, "sociales_ciudadanas": 2, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "tecnologia_tic", "nombre": "Tecnologías en desarrollo de software / redes", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 1, "ingles": 2 } }
+      ]
+    },
+    {
+      "id": "ciencias",
+      "nombre": "Ciencias exactas y naturales",
+      "carreras": [
+        { "id": "biologia", "nombre": "Biología", "pesos": { "lectura_critica": 2, "matematicas": 2, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 2 } },
+        { "id": "quimica", "nombre": "Química", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "fisica", "nombre": "Física", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 2 } },
+        { "id": "matematicas_carrera", "nombre": "Matemáticas / estadística", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 2, "ingles": 2 } }
+      ]
+    },
+    {
+      "id": "economia",
+      "nombre": "Economía, administración y negocios",
+      "carreras": [
+        { "id": "administracion", "nombre": "Administración de empresas", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "contaduria", "nombre": "Contaduría pública", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "economia", "nombre": "Economía", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "negocios_internacionales", "nombre": "Negocios internacionales", "pesos": { "lectura_critica": 2, "matematicas": 2, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 3 } },
+        { "id": "mercadeo", "nombre": "Mercadeo y publicidad", "pesos": { "lectura_critica": 3, "matematicas": 2, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 2 } }
+      ]
+    },
+    {
+      "id": "sociales",
+      "nombre": "Ciencias sociales, humanas y derecho",
+      "carreras": [
+        { "id": "derecho", "nombre": "Derecho", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "ciencia_politica", "nombre": "Ciencia política / relaciones internacionales", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "trabajo_social", "nombre": "Trabajo social", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "comunicacion", "nombre": "Comunicación social y periodismo", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "sociologia", "nombre": "Sociología / antropología / historia", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "filosofia", "nombre": "Filosofía / literatura", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 1 } }
+      ]
+    },
+    {
+      "id": "educacion",
+      "nombre": "Educación",
+      "carreras": [
+        { "id": "lic_humanidades", "nombre": "Licenciatura en lenguaje / humanidades", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "lic_matematicas", "nombre": "Licenciatura en matemáticas / ciencias", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 3, "ingles": 1 } },
+        { "id": "lic_ingles", "nombre": "Licenciatura en lenguas extranjeras", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 1, "ingles": 3 } },
+        { "id": "lic_infantil", "nombre": "Licenciatura en educación infantil / pedagogía", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "educacion_fisica", "nombre": "Educación física y deporte", "pesos": { "lectura_critica": 2, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 2, "ingles": 1 } }
+      ]
+    },
+    {
+      "id": "artes",
+      "nombre": "Arte, diseño y arquitectura",
+      "carreras": [
+        { "id": "arquitectura", "nombre": "Arquitectura", "pesos": { "lectura_critica": 2, "matematicas": 3, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "diseno_grafico", "nombre": "Diseño gráfico / multimedia", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "diseno_industrial", "nombre": "Diseño industrial / de modas", "pesos": { "lectura_critica": 2, "matematicas": 2, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 2 } },
+        { "id": "artes", "nombre": "Artes plásticas / música / artes escénicas", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "cine", "nombre": "Cine y televisión", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 2 } }
+      ]
+    },
+    {
+      "id": "idiomas_turismo",
+      "nombre": "Idiomas, turismo y servicios",
+      "carreras": [
+        { "id": "lenguas_modernas", "nombre": "Lenguas modernas / traducción", "pesos": { "lectura_critica": 3, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 1, "ingles": 3 } },
+        { "id": "turismo", "nombre": "Hotelería y turismo", "pesos": { "lectura_critica": 2, "matematicas": 1, "sociales_ciudadanas": 2, "ciencias_naturales": 1, "ingles": 3 } },
+        { "id": "gastronomia", "nombre": "Gastronomía", "pesos": { "lectura_critica": 1, "matematicas": 1, "sociales_ciudadanas": 1, "ciencias_naturales": 2, "ingles": 2 } }
+      ]
+    },
+    {
+      "id": "seguridad",
+      "nombre": "Fuerzas públicas y seguridad",
+      "carreras": [
+        { "id": "policia_militar", "nombre": "Carrera militar o policial", "pesos": { "lectura_critica": 2, "matematicas": 2, "sociales_ciudadanas": 3, "ciencias_naturales": 1, "ingles": 1 } },
+        { "id": "aviacion", "nombre": "Aviación / piloto", "pesos": { "lectura_critica": 1, "matematicas": 3, "sociales_ciudadanas": 1, "ciencias_naturales": 2, "ingles": 3 } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/icfes/:path((?!.*\\.).*)", "destination": "/icfes/index.html" }
+  ],
+  "functions": { "api/*.js": { "maxDuration": 30 } }
+}

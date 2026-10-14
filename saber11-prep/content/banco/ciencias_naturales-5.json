@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "CIE-058",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Identifica la aceleración de un móvil a partir de la pendiente de una gráfica velocidad-tiempo",
+    "habilidad": "interpretar",
+    "tema": "Cinemática",
+    "subtema": "Movimiento uniformemente acelerado: aceleración como pendiente de la gráfica velocidad-tiempo",
+    "dificultad": 1,
+    "contexto": "Un bus articulado sale de una estación partiendo del reposo. Un pasajero registra con una aplicación del celular la **velocidad** del bus cada segundo durante los primeros 5 segundos. La gráfica muestra los datos.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Velocidad del bus al salir de la estación",
+      "eje_x": "Tiempo (s)",
+      "eje_y": "Velocidad (m/s)",
+      "series": [
+        { "nombre": "Velocidad", "valores": [["0", 0], ["1", 2], ["2", 4], ["3", 6], ["4", 8], ["5", 10]] }
+      ]
+    },
+    "enunciado": "¿Cuál es la aceleración del bus durante esos 5 segundos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "10 m/s²",
+        "correcta": false,
+        "explicacion": "No responde. 10 m/s es la velocidad que alcanza el bus a los 5 s, no su aceleración. La aceleración indica cuánto cambia la velocidad en cada segundo: (10 − 0) m/s ÷ 5 s = 2 m/s².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde velocidad con aceleración y toma el último valor de la gráfica como respuesta."
+      },
+      {
+        "clave": "B",
+        "texto": "2 m/s²",
+        "correcta": true,
+        "explicacion": "Es la correcta. La velocidad aumenta 2 m/s cada segundo (0, 2, 4, 6, 8, 10). La aceleración es la pendiente de la gráfica v-t: a = Δv/Δt = (10 − 0)/(5 − 0) = 2 m/s², constante en todo el intervalo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "0 m/s², porque la velocidad cambia siempre de la misma manera",
+        "correcta": false,
+        "explicacion": "No responde. Que el cambio sea constante significa que la aceleración es constante, no que sea cero. Aceleración cero solo ocurre si la velocidad no cambia (línea horizontal en la gráfica v-t), y aquí la velocidad pasa de 0 a 10 m/s.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde \"aceleración constante\" con \"velocidad constante\" (movimiento uniforme)."
+      },
+      {
+        "clave": "D",
+        "texto": "0,5 m/s²",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de dividir el tiempo entre la velocidad (5 ÷ 10). La aceleración es el cambio de velocidad dividido entre el tiempo: 10 ÷ 5 = 2 m/s².",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el cociente de la definición de aceleración (Δt/Δv en lugar de Δv/Δt)."
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra velocidad (no posición) contra tiempo; parte de 0 m/s y llega a 10 m/s en 5 s. COMPRENDER: se pide la aceleración, es decir, qué tan rápido cambia la velocidad. INTERPRETAR: la línea es recta y creciente, así que la velocidad aumenta lo mismo cada segundo: es un movimiento uniformemente acelerado. REPRESENTAR: a = Δv/Δt. RAZONAR: la pendiente de una gráfica v-t es la aceleración; 10 m/s es una velocidad, no una aceleración. RESOLVER: a = (10 − 0) m/s ÷ (5 − 0) s = 2 m/s² (opción B). VERIFICAR: con a = 2 m/s², a los 3 s la velocidad sería 2 × 3 = 6 m/s, igual al dato de la gráfica.",
+    "que_identificar": "Que el eje vertical es velocidad, que parte del reposo y que en 5 s llega a 10 m/s con aumentos iguales cada segundo.",
+    "que_revisar": "Diferencia entre velocidad y aceleración; la aceleración como pendiente de la gráfica velocidad-tiempo; unidades m/s y m/s².",
+    "refuerzo_ids": ["CIE-059", "CIE-018"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["cinematica", "movimiento acelerado", "grafico de lineas", "transporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-059",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Describe el movimiento de un cuerpo (reposo, rapidez en cada tramo) a partir de una gráfica posición-tiempo",
+    "habilidad": "interpretar",
+    "tema": "Cinemática",
+    "subtema": "Gráfica posición-tiempo por tramos: reposo y comparación de rapideces",
+    "dificultad": 2,
+    "contexto": "Camila va en bicicleta por una ciclorruta recta en Bogotá. Su reloj deportivo registró su **posición** respecto al punto de partida. La gráfica muestra los datos; entre cada par de puntos el movimiento fue uniforme.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Posición de Camila en la ciclorruta",
+      "eje_x": "Tiempo (s)",
+      "eje_y": "Posición (m)",
+      "series": [
+        { "nombre": "Posición", "valores": [["0", 0], ["10", 50], ["20", 50], ["30", 150]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes descripciones del movimiento de Camila es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Entre los 10 s y los 20 s se movió con velocidad constante, porque la línea es horizontal.",
+        "correcta": false,
+        "explicacion": "No responde. En una gráfica posición-tiempo, una línea horizontal significa que la posición no cambia: Camila estuvo detenida en x = 50 m. La lectura \"horizontal = velocidad constante\" solo vale para una gráfica velocidad-tiempo.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la gráfica de posición como si fuera una gráfica de velocidad."
+      },
+      {
+        "clave": "B",
+        "texto": "Entre 0 s y 10 s estuvo acelerando, porque su posición aumentaba.",
+        "correcta": false,
+        "explicacion": "No responde. Que la posición aumente indica que se mueve, no que acelere. En ese tramo la gráfica es una recta: avanza 50 m en cada 10 s, a rapidez constante de 5 m/s. Una aceleración se vería como una curva.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde \"moverse\" (cambiar de posición) con \"acelerar\" (cambiar de velocidad)."
+      },
+      {
+        "clave": "C",
+        "texto": "Estuvo detenida entre los 10 s y los 20 s, y en el último tramo su rapidez fue el doble que en el primero.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Tramo 1: 50 m en 10 s → 5 m/s. Tramo 2: la posición se mantiene en 50 m → reposo. Tramo 3: de 50 m a 150 m (100 m) en 10 s → 10 m/s, el doble de 5 m/s. La pendiente del tramo 3 es mayor, como se ve en la gráfica.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "En el último tramo recorrió 150 m con una rapidez de 15 m/s.",
+        "correcta": false,
+        "explicacion": "No responde. 150 m es la posición final, no la distancia recorrida en el tramo. En el último tramo pasó de 50 m a 150 m: recorrió 100 m en 10 s, es decir, 10 m/s.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma la posición final como distancia del tramo, sin restar la posición inicial."
+      }
+    ],
+    "explicacion": "LEER: la gráfica es de posición contra tiempo con tres tramos: (0 s, 0 m) → (10 s, 50 m) → (20 s, 50 m) → (30 s, 150 m). COMPRENDER: se pide la descripción correcta del movimiento. INTERPRETAR: en una gráfica x-t la pendiente es la velocidad; una línea horizontal es reposo; una recta inclinada es rapidez constante. REPRESENTAR: v₁ = 50/10 = 5 m/s; v₂ = 0; v₃ = (150 − 50)/10 = 10 m/s. RAZONAR: A lee la gráfica como si fuera v-t; B confunde moverse con acelerar; D usa la posición final en vez del desplazamiento del tramo. RESOLVER: la opción C es la única coherente con los tres cálculos. VERIFICAR: 5 m/s × 10 s + 0 + 10 m/s × 10 s = 150 m, que es la posición final de la gráfica.",
+    "que_identificar": "Que el eje vertical es posición, que el tramo de 10 s a 20 s es horizontal y cuánto cambia la posición en los tramos 1 y 3.",
+    "que_revisar": "Lectura de gráficas posición-tiempo: pendiente = velocidad; reposo; diferencia entre posición y distancia recorrida en un tramo.",
+    "refuerzo_ids": ["CIE-058", "CIE-018"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cinematica", "movimiento uniforme", "grafico de lineas", "transporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-060",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la altura de caída de un cuerpo con el tiempo de caída usando el modelo de caída libre",
+    "habilidad": "resolver",
+    "tema": "Cinemática",
+    "subtema": "Caída libre: altura a partir del tiempo de caída",
+    "dificultad": 1,
+    "contexto": "Desde un puente sobre el río Magdalena, un estudiante deja caer una piedra (sin lanzarla) y mide con un cronómetro que tarda **3 s** en tocar el agua. Supón que la resistencia del aire es despreciable y que g = 10 m/s².",
+    "estimulo": null,
+    "enunciado": "¿A qué altura aproximada sobre el agua está el punto desde donde se soltó la piedra?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "15 m",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de calcular ½ · g · t = ½ · 10 · 3, sin elevar el tiempo al cuadrado. En caída libre desde el reposo, h = ½ · g · t² = ½ · 10 · 9 = 45 m.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvida elevar el tiempo al cuadrado en la ecuación de la altura."
+      },
+      {
+        "clave": "B",
+        "texto": "30 m",
+        "correcta": false,
+        "explicacion": "No responde. 30 es la velocidad (en m/s) con que la piedra llega al agua: v = g · t = 10 · 3. La pregunta pide la altura, que se obtiene con h = ½ · g · t² = 45 m.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la velocidad final con la distancia recorrida."
+      },
+      {
+        "clave": "C",
+        "texto": "45 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. La piedra parte del reposo y acelera a 10 m/s²: h = ½ · g · t² = ½ · 10 · 3² = 45 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "90 m",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de h = g · t² = 10 · 9, olvidando el factor ½. Ese factor aparece porque la velocidad crece desde 0: la velocidad promedio es la mitad de la final (15 m/s), y 15 m/s × 3 s = 45 m.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica la ecuación sin el factor ½, como si la piedra cayera siempre con la velocidad final."
+      }
+    ],
+    "explicacion": "LEER: la piedra se deja caer (velocidad inicial 0), tarda 3 s, g = 10 m/s², sin aire. COMPRENDER: se pide la altura de caída. INTERPRETAR: es un movimiento uniformemente acelerado con aceleración g. REPRESENTAR: h = v₀t + ½gt², con v₀ = 0. RAZONAR: la velocidad aumenta de 0 a 30 m/s, así que la velocidad promedio es 15 m/s; no se puede usar la velocidad final como si fuera constante. RESOLVER: h = ½ · 10 · 9 = 45 m (opción C). VERIFICAR: velocidad promedio × tiempo = 15 m/s × 3 s = 45 m, el mismo resultado.",
+    "que_identificar": "Que la piedra se suelta desde el reposo, el tiempo de caída (3 s) y el valor de g.",
+    "que_revisar": "Ecuaciones de caída libre (h = ½gt², v = gt); diferencia entre velocidad final y distancia recorrida.",
+    "refuerzo_ids": ["CIE-058", "CIE-063"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["cinematica", "caida libre", "gravedad", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-061",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Asociar fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Usa un diagrama de fuerzas y la segunda ley de Newton para determinar la aceleración de un cuerpo sometido a fricción",
+    "habilidad": "representar",
+    "tema": "Dinámica",
+    "subtema": "Diagrama de cuerpo libre con fricción: fuerza neta y aceleración",
+    "dificultad": 2,
+    "contexto": "En una bodega, Andrés empuja horizontalmente una caja de **20 kg** sobre el piso. El diagrama de fuerzas de la caja es el siguiente (g = 10 m/s²):\n\n- Peso: **200 N** hacia abajo.\n- Fuerza normal del piso: **200 N** hacia arriba.\n- Empuje de Andrés: **100 N** hacia la derecha.\n- Fricción del piso: **40 N** hacia la izquierda.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la aceleración de la caja?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "7 m/s² hacia la derecha",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de sumar el empuje y la fricción (100 + 40 = 140 N). Como actúan en sentidos opuestos, se restan: la fuerza neta es 60 N.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Suma las magnitudes de las fuerzas sin tener en cuenta su dirección."
+      },
+      {
+        "clave": "B",
+        "texto": "3 m/s² hacia la derecha",
+        "correcta": true,
+        "explicacion": "Es la correcta. Vertical: peso y normal se anulan (200 N − 200 N = 0). Horizontal: F neta = 100 N − 40 N = 60 N hacia la derecha. Por la segunda ley, a = F neta / m = 60 N ÷ 20 kg = 3 m/s².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "0,3 m/s² hacia la derecha",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de dividir la fuerza neta entre el peso (60 ÷ 200). En la segunda ley de Newton se divide entre la MASA (20 kg), no entre el peso (200 N).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde masa (kg) con peso (N)."
+      },
+      {
+        "clave": "D",
+        "texto": "5 m/s² hacia la derecha",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de dividir solo el empuje entre la masa (100 ÷ 20), ignorando la fricción. La aceleración depende de la fuerza NETA: 100 N − 40 N = 60 N.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa una sola fuerza en lugar de la suma de todas las fuerzas que actúan sobre la caja."
+      }
+    ],
+    "explicacion": "LEER: masa 20 kg; cuatro fuerzas: peso 200 N ↓, normal 200 N ↑, empuje 100 N →, fricción 40 N ←. COMPRENDER: se pide la aceleración. INTERPRETAR: la aceleración la produce la fuerza neta; las fuerzas verticales se equilibran y no producen movimiento vertical. REPRESENTAR: F neta (horizontal) = 100 − 40 = 60 N →; a = F neta / m. RAZONAR: se usa la masa (kg), no el peso (N); fuerzas opuestas se restan. RESOLVER: a = 60 ÷ 20 = 3 m/s² hacia la derecha (opción B). VERIFICAR: m · a = 20 · 3 = 60 N, que es exactamente la diferencia entre empuje y fricción.",
+    "que_identificar": "Las cuatro fuerzas con su dirección, la masa de la caja (20 kg) y que peso y normal se anulan.",
+    "que_revisar": "Diagrama de cuerpo libre; fuerza neta; segunda ley de Newton (F = m·a); diferencia entre masa y peso; fuerza de fricción.",
+    "refuerzo_ids": ["CIE-029", "CIE-062"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["dinamica", "segunda ley de newton", "friccion", "diagrama de fuerzas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-062",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica las fuerzas que se ejercen dos cuerpos que interactúan (tercera ley de Newton) y sus efectos según la masa de cada uno",
+    "habilidad": "razonar",
+    "tema": "Dinámica",
+    "subtema": "Tercera ley de Newton: fuerzas de acción y reacción en un choque entre cuerpos de masas distintas",
+    "dificultad": 2,
+    "contexto": "En una vía, un camión de **10 000 kg** y una moto de **200 kg** chocan de frente. En los noticieros se suele decir que \"el camión golpeó más fuerte a la moto\" porque la moto quedó destruida y el camión casi no se movió de su trayectoria.",
+    "estimulo": null,
+    "enunciado": "Durante el choque, ¿cuál afirmación describe correctamente las fuerzas y sus efectos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El camión ejerce sobre la moto una fuerza mayor que la que la moto ejerce sobre el camión, porque tiene más masa.",
+        "correcta": false,
+        "explicacion": "No responde. Por la tercera ley de Newton, las fuerzas que dos cuerpos se ejercen mutuamente tienen siempre la misma magnitud y sentidos opuestos, sin importar sus masas. La masa influye en el EFECTO de la fuerza (la aceleración), no en su tamaño.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el tamaño de la fuerza con el efecto que produce (el daño o el cambio de velocidad)."
+      },
+      {
+        "clave": "B",
+        "texto": "Las fuerzas son iguales y opuestas, por eso se anulan y ninguno de los dos vehículos cambia su velocidad.",
+        "correcta": false,
+        "explicacion": "No responde. Las fuerzas de acción y reacción actúan sobre cuerpos DISTINTOS (una sobre la moto y otra sobre el camión), por lo que no se anulan entre sí. Cada vehículo sí cambia su velocidad por la fuerza que recibe.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el par acción-reacción se cancela, como si actuara sobre el mismo cuerpo."
+      },
+      {
+        "clave": "C",
+        "texto": "La moto ejerce la mayor fuerza, porque iba a mayor velocidad que el camión.",
+        "correcta": false,
+        "explicacion": "No responde. El choque no dice que la moto fuera más rápida, y aun si lo fuera, las fuerzas de interacción entre ambos son iguales en magnitud. La velocidad no determina que un cuerpo ejerza más fuerza que el otro en la interacción.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia la fuerza con la velocidad o supone datos que el contexto no da."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos se ejercen fuerzas de igual magnitud y sentido opuesto, pero la moto sufre una aceleración unas 50 veces mayor porque su masa es 50 veces menor.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Tercera ley: F camión→moto = F moto→camión en magnitud. Segunda ley: a = F/m; con la misma F, la moto (200 kg) tiene una aceleración 10 000/200 = 50 veces mayor que la del camión. Por eso la moto cambia bruscamente su velocidad y sufre más daño.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: camión 10 000 kg, moto 200 kg; la creencia popular dice que el camión \"golpeó más fuerte\". COMPRENDER: se pide qué pasa con las fuerzas y con sus efectos. INTERPRETAR: en toda interacción hay un par de fuerzas (tercera ley) que actúan sobre cuerpos distintos. REPRESENTAR: F sobre la moto = F sobre el camión = F; a moto = F/200; a camión = F/10 000. RAZONAR: igual fuerza, masas diferentes → aceleraciones diferentes; el daño se relaciona con el cambio brusco de velocidad, no con una fuerza mayor. RESOLVER: a moto / a camión = 10 000/200 = 50 (opción D). VERIFICAR: el resultado explica la observación del noticiero (la moto destruida, el camión casi sin cambio) sin violar la tercera ley.",
+    "que_identificar": "Las masas de ambos vehículos y que la pregunta distingue entre la fuerza y su efecto.",
+    "que_revisar": "Tercera ley de Newton (acción y reacción actúan sobre cuerpos distintos); segunda ley (a = F/m); diferencia entre fuerza y aceleración.",
+    "refuerzo_ids": ["CIE-061", "CIE-065"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["dinamica", "tercera ley de newton", "choques", "seguridad vial", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-063",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela el movimiento de un cuerpo mediante la conservación de la energía mecánica (potencial gravitacional y cinética)",
+    "habilidad": "resolver",
+    "tema": "Trabajo y energía",
+    "subtema": "Conservación de la energía mecánica: rapidez en un punto intermedio de una montaña rusa",
+    "dificultad": 3,
+    "contexto": "En un parque de diversiones, un carrito de montaña rusa de **300 kg** parte del **reposo** desde el punto A, a **20 m** de altura sobre el suelo. Luego baja y pasa por el punto B, que está a **15 m** de altura. Supón que no hay fricción ni resistencia del aire y que g = 10 m/s².",
+    "estimulo": null,
+    "enunciado": "¿Con qué rapidez pasa el carrito por el punto B?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "20 m/s",
+        "correcta": false,
+        "explicacion": "No responde. Es la rapidez que tendría al llegar al suelo (bajando los 20 m completos): √(2·10·20) = 20 m/s. Pero B está a 15 m de altura; el carrito solo ha descendido 5 m.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa la altura total del punto A en lugar de la altura que realmente descendió."
+      },
+      {
+        "clave": "B",
+        "texto": "Aproximadamente 17,3 m/s",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de √(2·10·15), usando la altura del punto B como si fuera lo que bajó. La energía potencial que se convierte en cinética depende de la DIFERENCIA de alturas: 20 − 15 = 5 m.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa la altura del punto final en lugar de la diferencia de alturas."
+      },
+      {
+        "clave": "C",
+        "texto": "5 m/s",
+        "correcta": false,
+        "explicacion": "No responde. 5 es la altura que descendió (en metros), no una rapidez. Hay que convertir esa pérdida de energía potencial en energía cinética: v = √(2·g·Δh) = √100 = 10 m/s.",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Toma un dato intermedio (la diferencia de alturas) como resultado final, sin completar el cálculo."
+      },
+      {
+        "clave": "D",
+        "texto": "10 m/s",
+        "correcta": true,
+        "explicacion": "Es la correcta. Sin fricción, la energía mecánica se conserva: m·g·h_A = m·g·h_B + ½·m·v². La masa se cancela: v = √(2·g·(h_A − h_B)) = √(2·10·5) = √100 = 10 m/s.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: parte del reposo a 20 m; pasa por B a 15 m; sin fricción; g = 10 m/s²; masa 300 kg. COMPRENDER: se pide la rapidez en B. INTERPRETAR: sin fricción la energía mecánica total se conserva: la energía potencial que se pierde se convierte en cinética. REPRESENTAR: m·g·20 = m·g·15 + ½·m·v². RAZONAR: la masa aparece en todos los términos y se cancela (el dato de 300 kg no hace falta); lo que importa es el descenso, 5 m. RESOLVER: ½v² = 10·5 = 50 → v² = 100 → v = 10 m/s (opción D). VERIFICAR: con 300 kg, la energía potencial perdida es 300·10·5 = 15 000 J y la cinética en B es ½·300·10² = 15 000 J: coinciden.",
+    "que_identificar": "Que parte del reposo, las dos alturas (20 m y 15 m) y que no hay fricción.",
+    "que_revisar": "Energía potencial gravitacional y cinética; conservación de la energía mecánica; por qué la masa se cancela.",
+    "refuerzo_ids": ["CIE-060", "CIE-020"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["energia", "conservacion de la energia", "energia cinetica", "energia potencial", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-064",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observar y relacionar patrones en los datos para evaluar las predicciones",
+    "evidencia": "Contrasta una predicción sobre la potencia desarrollada por varias personas con los datos de masa, altura y tiempo de un experimento",
+    "habilidad": "verificar",
+    "tema": "Trabajo y energía",
+    "subtema": "Potencia: trabajo realizado frente al tiempo empleado al subir escaleras",
+    "dificultad": 2,
+    "contexto": "En clase de física, cuatro estudiantes suben corriendo la misma escalera del colegio (6 m de altura) y se mide el tiempo de cada uno. Antes del experimento, Tomás predijo: *\"Quien tenga mayor masa desarrollará mayor potencia\"*. Usa g = 10 m/s².",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Datos del experimento de la escalera",
+      "columnas": ["Estudiante", "Masa (kg)", "Altura subida (m)", "Tiempo (s)"],
+      "filas": [["Ana", 50, 6, 10], ["Beto", 60, 6, 15], ["Carla", 40, 6, 8], ["Diego", 70, 6, 20]],
+      "nota": "Trabajo para subir = peso × altura = m · g · h. Potencia = trabajo / tiempo."
+    },
+    "enunciado": "¿Qué se puede concluir sobre la predicción de Tomás a partir de los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No se cumple: Diego, el de mayor masa, desarrolla la menor potencia (210 W), porque aunque realiza el mayor trabajo tarda mucho más tiempo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Potencias: Ana 50·10·6/10 = 300 W; Beto 3 600/15 = 240 W; Carla 2 400/8 = 300 W; Diego 4 200/20 = 210 W. Diego, el de mayor masa, tiene la menor potencia, así que la predicción es falsa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Se cumple, porque Diego realiza el mayor trabajo (4 200 J) y por tanto la mayor potencia.",
+        "correcta": false,
+        "explicacion": "No responde. Diego sí hace el mayor trabajo, pero potencia no es lo mismo que trabajo: es trabajo por unidad de tiempo. Como Diego tarda 20 s, su potencia es 4 200 J / 20 s = 210 W, la menor del grupo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde trabajo (energía transferida) con potencia (rapidez con que se transfiere)."
+      },
+      {
+        "clave": "C",
+        "texto": "No se cumple: Carla, la que menos tarda, desarrolla una potencia mayor que la de todos los demás.",
+        "correcta": false,
+        "explicacion": "No responde. Carla tarda menos, pero también tiene menor masa: su potencia es 2 400 J / 8 s = 300 W, exactamente igual a la de Ana. La potencia depende del trabajo Y del tiempo, así que hay que calcularla.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que el más rápido siempre es el más potente, sin calcular ni comparar los valores."
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede evaluar la predicción, porque todos subieron la misma altura.",
+        "correcta": false,
+        "explicacion": "No responde. Que la altura sea la misma es una ventaja: es una variable controlada, y así las diferencias de potencia dependen solo de la masa y del tiempo. Con los datos de la tabla se puede calcular la potencia de cada uno y evaluar la predicción.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde controlar una variable con que falten datos para concluir."
+      }
+    ],
+    "explicacion": "LEER: cuatro estudiantes, misma altura (6 m), masas y tiempos distintos; predicción: \"mayor masa → mayor potencia\". COMPRENDER: hay que contrastar la predicción con los datos. INTERPRETAR: trabajo = m·g·h; potencia = trabajo/tiempo. REPRESENTAR: Ana 3 000 J/10 s = 300 W; Beto 3 600 J/15 s = 240 W; Carla 2 400 J/8 s = 300 W; Diego 4 200 J/20 s = 210 W. RAZONAR: la mayor masa (Diego) da el mayor trabajo, pero no la mayor potencia, porque su tiempo es el mayor. RESOLVER: la predicción no se cumple (opción A). VERIFICAR: ordenar por masa (Diego > Beto > Ana > Carla) da potencias 210 < 240 < 300 = 300: el orden es incluso el contrario al predicho.",
+    "que_identificar": "Masa, altura y tiempo de cada estudiante, y que la altura es igual para todos (variable controlada).",
+    "que_revisar": "Trabajo contra la gravedad (m·g·h); potencia como trabajo por unidad de tiempo (vatios); evaluación de predicciones con datos.",
+    "refuerzo_ids": ["CIE-063", "CIE-073"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["energia", "potencia", "trabajo", "indagacion", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-065",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva conclusiones sobre la conservación de la cantidad de movimiento y de la energía cinética a partir de los datos de choques entre carritos",
+    "habilidad": "verificar",
+    "tema": "Cantidad de movimiento",
+    "subtema": "Choques elásticos e inelásticos: conservación del momento y pérdida de energía cinética",
+    "dificultad": 3,
+    "contexto": "En el laboratorio se hicieron chocar carritos sobre un riel casi sin fricción. En cada ensayo, el carrito 1 se lanza contra el carrito 2, que está quieto. En el ensayo 1 los carritos rebotan; en los ensayos 2 y 3 tienen velcro y quedan unidos. Se calcularon la cantidad de movimiento total (p = m·v) y la energía cinética total (Ec = ½·m·v²) antes y después de cada choque.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resultados de los choques",
+      "columnas": ["Ensayo", "Masas m1 y m2 (kg)", "Velocidades antes (m/s)", "Velocidades después (m/s)", "p total antes (kg·m/s)", "p total después (kg·m/s)", "Ec total antes (J)", "Ec total después (J)"],
+      "filas": [["1 (rebotan)", "1 y 1", "4 y 0", "0 y 4", 4, 4, 8, 8], ["2 (unidos)", "1 y 1", "4 y 0", "2 y 2", 4, 4, 8, 4], ["3 (unidos)", "2 y 1", "3 y 0", "2 y 2", 6, 6, 9, 6]],
+      "nota": null
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En los ensayos 2 y 3 se violó el principio de conservación de la energía, porque la energía cinética disminuyó.",
+        "correcta": false,
+        "explicacion": "No responde. La energía total sí se conserva: la energía cinética \"perdida\" (4 J en el ensayo 2 y 3 J en el 3) se transformó en calor, sonido y deformación del velcro. Lo que no se conserva en esos choques es la energía CINÉTICA.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la energía cinética con la energía total del sistema."
+      },
+      {
+        "clave": "B",
+        "texto": "La cantidad de movimiento total se conservó en los tres ensayos, pero la energía cinética solo se conservó cuando los carritos no quedaron unidos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En los tres ensayos p antes = p después (4 = 4, 4 = 4, 6 = 6). La Ec se mantiene en el ensayo 1 (8 = 8) y disminuye en los ensayos 2 (8 → 4) y 3 (9 → 6), en los que los carritos quedan unidos (choques inelásticos).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Tanto la cantidad de movimiento como la energía cinética se conservan en cualquier choque.",
+        "correcta": false,
+        "explicacion": "No responde. Eso solo es cierto en el ensayo 1. En los ensayos 2 y 3 la energía cinética después del choque es menor que antes (4 J < 8 J y 6 J < 9 J).",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generaliza a partir de la primera fila de la tabla sin revisar las demás."
+      },
+      {
+        "clave": "D",
+        "texto": "La cantidad de movimiento solo se conserva cuando los dos carritos tienen la misma masa.",
+        "correcta": false,
+        "explicacion": "No responde. En el ensayo 3 las masas son distintas (2 kg y 1 kg) y la cantidad de movimiento también se conserva: 2·3 = 6 kg·m/s antes y (2 + 1)·2 = 6 kg·m/s después.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Saca una condición que los datos no respaldan, ignorando el ensayo con masas distintas."
+      }
+    ],
+    "explicacion": "LEER: tres choques; en el 1 los carritos rebotan y en el 2 y el 3 quedan unidos; la tabla da p y Ec totales antes y después. COMPRENDER: se pide la conclusión que los datos respaldan. INTERPRETAR: comparar columna por columna: p antes vs p después y Ec antes vs Ec después. REPRESENTAR: p: 4→4, 4→4, 6→6 (siempre igual). Ec: 8→8, 8→4, 9→6 (solo igual en el ensayo 1). RAZONAR: el momento se conserva en todos los choques (sin fuerzas externas netas); la Ec se conserva solo en el choque elástico; la Ec que falta no se destruye, se transforma en otras formas de energía. RESOLVER: opción B. VERIFICAR: ensayo 3: p después = 3 kg · 2 m/s = 6; Ec después = ½·3·2² = 6 J < 9 J; ambos coinciden con la tabla y con la conclusión B.",
+    "que_identificar": "Las columnas de p y Ec antes y después, y en cuáles ensayos los carritos quedan unidos.",
+    "que_revisar": "Cantidad de movimiento (p = m·v) y su conservación; choques elásticos e inelásticos; transformación de la energía cinética en otras formas.",
+    "refuerzo_ids": ["CIE-062", "CIE-063"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["cantidad de movimiento", "choques", "energia", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-066",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Modelar fenómenos de la naturaleza con base en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela el funcionamiento de una prensa hidráulica con el principio de Pascal, relacionando presión, fuerza y área",
+    "habilidad": "razonar",
+    "tema": "Fluidos",
+    "subtema": "Principio de Pascal: gato hidráulico y multiplicación de la fuerza",
+    "dificultad": 2,
+    "contexto": "En un taller de Bucaramanga usan un gato hidráulico para levantar carros. El aceite del gato conecta dos émbolos: el pequeño tiene un área de **10 cm²** y el grande, de **500 cm²**. El mecánico aplica una fuerza de **200 N** sobre el émbolo pequeño.",
+    "estimulo": null,
+    "enunciado": "¿Qué fuerza ejerce el aceite sobre el émbolo grande y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "200 N, porque el líquido transmite la misma fuerza a todos los puntos.",
+        "correcta": false,
+        "explicacion": "No responde. El principio de Pascal dice que el líquido transmite la misma PRESIÓN, no la misma fuerza. Como el área grande es 50 veces mayor, la fuerza también es 50 veces mayor.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde presión con fuerza al enunciar el principio de Pascal."
+      },
+      {
+        "clave": "B",
+        "texto": "4 N, porque la fuerza se reparte en un área 50 veces mayor.",
+        "correcta": false,
+        "explicacion": "No responde. Invierte la relación: con la misma presión, a mayor área corresponde MAYOR fuerza (F = P · A). Si la fuerza disminuyera, el gato no serviría para levantar un carro.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplica la proporción al revés (divide en lugar de multiplicar por la razón de áreas)."
+      },
+      {
+        "clave": "C",
+        "texto": "10 000 N, porque la presión se transmite igual en todo el aceite y el área del émbolo grande es 50 veces mayor.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Presión en el émbolo pequeño: P = 200 N / 10 cm² = 20 N/cm². Esa presión llega igual al émbolo grande: F = 20 N/cm² × 500 cm² = 10 000 N.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "100 000 N, porque se multiplica la fuerza aplicada por el área del émbolo grande.",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de 200 × 500, sin dividir entre el área del émbolo pequeño. La fuerza se multiplica por la RAZÓN de áreas (500/10 = 50), no por el área grande.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplica fuerza por área sin calcular primero la presión."
+      }
+    ],
+    "explicacion": "LEER: A₁ = 10 cm², A₂ = 500 cm², F₁ = 200 N. COMPRENDER: se pide F₂ y la razón física. INTERPRETAR: principio de Pascal: la presión aplicada a un líquido encerrado se transmite igual a todos sus puntos. REPRESENTAR: P = F₁/A₁ = F₂/A₂ → F₂ = F₁ · (A₂/A₁). RAZONAR: se transmite la presión, no la fuerza; a mayor área, mayor fuerza. RESOLVER: F₂ = 200 · (500/10) = 200 · 50 = 10 000 N (opción C). VERIFICAR: 200/10 = 20 N/cm² y 10 000/500 = 20 N/cm²: la presión es la misma en ambos émbolos.",
+    "que_identificar": "Las dos áreas, la fuerza aplicada y que el líquido está encerrado.",
+    "que_revisar": "Presión (P = F/A); principio de Pascal; prensa y gato hidráulico.",
+    "refuerzo_ids": ["CIE-006", "CIE-067"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["fluidos", "presion", "principio de pascal", "maquinas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-067",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva conclusiones sobre los factores de los que depende el empuje a partir de mediciones con dinamómetro en distintos líquidos",
+    "habilidad": "interpretar",
+    "tema": "Fluidos",
+    "subtema": "Principio de Arquímedes: empuje según la densidad del líquido y el peso del objeto",
+    "dificultad": 3,
+    "contexto": "Un grupo de estudiantes cuelga dos objetos, P y Q, de un dinamómetro. Ambos tienen el **mismo volumen (200 cm³)** pero distinto peso. Miden el peso de cada objeto en el aire y luego su **peso aparente** cuando está completamente sumergido en distintos líquidos. El empuje es la diferencia entre el peso en el aire y el peso aparente.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Mediciones con el dinamómetro",
+      "columnas": ["Objeto", "Peso en el aire (N)", "Líquido", "Densidad del líquido (g/cm³)", "Peso aparente sumergido (N)"],
+      "filas": [["P", 5, "Agua", 1, 3], ["P", 5, "Aceite", 0.8, 3.4], ["P", 5, "Agua con sal", 1.1, 2.8], ["Q", 8, "Agua", 1, 6]],
+      "nota": "Ambos objetos tienen 200 cm³ y quedan totalmente sumergidos."
+    },
+    "enunciado": "¿Cuál conclusión se puede derivar de estos datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Para un mismo volumen sumergido, el empuje aumenta con la densidad del líquido y no depende del peso del objeto.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Empuje sobre P: agua 5,0 − 3,0 = 2,0 N; aceite 5,0 − 3,4 = 1,6 N; agua con sal 5,0 − 2,8 = 2,2 N: crece con la densidad. Empuje sobre Q en agua: 8,0 − 6,0 = 2,0 N, igual que sobre P en agua, aunque Q pesa más.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El empuje depende del peso del objeto: Q, que es más pesado, recibe un empuje mayor en el agua.",
+        "correcta": false,
+        "explicacion": "No responde. Q tiene mayor peso APARENTE (6,0 N), pero su empuje es 8,0 − 6,0 = 2,0 N, igual al de P en agua (5,0 − 3,0 = 2,0 N). El empuje depende del volumen de líquido desalojado, no del peso del objeto.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara los pesos aparentes en lugar de calcular el empuje como diferencia."
+      },
+      {
+        "clave": "C",
+        "texto": "El empuje es igual al peso aparente medido en cada líquido.",
+        "correcta": false,
+        "explicacion": "No responde. El peso aparente es lo que marca el dinamómetro; el empuje es lo que el líquido \"le quita\" al peso: empuje = peso en el aire − peso aparente. Por ejemplo, para P en agua el empuje es 2,0 N, no 3,0 N.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el empuje con el peso aparente."
+      },
+      {
+        "clave": "D",
+        "texto": "El empuje es el mismo en todos los líquidos, porque el objeto P siempre tiene el mismo volumen.",
+        "correcta": false,
+        "explicacion": "No responde. Con el mismo volumen, el empuje sobre P cambia según el líquido (1,6 N en aceite, 2,0 N en agua, 2,2 N en agua con sal), porque el empuje es igual al peso del líquido desalojado, que depende de su densidad.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Considera solo el volumen como factor del empuje y olvida la densidad del líquido."
+      }
+    ],
+    "explicacion": "LEER: P y Q tienen el mismo volumen (200 cm³); P se mide en tres líquidos; Q solo en agua. COMPRENDER: se pide qué conclusión sobre el empuje respaldan los datos. INTERPRETAR: empuje = peso en el aire − peso aparente. REPRESENTAR: P: agua 2,0 N, aceite 1,6 N, agua con sal 2,2 N; Q: agua 2,0 N. RAZONAR: comparar P en los tres líquidos (misma masa y volumen, cambia la densidad) muestra el efecto de la densidad; comparar P y Q en agua (mismo volumen y líquido, cambia el peso) muestra que el peso no influye. RESOLVER: opción A. VERIFICAR: con Arquímedes, empuje = ρ·V·g = 1 000 kg/m³ · 0,0002 m³ · 10 m/s² = 2,0 N en agua; en aceite 800 · 0,0002 · 10 = 1,6 N; coincide con la tabla.",
+    "que_identificar": "Que el empuje se obtiene restando peso en el aire menos peso aparente, y qué variable cambia entre cada par de filas.",
+    "que_revisar": "Principio de Arquímedes; empuje y peso aparente; densidad; comparación de ensayos cambiando una sola variable.",
+    "refuerzo_ids": ["CIE-022", "CIE-066"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["fluidos", "principio de arquimedes", "empuje", "densidad", "indagacion", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-068",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la frecuencia, la longitud de onda y la rapidez de propagación de una onda electromagnética",
+    "habilidad": "resolver",
+    "tema": "Ondas",
+    "subtema": "Relación v = λ · f en ondas de radio FM",
+    "dificultad": 2,
+    "contexto": "Una emisora comunitaria de radio transmite en la frecuencia **100 MHz** (1 MHz = 1 000 000 Hz). Las ondas de radio son ondas electromagnéticas que viajan por el aire a unos **300 000 000 m/s** (3 × 10⁸ m/s).",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la longitud de onda de las ondas que emite la emisora?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0,33 m",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de dividir la frecuencia entre la rapidez (10⁸ / 3 × 10⁸). La relación es v = λ · f, así que λ = v / f = 3 × 10⁸ / 10⁸ = 3 m.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el cociente al despejar la longitud de onda."
+      },
+      {
+        "clave": "B",
+        "texto": "300 m",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de usar 1 000 000 Hz (1 MHz) como frecuencia, olvidando el factor 100: 100 MHz = 100 000 000 Hz = 10⁸ Hz. Con el valor correcto, λ = 3 × 10⁸ / 10⁸ = 3 m.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convierte mal los megahercios a hercios."
+      },
+      {
+        "clave": "C",
+        "texto": "3 × 10¹⁶ m",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de multiplicar la rapidez por la frecuencia. Ese producto no tiene sentido físico aquí: la longitud de onda es la rapidez DIVIDIDA entre la frecuencia.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No recuerda o no despeja correctamente la ecuación v = λ · f."
+      },
+      {
+        "clave": "D",
+        "texto": "3 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. v = λ · f → λ = v / f = (3 × 10⁸ m/s) / (1 × 10⁸ Hz) = 3 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: f = 100 MHz; v = 3 × 10⁸ m/s. COMPRENDER: se pide la longitud de onda. INTERPRETAR: en toda onda, la rapidez es la longitud de onda por la frecuencia. REPRESENTAR: λ = v / f; f = 100 × 10⁶ Hz = 10⁸ Hz. RAZONAR: a mayor frecuencia, menor longitud de onda; dividir (no multiplicar) y convertir bien las unidades. RESOLVER: λ = 3 × 10⁸ / 10⁸ = 3 m (opción D). VERIFICAR: 3 m × 10⁸ Hz = 3 × 10⁸ m/s, la rapidez dada; además, las antenas de FM suelen medir del orden de 1 m, coherente con λ de unos metros.",
+    "que_identificar": "La frecuencia en hercios (10⁸ Hz) y la rapidez de la onda.",
+    "que_revisar": "Relación v = λ · f; conversión de prefijos (mega = 10⁶); espectro electromagnético.",
+    "refuerzo_ids": ["CIE-069", "CIE-030"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["ondas", "ondas electromagneticas", "radio", "notacion cientifica", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-069",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica cualitativamente el efecto Doppler en el sonido de una fuente en movimiento",
+    "habilidad": "comprender",
+    "tema": "Ondas",
+    "subtema": "Efecto Doppler cualitativo: sirena de una ambulancia que se acerca y se aleja",
+    "dificultad": 1,
+    "contexto": "Mientras espera en un paradero, Valentina escucha la sirena de una ambulancia. Nota que, mientras la ambulancia se **acerca**, el sonido es más **agudo**, y cuando pasa y se **aleja**, se vuelve más **grave**. El conductor de la ambulancia, en cambio, oye siempre el mismo tono.",
+    "estimulo": null,
+    "enunciado": "¿Qué explica lo que percibe Valentina?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al acercarse, la ambulancia emite cada onda un poco más cerca de Valentina, así que a ella le llegan más ondas por segundo (mayor frecuencia percibida), aunque la frecuencia emitida por la sirena no cambia.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Es el efecto Doppler: el movimiento de la fuente \"comprime\" los frentes de onda por delante y los \"estira\" por detrás. Valentina percibe mayor frecuencia (más agudo) al acercarse y menor (más grave) al alejarse; el conductor, que se mueve con la sirena, oye la frecuencia original.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La sirena emite un sonido más agudo cuando la ambulancia se acerca a las personas, para advertirles.",
+        "correcta": false,
+        "explicacion": "No responde. Si la sirena cambiara su tono, el conductor también lo oiría cambiar, y el contexto dice que él oye siempre el mismo tono. El cambio está en la frecuencia PERCIBIDA, no en la emitida.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el cambio a la fuente y no usa el dato del conductor."
+      },
+      {
+        "clave": "C",
+        "texto": "Cuando la ambulancia se acerca, el sonido viaja más rápido por el aire y por eso se oye más agudo.",
+        "correcta": false,
+        "explicacion": "No responde. La rapidez del sonido depende del medio (el aire), no del movimiento de la fuente. Lo que cambia es la separación entre los frentes de onda que llegan a Valentina, es decir, la frecuencia.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la rapidez de la onda depende de la rapidez de quien la produce."
+      },
+      {
+        "clave": "D",
+        "texto": "Cuando la ambulancia está cerca, el sonido se oye más fuerte, y un sonido más fuerte es más agudo.",
+        "correcta": false,
+        "explicacion": "No responde. Fuerte o débil es la intensidad (volumen); agudo o grave es el tono, que depende de la frecuencia. Un sonido puede ser fuerte y grave a la vez; la intensidad no hace más agudo un sonido.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde intensidad (volumen) con tono (frecuencia)."
+      }
+    ],
+    "explicacion": "LEER: al acercarse el sonido es más agudo; al alejarse, más grave; el conductor oye siempre lo mismo. COMPRENDER: se pide explicar el cambio percibido por Valentina. INTERPRETAR: agudo/grave se relaciona con la frecuencia; como el conductor no nota cambio, la sirena emite siempre la misma frecuencia. REPRESENTAR: fuente que se acerca → frentes de onda más juntos delante → más ondas por segundo en el oído → mayor frecuencia percibida; al alejarse, lo contrario. RAZONAR: se descartan la fuente que cambia (B), la rapidez que cambia (C) y la confusión entre volumen y tono (D). RESOLVER: opción A (efecto Doppler). VERIFICAR: la explicación da cuenta de los tres datos del contexto: más agudo al acercarse, más grave al alejarse y sin cambio para el conductor.",
+    "que_identificar": "El cambio de agudo a grave para Valentina y que el conductor no percibe cambio.",
+    "que_revisar": "Efecto Doppler; frecuencia y tono; diferencia entre tono e intensidad; la rapidez del sonido depende del medio.",
+    "refuerzo_ids": ["CIE-068", "CIE-030"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["ondas", "sonido", "efecto doppler", "transporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-070",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Identifica las características de la imagen formada por una lente convergente según la posición del objeto",
+    "habilidad": "interpretar",
+    "tema": "Óptica",
+    "subtema": "Lente convergente usada como lupa: imagen virtual, derecha y aumentada",
+    "dificultad": 2,
+    "contexto": "Una lente convergente (de vidrio, que desvía la luz por **refracción**) tiene una distancia focal de **10 cm**. En la clase de física se colocó un objeto a diferentes distancias de la lente y se registraron las características de la imagen formada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Imágenes formadas por una lente convergente (f = 10 cm)",
+      "columnas": ["Distancia del objeto (cm)", "Tipo de imagen", "Orientación", "Tamaño respecto al objeto"],
+      "filas": [["30", "Real (se proyecta en una pantalla)", "Invertida", "La mitad"], ["20", "Real (se proyecta en una pantalla)", "Invertida", "Igual"], ["15", "Real (se proyecta en una pantalla)", "Invertida", "El doble"], ["5", "Virtual (se ve a través de la lente)", "Derecha", "El doble"]],
+      "nota": null
+    },
+    "enunciado": "Don Jairo quiere usar esta lente como lupa para leer la letra pequeña de la etiqueta de un medicamento, mirando a través de ella. ¿A qué distancia de la lente debe colocar la etiqueta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A 30 cm",
+        "correcta": false,
+        "explicacion": "No responde. A 30 cm la imagen es real, invertida y la mitad del tamaño: la letra se vería más pequeña y al revés. No sirve como lupa.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No relacionó las características necesarias (aumentada y derecha) con las columnas de la tabla."
+      },
+      {
+        "clave": "B",
+        "texto": "A 5 cm",
+        "correcta": true,
+        "explicacion": "Es la correcta. Solo cuando el objeto está más cerca de la lente que la distancia focal (5 cm < 10 cm) la imagen es virtual (se ve a través de la lente), derecha y aumentada (el doble): así funciona una lupa.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "A 15 cm",
+        "correcta": false,
+        "explicacion": "No responde. A 15 cm la imagen también es el doble de grande, pero es real e invertida: se forma al otro lado de la lente (sobre una pantalla) y las letras quedarían al revés. Es el distractor atractivo porque cumple solo una de las condiciones.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó solo en el tamaño (el doble) e ignoró la orientación y el tipo de imagen."
+      },
+      {
+        "clave": "D",
+        "texto": "A 20 cm",
+        "correcta": false,
+        "explicacion": "No responde. A 20 cm (el doble de la distancia focal) la imagen es real, invertida y del mismo tamaño: no amplía la letra.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió una distancia sin revisar las características de la imagen en la tabla."
+      }
+    ],
+    "explicacion": "LEER: lente convergente de f = 10 cm; tabla con cuatro distancias del objeto y el tipo, orientación y tamaño de la imagen. COMPRENDER: una lupa debe mostrar, al mirar a través de ella, una imagen derecha y más grande. INTERPRETAR: se necesitan tres condiciones: virtual, derecha y aumentada. REPRESENTAR: 30 cm → menor e invertida; 20 cm → igual e invertida; 15 cm → mayor pero invertida y real; 5 cm → mayor, derecha y virtual. RAZONAR: solo la fila de 5 cm cumple las tres condiciones; ocurre porque el objeto está dentro de la distancia focal. RESOLVER: opción B. VERIFICAR: con 1/f = 1/d_o + 1/d_i: 1/10 = 1/5 + 1/d_i → d_i = −10 cm (negativa = imagen virtual), aumento = 10/5 = 2, coherente con la tabla.",
+    "que_identificar": "Las tres características que necesita una lupa y la fila de la tabla que las cumple todas.",
+    "que_revisar": "Refracción de la luz en lentes; lentes convergentes; imágenes reales y virtuales; distancia focal.",
+    "refuerzo_ids": ["CIE-068"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["optica", "luz", "refraccion", "lentes", "salud", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-071",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observar y relacionar patrones en los datos para evaluar las predicciones",
+    "evidencia": "Evalúa una predicción sobre la corriente inducida en una bobina contrastándola con datos de un experimento con un imán",
+    "habilidad": "verificar",
+    "tema": "Electromagnetismo",
+    "subtema": "Inducción electromagnética: la corriente aparece solo cuando cambia el campo magnético en la bobina",
+    "dificultad": 2,
+    "contexto": "Una bobina de alambre de cobre se conecta a un amperímetro muy sensible (galvanómetro), sin pilas. Antes del experimento, Luisa predijo: *\"Habrá corriente en la bobina siempre que el imán esté dentro de ella\"*. La tabla muestra los resultados.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Corriente registrada en la bobina",
+      "columnas": ["Ensayo", "Qué se hizo", "Corriente (mA)", "Sentido de la aguja"],
+      "filas": [["1", "Imán quieto dentro de la bobina", 0, "No se mueve"], ["2", "Imán introducido lentamente", 2, "Derecha"], ["3", "Imán introducido rápidamente", 6, "Derecha"], ["4", "Imán sacado rápidamente", 6, "Izquierda"], ["5", "Imán quieto; bobina acercada rápidamente hacia él", 6, "Derecha"]],
+      "nota": null
+    },
+    "enunciado": "¿Qué se concluye sobre la predicción de Luisa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se cumple, porque en el ensayo 3 el imán está dentro de la bobina y hay corriente de 6 mA.",
+        "correcta": false,
+        "explicacion": "No responde. Un solo ensayo a favor no confirma la predicción; el ensayo 1 la contradice: el imán está dentro de la bobina, quieto, y la corriente es 0.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Busca solo un dato que apoye la predicción e ignora el que la contradice."
+      },
+      {
+        "clave": "B",
+        "texto": "No se cumple, porque la corriente solo aparece cuando se mueve el imán; si se mueve la bobina no hay corriente.",
+        "correcta": false,
+        "explicacion": "No responde. La primera parte es parcialmente cierta, pero el ensayo 5 muestra que al mover la bobina con el imán quieto también hay corriente (6 mA). Lo que importa es el movimiento RELATIVO.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó el ensayo 5 y generaliza a partir de los ensayos en que se mueve el imán."
+      },
+      {
+        "clave": "C",
+        "texto": "No se cumple: con el imán quieto dentro de la bobina no hay corriente; la corriente aparece cuando el campo magnético en la bobina cambia (por movimiento relativo), es mayor si el cambio es más rápido y cambia de sentido al sacar el imán.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Ensayo 1: imán dentro y quieto → 0 mA (refuta la predicción). Ensayos 2 y 3: más rápido → más corriente (2 vs 6 mA). Ensayo 4: al sacar, la aguja va al otro lado. Ensayo 5: mover la bobina también funciona. Es la inducción electromagnética (ley de Faraday).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede evaluar, porque no se sabe qué tan fuerte es el imán.",
+        "correcta": false,
+        "explicacion": "No responde. La intensidad del imán no cambia entre ensayos (es el mismo imán), así que es una variable controlada. Los datos bastan para evaluar la predicción: el ensayo 1 la refuta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Cree que falta información cuando la variable está controlada."
+      }
+    ],
+    "explicacion": "LEER: bobina con galvanómetro, sin pilas; predicción: \"habrá corriente siempre que el imán esté dentro\". COMPRENDER: hay que contrastar la predicción con los cinco ensayos. INTERPRETAR: buscar un ensayo con el imán dentro y sin corriente. REPRESENTAR: quieto → 0; lento → 2 mA; rápido → 6 mA; sacar → 6 mA en sentido opuesto; mover la bobina → 6 mA. RAZONAR: el ensayo 1 contradice la predicción; el patrón es que la corriente depende del CAMBIO del campo magnético (movimiento relativo) y de su rapidez. RESOLVER: opción C. VERIFICAR: la conclusión explica los cinco ensayos a la vez; así funcionan los generadores de las centrales eléctricas, que hacen girar bobinas frente a imanes.",
+    "que_identificar": "El ensayo 1 (imán dentro y quieto: 0 mA) y el ensayo 5 (se mueve la bobina).",
+    "que_revisar": "Inducción electromagnética (ley de Faraday); movimiento relativo entre imán y bobina; generadores eléctricos; evaluación de predicciones con contraejemplos.",
+    "refuerzo_ids": ["CIE-072", "CIE-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["electromagnetismo", "induccion", "magnetismo", "indagacion", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-072",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva conclusiones sobre el cumplimiento de la ley de Ohm a partir de gráficas corriente-voltaje de dos elementos",
+    "habilidad": "interpretar",
+    "tema": "Electricidad",
+    "subtema": "Ley de Ohm: resistor óhmico frente a bombillo cuya resistencia cambia con la temperatura",
+    "dificultad": 2,
+    "contexto": "En el laboratorio, un grupo aplicó distintos voltajes a un **resistor** y a un **bombillo pequeño**, y midió la corriente en cada caso. La gráfica muestra los resultados. Recuerda que la resistencia es R = V / I.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Corriente según el voltaje aplicado",
+      "eje_x": "Voltaje (V)",
+      "eje_y": "Corriente (A)",
+      "series": [
+        { "nombre": "Resistor", "valores": [["0", 0], ["3", 0.1], ["6", 0.2], ["9", 0.3], ["12", 0.4]] },
+        { "nombre": "Bombillo", "valores": [["0", 0], ["3", 0.15], ["6", 0.25], ["9", 0.32], ["12", 0.37]] }
+      ]
+    },
+    "enunciado": "¿Cuál conclusión es válida a partir de los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los dos cumplen la ley de Ohm, porque en ambos la corriente aumenta cuando aumenta el voltaje.",
+        "correcta": false,
+        "explicacion": "No responde. Cumplir la ley de Ohm exige que la corriente sea PROPORCIONAL al voltaje (R constante), no solo que aumente. En el bombillo, al duplicar el voltaje de 3 a 6 V, la corriente pasa de 0,15 a 0,25 A: no se duplica.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde \"aumentar juntos\" con \"ser directamente proporcionales\"."
+      },
+      {
+        "clave": "B",
+        "texto": "El resistor tiene una resistencia constante de 30 Ω; en el bombillo la resistencia aumenta con el voltaje, porque la corriente crece cada vez menos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Resistor: 3/0,1 = 6/0,2 = 9/0,3 = 12/0,4 = 30 Ω (cumple la ley de Ohm). Bombillo: 3/0,15 = 20 Ω; 6/0,25 = 24 Ω; 9/0,32 ≈ 28 Ω; 12/0,37 ≈ 32 Ω: la resistencia aumenta porque el filamento se calienta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La resistencia del resistor es de aproximadamente 0,03 Ω, porque se divide la corriente entre el voltaje.",
+        "correcta": false,
+        "explicacion": "No responde. La resistencia es R = V / I, no I / V. Con 3 V y 0,1 A: R = 3 / 0,1 = 30 Ω. El valor 0,033 corresponde a 0,1 / 3.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación de la ley de Ohm."
+      },
+      {
+        "clave": "D",
+        "texto": "El bombillo tiene menor resistencia que el resistor para cualquier voltaje.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto para voltajes bajos (20 Ω frente a 30 Ω a 3 V), pero a 12 V el bombillo tiene 12/0,37 ≈ 32 Ω, más que el resistor. En la gráfica, a 12 V la curva del bombillo está por debajo de la del resistor (menos corriente, más resistencia).",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara las curvas solo en el primer tramo y generaliza."
+      }
+    ],
+    "explicacion": "LEER: dos series de corriente contra voltaje: resistor (recta) y bombillo (curva que se aplana). COMPRENDER: se pide la conclusión válida sobre la resistencia de cada elemento. INTERPRETAR: si I es proporcional a V, R = V/I es constante (ley de Ohm); si la curva se aplana, R aumenta. REPRESENTAR: resistor: R = 30 Ω en todos los puntos; bombillo: 20, 24, ≈28, ≈32 Ω. RAZONAR: A confunde aumentar con ser proporcional; C invierte V/I; D generaliza el tramo inicial. RESOLVER: opción B. VERIFICAR: con R = 30 Ω, a 9 V la corriente sería 9/30 = 0,3 A, igual al dato; y las curvas se cruzan entre 9 y 12 V, lo que confirma que D es falsa.",
+    "que_identificar": "Los pares voltaje-corriente de cada serie y si la corriente se duplica cuando se duplica el voltaje.",
+    "que_revisar": "Ley de Ohm (V = I·R); elementos óhmicos y no óhmicos; efecto de la temperatura en la resistencia de un filamento.",
+    "refuerzo_ids": ["CIE-015", "CIE-073"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["electricidad", "ley de ohm", "circuitos", "laboratorio", "grafico de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-073",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Calcula la energía consumida por un electrodoméstico en kWh a partir de su potencia y tiempo de uso, y su costo en el recibo",
+    "habilidad": "resolver",
+    "tema": "Energía en el hogar",
+    "subtema": "Consumo en kWh y costo mensual de un electrodoméstico",
+    "dificultad": 1,
+    "contexto": "En una casa de Medellín, la etiqueta de la plancha dice **1 000 W**. La familia la usa **30 minutos cada día** durante los **30 días** del mes. En el recibo de energía, el kilovatio-hora (kWh) cuesta **$800**.",
+    "estimulo": null,
+    "enunciado": "¿Cuánto aporta el uso de la plancha al valor mensual del recibo de energía?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "$400",
+        "correcta": false,
+        "explicacion": "No responde. Es el costo de UN solo día: 1 kW × 0,5 h = 0,5 kWh × $800 = $400. Falta multiplicar por los 30 días del mes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el consumo diario y no leyó que se pedía el mensual."
+      },
+      {
+        "clave": "B",
+        "texto": "$7 200",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de tomar 30 minutos como 0,3 h: 1 kW × 0,3 h × 30 = 9 kWh × $800. Pero 30 minutos son media hora, 0,5 h.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convierte minutos a horas escribiendo 30 min = 0,3 h."
+      },
+      {
+        "clave": "C",
+        "texto": "$12 000 000",
+        "correcta": false,
+        "explicacion": "No responde. Resulta de usar 1 000 (vatios) en lugar de 1 kW: 1 000 × 0,5 × 30 = 15 000 \"kWh\". Como la tarifa está en kilovatios-hora, hay que pasar los vatios a kilovatios (1 000 W = 1 kW).",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "No convierte vatios a kilovatios antes de calcular los kWh."
+      },
+      {
+        "clave": "D",
+        "texto": "$12 000",
+        "correcta": true,
+        "explicacion": "Es la correcta. Energía = potencia × tiempo = 1 kW × 0,5 h/día × 30 días = 15 kWh. Costo = 15 kWh × $800 = $12 000.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: potencia 1 000 W; 30 min diarios; 30 días; $800 por kWh. COMPRENDER: se pide el costo mensual del uso de la plancha. INTERPRETAR: el recibo cobra energía (kWh), que es potencia por tiempo. REPRESENTAR: E = P · t, con P en kW y t en horas. RAZONAR: 1 000 W = 1 kW; 30 min = 0,5 h; tiempo mensual = 0,5 × 30 = 15 h. RESOLVER: E = 1 × 15 = 15 kWh; costo = 15 × 800 = $12 000 (opción D). VERIFICAR: costo diario $400 × 30 días = $12 000, el mismo resultado.",
+    "que_identificar": "Potencia en vatios, tiempo diario en minutos, número de días y tarifa por kWh.",
+    "que_revisar": "Energía eléctrica (E = P · t); kilovatio-hora; conversión de W a kW y de minutos a horas; lectura del recibo de energía.",
+    "refuerzo_ids": ["CIE-004", "CIE-075"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["energia", "hogar", "recibo de energia", "potencia", "cts", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-074",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analizar el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Explica, con base en la energía cinética, el efecto de la velocidad de los vehículos sobre la distancia de frenado y la seguridad de los peatones",
+    "habilidad": "razonar",
+    "tema": "Seguridad vial y energía",
+    "subtema": "Distancia de frenado proporcional al cuadrado de la rapidez: límite de velocidad en zonas escolares",
+    "dificultad": 2,
+    "contexto": "La alcaldía de un municipio propone bajar el límite de velocidad frente a los colegios de **60 km/h a 30 km/h**. Para sustentarlo, presenta mediciones de la distancia que recorre un mismo carro, en la misma vía seca, desde que el conductor pisa el freno hasta que se detiene.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Distancia de frenado de un carro en vía seca",
+      "columnas": ["Velocidad (km/h)", "Distancia de frenado (m)"],
+      "filas": [["30", 5], ["60", 20], ["90", 45]],
+      "nota": "No incluye la distancia recorrida durante el tiempo de reacción del conductor."
+    },
+    "enunciado": "¿Por qué reducir la velocidad a la mitad disminuye tanto la distancia de frenado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque la energía cinética del carro depende del cuadrado de su rapidez; a la mitad de la rapidez, el carro tiene la cuarta parte de energía que los frenos deben disipar, y la distancia de frenado se reduce a la cuarta parte (de 20 m a 5 m).",
+        "correcta": true,
+        "explicacion": "Es la correcta. Ec = ½·m·v². Si v se reduce a la mitad, Ec se reduce a (½)² = ¼. Con la misma fuerza de frenado, la distancia es proporcional a la energía que hay que disipar: 20 m / 4 = 5 m. La tabla lo confirma también de 30 a 90 km/h: triple de rapidez → nueve veces la distancia (5 → 45 m).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la distancia de frenado es proporcional a la velocidad: a la mitad de velocidad, la mitad de distancia.",
+        "correcta": false,
+        "explicacion": "No responde. Si fuera proporcional, a 30 km/h la distancia sería 10 m, pero la tabla muestra 5 m. Y de 30 a 90 km/h (el triple) la distancia no se triplica: se multiplica por 9.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone una relación lineal sin comprobarla con los datos de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque a menor velocidad el carro tiene menos masa y por eso frena con más facilidad.",
+        "correcta": false,
+        "explicacion": "No responde. La masa del carro no cambia con la velocidad. Lo que cambia es su energía cinética, que depende de la masa (constante) y del cuadrado de la rapidez.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde masa con cantidad de movimiento o energía, como si \"pesara menos\" al ir despacio."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque la fricción de los frenos es mucho mayor a baja velocidad.",
+        "correcta": false,
+        "explicacion": "No responde. Nada en los datos indica que la fuerza de frenado cambie; el mismo carro frena en la misma vía. Con la misma fuerza de frenado, los datos se explican completamente por la dependencia de la energía cinética con v².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Busca una explicación en una variable que el contexto mantiene constante."
+      }
+    ],
+    "explicacion": "LEER: mismo carro y misma vía; 30 km/h → 5 m, 60 km/h → 20 m, 90 km/h → 45 m. COMPRENDER: se pide explicar por qué la mitad de velocidad da mucho menos que la mitad de distancia. INTERPRETAR: al duplicar la velocidad, la distancia se multiplica por 4; al triplicarla, por 9: es una relación cuadrática. REPRESENTAR: Ec = ½·m·v²; trabajo de frenado = F·d = Ec → d ∝ v². RAZONAR: la masa y la fuerza de frenado no cambian; la energía a disipar crece con v². RESOLVER: opción A. VERIFICAR: (60/30)² = 4 → 5 × 4 = 20 m; (90/30)² = 9 → 5 × 9 = 45 m: coincide con la tabla. Implicación social: a menor velocidad, el carro se detiene antes y un atropello transfiere mucha menos energía al peatón.",
+    "que_identificar": "Cómo cambia la distancia cuando la velocidad se duplica o se triplica, y que el carro y la vía son los mismos.",
+    "que_revisar": "Energía cinética (Ec = ½·m·v²); relación cuadrática; trabajo de la fuerza de frenado; seguridad vial.",
+    "refuerzo_ids": ["CIE-063", "CIE-060"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["energia", "energia cinetica", "seguridad vial", "transporte", "cts", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-075",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Derivar conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Deriva conclusiones sobre la conveniencia económica y energética de una tecnología de iluminación a partir de datos de potencia, precio y vida útil",
+    "habilidad": "razonar",
+    "tema": "Energía en el hogar",
+    "subtema": "Bombillo LED frente a incandescente: consumo, costo y recuperación de la inversión",
+    "dificultad": 3,
+    "contexto": "Una familia de Cali quiere cambiar el bombillo de la sala, que se usa **5 horas diarias**. Un vecino opina: *\"El LED es seis veces más caro; no vale la pena\"*. El kWh cuesta **$800**; considera un mes de 30 días.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Comparación de bombillos que iluminan lo mismo",
+      "columnas": ["Tipo de bombillo", "Potencia (W)", "Luz emitida (lúmenes)", "Vida útil (horas)", "Precio ($)"],
+      "filas": [["Incandescente", 60, 800, 1000, 2000], ["LED", 9, 800, 15000, 12000]],
+      "nota": null
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los dos consumen la misma energía, porque emiten la misma cantidad de luz (800 lúmenes).",
+        "correcta": false,
+        "explicacion": "No responde. La luz emitida es igual, pero la potencia eléctrica que consumen es muy distinta (60 W frente a 9 W). El incandescente convierte la mayor parte de la energía en calor, no en luz.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la luz emitida con la energía eléctrica consumida."
+      },
+      {
+        "clave": "B",
+        "texto": "El LED ahorra 51 kWh cada mes, es decir, unos $40 800.",
+        "correcta": false,
+        "explicacion": "No responde. 51 es la diferencia de potencia en vatios (60 − 9), no de energía. Hay que multiplicar por el tiempo de uso y pasar a kilovatios: 0,051 kW × 150 h = 7,65 kWh ≈ $6 120 al mes.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde potencia (W) con energía (kWh) y no multiplica por el tiempo de uso."
+      },
+      {
+        "clave": "C",
+        "texto": "El LED conviene: con 5 horas diarias ahorra unos $6 120 al mes en energía, así que recupera la diferencia de precio ($10 000) en menos de dos meses y además dura 15 veces más.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Horas al mes: 5 × 30 = 150 h. Incandescente: 0,060 kW × 150 h = 9 kWh → $7 200. LED: 0,009 kW × 150 h = 1,35 kWh → $1 080. Ahorro: $6 120/mes. Diferencia de precio: $12 000 − $2 000 = $10 000; se recupera en 10 000/6 120 ≈ 1,6 meses.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El LED no conviene, porque su precio es seis veces el del incandescente.",
+        "correcta": false,
+        "explicacion": "No responde. Solo compara el precio de compra e ignora el costo de la energía durante el uso y la vida útil. El ahorro mensual en energía ($6 120) paga la diferencia de precio en menos de dos meses.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Evalúa la decisión con un solo criterio (precio inicial) y no con el costo total."
+      }
+    ],
+    "explicacion": "LEER: incandescente 60 W, $2 000, 1 000 h; LED 9 W, $12 000, 15 000 h; misma luz; 5 h/día; $800/kWh. COMPRENDER: hay que evaluar la opinión del vecino con los datos. INTERPRETAR: el costo real incluye la compra y la energía consumida durante el uso. REPRESENTAR: uso mensual = 150 h; energía = potencia (kW) × horas; costo = kWh × $800. RAZONAR: incandescente 9 kWh ($7 200); LED 1,35 kWh ($1 080); ahorro $6 120/mes frente a $10 000 de diferencia de precio. RESOLVER: la inversión se recupera en ≈ 1,6 meses (opción C). VERIFICAR: además, en 1 000 h (≈ 6,7 meses de uso) el incandescente se funde y hay que comprar otro, mientras el LED dura unos 100 meses: la conclusión se refuerza.",
+    "que_identificar": "La potencia de cada bombillo, las horas de uso al mes, la tarifa y la diferencia de precios.",
+    "que_revisar": "Diferencia entre potencia y energía; cálculo de consumo en kWh; eficiencia energética; costo total de una tecnología (compra + uso).",
+    "refuerzo_ids": ["CIE-073", "CIE-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["energia", "eficiencia energetica", "hogar", "iluminacion", "cts", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-076",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identificar las características de algunos fenómenos de la naturaleza con base en el análisis de información y en conceptos propios del conocimiento científico",
+    "evidencia": "Identifica una sustancia por su calor específico a partir de un balance de calor en un experimento de equilibrio térmico",
+    "habilidad": "resolver",
+    "tema": "Calor y propiedades de las sustancias",
+    "subtema": "Calorimetría: identificación de un metal por su calor específico",
+    "dificultad": 3,
+    "contexto": "Para identificar un metal desconocido, se calientan **100 g** del metal hasta **100 °C** y se sumergen en **100 g de agua a 20 °C** dentro de un recipiente aislado. Cuando se alcanza el equilibrio térmico, el termómetro marca **34 °C**. El calor específico del agua es **4,18 J/(g·°C)**. Supón que todo el calor que pierde el metal lo gana el agua.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Calor específico de algunos metales",
+      "columnas": ["Metal", "Calor específico (J/(g·°C))"],
+      "filas": [["Aluminio", 0.9], ["Hierro", 0.45], ["Cobre", 0.385], ["Plomo", 0.13]],
+      "nota": "Q = m · c · ΔT"
+    },
+    "enunciado": "¿Cuál es, con mayor probabilidad, el metal desconocido?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Plomo",
+        "correcta": false,
+        "explicacion": "No responde. El plomo, con el menor calor específico, cedería poco calor al enfriarse y el agua apenas se calentaría (la temperatura final sería de unos 22 °C). Un aumento grande del agua (de 20 a 34 °C) indica un calor específico ALTO.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación: cree que un metal con menor calor específico calienta más el agua."
+      },
+      {
+        "clave": "B",
+        "texto": "Cobre",
+        "correcta": false,
+        "explicacion": "No responde. Elegir el cobre por ser \"el mejor conductor del calor\" confunde conductividad térmica con calor específico. El cobre, con c = 0,385, dejaría el agua en unos 27 °C, no en 34 °C.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde conductividad térmica (qué tan rápido pasa el calor) con calor específico (cuánto calor almacena por gramo y grado)."
+      },
+      {
+        "clave": "C",
+        "texto": "Hierro",
+        "correcta": false,
+        "explicacion": "No responde. Con c = 0,45, el hierro llevaría el agua a unos 28 °C. Para llegar a 34 °C se necesita un calor específico cercano a 0,89 J/(g·°C).",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió sin plantear el balance de calor, o cometió un error al calcular los cambios de temperatura."
+      },
+      {
+        "clave": "D",
+        "texto": "Aluminio",
+        "correcta": true,
+        "explicacion": "Es la correcta. Calor ganado por el agua: 100 × 4,18 × (34 − 20) = 5 852 J. Calor perdido por el metal: 100 × c × (100 − 34) = 6 600·c. Igualando: c = 5 852 / 6 600 ≈ 0,89 J/(g·°C), muy cercano al del aluminio (0,90).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: metal 100 g a 100 °C; agua 100 g a 20 °C; equilibrio a 34 °C; c agua = 4,18. COMPRENDER: se pide identificar el metal por su calor específico. INTERPRETAR: en equilibrio térmico ambos quedan a 34 °C; el calor perdido por el metal es igual al ganado por el agua. REPRESENTAR: m_agua · c_agua · ΔT_agua = m_metal · c_metal · ΔT_metal, con ΔT_agua = 14 °C y ΔT_metal = 66 °C. RAZONAR: un metal con mayor c cede más calor al enfriarse y eleva más la temperatura del agua. RESOLVER: 5 852 = 6 600 · c → c ≈ 0,89 → aluminio (opción D). VERIFICAR: con c = 0,90: 100·0,90·(100 − T) = 100·4,18·(T − 20) → T ≈ 34,2 °C, coherente con la medición.",
+    "que_identificar": "Masas, temperaturas iniciales, temperatura de equilibrio y el calor específico del agua.",
+    "que_revisar": "Calor específico; equilibrio térmico; balance de calor (Q perdido = Q ganado); diferencia entre calor específico y conductividad térmica.",
+    "refuerzo_ids": ["CIE-031", "CIE-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["calor", "calor especifico", "equilibrio termico", "calorimetria", "propiedades", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-077",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explicar cómo ocurren algunos fenómenos de la naturaleza con base en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Explica la conducción de corriente eléctrica en soluciones a partir de la presencia de iones",
+    "habilidad": "comprender",
+    "tema": "Soluciones y electrolitos",
+    "subtema": "Conductividad eléctrica de soluciones iónicas y moleculares",
+    "dificultad": 1,
+    "contexto": "Un grupo arma un circuito con una pila, un bombillo y dos láminas de metal que se sumergen en diferentes líquidos. Si el líquido conduce la corriente, el circuito se cierra y el bombillo enciende. En las soluciones se disolvieron **10 g** de soluto en **200 mL** de agua destilada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Prueba de conductividad",
+      "columnas": ["Líquido", "Resultado del bombillo"],
+      "filas": [["Agua destilada", "No enciende"], ["Agua con sal de cocina (NaCl)", "Brillo intenso"], ["Agua con azúcar", "No enciende"], ["Vinagre (ácido acético en agua)", "Brillo débil"]],
+      "nota": null
+    },
+    "enunciado": "¿Qué explica que el agua con sal encienda el bombillo y el agua con azúcar no?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El azúcar absorbe la corriente eléctrica e impide que llegue al bombillo.",
+        "correcta": false,
+        "explicacion": "No responde. Las sustancias no \"absorben\" la corriente; simplemente no la conducen si no tienen cargas que puedan moverse. El azúcar se disuelve como moléculas neutras, así que no aporta portadores de carga.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usa una idea intuitiva de la corriente como algo que se \"absorbe\", sin relacionarla con cargas en movimiento."
+      },
+      {
+        "clave": "B",
+        "texto": "Al disolverse, la sal se separa en iones (Na⁺ y Cl⁻) que pueden moverse y transportar carga; el azúcar se disuelve en moléculas sin carga, que no conducen la corriente.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El NaCl es un compuesto iónico: en agua se disocia en iones con carga que se desplazan hacia las láminas y cierran el circuito. El azúcar es un compuesto covalente molecular: sus moléculas se separan pero no forman iones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El agua con azúcar tiene menos sustancia disuelta que el agua con sal.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que en ambas se disolvieron 10 g de soluto en 200 mL de agua. La diferencia no está en la cantidad, sino en que la sal forma iones y el azúcar no.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó que la cantidad de soluto es la misma en ambas soluciones."
+      },
+      {
+        "clave": "D",
+        "texto": "El agua conduce muy bien la electricidad por sí sola, y el azúcar la bloquea.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que el agua destilada NO enciende el bombillo: casi no conduce. La conducción aparece cuando se disuelve una sustancia que forma iones.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora el resultado del agua destilada, que sirve de control."
+      }
+    ],
+    "explicacion": "LEER: agua destilada y agua con azúcar no encienden el bombillo; agua con sal enciende con brillo intenso; vinagre, débil; misma cantidad de soluto. COMPRENDER: se pide explicar la diferencia entre sal y azúcar. INTERPRETAR: la corriente en un líquido requiere partículas con carga que se muevan (iones). REPRESENTAR: NaCl → Na⁺ + Cl⁻ (iones); azúcar → moléculas neutras. RAZONAR: el agua destilada es el control (casi no conduce); lo que cambia es el soluto; solo el que forma iones permite la corriente. RESOLVER: opción B. VERIFICAR: el vinagre enciende débilmente porque el ácido acético forma pocos iones (ácido débil), lo que confirma que la conductividad depende de la cantidad de iones.",
+    "que_identificar": "El resultado del agua destilada (control), la misma cantidad de soluto y la diferencia entre sal y azúcar.",
+    "que_revisar": "Compuestos iónicos y covalentes; disociación; electrolitos fuertes y débiles; corriente eléctrica como movimiento de cargas.",
+    "refuerzo_ids": ["CIE-072", "CIE-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["soluciones", "electrolitos", "iones", "electricidad", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-078",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Utilizar algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Evalúa una predicción sobre el volumen de un gas identificando en los datos la relación inversa entre presión y volumen a temperatura constante",
+    "habilidad": "verificar",
+    "tema": "Gases",
+    "subtema": "Ley de Boyle: producto presión × volumen constante en una jeringa sellada",
+    "dificultad": 1,
+    "contexto": "Se sella la punta de una jeringa con aire en su interior y se colocan pesas sobre el émbolo para aumentar la presión, manteniendo constante la temperatura. Los resultados están en la tabla. Un estudiante predice: *\"Con 300 kPa, el volumen del aire será 20 mL\"*.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Presión y volumen del aire en la jeringa (temperatura constante)",
+      "columnas": ["Presión (kPa)", "Volumen (mL)"],
+      "filas": [[100, 60], [150, 40], [200, 30], [250, 24]],
+      "nota": null
+    },
+    "enunciado": "¿Cuál es la evaluación correcta de la predicción del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es acertada: en todas las mediciones presión × volumen = 6 000 kPa·mL, así que a 300 kPa el volumen sería 6 000 / 300 = 20 mL.",
+        "correcta": true,
+        "explicacion": "Es la correcta. 100 × 60 = 150 × 40 = 200 × 30 = 250 × 24 = 6 000. A temperatura constante, P y V son inversamente proporcionales (ley de Boyle): V = 6 000 / 300 = 20 mL.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "No es acertada: el volumen disminuye de manera constante, así que a 300 kPa sería 18 mL (24 − 6).",
+        "correcta": false,
+        "explicacion": "No responde. Las disminuciones no son constantes: 60 → 40 (−20), 40 → 30 (−10), 30 → 24 (−6). La relación no es lineal sino inversa; extrapolar con la última diferencia no es válido.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone una relación lineal y extrapola con la última diferencia sin revisar el patrón completo."
+      },
+      {
+        "clave": "C",
+        "texto": "No es acertada: al aumentar la presión, el volumen del gas debe aumentar.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra lo contrario: al aumentar la presión el volumen disminuye, porque las partículas del gas se comprimen en un espacio menor.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Responde desde una idea previa sin mirar la tendencia de los datos."
+      },
+      {
+        "clave": "D",
+        "texto": "Es acertada, porque la presión y el volumen son directamente proporcionales.",
+        "correcta": false,
+        "explicacion": "No responde. El valor 20 mL es correcto, pero la justificación no: si fueran directamente proporcionales, al duplicar la presión se duplicaría el volumen, y los datos muestran que se reduce a la mitad (100 kPa → 60 mL; 200 kPa → 30 mL).",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Llega a la conclusión correcta con un argumento que contradice los datos."
+      }
+    ],
+    "explicacion": "LEER: cuatro pares presión-volumen a temperatura constante; predicción: 20 mL a 300 kPa. COMPRENDER: hay que evaluar la predicción y su justificación con los datos. INTERPRETAR: al aumentar P, V disminuye; hay que encontrar qué se mantiene constante. REPRESENTAR: P × V: 6 000, 6 000, 6 000, 6 000 kPa·mL. RAZONAR: el producto constante indica proporcionalidad inversa (ley de Boyle); ni lineal (B) ni directa (D). RESOLVER: V = 6 000 / 300 = 20 mL; la predicción es acertada (opción A). VERIFICAR: al duplicar la presión (100 → 200 kPa) el volumen se reduce a la mitad (60 → 30 mL); al triplicarla (100 → 300 kPa) debe reducirse a la tercera parte: 60/3 = 20 mL.",
+    "que_identificar": "Los pares presión-volumen y que la temperatura se mantiene constante.",
+    "que_revisar": "Ley de Boyle; proporcionalidad inversa; comportamiento de los gases al comprimirse; extrapolación con base en un patrón.",
+    "refuerzo_ids": ["CIE-064", "CIE-010"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["gases", "ley de boyle", "presion", "proporcionalidad inversa", "laboratorio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

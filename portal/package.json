@@ -1,0 +1,14 @@
+{
+  "name": "portal-unificado",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix ../saber11-prep ci --no-audit --no-fund && node build.mjs",
+    "preview": "BASE=./ node build.mjs && npx -y serve dist"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
+    "@supabase/supabase-js": "^2.108.1",
+    "zod": "^4.6.5"
+  }
+}

@@ -1,0 +1,1318 @@
+[
+  {
+    "id": "MAT-061",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Volumen de sólidos",
+    "subtema": "Volumen del cono y capacidad en litros: cuántos vasos cónicos se llenan con un botellón",
+    "dificultad": 2,
+    "contexto": "En la cafetería de un colegio de Tunja se sirve agua en **vasos de papel con forma de cono**. Cada vaso, visto de lado, es un triángulo isósceles con el vértice hacia abajo: la boca es un círculo de **3 cm de radio** y la distancia desde la boca hasta la punta (altura del cono) es **10 cm**. El agua sale de un botellón que tiene **1,5 litros**. Recuerda que 1 litro = 1 000 cm³, que el volumen de un cono es V = (1/3)·π·r²·h y usa π ≈ 3,14.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos vasos se pueden llenar COMPLETAMENTE con el agua del botellón?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "5",
+        "correcta": false,
+        "explicacion": "Resulta de calcular el volumen de un cilindro (π·3²·10 = 282,6 cm³) en lugar del de un cono: 1 500 ÷ 282,6 ≈ 5,3. El vaso es un cono, cuyo volumen es la tercera parte del cilindro de igual base y altura, así que caben unas tres veces más vasos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó el factor 1/3 de la fórmula del volumen del cono."
+      },
+      {
+        "clave": "B",
+        "texto": "15",
+        "correcta": true,
+        "explicacion": "Es la correcta. V = (1/3)·3,14·3²·10 = (1/3)·3,14·90 = 94,2 cm³ por vaso. El botellón tiene 1,5 L = 1 500 cm³; 1 500 ÷ 94,2 ≈ 15,9. Solo 15 vasos quedan completamente llenos (15 × 94,2 = 1 413 cm³ y sobran 87 cm³, que no alcanzan para otro vaso).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "16",
+        "correcta": false,
+        "explicacion": "Resulta de redondear 15,9 hacia arriba. Pero 16 vasos necesitan 16 × 94,2 = 1 507,2 cm³, más de los 1 500 cm³ del botellón: el vaso número 16 queda incompleto, y la pregunta pide vasos llenos completamente.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Redondeó el cociente al entero más cercano sin revisar qué significa ese número en la situación."
+      },
+      {
+        "clave": "D",
+        "texto": "47",
+        "correcta": false,
+        "explicacion": "Resulta de no elevar el radio al cuadrado: (1/3)·3,14·3·10 = 31,4 cm³ y 1 500 ÷ 31,4 ≈ 47,8. En la fórmula el radio va al cuadrado (r² = 9), porque la base es un círculo de área π·r².",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó por el radio en lugar de por el radio al cuadrado."
+      }
+    ],
+    "explicacion": "LEER: vaso cónico de radio 3 cm y altura 10 cm; botellón de 1,5 L; 1 L = 1 000 cm³; π ≈ 3,14. COMPRENDER: se pregunta cuántos vasos quedan llenos por completo, no cuántos «caben aproximadamente». INTERPRETAR: el volumen de cada vaso es el de un cono y el agua disponible hay que expresarla en cm³ para comparar. REPRESENTAR: V = (1/3)·π·r²·h; número de vasos = 1 500 ÷ V. RAZONAR: como se piden vasos completos, el cociente se trunca (se toma la parte entera), no se redondea. RESOLVER: V = (1/3)·3,14·9·10 = 94,2 cm³; 1 500 ÷ 94,2 ≈ 15,9 → 15 vasos. VERIFICAR: 15 × 94,2 = 1 413 ≤ 1 500 ✓ y 16 × 94,2 = 1 507,2 > 1 500 ✓.",
+    "que_identificar": "El radio y la altura del cono, la capacidad del botellón en litros y la condición «completamente llenos».",
+    "que_revisar": "Fórmula del volumen del cono (un tercio del cilindro), equivalencia 1 L = 1 000 cm³ y cuándo truncar un cociente en un problema de conteo.",
+    "refuerzo_ids": ["MAT-070", "MAT-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["volumen", "cono", "conversion_unidades", "capacidad"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-062",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Sólidos y sus vistas",
+    "subtema": "Vista superior de un sólido construido con cubos descrito en texto",
+    "dificultad": 1,
+    "contexto": "Para una clase de dibujo técnico, Mariana armó un sólido con **5 cubos iguales** sobre una mesa. Mirándolo de frente, así está construido:\n\n- En la mesa hay **3 cubos en una sola fila**, uno al lado del otro, de izquierda a derecha.\n- Encima del cubo de la **derecha** apiló **2 cubos más**, uno sobre otro, formando una columna de 3 cubos de alto.\n\nNo hay cubos delante ni detrás de esa fila.",
+    "estimulo": null,
+    "enunciado": "¿Qué figura ve una persona que mira el sólido directamente DESDE ARRIBA (vista superior)?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una figura en forma de L formada por 5 cuadrados: 3 en la fila de abajo y 2 encima del cuadrado de la derecha.",
+        "correcta": false,
+        "explicacion": "Esa es la vista FRONTAL: desde el frente se ven los 3 cubos de la base y la columna que sube a la derecha. Desde arriba no se distingue la altura de las pilas; solo se ve la huella de los cubos sobre la mesa.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la vista superior con la vista de frente, que es la que se describe en el enunciado."
+      },
+      {
+        "clave": "B",
+        "texto": "Una columna vertical de 3 cuadrados.",
+        "correcta": false,
+        "explicacion": "Esa es la vista LATERAL derecha: desde ese lado solo se ve la columna de 3 cubos de alto. Desde arriba se ve la fila completa de la base.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la vista desde un costado en lugar de la vista desde arriba."
+      },
+      {
+        "clave": "C",
+        "texto": "Un rectángulo formado por 3 cuadrados en fila.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Desde arriba se ve una cara de cada columna de cubos: la fila tiene 3 posiciones sobre la mesa (dos con un cubo y una con tres cubos apilados), así que se ven 3 cuadrados en fila. Los cubos apilados quedan uno debajo del otro y no agregan cuadrados.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Un rectángulo formado por 5 cuadrados en fila.",
+        "correcta": false,
+        "explicacion": "Resulta de contar todos los cubos como si todos se vieran desde arriba. Los 2 cubos apilados están exactamente encima del cubo de la derecha, así que desde arriba se ocultan unos a otros: solo se ven 3 cuadrados.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el número de cubos del sólido con el número de cuadrados visibles en una vista."
+      }
+    ],
+    "explicacion": "LEER: 3 cubos en fila sobre la mesa y 2 más apilados sobre el de la derecha (5 cubos). COMPRENDER: se pide la vista superior. INTERPRETAR: una vista muestra solo lo que se ve desde esa dirección; los cubos que están uno encima del otro se superponen. REPRESENTAR: huella sobre la mesa = posiciones ocupadas = 3 casillas en fila. RAZONAR: desde arriba la altura de cada pila no cambia el número de cuadrados; la L es la vista frontal y la columna es la lateral. RESOLVER: la vista superior es un rectángulo de 3 cuadrados en fila. VERIFICAR: las tres vistas son coherentes con el sólido: frontal (L de 5 cuadrados), lateral (columna de 3), superior (fila de 3) ✓.",
+    "que_identificar": "Cuántas posiciones de la mesa están ocupadas y cuáles cubos están apilados unos sobre otros.",
+    "que_revisar": "Vistas de un sólido (frontal, lateral y superior) y cómo los cubos apilados se superponen en una vista.",
+    "refuerzo_ids": ["MAT-071"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["vistas", "solidos", "visualizacion_espacial"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-063",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "representar",
+    "tema": "Razones trigonométricas",
+    "subtema": "Ángulo de elevación: altura de una torre con la tangente y la altura de los ojos del observador",
+    "dificultad": 2,
+    "contexto": "Julián quiere calcular la altura de la torre de la iglesia de su pueblo. Se para en el parque, a **30 m** (medidos horizontalmente) de la base de la torre, y con un clinómetro mide que el **ángulo de elevación** hacia la punta de la torre es de **35°**. El clinómetro está a la altura de sus ojos, **1,5 m** sobre el suelo, que es plano. Se forma un triángulo rectángulo cuyo cateto horizontal va desde los ojos de Julián hasta la torre, y cuyo cateto vertical va desde esa altura hasta la punta.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Razones trigonométricas de 35°",
+      "columnas": ["Ángulo", "seno", "coseno", "tangente"],
+      "filas": [["35°", "0,57", "0,82", "0,70"]],
+      "nota": "Valores aproximados a dos cifras decimales."
+    },
+    "enunciado": "¿Cuál es, aproximadamente, la altura de la torre?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "22,5 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. En el triángulo rectángulo, el cateto opuesto al ángulo de 35° es la parte de la torre por encima de los ojos (x) y el cateto adyacente es la distancia horizontal (30 m): tan 35° = x/30 → x = 30 × 0,70 = 21 m. A eso se suma la altura de los ojos: 21 + 1,5 = 22,5 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "21,0 m",
+        "correcta": false,
+        "explicacion": "21 m es solo la parte de la torre que está por encima de los ojos de Julián. El triángulo empieza a 1,5 m del suelo, así que falta sumar esa altura para obtener la altura total de la torre.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Resolvió bien el triángulo pero no volvió al contexto para sumar la altura del observador."
+      },
+      {
+        "clave": "C",
+        "texto": "18,6 m",
+        "correcta": false,
+        "explicacion": "Resulta de usar el seno: 30 × 0,57 = 17,1 y 17,1 + 1,5 = 18,6. El seno relaciona el cateto opuesto con la hipotenusa, pero 30 m es el cateto ADYACENTE (la distancia horizontal), no la hipotenusa (la línea de visión).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió la razón trigonométrica sin identificar cuál lado del triángulo es el dato conocido."
+      },
+      {
+        "clave": "D",
+        "texto": "26,1 m",
+        "correcta": false,
+        "explicacion": "Resulta de usar el coseno: 30 × 0,82 = 24,6 y 24,6 + 1,5 = 26,1. El coseno relaciona el cateto adyacente con la hipotenusa; aquí no se conoce la hipotenusa ni se busca el cateto adyacente, sino el opuesto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de confundir las razones o de escoger una fila de la tabla al azar."
+      }
+    ],
+    "explicacion": "LEER: distancia horizontal 30 m, ángulo de elevación 35°, ojos a 1,5 m, tan 35° ≈ 0,70. COMPRENDER: se pide la altura TOTAL de la torre. INTERPRETAR: el triángulo rectángulo tiene su vértice en los ojos de Julián; el cateto adyacente al ángulo es 30 m y el opuesto es la parte de la torre sobre los ojos. REPRESENTAR: tan 35° = x/30; altura = x + 1,5. RAZONAR: la razón que une cateto opuesto y cateto adyacente es la tangente. RESOLVER: x = 30 × 0,70 = 21 m; altura = 22,5 m. VERIFICAR: como 35° < 45°, el cateto opuesto debe ser menor que el adyacente (21 < 30 ✓), y la altura total supera en 1,5 m a ese cateto ✓.",
+    "que_identificar": "Cuál lado del triángulo es el dato (cateto adyacente, 30 m), cuál se busca (cateto opuesto) y que el triángulo empieza a la altura de los ojos.",
+    "que_revisar": "Razones seno, coseno y tangente en el triángulo rectángulo; ángulo de elevación; volver al contexto para completar la respuesta.",
+    "refuerzo_ids": ["MAT-064", "MAT-065"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "trigonometria", "angulo_elevacion", "tangente"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-064",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Razones trigonométricas",
+    "subtema": "Rampa de carga: expresión con seno para la altura cuando se conoce la hipotenusa",
+    "dificultad": 1,
+    "contexto": "Para subir bultos de papa al platón de un camión, don Efraín apoya una **tabla recta de 3 m de largo**: un extremo toca el piso y el otro descansa en el borde del platón. La tabla forma con el piso horizontal un ángulo de **20°**. El borde del platón está justo encima de un punto del piso, de modo que el piso, la tabla y la vertical desde el borde del platón forman un **triángulo rectángulo**; la tabla es la hipotenusa.",
+    "estimulo": null,
+    "enunciado": "¿Cuál expresión permite calcular la altura h del borde del platón sobre el piso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "h = 3 · cos 20°",
+        "correcta": false,
+        "explicacion": "Con el coseno se obtiene el cateto ADYACENTE al ángulo de 20°, es decir, la distancia horizontal por el piso desde el pie de la tabla hasta debajo del platón (≈ 2,8 m), no la altura.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el cateto adyacente con el opuesto al ángulo."
+      },
+      {
+        "clave": "B",
+        "texto": "h = 3 · tan 20°",
+        "correcta": false,
+        "explicacion": "La tangente relaciona el cateto opuesto con el cateto ADYACENTE: h = (cateto adyacente) · tan 20°. Pero 3 m es la hipotenusa (la tabla), no el cateto adyacente, así que esta expresión no da la altura.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la tangente sin comprobar que el dato conocido fuera un cateto."
+      },
+      {
+        "clave": "C",
+        "texto": "h = 3 / sen 20°",
+        "correcta": false,
+        "explicacion": "Esa expresión despeja mal sen 20° = h/3. Además da un valor cercano a 8,8 m, mayor que la tabla de 3 m, lo cual es imposible: en un triángulo rectángulo un cateto nunca supera a la hipotenusa.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Al despejar h dividió entre el seno en lugar de multiplicar."
+      },
+      {
+        "clave": "D",
+        "texto": "h = 3 · sen 20°",
+        "correcta": true,
+        "explicacion": "Es la correcta. La altura es el cateto OPUESTO al ángulo de 20° y la tabla es la hipotenusa. Como sen 20° = cateto opuesto / hipotenusa = h/3, se despeja h = 3 · sen 20° (≈ 1,0 m).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: tabla de 3 m (hipotenusa), ángulo de 20° con el piso, se busca la altura h. COMPRENDER: se pide una expresión, no un número. INTERPRETAR: la altura es el lado vertical, opuesto al ángulo de 20°. REPRESENTAR: sen 20° = h/3. RAZONAR: el seno une cateto opuesto e hipotenusa, que son justo el lado buscado y el dato. RESOLVER: h = 3 · sen 20°. VERIFICAR: sen 20° ≈ 0,34, así que h ≈ 1,0 m, menor que 3 m ✓ y razonable para un platón de camión ✓.",
+    "que_identificar": "Que la tabla es la hipotenusa y la altura es el cateto opuesto al ángulo de 20°.",
+    "que_revisar": "Definiciones de seno, coseno y tangente; despeje de una razón trigonométrica; un cateto siempre es menor que la hipotenusa.",
+    "refuerzo_ids": ["MAT-063"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["trigonometria", "rampas", "seno", "expresiones"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-065",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "razonar",
+    "tema": "Razones trigonométricas",
+    "subtema": "Cambio en la longitud de una sombra cuando disminuye el ángulo de elevación del sol",
+    "dificultad": 3,
+    "contexto": "Un edificio de **12 m** de altura está sobre un terreno plano en Barranquilla. A las 2:00 p. m. los rayos del sol llegan con un **ángulo de elevación de 45°** y a las 4:00 p. m. llegan con un **ángulo de elevación de 30°**. En ambos momentos el edificio, su sombra en el piso y el rayo de sol que pasa por el borde superior del edificio forman un triángulo rectángulo: el edificio es el cateto opuesto al ángulo de elevación y la sombra es el cateto adyacente.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Razones trigonométricas de 30° y 45°",
+      "columnas": ["Ángulo", "seno", "coseno", "tangente"],
+      "filas": [["30°", "0,50", "0,87", "0,58"], ["45°", "0,71", "0,71", "1,00"]],
+      "nota": "Valores aproximados a dos cifras decimales."
+    },
+    "enunciado": "Usando los valores de la tabla, ¿cuántos metros aumenta, aproximadamente, la longitud de la sombra entre las 2:00 p. m. y las 4:00 p. m.?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "5,0 m",
+        "correcta": false,
+        "explicacion": "Resulta de multiplicar la altura por la tangente (12 × 1,00 = 12 y 12 × 0,58 ≈ 7,0) y restar: 12 − 7,0 = 5,0. Pero tan θ = altura/sombra, así que la sombra es altura ÷ tan θ, no altura × tan θ. Con ese error la sombra de las 4:00 p. m. saldría más corta que la de las 2:00 p. m., cuando el sol más bajo produce sombras más largas.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Despejó mal la sombra en tan θ = altura/sombra."
+      },
+      {
+        "clave": "B",
+        "texto": "6,0 m",
+        "correcta": false,
+        "explicacion": "Resulta de suponer que la sombra es inversamente proporcional al ángulo: 45/30 = 1,5, sombra = 12 × 1,5 = 18 m y aumento = 6 m. La longitud de la sombra depende de la tangente del ángulo, y la tangente no es proporcional al ángulo (tan 45° = 1,00 no es 1,5 veces tan 30° = 0,58).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Trató el ángulo como si fuera una cantidad proporcional a la sombra, sin usar la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "8,7 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. Sombra = altura ÷ tan θ. A las 2:00 p. m.: 12 ÷ 1,00 = 12 m. A las 4:00 p. m.: 12 ÷ 0,58 ≈ 20,7 m. Aumento: 20,7 − 12 = 8,7 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "20,7 m",
+        "correcta": false,
+        "explicacion": "20,7 m es la longitud de la sombra a las 4:00 p. m., no cuánto aumentó. La pregunta pide la diferencia entre las dos sombras, así que falta restar los 12 m de las 2:00 p. m.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó bien la segunda sombra pero respondió con ella en lugar de con el aumento."
+      }
+    ],
+    "explicacion": "LEER: altura 12 m; ángulos de elevación 45° y 30°; tan 45° = 1,00 y tan 30° ≈ 0,58. COMPRENDER: se pide el AUMENTO de la sombra, es decir, una diferencia. INTERPRETAR: en cada momento, tan θ = cateto opuesto / cateto adyacente = altura / sombra. REPRESENTAR: s = 12 / tan θ; aumento = s(30°) − s(45°). RAZONAR: al bajar el sol, la tangente disminuye y la sombra se alarga. RESOLVER: s(45°) = 12 m; s(30°) = 12 ÷ 0,58 ≈ 20,7 m; aumento ≈ 8,7 m. VERIFICAR: 20,7 × 0,58 ≈ 12 ✓ y la sombra de las 4:00 p. m. es más larga que la de las 2:00 p. m., como debe ser ✓.",
+    "que_identificar": "Que la sombra es el cateto adyacente, la altura el opuesto y que se pide la diferencia entre dos sombras.",
+    "que_revisar": "Despeje en la razón tangente, relación no proporcional entre ángulo y tangente, y diferencia entre calcular un valor y calcular un cambio.",
+    "refuerzo_ids": ["MAT-063", "MAT-034"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["tablas", "trigonometria", "sombras", "tangente", "variacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-066",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Geometría en el plano cartesiano",
+    "subtema": "Punto medio de un segmento y distancia entre dos puntos en un plano cuadriculado",
+    "dificultad": 2,
+    "contexto": "En el plano de un barrio de Neiva, dibujado sobre un plano cartesiano, cada unidad de los ejes representa **100 m**. Laura y Andrés acordaron encontrarse en el **punto medio** del segmento que une sus casas y caminar hasta allí en línea recta (hay un parque abierto que lo permite).",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Ubicación en el plano del barrio",
+      "columnas": ["Lugar", "Coordenadas (x, y)"],
+      "filas": [["Casa de Laura", "(−2, 3)"], ["Casa de Andrés", "(6, −3)"]],
+      "nota": "1 unidad del plano = 100 m."
+    },
+    "enunciado": "¿Cuántos metros camina Laura, en línea recta, hasta el punto de encuentro?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "500 m",
+        "correcta": true,
+        "explicacion": "Es la correcta. Punto medio: M = ((−2 + 6)/2, (3 + (−3))/2) = (2, 0). Distancia de Laura a M: √((2 − (−2))² + (0 − 3)²) = √(16 + 9) = √25 = 5 unidades = 5 × 100 = 500 m.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "700 m",
+        "correcta": false,
+        "explicacion": "Resulta de sumar los desplazamientos horizontal (4 unidades) y vertical (3 unidades): 4 + 3 = 7 unidades. Esa sería la distancia caminando por las cuadras en ángulo recto; en línea recta la distancia es la hipotenusa del triángulo de catetos 4 y 3, que mide 5.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los catetos en lugar de aplicar el teorema de Pitágoras (fórmula de la distancia)."
+      },
+      {
+        "clave": "C",
+        "texto": "1 000 m",
+        "correcta": false,
+        "explicacion": "1 000 m (10 unidades, pues √(8² + 6²) = 10) es la distancia entre las dos casas. Laura solo camina hasta el punto medio, es decir, la mitad de ese recorrido.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la distancia entre las casas y no la distancia hasta el punto de encuentro."
+      },
+      {
+        "clave": "D",
+        "texto": "2 500 m",
+        "correcta": false,
+        "explicacion": "Resulta de no sacar la raíz cuadrada: 4² + 3² = 25 unidades → 2 500 m. La fórmula de la distancia termina con la raíz: √25 = 5 unidades.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Omitió la raíz cuadrada en la fórmula de la distancia."
+      }
+    ],
+    "explicacion": "LEER: Laura en (−2, 3), Andrés en (6, −3); 1 unidad = 100 m. COMPRENDER: se pide cuánto camina Laura hasta el punto medio, en metros. INTERPRETAR: el punto medio promedia las coordenadas; la distancia en línea recta es la hipotenusa del triángulo formado por los desplazamientos horizontal y vertical. REPRESENTAR: M = ((x₁ + x₂)/2, (y₁ + y₂)/2); d = √(Δx² + Δy²). RAZONAR: Laura recorre la mitad del segmento, así que también sirve calcular la distancia total y dividir entre 2. RESOLVER: M = (2, 0); d = √(4² + 3²) = 5 unidades = 500 m. VERIFICAR: distancia total entre casas = √(8² + 6²) = 10 unidades, y su mitad es 5 ✓; Andrés también camina √(4² + 3²) = 5 ✓.",
+    "que_identificar": "Las coordenadas de las dos casas, la equivalencia de 1 unidad = 100 m y que Laura camina solo hasta el punto medio.",
+    "que_revisar": "Fórmulas de punto medio y de distancia en el plano cartesiano (teorema de Pitágoras); conversión de unidades del plano a metros.",
+    "refuerzo_ids": ["MAT-023", "MAT-067"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "plano_cartesiano", "punto_medio", "distancia", "pitagoras"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-067",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Transformaciones en el plano",
+    "subtema": "Identificación de una reflexión respecto al eje y a partir de las coordenadas de los vértices",
+    "dificultad": 1,
+    "contexto": "Un estudiante diseña el logo del grupo de teatro en un programa de dibujo que usa un plano cartesiano. Dibuja el triángulo ABC y luego le aplica una transformación para obtener el triángulo A′B′C′. La tabla muestra las coordenadas de los vértices antes y después.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Coordenadas de los vértices",
+      "columnas": ["Vértice", "Triángulo original", "Triángulo transformado"],
+      "filas": [["A", "(1, 2)", "A′ (−1, 2)"], ["B", "(4, 2)", "B′ (−4, 2)"], ["C", "(4, 5)", "C′ (−4, 5)"]],
+      "nota": null
+    },
+    "enunciado": "¿Qué transformación convierte el triángulo ABC en el triángulo A′B′C′?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una reflexión respecto al eje x.",
+        "correcta": false,
+        "explicacion": "La reflexión respecto al eje x conserva la coordenada x y cambia el signo de la y: A(1, 2) iría a (1, −2). En la tabla ocurre lo contrario: la y se conserva y la x cambia de signo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de confundir los nombres de los ejes o de elegir sin comparar coordenadas."
+      },
+      {
+        "clave": "B",
+        "texto": "Una reflexión respecto al eje y.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En los tres vértices la coordenada y se mantiene y la x cambia de signo: (x, y) → (−x, y). Eso es exactamente una reflexión respecto al eje y: cada punto queda a la misma distancia del eje, pero del otro lado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Una rotación de 180° alrededor del origen.",
+        "correcta": false,
+        "explicacion": "La rotación de 180° con centro en el origen cambia el signo de AMBAS coordenadas: (x, y) → (−x, −y); A iría a (−1, −2). En la tabla la coordenada y no cambia.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vio que la x cambiaba de signo y no revisó qué pasaba con la y."
+      },
+      {
+        "clave": "D",
+        "texto": "Una traslación de 5 unidades hacia la izquierda.",
+        "correcta": false,
+        "explicacion": "Esa traslación restaría 5 a cada x: A(1, 2) → (−4, 2), B(4, 2) → (−1, 2) y C(4, 5) → (−1, 5). Aunque A′ y B′ coinciden con dos de esos puntos, C′ es (−4, 5), no (−1, 5), y además en una traslación cada vértice se corresponde consigo mismo desplazado: A no va a (−1, 2).",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó solo algunos puntos como conjunto y no verificó vértice por vértice."
+      }
+    ],
+    "explicacion": "LEER: A(1, 2) → (−1, 2); B(4, 2) → (−4, 2); C(4, 5) → (−4, 5). COMPRENDER: se debe nombrar la transformación. INTERPRETAR: comparar coordenada por coordenada: y se conserva, x cambia de signo. REPRESENTAR: regla (x, y) → (−x, y). RAZONAR: reflexión en eje x: (x, −y); rotación de 180°: (−x, −y); traslación de 5 a la izquierda: (x − 5, y); solo la reflexión en el eje y coincide con la regla. RESOLVER: reflexión respecto al eje y. VERIFICAR: la regla funciona para los tres vértices ✓ y el triángulo conserva su forma y tamaño (lado AB = 3 y A′B′ = 3) ✓.",
+    "que_identificar": "Qué coordenada cambia y cuál se conserva en cada vértice.",
+    "que_revisar": "Reglas de las reflexiones en los ejes, de la rotación de 180° y de las traslaciones en coordenadas.",
+    "refuerzo_ids": ["MAT-068"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tablas", "transformaciones", "reflexion", "plano_cartesiano"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-068",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "verificar",
+    "tema": "Transformaciones en el plano",
+    "subtema": "Homotecia con centro distinto del origen: se multiplica el vector desde el centro, no las coordenadas",
+    "dificultad": 2,
+    "contexto": "En un programa de diseño, Samuel debe ampliar un dibujo con una **homotecia de centro C(1, 1) y razón 2**. En una homotecia de centro C y razón k, la imagen P′ de un punto P está sobre la semirrecta que sale de C y pasa por P, y la distancia de C a P′ es k veces la distancia de C a P. Para el punto **P(3, 2)**, Samuel escribe: «Como la razón es 2, multiplico las coordenadas por 2 y la imagen es P′(6, 4)».",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación sobre la solución de Samuel es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Samuel tiene razón: en toda homotecia de razón 2 basta multiplicar por 2 las coordenadas del punto.",
+        "correcta": false,
+        "explicacion": "Multiplicar las coordenadas por la razón solo funciona cuando el centro es el origen (0, 0). Aquí el centro es (1, 1): el vector de C a (6, 4) es (5, 3), que no es el doble del vector de C a P, (2, 1). Además (6, 4) ni siquiera está sobre la recta que pasa por C y P.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó la regla de la homotecia con centro en el origen a cualquier centro."
+      },
+      {
+        "clave": "B",
+        "texto": "Samuel se equivoca: la imagen es (4, 3), porque a cada coordenada de P se le suma la coordenada correspondiente del centro.",
+        "correcta": false,
+        "explicacion": "Sumar el centro a P es una traslación, no una homotecia: no usa la razón 2. El vector de C a (4, 3) es (3, 2), que no es el doble de (2, 1).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la homotecia con una traslación determinada por el centro."
+      },
+      {
+        "clave": "C",
+        "texto": "Samuel se equivoca: la imagen es (7, 5), porque primero se multiplican por 2 las coordenadas de P y luego se suma el centro.",
+        "correcta": false,
+        "explicacion": "Con ese procedimiento el vector de C a (7, 5) es (6, 4), el triple de (2, 1), no el doble. El orden correcto es restar el centro, multiplicar por la razón y luego sumar el centro: C + 2·(P − C).",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Combinó la multiplicación y la traslación en un orden que no corresponde a la definición."
+      },
+      {
+        "clave": "D",
+        "texto": "Samuel se equivoca: la imagen es (5, 3), porque lo que se duplica es el vector que va del centro (1, 1) al punto P.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Vector CP = (3 − 1, 2 − 1) = (2, 1). Al duplicarlo: (4, 2). Imagen: P′ = C + (4, 2) = (1 + 4, 1 + 2) = (5, 3). Verificación: P′ está en la misma dirección desde C que P y a doble distancia (√20 = 2·√5).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: homotecia de centro C(1, 1) y razón 2; P(3, 2); Samuel propone (6, 4). COMPRENDER: hay que decidir si la solución es válida y por qué. INTERPRETAR: la definición dice que la distancia desde el CENTRO se multiplica por 2, en la misma dirección. REPRESENTAR: P′ = C + k·(P − C). RAZONAR: multiplicar las coordenadas equivale a usar el origen como centro, que no es el caso. RESOLVER: P − C = (2, 1); 2·(2, 1) = (4, 2); P′ = (5, 3). VERIFICAR: |CP| = √5 y |CP′| = √(16 + 4) = √20 = 2√5 ✓; C, P y P′ están alineados (pendiente 1/2 en ambos tramos) ✓.",
+    "que_identificar": "Que el centro de la homotecia no es el origen y la definición basada en la distancia desde el centro.",
+    "que_revisar": "Homotecias: definición con centro y razón, cálculo de imágenes con vectores y comprobación de alineación y distancias.",
+    "refuerzo_ids": ["MAT-067"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["transformaciones", "homotecia", "plano_cartesiano", "validacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-069",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Medición y escalas",
+    "subtema": "Área real a partir de un plano a escala 1:50: la escala se aplica a cada dimensión, no al área",
+    "dificultad": 2,
+    "contexto": "La familia Rincón va a cambiar el piso de la sala. En el plano del apartamento, dibujado a **escala 1:50**, la sala es un rectángulo de **8 cm por 10 cm**. En el almacén el piso se vende por metros cuadrados.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos metros cuadrados mide realmente la sala?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0,4 m²",
+        "correcta": false,
+        "explicacion": "Resulta de aplicar la escala al área del plano: 8 × 10 = 80 cm² y 80 × 50 = 4 000 cm² = 0,4 m². La escala 1:50 se refiere a longitudes: cada dimensión se multiplica por 50, así que el área se multiplica por 50 × 50 = 2 500.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó el área por la escala en lugar de convertir primero cada medida."
+      },
+      {
+        "clave": "B",
+        "texto": "18 m²",
+        "correcta": false,
+        "explicacion": "18 es el perímetro de la sala en metros: 2 × (4 + 5) = 18 m. Para cubrir el piso se necesita el área (largo × ancho), no la longitud del borde.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió perímetro con área."
+      },
+      {
+        "clave": "C",
+        "texto": "20 m²",
+        "correcta": true,
+        "explicacion": "Es la correcta. Medidas reales: 8 cm × 50 = 400 cm = 4 m y 10 cm × 50 = 500 cm = 5 m. Área: 4 m × 5 m = 20 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "200 m²",
+        "correcta": false,
+        "explicacion": "Resulta de convertir mal los centímetros cuadrados: 400 cm × 500 cm = 200 000 cm² y dividir entre 1 000. Como 1 m = 100 cm, 1 m² = 100 × 100 = 10 000 cm², y 200 000 ÷ 10 000 = 20 m².",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó un factor de conversión de área equivocado (1 000 en lugar de 10 000)."
+      }
+    ],
+    "explicacion": "LEER: escala 1:50; sala de 8 cm × 10 cm en el plano. COMPRENDER: se pide el área REAL en m². INTERPRETAR: 1 cm en el plano equivale a 50 cm en la realidad, para cada longitud. REPRESENTAR: largo real = 10 × 50 cm; ancho real = 8 × 50 cm; área = largo × ancho. RAZONAR: conviene pasar primero las longitudes a metros y luego multiplicar, para no equivocarse con las unidades cuadradas. RESOLVER: 4 m × 5 m = 20 m². VERIFICAR: área del plano 80 cm² × 2 500 = 200 000 cm² = 20 m² ✓; 20 m² es un tamaño razonable para una sala ✓.",
+    "que_identificar": "Que la escala 1:50 es lineal y que se necesita el área en metros cuadrados.",
+    "que_revisar": "Escalas: el factor de área es el cuadrado del factor lineal; conversión 1 m² = 10 000 cm²; diferencia entre perímetro y área.",
+    "refuerzo_ids": ["MAT-011", "MAT-072"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["escala", "area", "conversion_unidades", "planos"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-070",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "representar",
+    "tema": "Volumen de sólidos",
+    "subtema": "Volumen de un sólido compuesto: cilindro con techo cónico (silo)",
+    "dificultad": 3,
+    "contexto": "Una cooperativa de maíz del Tolima tiene un **silo** formado por dos partes del mismo radio: abajo, un **cilindro** de **2 m de radio** y **6 m de altura**; encima, como techo, un **cono** de **2 m de radio** y **1,5 m de altura** (medida desde la tapa del cilindro hasta la punta). El interior del cono también se llena de grano. Usa π ≈ 3,14, V(cilindro) = π·r²·h y V(cono) = (1/3)·π·r²·h.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la capacidad total del silo, aproximadamente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "75,4 m³",
+        "correcta": false,
+        "explicacion": "Es solo el volumen del cilindro: 3,14 × 2² × 6 = 75,36 m³. El enunciado dice que el cono del techo también se llena de grano, así que falta sumar su volumen.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó una sola de las dos partes del sólido compuesto."
+      },
+      {
+        "clave": "B",
+        "texto": "81,6 m³",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cilindro: 3,14 × 4 × 6 = 75,36 m³. Cono: (1/3) × 3,14 × 4 × 1,5 = 6,28 m³. Total: 75,36 + 6,28 = 81,64 ≈ 81,6 m³.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "94,2 m³",
+        "correcta": false,
+        "explicacion": "Resulta de calcular el cono sin el factor 1/3: 3,14 × 4 × 1,5 = 18,84 y 75,36 + 18,84 = 94,2. Así se trata el techo como un cilindro de 1,5 m; el cono ocupa solo la tercera parte de ese cilindro.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la fórmula del cilindro también al cono."
+      },
+      {
+        "clave": "D",
+        "texto": "326,6 m³",
+        "correcta": false,
+        "explicacion": "Resulta de usar 4 m (el diámetro) como radio: 3,14 × 16 × 6 + (1/3) × 3,14 × 16 × 1,5 = 301,44 + 25,12 = 326,56. El radio es 2 m; al usar el doble, el volumen se multiplica por 4.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió radio con diámetro al leer las medidas."
+      }
+    ],
+    "explicacion": "LEER: cilindro r = 2 m, h = 6 m; cono r = 2 m, h = 1,5 m; ambos se llenan; π ≈ 3,14. COMPRENDER: se pide la capacidad total. INTERPRETAR: el silo es un sólido compuesto; su volumen es la suma de las partes. REPRESENTAR: V = π·r²·6 + (1/3)·π·r²·1,5. RAZONAR: como el radio es el mismo, V = π·r²·(6 + 0,5) = π·4·6,5. RESOLVER: 3,14 × 4 × 6,5 = 81,64 ≈ 81,6 m³. VERIFICAR: por partes, 75,36 + 6,28 = 81,64 ✓; el resultado es un poco mayor que el cilindro solo, como se espera de un techo pequeño ✓.",
+    "que_identificar": "Las dos partes del sólido, que comparten el radio de 2 m, y que ambas se llenan.",
+    "que_revisar": "Volumen de cilindro y cono, descomposición de sólidos compuestos y diferencia entre radio y diámetro.",
+    "refuerzo_ids": ["MAT-061", "MAT-073"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["volumen", "cilindro", "cono", "figura_compuesta"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-071",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "razonar",
+    "tema": "Área de superficies",
+    "subtema": "Área lateral de una pirámide cuadrada: apotema lateral con el teorema de Pitágoras",
+    "dificultad": 3,
+    "contexto": "En un colegio de Villavicencio construyen un kiosco con **techo en forma de pirámide de base cuadrada**. La base del techo es un cuadrado de **8 m de lado** y la punta del techo está **3 m por encima** del centro de ese cuadrado (altura de la pirámide). Se va a cubrir con tela impermeable **solo las 4 caras triangulares** del techo; la base queda abierta. Cada cara es un triángulo isósceles de base 8 m; su altura (apotema lateral) va desde la punta hasta el punto medio de un lado de la base.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos metros cuadrados de tela se necesitan, como mínimo, para cubrir el techo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "80 m²",
+        "correcta": true,
+        "explicacion": "Es la correcta. La apotema lateral es la hipotenusa del triángulo rectángulo de catetos 3 m (altura) y 4 m (mitad del lado): √(9 + 16) = 5 m. Cada cara: 8 × 5 ÷ 2 = 20 m². Cuatro caras: 4 × 20 = 80 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "144 m²",
+        "correcta": false,
+        "explicacion": "Resulta de sumar las 4 caras (80 m²) y la base cuadrada (8 × 8 = 64 m²). El enunciado dice que solo se cubren las caras triangulares; la base queda abierta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el área total de la pirámide sin atender la condición de la situación."
+      },
+      {
+        "clave": "C",
+        "texto": "48 m²",
+        "correcta": false,
+        "explicacion": "Resulta de usar la altura de la pirámide (3 m) como altura de cada triángulo: 4 × (8 × 3 ÷ 2) = 48. Pero la altura de la pirámide es vertical, por dentro; la altura de cada cara está inclinada y es más larga: √(4² + 3²) = 5 m.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la altura de la pirámide con la apotema lateral de sus caras."
+      },
+      {
+        "clave": "D",
+        "texto": "64 m²",
+        "correcta": false,
+        "explicacion": "64 es el volumen de la pirámide: (1/3) × 8² × 3 = 64 m³. La tela cubre una superficie, así que se necesita un área de caras, no el espacio que encierra el techo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió volumen con área de superficie."
+      }
+    ],
+    "explicacion": "LEER: base cuadrada de 8 m, altura de la pirámide 3 m, solo 4 caras triangulares. COMPRENDER: se pide el área de tela (superficie lateral). INTERPRETAR: la altura de cada triángulo no es 3 m: es la apotema lateral, inclinada. REPRESENTAR: triángulo rectángulo interno con catetos 3 m (vertical) y 4 m (del centro de la base al punto medio de un lado); hipotenusa = apotema. RAZONAR: con Pitágoras se obtiene la apotema; luego se suman 4 triángulos iguales. RESOLVER: apotema = √(3² + 4²) = 5 m; área = 4 × (8 × 5 / 2) = 80 m². VERIFICAR: la apotema (5 m) es mayor que la altura (3 m), como debe ser en una cara inclinada ✓; las unidades son m² ✓.",
+    "que_identificar": "La diferencia entre la altura de la pirámide y la altura de cada cara, y que la base no se cubre.",
+    "que_revisar": "Área lateral de la pirámide, apotema lateral mediante el teorema de Pitágoras, diferencia entre área y volumen.",
+    "refuerzo_ids": ["MAT-023", "MAT-070"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["area", "piramide", "pitagoras", "solidos"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-072",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Semejanza y congruencia",
+    "subtema": "Triángulos semejantes: razón de semejanza, razón de áreas y diferencia con congruencia",
+    "dificultad": 3,
+    "contexto": "En la huerta escolar hay dos canteros triangulares. El cantero 1 tiene lados de **6 m, 8 m y 10 m**; el cantero 2 tiene lados de **9 m, 12 m y 15 m**. En ambos, el ángulo entre los dos lados más cortos es **recto**. Varios estudiantes discuten cómo se relacionan los dos canteros.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los canteros son congruentes, porque tienen los mismos ángulos.",
+        "correcta": false,
+        "explicacion": "Tener los mismos ángulos garantiza semejanza (misma forma), no congruencia (misma forma y mismo tamaño). Los lados del cantero 2 son más largos que los del cantero 1, así que no pueden ser congruentes.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el criterio de semejanza con el de congruencia."
+      },
+      {
+        "clave": "B",
+        "texto": "Los canteros son semejantes con razón 1,5, así que el área del cantero 2 es 1,5 veces la del cantero 1, es decir, 36 m².",
+        "correcta": false,
+        "explicacion": "La razón de semejanza (1,5) es correcta para los lados, pero el área depende de dos longitudes, y ambas se multiplican por 1,5: el área se multiplica por 2,25. El área real del cantero 2 es 9 × 12 ÷ 2 = 54 m², no 36 m².",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la razón de semejanza de las longitudes directamente al área."
+      },
+      {
+        "clave": "C",
+        "texto": "Los canteros no son semejantes, porque los lados del cantero 2 no se obtienen sumando la misma cantidad a los del cantero 1 (se suma 3, 4 y 5).",
+        "correcta": false,
+        "explicacion": "La semejanza exige que los lados sean PROPORCIONALES (mismo cociente), no que difieran en la misma cantidad. Los cocientes son todos 1,5, así que sí son semejantes.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó una comparación aditiva en lugar de una multiplicativa para decidir la semejanza."
+      },
+      {
+        "clave": "D",
+        "texto": "Los canteros son semejantes con razón 1,5, y el área del cantero 2 es 2,25 veces la del cantero 1.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cada lado del cantero 2 es 1,5 veces el correspondiente del cantero 1 (9/6 = 12/8 = 15/10 = 1,5), así que son semejantes. En figuras semejantes el área se multiplica por el cuadrado de la razón: 1,5² = 2,25. Comprobación: área 1 = 6 × 8 ÷ 2 = 24 m²; área 2 = 9 × 12 ÷ 2 = 54 m²; 54 ÷ 24 = 2,25.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cantero 1: 6, 8, 10; cantero 2: 9, 12, 15; ambos con un ángulo recto. COMPRENDER: hay que escoger la afirmación válida sobre su relación. INTERPRETAR: semejanza = lados proporcionales (misma forma); congruencia = además, mismo tamaño. REPRESENTAR: 9/6 = 12/8 = 15/10 = 1,5; áreas de triángulos rectángulos = cateto × cateto ÷ 2. RAZONAR: la razón de áreas de figuras semejantes es el cuadrado de la razón de semejanza. RESOLVER: son semejantes con k = 1,5 y razón de áreas 2,25. VERIFICAR: 24 m² × 2,25 = 54 m² = 9 × 12 ÷ 2 ✓; y 6² + 8² = 10², 9² + 12² = 15², coherente con el ángulo recto ✓.",
+    "que_identificar": "Los cocientes entre lados correspondientes y la diferencia entre comparar por cociente o por diferencia.",
+    "que_revisar": "Criterios de semejanza y congruencia de triángulos; relación entre razón de semejanza y razón de áreas.",
+    "refuerzo_ids": ["MAT-034", "MAT-069"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["semejanza", "congruencia", "area", "argumentacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-073",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Razón de cambio y tasas",
+    "subtema": "Tiempo de llenado de un tanque cilíndrico a caudal constante, con conversión de m³ a litros",
+    "dificultad": 2,
+    "contexto": "En una finca de Santander instalaron un **tanque cilíndrico** para recoger agua. El tanque mide **0,5 m de radio** y **1,2 m de altura**. Se llena con una manguera que entrega un caudal constante de **12 litros por minuto**. Recuerda que 1 m³ = 1 000 litros y usa π ≈ 3,14.",
+    "estimulo": null,
+    "enunciado": "Si el tanque está vacío, ¿cuánto tiempo tarda en llenarse por completo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "314 minutos",
+        "correcta": false,
+        "explicacion": "Resulta de usar 1 m (el diámetro) como radio: 3,14 × 1² × 1,2 = 3,768 m³ = 3 768 L y 3 768 ÷ 12 = 314. El radio es 0,5 m; al duplicarlo, el volumen se multiplica por 4.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó como radio el doble de la medida dada."
+      },
+      {
+        "clave": "B",
+        "texto": "78,5 minutos",
+        "correcta": true,
+        "explicacion": "Es la correcta. Volumen: 3,14 × 0,5² × 1,2 = 3,14 × 0,25 × 1,2 = 0,942 m³ = 942 L. Tiempo: 942 L ÷ 12 L/min = 78,5 min (una hora y 18,5 minutos).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "7,85 minutos",
+        "correcta": false,
+        "explicacion": "Resulta de convertir 0,942 m³ como si 1 m³ fuera 100 L (94,2 L ÷ 12 = 7,85). Como 1 m³ = 1 000 L, el tanque tiene 942 L y el tiempo es diez veces mayor.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó un factor de conversión de volumen incorrecto."
+      },
+      {
+        "clave": "D",
+        "texto": "0,0785 minutos",
+        "correcta": false,
+        "explicacion": "Resulta de dividir directamente 0,942 (m³) entre 12 (L/min), sin convertir unidades. Las unidades no son compatibles: primero hay que pasar el volumen a litros. Menos de 5 segundos para llenar casi mil litros no tiene sentido.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Operó cantidades en unidades distintas sin convertirlas."
+      }
+    ],
+    "explicacion": "LEER: radio 0,5 m, altura 1,2 m, caudal 12 L/min, 1 m³ = 1 000 L. COMPRENDER: se pide el tiempo de llenado. INTERPRETAR: tiempo = volumen ÷ caudal, con el volumen en las mismas unidades del caudal (litros). REPRESENTAR: V = π·r²·h; t = V / 12. RAZONAR: se calcula el volumen en m³, se convierte a litros y luego se divide. RESOLVER: V = 0,942 m³ = 942 L; t = 942 ÷ 12 = 78,5 min. VERIFICAR: 78,5 × 12 = 942 L ✓; un tanque de casi 1 000 L con una manguera de 12 L/min tarda más de una hora, lo cual es razonable ✓.",
+    "que_identificar": "Radio (no diámetro), altura, caudal en litros por minuto y la equivalencia entre m³ y litros.",
+    "que_revisar": "Volumen del cilindro, conversión de unidades de volumen y relación tiempo = cantidad ÷ tasa.",
+    "refuerzo_ids": ["MAT-022", "MAT-070"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["volumen", "cilindro", "tasas", "conversion_unidades"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-074",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Expresiones algebraicas",
+    "subtema": "Expresión del volumen de una caja sin tapa armada recortando cuadrados de lado x en las esquinas de una lámina",
+    "dificultad": 2,
+    "contexto": "Una fábrica de bocadillos de Vélez arma cajas sin tapa a partir de **láminas rectangulares de cartón de 30 cm por 20 cm**. En cada una de las **cuatro esquinas** recorta un **cuadrado de x cm de lado** y luego dobla hacia arriba las cuatro pestañas que quedan, para formar las paredes de la caja. Así, la altura de la caja es x.",
+    "estimulo": null,
+    "enunciado": "¿Cuál expresión representa el volumen de la caja, en centímetros cúbicos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "x(30 − x)(20 − x)",
+        "correcta": false,
+        "explicacion": "Resta x una sola vez a cada dimensión. Pero en cada lado de la lámina se recortan DOS cuadrados (uno en cada extremo), así que el largo de la base es 30 − 2x y el ancho es 20 − 2x. Con x = 5, esta expresión da 1 875 cm³, cuando la caja real mide 20 × 10 × 5 = 1 000 cm³.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "No tuvo en cuenta que cada lado de la lámina pierde un cuadrado en cada extremo."
+      },
+      {
+        "clave": "B",
+        "texto": "(30 − 2x)(20 − 2x)",
+        "correcta": false,
+        "explicacion": "Esa expresión es el ÁREA del fondo de la caja (largo × ancho de la base). El volumen necesita además la altura, que es x.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detuvo en el área de la base y no multiplicó por la altura."
+      },
+      {
+        "clave": "C",
+        "texto": "600 − 4x²",
+        "correcta": false,
+        "explicacion": "Es el área del cartón que queda después de recortar las cuatro esquinas (30 × 20 − 4·x²). Es una medida de superficie, no el espacio que encierra la caja armada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el área de la lámina recortada con el volumen de la caja."
+      },
+      {
+        "clave": "D",
+        "texto": "x(30 − 2x)(20 − 2x)",
+        "correcta": true,
+        "explicacion": "Es la correcta. Al recortar un cuadrado de lado x en cada esquina, el largo de la base queda 30 − 2x, el ancho 20 − 2x y, al doblar, la altura es x. Volumen = largo × ancho × alto = x(30 − 2x)(20 − 2x).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: lámina de 30 cm × 20 cm; cuadrados de lado x en las 4 esquinas; la altura es x. COMPRENDER: se pide una expresión para el volumen. INTERPRETAR: en cada lado de la lámina desaparecen dos segmentos de longitud x. REPRESENTAR: base (30 − 2x) × (20 − 2x); altura x. RAZONAR: volumen de un prisma rectangular = largo × ancho × alto. RESOLVER: V = x(30 − 2x)(20 − 2x). VERIFICAR: con x = 5 la caja mide 20 × 10 × 5 = 1 000 cm³ y la expresión da 5 · 20 · 10 = 1 000 ✓; además x debe ser menor que 10, porque si no el ancho 20 − 2x sería 0 o negativo ✓.",
+    "que_identificar": "Que se recortan cuadrados en las cuatro esquinas (dos por cada lado) y que la altura de la caja es x.",
+    "que_revisar": "Traducción de una situación geométrica a una expresión algebraica; volumen del prisma rectangular; verificación con un valor numérico.",
+    "refuerzo_ids": ["MAT-057", "MAT-075"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["expresiones_algebraicas", "volumen", "prisma", "modelacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-075",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Funciones lineales",
+    "subtema": "De una tabla altura-volumen de un tanque cilíndrico a la expresión V = k·h",
+    "dificultad": 1,
+    "contexto": "Un tanque de agua con forma de cilindro vertical se está llenando. Cada cierto tiempo, un estudiante mide la altura del agua con una regla y lee en un medidor el volumen que ya entró. Como el tanque tiene paredes rectas, cada centímetro de altura corresponde siempre a la misma cantidad de agua.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Altura del agua y volumen en el tanque",
+      "columnas": ["Altura h (cm)", "Volumen V (litros)"],
+      "filas": [["0", "0"], ["20", "50"], ["40", "100"], ["60", "150"]],
+      "nota": null
+    },
+    "enunciado": "¿Cuál expresión relaciona el volumen V (en litros) con la altura h (en centímetros)?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "V = 50h",
+        "correcta": false,
+        "explicacion": "El salto de 50 L ocurre cada 20 cm, no cada centímetro. Con V = 50h, para h = 20 se obtendrían 1 000 L, no 50 L.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el aumento entre filas como si fuera el aumento por cada unidad de h."
+      },
+      {
+        "clave": "B",
+        "texto": "V = h + 30",
+        "correcta": false,
+        "explicacion": "Funciona solo para la segunda fila (20 + 30 = 50), pero no para las demás: para h = 40 da 70 (no 100) y para h = 0 da 30 (no 0). Una relación se debe comprobar en todas las filas.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Construyó la expresión con una sola pareja de datos y no la comprobó con las demás."
+      },
+      {
+        "clave": "C",
+        "texto": "V = 2,5h",
+        "correcta": true,
+        "explicacion": "Es la correcta. El cociente V/h es constante: 50/20 = 100/40 = 150/60 = 2,5 L por centímetro, y para h = 0 el volumen es 0. Por eso V = 2,5h.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "V = 0,4h",
+        "correcta": false,
+        "explicacion": "Resulta de invertir el cociente (20/50 = 0,4). Eso da centímetros por litro, no litros por centímetro: con V = 0,4h, para h = 60 saldrían 24 L en lugar de 150 L.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la razón al revés (h/V en lugar de V/h)."
+      }
+    ],
+    "explicacion": "LEER: (0, 0), (20, 50), (40, 100), (60, 150). COMPRENDER: se busca una expresión de V en función de h. INTERPRETAR: al aumentar h en 20 cm, V aumenta 50 L siempre, y V = 0 cuando h = 0: la relación es de proporcionalidad directa. REPRESENTAR: V = k·h con k = V/h. RAZONAR: k es la cantidad de litros por cada centímetro de altura. RESOLVER: k = 50/20 = 2,5 → V = 2,5h. VERIFICAR: 2,5 × 40 = 100 ✓; 2,5 × 60 = 150 ✓; 2,5 × 0 = 0 ✓.",
+    "que_identificar": "Que el volumen aumenta lo mismo por cada 20 cm y que en h = 0 el volumen es 0.",
+    "que_revisar": "Proporcionalidad directa y constante de proporcionalidad; comprobar una expresión en todas las filas de la tabla.",
+    "refuerzo_ids": ["MAT-015", "MAT-073"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tablas", "funcion_lineal", "proporcionalidad", "volumen"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-076",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "verificar",
+    "tema": "Despeje de fórmulas",
+    "subtema": "Despejar el radio en V = π·r²·h: la división da r², falta la raíz cuadrada",
+    "dificultad": 1,
+    "contexto": "Una empresa de lácteos diseña una **lata cilíndrica** que debe contener **1 000 cm³** de leche condensada y medir **12 cm de altura**. Para hallar el radio, un practicante parte de la fórmula del volumen del cilindro, V = π·r²·h, y escribe: «r = V ÷ (π·h) = 1 000 ÷ (3,14 × 12) ≈ 26,5 cm».",
+    "estimulo": null,
+    "enunciado": "¿Cuál afirmación sobre el procedimiento del practicante es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es incorrecto: V ÷ (π·h) da el valor de r², así que falta sacar la raíz cuadrada; el radio es aproximadamente 5,2 cm.",
+        "correcta": true,
+        "explicacion": "Es la correcta. De V = π·r²·h se obtiene r² = V ÷ (π·h) = 1 000 ÷ 37,68 ≈ 26,54 y r = √26,54 ≈ 5,15 ≈ 5,2 cm. Comprobación: 3,14 × 5,15² × 12 ≈ 999 cm³ ✓.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Es incorrecto: el radio se obtiene restando, r = V − π·h ≈ 962 cm.",
+        "correcta": false,
+        "explicacion": "En la fórmula, π, r² y h están MULTIPLICANDO, así que para despejar se divide, no se resta. Un radio de 962 cm (más de 9 m) no tiene sentido para una lata.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la operación inversa equivocada al despejar."
+      },
+      {
+        "clave": "C",
+        "texto": "Es incorrecto: la raíz se aplica solo a V, r = √V ÷ (π·h) ≈ 0,84 cm.",
+        "correcta": false,
+        "explicacion": "La raíz debe aplicarse a todo el cociente V ÷ (π·h), porque ese cociente completo es r². Con r ≈ 0,84 cm el volumen sería 3,14 × 0,84² × 12 ≈ 27 cm³, muy lejos de 1 000 cm³.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la raíz cuadrada a una sola parte de la expresión."
+      },
+      {
+        "clave": "D",
+        "texto": "Es correcto: al despejar r de V = π·r²·h se divide V entre π·h, así que el radio es aproximadamente 26,5 cm.",
+        "correcta": false,
+        "explicacion": "Dividir V entre π·h deja r², no r. Si el radio fuera 26,5 cm, el volumen sería 3,14 × 26,5² × 12 ≈ 26 461 cm³, unas 26 veces más de lo pedido.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aceptó el despeje sin comprobar el resultado en la fórmula original."
+      }
+    ],
+    "explicacion": "LEER: V = 1 000 cm³, h = 12 cm, fórmula V = π·r²·h; el practicante obtiene r ≈ 26,5 cm. COMPRENDER: hay que juzgar su despeje. INTERPRETAR: en la fórmula el radio aparece al cuadrado. REPRESENTAR: r² = V ÷ (π·h) → r = √(V ÷ (π·h)). RAZONAR: al dividir entre π·h se despeja r², y para llegar a r falta la operación inversa del cuadrado, la raíz. RESOLVER: r² ≈ 26,54 → r ≈ 5,2 cm. VERIFICAR: 3,14 × 5,15² × 12 ≈ 999 cm³ ✓, mientras que con 26,5 cm saldrían unos 26 461 cm³ ✗; una lata de 12 cm de alto y unos 10 cm de diámetro es razonable ✓.",
+    "que_identificar": "Que el radio está elevado al cuadrado en la fórmula y que el resultado del practicante se puede comprobar.",
+    "que_revisar": "Despeje de variables en fórmulas (operaciones inversas, incluida la raíz cuadrada) y verificación sustituyendo en la fórmula original.",
+    "refuerzo_ids": ["MAT-073", "MAT-061"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["despeje", "formulas", "cilindro", "argumentacion", "verificacion"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-077",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "interpretar",
+    "tema": "Representación de datos",
+    "subtema": "De un gráfico de barras de áreas sembradas al porcentaje que representa una categoría",
+    "dificultad": 1,
+    "contexto": "La junta de acción comunal de una vereda del Huila registró cuántas **hectáreas** están sembradas con cada cultivo. En la vereda solo hay estos cuatro cultivos.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Área sembrada por cultivo en la vereda",
+      "eje_x": "Cultivo",
+      "eje_y": "Área (hectáreas)",
+      "series": [
+        { "nombre": "Área sembrada", "valores": [["Café", 12], ["Plátano", 6], ["Maíz", 4], ["Aguacate", 8]] }
+      ]
+    },
+    "enunciado": "¿Qué porcentaje del área sembrada de la vereda corresponde al café?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "40 %",
+        "correcta": true,
+        "explicacion": "Es la correcta. Área total: 12 + 6 + 4 + 8 = 30 ha. Café: 12 ÷ 30 = 0,4 = 40 %.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "12 %",
+        "correcta": false,
+        "explicacion": "12 es el número de hectáreas de café que muestra la barra, no un porcentaje. Para obtener el porcentaje hay que comparar esas 12 ha con el total de 30 ha.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el valor de la barra como si ya fuera un porcentaje."
+      },
+      {
+        "clave": "C",
+        "texto": "25 %",
+        "correcta": false,
+        "explicacion": "Resulta de pensar que, como hay 4 cultivos, cada uno ocupa la cuarta parte. Eso solo pasaría si todas las barras tuvieran la misma altura; el café tiene la barra más alta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de repartir en partes iguales o de responder sin leer el gráfico."
+      },
+      {
+        "clave": "D",
+        "texto": "66,7 %",
+        "correcta": false,
+        "explicacion": "Resulta de dividir 12 entre 18, que es el área de los OTROS tres cultivos (6 + 4 + 8). El porcentaje de una parte se calcula respecto al total, que incluye al café: 12 ÷ 30.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó la parte con el resto en lugar de con el total."
+      }
+    ],
+    "explicacion": "LEER: café 12 ha, plátano 6, maíz 4, aguacate 8. COMPRENDER: se pide qué porcentaje del total es café. INTERPRETAR: porcentaje = parte ÷ total × 100. REPRESENTAR: 12 ÷ (12 + 6 + 4 + 8) × 100. RAZONAR: el total incluye todos los cultivos, también el café. RESOLVER: 12 ÷ 30 = 0,40 → 40 %. VERIFICAR: los porcentajes de todos suman 100 %: 40 + 20 + 13,3 + 26,7 = 100 ✓.",
+    "que_identificar": "La altura de cada barra y el total del área sembrada.",
+    "que_revisar": "Cálculo de porcentajes como parte del total; diferencia entre frecuencia absoluta y porcentaje.",
+    "refuerzo_ids": ["MAT-037"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["graficos", "barras", "porcentajes", "hectareas"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-078",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Estimación a partir de una muestra",
+    "subtema": "Densidad promedio de plantas por metro cuadrado y conversión de hectáreas a m² para estimar un total",
+    "dificultad": 2,
+    "contexto": "Un técnico agrícola quiere estimar cuántas plantas de fríjol hay en un lote de **0,5 hectáreas** sembrado de manera uniforme. Escogió al azar **5 cuadros de 1 m²** dentro del lote y contó las plantas de cada uno. Recuerda que **1 hectárea = 10 000 m²**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Plantas contadas en cada cuadro de 1 m²",
+      "columnas": ["Cuadro", "1", "2", "3", "4", "5"],
+      "filas": [["Número de plantas", "12", "15", "11", "14", "13"]],
+      "nota": "Los cuadros se escogieron al azar en distintas partes del lote."
+    },
+    "enunciado": "Con base en el promedio de la muestra, ¿cuántas plantas hay aproximadamente en todo el lote?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "6 500",
+        "correcta": false,
+        "explicacion": "Resulta de convertir 0,5 ha como si 1 ha fuera 1 000 m² (0,5 ha = 500 m²) y multiplicar 13 × 500. Como 1 ha = 10 000 m², el lote tiene 5 000 m², diez veces más.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó un factor de conversión de hectáreas a metros cuadrados equivocado."
+      },
+      {
+        "clave": "B",
+        "texto": "65 000",
+        "correcta": true,
+        "explicacion": "Es la correcta. Promedio de la muestra: (12 + 15 + 11 + 14 + 13) ÷ 5 = 65 ÷ 5 = 13 plantas por m². Área del lote: 0,5 × 10 000 = 5 000 m². Estimación: 13 × 5 000 = 65 000 plantas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "325 000",
+        "correcta": false,
+        "explicacion": "Resulta de multiplicar el TOTAL contado en la muestra (65 plantas en 5 m²) por el área del lote, como si hubiera 65 plantas en cada metro cuadrado: 65 × 5 000. Las 65 plantas están repartidas en 5 m², así que la densidad es 13 por m².",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la suma de la muestra en lugar del promedio por metro cuadrado."
+      },
+      {
+        "clave": "D",
+        "texto": "650 000",
+        "correcta": false,
+        "explicacion": "Resulta de tomar 0,5 ha como 50 000 m² (13 × 50 000). Con 1 ha = 10 000 m², media hectárea son 5 000 m².",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de un error al correr la coma o de usar 1 ha = 100 000 m²."
+      }
+    ],
+    "explicacion": "LEER: 5 cuadros de 1 m² con 12, 15, 11, 14 y 13 plantas; lote de 0,5 ha; 1 ha = 10 000 m². COMPRENDER: se pide una estimación del total de plantas del lote. INTERPRETAR: como la siembra es uniforme y los cuadros se escogieron al azar, el promedio de la muestra estima las plantas por m² de todo el lote. REPRESENTAR: total ≈ (promedio por m²) × (área en m²). RAZONAR: primero se obtiene la densidad media y se expresa el área en la misma unidad (m²). RESOLVER: 65 ÷ 5 = 13 plantas/m²; 0,5 ha = 5 000 m²; 13 × 5 000 = 65 000. VERIFICAR: con el mínimo (11) y el máximo (15) de la muestra el total estaría entre 55 000 y 75 000, y 65 000 está en ese rango ✓.",
+    "que_identificar": "El promedio de plantas por metro cuadrado y el área del lote expresada en m².",
+    "que_revisar": "Media aritmética, estimación de un total a partir de una muestra y conversión de hectáreas a metros cuadrados.",
+    "refuerzo_ids": ["MAT-003", "MAT-069"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "muestreo", "media", "hectareas", "conversion_unidades"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-079",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "verificar",
+    "tema": "Medidas de tendencia central",
+    "subtema": "Media de datos agrupados en tabla de frecuencias: cada área pesa según el número de lotes",
+    "dificultad": 2,
+    "contexto": "Una urbanización de Montería tiene **10 lotes**. La tabla muestra cuántos lotes hay de cada tamaño. Un vendedor afirma: «El área promedio de los lotes es de **192,5 m²**, porque (120 + 150 + 200 + 300) ÷ 4 = 192,5».",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Lotes de la urbanización según su área",
+      "columnas": ["Área del lote (m²)", "Número de lotes"],
+      "filas": [["120", "4"], ["150", "3"], ["200", "2"], ["300", "1"]],
+      "nota": "Total: 10 lotes."
+    },
+    "enunciado": "¿Cuál afirmación sobre el cálculo del vendedor es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es válido, porque en la tabla hay cuatro valores de área y el promedio se obtiene dividiendo su suma entre 4.",
+        "correcta": false,
+        "explicacion": "Ese cálculo trata cada tamaño como si hubiera un solo lote de cada uno. Pero hay 4 lotes de 120 m² y solo 1 de 300 m²; el promedio de los 10 lotes debe tener en cuenta cuántas veces aparece cada área.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró la columna de frecuencias de la tabla."
+      },
+      {
+        "clave": "B",
+        "texto": "No es válido: el valor representativo es 120 m², porque es el área que más se repite, y el promedio siempre coincide con ese valor.",
+        "correcta": false,
+        "explicacion": "120 m² es la moda (el valor más frecuente), pero la media no tiene por qué coincidir con la moda. Aquí la media es 163 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la media con la moda."
+      },
+      {
+        "clave": "C",
+        "texto": "No es válido: cada área debe multiplicarse por el número de lotes que la tienen; el promedio es 1 630 ÷ 10 = 163 m².",
+        "correcta": true,
+        "explicacion": "Es la correcta. Suma de todas las áreas: 120 × 4 + 150 × 3 + 200 × 2 + 300 × 1 = 480 + 450 + 400 + 300 = 1 630 m². Número de lotes: 10. Media: 1 630 ÷ 10 = 163 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No es válido: el promedio es 1 630 ÷ 4 = 407,5 m², porque hay que ponderar las áreas y dividir entre las 4 categorías.",
+        "correcta": false,
+        "explicacion": "La suma ponderada (1 630 m²) es correcta, pero corresponde a 10 lotes, así que se divide entre 10, no entre 4. Un promedio de 407,5 m² sería mayor que el lote más grande (300 m²), lo cual es imposible.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ponderó bien pero dividió entre el número de categorías y no entre el total de datos."
+      }
+    ],
+    "explicacion": "LEER: 4 lotes de 120 m², 3 de 150, 2 de 200 y 1 de 300 (10 lotes); el vendedor propone 192,5 m². COMPRENDER: hay que decidir si su promedio es válido. INTERPRETAR: el promedio de los 10 lotes es la suma de sus 10 áreas dividida entre 10. REPRESENTAR: x̄ = Σ(área × número de lotes) ÷ Σ(número de lotes). RAZONAR: el vendedor le dio el mismo peso a cada tamaño, aunque el de 120 m² aparece 4 veces y el de 300 m² solo una. RESOLVER: 1 630 ÷ 10 = 163 m². VERIFICAR: 163 está entre 120 y 300 ✓ y más cerca de 120, porque la mayoría de lotes son pequeños ✓.",
+    "que_identificar": "La columna «Número de lotes» (frecuencias) y el total de 10 lotes.",
+    "que_revisar": "Media aritmética de datos con frecuencias (promedio ponderado) y diferencia entre media y moda.",
+    "refuerzo_ids": ["MAT-028", "MAT-027"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "promedio_ponderado", "media", "frecuencias"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-080",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Medidas de dispersión",
+    "subtema": "Rango como criterio de precisión de dos instrumentos de medición con la misma media",
+    "dificultad": 2,
+    "contexto": "Dos grupos de grado 11 midieron **cinco veces** el largo de la cancha del colegio, cada grupo con un instrumento diferente: el grupo 1 con una **cinta métrica** y el grupo 2 con una **rueda de medición**. Los dos grupos obtuvieron un promedio de **28,5 m**. Un estudiante concluye: «Como el promedio es el mismo, los dos instrumentos son igual de precisos».",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Medidas del largo de la cancha (m)",
+      "columnas": ["Instrumento", "Medida 1", "Medida 2", "Medida 3", "Medida 4", "Medida 5"],
+      "filas": [["Cinta métrica", "28,4", "28,5", "28,4", "28,6", "28,6"], ["Rueda de medición", "27,9", "29,1", "28,3", "28,9", "28,3"]],
+      "nota": "Un instrumento es más preciso cuando sus medidas repetidas de lo mismo están más cerca unas de otras."
+    },
+    "enunciado": "¿Cuál afirmación sobre la conclusión del estudiante es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es válida: si el promedio es igual, los dos instrumentos son igual de precisos.",
+        "correcta": false,
+        "explicacion": "Dos conjuntos de datos pueden tener la misma media y dispersiones muy distintas. La precisión, según la nota de la tabla, depende de qué tan cerca están las medidas entre sí, no de su promedio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó una medida de tendencia central para responder una pregunta sobre dispersión."
+      },
+      {
+        "clave": "B",
+        "texto": "No es válida: la rueda es más precisa, porque sus medidas alcanzan valores más altos y más bajos, es decir, cubren mejor el valor real.",
+        "correcta": false,
+        "explicacion": "Que las medidas se alejen más unas de otras indica MENOS precisión, no más. La nota de la tabla dice que es más preciso el instrumento cuyas medidas están más cerca entre sí.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó una mayor dispersión como una ventaja."
+      },
+      {
+        "clave": "C",
+        "texto": "No es válida: no se puede comparar la precisión porque ninguno de los grupos conoce el valor real del largo de la cancha.",
+        "correcta": false,
+        "explicacion": "Para comparar la precisión (qué tan agrupadas están las medidas repetidas) no hace falta conocer el valor real; eso sería necesario para juzgar la exactitud. Con los datos de la tabla sí se puede decidir.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de confundir precisión con exactitud o de desconfiar de cualquier conclusión con datos."
+      },
+      {
+        "clave": "D",
+        "texto": "No es válida: la cinta es más precisa, porque sus medidas varían solo 0,2 m (de 28,4 a 28,6), mientras que las de la rueda varían 1,2 m (de 27,9 a 29,1).",
+        "correcta": true,
+        "explicacion": "Es la correcta. El promedio no informa sobre la dispersión. El rango de la cinta es 28,6 − 28,4 = 0,2 m y el de la rueda es 29,1 − 27,9 = 1,2 m: las medidas de la cinta están mucho más agrupadas, y según el criterio de la nota eso significa mayor precisión.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cinta: 28,4; 28,5; 28,4; 28,6; 28,6. Rueda: 27,9; 29,1; 28,3; 28,9; 28,3. Ambos promedios: 28,5 m. COMPRENDER: hay que juzgar la conclusión «igual promedio → igual precisión». INTERPRETAR: la nota define precisión como cercanía entre las medidas repetidas, es decir, baja dispersión. REPRESENTAR: rango = máximo − mínimo. RAZONAR: la media resume el centro de los datos, no su dispersión. RESOLVER: rango cinta = 0,2 m; rango rueda = 1,2 m → la cinta es más precisa y la conclusión no es válida. VERIFICAR: sumas 142,5 y 142,5, ambas dan media 28,5 ✓; todas las medidas de la cinta están a 0,1 m o menos de 28,5, mientras que en la rueda hay medidas a 0,6 m ✓.",
+    "que_identificar": "Que las medias son iguales pero los valores mínimo y máximo de cada instrumento son muy distintos.",
+    "que_revisar": "Medidas de dispersión (rango), diferencia entre medidas de centro y de dispersión, precisión frente a exactitud.",
+    "refuerzo_ids": ["MAT-038"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "dispersion", "rango", "medicion", "argumentacion"],
+    "estado": "aprobada"
+  }
+]

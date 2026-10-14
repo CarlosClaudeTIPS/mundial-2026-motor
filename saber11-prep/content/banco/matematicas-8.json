@@ -1,0 +1,1749 @@
+[
+  {
+    "id": "MAT-121",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Notación científica y conversión de unidades",
+    "subtema": "Pasar de kilogramos a toneladas una cantidad escrita en notación científica (dividir entre 10³ resta 3 al exponente)",
+    "dificultad": 1,
+    "contexto": "Un informe sobre la cosecha anual de tres productos agrícolas en Colombia presenta las cantidades en **kilogramos**, escritas en notación científica. Para un boletín escolar, una estudiante quiere expresar la producción de café en **toneladas** (1 tonelada = 1 000 kg).",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Producción anual estimada (kg)",
+      "columnas": [
+        "Producto",
+        "Producción (kg)"
+      ],
+      "filas": [
+        [
+          "Café",
+          "8,4 × 10⁸"
+        ],
+        [
+          "Papa",
+          "2,7 × 10⁹"
+        ],
+        [
+          "Cacao",
+          "6,5 × 10⁷"
+        ]
+      ],
+      "nota": "Cifras redondeadas para el ejercicio."
+    },
+    "enunciado": "¿Cuál es la producción de café expresada en toneladas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "8,4 × 10⁵ toneladas",
+        "correcta": true,
+        "explicacion": "Es la correcta. Para pasar de kilogramos a toneladas se divide entre 1 000 = 10³; al dividir potencias de la misma base se restan los exponentes: 8,4 × 10⁸ ÷ 10³ = 8,4 × 10⁵ toneladas, es decir, 840 000 toneladas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "8,4 × 10¹¹ toneladas",
+        "correcta": false,
+        "explicacion": "No responde. 8,4 × 10¹¹ resulta de multiplicar por 1 000 (sumar 3 al exponente), pero una tonelada es más grande que un kilogramo, así que la cantidad de toneladas debe ser menor que la de kilogramos.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó por 1 000 en lugar de dividir, porque pensó que al convertir siempre se agregan ceros."
+      },
+      {
+        "clave": "C",
+        "texto": "8,4 × 10⁶ toneladas",
+        "correcta": false,
+        "explicacion": "No responde. 8,4 × 10⁶ equivale a dividir entre 100, no entre 1 000. Como 1 t = 1 000 kg = 10³ kg, al exponente 8 hay que restarle 3 y no 2, lo que da 10⁵.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el número de ceros de mil (tres) con el de cien (dos) al restar exponentes."
+      },
+      {
+        "clave": "D",
+        "texto": "2,7 × 10⁶ toneladas",
+        "correcta": false,
+        "explicacion": "No responde. 2,7 × 10⁶ sí es la conversión correcta de 2,7 × 10⁹ kg, pero esa fila corresponde a la papa; la pregunta se refiere al café, cuya producción es 8,4 × 10⁸ kg.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el dato de la fila de la papa, la cifra más grande de la tabla, en lugar del dato del café."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la producción en kilogramos; el café aparece con 8,4 × 10⁸ kg y una tonelada son 1 000 kg. COMPRENDER: se pide escribir esa misma cantidad en toneladas. INTERPRETAR: como la tonelada es una unidad mil veces mayor, la cantidad de toneladas es mil veces menor que la de kilogramos. REPRESENTAR: toneladas = 8,4 × 10⁸ ÷ 10³. RAZONAR: al dividir potencias de 10 se restan los exponentes: 8 − 3 = 5, y el factor 8,4 no cambia. RESOLVER: 8,4 × 10⁸ ÷ 10³ = 8,4 × 10⁵ toneladas (840 000 t). VERIFICAR: 840 000 t × 1 000 kg/t = 840 000 000 kg = 8,4 × 10⁸ kg, el dato de la tabla.",
+    "que_identificar": "La fila del café (8,4 × 10⁸ kg) y la equivalencia 1 t = 1 000 kg = 10³ kg.",
+    "que_revisar": "Notación científica; división de potencias de 10 restando exponentes; conversión entre kilogramos y toneladas.",
+    "refuerzo_ids": [
+      "MAT-101",
+      "MAT-021"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "notacion_cientifica",
+      "conversion",
+      "tablas",
+      "potencias"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-122",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Área de un trapecio",
+    "subtema": "Calcular el área de un lote trapezoidal con la fórmula (base mayor + base menor) × altura ÷ 2",
+    "dificultad": 1,
+    "contexto": "Un lote en Villavicencio tiene forma de **trapecio**: dos lados paralelos de **30 m y 50 m**, separados por una distancia (altura) de **20 m**. El propietario necesita el área para calcular el impuesto predial.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es el área del lote?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "1 600 m²",
+        "correcta": false,
+        "explicacion": "No responde. 1 600 = (30 + 50) × 20 omite la división entre 2 de la fórmula del trapecio. Ese valor sería el área de un rectángulo de 80 m × 20 m, mucho más grande que el lote.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó dividir entre 2 después de multiplicar la suma de las bases por la altura."
+      },
+      {
+        "clave": "B",
+        "texto": "800 m²",
+        "correcta": true,
+        "explicacion": "Es la correcta. Área del trapecio = (base mayor + base menor) × altura ÷ 2 = (50 + 30) × 20 ÷ 2 = 80 × 20 ÷ 2 = 800 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "1 000 m²",
+        "correcta": false,
+        "explicacion": "No responde. 1 000 = 50 × 20 usa solo la base mayor, como si el lote fuera un rectángulo de 50 m de ancho. El lado de 30 m indica que el lote es más estrecho en un extremo y su área real es 800 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la fórmula del rectángulo con la base mayor sin promediar las dos bases."
+      },
+      {
+        "clave": "D",
+        "texto": "600 m²",
+        "correcta": false,
+        "explicacion": "No responde. 600 = 30 × 20 toma solo la base menor y deja fuera la parte del lote que se ensancha hasta los 50 m. El área correcta promedia las dos bases: 40 × 20 = 800 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la base menor como si el lote fuera un rectángulo de 30 m de ancho."
+      }
+    ],
+    "explicacion": "LEER: lote trapezoidal con lados paralelos de 30 m y 50 m y altura de 20 m. COMPRENDER: se pide el área. INTERPRETAR: en un trapecio las dos bases son distintas, así que no sirve la fórmula del rectángulo con una sola de ellas. REPRESENTAR: A = (B + b) × h ÷ 2 = (50 + 30) × 20 ÷ 2. RAZONAR: la fórmula equivale a multiplicar la altura por el promedio de las bases, (50 + 30) ÷ 2 = 40 m, que es el \"ancho medio\" del lote. RESOLVER: A = 40 × 20 = 800 m². VERIFICAR: el resultado debe estar entre el área del rectángulo pequeño (30 × 20 = 600) y la del grande (50 × 20 = 1 000); 800 está justo en medio, como corresponde al promedio de las bases.",
+    "que_identificar": "Las dos bases paralelas (30 m y 50 m) y la altura (20 m) del trapecio.",
+    "que_revisar": "Fórmula del área del trapecio; relación entre el área del trapecio y el promedio de sus bases.",
+    "refuerzo_ids": [
+      "MAT-136",
+      "MAT-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "trapecio",
+      "area",
+      "predial",
+      "formulas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-123",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Correlación y causalidad",
+    "subtema": "Reconocer que dos variables que crecen juntas pueden depender de una tercera (variable oculta) sin que una cause la otra",
+    "dificultad": 2,
+    "contexto": "Un puesto de salud de Santa Marta registró, por trimestre, las ventas de una heladería vecina y los casos de insolación atendidos. Un practicante concluye: *\"Comer helado causa insolación, porque en los trimestres en que se vende más helado hay más casos\".*",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Registro trimestral",
+      "columnas": [
+        "Trimestre",
+        "Helados vendidos",
+        "Casos de insolación"
+      ],
+      "filas": [
+        [
+          "Ene-Mar",
+          4200,
+          38
+        ],
+        [
+          "Abr-Jun",
+          2900,
+          21
+        ],
+        [
+          "Jul-Sep",
+          3600,
+          30
+        ],
+        [
+          "Oct-Dic",
+          2500,
+          17
+        ]
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones refuta correctamente la conclusión del practicante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La conclusión es correcta, porque en los cuatro trimestres las dos cantidades aumentan y disminuyen juntas, lo que demuestra que una produce la otra.",
+        "correcta": false,
+        "explicacion": "No refuta: respalda la conclusión con el mismo error. Que dos variables suban y bajen juntas (correlación) no demuestra que una cause la otra; falta descartar explicaciones alternativas como el calor de la temporada.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió refutar con sustentar y asumió que toda correlación es una relación de causa y efecto."
+      },
+      {
+        "clave": "B",
+        "texto": "La conclusión es falsa, porque 38 casos entre 4 200 helados es menos del 1 %, así que casi nadie que come helado se insola y la relación es demasiado débil.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. Dividir casos entre helados mezcla dos cosas distintas (personas atendidas y unidades vendidas) y no dice nada sobre causalidad; una relación causal puede ser real aunque afecte a un porcentaje pequeño.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó un porcentaje sin sentido entre dos variables que no comparten unidad y lo usó como argumento."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas cantidades dependen de una tercera variable, el calor de la temporada: con más calor se compra más helado y también hay más insolaciones, sin que una cause la otra.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla solo muestra que las dos variables se mueven juntas; una explicación más plausible es una causa común (la temperatura o la temporada turística). Para hablar de causa se necesitaría controlar esa variable, no basta la asociación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La conclusión es falsa, porque solo hay cuatro datos y con menos de diez trimestres no se puede calcular ninguna relación entre variables.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. Tener pocos datos limita la precisión, pero con cuatro trimestres sí se observa una asociación clara; el problema de la conclusión es lógico (pasar de asociación a causa), no el número de registros.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de una regla memorizada sobre tamaño de muestra o de no analizar la lógica del argumento; no apunta al error de causalidad."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra que los trimestres con más helados vendidos (4 200 y 3 600) tienen más casos de insolación (38 y 30), y los de menos ventas tienen menos casos. COMPRENDER: se pide la afirmación que muestre por qué no es válido concluir que el helado causa la insolación. INTERPRETAR: los datos muestran una asociación (correlación positiva), no una relación de causa y efecto. REPRESENTAR: calor ↑ → helados ↑ y calor ↑ → insolaciones ↑; las dos flechas salen de la misma causa. RAZONAR: una tercera variable, el calor de la temporada, explica ambos aumentos; eso basta para que la conclusión no esté justificada. RESOLVER: la afirmación que señala la variable oculta refuta la conclusión. VERIFICAR: si se compararan dos trimestres con el mismo clima, no habría razón para esperar que vender más helado aumente las insolaciones; la supuesta causa desaparece.",
+    "que_identificar": "Que la tabla solo muestra que ambas cantidades varían juntas, y que hay una causa común plausible (temperatura de la temporada).",
+    "que_revisar": "Correlación frente a causalidad; variables ocultas o de confusión; cómo refutar una conclusión con una explicación alternativa.",
+    "refuerzo_ids": [
+      "MAT-103",
+      "MAT-115"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "tablas",
+      "correlacion",
+      "causalidad",
+      "argumentacion",
+      "salud"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-124",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Velocidad, distancia y tiempo",
+    "subtema": "Calcular la velocidad media de un viaje convirtiendo horas y minutos a horas decimales (40 min = 2/3 h)",
+    "dificultad": 2,
+    "contexto": "Un bus intermunicipal sale de Bogotá a las **6:20 a. m.** y llega a Tunja a las **9:00 a. m.** sin paradas. La distancia del recorrido es de **140 km**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál fue la velocidad media del bus durante el viaje?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "70 km/h",
+        "correcta": false,
+        "explicacion": "No responde. 70 = 140 ÷ 2 supone que el viaje duró 2 horas, pero de 6:20 a 9:00 pasan 2 horas y 40 minutos; con más tiempo para la misma distancia, la velocidad media es menor que 70 km/h.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Restó solo las horas (9 − 7 o 9 − 6 ajustado) y descartó los 40 minutos."
+      },
+      {
+        "clave": "B",
+        "texto": "58,3 km/h",
+        "correcta": false,
+        "explicacion": "No responde. 58,3 ≈ 140 ÷ 2,4 trata \"2 horas 40 minutos\" como 2,4 horas, pero 40 minutos son 40/60 = 2/3 ≈ 0,67 h, no 0,4 h. El tiempo correcto es 2,67 h.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Escribió los minutos como decimales de hora sin dividir entre 60 (2 h 40 min → 2,4 h)."
+      },
+      {
+        "clave": "C",
+        "texto": "46,7 km/h",
+        "correcta": false,
+        "explicacion": "No responde. 46,7 ≈ 140 ÷ 3 redondea la duración a 3 horas completas, pero el viaje duró 2 h 40 min, 20 minutos menos. El cociente correcto es 140 ÷ (8/3) = 52,5 km/h.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Redondeó 2 h 40 min a 3 horas para facilitar la división."
+      },
+      {
+        "clave": "D",
+        "texto": "52,5 km/h",
+        "correcta": true,
+        "explicacion": "Es la correcta. De 6:20 a 9:00 transcurren 2 h 40 min = 2 + 40/60 = 8/3 h ≈ 2,67 h. Velocidad media = 140 ÷ (8/3) = 140 × 3/8 = 52,5 km/h.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: salida 6:20, llegada 9:00, distancia 140 km. COMPRENDER: se pide la velocidad media, es decir, distancia dividida entre tiempo total. INTERPRETAR: el tiempo debe expresarse en horas para que la velocidad quede en km/h; 40 minutos no son 0,4 h sino 40/60 h. REPRESENTAR: t = 2 h 40 min = 2 + 40/60 = 8/3 h; v = 140 ÷ (8/3). RAZONAR: dividir entre una fracción es multiplicar por su inverso: 140 × 3/8. RESOLVER: 140 × 3 = 420; 420 ÷ 8 = 52,5 km/h. VERIFICAR: a 52,5 km/h, en 2 h se recorren 105 km y en los 40 min restantes (2/3 de hora) 35 km; 105 + 35 = 140 km, la distancia del viaje.",
+    "que_identificar": "La duración exacta del viaje (2 h 40 min) y la necesidad de convertir los minutos a fracción de hora.",
+    "que_revisar": "Velocidad media como razón distancia/tiempo; conversión de minutos a horas; división entre fracciones.",
+    "refuerzo_ids": [
+      "MAT-119",
+      "MAT-106"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "velocidad",
+      "tiempo",
+      "conversion",
+      "transporte",
+      "fracciones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-125",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Punto medio de un segmento",
+    "subtema": "Hallar las coordenadas del punto medio promediando las coordenadas de los extremos",
+    "dificultad": 1,
+    "contexto": "En el mapa de una ciudad se usa un sistema de coordenadas en kilómetros. Dos paraderos de una ruta de bus están en los puntos **P(2, 6)** y **Q(10, 2)**. La empresa quiere instalar un nuevo paradero exactamente a la **mitad del camino recto** entre los dos.",
+    "estimulo": null,
+    "enunciado": "¿En qué punto debe ubicarse el nuevo paradero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En el punto (12, 8), que resulta de sumar las coordenadas de los dos paraderos.",
+        "correcta": false,
+        "explicacion": "No responde. (12, 8) suma las coordenadas pero no divide entre 2; ese punto queda fuera del segmento, más lejos que cualquiera de los dos paraderos. El punto medio promedia cada coordenada: (6, 4).",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó las coordenadas de los extremos y olvidó dividir entre dos."
+      },
+      {
+        "clave": "B",
+        "texto": "En el punto (6, 4), que promedia las coordenadas de los dos paraderos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El punto medio tiene como coordenadas el promedio de las de los extremos: x = (2 + 10) ÷ 2 = 6 y y = (6 + 2) ÷ 2 = 4. El nuevo paradero va en (6, 4).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "En el punto (4, −2), que es la mitad de la diferencia entre las coordenadas.",
+        "correcta": false,
+        "explicacion": "No responde. (4, −2) es la mitad del desplazamiento de P a Q, es decir, cuánto hay que moverse desde P, pero no la posición final; sumado a P da (2 + 4, 6 − 2) = (6, 4), que es el punto medio.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó medio vector de desplazamiento y lo tomó como un punto del mapa."
+      },
+      {
+        "clave": "D",
+        "texto": "En el punto (5, 1), que es la mitad de las coordenadas del paradero más lejano.",
+        "correcta": false,
+        "explicacion": "No responde. (5, 1) divide entre 2 solo las coordenadas de Q(10, 2); eso daría el punto medio entre el origen (0, 0) y Q, no entre P y Q. Hay que promediar las coordenadas de ambos paraderos.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió a la mitad las coordenadas de un solo punto, ignorando el otro extremo."
+      }
+    ],
+    "explicacion": "LEER: paraderos en P(2, 6) y Q(10, 2); se busca el punto a la mitad del camino recto. COMPRENDER: se pide el punto medio del segmento PQ. INTERPRETAR: el punto medio está a la misma distancia de ambos extremos, así que cada una de sus coordenadas es el promedio de las coordenadas correspondientes. REPRESENTAR: M = ((2 + 10)/2, (6 + 2)/2). RAZONAR: en x se avanza de 2 a 10 (8 unidades), la mitad es 4, y 2 + 4 = 6; en y se baja de 6 a 2 (4 unidades), la mitad es 2, y 6 − 2 = 4. RESOLVER: M = (6, 4). VERIFICAR: de P a M hay un desplazamiento (4, −2) y de M a Q también (4, −2); como son iguales, M está exactamente en la mitad.",
+    "que_identificar": "Las coordenadas de los dos extremos y que \"mitad del camino recto\" significa punto medio del segmento.",
+    "que_revisar": "Fórmula del punto medio; promedio de coordenadas; diferencia entre un punto y un desplazamiento en el plano.",
+    "refuerzo_ids": [
+      "MAT-116",
+      "MAT-110"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "plano_cartesiano",
+      "punto_medio",
+      "coordenadas",
+      "transporte"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-126",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Probabilidad condicional",
+    "subtema": "Calcular una probabilidad restringida a una fila de una tabla de doble entrada (el total de la fila es el nuevo espacio muestral)",
+    "dificultad": 2,
+    "contexto": "Un colegio de Montería con dos jornadas registró cuántos estudiantes llegan en bicicleta. Se elige al azar un estudiante **de la jornada de la tarde**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Medio de llegada por jornada",
+      "columnas": [
+        "Jornada",
+        "En bicicleta",
+        "Otro medio",
+        "Total"
+      ],
+      "filas": [
+        [
+          "Mañana",
+          30,
+          90,
+          120
+        ],
+        [
+          "Tarde",
+          20,
+          60,
+          80
+        ],
+        [
+          "Total",
+          50,
+          150,
+          200
+        ]
+      ]
+    },
+    "enunciado": "¿Cuál es la probabilidad de que el estudiante elegido llegue en bicicleta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "1/4",
+        "correcta": true,
+        "explicacion": "Es la correcta. Como el estudiante se elige entre los de la tarde, el espacio muestral es la fila \"Tarde\": 80 estudiantes, de los cuales 20 llegan en bicicleta. P = 20 ÷ 80 = 1/4.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "1/10",
+        "correcta": false,
+        "explicacion": "No responde. 1/10 = 20 ÷ 200 divide entre el total del colegio, pero la condición \"de la jornada de la tarde\" reduce el espacio muestral a los 80 estudiantes de esa fila, no a los 200.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró la condición y usó el total general de la tabla como denominador."
+      },
+      {
+        "clave": "C",
+        "texto": "2/5",
+        "correcta": false,
+        "explicacion": "No responde. 2/5 = 20 ÷ 50 divide entre el total de ciclistas (columna), lo que respondería a otra pregunta: la probabilidad de que un ciclista sea de la tarde. Aquí se parte de los 80 estudiantes de la tarde.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la condición: tomó como denominador el total de la columna en lugar del total de la fila."
+      },
+      {
+        "clave": "D",
+        "texto": "3/4",
+        "correcta": false,
+        "explicacion": "No responde. 3/4 = 60 ÷ 80 es la probabilidad de que el estudiante de la tarde llegue por otro medio, el evento complementario del que se pregunta. La probabilidad de bicicleta es 20 ÷ 80 = 1/4.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la celda \"Otro medio\" de la fila Tarde en lugar de la celda \"En bicicleta\"."
+      }
+    ],
+    "explicacion": "LEER: la fila Tarde tiene 20 estudiantes en bicicleta, 60 en otro medio y 80 en total; el colegio suma 200. COMPRENDER: se pide la probabilidad de llegar en bicicleta sabiendo que el estudiante es de la tarde. INTERPRETAR: la condición restringe el espacio muestral a la fila Tarde; los 120 de la mañana no participan. REPRESENTAR: P(bici | tarde) = (bici y tarde) ÷ (total tarde) = 20 ÷ 80. RAZONAR: solo cuentan los casos de la fila elegida, tanto en el numerador como en el denominador. RESOLVER: 20 ÷ 80 = 1/4 = 0,25. VERIFICAR: la probabilidad del complemento (otro medio, dado tarde) es 60 ÷ 80 = 3/4, y 1/4 + 3/4 = 1, como debe ocurrir dentro de la misma fila.",
+    "que_identificar": "La fila \"Tarde\" de la tabla (20 en bicicleta de 80 estudiantes) como espacio muestral reducido.",
+    "que_revisar": "Probabilidad condicional en tablas de doble entrada; elección del denominador según la condición; eventos complementarios.",
+    "refuerzo_ids": [
+      "MAT-109",
+      "MAT-103"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "tablas",
+      "doble_entrada",
+      "probabilidad_condicional",
+      "fracciones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-127",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "verificar",
+    "tema": "Verificación de un procedimiento de cálculo con descuento",
+    "subtema": "Identificar el paso erróneo al aplicar un porcentaje de descuento sobre un total (restar 10 unidades en vez del 10 %)",
+    "dificultad": 2,
+    "contexto": "En una papelería de Ibagué un estudiante compra **3 cuadernos a 4 500 pesos** cada uno y **2 lapiceros a 1 200 pesos** cada uno. La papelería ofrece un **10 % de descuento** sobre el total. El estudiante calcula lo que debe pagar así:\n\n- Paso 1: 3 × 4 500 = 13 500\n- Paso 2: 2 × 1 200 = 2 400\n- Paso 3: 13 500 + 2 400 = 15 900\n- Paso 4: 15 900 − 10 = 15 890",
+    "estimulo": null,
+    "enunciado": "¿En cuál paso cometió un error el estudiante y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En el paso 1, porque debió sumar 3 + 4 500 en lugar de multiplicar, ya que compra tres artículos distintos.",
+        "correcta": false,
+        "explicacion": "No es un error. Tres cuadernos del mismo precio cuestan 3 × 4 500 = 13 500 pesos; multiplicar es exactamente lo que corresponde cuando se compran varias unidades iguales.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de confundir suma con multiplicación o de buscar el error en el primer paso sin revisar el resto."
+      },
+      {
+        "clave": "B",
+        "texto": "En el paso 2, porque el precio de los lapiceros debió multiplicarse también por 3 para igualarlo al de los cuadernos.",
+        "correcta": false,
+        "explicacion": "No es un error. Son 2 lapiceros a 1 200 pesos, así que 2 × 1 200 = 2 400 es correcto; el número de cuadernos no tiene por qué aplicarse a los lapiceros, que son otro artículo con otra cantidad.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló las cantidades de los dos artículos al no leer con cuidado el contexto."
+      },
+      {
+        "clave": "C",
+        "texto": "En el paso 3, porque el descuento debe aplicarse a cada artículo antes de sumar, y sumar primero cambia el resultado final.",
+        "correcta": false,
+        "explicacion": "No es un error. Por la propiedad distributiva, aplicar el 10 % a cada artículo y sumar da lo mismo que sumar y aplicar el 10 % al total: 0,9 × 13 500 + 0,9 × 2 400 = 0,9 × 15 900. El orden no cambia el resultado.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el porcentaje debe aplicarse por separado porque desconoce que el descuento sobre la suma es equivalente."
+      },
+      {
+        "clave": "D",
+        "texto": "En el paso 4, porque un descuento del 10 % no es restar 10 pesos sino restar la décima parte del total, que son 1 590 pesos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El 10 % de 15 900 es 15 900 × 0,10 = 1 590 pesos; el total con descuento es 15 900 − 1 590 = 14 310 pesos. Restar 10 confunde el porcentaje con una cantidad de pesos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: 3 cuadernos a 4 500, 2 lapiceros a 1 200, descuento del 10 % sobre el total; se muestran cuatro pasos. COMPRENDER: hay que encontrar el paso incorrecto y justificarlo. INTERPRETAR: los pasos 1 y 2 calculan el costo de cada artículo; el paso 3 suma; el paso 4 debería aplicar el 10 %. REPRESENTAR: total con descuento = 15 900 × (1 − 0,10) = 15 900 × 0,9. RAZONAR: 10 % significa 10 de cada 100, es decir, la décima parte; de 15 900 son 1 590 pesos, no 10 pesos. RESOLVER: el error está en el paso 4: lo correcto es 15 900 − 1 590 = 14 310 pesos. VERIFICAR: 14 310 ÷ 15 900 = 0,9, es decir, se pagó el 90 % del total, coherente con un descuento del 10 %; los pasos 1 a 3 se comprueban: 13 500 + 2 400 = 15 900.",
+    "que_identificar": "Que el paso 4 resta 10 pesos en lugar del 10 % del total (1 590 pesos).",
+    "que_revisar": "Significado de porcentaje como fracción del total; cálculo del 10 % dividiendo entre 10; propiedad distributiva al aplicar descuentos.",
+    "refuerzo_ids": [
+      "MAT-111",
+      "MAT-102"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "porcentajes",
+      "descuento",
+      "verificacion",
+      "procedimiento",
+      "compras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-128",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "leer",
+    "tema": "Gráficos de barras agrupadas",
+    "subtema": "Comparar dos series en un gráfico de barras para hallar la mayor diferencia entre años",
+    "dificultad": 1,
+    "contexto": "La coordinación deportiva de un colegio de Popayán comparó el número de estudiantes inscritos en cada deporte en **2024 y 2025**. Quiere destacar el deporte cuyo número de inscritos **aumentó más** de un año al otro.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Inscritos por deporte",
+      "eje_x": "Deporte",
+      "eje_y": "Número de inscritos",
+      "series": [
+        {
+          "nombre": "2024",
+          "valores": [
+            [
+              "Fútbol",
+              40
+            ],
+            [
+              "Baloncesto",
+              20
+            ],
+            [
+              "Voleibol",
+              25
+            ],
+            [
+              "Atletismo",
+              15
+            ]
+          ]
+        },
+        {
+          "nombre": "2025",
+          "valores": [
+            [
+              "Fútbol",
+              46
+            ],
+            [
+              "Baloncesto",
+              32
+            ],
+            [
+              "Voleibol",
+              30
+            ],
+            [
+              "Atletismo",
+              24
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Qué deporte tuvo el mayor aumento en el número de inscritos entre 2024 y 2025?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Fútbol, porque en 2025 tiene la barra más alta de todas.",
+        "correcta": false,
+        "explicacion": "No responde. Fútbol tiene la mayor cantidad de inscritos (46), pero su aumento fue de 46 − 40 = 6 estudiantes, el menor crecimiento junto con voleibol. La pregunta pide el cambio entre años, no el total.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la barra más alta con el mayor aumento sin restar los valores de los dos años."
+      },
+      {
+        "clave": "B",
+        "texto": "Atletismo, porque pasó de 15 a 24 inscritos, un aumento de 9.",
+        "correcta": false,
+        "explicacion": "No responde. Atletismo creció 24 − 15 = 9 inscritos, un aumento importante pero menor que el de baloncesto (32 − 20 = 12). En proporción atletismo creció más (60 %), pero la pregunta pide el aumento en número de inscritos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó el crecimiento relativo (porcentual) en lugar del aumento absoluto que pide la pregunta."
+      },
+      {
+        "clave": "C",
+        "texto": "Baloncesto, porque pasó de 20 a 32 inscritos, un aumento de 12.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Las diferencias 2025 − 2024 son: fútbol 6, baloncesto 12, voleibol 5 y atletismo 9. El mayor aumento es el de baloncesto, con 12 estudiantes más.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Voleibol, porque sus dos barras son las más parecidas entre sí.",
+        "correcta": false,
+        "explicacion": "No responde. Que las barras sean parecidas indica poco cambio: voleibol pasó de 25 a 30, un aumento de solo 5, el menor de todos. El mayor aumento se ve donde la barra de 2025 supera más a la de 2024.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó al revés la diferencia de altura entre las barras de los dos años."
+      }
+    ],
+    "explicacion": "LEER: para cada deporte hay dos barras, 2024 y 2025: fútbol 40 y 46, baloncesto 20 y 32, voleibol 25 y 30, atletismo 15 y 24. COMPRENDER: se pide el deporte con mayor aumento en cantidad de inscritos. INTERPRETAR: el aumento es la diferencia entre la barra de 2025 y la de 2024 de cada deporte, no la altura de una sola barra. REPRESENTAR: aumento = inscritos 2025 − inscritos 2024. RAZONAR: hay que calcular las cuatro diferencias y elegir la mayor. RESOLVER: fútbol 6, baloncesto 12, voleibol 5, atletismo 9; gana baloncesto. VERIFICAR: en el gráfico, la barra de 2025 de baloncesto supera a la de 2024 en más de la mitad de su altura (de 20 a 32), mientras que en fútbol las dos barras son casi iguales (40 y 46).",
+    "que_identificar": "Los pares de valores de cada deporte en las dos series y la operación de resta entre ellos.",
+    "que_revisar": "Lectura de gráficos de barras con dos series; diferencia entre valor total, aumento absoluto y aumento porcentual.",
+    "refuerzo_ids": [
+      "MAT-113",
+      "MAT-120"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "graficos",
+      "barras",
+      "comparacion",
+      "deportes"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-129",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Conversión de unidades de área",
+    "subtema": "Calcular cuántas baldosas cubren un piso pasando cm² a m² (1 m² = 10 000 cm²)",
+    "dificultad": 2,
+    "contexto": "Se va a embaldosar el piso de un salón rectangular de **6 m de largo por 4,5 m de ancho** con baldosas cuadradas de **30 cm de lado**, sin dejar espacios entre ellas y sin desperdicio.",
+    "estimulo": null,
+    "enunciado": "¿Cuántas baldosas se necesitan para cubrir todo el piso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "300 baldosas",
+        "correcta": true,
+        "explicacion": "Es la correcta. Área del piso: 6 × 4,5 = 27 m². Cada baldosa mide 0,3 m × 0,3 m = 0,09 m². Número de baldosas: 27 ÷ 0,09 = 300. También: 20 baldosas a lo largo (6 ÷ 0,3) por 15 a lo ancho (4,5 ÷ 0,3) = 300.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "30 baldosas",
+        "correcta": false,
+        "explicacion": "No responde. 30 = 27 ÷ 0,9 usa 0,9 m² como área de la baldosa, pero 0,3 m × 0,3 m = 0,09 m². Con solo 30 baldosas de 30 cm se cubrirían 2,7 m², una décima parte del salón.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se equivocó en la posición del decimal al elevar 0,3 al cuadrado (escribió 0,9 en vez de 0,09)."
+      },
+      {
+        "clave": "C",
+        "texto": "90 baldosas",
+        "correcta": false,
+        "explicacion": "No responde. 90 = 27 ÷ 0,3 divide el área en metros cuadrados entre la longitud del lado en metros, mezclando unidades de área con unidades de longitud. Hay que dividir entre el área de la baldosa, 0,09 m².",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió el área del piso entre el lado de la baldosa en lugar de entre su área."
+      },
+      {
+        "clave": "D",
+        "texto": "3 000 baldosas",
+        "correcta": false,
+        "explicacion": "No responde. 3 000 resulta de tomar 1 m² = 1 000 cm² al convertir, pero 1 m² = 100 cm × 100 cm = 10 000 cm². Con la conversión correcta, 270 000 cm² ÷ 900 cm² = 300 baldosas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió metros cuadrados a centímetros cuadrados multiplicando por 1 000 en vez de por 10 000."
+      }
+    ],
+    "explicacion": "LEER: salón de 6 m × 4,5 m; baldosas cuadradas de 30 cm de lado; sin desperdicio. COMPRENDER: se pide cuántas baldosas cubren el piso. INTERPRETAR: hay que comparar el área del piso con el área de una baldosa en las mismas unidades. REPRESENTAR: n = (6 × 4,5) ÷ (0,3 × 0,3), trabajando en metros. RAZONAR: 30 cm = 0,3 m, y el área de la baldosa es 0,3² = 0,09 m²; al elevar al cuadrado también se eleva al cuadrado el factor de conversión (1 m² = 10 000 cm²). RESOLVER: 27 ÷ 0,09 = 300 baldosas. VERIFICAR: a lo largo caben 6 ÷ 0,3 = 20 baldosas y a lo ancho 4,5 ÷ 0,3 = 15; 20 × 15 = 300, el mismo resultado.",
+    "que_identificar": "Las dimensiones del salón en metros y el lado de la baldosa en centímetros, que exigen unificar unidades antes de dividir áreas.",
+    "que_revisar": "Área del rectángulo y del cuadrado; conversión de unidades de área (1 m² = 10 000 cm²); conteo por filas y columnas como verificación.",
+    "refuerzo_ids": [
+      "MAT-112",
+      "MAT-107"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "area",
+      "conversion",
+      "baldosas",
+      "unidades",
+      "construccion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-130",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "razonar",
+    "tema": "Valor esperado de un juego",
+    "subtema": "Comparar el precio de una boleta con la ganancia promedio por boleta (total de premios ÷ número de boletas)",
+    "dificultad": 3,
+    "contexto": "Para recoger fondos, el consejo estudiantil de un colegio de Armenia organiza una rifa de **200 boletas a 5 000 pesos** cada una. Los premios son **uno de 300 000 pesos y cuatro de 50 000 pesos**. Un estudiante afirma: *\"Comprar una boleta es un buen negocio para quien la compra, porque hay cinco premios y los premios son grandes\".*",
+    "estimulo": null,
+    "enunciado": "¿Es correcta la afirmación del estudiante desde el punto de vista del valor esperado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque con 5 premios entre 200 boletas la probabilidad de ganar es 1/40, y 1/40 de 300 000 pesos supera el precio de la boleta.",
+        "correcta": false,
+        "explicacion": "No es correcta. Mezcla la probabilidad de ganar cualquier premio (5/200) con el valor del premio mayor; solo uno de los cinco premios es de 300 000. El cálculo correcto reparte el total de premios (500 000) entre las 200 boletas: 2 500 pesos por boleta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó la probabilidad de ganar algo por el premio más grande, como si todos los premios fueran de 300 000."
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque el total de premios es 500 000 pesos repartidos en 200 boletas: en promedio cada boleta devuelve 2 500 pesos, la mitad de lo que cuesta.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Premios totales: 300 000 + 4 × 50 000 = 500 000 pesos. Valor esperado por boleta: 500 000 ÷ 200 = 2 500 pesos, menor que los 5 000 que cuesta. En promedio, quien compra pierde 2 500 pesos; el buen negocio es para el consejo estudiantil.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque la probabilidad de ganar el premio mayor es 1/200, que es muy pequeña, y por eso ningún sorteo conviene a quien compra.",
+        "correcta": false,
+        "explicacion": "No es la razón adecuada. Una probabilidad pequeña no basta para juzgar un juego: si el premio fuera suficientemente grande, el valor esperado podría superar el precio. Hay que comparar el promedio de premios por boleta (2 500) con el precio (5 000).",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Juzgó la conveniencia solo por la probabilidad del premio mayor, sin incorporar los montos de todos los premios."
+      },
+      {
+        "clave": "D",
+        "texto": "Sí, porque el consejo recauda 1 000 000 de pesos y entrega 500 000 en premios, así que la mitad del dinero vuelve a los compradores, lo que es justo.",
+        "correcta": false,
+        "explicacion": "No es correcta. Que la mitad del dinero vuelva a los compradores significa justamente que, en promedio, cada boleta de 5 000 pesos devuelve solo 2 500; un juego es favorable para el comprador cuando el valor esperado es mayor que el precio, no cuando es la mitad.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"devolver la mitad\" como un juego equilibrado en vez de como una pérdida promedio del 50 %."
+      }
+    ],
+    "explicacion": "LEER: 200 boletas a 5 000 pesos; premios de 300 000 y cuatro de 50 000. COMPRENDER: se pide juzgar si comprar una boleta es favorable usando el valor esperado. INTERPRETAR: el valor esperado de una boleta es lo que, en promedio, devuelve; se obtiene repartiendo el total de premios entre todas las boletas. REPRESENTAR: E = (1 × 300 000 + 4 × 50 000) ÷ 200 = 500 000 ÷ 200. RAZONAR: equivalentemente, E = 300 000 × (1/200) + 50 000 × (4/200) + 0 × (195/200). RESOLVER: E = 2 500 pesos, frente a un precio de 5 000: la afirmación es incorrecta, en promedio se pierde la mitad. VERIFICAR: el consejo recauda 200 × 5 000 = 1 000 000 y entrega 500 000; la diferencia, 500 000, es lo que pierden en conjunto los compradores: 500 000 ÷ 200 = 2 500 por boleta.",
+    "que_identificar": "El número de boletas, el precio y el monto de cada premio, para calcular el promedio de premio por boleta.",
+    "que_revisar": "Valor esperado como promedio ponderado por probabilidades; juego justo (valor esperado = precio); por qué la probabilidad sola no decide la conveniencia.",
+    "refuerzo_ids": [
+      "MAT-109",
+      "MAT-103"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "valor_esperado",
+      "probabilidad",
+      "rifa",
+      "argumentacion",
+      "finanzas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-131",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Funciones periódicas",
+    "subtema": "Identificar el periodo de una gráfica que se repite y usarlo para predecir el siguiente máximo",
+    "dificultad": 2,
+    "contexto": "En el puerto de Buenaventura se registró la **altura del agua** cada 3 horas durante un día. La gráfica muestra que la marea sube y baja de forma regular. La **pleamar** es el momento de mayor altura.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Altura de la marea durante un día (m)",
+      "eje_x": "Hora",
+      "eje_y": "Altura (m)",
+      "series": [
+        {
+          "nombre": "Altura",
+          "valores": [
+            [
+              "0:00",
+              1
+            ],
+            [
+              "3:00",
+              2
+            ],
+            [
+              "6:00",
+              1
+            ],
+            [
+              "9:00",
+              0
+            ],
+            [
+              "12:00",
+              1
+            ],
+            [
+              "15:00",
+              2
+            ],
+            [
+              "18:00",
+              1
+            ],
+            [
+              "21:00",
+              0
+            ],
+            [
+              "24:00",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Si el comportamiento se mantiene, ¿a qué hora ocurrirá la siguiente pleamar después de la de las 15:00?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A las 18:00, porque es la siguiente hora registrada en la gráfica después de las 15:00.",
+        "correcta": false,
+        "explicacion": "No responde. A las 18:00 la altura es 1,0 m, un valor intermedio en descenso; la pleamar es el máximo de 2,0 m, que ocurre cada 12 horas (3:00 y 15:00), así que la siguiente es a las 3:00 del día siguiente.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el siguiente punto de la gráfica sin fijarse en que la pleamar corresponde al valor máximo."
+      },
+      {
+        "clave": "B",
+        "texto": "A las 21:00, porque la gráfica vuelve a cambiar de dirección en ese momento.",
+        "correcta": false,
+        "explicacion": "No responde. A las 21:00 la altura es 0,0 m, el mínimo: es la bajamar, no la pleamar. La gráfica cambia de dirección tanto en los máximos como en los mínimos, y la pregunta se refiere al máximo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el punto más bajo (bajamar) con el más alto (pleamar) porque ambos son cambios de dirección."
+      },
+      {
+        "clave": "C",
+        "texto": "A las 24:00, porque al terminar el día la altura regresa al valor con el que empezó.",
+        "correcta": false,
+        "explicacion": "No responde. A las 24:00 la altura vuelve a 1,0 m, igual que a las 0:00, pero ese es un valor medio, no el máximo. Que el ciclo diario se cierre no indica dónde está la pleamar; el máximo de 2,0 m se repite cada 12 horas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el final del registro con el final del ciclo sin comparar alturas."
+      },
+      {
+        "clave": "D",
+        "texto": "A las 3:00 del día siguiente, porque los máximos de 2,0 m se repiten cada 12 horas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los máximos (2,0 m) ocurren a las 3:00 y a las 15:00, separados por 12 horas: ese es el periodo. Sumando 12 horas a las 15:00 se obtiene las 3:00 del día siguiente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica muestra alturas que oscilan entre 0,0 y 2,0 m; los máximos están a las 3:00 y a las 15:00, y los mínimos a las 9:00 y a las 21:00. COMPRENDER: se pide la hora de la siguiente pleamar (máximo) después de las 15:00. INTERPRETAR: la gráfica es periódica: el mismo patrón se repite a intervalos regulares. REPRESENTAR: periodo = 15:00 − 3:00 = 12 horas; siguiente máximo = 15:00 + 12 h. RAZONAR: en una función periódica, cualquier característica (máximo, mínimo, cruce) se repite exactamente cada periodo. RESOLVER: 15:00 + 12 h = 3:00 del día siguiente. VERIFICAR: los mínimos también están separados 12 horas (9:00 y 21:00) y los puntos de 1,0 m se repiten cada 6 horas, mitad del periodo, todo coherente con un periodo de 12 h.",
+    "que_identificar": "Los dos máximos de la gráfica (3:00 y 15:00) y el intervalo entre ellos, que define el periodo.",
+    "que_revisar": "Funciones periódicas: periodo, máximo y mínimo; lectura de gráficas de líneas con comportamiento cíclico.",
+    "refuerzo_ids": [
+      "MAT-105",
+      "MAT-120"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "graficos",
+      "lineas",
+      "periodicidad",
+      "mareas",
+      "funciones"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-132",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Razones y mezclas",
+    "subtema": "Repartir una cantidad total según una razón a:b (el total corresponde a a + b partes)",
+    "dificultad": 1,
+    "contexto": "Para pintar un salón comunal en Bucaramanga se prepara un tono de verde mezclando pintura **azul y amarilla en razón 3:2** (3 partes de azul por cada 2 de amarillo). Se necesitan en total **20 litros** de la mezcla.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos litros de pintura azul se deben usar?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "15 litros",
+        "correcta": false,
+        "explicacion": "No responde. 15 = 20 × 3/4 interpreta la razón 3:2 como \"3 de cada 4\", pero la razón 3:2 significa 3 partes de un total de 3 + 2 = 5 partes. El azul es 3/5 de la mezcla: 12 litros.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió la razón 3:2 en la fracción 3/4 en lugar de 3/5."
+      },
+      {
+        "clave": "B",
+        "texto": "8 litros",
+        "correcta": false,
+        "explicacion": "No responde. 8 = 20 × 2/5 es la cantidad de pintura amarilla, que corresponde a las 2 partes de la razón. La pregunta pide la pintura azul, que son las 3 partes: 12 litros.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la parte correspondiente al amarillo e intercambió los colores de la razón."
+      },
+      {
+        "clave": "C",
+        "texto": "12 litros",
+        "correcta": true,
+        "explicacion": "Es la correcta. La razón 3:2 divide la mezcla en 3 + 2 = 5 partes iguales; cada parte vale 20 ÷ 5 = 4 litros. El azul ocupa 3 partes: 3 × 4 = 12 litros (y el amarillo 2 × 4 = 8 litros).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "6,7 litros",
+        "correcta": false,
+        "explicacion": "No responde. 6,7 ≈ 20 ÷ 3 divide el total entre el número de partes de azul, como si cada parte de azul fuera un tercio de la mezcla. Hay 5 partes en total, cada una de 4 litros, y el azul lleva 3 de ellas.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió el total entre el 3 de la razón sin considerar que el total se reparte en 5 partes."
+      }
+    ],
+    "explicacion": "LEER: mezcla de azul y amarillo en razón 3:2; total de 20 litros. COMPRENDER: se pide la cantidad de azul. INTERPRETAR: la razón 3:2 indica que, por cada 3 partes de azul, hay 2 de amarillo; la mezcla completa tiene 3 + 2 = 5 partes. REPRESENTAR: azul = 20 × 3/5; o bien, una parte = 20 ÷ 5 litros. RAZONAR: la fracción de azul respecto al total es 3/5, no 3/2 ni 3/4. RESOLVER: 20 ÷ 5 = 4 litros por parte; azul = 3 × 4 = 12 litros. VERIFICAR: amarillo = 2 × 4 = 8 litros; 12 + 8 = 20 litros y 12 : 8 = 3 : 2, la razón pedida.",
+    "que_identificar": "La razón 3:2 y el total de 20 litros, y que el total equivale a 5 partes.",
+    "que_revisar": "Razones y reparto proporcional; paso de razón a fracción del total; verificación con la suma de las partes.",
+    "refuerzo_ids": [
+      "MAT-119",
+      "MAT-106"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "razones",
+      "mezclas",
+      "reparto",
+      "fracciones",
+      "pintura"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-133",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "razonar",
+    "tema": "Desigualdad triangular",
+    "subtema": "Decidir si tres longitudes pueden formar un triángulo comparando la suma de las dos menores con la mayor",
+    "dificultad": 2,
+    "contexto": "Un estudiante de Pasto quiere construir un marco triangular para una cometa con tres varillas rectas de **4 cm, 7 cm y 12 cm**, uniendo los extremos sin cortarlas ni superponerlas. Afirma: *\"Sí se puede, porque cualquier grupo de tres varillas forma un triángulo si se unen bien las puntas\".*",
+    "estimulo": null,
+    "enunciado": "¿Es válida la afirmación del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No, porque las dos varillas más cortas suman 4 + 7 = 11 cm, menos que la varilla de 12 cm, y entonces sus extremos no alcanzan a tocarse.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En todo triángulo, la suma de dos lados debe ser mayor que el tercero (desigualdad triangular). Como 4 + 7 = 11 < 12, al apoyar las varillas cortas sobre los extremos de la de 12 cm queda un espacio de 1 cm: no se cierra el triángulo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Sí, porque tres segmentos cualesquiera siempre pueden unirse por sus extremos, y la figura que se forma tiene tres lados, es decir, es un triángulo.",
+        "correcta": false,
+        "explicacion": "No es válida. Que haya tres varillas no garantiza que cierren: si una es tan larga como la suma de las otras dos o más, las cortas quedan \"planas\" sobre ella o no se alcanzan. Con 4, 7 y 12 cm falta 1 cm para cerrar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Desconoce la desigualdad triangular y asume que tres longitudes siempre determinan un triángulo."
+      },
+      {
+        "clave": "C",
+        "texto": "Sí, porque 12 es menor que 4 × 7 = 28, y la varilla más larga debe ser menor que el producto de las otras dos para que el triángulo cierre.",
+        "correcta": false,
+        "explicacion": "No es válida. La condición para formar un triángulo compara la varilla mayor con la suma de las otras dos, no con su producto. El producto 4 × 7 = 28 no tiene significado geométrico aquí; lo que importa es que 4 + 7 = 11 no supera 12.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recordó que hay una condición entre los lados pero la aplicó con un producto en lugar de una suma."
+      },
+      {
+        "clave": "D",
+        "texto": "No, porque un triángulo necesita que las tres varillas midan lo mismo o que al menos dos sean iguales, y aquí las tres son distintas.",
+        "correcta": false,
+        "explicacion": "No es la razón. Existen triángulos escalenos, con los tres lados distintos (por ejemplo 5, 7 y 9 cm). La imposibilidad con 4, 7 y 12 cm no se debe a que sean distintas, sino a que 4 + 7 = 11 es menor que 12.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de recordar solo triángulos equiláteros e isósceles o de buscar cualquier razón para negar; no identifica la desigualdad triangular."
+      }
+    ],
+    "explicacion": "LEER: varillas de 4, 7 y 12 cm; el estudiante cree que siempre se forma un triángulo. COMPRENDER: se pide decidir si la afirmación es válida y por qué. INTERPRETAR: para que tres segmentos cierren un triángulo, cada lado debe ser menor que la suma de los otros dos (desigualdad triangular). REPRESENTAR: ¿4 + 7 > 12? RAZONAR: basta revisar la condición con el lado mayor: si las dos varillas cortas, puestas una tras otra, no superan la larga, no pueden \"levantarse\" para encontrarse. RESOLVER: 4 + 7 = 11 < 12, así que no se puede formar el triángulo; la afirmación es inválida. VERIFICAR: si la varilla larga midiera 10 cm, 4 + 7 = 11 > 10 y el triángulo sí cerraría; el problema es específicamente que 12 cm supera la suma de las otras dos.",
+    "que_identificar": "Las tres longitudes y la comparación clave: suma de las dos menores (11 cm) frente a la mayor (12 cm).",
+    "que_revisar": "Desigualdad triangular; condición de existencia de un triángulo; clasificación de triángulos por sus lados.",
+    "refuerzo_ids": [
+      "MAT-104",
+      "MAT-117"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "triangulos",
+      "desigualdad_triangular",
+      "argumentacion",
+      "construccion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-134",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos, como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Percentiles",
+    "subtema": "Interpretar la posición de un dato en una tabla de percentiles: el percentil k indica que el k % de los datos es menor o igual",
+    "dificultad": 1,
+    "contexto": "En un control de crecimiento, el pediatra usa una tabla de **percentiles de estatura** para niños y niñas de 12 años. Juan, de 12 años, mide **154 cm**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Percentiles de estatura a los 12 años (cm)",
+      "columnas": [
+        "Percentil",
+        "Estatura (cm)"
+      ],
+      "filas": [
+        [
+          "P10",
+          140
+        ],
+        [
+          "P25",
+          144
+        ],
+        [
+          "P50",
+          149
+        ],
+        [
+          "P75",
+          154
+        ],
+        [
+          "P90",
+          158
+        ]
+      ],
+      "nota": "Valores de referencia simplificados para el ejercicio."
+    },
+    "enunciado": "¿Qué significa la ubicación de la estatura de Juan en la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que Juan mide 75 % de la estatura máxima posible a su edad, porque está en el percentil 75.",
+        "correcta": false,
+        "explicacion": "No responde. El percentil no es un porcentaje de la estatura máxima: es una posición relativa dentro del grupo. Juan está en P75 porque 154 cm es el valor que deja por debajo al 75 % de los niños de su edad.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó el número del percentil como un porcentaje de una medida física."
+      },
+      {
+        "clave": "B",
+        "texto": "Que aproximadamente el 75 % de los niños de 12 años miden lo mismo o menos que Juan, y cerca del 25 % miden más.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La fila P75 corresponde a 154 cm: el percentil 75 es el valor que deja por debajo (o igual) al 75 % de los datos. Por tanto, alrededor del 75 % de los niños de su edad miden 154 cm o menos y el 25 % restante mide más.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que el 75 % de los niños de 12 años miden más que Juan, porque faltan 25 puntos para llegar al percentil 100.",
+        "correcta": false,
+        "explicacion": "No responde. Lee la tabla al revés: el percentil indica el porcentaje de datos que quedan por debajo, no por encima. Si el 75 % de los niños midiera más que Juan, él estaría en el percentil 25 (144 cm según la tabla).",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la dirección del percentil, asociándolo con el porcentaje de datos mayores."
+      },
+      {
+        "clave": "D",
+        "texto": "Que Juan está 5 cm por encima del promedio, porque el percentil 50 corresponde a 149 cm y la diferencia es 154 − 149.",
+        "correcta": false,
+        "explicacion": "No responde a lo que se pregunta. La resta 154 − 149 = 5 cm es correcta, pero el percentil 50 es la mediana, no necesariamente el promedio, y esa diferencia en centímetros no explica qué significa estar en el percentil 75 dentro del grupo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de confundir mediana con promedio o de responder con un cálculo en vez de con la interpretación pedida."
+      }
+    ],
+    "explicacion": "LEER: la tabla asocia percentiles con estaturas; 154 cm aparece en la fila P75. COMPRENDER: se pide interpretar qué significa que Juan esté en el percentil 75. INTERPRETAR: el percentil k es el valor por debajo del cual queda el k % de los datos del grupo de referencia. REPRESENTAR: P75 = 154 cm → 75 % de los niños de 12 años miden ≤ 154 cm; 100 % − 75 % = 25 % miden más. RAZONAR: el número del percentil habla de la posición de Juan frente a otros niños, no de una fracción de su estatura ni de una distancia en centímetros. RESOLVER: cerca del 75 % mide igual o menos que Juan y cerca del 25 % mide más. VERIFICAR: la tabla es creciente (P10 = 140 … P90 = 158): a mayor percentil, mayor estatura, lo que confirma que el percentil cuenta a los que están por debajo.",
+    "que_identificar": "La fila de la tabla cuya estatura coincide con la de Juan (P75 = 154 cm) y el significado de \"percentil\".",
+    "que_revisar": "Percentiles y cuartiles como medidas de posición; relación entre percentil 50 y mediana; lectura de tablas de referencia.",
+    "refuerzo_ids": [
+      "MAT-115",
+      "MAT-113"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "tablas",
+      "percentiles",
+      "posicion",
+      "salud"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-135",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucran información cuantitativa o esquemática",
+    "habilidad": "representar",
+    "tema": "Punto de equilibrio entre costos e ingresos",
+    "subtema": "Igualar una función de costo (fijo + variable) con una de ingreso para hallar la cantidad en que no hay pérdida ni ganancia",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes de Cartagena fabrica llaveros artesanales para una feria. Alquilar el puesto y comprar herramientas cuesta **600 000 pesos** (costo fijo), y los materiales de cada llavero cuestan **2 000 pesos**. Venden cada llavero a **5 000 pesos**.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos llaveros deben vender para que el ingreso iguale al costo total (punto de equilibrio)?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "86 llaveros",
+        "correcta": false,
+        "explicacion": "No responde. 86 ≈ 600 000 ÷ 7 000 suma el precio y el costo por llavero (5 000 + 2 000) en vez de restarlos. Lo que cada llavero aporta para cubrir el costo fijo es la diferencia 5 000 − 2 000 = 3 000 pesos.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó precio de venta y costo unitario en lugar de restar para obtener la ganancia por unidad."
+      },
+      {
+        "clave": "B",
+        "texto": "120 llaveros",
+        "correcta": false,
+        "explicacion": "No responde. 120 = 600 000 ÷ 5 000 solo cubre el costo fijo con el precio de venta e ignora que cada llavero también cuesta 2 000 pesos en materiales. Con 120 llaveros el costo total es 840 000 y el ingreso 600 000: hay pérdida.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Omitió el costo variable y dividió el costo fijo entre el precio de venta."
+      },
+      {
+        "clave": "C",
+        "texto": "300 llaveros",
+        "correcta": false,
+        "explicacion": "No responde. 300 = 600 000 ÷ 2 000 divide el costo fijo entre el costo de materiales, un cálculo sin relación con los ingresos. En el equilibrio se compara ingreso 5 000 n con costo 600 000 + 2 000 n, lo que da n = 200.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió entre el costo unitario por confundir qué cantidad cubre el costo fijo."
+      },
+      {
+        "clave": "D",
+        "texto": "200 llaveros",
+        "correcta": true,
+        "explicacion": "Es la correcta. Ingreso: 5 000 n; costo: 600 000 + 2 000 n. Igualando, 5 000 n = 600 000 + 2 000 n → 3 000 n = 600 000 → n = 200 llaveros. Cada llavero deja 3 000 pesos para cubrir los 600 000 fijos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: costo fijo 600 000; costo por llavero 2 000; precio de venta 5 000. COMPRENDER: se pide la cantidad de llaveros con la que ingreso = costo total. INTERPRETAR: el ingreso crece 5 000 por llavero y el costo crece 2 000 por llavero partiendo de 600 000; ambas son funciones lineales de n. REPRESENTAR: I(n) = 5 000 n; C(n) = 600 000 + 2 000 n; equilibrio cuando I(n) = C(n). RAZONAR: restando 2 000 n a ambos lados queda 3 000 n = 600 000; cada llavero aporta 3 000 pesos netos para pagar el costo fijo. RESOLVER: n = 600 000 ÷ 3 000 = 200 llaveros. VERIFICAR: con 200 llaveros, ingreso = 1 000 000 y costo = 600 000 + 400 000 = 1 000 000; coinciden. Con 201 llaveros ya hay ganancia de 3 000 pesos.",
+    "que_identificar": "El costo fijo, el costo variable por unidad y el precio de venta, y que el equilibrio es la igualdad de dos expresiones lineales.",
+    "que_revisar": "Funciones lineales de costo e ingreso; planteamiento y solución de una ecuación lineal; margen por unidad.",
+    "refuerzo_ids": [
+      "MAT-114",
+      "MAT-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "ecuaciones",
+      "funciones_lineales",
+      "punto_equilibrio",
+      "emprendimiento"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-136",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Área de un rombo",
+    "subtema": "Calcular el área de un rombo a partir de sus diagonales (D × d ÷ 2)",
+    "dificultad": 2,
+    "contexto": "Para el festival de cometas de Villa de Leyva, un estudiante construye una cometa con forma de **rombo**. Las dos varillas que forman las diagonales miden **60 cm y 80 cm** y se cruzan perpendicularmente en sus puntos medios. Debe comprar papel para cubrir exactamente la superficie de la cometa.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es el área de papel necesaria?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2 400 cm²",
+        "correcta": true,
+        "explicacion": "Es la correcta. El área de un rombo es el producto de sus diagonales dividido entre 2: 60 × 80 ÷ 2 = 4 800 ÷ 2 = 2 400 cm². Las diagonales dividen el rombo en cuatro triángulos rectángulos de catetos 30 y 40, cada uno de 600 cm².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "4 800 cm²",
+        "correcta": false,
+        "explicacion": "No responde. 4 800 = 60 × 80 es el área del rectángulo que encierra a la cometa (cuyos lados son las diagonales); el rombo ocupa exactamente la mitad de ese rectángulo, 2 400 cm².",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó las diagonales sin dividir entre 2, como si fueran los lados de un rectángulo."
+      },
+      {
+        "clave": "C",
+        "texto": "2 500 cm²",
+        "correcta": false,
+        "explicacion": "No responde. 2 500 = 50² usa el lado del rombo (√(30² + 40²) = 50 cm) como si la cometa fuera un cuadrado. Un rombo con lado 50 solo tendría área 2 500 si sus ángulos fueran rectos, y aquí las diagonales son distintas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el lado con Pitágoras y aplicó la fórmula del cuadrado (lado al cuadrado)."
+      },
+      {
+        "clave": "D",
+        "texto": "1 200 cm²",
+        "correcta": false,
+        "explicacion": "No responde. 1 200 = 30 × 40 es el área de un rectángulo formado con las medias diagonales, pero corresponde a dos de los cuatro triángulos que componen el rombo; faltan los otros dos, por lo que el área total es 2 400 cm².",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió las dos diagonales a la mitad y además volvió a dividir el producto entre dos."
+      }
+    ],
+    "explicacion": "LEER: cometa en forma de rombo con diagonales de 60 cm y 80 cm, perpendiculares y cortadas en sus puntos medios. COMPRENDER: se pide el área de la superficie. INTERPRETAR: las diagonales dividen el rombo en cuatro triángulos rectángulos iguales con catetos 30 cm y 40 cm. REPRESENTAR: A = D × d ÷ 2 = 60 × 80 ÷ 2; o A = 4 × (30 × 40 ÷ 2). RAZONAR: el rombo es la mitad del rectángulo de 60 × 80 que lo contiene, porque cada triángulo del rombo se complementa con otro igual fuera de él dentro del rectángulo. RESOLVER: A = 4 800 ÷ 2 = 2 400 cm². VERIFICAR: cada triángulo rectángulo mide 30 × 40 ÷ 2 = 600 cm²; 4 × 600 = 2 400 cm², el mismo valor.",
+    "que_identificar": "Que las dos varillas son las diagonales del rombo (no sus lados) y que se cortan perpendicularmente en el punto medio.",
+    "que_revisar": "Área del rombo con diagonales; descomposición en triángulos rectángulos; relación entre rombo y rectángulo circunscrito.",
+    "refuerzo_ids": [
+      "MAT-122",
+      "MAT-104"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "rombo",
+      "area",
+      "diagonales",
+      "cometa"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-137",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Encuestas de respuesta múltiple",
+    "subtema": "Explicar por qué los porcentajes de una encuesta pueden sumar más de 100 % cuando cada persona puede marcar varias opciones",
+    "dificultad": 2,
+    "contexto": "En una encuesta a 200 estudiantes de un colegio de Cali se preguntó **qué aplicaciones usan a diario** (se podía marcar más de una). Al ver el gráfico, un estudiante afirma: *\"Los resultados están mal, porque los porcentajes suman 250 % y nunca pueden pasar de 100 %\".*",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Estudiantes que usan cada aplicación a diario (%)",
+      "eje_x": "Aplicación",
+      "eje_y": "Porcentaje de estudiantes",
+      "series": [
+        {
+          "nombre": "Porcentaje",
+          "valores": [
+            [
+              "Mensajería",
+              80
+            ],
+            [
+              "Videos cortos",
+              70
+            ],
+            [
+              "Fotos",
+              65
+            ],
+            [
+              "Red social",
+              35
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones refuta correctamente al estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los porcentajes sí deben sumar 100 %, así que el error está en el gráfico: la barra de mensajería debería ser de 30 % para que el total cuadre.",
+        "correcta": false,
+        "explicacion": "No refuta: acepta la premisa equivocada del estudiante. Cada barra se calcula sobre los 200 encuestados por separado (por ejemplo, 160 de 200 usan mensajería = 80 %), y no hay razón para que las cuatro sumen 100 %.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asume que todo conjunto de porcentajes en un gráfico de barras debe completar un 100 %, como en un gráfico circular."
+      },
+      {
+        "clave": "B",
+        "texto": "El estudiante tiene razón en que algo falla, porque 250 % indica que se encuestó a 500 personas y no a 200, así que el tamaño de la muestra está mal reportado.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. 250 % no significa más personas: significa que se registraron 500 usos entre 200 estudiantes, es decir, 2,5 aplicaciones por persona en promedio. La muestra sigue siendo de 200 encuestados.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo el exceso sobre 100 % en más personas en lugar de en respuestas múltiples por persona."
+      },
+      {
+        "clave": "C",
+        "texto": "Cada porcentaje se calcula sobre el total de encuestados de forma independiente; como un mismo estudiante puede usar varias aplicaciones, la suma puede superar el 100 %.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El 80 % de mensajería significa que 160 de los 200 estudiantes la usan; el 70 % de videos cortos, 140 de los mismos 200. Como las categorías no son excluyentes, una persona cuenta en varias barras y la suma de porcentajes (250 %) solo indica que, en promedio, cada estudiante usa 2,5 aplicaciones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Los porcentajes son correctos porque fueron redondeados, y el redondeo de cuatro valores puede hacer que la suma se aleje bastante de 100 %.",
+        "correcta": false,
+        "explicacion": "No refuta correctamente. El redondeo cambia una suma en uno o dos puntos porcentuales, no en 150; además, las barras muestran valores exactos (80, 70, 65, 35). La verdadera razón es que las categorías no son excluyentes.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Recurre a una explicación genérica (redondeo) sin examinar si la magnitud del desajuste la hace plausible."
+      }
+    ],
+    "explicacion": "LEER: el gráfico muestra porcentajes de 80, 70, 65 y 35 que suman 250 %; la encuesta permitía marcar más de una aplicación. COMPRENDER: se pide la afirmación que explique por qué la objeción del estudiante no es válida. INTERPRETAR: cada barra responde a una pregunta sí/no independiente (\"¿usas esta aplicación?\") sobre los mismos 200 estudiantes. REPRESENTAR: mensajería 0,80 × 200 = 160; videos 140; fotos 130; red social 70; total de respuestas = 500. RAZONAR: los porcentajes solo deben sumar 100 % cuando las categorías son excluyentes (cada persona en una sola); aquí una persona puede estar en varias. RESOLVER: la afirmación correcta señala la independencia de los porcentajes y la no exclusividad de las categorías. VERIFICAR: 500 respuestas ÷ 200 estudiantes = 2,5 aplicaciones por persona, un valor razonable que explica exactamente el 250 %.",
+    "que_identificar": "Que la encuesta permitía marcar varias opciones y que cada porcentaje se calcula sobre el mismo total de 200 estudiantes.",
+    "que_revisar": "Categorías excluyentes frente a no excluyentes; cuándo los porcentajes deben sumar 100 %; diferencia entre gráfico de barras y gráfico circular.",
+    "refuerzo_ids": [
+      "MAT-113",
+      "MAT-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "graficos",
+      "barras",
+      "porcentajes",
+      "encuestas",
+      "argumentacion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-138",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "interpretar",
+    "tema": "Ecuación de la circunferencia",
+    "subtema": "Leer el centro y el radio en la forma (x − h)² + (y − k)² = r² y usarlos para decidir si un punto está dentro",
+    "dificultad": 2,
+    "contexto": "Una empresa de internet rural instala una antena en una vereda de Boyacá. En un plano con coordenadas en kilómetros, la zona con señal es el interior de la circunferencia de ecuación **(x − 3)² + (y + 2)² = 25**. Una escuela está ubicada en el punto **(5, 1)**.",
+    "estimulo": null,
+    "enunciado": "¿Dónde está la antena, cuál es el alcance de la señal y la escuela recibe señal?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La antena está en (−3, 2), el alcance es 25 km y la escuela sí recibe señal porque sus coordenadas son menores que 25.",
+        "correcta": false,
+        "explicacion": "No responde. En la forma (x − h)² + (y − k)² = r², el centro es (h, k) = (3, −2), con signos opuestos a los que aparecen en la ecuación, y r² = 25 implica r = 5 km, no 25. Comparar coordenadas con 25 no mide la distancia a la antena.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó los signos de la ecuación tal cual como coordenadas del centro y tomó r² como radio."
+      },
+      {
+        "clave": "B",
+        "texto": "La antena está en (3, −2), el alcance es 5 km y la escuela sí recibe señal porque su distancia a la antena es √13 ≈ 3,6 km, menor que 5.",
+        "correcta": true,
+        "explicacion": "Es la correcta. (x − 3)² + (y + 2)² = 25 tiene centro (3, −2) y radio √25 = 5 km. La distancia de la escuela (5, 1) a la antena es √((5 − 3)² + (1 + 2)²) = √(4 + 9) = √13 ≈ 3,6 km < 5 km, así que está dentro de la zona de señal.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La antena está en (3, −2), el alcance es 25 km y la escuela sí recibe señal porque está a menos de 25 km de la antena.",
+        "correcta": false,
+        "explicacion": "No responde completamente. El centro (3, −2) es correcto, pero el 25 de la ecuación es el radio al cuadrado: el alcance es √25 = 5 km. La conclusión sobre la escuela es cierta por casualidad, pero con un alcance equivocado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el término constante de la ecuación como el radio sin extraer la raíz cuadrada."
+      },
+      {
+        "clave": "D",
+        "texto": "La antena está en (−3, 2), el alcance es 5 km y la escuela no recibe señal porque su distancia a la antena es √65 ≈ 8,1 km, mayor que 5.",
+        "correcta": false,
+        "explicacion": "No responde. El radio 5 km es correcto, pero el centro no es (−3, 2): en (x − 3)² + (y + 2)² los signos se invierten y el centro es (3, −2). Con el centro correcto, la distancia a la escuela es √13 ≈ 3,6 km y sí hay señal.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió los signos del centro y por eso calculó la distancia desde el punto equivocado."
+      }
+    ],
+    "explicacion": "LEER: la zona con señal es el interior de (x − 3)² + (y + 2)² = 25; la escuela está en (5, 1). COMPRENDER: se pide el centro (posición de la antena), el radio (alcance) y si la escuela está dentro. INTERPRETAR: la ecuación tiene la forma (x − h)² + (y − k)² = r², con centro (h, k) y radio r; (y + 2) equivale a (y − (−2)). REPRESENTAR: centro (3, −2); r = √25 = 5 km. RAZONAR: un punto está dentro de la circunferencia si su distancia al centro es menor que el radio. RESOLVER: distancia = √((5 − 3)² + (1 − (−2))²) = √(4 + 9) = √13 ≈ 3,6 km < 5 km: la escuela recibe señal. VERIFICAR: sustituyendo (5, 1) en la ecuación, (5 − 3)² + (1 + 2)² = 13 < 25, lo que confirma que el punto está en el interior.",
+    "que_identificar": "Los valores h, k y r² en la ecuación, con atención a los signos, y la posición de la escuela.",
+    "que_revisar": "Ecuación canónica de la circunferencia; signos del centro; distancia entre dos puntos; interior y exterior de una circunferencia.",
+    "refuerzo_ids": [
+      "MAT-116",
+      "MAT-125"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "circunferencia",
+      "plano_cartesiano",
+      "distancia",
+      "ecuaciones",
+      "conectividad"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-139",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucra información cuantitativa o esquemática",
+    "habilidad": "representar",
+    "tema": "Unión e intersección de conjuntos",
+    "subtema": "Calcular cuántos elementos no pertenecen a ninguno de dos conjuntos usando |A ∪ B| = |A| + |B| − |A ∩ B|",
+    "dificultad": 2,
+    "contexto": "En un colegio de Medellín con **120 estudiantes de grado once**, **70 están inscritos en el club de inglés**, **50 en el club de francés** y **20 en ambos clubes**.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos estudiantes de grado once no están inscritos en ninguno de los dos clubes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0 estudiantes",
+        "correcta": false,
+        "explicacion": "No responde. 0 = 120 − (70 + 50) suma los dos clubes sin descontar a los 20 que están en ambos y por eso se cuentan dos veces. En la unión hay 70 + 50 − 20 = 100 estudiantes, no 120.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los tamaños de los dos clubes sin restar la intersección."
+      },
+      {
+        "clave": "B",
+        "texto": "30 estudiantes",
+        "correcta": false,
+        "explicacion": "No responde. 30 = 50 − 20 es el número de estudiantes que están solo en francés, no los que no están en ningún club. Los que no están en ninguno son 120 menos los 100 que están en al menos uno.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"solo francés\" con \"ninguno de los dos\"."
+      },
+      {
+        "clave": "C",
+        "texto": "50 estudiantes",
+        "correcta": false,
+        "explicacion": "No responde. 50 = 70 − 20 es el número de estudiantes que están solo en inglés. La pregunta se refiere a quienes están fuera de ambos clubes: 120 − 100 = 20.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó los que están únicamente en inglés y los tomó como los que no participan."
+      },
+      {
+        "clave": "D",
+        "texto": "20 estudiantes",
+        "correcta": true,
+        "explicacion": "Es la correcta. Estudiantes en al menos un club: 70 + 50 − 20 = 100 (los 20 de ambos se cuentan una sola vez). Fuera de los dos clubes: 120 − 100 = 20 estudiantes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: 120 estudiantes; 70 en inglés, 50 en francés, 20 en ambos. COMPRENDER: se pide cuántos no están en ningún club. INTERPRETAR: los 20 que están en ambos clubes aparecen tanto en los 70 como en los 50, así que sumar directamente los cuenta dos veces. REPRESENTAR: en un diagrama de dos conjuntos: solo inglés 70 − 20 = 50; ambos 20; solo francés 50 − 20 = 30; |A ∪ B| = 50 + 20 + 30 = 100. RAZONAR: ninguno = total − al menos uno. RESOLVER: 120 − 100 = 20 estudiantes. VERIFICAR: 50 (solo inglés) + 20 (ambos) + 30 (solo francés) + 20 (ninguno) = 120, el total del grado.",
+    "que_identificar": "Que los 20 estudiantes de ambos clubes están incluidos en los 70 y en los 50, y que se pide el complemento de la unión.",
+    "que_revisar": "Diagramas de Venn con dos conjuntos; principio de inclusión-exclusión; complemento de un conjunto.",
+    "refuerzo_ids": [
+      "MAT-109",
+      "MAT-137"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "conjuntos",
+      "union",
+      "interseccion",
+      "venn",
+      "clubes"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-140",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "verificar",
+    "tema": "Depreciación lineal y porcentual",
+    "subtema": "Distinguir perder una cantidad fija cada año de perder un porcentaje del valor del año anterior",
+    "dificultad": 3,
+    "contexto": "Una motocicleta nueva cuesta **8 000 000 de pesos**. Dos asesores estiman cómo pierde valor:\n\n- Asesor 1: *\"Pierde 800 000 pesos cada año\".*\n- Asesor 2: *\"Pierde cada año el 10 % del valor que tenía el año anterior\".*\n\nUn comprador concluye: *\"Los dos dicen lo mismo, porque el 10 % de 8 000 000 es exactamente 800 000; al cabo de 3 años la moto valdrá lo mismo con cualquiera de los dos cálculos\".*",
+    "estimulo": null,
+    "enunciado": "¿Es correcta la conclusión del comprador?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sí, porque el 10 % de 8 000 000 es 800 000 y, como ese porcentaje no cambia, cada año se descuenta la misma cantidad en los dos métodos.",
+        "correcta": false,
+        "explicacion": "No es correcta. El porcentaje no cambia, pero la base sobre la que se calcula sí: el segundo año el 10 % se aplica a 7 200 000 y da 720 000, no 800 000. Solo el primer año coinciden las dos pérdidas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que un porcentaje constante produce una cantidad constante, sin notar que la base disminuye cada año."
+      },
+      {
+        "clave": "B",
+        "texto": "No, porque con el asesor 2 la moto pierde valor más rápido: a los 3 años vale 8 000 000 × 0,7 = 5 600 000 y con el asesor 1 vale 8 000 000 − 800 000 = 7 200 000.",
+        "correcta": false,
+        "explicacion": "No es correcta. Mezcla los cálculos: 0,7 corresponde a restar 30 % de una sola vez (eso da justamente 5 600 000, el valor del asesor 1), y 7 200 000 es el valor tras un solo año. Con el asesor 2 el factor es 0,9³ = 0,729, que da 5 832 000.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los porcentajes anuales (3 × 10 % = 30 %) en lugar de multiplicar los factores 0,9 tres veces."
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque solo coinciden el primer año; después el 10 % se aplica a un valor cada vez menor, y a los 3 años la moto vale 5 600 000 con el asesor 1 y 5 832 000 con el asesor 2.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Asesor 1: 8 000 000 − 3 × 800 000 = 5 600 000. Asesor 2: 8 000 000 × 0,9³ = 8 000 000 × 0,729 = 5 832 000. Las pérdidas porcentuales del segundo y tercer año (720 000 y 648 000) son menores que 800 000, por eso los valores difieren.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Sí, porque la diferencia entre los dos métodos es tan pequeña que al cabo de 3 años, redondeando a millones, ambos valores dan 6 000 000 de pesos.",
+        "correcta": false,
+        "explicacion": "No es correcta. La diferencia a los 3 años es 5 832 000 − 5 600 000 = 232 000 pesos, una cantidad real y creciente con el tiempo; que ambos redondeen a 6 millones no hace equivalentes los dos métodos ni valida la conclusión del comprador.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de redondear en exceso o de no calcular los valores; no evalúa si los procedimientos son realmente equivalentes."
+      }
+    ],
+    "explicacion": "LEER: valor inicial 8 000 000; asesor 1 resta 800 000 fijos cada año; asesor 2 resta el 10 % del valor anterior; el comprador cree que a los 3 años coinciden. COMPRENDER: hay que decidir si los dos modelos dan el mismo valor tras 3 años. INTERPRETAR: el asesor 1 describe un modelo lineal (resta constante) y el asesor 2 un modelo porcentual (multiplicar por 0,9 cada año). REPRESENTAR: V₁(3) = 8 000 000 − 3 × 800 000; V₂(3) = 8 000 000 × 0,9³. RAZONAR: en el modelo porcentual la pérdida anual decrece: 800 000, luego 720 000, luego 648 000, porque la base se reduce. RESOLVER: V₁(3) = 5 600 000; V₂(3) = 8 000 000 × 0,729 = 5 832 000. La conclusión es incorrecta. VERIFICAR: la suma de las pérdidas del asesor 2 es 800 000 + 720 000 + 648 000 = 2 168 000 y 8 000 000 − 2 168 000 = 5 832 000, menor pérdida que los 2 400 000 del asesor 1.",
+    "que_identificar": "Que el 10 % del asesor 2 se aplica cada año sobre un valor distinto (el del año anterior), mientras que los 800 000 del asesor 1 son fijos.",
+    "que_revisar": "Modelos lineal y exponencial de decrecimiento; factor multiplicativo (1 − tasa); por qué un porcentaje constante no es una cantidad constante.",
+    "refuerzo_ids": [
+      "MAT-102",
+      "MAT-114"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "depreciacion",
+      "porcentajes",
+      "exponencial",
+      "lineal",
+      "argumentacion"
+    ],
+    "estado": "aprobada"
+  }
+]

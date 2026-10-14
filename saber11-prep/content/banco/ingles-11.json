@@ -1,0 +1,1428 @@
+[
+  {
+    "id": "ING-181",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Alimentos: jam (mermelada)",
+    "dificultad": 1,
+    "contexto": "Description: **A sweet food made from fruit and sugar. People put it on bread or toast at breakfast and keep it in a glass jar.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "butter",
+        "correcta": false,
+        "explicacion": "\"Butter\" (mantequilla) también se unta en el pan al desayuno, pero se hace con leche, no con fruta y azúcar, y no es dulce. Quien elige esta opción se fijó en \"put it on bread\" sin leer \"made from fruit and sugar\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la pista del pan y no revisó los ingredientes."
+      },
+      {
+        "clave": "B",
+        "texto": "jam",
+        "correcta": true,
+        "explicacion": "\"Jam\" (mermelada) es un alimento dulce hecho de fruta y azúcar (\"made from fruit and sugar\"), se unta en el pan o las tostadas al desayuno y se guarda en frascos de vidrio (\"glass jar\"). Las tres pistas coinciden.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "soup",
+        "correcta": false,
+        "explicacion": "\"Soup\" (sopa) es un plato caliente y salado que se toma con cuchara, normalmente al almuerzo o la cena; no es dulce, no se hace con fruta ni se unta en el pan. Quien elige esta opción no reconoció las pistas de alimento dulce para el desayuno.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No asoció \"sweet\", \"fruit\" y \"breakfast\" con un alimento para untar."
+      }
+    ],
+    "explicacion": "LEER: la descripción habla de un alimento dulce hecho de fruta y azúcar, que se pone sobre el pan al desayuno y se guarda en un frasco de vidrio. COMPRENDER: hay que identificar el nombre de ese alimento. INTERPRETAR: \"sweet\" y \"fruit and sugar\" indican algo dulce de fruta; \"on bread or toast\" indica que se unta; \"glass jar\" indica el envase típico. REPRESENTAR: fruta + azúcar → dulce para untar → frasco = mermelada. RAZONAR: la mantequilla se unta pero no es de fruta ni dulce; la sopa no es dulce ni se unta; la mermelada cumple todas las pistas. RESOLVER: la opción \"jam\". VERIFICAR: en Colombia la mermelada de mora o de guayaba se vende en frascos de vidrio y se come con pan, igual que en la descripción.",
+    "que_identificar": "Las pistas \"made from fruit and sugar\", \"on bread or toast\" y \"glass jar\".",
+    "que_revisar": "Vocabulario del desayuno: jam, butter, honey, toast, jar; adjetivos de sabor: sweet, salty, sour.",
+    "refuerzo_ids": [
+      "ING-161",
+      "ING-182"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "alimentos",
+      "desayuno",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-182",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "interpretar",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Clima y medio ambiente: drought (sequía)",
+    "dificultad": 2,
+    "contexto": "Description: **A long period of time with little or no rain. Rivers get low, the ground becomes dry and farmers can lose their crops.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "drought",
+        "correcta": true,
+        "explicacion": "\"Drought\" (sequía) es un periodo largo sin lluvia o con muy poca (\"little or no rain\"); por eso los ríos bajan, la tierra se seca y los cultivos se pierden. Cada efecto de la descripción corresponde a la falta de agua.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "flood",
+        "correcta": false,
+        "explicacion": "\"Flood\" (inundación) es el exceso de agua: los ríos se desbordan en lugar de bajar (\"rivers get low\") y la tierra se empapa en lugar de secarse. Quien elige esta opción asoció la pérdida de cultivos con un desastre, pero del tipo contrario.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó la pérdida de cosechas con el agua en exceso sin leer \"little or no rain\"."
+      },
+      {
+        "clave": "C",
+        "texto": "storm",
+        "correcta": false,
+        "explicacion": "\"Storm\" (tormenta) es un fenómeno corto con viento, lluvia fuerte y a veces rayos; no es un periodo largo (\"a long period of time\") ni se caracteriza por la falta de lluvia. Quien elige esta opción pensó en un fenómeno del clima sin revisar la duración ni la ausencia de lluvia.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un fenómeno del clima conocido sin comprobar las pistas de duración y falta de lluvia."
+      }
+    ],
+    "explicacion": "LEER: la descripción habla de un periodo largo con poca o ninguna lluvia, ríos bajos, tierra seca y cosechas perdidas. COMPRENDER: se pide el nombre de ese fenómeno climático. INTERPRETAR: todas las consecuencias (ríos bajos, suelo seco, pérdida de cultivos) se deben a la falta de agua durante mucho tiempo. REPRESENTAR: sin lluvia por mucho tiempo → ríos bajan → tierra seca → cultivos perdidos. RAZONAR: la inundación es exceso de agua, lo contrario; la tormenta es breve y trae lluvia; la sequía es la falta prolongada de lluvia. RESOLVER: la opción \"drought\". VERIFICAR: en Colombia, los periodos de sequía asociados al fenómeno de El Niño producen exactamente estos efectos en ríos y cultivos.",
+    "que_identificar": "Las pistas \"little or no rain\", \"a long period of time\" y \"rivers get low\".",
+    "que_revisar": "Vocabulario del clima y los desastres naturales: drought, flood, storm, earthquake, landslide; verbos: get low, dry out, lose crops.",
+    "refuerzo_ids": [
+      "ING-181",
+      "ING-101"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "clima",
+      "medio_ambiente",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-183",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Identifica el lugar donde puede encontrarse un aviso a partir de su contenido",
+    "habilidad": "razonar",
+    "tema": "Avisos y letreros",
+    "subtema": "Ubicar el lugar de un aviso: transporte público (keep your ticket, inspectors)",
+    "dificultad": 2,
+    "contexto": "Read the notice.\n\n**KEEP YOUR TICKET UNTIL THE END OF YOUR JOURNEY.\nINSPECTORS MAY ASK TO SEE IT AT ANY STOP.**",
+    "estimulo": null,
+    "enunciado": "Where can you see this notice?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "In a cinema, at the entrance to the screening room.",
+        "correcta": false,
+        "explicacion": "En un cine se muestra el tiquete al entrar, pero no hay un \"journey\" (viaje) ni \"stops\" (paradas). Quien elige esta opción se fijó en la palabra \"ticket\" y no en las palabras de transporte que la acompañan.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"ticket\" con una entrada de cine sin leer \"journey\" ni \"stop\"."
+      },
+      {
+        "clave": "B",
+        "texto": "In a museum, next to the ticket office.",
+        "correcta": false,
+        "explicacion": "Un museo vende tiquetes, pero nadie hace un \"journey\" dentro de él ni existen paradas donde un inspector revise el boleto. Quien elige esta opción reconoció un lugar con tiquetes, pero no las pistas de viaje.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Pensó en cualquier lugar donde se compran boletos sin atender a \"journey\" y \"stop\"."
+      },
+      {
+        "clave": "C",
+        "texto": "On a bus or a train, near the doors.",
+        "correcta": true,
+        "explicacion": "\"Journey\" (viaje), \"stop\" (parada) e \"inspectors\" que revisan el tiquete durante el trayecto son propios del transporte público. El aviso pide conservar el tiquete hasta el final del viaje porque un inspector puede subir en cualquier parada y pedirlo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el aviso pide conservar el tiquete hasta el final del viaje y advierte que los inspectores pueden pedirlo en cualquier parada. COMPRENDER: la pregunta pide el lugar donde se ve el aviso. INTERPRETAR: \"journey\" y \"stop\" son palabras de transporte, y los inspectores que revisan tiquetes durante el recorrido existen en buses y trenes. REPRESENTAR: tiquete + viaje + paradas + inspector = transporte público. RAZONAR: en un cine o un museo se compra un tiquete, pero no hay viaje ni paradas; en un bus o tren se cumplen todas las pistas. RESOLVER: la opción del bus o tren. VERIFICAR: en sistemas como el tren de cercanías o los buses intermunicipales es común que un inspector suba a revisar los pasajes, igual que describe el aviso.",
+    "que_identificar": "Las palabras \"journey\", \"stop\" e \"inspectors\" junto a \"ticket\".",
+    "que_revisar": "Vocabulario de transporte: journey, trip, stop, fare, inspector, ticket; modales de posibilidad en avisos: may.",
+    "refuerzo_ids": [
+      "ING-164",
+      "ING-184"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "lugar",
+      "transporte",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-184",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "razonar",
+    "tema": "Avisos y letreros",
+    "subtema": "Biblioteca: reglas con límite de tiempo y número mínimo de personas (fewer than)",
+    "dificultad": 3,
+    "contexto": "Notice at the entrance of the study rooms in a public library in Tunja:\n\n**STUDY ROOMS CAN BE BOOKED FOR UP TO TWO HOURS.\nGROUPS OF FEWER THAN THREE PEOPLE WILL BE ASKED TO USE THE MAIN HALL.**",
+    "estimulo": null,
+    "enunciado": "What does this notice mean?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Groups of three or more people have to study in the main hall.",
+        "correcta": false,
+        "explicacion": "Es al revés: quienes van a la sala principal son los grupos de menos de tres personas (\"fewer than three\"). Los grupos de tres o más sí pueden reservar una sala de estudio. Quien elige esta opción invirtió el sentido de \"fewer than\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"fewer than three\" como \"tres o más\"."
+      },
+      {
+        "clave": "B",
+        "texto": "Only groups of at least three people can use a study room.",
+        "correcta": true,
+        "explicacion": "Si los grupos de menos de tres personas (\"fewer than three\") deben ir a la sala principal, entonces las salas de estudio quedan para grupos de tres o más (\"at least three\"). La opción expresa esa regla desde el punto de vista de quién sí puede usar la sala.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Everybody must leave the library after two hours of study.",
+        "correcta": false,
+        "explicacion": "El límite de dos horas (\"up to two hours\") se aplica a la reserva de una sala de estudio, no a la permanencia en la biblioteca; después del tiempo se puede seguir en la sala principal. Quien elige esta opción amplió la regla de las salas a todo el edificio.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Aplicó el límite de dos horas de las salas a toda la biblioteca."
+      }
+    ],
+    "explicacion": "LEER: el aviso dice que las salas de estudio se reservan por un máximo de dos horas y que a los grupos de menos de tres personas se les pedirá usar la sala principal. COMPRENDER: hay que deducir qué significan las dos reglas juntas. INTERPRETAR: \"up to two hours\" es un máximo de reserva; \"fewer than three\" significa una o dos personas, que no pueden usar las salas. REPRESENTAR: 1 o 2 personas → sala principal; 3 o más → sala de estudio, máximo 2 horas. RAZONAR: mandar a la sala principal a los grupos de tres o más invierte la regla; salir de la biblioteca tras dos horas confunde la sala con el edificio; solo grupos de al menos tres en las salas expresa la regla. RESOLVER: la opción sobre grupos de al menos tres personas. VERIFICAR: \"fewer than three\" excluye a 1 y 2; su complemento es \"at least three\", que es lo que dice la opción elegida.",
+    "que_identificar": "La expresión \"fewer than three people\" y a qué se aplica el límite \"up to two hours\".",
+    "que_revisar": "Cuantificadores comparativos: fewer than, less than, at least, up to, more than; lectura de reglas con dos condiciones.",
+    "refuerzo_ids": [
+      "ING-183",
+      "ING-143"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "avisos",
+      "biblioteca",
+      "cuantificadores",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-185",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "comprender",
+    "tema": "Conversaciones cortas",
+    "subtema": "En clase: responder a una pregunta con \"Why didn't you...?\" dando una excusa",
+    "dificultad": 1,
+    "contexto": "In a classroom in Montería.\n\nTeacher: **Andrés, why didn't you bring your homework today?**\n\nAndrés: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "I'm sorry, I left it at home.",
+        "correcta": true,
+        "explicacion": "La pregunta \"Why didn't you...?\" pide una razón. Disculparse y explicar que dejó la tarea en casa responde directamente a esa pregunta y es la reacción adecuada ante un profesor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Yes, I did it last night.",
+        "correcta": false,
+        "explicacion": "Responder \"Yes\" solo tiene sentido ante una pregunta de sí o no, y la profesora preguntó por qué no trajo la tarea, no si la hizo. Decir que la hizo anoche no explica por qué no la trajo. Quien elige esta opción no identificó la palabra interrogativa \"why\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió a \"why\" como si fuera una pregunta de sí o no."
+      },
+      {
+        "clave": "C",
+        "texto": "Because it's on page ten.",
+        "correcta": false,
+        "explicacion": "Empieza con \"Because\", que es la forma de dar una razón, pero el contenido no explica la ausencia de la tarea: decir en qué página está no es un motivo para no traerla. Quien elige esta opción se fijó en la forma de la respuesta y no en su sentido.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió la respuesta por empezar con \"Because\" sin comprobar que fuera una razón lógica."
+      }
+    ],
+    "explicacion": "LEER: la profesora pregunta \"why didn't you bring your homework today?\". COMPRENDER: hay que elegir la respuesta de Andrés adecuada a esa intención. INTERPRETAR: \"why\" pide una razón; \"didn't bring\" indica que la tarea no llegó al colegio, así que la respuesta debe explicar ese hecho. REPRESENTAR: pregunta por la causa → excusa o explicación. RAZONAR: \"Yes, I did it last night\" responde a otra pregunta y no explica la ausencia; \"Because it's on page ten\" tiene forma de razón pero no explica nada; \"I'm sorry, I left it at home\" da una razón real y cortés. RESOLVER: la opción que se disculpa y dice que la dejó en casa. VERIFICAR: en una situación real, un estudiante que olvidó la tarea responde justamente así: se disculpa y explica dónde quedó.",
+    "que_identificar": "La palabra interrogativa \"why\" y la negación \"didn't bring\".",
+    "que_revisar": "Preguntas con why y respuestas con because o con una explicación directa; fórmulas de disculpa: I'm sorry, I forgot, I left it at home.",
+    "refuerzo_ids": [
+      "ING-165",
+      "ING-186"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "colegio",
+      "excusas",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-186",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "En la calle: responder a \"Is there a ... near here?\" indicando ubicación",
+    "dificultad": 1,
+    "contexto": "In the street, in Cartagena.\n\nTourist: **Excuse me, is there a bank near here?**\n\nLocal woman: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No, I don't have any money with me.",
+        "correcta": false,
+        "explicacion": "El turista no pidió dinero; preguntó si hay un banco cerca. Esta respuesta entiende la pregunta como una petición de plata. Quien elige esta opción asoció \"bank\" con \"money\" sin leer la estructura \"Is there a ... near here?\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó la pregunta sobre el banco como una petición de dinero."
+      },
+      {
+        "clave": "B",
+        "texto": "Yes, it opens at nine o'clock.",
+        "correcta": false,
+        "explicacion": "Dar el horario de apertura responde a \"What time does the bank open?\", no a si existe un banco cerca ni dónde está. Quien elige esta opción vio una respuesta que empieza con \"Yes\" y habla de un banco, pero no da la ubicación que el turista necesita.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Respondió con información del banco distinta de la que se pidió (su ubicación)."
+      },
+      {
+        "clave": "C",
+        "texto": "Yes, there's one on the next corner.",
+        "correcta": true,
+        "explicacion": "\"Is there a bank near here?\" pregunta si existe un banco cerca y, de forma implícita, dónde. Confirmar que sí (\"Yes, there's one\") y decir dónde está (\"on the next corner\") es la respuesta completa y natural.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el turista dice \"Excuse me, is there a bank near here?\". COMPRENDER: hay que elegir la respuesta que corresponda a esa pregunta. INTERPRETAR: \"Is there...?\" pregunta por la existencia de algo; \"near here\" pide, además, su ubicación. REPRESENTAR: ¿hay banco cerca? → sí + dónde. RAZONAR: hablar de no tener dinero responde a una petición que nadie hizo; dar la hora de apertura no dice dónde está el banco; confirmar que hay uno en la siguiente esquina responde a la existencia y a la ubicación. RESOLVER: la opción \"Yes, there's one on the next corner\". VERIFICAR: \"one\" sustituye a \"a bank\" para no repetirlo, lo que muestra que la respuesta está construida sobre la misma pregunta.",
+    "que_identificar": "La estructura \"Is there a ... near here?\" como pregunta de existencia y ubicación.",
+    "que_revisar": "There is / there are en preguntas; respuestas cortas con \"one\"; expresiones de lugar: on the corner, next to, opposite, two blocks away.",
+    "refuerzo_ids": [
+      "ING-185",
+      "ING-105"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "ciudad",
+      "ubicacion",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-187",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Voz pasiva en pasado simple: was + participio con sujeto singular",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(1)**.\n\n**The Oldest Tree in Town**\n\nIn the main park of Rionegro there is a ceiba tree that **(1) ______** planted before the town hall was built. Nobody knows exactly how old it is, but a document from 1812 already mentions it. For years the tree was in danger: cars parked on its roots, and people cut its branches to hang advertisements. In 2019 a group of neighbours decided to protect it. They built a small fence, planted flowers around it and asked the council **(2) ______** the parking spaces. Today the tree looks healthier than ever, and schoolchildren visit it to learn about native species. The neighbours say they will keep looking after it **(3) ______** the next generation can enjoy its shade too.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "is",
+        "correcta": false,
+        "explicacion": "\"Is planted\" sería pasiva en presente, pero el árbol se sembró en el pasado, antes de que se construyera la alcaldía (\"before the town hall was built\"), y el documento de 1812 lo confirma. Quien elige esta opción no atendió al marco temporal pasado de la oración.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el presente aunque la siembra ocurrió antes de la construcción de la alcaldía."
+      },
+      {
+        "clave": "B",
+        "texto": "was",
+        "correcta": true,
+        "explicacion": "El árbol no se siembra a sí mismo: alguien lo sembró, así que la oración está en voz pasiva (\"be\" + participio \"planted\"). El sujeto \"a ceiba tree\" es singular y la acción ocurrió en el pasado (\"before the town hall was built\"), por lo que la forma es \"was planted\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "were",
+        "correcta": false,
+        "explicacion": "\"Were\" es la forma de pasado para sujetos plurales (they, we, you), pero el sujeto es \"a ceiba tree\", singular. Quien elige esta opción reconoció la pasiva en pasado, pero no concordó el verbo con el sujeto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la forma plural \"were\" con un sujeto singular."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"a ceiba tree that ___ planted before the town hall was built\". COMPRENDER: hay que elegir la forma del verbo \"be\" que completa la pasiva con el participio \"planted\". INTERPRETAR: el árbol recibe la acción (lo sembraron), el sujeto es singular y la acción es anterior a la construcción de la alcaldía, es decir, pasada. REPRESENTAR: sujeto singular + pasado + pasiva = was + participio. RAZONAR: \"is\" pondría la siembra en presente, lo que contradice \"before the town hall was built\" y el documento de 1812; \"were\" es plural; \"was\" es singular y pasado. RESOLVER: la opción \"was\". VERIFICAR: en la misma oración aparece \"was built\", otra pasiva en pasado con sujeto singular, que sirve de modelo.",
+    "que_identificar": "El participio \"planted\" después del espacio, el sujeto singular \"a ceiba tree\" y la referencia temporal \"before the town hall was built\".",
+    "que_revisar": "Voz pasiva: be + participio; pasado simple pasivo con was/were; concordancia del verbo be con el sujeto.",
+    "refuerzo_ids": [
+      "ING-167",
+      "ING-188"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "gramatica",
+      "pasiva",
+      "pasado",
+      "texto:ING-T42",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-188",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "razonar",
+    "tema": "Gramática en contexto",
+    "subtema": "Verbo + objeto + infinitivo con to: ask someone to do something",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(2)**.\n\n**The Oldest Tree in Town**\n\nIn the main park of Rionegro there is a ceiba tree that **(1) ______** planted before the town hall was built. Nobody knows exactly how old it is, but a document from 1812 already mentions it. For years the tree was in danger: cars parked on its roots, and people cut its branches to hang advertisements. In 2019 a group of neighbours decided to protect it. They built a small fence, planted flowers around it and asked the council **(2) ______** the parking spaces. Today the tree looks healthier than ever, and schoolchildren visit it to learn about native species. The neighbours say they will keep looking after it **(3) ______** the next generation can enjoy its shade too.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "to move",
+        "correcta": true,
+        "explicacion": "El verbo \"ask\" con un objeto (\"the council\") va seguido de infinitivo con \"to\" para expresar lo que se le pide a alguien: \"asked the council to move the parking spaces\" (pidieron al concejo que moviera los parqueaderos). Es la estructura verbo + objeto + to + infinitivo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "move",
+        "correcta": false,
+        "explicacion": "El infinitivo sin \"to\" se usa después de verbos como \"make\" o \"let\" (\"let them move\"), pero no después de \"ask\" con objeto. Quien elige esta opción aplicó a \"ask\" la regla de otros verbos o tradujo literalmente \"pidieron que movieran\".",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Omitió \"to\" por analogía con make o let, o por traducir del español."
+      },
+      {
+        "clave": "C",
+        "texto": "moving",
+        "correcta": false,
+        "explicacion": "El gerundio sigue a verbos como \"enjoy\", \"keep\" o \"suggest\" (\"suggested moving\"), pero \"ask\" + objeto exige infinitivo con \"to\". Quien elige esta opción recordó que algunos verbos van con -ing, pero \"ask\" no está entre ellos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Aplicó el patrón de gerundio de otros verbos (suggest, enjoy) al verbo ask."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"They ... asked the council ___ the parking spaces\". COMPRENDER: hay que elegir la forma verbal que sigue a \"asked the council\". INTERPRETAR: los vecinos le piden algo al concejo; el verbo \"ask\" seguido de la persona a quien se pide exige infinitivo con \"to\". REPRESENTAR: ask + someone + to + verbo. RAZONAR: el infinitivo sin \"to\" va con make y let, no con ask; el gerundio va con suggest, enjoy o keep, no con ask; \"to move\" sigue el patrón correcto de ask. RESOLVER: la opción \"to move\". VERIFICAR: otros verbos de petición u orden funcionan igual (\"tell someone to\", \"want someone to\"), y más adelante el texto usa \"keep looking\", lo que muestra que el autor distingue bien los patrones.",
+    "que_identificar": "El verbo \"asked\" seguido del objeto \"the council\" antes del espacio.",
+    "que_revisar": "Patrones verbales: ask/tell/want + objeto + to-infinitivo; make/let + objeto + infinitivo sin to; enjoy/suggest/keep + gerundio.",
+    "refuerzo_ids": [
+      "ING-187",
+      "ING-189"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "gramatica",
+      "patrones_verbales",
+      "infinitivo",
+      "texto:ING-T42",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-189",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "razonar",
+    "tema": "Gramática en contexto",
+    "subtema": "Conectores de propósito: so that frente a because y although",
+    "dificultad": 3,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(3)**.\n\n**The Oldest Tree in Town**\n\nIn the main park of Rionegro there is a ceiba tree that **(1) ______** planted before the town hall was built. Nobody knows exactly how old it is, but a document from 1812 already mentions it. For years the tree was in danger: cars parked on its roots, and people cut its branches to hang advertisements. In 2019 a group of neighbours decided to protect it. They built a small fence, planted flowers around it and asked the council **(2) ______** the parking spaces. Today the tree looks healthier than ever, and schoolchildren visit it to learn about native species. The neighbours say they will keep looking after it **(3) ______** the next generation can enjoy its shade too.",
+    "estimulo": null,
+    "enunciado": "Which words complete gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "because",
+        "correcta": false,
+        "explicacion": "\"Because\" introduce una causa ya existente, pero que la próxima generación disfrute la sombra no es la causa actual del cuidado sino su finalidad futura. Además, el verbo \"can enjoy\" expresa una posibilidad que se busca, no un hecho. Quien elige esta opción confundió causa con propósito.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la finalidad (para que) con la causa (porque)."
+      },
+      {
+        "clave": "B",
+        "texto": "although",
+        "correcta": false,
+        "explicacion": "\"Although\" marca un contraste u obstáculo, pero cuidar el árbol y que los niños del futuro disfruten su sombra no se oponen; la segunda idea es el objetivo de la primera. Quien elige esta opción no identificó la relación lógica de propósito.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Usó un conector de contraste donde no hay oposición entre las ideas."
+      },
+      {
+        "clave": "C",
+        "texto": "so that",
+        "correcta": true,
+        "explicacion": "Los vecinos seguirán cuidando el árbol con un propósito: que la próxima generación también pueda disfrutar su sombra. \"So that\" (para que) introduce una finalidad y suele ir seguido de un modal como \"can\", justo como en \"so that the next generation can enjoy\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración es \"they will keep looking after it ___ the next generation can enjoy its shade too\". COMPRENDER: hay que elegir el conector que relacione el cuidado del árbol con el disfrute de la próxima generación. INTERPRETAR: la segunda parte expresa el objetivo del cuidado, no su causa ni una oposición; \"can enjoy\" señala un resultado deseado. REPRESENTAR: acción (cuidar) → finalidad (que otros disfruten) = para que. RAZONAR: \"because\" presentaría un hecho futuro como causa presente, lo cual no tiene lógica; \"although\" necesitaría un contraste que no existe; \"so that\" introduce la finalidad y combina con \"can\". RESOLVER: la opción \"so that\". VERIFICAR: la palabra \"too\" al final (\"disfrutar su sombra también\") refuerza la idea de un beneficio futuro buscado, coherente con un conector de propósito.",
+    "que_identificar": "La relación de propósito entre \"keep looking after it\" y \"the next generation can enjoy its shade\".",
+    "que_revisar": "Conectores de propósito: so that + sujeto + can/will, in order to + infinitivo, to + infinitivo; diferencia con because (causa) y although (contraste).",
+    "refuerzo_ids": [
+      "ING-188",
+      "ING-168"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "gramatica",
+      "conectores",
+      "proposito",
+      "texto:ING-T42",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-190",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "leer",
+    "tema": "Comprensión de lectura",
+    "subtema": "Relacionar una franja horaria con la actividad correspondiente en una lista",
+    "dificultad": 1,
+    "contexto": "Read the information sheet and answer the question.\n\n**Volunteer Day at Patitas Animal Shelter – Ibagué**\n\nPatitas is a shelter for abandoned dogs and cats. At the moment we look after 64 dogs and 31 cats, and we need help! Join our volunteer day on Sunday 14 September from 8 a.m. to 1 p.m.\n\n**What volunteers will do**\n\n- Walk the dogs in the park next to the shelter (8 to 10 a.m.).\n- Clean the cat house and wash the food bowls (10 to 11:30 a.m.).\n- Help the vet, Dr Lucía Mora, give vitamins to the animals (11:30 a.m. to 1 p.m.).\n\n**Who can come**\n\nAnyone over 14. Volunteers under 18 must bring a signed letter from a parent. You do not need experience, but you must wear closed shoes and old clothes. Please do not bring your own pets.\n\n**What we need**\n\nIf you can, bring a bag of dog food or a blanket. We also need towels, but not pillows: the cats destroy them in a day.\n\nLunch (lentils, rice and salad) is free for all volunteers at 1 p.m. To register, send a message with your name and age to 311 555 0123 before Thursday 11 September. Only 40 places are available.\n\nThank you! – The Patitas team",
+    "estimulo": null,
+    "enunciado": "What will volunteers do between 10 and 11:30 a.m.?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Walk the dogs in the park next to the shelter.",
+        "correcta": false,
+        "explicacion": "Pasear los perros es la primera actividad de la lista, de 8 a 10 a.m., no de 10 a 11:30. Quien elige esta opción tomó la primera actividad sin comparar su horario con el de la pregunta.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió la primera actividad de la lista sin revisar la hora entre paréntesis."
+      },
+      {
+        "clave": "B",
+        "texto": "Give vitamins to the animals with the vet.",
+        "correcta": false,
+        "explicacion": "Ayudar a la veterinaria con las vitaminas es la tercera actividad, de 11:30 a.m. a 1 p.m. Empieza justo cuando termina la franja de la pregunta. Quien elige esta opción confundió la hora de inicio con la hora de fin.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vio \"11:30\" en la tercera actividad y no notó que allí es hora de inicio, no de fin."
+      },
+      {
+        "clave": "C",
+        "texto": "Have lunch with the rest of the team.",
+        "correcta": false,
+        "explicacion": "El almuerzo es a la 1 p.m., al final de la jornada, según el último párrafo. No es una de las actividades de la mañana. Quien elige esta opción tomó un dato de otra parte del texto sin verificar la hora.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió el almuerzo de la 1 p.m. con una actividad de la mañana."
+      },
+      {
+        "clave": "D",
+        "texto": "Clean the cat house and wash the food bowls.",
+        "correcta": true,
+        "explicacion": "La segunda actividad de la lista dice: \"Clean the cat house and wash the food bowls (10 to 11:30 a.m.)\". La franja horaria coincide exactamente con la de la pregunta.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la sección \"What volunteers will do\" tiene tres actividades con su horario entre paréntesis. COMPRENDER: la pregunta pide la actividad de 10 a 11:30 a.m. INTERPRETAR: hay que buscar la actividad cuyo paréntesis diga \"10 to 11:30 a.m.\". REPRESENTAR: 8-10 pasear perros; 10-11:30 limpiar la casa de los gatos y lavar los platos; 11:30-1 vitaminas; 1 p.m. almuerzo. RAZONAR: pasear los perros es antes; las vitaminas son después; el almuerzo es al final; limpiar la casa de los gatos es la actividad de esa franja. RESOLVER: la opción de limpiar la casa de los gatos y lavar los platos. VERIFICAR: las franjas son consecutivas y sin huecos, y la de 10 a 11:30 solo corresponde a la segunda actividad.",
+    "que_identificar": "El horario entre paréntesis de cada actividad en la lista \"What volunteers will do\".",
+    "que_revisar": "Lectura de listas con horarios; verbos de tareas: walk, clean, wash, help; horas con a.m. y p.m.",
+    "refuerzo_ids": [
+      "ING-170",
+      "ING-191"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "horarios",
+      "texto:ING-T43",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-191",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "resolver",
+    "tema": "Comprensión de lectura",
+    "subtema": "Aplicar un requisito por edad (under 18) a un caso concreto",
+    "dificultad": 2,
+    "contexto": "Read the information sheet and answer the question.\n\n**Volunteer Day at Patitas Animal Shelter – Ibagué**\n\nPatitas is a shelter for abandoned dogs and cats. At the moment we look after 64 dogs and 31 cats, and we need help! Join our volunteer day on Sunday 14 September from 8 a.m. to 1 p.m.\n\n**What volunteers will do**\n\n- Walk the dogs in the park next to the shelter (8 to 10 a.m.).\n- Clean the cat house and wash the food bowls (10 to 11:30 a.m.).\n- Help the vet, Dr Lucía Mora, give vitamins to the animals (11:30 a.m. to 1 p.m.).\n\n**Who can come**\n\nAnyone over 14. Volunteers under 18 must bring a signed letter from a parent. You do not need experience, but you must wear closed shoes and old clothes. Please do not bring your own pets.\n\n**What we need**\n\nIf you can, bring a bag of dog food or a blanket. We also need towels, but not pillows: the cats destroy them in a day.\n\nLunch (lentils, rice and salad) is free for all volunteers at 1 p.m. To register, send a message with your name and age to 311 555 0123 before Thursday 11 September. Only 40 places are available.\n\nThank you! – The Patitas team",
+    "estimulo": null,
+    "enunciado": "Valeria is 16 years old and wants to volunteer. What must she bring?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Her own pet and a pair of closed shoes.",
+        "correcta": false,
+        "explicacion": "Los zapatos cerrados sí son obligatorios, pero el texto pide expresamente no llevar mascotas propias (\"Please do not bring your own pets\"). Quien elige esta opción mezcló un requisito real con algo prohibido.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó la negación en \"do not bring your own pets\"."
+      },
+      {
+        "clave": "B",
+        "texto": "A letter signed by one of her parents.",
+        "correcta": true,
+        "explicacion": "La sección \"Who can come\" dice: \"Volunteers under 18 must bring a signed letter from a parent\". Valeria tiene 16 años, es menor de 18, así que debe llevar la carta firmada por un padre o una madre.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "A certificate of experience with animals.",
+        "correcta": false,
+        "explicacion": "El texto dice \"You do not need experience\": no se exige experiencia ni ningún certificado que la demuestre. Quien elige esta opción supuso un requisito habitual en otros contextos, pero que aquí se niega explícitamente.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que se pedía experiencia sin leer \"You do not need experience\"."
+      },
+      {
+        "clave": "D",
+        "texto": "A pillow and some old clothes for the work.",
+        "correcta": false,
+        "explicacion": "La ropa vieja sí es obligatoria, pero las almohadas son justamente lo que el refugio no quiere recibir (\"not pillows: the cats destroy them\"). Quien elige esta opción combinó un requisito con un objeto rechazado.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó \"pillows\" de la lista de necesidades sin notar la negación \"not\"."
+      }
+    ],
+    "explicacion": "LEER: la sección \"Who can come\" establece la edad mínima, la carta para menores de 18, la ropa y la prohibición de llevar mascotas; la sección \"What we need\" habla de donaciones. COMPRENDER: la pregunta pide qué debe llevar una voluntaria de 16 años. INTERPRETAR: 16 es menor de 18 (\"under 18\"), así que le aplica la regla de la carta firmada. REPRESENTAR: 16 años → menor de 18 → carta firmada obligatoria; además zapatos cerrados y ropa vieja; sin mascotas ni almohadas. RAZONAR: la mascota está prohibida; la experiencia no se exige; la almohada se rechaza; la carta firmada es el requisito que depende de la edad. RESOLVER: la opción de la carta firmada por un padre o una madre. VERIFICAR: \"must bring\" expresa obligación, y la regla aparece justo después de la edad mínima, lo que confirma que es un requisito para menores como Valeria.",
+    "que_identificar": "La frase \"Volunteers under 18 must bring a signed letter from a parent\" y la edad de Valeria.",
+    "que_revisar": "Expresiones de edad: over 14, under 18, at least; obligación y prohibición: must, do not; aplicar una regla general a un caso particular.",
+    "refuerzo_ids": [
+      "ING-190",
+      "ING-192"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "requisitos",
+      "edad",
+      "texto:ING-T43",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-192",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar el elemento excluido en una lista con negación (but not)",
+    "dificultad": 2,
+    "contexto": "Read the information sheet and answer the question.\n\n**Volunteer Day at Patitas Animal Shelter – Ibagué**\n\nPatitas is a shelter for abandoned dogs and cats. At the moment we look after 64 dogs and 31 cats, and we need help! Join our volunteer day on Sunday 14 September from 8 a.m. to 1 p.m.\n\n**What volunteers will do**\n\n- Walk the dogs in the park next to the shelter (8 to 10 a.m.).\n- Clean the cat house and wash the food bowls (10 to 11:30 a.m.).\n- Help the vet, Dr Lucía Mora, give vitamins to the animals (11:30 a.m. to 1 p.m.).\n\n**Who can come**\n\nAnyone over 14. Volunteers under 18 must bring a signed letter from a parent. You do not need experience, but you must wear closed shoes and old clothes. Please do not bring your own pets.\n\n**What we need**\n\nIf you can, bring a bag of dog food or a blanket. We also need towels, but not pillows: the cats destroy them in a day.\n\nLunch (lentils, rice and salad) is free for all volunteers at 1 p.m. To register, send a message with your name and age to 311 555 0123 before Thursday 11 September. Only 40 places are available.\n\nThank you! – The Patitas team",
+    "estimulo": null,
+    "enunciado": "Which of these things does the shelter NOT want to receive?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pillows for the cats to sleep on.",
+        "correcta": true,
+        "explicacion": "La sección \"What we need\" dice: \"We also need towels, but not pillows: the cats destroy them in a day\". Las almohadas se excluyen explícitamente, con la razón de que los gatos las destruyen en un día.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Towels for drying the animals.",
+        "correcta": false,
+        "explicacion": "Las toallas sí se piden: \"We also need towels\". La negación \"but not\" viene después y se aplica a las almohadas, no a las toallas. Quien elige esta opción asoció la negación con la palabra más cercana al inicio de la frase.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la negación \"not\" a las toallas en lugar de a las almohadas."
+      },
+      {
+        "clave": "C",
+        "texto": "Blankets for the dogs.",
+        "correcta": false,
+        "explicacion": "Las cobijas están en la lista de lo que se agradece recibir: \"bring a bag of dog food or a blanket\". No hay ninguna negación sobre ellas. Quien elige esta opción no leyó la primera oración de la sección \"What we need\".",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No ubicó la cobija en la lista de donaciones bienvenidas."
+      },
+      {
+        "clave": "D",
+        "texto": "Bags of dog food.",
+        "correcta": false,
+        "explicacion": "La comida para perros es lo primero que se pide: \"If you can, bring a bag of dog food\". Es una donación bienvenida, no rechazada. Quien elige esta opción respondió sin revisar la sección de necesidades.",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Respondió por intuición sin confirmar la lista de donaciones."
+      }
+    ],
+    "explicacion": "LEER: la sección \"What we need\" dice: \"bring a bag of dog food or a blanket. We also need towels, but not pillows: the cats destroy them in a day\". COMPRENDER: la pregunta pide el objeto que el refugio no quiere recibir. INTERPRETAR: la estructura \"X, but not Y\" acepta X (toallas) y rechaza Y (almohadas). REPRESENTAR: sí = comida de perro, cobija, toallas; no = almohadas. RAZONAR: comida, cobijas y toallas aparecen como donaciones pedidas; las almohadas son el único elemento precedido de \"not\". RESOLVER: la opción de las almohadas. VERIFICAR: la razón que sigue (\"the cats destroy them in a day\") explica por qué se rechazan, lo que confirma que se habla de las almohadas.",
+    "que_identificar": "La estructura \"We also need towels, but not pillows\" en la sección \"What we need\".",
+    "que_revisar": "Negaciones parciales en listas: but not, except, apart from; vocabulario de objetos para animales: blanket, towel, pillow, bowl.",
+    "refuerzo_ids": [
+      "ING-191",
+      "ING-152"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "negacion",
+      "donaciones",
+      "texto:ING-T43",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-193",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "resolver",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar el procedimiento de inscripción: medio, datos y fecha límite",
+    "dificultad": 3,
+    "contexto": "Read the information sheet and answer the question.\n\n**Volunteer Day at Patitas Animal Shelter – Ibagué**\n\nPatitas is a shelter for abandoned dogs and cats. At the moment we look after 64 dogs and 31 cats, and we need help! Join our volunteer day on Sunday 14 September from 8 a.m. to 1 p.m.\n\n**What volunteers will do**\n\n- Walk the dogs in the park next to the shelter (8 to 10 a.m.).\n- Clean the cat house and wash the food bowls (10 to 11:30 a.m.).\n- Help the vet, Dr Lucía Mora, give vitamins to the animals (11:30 a.m. to 1 p.m.).\n\n**Who can come**\n\nAnyone over 14. Volunteers under 18 must bring a signed letter from a parent. You do not need experience, but you must wear closed shoes and old clothes. Please do not bring your own pets.\n\n**What we need**\n\nIf you can, bring a bag of dog food or a blanket. We also need towels, but not pillows: the cats destroy them in a day.\n\nLunch (lentils, rice and salad) is free for all volunteers at 1 p.m. To register, send a message with your name and age to 311 555 0123 before Thursday 11 September. Only 40 places are available.\n\nThank you! – The Patitas team",
+    "estimulo": null,
+    "enunciado": "What do people have to do to get a place on the volunteer day?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Pay for their lunch at the shelter on Sunday 14 September.",
+        "correcta": false,
+        "explicacion": "El almuerzo es gratis para todos los voluntarios (\"Lunch ... is free\"), así que no hay que pagar nada, y el domingo 14 es el día del evento, no el de la inscripción. Quien elige esta opción no leyó la frase sobre cómo registrarse.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso un pago que el texto niega y confundió el día del evento con el de la inscripción."
+      },
+      {
+        "clave": "B",
+        "texto": "Arrive at the shelter at 8 a.m. with the other 40 volunteers.",
+        "correcta": false,
+        "explicacion": "Llegar a las 8 a.m. es lo que harán quienes ya tengan un cupo; no es la forma de conseguirlo. El texto dice que solo hay 40 cupos y que hay que registrarse antes por mensaje. Quien elige esta opción confundió el inicio de la jornada con la inscripción.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la hora de inicio de la jornada como si bastara presentarse para participar."
+      },
+      {
+        "clave": "C",
+        "texto": "Call Dr Lucía Mora before 1 p.m. on the day of the event.",
+        "correcta": false,
+        "explicacion": "La doctora Mora es la veterinaria a la que los voluntarios ayudarán; el texto no la presenta como contacto de inscripción, y la 1 p.m. es la hora del almuerzo. Quien elige esta opción combinó un nombre y una hora del texto sin relación con el registro.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó a la única persona nombrada como contacto de inscripción."
+      },
+      {
+        "clave": "D",
+        "texto": "Send their name and age to the shelter's number by Thursday 11 September.",
+        "correcta": true,
+        "explicacion": "El último párrafo dice: \"To register, send a message with your name and age to 311 555 0123 before Thursday 11 September. Only 40 places are available\". Hay que enviar un mensaje con nombre y edad al número indicado antes de esa fecha para asegurar uno de los 40 cupos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el último párrafo dice \"To register, send a message with your name and age to 311 555 0123 before Thursday 11 September. Only 40 places are available\". COMPRENDER: la pregunta pide el procedimiento para conseguir un cupo. INTERPRETAR: \"To register\" introduce la instrucción: medio (mensaje), datos (nombre y edad), destino (el número) y plazo (antes del jueves 11). REPRESENTAR: mensaje + nombre y edad → 311 555 0123 → antes del 11 de septiembre → cupo. RAZONAR: no hay que pagar el almuerzo, que es gratis; llegar a las 8 a.m. es para quienes ya tienen cupo; la doctora Mora no es contacto de inscripción; enviar el mensaje con nombre y edad antes del 11 es lo que pide el texto. RESOLVER: la opción de enviar nombre y edad al número antes del jueves 11. VERIFICAR: la frase \"Only 40 places are available\" explica por qué es necesario registrarse con anticipación.",
+    "que_identificar": "La instrucción que empieza con \"To register\" en el último párrafo y la fecha límite.",
+    "que_revisar": "Vocabulario de inscripciones: register, sign up, places available, deadline, before; distinguir el día del evento del plazo de inscripción.",
+    "refuerzo_ids": [
+      "ING-192",
+      "ING-173"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "lectura",
+      "procedimiento",
+      "inscripcion",
+      "texto:ING-T43",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-194",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir la motivación de un grupo a partir de una cita",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**The Village That Turned Off Its Streetlights**\n\nThree years ago, the small town of San Lorenzo, in the mountains of Boyacá, did something that surprised its visitors: it switched off most of its streetlights after ten at night. The idea came from a group of teenagers who had spent a weekend at an astronomy camp. \"We came back and realised we couldn't see the Milky Way from our own square,\" says Daniela Ruiz, who was fifteen at the time.\n\nThe proposal was not popular at first. Shop owners worried about security, and older residents said the streets would be dangerous. The council agreed to a three-month trial in only two streets. During that time, the police reported no increase in crime, and something unexpected happened: on clear nights, families started to bring chairs to the square to look at the sky.\n\nToday San Lorenzo receives visitors from Bogotá and Tunja who come for its \"dark sky\" weekends. A local farmer rents out a field to campers, and the bakery stays open until midnight selling hot chocolate. Not everybody is convinced. \"I still carry a torch, and I still think a lit street is a safer street,\" says Jorge Pineda, who owns the hardware shop. But he admits that his sales have gone up since the visitors arrived.\n\nDaniela, now a university student, has a different measure of success. \"My little cousins know the names of constellations,\" she says. \"When I was their age, I only knew the names of the shops.\"",
+    "estimulo": null,
+    "enunciado": "Why did the teenagers propose switching off the streetlights?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Because they had learned at the camp that lights waste a lot of electricity.",
+        "correcta": false,
+        "explicacion": "El texto no menciona el consumo de electricidad ni el ahorro de energía. La cita de Daniela habla de no poder ver la Vía Láctea desde la plaza. Quien elige esta opción supuso un motivo ambiental común, pero que el texto no da.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a los jóvenes una razón de ahorro de energía que el texto no menciona."
+      },
+      {
+        "clave": "B",
+        "texto": "Because the shop owners of the town had asked them to do it.",
+        "correcta": false,
+        "explicacion": "Los comerciantes fueron justamente quienes se opusieron al principio (\"Shop owners worried about security\"). No pidieron la idea; la resistieron. Quien elige esta opción invirtió el papel de los comerciantes en la historia.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió a los opositores de la propuesta con sus promotores."
+      },
+      {
+        "clave": "C",
+        "texto": "Because the lights stopped them from seeing the night sky in their own town.",
+        "correcta": true,
+        "explicacion": "Los jóvenes volvieron de un campamento de astronomía y, en palabras de Daniela, \"realised we couldn't see the Milky Way from our own square\". Las luces de la calle impedían ver el cielo nocturno en su pueblo; apagarlas era la forma de recuperarlo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Because they wanted to attract tourists from Bogotá and Tunja.",
+        "correcta": false,
+        "explicacion": "Los visitantes de Bogotá y Tunja aparecen en el tercer párrafo como una consecuencia posterior (\"Today San Lorenzo receives visitors\"), no como el objetivo inicial. Quien elige esta opción tomó un resultado de hoy como la motivación de hace tres años.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió una consecuencia posterior con la causa original."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo dice que la idea vino de jóvenes que habían estado en un campamento de astronomía y cita a Daniela: \"We came back and realised we couldn't see the Milky Way from our own square\". COMPRENDER: la pregunta pide la razón de la propuesta. INTERPRETAR: tras ver el cielo en el campamento, notaron que en su pueblo la iluminación impedía verlo; de ahí la idea de apagar las luces. REPRESENTAR: campamento → ven el cielo → vuelven → no ven la Vía Láctea → proponen apagar las luces. RAZONAR: la electricidad no se menciona; los comerciantes se opusieron, no pidieron la idea; el turismo es un efecto posterior; ver el cielo desde su pueblo es la razón que da la cita. RESOLVER: la opción sobre no poder ver el cielo nocturno en su propio pueblo. VERIFICAR: la cita final de Daniela sobre sus primos y las constelaciones confirma que el cielo era lo que les importaba.",
+    "que_identificar": "La cita de Daniela en el primer párrafo y la mención del campamento de astronomía.",
+    "que_revisar": "Inferir motivaciones a partir de citas; distinguir causa original de consecuencias posteriores; vocabulario: streetlights, Milky Way, square, trial.",
+    "refuerzo_ids": [
+      "ING-174",
+      "ING-195"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "motivacion",
+      "texto:ING-T44",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-195",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir el resultado de una prueba piloto a partir de los datos del párrafo",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**The Village That Turned Off Its Streetlights**\n\nThree years ago, the small town of San Lorenzo, in the mountains of Boyacá, did something that surprised its visitors: it switched off most of its streetlights after ten at night. The idea came from a group of teenagers who had spent a weekend at an astronomy camp. \"We came back and realised we couldn't see the Milky Way from our own square,\" says Daniela Ruiz, who was fifteen at the time.\n\nThe proposal was not popular at first. Shop owners worried about security, and older residents said the streets would be dangerous. The council agreed to a three-month trial in only two streets. During that time, the police reported no increase in crime, and something unexpected happened: on clear nights, families started to bring chairs to the square to look at the sky.\n\nToday San Lorenzo receives visitors from Bogotá and Tunja who come for its \"dark sky\" weekends. A local farmer rents out a field to campers, and the bakery stays open until midnight selling hot chocolate. Not everybody is convinced. \"I still carry a torch, and I still think a lit street is a safer street,\" says Jorge Pineda, who owns the hardware shop. But he admits that his sales have gone up since the visitors arrived.\n\nDaniela, now a university student, has a different measure of success. \"My little cousins know the names of constellations,\" she says. \"When I was their age, I only knew the names of the shops.\"",
+    "estimulo": null,
+    "enunciado": "What does the text suggest about the three-month trial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "It showed that crime increased in the two streets without lights.",
+        "correcta": false,
+        "explicacion": "El texto dice lo contrario: \"the police reported no increase in crime\". Los temores de los comerciantes y los mayores no se cumplieron. Quien elige esta opción leyó las preocupaciones iniciales como si fueran el resultado de la prueba.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó los temores previos sobre seguridad como el resultado real de la prueba."
+      },
+      {
+        "clave": "B",
+        "texto": "Its results were better than many residents had expected.",
+        "correcta": true,
+        "explicacion": "Antes de la prueba, comerciantes y mayores temían inseguridad; durante la prueba no aumentó el crimen y, además, ocurrió \"something unexpected\": las familias salieron a mirar el cielo. Que no se cumplieran los temores y surgiera un efecto positivo imprevisto indica que el resultado superó las expectativas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "It was extended to the whole town the very same week it started.",
+        "correcta": false,
+        "explicacion": "La prueba duró tres meses y se hizo \"in only two streets\"; el texto no dice cuándo se amplió al resto del pueblo, solo que hoy la mayoría de las luces se apagan. Quien elige esta opción inventó una rapidez que el texto no describe.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una ampliación inmediata que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "It was cancelled because of the shop owners' complaints.",
+        "correcta": false,
+        "explicacion": "Nada indica que la prueba se cancelara; al contrario, hoy el pueblo apaga la mayoría de sus luces y recibe visitantes por ello. Las quejas de los comerciantes fueron anteriores a la prueba. Quien elige esta opción no conectó el segundo párrafo con la situación actual del tercero.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó la continuidad del proyecto hoy con el éxito de la prueba."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo presenta los temores iniciales, la prueba de tres meses en dos calles, el informe policial sin aumento del crimen y la aparición inesperada de familias mirando el cielo. COMPRENDER: la pregunta pide qué sugiere el texto sobre la prueba. INTERPRETAR: los temores no se cumplieron y surgió un beneficio imprevisto; el proyecto continúa hoy. REPRESENTAR: miedo a la inseguridad → prueba → sin más crimen + familias en la plaza → el pueblo adopta la medida. RAZONAR: el crimen no aumentó; no se dice que la ampliación fuera inmediata; no hubo cancelación, pues la medida sigue vigente; los resultados superaron lo que muchos esperaban. RESOLVER: la opción sobre resultados mejores de lo esperado. VERIFICAR: la expresión \"something unexpected happened\" apunta justamente a un resultado que nadie había previsto, en sentido positivo.",
+    "que_identificar": "El contraste entre los temores del segundo párrafo y las frases \"no increase in crime\" y \"something unexpected happened\".",
+    "que_revisar": "Inferir resultados a partir del contraste entre expectativas y hechos; vocabulario: trial, worried, unexpected, report.",
+    "refuerzo_ids": [
+      "ING-194",
+      "ING-196"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "resultados",
+      "texto:ING-T44",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-196",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Reconoce la opinión o la actitud de una voz citada a partir de sus palabras",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar una actitud matizada: duda persistente y reconocimiento de un beneficio",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**The Village That Turned Off Its Streetlights**\n\nThree years ago, the small town of San Lorenzo, in the mountains of Boyacá, did something that surprised its visitors: it switched off most of its streetlights after ten at night. The idea came from a group of teenagers who had spent a weekend at an astronomy camp. \"We came back and realised we couldn't see the Milky Way from our own square,\" says Daniela Ruiz, who was fifteen at the time.\n\nThe proposal was not popular at first. Shop owners worried about security, and older residents said the streets would be dangerous. The council agreed to a three-month trial in only two streets. During that time, the police reported no increase in crime, and something unexpected happened: on clear nights, families started to bring chairs to the square to look at the sky.\n\nToday San Lorenzo receives visitors from Bogotá and Tunja who come for its \"dark sky\" weekends. A local farmer rents out a field to campers, and the bakery stays open until midnight selling hot chocolate. Not everybody is convinced. \"I still carry a torch, and I still think a lit street is a safer street,\" says Jorge Pineda, who owns the hardware shop. But he admits that his sales have gone up since the visitors arrived.\n\nDaniela, now a university student, has a different measure of success. \"My little cousins know the names of constellations,\" she says. \"When I was their age, I only knew the names of the shops.\"",
+    "estimulo": null,
+    "enunciado": "What can be inferred about Jorge Pineda's attitude towards the change?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He has completely changed his mind and now supports the dark streets.",
+        "correcta": false,
+        "explicacion": "Jorge dice \"I still carry a torch, and I still think a lit street is a safer street\": la repetición de \"still\" muestra que mantiene su opinión sobre la seguridad. No ha cambiado de idea por completo. Quien elige esta opción se quedó con la frase sobre las ventas y olvidó la cita.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el aumento de ventas como prueba de un cambio total de opinión."
+      },
+      {
+        "clave": "B",
+        "texto": "He thinks the visitors have made the town more dangerous.",
+        "correcta": false,
+        "explicacion": "Su preocupación por la seguridad se refiere a las calles oscuras, no a los visitantes; de ellos solo dice que han aumentado sus ventas. Quien elige esta opción mezcló la inquietud por la oscuridad con la llegada de turistas.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a los visitantes el temor que Jorge expresa sobre la falta de luz."
+      },
+      {
+        "clave": "C",
+        "texto": "He wants the council to end the dark sky weekends immediately.",
+        "correcta": false,
+        "explicacion": "El texto no registra ninguna petición de Jorge al concejo; solo expresa una opinión personal y reconoce un beneficio. Pedir el fin de los fines de semana que le traen clientes contradiría además lo que admite sobre sus ventas. Quien elige esta opción exageró su desacuerdo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió una duda personal en una exigencia política que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "He still has doubts about safety, but he recognises an economic benefit.",
+        "correcta": true,
+        "explicacion": "Las dos oraciones sobre Jorge se complementan: en la cita mantiene su duda (\"I still think a lit street is a safer street\") y en la siguiente frase \"he admits that his sales have gone up\". El conector \"But\" une la reserva sobre la seguridad con el reconocimiento del beneficio económico.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo dice \"Not everybody is convinced\", cita a Jorge Pineda, que todavía carga una linterna y cree que una calle iluminada es más segura, y añade: \"But he admits that his sales have gone up since the visitors arrived\". COMPRENDER: la pregunta pide inferir su actitud. INTERPRETAR: \"still\" repetido indica que su opinión sobre la seguridad no ha cambiado; \"admits\" indica que reconoce algo favorable aunque no le guste del todo. REPRESENTAR: duda sobre seguridad + reconoce ventas más altas = actitud matizada. RAZONAR: no cambió de idea por completo; no culpa a los visitantes; no pide el fin del proyecto; mantiene dudas y acepta el beneficio económico. RESOLVER: la opción que combina las dudas con el reconocimiento del beneficio. VERIFICAR: la frase \"Not everybody is convinced\" presenta a Jorge como ejemplo de quien no está del todo convencido, no de un opositor radical.",
+    "que_identificar": "La repetición de \"still\" en la cita de Jorge y el verbo \"admits\" en la oración siguiente.",
+    "que_revisar": "Interpretar actitudes matizadas; valor de still, but y admit; distinguir opinión personal de acción política.",
+    "refuerzo_ids": [
+      "ING-195",
+      "ING-197"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "lectura",
+      "opinion",
+      "actitud",
+      "texto:ING-T44",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-197",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Interpreta el sentido de una afirmación figurada o indirecta dentro del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar el sentido de un contraste final (constelaciones frente a tiendas)",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**The Village That Turned Off Its Streetlights**\n\nThree years ago, the small town of San Lorenzo, in the mountains of Boyacá, did something that surprised its visitors: it switched off most of its streetlights after ten at night. The idea came from a group of teenagers who had spent a weekend at an astronomy camp. \"We came back and realised we couldn't see the Milky Way from our own square,\" says Daniela Ruiz, who was fifteen at the time.\n\nThe proposal was not popular at first. Shop owners worried about security, and older residents said the streets would be dangerous. The council agreed to a three-month trial in only two streets. During that time, the police reported no increase in crime, and something unexpected happened: on clear nights, families started to bring chairs to the square to look at the sky.\n\nToday San Lorenzo receives visitors from Bogotá and Tunja who come for its \"dark sky\" weekends. A local farmer rents out a field to campers, and the bakery stays open until midnight selling hot chocolate. Not everybody is convinced. \"I still carry a torch, and I still think a lit street is a safer street,\" says Jorge Pineda, who owns the hardware shop. But he admits that his sales have gone up since the visitors arrived.\n\nDaniela, now a university student, has a different measure of success. \"My little cousins know the names of constellations,\" she says. \"When I was their age, I only knew the names of the shops.\"",
+    "estimulo": null,
+    "enunciado": "What does Daniela mean with her final comment about constellations and shops?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Children in the town now have a connection with the sky that she did not have.",
+        "correcta": true,
+        "explicacion": "Daniela compara su infancia, en la que solo conocía \"the names of the shops\", con la de sus primos, que conocen \"the names of constellations\". El párrafo anuncia que para ella esa es \"a different measure of success\": lo valioso del cambio es que los niños de hoy tienen una relación con el cielo que ella no tuvo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "The town had many more shops when she was a child than it has today.",
+        "correcta": false,
+        "explicacion": "Daniela no compara la cantidad de tiendas de antes y de ahora; menciona las tiendas como lo único que ella conocía de niña, frente a las constelaciones que conocen sus primos. Quien elige esta opción leyó la frase de forma literal, como un dato sobre el comercio.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó literalmente la mención de las tiendas como información sobre el comercio local."
+      },
+      {
+        "clave": "C",
+        "texto": "Her cousins should also learn the names of the shops in the square.",
+        "correcta": false,
+        "explicacion": "La frase no es una recomendación para los primos; es una comparación entre su propia infancia y la de ellos, con un tono de satisfacción. Nada sugiere que Daniela quiera que aprendan los nombres de las tiendas. Quien elige esta opción convirtió un contraste en un consejo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Leyó la comparación como una sugerencia para los primos."
+      },
+      {
+        "clave": "D",
+        "texto": "Astronomy has become the most important subject at the local school.",
+        "correcta": false,
+        "explicacion": "El texto no menciona el colegio ni sus materias; los primos conocen las constelaciones porque ahora pueden ver el cielo desde el pueblo. Quien elige esta opción supuso una causa escolar que el texto no da.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó al colegio un conocimiento que el texto relaciona con el cielo oscuro del pueblo."
+      }
+    ],
+    "explicacion": "LEER: el texto cierra con Daniela diciendo que sus primos pequeños conocen los nombres de las constelaciones y que ella, a su edad, solo conocía los nombres de las tiendas. COMPRENDER: la pregunta pide el sentido de ese contraste. INTERPRETAR: su \"different measure of success\" no es el dinero sino lo que los niños conocen: las tiendas representan el pueblo iluminado de su infancia; las constelaciones, el cielo recuperado. REPRESENTAR: antes: luces → tiendas; ahora: oscuridad → cielo → constelaciones. RAZONAR: no se compara la cantidad de tiendas; no es un consejo para los primos; el colegio no aparece; la frase celebra que los niños de hoy tengan una relación con el cielo que ella no tuvo. RESOLVER: la opción sobre la conexión de los niños con el cielo que ella no tuvo. VERIFICAR: \"a different measure of success\" anuncia esa lectura: el éxito es el cambio en la infancia de los niños.",
+    "que_identificar": "La frase \"a different measure of success\" y el contraste entre \"constellations\" y \"the names of the shops\".",
+    "que_revisar": "Interpretar contrastes y sentidos indirectos en citas; identificar la idea de cierre de un texto; vocabulario: measure of success, constellation.",
+    "refuerzo_ids": [
+      "ING-196",
+      "ING-177"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "cita",
+      "texto:ING-T44",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-198",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "razonar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Replace vs. change / exchange: sustituir algo por algo más nuevo (replace with)",
+    "dificultad": 3,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(1)**.\n\n**A Second Life for Old Phones**\n\nEvery year, thousands of mobile phones end up in drawers because their owners **(1) ______** them with newer models. Camila Ortiz, an engineering student in Cali, collects these forgotten devices and gives them a second life. With a few basic tools, she **(2) ______** broken screens and batteries, installs simple software and then donates the phones to rural schools, where teachers use them as dictionaries and calculators. \"Most of the phones work perfectly,\" she explains. \"People just want the latest one.\" Her project has already **(3) ______** more than three hundred phones, and she now trains other students to do the same.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "change",
+        "correcta": false,
+        "explicacion": "\"Change\" significa cambiar, pero no se combina con \"with\" para indicar el sustituto: se diría \"change their phones\" o \"change to a new model\". La preposición \"with\" que sigue al espacio pide otro verbo. Quien elige esta opción tradujo \"cambiar\" sin revisar la preposición.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"cambiar por\" como \"change with\" sin conocer la colocación correcta."
+      },
+      {
+        "clave": "B",
+        "texto": "exchange",
+        "correcta": false,
+        "explicacion": "\"Exchange\" implica un intercambio entre dos partes y va con \"for\" (\"exchange something for something\"); además, los dueños no entregan el teléfono viejo a cambio, sino que lo guardan en un cajón (\"end up in drawers\"). Quien elige esta opción no atendió a la preposición ni al destino del teléfono.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Pensó en intercambio sin notar que el teléfono viejo se guarda y que la preposición es \"with\"."
+      },
+      {
+        "clave": "C",
+        "texto": "replace",
+        "correcta": true,
+        "explicacion": "\"Replace something with something\" significa sustituir una cosa por otra: los dueños reemplazan sus teléfonos con modelos más nuevos, y por eso los viejos acaban en los cajones. La preposición \"with\" confirma la colocación \"replace ... with\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración es \"thousands of mobile phones end up in drawers because their owners ___ them with newer models\". COMPRENDER: hay que elegir el verbo que, con \"with\", expresa sustituir el teléfono viejo por uno nuevo. INTERPRETAR: el resultado (los teléfonos viejos quedan en cajones) indica que el dueño compra uno nuevo y guarda el antiguo. REPRESENTAR: teléfono viejo → sustituido por modelo nuevo → cajón. RAZONAR: \"change\" no se construye con \"with\" para indicar el sustituto; \"exchange\" exige entregar el objeto a cambio y va con \"for\"; \"replace ... with\" es la colocación exacta para sustituir. RESOLVER: la opción \"replace\". VERIFICAR: la cita final, \"People just want the latest one\", confirma que se trata de reemplazar por el modelo más reciente.",
+    "que_identificar": "La preposición \"with\" después del espacio y la consecuencia \"end up in drawers\".",
+    "que_revisar": "Colocaciones con preposición: replace X with Y, exchange X for Y, change to; vocabulario de tecnología: device, model, screen, battery.",
+    "refuerzo_ids": [
+      "ING-178",
+      "ING-199"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 80,
+    "etiquetas": [
+      "vocabulario",
+      "colocaciones",
+      "tecnologia",
+      "texto:ING-T45",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-199",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Repair vs. cure / recover: arreglar objetos dañados",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(2)**.\n\n**A Second Life for Old Phones**\n\nEvery year, thousands of mobile phones end up in drawers because their owners **(1) ______** them with newer models. Camila Ortiz, an engineering student in Cali, collects these forgotten devices and gives them a second life. With a few basic tools, she **(2) ______** broken screens and batteries, installs simple software and then donates the phones to rural schools, where teachers use them as dictionaries and calculators. \"Most of the phones work perfectly,\" she explains. \"People just want the latest one.\" Her project has already **(3) ______** more than three hundred phones, and she now trains other students to do the same.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "cures",
+        "correcta": false,
+        "explicacion": "\"Cure\" significa curar y se usa con enfermedades o personas (\"cure a disease\"), no con objetos como pantallas o baterías. Quien elige esta opción trasladó la idea de \"arreglar\" al campo de la salud.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó un verbo de salud para objetos dañados."
+      },
+      {
+        "clave": "B",
+        "texto": "repairs",
+        "correcta": true,
+        "explicacion": "\"Repair\" (reparar, arreglar) es el verbo que se usa con objetos dañados como pantallas rotas y baterías. El contexto lo confirma: lo hace \"with a few basic tools\" (con unas pocas herramientas básicas) antes de instalar el software.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "recovers",
+        "correcta": false,
+        "explicacion": "\"Recover\" significa recuperar algo perdido o recuperarse de una enfermedad (\"recover the files\", \"recover from the flu\"); no significa arreglar una pantalla rota. Quien elige esta opción confundió recuperar con reparar, quizá por la idea de \"second life\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió recuperar (recover) con reparar por la idea de dar una segunda vida a los teléfonos."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"With a few basic tools, she ___ broken screens and batteries, installs simple software and then donates the phones\". COMPRENDER: hay que elegir el verbo que describe lo que Camila hace con las pantallas rotas y las baterías usando herramientas. INTERPRETAR: \"broken\" y \"tools\" indican una acción de arreglo sobre objetos. REPRESENTAR: herramientas + pantallas rotas → arreglar. RAZONAR: \"cure\" es para enfermedades o personas; \"recover\" es recuperar algo perdido o recuperarse; \"repair\" es arreglar objetos dañados. RESOLVER: la opción \"repairs\". VERIFICAR: después del arreglo, \"Most of the phones work perfectly\", lo que confirma que la acción fue reparar.",
+    "que_identificar": "El adjetivo \"broken\" aplicado a pantallas y baterías y la frase \"with a few basic tools\".",
+    "que_revisar": "Verbos de arreglo y recuperación: repair, fix, mend (objetos); cure, heal (salud); recover (recuperar o recuperarse).",
+    "refuerzo_ids": [
+      "ING-198",
+      "ING-200"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 70,
+    "etiquetas": [
+      "vocabulario",
+      "verbos",
+      "tecnologia",
+      "texto:ING-T45",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-200",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "verificar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Rescue vs. waste / miss: salvar objetos del abandono",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(3)**.\n\n**A Second Life for Old Phones**\n\nEvery year, thousands of mobile phones end up in drawers because their owners **(1) ______** them with newer models. Camila Ortiz, an engineering student in Cali, collects these forgotten devices and gives them a second life. With a few basic tools, she **(2) ______** broken screens and batteries, installs simple software and then donates the phones to rural schools, where teachers use them as dictionaries and calculators. \"Most of the phones work perfectly,\" she explains. \"People just want the latest one.\" Her project has already **(3) ______** more than three hundred phones, and she now trains other students to do the same.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "rescued",
+        "correcta": true,
+        "explicacion": "\"Rescue\" (rescatar, salvar) describe lo que hace el proyecto: saca los teléfonos del abandono en los cajones, los arregla y les da un nuevo uso. \"Has already rescued more than three hundred phones\" resume el logro del proyecto en sentido positivo, coherente con \"gives them a second life\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "wasted",
+        "correcta": false,
+        "explicacion": "\"Waste\" significa desperdiciar, lo contrario de lo que hace el proyecto, que evita el desperdicio dando una segunda vida a los teléfonos. La oración describe un logro (\"her project has already...\"), no un daño. Quien elige esta opción no relacionó el verbo con el sentido positivo del texto.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció los teléfonos viejos con desperdicio sin notar que la oración habla del logro del proyecto."
+      },
+      {
+        "clave": "C",
+        "texto": "missed",
+        "correcta": false,
+        "explicacion": "\"Miss\" significa perder una oportunidad, extrañar o no alcanzar algo (\"miss the bus\"); no describe la acción de recoger y arreglar teléfonos. Un proyecto que \"ha perdido trescientos teléfonos\" no sería un éxito. Quien elige esta opción confundió el verbo con la idea de teléfonos olvidados.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Vinculó \"forgotten devices\" con el verbo miss sin revisar el sentido de la oración."
+      }
+    ],
+    "explicacion": "LEER: la oración es \"Her project has already ___ more than three hundred phones, and she now trains other students to do the same\". COMPRENDER: hay que elegir el verbo que resume lo que el proyecto ha hecho con los teléfonos. INTERPRETAR: el texto describe un proceso positivo: recoger aparatos olvidados, repararlos y donarlos; la oración final presenta la cifra como un logro. REPRESENTAR: cajón → recoger → reparar → escuela rural = salvar el teléfono. RAZONAR: \"wasted\" es lo contrario de lo que hace el proyecto; \"missed\" significa perder o extrañar y no encaja con un logro; \"rescued\" expresa salvar algo del abandono. RESOLVER: la opción \"rescued\". VERIFICAR: la expresión \"gives them a second life\" del principio tiene el mismo sentido que rescatar, y la frase \"trains other students to do the same\" confirma que se trata de algo valioso que vale la pena repetir.",
+    "que_identificar": "El sentido positivo de la oración final y la idea inicial de \"a second life\".",
+    "que_revisar": "Verbos de valoración positiva y negativa: rescue, save, recycle frente a waste, throw away, miss; coherencia entre el verbo y el tono del texto.",
+    "refuerzo_ids": [
+      "ING-199",
+      "ING-180"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 70,
+    "etiquetas": [
+      "vocabulario",
+      "verbos",
+      "reciclaje",
+      "texto:ING-T45",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

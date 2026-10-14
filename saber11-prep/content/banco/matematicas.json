@@ -1,0 +1,946 @@
+[
+  {
+    "id": "MAT-001",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "leer",
+    "tema": "Estadística descriptiva",
+    "subtema": "Lectura de gráficos de barras",
+    "dificultad": 1,
+    "contexto": "En un colegio de Bogotá se preguntó a los 120 estudiantes de grado décimo cuál deporte prefieren practicar en el descanso. Cada estudiante eligió un solo deporte. El gráfico muestra los resultados.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Deporte preferido en el descanso (grado décimo)",
+      "eje_x": "Deporte",
+      "eje_y": "Número de estudiantes",
+      "series": [
+        { "nombre": "Estudiantes", "valores": [["Fútbol", 48], ["Baloncesto", 30], ["Voleibol", 24], ["Atletismo", 18]] }
+      ]
+    },
+    "enunciado": "¿Cuántos estudiantes más prefieren fútbol que voleibol?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "18",
+        "correcta": false,
+        "explicacion": "18 es el número de estudiantes que prefieren atletismo (la barra más baja) y también es el resultado de 48 − 30 (fútbol menos baloncesto). Ninguna de esas lecturas compara fútbol con voleibol, que es lo que pide la pregunta.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó la barra de atletismo en lugar de la de voleibol, o restó la barra de baloncesto en vez de la de voleibol."
+      },
+      {
+        "clave": "B",
+        "texto": "24",
+        "correcta": true,
+        "explicacion": "Fútbol tiene 48 estudiantes y voleibol 24. La diferencia es 48 − 24 = 24, que es cuántos estudiantes más prefieren fútbol.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "48",
+        "correcta": false,
+        "explicacion": "48 es el total de estudiantes que prefieren fútbol, no cuántos MÁS que voleibol. La pregunta pide una diferencia, así que hace falta restar los 24 de voleibol.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la barra de fútbol y la reportó sin hacer la comparación que pide el enunciado."
+      },
+      {
+        "clave": "D",
+        "texto": "72",
+        "correcta": false,
+        "explicacion": "72 resulta de sumar 48 + 24. La expresión 'cuántos más' pide la diferencia entre las dos cantidades, no su suma; además, 72 es mayor que cualquier barra, lo que no tiene sentido para una diferencia.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó las dos barras en lugar de restarlas."
+      }
+    ],
+    "explicacion": "Leer: el gráfico muestra cuántos estudiantes de décimo prefieren cada deporte: fútbol 48, baloncesto 30, voleibol 24 y atletismo 18. Comprender: se pregunta cuántos estudiantes MÁS prefieren fútbol que voleibol; es una comparación entre dos barras, no un valor aislado. Interpretar: la altura de cada barra representa el número de estudiantes de esa categoría. Representar: diferencia = fútbol − voleibol = 48 − 24. Razonar: la expresión 'cuántos más' indica una resta entre las dos cantidades comparadas. Resolver: 48 − 24 = 24. Verificar: 24 + 24 = 48 coincide con la barra de fútbol, y la diferencia es menor que ambas barras, como debe ser.",
+    "que_identificar": "Las barras de fútbol (48) y voleibol (24), y que el enunciado pide una diferencia entre ellas.",
+    "que_revisar": "Lectura de gráficos de barras y el significado de 'cuántos más' como resta.",
+    "refuerzo_ids": ["MAT-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["graficos", "barras", "encuesta_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-002",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "interpretar",
+    "tema": "Estadística descriptiva",
+    "subtema": "Frecuencia relativa y porcentaje a partir de una tabla",
+    "dificultad": 2,
+    "contexto": "El comité de convivencia de un colegio en Cali encuestó a 300 estudiantes sobre el medio de transporte que usan para llegar al colegio. Cada estudiante señaló un único medio. La tabla resume las respuestas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Medio de transporte para llegar al colegio",
+      "columnas": ["Medio de transporte", "Número de estudiantes"],
+      "filas": [["A pie", 90], ["Bicicleta", 30], ["Bus (transporte público)", 120], ["Carro particular", 60]],
+      "nota": "Total de encuestados: 300."
+    },
+    "enunciado": "¿Qué porcentaje de los estudiantes encuestados llega al colegio en bus?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "40 %",
+        "correcta": true,
+        "explicacion": "El porcentaje es la parte sobre el total: 120 ÷ 300 = 0,4, es decir, 40 % de los encuestados llega en bus.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "25 %",
+        "correcta": false,
+        "explicacion": "25 % sería el porcentaje si los 300 estudiantes se repartieran por igual entre las cuatro categorías (100 % ÷ 4). Pero la tabla muestra que las categorías NO tienen la misma frecuencia: bus tiene 120, no 75.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso que cada una de las cuatro categorías representa la cuarta parte del total sin usar los datos de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "60 %",
+        "correcta": false,
+        "explicacion": "60 % corresponde a los estudiantes que NO llegan en bus: (90 + 30 + 60) ÷ 300 = 180 ÷ 300 = 0,6. Es el complemento de lo que se pregunta, no la respuesta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el porcentaje de quienes usan los otros medios y no volvió a leer que la pregunta era sobre el bus."
+      },
+      {
+        "clave": "D",
+        "texto": "120 %",
+        "correcta": false,
+        "explicacion": "120 es la cantidad de estudiantes que llega en bus (frecuencia absoluta), no un porcentaje. Un porcentaje de una parte del total nunca puede superar el 100 %; falta dividir entre los 300 encuestados.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la frecuencia absoluta de la tabla con el porcentaje y le agregó el símbolo %."
+      }
+    ],
+    "explicacion": "Leer: la tabla registra cuántos de los 300 estudiantes usan cada medio: a pie 90, bicicleta 30, bus 120, carro 60. Comprender: se pide el porcentaje que llega en bus respecto al total de encuestados. Interpretar: un porcentaje expresa qué parte del total (300) representa una categoría (120). Representar: porcentaje = (120 ÷ 300) × 100. Razonar: como 120 es menos de la mitad de 300, el porcentaje debe ser menor que 50 %, lo que descarta 60 % y 120 %. Resolver: 120 ÷ 300 = 0,4 → 40 %. Verificar: 40 % de 300 = 120, que coincide con la tabla; además, 30 % + 10 % + 40 % + 20 % = 100 %.",
+    "que_identificar": "La frecuencia de la fila 'Bus' (120) y el total de encuestados (300) indicado en la nota.",
+    "que_revisar": "Frecuencia relativa y cálculo de porcentajes: parte ÷ total × 100.",
+    "refuerzo_ids": ["MAT-001"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "porcentajes", "encuesta_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-003",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Medidas de tendencia central",
+    "subtema": "Cálculo de la media aritmética a partir de una tabla",
+    "dificultad": 2,
+    "contexto": "Durante la cosecha, una familia caficultora del Huila anotó cada semana los kilos de café cereza que recogió en su finca. La tabla muestra el registro de las cinco semanas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Café cereza recogido por semana",
+      "columnas": ["Semana", "Kilos recogidos"],
+      "filas": [["1", 180], ["2", 250], ["3", 300], ["4", 190], ["5", 280]],
+      "nota": null
+    },
+    "enunciado": "¿Cuál fue el promedio de kilos de café recogidos por semana durante las cinco semanas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "300 kilos",
+        "correcta": false,
+        "explicacion": "300 es el máximo, lo recogido en la mejor semana (semana 3). El promedio no es el valor más alto sino un valor que reparte por igual el total entre las cinco semanas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó 'promedio' como la semana de mayor producción."
+      },
+      {
+        "clave": "B",
+        "texto": "1200 kilos",
+        "correcta": false,
+        "explicacion": "1200 es el total recogido en las cinco semanas (la suma). Para obtener el promedio por semana falta el último paso: dividir ese total entre 5.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los kilos de todas las semanas pero no dividió entre el número de semanas."
+      },
+      {
+        "clave": "C",
+        "texto": "240 kilos",
+        "correcta": true,
+        "explicacion": "El promedio es la suma de todos los kilos dividida entre el número de semanas: (180 + 250 + 300 + 190 + 280) ÷ 5 = 1200 ÷ 5 = 240 kilos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "250 kilos",
+        "correcta": false,
+        "explicacion": "250 es la mediana: al ordenar los datos (180, 190, 250, 280, 300) es el valor del centro. La pregunta pide el promedio (media aritmética), que se obtiene sumando y dividiendo entre 5, y da 240.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ordenó los datos y tomó el valor central, confundiendo mediana con promedio."
+      }
+    ],
+    "explicacion": "Leer: la tabla da los kilos recogidos en cinco semanas: 180, 250, 300, 190 y 280. Comprender: se pide el promedio semanal, es decir, la media aritmética de los cinco datos. Interpretar: el promedio es el valor que tendría cada semana si el total se repartiera por igual. Representar: media = (180 + 250 + 300 + 190 + 280) ÷ 5. Razonar: la media debe estar entre el mínimo (180) y el máximo (300), lo que descarta 1200; y no tiene que coincidir con ningún dato de la tabla. Resolver: la suma es 1200 y 1200 ÷ 5 = 240. Verificar: 240 × 5 = 1200, igual a la suma; 240 está entre 180 y 300.",
+    "que_identificar": "Los cinco valores de la columna 'Kilos recogidos' y que hay 5 semanas (el divisor).",
+    "que_revisar": "Media aritmética: suma de los datos dividida entre la cantidad de datos; diferencia entre media, mediana y máximo.",
+    "refuerzo_ids": ["MAT-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "promedio", "cosecha", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-004",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Medidas de tendencia central",
+    "subtema": "Media frente a mediana en datos con valores extremos",
+    "dificultad": 3,
+    "contexto": "El dueño de una panadería de barrio en Bucaramanga registró cuántos panes vendió cada día de una semana. Al ver los datos, afirma: **\"Un día típico entre semana vendo alrededor de 257 panes, porque ese es el promedio de la semana\"**.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Panes vendidos por día",
+      "eje_x": "Día",
+      "eje_y": "Panes vendidos",
+      "series": [
+        { "nombre": "Panes", "valores": [["Lun", 200], ["Mar", 210], ["Mié", 190], ["Jue", 205], ["Vie", 220], ["Sáb", 400], ["Dom", 375]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente la conclusión del dueño de la panadería?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es correcta, porque 257 es el promedio de los siete días y por lo tanto representa lo que se vende cualquier día.",
+        "correcta": false,
+        "explicacion": "El cálculo del promedio (1800 ÷ 7 ≈ 257) es correcto, pero la conclusión no: ningún día de lunes a viernes llega a 257 panes. El promedio no representa 'cualquier día' cuando hay valores muy altos (sábado y domingo) que lo elevan.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asumió que el promedio siempre describe el caso típico, sin revisar si los datos tienen valores extremos."
+      },
+      {
+        "clave": "B",
+        "texto": "Es incorrecta, porque ningún día entre semana alcanza 257 panes: el promedio está elevado por las ventas del fin de semana, y la mediana (210) describe mejor un día típico.",
+        "correcta": true,
+        "explicacion": "De lunes a viernes se venden entre 190 y 220 panes. Las ventas de sábado (400) y domingo (375) suben el promedio a 257. La mediana, que ordena los datos (190, 200, 205, 210, 220, 375, 400) y toma el centro, es 210, y sí refleja un día entre semana. Por eso la afirmación del dueño no es válida para describir un día típico.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Es incorrecta, porque el promedio semanal es en realidad 1800 panes.",
+        "correcta": false,
+        "explicacion": "1800 es el TOTAL de panes vendidos en la semana (la suma de los siete días), no el promedio. El promedio diario sí es 1800 ÷ 7 ≈ 257; el error del dueño no está en el cálculo sino en usar la media para describir un día entre semana.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el total de la semana con el promedio y por eso rechazó la afirmación con un argumento equivocado."
+      },
+      {
+        "clave": "D",
+        "texto": "Es correcta, porque 257 está entre el mínimo (190) y el máximo (400), así que es un valor posible de ventas.",
+        "correcta": false,
+        "explicacion": "Que 257 esté dentro del rango de los datos no significa que represente un día típico entre semana: todos los días de lunes a viernes están por debajo de 257. Estar entre el mínimo y el máximo es una propiedad de cualquier promedio, no un argumento sobre su representatividad.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó como justificación una propiedad general del promedio (estar dentro del rango) que no responde a lo que se cuestiona."
+      }
+    ],
+    "explicacion": "Leer: el gráfico muestra las ventas diarias: 200, 210, 190, 205, 220 entre semana, y 400 y 375 el fin de semana. Comprender: hay que evaluar si el promedio de la semana (257) describe bien 'un día típico entre semana'. Interpretar: de lunes a viernes las ventas se mueven entre 190 y 220; sábado y domingo casi las duplican. Representar: media = 1800 ÷ 7 ≈ 257; datos ordenados: 190, 200, 205, 210, 220, 375, 400 → mediana = 210. Razonar: la media es sensible a valores extremos; los dos días altos la suben por encima de todos los días entre semana, así que no es representativa de ellos; la mediana sí lo es. Resolver: la afirmación del dueño es incorrecta y la mejor evaluación es la opción B. Verificar: 257 supera a cada uno de los cinco valores entre semana, lo que confirma que no describe un día típico de lunes a viernes.",
+    "que_identificar": "Que los días entre semana están todos por debajo de 257 y que sábado y domingo son valores extremos que elevan la media.",
+    "que_revisar": "Cuándo la media es representativa y cuándo conviene usar la mediana (datos con valores extremos).",
+    "refuerzo_ids": ["MAT-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["graficos", "barras", "media", "mediana", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-005",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Probabilidad",
+    "subtema": "Probabilidad simple como cociente de casos favorables sobre casos posibles",
+    "dificultad": 2,
+    "contexto": "Para financiar la salida pedagógica, los estudiantes de grado once de un colegio en Pereira organizaron una rifa. Vendieron 300 boletas numeradas, todas al mismo precio, y el gráfico muestra cuántas compró cada grupo de personas. Todas las boletas se mezclan y se saca una al azar.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Boletas vendidas según quién las compró",
+      "eje_x": "Grupo de compradores",
+      "eje_y": "Boletas vendidas",
+      "series": [
+        { "nombre": "Boletas", "valores": [["Estudiantes de décimo", 60], ["Estudiantes de once", 90], ["Profesores", 30], ["Familias", 120]] }
+      ]
+    },
+    "enunciado": "¿Cuál es la probabilidad de que la boleta ganadora haya sido comprada por un estudiante de once?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "1/90",
+        "correcta": false,
+        "explicacion": "1/90 sería la probabilidad de que salga UNA boleta específica si solo existieran 90 boletas. Aquí hay 300 boletas en total y 90 de ellas son favorables, así que la probabilidad es 90/300, no 1/90.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Puso 1 en el numerador y el número de boletas del grupo en el denominador, invirtiendo el papel de casos favorables y posibles."
+      },
+      {
+        "clave": "B",
+        "texto": "1/4",
+        "correcta": false,
+        "explicacion": "1/4 sería la respuesta si los cuatro grupos tuvieran la misma cantidad de boletas. Pero no es así: el gráfico muestra 60, 90, 30 y 120, y lo que se saca al azar es una boleta, no un grupo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Contó los cuatro grupos como si fueran igualmente probables, sin usar el número de boletas de cada uno."
+      },
+      {
+        "clave": "C",
+        "texto": "3/10",
+        "correcta": true,
+        "explicacion": "Casos favorables: 90 boletas de estudiantes de once. Casos posibles: 300 boletas en total. Probabilidad = 90/300 = 3/10.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "3/7",
+        "correcta": false,
+        "explicacion": "3/7 = 90/210 resulta de dividir las boletas de once entre las boletas de los OTROS grupos (60 + 30 + 120 = 210), no entre el total. La probabilidad se calcula sobre todas las boletas posibles, es decir, sobre 300.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Puso en el denominador las boletas que no son de once en lugar del total de boletas."
+      }
+    ],
+    "explicacion": "Leer: hay 300 boletas; el gráfico muestra 60 de décimo, 90 de once, 30 de profesores y 120 de familias. Comprender: se pide la probabilidad de que la boleta ganadora sea de un estudiante de once. Interpretar: como todas las boletas tienen la misma posibilidad de salir, la probabilidad es el número de boletas favorables sobre el total de boletas. Representar: P(once) = 90 ÷ 300. Razonar: 90 es menos de la tercera parte de 300, así que la probabilidad debe ser un poco menor que 1/3, lo que descarta 3/7 (≈ 0,43). Resolver: 90 ÷ 300 = 0,3 = 3/10. Verificar: 60 + 90 + 30 + 120 = 300 confirma el total, y 3/10 de 300 = 90.",
+    "que_identificar": "La barra de estudiantes de once (90) como casos favorables y el total de boletas (300) como casos posibles.",
+    "que_revisar": "Definición de probabilidad clásica: casos favorables ÷ casos posibles, y simplificación de fracciones.",
+    "refuerzo_ids": ["MAT-025", "MAT-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["graficos", "barras", "probabilidad", "rifa_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-006",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "leer",
+    "tema": "Lectura de información numérica",
+    "subtema": "Lectura de una tabla de consumo en un recibo de servicios",
+    "dificultad": 1,
+    "contexto": "El recibo de energía de una familia en Barranquilla muestra, para cada mes, la lectura anterior y la lectura actual del medidor (en kilovatios hora, kWh) y el consumo del mes, que es la diferencia entre las dos lecturas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Historial de consumo de energía",
+      "columnas": ["Mes", "Lectura anterior (kWh)", "Lectura actual (kWh)", "Consumo del mes (kWh)"],
+      "filas": [["Enero", 4520, 4650, 130], ["Febrero", 4650, 4795, 145], ["Marzo", 4795, 4915, 120], ["Abril", 4915, 5070, 155]],
+      "nota": "Consumo del mes = lectura actual − lectura anterior."
+    },
+    "enunciado": "¿En cuál de los cuatro meses la familia tuvo el menor consumo de energía?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Marzo",
+        "correcta": true,
+        "explicacion": "En la columna 'Consumo del mes' los valores son 130, 145, 120 y 155 kWh. El menor es 120 kWh, que corresponde a marzo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Abril",
+        "correcta": false,
+        "explicacion": "Abril tuvo el MAYOR consumo (155 kWh) y también las lecturas más altas del medidor. La pregunta pide el mes de menor consumo, que es lo contrario.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió el mes de mayor consumo en lugar del de menor consumo, o eligió el mes con los números más grandes."
+      },
+      {
+        "clave": "C",
+        "texto": "Enero",
+        "correcta": false,
+        "explicacion": "Enero tiene la menor 'lectura anterior' (4520), pero esa columna es el número acumulado del medidor, no el consumo. El consumo de enero fue 130 kWh, que no es el menor de la tabla (marzo tuvo 120).",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó el número más pequeño de la tabla sin fijarse en que estaba en la columna de lectura del medidor y no en la de consumo."
+      },
+      {
+        "clave": "D",
+        "texto": "Febrero",
+        "correcta": false,
+        "explicacion": "El consumo de febrero fue 145 kWh, mayor que el de enero (130) y que el de marzo (120). No es el menor de la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de leer apresuradamente la columna equivocada o de responder sin comparar los cuatro consumos."
+      }
+    ],
+    "explicacion": "Leer: la tabla tiene cuatro columnas; la última, 'Consumo del mes', es la que responde a la pregunta: enero 130, febrero 145, marzo 120, abril 155. Comprender: se pregunta por el mes de MENOR consumo, no por la menor lectura del medidor ni por el mayor consumo. Interpretar: las lecturas del medidor son acumuladas y siempre crecen; el consumo es la diferencia entre ellas. Representar: comparar solo la columna de consumo: 120 < 130 < 145 < 155. Razonar: el menor valor de esa columna indica el mes buscado. Resolver: 120 kWh corresponde a marzo. Verificar: 4915 − 4795 = 120, la diferencia de lecturas de marzo confirma el dato de la tabla.",
+    "que_identificar": "La columna 'Consumo del mes' (y no las columnas de lectura del medidor) y la palabra 'menor' en el enunciado.",
+    "que_revisar": "Lectura de tablas con varias columnas: identificar qué columna responde a la pregunta antes de comparar.",
+    "refuerzo_ids": ["MAT-007"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tablas", "recibo_energia", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-007",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Operaciones con números naturales en contexto",
+    "subtema": "Cálculo del valor a pagar: consumo por tarifa más cargo fijo",
+    "dificultad": 2,
+    "contexto": "El recibo de energía de una familia en Cúcuta muestra los datos del mes. El valor del consumo se calcula multiplicando los kilovatios hora consumidos por la tarifa, y al resultado se le suma el cobro de alumbrado público, que es un valor fijo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Datos del recibo de energía del mes",
+      "columnas": ["Concepto", "Valor"],
+      "filas": [["Consumo del mes", "150 kWh"], ["Tarifa por kWh", "$820"], ["Alumbrado público (valor fijo)", "$9.500"]],
+      "nota": "Valor a pagar = consumo × tarifa + alumbrado público."
+    },
+    "enunciado": "¿Cuál es el valor total que debe pagar la familia este mes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "$10.470",
+        "correcta": false,
+        "explicacion": "10.470 resulta de sumar los tres números de la tabla: 150 + 820 + 9.500. Pero el consumo se paga multiplicando los 150 kWh por la tarifa de $820, no sumándolos; sumar kWh con pesos no tiene sentido.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó todas las cantidades de la tabla en lugar de multiplicar el consumo por la tarifa."
+      },
+      {
+        "clave": "B",
+        "texto": "$21.800",
+        "correcta": false,
+        "explicacion": "21.800 = 12.300 + 9.500 proviene de calcular 150 × 82 = 12.300 en vez de 150 × 820 = 123.000. El planteamiento es correcto, pero la multiplicación quedó con un cero de menos.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Perdió un cero al multiplicar 150 por 820 y luego sumó bien el alumbrado."
+      },
+      {
+        "clave": "C",
+        "texto": "$123.000",
+        "correcta": false,
+        "explicacion": "123.000 es solo el valor del consumo (150 × 820). Falta sumar el cobro de alumbrado público de $9.500 que el recibo también incluye; por eso no es el total a pagar.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el consumo correctamente pero no incluyó el cargo fijo de alumbrado."
+      },
+      {
+        "clave": "D",
+        "texto": "$132.500",
+        "correcta": true,
+        "explicacion": "Valor del consumo: 150 × 820 = 123.000. Total: 123.000 + 9.500 = 132.500 pesos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: la tabla da tres datos: 150 kWh consumidos, tarifa de $820 por kWh y alumbrado público fijo de $9.500; la nota indica la fórmula. Comprender: se pide el total a pagar, que incluye el consumo y el alumbrado. Interpretar: la tarifa es un precio por unidad, así que el consumo se convierte en pesos multiplicando; el alumbrado es fijo y se suma una sola vez. Representar: total = 150 × 820 + 9.500. Razonar: 150 × 800 ya es 120.000, así que el total debe superar 120.000, lo que descarta A y B. Resolver: 150 × 820 = 123.000; 123.000 + 9.500 = 132.500. Verificar: 132.500 − 9.500 = 123.000 y 123.000 ÷ 150 = 820, que es la tarifa de la tabla.",
+    "que_identificar": "Que el consumo (150 kWh) se multiplica por la tarifa ($820) y que el alumbrado ($9.500) es un valor fijo que se suma al final.",
+    "que_revisar": "Multiplicación por una tarifa unitaria, suma de cargos fijos y estimación para comprobar el orden de magnitud.",
+    "refuerzo_ids": ["MAT-006"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "recibo_energia", "tarifas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-008",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Variación y cambio",
+    "subtema": "Lectura de un gráfico de líneas: variación entre periodos consecutivos",
+    "dificultad": 2,
+    "contexto": "El gráfico muestra cómo cambió el valor del pasaje de bus urbano en una ciudad colombiana entre 2019 y 2024. Cada punto indica la tarifa vigente en ese año.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Valor del pasaje de bus urbano por año",
+      "eje_x": "Año",
+      "eje_y": "Tarifa (pesos)",
+      "series": [
+        { "nombre": "Tarifa del pasaje", "valores": [["2019", 2300], ["2020", 2400], ["2021", 2500], ["2022", 2650], ["2023", 2950], ["2024", 3100]] }
+      ]
+    },
+    "enunciado": "¿Entre cuáles dos años consecutivos se presentó el mayor aumento en el valor del pasaje?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2020 y 2021",
+        "correcta": false,
+        "explicacion": "Entre 2020 y 2021 la tarifa pasó de 2.400 a 2.500 pesos: un aumento de 100 pesos, uno de los más pequeños del gráfico. No es el mayor aumento.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede provenir de leer mal los valores del eje vertical o de elegir sin calcular las diferencias."
+      },
+      {
+        "clave": "B",
+        "texto": "2023 y 2024",
+        "correcta": false,
+        "explicacion": "En 2024 la tarifa es la MÁS ALTA (3.100), pero el aumento entre 2023 y 2024 fue de 150 pesos, la mitad del aumento entre 2022 y 2023 (300). La pregunta es por el mayor aumento, no por el mayor valor.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el punto más alto del gráfico con el tramo de mayor crecimiento."
+      },
+      {
+        "clave": "C",
+        "texto": "2019 y 2024",
+        "correcta": false,
+        "explicacion": "Entre 2019 y 2024 el aumento total fue de 800 pesos, pero esos años no son consecutivos. El enunciado pide comparar años seguidos, es decir, cada tramo del gráfico por separado.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el aumento total del periodo sin tener en cuenta la condición 'años consecutivos'."
+      },
+      {
+        "clave": "D",
+        "texto": "2022 y 2023",
+        "correcta": true,
+        "explicacion": "Los aumentos entre años consecutivos son: 100, 100, 150, 300 y 150 pesos. El mayor es 300 pesos, entre 2022 (2.650) y 2023 (2.950). En el gráfico es el tramo con mayor pendiente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: el gráfico de líneas muestra la tarifa por año: 2019: 2.300; 2020: 2.400; 2021: 2.500; 2022: 2.650; 2023: 2.950; 2024: 3.100. Comprender: se pide el par de años CONSECUTIVOS con mayor aumento, no el año con la tarifa más alta ni el aumento total. Interpretar: en un gráfico de líneas el aumento entre dos años se ve en la inclinación del tramo: a mayor pendiente, mayor aumento. Representar: diferencias: 2019→2020: 100; 2020→2021: 100; 2021→2022: 150; 2022→2023: 300; 2023→2024: 150. Razonar: basta comparar las cinco diferencias y elegir la mayor. Resolver: la mayor es 300 pesos, entre 2022 y 2023. Verificar: 2.650 + 300 = 2.950 coincide con el dato de 2023; los demás tramos tienen aumentos de 150 o menos.",
+    "que_identificar": "Los valores de cada año en el gráfico y la condición 'años consecutivos' del enunciado.",
+    "que_revisar": "Diferencia entre valor y variación en gráficos de líneas; la pendiente de cada tramo indica el cambio.",
+    "refuerzo_ids": ["MAT-009"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["graficos", "lineas", "transporte", "variacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-009",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "representar",
+    "tema": "Funciones lineales",
+    "subtema": "Modelación algebraica de un costo fijo más un costo variable",
+    "dificultad": 2,
+    "contexto": "Un operador de telefonía celular ofrece un plan pospago con un cargo fijo mensual de $25.000 que incluye 5 GB de datos. Cada GB adicional que se consuma en el mes cuesta $4.000. Sea **x** el número de GB adicionales (por encima de los 5 GB incluidos) que consume una persona en un mes.",
+    "estimulo": null,
+    "enunciado": "¿Cuál expresión representa el costo total C del plan en ese mes, en pesos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "C = 25.000x + 4.000",
+        "correcta": false,
+        "explicacion": "Esta expresión intercambia los papeles: hace variar el cargo fijo con x y deja fijo el costo por GB. Con 1 GB adicional daría $29.000 (coincide por casualidad), pero con 2 GB daría $54.000, cuando el plan realmente cobra 25.000 + 8.000 = $33.000.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Colocó la variable x junto al primer número del enunciado sin identificar cuál cantidad es fija y cuál depende de x."
+      },
+      {
+        "clave": "B",
+        "texto": "C = 25.000 + 4.000x",
+        "correcta": true,
+        "explicacion": "El cargo fijo de $25.000 se paga siempre (no depende de x) y cada GB adicional agrega $4.000, así que el costo variable es 4.000x. El total es la suma de ambos: C = 25.000 + 4.000x.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "C = 29.000x",
+        "correcta": false,
+        "explicacion": "29.000x resulta de sumar 25.000 + 4.000 y multiplicar todo por x. Eso haría que el cargo fijo se cobrara una vez por cada GB adicional y que, con x = 0, el plan costara $0, cuando en realidad cuesta $25.000.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los dos valores del enunciado y multiplicó el resultado por x sin distinguir el costo fijo del variable."
+      },
+      {
+        "clave": "D",
+        "texto": "C = 25.000 + 4.000(x − 5)",
+        "correcta": false,
+        "explicacion": "Restar 5 sería necesario si x fuera el consumo TOTAL de GB. Pero el enunciado define x como los GB adicionales, es decir, ya descuenta los 5 incluidos; restarlos otra vez cobra de menos (con x = 5 daría $25.000 en lugar de $45.000).",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó con cuidado la definición de x y descontó los 5 GB incluidos dos veces."
+      }
+    ],
+    "explicacion": "Leer: cargo fijo $25.000 con 5 GB incluidos; cada GB adicional cuesta $4.000; x = número de GB adicionales. Comprender: se pide traducir la situación a una expresión algebraica del costo total. Interpretar: hay una parte que no cambia (25.000) y una parte que crece 4.000 por cada unidad de x. Representar: costo fijo + costo variable = 25.000 + 4.000·x. Razonar: la expresión debe dar 25.000 cuando x = 0 (nadie consume datos extra) y aumentar 4.000 por cada GB adicional; solo la opción B cumple ambas condiciones. Resolver: C = 25.000 + 4.000x. Verificar: con x = 2, C = 25.000 + 8.000 = 33.000, que coincide con pagar el plan más dos GB de $4.000 cada uno.",
+    "que_identificar": "Cuál cantidad es fija ($25.000), cuál es el precio por unidad ($4.000) y que x ya representa solo los GB adicionales.",
+    "que_revisar": "Modelo lineal C = b + m·x: término independiente (costo fijo) y pendiente (costo por unidad).",
+    "refuerzo_ids": ["MAT-008"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["algebra", "funcion_lineal", "plan_de_datos", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-010",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "verificar",
+    "tema": "Porcentajes",
+    "subtema": "Descuentos sucesivos",
+    "dificultad": 3,
+    "contexto": "Una tienda de ropa en Medellín ofrece 20 % de descuento en una chaqueta que cuesta $120.000. Además, si el cliente paga con la tarjeta de la tienda, recibe un 10 % de descuento adicional **sobre el precio ya rebajado**. Un cliente razona así: **\"20 % más 10 % es 30 % de descuento; 30 % de 120.000 es 36.000, así que pago $84.000\"**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente el razonamiento del cliente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El cliente se equivoca: el 10 % adicional se calcula sobre $96.000, no sobre $120.000, por eso el descuento total es 28 % y paga $86.400.",
+        "correcta": true,
+        "explicacion": "Primer descuento: 120.000 × 0,8 = 96.000. Segundo descuento sobre el precio rebajado: 96.000 × 0,9 = 86.400. El descuento total es 120.000 − 86.400 = 33.600, que equivale a 33.600 ÷ 120.000 = 28 %, menor que 30 %.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El cliente se equivoca: los descuentos sucesivos se multiplican, 20 % × 10 % = 2 %, así que solo recibe 2 % de descuento y paga $117.600.",
+        "correcta": false,
+        "explicacion": "Lo que se multiplica no son los porcentajes de descuento sino los factores que quedan después de cada descuento: 0,8 × 0,9 = 0,72, es decir, se paga el 72 % del precio (descuento del 28 %). Multiplicar 0,2 × 0,1 = 0,02 no representa ningún paso de la situación.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recordó que 'los descuentos sucesivos se multiplican' pero multiplicó los porcentajes de descuento en lugar de los factores restantes."
+      },
+      {
+        "clave": "C",
+        "texto": "El cliente se equivoca porque el orden importa: si la tienda aplicara primero el 10 % y después el 20 %, pagaría menos de $86.400.",
+        "correcta": false,
+        "explicacion": "El orden de los descuentos sucesivos NO cambia el resultado: 120.000 × 0,9 × 0,8 = 86.400, igual que 120.000 × 0,8 × 0,9. La cifra de $86.400 es correcta, pero el argumento sobre el orden es falso, así que la afirmación no evalúa bien el razonamiento.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Llegó al valor correcto pero lo justificó con la idea equivocada de que el orden de los descuentos altera el precio final."
+      },
+      {
+        "clave": "D",
+        "texto": "El cliente tiene razón: los dos descuentos se suman, 20 % + 10 % = 30 %, y 30 % de $120.000 son $36.000, así que paga $84.000.",
+        "correcta": false,
+        "explicacion": "Los porcentajes no se pueden sumar porque se aplican sobre bases distintas: el 20 % sobre $120.000 y el 10 % sobre el precio ya rebajado ($96.000). El segundo descuento vale $9.600, no $12.000, así que el total no es $36.000 sino $33.600.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los porcentajes como si ambos se calcularan sobre el precio original."
+      }
+    ],
+    "explicacion": "Leer: precio $120.000; primer descuento 20 %; segundo descuento 10 % sobre el precio ya rebajado; el cliente suma 20 % + 10 % = 30 % y concluye $84.000. Comprender: hay que decidir si ese procedimiento es válido y cuál opción lo evalúa bien. Interpretar: 'sobre el precio ya rebajado' significa que el 10 % se calcula sobre una base menor que $120.000, así que vale menos que 10 % del precio original. Representar: precio final = 120.000 × 0,8 × 0,9. Razonar: como el segundo descuento actúa sobre $96.000, el descuento total debe ser menor que 30 %; por eso el cliente paga más de $84.000. Resolver: 120.000 × 0,8 = 96.000; 96.000 × 0,9 = 86.400; descuento total = 33.600 = 28 % de 120.000. Verificar: 0,8 × 0,9 = 0,72 y 72 % de 120.000 = 86.400; además, cambiar el orden (0,9 × 0,8) da el mismo resultado, lo que descarta la opción C.",
+    "que_identificar": "Que el segundo descuento se aplica sobre el precio ya rebajado ($96.000) y no sobre el precio original.",
+    "que_revisar": "Descuentos sucesivos: multiplicar los factores (1 − d1)(1 − d2); los porcentajes sobre bases distintas no se suman.",
+    "refuerzo_ids": ["MAT-018", "MAT-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["porcentajes", "descuentos", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-011",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "comprender",
+    "tema": "Medición y escalas",
+    "subtema": "Interpretación de un plano a escala y conversión de unidades",
+    "dificultad": 1,
+    "contexto": "Una familia de Tunja recibió el plano de la vivienda que va a comprar. El plano está dibujado a **escala 1:100**, es decir, cada centímetro del plano representa 100 centímetros en la realidad. En el plano, la sala aparece como un rectángulo de 5 cm de largo por 4 cm de ancho.",
+    "estimulo": null,
+    "enunciado": "¿Cuáles son las medidas reales de la sala?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "5 cm de largo por 4 cm de ancho",
+        "correcta": false,
+        "explicacion": "Estas son las medidas del dibujo, no las reales. La escala 1:100 indica que el plano está reducido 100 veces; una sala de 5 cm por 4 cm no podría existir.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reportó las medidas del plano sin aplicar la escala."
+      },
+      {
+        "clave": "B",
+        "texto": "50 cm de largo por 40 cm de ancho",
+        "correcta": false,
+        "explicacion": "50 cm y 40 cm resultan de multiplicar por 10 y no por 100. La escala 1:100 exige multiplicar cada medida del plano por 100: 5 × 100 = 500 cm, no 50 cm. Además, una sala de medio metro de largo no es realista.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó un factor de 10 en lugar de 100 al leer la escala 1:100."
+      },
+      {
+        "clave": "C",
+        "texto": "5 m de largo por 4 m de ancho",
+        "correcta": true,
+        "explicacion": "5 cm × 100 = 500 cm = 5 m y 4 cm × 100 = 400 cm = 4 m. La sala real mide 5 m por 4 m, una medida razonable para una sala.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "500 m de largo por 400 m de ancho",
+        "correcta": false,
+        "explicacion": "Multiplicar por 100 da 500 y 400, pero en CENTÍMETROS, no en metros. 500 cm son 5 m. Una sala de 500 m de largo tendría cinco cuadras de longitud, lo cual no es coherente con una vivienda.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la escala correctamente pero cambió la unidad de cm a m sin hacer la conversión."
+      }
+    ],
+    "explicacion": "Leer: escala 1:100 (1 cm en el plano = 100 cm reales); en el plano la sala mide 5 cm por 4 cm. Comprender: se piden las medidas reales, lo que exige ampliar las medidas del plano según la escala. Interpretar: 1:100 significa que la realidad es 100 veces más grande que el dibujo. Representar: largo real = 5 cm × 100; ancho real = 4 cm × 100. Razonar: el resultado queda en centímetros y conviene expresarlo en metros para que sea comprensible (100 cm = 1 m). Resolver: 5 × 100 = 500 cm = 5 m; 4 × 100 = 400 cm = 4 m. Verificar: una sala de 5 m por 4 m (20 m²) es un tamaño realista para una vivienda; 5 m ÷ 100 = 5 cm devuelve la medida del plano.",
+    "que_identificar": "El significado de la escala 1:100 y las medidas del plano (5 cm y 4 cm).",
+    "que_revisar": "Escalas de reducción y conversión entre centímetros y metros.",
+    "refuerzo_ids": ["MAT-020", "MAT-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["escala", "unidades", "plano", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-012",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Perímetro y área",
+    "subtema": "Perímetro de un rectángulo en un problema de compra de material",
+    "dificultad": 2,
+    "contexto": "Una familia campesina de Boyacá va a cercar con alambre un lote rectangular de 60 m de largo por 25 m de ancho para sembrar papa. La cerca llevará **3 vueltas de alambre** alrededor de todo el lote. El alambre se vende en rollos de 50 m y no se venden fracciones de rollo.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos rollos de alambre deben comprar como mínimo para completar la cerca?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "90 rollos",
+        "correcta": false,
+        "explicacion": "90 resulta de usar el ÁREA del lote (60 × 25 = 1500 m²) en lugar del perímetro: 1500 × 3 ÷ 50 = 90. Pero el alambre rodea el borde del lote, así que la magnitud correcta es el perímetro (170 m), no el área.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió área con perímetro y multiplicó largo por ancho en vez de sumar los lados."
+      },
+      {
+        "clave": "B",
+        "texto": "4 rollos",
+        "correcta": false,
+        "explicacion": "4 rollos (200 m) alcanzan para UNA sola vuelta: el perímetro es 170 m. Pero la cerca lleva 3 vueltas, es decir, 510 m de alambre, así que faltarían 310 m.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el perímetro correctamente pero olvidó multiplicar por las 3 vueltas."
+      },
+      {
+        "clave": "C",
+        "texto": "10 rollos",
+        "correcta": false,
+        "explicacion": "10 rollos son 500 m, pero se necesitan 510 m (3 × 170). Al dividir 510 ÷ 50 = 10,2 hay que redondear hacia ARRIBA, porque con 10 rollos faltarían 10 m de alambre para cerrar la cerca.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Obtuvo 10,2 y tomó la parte entera sin comprobar que 500 m no cubren los 510 m requeridos."
+      },
+      {
+        "clave": "D",
+        "texto": "11 rollos",
+        "correcta": true,
+        "explicacion": "Perímetro: 2 × (60 + 25) = 170 m. Alambre total: 3 × 170 = 510 m. Rollos: 510 ÷ 50 = 10,2, y como no se venden fracciones, se necesitan 11 rollos (550 m).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: lote rectangular de 60 m por 25 m; 3 vueltas de alambre; rollos de 50 m sin fracciones. Comprender: se pide el número mínimo de rollos para cubrir todo el alambre necesario. Interpretar: cercar el borde corresponde al perímetro del rectángulo, no a su área; cada vuelta usa un perímetro completo. Representar: perímetro = 2 × (60 + 25); alambre = 3 × perímetro; rollos = alambre ÷ 50, redondeado hacia arriba. Razonar: como el alambre se compra por rollos enteros, si la división no es exacta hay que tomar el entero siguiente. Resolver: perímetro = 170 m; alambre = 510 m; 510 ÷ 50 = 10,2 → 11 rollos. Verificar: 11 × 50 = 550 m ≥ 510 m, mientras que 10 × 50 = 500 m < 510 m, así que 11 es el mínimo que alcanza.",
+    "que_identificar": "Que se necesita el perímetro (no el área), que son 3 vueltas y que los rollos se compran enteros.",
+    "que_revisar": "Perímetro del rectángulo, diferencia entre perímetro y área, y redondeo hacia arriba en problemas de compra por unidades.",
+    "refuerzo_ids": ["MAT-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["perimetro", "cosecha", "redondeo", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-013",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "razonar",
+    "tema": "Volumen de sólidos",
+    "subtema": "Volumen del cilindro y efecto del radio al cuadrado",
+    "dificultad": 3,
+    "contexto": "Una junta de acción comunal en un municipio de Cundinamarca quiere comprar un tanque cilíndrico para almacenar agua. El vendedor ofrece dos modelos, cuyas medidas aparecen en la tabla, y afirma: **\"Los dos tanques almacenan la misma cantidad de agua, porque tienen las mismas medidas, solo que invertidas\"**. (Volumen del cilindro: V = π·r²·h).",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Medidas de los tanques ofrecidos",
+      "columnas": ["Tanque", "Radio (m)", "Altura (m)"],
+      "filas": [["Tanque 1", 1, 2], ["Tanque 2", 2, 1]],
+      "nota": null
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente lo que dice el vendedor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El vendedor tiene razón: en los dos tanques el producto del radio por la altura es 2, y el volumen depende de ese producto.",
+        "correcta": false,
+        "explicacion": "El volumen del cilindro no depende de r·h sino de r²·h: el radio va al cuadrado. Tanque 1: 1² × 2 = 2; tanque 2: 2² × 1 = 4. Los productos r·h coinciden, pero los volúmenes no.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la fórmula del volumen sin elevar el radio al cuadrado."
+      },
+      {
+        "clave": "B",
+        "texto": "El vendedor tiene razón: los dos tanques necesitan la misma cantidad de lámina para la pared lateral, y por eso guardan la misma agua.",
+        "correcta": false,
+        "explicacion": "Es cierto que el área lateral (2·π·r·h) es igual en ambos, 4π m², pero el área de la pared no determina la capacidad. El volumen se calcula con π·r²·h y da 2π m³ para el tanque 1 y 4π m³ para el tanque 2; el argumento usa una magnitud que no responde a la pregunta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comprobó que el área lateral es igual y dedujo, sin justificación, que el volumen también lo es."
+      },
+      {
+        "clave": "C",
+        "texto": "El vendedor se equivoca: el tanque 2 almacena el doble, porque en el volumen el radio está elevado al cuadrado: 2π m³ frente a 4π m³.",
+        "correcta": true,
+        "explicacion": "Tanque 1: V = π × 1² × 2 = 2π ≈ 6,3 m³. Tanque 2: V = π × 2² × 1 = 4π ≈ 12,6 m³. Duplicar el radio multiplica el volumen por 4, mientras que reducir la altura a la mitad solo lo divide entre 2; el efecto neto es el doble de capacidad para el tanque 2.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El vendedor se equivoca: el tanque 1 almacena más porque es más alto, y la altura es lo que determina cuánta agua cabe.",
+        "correcta": false,
+        "explicacion": "Concluye correctamente que el vendedor se equivoca, pero al revés: el tanque más alto (tanque 1) es el de MENOR capacidad, 2π m³ frente a 4π m³. La altura no es el único factor; el área de la base (π·r²) pesa más porque el radio va al cuadrado.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó únicamente en la altura como indicador de capacidad e ignoró el tamaño de la base."
+      }
+    ],
+    "explicacion": "Leer: tanque 1 tiene radio 1 m y altura 2 m; tanque 2 tiene radio 2 m y altura 1 m; el vendedor afirma que almacenan lo mismo; se da la fórmula V = π·r²·h. Comprender: hay que evaluar si esa afirmación es válida y con qué argumento. Interpretar: 'medidas invertidas' no implica igual volumen, porque radio y altura no cumplen el mismo papel en la fórmula: el radio está al cuadrado. Representar: V1 = π × 1² × 2 = 2π; V2 = π × 2² × 1 = 4π. Razonar: duplicar el radio cuadruplica el área de la base; reducir la altura a la mitad solo divide entre 2; el tanque 2 queda con el doble de volumen. Resolver: el vendedor se equivoca; el tanque 2 almacena el doble (opción C). Verificar: 4π ÷ 2π = 2, y el área lateral igual en ambos (4π m²) no contradice esto porque mide la pared, no la capacidad.",
+    "que_identificar": "Que el radio aparece al cuadrado en la fórmula del volumen y que intercambiar radio y altura cambia el resultado.",
+    "que_revisar": "Volumen del cilindro V = π·r²·h; efecto de duplicar una dimensión que está al cuadrado; diferencia entre área lateral y volumen.",
+    "refuerzo_ids": ["MAT-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["tablas", "volumen", "cilindro", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-014",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "verificar",
+    "tema": "Perímetro y área",
+    "subtema": "Área de un rectángulo y cambio de unidades al contar baldosas",
+    "dificultad": 1,
+    "contexto": "El piso de un salón de clase rectangular mide 8 m de largo por 6 m de ancho. Se va a cubrir por completo con baldosas cuadradas de 40 cm de lado, sin dejar espacios. Un estudiante calcula **8 × 6 = 48** y concluye que se necesitan **48 baldosas**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente el procedimiento del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El procedimiento es correcto, porque el área del salón es 8 × 6 = 48 m².",
+        "correcta": false,
+        "explicacion": "El área del salón sí es 48 m², pero eso no es el número de baldosas: cada baldosa cubre 0,4 m × 0,4 m = 0,16 m², mucho menos de 1 m². El estudiante confundió metros cuadrados con baldosas sin verificar las unidades.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Vio que el área estaba bien calculada y no comprobó que el resultado estuviera en la unidad que pide la pregunta (baldosas, no m²)."
+      },
+      {
+        "clave": "B",
+        "texto": "El procedimiento es incorrecto: debía calcular el perímetro, 2 × (8 + 6) = 28 m, y se necesitan 28 baldosas.",
+        "correcta": false,
+        "explicacion": "Cubrir un piso es un problema de ÁREA, no de perímetro: el perímetro mide el borde del salón, y las baldosas cubren toda la superficie. Además, 28 baldosas de 40 cm ni siquiera cubrirían una fila completa a lo largo y a lo ancho.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió área con perímetro al elegir la magnitud para resolver el problema."
+      },
+      {
+        "clave": "C",
+        "texto": "El procedimiento es incorrecto: 48 m² dividido entre 0,4 m da 120, así que se necesitan 120 baldosas.",
+        "correcta": false,
+        "explicacion": "Dividir un área (m²) entre una longitud (m) no da un número de baldosas: mezcla unidades distintas. Hay que dividir el área del salón entre el ÁREA de una baldosa (0,16 m²), lo que da 300, no 120.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió el área del salón entre el lado de la baldosa en lugar de dividir entre el área de la baldosa."
+      },
+      {
+        "clave": "D",
+        "texto": "El procedimiento es incorrecto: 48 m² es el área del salón, pero cada baldosa cubre 0,16 m², así que se necesitan 48 ÷ 0,16 = 300 baldosas.",
+        "correcta": true,
+        "explicacion": "Área del salón: 8 × 6 = 48 m². Área de cada baldosa: 0,4 × 0,4 = 0,16 m². Número de baldosas: 48 ÷ 0,16 = 300. También se puede ver así: a lo largo caben 8 ÷ 0,4 = 20 baldosas y a lo ancho 6 ÷ 0,4 = 15, y 20 × 15 = 300.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: salón de 8 m × 6 m; baldosas cuadradas de 40 cm de lado; el estudiante calcula 8 × 6 = 48 y dice 48 baldosas. Comprender: hay que evaluar si ese procedimiento responde a la pregunta '¿cuántas baldosas?'. Interpretar: 8 × 6 = 48 es el área del salón en metros cuadrados; una baldosa de 40 cm cubre mucho menos de un metro cuadrado, así que hacen falta muchas más de 48. Representar: baldosas = área del salón ÷ área de una baldosa = 48 ÷ (0,4 × 0,4). Razonar: el estudiante calculó bien el área pero no la relacionó con el tamaño de la baldosa ni revisó las unidades; el procedimiento está incompleto. Resolver: 0,4 × 0,4 = 0,16 m²; 48 ÷ 0,16 = 300 baldosas. Verificar: 20 baldosas a lo largo (8 ÷ 0,4) por 15 a lo ancho (6 ÷ 0,4) = 300; y 300 × 0,16 = 48 m², el área total.",
+    "que_identificar": "Que el resultado 48 está en m² y no en baldosas, y que el lado de la baldosa está en centímetros (40 cm = 0,4 m).",
+    "que_revisar": "Área del rectángulo, conversión de cm a m, y cómo contar cuántas figuras pequeñas caben en una grande (área ÷ área).",
+    "refuerzo_ids": ["MAT-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["area", "unidades", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

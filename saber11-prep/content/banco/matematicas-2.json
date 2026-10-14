@@ -1,0 +1,935 @@
+[
+  {
+    "id": "MAT-015",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Funciones lineales",
+    "subtema": "Interpretación de la pendiente (razón de cambio) en un gráfico de líneas",
+    "dificultad": 2,
+    "contexto": "En una finca de Cundinamarca se riega un cultivo de fresas con el agua de un tanque. Mientras el riego está encendido, el agua sale del tanque a un ritmo constante. El gráfico muestra la cantidad de agua que quedaba en el tanque cada 10 minutos desde que se abrió la llave.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Agua en el tanque durante el riego",
+      "eje_x": "Tiempo desde que se abrió la llave (minutos)",
+      "eje_y": "Agua en el tanque (litros)",
+      "series": [
+        { "nombre": "Agua en el tanque", "valores": [["0", 800], ["10", 650], ["20", 500], ["30", 350], ["40", 200]] }
+      ]
+    },
+    "enunciado": "De acuerdo con el gráfico, ¿cuántos litros de agua salen del tanque cada minuto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "150 litros por minuto",
+        "correcta": false,
+        "explicacion": "150 litros es lo que baja el nivel entre dos puntos consecutivos del gráfico (por ejemplo, de 800 a 650), pero esos puntos están separados 10 minutos, no 1 minuto. Para obtener el ritmo por minuto hay que dividir 150 entre 10.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la diferencia entre dos puntos consecutivos como si el eje horizontal avanzara de un minuto en un minuto."
+      },
+      {
+        "clave": "B",
+        "texto": "15 litros por minuto",
+        "correcta": true,
+        "explicacion": "Entre 0 y 40 minutos el agua pasó de 800 L a 200 L, es decir, salieron 600 L en 40 minutos: 600 ÷ 40 = 15 L por minuto. Se confirma con cualquier tramo: cada 10 minutos bajan 150 L, y 150 ÷ 10 = 15.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "20 litros por minuto",
+        "correcta": false,
+        "explicacion": "20 resulta de dividir 800 ÷ 40, es decir, de suponer que a los 40 minutos el tanque quedó vacío. Pero el gráfico muestra que a los 40 minutos aún quedan 200 L; lo que salió fue 800 − 200 = 600 L, no 800 L.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Dividió la cantidad inicial entre el tiempo total sin restar el agua que todavía quedaba en el tanque."
+      },
+      {
+        "clave": "D",
+        "texto": "5 litros por minuto",
+        "correcta": false,
+        "explicacion": "5 resulta de dividir 200 ÷ 40, usando el valor final del gráfico como si fuera la cantidad de agua que salió. 200 L es lo que queda en el tanque, no lo que salió; lo que salió fue 800 − 200 = 600 L.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el nivel final del tanque con la cantidad de agua que salió."
+      }
+    ],
+    "explicacion": "Leer: el gráfico da la cantidad de agua cada 10 minutos: 800, 650, 500, 350 y 200 litros en los minutos 0, 10, 20, 30 y 40. Comprender: se pregunta por el ritmo de salida en litros POR MINUTO, no por cuánto baja entre dos puntos ni por cuánta agua queda. Interpretar: la línea es recta y descendente, así que el ritmo de salida es constante y corresponde a la pendiente del gráfico. Representar: ritmo = (agua que salió) ÷ (tiempo transcurrido) = (800 − 200) ÷ (40 − 0). Razonar: en cualquier tramo de 10 minutos bajan 150 L, así que en un minuto deben bajar la décima parte. Resolver: 600 ÷ 40 = 15 L por minuto (también 150 ÷ 10 = 15). Verificar: 15 L/min × 40 min = 600 L, y 800 − 600 = 200 L, que coincide con el último punto del gráfico.",
+    "que_identificar": "Que los puntos del gráfico están separados 10 minutos (no 1) y que el agua que salió es la diferencia entre el nivel inicial y el final, no el nivel inicial ni el final por sí solos.",
+    "que_revisar": "Pendiente de una recta como razón de cambio: cambio en el eje vertical dividido entre cambio en el eje horizontal, cuidando las unidades de cada eje.",
+    "refuerzo_ids": ["MAT-008", "MAT-009"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["graficos", "lineas", "pendiente", "razon_de_cambio", "riego", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-016",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Diseña planes para la solución de problemas que involucren información cuantitativa o esquemática",
+    "habilidad": "representar",
+    "tema": "Sistemas de ecuaciones lineales",
+    "subtema": "Planteamiento de un sistema 2×2 a partir de un contexto de ventas",
+    "dificultad": 2,
+    "contexto": "En la feria de emprendimiento de un colegio de Villavicencio, un grupo de estudiantes vendió arepas a $3.000 cada una y jugos a $2.000 cada uno. Al cerrar el puesto contaron que habían vendido **45 productos en total** y que habían recaudado **$115.000**, pero no anotaron cuántas arepas ni cuántos jugos vendieron.",
+    "estimulo": null,
+    "enunciado": "Si x representa el número de arepas vendidas y y el número de jugos vendidos, ¿cuál sistema de ecuaciones permite hallar esos dos valores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "x + y = 45  y  2.000x + 3.000y = 115.000",
+        "correcta": false,
+        "explicacion": "La primera ecuación es correcta, pero en la segunda los precios están intercambiados: x son las arepas, que valen $3.000, y y son los jugos, que valen $2.000. Con este sistema la solución sería x = 20 y y = 25, es decir, se obtendría el número de jugos donde debería estar el de arepas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asignó el precio de cada producto a la variable equivocada al escribir la ecuación del dinero."
+      },
+      {
+        "clave": "B",
+        "texto": "x + y = 115.000  y  3.000x + 2.000y = 45",
+        "correcta": false,
+        "explicacion": "Los totales están intercambiados: la suma de unidades (x + y) debe ser 45 productos, y la suma del dinero (3.000x + 2.000y) debe ser $115.000. Tal como está, la segunda ecuación diría que 45 pesos se recaudaron vendiendo productos de miles de pesos, lo cual no tiene sentido.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No distinguió cuál dato es una cantidad de productos y cuál es una cantidad de dinero."
+      },
+      {
+        "clave": "C",
+        "texto": "x + y = 45  y  3.000x + 2.000y = 115.000",
+        "correcta": true,
+        "explicacion": "Hay dos condiciones: la cantidad de productos (x arepas más y jugos suman 45) y el dinero recaudado (cada arepa aporta $3.000 y cada jugo $2.000, y todo suma $115.000). Ese es exactamente el sistema. Su solución es x = 25 arepas y y = 20 jugos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "x + y = 45  y  5.000(x + y) = 115.000",
+        "correcta": false,
+        "explicacion": "La segunda ecuación supone que cada producto vendido aportó $5.000 (la suma de los dos precios), pero cada arepa aporta $3.000 y cada jugo $2.000 por separado. Además, si x + y = 45, entonces 5.000 × 45 = 225.000, que no coincide con los $115.000 recaudados: el sistema es contradictorio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los dos precios y los aplicó a todos los productos, en lugar de multiplicar cada precio por su propia cantidad."
+      }
+    ],
+    "explicacion": "Leer: arepas a $3.000, jugos a $2.000, 45 productos vendidos y $115.000 recaudados; x = arepas, y = jugos. Comprender: se pide el sistema que MODELA la situación, no el número de arepas y jugos. Interpretar: hay dos informaciones independientes: una cuenta productos y otra cuenta dinero; cada una da una ecuación. Representar: productos: x + y = 45; dinero: 3.000x + 2.000y = 115.000. Razonar: en la ecuación del dinero cada precio debe multiplicar a la cantidad de SU producto, y los totales no se pueden intercambiar porque tienen unidades distintas (productos y pesos). Resolver: el sistema es el de la opción C. Verificar: resolviendo, y = 45 − x; 3.000x + 2.000(45 − x) = 115.000 → 1.000x = 25.000 → x = 25, y = 20; y en efecto 25 + 20 = 45 y 3.000 × 25 + 2.000 × 20 = 75.000 + 40.000 = 115.000.",
+    "que_identificar": "Las dos condiciones del problema (total de productos y total de dinero) y qué precio corresponde a cada variable.",
+    "que_revisar": "Traducción de enunciados a ecuaciones: una ecuación por cada condición, cuidando que cada término tenga la misma unidad que el total.",
+    "refuerzo_ids": ["MAT-009"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["algebra", "sistemas_de_ecuaciones", "modelacion", "feria_escolar", "afirmacion_por_verificar", "revisar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-017",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "algebra_calculo",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Proporcionalidad",
+    "subtema": "Proporcionalidad inversa: número de trabajadores y tiempo",
+    "dificultad": 2,
+    "contexto": "En una finca cafetera de Risaralda, 8 recolectores que trabajan al mismo ritmo recogen toda la cosecha de un lote en 6 días. Como se anuncian lluvias fuertes, la familia dueña de la finca contrata 4 recolectores más, que trabajan al mismo ritmo que los anteriores.",
+    "estimulo": null,
+    "enunciado": "¿En cuántos días recogerán la cosecha del lote los 12 recolectores?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "2 días",
+        "correcta": false,
+        "explicacion": "2 resulta de restar los 4 recolectores nuevos a los 6 días (6 − 4 = 2), pero personas y días son magnitudes distintas y no se pueden restar entre sí. Con 12 recolectores el trabajo total (8 × 6 = 48 jornadas de persona) se reparte entre 12 personas: 48 ÷ 12 = 4 días.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pensó que cada recolector adicional descuenta un día, como si el cambio fuera por suma y resta y no por proporción."
+      },
+      {
+        "clave": "B",
+        "texto": "9 días",
+        "correcta": false,
+        "explicacion": "9 sale de una regla de tres directa (12 × 6 ÷ 8 = 9), pero eso significaría que con MÁS recolectores se tarda MÁS tiempo, lo cual contradice el contexto. Las magnitudes son inversamente proporcionales: al aumentar los trabajadores, disminuyen los días.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó una regla de tres directa sin preguntarse si al aumentar una magnitud la otra aumenta o disminuye."
+      },
+      {
+        "clave": "C",
+        "texto": "10 días",
+        "correcta": false,
+        "explicacion": "10 resulta de sumar los 4 recolectores nuevos a los 6 días (6 + 4 = 10). Además de mezclar unidades distintas, da un tiempo mayor que el original, cuando contratar más personas debe reducir los días de trabajo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de sumar cantidades de distinta naturaleza o de responder sin analizar si el tiempo debía aumentar o disminuir."
+      },
+      {
+        "clave": "D",
+        "texto": "4 días",
+        "correcta": true,
+        "explicacion": "El trabajo total equivale a 8 recolectores × 6 días = 48 jornadas de persona. Con 12 recolectores: 48 ÷ 12 = 4 días. Equivalentemente, 12 recolectores son 1,5 veces los 8 iniciales, así que tardan 6 ÷ 1,5 = 4 días.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: 8 recolectores tardan 6 días; se contratan 4 más (12 en total), todos al mismo ritmo. Comprender: se pregunta cuántos días tardarán los 12 recolectores. Interpretar: más trabajadores al mismo ritmo implica menos días: las magnitudes son inversamente proporcionales, así que el producto (recolectores × días) se mantiene constante. Representar: 8 × 6 = 12 × d. Razonar: el trabajo total son 48 jornadas de persona; al repartirlo entre 12 personas, cada una trabaja 48 ÷ 12 jornadas. Resolver: d = 48 ÷ 12 = 4 días. Verificar: 4 es menor que 6, como debe ser al tener más trabajadores, y 12 × 4 = 48 = 8 × 6.",
+    "que_identificar": "Que al aumentar el número de trabajadores el tiempo disminuye (relación inversa) y que el dato constante es el trabajo total, 8 × 6 = 48 jornadas de persona.",
+    "que_revisar": "Proporcionalidad inversa: cuando una magnitud se multiplica por un factor, la otra se divide entre ese factor; el producto de ambas es constante.",
+    "refuerzo_ids": ["MAT-016", "MAT-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["proporcionalidad", "proporcionalidad_inversa", "cosecha", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-018",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "algebra_calculo",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Plantea afirmaciones que sustentan o refutan una interpretación dada a la información disponible en el marco de la solución de un problema",
+    "habilidad": "razonar",
+    "tema": "Porcentajes",
+    "subtema": "Aumentos porcentuales encadenados: el segundo aumento se calcula sobre el valor ya aumentado",
+    "dificultad": 3,
+    "contexto": "Una familia de Bogotá pagaba en 2024 un arriendo mensual de $800.000. En 2025 el arriendo subió 10 % y el propietario les anunció que en 2026 subirá otro 10 %. El propietario les dice: **\"En total, en 2026 el arriendo habrá subido 20 % respecto al de 2024\"**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente lo que dice el propietario?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Se equivoca: el segundo 10 % se calcula sobre $880.000, no sobre $800.000; el arriendo de 2026 será $968.000, es decir, 21 % más que en 2024.",
+        "correcta": true,
+        "explicacion": "2025: 800.000 × 1,10 = 880.000. 2026: 880.000 × 1,10 = 968.000. El aumento total es 968.000 − 800.000 = 168.000, y 168.000 ÷ 800.000 = 0,21 = 21 %. Como el segundo aumento se calcula sobre un valor mayor, el total supera la simple suma de porcentajes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Se equivoca: el aumento total sí es 20 %, pero debe calcularse sobre $880.000, así que el arriendo de 2026 será $1.056.000.",
+        "correcta": false,
+        "explicacion": "Aplicar 20 % sobre $880.000 equivale a cobrar el primer 10 % dos veces: una al pasar de 800.000 a 880.000 y otra dentro del 20 %. El arriendo de 2026 es 880.000 + 10 % de 880.000 = 968.000, y $1.056.000 sería un aumento de 32 % sobre el arriendo de 2024.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de mezclar la suma de porcentajes con la base equivocada, o de aceptar la cifra de 20 % sin revisar sobre qué valor se aplica."
+      },
+      {
+        "clave": "C",
+        "texto": "Tiene razón: 10 % + 10 % = 20 %, así que el arriendo de 2026 será $960.000.",
+        "correcta": false,
+        "explicacion": "Sumar los porcentajes solo sería válido si los dos aumentos se calcularan sobre el mismo valor ($800.000). Pero el segundo 10 % se calcula sobre el arriendo de 2025, que ya es $880.000: 10 % de 880.000 = 88.000, y el arriendo de 2026 es $968.000, no $960.000.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó los porcentajes como si ambos aumentos se aplicaran sobre el arriendo original."
+      },
+      {
+        "clave": "D",
+        "texto": "Se equivoca: dos aumentos seguidos siempre rinden menos que la suma de los porcentajes, así que el aumento total es menor que 20 %.",
+        "correcta": false,
+        "explicacion": "Esa regla aplica a los DESCUENTOS sucesivos (el segundo se calcula sobre un valor ya reducido, y por eso el descuento total es menor que la suma). Con AUMENTOS sucede lo contrario: el segundo se calcula sobre un valor ya mayor, y el aumento total (21 %) supera la suma (20 %).",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trasladó a los aumentos la regla de los descuentos sucesivos sin revisar la dirección del cambio."
+      }
+    ],
+    "explicacion": "Leer: arriendo 2024 = $800.000; aumento de 10 % en 2025 y otro 10 % en 2026; el propietario afirma que el aumento total es 20 %. Comprender: hay que decidir si esa afirmación es válida y con qué argumento. Interpretar: cada aumento porcentual se calcula sobre el valor vigente en ese momento, no sobre el valor original. Representar: 2025: 800.000 × 1,10 = 880.000; 2026: 880.000 × 1,10 = 968.000; en un solo paso, 800.000 × 1,10 × 1,10 = 800.000 × 1,21. Razonar: el factor total es 1,21, es decir, 21 % de aumento; supera el 20 % porque el segundo 10 % se toma sobre una base mayor (880.000 en vez de 800.000, lo que agrega 8.000 extra). Resolver: el propietario se equivoca; el aumento es 21 % (opción A). Verificar: 968.000 − 800.000 = 168.000 y 168.000 ÷ 800.000 = 0,21; mientras que 20 % de 800.000 daría 960.000, que no coincide.",
+    "que_identificar": "Que el segundo aumento se aplica sobre el arriendo de 2025 ($880.000) y no sobre el de 2024, por lo que los porcentajes no se pueden sumar.",
+    "que_revisar": "Aumentos y descuentos sucesivos: se multiplican los factores (1,10 × 1,10 = 1,21), no se suman los porcentajes; con aumentos el total supera la suma y con descuentos queda por debajo.",
+    "refuerzo_ids": ["MAT-010", "MAT-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["porcentajes", "aumentos_sucesivos", "arriendo", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-019",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "algebra_calculo",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "representar",
+    "tema": "Sucesiones",
+    "subtema": "Regla general de una sucesión aritmética a partir de una tabla",
+    "dificultad": 1,
+    "contexto": "Una estudiante de Riohacha está ahorrando para comprar una bicicleta. Cada semana deposita en su alcancía $3.000 más que la semana anterior. La tabla muestra cuánto depositó en cada una de las primeras cuatro semanas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Depósito semanal en la alcancía",
+      "columnas": ["Semana (n)", "Depósito de esa semana ($)"],
+      "filas": [[1, 5000], [2, 8000], [3, 11000], [4, 14000]],
+      "nota": "Cada fila muestra solo lo depositado esa semana, no el total acumulado."
+    },
+    "enunciado": "¿Cuál expresión permite calcular el depósito de la semana n?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "3.000n + 2.000",
+        "correcta": true,
+        "explicacion": "El depósito sube 3.000 por semana (razón 3.000), así que la expresión tiene la forma 3.000n + b. Para que en la semana 1 dé 5.000: 3.000 × 1 + b = 5.000, luego b = 2.000. Se comprueba con la semana 4: 3.000 × 4 + 2.000 = 14.000.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "5.000n",
+        "correcta": false,
+        "explicacion": "Coincide solo con la semana 1 (5.000 × 1 = 5.000). En la semana 2 daría 10.000, pero la tabla dice 8.000. La expresión trata el primer depósito como si fuera el aumento semanal, cuando el aumento es de 3.000.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el primer valor de la tabla como si se repitiera cada semana (sucesión de múltiplos), sin revisar el aumento entre semanas."
+      },
+      {
+        "clave": "C",
+        "texto": "3.000n + 5.000",
+        "correcta": false,
+        "explicacion": "Usa correctamente el aumento de 3.000, pero suma el primer depósito completo como término independiente. En la semana 1 daría 3.000 + 5.000 = 8.000, que en realidad es el depósito de la semana 2. La expresión queda corrida una semana.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Escribió 'primer término + razón × n' en lugar de 'primer término + razón × (n − 1)'."
+      },
+      {
+        "clave": "D",
+        "texto": "2.000n + 3.000",
+        "correcta": false,
+        "explicacion": "Da 5.000 en la semana 1 (2.000 + 3.000), pero en la semana 2 daría 7.000 y no 8.000. Los números 2.000 y 3.000 están intercambiados: el que multiplica a n debe ser el aumento semanal (3.000).",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comprobó la expresión solo con la semana 1 y no la verificó con otra fila de la tabla."
+      }
+    ],
+    "explicacion": "Leer: la tabla muestra depósitos de 5.000, 8.000, 11.000 y 14.000 en las semanas 1 a 4; el contexto dice que cada semana se deposita 3.000 más que la anterior. Comprender: se pide una expresión en función de n que reproduzca esos valores para cualquier semana. Interpretar: como el aumento entre semanas consecutivas es constante (3.000), la sucesión es aritmética y su regla es lineal en n. Representar: depósito = 3.000n + b; con n = 1 se tiene 3.000 + b = 5.000, así que b = 2.000. Razonar: el coeficiente de n debe ser el aumento semanal, y el término independiente se ajusta para que la semana 1 dé 5.000. Resolver: depósito de la semana n = 3.000n + 2.000 (opción A). Verificar: n = 2: 8.000; n = 3: 11.000; n = 4: 14.000, todos coinciden con la tabla; las demás opciones fallan en alguna fila.",
+    "que_identificar": "Que el aumento entre semanas consecutivas es 3.000 (ese es el coeficiente de n) y que la expresión debe cumplirse en TODAS las filas, no solo en la primera.",
+    "que_revisar": "Sucesiones aritméticas: término general a_n = a_1 + d(n − 1); verificar la expresión con al menos dos valores de la tabla.",
+    "refuerzo_ids": ["MAT-009", "MAT-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["tablas", "sucesiones", "algebra", "ahorro", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-020",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "geometria",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Transforma la representación de una o más piezas de información",
+    "habilidad": "comprender",
+    "tema": "Medición y escalas",
+    "subtema": "Escala de un mapa: distancia real a partir de la distancia en el papel",
+    "dificultad": 1,
+    "contexto": "Un grupo de estudiantes de Tunja prepara una salida a Villa de Leyva y consulta un mapa de Boyacá dibujado a **escala 1:500.000**, es decir, cada centímetro del mapa representa 500.000 centímetros de terreno. En el mapa, la distancia en línea recta entre Tunja y Villa de Leyva mide 6 cm. (Recuerde: 1 m = 100 cm y 1 km = 1.000 m).",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la distancia real en línea recta entre Tunja y Villa de Leyva?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "3 km",
+        "correcta": false,
+        "explicacion": "6 × 500.000 = 3.000.000 cm es correcto, pero 3 km resulta de dividir entre 1.000.000, como si un kilómetro tuviera un millón de centímetros. Un kilómetro tiene 1.000 m × 100 cm = 100.000 cm, así que 3.000.000 ÷ 100.000 = 30 km.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió centímetros a kilómetros con un factor equivocado (1.000.000 en lugar de 100.000)."
+      },
+      {
+        "clave": "B",
+        "texto": "30 km",
+        "correcta": true,
+        "explicacion": "Distancia real = 6 cm × 500.000 = 3.000.000 cm. Como 1 km = 1.000 m = 100.000 cm, se divide: 3.000.000 ÷ 100.000 = 30 km.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "300 km",
+        "correcta": false,
+        "explicacion": "300 km resulta de pasar 3.000.000 cm a metros (30.000 m) y luego dividir entre 100 en vez de entre 1.000 para llegar a kilómetros. 30.000 m son 30 km. Además, 300 km es más que la distancia entre Bogotá y Bucaramanga en línea recta, imposible para dos municipios vecinos de Boyacá.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se equivocó en un paso de la conversión de unidades (usó 100 en lugar de 1.000 al pasar de metros a kilómetros)."
+      },
+      {
+        "clave": "D",
+        "texto": "3.000 km",
+        "correcta": false,
+        "explicacion": "3.000 km resulta de dividir 3.000.000 cm entre 1.000, como si un kilómetro tuviera solo 1.000 cm. Un kilómetro tiene 100.000 cm. Además, 3.000 km supera la longitud de Colombia de norte a sur, lo que muestra que el resultado no es razonable.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió 'kilo' (mil) con mil centímetros y no comprobó si la magnitud era razonable."
+      }
+    ],
+    "explicacion": "Leer: escala 1:500.000, distancia en el mapa 6 cm, y las equivalencias 1 m = 100 cm y 1 km = 1.000 m. Comprender: se pide la distancia real en kilómetros, así que hay dos pasos: aplicar la escala y convertir unidades. Interpretar: '1:500.000' significa que 1 cm del mapa equivale a 500.000 cm reales; por tanto 6 cm equivalen a 6 × 500.000 cm. Representar: 6 × 500.000 = 3.000.000 cm; 1 km = 1.000 × 100 = 100.000 cm. Razonar: para pasar de centímetros a kilómetros se divide entre 100.000. Resolver: 3.000.000 ÷ 100.000 = 30 km (opción B). Verificar: 30 km es una distancia razonable entre dos municipios del mismo departamento; 3 km sería un paseo a pie y 300 o 3.000 km cruzarían varios departamentos o el país entero.",
+    "que_identificar": "El significado de la escala 1:500.000 (1 cm del mapa = 500.000 cm reales) y la cadena de conversión cm → m → km.",
+    "que_revisar": "Escalas numéricas y conversión de unidades de longitud (1 km = 1.000 m = 100.000 cm); comprobar que el resultado sea razonable.",
+    "refuerzo_ids": ["MAT-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["escala", "mapas", "unidades", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-021",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "geometria",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Perímetro y área",
+    "subtema": "Área de una figura compuesta: rectángulo con dos semicírculos",
+    "dificultad": 2,
+    "contexto": "La alcaldía de Ibagué va a cubrir con grama sintética una zona de juegos de un parque. La zona tiene la forma de un rectángulo de 18 m de largo por 10 m de ancho, con un semicírculo unido a cada uno de los dos lados de 10 m (el diámetro de cada semicírculo es ese lado de 10 m). Para el cálculo se usa π ≈ 3,14.",
+    "estimulo": null,
+    "enunciado": "¿Cuántos metros cuadrados de grama sintética se necesitan para cubrir toda la zona de juegos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "494 m²",
+        "correcta": false,
+        "explicacion": "494 = 180 + 314 usa 10 m como radio (3,14 × 10² = 314). Pero 10 m es el DIÁMETRO del semicírculo, así que el radio es 5 m y el círculo completo mide 3,14 × 25 = 78,5 m².",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió diámetro con radio al aplicar la fórmula del área del círculo."
+      },
+      {
+        "clave": "B",
+        "texto": "219,25 m²",
+        "correcta": false,
+        "explicacion": "219,25 = 180 + 39,25 incluye el rectángulo y UN solo semicírculo (39,25 m² es la mitad de 3,14 × 5²). Pero la zona tiene dos semicírculos, uno en cada lado de 10 m; falta sumar los otros 39,25 m².",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó 'un semicírculo' y no tuvo en cuenta que hay uno en cada extremo del rectángulo."
+      },
+      {
+        "clave": "C",
+        "texto": "258,5 m²",
+        "correcta": true,
+        "explicacion": "Rectángulo: 18 × 10 = 180 m². Los dos semicírculos tienen diámetro 10 m (radio 5 m) y juntos forman un círculo completo: 3,14 × 5² = 78,5 m². Total: 180 + 78,5 = 258,5 m².",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "337 m²",
+        "correcta": false,
+        "explicacion": "337 = 180 + 157 cuenta cada semicírculo como si fuera un círculo completo (2 × 78,5 = 157). Cada extremo es solo MEDIO círculo; los dos semicírculos juntos equivalen a un círculo de 78,5 m², no a dos.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó el área de un círculo completo por cada semicírculo, sin dividir entre 2."
+      }
+    ],
+    "explicacion": "Leer: rectángulo de 18 m × 10 m; dos semicírculos, uno en cada lado de 10 m, con diámetro 10 m; π ≈ 3,14. Comprender: se pide el área total de la figura compuesta. Interpretar: dos semicírculos iguales unidos por su diámetro equivalen a un círculo completo de radio 5 m (la mitad del diámetro de 10 m). Representar: Área total = (18 × 10) + (3,14 × 5²). Razonar: el área del rectángulo es 180 m² y el círculo equivalente es 3,14 × 25 = 78,5 m². Resolver: 180 + 78,5 = 258,5 m² (opción C). Verificar: el resultado debe ser un poco mayor que el rectángulo (180) pero menor que el rectángulo que encerraría toda la figura, 28 m × 10 m = 280 m²; 258,5 cumple ambas condiciones.",
+    "que_identificar": "Que hay DOS semicírculos, que juntos forman un círculo, y que 10 m es el diámetro (radio 5 m).",
+    "que_revisar": "Área de figuras compuestas: descomponer en figuras conocidas; área del círculo π·r² con el radio, no el diámetro.",
+    "refuerzo_ids": ["MAT-014", "MAT-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["area", "figuras_compuestas", "circulo", "parque", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-022",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Establece la validez o pertinencia de una solución propuesta a un problema dado",
+    "habilidad": "verificar",
+    "tema": "Volumen y capacidad",
+    "subtema": "Volumen de un prisma rectangular y conversión de metros cúbicos a litros",
+    "dificultad": 2,
+    "contexto": "Una escuela rural de Nariño va a instalar un tanque de agua con forma de caja (prisma rectangular) de 1,2 m de largo, 0,8 m de ancho y 1 m de alto. El vendedor asegura: **\"Este tanque tiene capacidad para 9.600 litros\"**. Para comprobarlo, se sabe que 1 litro equivale a 1 decímetro cúbico (dm³) y que 1 m = 10 dm.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente lo que dice el vendedor?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Tiene razón: el volumen es 0,96 m³, que equivale a 9.600 dm³, y cada dm³ es un litro.",
+        "correcta": false,
+        "explicacion": "El volumen 0,96 m³ está bien calculado, pero 1 m³ no son 10.000 dm³ sino 10 × 10 × 10 = 1.000 dm³. Entonces 0,96 m³ = 0,96 × 1.000 = 960 dm³ = 960 litros, la décima parte de lo que afirma el vendedor.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó un factor de conversión equivocado (10.000) entre metros cúbicos y decímetros cúbicos."
+      },
+      {
+        "clave": "B",
+        "texto": "Se equivoca: la capacidad es 9,6 litros, porque 1 m = 10 dm y entonces 1 m³ = 10 dm³.",
+        "correcta": false,
+        "explicacion": "Que 1 m = 10 dm no significa que 1 m³ = 10 dm³. El volumen se mide en tres dimensiones: 1 m³ = 10 dm × 10 dm × 10 dm = 1.000 dm³. Por eso 0,96 m³ son 960 litros, no 9,6. Además, 9,6 litros es menos que una caneca pequeña, absurdo para un tanque de un metro de alto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Convirtió unidades de volumen con el factor de las unidades de longitud, sin elevarlo al cubo."
+      },
+      {
+        "clave": "C",
+        "texto": "Se equivoca: la capacidad es 3.000 litros, porque el volumen es 1,2 + 0,8 + 1 = 3 m³.",
+        "correcta": false,
+        "explicacion": "El volumen de un prisma rectangular se obtiene MULTIPLICANDO largo, ancho y alto, no sumándolos: 1,2 × 0,8 × 1 = 0,96 m³. Sumar las tres medidas da una longitud (3 m), no un volumen.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de no recordar la fórmula del volumen o de sumar por descuido; la conversión a litros sí la hizo bien."
+      },
+      {
+        "clave": "D",
+        "texto": "Se equivoca: la capacidad es 960 litros, porque 0,96 m³ equivalen a 0,96 × 1.000 = 960 dm³.",
+        "correcta": true,
+        "explicacion": "Volumen = 1,2 × 0,8 × 1 = 0,96 m³. Como 1 m = 10 dm, un metro cúbico contiene 10 × 10 × 10 = 1.000 dm³, y cada dm³ es un litro. Entonces 0,96 × 1.000 = 960 litros. El vendedor exageró la capacidad diez veces.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: tanque de 1,2 m × 0,8 m × 1 m; el vendedor afirma 9.600 litros; 1 L = 1 dm³ y 1 m = 10 dm. Comprender: hay que verificar la afirmación calculando la capacidad real en litros. Interpretar: la capacidad es el volumen del prisma; para pasarlo a litros hay que expresarlo en dm³. Representar: V = 1,2 × 0,8 × 1 = 0,96 m³; 1 m³ = (10 dm)³ = 1.000 dm³. Razonar: el factor de conversión de volumen es el cubo del factor de longitud (10³ = 1.000), no 10 ni 10.000. Resolver: 0,96 × 1.000 = 960 dm³ = 960 litros; el vendedor se equivoca (opción D). Verificar: también se puede calcular directamente en decímetros: 12 dm × 8 dm × 10 dm = 960 dm³, lo que confirma el resultado.",
+    "que_identificar": "Que el volumen se obtiene multiplicando las tres dimensiones y que el factor de conversión m³ → dm³ es 1.000 (10 elevado al cubo).",
+    "que_revisar": "Volumen del prisma rectangular (largo × ancho × alto) y relación entre unidades de volumen y capacidad: 1 dm³ = 1 L, 1 m³ = 1.000 L.",
+    "refuerzo_ids": ["MAT-013", "MAT-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["volumen", "capacidad", "unidades", "prisma", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-023",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "geometria",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "razonar",
+    "tema": "Teorema de Pitágoras",
+    "subtema": "Recíproco del teorema de Pitágoras para verificar un ángulo recto",
+    "dificultad": 3,
+    "contexto": "Un carpintero de Armenia arma un marco de ventana con dos listones de 60 cm y dos de 80 cm, colocando los lados opuestos iguales y paralelos. Para comprobar que las esquinas quedaron a escuadra (con ángulos rectos), mide una de las diagonales del marco y obtiene exactamente 100 cm. Entonces afirma: **\"El marco quedó bien escuadrado, porque la diagonal mide 100 cm\"**.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes opciones evalúa correctamente el argumento del carpintero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es válido: como 60² + 80² = 3.600 + 6.400 = 10.000 = 100², el triángulo formado por dos lados y la diagonal cumple el teorema de Pitágoras y, por su recíproco, el ángulo entre los lados de 60 y 80 es recto.",
+        "correcta": true,
+        "explicacion": "El recíproco del teorema de Pitágoras dice que si en un triángulo el cuadrado del lado mayor es igual a la suma de los cuadrados de los otros dos, el ángulo opuesto al lado mayor es recto. Aquí 60² + 80² = 100², así que la esquina es recta; y como los lados opuestos son iguales y paralelos, un ángulo recto basta para que todo el marco sea rectangular.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "No es válido: si el marco fuera rectangular, la diagonal debería medir 60 + 80 = 140 cm.",
+        "correcta": false,
+        "explicacion": "La diagonal de un rectángulo es la hipotenusa del triángulo que forma con dos lados, y la hipotenusa siempre es menor que la suma de los catetos (desigualdad triangular). Su medida se obtiene con la raíz de 60² + 80², que es 100 cm, no con la suma 140 cm.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calculó la diagonal sumando los lados en lugar de aplicar el teorema de Pitágoras."
+      },
+      {
+        "clave": "C",
+        "texto": "No es válido: el teorema de Pitágoras sirve para calcular la diagonal cuando ya se sabe que el ángulo es recto, pero no permite concluir que el ángulo es recto a partir de la medida de la diagonal.",
+        "correcta": false,
+        "explicacion": "El teorema de Pitágoras también funciona en sentido inverso (su recíproco es verdadero): si a² + b² = c², el ángulo opuesto a c es recto. Precisamente por eso los constructores usan la 'regla 3-4-5' (y sus múltiplos, como 60-80-100) para escuadrar esquinas. El argumento del carpintero sí es válido.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Conoce el teorema en una sola dirección y niega su recíproco sin justificarlo."
+      },
+      {
+        "clave": "D",
+        "texto": "Es válido, pero por otra razón: la diagonal (100 cm) es más larga que cada lado (60 y 80 cm), y eso solo ocurre cuando el ángulo entre los lados es recto.",
+        "correcta": false,
+        "explicacion": "Llega a la conclusión correcta con un argumento falso. En cualquier triángulo el lado mayor está opuesto al ángulo mayor, sea recto o no: si la diagonal midiera 110 cm también sería la más larga, pero el ángulo sería mayor que 90°. Lo que garantiza el ángulo recto es la igualdad 60² + 80² = 100², no que la diagonal sea la más larga.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de aceptar la conclusión sin examinar el argumento, o de confundir 'lado mayor' con 'ángulo recto'."
+      }
+    ],
+    "explicacion": "Leer: lados de 60 cm y 80 cm, opuestos iguales y paralelos; una diagonal mide 100 cm; el carpintero concluye que las esquinas son rectas. Comprender: hay que decidir si el argumento (diagonal de 100 cm ⇒ ángulo recto) es válido y por qué. Interpretar: la diagonal divide el marco en dos triángulos de lados 60, 80 y 100; la pregunta es si un triángulo con esas medidas tiene un ángulo recto. Representar: comparar 60² + 80² con 100²: 3.600 + 6.400 = 10.000 y 100² = 10.000. Razonar: por el recíproco del teorema de Pitágoras, si se cumple la igualdad el ángulo opuesto al lado mayor es recto; como el marco tiene lados opuestos iguales y paralelos (paralelogramo), un ángulo recto obliga a que los cuatro lo sean. Resolver: el argumento es válido (opción A). Verificar: si la esquina no fuera recta, la diagonal mediría más de 100 cm (ángulo mayor que 90°) o menos (ángulo menor); medir exactamente 100 cm confirma la escuadra.",
+    "que_identificar": "Que la diagonal forma con dos lados un triángulo 60-80-100 y que la pregunta es sobre la validez del razonamiento, no solo sobre la conclusión.",
+    "que_revisar": "Teorema de Pitágoras y su recíproco; ternas pitagóricas (3-4-5 y múltiplos) usadas para escuadrar; distinguir una conclusión correcta de un argumento válido.",
+    "refuerzo_ids": ["MAT-021", "MAT-014"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["pitagoras", "angulo_recto", "carpinteria", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-024",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "leer",
+    "tema": "Lectura de gráficos",
+    "subtema": "Gráfico de barras agrupadas con dos series",
+    "dificultad": 1,
+    "contexto": "Durante una campaña de reciclaje de un colegio de Manizales, cada grado recogió plástico y papel durante un mes. El gráfico muestra los kilos de cada material recogidos por los grados sexto a noveno.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Material reciclado por grado (kg)",
+      "eje_x": "Grado",
+      "eje_y": "Kilos recogidos",
+      "series": [
+        { "nombre": "Plástico", "valores": [["Sexto", 30], ["Séptimo", 20], ["Octavo", 45], ["Noveno", 35]] },
+        { "nombre": "Papel", "valores": [["Sexto", 25], ["Séptimo", 40], ["Octavo", 10], ["Noveno", 22]] }
+      ]
+    },
+    "enunciado": "Sumando plástico y papel, ¿cuál grado recogió la mayor cantidad de material?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Sexto",
+        "correcta": false,
+        "explicacion": "Sexto recogió 30 + 25 = 55 kg. Es menos que los 60 kg de séptimo y que los 57 kg de noveno; no es el mayor total.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de sumar mal alguna pareja de barras o de elegir el primer grado sin comparar los cuatro totales."
+      },
+      {
+        "clave": "B",
+        "texto": "Séptimo",
+        "correcta": true,
+        "explicacion": "Totales por grado: sexto 30 + 25 = 55 kg; séptimo 20 + 40 = 60 kg; octavo 45 + 10 = 55 kg; noveno 35 + 22 = 57 kg. El mayor total es 60 kg, de séptimo, aunque ninguna de sus barras sea la más alta del gráfico.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Octavo",
+        "correcta": false,
+        "explicacion": "Octavo tiene la barra más alta del gráfico (45 kg de plástico), pero recogió muy poco papel (10 kg). Su total es 45 + 10 = 55 kg, menor que los 60 kg de séptimo. La pregunta pide la SUMA de los dos materiales, no la barra más alta.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el grado con la barra individual más alta sin sumar las dos series."
+      },
+      {
+        "clave": "D",
+        "texto": "Noveno",
+        "correcta": false,
+        "explicacion": "Noveno recogió 35 + 22 = 57 kg, el segundo total más alto, pero no supera los 60 kg de séptimo. Es fácil confundirse porque sus dos barras se ven 'parejas', pero la suma es lo que cuenta.",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de un error al sumar o de estimar los totales a ojo sin leer los valores exactos."
+      }
+    ],
+    "explicacion": "Leer: para cada grado hay dos barras, plástico y papel: sexto 30 y 25; séptimo 20 y 40; octavo 45 y 10; noveno 35 y 22. Comprender: se pregunta por el grado con mayor SUMA de los dos materiales, no por la barra más alta. Interpretar: la barra más alta (octavo, plástico) no garantiza el mayor total, porque la otra barra de ese grado puede ser muy baja. Representar: sexto 55, séptimo 60, octavo 55, noveno 57. Razonar: comparar los cuatro totales y elegir el mayor. Resolver: 60 kg, séptimo (opción B). Verificar: 60 > 57 > 55 = 55; y en efecto 20 + 40 = 60.",
+    "que_identificar": "Que hay dos series por grado y que la pregunta pide el total de ambas, lo que obliga a sumar antes de comparar.",
+    "que_revisar": "Lectura de gráficos de barras agrupadas: identificar la leyenda, leer cada serie y operar con los valores antes de comparar.",
+    "refuerzo_ids": ["MAT-001", "MAT-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["graficos", "barras", "barras_agrupadas", "reciclaje", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-025",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Ejecuta un plan de solución para un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Probabilidad",
+    "subtema": "Probabilidad simple con tabla de doble entrada: elección del conjunto de casos posibles",
+    "dificultad": 2,
+    "contexto": "Un colegio de Soacha con dos jornadas registró cuántos de sus estudiantes usan el transporte escolar. La tabla muestra los resultados por jornada.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Uso del transporte escolar por jornada",
+      "columnas": ["Jornada", "Usa transporte escolar", "No usa transporte escolar", "Total"],
+      "filas": [["Mañana", 70, 80, 150], ["Tarde", 30, 90, 120], ["Total", 100, 170, 270]],
+      "nota": null
+    },
+    "enunciado": "Se elige al azar un estudiante de la jornada de la tarde. ¿Cuál es la probabilidad de que use el transporte escolar?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "3/4",
+        "correcta": false,
+        "explicacion": "3/4 = 90/120 usa la fila correcta (tarde) pero los casos favorables equivocados: 90 son los que NO usan transporte escolar. Es la probabilidad del evento contrario al que se pregunta.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la columna 'No usa' en lugar de 'Usa', o respondió el complemento de lo que se pedía."
+      },
+      {
+        "clave": "B",
+        "texto": "1/9",
+        "correcta": false,
+        "explicacion": "1/9 = 30/270 divide entre TODOS los estudiantes del colegio, pero el enunciado dice que se elige un estudiante de la jornada de la tarde: los casos posibles son solo los 120 de esa jornada, no los 270 del colegio.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el total general de la tabla como casos posibles sin restringirse a la jornada de la tarde."
+      },
+      {
+        "clave": "C",
+        "texto": "1/4",
+        "correcta": true,
+        "explicacion": "Casos posibles: los 120 estudiantes de la jornada de la tarde. Casos favorables: los 30 de esa jornada que usan transporte escolar. Probabilidad = 30/120 = 1/4 = 0,25.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "3/10",
+        "correcta": false,
+        "explicacion": "3/10 = 30/100 usa como casos posibles a los 100 estudiantes que usan transporte escolar. Ese cociente responde otra pregunta: 'si se elige un usuario del transporte, ¿probabilidad de que sea de la tarde?'. Aquí la condición es ser de la tarde, así que el denominador es 120.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el total de la columna en lugar del total de la fila que indica la condición del enunciado."
+      }
+    ],
+    "explicacion": "Leer: la tabla cruza jornada (mañana, tarde) con uso del transporte (usa, no usa) e incluye totales: tarde 30 usan, 90 no usan, 120 en total; el colegio tiene 270 estudiantes y 100 usan transporte. Comprender: se elige un estudiante DE LA TARDE; se pregunta la probabilidad de que use transporte escolar. Interpretar: la condición 'de la tarde' reduce los casos posibles a la fila 'Tarde' (120), y los casos favorables son la celda 'Tarde – Usa' (30). Representar: P = casos favorables / casos posibles = 30/120. Razonar: ni el total del colegio (270) ni el total de usuarios (100) son el conjunto del que se elige. Resolver: 30/120 = 1/4 (opción C). Verificar: 1/4 + 90/120 = 1/4 + 3/4 = 1, así que 'usa' y 'no usa' dentro de la tarde suman la certeza, como debe ser.",
+    "que_identificar": "La fila que corresponde a la condición del enunciado (jornada de la tarde) y la celda de casos favorables dentro de esa fila.",
+    "que_revisar": "Probabilidad como cociente favorables/posibles; en tablas de doble entrada, la condición 'se elige un estudiante de…' fija la fila o columna que da los casos posibles.",
+    "refuerzo_ids": ["MAT-005", "MAT-002"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "doble_entrada", "probabilidad", "transporte_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-026",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M1",
+    "componente": "estadistica",
+    "afirmacion": "Comprende y transforma la información cuantitativa y esquemática presentada en distintos formatos",
+    "evidencia": "Da cuenta de las características básicas de la información presentada en diferentes formatos como series, gráficas, tablas y esquemas",
+    "habilidad": "interpretar",
+    "tema": "Variación y cambio",
+    "subtema": "Gráfico de líneas de temperatura: intervalo de mayor descenso",
+    "dificultad": 1,
+    "contexto": "Una estación meteorológica escolar de Pasto registró la temperatura del aire cada tres horas durante un día. El gráfico muestra los valores obtenidos.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Temperatura registrada durante el día",
+      "eje_x": "Hora",
+      "eje_y": "Temperatura (°C)",
+      "series": [
+        { "nombre": "Temperatura", "valores": [["6:00", 8], ["9:00", 12], ["12:00", 18], ["15:00", 17], ["18:00", 12], ["21:00", 9]] }
+      ]
+    },
+    "enunciado": "¿En cuál intervalo de tres horas la temperatura descendió más?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Entre las 18:00 y las 21:00",
+        "correcta": false,
+        "explicacion": "Este tramo termina en una de las temperaturas más bajas del día (9 °C), pero el descenso fue de 3 °C (de 12 a 9), menor que los 5 °C del tramo anterior. Que la temperatura final sea baja no significa que el descenso haya sido el mayor.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el tramo que llega a la temperatura más baja con el tramo en que más baja la temperatura."
+      },
+      {
+        "clave": "B",
+        "texto": "Entre las 9:00 y las 12:00",
+        "correcta": false,
+        "explicacion": "Entre las 9:00 y las 12:00 la temperatura cambió 6 °C, el mayor cambio del día, pero fue un ASCENSO (de 12 a 18 °C). La pregunta pide el mayor descenso, es decir, el tramo en que la línea baja más.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Buscó el mayor cambio de temperatura sin fijarse en si la línea subía o bajaba."
+      },
+      {
+        "clave": "C",
+        "texto": "Entre las 12:00 y las 15:00",
+        "correcta": false,
+        "explicacion": "En ese tramo comienza el descenso, pero la temperatura solo bajó 1 °C (de 18 a 17). Contiene la temperatura máxima del día, pero el descenso más fuerte ocurre después.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el mayor descenso con el punto más alto del gráfico en vez de comparar cuánto baja la línea en cada tramo."
+      },
+      {
+        "clave": "D",
+        "texto": "Entre las 15:00 y las 18:00",
+        "correcta": true,
+        "explicacion": "Descensos: 12:00–15:00: 18 − 17 = 1 °C; 15:00–18:00: 17 − 12 = 5 °C; 18:00–21:00: 12 − 9 = 3 °C. El mayor descenso, 5 °C, ocurre entre las 15:00 y las 18:00.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: temperaturas de 8, 12, 18, 17, 12 y 9 °C a las 6:00, 9:00, 12:00, 15:00, 18:00 y 21:00. Comprender: se pregunta por el intervalo de tres horas en que la temperatura DESCENDIÓ más, no por el mayor cambio ni por la hora más fría. Interpretar: un descenso corresponde a un tramo donde la línea baja; su magnitud es la diferencia entre el valor inicial y el final del tramo. Representar: cambios por tramo: +4, +6, −1, −5, −3. Razonar: solo los tramos con signo negativo son descensos; entre ellos, el de mayor valor absoluto es −5. Resolver: entre las 15:00 y las 18:00 (opción D). Verificar: 17 − 12 = 5, mayor que 1 y que 3; el tramo de +6 se descarta porque es un ascenso.",
+    "que_identificar": "La palabra 'descendió' en el enunciado (solo cuentan los tramos donde la línea baja) y la diferencia de temperatura en cada tramo.",
+    "que_revisar": "Lectura de gráficos de líneas: variación entre puntos consecutivos, signo del cambio (ascenso o descenso) y comparación de magnitudes.",
+    "refuerzo_ids": ["MAT-008", "MAT-015"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["graficos", "lineas", "clima", "variacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-027",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M2",
+    "componente": "estadistica",
+    "afirmacion": "Frente a un problema que involucre información cuantitativa, plantea e implementa estrategias que lleven a soluciones adecuadas",
+    "evidencia": "Resuelve un problema que involucre información cuantitativa o esquemática",
+    "habilidad": "resolver",
+    "tema": "Medidas de tendencia central",
+    "subtema": "Mediana a partir de una tabla de frecuencias",
+    "dificultad": 2,
+    "contexto": "En un curso de grado once de un colegio de Montería se preguntó a cada uno de los 25 estudiantes cuántos hermanos tiene. La tabla resume las respuestas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Número de hermanos de los estudiantes del curso",
+      "columnas": ["Número de hermanos", "Número de estudiantes"],
+      "filas": [[0, 6], [1, 7], [2, 9], [3, 2], [4, 1]],
+      "nota": "En total respondieron 25 estudiantes."
+    },
+    "enunciado": "¿Cuál es la mediana del número de hermanos de los estudiantes del curso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "1",
+        "correcta": true,
+        "explicacion": "Al ordenar las 25 respuestas de menor a mayor, la mediana es la que ocupa la posición 13 (la del centro). Las 6 primeras son 0; de la 7 a la 13 son 1 (6 + 7 = 13). La respuesta número 13 es 1, así que la mediana es 1 hermano.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "1,4",
+        "correcta": false,
+        "explicacion": "1,4 es la MEDIA: (0×6 + 1×7 + 2×9 + 3×2 + 4×1) ÷ 25 = 35 ÷ 25 = 1,4. La mediana no se obtiene promediando sino ubicando el valor central de los datos ordenados, y ese valor es 1.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la mediana con la media aritmética."
+      },
+      {
+        "clave": "C",
+        "texto": "2",
+        "correcta": false,
+        "explicacion": "2 es la MODA (el valor con mayor frecuencia, 9 estudiantes) y también el valor que queda en el centro de la primera columna (0, 1, 2, 3, 4). Pero la mediana depende de cuántos estudiantes hay en cada valor: la mitad de los 25 datos ya se alcanza dentro del valor 1.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la moda, o el valor central de la columna de categorías, como si fuera la mediana."
+      },
+      {
+        "clave": "D",
+        "texto": "9",
+        "correcta": false,
+        "explicacion": "9 es una frecuencia (cuántos estudiantes tienen 2 hermanos), no un número de hermanos. La mediana debe ser un valor de la primera columna, entre 0 y 4; ningún estudiante tiene 9 hermanos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de buscar el número más grande de la tabla o de calcular sobre la columna equivocada."
+      }
+    ],
+    "explicacion": "Leer: la tabla dice cuántos estudiantes tienen 0, 1, 2, 3 y 4 hermanos: 6, 7, 9, 2 y 1; en total 25. Comprender: se pide la mediana del número de hermanos, es decir, el valor que queda en el centro cuando se ordenan las 25 respuestas. Interpretar: la primera columna son los valores y la segunda cuántas veces aparece cada uno; la mediana es un valor de la primera columna. Representar: con 25 datos, la posición central es (25 + 1) ÷ 2 = 13; frecuencias acumuladas: 0 → 6, 1 → 13, 2 → 22, 3 → 24, 4 → 25. Razonar: la posición 13 cae exactamente en el grupo del valor 1 (acumulado 13). Resolver: la mediana es 1 (opción A). Verificar: hay 6 datos menores que 1 y 12 datos mayores que 1 (9 + 2 + 1); el dato 13 es un 1 y a cada lado quedan a lo sumo 12 datos, así que 1 es el valor central. La media es 1,4 y la moda es 2, que son otras medidas.",
+    "que_identificar": "Que los 25 datos están resumidos por frecuencias, que la posición central es la 13 y que hay que acumular frecuencias para ubicarla.",
+    "que_revisar": "Mediana en tablas de frecuencias: ordenar, hallar la posición central y usar frecuencias acumuladas; diferencia entre media, mediana y moda.",
+    "refuerzo_ids": ["MAT-004", "MAT-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tablas", "mediana", "frecuencias", "encuesta_escolar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "MAT-028",
+    "prueba": "matematicas",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "M3",
+    "componente": "estadistica",
+    "afirmacion": "Valida procedimientos y estrategias matemáticas utilizadas para dar solución a problemas",
+    "evidencia": "Argumenta a favor o en contra de un procedimiento para resolver un problema a la luz de criterios presentados o establecidos",
+    "habilidad": "razonar",
+    "tema": "Medidas de tendencia central",
+    "subtema": "Promedio ponderado: el promedio de promedios de grupos de distinto tamaño",
+    "dificultad": 3,
+    "contexto": "En un colegio de Neiva, el grado once tiene tres grupos con distinto número de estudiantes: 11-1 tiene 20 estudiantes, 11-2 tiene 30 y 11-3 tiene 10. El gráfico muestra el promedio de matemáticas de cada grupo en el periodo. La coordinadora calcula el promedio del grado así: **\"(3,0 + 4,0 + 3,0) ÷ 3 = 3,33; ese es el promedio de todo el grado once\"**.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Promedio de matemáticas por grupo (escala 1 a 5)",
+      "eje_x": "Grupo",
+      "eje_y": "Promedio",
+      "series": [
+        { "nombre": "Promedio del periodo", "valores": [["11-1", 3], ["11-2", 4], ["11-3", 3]] }
+      ]
+    },
+    "enunciado": "¿Cuál de las siguientes afirmaciones evalúa correctamente el procedimiento de la coordinadora?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es correcto: el promedio del grado es el promedio de los promedios de los grupos, 3,33.",
+        "correcta": false,
+        "explicacion": "Promediar los tres promedios solo sería válido si los grupos tuvieran el mismo número de estudiantes. Como 11-2 tiene 30 estudiantes y 11-3 solo 10, el 4,0 de 11-2 debe pesar tres veces más que el 3,0 de 11-3. El promedio real del grado es (20×3,0 + 30×4,0 + 10×3,0) ÷ 60 = 210 ÷ 60 = 3,5.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Promedió los promedios sin tener en cuenta que los grupos tienen distinto tamaño."
+      },
+      {
+        "clave": "B",
+        "texto": "Es incorrecto: el promedio del grado es 3,0, porque dos de los tres grupos tienen ese promedio.",
+        "correcta": false,
+        "explicacion": "Que dos grupos tengan promedio 3,0 no hace que el grado tenga ese promedio: los 30 estudiantes de 11-2, con promedio 4,0, son la mitad del grado y elevan el resultado. El promedio real es 3,5. Esta opción usa el valor más repetido (una especie de moda) en lugar de un promedio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Puede venir de confundir el promedio con el valor más frecuente o de responder sin calcular."
+      },
+      {
+        "clave": "C",
+        "texto": "Es incorrecto: el promedio del grado es 4,0, porque 11-2 es el grupo más numeroso y su promedio es el que cuenta.",
+        "correcta": false,
+        "explicacion": "Es cierto que 11-2 es el grupo que más pesa, pero no es el único: los otros 30 estudiantes (11-1 y 11-3) tienen promedio 3,0 y también cuentan. Ponderando, (20×3,0 + 30×4,0 + 10×3,0) ÷ 60 = 3,5, que está entre 3,0 y 4,0, no en el extremo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reconoció que el tamaño del grupo importa, pero lo llevó al extremo de ignorar a los demás grupos."
+      },
+      {
+        "clave": "D",
+        "texto": "Es incorrecto: cada promedio debe multiplicarse por el número de estudiantes de su grupo y dividir la suma entre los 60 estudiantes del grado: (20×3,0 + 30×4,0 + 10×3,0) ÷ 60 = 3,5.",
+        "correcta": true,
+        "explicacion": "El promedio del grado es la suma de todas las notas dividida entre el total de estudiantes. La suma de notas de cada grupo es su promedio por su número de estudiantes: 60 + 120 + 30 = 210 puntos entre 60 estudiantes = 3,5. Al promediar solo los tres promedios (3,33) se le da al grupo de 10 estudiantes el mismo peso que al de 30.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "Leer: 11-1 tiene 20 estudiantes y promedio 3,0; 11-2 tiene 30 y promedio 4,0; 11-3 tiene 10 y promedio 3,0; la coordinadora promedia los tres promedios y obtiene 3,33. Comprender: hay que evaluar si ese PROCEDIMIENTO es válido para obtener el promedio del grado. Interpretar: el promedio del grado es (suma de todas las notas) ÷ (número total de estudiantes); el promedio de cada grupo multiplicado por su tamaño da la suma de notas de ese grupo. Representar: suma de notas = 20×3,0 + 30×4,0 + 10×3,0 = 60 + 120 + 30 = 210; total de estudiantes = 60. Razonar: promediar los promedios trata a los tres grupos como si fueran del mismo tamaño, lo que subestima el peso de 11-2 (30 estudiantes) y sobrestima el de 11-3 (10); el resultado correcto debe estar más cerca de 4,0 que 3,33. Resolver: 210 ÷ 60 = 3,5; el procedimiento de la coordinadora es incorrecto (opción D). Verificar: 3,5 está entre 3,0 y 4,0, como debe ser; y solo coincidiría con 3,33 si los tres grupos fueran del mismo tamaño.",
+    "que_identificar": "Que los grupos tienen tamaños distintos (20, 30 y 10) y que el promedio del grado depende de la suma de todas las notas, no de la suma de los promedios.",
+    "que_revisar": "Promedio ponderado: cuando se combinan promedios de grupos de distinto tamaño, cada promedio se pondera por el número de datos de su grupo.",
+    "refuerzo_ids": ["MAT-003", "MAT-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["graficos", "barras", "promedio", "promedio_ponderado", "argumentacion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

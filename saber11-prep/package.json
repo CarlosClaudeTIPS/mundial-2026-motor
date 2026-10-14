@@ -1,0 +1,35 @@
+{
+  "name": "saber11-prep",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "validar-banco": "node scripts/validar-banco.mjs",
+    "demo": "vite --mode demo --port 5181",
+    "revisar-banco": "node scripts/revisar-banco.mjs",
+    "balancear-banco": "node scripts/balancear-banco.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
+    "@supabase/supabase-js": "^2.108.1",
+    "dexie": "^4.0.10",
+    "lucide-react": "^0.312.0",
+    "pdfjs-dist": "^6.3.289",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.12",
+    "vite-plugin-pwa": "^0.20.5",
+    "vitest": "^2.1.8"
+  }
+}

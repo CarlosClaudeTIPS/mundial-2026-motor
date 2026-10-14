@@ -1,0 +1,1467 @@
+[
+  {
+    "id": "CIE-181",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Analiza la dinámica interna de los organismos y da razón de cómo funcionan sus componentes por separado y en conjunto para mantener la vida en el organismo",
+    "habilidad": "razonar",
+    "tema": "Desarrollo animal: metamorfosis de anfibios",
+    "subtema": "Efecto de la temperatura del agua sobre la duración del desarrollo de renacuajos",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes crió renacuajos de una misma puesta de rana en tres acuarios idénticos, con la misma comida y la misma cantidad de agua, pero a distinta temperatura. Registraron cuántos días tardaron los renacuajos en completar la metamorfosis (aparición de patas, pérdida de la cola) y cuántos sobrevivieron.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Desarrollo de renacuajos a tres temperaturas del agua",
+      "columnas": ["Temperatura del agua (°C)","Días hasta completar la metamorfosis","Renacuajos que sobrevivieron (de 30)","Longitud de la rana joven (mm)"],
+      "filas": [
+        [18,70,26,22],
+        [22,50,25,19],
+        [26,36,18,16]
+      ],
+      "nota": "Los acuarios se mantuvieron a temperatura constante con calentadores regulados."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que la metamorfosis sea más rápida en el agua más caliente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El agua caliente contiene más oxígeno disuelto, y con más oxígeno los renacuajos respiran mejor y crecen más rápido; por eso en el acuario de 26 °C las ranas terminaron antes y resultaron más grandes y numerosas.",
+        "correcta": false,
+        "explicacion": "No responde. El agua caliente contiene menos oxígeno disuelto, no más; y la tabla muestra que a 26 °C las ranas fueron más pequeñas (16 mm) y sobrevivieron menos (18 de 30), no más grandes ni más numerosas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que rapidez implica mejores resultados y no revisa las columnas de supervivencia y tamaño."
+      },
+      {
+        "clave": "B",
+        "texto": "Los renacuajos del agua caliente comieron más porque la comida se descompone más rápido y se vuelve más digerible; al alimentarse mejor acumulan reservas y pueden transformarse en ranas antes que los demás.",
+        "correcta": false,
+        "explicacion": "No responde. Todos los acuarios recibieron la misma comida y nada en la tabla indica una alimentación mejor a 26 °C; al contrario, las ranas de ese acuario fueron las más pequeñas, lo que descarta que acumularan más reservas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce una variable (calidad de la comida) que el diseño mantuvo igual en los tres acuarios."
+      },
+      {
+        "clave": "C",
+        "texto": "Los renacuajos son animales cuya temperatura corporal depende del agua; a mayor temperatura sus reacciones metabólicas y la acción de las hormonas que dirigen la metamorfosis ocurren más rápido, aunque el desarrollo acelerado deja ranas más pequeñas y con menor supervivencia.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los anfibios son ectotermos: su metabolismo se acelera con la temperatura, de modo que los procesos hormonales y celulares de la metamorfosis se completan en menos días (70 → 50 → 36). La tabla también muestra el costo: ranas más pequeñas (22 → 16 mm) y menos sobrevivientes a 26 °C.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El calor del agua daña la cola de los renacuajos y la hace caer antes de tiempo, lo que obliga al cuerpo a desarrollar las patas de emergencia; por eso la metamorfosis parece más rápida, aunque en realidad es una lesión y no un desarrollo.",
+        "correcta": false,
+        "explicacion": "No responde. La pérdida de la cola en la metamorfosis es un proceso programado por hormonas, no una lesión, y a 26 °C el agua está lejos de temperaturas dañinas para el tejido. La tabla registra un desarrollo completo, con patas y ranas jóvenes viables, solo que más rápido.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde un proceso de desarrollo regulado con un daño físico causado por el calor."
+      }
+    ],
+    "explicacion": "LEER: a 18, 22 y 26 °C la metamorfosis tardó 70, 50 y 36 días; sobrevivieron 26, 25 y 18 de 30 renacuajos, y las ranas midieron 22, 19 y 16 mm. COMPRENDER: se pide explicar por qué el desarrollo es más rápido en agua más caliente. INTERPRETAR: los anfibios son ectotermos: la temperatura del agua fija la temperatura de sus células. REPRESENTAR: más temperatura → reacciones metabólicas y señales hormonales más rápidas → metamorfosis en menos días; el desarrollo acelerado produce ranas más pequeñas y menos sobrevivientes. RAZONAR: la rapidez tiene un costo visible en las otras dos columnas, lo que descarta explicaciones basadas en mejores condiciones. RESOLVER: la respuesta es la opción que relaciona la temperatura con la velocidad del metabolismo y reconoce el costo. VERIFICAR: el agua caliente tiene menos oxígeno y las ranas no fueron más grandes; la comida fue igual en todos; la cola se pierde por un programa hormonal, no por una lesión.",
+    "que_identificar": "Que al subir la temperatura disminuyen los días hasta la metamorfosis, pero también disminuyen la supervivencia y el tamaño.",
+    "que_revisar": "Metamorfosis en anfibios; animales ectotermos; efecto de la temperatura sobre el metabolismo; lectura de tablas con varias variables.",
+    "refuerzo_ids": ["CIE-161","CIE-105"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["metamorfosis","anfibios","temperatura","metabolismo","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-182",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Establece relaciones entre conceptos fisicoquímicos simples (separación de mezclas, solubilidad, gases ideales) con distintos fenómenos naturales",
+    "habilidad": "interpretar",
+    "tema": "Dureza del agua",
+    "subtema": "Iones de calcio disueltos, formación de espuma del jabón y depósitos en las ollas",
+    "dificultad": 1,
+    "contexto": "En una vereda, las familias notaron que el jabón casi no hace espuma con el agua de un pozo y que en las ollas donde se hierve esa agua queda una costra blanca. Una docente explicó que el agua que atraviesa rocas calizas disuelve iones de calcio; estos iones reaccionan con el jabón formando una sustancia insoluble (la nata que flota) y, al hervir el agua, precipitan como carbonato de calcio. Los estudiantes compararon cuatro fuentes de agua agitando 100 mL de cada una con la misma cantidad de jabón.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Calcio disuelto y espuma formada con la misma cantidad de jabón",
+      "columnas": ["Fuente de agua","Calcio disuelto (mg/L)","Altura de la espuma (cm)","Costra al hervir"],
+      "filas": [
+        ["Agua lluvia",5,8.0,"No"],
+        ["Acueducto del pueblo",60,5.0,"Poca"],
+        ["Pozo de la vereda",200,0.5,"Abundante"],
+        ["Quebrada de la montaña",25,7.0,"No"]
+      ],
+      "nota": "Misma temperatura, mismo jabón y misma agitación en todas las pruebas."
+    },
+    "enunciado": "¿Qué relación entre las variables de la tabla explica los problemas observados con el agua del pozo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A mayor cantidad de calcio disuelto, menos espuma y más costra, porque el calcio consume el jabón formando una sustancia insoluble y, al hervir, precipita como carbonato de calcio; el pozo tiene el agua con más calcio de las cuatro fuentes.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La espuma baja de 8,0 cm (5 mg/L de calcio) a 0,5 cm (200 mg/L), y la costra aparece solo con calcio alto. El contexto da el mecanismo: el calcio reacciona con el jabón y, al hervir, precipita como carbonato de calcio. El agua del pozo tiene 200 mg/L, la mayor de la tabla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "A mayor cantidad de calcio disuelto, más espuma y menos costra, porque el calcio es un mineral que ayuda al jabón a disolverse; el problema del pozo es que su agua está demasiado fría y el jabón no se disuelve bien en ella, sin importar el calcio.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra la relación contraria: el agua con más calcio (200 mg/L) es la que menos espuma produce (0,5 cm) y más costra deja. Además, la nota indica que todas las pruebas se hicieron a la misma temperatura, así que el frío no explica la diferencia.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó al revés la relación entre calcio y espuma e introdujo una variable que estaba controlada."
+      },
+      {
+        "clave": "C",
+        "texto": "La espuma depende de qué tan limpia esté el agua y no del calcio: el agua lluvia y la quebrada hacen más espuma porque no han tocado el suelo, mientras que el pozo está contaminado con tierra y materia orgánica, que son las que forman la costra al hervir.",
+        "correcta": false,
+        "explicacion": "No responde. La costra blanca que describe el contexto es carbonato de calcio, no tierra ni materia orgánica, y la columna de calcio explica el orden de las cuatro fuentes; el agua del acueducto, ya tratada, también forma menos espuma que la lluvia por su mayor calcio.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye el fenómeno a suciedad en lugar de a los iones disueltos."
+      },
+      {
+        "clave": "D",
+        "texto": "A mayor cantidad de calcio disuelto, menos espuma, porque el calcio hace más densa el agua y las burbujas no pueden subir; la costra, en cambio, es sal común que queda cuando el agua se evapora y aparecería igual con cualquier fuente si se hierve lo suficiente.",
+        "correcta": false,
+        "explicacion": "No responde. La relación calcio-espuma está bien leída, pero el mecanismo es químico, no de densidad: el calcio reacciona con el jabón y forma una nata insoluble. Y la costra es carbonato de calcio, que no apareció al hervir el agua lluvia ni la de la quebrada.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Explica con densidad un fenómeno de reacción química y confunde la costra con sal común."
+      }
+    ],
+    "explicacion": "LEER: la tabla relaciona el calcio disuelto (5, 60, 200 y 25 mg/L) con la altura de la espuma (8,0; 5,0; 0,5 y 7,0 cm) y con la costra al hervir (no, poca, abundante, no). COMPRENDER: se pide la relación que explica la poca espuma y la costra del agua del pozo. INTERPRETAR: a más calcio, menos espuma y más costra; el pozo tiene el máximo de calcio. REPRESENTAR: calcio + jabón → nata insoluble (menos espuma); calcio disuelto + calor → carbonato de calcio precipitado (costra). RAZONAR: el contexto da el mecanismo químico y la tabla lo confirma con las cuatro fuentes, a igual temperatura, jabón y agitación. RESOLVER: la respuesta es la opción que relaciona más calcio con menos espuma y más costra mediante la reacción con el jabón y la precipitación. VERIFICAR: la opción de más espuma con más calcio invierte la tabla; la de suciedad no explica la costra blanca; la de densidad y sal común confunde los mecanismos.",
+    "que_identificar": "El orden inverso entre la columna de calcio y la de espuma, y que la costra aparece solo en las aguas con más calcio.",
+    "que_revisar": "Dureza del agua; iones disueltos; reacciones de precipitación; solubilidad y efecto de la temperatura.",
+    "refuerzo_ids": ["CIE-077","CIE-089"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["dureza del agua","calcio","precipitacion","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-183",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Interpreta y analiza datos representados en texto, gráficas, dibujos, diagramas o tablas",
+    "habilidad": "verificar",
+    "tema": "Ondas en cuerdas: rapidez y tensión",
+    "subtema": "Evaluación de la predicción de que duplicar la tensión duplica la rapidez de la onda",
+    "dificultad": 2,
+    "contexto": "En el laboratorio, un grupo midió la rapidez con que viaja un pulso por una cuerda elástica larga sometida a distintas tensiones. La misma cuerda se tensó colgando pesas de un extremo y se midió el tiempo que tardaba el pulso en recorrer una distancia fija. Antes de medir, una estudiante predijo: \"Si duplicamos la tensión, la rapidez del pulso también se duplicará\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Rapidez del pulso según la tensión de la cuerda",
+      "columnas": ["Tensión (N)","Rapidez del pulso (m/s)"],
+      "filas": [
+        [10,20.0],
+        [20,28.3],
+        [40,40.0],
+        [90,60.0]
+      ],
+      "nota": "La misma cuerda en todas las medidas; incertidumbre de ±0,5 m/s."
+    },
+    "enunciado": "Al comparar los datos con la predicción, ¿qué se puede concluir?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción se cumple: al pasar de 10 N a 20 N la rapidez aumenta, y al pasar de 20 N a 40 N vuelve a aumentar, lo que confirma que cada vez que se duplica la tensión la rapidez también se duplica, dentro de la incertidumbre de las medidas.",
+        "correcta": false,
+        "explicacion": "No responde. Que la rapidez aumente no significa que se duplique: de 10 N a 20 N pasa de 20,0 a 28,3 m/s (factor 1,41), y de 20 N a 40 N, de 28,3 a 40,0 m/s (factor 1,41). Una diferencia de 11,7 m/s respecto a los 40 m/s esperados supera con mucho la incertidumbre de ±0,5 m/s.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confirma la predicción con la dirección del cambio sin comprobar el factor."
+      },
+      {
+        "clave": "B",
+        "texto": "La predicción no se cumple porque la rapidez no depende de la tensión: las diferencias de la tabla provienen de que las pesas más grandes estiran la cuerda y la hacen más larga, lo que altera la distancia recorrida por el pulso y la medida del tiempo.",
+        "correcta": false,
+        "explicacion": "No responde. La rapidez sí depende de la tensión: sube de 20 a 60 m/s de manera ordenada, triplicándose cuando la tensión se multiplica por nueve. La distancia de medición era fija, según el contexto, así que el estiramiento no explica el patrón.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Niega la relación evidente en los datos y la atribuye a un defecto del montaje."
+      },
+      {
+        "clave": "C",
+        "texto": "La predicción se cumple solo para tensiones altas: entre 40 N y 90 N la rapidez pasa de 40 a 60 m/s, lo que equivale a duplicarse si se tiene en cuenta la incertidumbre, mientras que a tensiones bajas la cuerda todavía no responde de forma proporcional.",
+        "correcta": false,
+        "explicacion": "No responde. De 40 N a 90 N la tensión no se duplica, se multiplica por 2,25, y la rapidez pasa de 40 a 60 m/s, factor 1,5, que es justamente la raíz cuadrada de 2,25. El patrón es el mismo en toda la tabla y no hay un tramo donde la rapidez se duplique con la tensión.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara mal los factores de cambio y usa la incertidumbre para forzar la coincidencia."
+      },
+      {
+        "clave": "D",
+        "texto": "La predicción no se cumple: al duplicar la tensión la rapidez aumenta solo en un factor de aproximadamente 1,4 (de 20,0 a 28,3 m/s y de 28,3 a 40,0 m/s), y para duplicarla hace falta cuadruplicar la tensión (de 10 N a 40 N); la rapidez crece con la raíz cuadrada de la tensión.",
+        "correcta": true,
+        "explicacion": "Es la correcta. 28,3 / 20,0 ≈ 1,41 y 40,0 / 28,3 ≈ 1,41 ≈ √2; de 10 N a 40 N (×4) la rapidez pasa de 20 a 40 m/s (×2); de 10 N a 90 N (×9), de 20 a 60 m/s (×3). En todos los casos el factor de la rapidez es la raíz cuadrada del factor de la tensión, no el mismo factor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da la rapidez del pulso para tensiones de 10, 20, 40 y 90 N: 20,0; 28,3; 40,0 y 60,0 m/s; la predicción dice que duplicar la tensión duplica la rapidez. COMPRENDER: se pide evaluar la predicción con los datos. INTERPRETAR: hay que comparar factores, no solo la dirección del cambio. REPRESENTAR: tensión ×2 (10 → 20 N): rapidez ×1,41; tensión ×2 (20 → 40 N): rapidez ×1,41; tensión ×4 (10 → 40 N): rapidez ×2; tensión ×9 (10 → 90 N): rapidez ×3. RAZONAR: el factor de la rapidez es siempre la raíz cuadrada del factor de la tensión; para duplicar la rapidez hay que cuadruplicar la tensión. RESOLVER: la respuesta es la opción que rechaza la predicción y señala el factor 1,4 y la relación con la raíz cuadrada. VERIFICAR: la opción que la confirma ignora el factor; la que niega la dependencia contradice el patrón ordenado; la de tensiones altas compara mal 40 → 90 N (×2,25) con 40 → 60 m/s (×1,5).",
+    "que_identificar": "Los factores por los que cambian la tensión y la rapidez entre filas, y la incertidumbre de ±0,5 m/s.",
+    "que_revisar": "Rapidez de ondas en cuerdas; proporcionalidad y raíz cuadrada; evaluación de predicciones con factores de cambio.",
+    "refuerzo_ids": ["CIE-109","CIE-171"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["ondas","cuerdas","tension","indagacion","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-184",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Explica cómo la explotación de un recurso o el uso de una tecnología tiene efectos positivos o negativos en las personas y en el entorno",
+    "habilidad": "comprender",
+    "tema": "Residuos sólidos: biogás de rellenos sanitarios",
+    "subtema": "Captura y quema del metano producido por la descomposición de la basura orgánica",
+    "dificultad": 1,
+    "contexto": "En el relleno sanitario de una ciudad, la basura orgánica enterrada se descompone sin oxígeno y produce biogás. La empresa operadora instaló tubos para capturar ese gas y quemarlo en motores que generan electricidad. Un periodista preguntó si tenía sentido quemar el gas, ya que al quemarlo se produce dióxido de carbono, también un gas de efecto invernadero. La empresa respondió con la siguiente tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Composición del biogás y efecto invernadero de sus gases",
+      "columnas": ["Gas","Porcentaje en el biogás","Efecto invernadero por kilogramo (comparado con el CO₂ = 1)"],
+      "filas": [
+        ["Metano (CH₄)","55 %",28],
+        ["Dióxido de carbono (CO₂)","40 %",1],
+        ["Otros gases","5 %","variable"]
+      ],
+      "nota": "Al quemarse, cada kilogramo de metano se convierte en unos 2,75 kg de CO₂."
+    },
+    "enunciado": "Según la tabla, ¿por qué capturar y quemar el biogás reduce el efecto invernadero del relleno, a pesar de producir dióxido de carbono?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque al quemarse el biogás desaparece por completo y no queda ningún gas de efecto invernadero: la combustión transforma el metano y el dióxido de carbono en agua y calor, que se aprovecha para generar la electricidad.",
+        "correcta": false,
+        "explicacion": "No responde. La nota indica que cada kilogramo de metano quemado produce 2,75 kg de CO₂: sí queda un gas de efecto invernadero. El CO₂ que ya venía en el biogás no se transforma al quemarse. La ventaja no es eliminar los gases, sino cambiar el metano por un gas de menor efecto.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la combustión elimina los gases en lugar de transformar unos en otros."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el metano, que es más de la mitad del biogás, tiene un efecto invernadero 28 veces mayor que el CO₂ por kilogramo; al quemarlo se convierte en unos 2,75 kg de CO₂ por kilogramo, cuyo efecto es mucho menor que el de dejar escapar ese metano, y además se aprovecha la energía.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Un kilogramo de metano liberado equivale a 28 kg de CO₂ en efecto invernadero; quemado, produce 2,75 kg de CO₂, es decir, un efecto unas diez veces menor. Como el metano es el 55 % del biogás, la quema reduce de forma importante el efecto total, y la electricidad generada sustituye otras fuentes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el dióxido de carbono que se produce al quemar el biogás es absorbido de inmediato por las plantas que crecen sobre el relleno sanitario, de modo que nunca llega a la atmósfera, mientras que el metano no puede ser absorbido por ninguna planta.",
+        "correcta": false,
+        "explicacion": "No responde. Las plantas del relleno no absorben de inmediato el CO₂ de los motores, que sí llega a la atmósfera. La razón está en la tabla: el metano tiene 28 veces el efecto del CO₂, así que convertirlo en CO₂ reduce el efecto total aunque este gas se emita.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa un mecanismo de absorción en lugar de comparar los efectos de los dos gases."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el 40 % del biogás ya es dióxido de carbono, de modo que quemarlo no agrega nada nuevo a la atmósfera: la combustión solo libera el CO₂ que ya estaba en la basura y el metano se queda retenido en los tubos de captura del relleno.",
+        "correcta": false,
+        "explicacion": "No responde. El metano no se queda en los tubos: es el combustible que se quema en los motores y se convierte en CO₂ adicional (2,75 kg por kilogramo de metano). La ventaja está en que ese CO₂ tiene un efecto 28 veces menor que el metano que lo originó.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No entiende que el metano es lo que se quema y confunde captura con retención permanente."
+      }
+    ],
+    "explicacion": "LEER: el biogás es 55 % metano y 40 % CO₂; el metano tiene un efecto invernadero 28 veces mayor que el CO₂ por kilogramo, y al quemarse cada kilogramo de metano da 2,75 kg de CO₂. COMPRENDER: se pide por qué quemar el biogás reduce el efecto invernadero aunque produzca CO₂. INTERPRETAR: la comparación relevante es entre dejar escapar el metano y emitir el CO₂ de su combustión. REPRESENTAR: 1 kg de CH₄ liberado ≈ 28 kg de CO₂ en efecto; 1 kg de CH₄ quemado → 2,75 kg de CO₂ ≈ 2,75 en efecto. RAZONAR: la quema reduce el efecto del metano unas diez veces y, además, la energía generada sustituye otras fuentes. RESOLVER: la respuesta es la opción que compara el factor 28 con los 2,75 kg de CO₂ producidos. VERIFICAR: la combustión no elimina los gases; las plantas no absorben de inmediato el CO₂ de los motores; el metano no queda retenido en los tubos, es lo que se quema.",
+    "que_identificar": "El porcentaje de metano, su efecto invernadero 28 veces mayor y los 2,75 kg de CO₂ que produce cada kilogramo quemado.",
+    "que_revisar": "Gases de efecto invernadero; combustión del metano; descomposición anaerobia; manejo de residuos sólidos.",
+    "refuerzo_ids": ["CIE-052","CIE-098"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": ["biogas","metano","residuos","efecto invernadero","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-185",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica características de algunos procesos que se da en los ecosistemas para comprender la dinámica que se dan a su interior",
+    "habilidad": "interpretar",
+    "tema": "Ecología: competencia intraespecífica",
+    "subtema": "Densidad de siembra, rendimiento por planta y rendimiento por hectárea en un cultivo de maíz",
+    "dificultad": 2,
+    "contexto": "Un centro de investigación agrícola sembró maíz en cuatro lotes iguales, con el mismo suelo, riego y fertilización, pero con distinto número de plantas por hectárea. Al final del ciclo pesó el grano producido por cada planta y el total por hectárea.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Rendimiento del maíz según la densidad de siembra",
+      "columnas": ["Plantas por hectárea","Grano por planta (g)","Grano por hectárea (kg)"],
+      "filas": [
+        [40000,150,6000],
+        [60000,120,7200],
+        [80000,95,7600],
+        [100000,70,7000]
+      ],
+      "nota": "Promedio de tres repeticiones por densidad."
+    },
+    "enunciado": "¿Qué muestra la tabla sobre la relación entre la densidad de siembra y la producción, y a qué proceso ecológico corresponde?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el grano por hectárea aumenta siempre con la densidad, porque más plantas producen más grano; corresponde a la cooperación entre individuos de la misma especie, que se protegen del viento y del sol cuando crecen juntos.",
+        "correcta": false,
+        "explicacion": "No responde. El grano por hectárea no aumenta siempre: sube hasta 7 600 kg con 80 000 plantas y baja a 7 000 kg con 100 000. Y el grano por planta disminuye de 150 a 70 g, señal de que las plantas se perjudican, no se favorecen, al estar más juntas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No revisó la última fila y asumió una tendencia siempre creciente."
+      },
+      {
+        "clave": "B",
+        "texto": "Que el grano por planta disminuye con la densidad porque las plantas más juntas se transmiten enfermedades, y que el grano por hectárea se mantiene constante; corresponde al parasitismo, pues los hongos del suelo atacan más cuando hay más raíces.",
+        "correcta": false,
+        "explicacion": "No responde. El grano por hectárea no es constante (6 000, 7 200, 7 600 y 7 000 kg), y nada en la tabla menciona enfermedades u hongos. La disminución por planta se explica por el reparto de recursos limitados entre más individuos, no por parásitos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Añade una causa no observada e ignora la variación de la columna de kilogramos por hectárea."
+      },
+      {
+        "clave": "C",
+        "texto": "Que el grano por planta y el grano por hectárea disminuyen juntos al aumentar la densidad, porque cada planta recibe menos luz y nutrientes; corresponde a la depredación, ya que las plantas grandes consumen a las pequeñas al quitarles el agua.",
+        "correcta": false,
+        "explicacion": "No responde. Solo el grano por planta disminuye en toda la tabla; el grano por hectárea sube hasta 80 000 plantas. Además, quitarse agua, luz o nutrientes entre individuos de la misma especie es competencia, no depredación, que implica que un organismo se alimente de otro.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde competencia por recursos con depredación y lee mal la columna por hectárea."
+      },
+      {
+        "clave": "D",
+        "texto": "Que el grano por planta disminuye de forma continua al aumentar la densidad, mientras el grano por hectárea sube hasta un máximo cerca de 80 000 plantas y luego baja; corresponde a la competencia intraespecífica por luz, agua y nutrientes.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Grano por planta: 150 → 120 → 95 → 70 g, siempre a la baja. Grano por hectárea: 6 000 → 7 200 → 7 600 → 7 000 kg, con máximo en 80 000 plantas. Al haber más plantas de la misma especie, compiten por los mismos recursos limitados: cada una produce menos, y pasado cierto punto el total también cae.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: con 40 000, 60 000, 80 000 y 100 000 plantas por hectárea, el grano por planta fue 150, 120, 95 y 70 g, y el grano por hectárea 6 000, 7 200, 7 600 y 7 000 kg. COMPRENDER: se pide la relación entre densidad y producción y el proceso ecológico que la explica. INTERPRETAR: la columna por planta baja de forma continua; la columna por hectárea sube hasta 80 000 plantas y luego baja. REPRESENTAR: más plantas → menos luz, agua y nutrientes para cada una → menos grano por planta; el total crece mientras el aumento de plantas compensa la pérdida individual y decrece cuando ya no lo hace. RAZONAR: individuos de la misma especie que usan los mismos recursos limitados compiten entre sí: competencia intraespecífica. RESOLVER: la respuesta es la opción que describe la caída por planta, el máximo por hectárea y la competencia intraespecífica. VERIFICAR: la opción de aumento continuo contradice la última fila; la de parasitismo y la de depredación no corresponden a plantas de una misma especie que se quitan recursos.",
+    "que_identificar": "Que el grano por planta baja en toda la tabla y que el grano por hectárea tiene un máximo en 80 000 plantas.",
+    "que_revisar": "Relaciones intraespecíficas; competencia por recursos limitados; densidad de población; lectura de tablas con dos variables dependientes.",
+    "refuerzo_ids": ["CIE-046","CIE-121"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": ["competencia intraespecifica","densidad","agricultura","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-186",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Determina si los resultados derivados de una investigación son suficientes y pertinentes para sacar conclusiones en una situación dada",
+    "habilidad": "resolver",
+    "tema": "Termoquímica: poder calorífico de combustibles",
+    "subtema": "Energía liberada y dióxido de carbono emitido por gramo y por megajulio de distintos combustibles",
+    "dificultad": 3,
+    "contexto": "Un restaurante escolar debe elegir el combustible de su cocina. Un estudiante consultó la energía que libera cada combustible al quemarse por completo (poder calorífico) y la masa de dióxido de carbono que produce por gramo, y afirmó: \"El combustible que libera más energía por gramo es también el que más dióxido de carbono emite, así que no hay forma de ahorrar emisiones\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Poder calorífico y dióxido de carbono producido por cuatro combustibles",
+      "columnas": ["Combustible","Energía liberada (kJ/g)","CO₂ producido (g de CO₂ por g de combustible)"],
+      "filas": [
+        ["Gas natural (metano)",55,2.75],
+        ["Gas propano",50,3.0],
+        ["Carbón",30,2.9],
+        ["Leña seca",16,1.8]
+      ],
+      "nota": "Valores aproximados para combustión completa. 1 MJ = 1 000 kJ."
+    },
+    "enunciado": "¿Qué conclusión sobre la afirmación del estudiante respaldan los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La afirmación es incorrecta: para obtener la misma energía, el gas natural emite unos 50 g de CO₂ por MJ, el propano unos 60, el carbón unos 97 y la leña unos 113; el combustible con más energía por gramo es el que menos CO₂ emite por unidad de energía, así que sí se pueden reducir emisiones eligiéndolo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. CO₂ por MJ = (g CO₂/g) / (kJ/g) × 1 000: gas natural 2,75 / 55 × 1 000 = 50 g/MJ; propano 3,0 / 50 × 1 000 = 60; carbón 2,9 / 30 × 1 000 ≈ 97; leña 1,8 / 16 × 1 000 ≈ 113. Para cocinar lo mismo se necesita la misma energía, y el gas natural emite la mitad que el carbón.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La afirmación es correcta: el gas natural libera 55 kJ/g y produce 2,75 g de CO₂ por gramo, cerca del valor más alto de la tabla, mientras que la leña libera solo 16 kJ/g y produce 1,8 g de CO₂; por eso la leña es la opción con menos emisiones para el restaurante.",
+        "correcta": false,
+        "explicacion": "No responde. Compara emisiones por gramo de combustible, pero el restaurante necesita una cantidad de energía, no de gramos: para producir 1 MJ la leña emite unos 113 g de CO₂ y el gas natural unos 50 g. Por unidad de energía, la leña es la que más emite.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara por gramo de combustible en vez de por energía obtenida."
+      },
+      {
+        "clave": "C",
+        "texto": "La afirmación es incorrecta porque el propano, que no es el de mayor energía por gramo, es el que más CO₂ produce por gramo (3,0 g); al dividir la energía entre el CO₂ se obtiene que el carbón es el combustible más limpio, con unos 10 kJ por gramo de CO₂.",
+        "correcta": false,
+        "explicacion": "No responde. La primera observación es cierta, pero el cálculo final está mal: el carbón da 30 / 2,9 ≈ 10,3 kJ por gramo de CO₂, mientras que el gas natural da 55 / 2,75 = 20 kJ por gramo de CO₂, el doble. El carbón es de los que más emite por energía, no el más limpio.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Calcula el cociente para un solo combustible y no lo compara con los demás."
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede concluir nada sobre emisiones, porque la tabla da la energía en kilojulios por gramo y el CO₂ en gramos por gramo, unidades que no se pueden relacionar entre sí; haría falta medir directamente el CO₂ que sale de cada estufa durante una hora de uso.",
+        "correcta": false,
+        "explicacion": "No responde. Las dos columnas se refieren al mismo gramo de combustible, así que dividir una entre la otra da los gramos de CO₂ por kilojulio, una medida directamente comparable entre combustibles. No hace falta una medición adicional para evaluar la afirmación.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoce que dos magnitudes referidas a la misma masa pueden combinarse en un cociente."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la energía por gramo (55, 50, 30 y 16 kJ/g) y el CO₂ por gramo (2,75; 3,0; 2,9 y 1,8 g) de gas natural, propano, carbón y leña; el estudiante afirma que más energía por gramo implica más CO₂ y que no se pueden ahorrar emisiones. COMPRENDER: se pide evaluar esa afirmación. INTERPRETAR: lo que importa al cocinar es la energía obtenida, así que las emisiones deben compararse por unidad de energía. REPRESENTAR: g CO₂/MJ = (g CO₂/g) / (kJ/g) × 1 000: gas natural 50; propano 60; carbón 97; leña 113. RAZONAR: el combustible con más energía por gramo es el que menos emite por megajulio; la afirmación confunde emisión por gramo con emisión por energía. RESOLVER: la respuesta es la opción que calcula el CO₂ por MJ y concluye que sí se pueden reducir emisiones con el gas natural. VERIFICAR: la opción que elige la leña compara por gramo; la del carbón limpio no comparó cocientes; la que dice que no se puede concluir ignora que ambas columnas se refieren al mismo gramo.",
+    "que_identificar": "Que la afirmación compara por gramo de combustible y que las dos columnas permiten calcular CO₂ por unidad de energía.",
+    "que_revisar": "Reacciones de combustión; poder calorífico; relaciones por unidad de energía; evaluación de afirmaciones con datos.",
+    "refuerzo_ids": ["CIE-133","CIE-113"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["combustibles","poder calorifico","emisiones","indagacion","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-187",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un sistema eléctrico, argumentando a partir de los modelos básicos de circuitos",
+    "habilidad": "razonar",
+    "tema": "Electricidad: resistencia de un conductor",
+    "subtema": "Dependencia de la resistencia con la longitud y el área de la sección del alambre",
+    "dificultad": 3,
+    "contexto": "Para construir la resistencia de una estufa, un técnico midió con un multímetro la resistencia eléctrica de alambres de nicromo de distinta longitud y distinto grosor, todos a la misma temperatura. El grosor se expresa como el área de la sección transversal del alambre.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Resistencia de alambres de nicromo según su longitud y su sección",
+      "columnas": ["Alambre","Longitud (m)","Área de la sección (mm²)","Resistencia (Ω)"],
+      "filas": [
+        ["1",1.0,0.5,2.2],
+        ["2",2.0,0.5,4.4],
+        ["3",1.0,1.0,1.1],
+        ["4",2.0,1.0,2.2]
+      ],
+      "nota": "Mismo material y misma temperatura en todas las medidas."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de las relaciones que muestra la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La resistencia depende solo de la cantidad de material: los alambres 2 y 3 tienen la misma resistencia porque contienen la misma masa de nicromo, y el alambre 4, con el doble de material que el 1, por eso tiene la misma resistencia que él.",
+        "correcta": false,
+        "explicacion": "No responde. Los alambres 2 y 3 no tienen la misma resistencia (4,4 Ω frente a 1,1 Ω) aunque ambos tengan el mismo volumen de material; y el alambre 4 tiene la misma resistencia que el 1 pese a tener el doble de material. La cantidad de material no es la variable que explica la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Razona con el volumen de material sin verificar los valores de resistencia de cada fila."
+      },
+      {
+        "clave": "B",
+        "texto": "La resistencia aumenta con la longitud porque los electrones recorren más alambre y se calientan más; disminuye con el grosor porque un alambre más grueso se enfría mejor con el aire, y un alambre más frío conduce con menos oposición.",
+        "correcta": false,
+        "explicacion": "No responde. La nota indica que todas las medidas se hicieron a la misma temperatura, así que las diferencias no provienen del calentamiento ni del enfriamiento. La longitud y el área afectan la resistencia por la geometría del camino de los electrones, no por la temperatura.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye a la temperatura un efecto que el experimento mantuvo controlado."
+      },
+      {
+        "clave": "C",
+        "texto": "La resistencia es proporcional a la longitud, porque un alambre más largo ofrece más choques a los electrones en su recorrido, e inversamente proporcional al área, porque una sección mayor ofrece más caminos paralelos para que circulen; al duplicar ambas, los efectos se compensan.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con igual área, duplicar la longitud duplica la resistencia (2,2 → 4,4 Ω; 1,1 → 2,2 Ω); con igual longitud, duplicar el área la reduce a la mitad (2,2 → 1,1 Ω; 4,4 → 2,2 Ω). El alambre 4 iguala al 1 porque los dos cambios se cancelan: R es proporcional a longitud / área.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La resistencia es proporcional a la longitud y también al área, porque un alambre más grande en cualquier dimensión contiene más átomos con los que los electrones pueden chocar; el alambre 4 resulta igual al 1 por una compensación casual del instrumento.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que al duplicar el área la resistencia baja a la mitad (2,2 → 1,1 Ω), es decir, la relación con el área es inversa, no directa. La igualdad entre los alambres 1 y 4 no es casual: longitud doble y área doble se compensan exactamente.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que cualquier aumento de tamaño aumenta la resistencia y descarta el dato que lo contradice."
+      }
+    ],
+    "explicacion": "LEER: alambre 1: 1,0 m, 0,5 mm², 2,2 Ω; alambre 2: 2,0 m, 0,5 mm², 4,4 Ω; alambre 3: 1,0 m, 1,0 mm², 1,1 Ω; alambre 4: 2,0 m, 1,0 mm², 2,2 Ω; mismo material y temperatura. COMPRENDER: se pide explicar las relaciones entre longitud, área y resistencia. INTERPRETAR: comparando filas que cambian una sola variable: doble longitud → doble resistencia; doble área → mitad de resistencia. REPRESENTAR: R ∝ longitud / área. Un alambre más largo impone más choques en el camino; una sección mayor ofrece más caminos paralelos para la corriente. RAZONAR: el alambre 4 duplica ambas variables respecto al 1 y por eso su resistencia es igual: los efectos se compensan. RESOLVER: la respuesta es la opción que describe proporcionalidad directa con la longitud e inversa con el área. VERIFICAR: la opción de la cantidad de material no concuerda con los alambres 2 y 3; la de la temperatura contradice la nota; la de proporcionalidad directa con el área contradice las filas 1 y 3.",
+    "que_identificar": "Qué pares de filas cambian una sola variable y cómo cambia la resistencia en cada comparación.",
+    "que_revisar": "Resistencia eléctrica; resistividad; relación con longitud y sección; control de variables en tablas.",
+    "refuerzo_ids": ["CIE-110","CIE-072"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": ["electricidad","resistencia","conductores","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-188",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce posibles cambios en el entorno por la explotación de un recurso o el uso de una tecnología",
+    "habilidad": "leer",
+    "tema": "Capa de ozono y compuestos clorofluorocarbonados",
+    "subtema": "Relación entre la producción de CFC, su permanencia en la atmósfera y la recuperación lenta del ozono",
+    "dificultad": 2,
+    "contexto": "Los clorofluorocarbonos (CFC) se usaron durante décadas en neveras y aerosoles. En la atmósfera alta liberan cloro, que destruye las moléculas de ozono que filtran la radiación ultravioleta. Un acuerdo internacional de 1987 ordenó reducir su producción. Los CFC permanecen en la atmósfera entre 50 y 100 años después de ser liberados. La gráfica muestra, de manera simplificada, la producción mundial de CFC y el valor mínimo de ozono medido cada año sobre la Antártida.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Producción mundial de CFC y ozono mínimo sobre la Antártida",
+      "eje_x": "Año",
+      "eje_y": "Producción de CFC (miles de toneladas) / Ozono mínimo (unidades Dobson)",
+      "series": [
+        { "nombre": "Producción de CFC (miles de t)", "valores": [["1980",900],["1985",1050],["1990",700],["1995",250],["2000",150],["2005",60],["2010",30],["2015",15],["2020",10]] },
+        { "nombre": "Ozono mínimo (unidades Dobson)", "valores": [["1980",220],["1985",170],["1990",130],["1995",105],["2000",100],["2005",105],["2010",110],["2015",115],["2020",120]] }
+      ]
+    },
+    "enunciado": "¿Qué muestra la gráfica sobre la relación entre la producción de CFC y el ozono, y cómo se explica el ritmo de la recuperación?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el ozono comenzó a recuperarse en el mismo año en que se redujo la producción de CFC y volvió a los valores de 1980 hacia 2020, lo que demuestra que el cloro desaparece de la atmósfera tan pronto como se dejan de fabricar los CFC.",
+        "correcta": false,
+        "explicacion": "No responde. La producción cae desde 1985, pero el ozono siguió bajando hasta el año 2000 (100 UD) y en 2020 estaba en 120 UD, lejos de las 220 UD de 1980. El cloro no desaparece de inmediato: los CFC permanecen entre 50 y 100 años en la atmósfera.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee una recuperación inmediata y total que la gráfica no muestra."
+      },
+      {
+        "clave": "B",
+        "texto": "Que el ozono siguió disminuyendo durante unos 15 años después de que empezó a caer la producción de CFC y solo después comenzó a recuperarse lentamente, porque los CFC ya liberados permanecen décadas en la atmósfera y siguen destruyendo ozono aunque ya no se produzcan.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La producción baja desde 1985 (1 050 mil t) hasta casi cero en 2020, pero el ozono mínimo cae hasta 100 UD en 2000 y después sube despacio (120 UD en 2020). El desfase se explica porque los CFC liberados antes de la reducción duran de 50 a 100 años liberando cloro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que no hay relación entre las dos curvas, porque mientras la producción de CFC bajó de forma continua desde 1985, el ozono bajó primero y subió después; si los CFC fueran la causa, el ozono habría seguido una curva igual a la de la producción.",
+        "correcta": false,
+        "explicacion": "No responde. Una relación con retraso no exige curvas iguales: lo que destruye ozono es el cloro de los CFC acumulados en décadas, no la producción de cada año. Por eso el ozono responde tarde y lentamente al descenso de la producción, como indica el contexto.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Espera que causa y efecto varíen al mismo tiempo y descarta la relación por el desfase."
+      },
+      {
+        "clave": "D",
+        "texto": "Que el ozono disminuyó porque la producción de CFC aumentó hasta 1985 y que su recuperación posterior se debe a que la radiación ultravioleta que llega a la Antártida fabrica ozono nuevo con más rapidez cuando hay menos CFC en las neveras del mundo.",
+        "correcta": false,
+        "explicacion": "No responde. Los CFC guardados en neveras no afectan al ozono; lo hacen los ya liberados a la atmósfera. La recuperación es lenta justamente porque ese cloro acumulado tarda décadas en desaparecer, no porque la radiación produzca ozono más rápido.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde los CFC almacenados en aparatos con los que ya están en la atmósfera."
+      }
+    ],
+    "explicacion": "LEER: la producción de CFC sube hasta 1 050 mil t en 1985 y cae a 10 mil t en 2020; el ozono mínimo baja de 220 UD en 1980 a 100 UD en 2000 y sube despacio hasta 120 UD en 2020; los CFC permanecen de 50 a 100 años en la atmósfera. COMPRENDER: se pide la relación entre las curvas y la explicación del ritmo de recuperación. INTERPRETAR: el ozono siguió cayendo unos 15 años después de que la producción empezó a bajar y luego se recupera lentamente. REPRESENTAR: producción (1985) ↓ → cloro acumulado en la atmósfera permanece décadas → ozono mínimo en 2000 → recuperación lenta. RAZONAR: el daño depende del cloro acumulado, no de la producción del año; de ahí el desfase y la lentitud. RESOLVER: la respuesta es la opción que describe el retraso y lo explica con la permanencia de los CFC. VERIFICAR: la recuperación no fue inmediata ni total; el desfase no niega la relación; los CFC en neveras no afectan la atmósfera hasta que se liberan.",
+    "que_identificar": "El año en que empieza a bajar la producción, el año del mínimo de ozono y el dato de permanencia de los CFC.",
+    "que_revisar": "Capa de ozono y radiación ultravioleta; contaminantes persistentes; relaciones causa-efecto con retraso; lectura de gráficas de líneas con dos series.",
+    "refuerzo_ids": ["CIE-158","CIE-150"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["capa de ozono","cfc","contaminacion","lineas"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-189",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Reconoce la importancia de la evidencia para comprender fenómenos naturales",
+    "habilidad": "razonar",
+    "tema": "Reproducción de plantas: polinización",
+    "subtema": "Experimento de exclusión de polinizadores en ramas de un árbol frutal",
+    "dificultad": 2,
+    "contexto": "Los agricultores de una zona de cultivo de lulo notaron que la cosecha bajó desde que se fumigó con insecticidas un lote vecino. Para saber si los insectos tenían que ver con la producción de frutos, una estudiante cubrió con malla fina algunas ramas antes de que abrieran las flores, de modo que ningún insecto pudiera llegar a ellas, y dejó otras ramas de las mismas plantas sin cubrir. Contó las flores y, semanas después, los frutos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Flores y frutos en ramas cubiertas y sin cubrir",
+      "columnas": ["Tratamiento","Ramas","Flores contadas","Frutos formados","Semillas promedio por fruto"],
+      "filas": [
+        ["Ramas cubiertas con malla",10,120,9,15],
+        ["Ramas sin cubrir",10,118,86,110]
+      ],
+      "nota": "Las ramas cubiertas recibieron la misma luz, agua y abono que las demás."
+    },
+    "enunciado": "¿Qué permite concluir el experimento y qué papel cumple la evidencia obtenida?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la visita de los insectos es necesaria para que la mayoría de las flores de lulo formen frutos con muchas semillas; la comparación entre ramas cubiertas y sin cubrir, con las demás condiciones iguales, es la evidencia que respalda la relación entre insectos y cosecha.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con un número similar de flores (120 y 118), las ramas sin insectos dieron 9 frutos con 15 semillas y las ramas accesibles 86 frutos con 110 semillas. Como luz, agua y abono fueron iguales, la única diferencia fue el acceso de los insectos, que transportan el polen entre flores.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Que la malla impide el paso de la luz y por eso las flores cubiertas no formaron frutos; para demostrar que los insectos importan habría que repetir el experimento sin malla y contar cuántos insectos visitan cada flor durante el día.",
+        "correcta": false,
+        "explicacion": "No responde. La nota indica que las ramas cubiertas recibieron la misma luz, y la malla fina deja pasar la luz pero no los insectos. Contar visitas sería un dato adicional, pero el experimento ya aisló la variable de interés al comparar ramas con y sin acceso de insectos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el efecto a la malla como barrera de luz pese a la nota del estímulo."
+      },
+      {
+        "clave": "C",
+        "texto": "Que el insecticida del lote vecino mató las flores de las ramas cubiertas, porque la malla retuvo el veneno sobre ellas; la evidencia demuestra que las fumigaciones deben prohibirse en toda la zona para recuperar la cosecha de lulo.",
+        "correcta": false,
+        "explicacion": "No responde. El experimento no midió el insecticida y las flores cubiertas no murieron: se contaron 120 flores, casi igual que en las ramas libres. Lo que faltó en ellas fue la visita de insectos, no la vida de las flores; la conclusión sobre prohibir fumigaciones va más allá de los datos.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Saca una conclusión sobre una variable que el experimento no midió."
+      },
+      {
+        "clave": "D",
+        "texto": "Que el lulo puede formar frutos sin insectos, porque las ramas cubiertas produjeron 9 frutos; por tanto, la caída de la cosecha no se relaciona con los insectos y la evidencia señala que la causa debe buscarse en el clima o en el suelo.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que hubo 9 frutos sin insectos (posible autopolinización ocasional), pero fueron menos de la décima parte de los 86 de las ramas libres, y con siete veces menos semillas. La evidencia señala a los insectos como factor principal, no los descarta.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma una excepción pequeña como prueba de que la variable no influye."
+      }
+    ],
+    "explicacion": "LEER: diez ramas cubiertas con malla tuvieron 120 flores, 9 frutos y 15 semillas por fruto; diez ramas sin cubrir, 118 flores, 86 frutos y 110 semillas; luz, agua y abono iguales. COMPRENDER: se pide qué concluye el experimento y qué papel cumple la evidencia. INTERPRETAR: la única diferencia entre los grupos fue el acceso de los insectos a las flores. REPRESENTAR: sin insectos: 9 de 120 flores dan fruto (7,5 %); con insectos: 86 de 118 (73 %), con siete veces más semillas. RAZONAR: los insectos transportan polen entre flores; sin ellos casi no hay fecundación, lo que explica pocos frutos y pocas semillas. La comparación controlada es la evidencia que sostiene la relación entre insectos y cosecha. RESOLVER: la respuesta es la opción que concluye la necesidad de los insectos y reconoce la comparación como evidencia. VERIFICAR: la malla no bloqueó la luz según la nota; el insecticida no se midió y las flores no murieron; los 9 frutos son una excepción pequeña que no descarta a los insectos.",
+    "que_identificar": "Que ambos grupos tuvieron casi las mismas flores y condiciones, y que difieren mucho en frutos y semillas según el acceso de insectos.",
+    "que_revisar": "Polinización y fecundación en plantas con flor; papel de los polinizadores; grupo de comparación y control de variables.",
+    "refuerzo_ids": ["CIE-106","CIE-046"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["polinizacion","polinizadores","indagacion","evidencia","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-190",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce las razones por las cuales la materia se puede diferenciar, según su estructura y propiedades, y justifica las diferencias existentes entre distintos elementos, compuestos y mezclas",
+    "habilidad": "razonar",
+    "tema": "Aleaciones: estructura y propiedades de los metales",
+    "subtema": "Por qué el bronce es más duro y menos conductor que el cobre puro",
+    "dificultad": 2,
+    "contexto": "En un taller de orfebrería, los aprendices compararon el cobre puro con el bronce, una mezcla sólida de cobre con cerca de 12 % de estaño. En los metales, los átomos están ordenados en capas que pueden deslizarse unas sobre otras, lo que permite doblarlos y deformarlos; además, sus electrones externos se mueven libremente por toda la pieza, lo que explica que conduzcan la electricidad. Los átomos de estaño son más grandes que los de cobre.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Propiedades del cobre puro y del bronce",
+      "columnas": ["Propiedad","Cobre puro","Bronce (88 % Cu, 12 % Sn)"],
+      "filas": [
+        ["Dureza (escala Brinell)",35,70],
+        ["Conductividad eléctrica (% respecto al cobre)",100,15],
+        ["Temperatura de fusión (°C)",1085,"aprox. 950"]
+      ],
+      "nota": "Valores aproximados de referencia."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que el bronce sea más duro y conduzca peor la electricidad que el cobre puro?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El estaño forma un compuesto químico con el cobre en el que los electrones quedan atrapados en enlaces fijos entre pares de átomos; por eso el bronce ya no conduce y es duro como una sal, y funde a menor temperatura porque los enlaces son débiles.",
+        "correcta": false,
+        "explicacion": "No responde. El bronce es una mezcla sólida (aleación), no un compuesto con enlaces fijos entre pares de átomos: conserva el 15 % de la conductividad y sigue siendo metálico y deformable. La dureza se debe a la dificultad de deslizamiento de las capas, no a enlaces de tipo sal.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una aleación con un compuesto iónico o covalente."
+      },
+      {
+        "clave": "B",
+        "texto": "El estaño es un metal más duro y menos conductor que el cobre, así que el bronce simplemente promedia las propiedades de los dos; con 12 % de estaño la dureza sube un poco y la conductividad baja de manera proporcional a esa fracción.",
+        "correcta": false,
+        "explicacion": "No responde. Las propiedades de una aleación no son el promedio ponderado de las de sus componentes: con solo 12 % de estaño la dureza se duplica y la conductividad cae al 15 %, cambios mucho mayores que esa fracción. El estaño puro, además, es un metal blando.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que las propiedades de una mezcla se obtienen por promedio de sus componentes."
+      },
+      {
+        "clave": "C",
+        "texto": "Los átomos de estaño, más grandes, se intercalan entre los de cobre y deforman el ordenamiento de las capas, lo que dificulta que se deslicen unas sobre otras y hace al bronce más duro; esos mismos átomos extraños dispersan a los electrones libres y reducen la conductividad.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El contexto explica que la deformabilidad depende del deslizamiento de capas y la conducción del movimiento libre de electrones. Los átomos de estaño, de otro tamaño, alteran el orden de las capas (más dureza: 35 → 70) y actúan como obstáculos para los electrones (conductividad 100 → 15 %).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El estaño ocupa el lugar de los electrones libres del cobre, de modo que en el bronce casi no quedan electrones que se muevan; sin esos electrones las capas de átomos ya no pueden deslizarse y la pieza se vuelve dura y quebradiza, como el vidrio.",
+        "correcta": false,
+        "explicacion": "No responde. Los átomos de estaño no reemplazan electrones: aportan los suyos, y el bronce conserva electrones libres (por eso conduce un 15 %). Tampoco es quebradizo como el vidrio: sigue siendo un metal que se puede trabajar, aunque con más dificultad que el cobre.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcla la idea de átomos y electrones como si fueran intercambiables."
+      }
+    ],
+    "explicacion": "LEER: el bronce (88 % Cu, 12 % Sn) tiene dureza 70 frente a 35 del cobre y conductividad del 15 % frente al 100 %; el contexto explica el modelo del metal: capas de átomos que se deslizan y electrones externos libres; el estaño tiene átomos más grandes. COMPRENDER: se pide explicar la mayor dureza y la menor conductividad del bronce. INTERPRETAR: las propiedades metálicas dependen del orden de los átomos y del movimiento de los electrones. REPRESENTAR: átomos de estaño intercalados → capas deformadas → deslizamiento difícil → más dureza; átomos extraños → dispersión de electrones → menos conductividad. RAZONAR: un 12 % de átomos de otro tamaño basta para alterar todo el ordenamiento, por eso los cambios son grandes y no proporcionales. RESOLVER: la respuesta es la opción que describe la intercalación de átomos grandes, el bloqueo del deslizamiento y la dispersión de electrones. VERIFICAR: el bronce no es un compuesto con enlaces fijos; sus propiedades no son el promedio de las de sus componentes; los átomos no reemplazan electrones.",
+    "que_identificar": "Los cambios de dureza y conductividad entre cobre y bronce y el modelo de capas y electrones libres del contexto.",
+    "que_revisar": "Enlace metálico; aleaciones como mezclas homogéneas sólidas; relación entre estructura y propiedades de los materiales.",
+    "refuerzo_ids": ["CIE-034","CIE-082"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["aleaciones","enlace metalico","bronce","propiedades","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-191",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona los tipos de energía presentes en un objeto con las interacciones que presenta el sistema con su entorno",
+    "habilidad": "interpretar",
+    "tema": "Transferencia de calor: conducción",
+    "subtema": "Conductividad térmica de distintos materiales medida con cucharas en agua caliente",
+    "dificultad": 1,
+    "contexto": "Un grupo de estudiantes puso en un recipiente con agua a 90 °C cinco cucharas de igual tamaño pero de distinto material, con un trocito de mantequilla pegado en el extremo que quedaba fuera del agua. Midieron el tiempo que tardó la mantequilla en derretirse y caer en cada cuchara.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Tiempo hasta que la mantequilla se derrite en el extremo de cada cuchara",
+      "eje_x": "Material de la cuchara",
+      "eje_y": "Tiempo (segundos)",
+      "series": [
+        { "nombre": "Tiempo (s)", "valores": [["Cobre",40],["Aluminio",55],["Acero inoxidable",120],["Madera",600],["Plástico",600]] }
+      ]
+    },
+    "enunciado": "La mantequilla de las cucharas de madera y plástico no se había derretido cuando se detuvo el experimento a los 600 segundos. ¿Qué indican los resultados sobre los materiales?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el cobre absorbe más calor del agua que los demás materiales y lo guarda en su interior, por lo que su extremo se calienta más; la madera y el plástico, en cambio, rechazan el calor y permanecen fríos en toda su extensión.",
+        "correcta": false,
+        "explicacion": "No responde. El cobre no guarda el calor: lo transmite rápidamente de la parte sumergida al extremo seco, por eso la mantequilla se derrite en 40 s. Ningún material rechaza el calor; la madera y el plástico lo transmiten tan despacio que el extremo no alcanzó a calentarse en 600 s.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde conducir el calor con almacenarlo."
+      },
+      {
+        "clave": "B",
+        "texto": "Que el agua calienta más a los metales porque son más pesados, y como la madera y el plástico flotan, sus cucharas quedaron casi fuera del agua y recibieron menos calor, lo que explica que la mantequilla no se derritiera.",
+        "correcta": false,
+        "explicacion": "No responde. Las cucharas eran de igual tamaño y todas se sumergieron en la misma agua; el experimento compara cuánto tarda el calor en recorrer el material hasta el extremo seco. La diferencia es la conductividad térmica, no la flotación ni el peso.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce la flotación, una variable que el montaje no permite, para explicar la diferencia."
+      },
+      {
+        "clave": "C",
+        "texto": "Que la mantequilla se derrite más rápido en los metales brillantes porque reflejan el calor del agua hacia el extremo, y más lento en los materiales opacos; por eso el acero inoxidable, menos brillante que el cobre, tardó tres veces más.",
+        "correcta": false,
+        "explicacion": "No responde. El calor viaja por el interior de la cuchara por conducción, no por reflejo en su superficie; el acero inoxidable puede ser tan brillante como el cobre y aun así conduce peor. El brillo no es la propiedad que ordena los tiempos de la gráfica.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia una propiedad visible (brillo) con la conducción de calor."
+      },
+      {
+        "clave": "D",
+        "texto": "Que los metales, y en especial el cobre, conducen el calor con rapidez desde la parte sumergida hasta el extremo seco, mientras que la madera y el plástico son malos conductores (aislantes), por lo que el calor casi no avanza por ellos en el tiempo del experimento.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El calor se transfiere por conducción a lo largo de la cuchara; en el cobre llega al extremo en 40 s, en el aluminio en 55 s y en el acero en 120 s. En la madera y el plástico no llegó en 600 s: son aislantes térmicos, por eso se usan en mangos de ollas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la gráfica da el tiempo para que se derrita la mantequilla en el extremo de cucharas de cobre (40 s), aluminio (55 s), acero inoxidable (120 s), madera y plástico (más de 600 s), todas en agua a 90 °C. COMPRENDER: se pide qué indican los resultados sobre los materiales. INTERPRETAR: el calor pasa del agua a la parte sumergida y viaja por conducción hasta el extremo seco; cuanto más rápido se derrite la mantequilla, mejor conduce el material. REPRESENTAR: orden de conductividad: cobre > aluminio > acero >> madera ≈ plástico. RAZONAR: los metales conducen bien porque sus electrones libres y sus átomos transmiten la energía con rapidez; madera y plástico la transmiten muy despacio: son aislantes. RESOLVER: la respuesta es la opción que identifica a los metales como buenos conductores y a la madera y el plástico como aislantes. VERIFICAR: el cobre no almacena el calor; todas las cucharas estaban igual de sumergidas; el brillo no determina la conducción.",
+    "que_identificar": "El orden de los tiempos en la gráfica y que la madera y el plástico no alcanzaron a derretir la mantequilla.",
+    "que_revisar": "Transferencia de calor por conducción; conductores y aislantes térmicos; usos cotidianos de los materiales.",
+    "refuerzo_ids": ["CIE-002","CIE-031"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["calor","conduccion","materiales","barras"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-192",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Analiza aspectos de los ecosistemas y da razón de cómo funcionan, de sus interrelaciones con los factores bióticos y abióticos y de sus efectos al modificarse alguna variable interna",
+    "habilidad": "razonar",
+    "tema": "Ecología de poblaciones: depredador y presa",
+    "subtema": "Oscilaciones desfasadas de las poblaciones de ratones de campo y lechuzas en una finca",
+    "dificultad": 3,
+    "contexto": "En una finca de los Llanos, un grupo de biólogos estimó cada año la población de ratones de campo y la de lechuzas, que se alimentan casi exclusivamente de esos ratones. No hubo cambios importantes de clima ni de cultivos en el periodo.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Población estimada de ratones de campo y de lechuzas durante ocho años",
+      "eje_x": "Año",
+      "eje_y": "Individuos estimados (ratones en cientos, lechuzas en unidades)",
+      "series": [
+        { "nombre": "Ratones (cientos)", "valores": [["1",20],["2",45],["3",60],["4",35],["5",15],["6",25],["7",50],["8",58]] },
+        { "nombre": "Lechuzas", "valores": [["1",10],["2",12],["3",22],["4",30],["5",24],["6",12],["7",9],["8",18]] }
+      ]
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que la población de lechuzas alcance su máximo un año después que la de ratones y luego ambas disminuyan?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las lechuzas y los ratones compiten por el mismo alimento, de modo que cuando los ratones abundan dejan menos comida a las lechuzas; estas tardan un año en sentir el efecto y luego, al reducirse ambos, el alimento vuelve a alcanzar para los dos.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que las lechuzas se alimentan de los ratones, no de lo mismo que ellos: la relación es de depredación, no de competencia. Si compitieran, las lechuzas disminuirían cuando los ratones abundan, pero la gráfica muestra que aumentan después de ellos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la relación depredador-presa con una competencia por recursos."
+      },
+      {
+        "clave": "B",
+        "texto": "Cuando los ratones abundan, las lechuzas tienen más alimento, crían más polluelos y su población crece, pero con retraso, porque reproducirse toma tiempo; al haber muchas lechuzas, los ratones son cazados en exceso y disminuyen, y con menos alimento las lechuzas también decaen después.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los ratones llegan a 6 000 en el año 3 y las lechuzas a 30 en el año 4: el aumento de presas permite más crías de depredador, con el retraso de la reproducción. Luego la presión de caza baja los ratones (1 500 en el año 5) y la falta de alimento reduce las lechuzas (9 en el año 7), lo que permite que los ratones vuelvan a subir.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Las dos poblaciones responden a un ciclo de lluvias de la región que alterna años buenos y malos para todos los animales; las lechuzas van un año detrás porque viven en zonas más altas de la finca, donde la lluvia llega más tarde.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto señala que no hubo cambios importantes de clima en el periodo, y la lluvia no llega con un año de retraso a una parte de una misma finca. El desfase se explica por la dependencia alimentaria entre las dos especies.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Recurre a una causa externa descartada en el contexto en vez de a la interacción entre especies."
+      },
+      {
+        "clave": "D",
+        "texto": "Las lechuzas aumentan cuando los ratones abundan porque los ratones les transmiten una enfermedad que las hace reproducirse más; cuando los ratones mueren por esa misma enfermedad, las lechuzas también enferman y disminuyen un año más tarde.",
+        "correcta": false,
+        "explicacion": "No responde. No hay en el contexto ninguna evidencia de enfermedad y, en general, las enfermedades no aumentan la reproducción. El patrón de la gráfica es el esperado en una relación depredador-presa: más presas permiten más depredadores, que a su vez reducen a las presas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa un mecanismo sin apoyo en los datos para explicar el desfase."
+      }
+    ],
+    "explicacion": "LEER: los ratones suben de 2 000 a 6 000 entre los años 1 y 3, caen a 1 500 en el año 5 y vuelven a subir; las lechuzas suben de 10 a 30 entre los años 1 y 4, caen a 9 en el año 7 y repuntan; las lechuzas comen casi solo ratones y el clima no cambió. COMPRENDER: se pide explicar el desfase de un año entre máximos y la caída posterior de ambas. INTERPRETAR: es una relación depredador-presa. REPRESENTAR: más ratones → más alimento → más crías de lechuza (con retraso) → muchas lechuzas → más caza → menos ratones → menos alimento → menos lechuzas → los ratones se recuperan. RAZONAR: el retraso aparece porque la reproducción del depredador toma tiempo y porque su población responde al alimento del año anterior. RESOLVER: la respuesta es la opción que describe el ciclo con el retraso reproductivo y la presión de caza. VERIFICAR: la competencia contradice que las lechuzas comen ratones; el ciclo de lluvias está descartado por el contexto; la enfermedad no tiene apoyo en los datos.",
+    "que_identificar": "Los años de los máximos y mínimos de cada curva y el dato de que las lechuzas dependen de los ratones como alimento.",
+    "que_revisar": "Relaciones depredador-presa; dinámica de poblaciones; factores que regulan el tamaño de una población; lectura de gráficas con dos series.",
+    "refuerzo_ids": ["CIE-121","CIE-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": ["depredador-presa","poblaciones","ecologia","lineas"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-193",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Determina si los resultados derivados de una investigación son suficientes y pertinentes para sacar conclusiones en una situación dada",
+    "habilidad": "verificar",
+    "tema": "Salud pública: flúor en el agua y caries",
+    "subtema": "Evaluación de una conclusión sobre fluoración cuando hay variables no controladas",
+    "dificultad": 3,
+    "contexto": "En un departamento se discute si conviene agregar flúor al agua potable para reducir la caries. Un concejal comparó cuatro municipios y afirmó: \"El municipio 3 tiene flúor en el agua y más caries que el municipio 4, así que el flúor no sirve\". La caries se mide con el número promedio de dientes afectados por niño a los 12 años; el flúor fortalece el esmalte, mientras que el azúcar alimenta a las bacterias que lo desgastan.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Flúor en el agua, consumo de azúcar y caries en cuatro municipios",
+      "columnas": ["Municipio","Flúor en el agua (mg/L)","Niños que consumen bebidas azucaradas a diario (%)","Dientes con caries por niño"],
+      "filas": [
+        ["Municipio 1",0.1,30,4.5],
+        ["Municipio 2",0.7,30,2.1],
+        ["Municipio 3",0.7,75,3.9],
+        ["Municipio 4",1.0,25,1.8]
+      ],
+      "nota": "Niños de 12 años evaluados en escuelas públicas el mismo año."
+    },
+    "enunciado": "¿Qué se puede concluir sobre la afirmación del concejal a partir de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La afirmación es correcta, porque el municipio 3, con 0,7 mg/L de flúor, tiene casi el doble de caries que el municipio 4, con 1,0 mg/L; si el flúor sirviera, la diferencia de 0,3 mg/L no podría producir un cambio tan grande, así que la causa de la caries debe ser otra y el flúor es inútil.",
+        "correcta": false,
+        "explicacion": "No responde. La comparación entre los municipios 3 y 4 ignora que en el 3 el 75 % de los niños consume bebidas azucaradas a diario, frente al 25 % del 4. Que exista otra causa (el azúcar) no implica que el flúor sea inútil: los municipios 1 y 2, con igual azúcar, difieren solo en flúor y en caries.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Acepta una comparación entre municipios que difieren en una variable importante."
+      },
+      {
+        "clave": "B",
+        "texto": "La afirmación es incorrecta, porque en realidad el flúor es lo único que explica la caries: el municipio 4, con más flúor, tiene menos caries, y el azúcar no puede influir, ya que los municipios 1 y 2 consumen la misma cantidad y tienen caries muy distintas.",
+        "correcta": false,
+        "explicacion": "No responde. Que los municipios 1 y 2 muestren el efecto del flúor no descarta el azúcar: los municipios 2 y 3 tienen el mismo flúor (0,7 mg/L) y el 3, con mucho más azúcar, tiene casi el doble de caries. Los datos apoyan que ambas variables influyen.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasa de rechazar la afirmación a negar cualquier otra variable."
+      },
+      {
+        "clave": "C",
+        "texto": "La afirmación no está respaldada: los municipios 3 y 4 difieren también en el consumo de azúcar (75 % frente a 25 %), que explica la mayor caries del 3; al comparar municipios con igual azúcar (1 y 2) o igual flúor (2 y 3), los datos indican que el flúor reduce la caries y el azúcar la aumenta.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Municipios 1 y 2: mismo azúcar (30 %), flúor 0,1 frente a 0,7 mg/L, caries 4,5 frente a 2,1: el flúor reduce la caries. Municipios 2 y 3: mismo flúor (0,7), azúcar 30 % frente a 75 %, caries 2,1 frente a 3,9: el azúcar la aumenta. El concejal comparó dos municipios que difieren en ambas variables.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede concluir nada sobre el flúor porque cuatro municipios son muy pocos y la caries depende de muchos factores, como el cepillado y las visitas al odontólogo, que la tabla no registra; sería necesario un estudio con todos los municipios del país antes de opinar.",
+        "correcta": false,
+        "explicacion": "No responde. Es prudente reconocer otros factores, pero la tabla sí permite evaluar la afirmación del concejal: las comparaciones entre municipios que coinciden en una variable (1 con 2; 2 con 3) muestran que su conclusión no se sostiene. Pedir todos los municipios del país no es necesario para eso.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Rechaza cualquier conclusión en lugar de usar las comparaciones que los datos permiten."
+      }
+    ],
+    "explicacion": "LEER: la tabla da flúor, consumo diario de bebidas azucaradas y caries por niño en cuatro municipios; el concejal compara el 3 (0,7 mg/L; 75 %; 3,9) con el 4 (1,0 mg/L; 25 %; 1,8) y concluye que el flúor no sirve. COMPRENDER: se pide evaluar esa conclusión. INTERPRETAR: los municipios 3 y 4 difieren en dos variables a la vez, así que la comparación no aísla el efecto del flúor. REPRESENTAR: pares con una sola variable distinta: municipios 1 y 2 (mismo azúcar): más flúor → menos caries (4,5 → 2,1); municipios 2 y 3 (mismo flúor): más azúcar → más caries (2,1 → 3,9). RAZONAR: los datos indican que el flúor reduce la caries y el azúcar la aumenta; la mayor caries del municipio 3 se explica por su consumo de azúcar. RESOLVER: la respuesta es la opción que señala la variable no controlada y usa las comparaciones válidas. VERIFICAR: aceptar la afirmación ignora el azúcar; negar el azúcar contradice los municipios 2 y 3; rechazar toda conclusión desaprovecha las comparaciones posibles.",
+    "que_identificar": "Qué pares de municipios coinciden en una variable y difieren en la otra, y en qué difieren los dos que comparó el concejal.",
+    "que_revisar": "Variables confundidas; comparaciones controladas; salud bucal, flúor y azúcar; evaluación de argumentos con datos.",
+    "refuerzo_ids": ["CIE-138","CIE-137"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["fluor","caries","salud publica","variables confundidas","indagacion","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-194",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Diferencia distintos tipos de reacciones químicas y realiza de manera adecuada cálculos teniendo en cuenta la ley de conservación de la masa y carga",
+    "habilidad": "comprender",
+    "tema": "Química de los alimentos: oxidación y antioxidantes",
+    "subtema": "Pardeamiento de la manzana cortada y efecto del jugo de limón, el agua y el aceite",
+    "dificultad": 2,
+    "contexto": "Al cortar una manzana, la superficie se pone marrón en pocos minutos. Esto ocurre porque una enzima de la fruta, al entrar en contacto con el oxígeno del aire, oxida ciertas sustancias de la pulpa y forma pigmentos oscuros. En una práctica de cocina, los estudiantes trataron rodajas de la misma manzana de distintas maneras y midieron el tiempo hasta que aparecía el color marrón.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Tiempo hasta el pardeamiento de rodajas de manzana con distintos tratamientos",
+      "columnas": ["Tratamiento","Tiempo hasta el pardeamiento (min)"],
+      "filas": [
+        ["Sin tratamiento, al aire",8],
+        ["Cubierta con agua",20],
+        ["Rociada con jugo de limón (ácido y con vitamina C)",90],
+        ["Cubierta con una capa de aceite",75],
+        ["Sin tratamiento, en bolsa sin aire",80]
+      ],
+      "nota": "Todas las rodajas a la misma temperatura ambiente."
+    },
+    "enunciado": "¿Qué explica, en conjunto, los resultados de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El pardeamiento es una oxidación que necesita oxígeno y una enzima activa: el aceite y la bolsa sin aire retrasan el cambio al impedir el contacto con el oxígeno, el agua lo retrasa poco porque deja pasar algo de oxígeno, y el limón actúa porque su acidez frena la enzima y su vitamina C se oxida antes que la pulpa.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Sin aire (bolsa, 80 min) o con una barrera de aceite (75 min) el oxígeno no llega y la oxidación se retrasa mucho; el agua (20 min) es una barrera débil porque disuelve algo de oxígeno; el limón (90 min) combina dos efectos: el pH ácido reduce la actividad de la enzima y la vitamina C es un antioxidante que se oxida primero.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "El pardeamiento es una reacción de combustión lenta de los azúcares de la fruta: el limón y el aceite la frenan porque enfrían la superficie de la rodaja, y la bolsa la frena porque dentro de ella la temperatura es más baja que al aire libre.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto describe una oxidación catalizada por una enzima, no una combustión, y la nota indica que todas las rodajas estaban a la misma temperatura; además, una bolsa cerrada no enfría su contenido. La temperatura no fue la variable que cambió entre tratamientos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde oxidación enzimática con combustión y atribuye los efectos a la temperatura."
+      },
+      {
+        "clave": "C",
+        "texto": "El pardeamiento lo producen bacterias del aire que se alimentan de la pulpa: el limón las mata por su acidez, el aceite y la bolsa impiden que lleguen, y el agua las retrasa porque las arrastra; por eso el tratamiento más eficaz es el que más bacterias elimina.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto atribuye el color a una enzima de la propia fruta que actúa con el oxígeno, no a bacterias; además, un cambio en 8 minutos es demasiado rápido para un crecimiento bacteriano. La acidez del limón actúa sobre la enzima, no sobre microorganismos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta todo deterioro de alimentos como obra de microorganismos."
+      },
+      {
+        "clave": "D",
+        "texto": "El pardeamiento depende solo del contacto con el oxígeno: los tratamientos funcionan en el orden en que aíslan la rodaja del aire, así que el jugo de limón, que es el más eficaz, debe formar la capa más gruesa e impermeable al oxígeno de todos los tratamientos.",
+        "correcta": false,
+        "explicacion": "No responde. Un rociado de jugo de limón forma una película muy delgada, menos impermeable que una capa de aceite o una bolsa sin aire, y sin embargo retrasa más el cambio (90 frente a 75 y 80 min). Eso indica que el limón actúa también por otra vía: su acidez y su vitamina C.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce todos los efectos a una barrera física y fuerza el dato del limón para que encaje."
+      }
+    ],
+    "explicacion": "LEER: la manzana sin tratamiento se oscurece en 8 min; con agua en 20; con aceite en 75; en bolsa sin aire en 80; con jugo de limón en 90; el contexto explica que una enzima oxida la pulpa en presencia de oxígeno. COMPRENDER: se pide una explicación que cubra todos los resultados. INTERPRETAR: los tratamientos actúan sobre dos factores: el acceso de oxígeno y la actividad de la enzima. REPRESENTAR: aceite y bolsa → barrera al oxígeno → gran retraso; agua → barrera parcial → retraso pequeño; limón → pH ácido que frena la enzima + vitamina C que se oxida antes → el mayor retraso. RAZONAR: el limón supera a las barreras físicas pese a ser una película delgada, lo que muestra que no actúa solo como barrera. RESOLVER: la respuesta es la opción que combina la falta de oxígeno con la acidez y el antioxidante. VERIFICAR: no es combustión ni cambió la temperatura; no intervienen bacterias en 8 minutos; el limón no es la barrera más gruesa.",
+    "que_identificar": "Qué tratamientos bloquean el oxígeno y cuál actúa además sobre la enzima, según los tiempos de la tabla.",
+    "que_revisar": "Reacciones de oxidación; enzimas y efecto del pH; antioxidantes; conservación de alimentos.",
+    "refuerzo_ids": ["CIE-105","CIE-153"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["oxidacion","antioxidantes","enzimas","alimentos","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-195",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un sistema, argumentando a partir de los modelos básicos de la termodinámica",
+    "habilidad": "razonar",
+    "tema": "Transferencia de calor: radiación y color de las superficies",
+    "subtema": "Temperatura alcanzada al sol por láminas de distinto color y acabado",
+    "dificultad": 2,
+    "contexto": "Para decidir de qué color pintar el techo de una escuela en tierra caliente, los estudiantes expusieron al sol del mediodía, durante 30 minutos, cuatro láminas metálicas iguales pintadas de distinto color, y una lámina de aluminio pulido sin pintar. Midieron la temperatura de cada lámina al final. La temperatura del aire era de 28 °C.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Temperatura de láminas iguales tras 30 minutos al sol (aire a 28 °C)",
+      "columnas": ["Acabado de la lámina","Temperatura final (°C)"],
+      "filas": [
+        ["Pintura negra mate",58],
+        ["Pintura roja",50],
+        ["Pintura blanca",38],
+        ["Aluminio pulido (sin pintura)",35]
+      ],
+      "nota": "Láminas del mismo metal, tamaño y grosor, colocadas una al lado de la otra."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de las diferencias de temperatura entre las láminas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La pintura negra es más gruesa y pesada que la blanca, por lo que almacena más calor del aire caliente que la rodea; el aluminio pulido, al no tener pintura, no tiene dónde guardar el calor y se mantiene cerca de la temperatura del aire.",
+        "correcta": false,
+        "explicacion": "No responde. Las láminas eran iguales y recibieron el mismo aire a 28 °C; si solo las calentara el aire ninguna pasaría de 28 °C, pero la negra llegó a 58 °C. La energía adicional viene de la radiación solar, y lo que cambia entre láminas es cuánta absorben.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye el calentamiento al aire y a la masa de pintura en lugar de a la radiación absorbida."
+      },
+      {
+        "clave": "B",
+        "texto": "Las superficies oscuras y mates absorben la mayor parte de la radiación solar que les llega y la convierten en energía térmica, mientras que las superficies claras y las pulidas reflejan gran parte de esa radiación; por eso la lámina negra se calienta mucho más que la blanca y la de aluminio.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Todas las láminas reciben la misma radiación; la negra mate absorbe casi toda y sube a 58 °C; la roja absorbe parte (50 °C); la blanca refleja la mayoría (38 °C) y el aluminio pulido refleja aún más (35 °C), quedando cerca del aire. Un techo blanco mantiene la escuela más fresca.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El color negro atrae la luz del sol hacia la lámina, como un imán atrae al hierro, mientras que el blanco la repele; cuanto más oscuro es el color, más rayos de sol se desvían hacia la lámina y por eso recibe más energía que las láminas vecinas.",
+        "correcta": false,
+        "explicacion": "No responde. La luz no es atraída ni repelida por los colores: viaja en línea recta y todas las láminas, colocadas una al lado de la otra, reciben la misma cantidad. La diferencia está en la fracción que cada superficie absorbe o refleja una vez que la luz llega.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Imagina que el color actúa sobre la luz antes de que llegue a la superficie."
+      },
+      {
+        "clave": "D",
+        "texto": "El aluminio pulido se mantiene frío porque el metal conduce el calor hacia el suelo con mucha rapidez, mientras que la pintura, de cualquier color, aísla la lámina e impide esa pérdida; las diferencias entre colores se deben a pequeñas variaciones en el grosor de la pintura.",
+        "correcta": false,
+        "explicacion": "No responde. Todas las láminas eran del mismo metal y se apoyaban igual, así que conducían el calor por igual. Las diferencias entre negra, roja y blanca (58, 50 y 38 °C) son demasiado grandes para explicarse con el grosor de la pintura; se explican por la absorción de la radiación según el color.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Busca en la conducción y en detalles menores la causa de una diferencia debida al color."
+      }
+    ],
+    "explicacion": "LEER: tras 30 minutos al sol, con aire a 28 °C, la lámina negra mate llegó a 58 °C, la roja a 50 °C, la blanca a 38 °C y el aluminio pulido a 35 °C; las láminas eran iguales y estaban juntas. COMPRENDER: se pide explicar las diferencias de temperatura. INTERPRETAR: todas reciben la misma radiación solar; la diferencia está en la fracción que absorben frente a la que reflejan. REPRESENTAR: superficie oscura y mate → alta absorción → mucha energía térmica → 58 °C; superficie clara o pulida → alta reflexión → poca energía absorbida → 35 a 38 °C, cerca del aire. RAZONAR: el aire a 28 °C no puede calentar nada por encima de 28 °C; la energía extra proviene de la radiación absorbida. RESOLVER: la respuesta es la opción que relaciona color y acabado con absorción y reflexión de la radiación. VERIFICAR: la pintura más gruesa no explica superar la temperatura del aire; los colores no atraen la luz; la conducción era igual en todas las láminas.",
+    "que_identificar": "Que las láminas iguales y expuestas al mismo sol alcanzan temperaturas muy distintas según su color y acabado.",
+    "que_revisar": "Transferencia de calor por radiación; absorción y reflexión según el color; aplicaciones en construcción y ropa.",
+    "refuerzo_ids": ["CIE-150","CIE-031"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["radiacion","absorcion","color","calor","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-196",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Usa información adicional para evaluar una predicción",
+    "habilidad": "verificar",
+    "tema": "Microbiología: conservación de alimentos",
+    "subtema": "Crecimiento bacteriano en pollo crudo según la temperatura de almacenamiento",
+    "dificultad": 1,
+    "contexto": "Un restaurante quiere saber cuánto tiempo puede guardar pollo crudo antes de cocinarlo. Un estudiante de gastronomía predijo: \"En la nevera a 4 °C las bacterias dejan de reproducirse por completo, así que el pollo puede guardarse ahí el tiempo que sea\". Para comprobarlo, un laboratorio contó las bacterias presentes en muestras de pollo guardadas a tres temperaturas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Bacterias por gramo de pollo crudo según la temperatura y el tiempo de almacenamiento",
+      "columnas": ["Temperatura","Al inicio","A las 12 horas","A las 24 horas","A las 48 horas"],
+      "filas": [
+        ["4 °C (nevera)","1 000","1 500","2 500","6 000"],
+        ["15 °C (cocina fresca)","1 000","20 000","400 000","8 000 000"],
+        ["25 °C (ambiente cálido)","1 000","500 000","250 000 000","más de 1 000 000 000"]
+      ],
+      "nota": "Se considera riesgoso para la salud un pollo con más de 1 000 000 de bacterias por gramo."
+    },
+    "enunciado": "¿Qué indican los datos acerca de la predicción del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción es correcta, porque a 4 °C el pollo nunca superó el límite de riesgo en las 48 horas de la prueba, lo que demuestra que en la nevera las bacterias no se reproducen y el pollo se conserva de manera indefinida.",
+        "correcta": false,
+        "explicacion": "No responde. A 4 °C las bacterias sí se reprodujeron: pasaron de 1 000 a 6 000 por gramo en 48 horas (se multiplicaron por seis). Que no se superara el límite en dos días no demuestra que el pollo dure indefinidamente; si siguen creciendo, lo alcanzarán tarde o temprano.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde crecimiento lento con ausencia de crecimiento y extrapola más allá de los datos."
+      },
+      {
+        "clave": "B",
+        "texto": "La predicción es incorrecta, porque a 4 °C las bacterias crecieron más rápido que a 15 °C durante las primeras horas, lo que indica que el frío las estimula y que el pollo se conserva mejor a temperatura ambiente, como se hacía antes de existir las neveras.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra lo contrario: a las 12 horas había 1 500 bacterias por gramo a 4 °C y 20 000 a 15 °C; a las 48 horas, 6 000 frente a 8 000 000. El frío reduce mucho el crecimiento; a temperatura ambiente el pollo fue riesgoso en menos de 24 horas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó al revés las filas de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "La predicción no se puede evaluar, porque el laboratorio solo midió hasta 48 horas y el estudiante habló de un tiempo indefinido; sería necesario repetir el conteo durante varios meses a 4 °C para saber si las bacterias se detienen en algún momento.",
+        "correcta": false,
+        "explicacion": "No responde. La predicción tiene dos partes y la primera, que las bacterias dejan de reproducirse por completo a 4 °C, ya queda refutada: se multiplicaron por seis en 48 horas. No hace falta esperar meses para concluir que el frío no detiene el crecimiento, solo lo frena.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Considera que ningún dato parcial puede refutar una afirmación general."
+      },
+      {
+        "clave": "D",
+        "texto": "La predicción es incorrecta: a 4 °C las bacterias se reproducen más despacio, pero no se detienen (pasaron de 1 000 a 6 000 en 48 horas), así que la refrigeración alarga el tiempo seguro de conservación sin hacerlo ilimitado; a 15 °C y 25 °C el límite de riesgo se superó en menos de 48 y de 24 horas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. A 4 °C el conteo creció de 1 000 a 6 000 por gramo: lento, pero no nulo, lo que refuta que las bacterias dejen de reproducirse. A 15 °C se superó el millón entre las 24 y 48 horas y a 25 °C antes de las 24 horas. La nevera gana tiempo, pero no conserva el pollo indefinidamente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: a 4 °C las bacterias pasan de 1 000 a 1 500, 2 500 y 6 000 por gramo en 48 horas; a 15 °C llegan a 8 000 000 y a 25 °C a más de 1 000 000 000; el límite de riesgo es 1 000 000; el estudiante predijo que a 4 °C las bacterias dejan de reproducirse por completo. COMPRENDER: se pide evaluar la predicción con los datos. INTERPRETAR: a 4 °C el número sí aumenta, aunque despacio; a mayor temperatura el crecimiento es explosivo. REPRESENTAR: 4 °C: ×6 en 48 h, por debajo del límite; 15 °C: límite superado entre 24 y 48 h; 25 °C: límite superado antes de 24 h. RAZONAR: el frío frena el crecimiento pero no lo detiene; si el conteo sigue subiendo, el pollo no puede guardarse indefinidamente. RESOLVER: la respuesta es la opción que rechaza la predicción y reconoce que la refrigeración alarga, sin hacer ilimitado, el tiempo seguro. VERIFICAR: la opción que acepta la predicción confunde lento con nulo; la del frío estimulante invierte la tabla; la que pide meses de datos ignora que la primera parte ya fue refutada.",
+    "que_identificar": "Que la fila de 4 °C aumenta aunque lentamente y en qué momento cada temperatura supera el millón de bacterias por gramo.",
+    "que_revisar": "Crecimiento de poblaciones bacterianas; efecto de la temperatura; conservación de alimentos; evaluación de predicciones.",
+    "refuerzo_ids": ["CIE-028","CIE-126"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["bacterias","conservacion de alimentos","temperatura","indagacion","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-197",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Reconoce posibles cambios en el entorno por la explotación de un recurso o el uso de una tecnología",
+    "habilidad": "interpretar",
+    "tema": "Hidroeléctricas y ecosistemas de río: caudal y reproducción de peces",
+    "subtema": "Regulación del caudal por una represa y pérdida de la creciente que desencadena el desove del bocachico",
+    "dificultad": 2,
+    "contexto": "Aguas abajo de una represa construida para generar electricidad, los pescadores de un río reportaron que el bocachico casi dejó de reproducirse. Este pez desova cuando el río crece con fuerza al comienzo de la temporada de lluvias; esa creciente inunda las ciénagas y planicies donde las larvas encuentran alimento y refugio. La represa guarda agua en la época de lluvias y la libera de manera uniforme todo el año para producir energía constante.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Caudal mensual promedio del río antes y después de la represa (m³/s)",
+      "columnas": ["Mes","Caudal antes de la represa","Caudal después de la represa"],
+      "filas": [
+        ["Enero",150,420],
+        ["Marzo",120,420],
+        ["Mayo",900,450],
+        ["Julio",600,430],
+        ["Septiembre",400,420],
+        ["Noviembre",800,440]
+      ],
+      "nota": "Caudales medidos 20 km aguas abajo de la represa."
+    },
+    "enunciado": "Según la tabla y la información sobre el bocachico, ¿qué cambio en el río explica la caída de su reproducción?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La represa eliminó las crecientes de mayo y noviembre: el caudal, que antes subía hasta 900 m³/s y luego bajaba a 120 m³/s, ahora se mantiene entre 420 y 450 m³/s todo el año, de modo que no se produce la señal de creciente ni la inundación de las ciénagas que el pez necesita para desovar y para criar sus larvas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Antes, el caudal variaba de 120 a 900 m³/s con picos en mayo y noviembre; después se mantiene casi constante (420 a 450 m³/s). El bocachico desova con la creciente fuerte y sus larvas dependen de las ciénagas inundadas; sin picos no hay señal de desove ni planicies inundadas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La represa redujo el agua total del río: al sumar los caudales de la tabla se observa que después de la represa pasa menos agua en el año, así que los peces tienen menos espacio y menos oxígeno para vivir y por eso ya casi no se reproducen aguas abajo.",
+        "correcta": false,
+        "explicacion": "No responde. La suma de los seis caudales de la tabla es casi igual antes (2 970 m³/s) y después (2 580 m³/s) de la represa, y en los meses secos incluso pasa más agua que antes (420 frente a 120 o 150 m³/s). El problema no es la cantidad total de agua, sino la pérdida de su variación.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone una reducción del caudal total sin comparar los valores de la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "La represa aumentó el caudal de los meses secos: en enero y marzo ahora pasan 420 m³/s en vez de 150 y 120, y ese exceso de agua fría proveniente del fondo del embalse arrastra los huevos del bocachico antes de que puedan desarrollarse en las orillas.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que el caudal de los meses secos aumentó, pero el contexto indica que el bocachico desova con la creciente de las lluvias, no en enero o marzo; y la tabla no da datos de temperatura. La causa señalada por el contexto es la desaparición de las crecientes.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Se concentra en el cambio de los meses secos y añade un dato de temperatura que la tabla no tiene."
+      },
+      {
+        "clave": "D",
+        "texto": "La represa bloquea físicamente el paso de los peces, que ya no pueden subir río arriba a buscar las zonas de desove; el caudal uniforme de la tabla no influye en la reproducción, porque el bocachico se reproduce en cualquier mes si encuentra agua suficiente.",
+        "correcta": false,
+        "explicacion": "No responde. El muro puede ser una barrera para algunas especies, pero el contexto describe un pez que desova solo con la creciente y necesita las ciénagas inundadas; afirmar que se reproduce en cualquier mes contradice esa información, y la tabla sí muestra la pérdida de la creciente.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora el dato del contexto sobre cuándo y por qué desova el pez."
+      }
+    ],
+    "explicacion": "LEER: antes de la represa el caudal variaba entre 120 m³/s (marzo) y 900 m³/s (mayo), con otro pico en noviembre (800); después se mantiene entre 420 y 450 m³/s todo el año; el bocachico desova con la creciente fuerte y sus larvas dependen de las ciénagas inundadas. COMPRENDER: se pide el cambio del río que explica la caída de la reproducción. INTERPRETAR: la represa no quitó el agua, quitó su variación: ya no hay crecientes ni estiajes. REPRESENTAR: antes: creciente de mayo → señal de desove + inundación de ciénagas → larvas con alimento y refugio; después: caudal plano → sin señal → sin ciénagas inundadas → sin reproducción. RAZONAR: el ciclo de vida del pez está acoplado al pulso de inundación, que la regulación para generar energía constante eliminó. RESOLVER: la respuesta es la opción que identifica la pérdida de las crecientes. VERIFICAR: el total de agua es similar; los meses secos no son la época de desove y no hay datos de temperatura; el pez no se reproduce en cualquier mes.",
+    "que_identificar": "Los picos de caudal de mayo y noviembre antes de la represa y el caudal casi constante después.",
+    "que_revisar": "Efectos de las represas en los ecosistemas de río; pulsos de inundación; ciclos reproductivos acoplados al ambiente; costos y beneficios de la energía hidroeléctrica.",
+    "refuerzo_ids": ["CIE-020","CIE-139"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["hidroelectrica","caudal","peces","ecosistemas","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-198",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modela fenómenos de la naturaleza basado en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Identifica y usa modelos químicos para comprender fenómenos particulares de la naturaleza",
+    "habilidad": "representar",
+    "tema": "Mezclas: emulsiones y emulsionantes",
+    "subtema": "Por qué la vinagreta se separa y la mayonesa no: moléculas con una parte afín al agua y otra afín al aceite",
+    "dificultad": 2,
+    "contexto": "En una clase de cocina, los estudiantes prepararon dos mezclas. La **vinagreta** (aceite y vinagre batidos) se veía uniforme al terminar de batir, pero en cinco minutos se separó en dos capas: aceite arriba y vinagre abajo. La **mayonesa** (aceite, vinagre y yema de huevo batidos) se mantuvo uniforme durante días. La yema de huevo contiene lecitina, una molécula que tiene un extremo afín al agua y otro extremo afín al aceite. El aceite y el agua no se mezclan porque las moléculas de agua se atraen con fuerza entre sí y no con las del aceite.",
+    "estimulo": null,
+    "enunciado": "¿Cuál modelo explica mejor por qué la mayonesa permanece uniforme y la vinagreta se separa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En la mayonesa la yema reacciona con el aceite y lo transforma en una sustancia soluble en vinagre, de modo que deja de haber aceite como tal; en la vinagreta no hay con qué transformarlo y el aceite, más liviano, termina flotando sobre el vinagre.",
+        "correcta": false,
+        "explicacion": "No responde. En la mayonesa el aceite sigue siendo aceite: no ocurre una reacción que lo convierta en otra sustancia, y por eso la mayonesa es grasosa. Lo que cambia es la forma en que las gotas de aceite quedan rodeadas y dispersas gracias a la lecitina, sin transformación química.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta la estabilidad de la mezcla como el resultado de una reacción química."
+      },
+      {
+        "clave": "B",
+        "texto": "La yema de huevo es más densa que el aceite y que el vinagre, así que al mezclarse se queda en el medio y forma una capa que impide que el aceite suba y el vinagre baje; en la vinagreta no hay esa capa intermedia y las dos fases se reacomodan por su densidad.",
+        "correcta": false,
+        "explicacion": "No responde. Si la yema solo formara una capa intermedia, la mayonesa tendría tres capas, no un aspecto uniforme. La estabilidad proviene de que la lecitina rodea cada gota de aceite y la mantiene dispersa en el vinagre, tal como permite deducir la descripción de su molécula.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Explica con capas por densidad una mezcla que se observa uniforme."
+      },
+      {
+        "clave": "C",
+        "texto": "Al batir, el aceite se divide en gotas diminutas; en la mayonesa las moléculas de lecitina se colocan en la superficie de cada gota con su extremo afín al aceite hacia adentro y el afín al agua hacia afuera, de modo que las gotas quedan rodeadas de una capa compatible con el vinagre y no se vuelven a juntar; en la vinagreta nada las separa y se unen hasta formar una capa.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La lecitina, con un extremo afín al agua y otro al aceite, actúa como emulsionante: recubre las gotas de aceite y les da una superficie que el vinagre acepta, impidiendo que se junten. En la vinagreta las gotas chocan, se unen y, por ser el aceite menos denso, forman la capa superior.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Batir con yema introduce mucho más aire en la mezcla, y las burbujas de aire sostienen las gotas de aceite y les impiden subir; la vinagreta, al tener menos aire atrapado, deja que el aceite flote hasta la superficie en pocos minutos y se separe del vinagre.",
+        "correcta": false,
+        "explicacion": "No responde. Las burbujas de aire escapan de un líquido en minutos y no podrían sostener la mezcla durante días; además, el contexto no menciona aire, sino la lecitina y sus dos extremos de distinta afinidad, que es la clave para que las gotas de aceite permanezcan dispersas.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye la estabilidad a un factor no descrito e incapaz de durar días."
+      }
+    ],
+    "explicacion": "LEER: la vinagreta (aceite y vinagre) se separa en cinco minutos; la mayonesa (aceite, vinagre y yema) se mantiene uniforme por días; la yema aporta lecitina, con un extremo afín al agua y otro afín al aceite; el agua y el aceite no se mezclan por la atracción entre moléculas de agua. COMPRENDER: se pide un modelo que explique la diferencia de estabilidad. INTERPRETAR: al batir, el aceite se dispersa en gotas; la pregunta es qué impide que se reúnan. REPRESENTAR: gota de aceite rodeada de moléculas de lecitina con el extremo afín al aceite hacia adentro y el afín al agua hacia afuera: la gota queda con una superficie compatible con el vinagre y no se une a otras. RAZONAR: sin lecitina, las gotas se unen al chocar y el aceite, menos denso, forma la capa superior; con lecitina, la emulsión es estable. RESOLVER: la respuesta es la opción que describe la lecitina recubriendo las gotas con la orientación adecuada. VERIFICAR: no hay reacción que transforme el aceite; la yema no forma una capa intermedia; el aire no sostiene una mezcla durante días.",
+    "que_identificar": "La propiedad de la lecitina descrita en el contexto (dos extremos con distinta afinidad) y la diferencia de comportamiento entre las dos mezclas.",
+    "que_revisar": "Mezclas heterogéneas y emulsiones; sustancias polares y no polares; agentes emulsionantes y tensoactivos.",
+    "refuerzo_ids": ["CIE-094","CIE-154"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["emulsiones","mezclas","polaridad","cocina"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-199",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "verificar",
+    "tema": "Magnetismo: materiales atraídos por imanes",
+    "subtema": "Evaluación de la conclusión de que todos los metales son atraídos por un imán",
+    "dificultad": 1,
+    "contexto": "En una clase se entregó a los estudiantes un imán y una caja con objetos de distintos materiales. Debían acercar el imán a cada objeto, anotar si era atraído y luego proponer una conclusión. Un estudiante concluyó: \"El imán atrae a todos los metales y no atrae a los materiales que no son metales\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Objetos probados con el imán",
+      "columnas": ["Objeto","Material","¿Es atraído por el imán?"],
+      "filas": [
+        ["Clavo","Hierro","Sí"],
+        ["Moneda antigua","Cobre","No"],
+        ["Lata de gaseosa","Aluminio","No"],
+        ["Tornillo","Acero","Sí"],
+        ["Llave","Latón (cobre y zinc)","No"],
+        ["Lámina pequeña","Níquel","Sí"],
+        ["Regla","Plástico","No"],
+        ["Corcho","Madera","No"]
+      ],
+      "nota": "Todos los objetos estaban limpios y secos."
+    },
+    "enunciado": "¿Qué se puede decir de la conclusión del estudiante a la luz de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La conclusión es correcta, porque todos los objetos atraídos (clavo, tornillo y lámina) son metálicos y ninguno de los no metálicos (regla y corcho) fue atraído; los casos del cobre, el aluminio y el latón se deben a que esos objetos tenían pintura o suciedad que bloqueó al imán.",
+        "correcta": false,
+        "explicacion": "No responde. La nota indica que los objetos estaban limpios, y una capa de pintura no impide que un imán atraiga a un material magnético. El cobre, el aluminio y el latón son metales que no fueron atraídos: contradicen la primera parte de la conclusión.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Descarta los datos que contradicen la hipótesis con una excusa no respaldada."
+      },
+      {
+        "clave": "B",
+        "texto": "La conclusión es incorrecta en su primera parte: el cobre, el aluminio y el latón son metales y no fueron atraídos, así que el imán no atrae a todos los metales sino a algunos, como el hierro, el acero (que contiene hierro) y el níquel; la segunda parte sí concuerda con los datos de la regla y el corcho.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Tres metales de la tabla (cobre, aluminio y latón) no fueron atraídos, lo que basta para refutar que el imán atrae a todos los metales. Los atraídos fueron hierro, acero y níquel. Los no metales probados (plástico y madera) no fueron atraídos, en acuerdo con la segunda parte.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La conclusión es incorrecta porque el imán solo atrae a los objetos alargados y puntiagudos, como el clavo y el tornillo, y la lámina de níquel fue atraída por ser muy liviana; la forma del objeto, y no su material, es lo que determina la atracción.",
+        "correcta": false,
+        "explicacion": "No responde. La llave de latón también es alargada y no fue atraída, y la moneda de cobre es tan liviana como la lámina de níquel y tampoco. Los datos ordenados por material muestran que lo que decide la atracción es de qué está hecho el objeto, no su forma o peso.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Busca un patrón en la forma de los objetos sin comprobarlo con todos los casos."
+      },
+      {
+        "clave": "D",
+        "texto": "La conclusión es correcta si se tiene en cuenta que el cobre, el aluminio y el latón no son metales verdaderos sino aleaciones blandas; los únicos metales puros de la caja eran el hierro, el acero y el níquel, y los tres fueron atraídos, como afirma el estudiante.",
+        "correcta": false,
+        "explicacion": "No responde. El cobre y el aluminio son elementos metálicos puros, y el acero es una aleación (hierro con carbono), de modo que la clasificación propuesta es falsa. Lo que distingue a los atraídos es que contienen hierro o níquel, materiales magnéticos, no su pureza.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Redefine qué es un metal para salvar la conclusión."
+      }
+    ],
+    "explicacion": "LEER: fueron atraídos el clavo (hierro), el tornillo (acero) y la lámina (níquel); no fueron atraídos la moneda (cobre), la lata (aluminio), la llave (latón), la regla (plástico) ni el corcho (madera); el estudiante concluye que el imán atrae a todos los metales y a ningún no metal. COMPRENDER: se pide evaluar esa conclusión con la tabla. INTERPRETAR: basta un metal no atraído para refutar la primera parte; la segunda parte se compara con los no metales probados. REPRESENTAR: metales atraídos: hierro, acero, níquel; metales no atraídos: cobre, aluminio, latón; no metales: ninguno atraído. RAZONAR: la primera parte de la conclusión es falsa (tres contraejemplos); la segunda concuerda con los dos no metales probados. RESOLVER: la respuesta es la opción que señala los metales no atraídos y mantiene la segunda parte. VERIFICAR: la pintura no explica los contraejemplos y los objetos estaban limpios; la forma no ordena los datos (la llave alargada no fue atraída); el cobre y el aluminio son metales puros.",
+    "que_identificar": "Qué objetos metálicos de la tabla no fueron atraídos y qué tienen en común los que sí lo fueron.",
+    "que_revisar": "Materiales magnéticos (hierro, níquel, cobalto y sus aleaciones); metales no magnéticos; uso de contraejemplos para evaluar conclusiones.",
+    "refuerzo_ids": ["CIE-071","CIE-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["magnetismo","materiales","indagacion","conclusiones","tabla"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-200",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica características de algunos procesos que se da en los ecosistemas para comprender la dinámica que se dan a su interior",
+    "habilidad": "interpretar",
+    "tema": "Biodiversidad: riqueza y equidad de especies",
+    "subtema": "Comparación de dos bosques con el mismo número de especies pero distinta distribución de individuos",
+    "dificultad": 3,
+    "contexto": "Para decidir cuál de dos fragmentos de bosque priorizar en un plan de conservación, un equipo contó los árboles de cada especie en parcelas iguales. La diversidad de una comunidad depende de dos aspectos: la riqueza (cuántas especies hay) y la equidad (qué tan repartidos están los individuos entre las especies). Un índice de diversidad usado por el equipo vale cerca de 0 cuando casi todos los individuos pertenecen a una sola especie y se acerca a 1 cuando los individuos están repartidos por igual entre muchas especies.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Árboles contados por especie en dos fragmentos de bosque (100 árboles cada uno)",
+      "columnas": ["Especie","Fragmento 1","Fragmento 2"],
+      "filas": [
+        ["Guadua",96,20],
+        ["Cedro",1,20],
+        ["Yarumo",1,20],
+        ["Guayacán",1,20],
+        ["Nogal",1,20],
+        ["Índice de diversidad",0.08,0.80]
+      ],
+      "nota": "Parcelas del mismo tamaño muestreadas con el mismo método."
+    },
+    "enunciado": "¿Qué conclusión sobre la diversidad de los dos fragmentos se desprende de la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los dos fragmentos tienen la misma diversidad, porque en ambos se contaron 100 árboles repartidos en las mismas cinco especies; el índice de 0,08 del fragmento 1 debe ser un error de cálculo, ya que riqueza igual implica diversidad igual.",
+        "correcta": false,
+        "explicacion": "No responde. La riqueza es igual (cinco especies), pero la diversidad también depende de la equidad: en el fragmento 1, 96 de 100 árboles son de una sola especie, y el contexto indica que en ese caso el índice se acerca a 0. No hay error: refleja la baja equidad.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce la diversidad a la riqueza de especies e ignora la distribución de individuos."
+      },
+      {
+        "clave": "B",
+        "texto": "El fragmento 1 es más diverso, porque tiene una especie dominante muy abundante, la guadua, que indica un bosque maduro y bien establecido; el fragmento 2, con todas las especies en igual número, parece una siembra artificial y no un bosque natural.",
+        "correcta": false,
+        "explicacion": "No responde. Una especie que concentra el 96 % de los individuos reduce la equidad y, con ella, la diversidad (índice 0,08). La tabla no informa sobre la edad del bosque ni sobre si fue sembrado; esas afirmaciones no se desprenden de los datos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia dominancia con diversidad y añade interpretaciones sin apoyo en la tabla."
+      },
+      {
+        "clave": "C",
+        "texto": "El fragmento 2 es más diverso porque tiene más especies de árboles valiosos, como cedro, nogal y guayacán, mientras que el fragmento 1 está lleno de guadua, que no es un árbol; el índice de diversidad mide el valor comercial de la madera presente.",
+        "correcta": false,
+        "explicacion": "No responde. Ambos fragmentos tienen las mismas cinco especies, incluidas las maderables, y el índice no mide valor comercial sino cómo se reparten los individuos entre las especies, según define el contexto. La conclusión es correcta pero por razones equivocadas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta el índice con un criterio económico ajeno a su definición."
+      },
+      {
+        "clave": "D",
+        "texto": "Los dos fragmentos tienen la misma riqueza (cinco especies), pero el fragmento 2 es más diverso porque sus individuos están repartidos por igual entre las especies (índice 0,80), mientras que en el fragmento 1 casi todos son guadua y las otras especies están al borde de desaparecer (índice 0,08).",
+        "correcta": true,
+        "explicacion": "Es la correcta. Riqueza igual: cinco especies en cada fragmento. Equidad distinta: en el fragmento 2 cada especie tiene 20 individuos (índice 0,80, cercano a 1); en el fragmento 1 la guadua tiene 96 y las demás solo 1 (índice 0,08, cercano a 0). La diversidad combina ambos aspectos, y por eso el fragmento 2 es más diverso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cada fragmento tiene 100 árboles de las mismas cinco especies; en el fragmento 1 la guadua tiene 96 y las otras cuatro especies 1 cada una (índice 0,08); en el fragmento 2 cada especie tiene 20 (índice 0,80); el contexto define riqueza, equidad y el significado del índice. COMPRENDER: se pide la conclusión sobre la diversidad de ambos fragmentos. INTERPRETAR: la riqueza es la misma; lo que cambia es la equidad. REPRESENTAR: fragmento 1: 96/1/1/1/1 → dominancia extrema → índice cercano a 0; fragmento 2: 20/20/20/20/20 → reparto uniforme → índice cercano a 1. RAZONAR: con igual riqueza, la comunidad más equitativa es la más diversa, y en el fragmento 1 cuatro especies están representadas por un solo individuo, en riesgo de desaparecer. RESOLVER: la respuesta es la opción que distingue riqueza igual y equidad distinta y concluye que el fragmento 2 es más diverso. VERIFICAR: igual riqueza no implica igual diversidad; la dominancia no indica mayor diversidad; el índice no mide valor comercial.",
+    "que_identificar": "Que ambos fragmentos tienen cinco especies y 100 árboles, pero difieren en cómo se reparten los individuos y en el índice.",
+    "que_revisar": "Biodiversidad: riqueza y equidad; índices de diversidad; dominancia de especies; criterios para priorizar la conservación.",
+    "refuerzo_ids": ["CIE-056","CIE-146"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 160,
+    "etiquetas": ["biodiversidad","riqueza","equidad","conservacion","tabla"],
+    "estado": "aprobada"
+  }
+]

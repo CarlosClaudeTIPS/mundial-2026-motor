@@ -1,0 +1,2112 @@
+[
+  {
+    "id": "CIE-161",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica características de algunos procesos que se dan en los organismos para comprender la dinámica de lo vivo",
+    "habilidad": "interpretar",
+    "tema": "Homeostasis: termorregulación",
+    "subtema": "Animales endotermos y ectotermos: temperatura corporal frente a la temperatura ambiente",
+    "dificultad": 1,
+    "contexto": "En un laboratorio de biología, un grupo de estudiantes midió la temperatura corporal de un lagarto y de un ratón después de mantener a cada animal durante dos horas en cámaras con distinta temperatura ambiente. Ambos animales tenían agua y alimento disponibles.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Temperatura corporal de dos animales según la temperatura ambiente",
+      "columnas": [
+        "Temperatura ambiente (°C)",
+        "Temperatura corporal del lagarto (°C)",
+        "Temperatura corporal del ratón (°C)"
+      ],
+      "filas": [
+        [
+          10,
+          12,
+          37
+        ],
+        [
+          20,
+          21,
+          36.9
+        ],
+        [
+          30,
+          30.5,
+          37.1
+        ]
+      ],
+      "nota": "Promedio de tres mediciones por animal en cada cámara."
+    },
+    "enunciado": "De acuerdo con la tabla, ¿qué característica distingue la regulación de la temperatura del ratón de la del lagarto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El ratón calienta su cuerpo con el calor del ambiente, mientras que el lagarto produce calor interno; por eso el lagarto se mantiene siempre más frío que el ratón. Esta diferencia se mantiene en las tres cámaras de la tabla.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra lo contrario: la temperatura del lagarto sigue a la del ambiente (12, 21 y 30,5 °C), lo que indica que depende del calor externo, mientras el ratón se mantiene cerca de 37 °C sin importar la cámara.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió las columnas de los dos animales al leer la tabla."
+      },
+      {
+        "clave": "B",
+        "texto": "El ratón mantiene una temperatura casi constante de unos 37 °C gracias al calor que produce su propio metabolismo, mientras que la temperatura del lagarto cambia con la del ambiente.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Entre 10 y 30 °C el ratón varía apenas entre 36,9 y 37,1 °C: regula internamente su temperatura (endotermo). El lagarto pasa de 12 a 30,5 °C siguiendo al ambiente: depende del calor externo (ectotermo).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los dos animales regulan su temperatura de la misma manera, pero el ratón tiene más pelo, de modo que el aislamiento del pelaje explica por completo la diferencia entre las columnas.",
+        "correcta": false,
+        "explicacion": "No responde. Si solo cambiara el aislamiento, la temperatura del ratón también subiría o bajaría con el ambiente, aunque más lentamente; la tabla muestra que se mantiene en 37 °C, lo que exige producción interna de calor y mecanismos de regulación.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye todo a una barrera pasiva sin considerar la producción metabólica de calor."
+      },
+      {
+        "clave": "D",
+        "texto": "El lagarto regula su temperatura mejor que el ratón, porque la ajusta a cada ambiente y así gasta menos energía, mientras que el ratón no logra cambiar su temperatura en ninguna cámara.",
+        "correcta": false,
+        "explicacion": "No responde. Que el ratón no cambie de temperatura es precisamente la evidencia de que la regula; el lagarto no la ajusta activamente, sino que su cuerpo se enfría o se calienta con el aire que lo rodea, como muestran las tres filas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta la variación como regulación y la constancia como incapacidad de regular."
+      }
+    ],
+    "explicacion": "LEER: la tabla registra la temperatura corporal de un lagarto y un ratón a 10, 20 y 30 °C de temperatura ambiente. COMPRENDER: se pide qué distingue la regulación térmica de los dos animales. INTERPRETAR: la columna del lagarto cambia casi igual que el ambiente (12 → 21 → 30,5 °C); la del ratón se queda entre 36,9 y 37,1 °C. REPRESENTAR: lagarto: temperatura corporal ≈ temperatura ambiente; ratón: ≈ 37 °C constante. RAZONAR: mantener 37 °C en una cámara a 10 °C solo es posible si el animal produce calor internamente y lo conserva (endotermo); el lagarto depende del calor externo (ectotermo). RESOLVER: la respuesta es la opción que describe al ratón con temperatura casi constante por su metabolismo y al lagarto variando con el ambiente. VERIFICAR: la opción que invierte los papeles contradice la tabla; la del pelaje no explica la constancia a 10 °C; la que llama regulación a seguir el ambiente confunde los conceptos.",
+    "que_identificar": "Que una columna de la tabla se mantiene constante y la otra cambia junto con la temperatura ambiente.",
+    "que_revisar": "Homeostasis; termorregulación; animales endotermos y ectotermos; metabolismo y producción de calor.",
+    "refuerzo_ids": [
+      "CIE-050",
+      "CIE-122"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "homeostasis",
+      "termorregulacion",
+      "endotermos",
+      "ectotermos",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-162",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un sistema, argumentando a partir de los modelos básicos de ondas",
+    "habilidad": "razonar",
+    "tema": "Óptica: reflexión en espejos planos",
+    "subtema": "Tamaño mínimo de un espejo para verse de cuerpo entero y su independencia de la distancia",
+    "dificultad": 2,
+    "contexto": "Un almacén de espejos quiere ofrecer un espejo de pared en el que una persona pueda verse de cuerpo entero. Para decidir la altura mínima, un técnico pidió a tres personas de distinta estatura que se pararan frente a un espejo vertical y fue tapando la parte superior e inferior hasta encontrar la franja mínima con la que cada una seguía viéndose desde la cabeza hasta los pies. Repitió la medida a 1 m y a 3 m del espejo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Altura mínima del espejo para verse de cuerpo entero",
+      "columnas": [
+        "Estatura de la persona (cm)",
+        "Altura mínima del espejo a 1 m (cm)",
+        "Altura mínima del espejo a 3 m (cm)"
+      ],
+      "filas": [
+        [
+          150,
+          75,
+          75
+        ],
+        [
+          170,
+          85,
+          85
+        ],
+        [
+          190,
+          95,
+          95
+        ]
+      ],
+      "nota": "El espejo está colgado verticalmente y su borde inferior se ajusta en cada medida."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que la altura mínima del espejo sea la mitad de la estatura y no cambie con la distancia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El espejo reduce a la mitad el tamaño de todo lo que refleja, así que la imagen de la persona siempre mide la mitad de su estatura, sin importar desde dónde la mire.",
+        "correcta": false,
+        "explicacion": "No responde. Un espejo plano forma una imagen del mismo tamaño que el objeto, no reducida; lo que mide la mitad es la franja de espejo necesaria, porque los rayos que llegan al ojo se reflejan a mitad de camino entre el ojo y cada punto del cuerpo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el tamaño de la imagen con el tamaño del espejo necesario para verla."
+      },
+      {
+        "clave": "B",
+        "texto": "Al alejarse, la imagen se hace más pequeña y cabe en menos espejo, pero al mismo tiempo el ojo ve menos detalle; los dos efectos se cancelan y por eso la medida no cambia con la distancia.",
+        "correcta": false,
+        "explicacion": "No responde. La imagen en un espejo plano se forma detrás del espejo a la misma distancia que la persona y conserva su tamaño; la tabla no muestra ninguna compensación de efectos, sino una altura que depende solo de la estatura.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa dos efectos opuestos para justificar un resultado que no entiende."
+      },
+      {
+        "clave": "C",
+        "texto": "La imagen se forma detrás del espejo a la misma distancia a la que está la persona, de modo que al alejarse la imagen también se aleja y se ve más pequeña; por eso el espejo necesario debería reducirse con la distancia, y la tabla solo muestra valores iguales porque el técnico redondeó.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que la imagen se aleja y se ve bajo un ángulo menor, pero el espejo también se ve bajo un ángulo menor en la misma proporción; la franja necesaria sigue siendo la mitad de la estatura. La tabla registra valores idénticos a 1 m y 3 m sin redondeo alguno.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que una imagen que se ve más pequeña necesita menos espejo y descarta los datos como redondeos."
+      },
+      {
+        "clave": "D",
+        "texto": "Como el ángulo de reflexión es igual al de incidencia, el rayo que sale de los pies llega al ojo tras tocar el espejo justo a media altura entre el ojo y los pies, y el de la cabeza a media altura entre el ojo y la cabeza; esos puntos medios dependen de la estatura, no de la distancia.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Por la ley de la reflexión, el punto del espejo donde se refleja el rayo que une un punto del cuerpo con el ojo está a la mitad de la altura entre ambos. La franja útil va desde la mitad entre ojo y pies hasta la mitad entre ojo y cabeza: su longitud es la mitad de la estatura y no cambia al alejarse, como muestra la tabla (75, 85 y 95 cm en ambas distancias).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra que personas de 150, 170 y 190 cm necesitan espejos de 75, 85 y 95 cm, tanto a 1 m como a 3 m. COMPRENDER: se pide explicar por qué la altura mínima es la mitad de la estatura y no depende de la distancia. INTERPRETAR: por la ley de la reflexión, el ángulo de incidencia es igual al de reflexión, y la imagen queda detrás del espejo a la misma distancia que la persona. REPRESENTAR: el rayo que va de los pies al ojo toca el espejo a media altura entre pies y ojo; el de la cabeza, a media altura entre cabeza y ojo. RAZONAR: la franja entre esos puntos mide la mitad de la estatura; al alejarse, los triángulos se ensanchan pero los puntos medios verticales no cambian. RESOLVER: la respuesta es la opción que usa la igualdad de ángulos y los puntos medios. VERIFICAR: la imagen reducida contradice que el espejo plano conserva el tamaño; los efectos que se cancelan no usan ningún principio; la opción del redondeo contradice las dos columnas idénticas.",
+    "que_identificar": "Que la altura mínima del espejo es exactamente la mitad de la estatura en cada fila y que es idéntica a 1 m y a 3 m.",
+    "que_revisar": "Ley de la reflexión; formación de imágenes en espejos planos; trazado de rayos.",
+    "refuerzo_ids": [
+      "CIE-070",
+      "CIE-131"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "optica",
+      "reflexion",
+      "espejo plano",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-163",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "razonar",
+    "tema": "Separación de mezclas: cromatografía en papel",
+    "subtema": "Comparación de tintas por el factor de retención de sus componentes",
+    "dificultad": 2,
+    "contexto": "En un colegio apareció una nota escrita con marcador negro. Para averiguar con cuál de tres marcadores del salón se escribió, los estudiantes hicieron una cromatografía en papel: pusieron un punto de cada tinta y un punto extraído de la nota sobre una tira de papel de filtro y dejaron subir alcohol como disolvente. El frente del disolvente avanzó 8,0 cm en todas las tiras. El factor de retención (Rf) de una mancha es la distancia que recorrió dividida entre la distancia que recorrió el disolvente.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Distancia recorrida por las manchas de cada tinta (frente del disolvente: 8,0 cm)",
+      "columnas": [
+        "Muestra",
+        "Mancha azul (cm)",
+        "Mancha roja (cm)",
+        "Mancha amarilla (cm)"
+      ],
+      "filas": [
+        [
+          "Marcador 1",
+          1.6,
+          4,
+          6.4
+        ],
+        [
+          "Marcador 2",
+          1.6,
+          "no aparece",
+          6.4
+        ],
+        [
+          "Marcador 3",
+          2.4,
+          4,
+          "no aparece"
+        ],
+        [
+          "Tinta de la nota",
+          1.6,
+          4,
+          6.4
+        ]
+      ],
+      "nota": "Todas las tiras se corrieron al mismo tiempo, con el mismo papel y el mismo disolvente."
+    },
+    "enunciado": "¿Qué conclusión está respaldada por los resultados de la cromatografía?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La tinta de la nota coincide con el marcador 1, porque presenta los mismos tres componentes con los mismos valores de Rf (0,20; 0,50 y 0,80), mientras que los otros dos marcadores carecen de alguno de ellos o lo tienen con otro Rf.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Rf de la nota: 1,6/8,0 = 0,20; 4,0/8,0 = 0,50; 6,4/8,0 = 0,80, iguales a los del marcador 1. El marcador 2 no tiene la mancha roja y el marcador 3 no tiene la amarilla y su azul tiene Rf 0,30, así que no coinciden.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La tinta de la nota coincide con el marcador 2, porque los dos comparten exactamente la mancha azul y la amarilla en 1,6 y 6,4 cm, y la mancha roja de la nota puede provenir de otra tinta mezclada en el papel de la nota. Además, los dos coinciden en el color de la tapa.",
+        "correcta": false,
+        "explicacion": "No responde. El marcador 2 no produce mancha roja y la nota sí la tiene en 4,0 cm; introducir una tinta adicional no observada es una suposición sin evidencia, mientras que el marcador 1 explica las tres manchas sin suponer nada.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Acepta una coincidencia parcial y rellena la diferencia con una hipótesis no comprobada."
+      },
+      {
+        "clave": "C",
+        "texto": "No es posible concluir nada, porque el frente del disolvente recorrió la misma distancia en todas las tiras y por eso el factor de retención resulta igual para todas las manchas, sin diferencias entre marcadores.",
+        "correcta": false,
+        "explicacion": "No responde. Que el disolvente avance 8,0 cm en todas las tiras es justamente lo que permite comparar: el Rf cambia porque cada mancha recorre una distancia distinta (1,6; 2,4; 4,0 o 6,4 cm), y esas diferencias sí distinguen a los marcadores.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la distancia del disolvente (constante) con la distancia de las manchas (variable)."
+      },
+      {
+        "clave": "D",
+        "texto": "La tinta de la nota coincide con el marcador 3, porque es el que tiene la mancha azul más alejada del punto de partida, y una mancha que avanza más indica que la tinta es más reciente, como la de la nota.",
+        "correcta": false,
+        "explicacion": "No responde. La distancia que recorre una mancha depende de la afinidad del componente con el disolvente y el papel, no de la antigüedad de la tinta; además, el azul del marcador 3 (2,4 cm) no coincide con el de la nota (1,6 cm).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye el avance de la mancha a una causa ajena a la cromatografía."
+      }
+    ],
+    "explicacion": "LEER: la tabla da la distancia recorrida por las manchas de tres marcadores y de la tinta de la nota, con el disolvente avanzando 8,0 cm. COMPRENDER: se pide la conclusión respaldada sobre qué marcador se usó. INTERPRETAR: dos tintas iguales se separan en los mismos componentes con los mismos Rf, porque cada componente tiene una afinidad fija con el papel y el disolvente. REPRESENTAR: Rf de la nota = 1,6/8 = 0,20; 4,0/8 = 0,50; 6,4/8 = 0,80. Marcador 1: 0,20; 0,50; 0,80. Marcador 2: sin roja. Marcador 3: azul 0,30 y sin amarilla. RAZONAR: solo el marcador 1 reproduce las tres manchas con los mismos valores. RESOLVER: la respuesta es la opción que identifica el marcador 1 por la coincidencia de los tres Rf. VERIFICAR: el marcador 2 carece de la roja; el marcador 3 carece de la amarilla y su azul es distinto; la opción que dice que no se puede concluir confunde la distancia del disolvente con la de las manchas.",
+    "que_identificar": "Que la tinta de la nota y el marcador 1 presentan las mismas tres manchas a las mismas distancias, y que los otros marcadores difieren en al menos una.",
+    "que_revisar": "Cromatografía en papel; factor de retención; separación de mezclas por diferencias de afinidad.",
+    "refuerzo_ids": [
+      "CIE-152",
+      "CIE-023"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "cromatografia",
+      "separacion de mezclas",
+      "indagacion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-164",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Establece relaciones entre fenómenos biológicos para comprender su entorno",
+    "habilidad": "comprender",
+    "tema": "Salud pública: dengue y criaderos de mosquitos",
+    "subtema": "Ciclo de vida del mosquito Aedes aegypti y control de criaderos en las viviendas",
+    "dificultad": 1,
+    "contexto": "En un municipio de clima cálido aumentaron los casos de dengue. Un equipo de salud visitó 200 viviendas y revisó los recipientes con agua. El mosquito transmisor pone sus huevos en agua limpia y quieta; los huevos se convierten en larvas acuáticas y, tras unos 7 a 10 días, emergen los mosquitos adultos, que son los que pican y transmiten el virus.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Recipientes con agua encontrados en 200 viviendas",
+      "columnas": [
+        "Tipo de recipiente",
+        "Recipientes con agua",
+        "Recipientes con larvas"
+      ],
+      "filas": [
+        [
+          "Tanques de almacenamiento sin tapa",
+          180,
+          95
+        ],
+        [
+          "Llantas y baldes en los patios",
+          120,
+          60
+        ],
+        [
+          "Floreros y platos de macetas",
+          150,
+          30
+        ],
+        [
+          "Tanques de almacenamiento con tapa",
+          90,
+          2
+        ]
+      ],
+      "nota": "Inspección realizada en una sola semana."
+    },
+    "enunciado": "Con base en el ciclo de vida descrito y en la tabla, ¿cuál medida en las viviendas interrumpe de manera más directa la reproducción del mosquito?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Fumigar los patios cada noche para matar a los mosquitos adultos, porque son ellos los que pican y transmiten el virus, mientras que los recipientes no participan en la transmisión.",
+        "correcta": false,
+        "explicacion": "No responde. Los recipientes sí participan: la tabla muestra que allí se desarrollan las larvas que se convertirán en nuevos adultos. Fumigar mata adultos de un día, pero cada semana emergen más de los 187 recipientes con larvas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se centra en la etapa adulta y pasa por alto la fase acuática del ciclo de vida."
+      },
+      {
+        "clave": "B",
+        "texto": "Hervir el agua de los floreros y las macetas antes de usarla, porque el calor elimina el virus del dengue que el mosquito deja en el agua y así se evita que las personas lo adquieran al tocarla.",
+        "correcta": false,
+        "explicacion": "No responde. El dengue se transmite por la picadura del mosquito adulto, no por contacto con el agua; además, los floreros y macetas son el grupo con menor proporción de larvas (30 de 150), no el principal criadero.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el virus se transmite por el agua y no por la picadura."
+      },
+      {
+        "clave": "C",
+        "texto": "Tapar los tanques de almacenamiento y eliminar las llantas y baldes con agua quieta, porque allí está la mayoría de las larvas y sin agua expuesta los huevos no completan su desarrollo hasta adultos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los tanques sin tapa (95 con larvas) y las llantas y baldes (60) concentran 155 de los 187 recipientes con larvas; los tanques con tapa casi no tienen (2 de 90). Quitar el agua expuesta corta la fase acuática del ciclo y no emergen nuevos adultos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Cambiar el agua de los tanques una vez al mes, porque las larvas tardan varias semanas en transformarse en adultos y así el agua se renueva antes de que terminen su desarrollo. Así se evita además desperdiciar agua en los lavados frecuentes.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que la fase acuática dura entre 7 y 10 días; un cambio mensual deja tiempo de sobra para que varias generaciones de larvas se conviertan en adultos. Lavar y tapar los tanques cada semana sí interrumpiría el ciclo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó la duración del ciclo (7 a 10 días) con la frecuencia de la medida propuesta."
+      }
+    ],
+    "explicacion": "LEER: el contexto describe el ciclo del mosquito (huevos en agua quieta, larvas durante 7 a 10 días, adultos que pican) y la tabla cuenta recipientes con agua y con larvas en 200 viviendas. COMPRENDER: se pide la medida que interrumpe más directamente la reproducción. INTERPRETAR: los criaderos principales son los tanques sin tapa (95 con larvas) y las llantas y baldes (60); los tanques con tapa casi no tienen (2 de 90). REPRESENTAR: agua expuesta → huevos → larvas (7-10 días) → adultos; sin agua expuesta no hay nuevos adultos. RAZONAR: la comparación entre tanques con y sin tapa muestra que tapar funciona; eliminar llantas y baldes quita el segundo criadero. RESOLVER: la respuesta es la opción que propone tapar tanques y eliminar llantas y baldes. VERIFICAR: fumigar adultos no detiene la emergencia semanal; hervir agua confunde la vía de transmisión; cambiar el agua cada mes es demasiado lento frente a un ciclo de 7 a 10 días.",
+    "que_identificar": "Qué recipientes concentran las larvas y cuánto dura la fase acuática del mosquito.",
+    "que_revisar": "Ciclo de vida de los insectos; enfermedades transmitidas por vectores; prevención del dengue.",
+    "refuerzo_ids": [
+      "CIE-036",
+      "CIE-138"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "dengue",
+      "salud publica",
+      "vectores",
+      "ciclo de vida",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-165",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Analiza la dinámica interna de los organismos y da razón de cómo funcionan sus componentes por separado y en conjunto para mantener la vida en el organismo",
+    "habilidad": "razonar",
+    "tema": "Plantas: fototropismo",
+    "subtema": "Papel de la punta del tallo y de las auxinas en la curvatura hacia la luz",
+    "dificultad": 2,
+    "contexto": "Un estudiante sembró plántulas de avena en cuatro macetas y las puso en una caja oscura con una sola ventana lateral por donde entraba luz. A cada grupo le hizo un tratamiento distinto y, después de tres días, anotó lo observado:\n\n- **Grupo 1** (sin tratamiento): los tallos se curvaron hacia la ventana.\n- **Grupo 2** (punta del tallo cubierta con una capucha opaca): los tallos crecieron rectos, sin curvarse.\n- **Grupo 3** (punta del tallo cortada): los tallos casi no crecieron y no se curvaron.\n- **Grupo 4** (base del tallo cubierta, punta descubierta): los tallos se curvaron hacia la ventana.\n\nEn todos los grupos la curvatura, cuando ocurrió, se produjo en la zona del tallo por debajo de la punta.",
+    "estimulo": null,
+    "enunciado": "¿Cuál explicación da cuenta de los resultados de los cuatro grupos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La punta del tallo detecta la luz y produce una sustancia que baja al tallo y se acumula en el lado sombreado; allí las células se alargan más que en el lado iluminado y el tallo se curva hacia la luz.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Si se tapa o se corta la punta, no hay detección ni sustancia (auxina) y no hay curvatura (grupos 2 y 3); si se tapa la base pero la punta queda libre, sí la hay (grupo 4). La curvatura ocurre debajo de la punta porque allí actúa la sustancia alargando las células del lado oscuro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La luz calienta el lado del tallo que la recibe y el calor hace que esas células se encojan; el tallo se inclina hacia la ventana porque el lado iluminado queda más corto que el lado sombreado.",
+        "correcta": false,
+        "explicacion": "No responde. Si fuera un efecto directo del calor sobre el tallo, el grupo 2 (punta cubierta, tallo expuesto) también se habría curvado, y no lo hizo. Los datos muestran que la respuesta depende de la punta, no del tallo iluminado.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone un mecanismo que no distingue entre los grupos 1 y 2 del experimento."
+      },
+      {
+        "clave": "C",
+        "texto": "Las raíces perciben de qué lado viene la luz a través del suelo y empujan el tallo hacia ella; cuando se corta la punta la planta pierde energía y por eso el grupo 3 deja de crecer y de curvarse.",
+        "correcta": false,
+        "explicacion": "No responde. Las raíces estaban igual en los cuatro grupos y la luz no atraviesa el suelo; además, en el grupo 2 las raíces estaban intactas y el tallo no se curvó, lo que descarta que ellas dirijan la respuesta.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye la percepción de la luz a un órgano que no estuvo involucrado en los tratamientos."
+      },
+      {
+        "clave": "D",
+        "texto": "La luz empuja físicamente el tallo con la presión que ejerce al chocar contra él; la capucha del grupo 2 impide ese empuje y el corte del grupo 3 debilita el tallo, por eso solo se curvan los grupos 1 y 4.",
+        "correcta": false,
+        "explicacion": "No responde. La presión de la luz es insignificante y, de existir, empujaría el tallo lejos de la ventana, no hacia ella. El grupo 4 recibe luz en la punta y se curva, lo que apunta a una señal biológica desde la punta y no a un empuje mecánico.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Busca una causa mecánica y no revisa en qué dirección actuaría."
+      }
+    ],
+    "explicacion": "LEER: con luz lateral, las plántulas sin tratamiento se curvan; con la punta cubierta no; con la punta cortada no crecen ni se curvan; con la base cubierta y la punta libre sí; la curvatura ocurre debajo de la punta. COMPRENDER: se pide una explicación coherente con los cuatro grupos. INTERPRETAR: la respuesta desaparece cuando la punta no recibe luz o no existe, y se conserva cuando solo la punta está expuesta: la punta detecta la luz. REPRESENTAR: punta iluminada → produce auxina → la auxina baja y se acumula en el lado sombreado → esas células se alargan más → el tallo se curva hacia la luz. RAZONAR: el modelo predice crecimiento recto en el grupo 2, falta de crecimiento en el grupo 3 y curvatura en el grupo 4. RESOLVER: la respuesta es la opción que describe la detección en la punta y la sustancia que alarga las células del lado sombreado. VERIFICAR: el calor directo no explica el grupo 2; las raíces no cambiaron entre grupos; la presión de la luz empujaría en sentido contrario.",
+    "que_identificar": "Que la curvatura solo ocurre cuando la punta del tallo recibe luz, independientemente de si el resto del tallo está cubierto.",
+    "que_revisar": "Hormonas vegetales (auxinas); fototropismo; diseño experimental con grupos de comparación.",
+    "refuerzo_ids": [
+      "CIE-143",
+      "CIE-123"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "fototropismo",
+      "auxinas",
+      "plantas",
+      "experimento"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-166",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica los diferentes tipos de fuerzas que actúan sobre los cuerpos que conforman un sistema",
+    "habilidad": "resolver",
+    "tema": "Gravitación: masa y peso",
+    "subtema": "Peso de un mismo objeto en cuerpos celestes con distinta aceleración gravitacional",
+    "dificultad": 1,
+    "contexto": "En una feria de ciencias, un grupo construyó una báscula que muestra el peso que tendría una persona en distintos cuerpos del sistema solar. La báscula mide la masa de la persona y la multiplica por la aceleración gravitacional del lugar elegido. Un visitante de 60 kg de masa probó la báscula.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Aceleración gravitacional en la superficie de cuatro cuerpos celestes",
+      "columnas": [
+        "Cuerpo celeste",
+        "Aceleración gravitacional (m/s²)"
+      ],
+      "filas": [
+        [
+          "Tierra",
+          9.8
+        ],
+        [
+          "Luna",
+          1.6
+        ],
+        [
+          "Marte",
+          3.7
+        ],
+        [
+          "Júpiter",
+          24.8
+        ]
+      ],
+      "nota": "Valores aproximados en la superficie o en el tope de las nubes, en el caso de Júpiter."
+    },
+    "enunciado": "¿Qué mostraría la báscula para el visitante de 60 kg al elegir la Luna y Júpiter, y cómo cambia su masa en cada caso?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Un peso de 96 N en la Luna y de 1 488 N en Júpiter; la masa también cambia en la misma proporción, porque la masa es la cantidad de materia que la gravedad del lugar le aporta al cuerpo.",
+        "correcta": false,
+        "explicacion": "No responde. Los pesos están bien calculados (60 × 1,6 = 96 N; 60 × 24,8 = 1 488 N), pero la masa es la cantidad de materia del cuerpo y no depende del lugar: el visitante sigue teniendo 60 kg en cualquier cuerpo celeste.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde masa con peso y cree que la masa depende de la gravedad."
+      },
+      {
+        "clave": "B",
+        "texto": "Un peso de 9,8 N en la Luna y de 60 N en Júpiter; la masa se mantiene en 60 kg, porque el peso se obtiene dividiendo la aceleración gravitacional entre la masa de la persona.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que la báscula multiplica la masa por la aceleración gravitacional, no que divide; además, 9,8 y 60 no resultan de ninguna operación con los datos de la Luna y de Júpiter de la tabla.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación entre peso, masa y gravedad y mezcló datos de distintas filas."
+      },
+      {
+        "clave": "C",
+        "texto": "Un peso de 588 N tanto en la Luna como en Júpiter; la masa se mantiene en 60 kg, porque el peso es una propiedad del cuerpo que la báscula calcula una sola vez con la gravedad de la Tierra. Por eso la lectura coincide con la que daría cualquier báscula casera.",
+        "correcta": false,
+        "explicacion": "No responde. 588 N es el peso en la Tierra (60 × 9,8). El peso es la fuerza con que cada cuerpo celeste atrae al visitante y cambia con la aceleración gravitacional del lugar; lo que no cambia es la masa.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trata el peso como una propiedad fija del cuerpo, igual que la masa."
+      },
+      {
+        "clave": "D",
+        "texto": "Un peso de 96 N en la Luna y de 1 488 N en Júpiter; la masa se mantiene en 60 kg en ambos casos, porque la masa es la cantidad de materia del cuerpo y el peso es la fuerza con que cada cuerpo celeste lo atrae.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Peso = masa × aceleración gravitacional: en la Luna 60 kg × 1,6 m/s² = 96 N y en Júpiter 60 kg × 24,8 m/s² = 1 488 N. La masa de 60 kg no cambia porque es la cantidad de materia del visitante; lo que cambia es la fuerza de atracción.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da la aceleración gravitacional de la Tierra (9,8), la Luna (1,6), Marte (3,7) y Júpiter (24,8 m/s²); el visitante tiene 60 kg de masa y la báscula multiplica masa por aceleración. COMPRENDER: se pide el peso en la Luna y en Júpiter, y qué pasa con la masa. INTERPRETAR: el peso es la fuerza gravitacional sobre el cuerpo y depende del lugar; la masa es la cantidad de materia y no depende del lugar. REPRESENTAR: P = m · g. Luna: 60 × 1,6 = 96 N. Júpiter: 60 × 24,8 = 1 488 N. Tierra: 60 × 9,8 = 588 N, como referencia. RAZONAR: la masa de 60 kg es la misma en los tres lugares; solo cambia la fuerza. RESOLVER: la respuesta es la opción con 96 N y 1 488 N y la masa constante de 60 kg. VERIFICAR: la opción que dice que la masa cambia confunde los conceptos; la de 9,8 y 60 N no sale de los datos; la de 588 N en todas partes usa solo la gravedad terrestre.",
+    "que_identificar": "La aceleración gravitacional de la Luna y de Júpiter en la tabla y la regla de la báscula (masa por aceleración).",
+    "que_revisar": "Diferencia entre masa y peso; fuerza gravitacional; unidades de fuerza (newton).",
+    "refuerzo_ids": [
+      "CIE-029",
+      "CIE-061"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "gravitacion",
+      "peso",
+      "masa",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-167",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modela fenómenos de la naturaleza basado en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Identifica y usa modelos químicos para comprender fenómenos particulares de la naturaleza",
+    "habilidad": "razonar",
+    "tema": "Equilibrio químico: principio de Le Chatelier",
+    "subtema": "Efecto de la presión y la temperatura sobre el rendimiento de la síntesis de amoniaco",
+    "dificultad": 3,
+    "contexto": "El amoniaco (NH₃), materia prima de muchos fertilizantes, se produce a partir de nitrógeno e hidrógeno mediante la reacción reversible N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g), que libera calor (es exotérmica en el sentido de formación del amoniaco). En una planta se midió el porcentaje de amoniaco presente en la mezcla gaseosa cuando el sistema alcanza el equilibrio bajo distintas condiciones.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Porcentaje de amoniaco en el equilibrio según la presión y la temperatura",
+      "columnas": [
+        "Temperatura (°C)",
+        "100 atm",
+        "200 atm",
+        "300 atm"
+      ],
+      "filas": [
+        [
+          400,
+          "25 %",
+          "36 %",
+          "47 %"
+        ],
+        [
+          500,
+          "11 %",
+          "18 %",
+          "26 %"
+        ]
+      ],
+      "nota": "Mezcla inicial de N₂ y H₂ en proporción 1:3."
+    },
+    "enunciado": "¿Cuál explicación da cuenta de las dos tendencias que muestra la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al aumentar la presión, el equilibrio se desplaza hacia el lado con más moléculas de gas para ocupar el espacio, y al aumentar la temperatura se favorece la reacción que libera calor; por eso el amoniaco sube con la presión y baja con la temperatura.",
+        "correcta": false,
+        "explicacion": "No responde. Las conclusiones coinciden con la tabla, pero los argumentos están invertidos: la presión favorece el lado con menos moléculas de gas (2 frente a 4), y el aumento de temperatura favorece la reacción que absorbe calor, es decir, la descomposición del amoniaco.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recuerda la tendencia observada pero aplica al revés los criterios de Le Chatelier."
+      },
+      {
+        "clave": "B",
+        "texto": "Al aumentar la presión, el sistema reduce la perturbación desplazándose hacia el lado con menos moléculas de gas, que es el del amoniaco (2 frente a 4); al aumentar la temperatura, se favorece la reacción que absorbe calor, es decir, la descomposición del amoniaco, y su porcentaje baja.",
+        "correcta": true,
+        "explicacion": "Es la correcta. En cada fila el amoniaco aumenta con la presión (25 → 36 → 47 % a 400 °C) porque 4 moléculas de reactivos dan 2 de producto y el sistema compensa la compresión formando menos moléculas. En cada columna baja al pasar de 400 a 500 °C porque la formación de NH₃ libera calor y el calor añadido favorece el sentido inverso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La presión alta rompe las moléculas de nitrógeno e hidrógeno y las obliga a combinarse, mientras que la temperatura alta destruye el amoniaco ya formado por ser una molécula frágil; por eso a 500 °C se produce menos amoniaco en cualquier presión. Esa fragilidad también explicaría por qué el amoniaco huele tan fuerte.",
+        "correcta": false,
+        "explicacion": "No responde. La presión no rompe moléculas; solo altera la proporción de equilibrio entre reactivos y productos. Y la disminución con la temperatura no se debe a fragilidad, sino a que la reacción inversa, que absorbe calor, se ve favorecida al calentar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Explica el equilibrio con imágenes mecánicas de ruptura en lugar de desplazamientos."
+      },
+      {
+        "clave": "D",
+        "texto": "A mayor temperatura las moléculas chocan con más energía y la reacción avanza más rápido hacia el amoniaco, pero el gas se escapa del reactor; a mayor presión el gas no escapa, de modo que la tabla refleja pérdidas de amoniaco y no un cambio del equilibrio.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla registra la composición en el equilibrio de un sistema cerrado, sin fugas. La rapidez de la reacción sí aumenta con la temperatura, pero eso no determina cuánto amoniaco hay en el equilibrio; lo que lo determina es el carácter exotérmico de la formación.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde velocidad de reacción con posición del equilibrio y añade una fuga no descrita."
+      }
+    ],
+    "explicacion": "LEER: la reacción N₂ + 3 H₂ ⇌ 2 NH₃ libera calor; la tabla da el porcentaje de amoniaco en equilibrio a 400 y 500 °C y a 100, 200 y 300 atm. COMPRENDER: se pide explicar por qué el amoniaco aumenta con la presión y disminuye con la temperatura. INTERPRETAR: según Le Chatelier, el sistema se desplaza en el sentido que contrarresta la perturbación. REPRESENTAR: reactivos: 4 moléculas de gas; productos: 2. Más presión favorece el lado con menos moléculas (amoniaco): 25 → 36 → 47 % a 400 °C. Más temperatura favorece el sentido que absorbe calor (descomposición): 47 % → 26 % a 300 atm. RAZONAR: ambas tendencias se explican con el mismo principio aplicado a dos variables. RESOLVER: la respuesta es la opción que asocia la presión con el lado de menos moléculas y la temperatura con la reacción que absorbe calor. VERIFICAR: la opción que invierte los argumentos acierta las tendencias por razones equivocadas; la de moléculas rotas no describe un equilibrio; la de fugas contradice el sistema cerrado.",
+    "que_identificar": "Que en cada fila el porcentaje de amoniaco crece con la presión y que en cada columna disminuye al subir la temperatura.",
+    "que_revisar": "Equilibrio químico; principio de Le Chatelier; reacciones exotérmicas y endotérmicas; conteo de moles de gas en una ecuación.",
+    "refuerzo_ids": [
+      "CIE-054",
+      "CIE-113"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "equilibrio quimico",
+      "le chatelier",
+      "amoniaco",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-168",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Determina si los resultados derivados de una investigación son suficientes y pertinentes para sacar conclusiones en una situación dada",
+    "habilidad": "verificar",
+    "tema": "Ecología: bioindicadores de calidad del agua",
+    "subtema": "Macroinvertebrados acuáticos y oxígeno disuelto en tramos de un río antes y después de un vertimiento",
+    "dificultad": 3,
+    "contexto": "Un grupo de estudiantes quiso saber si el vertimiento de aguas residuales de un pueblo afecta la vida de una quebrada. Tomaron muestras de macroinvertebrados (larvas de insectos y otros animales pequeños del fondo) en tres tramos: 500 m antes del vertimiento, 200 m después y 3 km después. Las larvas de efemerópteros y plecópteros solo viven en aguas con mucho oxígeno; las larvas de quironómidos y los gusanos tubifícidos toleran aguas con poco oxígeno y mucha materia orgánica.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Organismos capturados y oxígeno disuelto en tres tramos de la quebrada",
+      "columnas": [
+        "Tramo",
+        "Efemerópteros y plecópteros",
+        "Quironómidos y tubifícidos",
+        "Oxígeno disuelto (mg/L)"
+      ],
+      "filas": [
+        [
+          "500 m antes del vertimiento",
+          48,
+          6,
+          7.8
+        ],
+        [
+          "200 m después del vertimiento",
+          2,
+          61,
+          2.9
+        ],
+        [
+          "3 km después del vertimiento",
+          21,
+          19,
+          5.6
+        ]
+      ],
+      "nota": "Muestreo con red durante 10 minutos en cada tramo, el mismo día y con el mismo caudal."
+    },
+    "enunciado": "¿Cuál conclusión está respaldada por los datos y es prudente respecto a su alcance?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La quebrada se recupera por completo a 3 km del vertimiento, porque allí reaparecen los organismos sensibles y el oxígeno vuelve a subir; por tanto, la descarga solo afecta un tramo corto y no es necesario tratar las aguas residuales del pueblo.",
+        "correcta": false,
+        "explicacion": "No responde. A 3 km la recuperación es parcial, no completa: hay 21 organismos sensibles frente a 48 antes del vertimiento y 5,6 mg/L de oxígeno frente a 7,8. Además, un tramo de 3 km con oxígeno de 2,9 mg/L sí es un daño que justifica tratar las aguas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la mejora parcial a 3 km como una recuperación total y minimiza el tramo afectado."
+      },
+      {
+        "clave": "B",
+        "texto": "Los quironómidos y tubifícidos son los causantes de la baja de oxígeno a 200 m, porque consumen el oxígeno del agua al alimentarse de la materia orgánica; por eso en el tramo donde más abundan es donde menos oxígeno hay. La misma lógica explicaría por qué antes del vertimiento, con pocos tolerantes, hay más oxígeno.",
+        "correcta": false,
+        "explicacion": "No responde. Los datos muestran una asociación, pero el contexto explica que estos organismos toleran el agua pobre en oxígeno, no que la causen: la materia orgánica del vertimiento, al descomponerse, consume el oxígeno, y los organismos tolerantes son consecuencia, no causa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación causa-efecto entre la condición del agua y los organismos presentes."
+      },
+      {
+        "clave": "C",
+        "texto": "El vertimiento está asociado a una caída del oxígeno y a la sustitución de organismos sensibles por tolerantes a 200 m, con recuperación parcial a 3 km; como el muestreo fue de un solo día, no permite afirmar cómo se comporta la quebrada en otras épocas o caudales.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Antes del vertimiento dominan los sensibles (48 frente a 6) con 7,8 mg/L de oxígeno; a 200 m dominan los tolerantes (61 frente a 2) con 2,9 mg/L; a 3 km hay valores intermedios. La conclusión describe lo observado y reconoce el límite de un muestreo único.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La quebrada no está contaminada, porque en los tres tramos se encontraron organismos vivos y en total hay más animales a 200 m del vertimiento (63) que antes de él (54), lo que indica que la descarga aporta nutrientes que favorecen la vida acuática.",
+        "correcta": false,
+        "explicacion": "No responde. El número total de organismos no es el indicador adecuado: lo relevante es qué tipo de organismos hay. A 200 m casi desaparecen los sensibles al oxígeno (2) y dominan los tolerantes, junto con un oxígeno de 2,9 mg/L, señales claras de deterioro.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Suma las columnas de organismos sin distinguir entre especies sensibles y tolerantes."
+      }
+    ],
+    "explicacion": "LEER: antes del vertimiento hay 48 organismos sensibles, 6 tolerantes y 7,8 mg/L de oxígeno; a 200 m, 2 sensibles, 61 tolerantes y 2,9 mg/L; a 3 km, 21 sensibles, 19 tolerantes y 5,6 mg/L. COMPRENDER: se pide la conclusión respaldada y prudente en su alcance. INTERPRETAR: los sensibles requieren oxígeno abundante; los tolerantes resisten aguas con materia orgánica y poco oxígeno; el cambio de comunidad coincide con la caída del oxígeno tras la descarga. REPRESENTAR: antes: comunidad sensible y agua oxigenada; 200 m: comunidad tolerante y poco oxígeno; 3 km: valores intermedios, recuperación parcial. RAZONAR: el patrón apoya que el vertimiento deteriora la quebrada, pero un solo día de muestreo no informa sobre otras épocas o caudales. RESOLVER: la respuesta es la opción que describe la asociación, la recuperación parcial y el límite del muestreo único. VERIFICAR: declarar limpia la quebrada a 3 km ignora que no volvió a los valores iniciales; culpar a los tolerantes invierte causa y efecto; sumar totales ignora qué especies hay.",
+    "que_identificar": "El cambio de organismos sensibles a tolerantes y la caída del oxígeno a 200 m, la mejora parcial a 3 km y que el muestreo fue de un solo día.",
+    "que_revisar": "Bioindicadores; oxígeno disuelto y materia orgánica; correlación frente a causalidad; alcance de las conclusiones.",
+    "refuerzo_ids": [
+      "CIE-100",
+      "CIE-012"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "bioindicadores",
+      "calidad del agua",
+      "indagacion",
+      "conclusiones",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-169",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Interpreta y analiza datos representados en texto, gráficas, dibujos, diagramas o tablas",
+    "habilidad": "resolver",
+    "tema": "Uso del agua en la agricultura: sistemas de riego",
+    "subtema": "Agua aplicada por kilogramo de tomate producido en riego por inundación, aspersión y goteo",
+    "dificultad": 2,
+    "contexto": "Una asociación de agricultores de un municipio con escasez de agua en época seca probó tres sistemas de riego en lotes de una hectárea sembrados con la misma variedad de tomate, el mismo suelo y la misma fecha de siembra. Un técnico predijo que el riego por goteo usaría menos agua por kilogramo de tomate producido, aunque la cosecha total fuera algo menor.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Agua aplicada y cosecha de tomate por hectárea en un ciclo de cultivo",
+      "columnas": [
+        "Sistema de riego",
+        "Agua aplicada (m³/ha)",
+        "Cosecha (kg/ha)"
+      ],
+      "filas": [
+        [
+          "Inundación por surcos",
+          9000,
+          30000
+        ],
+        [
+          "Aspersión",
+          6000,
+          31000
+        ],
+        [
+          "Goteo",
+          4000,
+          33000
+        ]
+      ],
+      "nota": "1 m³ = 1 000 L. Los tres lotes recibieron el mismo fertilizante y manejo de plagas."
+    },
+    "enunciado": "Al comparar los datos con la predicción del técnico, ¿qué se puede concluir?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción se cumplió por completo: el goteo usó menos agua por kilogramo (unos 121 L/kg frente a 300 L/kg de la inundación) y, como anticipó el técnico, su cosecha total fue menor que la de los otros dos sistemas.",
+        "correcta": false,
+        "explicacion": "No responde. La primera parte es correcta (4 000 000 L / 33 000 kg ≈ 121 L/kg frente a 300 L/kg), pero la tabla muestra que el goteo obtuvo la mayor cosecha (33 000 kg/ha), no la menor; esa parte de la predicción no se cumplió.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Da por cierta la segunda parte de la predicción sin revisar la columna de cosecha."
+      },
+      {
+        "clave": "B",
+        "texto": "La predicción se cumplió solo en parte: el goteo sí usó menos agua por kilogramo (unos 121 L/kg frente a 194 L/kg de la aspersión y 300 L/kg de la inundación), pero su cosecha no fue menor, sino la mayor de los tres sistemas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Agua por kilogramo: inundación 9 000 000 L / 30 000 kg = 300 L/kg; aspersión 6 000 000 / 31 000 ≈ 194 L/kg; goteo 4 000 000 / 33 000 ≈ 121 L/kg. El goteo también dio la mayor cosecha (33 000 kg/ha), lo que contradice la parte de la predicción sobre una cosecha menor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La predicción no se cumplió: aunque el goteo aplicó menos metros cúbicos en total, al dividir el agua entre la cosecha resulta que la inundación es la más eficiente, porque 9 000 m³ repartidos en 30 000 kg dan un valor menor que 4 000 m³ repartidos en 33 000 kg.",
+        "correcta": false,
+        "explicacion": "No responde. El cálculo está mal: 9 000 / 30 000 = 0,30 m³/kg (300 L/kg) y 4 000 / 33 000 ≈ 0,12 m³/kg (121 L/kg); el valor de la inundación es mayor, no menor, así que es el sistema menos eficiente en agua por kilogramo.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó mal las fracciones o invirtió el cociente agua/cosecha."
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede evaluar la predicción, porque los tres lotes tuvieron cosechas distintas y para comparar el uso de agua se necesita que todos produzcan exactamente la misma cantidad de tomate con el mismo volumen de riego.",
+        "correcta": false,
+        "explicacion": "No responde. Justamente porque las cosechas difieren se calcula el agua por kilogramo, que normaliza la comparación. Las variables de suelo, variedad, fecha y manejo sí se mantuvieron iguales, así que los datos permiten evaluar la predicción.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoce que dividir agua entre cosecha es la forma de comparar lotes con distinta producción."
+      }
+    ],
+    "explicacion": "LEER: inundación: 9 000 m³ y 30 000 kg; aspersión: 6 000 m³ y 31 000 kg; goteo: 4 000 m³ y 33 000 kg; el técnico predijo menos agua por kilogramo con el goteo y una cosecha algo menor. COMPRENDER: se pide confrontar los datos con las dos partes de la predicción. INTERPRETAR: la eficiencia se compara como litros por kilogramo producido. REPRESENTAR: inundación: 9 000 000 / 30 000 = 300 L/kg; aspersión: 6 000 000 / 31 000 ≈ 194 L/kg; goteo: 4 000 000 / 33 000 ≈ 121 L/kg. RAZONAR: la primera parte se cumple (el goteo es el más eficiente); la segunda no, porque el goteo tuvo la mayor cosecha. RESOLVER: la respuesta es la opción que dice que la predicción se cumplió solo en parte. VERIFICAR: la opción de cosecha menor contradice los 33 000 kg; la que declara más eficiente la inundación invierte el cociente; la que dice que no se puede evaluar ignora que el agua por kilogramo normaliza la comparación.",
+    "que_identificar": "Las dos partes de la predicción y los datos de agua y cosecha de cada sistema para calcular litros por kilogramo.",
+    "que_revisar": "Eficiencia en el uso del agua; razones y proporciones; evaluación de predicciones con datos; variables controladas.",
+    "refuerzo_ids": [
+      "CIE-099",
+      "CIE-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "riego",
+      "agua",
+      "agricultura",
+      "indagacion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-170",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica las propiedades y estructura de la materia y diferencia elementos, compuestos y mezclas",
+    "habilidad": "interpretar",
+    "tema": "Propiedades de la materia: punto de fusión como criterio de pureza",
+    "subtema": "Sustancias puras con punto de fusión definido frente a mezclas que funden en un intervalo",
+    "dificultad": 1,
+    "contexto": "En el laboratorio, un grupo recibió cuatro muestras sólidas blancas sin etiqueta. Para saber cuáles son sustancias puras y cuáles mezclas, calentaron lentamente cada una en un tubo con termómetro y anotaron la temperatura a la que apareció la primera gota de líquido y la temperatura a la que se fundió todo el sólido. Una sustancia pura funde a una temperatura definida, mientras que una mezcla se ablanda y funde a lo largo de un intervalo de temperaturas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Temperaturas de fusión de cuatro muestras sólidas",
+      "columnas": [
+        "Muestra",
+        "Primera gota de líquido (°C)",
+        "Todo fundido (°C)"
+      ],
+      "filas": [
+        [
+          "Muestra 1",
+          80,
+          81
+        ],
+        [
+          "Muestra 2",
+          68,
+          77
+        ],
+        [
+          "Muestra 3",
+          122,
+          123
+        ],
+        [
+          "Muestra 4",
+          71,
+          80
+        ]
+      ],
+      "nota": "Calentamiento a razón de 1 °C por minuto."
+    },
+    "enunciado": "Según el criterio descrito y los datos de la tabla, ¿cuáles muestras son sustancias puras?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las muestras 2 y 4, porque son las que empiezan a fundirse a menor temperatura, y una sustancia pura, al no tener impurezas que la estabilicen, siempre se funde antes que una mezcla.",
+        "correcta": false,
+        "explicacion": "No responde. El criterio del contexto no es qué tan baja es la temperatura de fusión, sino si la fusión ocurre en una temperatura definida o en un intervalo. Las muestras 2 y 4 funden a lo largo de 9 °C, lo que las señala como mezclas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la temperatura inicial como criterio en vez del ancho del intervalo de fusión."
+      },
+      {
+        "clave": "B",
+        "texto": "Solo la muestra 3, porque es la que funde a mayor temperatura, y cuanto más alto es el punto de fusión más fuertes son las uniones entre partículas, lo que solo ocurre en sustancias sin impurezas. Por eso en el laboratorio las sustancias de alto punto de fusión se consideran las más confiables.",
+        "correcta": false,
+        "explicacion": "No responde. Un punto de fusión alto indica uniones fuertes, pero no pureza: muchas mezclas funden a temperaturas altas y muchas sustancias puras a temperaturas bajas. La muestra 1 también funde en un intervalo de solo 1 °C y es igualmente pura.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia pureza con punto de fusión alto y descarta la muestra 1 sin revisar su intervalo."
+      },
+      {
+        "clave": "C",
+        "texto": "Las muestras 1 y 4, porque ambas terminan de fundirse en 80 u 81 °C, lo que indica que tienen la misma temperatura de fusión y, por tanto, son la misma sustancia pura.",
+        "correcta": false,
+        "explicacion": "No responde. Aunque la muestra 4 termina de fundir en 80 °C, empezó a hacerlo en 71 °C: fundió en un intervalo de 9 °C, propio de una mezcla. La muestra 1 fundió entre 80 y 81 °C, un intervalo estrecho que sí indica pureza.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se fijó solo en la columna de fusión completa y no comparó con la primera gota."
+      },
+      {
+        "clave": "D",
+        "texto": "Las muestras 1 y 3, porque cada una funde en un intervalo de apenas 1 °C, lo que corresponde a una temperatura de fusión definida; las muestras 2 y 4 funden a lo largo de 9 °C, como lo hacen las mezclas.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Muestra 1: 80 a 81 °C (1 °C); muestra 3: 122 a 123 °C (1 °C): fusión a temperatura definida, criterio de sustancia pura. Muestra 2: 68 a 77 °C y muestra 4: 71 a 80 °C (9 °C cada una): intervalos amplios, característicos de mezclas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da la temperatura de la primera gota y la de fusión completa de cuatro muestras; el contexto fija el criterio: una sustancia pura funde a una temperatura definida y una mezcla en un intervalo. COMPRENDER: se pide identificar las sustancias puras. INTERPRETAR: lo decisivo es el ancho del intervalo entre las dos columnas, no el valor de la temperatura. REPRESENTAR: muestra 1: 81 − 80 = 1 °C; muestra 2: 77 − 68 = 9 °C; muestra 3: 123 − 122 = 1 °C; muestra 4: 80 − 71 = 9 °C. RAZONAR: intervalos de 1 °C indican fusión definida (puras); intervalos de 9 °C indican mezclas. RESOLVER: la respuesta es la opción que señala las muestras 1 y 3. VERIFICAR: elegir las que funden más bajo o la que funde más alto usa un criterio equivocado; emparejar las muestras 1 y 4 por la temperatura final ignora que la 4 empezó a fundir 9 °C antes.",
+    "que_identificar": "La diferencia entre las dos columnas de temperatura de cada muestra y el criterio de pureza dado en el contexto.",
+    "que_revisar": "Propiedades características de las sustancias puras; punto de fusión; diferencia entre sustancia pura y mezcla.",
+    "refuerzo_ids": [
+      "CIE-003",
+      "CIE-116"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "punto de fusion",
+      "sustancias puras",
+      "mezclas",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-171",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un sistema, argumentando a partir de los modelos básicos de ondas",
+    "habilidad": "razonar",
+    "tema": "Ondas: cuerdas vibrantes e instrumentos musicales",
+    "subtema": "Relación inversa entre la longitud de la cuerda que vibra y la frecuencia del sonido en una guitarra",
+    "dificultad": 2,
+    "contexto": "Un estudiante de música midió, con una aplicación afinadora, la frecuencia del sonido que produce la cuerda más grave de una guitarra cuando la pulsa libre y cuando la presiona en distintos trastes, lo que acorta la parte de la cuerda que vibra. La tensión de la cuerda no cambió durante las medidas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Frecuencia del sonido según la longitud de cuerda que vibra",
+      "columnas": [
+        "Longitud que vibra (cm)",
+        "Frecuencia (Hz)"
+      ],
+      "filas": [
+        [
+          65,
+          110
+        ],
+        [
+          52,
+          138
+        ],
+        [
+          43.3,
+          165
+        ],
+        [
+          32.5,
+          220
+        ]
+      ],
+      "nota": "La misma cuerda, con la misma tensión, en todas las medidas."
+    },
+    "enunciado": "¿Cuál es la mejor explicación de que la nota sea más aguda cuando la cuerda que vibra es más corta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una cuerda más corta vibra formando una onda de menor longitud; como la rapidez de la onda en la cuerda depende de la tensión y no cambió, a menor longitud de onda corresponde mayor frecuencia, y la frecuencia es lo que percibimos como altura del sonido.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La cuerda vibra con una longitud de onda proporcional a su longitud; con rapidez constante, frecuencia = rapidez / longitud de onda. Al reducir la longitud a la mitad (65 → 32,5 cm), la frecuencia se duplica (110 → 220 Hz), como muestra la tabla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Al presionar la cuerda contra el traste se aumenta mucho su tensión, y una cuerda más tensa vibra más rápido; la longitud no influye, pero como presionar siempre acorta la cuerda, parece que la longitud es la causa. De hecho, al afinar la guitarra se gira la clavija justamente para cambiar la tensión y con ella la nota.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que la tensión no cambió durante las medidas. Además, la tabla muestra una relación exacta entre longitud y frecuencia (su producto es constante, unos 7 150 cm·Hz), que no se explicaría si la causa fuera un cambio de tensión.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el cambio a la tensión pese a que el contexto la declara constante."
+      },
+      {
+        "clave": "C",
+        "texto": "Una cuerda más corta tiene menos masa en movimiento y por eso suena con más volumen; el oído confunde un sonido más fuerte con un sonido más agudo, de modo que el cambio registrado es de intensidad y no de frecuencia.",
+        "correcta": false,
+        "explicacion": "No responde. El afinador mide frecuencia en hercios, no intensidad, y los valores pasan de 110 a 220 Hz: el cambio es de frecuencia. La intensidad del sonido depende de la amplitud de la vibración, que no se registró.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde intensidad (volumen) con frecuencia (altura o tono)."
+      },
+      {
+        "clave": "D",
+        "texto": "La onda sonora recorre menos distancia en una cuerda corta, así que llega más veces por segundo al oído del estudiante; por eso la frecuencia aumenta de manera proporcional a la longitud que se recorta en cada traste.",
+        "correcta": false,
+        "explicacion": "No responde. El sonido no viaja por la cuerda hasta el oído: la cuerda vibra y hace vibrar el aire. Además, la frecuencia no es proporcional a lo que se recorta, sino inversamente proporcional a la longitud que vibra: 65 × 110 ≈ 32,5 × 220.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Imagina el sonido viajando a lo largo de la cuerda y propone una proporcionalidad directa."
+      }
+    ],
+    "explicacion": "LEER: la tabla relaciona la longitud que vibra (65,0; 52,0; 43,3; 32,5 cm) con la frecuencia (110, 138, 165, 220 Hz), a tensión constante. COMPRENDER: se pide explicar por qué una cuerda más corta da una nota más aguda. INTERPRETAR: longitud por frecuencia es casi constante (65 × 110 = 7 150; 32,5 × 220 = 7 150): la frecuencia es inversamente proporcional a la longitud. REPRESENTAR: la cuerda vibra con una longitud de onda proporcional a su longitud; la rapidez de la onda depende de la tensión y la masa por unidad de longitud, que no cambiaron; frecuencia = rapidez / longitud de onda. RAZONAR: menor longitud → menor longitud de onda → mayor frecuencia → sonido más agudo. RESOLVER: la respuesta es la opción que relaciona longitud de onda, rapidez constante y frecuencia. VERIFICAR: la opción de la tensión contradice el contexto; la del volumen confunde intensidad con frecuencia; la del sonido que recorre la cuerda describe mal la propagación y propone la proporción equivocada.",
+    "que_identificar": "Que al reducir la longitud a la mitad la frecuencia se duplica y que la tensión se mantuvo constante.",
+    "que_revisar": "Ondas estacionarias en cuerdas; relación entre rapidez, frecuencia y longitud de onda; altura e intensidad del sonido.",
+    "refuerzo_ids": [
+      "CIE-068",
+      "CIE-030"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "ondas",
+      "sonido",
+      "cuerdas",
+      "frecuencia",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-172",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Establece relaciones entre fenómenos biológicos para comprender la dinámica de lo vivo",
+    "habilidad": "interpretar",
+    "tema": "Genética: herencia de dos caracteres",
+    "subtema": "Proporción 9:3:3:1 en la descendencia de un cruce entre plantas dihíbridas",
+    "dificultad": 2,
+    "contexto": "En un vivero se cruzaron entre sí plantas de fríjol que eran heterocigotas para dos caracteres: color de la semilla (rojo o blanco) y forma de la semilla (lisa o rugosa). Las 160 plantas descendientes se clasificaron según sus semillas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Descendencia del cruce entre plantas heterocigotas para dos caracteres",
+      "columnas": [
+        "Fenotipo de la semilla",
+        "Número de plantas"
+      ],
+      "filas": [
+        [
+          "Roja y lisa",
+          90
+        ],
+        [
+          "Roja y rugosa",
+          30
+        ],
+        [
+          "Blanca y lisa",
+          30
+        ],
+        [
+          "Blanca y rugosa",
+          10
+        ]
+      ],
+      "nota": "Total: 160 plantas."
+    },
+    "enunciado": "¿Qué indica la proporción observada en la descendencia acerca de los dos caracteres?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que el color rojo y la forma rugosa son los caracteres dominantes, porque la combinación roja y rugosa aparece tres veces más que la blanca y rugosa, que es la menos frecuente de las cuatro.",
+        "correcta": false,
+        "explicacion": "No responde. El carácter dominante es el que aparece en la mayoría de la descendencia: liso (120 de 160) y rojo (120 de 160). La forma rugosa aparece solo en 40 plantas, lo que la señala como recesiva.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó dos filas aisladas en lugar de sumar cuántas plantas muestran cada carácter."
+      },
+      {
+        "clave": "B",
+        "texto": "Que los dos caracteres se heredan juntos como un solo bloque, porque las semillas rojas tienden a ser lisas y las blancas tienden a ser rugosas, lo que muestra que el gen del color arrastra al gen de la forma.",
+        "correcta": false,
+        "explicacion": "No responde. Si se heredaran juntos, no aparecerían las combinaciones nuevas roja-rugosa y blanca-lisa, o serían muy escasas. Aquí suman 60 de 160 plantas, justo lo esperado si los genes se transmiten de forma independiente.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta la abundancia de la combinación roja-lisa como prueba de herencia ligada."
+      },
+      {
+        "clave": "C",
+        "texto": "Que el color rojo y la forma lisa son dominantes y que los dos caracteres se transmiten de manera independiente, porque las cuatro combinaciones aparecen en una proporción cercana a 9:3:3:1.",
+        "correcta": true,
+        "explicacion": "Es la correcta. 90:30:30:10 equivale a 9:3:3:1. Rojo y liso aparecen en 120 de 160 plantas (3/4) cada uno, como corresponde a caracteres dominantes; la aparición de las combinaciones nuevas en la proporción 3:3 muestra que cada gen se transmitió sin depender del otro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Que el color rojo y la forma lisa son dominantes, pero que las 10 plantas blancas y rugosas son el resultado de mutaciones nuevas, porque ninguno de los padres heterocigotos mostraba esos caracteres.",
+        "correcta": false,
+        "explicacion": "No responde. Los padres heterocigotos portan los alelos recesivos aunque no los muestren; al unirse dos gametos con ambos alelos recesivos (probabilidad 1/4 × 1/4 = 1/16) aparece la combinación blanca y rugosa: 160/16 = 10 plantas, sin necesidad de mutaciones.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvida que los heterocigotos transmiten alelos recesivos ocultos."
+      }
+    ],
+    "explicacion": "LEER: de 160 descendientes de padres heterocigotos para dos caracteres, 90 son rojas y lisas, 30 rojas y rugosas, 30 blancas y lisas y 10 blancas y rugosas. COMPRENDER: se pide qué indica la proporción sobre la dominancia y la forma de herencia. INTERPRETAR: dividiendo entre 10, la proporción es 9:3:3:1, la esperada cuando dos genes con dominancia completa se transmiten de manera independiente. REPRESENTAR: rojas: 90 + 30 = 120 (3/4); lisas: 120 (3/4): rojo y liso dominan. Blanca y rugosa: 1/4 × 1/4 = 1/16 de 160 = 10. RAZONAR: las combinaciones nuevas en 3/16 cada una descartan que los genes vayan juntos; los dobles recesivos se explican por los alelos ocultos de los padres. RESOLVER: la respuesta es la opción que señala rojo y liso como dominantes y la transmisión independiente con proporción 9:3:3:1. VERIFICAR: llamar dominante a rugoso contradice los totales; la herencia en bloque no explica las 60 combinaciones nuevas; la de mutaciones ignora los alelos recesivos de los heterocigotos.",
+    "que_identificar": "Que los cuatro fenotipos guardan la proporción 9:3:3:1 y cuántas plantas muestran cada carácter al sumar filas.",
+    "que_revisar": "Segunda ley de Mendel (transmisión independiente); dominancia y recesividad; cuadro de Punnett para dos caracteres.",
+    "refuerzo_ids": [
+      "CIE-014",
+      "CIE-104"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "genetica",
+      "mendel",
+      "dihibrido",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-173",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "razonar",
+    "tema": "Electrostática: cargas eléctricas",
+    "subtema": "Atracción y repulsión entre objetos frotados: existencia de dos tipos de carga",
+    "dificultad": 2,
+    "contexto": "Un grupo de estudiantes frotó distintos objetos y los colgó de hilos para observar cómo se comportaban al acercarlos entre sí. Antes de frotarlos, ninguno de los objetos atraía ni repelía a los demás. Registraron lo observado en una tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Comportamiento de objetos frotados al acercarlos",
+      "columnas": [
+        "Objetos acercados",
+        "Observación"
+      ],
+      "filas": [
+        [
+          "Globo frotado con lana + globo frotado con lana",
+          "Se repelen"
+        ],
+        [
+          "Varilla de vidrio frotada con seda + varilla de vidrio frotada con seda",
+          "Se repelen"
+        ],
+        [
+          "Globo frotado con lana + varilla de vidrio frotada con seda",
+          "Se atraen"
+        ],
+        [
+          "Globo frotado con lana + globo sin frotar",
+          "Se atraen débilmente"
+        ]
+      ],
+      "nota": "Los objetos se acercaron sin tocarse, a unos 5 cm."
+    },
+    "enunciado": "¿Qué conclusión sobre la carga eléctrica está respaldada por todas las observaciones?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Al frotar, los objetos adquieren un solo tipo de carga, y los objetos cargados se repelen entre sí; la atracción entre el globo y el vidrio se debe a que el vidrio, por ser más duro, no llegó a cargarse. Lo mismo pasaría con cualquier otro material duro, como la cerámica.",
+        "correcta": false,
+        "explicacion": "No responde. Si el vidrio no se hubiera cargado, dos varillas de vidrio frotadas no se repelerían, y la tabla muestra que sí lo hacen. Las tres primeras filas solo se explican si hay dos tipos de carga distintos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone una explicación para una fila que contradice otra fila de la misma tabla."
+      },
+      {
+        "clave": "B",
+        "texto": "Existen dos tipos de carga: los objetos con el mismo tipo se repelen y los de tipo distinto se atraen; el globo frotado con lana y el vidrio frotado con seda quedaron con cargas de tipo diferente, y un objeto cargado puede atraer débilmente a uno neutro.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Dos globos iguales se repelen y dos vidrios iguales se repelen (misma carga en cada par), pero globo y vidrio se atraen (cargas distintas): hacen falta dos tipos. La atracción débil hacia el globo sin frotar corresponde a la atracción de un objeto cargado sobre uno neutro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Los objetos frotados se comportan como imanes: la lana convierte al globo en un polo norte y la seda convierte al vidrio en un polo sur, y por eso los polos iguales se repelen y los distintos se atraen, igual que en los imanes de nevera.",
+        "correcta": false,
+        "explicacion": "No responde. El comportamiento se parece al de los imanes, pero los globos y el vidrio no son materiales magnéticos y lo que cambió al frotarlos fue su carga eléctrica, no una imantación. Además, un imán no atraería un globo neutro como ocurre en la última fila.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde fenómenos eléctricos con fenómenos magnéticos por la semejanza de atraer y repeler."
+      },
+      {
+        "clave": "D",
+        "texto": "Solo el globo se carga al frotarse, porque es el único que atrae al globo sin frotar; el vidrio simplemente refleja la carga del globo, y por eso dos varillas de vidrio se repelen únicamente cuando hay un globo cargado cerca.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla indica que las dos varillas de vidrio se repelen al acercarse entre sí, sin que se mencione un globo cerca; eso solo ocurre si ambas quedaron cargadas al frotarlas con seda. La carga no se refleja de un objeto a otro.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Añade a la observación una condición (globo cercano) que la tabla no registra."
+      }
+    ],
+    "explicacion": "LEER: dos globos frotados con lana se repelen, dos varillas de vidrio frotadas con seda se repelen, globo y varilla se atraen, y un globo frotado atrae débilmente a uno sin frotar; antes de frotar no había interacción. COMPRENDER: se pide la conclusión sobre la carga que explique todas las filas. INTERPRETAR: frotar carga los objetos; los frotados de la misma manera se repelen y los frotados de maneras distintas se atraen. REPRESENTAR: globo-globo y vidrio-vidrio: misma carga → repulsión; globo-vidrio: cargas distintas → atracción; globo cargado-globo neutro: atracción débil por redistribución de cargas en el neutro. RAZONAR: con un solo tipo de carga todo se repelería; la atracción globo-vidrio exige un segundo tipo. RESOLVER: la respuesta es la opción que concluye dos tipos de carga, con atracción entre tipos distintos y hacia objetos neutros. VERIFICAR: un solo tipo no explica la atracción globo-vidrio; la de imanes confunde electricidad con magnetismo; la de que solo el globo se carga contradice la repulsión entre varillas.",
+    "que_identificar": "Que los pares iguales se repelen, el par distinto se atrae y el objeto sin frotar es atraído débilmente.",
+    "que_revisar": "Carga eléctrica por frotamiento; tipos de carga; atracción, repulsión y polarización de objetos neutros.",
+    "refuerzo_ids": [
+      "CIE-071",
+      "CIE-015"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "electrostatica",
+      "carga electrica",
+      "indagacion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-174",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Explica cómo la explotación de un recurso o el uso de una tecnología tiene efectos positivos o negativos en las personas y en el entorno",
+    "habilidad": "razonar",
+    "tema": "Agricultura y salud: cadmio en el cacao",
+    "subtema": "Acidez del suelo, disponibilidad del cadmio para las raíces y encalado como medida de manejo",
+    "dificultad": 2,
+    "contexto": "El cadmio es un metal pesado tóxico que se acumula en los riñones de las personas. Algunos compradores internacionales rechazan el cacao con más de 0,8 mg de cadmio por kilogramo de grano. Una asociación de cacaoteros midió el pH del suelo de varias fincas y el cadmio de sus granos. El cadmio del suelo proviene de la roca madre y es similar en todas las fincas; en suelos ácidos el cadmio se encuentra disuelto en el agua del suelo, mientras que en suelos cercanos a la neutralidad queda retenido en partículas minerales.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "pH del suelo y cadmio en el grano de cacao en cuatro fincas",
+      "columnas": [
+        "Finca",
+        "pH del suelo",
+        "Cadmio en el grano (mg/kg)"
+      ],
+      "filas": [
+        [
+          "Finca 1",
+          4.5,
+          1.2
+        ],
+        [
+          "Finca 2",
+          5.5,
+          0.8
+        ],
+        [
+          "Finca 3",
+          6.5,
+          0.4
+        ],
+        [
+          "Finca 4",
+          7,
+          0.3
+        ]
+      ],
+      "nota": "Cadmio total del suelo similar en las cuatro fincas (0,9 a 1,0 mg/kg)."
+    },
+    "enunciado": "Un técnico recomienda aplicar cal agrícola (que eleva el pH del suelo) en la finca 1. ¿Cuál es la mejor explicación de por qué esta medida podría reducir el cadmio del grano?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La cal reacciona con el cadmio del suelo y lo convierte en un gas que escapa a la atmósfera, de modo que la cantidad total de cadmio del suelo disminuye y a las raíces les queda menos metal disponible.",
+        "correcta": false,
+        "explicacion": "No responde. El cadmio es un metal que no forma gases en el suelo, y el contexto indica que su cantidad total es similar en todas las fincas; lo que cambia con el pH no es la cantidad de cadmio, sino si está disuelto o retenido en los minerales.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Cree que la medida elimina el contaminante en lugar de cambiar su disponibilidad."
+      },
+      {
+        "clave": "B",
+        "texto": "La cal aporta calcio, un nutriente que hace crecer más las plantas de cacao; con más hojas y frutos, el mismo cadmio se reparte en más granos y la concentración por kilogramo baja aunque las raíces absorban igual cantidad. Ese efecto de dilución es el mismo que se observa cuando una cosecha abundante reduce el azúcar por fruto.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla no relaciona el cadmio del grano con el tamaño de la planta sino con el pH del suelo, y el contexto explica el mecanismo: en suelos ácidos el cadmio está disuelto y las raíces lo absorben; al subir el pH queda retenido, no diluido.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone un efecto de dilución sin usar la información sobre acidez y disponibilidad."
+      },
+      {
+        "clave": "C",
+        "texto": "La cal baja el pH del suelo y lo vuelve más ácido; en la tabla las fincas más ácidas tienen más cadmio, así que la medida en realidad aumentaría el cadmio del grano y el técnico debería recomendar lo contrario.",
+        "correcta": false,
+        "explicacion": "No responde. El enunciado indica que la cal eleva el pH, es decir, reduce la acidez. La lectura de la tabla es acertada (más ácido, más cadmio), pero la conclusión se invierte por confundir el efecto de la cal sobre el pH.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde subir el pH con aumentar la acidez."
+      },
+      {
+        "clave": "D",
+        "texto": "Al elevar el pH del suelo, el cadmio pasa de estar disuelto en el agua del suelo a quedar retenido en las partículas minerales; las raíces solo absorben lo que está disuelto, por lo que llega menos cadmio al grano, como muestran las fincas con pH más alto.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que, con cadmio total similar, el grano pasa de 1,2 mg/kg a pH 4,5 a 0,3 mg/kg a pH 7,0. El contexto da el mecanismo: en suelos ácidos el cadmio está disuelto y disponible para las raíces; al neutralizar el suelo queda retenido y la planta absorbe menos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla relaciona el pH del suelo (4,5 a 7,0) con el cadmio del grano (1,2 a 0,3 mg/kg) en fincas con cadmio total similar; en suelos ácidos el cadmio está disuelto y en suelos casi neutros queda retenido. COMPRENDER: se pide explicar por qué la cal, que eleva el pH, podría reducir el cadmio del grano. INTERPRETAR: a menor pH, más cadmio en el grano; a mayor pH, menos. REPRESENTAR: pH bajo → cadmio disuelto → raíces lo absorben → grano con más cadmio. Cal → pH sube → cadmio retenido → menos absorción → grano con menos cadmio. RAZONAR: la medida no elimina el metal, cambia su disponibilidad; la finca 1 podría acercarse a los valores de las fincas 3 y 4, por debajo del límite de 0,8 mg/kg. RESOLVER: la respuesta es la opción que describe el paso de disuelto a retenido al subir el pH. VERIFICAR: el cadmio no se vuelve gas; la dilución por crecimiento no usa el dato de pH; la opción que dice que la cal acidifica contradice el enunciado.",
+    "que_identificar": "La relación inversa entre pH del suelo y cadmio del grano, con cadmio total del suelo similar en todas las fincas.",
+    "que_revisar": "pH y acidez del suelo; solubilidad y disponibilidad de metales; absorción de nutrientes y contaminantes por las raíces; metales pesados y salud.",
+    "refuerzo_ids": [
+      "CIE-118",
+      "CIE-160"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "cadmio",
+      "cacao",
+      "suelos",
+      "metales pesados",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-175",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Da las razones por las cuales una reacción describe un fenómeno y justifica las relaciones cuantitativas existentes, teniendo en cuenta la ley de conservación de la masa y carga",
+    "habilidad": "resolver",
+    "tema": "Electroquímica: pilas galvánicas",
+    "subtema": "Potenciales de reducción, metal que se oxida y voltaje de una pila de dos metales",
+    "dificultad": 3,
+    "contexto": "En una feria escolar, un grupo construyó pilas sumergiendo dos láminas de metales distintos en soluciones de sus sales, unidas por un puente salino, y midió el voltaje con un multímetro. Para interpretar los resultados consultaron una tabla de potenciales estándar de reducción: cuanto más negativo es el potencial de un metal, mayor es su tendencia a oxidarse (perder electrones). En una pila, el metal con potencial más negativo se oxida y actúa como ánodo; el voltaje de la pila es la diferencia entre los dos potenciales.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Potenciales estándar de reducción de cuatro metales",
+      "columnas": [
+        "Semirreacción de reducción",
+        "Potencial estándar (V)"
+      ],
+      "filas": [
+        [
+          "Mg²⁺ + 2 e⁻ → Mg",
+          -2.37
+        ],
+        [
+          "Zn²⁺ + 2 e⁻ → Zn",
+          -0.76
+        ],
+        [
+          "Fe²⁺ + 2 e⁻ → Fe",
+          -0.44
+        ],
+        [
+          "Cu²⁺ + 2 e⁻ → Cu",
+          0.34
+        ]
+      ],
+      "nota": "Valores a 25 °C y concentraciones estándar."
+    },
+    "enunciado": "El grupo quiere la pila de mayor voltaje posible con dos de estos metales. ¿Cuáles metales debe usar, cuál se consumirá y qué voltaje aproximado medirá?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Magnesio y cobre; se consume la lámina de magnesio, que se oxida a Mg²⁺ mientras el Cu²⁺ se deposita como cobre metálico, y el voltaje es de unos 2,71 V, la mayor diferencia de potenciales de la tabla.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La mayor diferencia se da entre el potencial más negativo (Mg, −2,37 V) y el más positivo (Cu, +0,34 V): 0,34 − (−2,37) = 2,71 V. El magnesio, con el potencial más negativo, se oxida y se consume; en el cobre ocurre la reducción de Cu²⁺.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Magnesio y cobre; se consume la lámina de cobre, porque el cobre tiene el potencial positivo y es el metal que entrega los electrones, y el voltaje es de unos 2,03 V, que resulta de restar 2,37 menos 0,34.",
+        "correcta": false,
+        "explicacion": "No responde. Elegir magnesio y cobre es acertado, pero el que se oxida es el metal con potencial más negativo (magnesio), no el cobre; y el voltaje es la diferencia 0,34 − (−2,37) = 2,71 V, no 2,37 − 0,34 = 2,03 V, que ignora el signo.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Restó los valores absolutos sin respetar el signo del potencial e identificó al revés el ánodo."
+      },
+      {
+        "clave": "C",
+        "texto": "Zinc y cobre; se consume la lámina de zinc, que se oxida a Zn²⁺, y el voltaje es de unos 1,10 V; es la mejor combinación porque el zinc y el cobre son los metales más usados en pilas comerciales y por eso rinden más.",
+        "correcta": false,
+        "explicacion": "No responde. El análisis de la pila zinc-cobre es correcto (1,10 V, se consume el zinc), pero no es la de mayor voltaje: la de magnesio y cobre da 2,71 V. Que una combinación sea común en pilas comerciales no significa que tenga el mayor voltaje.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió una pila conocida en vez de buscar la mayor diferencia de potenciales en la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "Magnesio y zinc; se consume la lámina de magnesio, y el voltaje es de unos 3,13 V, porque al sumar los dos potenciales negativos se obtiene la pila más potente, ya que ambos metales tienen gran tendencia a oxidarse.",
+        "correcta": false,
+        "explicacion": "No responde. El voltaje es la diferencia de potenciales, no la suma: Mg y Zn dan −0,76 − (−2,37) = 1,61 V. Dos metales con gran tendencia a oxidarse no forman una buena pila entre sí; se necesita uno que se oxide y otro que se reduzca con facilidad.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó potenciales en lugar de restarlos."
+      }
+    ],
+    "explicacion": "LEER: potenciales de reducción: Mg −2,37 V, Zn −0,76 V, Fe −0,44 V, Cu +0,34 V; el metal con potencial más negativo se oxida y el voltaje es la diferencia de potenciales. COMPRENDER: se pide la pareja de mayor voltaje, el metal que se consume y el valor aproximado. INTERPRETAR: la mayor diferencia se obtiene con el potencial más negativo y el más positivo. REPRESENTAR: voltaje = 0,34 − (−2,37) = 2,71 V. Otras parejas: Zn-Cu 1,10 V; Fe-Cu 0,78 V; Mg-Zn 1,61 V. RAZONAR: el magnesio pierde electrones (Mg → Mg²⁺ + 2 e⁻) y su lámina se consume; en el cobre se reduce el Cu²⁺. RESOLVER: la respuesta es la opción con magnesio y cobre, consumo del magnesio y 2,71 V. VERIFICAR: la opción de 2,03 V ignoró el signo y confundió el ánodo; la de zinc-cobre da solo 1,10 V; la de 3,13 V sumó en vez de restar.",
+    "que_identificar": "El potencial más negativo y el más positivo de la tabla y la regla del contexto para el metal que se oxida y para el voltaje.",
+    "que_revisar": "Reacciones de óxido-reducción; potenciales estándar de reducción; ánodo y cátodo en una pila galvánica.",
+    "refuerzo_ids": [
+      "CIE-153",
+      "CIE-136"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "electroquimica",
+      "pilas",
+      "oxido-reduccion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-176",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basado en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Identifica características de algunos procesos que se dan en los organismos para comprender la dinámica de lo vivo",
+    "habilidad": "leer",
+    "tema": "Reproducción humana: ciclo menstrual",
+    "subtema": "Pico de la hormona luteinizante, ovulación y aumento de la progesterona",
+    "dificultad": 1,
+    "contexto": "En una clase sobre reproducción humana se analizó la variación de dos hormonas en la sangre de una mujer a lo largo de un ciclo menstrual de 28 días. La hormona luteinizante (LH) es liberada por la hipófisis y su aumento brusco desencadena la ovulación, que ocurre entre 24 y 36 horas después del pico. La progesterona es producida por el cuerpo lúteo, la estructura que queda en el ovario después de liberado el ovocito, y prepara el útero para un posible embarazo.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Concentración relativa de dos hormonas durante un ciclo menstrual de 28 días",
+      "eje_x": "Día del ciclo",
+      "eje_y": "Concentración relativa (unidades arbitrarias)",
+      "series": [
+        {
+          "nombre": "Hormona luteinizante (LH)",
+          "valores": [
+            [
+              "1",
+              5
+            ],
+            [
+              "5",
+              5
+            ],
+            [
+              "9",
+              7
+            ],
+            [
+              "12",
+              15
+            ],
+            [
+              "13",
+              40
+            ],
+            [
+              "14",
+              22
+            ],
+            [
+              "16",
+              8
+            ],
+            [
+              "20",
+              6
+            ],
+            [
+              "24",
+              5
+            ],
+            [
+              "28",
+              5
+            ]
+          ]
+        },
+        {
+          "nombre": "Progesterona",
+          "valores": [
+            [
+              "1",
+              1
+            ],
+            [
+              "5",
+              1
+            ],
+            [
+              "9",
+              1
+            ],
+            [
+              "12",
+              1
+            ],
+            [
+              "13",
+              2
+            ],
+            [
+              "14",
+              3
+            ],
+            [
+              "16",
+              8
+            ],
+            [
+              "20",
+              15
+            ],
+            [
+              "24",
+              12
+            ],
+            [
+              "28",
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Según la gráfica y la información del contexto, ¿en qué momento del ciclo ocurre con mayor probabilidad la ovulación y qué cambio hormonal la sigue?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Alrededor del día 20, cuando la progesterona alcanza su máximo, porque esa hormona es la que libera el ovocito; después de ese día la LH comienza a bajar lentamente hasta el final del ciclo. Esa secuencia coincidiría con la mitad del ciclo si se cuenta desde el final.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto indica que la ovulación la desencadena el pico de LH, no la progesterona; el máximo de progesterona del día 20 es posterior y lo produce el cuerpo lúteo que se forma después de la ovulación. La LH ya había bajado desde el día 14.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la ovulación a la hormona con el pico más tardío sin leer qué hormona la desencadena."
+      },
+      {
+        "clave": "B",
+        "texto": "Alrededor del día 1, cuando comienza el ciclo, porque las dos hormonas están en sus valores más bajos y el ovario queda libre para liberar el ovocito; después de ese día la LH sube de manera gradual hasta el día 13.",
+        "correcta": false,
+        "explicacion": "No responde. En el día 1 no hay ningún pico de LH, que es la señal de la ovulación según el contexto; el ciclo comienza con la menstruación. El aumento gradual de LH hasta el día 13 precede a la ovulación, no la sigue.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el inicio del ciclo con el momento de la ovulación."
+      },
+      {
+        "clave": "C",
+        "texto": "Alrededor del día 14, un día después del pico de LH del día 13, porque ese aumento brusco es la señal que desencadena la liberación del ovocito; después, la progesterona sube por la acción del cuerpo lúteo y alcanza su máximo hacia el día 20.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La LH pasa de 15 a 40 unidades entre los días 12 y 13 (pico) y la ovulación ocurre 24 a 36 horas después, es decir, hacia el día 14. Luego la progesterona, que estaba en 1, sube a 8 (día 16) y 15 (día 20), producida por el cuerpo lúteo que se forma tras la ovulación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Alrededor del día 28, cuando la progesterona cae bruscamente de 12 a 3 unidades, porque esa caída es la que libera el ovocito del ovario; después de ese día la LH vuelve a subir para iniciar un nuevo ciclo.",
+        "correcta": false,
+        "explicacion": "No responde. La caída de la progesterona al final del ciclo indica que el cuerpo lúteo se degenera cuando no hubo embarazo, y da paso a la menstruación; no libera ningún ovocito. La señal de la ovulación es el pico de LH del día 13.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpreta cualquier cambio brusco de la gráfica como la ovulación."
+      }
+    ],
+    "explicacion": "LEER: la LH se mantiene entre 5 y 7 hasta el día 9, sube a 15 el día 12, alcanza un pico de 40 el día 13 y baja después; la progesterona permanece en 1 hasta el día 12 y sube a 8, 15 y 12 entre los días 16 y 24 para caer a 3 el día 28. El contexto dice que el pico de LH desencadena la ovulación 24 a 36 horas después y que la progesterona la produce el cuerpo lúteo. COMPRENDER: se pide ubicar la ovulación y el cambio hormonal posterior. INTERPRETAR: el pico de LH es la señal; la ovulación ocurre un día después. REPRESENTAR: día 13: pico de LH → día 14: ovulación → días 16-24: sube la progesterona → día 28: cae si no hubo embarazo. RAZONAR: la secuencia de la gráfica coincide con la descrita en el contexto. RESOLVER: la respuesta es la opción que ubica la ovulación hacia el día 14 seguida del aumento de progesterona. VERIFICAR: las opciones de los días 1, 20 y 28 asignan la ovulación a momentos sin pico de LH o a cambios de progesterona, que son consecuencia y no causa.",
+    "que_identificar": "El día del pico de LH en la gráfica, el desfase de 24 a 36 horas indicado en el contexto y el aumento posterior de la progesterona.",
+    "que_revisar": "Ciclo menstrual; hormonas hipofisarias y ováricas; ovulación y cuerpo lúteo; lectura de gráficas de líneas.",
+    "refuerzo_ids": [
+      "CIE-050",
+      "CIE-017"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "reproduccion",
+      "ciclo menstrual",
+      "hormonas",
+      "lineas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-177",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Interpreta y analiza datos representados en texto, gráficas, dibujos, diagramas o tablas",
+    "habilidad": "verificar",
+    "tema": "Compuestos hidratados: agua de cristalización",
+    "subtema": "Pérdida de masa al calentar sulfato de cobre pentahidratado y comparación con la fórmula",
+    "dificultad": 3,
+    "contexto": "El sulfato de cobre pentahidratado (CuSO₄·5H₂O) es un sólido azul cuyos cristales contienen cinco moléculas de agua por cada unidad de sulfato de cobre. Al calentarlo, el agua se libera como vapor y queda sulfato de cobre anhidro (CuSO₄), un polvo blanco. Antes de hacer el experimento, una estudiante predijo que la masa perdida sería el 36 % de la masa inicial, usando las masas molares: CuSO₄·5H₂O ≈ 249,7 g/mol y H₂O ≈ 18,0 g/mol. Luego calentó una muestra en un crisol hasta que la masa dejó de cambiar.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masa de la muestra durante el calentamiento",
+      "columnas": [
+        "Momento de la medición",
+        "Masa del sólido (g)",
+        "Color"
+      ],
+      "filas": [
+        [
+          "Antes de calentar",
+          5,
+          "Azul"
+        ],
+        [
+          "Después de 5 minutos",
+          4.1,
+          "Azul claro"
+        ],
+        [
+          "Después de 10 minutos",
+          3.2,
+          "Blanco"
+        ],
+        [
+          "Después de 15 minutos",
+          3.2,
+          "Blanco"
+        ]
+      ],
+      "nota": "Masa del crisol vacío ya descontada."
+    },
+    "enunciado": "¿La predicción de la estudiante concuerda con los datos del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No, porque la muestra perdió 1,80 g, que corresponde al 36 % de la masa final de 3,20 g y no de la masa inicial; la predicción debió hacerse sobre la masa del sólido blanco que queda al terminar.",
+        "correcta": false,
+        "explicacion": "No responde. La predicción se refiere a la masa inicial y así debe compararse: 1,80 g / 5,00 g = 0,36 = 36 %. Calcular 1,80 / 3,20 daría 56 %, no 36 %; el cálculo propuesto en esta opción no es coherente con sus propios números.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Divide la pérdida por la masa final en lugar de la inicial."
+      },
+      {
+        "clave": "B",
+        "texto": "Sí, porque la muestra pasó de 5,00 g a 3,20 g, una pérdida de 1,80 g que equivale al 36 % de la masa inicial, igual al porcentaje de agua que indica la fórmula: 5 × 18,0 = 90,0 g de agua por cada 249,7 g de hidrato.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Pérdida: 5,00 − 3,20 = 1,80 g; 1,80 / 5,00 = 0,36 = 36 %. Según la fórmula, el agua es 90,0 / 249,7 ≈ 0,36 = 36 %. La masa constante entre los 10 y 15 minutos y el color blanco confirman que se liberó toda el agua y no más.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No, porque a los 5 minutos la muestra solo había perdido 0,90 g, es decir, el 18 % de la masa inicial, la mitad de lo que predijo la estudiante; el 36 % se alcanzó solo porque se siguió calentando y el sulfato de cobre también empezó a descomponerse.",
+        "correcta": false,
+        "explicacion": "No responde. A los 5 minutos la deshidratación era incompleta (color azul claro). La masa se estabilizó en 3,20 g entre los 10 y 15 minutos, lo que indica que no hubo descomposición adicional; si el CuSO₄ se descompusiera, la masa seguiría bajando.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma una medición intermedia como resultado final e inventa una reacción no respaldada por los datos."
+      },
+      {
+        "clave": "D",
+        "texto": "No, porque la fórmula indica cinco moléculas de agua por cada una de sulfato de cobre, lo que corresponde a 5/6 de la masa, es decir, cerca del 83 %; la pérdida observada del 36 % muestra que la mayor parte del agua permaneció en el sólido.",
+        "correcta": false,
+        "explicacion": "No responde. La proporción 5 a 1 es de moléculas, no de masa: cinco moléculas de agua pesan 90,0 g, mientras que el CuSO₄ pesa 159,7 g, así que el agua es 90,0 / 249,7 ≈ 36 % de la masa. El color blanco y la masa constante indican que no quedó agua.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la proporción de moléculas con la proporción de masas."
+      }
+    ],
+    "explicacion": "LEER: la muestra de CuSO₄·5H₂O pasa de 5,00 g (azul) a 4,10 g, luego a 3,20 g (blanco) y se mantiene; la estudiante predijo una pérdida del 36 % de la masa inicial. COMPRENDER: se pide evaluar si la predicción concuerda con los datos. INTERPRETAR: la pérdida de masa es el agua liberada; la masa constante al final indica que la deshidratación terminó. REPRESENTAR: pérdida = 5,00 − 3,20 = 1,80 g; 1,80 / 5,00 = 36 %. Teórico: agua = 5 × 18,0 = 90,0 g por cada 249,7 g; 90,0 / 249,7 ≈ 36 %. RAZONAR: experimento y predicción coinciden; el cambio de azul a blanco respalda la pérdida total del agua de cristalización. RESOLVER: la respuesta es la opción que confirma la predicción con el 36 % de la masa inicial y la fórmula. VERIFICAR: dividir por la masa final da 56 %, no 36 %; la medición de los 5 minutos es intermedia y no hubo descomposición porque la masa se estabilizó; la proporción 5 a 1 es de moléculas, no de masa.",
+    "que_identificar": "Las masas inicial y final estable de la tabla, el porcentaje de pérdida y el porcentaje de agua que indica la fórmula.",
+    "que_revisar": "Compuestos hidratados; masa molar y composición porcentual; relación entre moles y masa; evidencias de que una reacción terminó.",
+    "refuerzo_ids": [
+      "CIE-132",
+      "CIE-155"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "hidratos",
+      "masa molar",
+      "composicion porcentual",
+      "indagacion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-178",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basado en observaciones, patrones y conceptos propios del conocimiento científico",
+    "evidencia": "Elabora explicaciones al relacionar las variables de estado que describen un sistema, argumentando a partir de los modelos básicos de cinemática y dinámica newtoniana",
+    "habilidad": "razonar",
+    "tema": "Presión sobre superficies sólidas",
+    "subtema": "Fuerza, área de apoyo y presión: tacón de aguja frente a suela plana sobre un piso de madera",
+    "dificultad": 1,
+    "contexto": "En un salón comunal con piso de madera blanda aparecieron pequeñas marcas hundidas después de una fiesta. El administrador notó que las marcas coincidían con el tamaño de los tacones de aguja de algunos zapatos, mientras que los zapatos de suela plana, aunque los usaran personas más pesadas, no dejaron huella. La presión es la fuerza aplicada dividida entre el área sobre la que actúa.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Dos tipos de calzado apoyados sobre el piso",
+      "columnas": [
+        "Calzado",
+        "Peso de la persona que se apoya en un pie (N)",
+        "Área de apoyo del zapato (cm²)"
+      ],
+      "filas": [
+        [
+          "Tacón de aguja (solo el tacón)",
+          600,
+          2
+        ],
+        [
+          "Suela plana (todo el pie)",
+          800,
+          200
+        ]
+      ],
+      "nota": "1 cm² = 0,0001 m². La presión en pascales (Pa) es N/m²."
+    },
+    "enunciado": "¿Por qué el tacón de aguja marca el piso y la suela plana no, si la persona de suela plana pesa más?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el tacón golpea el piso con más fuerza al caminar, ya que la persona que lo usa aplica un peso mayor que la de suela plana; la fuerza total es lo que decide si la madera se hunde o no.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que la persona con tacones aplica menos fuerza (600 N) que la de suela plana (800 N), así que la fuerza total no explica la marca; lo que cambia de forma drástica es el área sobre la que se reparte.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que el que marca el piso es quien aplica más fuerza, sin revisar la columna de peso."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la madera reacciona de forma distinta según el material del calzado: el metal o plástico duro del tacón raya la madera, mientras que la goma de la suela plana la protege, sin importar la fuerza ni el área de contacto. Esto se nota porque las marcas tienen el contorno exacto del tacón.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla no informa sobre materiales y la definición de presión del contexto sí explica las marcas: una fuerza similar sobre un área cien veces menor produce una presión cien veces mayor, suficiente para hundir la madera.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Busca la causa en una variable no presentada e ignora la relación entre fuerza y área."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque la suela plana reparte el peso en toda su área y por eso la presión es casi nula, mientras que en el tacón la presión es igual al peso de la persona, 600 N, que supera lo que resiste la madera.",
+        "correcta": false,
+        "explicacion": "No responde. La presión no se mide en newtons ni es igual al peso: en el tacón es 600 N / 0,0002 m² = 3 000 000 Pa, y en la suela plana 800 N / 0,02 m² = 40 000 Pa, que no es nula, aunque sí mucho menor.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde presión con fuerza y no divide entre el área."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque la presión es la fuerza dividida entre el área: el tacón concentra 600 N en 2 cm² (unos 3 000 000 Pa), mientras la suela reparte 800 N en 200 cm² (unos 40 000 Pa); la presión del tacón es unas 75 veces mayor y supera lo que soporta la madera.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Tacón: 600 N / 0,0002 m² = 3 000 000 Pa. Suela plana: 800 N / 0,02 m² = 40 000 Pa. Aunque la fuerza es menor, el área cien veces más pequeña hace que la presión sea unas 75 veces mayor, y es la presión, no la fuerza, la que hunde la madera.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el tacón soporta 600 N sobre 2 cm² y la suela plana 800 N sobre 200 cm²; el contexto define presión como fuerza entre área. COMPRENDER: se pide explicar por qué marca el piso el tacón y no la suela plana, pese a que la persona de suela plana pesa más. INTERPRETAR: lo que deforma la madera es la presión, es decir, la fuerza por unidad de área. REPRESENTAR: 2 cm² = 0,0002 m²; 200 cm² = 0,02 m². Presión del tacón = 600 / 0,0002 = 3 000 000 Pa. Presión de la suela = 800 / 0,02 = 40 000 Pa. RAZONAR: la razón entre presiones es 3 000 000 / 40 000 = 75: el tacón ejerce una presión 75 veces mayor con menos fuerza, porque su área es cien veces menor. RESOLVER: la respuesta es la opción que calcula ambas presiones y las compara. VERIFICAR: la opción de la fuerza mayor contradice la tabla; la del material no usa los datos; la que iguala presión a 600 N confunde presión con fuerza.",
+    "que_identificar": "La fuerza y el área de cada calzado en la tabla y la definición de presión como fuerza dividida entre área.",
+    "que_revisar": "Presión en sólidos; conversión de cm² a m²; pascal; relación inversa entre presión y área.",
+    "refuerzo_ids": [
+      "CIE-130",
+      "CIE-022"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "presion",
+      "fuerza",
+      "area",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-179",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza, basándose en conocimientos científicos y en la evidencia de su propia investigación y la de otros",
+    "evidencia": "Elabora conclusiones a partir de información o evidencias que las respalden",
+    "habilidad": "resolver",
+    "tema": "Movilidad urbana y emisiones de dióxido de carbono",
+    "subtema": "Emisiones de CO₂ por pasajero y kilómetro en distintos medios de transporte",
+    "dificultad": 3,
+    "contexto": "Un colegio quiere recomendar a sus estudiantes el medio de transporte con menor impacto climático para llegar a clases. Un grupo recopiló las emisiones promedio de dióxido de carbono por kilómetro recorrido de cada vehículo y el número promedio de personas que viajan en él en la ciudad. Un estudiante afirmó: \"El bus es el que más contamina, porque emite cinco veces más CO₂ por kilómetro que un carro\".",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Emisiones y ocupación promedio por tipo de vehículo",
+      "columnas": [
+        "Vehículo",
+        "CO₂ emitido por kilómetro (g/km)",
+        "Ocupación promedio (personas)"
+      ],
+      "filas": [
+        [
+          "Automóvil particular",
+          180,
+          1.3
+        ],
+        [
+          "Motocicleta",
+          80,
+          1.1
+        ],
+        [
+          "Bus urbano",
+          900,
+          40
+        ],
+        [
+          "Bicicleta",
+          0,
+          1
+        ]
+      ],
+      "nota": "Emisiones directas del vehículo en marcha; no se incluyen la fabricación ni la producción del combustible."
+    },
+    "enunciado": "¿Qué conclusión sobre la afirmación del estudiante se desprende de los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La afirmación es engañosa: por vehículo el bus emite más, pero por pasajero emite unos 23 g de CO₂ por kilómetro, frente a unos 138 g del automóvil y unos 73 g de la motocicleta; para comparar el impacto de transportar personas debe usarse la emisión por pasajero.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Emisión por pasajero: automóvil 180 / 1,3 ≈ 138 g; motocicleta 80 / 1,1 ≈ 73 g; bus 900 / 40 ≈ 23 g; bicicleta 0. El bus emite más por vehículo, pero transporta 40 personas, así que por pasajero es el motorizado de menor impacto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La afirmación es correcta: el bus emite 900 g/km, cinco veces los 180 g/km del automóvil, y como circula todo el día por la ciudad acumula más emisiones que cualquier otro vehículo; conviene recomendar la motocicleta, que es el motorizado con menos emisiones por kilómetro.",
+        "correcta": false,
+        "explicacion": "No responde. Compara emisiones por vehículo sin tener en cuenta cuántas personas transporta cada uno. Por pasajero, el bus emite unos 23 g/km, menos de la tercera parte de la motocicleta (73 g/km); la tabla no informa sobre horas de circulación.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara vehículos sin normalizar por el número de personas transportadas."
+      },
+      {
+        "clave": "C",
+        "texto": "La afirmación es incorrecta porque la ocupación del bus hace que sus emisiones por pasajero sean de unos 900 / 40 = 22,5 g/km, pero la del automóvil queda en 180 × 1,3 = 234 g/km por pasajero, así que el automóvil emite diez veces más por persona que el bus.",
+        "correcta": false,
+        "explicacion": "No responde. La emisión por pasajero se obtiene dividiendo entre la ocupación en todos los casos: para el automóvil es 180 / 1,3 ≈ 138 g/km, no 180 × 1,3. El bus sí emite menos por persona, pero la razón es cercana a 6, no a 10.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Multiplicó por la ocupación en un vehículo y dividió en otro."
+      },
+      {
+        "clave": "D",
+        "texto": "No se puede evaluar la afirmación, porque la tabla no incluye las emisiones de la fabricación de los vehículos ni de la producción del combustible, y sin esos datos cualquier comparación entre medios de transporte carece de sentido.",
+        "correcta": false,
+        "explicacion": "No responde. La afirmación del estudiante se refiere a lo que el vehículo emite al circular, y para eso los datos sí permiten una comparación justa por pasajero. Incluir la fabricación ampliaría el análisis, pero no impide evaluar la afirmación con la información disponible.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Rechaza toda conclusión por falta de un dato que no es necesario para la pregunta planteada."
+      }
+    ],
+    "explicacion": "LEER: automóvil 180 g/km y 1,3 personas; motocicleta 80 g/km y 1,1; bus 900 g/km y 40; bicicleta 0 g/km y 1; el estudiante afirma que el bus es el que más contamina porque emite cinco veces más que un carro. COMPRENDER: se pide evaluar esa afirmación. INTERPRETAR: el objetivo es transportar personas, así que la medida pertinente es la emisión por pasajero y kilómetro. REPRESENTAR: automóvil 180 / 1,3 ≈ 138 g; motocicleta 80 / 1,1 ≈ 73 g; bus 900 / 40 ≈ 23 g; bicicleta 0 g. RAZONAR: la afirmación es cierta por vehículo pero engañosa para decidir cómo transportarse: por pasajero el bus es el motorizado de menor impacto y la bicicleta no emite. RESOLVER: la respuesta es la opción que recalcula por pasajero y señala el error de comparar por vehículo. VERIFICAR: la opción que acepta la afirmación no normaliza; la que multiplica 180 × 1,3 aplica mal la operación; los datos de fabricación no son necesarios para evaluar una afirmación sobre emisiones en marcha.",
+    "que_identificar": "Que la afirmación compara emisiones por vehículo y que la tabla permite calcular emisiones por pasajero dividiendo entre la ocupación.",
+    "que_revisar": "Emisiones de gases de efecto invernadero; razones y normalización de datos; evaluación de afirmaciones con evidencia.",
+    "refuerzo_ids": [
+      "CIE-097",
+      "CIE-117"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "movilidad",
+      "emisiones",
+      "cambio climatico",
+      "indagacion",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-180",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona los distintos factores que determinan la dinámica de un sistema o fenómeno (condiciones iniciales, parámetros y constantes) para identificar su comportamiento, teniendo en cuenta las leyes de la física",
+    "habilidad": "interpretar",
+    "tema": "Equilibrio y estabilidad: centro de masa",
+    "subtema": "Altura del centro de masa de un camión cargado y ángulo máximo de inclinación antes de volcar",
+    "dificultad": 3,
+    "contexto": "Una empresa transportadora investigó por qué algunos de sus camiones volcaron en curvas de montaña. Un ingeniero explicó que un vehículo vuelca cuando se inclina tanto que la línea vertical que pasa por su centro de masa cae fuera de la base formada por las ruedas. Con un modelo del camión, de 2,4 m de ancho entre ruedas, midió el ángulo máximo de inclinación lateral antes del vuelco para distintas formas de acomodar la misma carga.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Altura del centro de masa y ángulo máximo de inclinación (ancho entre ruedas: 2,4 m)",
+      "columnas": [
+        "Forma de acomodar la carga",
+        "Altura del centro de masa (m)",
+        "Ángulo máximo antes de volcar (°)"
+      ],
+      "filas": [
+        [
+          "Carga pesada abajo, extendida sobre el piso",
+          1,
+          50
+        ],
+        [
+          "Carga repartida en dos niveles",
+          1.5,
+          39
+        ],
+        [
+          "Carga pesada arriba, liviana abajo",
+          2,
+          31
+        ],
+        [
+          "Carga apilada en lo alto, sobrepasando la baranda",
+          2.5,
+          26
+        ]
+      ],
+      "nota": "La masa total de la carga es la misma en los cuatro casos."
+    },
+    "enunciado": "¿Qué relación muestra la tabla y cómo se explica con el criterio del ingeniero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A mayor altura del centro de masa, mayor ángulo de inclinación soporta el camión, porque la carga alta actúa como contrapeso que lo endereza; por eso conviene apilar la carga pesada arriba en las rutas de montaña.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra lo contrario: al subir el centro de masa de 1,0 a 2,5 m el ángulo máximo baja de 50° a 26°. Una carga alta no endereza el camión; hace que su vertical salga de la base con menos inclinación.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la relación al revés o supuso que más altura da más estabilidad."
+      },
+      {
+        "clave": "B",
+        "texto": "El ángulo máximo depende solo de la masa total de la carga, no de su altura; como la masa es la misma en los cuatro casos, las diferencias de la tabla se deben a errores de medición en el modelo y no a la forma de acomodar la carga.",
+        "correcta": false,
+        "explicacion": "No responde. Con la misma masa total, el ángulo cambió de 50° a 26° de manera ordenada al subir el centro de masa; una variación tan grande y sistemática no corresponde a errores de medición, sino al efecto de la altura del centro de masa.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Descarta un patrón claro en los datos atribuyéndolo a error experimental."
+      },
+      {
+        "clave": "C",
+        "texto": "A mayor altura del centro de masa, menor ángulo de inclinación soporta el camión, porque con el centro de masa más alto basta una inclinación pequeña para que su vertical caiga fuera de la base de 2,4 m entre las ruedas; por eso la carga pesada debe ir abajo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que al pasar de 1,0 a 2,5 m de altura el ángulo máximo cae de 50° a 26°. Con la misma base, un centro de masa más alto se desplaza más hacia afuera al inclinarse, y su vertical sale de la base con un ángulo menor, tal como describe el criterio del ingeniero.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "A mayor altura del centro de masa, menor ángulo soporta el camión, porque la carga alta aumenta el peso total del vehículo y las ruedas del lado interior de la curva se despegan del suelo con más facilidad al tener que sostener más kilos. Esta es la razón por la que los camiones cargados frenan peor.",
+        "correcta": false,
+        "explicacion": "No responde. La relación está bien leída, pero la explicación es incorrecta: la nota indica que la masa total es la misma en los cuatro casos, así que el peso no aumentó. Lo que cambia es la posición del centro de masa respecto a la base, no la cantidad de kilos.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye el efecto a más peso en lugar de a la geometría del centro de masa y la base."
+      }
+    ],
+    "explicacion": "LEER: la tabla relaciona la altura del centro de masa (1,0; 1,5; 2,0; 2,5 m) con el ángulo máximo antes de volcar (50°, 39°, 31°, 26°), con la misma masa y 2,4 m entre ruedas; el vuelco ocurre cuando la vertical por el centro de masa cae fuera de la base. COMPRENDER: se pide la relación y su explicación. INTERPRETAR: a mayor altura del centro de masa, menor ángulo tolerado: relación inversa. REPRESENTAR: al inclinar el camión un ángulo θ, la vertical por el centro de masa se desplaza una distancia proporcional a la altura h; sale de la base cuando supera la mitad del ancho (1,2 m): tan θ = 1,2 / h; para h = 1,0 m, θ ≈ 50°; para h = 2,5 m, θ ≈ 26°. RAZONAR: la geometría explica los valores de la tabla sin cambiar la masa. RESOLVER: la respuesta es la opción que describe la relación inversa y la explica con la vertical que sale de la base. VERIFICAR: la opción del contrapeso invierte la relación; la de errores de medición ignora un patrón sistemático; la del peso adicional contradice la nota de masa constante.",
+    "que_identificar": "Que el ángulo máximo disminuye de forma ordenada al subir el centro de masa, con masa total y ancho de base constantes.",
+    "que_revisar": "Centro de masa; condiciones de equilibrio y estabilidad; base de apoyo; relaciones inversas en tablas.",
+    "refuerzo_ids": [
+      "CIE-127",
+      "CIE-147"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "centro de masa",
+      "equilibrio",
+      "estabilidad",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  }
+]

@@ -1,0 +1,1817 @@
+[
+  {
+    "id": "SOC-121",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "verificar",
+    "tema": "Fotografía como fuente histórica",
+    "subtema": "Alcances de una foto oficial de inauguración",
+    "dificultad": 2,
+    "contexto": "Descripción de una fotografía (ficticia) conservada en un archivo municipal, fechada en 1932: en el andén de una estación de ferrocarril recién construida posan el gobernador, el obispo, el gerente de la compañía ferroviaria y varios hombres de traje y sombrero. Al fondo se ve la locomotora adornada con banderas. En el borde inferior, una leyenda impresa dice: “Progreso y unión: la región se incorpora a la nación”. No aparecen trabajadores de la obra ni pasajeros.\n\nUn grupo de estudiantes quiere usar la foto para sostener que “el ferrocarril fue recibido con entusiasmo por toda la población de la región”.",
+    "estimulo": null,
+    "enunciado": "¿Qué puede afirmarse con rigor sobre el uso de esta fuente para esa conclusión?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La foto prueba la conclusión, porque fue tomada el día de la inauguración y muestra banderas y autoridades celebrando.",
+        "correcta": false,
+        "explicacion": "La foto muestra la celebración de un grupo reducido de autoridades y empresarios; de ella no puede deducirse lo que sentía 'toda la población', que no aparece en la imagen.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generaliza a toda la población lo que la imagen muestra de unas pocas personas."
+      },
+      {
+        "clave": "B",
+        "texto": "La foto no sirve como fuente histórica, porque fue tomada con fines de propaganda y por tanto es falsa.",
+        "correcta": false,
+        "explicacion": "Que una imagen sea propaganda no la hace inútil: informa sobre quiénes promovían el ferrocarril y cómo querían presentarlo. El error está en usarla para probar algo que no muestra.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una fuente sesgada con una fuente falsa y la descarta por completo."
+      },
+      {
+        "clave": "C",
+        "texto": "La foto informa sobre cómo las élites quisieron presentar el ferrocarril, pero no sobre la opinión de trabajadores ni de la población en general.",
+        "correcta": true,
+        "explicacion": "Los retratados son autoridades y empresarios, la leyenda transmite un mensaje oficial y no hay trabajadores ni pasajeros: la imagen es evidencia de la intención de las élites, no del sentir popular.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La foto demuestra que los trabajadores estaban descontentos, puesto que ninguno de ellos quiso aparecer en la inauguración.",
+        "correcta": false,
+        "explicacion": "La ausencia de trabajadores en la foto no revela su opinión: pudo deberse a quién decidió quién posaba. Deducir descontento de una ausencia es ir más allá de lo que la fuente muestra.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Interpreta un silencio de la fuente como una prueba positiva de lo contrario."
+      }
+    ],
+    "explicacion": "LEER: la foto de 1932 muestra autoridades y empresarios posando en la estación, con una leyenda oficial, y sin trabajadores ni pasajeros; los estudiantes quieren probar el entusiasmo de toda la población. COMPRENDER: se pide evaluar qué permite afirmar la fuente. INTERPRETAR: quienes aparecen y la leyenda muestran la intención de los promotores de presentar el ferrocarril como progreso; nada informa sobre lo que pensaba el resto de la gente. REPRESENTAR: lo que muestra (élites, mensaje oficial) frente a lo que no muestra (trabajadores, pasajeros, opiniones). RAZONAR: la foto ni prueba el entusiasmo general ni el descontento obrero, y tampoco es inútil por ser propaganda. RESOLVER: la opción que distingue entre la presentación de las élites y la opinión de la población. VERIFICAR: la frase de la leyenda, 'Progreso y unión', confirma que la imagen fue construida para transmitir un mensaje.",
+    "que_identificar": "Quiénes aparecen en la foto, quiénes no, y el mensaje de la leyenda impresa.",
+    "que_revisar": "Imágenes como fuentes históricas: autor, intención, encuadre y silencios; diferencia entre fuente sesgada y fuente falsa.",
+    "refuerzo_ids": [
+      "SOC-106",
+      "SOC-050"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "fuentes_historicas",
+      "fotografia",
+      "ferrocarril",
+      "siglo_xx_colombia",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-122",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona problemáticas o prácticas sociales con características del espacio geográfico",
+    "habilidad": "interpretar",
+    "tema": "Densidad de población y características del territorio",
+    "subtema": "Contraste entre el Caribe urbano y la Amazonia",
+    "dificultad": 1,
+    "contexto": "La **densidad de población** es el número de habitantes por kilómetro cuadrado. Un estudiante comparó cuatro departamentos de Colombia con cifras redondeadas tomadas de las proyecciones del censo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Área, población y densidad de cuatro departamentos (cifras aproximadas)",
+      "columnas": [
+        "Departamento",
+        "Área (km²)",
+        "Población (millones)",
+        "Densidad (hab/km²)"
+      ],
+      "filas": [
+        [
+          "Atlántico",
+          3400,
+          2.8,
+          "≈ 820"
+        ],
+        [
+          "Quindío",
+          1850,
+          0.55,
+          "≈ 300"
+        ],
+        [
+          "Vichada",
+          100000,
+          0.11,
+          "≈ 1"
+        ],
+        [
+          "Amazonas",
+          109000,
+          0.08,
+          "≈ 0,7"
+        ]
+      ],
+      "nota": "Cifras redondeadas con fines escolares."
+    },
+    "enunciado": "¿Cuál explicación relaciona de forma adecuada las densidades de la tabla con las características de cada territorio?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Vichada y Amazonas tienen poca población porque son departamentos muy pequeños, con menos área que Atlántico.",
+        "correcta": false,
+        "explicacion": "La tabla muestra lo contrario: Vichada y Amazonas tienen más de 100 000 km², unas treinta veces el área del Atlántico; su baja densidad se debe a la poca población, no al poco espacio.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la columna de densidad con la de área y supone que baja densidad equivale a territorio pequeño."
+      },
+      {
+        "clave": "B",
+        "texto": "Atlántico tiene la mayor densidad porque su territorio es el más extenso y por eso cabe más gente en él.",
+        "correcta": false,
+        "explicacion": "Atlántico es el segundo departamento más pequeño de la tabla en área; su densidad es alta porque concentra 2,8 millones de personas, sobre todo en Barranquilla y su área metropolitana.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia alta densidad con gran extensión, cuando es la relación entre población y área."
+      },
+      {
+        "clave": "C",
+        "texto": "Las cuatro cifras muestran que la población colombiana se distribuye de manera uniforme por todo el país.",
+        "correcta": false,
+        "explicacion": "Una densidad de 820 frente a 0,7 habitantes por km² es la prueba de una distribución muy desigual, no uniforme.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No compara los valores extremos de la tabla."
+      },
+      {
+        "clave": "D",
+        "texto": "Atlántico es pequeño y concentra una gran ciudad costera; Vichada y Amazonas son extensos, con selva y sabanas poco pobladas y de difícil acceso.",
+        "correcta": true,
+        "explicacion": "La densidad de 820 del Atlántico resulta de mucha población en poco espacio alrededor de Barranquilla; las de Vichada y Amazonas, cercanas a 1, reflejan grandes territorios de selva y sabana con poca población y escasa conexión por vías.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da área, población y densidad de cuatro departamentos; la densidad va de 820 a 0,7 habitantes por km². COMPRENDER: se pide relacionar esas densidades con las características de cada territorio. INTERPRETAR: densidad = población / área; el Atlántico es pequeño y muy poblado; Vichada y Amazonas son enormes y casi vacíos. REPRESENTAR: Atlántico (3 400 km², 2,8 millones) frente a Amazonas (109 000 km², 0,08 millones). RAZONAR: las opciones que atribuyen la baja densidad al poco espacio o la alta densidad a la gran extensión invierten la relación; la distribución no es uniforme. RESOLVER: la opción que vincula la concentración urbana costera con la selva y sabana poco pobladas. VERIFICAR: 2,8 millones / 3 400 km² da cerca de 820, como indica la tabla.",
+    "que_identificar": "La relación entre las columnas de área y población que produce la densidad, y la ubicación geográfica de cada departamento.",
+    "que_revisar": "Densidad de población; distribución de la población colombiana entre la región Andina, el Caribe, la Orinoquia y la Amazonia.",
+    "refuerzo_ids": [
+      "SOC-110",
+      "SOC-020"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "densidad",
+      "poblacion",
+      "amazonia",
+      "caribe",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-123",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Salario mínimo",
+    "subtema": "Efectos de un aumento alto del salario mínimo en varias dimensiones",
+    "dificultad": 2,
+    "contexto": "Cada diciembre, en Colombia, representantes de los trabajadores, de los empresarios y del gobierno negocian el **salario mínimo** del año siguiente. En una mesa (ficticia), los sindicatos piden un aumento del 15 %, mientras la inflación del año fue del 6 %. Datos presentados en la mesa: cerca de la mitad de los trabajadores del país es informal (no tiene contrato ni cotiza a seguridad social) y en las microempresas la nómina representa más de la mitad de los costos. Los empresarios proponen un 7 %.",
+    "estimulo": null,
+    "enunciado": "¿Cuál análisis de los posibles efectos de un aumento del 15 % considera más de una dimensión del problema?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Mejoraría el poder de compra de los trabajadores formales, pero podría llevar a algunas microempresas a reducir personal o a contratar sin formalidad, lo que no beneficia a los informales.",
+        "correcta": true,
+        "explicacion": "El aumento supera a la inflación, así que quien lo recibe gana poder adquisitivo; pero en microempresas donde la nómina pesa más de la mitad, el sobrecosto puede traducirse en despidos o informalidad, y los informales, la mitad de los trabajadores, no reciben el mínimo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Beneficiaría por igual a todos los trabajadores del país, porque el salario mínimo es la base legal de pago de cualquier empleo en Colombia y, con el tiempo, también arrastra hacia arriba lo que ganan los informales.",
+        "correcta": false,
+        "explicacion": "El contexto indica que cerca de la mitad de los trabajadores es informal y no recibe salario mínimo legal; el aumento no les llega de forma directa.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora el dato de informalidad y supone que todos los trabajadores tienen contrato."
+      },
+      {
+        "clave": "C",
+        "texto": "No tendría ningún efecto real sobre nadie, porque la inflación del 6 % se come todo el aumento y tanto los trabajadores formales como los informales terminan con el mismo poder de compra que tenían antes.",
+        "correcta": false,
+        "explicacion": "Un aumento del 15 % con inflación del 6 % deja una ganancia real cercana al 9 %; la afirmación confunde un aumento mayor que la inflación con uno igual a ella.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Resta mal o cree que cualquier inflación anula cualquier aumento."
+      },
+      {
+        "clave": "D",
+        "texto": "Reduciría la informalidad de inmediato, porque con un salario más alto todos los empleadores, incluidas las microempresas, preferirían contratar de manera formal para no perder a sus trabajadores.",
+        "correcta": false,
+        "explicacion": "Un mayor costo de la nómina formal tiende a desestimular, no a favorecer, la contratación formal en las microempresas, según el dato de que la nómina supera la mitad de sus costos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación entre costo laboral y decisión de formalizar."
+      }
+    ],
+    "explicacion": "LEER: sindicatos piden 15 %, inflación 6 %, empresarios ofrecen 7 %; la mitad de los trabajadores es informal y en microempresas la nómina pesa más de la mitad de los costos. COMPRENDER: se pide el análisis que considere varias dimensiones. INTERPRETAR: el aumento mejora el ingreso real de los formales (15 > 6), pero encarece la nómina de las microempresas, que pueden despedir o informalizar; los informales no reciben el mínimo. REPRESENTAR: dimensión del trabajador formal (gana), de la microempresa (costo), del informal (no le llega). RAZONAR: decir que beneficia a todos, que no tiene efecto o que reduce la informalidad contradice alguno de los datos. RESOLVER: la opción que combina mayor poder de compra con riesgo de despidos e informalidad. VERIFICAR: 15 % menos 6 % es cerca de 9 % de ganancia real, lo que confirma el beneficio para quien conserve su empleo formal.",
+    "que_identificar": "La diferencia entre 15 % y 6 %, el dato de informalidad y el peso de la nómina en las microempresas.",
+    "que_revisar": "Salario mínimo, inflación y salario real; informalidad laboral; análisis de efectos de una decisión en varios actores.",
+    "refuerzo_ids": [
+      "SOC-069",
+      "SOC-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "salario_minimo",
+      "informalidad",
+      "economia",
+      "politica_publica",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-124",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce la organización del Estado: funciones y alcances de las ramas del poder y de los organismos de control",
+    "habilidad": "comprender",
+    "tema": "Trámite de una ley",
+    "subtema": "Etapas en el Congreso y sanción presidencial",
+    "dificultad": 1,
+    "contexto": "Un periódico escolar publicó esta nota (ficticia): “El Senado aprobó ayer, en plenaria, el proyecto que reduce la jornada escolar los viernes. ¡Desde la próxima semana saldremos a las 11 a. m.!”. Un docente les recordó a los redactores que, según la Constitución de 1991, un proyecto de ley debe ser aprobado en **cuatro debates** (comisión y plenaria de cada una de las dos cámaras: Senado y Cámara de Representantes), luego pasa al **presidente**, quien lo **sanciona** (firma) o lo **objeta** por inconveniencia o inconstitucionalidad, y solo entonces se publica y entra en vigor.",
+    "estimulo": null,
+    "enunciado": "¿Por qué el titular del periódico escolar es incorrecto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque las leyes sobre educación no las aprueba el Congreso, sino el Ministerio de Educación mediante decretos.",
+        "correcta": false,
+        "explicacion": "El Congreso sí expide leyes sobre educación; el Ministerio reglamenta y ejecuta, pero no reemplaza al legislador. El error del titular es otro: el trámite no ha terminado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la función de legislar con la de reglamentar y ejecutar."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque la aprobación en la plenaria del Senado es solo una etapa: faltan los debates en la Cámara de Representantes y la sanción presidencial.",
+        "correcta": true,
+        "explicacion": "El docente explica que se requieren cuatro debates en las dos cámaras y la sanción del presidente; con la plenaria del Senado el proyecto sigue siendo proyecto, no ley vigente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el proyecto debe ser aprobado también por la Corte Constitucional antes de que se publique como ley.",
+        "correcta": false,
+        "explicacion": "La Corte revisa las leyes cuando son demandadas (o ciertas leyes de forma automática), pero no es una etapa ordinaria de aprobación; el paso que falta es el de la otra cámara y la sanción.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Agrega una etapa que no está en el trámite ordinario descrito por el docente."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el presidente ya había objetado el proyecto y, por tanto, el Senado no podía volver a discutirlo.",
+        "correcta": false,
+        "explicacion": "El contexto no menciona ninguna objeción presidencial; el proyecto ni siquiera ha llegado al presidente, pues falta su paso por la Cámara de Representantes.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa un hecho que no aparece en la nota ni en la explicación del docente."
+      }
+    ],
+    "explicacion": "LEER: el titular anuncia que la medida ya rige porque el Senado la aprobó; el docente describe el trámite completo. COMPRENDER: se pide la razón por la que el titular se equivoca. INTERPRETAR: aprobar en plenaria del Senado es uno de los cuatro debates; luego siguen comisión y plenaria de la Cámara, sanción presidencial y publicación. REPRESENTAR: proyecto → comisión Senado → plenaria Senado → comisión Cámara → plenaria Cámara → sanción u objeción → publicación → ley vigente. RAZONAR: el Congreso sí legisla sobre educación; la Corte no es etapa ordinaria; no hubo objeción. RESOLVER: la opción que señala que faltan la Cámara y la sanción. VERIFICAR: la frase 'solo entonces se publica y entra en vigor' confirma que la medida no puede aplicarse la próxima semana.",
+    "que_identificar": "La etapa que menciona la nota (plenaria del Senado) y las etapas que faltan según la explicación del docente.",
+    "que_revisar": "Función legislativa: Congreso bicameral, debates, sanción y objeciones presidenciales; diferencia entre ley, decreto y sentencia.",
+    "refuerzo_ids": [
+      "SOC-105",
+      "SOC-003"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "congreso",
+      "tramite_legislativo",
+      "ramas_del_poder",
+      "constitucion_1991",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-125",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "interpretar",
+    "tema": "Memoria histórica y monumentos",
+    "subtema": "Debate sobre la estatua de un conquistador",
+    "dificultad": 3,
+    "contexto": "En la plaza central de una ciudad (ficticia) hay desde 1937 una estatua de un conquistador español del siglo XVI, fundador de la ciudad. Un cabildo indígena pidió retirarla. En un foro se oyeron estas voces:\n\n- **Gobernador del cabildo:** “Ese hombre dirigió la matanza de nuestros antepasados. Pasar cada día frente a su estatua es celebrar nuestra derrota”.\n- **Historiadora de la universidad:** “La estatua no es del siglo XVI: la puso en 1937 un gobierno que quería exaltar la herencia hispánica. Más que al conquistador, nos habla de quién decidió recordarlo así”.\n- **Presidente de los comerciantes:** “La estatua es la postal de la ciudad; sin ella perdemos identidad y turismo”.\n- **Alcaldesa:** “Propongo dejarla, pero añadir una placa y un monumento a los pueblos originarios al frente”.",
+    "estimulo": null,
+    "enunciado": "¿Qué aporta la perspectiva de la historiadora al debate, a diferencia de las otras tres?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Defiende que la estatua se conserve tal como está, porque es un objeto antiguo que no debe ser alterado por razones políticas.",
+        "correcta": false,
+        "explicacion": "La historiadora no pide conservarla ni retirarla; señala que la estatua es de 1937, no antigua del siglo XVI, y que expresa una decisión política de ese momento.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asume que todo historiador defiende conservar los monumentos."
+      },
+      {
+        "clave": "B",
+        "texto": "Respalda la petición del cabildo con el argumento de que el conquistador fue responsable de la muerte de los antepasados indígenas.",
+        "correcta": false,
+        "explicacion": "Ese argumento es el del gobernador del cabildo; la historiadora no habla del conquistador, sino del gobierno de 1937 que erigió la estatua.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde las voces y atribuye a la historiadora el argumento del cabildo."
+      },
+      {
+        "clave": "C",
+        "texto": "Plantea que la decisión debe tomarse según su efecto en la identidad y el turismo de la ciudad, como señala el comerciante.",
+        "correcta": false,
+        "explicacion": "La historiadora no menciona turismo ni identidad comercial; su aporte está en el origen y el significado histórico del monumento.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Mezcla la postura económica del comerciante con la de la historiadora."
+      },
+      {
+        "clave": "D",
+        "texto": "Desplaza la discusión del personaje representado a quienes decidieron erigir la estatua y al mensaje que quisieron transmitir en 1937.",
+        "correcta": true,
+        "explicacion": "Mientras el cabildo, el comerciante y la alcaldesa discuten si la figura debe estar o no, la historiadora muestra que el monumento es una fuente sobre 1937: revela la intención de exaltar la herencia hispánica de quien lo levantó.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro voces sobre la estatua: retirarla (cabildo), conservarla por turismo (comerciante), complementarla (alcaldesa) y una lectura sobre su origen en 1937 (historiadora). COMPRENDER: se pide el aporte particular de la historiadora. INTERPRETAR: ella no toma partido sobre quitar o dejar; aclara que la estatua es de 1937 y expresa la intención de un gobierno de exaltar la herencia hispánica. REPRESENTAR: el conquistador (siglo XVI) frente a quienes lo recordaron (1937): el monumento es fuente sobre el segundo momento. RAZONAR: no defiende conservarla, no repite el argumento del cabildo ni el del comerciante. RESOLVER: la opción que señala el desplazamiento hacia quienes erigieron la estatua y su mensaje. VERIFICAR: su frase 'nos habla de quién decidió recordarlo así' resume ese aporte.",
+    "que_identificar": "La fecha de 1937 y la frase de la historiadora sobre quién decidió recordar al conquistador, frente a los argumentos de los demás.",
+    "que_revisar": "Memoria histórica, monumentos y usos públicos del pasado; distinción entre el hecho histórico y la forma en que se conmemora.",
+    "refuerzo_ids": [
+      "SOC-112",
+      "SOC-053"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "memoria_historica",
+      "monumentos",
+      "pueblos_indigenas",
+      "perspectivas",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-126",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "interpretar",
+    "tema": "Turismo y transformación de los pueblos",
+    "subtema": "Relación entre visitantes y costo de la vivienda",
+    "dificultad": 2,
+    "contexto": "Un pueblo colonial de la región Andina (ficticio) fue declarado destino turístico en 2015. Desde entonces se abrieron hoteles, cafés y tiendas de artesanías. Una veeduría ciudadana reunió estos datos para discutirlos con el concejo, porque varias familias que vivían en el centro histórico se han ido a barrios periféricos.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Visitantes al año y arriendo promedio de una casa en el centro histórico (datos ficticios)",
+      "eje_x": "Año",
+      "eje_y": "Valor",
+      "series": [
+        {
+          "nombre": "Visitantes (miles por año)",
+          "valores": [
+            [
+              "2015",
+              40
+            ],
+            [
+              "2017",
+              95
+            ],
+            [
+              "2019",
+              160
+            ],
+            [
+              "2021",
+              120
+            ],
+            [
+              "2023",
+              230
+            ],
+            [
+              "2025",
+              310
+            ]
+          ]
+        },
+        {
+          "nombre": "Arriendo mensual promedio (miles de pesos)",
+          "valores": [
+            [
+              "2015",
+              600
+            ],
+            [
+              "2017",
+              800
+            ],
+            [
+              "2019",
+              1100
+            ],
+            [
+              "2021",
+              1150
+            ],
+            [
+              "2023",
+              1600
+            ],
+            [
+              "2025",
+              2100
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál relación entre dimensiones del problema se apoya en el gráfico y en el contexto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La caída de visitantes en 2021 provocó una baja de los arriendos del centro histórico, lo que permitió que las familias desplazadas regresaran a sus casas y frenó la presión sobre los barrios periféricos.",
+        "correcta": false,
+        "explicacion": "En 2021 los visitantes bajaron de 160 a 120 mil, pero el arriendo no bajó: subió levemente de 1 100 a 1 150; el contexto tampoco habla de regreso de familias.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que las dos series se mueven siempre juntas y no revisa el dato de 2021."
+      },
+      {
+        "clave": "B",
+        "texto": "El aumento de visitantes mejoró los ingresos de todos los habitantes del pueblo por igual (dimensión económica), de modo que el desplazamiento de familias hacia la periferia debe explicarse por otras causas, como la inseguridad.",
+        "correcta": false,
+        "explicacion": "El gráfico no muestra ingresos de los habitantes; sí muestra que el arriendo se multiplicó por 3,5 mientras crecía el turismo, lo que coincide con la salida de familias señalada en el contexto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye al turismo solo efectos positivos e introduce datos que no están en el gráfico."
+      },
+      {
+        "clave": "C",
+        "texto": "El crecimiento del turismo (dimensión económica) elevó el costo de vivir en el centro, lo que empuja a las familias de menores ingresos hacia la periferia (dimensión social).",
+        "correcta": true,
+        "explicacion": "Entre 2015 y 2025 los visitantes pasaron de 40 a 310 mil y el arriendo de 600 mil a 2,1 millones de pesos; el contexto conecta esa alza con la salida de familias del centro histórico. Es una relación entre la economía turística y la composición social del lugar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El alza de los arriendos hizo que llegaran más turistas (dimensión económica), porque los precios altos dan prestigio al destino y atraen visitantes de mayores ingresos que buscan exclusividad y tranquilidad.",
+        "correcta": false,
+        "explicacion": "La relación lógica va en sentido contrario: la demanda turística eleva los precios del centro; nada en el contexto indica que los turistas lleguen atraídos por arriendos caros.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la dirección de la relación causa-efecto."
+      }
+    ],
+    "explicacion": "LEER: el gráfico muestra visitantes (40 → 310 mil) y arriendo promedio (600 mil → 2,1 millones) entre 2015 y 2025; el contexto dice que familias del centro se fueron a la periferia. COMPRENDER: se pide la relación entre dimensiones que apoyan los datos. INTERPRETAR: más turismo eleva la demanda de espacio en el centro y, con ella, los arriendos; quienes no pueden pagar se desplazan. REPRESENTAR: dimensión económica (visitantes, arriendo) → dimensión social (desplazamiento de familias) → dimensión territorial (cambio de uso del centro). RAZONAR: en 2021 el arriendo no bajó pese a menos turistas; el gráfico no mide ingresos; los arriendos caros no atraen turistas. RESOLVER: la opción que vincula el crecimiento turístico con el costo de vivir en el centro y la salida de familias. VERIFICAR: la relación 2 100 / 600 = 3,5 confirma el fuerte encarecimiento.",
+    "que_identificar": "La tendencia de las dos series, el dato de 2021 y la mención del desplazamiento de familias en el contexto.",
+    "que_revisar": "Efectos sociales y territoriales del turismo; gentrificación; lectura de gráficos de líneas con dos series.",
+    "refuerzo_ids": [
+      "SOC-117",
+      "SOC-045"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "turismo",
+      "vivienda",
+      "gentrificacion",
+      "territorio",
+      "lineas",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-127",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "leer",
+    "tema": "Revoluciones atlánticas",
+    "subtema": "Secuencia de independencias y revoluciones (1776-1824)",
+    "dificultad": 1,
+    "contexto": "Un docente propuso a sus estudiantes ubicar en el tiempo las principales revoluciones e independencias del mundo atlántico entre finales del siglo XVIII y comienzos del XIX.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Revoluciones e independencias en el mundo atlántico",
+      "columnas": [
+        "Año",
+        "Hecho",
+        "Lugar"
+      ],
+      "filas": [
+        [
+          "1776",
+          "Declaración de Independencia de las Trece Colonias",
+          "América del Norte"
+        ],
+        [
+          "1789",
+          "Toma de la Bastilla; inicio de la Revolución Francesa",
+          "Francia"
+        ],
+        [
+          "1804",
+          "Independencia de Haití, primera república fundada por personas antes esclavizadas",
+          "Caribe"
+        ],
+        [
+          "1810",
+          "Grito de independencia en Santafé (20 de julio)",
+          "Nuevo Reino de Granada"
+        ],
+        [
+          "1819",
+          "Batalla de Boyacá",
+          "Nuevo Reino de Granada"
+        ],
+        [
+          "1824",
+          "Batalla de Ayacucho; fin del dominio español en Sudamérica",
+          "Perú"
+        ]
+      ],
+      "nota": "Cronología simplificada."
+    },
+    "enunciado": "¿Cuál afirmación es correcta según la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La Revolución Francesa comenzó antes que la independencia de las Trece Colonias y les sirvió de modelo político a los colonos.",
+        "correcta": false,
+        "explicacion": "La tabla ubica la independencia de las Trece Colonias en 1776 y la toma de la Bastilla en 1789: la primera es trece años anterior a la segunda.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el orden de las dos primeras filas porque asocia 'Francia' con el origen de todas las revoluciones."
+      },
+      {
+        "clave": "B",
+        "texto": "Cuando se dio el grito de independencia en Santafé, Haití ya era una república independiente desde hacía seis años.",
+        "correcta": true,
+        "explicacion": "Haití se independizó en 1804 y el 20 de julio de Santafé es de 1810; la diferencia es de seis años, por lo que Haití ya existía como república cuando empezó el proceso neogranadino.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La batalla de Boyacá puso fin al dominio español en toda Sudamérica, por lo que la batalla de Ayacucho fue apenas un combate menor.",
+        "correcta": false,
+        "explicacion": "Según la tabla, el fin del dominio español en Sudamérica se asocia a Ayacucho (1824), cinco años después de Boyacá (1819), que fue decisiva para el Nuevo Reino de Granada.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la batalla decisiva de la Nueva Granada con la que cerró las guerras en el continente."
+      },
+      {
+        "clave": "D",
+        "texto": "Entre la independencia de Haití y la de las Trece Colonias pasaron menos de diez años, pues ambas ocurrieron en la década de 1770.",
+        "correcta": false,
+        "explicacion": "De 1776 a 1804 transcurrieron 28 años, no menos de diez; el error proviene de restar mal o de confundir las fechas.",
+        "tipo_error": "calculo",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Resta las fechas equivocadas o estima sin calcular."
+      }
+    ],
+    "explicacion": "LEER: la tabla presenta seis hechos entre 1776 y 1824 con su lugar. COMPRENDER: se pide la afirmación coherente con esos datos. INTERPRETAR: hay que comparar años y leer la columna de lugar para no confundir hechos. REPRESENTAR: 1776 Trece Colonias → 1789 Francia → 1804 Haití → 1810 Santafé → 1819 Boyacá → 1824 Ayacucho. RAZONAR: Francia es posterior a las Trece Colonias; Boyacá no cerró la guerra en Sudamérica; entre 1776 y 1804 hay 28 años; entre 1804 y 1810 hay seis. RESOLVER: la opción sobre Haití independiente seis años antes del grito de Santafé. VERIFICAR: 1810 menos 1804 es igual a 6.",
+    "que_identificar": "Los años de Haití (1804) y Santafé (1810) y la columna de lugar que distingue Boyacá de Ayacucho.",
+    "que_revisar": "Revoluciones atlánticas: independencia de Estados Unidos, Revolución Francesa, Haití e independencias hispanoamericanas; cálculo de intervalos.",
+    "refuerzo_ids": [
+      "SOC-102",
+      "SOC-015"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "independencias",
+      "revolucion_francesa",
+      "haiti",
+      "cronologia",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-128",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "razonar",
+    "tema": "Propaganda política y miedo",
+    "subtema": "Intención y supuestos de un mensaje de campaña",
+    "dificultad": 2,
+    "contexto": "Volante (ficticio) repartido en un municipio durante la campaña para la alcaldía:\n\n“Si gana el candidato Ríos, su casa será la próxima. Él y sus amigos quieren quitarle lo que usted construyó con esfuerzo para dárselo a los que no trabajan. Vote por la seguridad de su familia. Vote por Ardila”.\n\nEl programa publicado por el candidato Ríos propone, en materia de vivienda, un subsidio municipal para mejorar casas de familias de bajos ingresos, financiado con el impuesto predial de los predios de mayor valor.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la intención del volante y qué recurso utiliza para lograrla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Busca que los electores voten por Ardila provocando miedo, para lo cual deforma la propuesta de Ríos y presenta a los beneficiarios del subsidio como personas que no trabajan.",
+        "correcta": true,
+        "explicacion": "El volante convierte un subsidio de mejoramiento, financiado con predial de predios de alto valor, en una amenaza de perder la casa; además, descalifica a los beneficiarios con el prejuicio de que no trabajan. Su objetivo es el voto por Ardila a través del temor.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Busca informar a los electores sobre el programa de vivienda de Ríos, para lo cual resume sus puntos principales en lenguaje sencillo.",
+        "correcta": false,
+        "explicacion": "El volante no resume el programa: lo sustituye por una amenaza ('su casa será la próxima') que no aparece en la propuesta de subsidio publicada por Ríos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma el volante como información neutral sin compararlo con el programa real."
+      },
+      {
+        "clave": "C",
+        "texto": "Busca promover el debate entre los dos candidatos, para lo cual invita a los ciudadanos a comparar sus propuestas de impuesto predial.",
+        "correcta": false,
+        "explicacion": "No hay invitación a comparar ni mención del predial; el volante presenta una sola conclusión ('vote por Ardila') basada en el miedo, lo contrario de un llamado al debate.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye al volante una intención deliberativa que su lenguaje no tiene."
+      },
+      {
+        "clave": "D",
+        "texto": "Busca denunciar un caso real de expropiación ocurrido en el municipio, para lo cual cita el programa de Ríos como prueba del hecho.",
+        "correcta": false,
+        "explicacion": "El volante no menciona ningún caso concreto ni cita el programa; la expropiación es una proyección sin fundamento en la propuesta publicada.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una advertencia alarmista con la denuncia de un hecho comprobado."
+      }
+    ],
+    "explicacion": "LEER: el volante advierte que con Ríos 'su casa será la próxima' y pide votar por Ardila; el programa de Ríos propone un subsidio de mejoramiento financiado con predial de predios de alto valor. COMPRENDER: se pide la intención del mensaje y el recurso que usa. INTERPRETAR: el mensaje exagera y deforma la propuesta (de subsidio a expropiación), apela al miedo ('seguridad de su familia') y usa un prejuicio ('los que no trabajan'). REPRESENTAR: propuesta real → distorsión → miedo → voto por el otro candidato. RAZONAR: no informa, no invita al debate y no denuncia un hecho concreto. RESOLVER: la opción que identifica el miedo, la deformación de la propuesta y el prejuicio sobre los beneficiarios. VERIFICAR: la última frase, 'Vote por Ardila', confirma que el propósito es electoral y no informativo.",
+    "que_identificar": "La diferencia entre lo que dice el volante (expropiación) y lo que propone el programa (subsidio con predial), y la frase sobre quienes 'no trabajan'.",
+    "que_revisar": "Propaganda política, apelación al miedo, estereotipos sobre la pobreza; lectura crítica de mensajes electorales.",
+    "refuerzo_ids": [
+      "SOC-109",
+      "SOC-041"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "propaganda",
+      "elecciones",
+      "prejuicio",
+      "argumentacion",
+      "vivienda",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-129",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "comprender",
+    "tema": "Tasa de cambio y comercio exterior",
+    "subtema": "Efectos de la devaluación sobre exportadores e importadores",
+    "dificultad": 1,
+    "contexto": "Noticia ficticia: “El dólar pasó de 3 800 a 4 400 pesos en seis meses. Los cultivadores de flores de la Sabana de Bogotá, que venden casi toda su producción en Estados Unidos y pagan salarios y fertilizantes en pesos, celebran. En cambio, las familias que compran computadores y celulares importados sienten que todo subió de precio, aunque en dólares cueste lo mismo”.",
+    "estimulo": null,
+    "enunciado": "¿Qué concepto económico describe la situación y por qué beneficia a unos y perjudica a otros?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Devaluación del peso: cada dólar que reciben los exportadores vale más pesos, mientras que los bienes importados cuestan más pesos.",
+        "correcta": true,
+        "explicacion": "Que el dólar pase de 3 800 a 4 400 pesos significa que el peso perdió valor frente al dólar. Los floricultores reciben más pesos por cada dólar y pagan costos en pesos; los importadores necesitan más pesos para pagar el mismo precio en dólares.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Inflación: el aumento general de los precios en el país hizo que los floricultores vendieran más caro en el exterior.",
+        "correcta": false,
+        "explicacion": "La noticia no habla de un alza general de precios internos, sino del precio del dólar; además, los floricultores venden en dólares y lo que cambia es cuántos pesos reciben por cada uno.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la subida del precio de una divisa con la subida general de los precios."
+      },
+      {
+        "clave": "C",
+        "texto": "Déficit fiscal: el gobierno gastó más de lo que recaudó y por eso los productos importados subieron de precio.",
+        "correcta": false,
+        "explicacion": "El déficit fiscal se refiere a las cuentas del Estado; la noticia describe el precio del dólar y sus efectos en quienes venden o compran en esa moneda.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia cualquier noticia económica negativa con el gasto del gobierno."
+      },
+      {
+        "clave": "D",
+        "texto": "Revaluación del peso: el peso se fortaleció frente al dólar y por eso los floricultores ganan más por cada venta.",
+        "correcta": false,
+        "explicacion": "Si se necesitan más pesos (4 400 en vez de 3 800) para comprar un dólar, el peso se debilitó, no se fortaleció; una revaluación perjudicaría a los exportadores.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee 'el dólar subió' y lo interpreta como fortalecimiento de la moneda local."
+      }
+    ],
+    "explicacion": "LEER: el dólar subió de 3 800 a 4 400 pesos; los floricultores que venden en dólares celebran; quienes compran importados pagan más. COMPRENDER: se pide el concepto y la razón del efecto desigual. INTERPRETAR: más pesos por dólar significa un peso más débil: devaluación. REPRESENTAR: exportador: ingresos en dólares × más pesos por dólar = más ingresos en pesos, con costos en pesos iguales; importador: precio en dólares × más pesos por dólar = más caro. RAZONAR: no es inflación (precios generales) ni déficit fiscal (cuentas públicas); la revaluación sería el movimiento contrario. RESOLVER: la opción sobre devaluación con sus dos efectos. VERIFICAR: 4 400 es mayor que 3 800, lo que confirma la pérdida de valor del peso.",
+    "que_identificar": "La dirección del cambio en el precio del dólar y en qué moneda recibe ingresos o paga cada actor.",
+    "que_revisar": "Tasa de cambio, devaluación y revaluación; efectos sobre exportadores, importadores y consumidores; diferencia con inflación y déficit fiscal.",
+    "refuerzo_ids": [
+      "SOC-069",
+      "SOC-079"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "tasa_de_cambio",
+      "devaluacion",
+      "exportaciones",
+      "economia",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-130",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Acceso al agua potable",
+    "subtema": "Brecha rural-urbana y salud",
+    "dificultad": 3,
+    "contexto": "Un informe departamental (ficticio) compara la cobertura de acueducto con tratamiento del agua y la tasa de hospitalizaciones por enfermedad diarreica en niños menores de cinco años, en zonas urbanas y rurales. En las veredas, muchas familias toman el agua directamente de quebradas o pozos. El gobernador debe decidir si invierte en una planta de tratamiento para la capital o en pequeños sistemas de potabilización para las veredas.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Cobertura de agua tratada y hospitalizaciones por diarrea en menores de 5 años (datos ficticios)",
+      "columnas": [
+        "Zona",
+        "Población menor de 5 años",
+        "Cobertura de agua tratada",
+        "Hospitalizaciones por diarrea (por cada 1 000 niños)"
+      ],
+      "filas": [
+        [
+          "Capital",
+          60000,
+          "96 %",
+          8
+        ],
+        [
+          "Otras cabeceras",
+          40000,
+          "80 %",
+          15
+        ],
+        [
+          "Zona rural",
+          50000,
+          "35 %",
+          42
+        ]
+      ],
+      "nota": "Tasa calculada sobre los niños de cada zona."
+    },
+    "enunciado": "¿Cuál análisis relaciona de forma correcta las dimensiones ambiental, de salud y de equidad que muestra la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La capital debe recibir la planta, porque tiene más niños (60 000) y por tanto allí ocurren más hospitalizaciones en total, aunque su tasa por cada 1 000 niños sea la más baja de las tres zonas de la tabla.",
+        "correcta": false,
+        "explicacion": "Con 8 por cada 1 000, la capital tiene unas 480 hospitalizaciones; la zona rural, con 42 por cada 1 000 y 50 000 niños, tiene unas 2 100. Ni en tasa ni en total la capital es la más afectada.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mira solo la columna de población y no multiplica por la tasa."
+      },
+      {
+        "clave": "B",
+        "texto": "Las tres zonas presentan tasas parecidas de enfermedad si se tiene en cuenta el tamaño de su población infantil, así que la cobertura de agua tratada no tiene una relación directa con la salud de los niños.",
+        "correcta": false,
+        "explicacion": "Las tasas van de 8 a 42 por cada 1 000, más de cinco veces de diferencia, y descienden a medida que sube la cobertura de agua tratada: la relación es clara.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No compara las columnas entre sí."
+      },
+      {
+        "clave": "C",
+        "texto": "A menor cobertura de agua tratada, mayor tasa de diarrea; la zona rural, con 35 % de cobertura y 42 hospitalizaciones por cada 1 000, concentra el problema y la mayor desigualdad.",
+        "correcta": true,
+        "explicacion": "Las columnas muestran una relación inversa (96 % → 8; 80 % → 15; 35 % → 42) y la zona rural tiene una tasa cinco veces mayor que la capital, además del mayor número total de casos; invertir allí atendería la salud y reduciría la brecha.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Las hospitalizaciones rurales se explican por la distancia a los hospitales y no por el agua, pues los niños de las veredas llegan más graves a consulta, así que la inversión debe ir a construir más vías.",
+        "correcta": false,
+        "explicacion": "La tabla no mide distancias; sí muestra que donde el agua tratada escasea la diarrea es mucho más frecuente, y el contexto señala que en las veredas se bebe agua sin tratar.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce una causa ajena a los datos y deja de lado la relación que la tabla sí muestra."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra tres zonas con población infantil, cobertura de agua tratada y tasa de hospitalizaciones por diarrea; el gobernador debe elegir dónde invertir. COMPRENDER: se pide el análisis que relacione ambiente (agua), salud (diarrea) y equidad (brechas entre zonas). INTERPRETAR: a menor cobertura, mayor tasa: 96 % → 8, 80 % → 15, 35 % → 42. REPRESENTAR: capital: 60 000 × 8 / 1 000 = 480 casos; rural: 50 000 × 42 / 1 000 = 2 100 casos. RAZONAR: la capital no es la más afectada ni en tasa ni en total; las tasas no son parecidas; la distancia no está en la tabla. RESOLVER: la opción que describe la relación inversa y ubica el problema en la zona rural. VERIFICAR: 42 / 8 es mayor que 5, lo que confirma la desigualdad señalada.",
+    "que_identificar": "La relación inversa entre cobertura y tasa de diarrea y el cálculo de casos totales por zona.",
+    "que_revisar": "Agua potable y saneamiento como determinantes de salud; brecha rural-urbana; tasas por mil frente a totales.",
+    "refuerzo_ids": [
+      "SOC-122",
+      "SOC-034"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": [
+      "agua_potable",
+      "salud",
+      "ruralidad",
+      "equidad",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-131",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "interpretar",
+    "tema": "Jurisdicción especial indígena",
+    "subtema": "Dos concepciones de la justicia frente a un mismo hecho",
+    "dificultad": 2,
+    "contexto": "El artículo 246 de la Constitución de 1991 reconoce que las autoridades de los pueblos indígenas pueden ejercer funciones jurisdiccionales en su territorio, según sus propias normas, siempre que no sean contrarias a la Constitución y a las leyes. En un resguardo (ficticio), un joven robó ganado de un vecino. Dos opiniones sobre el caso:\n\n- **Juez municipal:** “El hurto es un delito tipificado en el Código Penal; lo que corresponde es un proceso y, si se prueba, una pena de prisión proporcional al daño”.\n- **Gobernador del resguardo:** “El robo rompió la armonía de la comunidad. El joven deberá trabajar en la parcela del afectado hasta reponer los animales, participar en una ceremonia de limpieza con los mayores y pedir perdón en asamblea. Encerrarlo lejos no cura nada: lo separa de quienes pueden enseñarle”.",
+    "estimulo": null,
+    "enunciado": "¿Qué diferencia de concepción explica las dos propuestas de sanción?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El juez busca que el joven aprenda de su error mediante un proceso judicial con garantías, mientras que el gobernador solo quiere que el afectado recupere sus animales lo más pronto posible, sin pensar en el joven.",
+        "correcta": false,
+        "explicacion": "Es el gobernador quien insiste en el aprendizaje ('quienes pueden enseñarle') y en la reparación; el juez habla de proceso y pena proporcional, no de aprendizaje.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambia los argumentos de los dos actores."
+      },
+      {
+        "clave": "B",
+        "texto": "El gobernador desconoce que el robo es un delito tipificado en el Código Penal, mientras que el juez sí conoce la ley colombiana y por eso propone la única sanción que el ordenamiento jurídico del país permite.",
+        "correcta": false,
+        "explicacion": "El gobernador reconoce el daño y propone una sanción; no niega que haya una falta. La diferencia no es de conocimiento, sino de la forma de entender para qué sirve castigar.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que una concepción distinta de la justicia equivale a ignorancia de la ley."
+      },
+      {
+        "clave": "C",
+        "texto": "Ambos quieren castigar al joven privándolo de su libertad, pero el gobernador considera que el encierro debe cumplirse dentro del resguardo y acompañado de ceremonias, no en una cárcel ordinaria del Estado.",
+        "correcta": false,
+        "explicacion": "El gobernador rechaza expresamente el encierro ('encerrarlo lejos no cura nada') y propone trabajo, ceremonia y perdón; no habla de cárcel en ningún lugar.",
+        "tipo_error": "descuido",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No lee con atención la propuesta del gobernador."
+      },
+      {
+        "clave": "D",
+        "texto": "El juez entiende la justicia como castigo individual proporcional al delito; el gobernador, como restablecimiento de la armonía comunitaria mediante reparación, ritual y reintegración.",
+        "correcta": true,
+        "explicacion": "El juez aplica la lógica del Código Penal (delito, proceso, pena proporcional, prisión). El gobernador parte de otra cosmovisión: el daño afecta a la comunidad y se repara trabajando para el afectado, con una ceremonia y el perdón público, sin separar al joven de su gente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la Constitución reconoce la jurisdicción indígena; frente a un robo, el juez propone proceso y prisión proporcional, y el gobernador propone trabajo reparador, ceremonia y perdón en asamblea. COMPRENDER: se pide la diferencia de concepción que explica las propuestas. INTERPRETAR: el juez piensa en delito, prueba y pena para el individuo; el gobernador piensa en armonía rota y en restablecerla con reparación y reintegración. REPRESENTAR: justicia retributiva individual frente a justicia restaurativa comunitaria. RAZONAR: ninguno ignora la falta, los argumentos no están intercambiados y el gobernador rechaza el encierro. RESOLVER: la opción que contrasta castigo proporcional con restablecimiento de la armonía. VERIFICAR: la frase 'lo separa de quienes pueden enseñarle' resume la lógica comunitaria del gobernador.",
+    "que_identificar": "Las palabras clave de cada actor: 'delito', 'pena proporcional' frente a 'armonía', 'reponer', 'ceremonia', 'perdón en asamblea'.",
+    "que_revisar": "Jurisdicción especial indígena (artículo 246); diversidad étnica y cultural (artículo 7); justicia retributiva y justicia restaurativa.",
+    "refuerzo_ids": [
+      "SOC-112",
+      "SOC-059"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "jurisdiccion_indigena",
+      "cosmovision",
+      "justicia",
+      "constitucion_1991",
+      "diversidad",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-132",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona dimensiones históricas y geográficas de eventos y problemáticas sociales",
+    "habilidad": "razonar",
+    "tema": "Fronteras marítimas y fallo de La Haya de 2012",
+    "subtema": "Efectos del fallo sobre los pescadores raizales",
+    "dificultad": 3,
+    "contexto": "Descripción de un mapa del Caribe suroccidental: el archipiélago de San Andrés, Providencia y Santa Catalina está a unos 700 km de la costa continental colombiana y a unos 200 km de la costa de Nicaragua. En 2012, la Corte Internacional de Justicia de La Haya confirmó que las islas y los cayos pertenecen a Colombia, pero trazó un nuevo límite marítimo que dejó bajo jurisdicción de Nicaragua una amplia zona de mar que Colombia consideraba suya. Los pescadores raizales, descendientes de la población afrocaribeña anglófona del archipiélago, han pescado durante generaciones en bancos y cayos situados en esa zona.",
+    "estimulo": null,
+    "enunciado": "¿Qué relación entre la dimensión histórica y la geográfica explica el impacto del fallo en la comunidad raizal?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El fallo entregó las islas a Nicaragua, por lo que los raizales perdieron su territorio y debieron trasladarse al continente colombiano.",
+        "correcta": false,
+        "explicacion": "El contexto dice que la Corte confirmó la soberanía colombiana sobre las islas y cayos; lo que cambió fue el límite marítimo, no la pertenencia de las islas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el límite marítimo con la soberanía sobre las islas."
+      },
+      {
+        "clave": "B",
+        "texto": "Las zonas de pesca tradicionales de los raizales, construidas a lo largo de generaciones, quedaron en aguas que ahora administra otro Estado, lo que afecta su sustento y su cultura.",
+        "correcta": true,
+        "explicacion": "La dimensión histórica es la práctica pesquera heredada; la geográfica, la ubicación de los bancos en la zona que el fallo asignó a Nicaragua. Al cruzarlas, se entiende que los raizales conservan sus islas pero pierden acceso libre a los mares de los que han vivido.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La distancia de 700 km al continente demuestra que el archipiélago siempre debió ser nicaragüense, lo que el fallo finalmente corrigió.",
+        "correcta": false,
+        "explicacion": "La Corte no decidió por distancia que las islas fueran de Nicaragua; al contrario, ratificó que son colombianas. La distancia explica el aislamiento del archipiélago, no un cambio de soberanía.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa la cercanía geográfica como criterio de soberanía y lee mal el resultado del fallo."
+      },
+      {
+        "clave": "D",
+        "texto": "Los raizales no fueron afectados, porque la pesca artesanal se practica únicamente en la orilla de las islas y no en alta mar.",
+        "correcta": false,
+        "explicacion": "El contexto afirma que los raizales han pescado durante generaciones en bancos y cayos de la zona que pasó a jurisdicción nicaragüense, lejos de la orilla.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora la última frase del contexto sobre los lugares de pesca tradicionales."
+      }
+    ],
+    "explicacion": "LEER: el archipiélago es colombiano y así lo confirmó la Corte en 2012, pero el nuevo límite marítimo dejó bajo Nicaragua aguas donde los raizales han pescado por generaciones. COMPRENDER: se pide la relación entre historia y geografía que explica el impacto en los raizales. INTERPRETAR: la práctica pesquera tradicional (historia) se desarrolla en bancos y cayos ubicados en la zona que cambió de jurisdicción (geografía). REPRESENTAR: islas colombianas + mar reasignado + pesca ancestral en ese mar = pérdida de acceso al sustento. RAZONAR: las islas no pasaron a Nicaragua, la distancia no decidió la soberanía y la pesca raizal no es solo de orilla. RESOLVER: la opción sobre las zonas de pesca tradicionales en aguas que ahora administra otro Estado. VERIFICAR: la frase 'han pescado durante generaciones en bancos y cayos situados en esa zona' confirma la relación.",
+    "que_identificar": "Que las islas siguen siendo colombianas, que cambió el límite marítimo y dónde pescan tradicionalmente los raizales.",
+    "que_revisar": "Fronteras terrestres y marítimas de Colombia; fallo de la Corte Internacional de Justicia de 2012; comunidad raizal y su cultura.",
+    "refuerzo_ids": [
+      "SOC-119",
+      "SOC-025"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "san_andres",
+      "raizales",
+      "fronteras",
+      "la_haya",
+      "caribe",
+      "revisar_docente",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-133",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza el impacto de las ciencias sociales en la sociedad",
+    "habilidad": "razonar",
+    "tema": "Historia, memoria y reparación",
+    "subtema": "Impacto de una investigación histórica en una comunidad",
+    "dificultad": 3,
+    "contexto": "En un municipio del Caribe (ficticio), durante décadas se dijo oficialmente que en 1990 un grupo de campesinos había muerto “en un enfrentamiento entre grupos armados”. Un equipo de historiadores y antropólogos revisó actas de la inspección de policía, registros de defunción, prensa regional y 60 testimonios de sobrevivientes, y concluyó que se trató de una masacre de civiles desarmados perpetrada por un grupo paramilitar con apoyo de algunos funcionarios locales. Tras la publicación del informe, el concejo municipal cambió el nombre de la plaza por el de las víctimas, la alcaldía pidió perdón público y las familias accedieron a programas de reparación.",
+    "estimulo": null,
+    "enunciado": "¿Qué muestra este caso sobre el impacto de las ciencias sociales en la sociedad?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que las ciencias sociales solo describen el pasado y no influyen en decisiones del presente, pues el cambio de nombre de la plaza fue una decisión política ajena al informe.",
+        "correcta": false,
+        "explicacion": "El contexto conecta directamente el informe con el cambio de nombre, el perdón público y la reparación: 'tras la publicación del informe'. La investigación sí influyó en decisiones presentes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Separa la investigación de sus efectos pese a que el texto los encadena."
+      },
+      {
+        "clave": "B",
+        "texto": "Que los testimonios de las víctimas bastan por sí solos para establecer la verdad, por lo que los documentos oficiales eran innecesarios.",
+        "correcta": false,
+        "explicacion": "El equipo cruzó testimonios con actas, registros de defunción y prensa; esa combinación de fuentes es lo que dio solidez a la conclusión frente a la versión oficial.",
+        "tipo_error": "argumentacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Valora una sola clase de fuente y desconoce el método de contrastar varias."
+      },
+      {
+        "clave": "C",
+        "texto": "Que una investigación rigurosa con fuentes contrastadas puede corregir una versión oficial de los hechos y abrir paso al reconocimiento público y a la reparación de las víctimas.",
+        "correcta": true,
+        "explicacion": "El informe reemplazó la versión del 'enfrentamiento' por la de masacre, apoyándose en varias fuentes cruzadas; ese cambio de verdad reconocida produjo decisiones concretas: renombrar la plaza, pedir perdón y reparar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Que la función de la historia es castigar a los culpables, lo que se cumplió cuando el informe condenó a los funcionarios locales implicados.",
+        "correcta": false,
+        "explicacion": "Los investigadores no condenan a nadie: establecen hechos. El castigo corresponde a los jueces, y el contexto no menciona condenas, sino reconocimiento y reparación.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el papel de la investigación social con el de la justicia penal."
+      }
+    ],
+    "explicacion": "LEER: una versión oficial de 1990 hablaba de enfrentamiento; una investigación con varias fuentes concluyó que fue una masacre de civiles; luego hubo cambio de nombre de la plaza, perdón público y reparación. COMPRENDER: se pide lo que el caso muestra sobre el impacto de las ciencias sociales. INTERPRETAR: el conocimiento producido con método (fuentes contrastadas) cambió la verdad aceptada y motivó decisiones públicas. REPRESENTAR: versión oficial → investigación con fuentes cruzadas → nueva verdad reconocida → medidas simbólicas y materiales. RAZONAR: la investigación sí influyó; no se basó solo en testimonios; no condenó a nadie. RESOLVER: la opción sobre corregir la versión oficial y abrir paso al reconocimiento y la reparación. VERIFICAR: las tres medidas del final del texto ocurren 'tras la publicación del informe'.",
+    "que_identificar": "La variedad de fuentes usadas, el contraste con la versión oficial y la secuencia de medidas posteriores al informe.",
+    "que_revisar": "Memoria histórica, verdad y reparación; método histórico y contraste de fuentes; papel de las ciencias sociales en la justicia transicional.",
+    "refuerzo_ids": [
+      "SOC-053",
+      "SOC-121"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "memoria_historica",
+      "conflicto_armado",
+      "reparacion",
+      "ciencias_sociales",
+      "fuentes",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-134",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "resolver",
+    "tema": "Control social a la gestión pública",
+    "subtema": "Veeduría ciudadana sobre una obra atrasada",
+    "dificultad": 1,
+    "contexto": "La construcción del nuevo bloque de aulas de un colegio público lleva un año de retraso. El contrato se firmó por 2 000 millones de pesos y ya se pagó el 80 %, pero la obra está apenas en la mitad. Un grupo de padres y estudiantes quiere **vigilar de cerca** cómo se ejecutan los recursos, pedir informes al contratista y a la alcaldía, y alertar a los organismos de control si encuentran irregularidades. La Ley 850 de 2003 regula las **veedurías ciudadanas** como mecanismo democrático de representación para ejercer vigilancia sobre la gestión pública y la ejecución de obras y contratos.",
+    "estimulo": null,
+    "enunciado": "¿Cuál mecanismo responde al propósito del grupo de padres y estudiantes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Una acción de tutela contra el contratista, para que un juez le ordene terminar el bloque de aulas en un plazo fijo, porque el retraso de la obra vulnera el derecho a la educación de los estudiantes del colegio.",
+        "correcta": false,
+        "explicacion": "La tutela protege derechos fundamentales frente a amenazas concretas y se dirige sobre todo contra autoridades; el grupo no pide una orden judicial, sino vigilar y pedir informes.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Recurre a la tutela como respuesta a cualquier problema con lo público."
+      },
+      {
+        "clave": "B",
+        "texto": "Conformar una veeduría ciudadana, que les permite vigilar la ejecución del contrato, solicitar información y denunciar irregularidades ante los organismos de control.",
+        "correcta": true,
+        "explicacion": "El propósito descrito (vigilar, pedir informes, alertar a los organismos de control) coincide con la definición legal de veeduría ciudadana de la Ley 850 de 2003; es un mecanismo de control social sobre obras y contratos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Promover una revocatoria del mandato del alcalde, pues la obra atrasada demuestra que incumplió su programa de gobierno y la ley permite a los ciudadanos retirar al gobernante por esa causa en cualquier momento.",
+        "correcta": false,
+        "explicacion": "La revocatoria busca terminar el periodo del alcalde y exige firmas y votación; el grupo quiere seguir la obra y los pagos, no cambiar de gobernante.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasa de la vigilancia a la sanción política sin que el contexto lo plantee."
+      },
+      {
+        "clave": "D",
+        "texto": "Solicitar un plebiscito municipal para que todos los habitantes decidan con su voto si la obra debe continuar con el mismo contratista o cancelarse y volver a licitarse con nuevos recursos del municipio.",
+        "correcta": false,
+        "explicacion": "El plebiscito es convocado por el presidente sobre decisiones del Ejecutivo nacional; no existe un plebiscito municipal para decidir sobre un contrato de obra.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que cualquier decisión pública puede someterse a votación popular en cualquier nivel."
+      }
+    ],
+    "explicacion": "LEER: una obra escolar está atrasada y pagada en un 80 %; un grupo quiere vigilar los recursos, pedir informes y alertar a los organismos de control; el contexto define las veedurías ciudadanas. COMPRENDER: se pide el mecanismo que corresponde a ese propósito. INTERPRETAR: el objetivo es control social permanente sobre un contrato, no una orden judicial, ni destituir al alcalde, ni votar. REPRESENTAR: tutela = derechos fundamentales; revocatoria = fin del mandato; plebiscito = decisión presidencial nacional; veeduría = vigilancia ciudadana de la gestión pública. RAZONAR: solo la veeduría encaja con 'vigilar de cerca', 'pedir informes' y 'alertar a los organismos de control'. RESOLVER: la opción de la veeduría ciudadana. VERIFICAR: la Ley 850 de 2003 citada en el contexto menciona expresamente la ejecución de obras y contratos.",
+    "que_identificar": "Las acciones que quiere realizar el grupo (vigilar, pedir informes, denunciar) y la definición de veeduría en el contexto.",
+    "que_revisar": "Mecanismos de control social: veedurías ciudadanas, rendición de cuentas, derecho de petición; organismos de control (Contraloría, Procuraduría, Personería).",
+    "refuerzo_ids": [
+      "SOC-101",
+      "SOC-113"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "veeduria",
+      "control_social",
+      "contratacion_publica",
+      "participacion",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-135",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Asamblea Nacional Constituyente de 1991",
+    "subtema": "Contexto de un discurso sobre la séptima papeleta",
+    "dificultad": 2,
+    "contexto": "Fragmento (ficticio) de la intervención de un delegatario en la sesión inaugural de una asamblea, febrero de 1991:\n\n“Estamos aquí porque millones de ciudadanos depositaron una papeleta adicional en las urnas, una papeleta que ninguna ley había previsto. Fue la respuesta de un país cansado de ver caer a sus candidatos presidenciales bajo las balas, de una Constitución centenaria que ya no nos representaba y de una guerra que parecía no tener salida. Ustedes, jóvenes universitarios que convocaron ese voto, hoy nos están mirando”.",
+    "estimulo": null,
+    "enunciado": "¿En qué contexto político se inscribe esta fuente?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En la instalación de la Asamblea Nacional Constituyente, convocada tras el movimiento estudiantil de la séptima papeleta y en medio de la violencia del narcotráfico, que redactó la Constitución de 1991.",
+        "correcta": true,
+        "explicacion": "Las pistas coinciden: papeleta no prevista por la ley (séptima papeleta de 1990), candidatos presidenciales asesinados (1989-1990), Constitución centenaria (la de 1886) y jóvenes universitarios como convocantes. Todo apunta a la Constituyente que se instaló en febrero de 1991.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "En la instalación del Congreso que aprobó el Frente Nacional, convocado tras el plebiscito de 1957 para alternar liberales y conservadores en el poder, después de una década de violencia bipartidista y de la dictadura de Rojas Pinilla.",
+        "correcta": false,
+        "explicacion": "El plebiscito de 1957 sí fue una votación, pero el fragmento habla de una papeleta no prevista por la ley, de una Constitución 'centenaria' y de jóvenes universitarios: pistas que remiten a 1990-1991, no a 1957.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia cualquier mención a votaciones extraordinarias con el plebiscito de 1957."
+      },
+      {
+        "clave": "C",
+        "texto": "En la firma del acuerdo de paz de 2016, cuando se convocó un plebiscito para que los ciudadanos aprobaran lo pactado con la guerrilla tras más de cincuenta años de conflicto armado y de atentados contra dirigentes políticos.",
+        "correcta": false,
+        "explicacion": "El plebiscito de 2016 estaba previsto por la ley y no buscaba redactar una nueva Constitución; además, en 2016 la Constitución vigente tenía 25 años, no cien.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se queda con la palabra 'guerra' y 'voto' sin revisar la fecha ni la referencia a la Constitución centenaria."
+      },
+      {
+        "clave": "D",
+        "texto": "En la convención que redactó la Constitución de 1886, tras la derrota de los federalistas radicales en la guerra civil de 1885, cuando el país buscaba un Estado centralista y una Constitución que durara más que las anteriores.",
+        "correcta": false,
+        "explicacion": "La Constitución de 1886 es justamente la 'centenaria' que el orador quiere reemplazar; el fragmento es de febrero de 1991, como indica su encabezado.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde la Constitución que se critica con la que se va a redactar."
+      }
+    ],
+    "explicacion": "LEER: el orador habla en febrero de 1991 de una papeleta adicional no prevista por la ley, de candidatos presidenciales asesinados, de una Constitución centenaria y de jóvenes universitarios convocantes. COMPRENDER: se pide el contexto político de la fuente. INTERPRETAR: la 'papeleta adicional' es la séptima papeleta de las elecciones de marzo de 1990; la Constitución centenaria es la de 1886; la violencia contra candidatos remite al narcotráfico de 1989-1990. REPRESENTAR: movimiento estudiantil → séptima papeleta → elección de constituyentes (diciembre de 1990) → instalación de la Asamblea (febrero de 1991) → Constitución de 1991. RAZONAR: 1957, 2016 y 1886 no coinciden con la fecha ni con las pistas. RESOLVER: la opción sobre la Asamblea Nacional Constituyente. VERIFICAR: la fecha del encabezado, febrero de 1991, coincide con la instalación de la Asamblea.",
+    "que_identificar": "Las pistas: fecha de 1991, papeleta no prevista, candidatos asesinados, Constitución centenaria, estudiantes universitarios.",
+    "que_revisar": "Proceso que llevó a la Constitución de 1991: séptima papeleta, violencia de finales de los ochenta, Asamblea Nacional Constituyente.",
+    "refuerzo_ids": [
+      "SOC-115",
+      "SOC-002"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "constituyente_1991",
+      "septima_papeleta",
+      "fuentes_primarias",
+      "constitucion_1991",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-136",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Delimitación de páramos",
+    "subtema": "Efectos de prohibir la agricultura en zona de páramo",
+    "dificultad": 2,
+    "contexto": "Los **páramos** regulan el agua que abastece a millones de personas en Colombia. La ley prohíbe en ellos la minería y la agricultura de gran escala, y ordena acordar con las comunidades la transición de las actividades agropecuarias. En un municipio (ficticio), la autoridad ambiental delimitó el páramo y anunció que en dos años no se permitirá cultivar papa ni tener ganado dentro del área. El gráfico muestra cuántas familias dependen de cada actividad dentro de la zona delimitada.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Familias que viven dentro del páramo delimitado, según su actividad principal (datos ficticios)",
+      "eje_x": "Actividad principal",
+      "eje_y": "Número de familias",
+      "series": [
+        {
+          "nombre": "Familias",
+          "valores": [
+            [
+              "Cultivo de papa",
+              180
+            ],
+            [
+              "Ganadería de leche",
+              120
+            ],
+            [
+              "Turismo de naturaleza",
+              25
+            ],
+            [
+              "Empleo fuera del páramo",
+              35
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál análisis de los efectos de la medida tiene en cuenta tanto la dimensión ambiental como la social y la económica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La medida no tendrá efectos sociales negativos, porque las familias que cultivan papa o tienen ganado pueden pasarse al turismo de naturaleza, que ya es la actividad principal del páramo y crece con cada visitante que llega a la zona.",
+        "correcta": false,
+        "explicacion": "El gráfico muestra que el turismo ocupa solo a 25 familias frente a 300 de papa y ganadería; no es la actividad principal y no podría absorber de inmediato a todas las demás.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la barra más baja como si fuera la más alta o idealiza el turismo como salida universal."
+      },
+      {
+        "clave": "B",
+        "texto": "Proteger el agua es lo único que importa en un ecosistema estratégico, de modo que las 300 familias de papa y leche deben salir del páramo sin más consideración, pues cualquier compensación retrasaría la recuperación ambiental.",
+        "correcta": false,
+        "explicacion": "La propia ley citada exige acordar la transición con las comunidades; ignorar a 300 familias desconoce la dimensión social y puede generar conflicto y pobreza.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce el problema a una sola dimensión, la ambiental."
+      },
+      {
+        "clave": "C",
+        "texto": "La agricultura debe continuar exactamente igual, porque 300 familias dependen de ella, el páramo ha resistido siglos de cultivo sin perder su función y el agua seguirá llegando a las ciudades como lo ha hecho hasta ahora.",
+        "correcta": false,
+        "explicacion": "El contexto afirma que la ley prohíbe esas actividades a gran escala para proteger el agua de millones de personas; mantener todo igual ignora la dimensión ambiental y la norma.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce el problema a la dimensión económica local y descarta el daño ambiental."
+      },
+      {
+        "clave": "D",
+        "texto": "La medida protege el agua de muchas personas, pero afecta el sustento de 300 familias, por lo que requiere alternativas acordadas, como reconversión productiva, pago por servicios ambientales o reubicación voluntaria.",
+        "correcta": true,
+        "explicacion": "Combina lo ambiental (regulación del agua), lo social (300 familias de papa y leche, el 83 % del total) y lo económico (necesidad de ingresos alternativos), y responde al mandato legal de acordar la transición con las comunidades.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el páramo regula el agua; la ley prohíbe agricultura de gran escala y minería, y exige acordar la transición; el gráfico muestra 180 familias de papa, 120 de ganadería, 25 de turismo y 35 con empleo externo. COMPRENDER: se pide el análisis que integre las tres dimensiones. INTERPRETAR: la medida beneficia a millones de usuarios del agua pero afecta a 300 familias (180 + 120) cuyo sustento está dentro del área. REPRESENTAR: ambiental (agua), social (familias afectadas), económica (ingresos alternativos). RAZONAR: el turismo con 25 familias no absorbe a 300; sacar a todos sin acuerdo ignora lo social; mantener todo igual ignora lo ambiental. RESOLVER: la opción que reconoce el beneficio ambiental, el costo social y la necesidad de alternativas acordadas. VERIFICAR: 300 de 360 familias, el 83 %, dependen de las actividades que se prohibirán.",
+    "que_identificar": "El número de familias por actividad (180 y 120 frente a 25) y la exigencia legal de acordar la transición.",
+    "que_revisar": "Páramos como ecosistemas estratégicos; conflictos entre conservación y economía campesina; pago por servicios ambientales.",
+    "refuerzo_ids": [
+      "SOC-114",
+      "SOC-074"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "paramos",
+      "agua",
+      "economia_campesina",
+      "ambiente",
+      "barras",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-137",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Reconoce la distribución espacial de la población y los cambios que experimenta en el tiempo",
+    "habilidad": "interpretar",
+    "tema": "Transición demográfica",
+    "subtema": "Cambio en la estructura de edades de Colombia",
+    "dificultad": 1,
+    "contexto": "La **estructura por edades** de una población indica qué porcentaje de personas hay en cada grupo de edad. Una estudiante comparó cifras aproximadas de Colombia en dos momentos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Estructura por edades de la población colombiana (porcentajes aproximados)",
+      "columnas": [
+        "Grupo de edad",
+        "1985",
+        "2025"
+      ],
+      "filas": [
+        [
+          "0 a 14 años",
+          "37 %",
+          "21 %"
+        ],
+        [
+          "15 a 64 años",
+          "59 %",
+          "67 %"
+        ],
+        [
+          "65 años y más",
+          "4 %",
+          "12 %"
+        ]
+      ],
+      "nota": "Cifras redondeadas con fines escolares."
+    },
+    "enunciado": "¿Qué cambio en la población colombiana muestra la tabla y qué consecuencia es razonable esperar de él?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La población infantil creció, por lo que el país deberá construir muchas más escuelas primarias y contratar más docentes en los próximos años para atender la nueva demanda.",
+        "correcta": false,
+        "explicacion": "El porcentaje de niños bajó de 37 % a 21 %; la tabla muestra una reducción relativa de la población infantil, no un crecimiento.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee las columnas en orden invertido o asume que la población siempre rejuvenece."
+      },
+      {
+        "clave": "B",
+        "texto": "La población envejece: hay menos niños y más personas mayores en proporción, lo que aumentará la demanda de pensiones y de servicios de salud para adultos mayores.",
+        "correcta": true,
+        "explicacion": "Los menores de 15 pasaron de 37 % a 21 % y los mayores de 65 de 4 % a 12 %, el triple. Una población con más adultos mayores necesita más recursos para pensiones y atención en salud de ese grupo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La población se mantuvo igual en su composición, porque la suma de los tres grupos sigue siendo 100 % en los dos años y eso demuestra que no hubo cambios relevantes entre 1985 y 2025.",
+        "correcta": false,
+        "explicacion": "Que los porcentajes sumen 100 es una propiedad de cualquier distribución; lo relevante es cómo se reparte ese 100 entre los grupos, y eso cambió mucho.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la suma total de porcentajes con la ausencia de cambio en su distribución."
+      },
+      {
+        "clave": "D",
+        "texto": "La población en edad de trabajar disminuyó, lo que explica la escasez de trabajadores en las empresas del país y obligará a traer mano de obra de otros países en los próximos años.",
+        "correcta": false,
+        "explicacion": "El grupo de 15 a 64 años aumentó de 59 % a 67 %; la tabla no muestra disminución de la población en edad de trabajar.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee mal la fila intermedia o deduce escasez de trabajadores sin apoyo en los datos."
+      }
+    ],
+    "explicacion": "LEER: la tabla compara tres grupos de edad en 1985 y 2025. COMPRENDER: se pide el cambio que muestra y una consecuencia razonable. INTERPRETAR: los niños bajan de 37 % a 21 %, los adultos de 15 a 64 suben de 59 % a 67 % y los mayores de 65 pasan de 4 % a 12 %. REPRESENTAR: la base de la pirámide se estrecha y la cima se ensancha: envejecimiento. RAZONAR: no hay más niños, el grupo laboral no disminuyó y que los porcentajes sumen 100 no significa que nada cambió. RESOLVER: la opción que describe el envejecimiento y la mayor demanda de pensiones y salud. VERIFICAR: 12 % es el triple de 4 %, lo que confirma el fuerte aumento de los adultos mayores.",
+    "que_identificar": "La dirección del cambio en cada fila, en especial la caída de los menores de 15 y el aumento de los mayores de 65.",
+    "que_revisar": "Transición demográfica, pirámides de población y envejecimiento; relación entre estructura de edades y políticas públicas.",
+    "refuerzo_ids": [
+      "SOC-110",
+      "SOC-122"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "demografia",
+      "envejecimiento",
+      "poblacion",
+      "tabla",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-138",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "comprender",
+    "tema": "Patrimonio cultural inmaterial",
+    "subtema": "Perspectivas sobre la comercialización de una fiesta tradicional",
+    "dificultad": 2,
+    "contexto": "Una fiesta tradicional de un municipio del Caribe (ficticia) fue declarada **patrimonio cultural inmaterial** de la nación. Desde entonces llegan patrocinadores y turistas. En una reunión del consejo de cultura se escucharon estas opiniones:\n\n- **Hacedora de máscaras:** “Antes las máscaras las hacíamos para bailar; ahora nos piden cientos para vender y ya no hay tiempo de enseñar a los niños”.\n- **Empresario de eventos:** “El patrocinio permitió tarimas, sonido y seguridad; la fiesta nunca había tenido tanto público”.\n- **Director de la casa de la cultura:** “La declaratoria obliga a proteger las prácticas, no solo el espectáculo; hay que financiar las escuelas de tradición”.\n- **Turista:** “Vine por las fotos y la música; no sabía que las máscaras tenían un significado”.",
+    "estimulo": null,
+    "enunciado": "¿Qué preocupación comparten la hacedora de máscaras y el director de la casa de la cultura, que no aparece en las otras dos voces?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la fiesta ha perdido público y necesita más patrocinio para recuperar las tarimas y el sonido de antes.",
+        "correcta": false,
+        "explicacion": "El empresario afirma lo contrario: nunca hubo tanto público. Ni la hacedora ni el director hablan de falta de público o de patrocinio.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a los dos actores un problema que el texto niega."
+      },
+      {
+        "clave": "B",
+        "texto": "Que los turistas deben pagar una entrada para que los recursos lleguen directamente a los artesanos.",
+        "correcta": false,
+        "explicacion": "Ninguna de las voces propone cobrar entrada; la hacedora habla de tiempo para enseñar y el director de financiar escuelas de tradición.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa una solución que no está en las intervenciones."
+      },
+      {
+        "clave": "C",
+        "texto": "Que las máscaras deben dejar de venderse para que la fiesta recupere su carácter exclusivamente religioso.",
+        "correcta": false,
+        "explicacion": "La hacedora no pide dejar de vender, sino que la venta masiva le quita tiempo para enseñar; además, el contexto no describe la fiesta como religiosa.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exagera la queja de la hacedora hasta convertirla en una prohibición."
+      },
+      {
+        "clave": "D",
+        "texto": "Que el crecimiento comercial de la fiesta amenaza la transmisión de los saberes tradicionales a las nuevas generaciones.",
+        "correcta": true,
+        "explicacion": "La hacedora señala que ya no hay tiempo de enseñar a los niños y el director insiste en financiar escuelas de tradición y proteger las prácticas; ambos se preocupan por la continuidad del saber, algo ausente en las voces del empresario y del turista.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: cuatro voces sobre una fiesta declarada patrimonio inmaterial: la hacedora ya no tiene tiempo de enseñar, el empresario celebra el público, el director pide proteger prácticas y escuelas de tradición, el turista desconoce el significado. COMPRENDER: se pide la preocupación común de la hacedora y el director que no aparece en las otras voces. INTERPRETAR: ambos hablan de transmitir saberes: enseñar a los niños, escuelas de tradición. REPRESENTAR: patrimonio inmaterial = prácticas vivas que se transmiten; comercialización = espectáculo y ventas. RAZONAR: nadie habla de pérdida de público, de cobrar entrada ni de prohibir ventas o de carácter religioso. RESOLVER: la opción sobre la amenaza a la transmisión de saberes. VERIFICAR: la frase del turista, 'no sabía que las máscaras tenían un significado', ilustra justamente lo que ellos temen perder.",
+    "que_identificar": "Las frases 'ya no hay tiempo de enseñar a los niños' y 'financiar las escuelas de tradición' frente al énfasis en público y fotos de las otras voces.",
+    "que_revisar": "Patrimonio cultural inmaterial y su salvaguardia; tensiones entre turismo, comercio y transmisión cultural.",
+    "refuerzo_ids": [
+      "SOC-125",
+      "SOC-033"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "patrimonio_inmaterial",
+      "cultura",
+      "turismo",
+      "perspectivas",
+      "caribe",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-139",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "interpretar",
+    "tema": "Informalidad laboral y protección social",
+    "subtema": "Relación entre trabajo informal y cobertura pensional",
+    "dificultad": 3,
+    "contexto": "En Colombia, quien trabaja con contrato formal cotiza a pensión y salud; quien trabaja por cuenta propia sin registro (informal) suele no cotizar. El gráfico muestra, para una ciudad intermedia (ficticia), el porcentaje de trabajadores informales y el porcentaje de personas mayores de 65 años que reciben una pensión.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Informalidad laboral y cobertura pensional (datos ficticios)",
+      "eje_x": "Año",
+      "eje_y": "Porcentaje",
+      "series": [
+        {
+          "nombre": "Trabajadores informales (% del total de ocupados)",
+          "valores": [
+            [
+              "2005",
+              62
+            ],
+            [
+              "2010",
+              60
+            ],
+            [
+              "2015",
+              58
+            ],
+            [
+              "2020",
+              63
+            ],
+            [
+              "2025",
+              59
+            ]
+          ]
+        },
+        {
+          "nombre": "Mayores de 65 años con pensión (%)",
+          "valores": [
+            [
+              "2005",
+              22
+            ],
+            [
+              "2010",
+              24
+            ],
+            [
+              "2015",
+              25
+            ],
+            [
+              "2020",
+              24
+            ],
+            [
+              "2025",
+              26
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Cuál conclusión relaciona de forma adecuada la dimensión económica (trabajo) con la dimensión social (vejez) a partir del gráfico?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La cobertura pensional es baja porque los adultos mayores de esta ciudad prefieren seguir trabajando en vez de pensionarse.",
+        "correcta": false,
+        "explicacion": "El gráfico no informa sobre preferencias de los mayores; lo que muestra es que seis de cada diez trabajadores son informales y, según el contexto, los informales no suelen cotizar.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Introduce una explicación basada en gustos personales que los datos no respaldan."
+      },
+      {
+        "clave": "B",
+        "texto": "La informalidad cayó fuertemente entre 2005 y 2025, así que en pocos años casi todos los mayores tendrán pensión.",
+        "correcta": false,
+        "explicacion": "La informalidad apenas pasó de 62 % a 59 %, con un repunte en 2020; una reducción de tres puntos en veinte años no permite anticipar una cobertura casi total.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exagera una variación pequeña de la serie."
+      },
+      {
+        "clave": "C",
+        "texto": "Mientras cerca del 60 % de los ocupados sea informal y no cotice, solo una minoría de los mayores llegará a pensionarse, como muestra una cobertura que no supera el 26 %.",
+        "correcta": true,
+        "explicacion": "Las dos series se mantienen casi estables: informalidad alrededor de 60 % y cobertura entre 22 % y 26 %. Si la mayoría no cotiza durante su vida laboral, en la vejez la mayoría no tiene pensión: la dimensión económica del presente define la social del futuro.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "No hay relación entre las dos series, porque cuando la informalidad subió en 2020 la cobertura pensional también cambió en la misma dirección.",
+        "correcta": false,
+        "explicacion": "En 2020 la informalidad subió (63 %) y la cobertura bajó levemente (24 %), es decir, se movieron en direcciones opuestas; además, el efecto principal es de largo plazo, no de un año a otro.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Lee mal el dato de 2020 y espera que la relación se vea año por año."
+      }
+    ],
+    "explicacion": "LEER: el contexto explica que los informales no suelen cotizar a pensión; el gráfico muestra informalidad cercana al 60 % y cobertura pensional de los mayores entre 22 % y 26 % durante veinte años. COMPRENDER: se pide la conclusión que relacione trabajo y vejez. INTERPRETAR: una mayoría que no cotiza hoy será una mayoría sin pensión mañana; las dos series estables son coherentes con eso. REPRESENTAR: informalidad alta y constante → pocas cotizaciones → cobertura pensional baja y constante. RAZONAR: el gráfico no mide preferencias; la informalidad no cayó fuertemente; en 2020 las series se movieron en sentido contrario. RESOLVER: la opción que vincula el 60 % de informalidad con una cobertura que no supera el 26 %. VERIFICAR: el valor máximo de la cobertura (26 % en 2025) es apenas superior al de 2005 (22 %), lo que confirma la persistencia del problema.",
+    "que_identificar": "Los niveles de las dos series, su estabilidad en el tiempo y la explicación del contexto sobre quién cotiza.",
+    "que_revisar": "Informalidad laboral, sistema de seguridad social y pensiones en Colombia; relación entre trayectoria laboral y protección en la vejez.",
+    "refuerzo_ids": [
+      "SOC-123",
+      "SOC-140"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 160,
+    "etiquetas": [
+      "informalidad",
+      "pensiones",
+      "seguridad_social",
+      "trabajo",
+      "lineas",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-140",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce el modelo de Estado Social de Derecho y su aplicación en Colombia",
+    "habilidad": "resolver",
+    "tema": "Derecho a la salud y seguridad social",
+    "subtema": "Régimen subsidiado y Estado Social de Derecho",
+    "dificultad": 2,
+    "contexto": "El artículo 49 de la Constitución establece que la atención de la salud es un servicio público a cargo del Estado y garantiza a todas las personas el acceso a los servicios de promoción, protección y recuperación de la salud. El sistema colombiano tiene dos regímenes: el **contributivo**, para quienes tienen capacidad de pago y cotizan (trabajadores con contrato, independientes con ingresos), y el **subsidiado**, financiado con recursos públicos para quienes no pueden cotizar.\n\nDoña Rosalba, de 58 años, vende arepas en una esquina, no tiene contrato ni ingresos fijos y nunca ha estado afiliada a salud. Un médico del hospital le diagnosticó una hernia que requiere cirugía. Un funcionario le dijo que, como no cotiza, “no tiene derecho a nada”.",
+    "estimulo": null,
+    "enunciado": "¿Cuál respuesta es coherente con el modelo de Estado Social de Derecho y con la organización del sistema de salud?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Doña Rosalba tiene derecho a afiliarse al régimen subsidiado y a recibir la cirugía, porque la Constitución garantiza el acceso a la salud a todas las personas, coticen o no.",
+        "correcta": true,
+        "explicacion": "El régimen subsidiado existe precisamente para quienes no pueden cotizar, y el artículo 49 garantiza el acceso a todas las personas; el Estado Social de Derecho obliga a hacer efectivo ese derecho a quien está en desventaja económica.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Doña Rosalba solo podrá operarse si consigue un empleo con contrato y cotiza al régimen contributivo durante al menos un año, porque el sistema de salud se financia únicamente con los aportes de quienes trabajan formalmente.",
+        "correcta": false,
+        "explicacion": "Esta respuesta repite el error del funcionario: condiciona el derecho a la salud a la capacidad de pago, lo que contradice el artículo 49 y la existencia del régimen subsidiado.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que solo quien cotiza tiene derechos en el sistema de salud."
+      },
+      {
+        "clave": "C",
+        "texto": "El hospital debe operarla gratis por caridad, aunque la ley no lo obligue, porque es una persona de edad y sin recursos, y negarse iría en contra de la ética médica, aunque no de la Constitución ni de la ley.",
+        "correcta": false,
+        "explicacion": "La atención no depende de la caridad del hospital, sino de un derecho constitucional y de un régimen financiado con recursos públicos; presentar el derecho como favor desconoce el modelo de Estado Social de Derecho.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde un derecho exigible con un acto de beneficencia."
+      },
+      {
+        "clave": "D",
+        "texto": "Doña Rosalba debe pagar la cirugía con sus ventas, pues el régimen subsidiado cubre únicamente a niños, a personas mayores de 65 años y a quienes estén registrados oficialmente como población en pobreza extrema.",
+        "correcta": false,
+        "explicacion": "El régimen subsidiado no está limitado por edad; cubre a quienes no tienen capacidad de pago, como una vendedora sin ingresos fijos de 58 años.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventa un requisito de edad que no existe en la descripción del sistema."
+      }
+    ],
+    "explicacion": "LEER: el artículo 49 garantiza el acceso a la salud a todas las personas; hay régimen contributivo para quien cotiza y subsidiado para quien no puede; doña Rosalba no cotiza y necesita cirugía; un funcionario le niega todo. COMPRENDER: se pide la respuesta coherente con el Estado Social de Derecho y con el sistema. INTERPRETAR: no poder cotizar no elimina el derecho; el régimen subsidiado existe para ese caso. REPRESENTAR: capacidad de pago → contributivo; sin capacidad de pago → subsidiado; en ambos, acceso a la atención. RAZONAR: exigir contrato, apelar a la caridad o inventar un límite de edad contradicen el contexto. RESOLVER: la opción que reconoce su derecho a afiliarse al subsidiado y recibir la cirugía. VERIFICAR: la frase 'para quienes no pueden cotizar' describe exactamente la situación de doña Rosalba.",
+    "que_identificar": "La garantía del artículo 49 para 'todas las personas' y la definición del régimen subsidiado en el contexto.",
+    "que_revisar": "Derecho a la salud (artículo 49), sistema general de seguridad social en salud, regímenes contributivo y subsidiado; Estado Social de Derecho e igualdad material.",
+    "refuerzo_ids": [
+      "SOC-083",
+      "SOC-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "salud",
+      "seguridad_social",
+      "estado_social_de_derecho",
+      "regimen_subsidiado",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

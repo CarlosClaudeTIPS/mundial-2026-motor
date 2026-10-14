@@ -1,0 +1,377 @@
+{
+  "_nota": "Taxonomía inicial editable desde Administración. Competencias, componentes y partes según los marcos de referencia y guías del ICFES (docs/01-investigacion-saber11.md). Las habilidades son el eje transversal propio del programa.",
+  "pruebas": [
+    {
+      "id": "lectura_critica",
+      "nombre": "Lectura Crítica",
+      "sesion": 1,
+      "color": "#A78BFA"
+    },
+    {
+      "id": "matematicas",
+      "nombre": "Matemáticas",
+      "sesion": 1,
+      "color": "#38BDF8"
+    },
+    {
+      "id": "sociales_ciudadanas",
+      "nombre": "Sociales y Ciudadanas",
+      "sesion": 2,
+      "color": "#FBBF24"
+    },
+    {
+      "id": "ciencias_naturales",
+      "nombre": "Ciencias Naturales",
+      "sesion": 2,
+      "color": "#34D399"
+    },
+    {
+      "id": "ingles",
+      "nombre": "Inglés",
+      "sesion": 2,
+      "color": "#F472B6"
+    }
+  ],
+  "competencias": [
+    {
+      "id": "LC1",
+      "prueba": "lectura_critica",
+      "nombre": "Identifica y entiende los contenidos locales que conforman un texto"
+    },
+    {
+      "id": "LC2",
+      "prueba": "lectura_critica",
+      "nombre": "Comprende cómo se articulan las partes de un texto para darle un sentido global"
+    },
+    {
+      "id": "LC3",
+      "prueba": "lectura_critica",
+      "nombre": "Reflexiona a partir de un texto y evalúa su contenido"
+    },
+    {
+      "id": "M1",
+      "prueba": "matematicas",
+      "nombre": "Interpretación y representación"
+    },
+    {
+      "id": "M2",
+      "prueba": "matematicas",
+      "nombre": "Formulación y ejecución"
+    },
+    {
+      "id": "M3",
+      "prueba": "matematicas",
+      "nombre": "Argumentación"
+    },
+    {
+      "id": "S1",
+      "prueba": "sociales_ciudadanas",
+      "nombre": "Pensamiento social"
+    },
+    {
+      "id": "S2",
+      "prueba": "sociales_ciudadanas",
+      "nombre": "Interpretación y análisis de perspectivas"
+    },
+    {
+      "id": "S3",
+      "prueba": "sociales_ciudadanas",
+      "nombre": "Pensamiento reflexivo y sistémico"
+    },
+    {
+      "id": "C1",
+      "prueba": "ciencias_naturales",
+      "nombre": "Uso comprensivo del conocimiento científico"
+    },
+    {
+      "id": "C2",
+      "prueba": "ciencias_naturales",
+      "nombre": "Explicación de fenómenos"
+    },
+    {
+      "id": "C3",
+      "prueba": "ciencias_naturales",
+      "nombre": "Indagación"
+    },
+    {
+      "id": "I1",
+      "prueba": "ingles",
+      "nombre": "Competencia lingüística (léxica y gramatical)"
+    },
+    {
+      "id": "I2",
+      "prueba": "ingles",
+      "nombre": "Competencia pragmática (comprensión de textos y situaciones)"
+    }
+  ],
+  "componentes": [
+    {
+      "id": "algebra_calculo",
+      "prueba": "matematicas",
+      "nombre": "Álgebra y cálculo"
+    },
+    {
+      "id": "geometria",
+      "prueba": "matematicas",
+      "nombre": "Geometría"
+    },
+    {
+      "id": "estadistica",
+      "prueba": "matematicas",
+      "nombre": "Estadística"
+    },
+    {
+      "id": "espacio_territorio_ambiente",
+      "prueba": "sociales_ciudadanas",
+      "nombre": "Espacio, territorio, ambiente y población"
+    },
+    {
+      "id": "historia_cultura",
+      "prueba": "sociales_ciudadanas",
+      "nombre": "El tiempo y las culturas"
+    },
+    {
+      "id": "etico_politico",
+      "prueba": "sociales_ciudadanas",
+      "nombre": "Poder, economía y organizaciones sociales"
+    },
+    {
+      "id": "biologia",
+      "prueba": "ciencias_naturales",
+      "nombre": "Biología"
+    },
+    {
+      "id": "fisica",
+      "prueba": "ciencias_naturales",
+      "nombre": "Física"
+    },
+    {
+      "id": "quimica",
+      "prueba": "ciencias_naturales",
+      "nombre": "Química"
+    },
+    {
+      "id": "cts",
+      "prueba": "ciencias_naturales",
+      "nombre": "Ciencia, tecnología y sociedad"
+    },
+    {
+      "id": "texto_continuo",
+      "prueba": "lectura_critica",
+      "nombre": "Texto continuo (literario, expositivo, argumentativo)"
+    },
+    {
+      "id": "texto_discontinuo",
+      "prueba": "lectura_critica",
+      "nombre": "Texto discontinuo (infografía, tabla, caricatura, afiche)"
+    },
+    {
+      "id": "parte_1",
+      "prueba": "ingles",
+      "nombre": "Parte 1 · Relacionar descripciones y palabras"
+    },
+    {
+      "id": "parte_2",
+      "prueba": "ingles",
+      "nombre": "Parte 2 · Avisos y letreros"
+    },
+    {
+      "id": "parte_3",
+      "prueba": "ingles",
+      "nombre": "Parte 3 · Conversaciones"
+    },
+    {
+      "id": "parte_4",
+      "prueba": "ingles",
+      "nombre": "Parte 4 · Texto con espacios (estructura)"
+    },
+    {
+      "id": "parte_5",
+      "prueba": "ingles",
+      "nombre": "Parte 5 · Lectura literal"
+    },
+    {
+      "id": "parte_6",
+      "prueba": "ingles",
+      "nombre": "Parte 6 · Lectura inferencial"
+    },
+    {
+      "id": "parte_7",
+      "prueba": "ingles",
+      "nombre": "Parte 7 · Texto con espacios (léxico)"
+    }
+  ],
+  "habilidades": [
+    {
+      "id": "leer",
+      "nombre": "Leer",
+      "descripcion": "Decodificar el enunciado, el contexto y el estímulo completos, sin saltar información."
+    },
+    {
+      "id": "comprender",
+      "nombre": "Comprender",
+      "descripcion": "Reconstruir qué se dice y qué se pregunta; identificar la información relevante."
+    },
+    {
+      "id": "interpretar",
+      "nombre": "Interpretar",
+      "descripcion": "Dar significado a datos, tablas, gráficos, textos y situaciones; inferir lo no explícito."
+    },
+    {
+      "id": "representar",
+      "nombre": "Representar",
+      "descripcion": "Traducir la información a otra forma: esquema, tabla, ecuación, gráfico, resumen."
+    },
+    {
+      "id": "razonar",
+      "nombre": "Razonar",
+      "descripcion": "Encadenar relaciones, comparar, deducir, argumentar o descartar con base en evidencia."
+    },
+    {
+      "id": "resolver",
+      "nombre": "Resolver",
+      "descripcion": "Ejecutar el procedimiento o la estrategia y llegar a una respuesta."
+    },
+    {
+      "id": "verificar",
+      "nombre": "Verificar",
+      "descripcion": "Comprobar que la respuesta responde lo preguntado y es coherente con el contexto."
+    }
+  ],
+  "tipos_error": [
+    {
+      "id": "comprension",
+      "nombre": "Comprensión del enunciado",
+      "practica": "lectura_guiada"
+    },
+    {
+      "id": "interpretacion",
+      "nombre": "Interpretación de la información",
+      "practica": "representacion"
+    },
+    {
+      "id": "inferencia",
+      "nombre": "Inferencia",
+      "practica": "lectura_guiada"
+    },
+    {
+      "id": "conocimiento",
+      "nombre": "Conocimiento del tema",
+      "practica": "conceptual"
+    },
+    {
+      "id": "procedimiento",
+      "nombre": "Procedimiento o estrategia",
+      "practica": "ejemplo_resuelto"
+    },
+    {
+      "id": "calculo",
+      "nombre": "Cálculo",
+      "practica": "ejercitacion"
+    },
+    {
+      "id": "lectura_grafico",
+      "nombre": "Lectura de gráfico",
+      "practica": "representacion"
+    },
+    {
+      "id": "lectura_tabla",
+      "nombre": "Lectura de tabla",
+      "practica": "representacion"
+    },
+    {
+      "id": "razonamiento",
+      "nombre": "Razonamiento",
+      "practica": "ejemplo_resuelto"
+    },
+    {
+      "id": "argumentacion",
+      "nombre": "Argumentación",
+      "practica": "contraste_argumentos"
+    },
+    {
+      "id": "distractor",
+      "nombre": "Distractor atractivo (opción parcialmente correcta)",
+      "practica": "verificacion"
+    },
+    {
+      "id": "vocabulario",
+      "nombre": "Vocabulario",
+      "practica": "conceptual"
+    },
+    {
+      "id": "tiempo",
+      "nombre": "Tiempo (correcta pero muy lenta, o sin responder)",
+      "practica": "cronometrada"
+    },
+    {
+      "id": "descuido",
+      "nombre": "Descuido (respondió otra cosa, marcó mal)",
+      "practica": "verificacion"
+    },
+    {
+      "id": "verificacion",
+      "nombre": "No verificó la respuesta",
+      "practica": "verificacion"
+    }
+  ],
+  "tipos_practica": [
+    {
+      "id": "lectura_guiada",
+      "nombre": "Lectura guiada",
+      "descripcion": "Pregunta con andamiaje: primero identificar qué se pregunta y qué datos sirven, luego responder."
+    },
+    {
+      "id": "representacion",
+      "nombre": "Representación",
+      "descripcion": "Traducir la información a tabla, esquema o frase propia antes de elegir."
+    },
+    {
+      "id": "conceptual",
+      "nombre": "Refuerzo conceptual",
+      "descripcion": "Recurso breve sobre el concepto y luego 3 preguntas del mismo tema."
+    },
+    {
+      "id": "ejemplo_resuelto",
+      "nombre": "Ejemplo resuelto",
+      "descripcion": "Ver un ejemplo paso a paso y luego resolver uno similar con pasos parcialmente dados."
+    },
+    {
+      "id": "ejercitacion",
+      "nombre": "Ejercitación",
+      "descripcion": "Serie corta de preguntas similares sin tiempo, con verificación entre cada una."
+    },
+    {
+      "id": "contraste_argumentos",
+      "nombre": "Contraste de argumentos",
+      "descripcion": "Comparar dos opciones plausibles y justificar por qué una no responde."
+    },
+    {
+      "id": "verificacion",
+      "nombre": "Verificación",
+      "descripcion": "Antes de enviar: lista de chequeo (¿responde lo preguntado?, ¿unidades?, ¿coherente?)."
+    },
+    {
+      "id": "cronometrada",
+      "nombre": "Práctica cronometrada",
+      "descripcion": "Preguntas con tiempo objetivo por pregunta según la prueba."
+    }
+  ],
+  "niveles_diagnostico": [
+    {
+      "id": "confirmado",
+      "nombre": "Error confirmado",
+      "descripcion": "El estudiante indicó su razonamiento y coincide con el error asociado a la opción."
+    },
+    {
+      "id": "probable",
+      "nombre": "Error probable",
+      "descripcion": "La opción elegida se construyó para un error específico; es la explicación más plausible, no una certeza."
+    },
+    {
+      "id": "insuficiente",
+      "nombre": "Información insuficiente",
+      "descripcion": "La opción no permite inferir un error específico (varias causas posibles o respuesta al azar)."
+    }
+  ]
+}

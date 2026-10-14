@@ -1,0 +1,1587 @@
+[
+  {
+    "id": "ING-101",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Lugares de la ciudad: pharmacy",
+    "dificultad": 1,
+    "contexto": "Description: **This is a shop where you can buy medicine. The person who works here can also help you if you have a headache or a cold.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "bakery",
+        "correcta": false,
+        "explicacion": "Una \"bakery\" (panadería) vende pan y pasteles, no medicinas. Quien elige esta opción reconoció que se trata de una tienda (shop), pero no leyó la pista principal: \"buy medicine\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con la palabra \"shop\" y no leyó qué se vende allí."
+      },
+      {
+        "clave": "B",
+        "texto": "pharmacy",
+        "correcta": true,
+        "explicacion": "Una \"pharmacy\" (farmacia o droguería) es la tienda donde se compran medicinas (\"buy medicine\"), y la persona que atiende puede orientar a quien tiene dolor de cabeza o gripa (\"headache or a cold\"). Cumple las tres pistas de la descripción.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "library",
+        "correcta": false,
+        "explicacion": "En una \"library\" (biblioteca) se prestan libros; no se compra nada ni se venden medicinas. Quien elige esta opción pudo confundir \"library\" con \"librería\" (bookshop), pero ni siquiera así encajaría con \"medicine\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"library\" con un lugar donde se atiende al público sin fijarse en \"medicine\"."
+      }
+    ],
+    "explicacion": "LEER: la descripción habla de una tienda donde se compra medicina y donde alguien puede ayudar si uno tiene dolor de cabeza o gripa. COMPRENDER: se busca el nombre de ese lugar. INTERPRETAR: las pistas son \"shop\", \"buy medicine\" y \"headache or a cold\": todo apunta a un lugar relacionado con la salud. REPRESENTAR: tienda + medicinas + malestares leves = farmacia. RAZONAR: la panadería vende pan; la biblioteca presta libros y no vende nada; solo la farmacia vende medicinas y orienta sobre malestares. RESOLVER: la opción que dice \"pharmacy\". VERIFICAR: \"I bought some aspirin at the pharmacy\" es una oración natural y coherente con la descripción.",
+    "que_identificar": "Las pistas \"shop\", \"buy medicine\" y \"headache or a cold\".",
+    "que_revisar": "Vocabulario de lugares de la ciudad: pharmacy (droguería), bakery (panadería), library (biblioteca), bookshop (librería), butcher's (carnicería); leer todas las pistas antes de elegir.",
+    "refuerzo_ids": [
+      "ING-102",
+      "ING-016"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "lugares",
+      "salud",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-102",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Profesiones: architect",
+    "dificultad": 2,
+    "contexto": "Description: **This person draws the plans for new houses, schools and bridges before the workers start building them.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "plumber",
+        "correcta": false,
+        "explicacion": "Un \"plumber\" (plomero o fontanero) repara tuberías y grifos; no dibuja planos de edificios. Quien elige esta opción reconoció que se trata de un trabajo relacionado con casas, pero no leyó \"draws the plans\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"houses\" con un oficio de la construcción sin atender a \"draws the plans\"."
+      },
+      {
+        "clave": "B",
+        "texto": "electrician",
+        "correcta": false,
+        "explicacion": "Un \"electrician\" (electricista) instala y repara cables y conexiones eléctricas. Trabaja en las obras, pero no es quien dibuja los planos antes de que empiece la construcción.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un oficio de la construcción sin distinguir quién diseña y quién ejecuta."
+      },
+      {
+        "clave": "C",
+        "texto": "architect",
+        "correcta": true,
+        "explicacion": "Un \"architect\" (arquitecto) es quien dibuja los planos (\"draws the plans\") de casas, colegios y puentes antes de que los obreros empiecen a construir (\"before the workers start building them\"). La descripción corresponde a su trabajo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la descripción habla de una persona que dibuja los planos de casas, colegios y puentes antes de que los trabajadores empiecen a construir. COMPRENDER: se busca el nombre de esa profesión. INTERPRETAR: la pista clave es \"draws the plans\" (dibuja los planos) y el momento: \"before the workers start building\". REPRESENTAR: diseñar antes de construir = arquitecto. RAZONAR: el plomero y el electricista trabajan durante la obra con tuberías y cables; el arquitecto diseña antes. RESOLVER: la opción que dice \"architect\". VERIFICAR: \"The architect showed us the plans of the new school\" es una oración natural que repite las pistas de la descripción.",
+    "que_identificar": "Las pistas \"draws the plans\" y \"before the workers start building\".",
+    "que_revisar": "Vocabulario de profesiones de la construcción y el diseño: architect, engineer, builder, plumber, electrician, painter; diferenciar quién diseña y quién construye.",
+    "refuerzo_ids": [
+      "ING-101",
+      "ING-098"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "profesiones",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-103",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "interpretar",
+    "tema": "Avisos y letreros",
+    "subtema": "Biblioteca: instrucción con alternativa (return to the desk / do not put back)",
+    "dificultad": 1,
+    "contexto": "Sign in a public library in Manizales:\n\n**PLEASE RETURN BOOKS TO THE DESK. DO NOT PUT THEM BACK ON THE SHELVES.**",
+    "estimulo": null,
+    "enunciado": "What does this sign mean?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Readers should give the books to the staff instead of putting them on the shelves.",
+        "correcta": true,
+        "explicacion": "El aviso tiene una instrucción positiva (\"return books to the desk\" = devolver los libros en el mostrador) y una prohibición (\"do not put them back on the shelves\" = no volver a ponerlos en los estantes). La opción recoge las dos partes: entregarlos al personal, no al estante.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Readers must put the books back exactly where they found them.",
+        "correcta": false,
+        "explicacion": "Es lo contrario de lo que dice el aviso: \"DO NOT put them back on the shelves\" prohíbe devolverlos al estante. Quien elige esta opción leyó \"put them back on the shelves\" sin la negación \"do not\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó la negación \"do not\" y leyó la frase como una orden positiva."
+      },
+      {
+        "clave": "C",
+        "texto": "Readers can only take books from the desk, not from the shelves.",
+        "correcta": false,
+        "explicacion": "El aviso habla de DEVOLVER (\"return\") los libros, no de dónde tomarlos. Nada dice que no se puedan sacar libros de los estantes. Quien elige esta opción cambió el verbo \"return\" por \"take\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"return\" (devolver) con tomar o sacar un libro."
+      }
+    ],
+    "explicacion": "LEER: el aviso dice \"Please return books to the desk\" y \"Do not put them back on the shelves\". COMPRENDER: se pregunta qué significa el aviso en conjunto. INTERPRETAR: \"return\" = devolver; \"desk\" = mostrador de atención; \"put back on the shelves\" = volver a poner en los estantes; \"do not\" lo prohíbe. REPRESENTAR: libro leído → mostrador (sí) / estante (no). RAZONAR: la opción que habla de ponerlos donde estaban ignora el \"do not\"; la que habla de tomar libros cambia el verbo \"return\"; la opción que dice entregarlos al personal y no al estante recoge las dos instrucciones. RESOLVER: la opción que propone dar los libros al personal. VERIFICAR: las dos oraciones del aviso quedan explicadas y no se agrega nada.",
+    "que_identificar": "El verbo \"return\" (devolver) y la negación \"do not put them back\".",
+    "que_revisar": "Avisos con instrucciones y prohibiciones: please + verbo, do not + verbo; vocabulario de biblioteca: desk, shelf/shelves, return, borrow.",
+    "refuerzo_ids": [
+      "ING-104",
+      "ING-043"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "instrucciones",
+      "biblioteca",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-104",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "interpretar",
+    "tema": "Avisos y letreros",
+    "subtema": "Piscina: obligación con must y condición para menores",
+    "dificultad": 2,
+    "contexto": "Sign at the entrance of a public swimming pool:\n\n**ALL SWIMMERS MUST SHOWER BEFORE ENTERING THE POOL.\nCHILDREN UNDER 8 ONLY WITH AN ADULT.**",
+    "estimulo": null,
+    "enunciado": "Which sentence is TRUE according to the sign?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Children under eight can swim alone if they take a shower first.",
+        "correcta": false,
+        "explicacion": "El aviso dice \"Children under 8 ONLY with an adult\": los menores de ocho años solo pueden entrar acompañados de un adulto. Ducharse no reemplaza esa condición. Quien elige esta opción mezcló las dos reglas como si una sustituyera a la otra.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Combinó las dos reglas y supuso que cumplir una exime de la otra."
+      },
+      {
+        "clave": "B",
+        "texto": "Everyone has to take a shower before getting into the water.",
+        "correcta": true,
+        "explicacion": "\"All swimmers must shower before entering the pool\" = todos los nadadores deben ducharse antes de entrar a la piscina. \"Must\" expresa obligación y \"all\" indica que aplica a todos, sin excepción. La opción parafrasea exactamente la primera regla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Adults do not need to shower if they are with a child.",
+        "correcta": false,
+        "explicacion": "La primera regla dice \"ALL swimmers must shower\": aplica a todos, incluidos los adultos. La segunda regla habla de la compañía de los niños, no de excepciones para ducharse. Quien elige esta opción inventó una excepción que el aviso no da.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso una excepción a partir de la segunda regla sin apoyo en el texto."
+      }
+    ],
+    "explicacion": "LEER: el aviso tiene dos reglas: \"All swimmers must shower before entering the pool\" y \"Children under 8 only with an adult\". COMPRENDER: se busca la única oración verdadera según el aviso. INTERPRETAR: \"must\" = deben (obligación); \"all\" = todos; \"only with an adult\" = únicamente acompañados de un adulto. REPRESENTAR: regla 1: todos → ducha antes de entrar; regla 2: menores de 8 → con adulto. RAZONAR: la opción sobre niños solos contradice \"only with an adult\"; la opción sobre adultos sin ducha contradice \"all swimmers\"; la opción que dice que todos deben ducharse antes de entrar al agua coincide con la regla 1. RESOLVER: la opción sobre la ducha obligatoria para todos. VERIFICAR: \"has to take a shower\" equivale a \"must shower\" y \"getting into the water\" a \"entering the pool\".",
+    "que_identificar": "La palabra \"all\" y el modal \"must\" en la primera regla, y \"only with an adult\" en la segunda.",
+    "que_revisar": "Avisos con obligaciones (must, have to) y restricciones (only, under); comprobar cada opción contra cada regla del aviso.",
+    "refuerzo_ids": [
+      "ING-103",
+      "ING-044"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "obligaciones",
+      "piscina",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-105",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "En una tienda: preguntar por una talla",
+    "dificultad": 1,
+    "contexto": "In a shoe shop in Cúcuta.\n\nCustomer: **Excuse me, do you have these shoes in a size 38?**\n\nShop assistant: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Yes, they are very comfortable.",
+        "correcta": false,
+        "explicacion": "El cliente no pregunta si los zapatos son cómodos, sino si hay una talla 38. Esta respuesta habla de otra cosa. Quien elige esta opción se fijó en \"Yes\" y en \"shoes\", pero no en la pregunta real sobre la talla.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió al tema (zapatos) y no a la pregunta concreta (la talla)."
+      },
+      {
+        "clave": "B",
+        "texto": "No, thanks. I'm just looking.",
+        "correcta": false,
+        "explicacion": "\"I'm just looking\" (solo estoy mirando) es lo que dice un CLIENTE cuando el vendedor le ofrece ayuda. Aquí quien habla es el vendedor, así que la respuesta no corresponde a su papel en la conversación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió los papeles: usó una frase típica del cliente en la voz del vendedor."
+      },
+      {
+        "clave": "C",
+        "texto": "Let me check in the back. One moment, please.",
+        "correcta": true,
+        "explicacion": "El cliente pregunta si tienen los zapatos en talla 38. El vendedor responde que va a revisar en la bodega (\"check in the back\") y pide un momento. Es la respuesta natural de un vendedor a una pregunta sobre disponibilidad de una talla.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el cliente pregunta \"do you have these shoes in a size 38?\". COMPRENDER: hay que elegir la respuesta natural del vendedor. INTERPRETAR: es una pregunta sobre disponibilidad de una talla; el vendedor debe decir si la tiene o ir a buscarla. REPRESENTAR: pregunta por talla → confirmar, negar o ir a revisar. RAZONAR: la frase sobre la comodidad no responde la pregunta; \"I'm just looking\" la diría el cliente, no el vendedor; \"Let me check in the back\" responde a la pregunta y corresponde al papel del vendedor. RESOLVER: la opción en la que el vendedor va a revisar. VERIFICAR: \"Do you have these in a size 38? – Let me check in the back. One moment, please.\" es un diálogo coherente de tienda.",
+    "que_identificar": "La pregunta sobre disponibilidad (\"do you have... in a size 38?\") y quién habla en cada turno (cliente / vendedor).",
+    "que_revisar": "Frases de compras: \"Do you have this in a size...?\", \"Let me check\", \"I'm just looking\", \"Can I try it on?\"; identificar el papel de cada hablante.",
+    "refuerzo_ids": [
+      "ING-106",
+      "ING-093"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "compras",
+      "tienda",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-106",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "En el médico: responder a \"What's the matter?\"",
+    "dificultad": 2,
+    "contexto": "At a health centre in Popayán.\n\nDoctor: **Good morning. What's the matter?**\n\nPatient: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "I've had a terrible headache since yesterday.",
+        "correcta": true,
+        "explicacion": "\"What's the matter?\" significa \"¿Qué le pasa?\" o \"¿Cuál es el problema?\". El paciente responde describiendo su malestar: un dolor de cabeza fuerte desde ayer. Es exactamente la información que el médico necesita.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Yes, I'm fine, thank you very much.",
+        "correcta": false,
+        "explicacion": "\"What's the matter?\" no es una pregunta de sí o no, y tampoco es \"How are you?\". Decir que está bien no tiene sentido en una consulta médica. Quien elige esta opción confundió la pregunta con un saludo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"What's the matter?\" como \"How are you?\" y respondió con una fórmula de saludo."
+      },
+      {
+        "clave": "C",
+        "texto": "It doesn't matter, don't worry about it.",
+        "correcta": false,
+        "explicacion": "\"It doesn't matter\" (no importa) se usa para aceptar una disculpa o restar importancia a algo. Repite la palabra \"matter\", pero con otro sentido: el médico pregunta por el problema de salud, no se está disculpando.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se dejó llevar por la repetición de \"matter\" sin notar el cambio de significado."
+      }
+    ],
+    "explicacion": "LEER: el médico pregunta \"What's the matter?\". COMPRENDER: hay que elegir la respuesta natural del paciente. INTERPRETAR: en una consulta, \"What's the matter?\" pregunta qué problema o malestar tiene la persona. REPRESENTAR: pregunta por el problema → describir el síntoma. RAZONAR: \"I'm fine\" responde a un saludo, no a esta pregunta; \"It doesn't matter\" responde a una disculpa y usa \"matter\" con otro sentido; \"I've had a terrible headache since yesterday\" describe el malestar. RESOLVER: la opción que describe el dolor de cabeza. VERIFICAR: \"What's the matter? – I've had a terrible headache since yesterday.\" es un intercambio típico de consulta médica.",
+    "que_identificar": "La expresión \"What's the matter?\" y el lugar (centro de salud), que indican que se pregunta por un malestar.",
+    "que_revisar": "Expresiones con \"matter\": \"What's the matter?\" (¿qué pasa?), \"It doesn't matter\" (no importa); vocabulario de síntomas: headache, sore throat, fever, cough.",
+    "refuerzo_ids": [
+      "ING-105",
+      "ING-096"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "salud",
+      "medico",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-107",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "There is / there are: concordancia con sustantivo plural",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(1)**.\n\n**A Day at My Uncle's Farm**\n\nEvery December my family travels to my uncle's farm near Fusagasugá. There **(1) ______** more than two hundred chickens, six cows and a very old horse called Lucero. My uncle gets up **(2) ______** five o'clock every morning to milk the cows, and my cousin Sara helps him before school. Sara is only eleven, but **(3) ______** knows the name of every animal. When we visit, I try to help too, but the chickens run away from me! In the afternoon we ride Lucero slowly around the field and eat the oranges that grow next to the house.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "is",
+        "correcta": false,
+        "explicacion": "\"There is\" se usa con un sustantivo singular (\"there is a horse\"). Aquí lo que sigue es plural: \"more than two hundred chickens, six cows and a very old horse\". Quien elige esta opción no miró el sustantivo que sigue al espacio.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó \"there is\" sin revisar que lo que sigue es plural."
+      },
+      {
+        "clave": "B",
+        "texto": "are",
+        "correcta": true,
+        "explicacion": "La estructura \"there + be\" presenta la existencia de algo, y el verbo concuerda con lo que sigue: \"more than two hundred chickens, six cows and a very old horse\" es plural, así que se usa \"there are\". El texto está en presente (travels, gets up, helps), lo que confirma \"are\" y no \"were\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "be",
+        "correcta": false,
+        "explicacion": "\"There be\" no es una forma conjugada; después de \"there\" el verbo \"be\" debe ir en presente o pasado (is/are/was/were). Quien elige esta opción reconoció la estructura con \"there\" pero dejó el verbo en infinitivo.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Dejó el verbo sin conjugar porque no identificó el sujeto ni el tiempo."
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"There ______ more than two hundred chickens, six cows and a very old horse called Lucero\". COMPRENDER: hay que elegir la forma del verbo \"be\" en la estructura \"there + be\". INTERPRETAR: el texto describe la finca en presente (travels, gets up, helps) y lo que sigue al espacio es una lista plural. REPRESENTAR: there + are + sustantivos en plural. RAZONAR: \"is\" exige singular; \"be\" no está conjugado; \"are\" concuerda con el plural y con el presente del texto. RESOLVER: la opción que dice \"are\". VERIFICAR: \"There are more than two hundred chickens\" es natural y coherente con la descripción de la finca.",
+    "que_identificar": "Los sustantivos en plural que siguen al espacio (chickens, cows) y los verbos en presente del resto del texto.",
+    "que_revisar": "Estructura there is / there are para describir lo que hay en un lugar; concordancia singular/plural y uso de presente o pasado según el texto.",
+    "refuerzo_ids": [
+      "ING-108",
+      "ING-021"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "there_is_are",
+      "texto:ING-T20",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-108",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Preposiciones de tiempo: at + hora",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(2)**.\n\n**A Day at My Uncle's Farm**\n\nEvery December my family travels to my uncle's farm near Fusagasugá. There **(1) ______** more than two hundred chickens, six cows and a very old horse called Lucero. My uncle gets up **(2) ______** five o'clock every morning to milk the cows, and my cousin Sara helps him before school. Sara is only eleven, but **(3) ______** knows the name of every animal. When we visit, I try to help too, but the chickens run away from me! In the afternoon we ride Lucero slowly around the field and eat the oranges that grow next to the house.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "in",
+        "correcta": false,
+        "explicacion": "\"In\" se usa con partes del día, meses y años (\"in the morning\", \"in December\"), no con horas exactas. Quien elige esta opción aplicó la preposición que aparece en \"in the afternoon\" a una hora concreta.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó \"in\" (in the morning) a una hora exacta."
+      },
+      {
+        "clave": "B",
+        "texto": "on",
+        "correcta": false,
+        "explicacion": "\"On\" se usa con días y fechas (\"on Monday\", \"on 5 May\"), no con horas. Quien elige esta opción confundió el uso de \"on\" para días con el de \"at\" para horas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la preposición de días (on) con la de horas (at)."
+      },
+      {
+        "clave": "C",
+        "texto": "at",
+        "correcta": true,
+        "explicacion": "Con horas exactas se usa \"at\": \"My uncle gets up at five o'clock every morning\". \"Five o'clock\" marca una hora precisa, y la preposición que la acompaña es siempre \"at\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"My uncle gets up ______ five o'clock every morning to milk the cows\". COMPRENDER: hay que elegir la preposición de tiempo adecuada. INTERPRETAR: lo que sigue al espacio es una hora exacta (\"five o'clock\"). REPRESENTAR: at + hora; on + día o fecha; in + mes, año o parte del día. RAZONAR: \"in\" va con \"the morning\" o \"December\"; \"on\" va con días; \"at\" es la única preposición para horas exactas. RESOLVER: la opción que dice \"at\". VERIFICAR: \"gets up at five o'clock every morning\" es la forma natural de decir a qué hora se levanta.",
+    "que_identificar": "La expresión \"five o'clock\" que sigue al espacio: una hora exacta.",
+    "que_revisar": "Preposiciones de tiempo: at (horas: at six, at noon, at night), on (días y fechas), in (meses, años, partes del día).",
+    "refuerzo_ids": [
+      "ING-107",
+      "ING-109"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "preposiciones_tiempo",
+      "texto:ING-T20",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-109",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Pronombres personales de sujeto: she vs. her / hers",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(3)**.\n\n**A Day at My Uncle's Farm**\n\nEvery December my family travels to my uncle's farm near Fusagasugá. There **(1) ______** more than two hundred chickens, six cows and a very old horse called Lucero. My uncle gets up **(2) ______** five o'clock every morning to milk the cows, and my cousin Sara helps him before school. Sara is only eleven, but **(3) ______** knows the name of every animal. When we visit, I try to help too, but the chickens run away from me! In the afternoon we ride Lucero slowly around the field and eat the oranges that grow next to the house.",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "she",
+        "correcta": true,
+        "explicacion": "El espacio está en posición de sujeto del verbo \"knows\": \"Sara is only eleven, but she knows the name of every animal\". Como Sara es una niña, el pronombre de sujeto es \"she\". La terminación -s de \"knows\" confirma que el sujeto es tercera persona singular.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "her",
+        "correcta": false,
+        "explicacion": "\"Her\" es pronombre de objeto o adjetivo posesivo (\"I help her\", \"her cousin\"), no puede ser sujeto de \"knows\". Quien elige esta opción tradujo \"ella\" sin distinguir sujeto y objeto, porque en español la misma palabra sirve para ambos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la forma de objeto \"her\" como sujeto por influencia del español \"ella\"."
+      },
+      {
+        "clave": "C",
+        "texto": "hers",
+        "correcta": false,
+        "explicacion": "\"Hers\" es pronombre posesivo (\"the horse is hers\" = el caballo es de ella) y nunca funciona como sujeto de un verbo. Quien elige esta opción reconoció que se habla de Sara, pero eligió la forma que indica posesión.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió el pronombre posesivo con el de sujeto."
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"Sara is only eleven, but ______ knows the name of every animal\". COMPRENDER: hay que elegir el pronombre que funciona como sujeto de \"knows\". INTERPRETAR: el pronombre se refiere a Sara, una niña (\"my cousin Sara\"), y va antes del verbo, en posición de sujeto. REPRESENTAR: Sara → she (sujeto), her (objeto / posesivo), hers (posesivo sin sustantivo). RAZONAR: \"her\" y \"hers\" no pueden ser sujetos de un verbo; solo \"she\" ocupa esa posición. RESOLVER: la opción que dice \"she\". VERIFICAR: \"she knows the name of every animal\" tiene sujeto en tercera persona singular, lo que coincide con la -s de \"knows\".",
+    "que_identificar": "La posición del espacio antes del verbo \"knows\" (sujeto) y el referente \"my cousin Sara\".",
+    "que_revisar": "Pronombres personales: sujeto (I, you, he, she, it, we, they), objeto (me, him, her...) y posesivos (mine, hers...); la posición antes del verbo indica sujeto.",
+    "refuerzo_ids": [
+      "ING-107",
+      "ING-023"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "pronombres",
+      "texto:ING-T20",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-110",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una lista de objetos obligatorios (must bring)",
+    "dificultad": 1,
+    "contexto": "Read the text and the table, and answer the question.\n\n**From:** Aqua Club Villavicencio\n**To:** Parents and students\n**Subject:** Swimming lessons – January\n\nDear families,\n\nOur swimming lessons start again on Monday, 12 January. This year we have four groups. Please read the table carefully and choose the group for your child.\n\nAll lessons last 45 minutes. Students must bring a swimming cap, goggles and a towel. We sell caps at the reception for 15,000 pesos, but you can bring your own.\n\nThe Beginners group is for children who cannot swim yet. In this group there are only six students per teacher, so places are limited. The Dolphins group is for students who can already swim 25 metres without stopping.\n\nIf you pay for the whole month before 9 January, you get a 10 % discount. Payments can be made at the reception or by bank transfer. Please send the receipt to our email address with your child's full name.\n\nIf you have any questions, call us at 608 555 0123 between 8 a.m. and 6 p.m.\n\nKind regards,\nPatricia Mora, Coordinator",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Swimming lessons – January",
+      "columnas": [
+        "Group",
+        "Age",
+        "Days",
+        "Time",
+        "Monthly price (pesos)"
+      ],
+      "filas": [
+        [
+          "Beginners",
+          "5–7",
+          "Tuesday and Thursday",
+          "3:00–3:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Dolphins",
+          "8–11",
+          "Monday and Wednesday",
+          "4:00–4:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Teens",
+          "12–16",
+          "Monday, Wednesday and Friday",
+          "5:00–5:45 p.m.",
+          "150,000"
+        ],
+        [
+          "Adults",
+          "17+",
+          "Saturday",
+          "7:00–7:45 a.m.",
+          "100,000"
+        ]
+      ],
+      "nota": "Prices are per month. A 10 % discount applies to payments made before 9 January."
+    },
+    "enunciado": "What must students bring to the lessons?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "A towel and 15,000 pesos to buy a cap.",
+        "correcta": false,
+        "explicacion": "El correo dice que venden gorros por 15,000 pesos, pero añade \"you can bring your own\": comprarlo no es obligatorio. Además, la lista obligatoria incluye también las gafas (\"goggles\"). Quien elige esta opción mezcló la venta opcional con lo obligatorio.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el precio del gorro como un requisito y olvidó las gafas."
+      },
+      {
+        "clave": "B",
+        "texto": "Goggles, a towel and a bank receipt.",
+        "correcta": false,
+        "explicacion": "El recibo (\"receipt\") se envía por correo electrónico cuando se paga por transferencia; no es algo que se lleve a la clase. Quien elige esta opción unió información de dos párrafos distintos (lo que se lleva y cómo se paga).",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Mezcló el párrafo de los pagos con el de los objetos para la clase."
+      },
+      {
+        "clave": "C",
+        "texto": "A swimming cap and their birth certificate.",
+        "correcta": false,
+        "explicacion": "El texto no menciona ningún documento de identidad ni certificado. Es información inventada; además faltan las gafas y la toalla, que sí aparecen en la lista con \"must bring\".",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Agregó un requisito común en inscripciones que el texto no menciona."
+      },
+      {
+        "clave": "D",
+        "texto": "A cap, goggles and a towel.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo dice: \"Students must bring a swimming cap, goggles and a towel\". \"Must bring\" indica obligación, y los tres objetos coinciden exactamente con la opción (cap = gorro, goggles = gafas de natación, towel = toalla).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo del correo habla de la duración de las clases y de lo que deben llevar los estudiantes. COMPRENDER: la pregunta usa \"must bring\", así que busca la lista de objetos obligatorios. INTERPRETAR: \"Students must bring a swimming cap, goggles and a towel\" es la oración clave; la venta de gorros es opcional (\"you can bring your own\"). REPRESENTAR: obligatorio: gorro + gafas + toalla; opcional: comprar el gorro; aparte: enviar el recibo si se paga por transferencia. RAZONAR: la opción con el precio confunde opcional con obligatorio; la del recibo mezcla párrafos; la del certificado inventa un requisito. RESOLVER: la opción con gorro, gafas y toalla. VERIFICAR: los tres objetos aparecen juntos en la misma oración del texto con \"must\".",
+    "que_identificar": "La oración \"Students must bring a swimming cap, goggles and a towel\" y la aclaración \"you can bring your own\".",
+    "que_revisar": "Vocabulario de natación (cap, goggles, towel, pool) y el modal \"must\" para obligaciones; distinguir lo obligatorio de lo opcional (can).",
+    "refuerzo_ids": [
+      "ING-111",
+      "ING-065"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "deportes",
+      "texto:ING-T21",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-111",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Relaciona la información de una tabla con la pregunta y con el texto que la acompaña",
+    "habilidad": "leer",
+    "tema": "Comprensión de lectura",
+    "subtema": "Leer una fila de la tabla: días y hora de un grupo",
+    "dificultad": 1,
+    "contexto": "Read the text and the table, and answer the question.\n\n**From:** Aqua Club Villavicencio\n**To:** Parents and students\n**Subject:** Swimming lessons – January\n\nDear families,\n\nOur swimming lessons start again on Monday, 12 January. This year we have four groups. Please read the table carefully and choose the group for your child.\n\nAll lessons last 45 minutes. Students must bring a swimming cap, goggles and a towel. We sell caps at the reception for 15,000 pesos, but you can bring your own.\n\nThe Beginners group is for children who cannot swim yet. In this group there are only six students per teacher, so places are limited. The Dolphins group is for students who can already swim 25 metres without stopping.\n\nIf you pay for the whole month before 9 January, you get a 10 % discount. Payments can be made at the reception or by bank transfer. Please send the receipt to our email address with your child's full name.\n\nIf you have any questions, call us at 608 555 0123 between 8 a.m. and 6 p.m.\n\nKind regards,\nPatricia Mora, Coordinator",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Swimming lessons – January",
+      "columnas": [
+        "Group",
+        "Age",
+        "Days",
+        "Time",
+        "Monthly price (pesos)"
+      ],
+      "filas": [
+        [
+          "Beginners",
+          "5–7",
+          "Tuesday and Thursday",
+          "3:00–3:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Dolphins",
+          "8–11",
+          "Monday and Wednesday",
+          "4:00–4:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Teens",
+          "12–16",
+          "Monday, Wednesday and Friday",
+          "5:00–5:45 p.m.",
+          "150,000"
+        ],
+        [
+          "Adults",
+          "17+",
+          "Saturday",
+          "7:00–7:45 a.m.",
+          "100,000"
+        ]
+      ],
+      "nota": "Prices are per month. A 10 % discount applies to payments made before 9 January."
+    },
+    "enunciado": "According to the table, when does the Teens group have lessons?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Tuesday and Thursday, from 3:00 to 3:45 p.m.",
+        "correcta": false,
+        "explicacion": "Esos son los días y la hora del grupo Beginners (fila 1), no del grupo Teens. Quien elige esta opción leyó la fila equivocada o la primera que encontró.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó la primera fila de la tabla sin buscar el nombre del grupo."
+      },
+      {
+        "clave": "B",
+        "texto": "Monday, Wednesday and Friday, from 5:00 to 5:45 p.m.",
+        "correcta": true,
+        "explicacion": "En la tabla, la fila \"Teens\" (edades 12–16) indica \"Monday, Wednesday and Friday\" en la columna de días y \"5:00–5:45 p.m.\" en la columna de hora. La opción reproduce exactamente esos dos datos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Monday and Wednesday, from 4:00 to 4:45 p.m.",
+        "correcta": false,
+        "explicacion": "Son los datos del grupo Dolphins (edades 8–11). Comparte dos días con el grupo Teens, pero no el viernes ni la hora. Quien elige esta opción confundió dos filas parecidas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la fila Dolphins con la fila Teens porque comparten días."
+      },
+      {
+        "clave": "D",
+        "texto": "Every Saturday morning, from 7:00 to 7:45 a.m.",
+        "correcta": false,
+        "explicacion": "Es el horario del grupo Adults (17+). Quien elige esta opción pudo pensar que los adolescentes son \"adultos\" o leyó la última fila sin verificar el nombre del grupo.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció a los adolescentes con la fila de adultos sin revisar la columna Group."
+      }
+    ],
+    "explicacion": "LEER: la pregunta remite a la tabla y al grupo \"Teens\". COMPRENDER: se piden dos datos de esa fila: los días (when) y la hora. INTERPRETAR: en la fila Teens, la columna Days dice \"Monday, Wednesday and Friday\" y la columna Time dice \"5:00–5:45 p.m.\". REPRESENTAR: Teens → lunes, miércoles y viernes → 5:00 a 5:45 p.m. RAZONAR: las otras opciones corresponden a las filas Beginners, Dolphins y Adults; la de Dolphins es la más parecida porque comparte dos días, pero no incluye el viernes ni la hora correcta. RESOLVER: la opción con lunes, miércoles y viernes a las 5:00 p.m. VERIFICAR: la hora de la opción coincide con los 45 minutos que dura cada clase según el correo.",
+    "que_identificar": "La fila \"Teens\" de la tabla y sus columnas Days y Time.",
+    "que_revisar": "Lectura de tablas: ubicar primero la fila por el nombre y después leer las columnas pedidas; días de la semana y horas en inglés.",
+    "refuerzo_ids": [
+      "ING-110",
+      "ING-112"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "tabla",
+      "horarios",
+      "texto:ING-T21",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-112",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una condición explícita (if... before...)",
+    "dificultad": 2,
+    "contexto": "Read the text and the table, and answer the question.\n\n**From:** Aqua Club Villavicencio\n**To:** Parents and students\n**Subject:** Swimming lessons – January\n\nDear families,\n\nOur swimming lessons start again on Monday, 12 January. This year we have four groups. Please read the table carefully and choose the group for your child.\n\nAll lessons last 45 minutes. Students must bring a swimming cap, goggles and a towel. We sell caps at the reception for 15,000 pesos, but you can bring your own.\n\nThe Beginners group is for children who cannot swim yet. In this group there are only six students per teacher, so places are limited. The Dolphins group is for students who can already swim 25 metres without stopping.\n\nIf you pay for the whole month before 9 January, you get a 10 % discount. Payments can be made at the reception or by bank transfer. Please send the receipt to our email address with your child's full name.\n\nIf you have any questions, call us at 608 555 0123 between 8 a.m. and 6 p.m.\n\nKind regards,\nPatricia Mora, Coordinator",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Swimming lessons – January",
+      "columnas": [
+        "Group",
+        "Age",
+        "Days",
+        "Time",
+        "Monthly price (pesos)"
+      ],
+      "filas": [
+        [
+          "Beginners",
+          "5–7",
+          "Tuesday and Thursday",
+          "3:00–3:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Dolphins",
+          "8–11",
+          "Monday and Wednesday",
+          "4:00–4:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Teens",
+          "12–16",
+          "Monday, Wednesday and Friday",
+          "5:00–5:45 p.m.",
+          "150,000"
+        ],
+        [
+          "Adults",
+          "17+",
+          "Saturday",
+          "7:00–7:45 a.m.",
+          "100,000"
+        ]
+      ],
+      "nota": "Prices are per month. A 10 % discount applies to payments made before 9 January."
+    },
+    "enunciado": "How can a family get a discount?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "By paying at the reception in cash.",
+        "correcta": false,
+        "explicacion": "El texto dice que se puede pagar en la recepción o por transferencia, pero el lugar o la forma de pago no da descuento. Lo que da el descuento es la FECHA: pagar el mes completo antes del 9 de enero.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó el descuento con el lugar de pago, no con la fecha."
+      },
+      {
+        "clave": "B",
+        "texto": "By bringing their own swimming cap.",
+        "correcta": false,
+        "explicacion": "Traer el propio gorro evita gastar 15,000 pesos, pero el texto no lo llama descuento. El \"10 % discount\" aparece en otro párrafo y depende de la fecha de pago.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió un ahorro (no comprar el gorro) con el descuento del 10 %."
+      },
+      {
+        "clave": "C",
+        "texto": "By registering in the Beginners group.",
+        "correcta": false,
+        "explicacion": "El grupo Beginners tiene cupos limitados (\"places are limited\"), pero no tiene descuento; cuesta lo mismo que Dolphins según la tabla. Quien elige esta opción inventó una relación entre grupo y precio.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que un grupo especial tendría un precio especial."
+      },
+      {
+        "clave": "D",
+        "texto": "By paying for the whole month before 9 January.",
+        "correcta": true,
+        "explicacion": "El cuarto párrafo dice: \"If you pay for the whole month before 9 January, you get a 10 % discount\". La condición es pagar el mes completo antes de esa fecha; la nota de la tabla lo repite.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el cuarto párrafo habla de pagos y descuentos. COMPRENDER: la pregunta pide la condición para obtener un descuento (how). INTERPRETAR: \"If you pay for the whole month before 9 January, you get a 10 % discount\": la condición es la fecha del pago, no el lugar ni la forma. REPRESENTAR: pago del mes completo + antes del 9 de enero → 10 % menos. RAZONAR: pagar en recepción es solo una forma de pago; traer el gorro es un ahorro, no un descuento; el grupo Beginners no tiene precio especial. RESOLVER: la opción que menciona pagar antes del 9 de enero. VERIFICAR: la nota de la tabla repite la misma condición (\"payments made before 9 January\").",
+    "que_identificar": "La oración condicional \"If you pay for the whole month before 9 January, you get a 10 % discount\".",
+    "que_revisar": "Oraciones condicionales con \"if\" para expresar condiciones; vocabulario de pagos: discount, payment, bank transfer, receipt.",
+    "refuerzo_ids": [
+      "ING-113",
+      "ING-071"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "pagos",
+      "texto:ING-T21",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-113",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Relacionar una característica del texto con una fila de la tabla",
+    "dificultad": 2,
+    "contexto": "Read the text and the table, and answer the question.\n\n**From:** Aqua Club Villavicencio\n**To:** Parents and students\n**Subject:** Swimming lessons – January\n\nDear families,\n\nOur swimming lessons start again on Monday, 12 January. This year we have four groups. Please read the table carefully and choose the group for your child.\n\nAll lessons last 45 minutes. Students must bring a swimming cap, goggles and a towel. We sell caps at the reception for 15,000 pesos, but you can bring your own.\n\nThe Beginners group is for children who cannot swim yet. In this group there are only six students per teacher, so places are limited. The Dolphins group is for students who can already swim 25 metres without stopping.\n\nIf you pay for the whole month before 9 January, you get a 10 % discount. Payments can be made at the reception or by bank transfer. Please send the receipt to our email address with your child's full name.\n\nIf you have any questions, call us at 608 555 0123 between 8 a.m. and 6 p.m.\n\nKind regards,\nPatricia Mora, Coordinator",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Swimming lessons – January",
+      "columnas": [
+        "Group",
+        "Age",
+        "Days",
+        "Time",
+        "Monthly price (pesos)"
+      ],
+      "filas": [
+        [
+          "Beginners",
+          "5–7",
+          "Tuesday and Thursday",
+          "3:00–3:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Dolphins",
+          "8–11",
+          "Monday and Wednesday",
+          "4:00–4:45 p.m.",
+          "120,000"
+        ],
+        [
+          "Teens",
+          "12–16",
+          "Monday, Wednesday and Friday",
+          "5:00–5:45 p.m.",
+          "150,000"
+        ],
+        [
+          "Adults",
+          "17+",
+          "Saturday",
+          "7:00–7:45 a.m.",
+          "100,000"
+        ]
+      ],
+      "nota": "Prices are per month. A 10 % discount applies to payments made before 9 January."
+    },
+    "enunciado": "Which group has a maximum of six students per teacher?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Beginners",
+        "correcta": true,
+        "explicacion": "El tercer párrafo dice: \"The Beginners group is for children who cannot swim yet. In this group there are only six students per teacher\". El límite de seis estudiantes por profesor corresponde al grupo de principiantes.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Dolphins",
+        "correcta": false,
+        "explicacion": "El texto describe al grupo Dolphins por su nivel (\"can already swim 25 metres without stopping\"), no por el número de estudiantes. El dato de seis por profesor está en la oración anterior, sobre Beginners.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el párrafo correcto pero asignó el dato al segundo grupo mencionado."
+      },
+      {
+        "clave": "C",
+        "texto": "Teens",
+        "correcta": false,
+        "explicacion": "El grupo Teens solo aparece en la tabla; el correo no dice nada sobre el número de estudiantes de ese grupo. Quien elige esta opción respondió sin ubicar la frase \"six students per teacher\".",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No buscó en el texto la frase sobre el número de estudiantes."
+      },
+      {
+        "clave": "D",
+        "texto": "Adults",
+        "correcta": false,
+        "explicacion": "El grupo Adults tiene el precio más bajo y clases los sábados, pero el texto no indica cuántos estudiantes tiene por profesor. El límite de seis se menciona solo para Beginners.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un grupo con un dato llamativo en la tabla (precio) sin volver al texto."
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo describe dos grupos: Beginners y Dolphins. COMPRENDER: la pregunta pide el grupo con máximo seis estudiantes por profesor. INTERPRETAR: \"In this group there are only six students per teacher\" aparece justo después de \"The Beginners group is for children who cannot swim yet\", así que \"this group\" se refiere a Beginners. REPRESENTAR: Beginners → no saben nadar → 6 por profesor → cupos limitados; Dolphins → ya nadan 25 m. RAZONAR: la tabla no da el número de estudiantes de ningún grupo; solo el texto lo dice, y únicamente para Beginners. RESOLVER: la opción que dice \"Beginners\". VERIFICAR: la frase siguiente, \"so places are limited\", es coherente con un grupo pequeño.",
+    "que_identificar": "El referente de \"this group\" en la oración \"In this group there are only six students per teacher\".",
+    "que_revisar": "Identificar el referente de \"this\" en un párrafo y combinar información del texto con la de la tabla.",
+    "refuerzo_ids": [
+      "ING-112",
+      "ING-110"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "referencia",
+      "tabla",
+      "texto:ING-T21",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-114",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir cómo resolvió un personaje un problema",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**The Boy Who Fixes Bikes**\n\nWhen Samuel Guerrero was thirteen, his bicycle broke a week before a race in Pasto, and the only repair shop in his neighbourhood was closed for the holidays. \"I watched videos all night and fixed it myself with my father's old tools,\" he remembers. \"I didn't win the race, but I discovered something I loved.\"\n\nThree years later, Samuel runs a small workshop in his family's garage. He opens it after school, from four to seven, and on Saturday mornings. Most of his customers are children from nearby schools, and he charges them very little. \"If a kid brings me a flat tyre and doesn't have money, I teach them how to fix it. Next time they won't need me,\" he says with a smile.\n\nHis mother, Lucía, was not happy at first. \"I wanted him to concentrate on his studies,\" she admits. \"But his grades have not gone down, and now the whole street knows him.\" Samuel still wants to study engineering. \"I'm not planning to repair bikes all my life,\" he says. \"But I'm not going to stop either. The garage is where I think best.\"",
+    "estimulo": null,
+    "enunciado": "What can we infer about the day Samuel's bike broke?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He asked a repair shop to fix it quickly.",
+        "correcta": false,
+        "explicacion": "El texto dice que el único taller del barrio estaba cerrado por vacaciones (\"closed for the holidays\"), así que no pudo pedir ayuda allí. Quien elige esta opción no leyó por qué Samuel tuvo que arreglarla él mismo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó que el taller estaba cerrado."
+      },
+      {
+        "clave": "B",
+        "texto": "He decided not to take part in the race.",
+        "correcta": false,
+        "explicacion": "Samuel sí participó: dice \"I didn't win the race\", lo que implica que corrió y no ganó. Quien elige esta opción convirtió \"no ganó\" en \"no participó\".",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"I didn't win\" como si no hubiera corrido."
+      },
+      {
+        "clave": "C",
+        "texto": "He learned to repair it without anyone's help.",
+        "correcta": true,
+        "explicacion": "Samuel cuenta: \"I watched videos all night and fixed it myself with my father's old tools\". Aprendió viendo videos y la arregló él mismo (\"myself\"), porque el taller estaba cerrado. La opción resume esa situación sin agregar nada.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "He discovered that he did not like cycling.",
+        "correcta": false,
+        "explicacion": "Lo que descubrió fue \"something I loved\": una afición nueva, reparar bicicletas. El texto no dice nada negativo sobre el ciclismo. Quien elige esta opción invirtió el sentido de \"discovered something I loved\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supuso que perder la carrera lo alejó del ciclismo, sin apoyo en el texto."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo cuenta el día en que la bicicleta se dañó y lo que hizo Samuel. COMPRENDER: la pregunta pide inferir (infer), es decir, concluir algo apoyado en los detalles. INTERPRETAR: el taller estaba cerrado, vio videos toda la noche y la arregló \"myself\" con herramientas viejas; corrió, no ganó, y descubrió algo que le gustó. REPRESENTAR: taller cerrado → videos → arreglo por su cuenta → carrera (sin ganar) → nueva afición. RAZONAR: pedir ayuda al taller contradice \"closed\"; no participar contradice \"I didn't win\"; no gustarle el ciclismo contradice \"something I loved\". RESOLVER: la opción que dice que aprendió a repararla sin ayuda. VERIFICAR: \"fixed it myself\" respalda directamente la idea de hacerlo sin ayuda de nadie.",
+    "que_identificar": "La frase \"fixed it myself with my father's old tools\" y la razón: \"the only repair shop... was closed\".",
+    "que_revisar": "Pronombres reflexivos para enfatizar (myself = yo mismo); inferir a partir de causas explícitas; distinguir \"didn't win\" de \"didn't take part\".",
+    "refuerzo_ids": [
+      "ING-115",
+      "ING-068"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "texto:ING-T22",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-115",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir la razón de una decisión a partir de una cita",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**The Boy Who Fixes Bikes**\n\nWhen Samuel Guerrero was thirteen, his bicycle broke a week before a race in Pasto, and the only repair shop in his neighbourhood was closed for the holidays. \"I watched videos all night and fixed it myself with my father's old tools,\" he remembers. \"I didn't win the race, but I discovered something I loved.\"\n\nThree years later, Samuel runs a small workshop in his family's garage. He opens it after school, from four to seven, and on Saturday mornings. Most of his customers are children from nearby schools, and he charges them very little. \"If a kid brings me a flat tyre and doesn't have money, I teach them how to fix it. Next time they won't need me,\" he says with a smile.\n\nHis mother, Lucía, was not happy at first. \"I wanted him to concentrate on his studies,\" she admits. \"But his grades have not gone down, and now the whole street knows him.\" Samuel still wants to study engineering. \"I'm not planning to repair bikes all my life,\" he says. \"But I'm not going to stop either. The garage is where I think best.\"",
+    "estimulo": null,
+    "enunciado": "Why does Samuel teach some children to fix their own bikes?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Because he does not have time to repair every bicycle he receives.",
+        "correcta": false,
+        "explicacion": "El texto no habla de falta de tiempo. La razón está en la cita: lo hace cuando un niño no tiene dinero, y para que la próxima vez no lo necesite. Quien elige esta opción inventó una causa práctica que suena lógica pero no está en el texto.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso una razón común (falta de tiempo) en lugar de leer la cita."
+      },
+      {
+        "clave": "B",
+        "texto": "Because his mother asked him to help the neighbours for free.",
+        "correcta": false,
+        "explicacion": "Su madre, al contrario, quería que se concentrara en los estudios (\"I wanted him to concentrate on his studies\"). No hay ninguna petición de ella relacionada con ayudar gratis a los vecinos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a la madre una motivación que el texto no menciona y que contradice su postura inicial."
+      },
+      {
+        "clave": "C",
+        "texto": "Because he wants to open a second workshop in another neighbourhood.",
+        "correcta": false,
+        "explicacion": "El texto no menciona planes de abrir otro taller; de hecho, Samuel dice que no planea reparar bicicletas toda su vida. Es información agregada sin apoyo.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Agregó un plan de negocio que no aparece en el texto."
+      },
+      {
+        "clave": "D",
+        "texto": "Because he wants them to be able to solve the problem themselves.",
+        "correcta": true,
+        "explicacion": "Samuel dice: \"If a kid brings me a flat tyre and doesn't have money, I teach them how to fix it. Next time they won't need me\". La frase \"Next time they won't need me\" muestra que su objetivo es que los niños puedan resolverlo solos la próxima vez.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la cita del segundo párrafo sobre los niños que llegan sin dinero. COMPRENDER: la pregunta pide la razón (why) por la que enseña a reparar. INTERPRETAR: \"I teach them how to fix it. Next time they won't need me\": enseña para que la próxima vez no lo necesiten, es decir, para que sean capaces de resolverlo solos. REPRESENTAR: niño sin dinero → Samuel enseña → el niño ya no depende de él. RAZONAR: la falta de tiempo y el segundo taller no aparecen; la petición de la madre contradice lo que ella misma dice. RESOLVER: la opción que habla de que puedan resolver el problema por sí mismos. VERIFICAR: \"they won't need me\" equivale a \"be able to solve the problem themselves\".",
+    "que_identificar": "La oración \"Next time they won't need me\" y lo que implica sobre la intención de Samuel.",
+    "que_revisar": "Inferir intenciones a partir de citas; conectores de condición (if) y futuro con \"won't\"; vocabulario: flat tyre, charge, customers.",
+    "refuerzo_ids": [
+      "ING-114",
+      "ING-116"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "causa",
+      "texto:ING-T22",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-116",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar el cambio de opinión de una voz citada (at first / but)",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**The Boy Who Fixes Bikes**\n\nWhen Samuel Guerrero was thirteen, his bicycle broke a week before a race in Pasto, and the only repair shop in his neighbourhood was closed for the holidays. \"I watched videos all night and fixed it myself with my father's old tools,\" he remembers. \"I didn't win the race, but I discovered something I loved.\"\n\nThree years later, Samuel runs a small workshop in his family's garage. He opens it after school, from four to seven, and on Saturday mornings. Most of his customers are children from nearby schools, and he charges them very little. \"If a kid brings me a flat tyre and doesn't have money, I teach them how to fix it. Next time they won't need me,\" he says with a smile.\n\nHis mother, Lucía, was not happy at first. \"I wanted him to concentrate on his studies,\" she admits. \"But his grades have not gone down, and now the whole street knows him.\" Samuel still wants to study engineering. \"I'm not planning to repair bikes all my life,\" he says. \"But I'm not going to stop either. The garage is where I think best.\"",
+    "estimulo": null,
+    "enunciado": "How does Lucía feel about the workshop now?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She accepts it because Samuel's results at school are still good.",
+        "correcta": true,
+        "explicacion": "Lucía dice que al principio no estaba contenta (\"was not happy at first\"), pero añade: \"But his grades have not gone down, and now the whole street knows him\". El \"but\" marca el cambio: como las notas no han bajado, ahora acepta el taller.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "She is worried because Samuel is spending too much time on it.",
+        "correcta": false,
+        "explicacion": "Esa era su preocupación INICIAL (\"I wanted him to concentrate on his studies\"). El conector \"But\" y la frase sobre las notas muestran que esa preocupación ya no se cumple. Quien elige esta opción se quedó en \"at first\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó el contraste que introduce \"But\" y tomó la opinión inicial como la actual."
+      },
+      {
+        "clave": "C",
+        "texto": "She is proud because Samuel has become famous in Pasto.",
+        "correcta": false,
+        "explicacion": "Lucía dice que \"the whole street knows him\" (toda la calle lo conoce), no toda la ciudad. Además no usa la palabra orgullo; su argumento principal son las notas. La opción exagera el alcance y cambia la razón.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Exageró \"the whole street\" a toda la ciudad y supuso orgullo."
+      },
+      {
+        "clave": "D",
+        "texto": "She wants Samuel to close it and study engineering.",
+        "correcta": false,
+        "explicacion": "Quien quiere estudiar ingeniería es Samuel, y es él quien dice que no va a parar. Lucía no pide que cierre el taller; su comentario actual es favorable. Quien elige esta opción mezcló las palabras de los dos personajes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuyó a la madre el plan de estudiar ingeniería, que es de Samuel."
+      }
+    ],
+    "explicacion": "LEER: el tercer párrafo cita a Lucía, la madre de Samuel. COMPRENDER: la pregunta pide su sentimiento ACTUAL (now) sobre el taller. INTERPRETAR: \"was not happy at first\" describe el pasado; \"But his grades have not gone down, and now the whole street knows him\" describe el presente, con un tono de aceptación. REPRESENTAR: antes: preocupación por los estudios → ahora: las notas siguen bien → acepta. RAZONAR: la preocupación por el tiempo es la postura inicial; la fama en toda la ciudad exagera \"the whole street\"; cerrar el taller y estudiar ingeniería son palabras de Samuel. RESOLVER: la opción que dice que lo acepta porque las notas siguen bien. VERIFICAR: el conector \"But\" y el adverbio \"now\" sostienen el cambio de opinión.",
+    "que_identificar": "El contraste entre \"was not happy at first\" y \"But his grades have not gone down\".",
+    "que_revisar": "Marcadores de cambio de opinión (at first, but, now); interpretar el tono de una cita; identificar a quién pertenece cada afirmación en un texto con varias voces.",
+    "refuerzo_ids": [
+      "ING-115",
+      "ING-074"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "opinion",
+      "texto:ING-T22",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-117",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar una frase final con sentido figurado",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**The Boy Who Fixes Bikes**\n\nWhen Samuel Guerrero was thirteen, his bicycle broke a week before a race in Pasto, and the only repair shop in his neighbourhood was closed for the holidays. \"I watched videos all night and fixed it myself with my father's old tools,\" he remembers. \"I didn't win the race, but I discovered something I loved.\"\n\nThree years later, Samuel runs a small workshop in his family's garage. He opens it after school, from four to seven, and on Saturday mornings. Most of his customers are children from nearby schools, and he charges them very little. \"If a kid brings me a flat tyre and doesn't have money, I teach them how to fix it. Next time they won't need me,\" he says with a smile.\n\nHis mother, Lucía, was not happy at first. \"I wanted him to concentrate on his studies,\" she admits. \"But his grades have not gone down, and now the whole street knows him.\" Samuel still wants to study engineering. \"I'm not planning to repair bikes all my life,\" he says. \"But I'm not going to stop either. The garage is where I think best.\"",
+    "estimulo": null,
+    "enunciado": "What does Samuel mean when he says \"The garage is where I think best\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "He prefers to do his homework in the garage.",
+        "correcta": false,
+        "explicacion": "Es una lectura demasiado literal: \"think best\" no se refiere a hacer tareas. Samuel habla de lo que el taller significa para él, no de dónde estudia. Quien elige esta opción conectó \"think\" con los estudios mencionados antes.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Relacionó \"think\" con las tareas escolares de forma literal."
+      },
+      {
+        "clave": "B",
+        "texto": "Working in the workshop helps him think clearly.",
+        "correcta": true,
+        "explicacion": "La frase cierra una idea: no va a dejar el taller aunque no quiera reparar bicicletas toda la vida, porque es el lugar donde piensa mejor. Es decir, trabajar allí le aclara las ideas y lo ayuda a reflexionar; por eso no va a parar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "He believes the garage needs a better design.",
+        "correcta": false,
+        "explicacion": "No hay nada en el texto sobre el estado o el diseño del garaje. Quien elige esta opción asoció \"engineering\" con mejorar el espacio, pero la frase habla de pensar, no de construir.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Agregó una idea de mejora física que el texto no sugiere."
+      },
+      {
+        "clave": "D",
+        "texto": "He wants to become a garage owner, not an engineer.",
+        "correcta": false,
+        "explicacion": "Es lo contrario: Samuel dice que quiere estudiar ingeniería y que no planea reparar bicicletas toda la vida. La frase sobre el garaje explica por qué no va a parar por ahora, no un cambio de planes.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró \"Samuel still wants to study engineering\" y leyó la frase como una decisión de carrera."
+      }
+    ],
+    "explicacion": "LEER: la frase cierra el texto, justo después de \"I'm not planning to repair bikes all my life... But I'm not going to stop either\". COMPRENDER: se pide el significado de lo que Samuel quiere decir, no lo literal. INTERPRETAR: dice que el garaje es el lugar donde piensa mejor; es su explicación de por qué no deja el taller aunque su futuro sea otro. REPRESENTAR: ingeniería (futuro) + taller (presente) → el taller le ayuda a pensar → no lo deja. RAZONAR: la opción de las tareas es literal; la del diseño inventa un problema físico; la de ser dueño de garaje contradice su plan de estudiar ingeniería. RESOLVER: la opción que dice que trabajar allí le ayuda a pensar con claridad. VERIFICAR: la frase \"I'm not going to stop either\" encaja con un lugar que le hace bien.",
+    "que_identificar": "La relación entre \"I'm not going to stop either\" y \"The garage is where I think best\".",
+    "que_revisar": "Interpretar frases de cierre con sentido figurado; conectores de contraste (but, either); distinguir planes futuros de motivaciones presentes.",
+    "refuerzo_ids": [
+      "ING-116",
+      "ING-083"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "sentido_figurado",
+      "texto:ING-T22",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-118",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Spend time vs. pass / take (pasar tiempo)",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(1)**.\n\n**Learning to Cook with My Grandfather**\n\nLast year I decided to learn to cook. My grandfather, Don Julio, worked as a chef for thirty years, so every Sunday I **(1) ______** three hours with him in his small kitchen in Bucaramanga. The first lesson was simple: how to cut an onion without crying! He doesn't have many books, so I **(2) ______** two recipe books from the public library, and we tried a different dish every week. Some of them were a disaster: my first rice was too salty and my soup had no flavour at all. But my grandfather never laughs at me. \"A good cook always **(3) ______** mistakes,\" he says. \"The secret is to taste the food before you serve it.\" Now I cook dinner for my family twice a week, and my mother says my ajiaco is almost as good as his.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "passed",
+        "correcta": false,
+        "explicacion": "En español decimos \"pasar tres horas\", pero en inglés \"pass\" con tiempo significa que el tiempo transcurre (\"three hours passed\"), con el tiempo como sujeto. Con una persona como sujeto y una cantidad de tiempo se usa \"spend\". Es un calco del español.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"pasar tiempo\" palabra por palabra con \"pass\"."
+      },
+      {
+        "clave": "B",
+        "texto": "took",
+        "correcta": false,
+        "explicacion": "\"Take\" + tiempo indica cuánto dura algo (\"the trip takes forty minutes\"), normalmente con la actividad o \"it\" como sujeto. \"I took three hours with him\" no expresa la idea de dedicar tiempo a estar con alguien.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió \"it takes time\" (dura) con \"spend time\" (dedicar tiempo)."
+      },
+      {
+        "clave": "C",
+        "texto": "spent",
+        "correcta": true,
+        "explicacion": "\"Spend time with someone\" significa pasar o dedicar tiempo con alguien: \"every Sunday I spent three hours with him in his small kitchen\". El verbo va en pasado (spent) porque el texto cuenta lo que ocurrió el año pasado (\"Last year I decided...\").",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el espacio (1) está en \"every Sunday I ______ three hours with him in his small kitchen\". COMPRENDER: se busca el verbo que se combina con una cantidad de tiempo y una persona como sujeto. INTERPRETAR: el narrador cuenta que dedicaba tres horas cada domingo a cocinar con su abuelo. REPRESENTAR: persona + spend + tiempo + with alguien. RAZONAR: \"pass\" con tiempo tiene el tiempo como sujeto (\"hours passed\"); \"take\" indica duración de una actividad (\"it takes\"); solo \"spend\" expresa dedicar tiempo. RESOLVER: la opción que dice \"spent\". VERIFICAR: \"I spent three hours with him\" es natural y coherente con \"Last year\" (pasado).",
+    "que_identificar": "La expresión de cantidad de tiempo (\"three hours\") después del espacio y el sujeto \"I\".",
+    "que_revisar": "Verbos con tiempo: spend time (dedicar), it takes time (dura), time passes (transcurre); evitar el calco \"pass time with\".",
+    "refuerzo_ids": [
+      "ING-119",
+      "ING-090"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "spend_take",
+      "cocina",
+      "texto:ING-T23",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-119",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Borrow vs. lend: quién recibe y quién da",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(2)**.\n\n**Learning to Cook with My Grandfather**\n\nLast year I decided to learn to cook. My grandfather, Don Julio, worked as a chef for thirty years, so every Sunday I **(1) ______** three hours with him in his small kitchen in Bucaramanga. The first lesson was simple: how to cut an onion without crying! He doesn't have many books, so I **(2) ______** two recipe books from the public library, and we tried a different dish every week. Some of them were a disaster: my first rice was too salty and my soup had no flavour at all. But my grandfather never laughs at me. \"A good cook always **(3) ______** mistakes,\" he says. \"The secret is to taste the food before you serve it.\" Now I cook dinner for my family twice a week, and my mother says my ajiaco is almost as good as his.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "borrowed",
+        "correcta": true,
+        "explicacion": "\"Borrow something from someone/somewhere\" significa tomar prestado: \"I borrowed two recipe books from the public library\" = tomé prestados dos libros de la biblioteca. El sujeto \"I\" es quien recibe los libros, y la preposición \"from\" confirma que vienen de la biblioteca.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "lent",
+        "correcta": false,
+        "explicacion": "\"Lend\" significa prestar, es decir, DAR algo a otra persona por un tiempo (\"the library lent me two books\"). Aquí el sujeto es \"I\" y los libros vienen \"from the public library\", así que el narrador los recibe, no los da. Es la confusión clásica entre borrow y lend.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió lend (dar prestado) con borrow (tomar prestado) porque en español ambos son \"prestar\"."
+      },
+      {
+        "clave": "C",
+        "texto": "bought",
+        "correcta": false,
+        "explicacion": "\"Bought\" (compró) no encaja con \"from the public library\": en una biblioteca pública los libros se prestan, no se venden. Además el texto dice que el abuelo no tiene muchos libros, lo que motiva pedirlos prestados.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No relacionó \"public library\" con el préstamo de libros."
+      }
+    ],
+    "explicacion": "LEER: el espacio (2) está en \"He doesn't have many books, so I ______ two recipe books from the public library\". COMPRENDER: se busca el verbo que describe cómo consiguió los libros. INTERPRETAR: los libros vienen de una biblioteca pública (\"from the public library\"), y quien los recibe es el narrador. REPRESENTAR: biblioteca → libros → yo = tomar prestado (borrow from). RAZONAR: \"lend\" es dar prestado (la biblioteca sería el sujeto); \"bought\" no corresponde a una biblioteca; \"borrowed... from\" es la combinación correcta. RESOLVER: la opción que dice \"borrowed\". VERIFICAR: \"I borrowed two recipe books from the public library\" es natural y explica por qué tuvieron recetas nuevas cada semana.",
+    "que_identificar": "La preposición \"from\" y el lugar \"public library\" después del espacio, que indican que el narrador recibe los libros.",
+    "que_revisar": "Borrow (tomar prestado, con from) frente a lend (dar prestado, con to o con objeto indirecto); vocabulario de biblioteca.",
+    "refuerzo_ids": [
+      "ING-118",
+      "ING-120"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "borrow_lend",
+      "cocina",
+      "texto:ING-T23",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-120",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "verificar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Make vs. do: make mistakes (cometer errores)",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(3)**.\n\n**Learning to Cook with My Grandfather**\n\nLast year I decided to learn to cook. My grandfather, Don Julio, worked as a chef for thirty years, so every Sunday I **(1) ______** three hours with him in his small kitchen in Bucaramanga. The first lesson was simple: how to cut an onion without crying! He doesn't have many books, so I **(2) ______** two recipe books from the public library, and we tried a different dish every week. Some of them were a disaster: my first rice was too salty and my soup had no flavour at all. But my grandfather never laughs at me. \"A good cook always **(3) ______** mistakes,\" he says. \"The secret is to taste the food before you serve it.\" Now I cook dinner for my family twice a week, and my mother says my ajiaco is almost as good as his.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "does",
+        "correcta": false,
+        "explicacion": "\"Do a mistake\" no es correcto en inglés, aunque en español digamos \"hacer\" o \"cometer\" un error. Con \"mistake\" la colocación fija es \"make\". Quien elige esta opción aplicó \"do\" a cualquier acción traducible como \"hacer\".",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"cometer errores\" con \"do\" por asociar \"do\" con \"hacer\"."
+      },
+      {
+        "clave": "B",
+        "texto": "makes",
+        "correcta": true,
+        "explicacion": "La colocación correcta es \"make a mistake / make mistakes\" (cometer errores): \"A good cook always makes mistakes\". Lleva -s porque el sujeto es \"a good cook\" (tercera persona singular, presente simple), y el sentido encaja con los platos fallidos que describe el texto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "has",
+        "correcta": false,
+        "explicacion": "\"Have mistakes\" no es una expresión del inglés; \"have\" indica posesión o experiencias (\"have a problem\", \"have fun\"), pero no se usa para cometer errores. Quien elige esta opción buscó un verbo general sin conocer la colocación.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un verbo frecuente sin comprobar la colocación con \"mistakes\"."
+      }
+    ],
+    "explicacion": "LEER: el espacio (3) está en la cita del abuelo: \"A good cook always ______ mistakes\". COMPRENDER: se busca el verbo que se combina con \"mistakes\". INTERPRETAR: el abuelo consuela al narrador después de los platos fallidos: todo buen cocinero se equivoca. REPRESENTAR: cometer errores = make mistakes. RAZONAR: \"do a mistake\" es un calco del español; \"have mistakes\" no existe con ese sentido; solo \"make\" forma la colocación, y la -s concuerda con \"a good cook\". RESOLVER: la opción que dice \"makes\". VERIFICAR: \"A good cook always makes mistakes. The secret is to taste the food\" es coherente: errar es normal, lo importante es probar.",
+    "que_identificar": "El sustantivo \"mistakes\" después del espacio y el sujeto singular \"a good cook\".",
+    "que_revisar": "Colocaciones con make: make a mistake, make a decision, make dinner, make friends; frente a do: do homework, do the dishes, do exercise.",
+    "refuerzo_ids": [
+      "ING-118",
+      "ING-086"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "make_do",
+      "cocina",
+      "texto:ING-T23",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]

@@ -1,0 +1,1765 @@
+[
+  {
+    "id": "SOC-161",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "resolver",
+    "tema": "Lectura de mapas y escala",
+    "subtema": "Escala numérica y distancia real",
+    "dificultad": 1,
+    "contexto": "En clase de geografía, un grupo de estudiantes de un colegio de Pasto trabaja con un mapa de carreteras del departamento de Nariño. El mapa indica en su leyenda la **escala 1:500 000**, lo que significa que un centímetro del mapa equivale a 500 000 centímetros del terreno, es decir, a 5 kilómetros. Los estudiantes midieron con regla la distancia en línea recta entre varias cabeceras municipales y registraron los resultados.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Distancias medidas en el mapa (escala 1:500 000)",
+      "columnas": [
+        "Tramo",
+        "Distancia medida en el mapa (cm)"
+      ],
+      "filas": [
+        [
+          "Pasto - Túquerres",
+          "9,0"
+        ],
+        [
+          "Pasto - Ipiales",
+          "14,0"
+        ],
+        [
+          "Pasto - La Unión",
+          "12,5"
+        ],
+        [
+          "Túquerres - Tumaco",
+          "26,0"
+        ]
+      ],
+      "nota": "Mediciones en línea recta; la distancia por carretera es mayor."
+    },
+    "enunciado": "De acuerdo con la escala del mapa, ¿cuál es la distancia real en línea recta entre Pasto e Ipiales?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "70 kilómetros, porque cada centímetro del mapa representa 5 kilómetros del terreno.",
+        "correcta": true,
+        "explicacion": "La escala 1:500 000 indica que 1 cm del mapa son 500 000 cm reales, o sea 5 km. Como el tramo mide 14 cm, la distancia real es 14 × 5 = 70 km.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "140 kilómetros, porque cada centímetro del mapa representa 10 kilómetros del terreno.",
+        "correcta": false,
+        "explicacion": "La leyenda aclara que un centímetro equivale a 500 000 cm, es decir, a 5 km y no a 10 km; con 14 cm medidos la distancia real es 70 km, no 140 km.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la conversión de centímetros a kilómetros y duplica la equivalencia de la escala."
+      },
+      {
+        "clave": "C",
+        "texto": "45 kilómetros, porque se debe usar la medida del tramo más corto registrado en la tabla.",
+        "correcta": false,
+        "explicacion": "La pregunta se refiere al tramo Pasto - Ipiales, que mide 14 cm. El valor de 45 km resulta de usar los 9 cm de Pasto - Túquerres, una fila distinta de la tabla.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee la fila equivocada de la tabla y aplica la escala a otro tramo."
+      },
+      {
+        "clave": "D",
+        "texto": "14 kilómetros, porque la medida del mapa coincide con la distancia real cuando el mapa es oficial.",
+        "correcta": false,
+        "explicacion": "Ningún mapa representa el terreno a tamaño real; la escala existe justamente para reducirlo. Los 14 cm medidos deben multiplicarse por la equivalencia de 5 km por centímetro.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No comprende el concepto de escala y toma la medida del mapa como si fuera la distancia real."
+      }
+    ],
+    "explicacion": "LEER: el mapa tiene escala 1:500 000 y la tabla registra 14 cm entre Pasto e Ipiales. COMPRENDER: se pide convertir esa medida del mapa en distancia real. INTERPRETAR: la escala dice que 1 cm del mapa equivale a 500 000 cm del terreno. REPRESENTAR: 500 000 cm = 5 000 m = 5 km, así que cada centímetro vale 5 km. RAZONAR: la distancia real se obtiene multiplicando los centímetros medidos por la equivalencia. RESOLVER: 14 × 5 = 70 km, que corresponde a la opción que propone 70 kilómetros. VERIFICAR: la distancia real por carretera entre Pasto e Ipiales ronda los 80 km, coherente con 70 km en línea recta; además los otros tramos dan valores razonables para Nariño (Túquerres - Tumaco, 130 km).",
+    "que_identificar": "La equivalencia de la escala numérica (1 cm = 5 km) en el contexto y la fila correcta de la tabla para el tramo Pasto - Ipiales.",
+    "que_revisar": "Concepto de escala cartográfica: escala numérica, conversión de unidades (cm a km) y diferencia entre distancia en línea recta y por carretera.",
+    "refuerzo_ids": [
+      "SOC-063",
+      "SOC-122"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "mapas",
+      "escala",
+      "geografia",
+      "narino",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-162",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Inscribe una fuente primaria dada en un contexto económico, político o cultural",
+    "habilidad": "interpretar",
+    "tema": "Reforma protestante e imprenta",
+    "subtema": "Difusión de ideas religiosas en el siglo XVI",
+    "dificultad": 2,
+    "contexto": "En 1517, el monje alemán Martín Lutero hizo públicas sus **95 tesis**, en las que criticaba la venta de indulgencias por parte de la Iglesia católica. En pocos meses, copias impresas de las tesis y de folletos en alemán circulaban por numerosas ciudades del Sacro Imperio. Un impresor de la época escribió a un colega: *\"Nunca habíamos vendido tanto: los pliegos del doctor Lutero se agotan el mismo día en que salen de la prensa, y la gente los lee en voz alta en las plazas para quienes no saben leer\"*. Historiadores han señalado que, sin la imprenta de tipos móviles difundida en Europa desde mediados del siglo XV, la Reforma difícilmente habría alcanzado tanta velocidad.",
+    "estimulo": null,
+    "enunciado": "¿Qué permite concluir la carta del impresor sobre el contexto en que se difundió la Reforma protestante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la mayoría de la población alemana ya sabía leer y por eso compraba los pliegos para estudiarlos en privado.",
+        "correcta": false,
+        "explicacion": "La carta dice lo contrario: los pliegos se leían en voz alta en las plazas para quienes no sabían leer, lo cual indica que buena parte de la población era analfabeta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasa por alto la frase sobre la lectura en voz alta y supone alfabetización generalizada."
+      },
+      {
+        "clave": "B",
+        "texto": "Que la imprenta convirtió las ideas de Lutero en un producto de amplia circulación que llegaba incluso a quienes no leían.",
+        "correcta": true,
+        "explicacion": "El impresor describe pliegos que se agotan el mismo día y que se leen en voz alta en las plazas: la imprenta multiplicó las copias y la lectura pública amplió el alcance a los analfabetos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que la Iglesia católica financió la impresión de las tesis para que los fieles conocieran sus argumentos sobre las indulgencias.",
+        "correcta": false,
+        "explicacion": "Las tesis criticaban la venta de indulgencias de la propia Iglesia; nada en la carta sugiere que esta las financiara, y el impresor habla de ventas, no de una campaña eclesiástica.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde al autor de la crítica con la institución criticada."
+      },
+      {
+        "clave": "D",
+        "texto": "Que los impresores alemanes fueron quienes redactaron las tesis para aumentar sus ventas aprovechando la crisis religiosa.",
+        "correcta": false,
+        "explicacion": "El contexto atribuye las tesis a Lutero; el impresor solo señala que las vende con éxito. Beneficiarse de la demanda no equivale a haber escrito los textos.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Infiere autoría a partir del beneficio económico que menciona la fuente."
+      }
+    ],
+    "explicacion": "LEER: Lutero publica las 95 tesis en 1517; un impresor cuenta que los pliegos se agotan de inmediato y que se leen en voz alta en las plazas. COMPRENDER: se pide inscribir la fuente en su contexto y concluir algo sobre la difusión de la Reforma. INTERPRETAR: la carta es una fuente primaria de un actor económico que confirma alta demanda de copias y lectura pública para analfabetos. REPRESENTAR: imprenta → copias baratas → venta masiva → lectura colectiva → ideas que llegan a letrados y no letrados. RAZONAR: la conclusión debe apoyarse en lo que la fuente dice, no en suposiciones sobre autoría o financiación. RESOLVER: la opción que señala que la imprenta convirtió las ideas en un producto de amplia circulación que llegaba incluso a quienes no leían. VERIFICAR: la mención a los historiadores en el contexto respalda el papel de la imprenta en la rapidez de la Reforma.",
+    "que_identificar": "Las dos pistas de la carta: los pliegos se agotan el mismo día y se leen en voz alta a quienes no saben leer.",
+    "que_revisar": "Reforma protestante (1517) e invención de la imprenta de tipos móviles (mediados del siglo XV); análisis de fuentes primarias y de la intención de su autor.",
+    "refuerzo_ids": [
+      "SOC-106",
+      "SOC-006"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "reforma_protestante",
+      "imprenta",
+      "siglo_xvi",
+      "fuente_primaria",
+      "lutero"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-163",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Regalías y desarrollo regional",
+    "subtema": "Redistribución de los recursos de la explotación minera y petrolera",
+    "dificultad": 2,
+    "contexto": "Las **regalías** son el pago que recibe el Estado colombiano por la explotación de recursos naturales no renovables como petróleo, carbón y oro. Hasta 2011, la mayor parte de esos recursos se quedaba en los departamentos y municipios donde se extraían. Una reforma constitucional de ese año creó el Sistema General de Regalías, que reparte los recursos entre todas las regiones del país con criterios de población y pobreza, aunque conserva una porción para las zonas productoras. Un equipo de estudiantes elaboró un gráfico comparativo, con datos simplificados para un departamento productor y uno no productor, antes y después de la reforma.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Regalías recibidas por año (miles de millones de pesos, cifras simplificadas)",
+      "eje_x": "Departamento y periodo",
+      "eje_y": "Miles de millones de pesos",
+      "series": [
+        {
+          "nombre": "Regalías anuales",
+          "valores": [
+            [
+              "Productor, antes de 2011",
+              900
+            ],
+            [
+              "Productor, después de 2011",
+              450
+            ],
+            [
+              "No productor, antes de 2011",
+              40
+            ],
+            [
+              "No productor, después de 2011",
+              260
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "A partir del gráfico y del contexto, ¿cuál es el análisis más completo de los efectos de la reforma de 2011?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La reforma eliminó por completo las regalías de los departamentos productores, lo que los dejó sin ningún recurso para atender los daños ambientales y sociales que causa la extracción en su territorio.",
+        "correcta": false,
+        "explicacion": "El gráfico muestra que el departamento productor pasó de 900 a 450 mil millones: perdió la mitad, pero no todo. El contexto confirma que se conserva una porción para las zonas productoras.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Exagera la caída de la barra del productor y la lee como una pérdida total."
+      },
+      {
+        "clave": "B",
+        "texto": "La reforma aumentó el total de regalías que recibe el país, pues la suma de las barras posteriores a 2011 es mayor que la suma de las anteriores.",
+        "correcta": false,
+        "explicacion": "Las regalías dependen de cuánto se extrae y del precio, no de cómo se reparten. Las barras muestran una redistribución entre dos departamentos de ejemplo, no el total nacional.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Suma las barras como si fueran el total del país y confunde reparto con monto recaudado."
+      },
+      {
+        "clave": "C",
+        "texto": "La reforma mejoró la equidad territorial al llevar recursos a regiones pobres sin extracción, a costa de reducir los ingresos de las zonas productoras, que asumen los impactos de la actividad.",
+        "correcta": true,
+        "explicacion": "El gráfico muestra que el no productor pasó de 40 a 260 y el productor de 900 a 450: hay ganancia en equidad regional, pero las zonas que soportan la extracción reciben menos, lo cual genera una tensión entre dimensiones.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La reforma benefició por igual a todos los departamentos, porque después de 2011 las barras de productores y no productores tienen alturas prácticamente iguales.",
+        "correcta": false,
+        "explicacion": "Después de 2011 el productor recibe 450 y el no productor 260: las barras no son iguales. Además, uno perdió recursos y el otro los ganó, de modo que los efectos fueron opuestos, no iguales.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Compara las barras sin leer los valores del eje y supone igualdad donde hay diferencia."
+      }
+    ],
+    "explicacion": "LEER: las regalías pagan la extracción de recursos no renovables; antes de 2011 se concentraban en zonas productoras y la reforma las repartió entre todas las regiones. COMPRENDER: se pide el análisis más completo de los efectos de esa intervención. INTERPRETAR: en el gráfico el productor baja de 900 a 450 y el no productor sube de 40 a 260. REPRESENTAR: dimensión de equidad regional (ganan las regiones sin extracción) frente a dimensión territorial y ambiental (las zonas productoras, que soportan los impactos, reciben menos). RAZONAR: un análisis completo reconoce la ganancia y la pérdida al mismo tiempo, no una sola de ellas. RESOLVER: la opción que habla de mejora en la equidad territorial a costa de reducir los ingresos de las zonas productoras. VERIFICAR: ni se eliminaron las regalías del productor ni las barras posteriores son iguales ni el reparto cambia el total recaudado.",
+    "que_identificar": "Los cuatro valores del gráfico y la frase del contexto sobre la porción que conservan las zonas productoras.",
+    "que_revisar": "Sistema General de Regalías (reforma constitucional de 2011), tensiones entre equidad regional e impactos locales de la extracción, lectura de gráficos de barras comparativos.",
+    "refuerzo_ids": [
+      "SOC-067",
+      "SOC-069"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": [
+      "regalias",
+      "descentralizacion",
+      "mineria",
+      "equidad_territorial",
+      "barras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-164",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce la organización del Estado: funciones y alcances de las ramas del poder y de los organismos de control",
+    "habilidad": "comprender",
+    "tema": "Estados de excepción",
+    "subtema": "Límites constitucionales de la emergencia económica, social y ecológica",
+    "dificultad": 2,
+    "contexto": "Tras una temporada de lluvias que inundó varios municipios, el Gobierno nacional declaró un **estado de emergencia económica, social y ecológica**, una de las figuras de excepción que prevé la Constitución de 1991. Durante los días siguientes expidió decretos con fuerza de ley para destinar recursos a la reconstrucción. En un foro escolar, una estudiante afirmó: *\"Mientras dure la emergencia el presidente puede hacer lo que quiera, porque los estados de excepción suspenden la Constitución\"*. Su profesora le recordó que la Constitución fija límites: la emergencia tiene duración máxima, los decretos deben referirse solo a la crisis, no pueden desmejorar los derechos sociales de los trabajadores y la Corte Constitucional revisa de manera automática cada decreto.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de las siguientes afirmaciones corrige adecuadamente la idea de la estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los estados de excepción reemplazan al Congreso de manera permanente, pues el presidente asume la función legislativa hasta que decida devolverla.",
+        "correcta": false,
+        "explicacion": "La profesora señala que la emergencia tiene una duración máxima; el presidente legisla por decreto solo de forma temporal y sobre la crisis, no de manera permanente ni a su arbitrio.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una facultad temporal y limitada con una sustitución permanente del Congreso."
+      },
+      {
+        "clave": "B",
+        "texto": "Durante la emergencia el presidente puede dictar cualquier norma que considere necesaria, pero la Corte Constitucional solo la revisa si un ciudadano presenta una demanda contra ella.",
+        "correcta": false,
+        "explicacion": "El contexto indica que la revisión de la Corte es automática: no depende de una demanda ciudadana. Además, los decretos deben limitarse a la crisis, así que no puede dictar cualquier norma.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el control automático de los decretos de excepción con la acción pública de inconstitucionalidad."
+      },
+      {
+        "clave": "C",
+        "texto": "La emergencia suspende la Constitución únicamente en los municipios inundados, mientras que en el resto del país sigue vigente sin cambios.",
+        "correcta": false,
+        "explicacion": "La Constitución no se suspende en ningún lugar del país durante la emergencia; lo que ocurre es que el Gobierno recibe facultades extraordinarias limitadas y controladas. El territorio afectado no define la vigencia de la Carta.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Traslada el alcance territorial de la inundación a la vigencia de la norma constitucional."
+      },
+      {
+        "clave": "D",
+        "texto": "La emergencia otorga facultades extraordinarias temporales, limitadas a la crisis y sometidas al control de la Corte, sin suspender la Constitución ni los derechos.",
+        "correcta": true,
+        "explicacion": "Resume los límites que menciona la profesora: duración máxima, conexión con la crisis, prohibición de desmejorar derechos sociales y control automático de la Corte. La Constitución sigue vigente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el Gobierno declara una emergencia por inundaciones y expide decretos con fuerza de ley; una estudiante cree que se suspende la Constitución; la profesora enumera límites. COMPRENDER: se pide la afirmación que corrige esa idea. INTERPRETAR: los límites son duración máxima, decretos ligados a la crisis, protección de derechos sociales y control automático de la Corte. REPRESENTAR: excepción = facultades extraordinarias + temporales + limitadas + controladas, con la Constitución vigente. RAZONAR: la corrección debe recoger esos rasgos y negar la suspensión de la Carta. RESOLVER: la opción que describe facultades extraordinarias temporales, limitadas a la crisis y sometidas al control de la Corte, sin suspender la Constitución ni los derechos. VERIFICAR: las demás conservan un error: Congreso sustituido, control solo por demanda o suspensión territorial.",
+    "que_identificar": "Los límites que enumera la profesora: duración máxima, decretos ligados a la crisis, no desmejora de derechos sociales y control automático de la Corte.",
+    "que_revisar": "Estados de excepción en la Constitución de 1991 (guerra exterior, conmoción interior y emergencia económica, social y ecológica) y el control de constitucionalidad de los decretos legislativos.",
+    "refuerzo_ids": [
+      "SOC-105",
+      "SOC-014"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "estados_de_excepcion",
+      "constitucion_1991",
+      "corte_constitucional",
+      "ramas_del_poder",
+      "emergencia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-165",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Establece relaciones entre las perspectivas de los individuos en una situación conflictiva y las propuestas de solución",
+    "habilidad": "razonar",
+    "tema": "Grandes represas y comunidades ribereñas",
+    "subtema": "Reacciones de los actores ante una propuesta de compensación",
+    "dificultad": 2,
+    "contexto": "Una empresa proyecta construir una gran central hidroeléctrica en un cañón del río Cauca. El embalse inundaría playas donde cerca de 300 familias practican el **barequeo** (extracción artesanal de oro con batea) y la pesca, y modificaría el caudal río abajo. En una audiencia pública se escucharon tres voces:\n\n- **Vocera de los barequeros**: \"Vivimos del río desde hace generaciones; no queremos plata, queremos seguir trabajando en él\".\n- **Gerente del proyecto**: \"La central dará energía limpia a millones de hogares y generará 5 000 empleos durante la construcción\".\n- **Alcalde**: \"El municipio recibirá transferencias por la generación de energía, con las que podemos pavimentar vías y construir un hospital\".\n\nLa empresa propuso como solución pagar a cada familia una indemnización única en dinero y ofrecer cursos de formación para empleos en la obra.",
+    "estimulo": null,
+    "enunciado": "¿Cómo es más probable que reaccionen los barequeros ante la propuesta de la empresa, y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La aceptarán con entusiasmo, porque una indemnización en dinero les permite comprar herramientas para seguir extrayendo oro en el mismo lugar.",
+        "correcta": false,
+        "explicacion": "Las playas donde trabajan quedarían inundadas por el embalse; con dinero o herramientas no podrían seguir barequeando en el mismo lugar, que es justamente lo que su vocera dice querer.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora que el embalse elimina el lugar de trabajo y supone que el dinero resuelve la pérdida."
+      },
+      {
+        "clave": "B",
+        "texto": "La rechazarán, porque su reclamo central es conservar su forma de vida ligada al río, y un pago único más empleos temporales no la reemplaza.",
+        "correcta": true,
+        "explicacion": "La vocera afirma que no quieren dinero sino seguir trabajando en el río. La propuesta ofrece exactamente lo que rechazan (un pago) y empleos que duran lo que dura la construcción, de modo que no responde a su interés.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La aceptarán, porque las transferencias que recibirá el municipio garantizan que el hospital y las vías beneficien directamente a sus familias.",
+        "correcta": false,
+        "explicacion": "Las transferencias y las obras son el interés del alcalde, no el de los barequeros. La vocera no menciona hospitales ni vías; su preocupación es perder el trabajo en el río.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a un actor los intereses expresados por otro actor de la audiencia."
+      },
+      {
+        "clave": "D",
+        "texto": "La rechazarán, porque se oponen a la energía limpia y prefieren que el municipio siga dependiendo de plantas que queman carbón.",
+        "correcta": false,
+        "explicacion": "Nada en la intervención de la vocera se refiere al tipo de energía; su oposición nace de la pérdida de su medio de vida, no de una preferencia por el carbón.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Inventa un motivo que no aparece en la fuente para explicar el rechazo."
+      }
+    ],
+    "explicacion": "LEER: la hidroeléctrica inundaría las playas donde 300 familias barequean y pescan; la vocera dice que no quieren dinero sino seguir en el río; la empresa ofrece pago único y cursos para empleos en la obra. COMPRENDER: se pide anticipar la reacción de los barequeros . INTERPRETAR: su interés es continuar una forma de vida ligada al río; el gerente busca energía y empleo y el alcalde, obras. REPRESENTAR: propuesta = dinero + empleos temporales; demanda = permanencia en el río; no coinciden. RAZONAR: una propuesta que da lo que el actor rechazó y no resuelve la pérdida del lugar de trabajo será rechazada. RESOLVER: la opción que prevé el rechazo porque un pago único y empleos temporales no reemplazan la forma de vida ligada al río. VERIFICAR: las otras opciones confunden intereses del alcalde con los de los barequeros o inventan motivos ausentes en la fuente.",
+    "que_identificar": "La frase de la vocera (\"no queremos plata, queremos seguir trabajando en él\") y el carácter temporal de los empleos ofrecidos.",
+    "que_revisar": "Análisis de perspectivas de actores en conflictos socioambientales; relación entre los intereses de cada actor y su reacción ante una propuesta de solución.",
+    "refuerzo_ids": [
+      "SOC-090",
+      "SOC-103"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "hidroelectricas",
+      "represas",
+      "conflicto_socioambiental",
+      "perspectivas",
+      "rio_cauca"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-166",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Tragedia de Armero y sistemas de alerta",
+    "subtema": "Dimensiones de un desastre: conocimiento científico, decisiones políticas y comunicación",
+    "dificultad": 2,
+    "contexto": "El 13 de noviembre de 1985 el volcán Nevado del Ruiz hizo erupción. El calor fundió parte del hielo de la cima y formó avalanchas de lodo (lahares) que bajaron por los ríos y sepultaron la población de **Armero**, en el Tolima, donde murieron alrededor de 20 000 personas. Investigaciones posteriores mostraron que el volcán había dado señales durante meses y que existía un mapa de amenaza que señalaba a Armero como zona de alto riesgo. Un grupo de estudiantes organizó en una tabla los hechos previos al desastre.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Hechos previos a la tragedia de Armero (síntesis escolar)",
+      "columnas": [
+        "Fecha (1985)",
+        "Hecho"
+      ],
+      "filas": [
+        [
+          "Diciembre 1984 - septiembre",
+          "Aumento de sismos y emisiones de ceniza en el volcán; científicos piden vigilancia permanente"
+        ],
+        [
+          "Octubre",
+          "Se publica un mapa preliminar de amenaza volcánica que ubica a Armero en zona de alto peligro por flujos de lodo"
+        ],
+        [
+          "Octubre - noviembre",
+          "Algunas autoridades califican el mapa de alarmista; no se define un plan de evacuación para Armero"
+        ],
+        [
+          "13 de noviembre, tarde",
+          "Caída de ceniza sobre Armero; por radio se recomienda a la población mantener la calma y permanecer en casa"
+        ],
+        [
+          "13 de noviembre, noche",
+          "Erupción; los lahares llegan a Armero cerca de dos horas y media después y sepultan el pueblo"
+        ]
+      ],
+      "nota": "Cifras y fechas aproximadas, tomadas de síntesis divulgativas."
+    },
+    "enunciado": "Según la tabla, ¿qué relación entre dimensiones explica mejor por qué el conocimiento científico disponible no evitó la tragedia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El conocimiento técnico existía, pero la dimensión política (decisiones de las autoridades) y la comunicativa (mensajes de calma) no lo tradujeron en evacuación.",
+        "correcta": true,
+        "explicacion": "La tabla muestra un mapa de amenaza y señales del volcán, pero también autoridades que lo tacharon de alarmista, ausencia de plan de evacuación y mensajes de permanecer en casa: la falla estuvo en la decisión y en la comunicación, no en la ciencia.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La dimensión científica falló por completo, porque los vulcanólogos no detectaron actividad en el volcán hasta el mismo día de la erupción.",
+        "correcta": false,
+        "explicacion": "La primera fila registra sismos y emisiones de ceniza desde diciembre de 1984, y la segunda un mapa de amenaza publicado en octubre: la ciencia sí advirtió con meses de anticipación.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No lee las primeras filas de la tabla y atribuye el desastre a falta de conocimiento científico."
+      },
+      {
+        "clave": "C",
+        "texto": "La dimensión geográfica fue la única determinante, ya que un pueblo ubicado en el valle de un río que baja de un volcán no puede ser protegido por ninguna decisión humana, por rápida que sea.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que los lahares tardaron cerca de dos horas y media en llegar: hubo tiempo para evacuar si se hubiera decidido y comunicado. La ubicación aumentó el riesgo, pero las decisiones podían reducirlo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce el desastre a una causa natural inevitable y descarta el papel de las decisiones humanas."
+      },
+      {
+        "clave": "D",
+        "texto": "La dimensión económica explica todo: la población se negó a evacuar porque no quería abandonar sus cultivos y propiedades aunque se lo ordenaron.",
+        "correcta": false,
+        "explicacion": "La tabla no registra ninguna orden de evacuación; por el contrario, señala que no se definió un plan y que por radio se recomendó permanecer en casa. No hay evidencia de una negativa de la población.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supone una orden de evacuación desobedecida que la fuente no menciona."
+      }
+    ],
+    "explicacion": "LEER: la erupción del Ruiz de 1985 sepultó Armero; la tabla registra señales desde 1984, un mapa de amenaza en octubre, autoridades que lo llamaron alarmista, sin plan de evacuación y con mensajes de calma. COMPRENDER: se pide la relación entre dimensiones que explica por qué el conocimiento no evitó la tragedia. INTERPRETAR: la dimensión científica cumplió; la política (no evacuar) y la comunicativa (recomendar quedarse) fallaron. REPRESENTAR: ciencia advierte → política desestima → comunicación tranquiliza → población permanece → el lahar llega dos horas y media después. RAZONAR: hubo tiempo y conocimiento; faltó convertirlos en decisión y mensaje de evacuación. RESOLVER: la opción que señala que el conocimiento existía pero las dimensiones política y comunicativa no lo tradujeron en evacuación. VERIFICAR: las demás opciones contradicen filas concretas de la tabla.",
+    "que_identificar": "Las filas sobre el mapa de amenaza de octubre, la calificación de alarmista sin plan de evacuación y la recomendación radial de permanecer en casa.",
+    "que_revisar": "Gestión del riesgo de desastres: diferencia entre amenaza, vulnerabilidad y riesgo; relación entre conocimiento científico, decisión política y comunicación pública; la tragedia de Armero (1985) y la creación posterior del sistema nacional de atención de desastres.",
+    "refuerzo_ids": [
+      "SOC-108",
+      "SOC-016"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 160,
+    "etiquetas": [
+      "armero",
+      "nevado_del_ruiz",
+      "gestion_del_riesgo",
+      "1985",
+      "dimensiones",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-167",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Relaciona dimensiones históricas y geográficas de eventos y problemáticas sociales",
+    "habilidad": "interpretar",
+    "tema": "Navegación a vapor por el río Magdalena",
+    "subtema": "El río como eje de comunicación en el siglo XIX",
+    "dificultad": 1,
+    "contexto": "Durante el siglo XIX, la mayor parte de la población de Colombia vivía en la cordillera de los Andes, lejos del mar. El **río Magdalena**, que recorre el país de sur a norte hasta el Caribe, se convirtió en la principal vía para sacar productos de exportación y traer mercancías importadas. Desde la década de 1820 se intentó introducir barcos de vapor, pero la navegación regular solo se consolidó hacia mediados del siglo. Un viajero describió el trayecto en una tabla que resumía los medios de transporte usados para llegar de Bogotá al puerto de Barranquilla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Viaje de Bogotá a Barranquilla hacia 1870 (reconstrucción escolar)",
+      "columnas": [
+        "Tramo",
+        "Medio de transporte",
+        "Duración aproximada"
+      ],
+      "filas": [
+        [
+          "Bogotá - Honda (bajada de la cordillera)",
+          "Mula por camino de herradura",
+          "4 a 6 días"
+        ],
+        [
+          "Honda - Barranquilla (río Magdalena)",
+          "Barco de vapor",
+          "6 a 10 días"
+        ],
+        [
+          "Barranquilla - puerto marítimo",
+          "Pequeña embarcación o, luego, ferrocarril",
+          "Menos de 1 día"
+        ]
+      ],
+      "nota": "Las duraciones variaban según el nivel del río y la época del año."
+    },
+    "enunciado": "¿Qué relación entre geografía e historia permite explicar la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La ubicación costera de la mayoría de la población hizo que el comercio se concentrara en los puertos y que el río fuera poco usado.",
+        "correcta": false,
+        "explicacion": "El contexto afirma lo contrario: la mayor parte de la población vivía en la cordillera, lejos del mar, y por eso el río era indispensable para conectar el interior con el Caribe.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el dato sobre la ubicación de la población que da el contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "La construcción temprana de carreteras pavimentadas entre Bogotá y la costa Caribe hizo innecesaria la navegación fluvial desde 1820, aunque algunos viajeros siguieran usando el río por costumbre.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que hacia 1870 el descenso de la cordillera se hacía en mula por caminos de herradura y el resto en barco de vapor; no existían carreteras pavimentadas hasta la costa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Proyecta la infraestructura actual al siglo XIX."
+      },
+      {
+        "clave": "C",
+        "texto": "El relieve montañoso del interior y la lejanía del mar convirtieron al río en el eje de conexión, combinado con mulas para bajar de la cordillera.",
+        "correcta": true,
+        "explicacion": "La tabla muestra un primer tramo en mula para descender la cordillera y luego un largo recorrido en vapor por el Magdalena: la geografía andina obligaba a combinar ambos medios para llegar al Caribe.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El río Magdalena nace en el Caribe y desemboca en los Andes, por eso los barcos subían con la corriente desde Barranquilla hasta Bogotá.",
+        "correcta": false,
+        "explicacion": "El contexto indica que el río recorre el país de sur a norte hasta el Caribe, y la tabla muestra que los barcos llegaban hasta Honda, no hasta Bogotá, a donde se subía en mula.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde la dirección del río y el alcance de la navegación."
+      }
+    ],
+    "explicacion": "LEER: en el siglo XIX la población vivía en los Andes; el Magdalena corre de sur a norte hasta el Caribe y fue la principal vía comercial; la tabla muestra mula hasta Honda y vapor hasta Barranquilla. COMPRENDER: se pide la relación entre geografía e historia que explica ese itinerario. INTERPRETAR: el relieve impedía llegar en barco hasta Bogotá, por eso se bajaba en mula; la lejanía del mar hacía del río la salida eficiente. REPRESENTAR: cordillera (mula, 4-6 días) → Honda → río (vapor, 6-10 días) → Barranquilla → mar. RAZONAR: la combinación de medios responde a la geografía: montaña en el primer tramo y río navegable en el segundo. RESOLVER: la opción que explica que el relieve y la lejanía del mar convirtieron al río en eje de conexión combinado con mulas. VERIFICAR: las otras opciones contradicen la ubicación andina de la población o la dirección del río.",
+    "que_identificar": "La ubicación andina de la población y la dirección del río en el contexto, y los dos medios de transporte combinados en la tabla.",
+    "que_revisar": "Geografía física de Colombia (cordilleras y río Magdalena) y su relación con el comercio y el transporte en el siglo XIX; navegación a vapor y puertos fluviales como Honda.",
+    "refuerzo_ids": [
+      "SOC-068",
+      "SOC-063"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "rio_magdalena",
+      "siglo_xix",
+      "transporte",
+      "vapores",
+      "geografia_historica",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-168",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Devela prejuicios e intenciones en enunciados o argumentos",
+    "habilidad": "verificar",
+    "tema": "Falacias en el debate público",
+    "subtema": "Generalización apresurada y ataque personal",
+    "dificultad": 2,
+    "contexto": "En un debate transmitido por una emisora comunitaria sobre la instalación de una planta de reciclaje en un barrio de Bucaramanga, un concejal dijo: *\"No podemos escuchar a los vecinos que se oponen: su líder fue multado hace años por una infracción de tránsito, así que no tiene autoridad moral para hablar de nada. Además, conozco a dos recicladores que botan basura en la calle; por eso todos los recicladores son desordenados y la planta será un foco de suciedad\"*. Una estudiante que escuchaba el programa anotó que el concejal no había dado ninguna información sobre el diseño de la planta ni sobre su funcionamiento.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la principal debilidad del argumento del concejal?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Usa datos técnicos sobre el diseño y la operación de la planta que la audiencia no puede comprobar, lo que hace que su argumento sea difícil de refutar aunque en el fondo sea sólido.",
+        "correcta": false,
+        "explicacion": "La estudiante anotó que el concejal no dio ninguna información sobre el diseño ni el funcionamiento de la planta; su intervención carece de datos técnicos, comprobables o no.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No tiene en cuenta la observación final del contexto sobre la ausencia de datos."
+      },
+      {
+        "clave": "B",
+        "texto": "Se apoya en la opinión mayoritaria de los vecinos del barrio para decidir, sin considerar los estudios ambientales de la planta.",
+        "correcta": false,
+        "explicacion": "El concejal no se apoya en la opinión de los vecinos; al contrario, pide no escucharlos. Tampoco menciona estudios ambientales, así que esta debilidad no corresponde a lo que dijo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde descalificar a los vecinos con apoyarse en ellos."
+      },
+      {
+        "clave": "C",
+        "texto": "Confía demasiado en la experiencia personal de los recicladores y olvida que las decisiones del concejo deben tomarse por mayoría de votos.",
+        "correcta": false,
+        "explicacion": "El concejal no recoge la experiencia de los recicladores sino que los descalifica a partir de dos casos. El procedimiento de votación del concejo no es el problema del argumento.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Introduce un asunto de procedimiento ajeno al razonamiento evaluado."
+      },
+      {
+        "clave": "D",
+        "texto": "Descalifica a las personas en lugar de discutir sus razones y generaliza a todo un grupo a partir de dos casos, sin aportar datos sobre la planta.",
+        "correcta": true,
+        "explicacion": "El concejal rechaza a los vecinos por una multa de su líder (ataque a la persona) y concluye que todos los recicladores son desordenados a partir de dos conocidos (generalización apresurada), sin hablar de la planta misma.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el concejal descarta a los vecinos por una multa de su líder y afirma que todos los recicladores son desordenados porque conoce a dos; no habla de la planta. COMPRENDER: se pide la principal debilidad del argumento. INTERPRETAR: hay dos fallas: atacar a la persona en lugar de sus razones y generalizar a un grupo entero a partir de dos casos. REPRESENTAR: multa del líder → descalificación de todos los opositores; dos recicladores → todos los recicladores; cero datos sobre la planta. RAZONAR: un argumento sólido sobre una planta debería discutir la planta; este se construye sobre prejuicios hacia personas y grupos. RESOLVER: la opción que señala la descalificación personal, la generalización a partir de dos casos y la ausencia de datos sobre la planta. VERIFICAR: las demás opciones atribuyen al concejal cosas que no hizo.",
+    "que_identificar": "La multa usada para descalificar al líder, los dos casos usados para generalizar sobre todos los recicladores y la anotación sobre la falta de información técnica.",
+    "que_revisar": "Falacias frecuentes en el debate público: ataque a la persona (ad hominem) y generalización apresurada; evaluación de la solidez de argumentos y detección de prejuicios.",
+    "refuerzo_ids": [
+      "SOC-088",
+      "SOC-109"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "falacias",
+      "argumentacion",
+      "prejuicios",
+      "reciclaje",
+      "debate_publico"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-169",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "interpretar",
+    "tema": "Islas de calor urbano",
+    "subtema": "Cobertura vegetal, temperatura y decisiones de planeación",
+    "dificultad": 2,
+    "contexto": "Las ciudades suelen ser más calientes que su entorno rural porque el concreto y el asfalto absorben calor y porque hay pocos árboles que den sombra y evaporen agua. Este fenómeno se llama **isla de calor urbano**. La alcaldía de una ciudad del valle del río Cauca midió la temperatura promedio de la tarde en cuatro barrios con distinta cobertura arbórea, para decidir dónde invertir un presupuesto limitado de arborización. Los resultados aparecen en el gráfico.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "Temperatura promedio a las 3 p. m. y cobertura arbórea por barrio",
+      "eje_x": "Barrio (porcentaje de superficie con árboles)",
+      "eje_y": "Temperatura (°C)",
+      "series": [
+        {
+          "nombre": "Temperatura promedio",
+          "valores": [
+            [
+              "Centro comercial (3 %)",
+              34.5
+            ],
+            [
+              "Barrio industrial (6 %)",
+              33.8
+            ],
+            [
+              "Barrio residencial antiguo (22 %)",
+              31.2
+            ],
+            [
+              "Barrio junto al parque (35 %)",
+              29.9
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "Si la alcaldía quiere reducir la temperatura donde el efecto de isla de calor es más intenso, ¿qué decisión es más coherente con los datos y con el contexto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Priorizar la siembra de árboles en el centro comercial y el barrio industrial, pues allí la cobertura es mínima y la temperatura es la más alta.",
+        "correcta": true,
+        "explicacion": "Los datos muestran que a menor cobertura arbórea, mayor temperatura: el centro (3 %) y el industrial (6 %) superan los 33 °C. Invertir donde falta sombra ataca el problema en su punto más intenso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Priorizar la siembra de árboles en el barrio junto al parque, pues allí ya existe experiencia en cuidar la vegetación y los árboles crecerán mejor.",
+        "correcta": false,
+        "explicacion": "Ese barrio ya tiene 35 % de cobertura y la temperatura más baja (29,9 °C); sembrar allí no reduce la isla de calor donde es más intensa, que es el objetivo planteado.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Elige el lugar más fácil para sembrar en vez del lugar donde el problema es mayor."
+      },
+      {
+        "clave": "C",
+        "texto": "Repartir los árboles por igual entre los cuatro barrios, pues la temperatura varía menos de 5 °C y la diferencia no justifica priorizar ninguno.",
+        "correcta": false,
+        "explicacion": "Una diferencia de 4,6 °C entre el barrio más caliente y el más fresco es grande en términos de confort y salud; además, repartir por igual desperdicia un presupuesto limitado en barrios que ya tienen sombra.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Minimiza la diferencia de temperatura y no considera la restricción presupuestal."
+      },
+      {
+        "clave": "D",
+        "texto": "Pavimentar más calles en el barrio junto al parque, pues sus zonas verdes retienen humedad y elevan la sensación de calor en las tardes.",
+        "correcta": false,
+        "explicacion": "El contexto explica que el concreto y el asfalto absorben calor y que la vegetación refresca mediante sombra y evaporación; pavimentar aumentaría la isla de calor en lugar de reducirla.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Invierte la relación causal entre vegetación y temperatura descrita en el contexto."
+      }
+    ],
+    "explicacion": "LEER: el concreto y el asfalto absorben calor y los árboles refrescan; el gráfico relaciona cobertura arbórea y temperatura en cuatro barrios; el presupuesto es limitado. COMPRENDER: se pide la decisión más coherente para reducir la temperatura donde la isla de calor es más intensa. INTERPRETAR: a menor cobertura, mayor temperatura: 3 % → 34,5 °C; 35 % → 29,9 °C. REPRESENTAR: ordenar los barrios por temperatura muestra que el centro comercial y el industrial son los más calientes y los menos arborizados. RAZONAR: con presupuesto limitado, la intervención debe concentrarse donde el problema es mayor y donde la falta de sombra es la causa. RESOLVER: la opción que prioriza sembrar árboles en el centro comercial y el barrio industrial. VERIFICAR: sembrar junto al parque o repartir por igual no ataca el punto crítico, y pavimentar contradice la explicación del fenómeno.",
+    "que_identificar": "La relación inversa entre porcentaje de árboles y temperatura en el gráfico, y la restricción de presupuesto limitado en el contexto.",
+    "que_revisar": "Isla de calor urbano: causas (materiales, falta de vegetación) y medidas de mitigación; toma de decisiones de planeación urbana con criterios ambientales y de equidad.",
+    "refuerzo_ids": [
+      "SOC-104",
+      "SOC-110"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": [
+      "isla_de_calor",
+      "ciudad",
+      "arborizacion",
+      "cambio_climatico",
+      "planeacion_urbana",
+      "barras"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-170",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Identifica y usa conceptos sociales básicos (económicos, políticos, culturales y geográficos)",
+    "habilidad": "comprender",
+    "tema": "Banco de la República y tasas de interés",
+    "subtema": "Política monetaria y control de la inflación",
+    "dificultad": 1,
+    "contexto": "El **Banco de la República** es el banco central de Colombia. Entre sus funciones está mantener la inflación baja y estable. Para ello, su junta directiva fija la tasa de interés a la que presta dinero a los bancos comerciales. Cuando esa tasa sube, los bancos encarecen los créditos a las familias y empresas, lo que reduce el consumo y la inversión y frena el aumento de los precios. Cuando baja, los créditos se abaratan y la economía se reactiva. Un noticiero informó: *\"Ante una inflación que llegó al 9 % anual, el Banco de la República subió su tasa de interés por quinta vez consecutiva\"*.",
+    "estimulo": null,
+    "enunciado": "¿Qué efecto busca el Banco de la República con la decisión que informa el noticiero?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Aumentar el consumo de las familias para que las empresas vendan más y puedan contratar más trabajadores en el corto plazo.",
+        "correcta": false,
+        "explicacion": "Según el contexto, subir la tasa encarece los créditos y reduce el consumo; aumentar el consumo sería el efecto de bajar la tasa, no de subirla.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación entre tasa de interés y consumo descrita en el contexto."
+      },
+      {
+        "clave": "B",
+        "texto": "Encarecer el crédito para enfriar el consumo y la inversión y así frenar el aumento de los precios, que superaba la meta de inflación.",
+        "correcta": true,
+        "explicacion": "El contexto explica que al subir la tasa los bancos encarecen los créditos, cae el consumo y la inversión, y se frena la subida de precios. Con inflación del 9 %, ese es el objetivo de la medida.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Abaratar los préstamos para que las empresas produzcan más bienes y la mayor oferta haga bajar los precios en los supermercados.",
+        "correcta": false,
+        "explicacion": "Subir la tasa de interés no abarata los préstamos, los encarece. La opción describe el mecanismo contrario al que informa el noticiero.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde subir la tasa con bajarla y construye una cadena causal invertida."
+      },
+      {
+        "clave": "D",
+        "texto": "Recaudar más impuestos para el Gobierno nacional, pues la tasa de interés del banco central funciona como un tributo sobre los créditos.",
+        "correcta": false,
+        "explicacion": "La tasa de interés es el precio al que el banco central presta a los bancos, no un impuesto; recaudar tributos es función del Gobierno y del Congreso, no del Banco de la República.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confunde política monetaria con política fiscal."
+      }
+    ],
+    "explicacion": "LEER: el Banco de la República fija la tasa a la que presta a los bancos; subirla encarece el crédito, reduce consumo e inversión y frena los precios; la inflación llegó al 9 % y el banco subió la tasa por quinta vez. COMPRENDER: se pregunta por el efecto que busca esa decisión. INTERPRETAR: la inflación alta es el problema; la herramienta es la tasa de interés. REPRESENTAR: tasa sube → crédito más caro → menos consumo e inversión → precios suben más despacio. RAZONAR: la cadena causal del contexto conecta directamente la subida de tasa con la contención de la inflación. RESOLVER: la opción que describe encarecer el crédito para enfriar el consumo y la inversión y frenar los precios. VERIFICAR: las demás opciones invierten la relación (más consumo, préstamos más baratos) o confunden la tasa con un impuesto.",
+    "que_identificar": "La cadena causal del contexto (tasa sube → crédito caro → menos consumo → menos inflación) y el dato de inflación del 9 %.",
+    "que_revisar": "Funciones del Banco de la República como banco central; política monetaria, tasa de interés de intervención e inflación; diferencia entre política monetaria y política fiscal.",
+    "refuerzo_ids": [
+      "SOC-066",
+      "SOC-129"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "banco_de_la_republica",
+      "tasa_de_interes",
+      "inflacion",
+      "politica_monetaria",
+      "economia"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-171",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce que las cosmovisiones, ideologías y roles sociales influyen en diferentes argumentos, posiciones y conductas",
+    "habilidad": "razonar",
+    "tema": "Movimiento por los derechos civiles en Estados Unidos",
+    "subtema": "Desobediencia civil y argumentos sobre la legalidad",
+    "dificultad": 3,
+    "contexto": "En el sur de Estados Unidos, hasta mediados del siglo XX, leyes estatales imponían la **segregación racial**: escuelas, buses y restaurantes separados para blancos y negros. Entre 1955 y 1965, el movimiento por los derechos civiles usó boicots, sentadas y marchas pacíficas para exigir la igualdad, hasta lograr la Ley de Derechos Civiles de 1964 y la Ley de Derecho al Voto de 1965. En 1963, un grupo de clérigos blancos publicó una carta en la que pedían a los manifestantes \"esperar\" y acudir a los tribunales en vez de desobedecer las leyes locales. Desde la cárcel, un líder del movimiento respondió que una ley injusta, que degrada a las personas, no obliga moralmente, y que quien la desobedece de manera abierta y pacífica, aceptando el castigo, muestra el mayor respeto por la ley justa.",
+    "estimulo": null,
+    "enunciado": "¿Qué diferencia de fondo explica el desacuerdo entre los clérigos y el líder del movimiento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los clérigos defendían la segregación como un orden natural, mientras el líder sostenía que las razas debían vivir separadas pero con iguales recursos.",
+        "correcta": false,
+        "explicacion": "La carta de los clérigos no defiende la segregación sino el camino de los tribunales y la espera; y el líder no pide separación con iguales recursos, sino igualdad, que era el objetivo del movimiento.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a ambos actores posturas que el contexto no les asigna."
+      },
+      {
+        "clave": "B",
+        "texto": "Los clérigos rechazaban toda protesta por considerarla violenta, mientras el líder promovía la resistencia armada contra las autoridades locales.",
+        "correcta": false,
+        "explicacion": "El contexto describe boicots, sentadas y marchas pacíficas, y el líder habla de desobedecer de manera abierta y pacífica aceptando el castigo; no hay resistencia armada en la fuente.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asocia desobediencia civil con violencia sin apoyo en el texto."
+      },
+      {
+        "clave": "C",
+        "texto": "Los clérigos pensaban que las leyes locales eran injustas pero que solo el Congreso federal podía cambiarlas, mientras el líder confiaba únicamente en los jueces y en las demandas ante los tribunales.",
+        "correcta": false,
+        "explicacion": "Son los clérigos quienes proponen acudir a los tribunales; el líder, en cambio, justifica la desobediencia pacífica. La opción intercambia los caminos que cada actor propone.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde cuál de los dos actores propone la vía judicial."
+      },
+      {
+        "clave": "D",
+        "texto": "Los clérigos privilegiaban el orden y la vía institucional, mientras el líder sostenía que la justicia está por encima de la legalidad y legitima la desobediencia pacífica.",
+        "correcta": true,
+        "explicacion": "Los clérigos piden esperar y usar los tribunales (valor del orden legal); el líder afirma que una ley injusta no obliga moralmente y que desobedecerla pacíficamente, aceptando el castigo, respeta la ley justa (valor de la justicia).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: segregación legal en el sur de Estados Unidos; los clérigos piden esperar y acudir a tribunales; el líder responde que una ley injusta no obliga y que desobedecerla pacíficamente respeta la ley justa. COMPRENDER: se pide la diferencia de fondo entre las posturas. INTERPRETAR: los clérigos valoran el orden y los canales institucionales; el líder distingue legalidad de justicia y pone la segunda por encima. REPRESENTAR: orden legal y espera frente a justicia moral y acción directa no violenta. RAZONAR: ambos rechazan la violencia; cambia qué deber pesa más: obedecer mientras se litiga o desobedecer públicamente. RESOLVER: la opción que contrasta el orden institucional de los clérigos con la primacía de la justicia y la desobediencia pacífica del líder. VERIFICAR: la fuente no menciona defensa de la segregación ni resistencia armada.",
+    "que_identificar": "La petición de los clérigos (esperar y acudir a tribunales) y los dos argumentos del líder (la ley injusta no obliga; la desobediencia pacífica que acepta castigo respeta la ley justa).",
+    "que_revisar": "Movimiento por los derechos civiles en Estados Unidos (1955-1965); concepto de desobediencia civil y distinción entre legalidad y legitimidad; análisis de perspectivas y valores en conflicto.",
+    "refuerzo_ids": [
+      "SOC-148",
+      "SOC-085"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": [
+      "derechos_civiles",
+      "estados_unidos",
+      "desobediencia_civil",
+      "segregacion",
+      "siglo_xx",
+      "perspectivas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-172",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Establece relaciones que hay entre dimensiones presentes en una situación problemática",
+    "habilidad": "razonar",
+    "tema": "Envejecimiento poblacional y sistema pensional",
+    "subtema": "Relación entre estructura demográfica y financiación de las pensiones",
+    "dificultad": 3,
+    "contexto": "En un sistema pensional de **reparto**, las pensiones de los jubilados se pagan con las cotizaciones de los trabajadores activos de ese mismo año; cuando las cotizaciones no alcanzan, el Estado cubre la diferencia con impuestos. Colombia, como muchos países, vive una transición demográfica: nacen menos niños y las personas viven más años. Un estudio escolar proyectó, con datos simplificados, cuántas personas en edad de trabajar habrá por cada persona mayor de 65 años.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Personas de 15 a 64 años por cada persona de 65 años o más (proyección simplificada)",
+      "eje_x": "Año",
+      "eje_y": "Personas en edad de trabajar por cada adulto mayor",
+      "series": [
+        {
+          "nombre": "Relación de apoyo",
+          "valores": [
+            [
+              "2005",
+              10.2
+            ],
+            [
+              "2015",
+              8.1
+            ],
+            [
+              "2025",
+              6.0
+            ],
+            [
+              "2035",
+              4.4
+            ],
+            [
+              "2045",
+              3.3
+            ]
+          ]
+        }
+      ]
+    },
+    "enunciado": "¿Qué consecuencia para el sistema de reparto se desprende de la tendencia del gráfico, y qué relación entre dimensiones la explica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las pensiones serán más fáciles de pagar, porque al haber menos niños las familias gastarán menos en crianza y educación y podrán cotizar montos más altos al sistema durante toda su vida laboral.",
+        "correcta": false,
+        "explicacion": "El gráfico no muestra el gasto de las familias sino cuántos trabajadores sostienen a cada adulto mayor, y esa relación cae de 10,2 a 3,3. Menos cotizantes por pensionado dificulta el pago, no lo facilita.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma la caída de la natalidad como un alivio económico sin conectarla con la base de cotizantes."
+      },
+      {
+        "clave": "B",
+        "texto": "El sistema no se verá afectado, porque cada trabajador ahorra para su propia pensión y no importa cuántos adultos mayores haya en el país.",
+        "correcta": false,
+        "explicacion": "El contexto define el reparto como el pago de las pensiones actuales con las cotizaciones de los trabajadores actuales; el ahorro individual describe otro modelo, no el que se analiza.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el sistema de reparto con el de ahorro individual."
+      },
+      {
+        "clave": "C",
+        "texto": "Habrá cada vez menos cotizantes por cada pensionado, de modo que el cambio demográfico presiona la dimensión fiscal y obliga a decidir entre más impuestos, más cotización o reformas.",
+        "correcta": true,
+        "explicacion": "La relación de apoyo cae de 10,2 a 3,3 trabajadores por adulto mayor. En un sistema de reparto eso reduce las cotizaciones por pensión y, según el contexto, el Estado debe cubrir el faltante con impuestos: la demografía presiona las finanzas públicas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La relación de apoyo aumentará después de 2045 por sí sola, de modo que basta con esperar a que la generación actual de jóvenes llegue a la edad de trabajar.",
+        "correcta": false,
+        "explicacion": "El gráfico muestra una tendencia descendente continua y no incluye datos posteriores a 2045; además, el contexto indica que nacen menos niños, por lo que no hay una generación numerosa que revierta la caída.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Supone un cambio de tendencia que el gráfico no muestra."
+      }
+    ],
+    "explicacion": "LEER: en el reparto las pensiones se pagan con las cotizaciones del año y el Estado cubre el faltante; nacen menos niños y la gente vive más; la relación de apoyo baja de 10,2 (2005) a 3,3 (2045). COMPRENDER: se pide la consecuencia para el sistema y la relación entre dimensiones que la explica. INTERPRETAR: menos trabajadores por adulto mayor significa menos cotizaciones por cada pensión. REPRESENTAR: demografía (menos nacimientos, más longevidad) → economía (menos cotizantes por pensionado) → fisco (el Estado cubre el déficit) → política (decidir reformas). RAZONAR: la tendencia es continua y descendente, así que la presión crece y exige decisiones. RESOLVER: la opción que señala menos cotizantes por pensionado y la presión fiscal que obliga a elegir entre impuestos, cotizaciones o reformas. VERIFICAR: las demás confunden el modelo, invierten el efecto o suponen un repunte sin datos.",
+    "que_identificar": "La definición de reparto en el contexto y la caída sostenida de la relación de apoyo en el gráfico de líneas.",
+    "que_revisar": "Transición demográfica y envejecimiento poblacional; sistemas pensionales de reparto y de ahorro individual; relación entre demografía, finanzas públicas y decisiones de política social.",
+    "refuerzo_ids": [
+      "SOC-137",
+      "SOC-139"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 170,
+    "etiquetas": [
+      "pensiones",
+      "envejecimiento",
+      "demografia",
+      "sistema_de_reparto",
+      "dimensiones",
+      "lineas"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-173",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce los mecanismos que los ciudadanos tienen a su disposición para participar activamente en la democracia y para garantizar el respeto de sus derechos",
+    "habilidad": "comprender",
+    "tema": "Río Atrato como sujeto de derechos",
+    "subtema": "Decisión judicial, comunidades étnicas y protección del territorio",
+    "dificultad": 1,
+    "contexto": "El río **Atrato**, en el Chocó, es la principal vía de transporte y fuente de alimento para decenas de comunidades afrocolombianas e indígenas. Durante años la minería ilegal de oro contaminó sus aguas con mercurio y sedimentos. Organizaciones de esas comunidades presentaron una acción de tutela argumentando que la contaminación vulneraba sus derechos a la vida, la salud, el agua y la alimentación. En 2016, la Corte Constitucional reconoció al río como **sujeto de derechos** a la protección, conservación y restauración, y ordenó al Estado, junto con representantes de las comunidades llamados \"guardianes del río\", diseñar planes para descontaminarlo y controlar la minería ilegal.",
+    "estimulo": null,
+    "enunciado": "¿Qué permite afirmar el caso del río Atrato sobre los mecanismos de protección de derechos en Colombia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que la acción de tutela, pensada para proteger derechos fundamentales de las personas, sirvió para que las comunidades lograran proteger un territorio del que depende su vida.",
+        "correcta": true,
+        "explicacion": "Las comunidades usaron la tutela alegando vulneración de sus derechos a la vida, la salud, el agua y la alimentación; la Corte, al proteger esos derechos, extendió la protección al río del que dependen.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Que los ríos pueden presentar acciones judiciales por sí mismos ante la Corte Constitucional, sin necesidad de que ninguna persona, comunidad u organización actúe en su nombre o lo represente.",
+        "correcta": false,
+        "explicacion": "El contexto indica que fueron las organizaciones de las comunidades quienes presentaron la tutela, y que los guardianes del río actúan en su representación: el río no litiga por sí mismo.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lleva al extremo la idea de sujeto de derechos y supone que el río actúa sin representantes."
+      },
+      {
+        "clave": "C",
+        "texto": "Que la tutela solo procede contra empresas mineras privadas, por lo cual la Corte no pudo ordenar nada al Estado y dejó la descontaminación en manos de las comunidades.",
+        "correcta": false,
+        "explicacion": "La Corte ordenó al Estado diseñar planes de descontaminación y control de la minería, en conjunto con las comunidades. La tutela procede ante todo frente a autoridades públicas.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasa por alto la orden dirigida al Estado que aparece en el contexto."
+      },
+      {
+        "clave": "D",
+        "texto": "Que la contaminación por minería ilegal es un asunto exclusivamente ambiental, por lo cual la Corte se declaró incompetente y remitió el caso a las autoridades ambientales.",
+        "correcta": false,
+        "explicacion": "La Corte sí decidió el caso y reconoció al río como sujeto de derechos; no se declaró incompetente. El contexto muestra que la contaminación afectaba derechos de las personas, no solo el ambiente.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Separa artificialmente la dimensión ambiental de los derechos de las comunidades."
+      }
+    ],
+    "explicacion": "LEER: la minería ilegal contaminó el Atrato; las comunidades presentaron una tutela por sus derechos a la vida, la salud, el agua y la alimentación; en 2016 la Corte reconoció al río como sujeto de derechos y ordenó planes de descontaminación al Estado y a los guardianes. COMPRENDER: se pide qué muestra el caso sobre los mecanismos de protección. INTERPRETAR: la tutela, pensada para derechos fundamentales de personas, fue el camino de las comunidades. REPRESENTAR: contaminación → vulneración de derechos → tutela → protección del río como condición de esos derechos. RAZONAR: proteger el territorio resultó necesario para proteger la vida de quienes dependen de él. RESOLVER: la opción que afirma que la tutela sirvió para proteger un territorio del que depende la vida de las comunidades. VERIFICAR: el río no litigó solo y la Corte sí ordenó al Estado.",
+    "que_identificar": "Quién presentó la tutela, qué derechos alegó y qué ordenó la Corte al Estado y a los guardianes del río.",
+    "que_revisar": "Acción de tutela y derechos fundamentales; derechos colectivos y ambientales; la sentencia de 2016 sobre el río Atrato y el concepto de sujeto de derechos; territorios étnicos del Pacífico.",
+    "refuerzo_ids": [
+      "SOC-113",
+      "SOC-040"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "rio_atrato",
+      "tutela",
+      "sujeto_de_derechos",
+      "choco",
+      "mineria_ilegal",
+      "corte_constitucional"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-174",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "comprender",
+    "tema": "Libertad de expresión en redes sociales",
+    "subtema": "Tensión entre libertad de expresión y derecho al buen nombre",
+    "dificultad": 2,
+    "contexto": "Una usuaria publicó en una red social que un restaurante de su ciudad \"envenena a la gente\" después de sufrir un malestar estomacal tras comer allí. La publicación se compartió miles de veces y el restaurante perdió clientes. El dueño exigió que la borrara y la usuaria respondió: *\"Tengo derecho a expresar mi opinión y a alertar a otros consumidores\"*. El dueño replicó: *\"Una cosa es contar lo que te pasó y otra acusarnos de un delito sin pruebas; eso daña nuestro buen nombre y el trabajo de doce familias\"*. Un abogado consultado por un medio local explicó que la Constitución protege tanto la libertad de expresión como el derecho al buen nombre, que las opiniones gozan de amplia protección, pero que las afirmaciones sobre hechos deben tener algún sustento y que quien se siente afectado puede pedir rectificación.",
+    "estimulo": null,
+    "enunciado": "¿En qué coinciden y en qué difieren las perspectivas de la usuaria y del dueño del restaurante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Coinciden en que el malestar fue causado por el restaurante y difieren en el monto de la indemnización que la usuaria debería recibir.",
+        "correcta": false,
+        "explicacion": "El dueño no acepta la causa del malestar: dice que lo acusan sin pruebas. Y ninguno de los dos habla de indemnización; el conflicto es sobre la publicación y el buen nombre.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Inventa un acuerdo sobre los hechos y un desacuerdo económico que no están en el texto."
+      },
+      {
+        "clave": "B",
+        "texto": "Coinciden en que la usuaria no debió publicar nada y difieren en si el restaurante debe disculparse públicamente por el incidente.",
+        "correcta": false,
+        "explicacion": "La usuaria defiende su publicación como un derecho; no acepta que no debió publicar. Tampoco se discute una disculpa del restaurante.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuye a la usuaria una posición contraria a la que expresa."
+      },
+      {
+        "clave": "C",
+        "texto": "Coinciden en que ella puede contar su experiencia, pero difieren en si acusar al restaurante de envenenar, sin pruebas, sigue siendo una opinión protegida o daña un derecho ajeno.",
+        "correcta": true,
+        "explicacion": "El dueño distingue entre contar lo que le pasó (lo acepta) y acusar de un delito sin pruebas (lo rechaza); la usuaria ve toda su publicación como opinión protegida. El desacuerdo está en el límite entre opinión y acusación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Coinciden en que las redes sociales no deberían usarse para hablar de negocios locales y difieren en quién debe pedirle a la plataforma que elimine la publicación: el dueño o la propia usuaria.",
+        "correcta": false,
+        "explicacion": "Ninguno sostiene que las redes no sirvan para hablar de negocios; la usuaria defiende precisamente alertar a otros consumidores por ese medio. El dueño le pide a ella, no a la plataforma, que borre la publicación.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Desplaza el conflicto hacia el papel de la plataforma, que el texto no menciona."
+      }
+    ],
+    "explicacion": "LEER: una usuaria acusa a un restaurante de envenenar a la gente tras un malestar; el dueño acepta que cuente lo que le pasó pero rechaza la acusación sin pruebas; un abogado distingue opiniones de hechos. COMPRENDER: se pide identificar coincidencias y diferencias entre las perspectivas. INTERPRETAR: la usuaria apela a la libertad de expresión; el dueño, al buen nombre, y traza una línea entre relatar y acusar. REPRESENTAR: zona común = contar la experiencia; zona en disputa = afirmar que envenenan, como hecho sin sustento. RAZONAR: el desacuerdo no es sobre si puede hablar, sino sobre el límite entre opinión protegida y acusación que daña un derecho ajeno. RESOLVER: la opción que ubica la coincidencia en contar la experiencia y la diferencia en si la acusación sin pruebas sigue siendo opinión protegida. VERIFICAR: las demás opciones inventan acuerdos o actores que el texto no menciona.",
+    "que_identificar": "La frase del dueño que separa \"contar lo que te pasó\" de \"acusarnos de un delito sin pruebas\" y la defensa de la usuaria de su derecho a opinar y alertar.",
+    "que_revisar": "Libertad de expresión y derecho al buen nombre en la Constitución de 1991; diferencia entre opinión y afirmación de hechos; derecho de rectificación; análisis de perspectivas en conflicto.",
+    "refuerzo_ids": [
+      "SOC-032",
+      "SOC-089"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "libertad_de_expresion",
+      "buen_nombre",
+      "redes_sociales",
+      "perspectivas",
+      "derechos_en_tension"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-175",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende que los problemas y sus soluciones involucran distintas dimensiones y reconoce relaciones entre estas",
+    "evidencia": "Analiza los efectos en distintas dimensiones que tendría una posible intervención",
+    "habilidad": "razonar",
+    "tema": "Cultivos ilícitos y sustitución",
+    "subtema": "Evaluación de un programa de sustitución con datos de un municipio",
+    "dificultad": 3,
+    "contexto": "En un municipio de la región del Catatumbo, muchas familias campesinas sembraron hoja de coca porque los compradores llegan hasta la finca, pagan de contado y el producto no se daña en el transporte. En 2018 comenzó un programa de **sustitución voluntaria**: las familias que arrancaran la coca recibirían pagos mensuales durante un año, asistencia técnica y apoyo para proyectos productivos como cacao. Una organización comunitaria recogió datos sobre el programa cinco años después.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Programa de sustitución en el municipio (2018-2023, datos de la organización comunitaria)",
+      "columnas": [
+        "Indicador",
+        "Valor"
+      ],
+      "filas": [
+        [
+          "Familias inscritas que arrancaron la coca",
+          "1 240 (96 % de las inscritas)"
+        ],
+        [
+          "Familias que recibieron los pagos mensuales completos",
+          "1 180"
+        ],
+        [
+          "Familias que recibieron el proyecto productivo prometido",
+          "310"
+        ],
+        [
+          "Kilómetros de vía terciaria mejorados para sacar cacao",
+          "0"
+        ],
+        [
+          "Familias que volvieron a sembrar coca al terminar los pagos",
+          "520"
+        ]
+      ],
+      "nota": "El cacao tarda entre tres y cuatro años en dar su primera cosecha comercial."
+    },
+    "enunciado": "¿Qué conclusión sobre el programa se sostiene mejor con los datos de la tabla y el contexto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El programa fracasó porque las familias campesinas nunca quisieron arrancar la coca y usaron los pagos mensuales sin cumplir su compromiso inicial.",
+        "correcta": false,
+        "explicacion": "La tabla muestra que el 96 % de las familias inscritas sí arrancó la coca; el compromiso inicial se cumplió. La resiembra posterior ocurrió al terminar los pagos, no desde el inicio.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignora la primera fila y atribuye la resiembra a mala fe inicial de las familias."
+      },
+      {
+        "clave": "B",
+        "texto": "El programa cumplió la parte de pagos pero falló en la dimensión productiva y de infraestructura, lo que dejó a muchas familias sin ingresos cuando el cacao aún no producía y favoreció la resiembra.",
+        "correcta": true,
+        "explicacion": "1 180 familias recibieron pagos completos, pero solo 310 recibieron proyecto productivo y no se mejoró ninguna vía; como el cacao tarda tres o cuatro años en producir, al acabar los pagos 520 familias quedaron sin ingresos y volvieron a la coca.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El programa fue un éxito completo, porque la mayoría de las familias recibió los pagos prometidos y menos de la mitad de las inscritas volvió a sembrar coca.",
+        "correcta": false,
+        "explicacion": "Recibir los pagos no era el objetivo del programa sino sustituir el cultivo de forma duradera; que 520 familias hayan vuelto a la coca y solo 310 tengan proyecto productivo muestra fallas graves, no un éxito completo.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Evalúa el programa por la entrega de dinero y no por el resultado que buscaba."
+      },
+      {
+        "clave": "D",
+        "texto": "El programa falló únicamente porque los pagos mensuales fueron insuficientes; si hubieran durado dos años, ninguna familia habría vuelto a sembrar coca.",
+        "correcta": false,
+        "explicacion": "La tabla señala fallas en la dimensión productiva (310 proyectos de 1 240) y en la de infraestructura (0 km de vía). Prolongar los pagos no resuelve que el cacao no tenga cómo salir ni que la mayoría no recibiera el proyecto.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Reduce un problema multidimensional a una sola causa y hace una predicción sin apoyo en los datos."
+      }
+    ],
+    "explicacion": "LEER: las familias sembraban coca porque el comprador llega a la finca y paga de contado; el programa daba pagos por un año, asistencia y proyectos; la tabla muestra 96 % de arranque, 1 180 pagos completos, solo 310 proyectos, 0 km de vías y 520 resiembras; el cacao tarda tres o cuatro años. COMPRENDER: se pide la conclusión que mejor se sostiene. INTERPRETAR: la dimensión del pago funcionó; la productiva y la de infraestructura no. REPRESENTAR: pagos terminan al año → cacao sin cosecha → sin vías → sin ingresos → resiembra. RAZONAR: la resiembra no se explica por mala fe inicial (96 % cumplió) sino por la brecha entre el fin de los pagos y el inicio de ingresos alternativos. RESOLVER: la opción que señala cumplimiento en los pagos y falla en lo productivo y la infraestructura. VERIFICAR: las otras opciones contradicen la primera fila o reducen el problema a una sola causa.",
+    "que_identificar": "La diferencia entre familias con pagos (1 180) y con proyecto productivo (310), los 0 km de vía y la nota sobre los años que tarda el cacao.",
+    "que_revisar": "Programas de sustitución de cultivos de uso ilícito: dimensiones económica, productiva, de infraestructura y de seguridad; evaluación de políticas públicas con indicadores de proceso y de resultado.",
+    "refuerzo_ids": [
+      "SOC-081",
+      "SOC-077"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "cultivos_ilicitos",
+      "sustitucion",
+      "catatumbo",
+      "politica_publica",
+      "dimensiones",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-176",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "historia_cultura",
+    "afirmacion": "Comprende dimensiones espaciales y temporales de eventos, problemáticas y prácticas sociales",
+    "evidencia": "Localiza en el tiempo y en el espacio eventos históricos y prácticas sociales",
+    "habilidad": "interpretar",
+    "tema": "Revolución Mexicana y reforma agraria",
+    "subtema": "Causas agrarias de una revolución del siglo XX",
+    "dificultad": 2,
+    "contexto": "A comienzos del siglo XX, México llevaba más de treinta años bajo el gobierno de Porfirio Díaz. En ese periodo se construyeron ferrocarriles y llegaron inversiones extranjeras, pero las grandes **haciendas** se expandieron absorbiendo las tierras comunales de los pueblos, y millones de campesinos quedaron como peones mal pagados. En 1910 estalló la Revolución Mexicana. En 1911, un dirigente campesino del estado de Morelos proclamó un plan que decía: *\"Los terrenos, montes y aguas que hayan usurpado los hacendados entrarán en posesión de los pueblos que tengan sus títulos\"*. La Constitución de 1917 recogió esa demanda al declarar que la tierra y el subsuelo pertenecen originalmente a la nación y al permitir la restitución y el reparto de tierras a las comunidades.",
+    "estimulo": null,
+    "enunciado": "¿Qué relación entre el contexto previo y las demandas de la Revolución Mexicana expresa el fragmento del plan de 1911?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Las inversiones extranjeras en ferrocarriles provocaron la revolución, por lo que el plan exigía nacionalizar los trenes y expulsar a los inversionistas.",
+        "correcta": false,
+        "explicacion": "El fragmento habla de terrenos, montes y aguas usurpados por hacendados y de devolverlos a los pueblos; no menciona ferrocarriles ni inversionistas extranjeros.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma un elemento del contexto (ferrocarriles) que no corresponde a la demanda citada."
+      },
+      {
+        "clave": "B",
+        "texto": "La prolongada permanencia de Díaz en el poder generó una demanda exclusivamente política de elecciones libres, que el plan de 1911 formuló.",
+        "correcta": false,
+        "explicacion": "Aunque la duración del gobierno de Díaz fue una causa de la revolución, el fragmento citado no trata de elecciones sino de la devolución de tierras a los pueblos: es una demanda agraria.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reduce la revolución a su dimensión política y no lee el contenido agrario del fragmento."
+      },
+      {
+        "clave": "C",
+        "texto": "El plan proponía que los campesinos compraran las haciendas con créditos del Estado, respetando la propiedad adquirida por los hacendados durante el porfiriato.",
+        "correcta": false,
+        "explicacion": "El fragmento habla de tierras \"usurpadas\" que \"entrarán en posesión de los pueblos\": es una restitución, no una compra, y no reconoce como legítima la propiedad de los hacendados sobre esas tierras.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Suaviza la demanda del plan y la convierte en una transacción que el texto no plantea."
+      },
+      {
+        "clave": "D",
+        "texto": "La expansión de las haciendas sobre tierras comunales durante el porfiriato explica que el plan exigiera devolver a los pueblos las tierras usurpadas, demanda que luego recogió la Constitución de 1917.",
+        "correcta": true,
+        "explicacion": "El contexto describe haciendas que absorbieron tierras comunales; el plan responde exigiendo su devolución a los pueblos con títulos; la Constitución de 1917 institucionalizó la restitución y el reparto. Hay continuidad entre causa, demanda y resultado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: bajo Porfirio Díaz las haciendas absorbieron tierras comunales y los campesinos quedaron como peones; en 1910 estalla la revolución; el plan de 1911 exige devolver a los pueblos las tierras usurpadas; la Constitución de 1917 permite restitución y reparto. COMPRENDER: se pide la relación entre el contexto previo y la demanda del fragmento. INTERPRETAR: el fragmento es una demanda agraria que responde al despojo de tierras comunales. REPRESENTAR: despojo (porfiriato) → demanda de restitución (1911) → norma constitucional (1917). RAZONAR: la secuencia muestra causa, reclamo y resultado en el mismo asunto: la tierra. RESOLVER: la opción que vincula la expansión de las haciendas con la exigencia de devolver tierras y su recogida en la Constitución de 1917. VERIFICAR: las otras opciones hablan de ferrocarriles, elecciones o compra de haciendas, asuntos que el fragmento no menciona.",
+    "que_identificar": "La frase del contexto sobre haciendas que absorbieron tierras comunales y las palabras del plan sobre terrenos usurpados que vuelven a los pueblos.",
+    "que_revisar": "Revolución Mexicana (1910-1920): porfiriato, demandas agrarias, Plan de Ayala y Constitución de 1917; relación entre estructura de la propiedad de la tierra y conflictos sociales en América Latina.",
+    "refuerzo_ids": [
+      "SOC-073",
+      "SOC-127"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "revolucion_mexicana",
+      "reforma_agraria",
+      "america_latina",
+      "siglo_xx",
+      "porfiriato"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-177",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "espacio_territorio_ambiente",
+    "afirmacion": "Comprende perspectivas de distintos actores y grupos sociales",
+    "evidencia": "Reconoce y compara perspectivas de actores y grupos sociales",
+    "habilidad": "interpretar",
+    "tema": "Áreas protegidas y comunidades campesinas",
+    "subtema": "Conservación estricta frente a uso campesino del territorio",
+    "dificultad": 2,
+    "contexto": "Cerca de 200 familias campesinas viven desde hace décadas dentro de los límites de un **parque nacional natural** en la cordillera Oriental, muchas de ellas asentadas antes de que el parque fuera declarado. La ley prohíbe la agricultura y la ganadería dentro de los parques. En una mesa de diálogo participaron:\n\n- **Funcionaria de Parques Nacionales**: \"Nuestra misión es conservar el bosque andino y el agua que nace aquí; cada hectárea de potrero es una hectárea de bosque que se pierde\".\n- **Vocero campesino**: \"Llegamos antes que el parque, huyendo de la violencia. No somos invasores: cuidamos el bosque porque de él depende nuestra agua. Queremos quedarnos y producir sin destruir\".\n- **Representante de la gobernación**: \"Reubicar a 200 familias costaría más de lo que tiene el departamento; necesitamos una salida que no sea ni expulsarlas ni dejar que el parque se convierta en potrero\".\n\nUna de las propuestas sobre la mesa es firmar acuerdos de conservación: las familias se quedan, dejan de ampliar los potreros, restauran franjas de bosque y reciben pago por cuidar el agua.",
+    "estimulo": null,
+    "enunciado": "¿Por qué la propuesta de acuerdos de conservación podría ser aceptable para los tres actores a la vez?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque permite a las familias permanecer y producir, detiene la pérdida de bosque que preocupa a Parques y evita el costo de reubicación que señala la gobernación.",
+        "correcta": true,
+        "explicacion": "La propuesta toca el interés de cada actor: permanencia para los campesinos, freno a la ampliación de potreros y restauración para Parques, y ninguna reubicación costosa para la gobernación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque elimina la prohibición legal de cultivar dentro de los parques, lo que satisface a los campesinos y libera a Parques de la obligación de vigilar el territorio.",
+        "correcta": false,
+        "explicacion": "La propuesta no cambia la ley ni libera a Parques de su misión; al contrario, implica compromisos de restauración y seguimiento. Además, eliminar la prohibición iría contra el interés de conservación de la funcionaria.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que un acuerdo equivale a derogar la norma y descuida la perspectiva de Parques."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque traslada a las familias a tierras fuera del parque pagadas por la gobernación, con lo cual Parques recupera el bosque y los campesinos conservan su forma de vida.",
+        "correcta": false,
+        "explicacion": "La propuesta consiste en que las familias se queden, no en trasladarlas; y la gobernación afirma que no tiene recursos para reubicar a 200 familias. La opción describe una solución distinta de la planteada.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde los acuerdos de conservación con una reubicación."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque obliga a los campesinos a convertirse en guardaparques asalariados y abandonar toda actividad agrícola, con lo cual el conflicto desaparece.",
+        "correcta": false,
+        "explicacion": "El vocero campesino quiere quedarse y producir; una propuesta que les prohíba toda actividad agrícola no sería aceptable para ellos. La propuesta descrita les permite producir sin ampliar potreros.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Ignora la demanda campesina de seguir produciendo."
+      }
+    ],
+    "explicacion": "LEER: 200 familias viven dentro de un parque donde la ley prohíbe agricultura y ganadería; Parques quiere conservar bosque y agua; los campesinos quieren quedarse y producir; la gobernación no puede pagar una reubicación; se proponen acuerdos de conservación. COMPRENDER: se pide por qué la propuesta puede satisfacer a los tres actores. INTERPRETAR: cada actor tiene un interés distinto: conservación, permanencia con producción y viabilidad económica. REPRESENTAR: propuesta = quedarse (campesinos) + no ampliar y restaurar (Parques) + sin reubicación (gobernación). RAZONAR: la propuesta es aceptable cuando cada parte encuentra algo de lo que buscaba y no se le impone lo que rechazaba. RESOLVER: la opción que muestra cómo la propuesta atiende la permanencia, la pérdida de bosque y el costo de reubicación. VERIFICAR: las otras opciones describen soluciones distintas de la propuesta planteada.",
+    "que_identificar": "El interés central de cada actor en sus intervenciones y los cuatro componentes de la propuesta de acuerdos de conservación.",
+    "que_revisar": "Áreas protegidas en Colombia y conflictos de uso con comunidades campesinas; análisis de perspectivas e identificación de soluciones que integren intereses distintos.",
+    "refuerzo_ids": [
+      "SOC-136",
+      "SOC-077"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": [
+      "parques_nacionales",
+      "campesinos",
+      "conservacion",
+      "perspectivas",
+      "acuerdos_de_conservacion"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-178",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S3",
+    "componente": "etico_politico",
+    "afirmacion": "Evalúa usos sociales de las ciencias sociales",
+    "evidencia": "Analiza modelos conceptuales y sus usos en decisiones sociales",
+    "habilidad": "verificar",
+    "tema": "Correlación y causalidad en estudios sociales",
+    "subtema": "Uso de datos estadísticos para justificar una política pública",
+    "dificultad": 3,
+    "contexto": "La secretaría de educación de un departamento comparó el puntaje promedio de sus colegios en una prueba nacional con el número de computadores por cada 100 estudiantes. Al encontrar que los colegios con más computadores tenían mejores puntajes, un funcionario propuso: *\"Si compramos computadores para todos los colegios, los puntajes subirán\"*. Una investigadora pidió revisar los datos antes de decidir, porque los colegios con más computadores también eran los de zonas urbanas, con familias de mayores ingresos y docentes con más años de experiencia.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Grupos de colegios del departamento (promedios)",
+      "columnas": [
+        "Grupo de colegios",
+        "Computadores por 100 estudiantes",
+        "Ingreso promedio de las familias (salarios mínimos)",
+        "Años de experiencia docente",
+        "Puntaje promedio"
+      ],
+      "filas": [
+        [
+          "Urbanos privados",
+          "28",
+          "4,5",
+          "14",
+          "298"
+        ],
+        [
+          "Urbanos oficiales",
+          "12",
+          "1,8",
+          "11",
+          "262"
+        ],
+        [
+          "Rurales oficiales",
+          "4",
+          "1,1",
+          "7",
+          "238"
+        ]
+      ],
+      "nota": "Datos simplificados para el análisis escolar."
+    },
+    "enunciado": "¿Cuál es la objeción más sólida al razonamiento del funcionario?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Que los computadores no tienen ninguna relación con el aprendizaje, por lo cual comprarlos sería un gasto completamente inútil para los colegios.",
+        "correcta": false,
+        "explicacion": "La tabla sí muestra una relación entre computadores y puntaje; la objeción no es que no exista relación, sino que esa relación no prueba por sí sola que los computadores causen los puntajes.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Pasa del extremo de afirmar causalidad al extremo de negar toda relación."
+      },
+      {
+        "clave": "B",
+        "texto": "Que la relación observada puede deberse a otras variables que cambian junto con los computadores, como el ingreso familiar y la experiencia docente, de modo que no se ha demostrado que los computadores causen los puntajes.",
+        "correcta": true,
+        "explicacion": "En la tabla los computadores, el ingreso y la experiencia docente suben juntos con el puntaje; no es posible saber cuál de esas variables explica la diferencia. Una correlación no basta para afirmar causalidad.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Que la muestra es demasiado pequeña, pues solo se compararon tres colegios, y con tan pocos casos cualquier conclusión estadística es inválida.",
+        "correcta": false,
+        "explicacion": "La tabla presenta tres grupos de colegios con promedios, no tres colegios individuales; el problema del razonamiento no es el tamaño de la muestra sino la presencia de otras variables asociadas.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde grupos con casos individuales y desvía la objeción hacia el tamaño de la muestra."
+      },
+      {
+        "clave": "D",
+        "texto": "Que las pruebas nacionales no miden nada relevante del aprendizaje, por lo que comparar puntajes entre colegios carece de sentido en cualquier circunstancia.",
+        "correcta": false,
+        "explicacion": "La investigadora no cuestiona la prueba sino la inferencia causal a partir de los datos. Descalificar la prueba es un argumento distinto que no aborda el error del funcionario.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Cambia el objeto de la objeción y evita analizar el razonamiento sobre los datos."
+      }
+    ],
+    "explicacion": "LEER: los colegios con más computadores tienen mejores puntajes; el funcionario concluye que comprar computadores subirá los puntajes; la investigadora advierte que esos colegios también tienen familias con más ingresos y docentes más experimentados; la tabla lo confirma. COMPRENDER: se pide la objeción más sólida. INTERPRETAR: el funcionario toma una correlación como si fuera una causa. REPRESENTAR: computadores ↑, ingreso ↑, experiencia ↑, puntaje ↑: cualquiera de las tres primeras podría explicar la cuarta. RAZONAR: sin separar el efecto de cada variable no se puede afirmar que los computadores por sí solos mejoren los resultados. RESOLVER: la opción que señala que otras variables cambian junto con los computadores y que no se ha demostrado causalidad. VERIFICAR: negar toda relación, hablar de tres colegios o descalificar la prueba no responde al problema lógico del funcionario.",
+    "que_identificar": "Las columnas de ingreso familiar y experiencia docente que aumentan junto con los computadores y el puntaje, y la advertencia de la investigadora.",
+    "que_revisar": "Diferencia entre correlación y causalidad; variables asociadas (confusoras) en estudios sociales; uso responsable de datos estadísticos en decisiones de política pública.",
+    "refuerzo_ids": [
+      "SOC-120",
+      "SOC-070"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": [
+      "correlacion",
+      "causalidad",
+      "estadistica",
+      "politica_educativa",
+      "ciencias_sociales",
+      "tabla"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-179",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S1",
+    "componente": "etico_politico",
+    "afirmacion": "Comprende modelos conceptuales, sus características y contextos de aplicación",
+    "evidencia": "Conoce la organización del Estado: funciones y alcances de las ramas del poder y de los organismos de control",
+    "habilidad": "leer",
+    "tema": "Moción de censura y control político",
+    "subtema": "Alcance del control del Congreso sobre los ministros",
+    "dificultad": 1,
+    "contexto": "Tras varias semanas de fallas en el servicio de energía en la costa Caribe, un grupo de representantes a la Cámara anunció que promovería una **moción de censura** contra el ministro del ramo. La Constitución establece que esta figura permite al Congreso, por decisión de la mayoría absoluta de los miembros de una de sus cámaras, separar del cargo a un ministro por asuntos relacionados con sus funciones; el ministro debe ser citado antes para responder en un debate. En un noticiero, un ciudadano comentó: *\"Con esa moción el Congreso puede meter al ministro a la cárcel y anular los contratos que firmó\"*.",
+    "estimulo": null,
+    "enunciado": "Según el contexto, ¿cuál es el alcance real de la moción de censura?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Permite al Congreso imponer penas de prisión al ministro, porque el control político incluye la facultad de juzgar penalmente a los funcionarios.",
+        "correcta": false,
+        "explicacion": "El contexto dice que la moción permite separar del cargo al ministro, no encarcelarlo. Juzgar penalmente a un funcionario es tarea de la rama judicial, no del control político del Congreso.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el control político con la justicia penal, siguiendo la idea del ciudadano."
+      },
+      {
+        "clave": "B",
+        "texto": "Faculta al Congreso para anular los contratos firmados por el ministerio, pues la censura deja sin efecto todos los actos del funcionario censurado.",
+        "correcta": false,
+        "explicacion": "Nada en el contexto indica que la moción anule contratos o actos administrativos; su efecto descrito es la separación del cargo. La legalidad de los contratos la deciden los jueces.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma como cierta la segunda afirmación del ciudadano sin contrastarla con el contexto."
+      },
+      {
+        "clave": "C",
+        "texto": "Es una recomendación simbólica que el presidente puede ignorar sin consecuencias, pues el Congreso no tiene ninguna facultad para remover a los ministros que nombra libremente el ejecutivo.",
+        "correcta": false,
+        "explicacion": "El contexto afirma que la moción aprobada por mayoría absoluta separa del cargo al ministro; no es una recomendación simbólica sino una decisión con efecto vinculante.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Subestima el alcance de la figura por creer que solo el presidente decide sobre su gabinete."
+      },
+      {
+        "clave": "D",
+        "texto": "Es un instrumento de control político que, tras un debate y con mayoría absoluta de una cámara, separa al ministro de su cargo, sin imponer sanciones penales ni anular contratos.",
+        "correcta": true,
+        "explicacion": "El contexto describe exactamente ese alcance: citación y debate, votación por mayoría absoluta de los miembros de una cámara y separación del cargo. Las sanciones penales y la validez de los contratos corresponden a otras autoridades.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: representantes anuncian una moción de censura contra un ministro; la Constitución permite al Congreso, por mayoría absoluta de una cámara y tras un debate, separarlo del cargo; un ciudadano cree que puede encarcelarlo y anular contratos. COMPRENDER: se pide el alcance real de la figura. INTERPRETAR: la moción es control político: su consecuencia es la salida del ministro. REPRESENTAR: citación → debate → votación (mayoría absoluta) → separación del cargo. RAZONAR: encarcelar corresponde a la justicia penal y anular contratos a los jueces; el Congreso no tiene esas funciones. RESOLVER: la opción que describe la moción como control político que separa al ministro tras debate y mayoría absoluta, sin penas ni anulación de contratos. VERIFICAR: las otras opciones repiten los errores del ciudadano o reducen la moción a un gesto simbólico, contra lo que dice el contexto.",
+    "que_identificar": "La descripción constitucional de la moción en el contexto (debate, mayoría absoluta, separación del cargo) frente a las afirmaciones del ciudadano.",
+    "que_revisar": "Control político del Congreso: moción de censura, citaciones y debates; separación de funciones entre las ramas legislativa, ejecutiva y judicial.",
+    "refuerzo_ids": [
+      "SOC-014",
+      "SOC-027"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "mocion_de_censura",
+      "congreso",
+      "control_politico",
+      "ramas_del_poder",
+      "ministros"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "SOC-180",
+    "prueba": "sociales_ciudadanas",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES)",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "S2",
+    "componente": "historia_cultura",
+    "afirmacion": "Contextualiza y evalúa usos de fuentes y argumentos",
+    "evidencia": "Evalúa posibilidades y limitaciones del uso de una fuente para apoyar argumentos o explicaciones",
+    "habilidad": "verificar",
+    "tema": "Historia oral y testimonios",
+    "subtema": "Alcances y límites de un testimonio como fuente",
+    "dificultad": 1,
+    "contexto": "Para un proyecto escolar sobre la historia de su barrio en Cali, un estudiante entrevistó a su abuela, quien llegó allí en 1965. Ella relató: *\"Cuando llegamos no había acueducto; cargábamos el agua desde una pila comunal y las calles eran de tierra. El barrio lo construimos entre todos, los domingos, con convites. Yo creo que éramos unas 50 familias en ese entonces\"*. El estudiante quiere usar la entrevista en su trabajo y su profesora le pide que piense qué puede y qué no puede demostrar con ella.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es el uso más adecuado del testimonio de la abuela como fuente histórica?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Usarlo como prueba exacta del número de familias del barrio en 1965, pues la abuela vivió allí y recuerda bien las cifras de la época.",
+        "correcta": false,
+        "explicacion": "La propia abuela dice \"yo creo que éramos unas 50 familias\": es una estimación de memoria, no un dato verificado. Un censo o un registro municipal serían más confiables para la cifra.",
+        "tipo_error": "verificacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Toma una cifra aproximada de la memoria como dato exacto."
+      },
+      {
+        "clave": "B",
+        "texto": "Descartarlo por completo, porque los recuerdos personales nunca sirven como fuente histórica y solo valen los documentos escritos oficiales.",
+        "correcta": false,
+        "explicacion": "Los testimonios orales son fuentes legítimas, especialmente para conocer la vida cotidiana y las experiencias de quienes no dejaron documentos escritos; el reto es usarlos con cuidado, no descartarlos.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que solo los documentos escritos son fuentes válidas."
+      },
+      {
+        "clave": "C",
+        "texto": "Usarlo para mostrar cómo vivían los primeros habitantes y cómo construyeron el barrio en comunidad, contrastando las cifras con otras fuentes.",
+        "correcta": true,
+        "explicacion": "El testimonio es valioso para la experiencia vivida (falta de acueducto, calles de tierra, convites), que difícilmente aparece en documentos oficiales; los datos numéricos, que la abuela presenta como aproximados, deben cotejarse con registros.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Usarlo para demostrar que todos los barrios de Cali se construyeron por convites comunitarios en los años sesenta, porque la abuela lo vivió directamente.",
+        "correcta": false,
+        "explicacion": "La abuela habla de su barrio; su experiencia no permite generalizar a todos los barrios de la ciudad. Un testimonio individual ilustra un caso, no prueba un patrón general.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Generaliza a toda la ciudad lo que la fuente dice de un solo barrio."
+      }
+    ],
+    "explicacion": "LEER: la abuela llegó al barrio en 1965 y describe la falta de acueducto, las calles de tierra, los convites y una cifra aproximada de 50 familias; la profesora pide evaluar qué demuestra la entrevista. COMPRENDER: se pide el uso más adecuado del testimonio. INTERPRETAR: es una fuente oral de primera mano sobre experiencias vividas, con una cifra que la testigo marca como estimación. REPRESENTAR: fortalezas = vida cotidiana y organización comunitaria; límites = cifras y generalización a otros barrios. RAZONAR: una fuente se usa para lo que puede sostener y se contrasta en lo que no. RESOLVER: la opción que propone usar el testimonio para mostrar cómo vivían y construyeron el barrio, contrastando las cifras con otras fuentes. VERIFICAR: tomar la cifra como exacta, descartar el testimonio o generalizarlo a toda Cali desconoce sus posibilidades o sus límites.",
+    "que_identificar": "La expresión \"yo creo que éramos unas 50 familias\" como señal de estimación, y los detalles de vida cotidiana que sí aporta el relato.",
+    "que_revisar": "Historia oral y testimonios como fuentes primarias: aportes (experiencia, vida cotidiana), límites (memoria, cifras, representatividad) y necesidad de contrastar con otras fuentes.",
+    "refuerzo_ids": [
+      "SOC-106",
+      "SOC-121"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 110,
+    "etiquetas": [
+      "historia_oral",
+      "testimonio",
+      "fuentes",
+      "barrios",
+      "cali",
+      "memoria"
+    ],
+    "estado": "aprobada"
+  }
+]

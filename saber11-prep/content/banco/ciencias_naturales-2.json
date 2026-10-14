@@ -1,0 +1,823 @@
+[
+  {
+    "id": "CIE-013",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Identifica las relaciones alimentarias de un ecosistema y predice el efecto de la desaparición de una población sobre las demás",
+    "habilidad": "interpretar",
+    "tema": "Ecosistemas",
+    "subtema": "Cadenas y redes tróficas: efecto de la pérdida de un eslabón",
+    "dificultad": 1,
+    "contexto": "En una salida de campo a un humedal de la sabana de Bogotá, un grupo de grado 10° registró de qué se alimentan los organismos más abundantes del lugar, como se muestra en la tabla. Semanas después, un derrame de plaguicida desde un cultivo vecino mató a casi todas las guapuchas del humedal, pero no afectó de manera directa a los demás organismos.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Relaciones alimentarias observadas en el humedal",
+      "columnas": ["Organismo", "De qué se alimenta"],
+      "filas": [["Algas y plantas acuáticas", "Producen su propio alimento mediante la fotosíntesis"], ["Larvas de insectos acuáticos", "Algas"], ["Renacuajos", "Algas y plantas acuáticas"], ["Guapuchas (peces pequeños)", "Larvas de insectos acuáticos y renacuajos"], ["Garzas", "Guapuchas"]],
+      "nota": "Las garzas no consumen larvas ni renacuajos, porque son presas demasiado pequeñas para ellas."
+    },
+    "enunciado": "¿Qué cambio es más probable que ocurra en el humedal durante las semanas siguientes a la desaparición de las guapuchas?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Aumentarán las larvas de insectos y los renacuajos, porque ya no tienen depredador, y disminuirán o se irán las garzas, porque pierden su fuente de alimento.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Según la tabla, las guapuchas son el único consumidor de larvas y renacuajos y, a la vez, el único alimento de las garzas. Al desaparecer, las poblaciones que eran sus presas crecen (menos depredación) y la población que las consumía queda sin alimento y disminuye o migra. Es el efecto en cadena típico de retirar un eslabón intermedio de una red trófica.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Aumentarán las algas, porque las guapuchas ya no se las comen.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que las guapuchas no comen algas: comen larvas y renacuajos. De hecho, al aumentar las larvas y los renacuajos (que sí comen algas) lo esperable es que las algas disminuyan, no que aumenten.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Le atribuye a las guapuchas una dieta que la tabla no indica, sin revisar la fila correspondiente."
+      },
+      {
+        "clave": "C",
+        "texto": "Aumentarán las garzas, porque desaparece la competencia de las guapuchas por las larvas y los renacuajos.",
+        "correcta": false,
+        "explicacion": "No responde. Las garzas y las guapuchas no compiten por el mismo alimento: las garzas se alimentan de las guapuchas (relación depredador-presa) y la nota aclara que no consumen larvas ni renacuajos. Sin guapuchas, las garzas se quedan sin comida y no pueden aumentar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde una relación de depredación con una relación de competencia."
+      },
+      {
+        "clave": "D",
+        "texto": "No habrá cambios, porque cada organismo se alimenta de algo diferente y no depende de los demás.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra precisamente lo contrario: los organismos están conectados por relaciones alimentarias (algas → larvas y renacuajos → guapuchas → garzas). Si un eslabón desaparece, los que estaban antes y después de él se ven afectados.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoce que las filas de la tabla forman una cadena de dependencias."
+      }
+    ],
+    "explicacion": "LEER: la tabla indica qué come cada organismo; el contexto dice que desaparecieron las guapuchas y solo ellas. COMPRENDER: se pregunta qué pasará con las demás poblaciones. INTERPRETAR: las guapuchas comen larvas y renacuajos, y son el único alimento de las garzas. REPRESENTAR: cadena algas → larvas y renacuajos → guapuchas → garzas; se retira el eslabón 'guapuchas'. RAZONAR: sin depredador, larvas y renacuajos aumentan; sin presa, las garzas disminuyen; B atribuye a las guapuchas una dieta que no tienen, C confunde depredación con competencia y D niega las relaciones que muestra la tabla. RESOLVER: la respuesta es A. VERIFICAR: la predicción es coherente con cada fila de la tabla y con la nota sobre las garzas; además anticipa un efecto secundario (menos algas) que no contradice ninguna opción correcta.",
+    "que_identificar": "Qué organismos comen guapuchas y qué comen las guapuchas, según las filas de la tabla.",
+    "que_revisar": "Cadenas y redes tróficas; productores, consumidores y depredadores; efectos en cascada al eliminar una población.",
+    "refuerzo_ids": ["CIE-021"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["ecosistemas", "redes troficas", "humedal", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-014",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "biologia",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Usa el cuadro de Punnett para relacionar genotipos y fenotipos en un cruce monohíbrido",
+    "habilidad": "interpretar",
+    "tema": "Genética mendeliana",
+    "subtema": "Cruce entre heterocigotos: proporciones de genotipos y fenotipos",
+    "dificultad": 2,
+    "contexto": "En un colegio agropecuario de Boyacá, los estudiantes cruzaron dos plantas de fríjol de flor morada que sabían que eran heterocigotas (Mm). En la generación siguiente obtuvieron 120 plantas: 92 de flor morada y 28 de flor blanca. El profesor les pidió representar el cruce en un cuadro de Punnett.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Cuadro de Punnett del cruce Mm × Mm",
+      "columnas": ["Gametos de la planta madre ↓ / Gametos de la planta padre →", "M", "m"],
+      "filas": [["M", "MM", "Mm"], ["m", "Mm", "mm"]],
+      "nota": "M = alelo dominante (flor morada); m = alelo recesivo (flor blanca). Cada una de las cuatro casillas representa una combinación igualmente probable."
+    },
+    "enunciado": "Si se toma al azar una de las plantas de flor morada de la nueva generación, ¿qué genotipo puede tener y con qué probabilidad?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Puede ser MM, Mm o mm con probabilidades 1/4, 2/4 y 1/4, como muestra el cuadro completo.",
+        "correcta": false,
+        "explicacion": "No responde. Esas son las probabilidades para cualquier planta de la generación, pero la pregunta se refiere a una planta de flor morada. El genotipo mm produce flor blanca, así que queda excluido, y las probabilidades deben calcularse solo sobre las tres casillas moradas.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Lee correctamente el cuadro completo pero no aplica la condición del enunciado (planta de flor morada)."
+      },
+      {
+        "clave": "B",
+        "texto": "Solo puede ser Mm, porque las dos plantas progenitoras eran Mm y los hijos heredan el mismo genotipo.",
+        "correcta": false,
+        "explicacion": "No responde. Cada progenitor entrega solo uno de sus dos alelos en cada gameto, de modo que los hijos combinan alelos y no copian el genotipo de los padres; el cuadro lo muestra: aparecen MM, Mm y mm. Además, si todos fueran Mm no habría plantas blancas, y hubo 28.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la descendencia hereda el genotipo completo de los padres, sin segregación de alelos."
+      },
+      {
+        "clave": "C",
+        "texto": "Solo puede ser MM, porque el color morado es el carácter dominante.",
+        "correcta": false,
+        "explicacion": "No responde. Que el morado sea dominante significa que basta un alelo M para que la flor sea morada; por eso tanto MM como Mm tienen flor morada. El cuadro muestra dos casillas Mm con flor morada, así que no todas las moradas son MM.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde fenotipo dominante con genotipo homocigoto dominante."
+      },
+      {
+        "clave": "D",
+        "texto": "Puede ser MM con probabilidad 1/3 o Mm con probabilidad 2/3, porque de las tres casillas del cuadro que dan flor morada, una es MM y dos son Mm.",
+        "correcta": true,
+        "explicacion": "Es la correcta. De las cuatro casillas, tres producen flor morada (MM, Mm, Mm) y una produce flor blanca (mm). Como la planta elegida es morada, solo cuentan las tres casillas moradas: una de ellas es MM (1/3) y dos son Mm (2/3). La proporción fenotípica 3:1 se confirma con los datos: se esperaban 90 moradas y 30 blancas, y se obtuvieron 92 y 28.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el cruce es Mm × Mm; el cuadro tiene cuatro casillas: MM, Mm, Mm y mm; los resultados fueron 92 moradas y 28 blancas. COMPRENDER: se pregunta por el genotipo de una planta que ya sabemos que es morada, no de una planta cualquiera. INTERPRETAR: M domina sobre m, así que MM y Mm son moradas y mm es blanca; tres casillas moradas y una blanca (3:1). REPRESENTAR: entre las moradas: MM (1 casilla), Mm (2 casillas) → 1/3 y 2/3. RAZONAR: A ignora que Mm también es morada; C incluye mm, que es blanca; D niega la segregación de alelos y contradice las 28 blancas; B condiciona correctamente sobre las casillas moradas. RESOLVER: la respuesta es B. VERIFICAR: 120 × 3/4 = 90 moradas esperadas frente a 92 observadas, lo que confirma el modelo del cuadro; y entre esas 90, unas 30 serían MM y 60 Mm, en proporción 1:2.",
+    "que_identificar": "Cuáles casillas del cuadro corresponden a flor morada y cuál a flor blanca, y que la pregunta se restringe a las plantas moradas.",
+    "que_revisar": "Alelos dominantes y recesivos; genotipo y fenotipo; cuadro de Punnett y proporciones 1:2:1 y 3:1; probabilidad condicionada a un fenotipo.",
+    "refuerzo_ids": ["CIE-013"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["genetica", "cuadro de punnett", "cultivos", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-015",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "fisica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la corriente y el brillo de los bombillos con el tipo de conexión (serie o paralelo) en circuitos eléctricos simples",
+    "habilidad": "razonar",
+    "tema": "Electricidad",
+    "subtema": "Circuitos en serie y en paralelo: corriente y resistencia",
+    "dificultad": 2,
+    "contexto": "En la clase de Física, un grupo armó cuatro circuitos con la misma pila de 9 V y bombillos idénticos. En cada circuito midieron con un amperímetro la corriente que entrega la pila y compararon el brillo de los bombillos con el de un bombillo solo.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Corriente y brillo en cuatro circuitos con la misma pila",
+      "columnas": ["Circuito", "Conexión de los bombillos", "Corriente que entrega la pila (A)", "Brillo de cada bombillo"],
+      "filas": [["1", "Un solo bombillo", 0.3, "Normal"], ["2", "Dos bombillos en serie", 0.15, "Más tenue que en el circuito 1"], ["3", "Dos bombillos en paralelo", 0.6, "Igual que en el circuito 1"], ["4", "Tres bombillos en paralelo", 0.9, "Igual que en el circuito 1"]],
+      "nota": "Se supone que la pila mantiene 9 V entre sus bornes en todos los casos."
+    },
+    "enunciado": "¿Cuál explicación es coherente con las corrientes y los brillos registrados en la tabla?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En paralelo, cada bombillo queda conectado directamente a los 9 V de la pila, recibe 0,30 A y brilla normal, y la pila entrega la suma de las corrientes; en serie, los dos bombillos comparten los 9 V y la resistencia total se duplica, así que circula la mitad de la corriente y ambos brillan menos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cada bombillo tiene una resistencia de 9 V / 0,30 A = 30 Ω. En paralelo, cada rama ve 9 V y toma 0,30 A; la pila entrega 0,60 A con dos ramas y 0,90 A con tres, como muestra la tabla, y el brillo no cambia. En serie, la resistencia total es 60 Ω y la corriente única del circuito es 9 V / 60 Ω = 0,15 A; cada bombillo recibe solo 4,5 V y brilla menos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "En paralelo la pila entrega más corriente porque cada bombillo adicional aporta energía al circuito.",
+        "correcta": false,
+        "explicacion": "No responde. Los bombillos no aportan energía: la consumen (la transforman en luz y calor). La única fuente de energía es la pila. La corriente total aumenta en paralelo porque hay más caminos de igual resistencia conectados a los mismos 9 V, no porque los bombillos 'generen' corriente.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a los bombillos el papel de fuente en lugar de consumidores de energía."
+      },
+      {
+        "clave": "C",
+        "texto": "La corriente que entrega la pila siempre aumenta con el número de bombillos, sin importar cómo se conecten.",
+        "correcta": false,
+        "explicacion": "No responde. La fila del circuito 2 lo contradice: con dos bombillos en serie la corriente bajó de 0,30 A a 0,15 A. El número de bombillos no basta para predecir la corriente; hay que tener en cuenta la forma de conexión.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generaliza a partir de los circuitos en paralelo sin revisar el circuito en serie."
+      },
+      {
+        "clave": "D",
+        "texto": "En serie, la corriente de 0,30 A del bombillo solo se reparte por igual entre los dos bombillos, por eso cada uno recibe 0,15 A y brilla menos.",
+        "correcta": false,
+        "explicacion": "No responde. En un circuito en serie hay un solo camino y la misma corriente atraviesa los dos bombillos; no se 'reparte'. La corriente total baja a 0,15 A porque al poner dos bombillos en fila la resistencia total del circuito se duplica (I = V/R), y esa corriente reducida pasa completa por cada bombillo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que la corriente se divide entre los elementos en serie, en lugar de reconocer que aumenta la resistencia total."
+      }
+    ],
+    "explicacion": "LEER: misma pila de 9 V y bombillos idénticos; cuatro circuitos con corriente total y brillo registrados. COMPRENDER: se pide la explicación que sea coherente con TODAS las filas. INTERPRETAR: en serie la corriente se reduce a la mitad y el brillo baja; en paralelo la corriente total es 0,30 A por cada bombillo y el brillo se mantiene. REPRESENTAR: R de cada bombillo = 9 V / 0,30 A = 30 Ω; serie: R total = 60 Ω → I = 0,15 A; paralelo: cada rama a 9 V toma 0,30 A → I total = 0,30 × número de ramas. RAZONAR: A supone que la corriente se divide en serie, cuando es la misma en todo el circuito; C convierte los bombillos en fuentes; D contradice la fila 2; B explica las cuatro filas con la ley de Ohm y las reglas de serie y paralelo. RESOLVER: la respuesta es B. VERIFICAR: los cálculos reproducen exactamente 0,15, 0,60 y 0,90 A, y explican por qué el brillo solo cambia en la conexión en serie.",
+    "que_identificar": "Que en paralelo la corriente total es múltiplo de 0,30 A y el brillo no cambia, mientras que en serie la corriente se reduce a la mitad y el brillo baja.",
+    "que_revisar": "Ley de Ohm; resistencia equivalente en serie y en paralelo; la corriente es la misma en todos los puntos de un circuito en serie.",
+    "refuerzo_ids": ["CIE-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["electricidad", "circuitos", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-016",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta valores de pH de sustancias cotidianas para clasificarlas como ácidas, neutras o básicas y anticipar una neutralización",
+    "habilidad": "interpretar",
+    "tema": "Ácidos y bases",
+    "subtema": "Escala de pH y neutralización en sustancias cotidianas",
+    "dificultad": 1,
+    "contexto": "Un estudiante de grado 10° midió con tiras indicadoras el pH de ocho sustancias de su casa, todas a temperatura ambiente. Recordó que la escala de pH va de 0 a 14: los valores menores que 7 corresponden a sustancias ácidas, 7 es neutro y los mayores que 7 corresponden a sustancias básicas (alcalinas); y que un ácido y una base reaccionan entre sí y se neutralizan.",
+    "estimulo": {
+      "tipo": "barras",
+      "titulo": "pH medido en sustancias de uso cotidiano",
+      "eje_x": "Sustancia",
+      "eje_y": "pH",
+      "series": [
+        { "nombre": "pH", "valores": [["Jugo de limón", 2], ["Vinagre", 3], ["Café negro", 5], ["Leche", 6.5], ["Agua destilada", 7], ["Bicarbonato de sodio en agua", 8.5], ["Jabón de barra en agua", 10], ["Blanqueador (hipoclorito)", 12]] }
+      ]
+    },
+    "enunciado": "A un familiar con acidez estomacal (exceso de ácido en el estómago) le sugieren tomar una pequeña cantidad de alguna de estas sustancias para aliviar la molestia. Según los datos, ¿cuál sería adecuada y segura, y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Jugo de limón, porque tiene el pH más bajo de todos y por eso 'corta' el ácido del estómago.",
+        "correcta": false,
+        "explicacion": "No responde. Un pH de 2 indica una sustancia muy ácida; agregar más ácido al estómago no neutraliza el exceso, lo aumenta. Para neutralizar un ácido se necesita una base, es decir, una sustancia con pH mayor que 7.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que un ácido fuerte 'elimina' a otro ácido, sin reconocer que la neutralización requiere una base."
+      },
+      {
+        "clave": "B",
+        "texto": "Agua destilada, porque su pH de 7 es neutro y por eso neutraliza cualquier ácido.",
+        "correcta": false,
+        "explicacion": "No responde. Que una sustancia sea neutra no significa que neutralice: el agua no reacciona con el ácido del estómago, solo lo diluye un poco. Neutralizar es una reacción entre un ácido y una base, y el agua destilada no es una base.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde 'sustancia neutra' con 'sustancia que neutraliza'."
+      },
+      {
+        "clave": "C",
+        "texto": "Bicarbonato de sodio en agua, porque su pH de 8,5 indica una base débil que reacciona con el exceso de ácido sin ser peligrosa para el organismo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El bicarbonato en agua es básico (pH 8,5, por encima de 7), así que reacciona con el ácido del estómago y lo neutraliza parcialmente; al ser una base débil y de uso alimentario, una pequeña cantidad no daña los tejidos. Es, de hecho, el principio de muchos antiácidos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Blanqueador, porque es la sustancia más básica de la gráfica (pH 12) y por eso neutralizaría más ácido.",
+        "correcta": false,
+        "explicacion": "No responde. Es cierto que el blanqueador es básico, pero un pH de 12 corresponde a una sustancia muy alcalina y corrosiva, tóxica si se ingiere; quemaría el esófago y el estómago. La pregunta pide una sustancia adecuada Y segura: elegir el valor más extremo ignora esa condición.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Elige el valor más alto de la gráfica sin considerar la condición de seguridad del enunciado."
+      }
+    ],
+    "explicacion": "LEER: la gráfica da el pH de ocho sustancias; el contexto recuerda que menor que 7 es ácido, 7 neutro y mayor que 7 básico, y que ácido + base se neutralizan. COMPRENDER: se busca una sustancia que neutralice el exceso de ácido del estómago y que además sea segura de tomar. INTERPRETAR: las candidatas para neutralizar son las básicas: bicarbonato (8,5), jabón (10) y blanqueador (12). REPRESENTAR: ácido del estómago + base débil comestible → neutralización parcial y segura. RAZONAR: A y B no son bases (una es un ácido, la otra es neutra); D es una base, pero corrosiva y tóxica; C es una base débil y de uso alimentario. RESOLVER: la respuesta es C. VERIFICAR: el bicarbonato cumple las dos condiciones del enunciado (neutraliza y es seguro), y coincide con su uso real como antiácido casero.",
+    "que_identificar": "Qué sustancias de la gráfica tienen pH mayor que 7 y cuál de ellas es segura de ingerir en pequeña cantidad.",
+    "que_revisar": "Escala de pH; ácidos, bases y sustancias neutras; reacción de neutralización; diferencia entre 'neutro' y 'neutralizante'.",
+    "refuerzo_ids": ["CIE-019"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["acidos y bases", "ph", "hogar", "grafico de barras", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-017",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "biologia",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la redistribución del flujo sanguíneo durante el ejercicio a partir de datos sobre el gasto cardíaco y el riego de los órganos",
+    "habilidad": "razonar",
+    "tema": "Sistemas del cuerpo humano",
+    "subtema": "Gasto cardíaco y redistribución del flujo sanguíneo durante el ejercicio",
+    "dificultad": 2,
+    "contexto": "En una clase sobre el sistema circulatorio, el profesor mostró cuánta sangre recibe cada órgano por minuto cuando una persona adulta está en reposo y cuando hace ejercicio intenso, por ejemplo, al correr una carrera de 400 metros. La última fila indica el total de sangre que el corazón bombea por minuto (gasto cardíaco).",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Flujo sanguíneo por órgano en reposo y en ejercicio intenso",
+      "columnas": ["Órgano o tejido", "Flujo en reposo (mL/min)", "Flujo en ejercicio intenso (mL/min)"],
+      "filas": [["Músculos esqueléticos", 1000, 12500], ["Aparato digestivo", 1400, 600], ["Riñones", 1100, 600], ["Cerebro", 750, 750], ["Piel", 500, 1900], ["Corazón (músculo cardíaco)", 250, 750], ["Total (gasto cardíaco)", 5000, 17100]],
+      "nota": "Valores aproximados para una persona adulta sana."
+    },
+    "enunciado": "¿Cómo se explica que los músculos esqueléticos reciban más de doce veces más sangre por minuto durante el ejercicio intenso que en reposo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El cerebro reduce su flujo sanguíneo para enviar más sangre a los músculos; por eso a veces se siente mareo al hacer ejercicio.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla muestra que el cerebro recibe 750 mL/min tanto en reposo como en ejercicio: su flujo no cambia, porque las neuronas no soportan una reducción de oxígeno. La explicación contradice directamente la fila del cerebro.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supone que todos los órganos 'no musculares' ceden sangre sin verificar la fila del cerebro."
+      },
+      {
+        "clave": "B",
+        "texto": "Durante el ejercicio el cuerpo produce más sangre, por lo que hay más volumen para repartir entre todos los órganos.",
+        "correcta": false,
+        "explicacion": "No responde. El volumen de sangre del cuerpo (unos 5 litros en un adulto) no aumenta en minutos; producir glóbulos rojos toma días. Lo que cambia es la velocidad con que esa misma sangre circula: el corazón la bombea más veces por minuto y con más fuerza, por eso el total por minuto pasa de 5000 a 17 100 mL.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el volumen total de sangre con el flujo por minuto (gasto cardíaco)."
+      },
+      {
+        "clave": "C",
+        "texto": "El corazón bombea más sangre por minuto (de 5000 a 17 100 mL) y, al mismo tiempo, los vasos sanguíneos de los músculos se dilatan mientras los del aparato digestivo y los riñones se estrechan, de modo que el flujo se redistribuye hacia los tejidos con mayor demanda de oxígeno.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Combina los dos mecanismos que muestra la tabla: el gasto cardíaco se multiplica por más de tres (mayor frecuencia y mayor volumen bombeado por latido) y, además, la sangre se reparte de otra manera: sube en músculos, piel (para eliminar calor) y corazón, y baja en digestivo y riñones, cuya actividad puede posponerse. El cerebro conserva su flujo porque no tolera una reducción de oxígeno.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Toda la sangre adicional que reciben los músculos proviene del aparato digestivo y de los riñones, que la ceden durante el ejercicio.",
+        "correcta": false,
+        "explicacion": "No responde. Los músculos aumentan su flujo en 11 500 mL/min (de 1000 a 12 500), pero el aparato digestivo y los riñones solo reducen el suyo en 1300 mL/min en total (de 2500 a 1200). La redistribución existe, pero aporta una parte pequeña; la mayor parte del aumento viene de que el corazón bombea mucho más sangre por minuto (el total pasa de 5000 a 17 100).",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Nota que algunos órganos reciben menos, pero no compara las magnitudes ni revisa el cambio del total."
+      }
+    ],
+    "explicacion": "LEER: la tabla da el flujo por órgano en reposo y en ejercicio, y el total bombeado por minuto (5000 → 17 100 mL). COMPRENDER: se pregunta por el mecanismo que permite a los músculos pasar de 1000 a 12 500 mL/min. INTERPRETAR: el total se multiplica por 3,4; digestivo y riñones bajan; cerebro se mantiene; piel y corazón suben. REPRESENTAR: aumento en músculos = 11 500 mL/min; ahorro en digestivo + riñones = 1300 mL/min; aumento del gasto cardíaco = 12 100 mL/min. RAZONAR: B atribuye todo a la redistribución, que es solo una parte pequeña; C contradice la fila del cerebro; D confunde volumen de sangre con flujo por minuto; A combina mayor gasto cardíaco con vasodilatación en músculos y vasoconstricción en órganos que pueden esperar. RESOLVER: la respuesta es A. VERIFICAR: sumando el aumento del gasto cardíaco y la sangre desviada de digestivo y riñones se cubre el incremento de músculos, piel y corazón, en coherencia con todas las filas.",
+    "que_identificar": "El cambio en el total (gasto cardíaco), qué órganos reducen su flujo y en cuánto, y que el cerebro no cambia.",
+    "que_revisar": "Gasto cardíaco (frecuencia × volumen por latido); vasodilatación y vasoconstricción; prioridad del riego cerebral; papel de la piel en la regulación de la temperatura.",
+    "refuerzo_ids": ["CIE-001"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["salud", "sistemas del cuerpo", "circulatorio", "ejercicio", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-018",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Describe el movimiento de dos móviles a partir de una gráfica de distancia contra tiempo, relacionando la pendiente con la rapidez",
+    "habilidad": "interpretar",
+    "tema": "Cinemática",
+    "subtema": "Movimiento rectilíneo uniforme: gráfica distancia-tiempo y encuentro de dos móviles",
+    "dificultad": 2,
+    "contexto": "Dos ciclistas recorren un tramo recto de la ciclovía de un parque en Medellín, en el mismo sentido. Un estudiante registró cada 10 segundos la distancia de cada ciclista respecto a la entrada del parque, que tomó como punto de referencia, y construyó la gráfica. Cuando empezó a medir (t = 0 s), el ciclista 2 ya estaba a 60 m de la entrada.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Distancia a la entrada del parque en función del tiempo",
+      "eje_x": "Tiempo (s)",
+      "eje_y": "Distancia a la entrada (m)",
+      "series": [
+        { "nombre": "Ciclista 1", "valores": [["0", 0], ["10", 50], ["20", 100], ["30", 150], ["40", 200]] },
+        { "nombre": "Ciclista 2", "valores": [["0", 60], ["10", 90], ["20", 120], ["30", 150], ["40", 180]] }
+      ]
+    },
+    "enunciado": "¿Cuál afirmación describe correctamente el movimiento de los dos ciclistas en el intervalo registrado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El ciclista 2 es más rápido, porque su línea está por encima de la del ciclista 1 durante los primeros 30 segundos.",
+        "correcta": false,
+        "explicacion": "No responde. Que una línea esté más arriba significa que ese ciclista está más lejos de la entrada, no que vaya más rápido. La rapidez es la pendiente: el ciclista 2 avanza 30 m cada 10 s y el ciclista 1 avanza 50 m cada 10 s. El ciclista 2 iba adelante solo porque empezó con 60 m de ventaja.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la posición (altura de la línea) con la rapidez (pendiente de la línea)."
+      },
+      {
+        "clave": "B",
+        "texto": "El ciclista 1 va acelerando, porque su distancia a la entrada es cada vez mayor.",
+        "correcta": false,
+        "explicacion": "No responde. Que la distancia aumente solo indica que el ciclista se aleja de la entrada; para saber si acelera hay que ver si la distancia recorrida en cada intervalo crece. Aquí es siempre 50 m por cada 10 s: la línea es recta, la rapidez es constante y no hay aceleración.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta 'la distancia aumenta' como 'la rapidez aumenta'."
+      },
+      {
+        "clave": "C",
+        "texto": "A los 30 segundos los dos ciclistas se detienen, porque en ese punto las líneas se cruzan.",
+        "correcta": false,
+        "explicacion": "No responde. El cruce de las líneas indica que en ese instante los dos ciclistas están en el mismo lugar (150 m de la entrada), no que se detengan; después de los 30 s ambas líneas siguen subiendo. Un ciclista detenido se vería como una línea horizontal.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Lee el punto de cruce como un evento de parada en lugar de una coincidencia de posición."
+      },
+      {
+        "clave": "D",
+        "texto": "Ambos se mueven con rapidez constante; el ciclista 1 va más rápido (5 m/s frente a 3 m/s) y alcanza al ciclista 2 a los 30 s, cuando los dos están a 150 m de la entrada.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Las dos gráficas son líneas rectas, así que cada ciclista recorre la misma distancia en cada intervalo de 10 s: 50 m el ciclista 1 (5 m/s) y 30 m el ciclista 2 (3 m/s). La línea del ciclista 1 tiene mayor pendiente, es decir, mayor rapidez, y por eso, aunque salió 60 m atrás, alcanza al ciclista 2 en el punto donde las líneas se cruzan: t = 30 s y d = 150 m. Después de ese instante va adelante.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: gráfica de distancia contra tiempo con dos líneas rectas; ciclista 1 parte de 0 m y ciclista 2 de 60 m; se registran cinco instantes. COMPRENDER: se pide describir el movimiento: rapidez de cada uno, quién es más rápido y qué significa el cruce. INTERPRETAR: en una gráfica distancia-tiempo la pendiente es la rapidez; línea recta = rapidez constante. REPRESENTAR: ciclista 1: 50 m / 10 s = 5 m/s; ciclista 2: 30 m / 10 s = 3 m/s; cruce en (30 s, 150 m). RAZONAR: B confunde altura con pendiente; C confunde alejarse con acelerar; D confunde cruce con detención; A usa correctamente la pendiente y el cruce. RESOLVER: la respuesta es A. VERIFICAR: con las ecuaciones d₁ = 5t y d₂ = 60 + 3t, la igualdad 5t = 60 + 3t da t = 30 s y d = 150 m, exactamente el punto de cruce de la gráfica.",
+    "que_identificar": "Que ambas líneas son rectas (rapidez constante), cuánto avanza cada ciclista en cada intervalo de 10 s y las coordenadas del punto de cruce.",
+    "que_revisar": "Gráficas distancia-tiempo: pendiente como rapidez, línea horizontal como reposo, cruce como encuentro; movimiento rectilíneo uniforme.",
+    "refuerzo_ids": ["CIE-022"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 140,
+    "etiquetas": ["cinematica", "movimiento uniforme", "grafico de lineas", "transporte", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-019",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica los cambios de masa observados en una reacción química en sistemas abiertos y cerrados a partir de la ley de conservación de la masa",
+    "habilidad": "razonar",
+    "tema": "Reacciones químicas",
+    "subtema": "Conservación de la masa en sistemas abiertos y cerrados",
+    "dificultad": 3,
+    "contexto": "Un grupo de grado 10° hizo reaccionar bicarbonato de sodio (NaHCO₃) con vinagre (disolución de ácido acético) en tres montajes distintos, cada uno sobre una balanza con precisión de 0,1 g. La reacción produce acetato de sodio, agua y dióxido de carbono (CO₂), que es un gas. En los tres montajes se usaron 2,1 g de bicarbonato y la misma cantidad de vinagre. La mezcla se sintió fría al tacto durante la reacción.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masa medida antes y después de la reacción en cada montaje",
+      "columnas": ["Montaje", "Descripción", "Masa antes de mezclar (g)", "Masa al terminar la reacción (g)"],
+      "filas": [["A", "Vaso abierto: el bicarbonato se agrega al vinagre y se deja el vaso destapado", 150, 148.9], ["B", "Botella cerrada: el bicarbonato está dentro de un globo ajustado a la boca de la botella y se deja caer al vinagre sin abrir el sistema", 180, 180], ["C", "Igual que B, pero al terminar la reacción se retira el globo y se pesa de nuevo", 180, 178.9]],
+      "nota": "En B y en C el globo se infló durante la reacción."
+    },
+    "enunciado": "¿Cuál explicación es coherente con los tres resultados y con la ley de conservación de la masa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "En el montaje A parte de la materia se destruye durante la reacción, por eso la masa disminuye 1,1 g; en B no se destruye porque el sistema está cerrado.",
+        "correcta": false,
+        "explicacion": "No responde. En una reacción química los átomos se reorganizan, pero no se crean ni se destruyen; la masa total de reactivos es igual a la de productos. Cerrar o abrir el recipiente no cambia esa ley: lo que cambia es si el gas producido se queda dentro del sistema pesado o escapa al aire.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta la pérdida de masa en el sistema abierto como destrucción de materia."
+      },
+      {
+        "clave": "B",
+        "texto": "En los tres montajes la masa se conserva: los 1,1 g que 'faltan' en A y en C corresponden al CO₂ que escapó al aire por estar el sistema abierto, mientras que en B ese gas quedó atrapado en el globo y por eso la balanza marcó lo mismo.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los 2,1 g de bicarbonato (0,025 mol) producen 0,025 mol de CO₂, es decir, 1,1 g de gas: exactamente la diferencia observada en A y en C. En B el gas no pudo salir y la masa fue idéntica; en C la masa solo cambió cuando se abrió el sistema y el gas se liberó. La materia no desapareció: se fue al aire en forma de gas.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "En el montaje B no ocurrió la reacción, ya que la masa no cambió; por eso ese resultado no sirve para probar la ley.",
+        "correcta": false,
+        "explicacion": "No responde. La nota indica que el globo se infló en B, lo que demuestra que sí se produjo gas, es decir, que la reacción ocurrió. Que la masa no cambie en un sistema cerrado es justamente lo que predice la ley de conservación de la masa; el montaje B es la mejor evidencia de la ley, no una excepción.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asume que 'masa constante' significa 'no pasó nada' e ignora la evidencia del globo inflado."
+      },
+      {
+        "clave": "D",
+        "texto": "La pérdida de 1,1 g en A se debe a que el vinagre se evaporó por el calor liberado en la reacción.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que la mezcla se sintió fría, así que la reacción absorbe calor y no lo libera; no hay un calentamiento que evapore vinagre. Además, el montaje C pierde exactamente los mismos 1,1 g solo al retirar el globo, cuando la reacción ya terminó: eso señala al gas atrapado, no a una evaporación.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Propone una causa (evaporación por calor) que contradice el dato de la temperatura y no explica el montaje C."
+      }
+    ],
+    "explicacion": "LEER: tres montajes con las mismas cantidades; A abierto pierde 1,1 g; B cerrado no cambia y el globo se infla; C cerrado no cambia hasta que se retira el globo y entonces pierde 1,1 g; la mezcla se enfría. COMPRENDER: se pide la explicación coherente con los TRES resultados y con la conservación de la masa. INTERPRETAR: la única diferencia entre perder o no perder masa es si el gas puede salir del sistema pesado. REPRESENTAR: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂↑; 2,1 g / 84 g/mol = 0,025 mol → 0,025 mol × 44 g/mol = 1,1 g de CO₂. RAZONAR: A niega la ley; C ignora el globo inflado; D contradice el enfriamiento y no explica C; B explica los tres montajes con el mismo mecanismo (gas que escapa o queda atrapado). RESOLVER: la respuesta es B. VERIFICAR: el cálculo estequiométrico reproduce exactamente los 1,1 g perdidos, y la masa idéntica en B confirma que la materia no se destruyó.",
+    "que_identificar": "Que la pérdida de masa ocurre solo cuando el sistema está abierto (A y C al final), que en B el globo se infló y que la mezcla se enfrió.",
+    "que_revisar": "Ley de conservación de la masa; sistemas abiertos y cerrados; reacciones que producen gases; cálculo de masa de producto a partir de moles.",
+    "refuerzo_ids": ["CIE-016"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["reacciones quimicas", "conservacion de la masa", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-020",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica las transformaciones de energía en un artefacto tecnológico e identifica en qué se convierte la energía que 'se pierde'",
+    "habilidad": "representar",
+    "tema": "Energía",
+    "subtema": "Transformaciones y conservación de la energía en una central hidroeléctrica",
+    "dificultad": 2,
+    "contexto": "En un municipio de Antioquia funciona una pequeña central hidroeléctrica que abastece a unas 300 viviendas. El agua de una quebrada se almacena en un tanque ubicado 120 m por encima de la casa de máquinas, baja por una tubería, hace girar una turbina conectada a un generador y regresa a la quebrada. Según el operador, de cada 100 J de energía que tiene el agua almacenada en el tanque, unos 80 J llegan a las viviendas como energía eléctrica; el resto 'se pierde' en la tubería, la turbina, el generador y las líneas de transmisión.",
+    "estimulo": null,
+    "enunciado": "¿Cuál secuencia de transformaciones de energía describe el funcionamiento de la central y qué ocurre con los 20 J que 'se pierden'?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Energía potencial gravitatoria del agua en el tanque → energía cinética del agua en la tubería → energía cinética de rotación de la turbina → energía eléctrica en el generador; los 20 J no desaparecen: se transforman en energía térmica (por fricción y por la resistencia de los conductores) y en sonido, que se disipan al ambiente.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La energía del agua en altura es potencial gravitatoria; al caer se convierte en cinética; la turbina la transforma en energía de rotación y el generador, en eléctrica. La energía se conserva: los 20 J no se destruyen, sino que se transforman en formas que no se aprovechan (calor por fricción del agua con la tubería y de las partes móviles, calor en los cables, ruido). Un 80 % de aprovechamiento es alto comparado con el de una planta que quema combustible (alrededor del 35 %).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Energía química del agua → energía eléctrica; los 20 J se gastan en hacer girar la turbina.",
+        "correcta": false,
+        "explicacion": "No responde. El agua no es un combustible: en la central no ocurre ninguna reacción química, así que no hay energía química involucrada. La energía aprovechada es la potencial gravitatoria del agua en altura. Además, hacer girar la turbina no es una pérdida: es el paso intermedio que permite producir la electricidad.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia toda generación de electricidad con quemar un combustible y no identifica la energía potencial gravitatoria."
+      },
+      {
+        "clave": "C",
+        "texto": "Energía potencial gravitatoria → energía eléctrica; los 20 J se destruyen durante el proceso, como ocurre en toda máquina real.",
+        "correcta": false,
+        "explicacion": "No responde. La energía no se crea ni se destruye; en toda máquina real una parte se transforma en calor y sonido que no se aprovechan, pero sigue existiendo y puede medirse como aumento de temperatura de la tubería, la turbina o los cables. Decir que 'se destruye' contradice el principio de conservación de la energía.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpreta la energía no aprovechada como energía destruida."
+      },
+      {
+        "clave": "D",
+        "texto": "Energía eléctrica → energía cinética de la turbina → energía potencial del agua; los 20 J se usan para subir de nuevo el agua al tanque.",
+        "correcta": false,
+        "explicacion": "No responde. La secuencia está invertida: describe una bomba que gasta electricidad para elevar agua, no una central que produce electricidad a partir del agua que cae. El contexto dice que el agua baja desde el tanque y regresa a la quebrada, no que se bombee de vuelta.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Invierte el sentido de las transformaciones y confunde la central con una bomba."
+      }
+    ],
+    "explicacion": "LEER: el agua está almacenada 120 m arriba, baja por una tubería, mueve una turbina unida a un generador y de cada 100 J llegan 80 J como electricidad. COMPRENDER: se pide la cadena de transformaciones y el destino de los 20 J. INTERPRETAR: altura → energía potencial gravitatoria; caída → cinética; giro → rotación de la turbina; generador → eléctrica. REPRESENTAR: E. potencial (100 J) → E. cinética → E. de rotación → E. eléctrica (80 J) + E. térmica y sonido (20 J). RAZONAR: B introduce energía química inexistente; C niega la conservación de la energía; D invierte la cadena; A describe la cadena correcta y explica las 'pérdidas' como transformaciones a calor y sonido. RESOLVER: la respuesta es A. VERIFICAR: 80 J + 20 J = 100 J, la energía total se conserva; el enunciado mismo pone 'se pierden' entre comillas porque la energía no desaparece, solo deja de ser útil.",
+    "que_identificar": "El punto de partida (agua en altura), los pasos intermedios (tubería, turbina, generador) y que los 80 J más los 20 J suman los 100 J iniciales.",
+    "que_revisar": "Formas de energía (potencial gravitatoria, cinética, eléctrica, térmica); principio de conservación de la energía; eficiencia de una máquina; generación hidroeléctrica en Colombia.",
+    "refuerzo_ids": ["CIE-004"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 130,
+    "etiquetas": ["energia", "transformaciones de energia", "hidroelectrica", "cts", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-021",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "biologia",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones sobre el efecto del aumento de la temperatura del mar en los corales a partir de datos de monitoreo, sin ir más allá de lo que muestran los datos",
+    "habilidad": "razonar",
+    "tema": "Cambio climático y ecosistemas",
+    "subtema": "Blanqueamiento de corales y evidencia del estrés térmico",
+    "dificultad": 3,
+    "contexto": "Los corales son animales que viven en simbiosis con microalgas alojadas en sus tejidos; las algas les dan su color y la mayor parte de su alimento. Cuando el agua se mantiene demasiado caliente durante varias semanas, el coral expulsa las algas y queda blanco (blanqueamiento); si el estrés se prolonga, el coral muere de hambre, pero si el agua se enfría a tiempo puede recuperar las algas. Un grupo de biólogos monitoreó un arrecife del Caribe colombiano en seis años distintos y registró los datos de la tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Temperatura del mar y blanqueamiento de corales en el arrecife monitoreado",
+      "columnas": ["Año", "Temperatura superficial media del mar en el periodo más cálido (°C)", "Semanas consecutivas con temperatura mayor que 30 °C", "Colonias de coral blanqueadas (%)"],
+      "filas": [["2005", 30.2, 6, 45], ["2010", 30.4, 8, 60], ["2013", 29.1, 0, 5], ["2017", 29.5, 2, 12], ["2020", 29.3, 1, 8], ["2023", 30.8, 10, 75]],
+      "nota": "Datos construidos con fines didácticos a partir del patrón observado en arrecifes del Caribe."
+    },
+    "enunciado": "¿Cuál conclusión está mejor sustentada por los datos de la tabla y por la información del contexto?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los corales mueren cada vez que la temperatura del mar supera los 30 °C, sin importar por cuánto tiempo.",
+        "correcta": false,
+        "explicacion": "No responde. La tabla no mide muerte de corales sino blanqueamiento, que según el contexto es reversible si el agua se enfría a tiempo. Además, la duración sí importa: en 2017, con solo 2 semanas por encima de 30 °C, se blanqueó el 12 % de las colonias, frente al 75 % en 2023 con 10 semanas.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Iguala blanqueamiento con muerte y convierte una relación gradual en una regla de todo o nada."
+      },
+      {
+        "clave": "B",
+        "texto": "El porcentaje de colonias blanqueadas aumenta con el número de semanas de agua caliente, lo que es coherente con la expulsión de las algas por estrés térmico prolongado; para atribuir estos episodios al calentamiento global harían falta series de temperatura de muchas décadas, que estos seis años no reemplazan.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Ordenando por semanas de calor (0, 1, 2, 6, 8, 10) los porcentajes crecen de forma consistente (5, 8, 12, 45, 60, 75), lo que respalda la relación entre calor prolongado y blanqueamiento que describe el contexto. La conclusión se limita a lo que los datos muestran y reconoce que seis años aislados no bastan para demostrar una tendencia climática de largo plazo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No existe relación entre la temperatura y el blanqueamiento, porque en 2013 y 2020 la temperatura fue casi igual (29,1 y 29,3 °C) y los porcentajes fueron distintos (5 % y 8 %).",
+        "correcta": false,
+        "explicacion": "No responde. Una diferencia de 3 puntos porcentuales entre dos años frescos no anula la tendencia general: los tres años con más semanas de calor (2005, 2010 y 2023) tienen los porcentajes más altos con gran diferencia. Además, 2020 tuvo 1 semana por encima de 30 °C y 2013 ninguna, lo que explica su pequeña diferencia.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa una diferencia pequeña entre dos filas para descartar un patrón que las demás filas muestran con claridad."
+      },
+      {
+        "clave": "D",
+        "texto": "El blanqueamiento ocurre porque con el calor las algas se multiplican en exceso y cubren el coral con una capa blanca.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto explica lo contrario: el coral queda blanco porque EXPULSA las algas que le daban color, no porque estas lo cubran. Si las algas se multiplicaran, el coral se vería más coloreado y mejor alimentado, no blanco y hambriento.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte el mecanismo del blanqueamiento descrito en el contexto."
+      }
+    ],
+    "explicacion": "LEER: el contexto explica la simbiosis coral-alga y el mecanismo del blanqueamiento; la tabla da temperatura, semanas de calor y porcentaje blanqueado en seis años. COMPRENDER: se pide la conclusión MEJOR sustentada, es decir, la que use los datos sin exagerarlos. INTERPRETAR: a más semanas de agua por encima de 30 °C, mayor porcentaje blanqueado; los años frescos (2013, 2017, 2020) tienen valores bajos y los calientes (2005, 2010, 2023) valores altos. REPRESENTAR: semanas → % blanqueado: 0 → 5, 1 → 8, 2 → 12, 6 → 45, 8 → 60, 10 → 75; relación creciente. RAZONAR: A confunde blanqueamiento con muerte e ignora la duración; C descarta el patrón por una diferencia mínima; D invierte el mecanismo; B describe la relación, la conecta con el mecanismo y reconoce el límite de seis años de datos. RESOLVER: la respuesta es B. VERIFICAR: cada afirmación de B puede señalarse en la tabla o en el contexto, y ninguna va más allá de lo que se midió.",
+    "que_identificar": "La columna de semanas consecutivas de calor y su relación con el porcentaje blanqueado, y la frase del contexto que dice que el coral expulsa las algas.",
+    "que_revisar": "Simbiosis y blanqueamiento de corales; relación entre variables en una tabla; diferencia entre un episodio y una tendencia de largo plazo; evidencia del cambio climático.",
+    "refuerzo_ids": ["CIE-012"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["cambio climatico", "ecosistemas", "corales", "caribe colombiano", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-022",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Contrasta una predicción sobre flotación con datos de masa y volumen, calculando la densidad de cada objeto",
+    "habilidad": "verificar",
+    "tema": "Propiedades de la materia y fluidos",
+    "subtema": "Densidad y flotación: evaluación de una predicción",
+    "dificultad": 2,
+    "contexto": "Antes de un experimento, un grupo de grado 10° de Cartagena formuló la predicción: 'Un objeto flota en agua si su densidad es menor que la del agua y se hunde si es mayor; no importa qué tan pesado ni qué tan grande sea'. Midieron la masa y el volumen de cinco objetos, los sumergieron uno por uno en un balde con agua dulce y registraron lo que ocurrió.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masa, volumen y comportamiento de cinco objetos en agua dulce",
+      "columnas": ["Objeto", "Masa (g)", "Volumen (cm³)", "Resultado al soltarlo en el agua"],
+      "filas": [["Bloque de madera", 40, 80, "Flota"], ["Bola de vidrio", 25, 10, "Se hunde"], ["Vela de parafina", 45, 50, "Flota"], ["Barra de plastilina", 90, 60, "Se hunde"], ["Naranja con cáscara", 190, 200, "Flota"]],
+      "nota": "Densidad del agua dulce: 1,0 g/cm³. Densidad = masa / volumen."
+    },
+    "enunciado": "¿Qué muestran los datos respecto a la predicción del grupo?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La predicción no puede evaluarse, porque en la tabla no se midió la densidad de ningún objeto.",
+        "correcta": false,
+        "explicacion": "No responde. La densidad no se mide directamente: se calcula dividiendo la masa entre el volumen, y la tabla trae ambas magnitudes para cada objeto (además, la nota recuerda la fórmula). Con esos datos la predicción sí puede evaluarse.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No reconoce que la densidad se obtiene a partir de la masa y el volumen registrados."
+      },
+      {
+        "clave": "B",
+        "texto": "La predicción se cumple: los objetos con densidad menor que 1,0 g/cm³ (madera 0,5; vela 0,9; naranja 0,95) flotaron y los de densidad mayor (vidrio 2,5; plastilina 1,5) se hundieron, aunque la naranja es el objeto más pesado y el vidrio uno de los más livianos.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Calculando masa / volumen para cada fila: madera 40/80 = 0,5; vidrio 25/10 = 2,5; vela 45/50 = 0,9; plastilina 90/60 = 1,5; naranja 190/200 = 0,95. Los tres valores menores que 1,0 corresponden a los objetos que flotaron y los dos mayores a los que se hundieron, sin excepción. Los casos de la naranja (pesada pero flota) y el vidrio (liviano pero se hunde) confirman que ni la masa ni el volumen por sí solos deciden la flotación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "La predicción falla, porque el objeto más pesado (la naranja, 190 g) flotó mientras que la bola de vidrio, de solo 25 g, se hundió.",
+        "correcta": false,
+        "explicacion": "No responde. La predicción dice explícitamente que la masa no importa, solo la densidad; el caso naranja-vidrio no la contradice, la confirma: la naranja tiene 0,95 g/cm³ (menor que 1,0) y el vidrio 2,5 g/cm³ (mayor que 1,0). Quien elige esta opción evaluó la predicción con la masa en lugar de la densidad.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde 'pesado' con 'denso' y juzga la predicción con una variable que ella misma descarta."
+      },
+      {
+        "clave": "D",
+        "texto": "Los datos muestran que lo que decide la flotación es el volumen: los objetos grandes flotan y los pequeños se hunden.",
+        "correcta": false,
+        "explicacion": "No responde. La barra de plastilina (60 cm³) es más grande que la vela (50 cm³) y sin embargo la plastilina se hundió y la vela flotó. El volumen por sí solo no explica los cinco resultados; la densidad sí.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Observa que la naranja, el objeto más grande, flota, y generaliza sin revisar la plastilina y la vela."
+      }
+    ],
+    "explicacion": "LEER: predicción: flota si densidad < 1,0 g/cm³, sin importar masa ni tamaño; tabla con masa, volumen y resultado de cinco objetos. COMPRENDER: se pide decir si los datos confirman o refutan la predicción. INTERPRETAR: para evaluarla hay que calcular la densidad de cada objeto y compararla con 1,0. REPRESENTAR: madera 0,5 (flota), vidrio 2,5 (se hunde), vela 0,9 (flota), plastilina 1,5 (se hunde), naranja 0,95 (flota). RAZONAR: los cinco resultados coinciden con la regla; B usa la masa, que la predicción descarta; C usa el volumen, que falla con plastilina y vela; D ignora que la densidad se calcula; A evalúa la predicción con la variable correcta. RESOLVER: la respuesta es A. VERIFICAR: no hay ningún objeto con densidad menor que 1,0 que se haya hundido ni ninguno con densidad mayor que haya flotado, así que la predicción se cumple en todos los casos observados.",
+    "que_identificar": "Que la predicción habla de densidad y que esta se calcula como masa / volumen con los datos de cada fila.",
+    "que_revisar": "Densidad como propiedad característica; principio de flotación (comparar densidades); evaluar una predicción usando la variable que ella menciona.",
+    "refuerzo_ids": ["CIE-018"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["densidad", "flotacion", "indagacion", "experimento escolar", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-023",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Selecciona la secuencia de procedimientos adecuada para separar los componentes de una mezcla a partir de sus propiedades",
+    "habilidad": "resolver",
+    "tema": "Mezclas y sustancias",
+    "subtema": "Separación de una mezcla de tres componentes: imantación, disolución, filtración y evaporación",
+    "dificultad": 1,
+    "contexto": "En el laboratorio, cada grupo de grado 10° recibe un frasco con una mezcla seca de arena, sal de cocina y limaduras de hierro, y debe entregar los tres componentes por separado y secos. Disponen de un imán, agua, un embudo con papel de filtro, un vaso de precipitados, una cápsula de porcelana y un mechero. Saben que la sal se disuelve en agua, que la arena y el hierro no se disuelven, y que solo el hierro es atraído por el imán.",
+    "estimulo": null,
+    "enunciado": "¿Cuál secuencia de procedimientos permite recuperar los tres componentes por separado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Calentar la mezcla seca en la cápsula con el mechero hasta que la sal se funda y se separe de la arena y del hierro.",
+        "correcta": false,
+        "explicacion": "No responde. La sal de cocina funde a unos 800 °C, una temperatura que un mechero de laboratorio no alcanza en una cápsula con mezcla; y aunque se fundiera, quedaría empapando la arena y el hierro, no separada. La propiedad útil de la sal aquí es que se disuelve en agua, no su punto de fusión.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde disolver con fundir y desconoce el punto de fusión de la sal."
+      },
+      {
+        "clave": "B",
+        "texto": "Filtrar la mezcla seca con el embudo para separar la sal, que es la de grano más fino, y luego pasar el imán por lo que quede en el filtro.",
+        "correcta": false,
+        "explicacion": "No responde. La filtración separa un sólido de un líquido, no sólidos secos entre sí: los granos de sal, arena y hierro son todos más grandes que los poros del papel de filtro y quedarían juntos. Sin disolver la sal en agua no hay nada que atraviese el filtro.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Aplica la filtración a una mezcla seca sin entender qué separa ese método."
+      },
+      {
+        "clave": "C",
+        "texto": "Pasar el imán sobre la mezcla seca para retirar el hierro; agregar agua y agitar para disolver la sal; filtrar para retener la arena; y calentar el líquido filtrado en la cápsula hasta evaporar el agua y recuperar la sal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Cada paso aprovecha una propiedad que solo tiene uno de los componentes: el magnetismo del hierro (imantación), la solubilidad de la sal en agua (disolución), el tamaño de las partículas de arena no disueltas (filtración) y la diferencia de puntos de ebullición entre el agua y la sal (evaporación). Al final se tienen hierro seco, arena en el papel de filtro y sal cristalizada en la cápsula.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Agregar agua a toda la mezcla, filtrar y evaporar el líquido filtrado: la arena y el hierro quedan juntos en el papel de filtro y la sal se recupera en la cápsula.",
+        "correcta": false,
+        "explicacion": "No responde. Este procedimiento recupera la sal, pero deja la arena y el hierro mezclados en el filtro, y la tarea exige entregar los TRES componentes por separado. Además, el hierro mojado empieza a oxidarse. Faltó usar el imán, y conviene hacerlo antes de agregar agua.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Omite un paso y no verifica que el resultado cumpla la condición de separar los tres componentes."
+      }
+    ],
+    "explicacion": "LEER: mezcla seca de arena, sal y hierro; materiales: imán, agua, filtro, vaso, cápsula, mechero; propiedades: la sal se disuelve, la arena y el hierro no, solo el hierro es magnético. COMPRENDER: se pide un orden de pasos que deje los tres componentes separados y secos. INTERPRETAR: cada propiedad distinta sugiere un método: magnetismo → imán; solubilidad → agua y luego filtración; recuperar la sal disuelta → evaporación. REPRESENTAR: imán (sale el hierro) → agua (la sal se disuelve) → filtro (queda la arena) → evaporación (queda la sal). RAZONAR: B deja arena y hierro juntos; C usa un cambio de estado imposible con el mechero; D filtra sólidos secos; A usa una propiedad diferente en cada paso y separa los tres. RESOLVER: la respuesta es A. VERIFICAR: al final del procedimiento A hay tres recipientes con hierro, arena y sal secos, que es exactamente lo que pide la tarea.",
+    "que_identificar": "Qué propiedad distingue a cada componente (magnetismo, solubilidad, insolubilidad) y qué método aprovecha cada una.",
+    "que_revisar": "Métodos de separación de mezclas (imantación, disolución, filtración, evaporación, decantación) y la propiedad en que se basa cada uno.",
+    "refuerzo_ids": ["CIE-003"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": ["mezclas", "separacion de mezclas", "laboratorio", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-024",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Evalúa una propuesta sobre el tratamiento del agua potable contrastando datos de calidad del agua con la norma vigente",
+    "habilidad": "verificar",
+    "tema": "Agua potable y salud",
+    "subtema": "Etapas del tratamiento del agua y evaluación de una propuesta con datos",
+    "dificultad": 3,
+    "contexto": "El acueducto de una vereda toma agua de una quebrada y la trata en tres etapas: sedimentación (el agua reposa en un tanque para que las partículas se depositen en el fondo), filtración (el agua pasa por capas de arena y grava) y cloración (se agrega una dosis controlada de cloro). La secretaría de salud tomó muestras en cuatro puntos y midió la turbidez (partículas en suspensión), los coliformes (bacterias que indican contaminación con materia fecal) y el cloro residual. La norma colombiana de agua potable exige turbidez máxima de 2 UNT, cero coliformes en 100 mL y cloro residual entre 0,3 y 2,0 mg/L a la salida del sistema.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Calidad del agua en cuatro puntos del acueducto veredal",
+      "columnas": ["Punto de muestreo", "Turbidez (UNT)", "Coliformes (UFC por 100 mL)", "Cloro residual (mg/L)"],
+      "filas": [["Quebrada (agua cruda)", 45, 1200, 0], ["Salida de la sedimentación", 12, 900, 0], ["Salida de la filtración", 2, 150, 0], ["Salida de la cloración (agua que va a las casas)", 2, 0, 0.8]],
+      "nota": "UNT: unidades nefelométricas de turbidez. UFC: unidades formadoras de colonias."
+    },
+    "enunciado": "Para reducir costos, un habitante propone suprimir la cloración porque 'después del filtro el agua ya sale transparente'. ¿Cuál evaluación de la propuesta es correcta según los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La propuesta no es aceptable, porque la cloración es la etapa que más reduce la turbidez del agua.",
+        "correcta": false,
+        "explicacion": "No responde. La conclusión (no suprimir la cloración) es correcta, pero la razón es falsa: la turbidez entra a la cloración en 2 UNT y sale en 2 UNT, es decir, esa etapa no la modifica. Quienes reducen la turbidez son la sedimentación (45 → 12) y la filtración (12 → 2). El papel de la cloración es eliminar microorganismos.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Justifica la respuesta con una columna equivocada sin verificar que la turbidez no cambia en la cloración."
+      },
+      {
+        "clave": "B",
+        "texto": "La propuesta es aceptable si se alarga el tiempo de sedimentación, porque esa fue la etapa que eliminó más coliformes.",
+        "correcta": false,
+        "explicacion": "No responde. La sedimentación redujo los coliformes en 300 UFC (1200 → 900), la filtración en 750 (900 → 150) y la cloración eliminó todos los que quedaban (150 → 0); la sedimentación fue, de hecho, la etapa que menos bacterias retiró. Y ninguna etapa física llega a cero: sin desinfección el agua no cumple la norma.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "No calcula la reducción de coliformes en cada etapa y atribuye a la sedimentación un efecto que no tuvo."
+      },
+      {
+        "clave": "C",
+        "texto": "La propuesta es aceptable: con 2 UNT el agua ya cumple la norma de turbidez, y un agua transparente es agua potable.",
+        "correcta": false,
+        "explicacion": "No responde. Transparente no significa segura: a la salida del filtro el agua tiene 150 coliformes por 100 mL, cuando la norma exige cero. Las bacterias no se ven a simple vista y no producen turbidez; por eso un agua cristalina puede transmitir enfermedades como la diarrea infecciosa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Iguala 'agua transparente' con 'agua potable' e ignora la columna de coliformes."
+      },
+      {
+        "clave": "D",
+        "texto": "La propuesta no es aceptable: la filtración deja el agua transparente pero todavía con 150 coliformes por 100 mL; solo la cloración los lleva a cero y deja cloro residual (0,8 mg/L) que sigue protegiendo el agua en la red, de modo que sin ella el agua transparente podría transmitir enfermedades.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La tabla muestra que sedimentación y filtración resuelven la turbidez (45 → 12 → 2 UNT) pero no eliminan por completo las bacterias (1200 → 900 → 150 UFC). La cloración es la única etapa que lleva los coliformes a cero, cumpliendo la norma, y además deja cloro residual dentro del rango exigido (0,3-2,0 mg/L), que protege el agua contra una nueva contaminación mientras viaja por las tuberías. Suprimirla dejaría un agua que parece limpia pero no lo es.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: tres etapas de tratamiento; tabla con turbidez, coliformes y cloro residual en cuatro puntos; norma: ≤ 2 UNT, 0 coliformes, cloro residual 0,3-2,0 mg/L. COMPRENDER: hay que evaluar si se puede eliminar la cloración usando los datos, no la apariencia del agua. INTERPRETAR: la turbidez se resuelve en la filtración (2 UNT), pero los coliformes solo llegan a cero en la cloración; el cloro residual aparece únicamente después de clorar. REPRESENTAR: reducción de coliformes por etapa: sedimentación −300, filtración −750, cloración −150 hasta 0; turbidez: −33, −10, 0. RAZONAR: A confunde transparencia con potabilidad; C da una razón que contradice la columna de turbidez; D calcula mal el aporte de la sedimentación y olvida que sin desinfección no se llega a cero; B usa las tres columnas y la norma para mostrar que la cloración es indispensable. RESOLVER: la respuesta es B. VERIFICAR: sin cloración, el agua a las casas tendría 150 UFC/100 mL y 0 mg/L de cloro residual, dos incumplimientos de la norma; con cloración cumple los tres parámetros.",
+    "que_identificar": "La columna de coliformes en la salida de la filtración (150) y en la salida de la cloración (0), y el valor de cloro residual frente al rango de la norma.",
+    "que_revisar": "Etapas del tratamiento del agua potable y qué elimina cada una; indicadores microbiológicos (coliformes); diferencia entre parámetros físicos y biológicos de calidad del agua.",
+    "refuerzo_ids": ["CIE-023"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["agua", "salud", "agua potable", "cts", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

@@ -1,0 +1,1498 @@
+[
+  {
+    "id": "CIE-079",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Diferencia los isótopos de un elemento a partir del número de protones, neutrones y electrones de sus átomos",
+    "habilidad": "interpretar",
+    "tema": "Estructura atómica",
+    "subtema": "Isótopos del carbono: mismo número de protones, distinto número de neutrones",
+    "dificultad": 1,
+    "contexto": "Para estimar la edad de restos orgánicos encontrados en una excavación arqueológica en el Huila, un laboratorio mide la cantidad de **carbono-14** que contienen. En la naturaleza el carbono se presenta en tres formas (isótopos), cuya composición se muestra en la tabla.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Composición de los isótopos del carbono (átomos neutros)",
+      "columnas": ["Isótopo", "Protones", "Neutrones", "Electrones", "Número de masa"],
+      "filas": [["Carbono-12", 6, 6, 6, 12], ["Carbono-13", 6, 7, 6, 13], ["Carbono-14", 6, 8, 6, 14]],
+      "nota": "Número de masa = protones + neutrones."
+    },
+    "enunciado": "De acuerdo con la tabla, ¿qué tienen en común los tres isótopos y qué los diferencia?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El carbono-14 es un elemento diferente al carbono-12, porque su número de masa es distinto.",
+        "correcta": false,
+        "explicacion": "No responde. El elemento lo define el número de protones (número atómico), no el número de masa. Como el carbono-14 tiene 6 protones, sigue siendo carbono.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el número de masa, y no el número atómico, identifica al elemento."
+      },
+      {
+        "clave": "B",
+        "texto": "Tienen el mismo número de protones, por eso son el mismo elemento; se diferencian en el número de neutrones y, por tanto, en su masa.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los tres tienen 6 protones (número atómico 6), que es lo que define al elemento carbono. Lo que cambia es la cantidad de neutrones (6, 7 y 8), y por eso cambia el número de masa (12, 13 y 14).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Tienen el mismo número de neutrones; se diferencian en el número de protones.",
+        "correcta": false,
+        "explicacion": "No responde. En la tabla los neutrones cambian (6, 7 y 8) y los protones se mantienen en 6. Además, si cambiara el número de protones ya no sería carbono sino otro elemento.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó las columnas invertidas o asumió que lo que cambia son los protones."
+      },
+      {
+        "clave": "D",
+        "texto": "Tienen la misma masa; se diferencian en el número de electrones, por lo que tienen cargas eléctricas distintas.",
+        "correcta": false,
+        "explicacion": "No responde. Los tres átomos neutros tienen 6 electrones, así que no tienen carga. Un átomo con distinto número de electrones que de protones sería un ion, no un isótopo. Y la masa sí cambia (12, 13, 14).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde isótopo con ion: cree que los isótopos difieren en electrones."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra protones, neutrones, electrones y número de masa de tres isótopos del carbono. COMPRENDER: se pregunta qué comparten y en qué difieren. INTERPRETAR: la columna de protones es constante (6) y la de neutrones cambia (6, 7, 8). REPRESENTAR: número de masa = protones + neutrones → 6+6=12, 6+7=13, 6+8=14. RAZONAR: el número de protones define el elemento; si es igual, son el mismo elemento con distinta masa, es decir, isótopos. B invierte las columnas, C confunde isótopos con iones y D usa el número de masa para identificar el elemento. RESOLVER: la respuesta es A. VERIFICAR: los electrones también son 6 en los tres, lo que confirma que son átomos neutros del mismo elemento.",
+    "que_identificar": "Qué columna de la tabla se mantiene constante (protones y electrones) y cuál cambia (neutrones y número de masa).",
+    "que_revisar": "Partículas subatómicas; número atómico y número de masa; diferencia entre isótopo e ion.",
+    "refuerzo_ids": ["CIE-080", "CIE-032"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["estructura atomica", "isotopos", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-080",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Relaciona la configuración electrónica de un elemento con su ubicación en la tabla periódica (periodo y grupo) y con su tendencia a ganar o perder electrones",
+    "habilidad": "interpretar",
+    "tema": "Tabla periódica y configuración electrónica",
+    "subtema": "Periodo y grupo a partir de la configuración electrónica; electrones de valencia",
+    "dificultad": 2,
+    "contexto": "En una clase de química se entrega a cada grupo la configuración electrónica de un elemento desconocido X, cuyos átomos neutros tienen 17 electrones:\n\n**X: 1s² 2s² 2p⁶ 3s² 3p⁵**\n\nLa docente recuerda que el **periodo** corresponde al nivel de energía más externo ocupado y que, para estos elementos, el **grupo** se relaciona con el número de electrones del último nivel (electrones de valencia): los elementos del grupo 1 tienen 1, los del grupo 2 tienen 2 y los de los grupos 13 a 18 tienen de 3 a 8. Los átomos tienden a ganar o perder electrones hasta completar 8 en su último nivel.",
+    "estimulo": null,
+    "enunciado": "¿Dónde se ubica X en la tabla periódica y cómo tiende a comportarse al formar compuestos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Periodo 5, grupo 17; tiende a ganar un electrón y formar el ion X⁻.",
+        "correcta": false,
+        "explicacion": "No responde. El periodo no es el número de subniveles escritos (1s, 2s, 2p, 3s, 3p son cinco), sino el nivel de energía más externo, que es el 3.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Contó los subniveles de la configuración en lugar de identificar el nivel más externo."
+      },
+      {
+        "clave": "B",
+        "texto": "Periodo 3, grupo 15; tiende a ganar tres electrones y formar el ion X³⁻.",
+        "correcta": false,
+        "explicacion": "No responde. Tomó solo los 5 electrones del subnivel 3p y olvidó los 2 del 3s, que también pertenecen al último nivel. Los electrones de valencia son 2 + 5 = 7, no 5.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el exponente del último subnivel como número de electrones de valencia."
+      },
+      {
+        "clave": "C",
+        "texto": "Periodo 3, grupo 17; tiende a ganar un electrón y formar el ion X⁻.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El último nivel ocupado es el 3 (3s² 3p⁵), así que está en el periodo 3. En ese nivel hay 2 + 5 = 7 electrones de valencia, lo que corresponde al grupo 17. Le falta un electrón para completar 8, por lo que tiende a ganarlo y formar X⁻ (es el cloro).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Periodo 3, grupo 17; tiende a perder sus siete electrones de valencia y formar el ion X⁷⁺.",
+        "correcta": false,
+        "explicacion": "No responde. La ubicación es correcta, pero para completar 8 electrones a X le resulta mucho más fácil ganar 1 electrón que perder 7. Por eso los elementos del grupo 17 forman iones con carga −1.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que todos los átomos pierden sus electrones de valencia, sin comparar cuántos debe ganar o perder."
+      }
+    ],
+    "explicacion": "LEER: X tiene 17 electrones con configuración 1s² 2s² 2p⁶ 3s² 3p⁵; el contexto da las reglas de periodo y grupo. COMPRENDER: se pide ubicación (periodo y grupo) y comportamiento químico. INTERPRETAR: el nivel más externo es el 3; en él están 3s² y 3p⁵. REPRESENTAR: electrones de valencia = 2 + 5 = 7 → grupo 17; periodo 3. RAZONAR: con 7 electrones de valencia, completar 8 exige ganar 1 (más sencillo que perder 7). B elige el camino difícil, C cuenta subniveles y D olvida el 3s². RESOLVER: la respuesta es A. VERIFICAR: 2 + 8 + 7 = 17 electrones, y el elemento del periodo 3, grupo 17, es el cloro, que forma el ion cloruro Cl⁻ (como en la sal de cocina).",
+    "que_identificar": "El nivel de energía más externo (3) y la suma de todos los electrones de ese nivel (3s² + 3p⁵).",
+    "que_revisar": "Configuración electrónica; electrones de valencia; relación entre configuración, periodo y grupo; regla del octeto.",
+    "refuerzo_ids": ["CIE-079", "CIE-082"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tabla periodica", "configuracion electronica", "valencia", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-081",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Contrasta una predicción sobre el tamaño de los átomos con los datos de radio atómico de los elementos de un periodo de la tabla periódica",
+    "habilidad": "razonar",
+    "tema": "Tabla periódica: tendencias",
+    "subtema": "Variación del radio atómico a lo largo del periodo 3",
+    "dificultad": 2,
+    "contexto": "Un estudiante predice: *\"Como el cloro tiene más protones y más electrones que el sodio, su átomo debe ser más grande que el del sodio\"*. Para evaluar su predicción, consulta el radio atómico de los elementos del periodo 3. Todos estos elementos tienen sus electrones más externos en el **mismo nivel de energía** (el nivel 3). El número entre paréntesis es el número atómico (cantidad de protones).",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Radio atómico de los elementos del periodo 3",
+      "eje_x": "Elemento (número atómico)",
+      "eje_y": "Radio atómico (pm)",
+      "series": [
+        { "nombre": "Radio atómico", "valores": [["Na (11)", 186], ["Mg (12)", 160], ["Al (13)", 143], ["Si (14)", 118], ["P (15)", 110], ["S (16)", 104], ["Cl (17)", 99]] }
+      ]
+    },
+    "enunciado": "¿Qué se puede concluir sobre la predicción del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es correcta: más partículas ocupan más espacio, por eso el átomo de cloro es más grande.",
+        "correcta": false,
+        "explicacion": "No responde. La idea parece lógica, pero los datos la contradicen: el cloro (99 pm) es mucho más pequeño que el sodio (186 pm). Una predicción se evalúa con los datos, no con la intuición.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Respondió con la intuición de \"más partículas, más tamaño\" sin mirar la tendencia de la gráfica."
+      },
+      {
+        "clave": "B",
+        "texto": "Es incorrecta: el cloro es más pequeño porque tiene menos electrones que el sodio.",
+        "correcta": false,
+        "explicacion": "No responde. El cloro tiene 17 electrones y el sodio 11; el cloro tiene más, no menos. La conclusión (el cloro es más pequeño) es cierta, pero la razón es falsa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Llegó a la conclusión correcta a partir de una razón inventada sobre el número de electrones."
+      },
+      {
+        "clave": "C",
+        "texto": "No se puede evaluar, porque la gráfica no incluye todos los elementos de la tabla periódica.",
+        "correcta": false,
+        "explicacion": "No responde. La predicción compara solo el sodio y el cloro, y ambos están en la gráfica. Para evaluarla no se necesitan datos de otros elementos.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Exige más datos de los necesarios; no delimita qué compara la predicción."
+      },
+      {
+        "clave": "D",
+        "texto": "Es incorrecta: el radio disminuye de 186 pm (Na) a 99 pm (Cl), porque al aumentar los protones el núcleo atrae con más fuerza a los electrones, que se ubican en el mismo nivel.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Los datos muestran que el radio disminuye a lo largo del periodo. Los electrones se agregan al mismo nivel (el 3), así que no se alejan del núcleo, mientras la carga del núcleo crece de +11 a +17 y los atrae con más fuerza, contrayendo el átomo.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la predicción dice que el cloro es más grande que el sodio; la gráfica da el radio de Na a Cl. COMPRENDER: hay que decidir si los datos apoyan la predicción y por qué. INTERPRETAR: la línea baja de 186 pm (Na) a 99 pm (Cl): el radio disminuye al aumentar el número atómico. REPRESENTAR: Na: 11 protones, 3 niveles, 186 pm; Cl: 17 protones, 3 niveles, 99 pm. RAZONAR: al tener el mismo número de niveles, la mayor carga nuclear del cloro atrae más a los electrones y el átomo se contrae. B ignora los datos, C da una razón falsa y D pide datos innecesarios. RESOLVER: la respuesta es A. VERIFICAR: la tendencia es regular en todo el periodo (cada elemento es más pequeño que el anterior), lo que confirma que no es un dato aislado.",
+    "que_identificar": "Los radios del Na (186 pm) y del Cl (99 pm) y la información de que todos tienen el último electrón en el mismo nivel.",
+    "que_revisar": "Tendencias periódicas: radio atómico en un periodo y en un grupo; carga nuclear; evaluar predicciones con datos.",
+    "refuerzo_ids": ["CIE-080", "CIE-082"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["tabla periodica", "radio atomico", "prediccion", "grafica de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-082",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Usa valores de electronegatividad para clasificar el enlace entre dos átomos como iónico, covalente polar o covalente apolar",
+    "habilidad": "interpretar",
+    "tema": "Enlace químico y electronegatividad",
+    "subtema": "Diferencia de electronegatividad como criterio del tipo de enlace",
+    "dificultad": 2,
+    "contexto": "En clase se usa el siguiente criterio: se calcula la **diferencia** de electronegatividad entre los dos átomos que se enlazan (el valor mayor menos el menor). Si la diferencia es **mayor que 1,7**, el enlace es predominantemente **iónico**; si está **entre 0,4 y 1,7**, es **covalente polar**; si es **menor que 0,4**, es **covalente apolar**.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Electronegatividad de algunos elementos (escala de Pauling)",
+      "columnas": ["Elemento", "Símbolo", "Electronegatividad"],
+      "filas": [["Hidrógeno", "H", "2,1"], ["Oxígeno", "O", "3,5"], ["Flúor", "F", "4,0"], ["Cloro", "Cl", "3,0"], ["Sodio", "Na", "0,9"], ["Potasio", "K", "0,8"]],
+      "nota": "Valores redondeados a una cifra decimal."
+    },
+    "enunciado": "Según el criterio y la tabla, ¿cuál afirmación es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El enlace en el HCl es covalente apolar, porque el hidrógeno y el cloro son no metales.",
+        "correcta": false,
+        "explicacion": "No responde. Que ambos sean no metales indica que el enlace es covalente, pero no que sea apolar. La diferencia es 3,0 − 2,1 = 0,9, que está entre 0,4 y 1,7 → covalente polar.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó una regla general (no metal + no metal) sin calcular la diferencia que exige el criterio."
+      },
+      {
+        "clave": "B",
+        "texto": "El enlace en el KF es iónico (diferencia 3,2) y el enlace O–H del agua es covalente polar (diferencia 1,4).",
+        "correcta": true,
+        "explicacion": "Es la correcta. KF: 4,0 − 0,8 = 3,2 > 1,7 → iónico. O–H: 3,5 − 2,1 = 1,4, que está entre 0,4 y 1,7 → covalente polar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "El enlace en el F₂ es iónico, porque el flúor tiene la electronegatividad más alta de la tabla (4,0).",
+        "correcta": false,
+        "explicacion": "No responde. El criterio usa la diferencia entre los dos átomos, no el valor de uno solo. En el F₂ los dos átomos son iguales: 4,0 − 4,0 = 0 → covalente apolar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usa el valor de electronegatividad de un átomo en lugar de la diferencia entre los dos átomos enlazados."
+      },
+      {
+        "clave": "D",
+        "texto": "El enlace O–H del agua es iónico, porque 3,5 + 2,1 = 5,6, que es mayor que 1,7.",
+        "correcta": false,
+        "explicacion": "No responde. El criterio pide restar, no sumar. La diferencia es 3,5 − 2,1 = 1,4, que corresponde a un enlace covalente polar.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Sumó las electronegatividades en lugar de restarlas."
+      }
+    ],
+    "explicacion": "LEER: la tabla da electronegatividades y el contexto el criterio por intervalos de diferencia. COMPRENDER: se busca la afirmación que aplica bien el criterio. INTERPRETAR: lo que importa es la resta entre los dos átomos del enlace. REPRESENTAR: KF → 4,0 − 0,8 = 3,2; O–H → 3,5 − 2,1 = 1,4; F–F → 0; H–Cl → 0,9. RAZONAR: 3,2 > 1,7 (iónico); 1,4 y 0,9 están entre 0,4 y 1,7 (polar); 0 < 0,4 (apolar). B usa un solo valor, C suma y D no calcula. RESOLVER: la respuesta es A. VERIFICAR: el KF es un sólido que se disuelve en agua formando iones, como la sal; el agua es una molécula polar: ambos hechos coinciden con la clasificación.",
+    "que_identificar": "El criterio basado en la diferencia de electronegatividad y los valores de los dos átomos de cada enlace.",
+    "que_revisar": "Electronegatividad; enlace iónico, covalente polar y apolar; aplicación de un criterio por intervalos.",
+    "refuerzo_ids": ["CIE-034", "CIE-080"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["enlace quimico", "electronegatividad", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-083",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Asocia fenómenos naturales con conceptos propios del conocimiento científico",
+    "evidencia": "Clasifica compuestos inorgánicos de uso cotidiano en óxidos, hidróxidos, ácidos y sales a partir de su fórmula",
+    "habilidad": "comprender",
+    "tema": "Nomenclatura y funciones químicas inorgánicas",
+    "subtema": "Óxidos, hidróxidos, ácidos y sales en productos del hogar y la ferretería",
+    "dificultad": 1,
+    "contexto": "En una ferretería de Pasto se venden estos productos: **soda cáustica** (NaOH), **ácido muriático** (HCl disuelto en agua), **cal viva** (CaO) y **sal** para ablandar agua (NaCl). Un estudiante debe clasificarlos con estas reglas vistas en clase:\n\n- **Óxido básico:** metal + oxígeno. **Óxido ácido:** no metal + oxígeno.\n- **Hidróxido (base):** metal + grupo OH.\n- **Ácido (hidrácido):** hidrógeno + no metal, sin oxígeno; en agua libera iones H⁺.\n- **Sal:** metal + no metal (o grupo con oxígeno), sin H⁺ ni OH⁻; se forma al neutralizar un ácido con una base.",
+    "estimulo": null,
+    "enunciado": "¿Cuál clasificación de los cuatro productos es correcta?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "NaOH: hidróxido; HCl: sal; CaO: óxido básico; NaCl: sal.",
+        "correcta": false,
+        "explicacion": "No responde. El HCl no tiene metal: es hidrógeno + no metal, y en agua libera H⁺, por eso es un ácido. La presencia de cloro no convierte un compuesto en sal.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Clasificó por parecido con la sal de cocina (ambos tienen Cl) en lugar de aplicar la regla."
+      },
+      {
+        "clave": "B",
+        "texto": "NaOH: hidróxido; HCl: ácido; CaO: óxido ácido; NaCl: sal.",
+        "correcta": false,
+        "explicacion": "No responde. El calcio es un metal, así que el CaO es un óxido básico. Los óxidos ácidos se forman con no metales (por ejemplo, CO₂ o SO₂).",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asocia \"óxido\" con \"ácido\" sin revisar si el elemento es metal o no metal."
+      },
+      {
+        "clave": "C",
+        "texto": "NaOH: hidróxido; HCl: ácido; CaO: óxido básico; NaCl: sal.",
+        "correcta": true,
+        "explicacion": "Es la correcta. NaOH = metal (Na) + OH → hidróxido. HCl = H + no metal (Cl) → ácido. CaO = metal (Ca) + O → óxido básico. NaCl = metal + no metal, sin H ni OH → sal.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "NaOH: ácido; HCl: ácido; CaO: óxido básico; NaCl: sal.",
+        "correcta": false,
+        "explicacion": "No responde. El NaOH contiene hidrógeno, pero dentro del grupo OH unido a un metal: es un hidróxido (una base fuerte), no un ácido.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que cualquier compuesto con H en la fórmula es un ácido."
+      }
+    ],
+    "explicacion": "LEER: cuatro fórmulas (NaOH, HCl, CaO, NaCl) y las reglas de clasificación. COMPRENDER: hay que asignar cada fórmula a una función química. INTERPRETAR: identificar en cada fórmula si hay metal, no metal, O u OH. REPRESENTAR: NaOH = metal + OH; HCl = H + no metal; CaO = metal + O; NaCl = metal + no metal. RAZONAR: aplicando las reglas se obtiene hidróxido, ácido, óxido básico y sal. B confunde el H del OH con acidez, C clasifica por el cloro y D olvida que el Ca es metal. RESOLVER: la respuesta es A. VERIFICAR: al mezclar NaOH con HCl se obtiene NaCl + H₂O, es decir, base + ácido → sal + agua, coherente con la clasificación.",
+    "que_identificar": "Qué elementos o grupos (metal, no metal, O, OH, H) aparecen en cada fórmula.",
+    "que_revisar": "Funciones químicas inorgánicas: óxidos básicos y ácidos, hidróxidos, ácidos, sales; metales y no metales.",
+    "refuerzo_ids": ["CIE-016", "CIE-032"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["nomenclatura", "funciones quimicas", "productos del hogar", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-084",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el balanceo de una ecuación química a partir de la conservación del número de átomos de cada elemento",
+    "habilidad": "representar",
+    "tema": "Reacciones químicas: balanceo",
+    "subtema": "Combustión del propano (gas de cilindro) y conservación de los átomos",
+    "dificultad": 2,
+    "contexto": "En muchas zonas rurales de Colombia se cocina con gas propano de cilindro. Su combustión completa se representa con la ecuación:\n\n**C₃H₈ + __ O₂ → 3 CO₂ + 4 H₂O**\n\nUna ecuación está balanceada cuando hay el mismo número de átomos de cada elemento a ambos lados, porque en una reacción los átomos no se crean ni se destruyen, solo se reorganizan.",
+    "estimulo": null,
+    "enunciado": "¿Qué coeficiente debe ir antes del O₂ para que la ecuación cumpla la conservación de la masa?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "10, porque en los productos hay 10 átomos de oxígeno.",
+        "correcta": false,
+        "explicacion": "No responde. Hay 10 átomos de oxígeno, pero el coeficiente cuenta moléculas de O₂, y cada una tiene 2 átomos. Con 10 O₂ habría 20 átomos de oxígeno en los reactivos y solo 10 en los productos.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió el número de átomos con el número de moléculas diatómicas."
+      },
+      {
+        "clave": "B",
+        "texto": "7, porque se necesitan 6 oxígenos para el CO₂ y 1 para el agua.",
+        "correcta": false,
+        "explicacion": "No responde. Contó el oxígeno del agua una sola vez, pero hay 4 moléculas de H₂O, cada una con un oxígeno. Además, 7 no tiene en cuenta que cada O₂ aporta 2 átomos.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "No multiplicó el subíndice por el coeficiente al contar los átomos del agua."
+      },
+      {
+        "clave": "C",
+        "texto": "No hace falta coeficiente; basta con cambiar la fórmula del oxígeno por O₁₀.",
+        "correcta": false,
+        "explicacion": "No responde. Cambiar un subíndice cambia la sustancia: O₁₀ no es el oxígeno del aire. Para balancear solo se ajustan los coeficientes (número de moléculas), nunca los subíndices.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que balancear consiste en modificar las fórmulas para que coincidan los átomos."
+      },
+      {
+        "clave": "D",
+        "texto": "5, porque en los productos hay 10 átomos de oxígeno (6 en el CO₂ y 4 en el H₂O) y cada molécula de O₂ aporta 2.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Productos: 3 CO₂ tienen 3 × 2 = 6 átomos de O y 4 H₂O tienen 4 × 1 = 4; en total 10. Como cada O₂ tiene 2 átomos, se necesitan 10 ÷ 2 = 5 moléculas de O₂.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: C₃H₈ + __ O₂ → 3 CO₂ + 4 H₂O. COMPRENDER: se pide el coeficiente del O₂ que iguala los átomos. INTERPRETAR: C (3 = 3) e H (8 = 4 × 2) ya están balanceados; falta el O. REPRESENTAR: O en productos = 3 × 2 + 4 × 1 = 10. RAZONAR: cada O₂ aporta 2 átomos → 10 ÷ 2 = 5. B confunde átomos con moléculas, C cuenta mal el agua, D cambia la sustancia. RESOLVER: la respuesta es A (5 O₂). VERIFICAR: reactivos: 3 C, 8 H, 10 O; productos: 3 C, 8 H, 10 O. La masa se conserva: 44 g de propano + 160 g de O₂ = 132 g de CO₂ + 72 g de H₂O = 204 g.",
+    "que_identificar": "Los coeficientes y subíndices de los productos y que el O₂ tiene 2 átomos por molécula.",
+    "que_revisar": "Balanceo por tanteo; diferencia entre coeficiente y subíndice; ley de conservación de la masa.",
+    "refuerzo_ids": ["CIE-019", "CIE-085"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["reacciones quimicas", "balanceo", "combustion", "conservacion de la masa", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-085",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela la relación entre las masas de reactivos y productos de una reacción usando la ecuación balanceada y las masas molares",
+    "habilidad": "resolver",
+    "tema": "Estequiometría",
+    "subtema": "Masa de cal viva obtenida al descomponer piedra caliza",
+    "dificultad": 2,
+    "contexto": "En los hornos de cal de Nobsa (Boyacá) la piedra caliza (carbonato de calcio, CaCO₃) se calienta a alta temperatura y se descompone en cal viva (CaO) y dióxido de carbono (CO₂):\n\n**CaCO₃ → CaO + CO₂**\n\nMasas atómicas aproximadas: Ca = 40; C = 12; O = 16 (g/mol). Por tanto, las masas molares son CaCO₃ = 100 g/mol, CaO = 56 g/mol y CO₂ = 44 g/mol.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masas molares de las sustancias de la reacción",
+      "columnas": ["Sustancia", "Fórmula", "Masa molar (g/mol)"],
+      "filas": [["Carbonato de calcio (caliza)", "CaCO₃", 100], ["Óxido de calcio (cal viva)", "CaO", 56], ["Dióxido de carbono", "CO₂", 44]],
+      "nota": "Se supone caliza pura y descomposición completa."
+    },
+    "enunciado": "Si en una hornada se descomponen por completo 500 kg de caliza pura, ¿cuánta cal viva se obtiene?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "56 kg, porque la masa molar del CaO es 56 g/mol.",
+        "correcta": false,
+        "explicacion": "No responde. 56 g es la masa de CaO que sale de 100 g de caliza; para 500 kg hay que escalar la proporción (× 5 000 en gramos, o × 5 si se piensa en cientos de kilogramos).",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó la masa molar como respuesta sin aplicar la proporción a la cantidad dada."
+      },
+      {
+        "clave": "B",
+        "texto": "280 kg, porque cada 100 g de CaCO₃ producen 56 g de CaO; 500 kg son 5 veces 100 kg, así que se obtienen 5 × 56 = 280 kg.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La ecuación indica 1 mol de CaCO₃ (100 g) → 1 mol de CaO (56 g). La proporción de masas 56/100 = 0,56 se mantiene a cualquier escala: 500 kg × 0,56 = 280 kg.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "500 kg, porque la masa se conserva en toda reacción química.",
+        "correcta": false,
+        "explicacion": "No responde. La masa se conserva, pero repartida entre TODOS los productos: 500 kg = 280 kg de CaO + 220 kg de CO₂. El CO₂ es un gas que sale del horno, así que la cal pesa menos que la caliza.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la conservación de la masa a un solo producto, olvidando el gas que se libera."
+      },
+      {
+        "clave": "D",
+        "texto": "220 kg, porque 500 × 44 ÷ 100 = 220.",
+        "correcta": false,
+        "explicacion": "No responde. 220 kg es la masa de CO₂ que se libera, no la de cal viva. Usó la masa molar del producto equivocado.",
+        "tipo_error": "descuido",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó de la tabla la masa molar del CO₂ en lugar de la del CaO."
+      }
+    ],
+    "explicacion": "LEER: CaCO₃ → CaO + CO₂, masas molares 100, 56 y 44 g/mol, y 500 kg de caliza. COMPRENDER: se pide la masa de CaO. INTERPRETAR: la ecuación dice 1 mol de CaCO₃ da 1 mol de CaO. REPRESENTAR: 100 g CaCO₃ → 56 g CaO; por regla de tres, 500 kg → x. RAZONAR: x = 500 × 56 ÷ 100. B olvida el CO₂, C usa el producto equivocado, D no escala. RESOLVER: x = 280 kg; la respuesta es A. VERIFICAR: CO₂ = 500 × 44 ÷ 100 = 220 kg, y 280 + 220 = 500 kg: la masa total se conserva.",
+    "que_identificar": "La relación 1 : 1 entre moles de CaCO₃ y CaO y las masas molares de la tabla.",
+    "que_revisar": "Proporciones estequiométricas masa-masa; regla de tres; conservación de la masa con productos gaseosos.",
+    "refuerzo_ids": ["CIE-084", "CIE-019"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["estequiometria", "masa molar", "descomposicion", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-086",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones sobre el reactivo límite de una reacción a partir de los resultados de un experimento, sin ir más allá de lo que muestran los datos",
+    "habilidad": "razonar",
+    "tema": "Estequiometría: reactivo límite",
+    "subtema": "Magnesio y ácido clorhídrico: volumen de hidrógeno recogido en globos",
+    "dificultad": 3,
+    "contexto": "En cinco frascos se colocan **50 mL de la misma solución de ácido clorhídrico** (HCl). En cada frasco se agrega una masa distinta de cinta de magnesio (Mg) e inmediatamente se tapa con un globo, que recoge el hidrógeno producido:\n\n**Mg + 2 HCl → MgCl₂ + H₂**\n\nCuando la reacción termina se mide el volumen de gas en cada globo (los globos pueden contener hasta 2 000 mL sin reventar). En los frascos con 0,8 g y 1,0 g quedó **magnesio sin reaccionar** en el fondo; en los demás el magnesio desapareció por completo.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Volumen de hidrógeno obtenido según la masa de magnesio",
+      "eje_x": "Masa de magnesio agregada (g)",
+      "eje_y": "Volumen de H₂ (mL)",
+      "series": [
+        { "nombre": "Volumen de H₂", "valores": [["0,2", 200], ["0,4", 400], ["0,6", 600], ["0,8", 600], ["1,0", 600]] }
+      ]
+    },
+    "enunciado": "¿Qué conclusión está respaldada por los resultados del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "El magnesio es el reactivo límite en todos los frascos, porque siempre se agregó en menor masa que la solución de ácido.",
+        "correcta": false,
+        "explicacion": "No responde. El reactivo límite no se decide comparando masas, sino viendo cuál se agota. En los frascos de 0,8 g y 1,0 g sobró magnesio, así que allí el que se agotó fue el ácido.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que el reactivo límite es siempre el que está en menor masa."
+      },
+      {
+        "clave": "B",
+        "texto": "Si se agregan 1,2 g de magnesio se obtendrán 1 200 mL de hidrógeno, porque el volumen es proporcional a la masa de magnesio.",
+        "correcta": false,
+        "explicacion": "No responde. La proporcionalidad solo se cumple en los tres primeros frascos. Desde 0,6 g la gráfica es plana: con la misma cantidad de ácido, 1,2 g de Mg seguirían produciendo unos 600 mL.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Extrapoló la parte creciente de la gráfica sin ver que después se vuelve horizontal."
+      },
+      {
+        "clave": "C",
+        "texto": "A partir de cierta masa de magnesio (alrededor de 0,6 g) el ácido se agota: en los frascos de 0,8 g y 1,0 g el HCl es el reactivo límite, por eso el volumen deja de aumentar y sobra magnesio.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Mientras el Mg se consume por completo, el volumen crece en proporción a su masa (200, 400, 600 mL). Después, aunque se agregue más Mg, el volumen se queda en 600 mL y queda Mg sin reaccionar: ya no hay ácido para reaccionar con él. El reactivo que se acaba primero (HCl) limita la cantidad de producto.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "El volumen deja de aumentar porque los globos alcanzaron su capacidad máxima.",
+        "correcta": false,
+        "explicacion": "No responde. Los globos resisten hasta 2 000 mL y el volumen máximo fue 600 mL. Además, esta explicación no da cuenta del magnesio que sobró en el fondo de los frascos.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No usó la información del contexto sobre la capacidad de los globos y el magnesio sobrante."
+      }
+    ],
+    "explicacion": "LEER: igual cantidad de ácido en todos los frascos, masas de Mg de 0,2 a 1,0 g, volúmenes de H₂ y el dato de Mg sobrante en los frascos de 0,8 y 1,0 g. COMPRENDER: se pide la conclusión apoyada por los datos. INTERPRETAR: la gráfica sube de forma proporcional hasta 0,6 g y luego se vuelve horizontal en 600 mL. REPRESENTAR: tramo 1 → el Mg se consume todo (limita el Mg); tramo 2 → sobra Mg (limita el HCl). RAZONAR: si sobra un reactivo y el producto ya no aumenta, el otro reactivo se agotó. B contradice la capacidad de los globos, C compara masas en vez de ver qué se agota y D extrapola sin ver la meseta. RESOLVER: la respuesta es A. VERIFICAR: con Mg = 24 g/mol, 0,6 g son 0,025 mol, que producen 0,025 mol de H₂ (≈ 600 mL a temperatura ambiente); más Mg no aumenta el gas porque el ácido ya reaccionó todo.",
+    "que_identificar": "El cambio de la gráfica de creciente a horizontal y la observación de magnesio sin reaccionar en los dos últimos frascos.",
+    "que_revisar": "Reactivo límite y reactivo en exceso; lectura de gráficas con meseta; conclusiones sin extrapolar.",
+    "refuerzo_ids": ["CIE-085", "CIE-009"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["reactivo limite", "estequiometria", "experimento", "grafica de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-087",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Identifica en una tabla de datos la relación inversa entre la presión y el volumen de un gas a temperatura constante y la usa para predecir un nuevo valor",
+    "habilidad": "interpretar",
+    "tema": "Gases",
+    "subtema": "Ley de Boyle: presión y volumen del aire en una jeringa tapada",
+    "dificultad": 1,
+    "contexto": "Un grupo de estudiantes tapa la punta de una jeringa que contiene aire y empuja el émbolo con distintas fuerzas, manteniendo la temperatura constante. Con un manómetro miden la presión del aire encerrado y registran su volumen.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Presión y volumen del aire encerrado (temperatura constante)",
+      "columnas": ["Presión (atm)", "Volumen (mL)"],
+      "filas": [["1,0", 60], ["1,5", 40], ["2,0", 30], ["3,0", 20]],
+      "nota": "La cantidad de aire dentro de la jeringa no cambia durante el experimento."
+    },
+    "enunciado": "Si el patrón de los datos se mantiene, ¿qué volumen tendría el aire a una presión de 6,0 atm?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "60 mL, porque la cantidad de aire no cambia y entonces el volumen tampoco.",
+        "correcta": false,
+        "explicacion": "No responde. Que la cantidad de aire no cambie no significa que su volumen sea fijo: la tabla muestra que el mismo aire ocupa menos volumen cuando aumenta la presión.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la cantidad de gas con el volumen que ocupa."
+      },
+      {
+        "clave": "B",
+        "texto": "0 mL, porque el volumen disminuye 10 mL por cada atmósfera que aumenta la presión.",
+        "correcta": false,
+        "explicacion": "No responde. Tomó solo las dos últimas filas (de 2,0 a 3,0 atm bajó 10 mL) y supuso una disminución constante. Entre 1,0 y 1,5 atm bajó 20 mL en media atmósfera: la relación no es lineal sino inversa, y el volumen nunca llega a cero.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó el cambio entre dos filas sin revisar todas las demás."
+      },
+      {
+        "clave": "C",
+        "texto": "40 mL, porque al duplicar la presión de 3,0 a 6,0 atm el volumen se duplica de 20 a 40 mL.",
+        "correcta": false,
+        "explicacion": "No responde. En la tabla, al duplicar la presión (de 1,0 a 2,0 atm) el volumen se reduce a la mitad (de 60 a 30 mL), no se duplica. Al pasar de 3,0 a 6,0 atm el volumen pasa de 20 a 10 mL.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Supuso una relación directa entre presión y volumen."
+      },
+      {
+        "clave": "D",
+        "texto": "10 mL, porque en todos los ensayos presión × volumen = 60, así que 60 ÷ 6,0 = 10 mL.",
+        "correcta": true,
+        "explicacion": "Es la correcta. 1,0 × 60 = 1,5 × 40 = 2,0 × 30 = 3,0 × 20 = 60. Presión y volumen son inversamente proporcionales (ley de Boyle): a 6,0 atm, V = 60 ÷ 6,0 = 10 mL.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la tabla da cuatro pares presión-volumen a temperatura constante. COMPRENDER: se pide predecir el volumen a 6,0 atm. INTERPRETAR: al aumentar la presión el volumen disminuye. REPRESENTAR: P × V = 60 en todas las filas → V = 60 ÷ P. RAZONAR: es una relación inversa; al duplicar P, V se reduce a la mitad. B niega el cambio, C supone una disminución lineal y D una relación directa. RESOLVER: V = 60 ÷ 6,0 = 10 mL; la respuesta es A. VERIFICAR: de 3,0 a 6,0 atm la presión se duplica y el volumen pasa de 20 a 10 mL (mitad), igual que ocurrió de 1,0 a 2,0 atm (60 → 30 mL).",
+    "que_identificar": "Que el producto presión × volumen es el mismo en todas las filas.",
+    "que_revisar": "Ley de Boyle; relaciones inversamente proporcionales; buscar el patrón con todos los datos.",
+    "refuerzo_ids": ["CIE-095", "CIE-096"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["gases", "ley de boyle", "tabla", "prediccion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-088",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Calcula la concentración molar de una solución a partir de la masa de soluto, su masa molar y el volumen de solución",
+    "habilidad": "resolver",
+    "tema": "Soluciones y concentración",
+    "subtema": "Molaridad de una solución de hidróxido de sodio",
+    "dificultad": 2,
+    "contexto": "Para una práctica de neutralización, el auxiliar de laboratorio disuelve **8,0 g de hidróxido de sodio** (NaOH) en agua y completa con agua hasta obtener **250 mL de solución**. La masa molar del NaOH es 40 g/mol.\n\nRecuerde: molaridad (M) = moles de soluto ÷ litros de solución; 1 L = 1 000 mL.",
+    "estimulo": null,
+    "enunciado": "¿Cuál es la concentración molar de la solución preparada?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0,8 mol/L, porque 8,0 g son 0,2 mol de NaOH y 0,2 mol ÷ 0,250 L = 0,8 mol/L.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Moles = 8,0 g ÷ 40 g/mol = 0,2 mol. Volumen = 250 mL = 0,250 L. M = 0,2 ÷ 0,250 = 0,8 mol/L.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "0,2 mol/L, porque 8,0 g ÷ 40 g/mol = 0,2.",
+        "correcta": false,
+        "explicacion": "No responde. 0,2 son los moles de NaOH, no la concentración. Falta dividir entre el volumen de la solución en litros (0,250 L).",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se detuvo en el cálculo de moles y no dividió entre el volumen."
+      },
+      {
+        "clave": "C",
+        "texto": "32 mol/L, porque 8,0 ÷ 0,250 = 32.",
+        "correcta": false,
+        "explicacion": "No responde. Dividió la masa en gramos entre el volumen: 32 g/L es una concentración en masa, no molar. Para la molaridad hay que convertir primero los gramos a moles.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No convirtió la masa de soluto a moles antes de dividir."
+      },
+      {
+        "clave": "D",
+        "texto": "0,0008 mol/L, porque 0,2 ÷ 250 = 0,0008.",
+        "correcta": false,
+        "explicacion": "No responde. Dividió los moles entre 250 mL sin convertir a litros. La molaridad exige el volumen en litros: 0,2 ÷ 0,250 = 0,8 mol/L.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó el volumen en mililitros en una fórmula que exige litros."
+      }
+    ],
+    "explicacion": "LEER: 8,0 g de NaOH, masa molar 40 g/mol, 250 mL de solución. COMPRENDER: se pide la molaridad. INTERPRETAR: M = moles ÷ litros; hay que convertir gramos a moles y mL a L. REPRESENTAR: n = 8,0 ÷ 40; V = 250 ÷ 1 000. RAZONAR: B no divide entre el volumen, C no convierte a moles y D no convierte a litros. RESOLVER: n = 0,2 mol; V = 0,250 L; M = 0,8 mol/L; la respuesta es A. VERIFICAR: en 1 L habría 4 veces más solución y 4 × 0,2 = 0,8 mol de NaOH, coherente con 0,8 mol/L.",
+    "que_identificar": "La masa de soluto, su masa molar y el volumen total de solución en litros.",
+    "que_revisar": "Molaridad; conversión masa → moles; conversión mL → L; diferencia entre g/L y mol/L.",
+    "refuerzo_ids": ["CIE-033", "CIE-091"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["soluciones", "molaridad", "calculo", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-089",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Deriva conclusiones para algunos fenómenos de la naturaleza basándose en conocimientos científicos y en la evidencia de su propia investigación y de la de otros",
+    "evidencia": "Elabora conclusiones sobre la cristalización de dos sales a partir de sus curvas de solubilidad y de los resultados de un enfriamiento",
+    "habilidad": "razonar",
+    "tema": "Soluciones: solubilidad",
+    "subtema": "Curvas de solubilidad del nitrato de potasio y del cloruro de sodio; cristalización por enfriamiento",
+    "dificultad": 3,
+    "contexto": "Unos estudiantes preparan dos soluciones **saturadas a 60 °C**, cada una con 100 g de agua: una de nitrato de potasio (KNO₃, usado como fertilizante) y otra de cloruro de sodio (NaCl, sal de cocina). Luego enfrían ambas hasta **20 °C** y recogen los cristales que se forman. La gráfica muestra la masa máxima de cada sal que se disuelve en 100 g de agua a cada temperatura.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Solubilidad en agua según la temperatura",
+      "eje_x": "Temperatura (°C)",
+      "eje_y": "Solubilidad (g de sal / 100 g de agua)",
+      "series": [
+        { "nombre": "Nitrato de potasio (KNO₃)", "valores": [["0", 13], ["20", 32], ["40", 64], ["60", 110], ["80", 169]] },
+        { "nombre": "Cloruro de sodio (NaCl)", "valores": [["0", 36], ["20", 36], ["40", 36], ["60", 37], ["80", 38]] }
+      ]
+    },
+    "enunciado": "¿Qué conclusión se puede derivar de la gráfica y del experimento?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Del NaCl se forman más cristales que del KNO₃, porque a 20 °C el NaCl es más soluble (36 g frente a 32 g).",
+        "correcta": false,
+        "explicacion": "No responde. Una mayor solubilidad a 20 °C significa que queda MÁS sal disuelta, no más cristales. Lo que determina los cristales es cuánto cae la solubilidad al enfriar: 78 g para el KNO₃ y 1 g para el NaCl.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió la relación entre solubilidad y cantidad que cristaliza."
+      },
+      {
+        "clave": "B",
+        "texto": "Al enfriar, del KNO₃ se forman unos 78 g de cristales (110 − 32) y del NaCl apenas 1 g (37 − 36); el enfriamiento sirve para recuperar KNO₃, pero no NaCl.",
+        "correcta": true,
+        "explicacion": "Es la correcta. A 60 °C hay 110 g de KNO₃ disueltos y a 20 °C solo caben 32 g: se separan 110 − 32 = 78 g. La solubilidad del NaCl casi no cambia con la temperatura (37 g → 36 g), así que al enfriar solo cristaliza ≈ 1 g. Por eso la sal de cocina se obtiene evaporando el agua (como en las salinas), no enfriando.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Ambas soluciones forman la misma cantidad de cristales, porque las dos estaban saturadas.",
+        "correcta": false,
+        "explicacion": "No responde. Estar saturadas a 60 °C solo significa que cada una tenía disuelto el máximo posible a esa temperatura. La cantidad que cristaliza depende de cuánto disminuye la solubilidad al enfriar, y eso es muy distinto para cada sal.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que \"saturada\" implica el mismo comportamiento para cualquier sustancia."
+      },
+      {
+        "clave": "D",
+        "texto": "Del KNO₃ se forman 32 g de cristales, porque ese es el valor de la gráfica a 20 °C.",
+        "correcta": false,
+        "explicacion": "No responde. 32 g es lo que queda DISUELTO a 20 °C, no lo que cristaliza. Los cristales son la diferencia entre lo disuelto a 60 °C (110 g) y lo que puede seguir disuelto a 20 °C (32 g): 78 g.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el valor de solubilidad como masa de cristales sin restar."
+      }
+    ],
+    "explicacion": "LEER: dos soluciones saturadas a 60 °C en 100 g de agua que se enfrían a 20 °C; curvas de solubilidad de KNO₃ y NaCl. COMPRENDER: se pide la conclusión sobre la cristalización. INTERPRETAR: la curva del KNO₃ cae mucho entre 60 y 20 °C; la del NaCl es casi horizontal. REPRESENTAR: cristales = solubilidad a 60 °C − solubilidad a 20 °C → KNO₃: 110 − 32 = 78 g; NaCl: 37 − 36 = 1 g. RAZONAR: la cantidad que cristaliza depende del cambio de solubilidad. B supone igualdad, C lee sin restar y D invierte la relación. RESOLVER: la respuesta es A. VERIFICAR: 78 g + 32 g que siguen disueltos = 110 g iniciales; la cuenta cierra.",
+    "que_identificar": "La solubilidad de cada sal a 60 °C y a 20 °C y el hecho de que ambas soluciones estaban saturadas a 60 °C.",
+    "que_revisar": "Solubilidad y curvas de solubilidad; soluciones saturadas; cristalización por enfriamiento y por evaporación.",
+    "refuerzo_ids": ["CIE-023", "CIE-088"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["soluciones", "solubilidad", "cristalizacion", "grafica de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-090",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "quimica",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta el color de un indicador ácido-base para clasificar sustancias según su pH y seleccionar cuál puede neutralizar a otra",
+    "habilidad": "interpretar",
+    "tema": "Ácidos y bases",
+    "subtema": "Indicador de repollo morado y selección de una base para neutralizar un ácido",
+    "dificultad": 1,
+    "contexto": "En el laboratorio se prepara un indicador casero con el jugo de repollo morado. Se agregan unas gotas a cuatro muestras y se observan estos colores:\n\n- Muestra 1 (vinagre): **rojo**\n- Muestra 2 (champú): **violeta**\n- Muestra 3 (limpiador de vidrios con amoníaco): **verde**\n- Muestra 4 (agua de la llave): **azul**\n\nDurante la práctica se derrama un poco de vinagre sobre el mesón y se quiere neutralizar.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Color del indicador de repollo morado según el pH",
+      "columnas": ["pH", "Color", "Tipo de sustancia"],
+      "filas": [["0 a 3", "Rojo", "Ácida"], ["4 a 6", "Violeta", "Ligeramente ácida"], ["7 a 8", "Azul", "Neutra o ligeramente básica"], ["9 a 11", "Verde", "Básica"], ["12 a 14", "Amarillo", "Muy básica"]],
+      "nota": "Tabla simplificada para uso escolar."
+    },
+    "enunciado": "¿Cuál muestra es la más adecuada para neutralizar el vinagre derramado y por qué?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La muestra 4, porque al agregar agua el vinagre deja de ser ácido.",
+        "correcta": false,
+        "explicacion": "No responde. El agua diluye el vinagre (su pH sube un poco), pero no elimina el ácido; para neutralizarlo se necesita una base que reaccione con él.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde diluir con neutralizar."
+      },
+      {
+        "clave": "B",
+        "texto": "La muestra 3, porque el color verde indica que es ácida y los ácidos se neutralizan entre sí.",
+        "correcta": false,
+        "explicacion": "No responde. Elige la muestra correcta pero con una razón equivocada: el verde indica una sustancia básica (pH 9 a 11), y la neutralización ocurre entre un ácido y una base, no entre dos ácidos.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Acertó la muestra sin entender qué significa el color ni qué es una neutralización."
+      },
+      {
+        "clave": "C",
+        "texto": "La muestra 3, porque el color verde indica un pH entre 9 y 11: es una base y puede reaccionar con el ácido del vinagre.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El vinagre (rojo, pH 0 a 3) es ácido. Para neutralizar un ácido se necesita una base; la única muestra básica es la 3 (verde, pH 9 a 11).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "La muestra 2, porque el color violeta indica que es neutra.",
+        "correcta": false,
+        "explicacion": "No responde. Según la tabla, el violeta corresponde a pH 4 a 6, es decir, ligeramente ácido. Una sustancia ácida no neutraliza a otra ácida.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció el violeta con neutralidad sin verificarlo en la tabla."
+      }
+    ],
+    "explicacion": "LEER: colores de cuatro muestras y tabla color-pH del indicador. COMPRENDER: se busca la muestra que neutraliza el vinagre y la razón. INTERPRETAR: rojo → pH 0-3 (ácido); violeta → 4-6 (ligeramente ácido); verde → 9-11 (básico); azul → 7-8 (neutro). REPRESENTAR: vinagre = ácido; se necesita una base. RAZONAR: solo la muestra 3 es básica. B lee mal el violeta, C confunde diluir con neutralizar y D da una razón falsa. RESOLVER: la respuesta es A. VERIFICAR: si se agrega el limpiador poco a poco al vinagre con indicador, el color pasaría de rojo hacia violeta y azul, señal de que el pH sube hacia la neutralidad.",
+    "que_identificar": "El color de cada muestra y el intervalo de pH que le corresponde en la tabla.",
+    "que_revisar": "Escala de pH; indicadores ácido-base; neutralización ácido + base; diferencia entre diluir y neutralizar.",
+    "refuerzo_ids": ["CIE-016", "CIE-091"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["acidos y bases", "ph", "indicadores", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-091",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Modela fenómenos de la naturaleza basándose en el análisis de variables, la relación entre dos o más conceptos del conocimiento científico y de la evidencia derivada de investigaciones científicas",
+    "evidencia": "Modela una reacción de neutralización a partir de una curva de titulación para calcular la concentración de un ácido",
+    "habilidad": "resolver",
+    "tema": "Ácidos y bases: neutralización",
+    "subtema": "Curva de titulación de ácido clorhídrico con hidróxido de sodio y punto de equivalencia",
+    "dificultad": 3,
+    "contexto": "Para conocer la concentración de un ácido clorhídrico (HCl), se colocan **10 mL** del ácido en un vaso y se le agrega poco a poco una solución de hidróxido de sodio (NaOH) de **0,10 mol/L**, midiendo el pH después de cada adición. La reacción es:\n\n**HCl + NaOH → NaCl + H₂O** (1 mol de HCl reacciona con 1 mol de NaOH)\n\nEl punto de equivalencia (donde el ácido quedó exactamente neutralizado) corresponde al salto brusco del pH hasta 7.\n\nRecuerde: moles = concentración (mol/L) × volumen (L).",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Curva de titulación del HCl con NaOH 0,10 mol/L",
+      "eje_x": "Volumen de NaOH agregado (mL)",
+      "eje_y": "pH",
+      "series": [
+        { "nombre": "pH de la mezcla", "valores": [["0", 0.7], ["5", 1], ["10", 1.3], ["15", 1.7], ["18", 2.2], ["20", 7], ["22", 11.8], ["25", 12.2], ["30", 12.4]] }
+      ]
+    },
+    "enunciado": "¿Cuál es la concentración del ácido clorhídrico analizado?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "0,10 mol/L, porque en la neutralización el ácido y la base deben tener la misma concentración.",
+        "correcta": false,
+        "explicacion": "No responde. En la neutralización se igualan los MOLES, no las concentraciones. Como se gastó el doble de volumen de base (20 mL) que de ácido (10 mL), el ácido es el doble de concentrado que la base.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que en el punto de equivalencia las concentraciones son iguales."
+      },
+      {
+        "clave": "B",
+        "texto": "0,05 mol/L, porque 0,10 × 10 ÷ 20 = 0,05.",
+        "correcta": false,
+        "explicacion": "No responde. Invirtió los volúmenes: usó 10 mL para la base y 20 mL para el ácido. La base gastada fue 20 mL y el ácido medido 10 mL: 0,10 × 20 ÷ 10 = 0,20 mol/L.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Intercambió los volúmenes de ácido y base en la relación C₁V₁ = C₂V₂."
+      },
+      {
+        "clave": "C",
+        "texto": "0,70 mol/L, porque el pH inicial del ácido es 0,7.",
+        "correcta": false,
+        "explicacion": "No responde. El valor del eje vertical es el pH, no la concentración. De hecho, pH 0,7 corresponde a una concentración de H⁺ de 10^(−0,7) ≈ 0,20 mol/L, coherente con la respuesta correcta.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el pH inicial como si fuera la concentración del ácido."
+      },
+      {
+        "clave": "D",
+        "texto": "0,20 mol/L, porque se necesitaron 20 mL de NaOH 0,10 mol/L (0,002 mol) para neutralizar los 10 mL de ácido: 0,002 mol ÷ 0,010 L = 0,20 mol/L.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El salto a pH 7 ocurre con 20 mL de NaOH. Moles de NaOH = 0,10 × 0,020 = 0,002 mol = moles de HCl (relación 1 : 1). Concentración del HCl = 0,002 ÷ 0,010 = 0,20 mol/L.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: 10 mL de HCl, NaOH 0,10 mol/L, relación 1 : 1 y curva de pH contra volumen de NaOH. COMPRENDER: se pide la concentración del HCl. INTERPRETAR: el salto a pH 7 ocurre en 20 mL: ese es el punto de equivalencia. REPRESENTAR: n(NaOH) = 0,10 mol/L × 0,020 L = 0,002 mol = n(HCl); C(HCl) = n ÷ 0,010 L. RAZONAR: B iguala concentraciones, C invierte volúmenes y D confunde pH con concentración. RESOLVER: C = 0,002 ÷ 0,010 = 0,20 mol/L; la respuesta es A. VERIFICAR: un HCl 0,20 mol/L tiene pH = −log 0,20 ≈ 0,7, justo el pH inicial de la gráfica.",
+    "que_identificar": "El volumen de NaOH en el salto de pH (20 mL), la concentración de la base y el volumen de ácido (10 mL).",
+    "que_revisar": "Titulación y punto de equivalencia; moles = C × V; relación estequiométrica 1 : 1; C₁V₁ = C₂V₂.",
+    "refuerzo_ids": ["CIE-090", "CIE-088"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["acidos y bases", "neutralizacion", "titulacion", "grafica de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-092",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "quimica",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Selecciona los ensayos que permiten poner a prueba una predicción sobre la velocidad de una reacción, controlando las demás variables",
+    "habilidad": "razonar",
+    "tema": "Velocidad de reacción",
+    "subtema": "Efecto de la superficie de contacto: tableta efervescente entera o triturada",
+    "dificultad": 2,
+    "contexto": "Una estudiante predice: *\"Si la tableta efervescente se tritura, reacciona más rápido con el agua\"*. Revisa los resultados que obtuvo su grupo, en los que se midió el tiempo hasta que la tableta dejó de burbujear.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Tiempo de reacción de una tableta efervescente en agua",
+      "columnas": ["Ensayo", "Forma de la tableta", "Temperatura del agua (°C)", "Volumen de agua (mL)", "Tiempo hasta dejar de burbujear (s)"],
+      "filas": [["1", "Entera", 20, 200, 60], ["2", "Triturada", 20, 200, 25], ["3", "Entera", 40, 200, 35], ["4", "Triturada", 40, 100, 10]],
+      "nota": "En todos los ensayos se usó el mismo tipo de tableta."
+    },
+    "enunciado": "¿Qué par de ensayos permite evaluar la predicción de la estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Los ensayos 1 y 2, porque solo cambia la forma de la tableta y las demás condiciones son iguales.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Entre 1 y 2 la temperatura (20 °C) y el volumen (200 mL) son iguales; solo cambia la forma. La diferencia de tiempo (60 s frente a 25 s) se puede atribuir a la superficie de contacto, y apoya la predicción.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Los ensayos 1 y 4, porque muestran la mayor diferencia de tiempo.",
+        "correcta": false,
+        "explicacion": "No responde. Entre 1 y 4 cambian la forma, la temperatura y el volumen a la vez. Una diferencia grande no sirve si no se sabe cuál variable la produjo.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el contraste más llamativo sin revisar qué variables cambian."
+      },
+      {
+        "clave": "C",
+        "texto": "Los ensayos 1 y 3, porque en ambos la tableta está entera.",
+        "correcta": false,
+        "explicacion": "No responde. Entre 1 y 3 la forma es la misma y lo que cambia es la temperatura. Este par sirve para estudiar el efecto de la temperatura, no el de triturar.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No identificó cuál es la variable que la predicción quiere poner a prueba."
+      },
+      {
+        "clave": "D",
+        "texto": "Los ensayos 3 y 4, porque ambos se hicieron a 40 °C y solo cambia la forma.",
+        "correcta": false,
+        "explicacion": "No responde. Además de la forma, cambia el volumen de agua (200 mL frente a 100 mL). No se sabe si la reacción más rápida del ensayo 4 se debe a la trituración o al volumen.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Revisó la temperatura pero no las demás columnas de la tabla."
+      }
+    ],
+    "explicacion": "LEER: la predicción relaciona triturar la tableta con mayor rapidez; la tabla tiene cuatro ensayos con tres variables. COMPRENDER: se pide el par que pone a prueba solo el efecto de la forma. INTERPRETAR: variable independiente = forma; variables a controlar = temperatura y volumen. REPRESENTAR: 1-2 (cambia solo la forma); 1-3 (solo temperatura); 3-4 (forma y volumen); 1-4 (las tres). RAZONAR: una comparación válida cambia una sola variable. RESOLVER: la respuesta es A. VERIFICAR: en 1 y 2 el tiempo baja de 60 a 25 s; como la superficie de contacto es la única diferencia, los datos apoyan la predicción.",
+    "que_identificar": "Qué columnas cambian y cuáles se mantienen iguales entre cada par de ensayos.",
+    "que_revisar": "Control de variables; factores que afectan la velocidad de reacción (superficie de contacto, temperatura, concentración).",
+    "refuerzo_ids": ["CIE-011", "CIE-010"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["velocidad de reaccion", "control de variables", "experimento", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-093",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el efecto de un catalizador en la velocidad de una reacción y en la cantidad de producto a partir de resultados experimentales",
+    "habilidad": "interpretar",
+    "tema": "Velocidad de reacción: catalizadores",
+    "subtema": "Descomposición del agua oxigenada con y sin catalasa de la papa",
+    "dificultad": 2,
+    "contexto": "El agua oxigenada (H₂O₂) se descompone lentamente en agua y oxígeno: **2 H₂O₂ → 2 H₂O + O₂**. En dos frascos iguales, a 20 °C, se colocan 50 mL de la misma agua oxigenada. A uno se le agregan trozos de papa cruda, que contiene la enzima catalasa. Se mide el oxígeno liberado. Otras observaciones:\n\n- La temperatura de ambos frascos se mantuvo en 20 °C.\n- El frasco sin papa, al cabo de 24 horas, también llegó a 80 mL de oxígeno.\n- Los trozos de papa, lavados y puestos en agua oxigenada nueva, vuelven a producir el mismo efecto.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Oxígeno liberado por el agua oxigenada",
+      "eje_x": "Tiempo (min)",
+      "eje_y": "Volumen de O₂ (mL)",
+      "series": [
+        { "nombre": "Con papa cruda", "valores": [["0", 0], ["5", 50], ["10", 70], ["15", 77], ["20", 80], ["25", 80], ["30", 80]] },
+        { "nombre": "Sin papa", "valores": [["0", 0], ["5", 9], ["10", 18], ["15", 26], ["20", 34], ["25", 41], ["30", 48]] }
+      ]
+    },
+    "enunciado": "¿Qué explicación es coherente con todos los resultados?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "La catalasa de la papa acelera la descomposición del H₂O₂ sin cambiar la cantidad total de oxígeno que se forma, y no se consume en la reacción.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Con papa se llega a 80 mL en 20 minutos; sin papa se llega a los mismos 80 mL, pero en 24 horas. La papa cambia la rapidez, no la cantidad final (que depende del H₂O₂). Además, la papa se puede reutilizar: no es un reactivo. Esto es lo que hace un catalizador: disminuye la energía de activación.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "La papa aporta oxígeno adicional, y por eso en el frasco con papa se produce más gas.",
+        "correcta": false,
+        "explicacion": "No responde. Si la papa aportara oxígeno, el volumen final sería mayor que en el frasco sin papa; pero ambos llegan a 80 mL. La papa solo hace que se llegue antes.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Comparó los dos frascos en un mismo instante y concluyó que la papa produce más gas, sin usar el dato de las 24 horas."
+      },
+      {
+        "clave": "C",
+        "texto": "La papa calienta el agua oxigenada, y el aumento de temperatura acelera la reacción.",
+        "correcta": false,
+        "explicacion": "No responde. La temperatura aumenta la velocidad de reacción en general, pero el contexto dice que ambos frascos se mantuvieron a 20 °C. La diferencia no se puede atribuir a la temperatura.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó un factor conocido de la velocidad de reacción sin verificar que en el experimento se controló."
+      },
+      {
+        "clave": "D",
+        "texto": "La papa es un reactivo que se gasta al reaccionar con el H₂O₂.",
+        "correcta": false,
+        "explicacion": "No responde. Si la papa se gastara, no podría volver a producir el mismo efecto al reutilizarla. Un catalizador participa en la reacción pero se recupera al final.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No distingue entre catalizador y reactivo."
+      }
+    ],
+    "explicacion": "LEER: dos curvas de O₂ contra tiempo, con y sin papa, y tres observaciones adicionales. COMPRENDER: se pide la explicación compatible con TODOS los resultados. INTERPRETAR: la curva con papa sube rápido y se estabiliza en 80 mL; la otra sube lentamente y a las 24 h también llega a 80 mL. REPRESENTAR: misma cantidad final, distinta rapidez; temperatura igual; papa reutilizable. RAZONAR: esto corresponde a un catalizador. B contradice el volumen final igual, C contradice la temperatura constante y D contradice la reutilización. RESOLVER: la respuesta es A. VERIFICAR: cada observación del contexto es coherente con A y descarta una de las otras opciones.",
+    "que_identificar": "Que ambos frascos llegan al mismo volumen final, que la temperatura se mantuvo constante y que la papa puede reutilizarse.",
+    "que_revisar": "Catalizadores y enzimas; energía de activación; diferencia entre velocidad de reacción y cantidad de producto.",
+    "refuerzo_ids": ["CIE-005", "CIE-092"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["velocidad de reaccion", "catalizador", "enzimas", "grafica de lineas", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-094",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "quimica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica la solubilidad en agua de compuestos orgánicos a partir de sus grupos funcionales y de la polaridad de sus moléculas",
+    "habilidad": "razonar",
+    "tema": "Química orgánica: hidrocarburos y grupos funcionales",
+    "subtema": "Solubilidad del etanol y del hexano en agua según el grupo funcional",
+    "dificultad": 2,
+    "contexto": "En el laboratorio se mezclan distintos compuestos orgánicos con agua y se observa si forman una sola fase. El agua es una molécula polar que forma puentes de hidrógeno.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Compuestos orgánicos y su comportamiento en agua",
+      "columnas": ["Compuesto", "Fórmula", "Grupo funcional", "¿Se mezcla con el agua?"],
+      "filas": [["Hexano (componente de la gasolina)", "CH₃–CH₂–CH₂–CH₂–CH₂–CH₃", "Ninguno (alcano)", "No; forma dos capas"], ["Etanol (alcohol antiséptico)", "CH₃–CH₂–OH", "Hidroxilo (–OH), alcohol", "Sí, en cualquier proporción"], ["Ácido acético (vinagre)", "CH₃–COOH", "Carboxilo (–COOH), ácido carboxílico", "Sí, en cualquier proporción"]],
+      "nota": "Observaciones a temperatura ambiente."
+    },
+    "enunciado": "¿Por qué el etanol se mezcla con el agua y el hexano no, si ambos son compuestos del carbono?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque el etanol tiene el grupo –OH, que es polar y forma puentes de hidrógeno con el agua, mientras que el hexano solo tiene enlaces C–C y C–H y es apolar.",
+        "correcta": true,
+        "explicacion": "Es la correcta. \"Semejante disuelve a semejante\": el –OH del etanol hace que la molécula tenga una parte polar capaz de formar puentes de hidrógeno con el agua. El hexano, un hidrocarburo, es apolar y no interactúa con el agua. El ácido acético, que también tiene un grupo polar (–COOH), confirma el patrón.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Porque el etanol tiene menos átomos de carbono que el hexano, y las moléculas pequeñas siempre se disuelven en agua.",
+        "correcta": false,
+        "explicacion": "No responde. El tamaño influye, pero no es la razón principal: el metano (CH₄), con un solo carbono, casi no se disuelve en agua. Lo decisivo es la presencia de un grupo polar como el –OH.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó un factor secundario (tamaño de la cadena) como explicación completa."
+      },
+      {
+        "clave": "C",
+        "texto": "Porque el hexano es más denso que el agua y se va al fondo.",
+        "correcta": false,
+        "explicacion": "No responde. El hexano es menos denso que el agua (flota), y la densidad no explica por qué dos líquidos se mezclan o no; lo explica la polaridad.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde la separación en capas con una diferencia de densidad como causa."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el etanol es un compuesto iónico que se separa en iones al disolverse.",
+        "correcta": false,
+        "explicacion": "No responde. El etanol es un compuesto covalente; al disolverse no forma iones (por eso una mezcla de etanol y agua casi no conduce la electricidad). Se disuelve por su polaridad, no por disociarse.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cree que todo lo que se disuelve en agua lo hace formando iones, como la sal."
+      }
+    ],
+    "explicacion": "LEER: la tabla muestra tres compuestos orgánicos, su grupo funcional y si se mezclan con agua. COMPRENDER: se pide explicar la diferencia entre etanol y hexano. INTERPRETAR: los que se mezclan tienen un grupo funcional con oxígeno (–OH, –COOH); el que no se mezcla es un hidrocarburo sin grupo funcional. REPRESENTAR: grupo polar → interacción con el agua polar; cadena C–H → apolar. RAZONAR: \"semejante disuelve a semejante\". B da un factor secundario, C da un dato falso e irrelevante y D confunde covalente con iónico. RESOLVER: la respuesta es A. VERIFICAR: el ácido acético, también con grupo polar, se mezcla con agua, lo que apoya la explicación.",
+    "que_identificar": "El grupo funcional de cada compuesto y su relación con la columna \"¿se mezcla con el agua?\".",
+    "que_revisar": "Hidrocarburos; grupos funcionales (alcohol, ácido carboxílico); polaridad y solubilidad; puentes de hidrógeno.",
+    "refuerzo_ids": ["CIE-082", "CIE-034"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["quimica organica", "grupos funcionales", "solubilidad", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-095",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "fisica",
+    "afirmacion": "Observa y relaciona patrones en los datos para evaluar las predicciones",
+    "evidencia": "Contrasta una predicción sobre la dilatación de un gas con datos de volumen y temperatura, reconociendo la proporcionalidad con la temperatura absoluta",
+    "habilidad": "verificar",
+    "tema": "Gases y termodinámica",
+    "subtema": "Ley de Charles: el volumen es proporcional a la temperatura en kelvin, no en grados Celsius",
+    "dificultad": 3,
+    "contexto": "Una jeringa con aire, con el émbolo libre (presión constante), se sumerge en agua a distintas temperaturas. Un estudiante observa la gráfica y predice: *\"Si la temperatura se duplica de 30 °C a 60 °C, el volumen del aire se duplicará\"*.\n\nRecuerde: T (K) = T (°C) + 273.",
+    "estimulo": {
+      "tipo": "lineas",
+      "titulo": "Volumen del aire en la jeringa a presión constante",
+      "eje_x": "Temperatura (°C)",
+      "eje_y": "Volumen (mL)",
+      "series": [
+        { "nombre": "Volumen del aire", "valores": [["0", 91], ["30", 101], ["60", 111], ["90", 121]] }
+      ]
+    },
+    "enunciado": "¿Qué se puede afirmar sobre la predicción del estudiante?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Es incorrecta: el volumen pasa de 101 mL a 111 mL; el volumen es proporcional a la temperatura absoluta, y de 303 K a 333 K esta solo aumenta cerca de 10 %.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La gráfica muestra 101 mL a 30 °C y 111 mL a 60 °C, lejos de duplicarse. V/T(K) es constante: 101/303 = 111/333 ≈ 0,333 mL/K. Duplicar la temperatura en °C no duplica la temperatura absoluta (303 K → 333 K), que es la que determina el volumen.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Es correcta, porque según la ley de Charles el volumen y la temperatura son directamente proporcionales.",
+        "correcta": false,
+        "explicacion": "No responde. La proporcionalidad directa de la ley de Charles es con la temperatura en kelvin. Con grados Celsius no se cumple, y los datos lo muestran: 101 mL no se convierte en 202 mL.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la ley de Charles con la temperatura en grados Celsius."
+      },
+      {
+        "clave": "C",
+        "texto": "Es incorrecta, porque al calentar un gas su volumen disminuye.",
+        "correcta": false,
+        "explicacion": "No responde. La gráfica muestra lo contrario: el volumen aumenta con la temperatura (91, 101, 111, 121 mL). La predicción es incorrecta, pero por otra razón.",
+        "tipo_error": "lectura_grafico",
+        "diagnostico": "probable",
+        "razon_frecuente": "No leyó la tendencia creciente de la gráfica."
+      },
+      {
+        "clave": "D",
+        "texto": "Es correcta, porque el volumen aumenta cuando aumenta la temperatura.",
+        "correcta": false,
+        "explicacion": "No responde. Que el volumen aumente no significa que se duplique. La predicción es cuantitativa (\"se duplicará\") y los datos dan un aumento de 101 a 111 mL, apenas 10 %.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"aumenta\" con \"se duplica\": verificó la dirección del cambio pero no su tamaño."
+      }
+    ],
+    "explicacion": "LEER: datos de volumen a 0, 30, 60 y 90 °C y la predicción de duplicación. COMPRENDER: hay que contrastar la predicción con los datos. INTERPRETAR: el volumen sube 10 mL por cada 30 °C, pero a 0 °C no es cero, así que no es proporcional a la temperatura en °C. REPRESENTAR: 30 °C = 303 K → 101 mL; 60 °C = 333 K → 111 mL; 101/303 = 111/333 ≈ 0,333. RAZONAR: el volumen es proporcional a la temperatura absoluta; duplicar los °C no duplica los kelvin. B usa °C, C lee mal la gráfica y D confunde aumentar con duplicar. RESOLVER: la respuesta es A. VERIFICAR: para duplicar el volumen (202 mL) haría falta duplicar la temperatura absoluta: 606 K = 333 °C.",
+    "que_identificar": "Los volúmenes a 30 °C y a 60 °C y la conversión de las temperaturas a kelvin.",
+    "que_revisar": "Ley de Charles; escala de temperatura absoluta; diferencia entre relación lineal y proporcional.",
+    "refuerzo_ids": ["CIE-087", "CIE-096"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 180,
+    "etiquetas": ["gases", "ley de charles", "temperatura absoluta", "grafica de lineas", "prediccion", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-096",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "fisica",
+    "afirmacion": "Explica cómo ocurren algunos fenómenos de la naturaleza basándose en observaciones, en patrones y en conceptos propios del conocimiento científico",
+    "evidencia": "Explica el aumento de la presión de un gas encerrado al calentarse a partir del modelo cinético de las partículas",
+    "habilidad": "comprender",
+    "tema": "Gases: modelo cinético-molecular",
+    "subtema": "Aumento de la presión de un balón al calentarse al sol",
+    "dificultad": 1,
+    "contexto": "Un equipo de fútbol de Barranquilla infla sus balones temprano en la mañana, cuando hace fresco. Al mediodía, después de estar varias horas al sol sobre la cancha, los balones se sienten más duros. Nadie les agregó aire y no tienen fugas; su volumen casi no cambia.",
+    "estimulo": null,
+    "enunciado": "Según el modelo cinético de la materia, ¿por qué el balón se siente más duro al mediodía?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Porque con el calor las partículas se mueven más despacio y se acumulan contra las paredes del balón.",
+        "correcta": false,
+        "explicacion": "No responde. Al aumentar la temperatura las partículas se mueven más rápido, no más despacio. Es el aumento de rapidez el que eleva la presión.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invierte la relación entre temperatura y rapidez de las partículas."
+      },
+      {
+        "clave": "B",
+        "texto": "Porque al aumentar la temperatura las partículas del aire se mueven más rápido y chocan con más frecuencia y fuerza contra las paredes del balón, lo que aumenta la presión.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La temperatura es una medida de la energía cinética promedio de las partículas. Más temperatura → partículas más rápidas → choques más frecuentes y fuertes contra la pared → mayor presión, con la misma cantidad de aire y casi el mismo volumen.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Porque al calentarse las partículas del aire se dilatan, es decir, cada partícula se hace más grande.",
+        "correcta": false,
+        "explicacion": "No responde. Las partículas no cambian de tamaño al calentarse; lo que cambia es su rapidez. Esta es una idea muy común pero incorrecta del modelo de partículas.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye a cada partícula las propiedades del material en conjunto (dilatación)."
+      },
+      {
+        "clave": "D",
+        "texto": "Porque el calor hace entrar aire del exterior a través de los poros del balón.",
+        "correcta": false,
+        "explicacion": "No responde. El contexto dice que nadie agregó aire y que no hay fugas; la cantidad de aire es la misma. El cambio se debe al comportamiento de las partículas que ya estaban dentro.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No usó la información del contexto de que la cantidad de aire no cambió."
+      }
+    ],
+    "explicacion": "LEER: balón inflado en la mañana, más duro al mediodía tras estar al sol, sin agregar aire ni fugas. COMPRENDER: se pide una explicación con el modelo de partículas. INTERPRETAR: \"más duro\" = mayor presión interna; la variable que cambió fue la temperatura. REPRESENTAR: ↑T → ↑ rapidez de las partículas → ↑ choques contra la pared → ↑P. RAZONAR: B atribuye dilatación a las partículas, C contradice el contexto y D invierte la relación. RESOLVER: la respuesta es A. VERIFICAR: por la misma razón las llantas de los carros marcan más presión después de un viaje largo, cuando están calientes.",
+    "que_identificar": "Que la cantidad de aire y el volumen se mantienen y solo cambia la temperatura.",
+    "que_revisar": "Modelo cinético-molecular; relación temperatura-energía cinética; presión como resultado de los choques de partículas.",
+    "refuerzo_ids": ["CIE-087", "CIE-095"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["gases", "modelo cinetico", "presion", "temperatura", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-097",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C2",
+    "componente": "cts",
+    "afirmacion": "Analiza el potencial del uso de recursos naturales o artefactos y sus efectos sobre el entorno y la salud, así como las posibilidades de desarrollo para las comunidades",
+    "evidencia": "Analiza el origen de la lluvia ácida en la quema de combustibles con azufre y evalúa medidas para reducir sus efectos sobre el entorno",
+    "habilidad": "razonar",
+    "tema": "Contaminación atmosférica",
+    "subtema": "Lluvia ácida: óxidos de azufre de una termoeléctrica a carbón y medidas de control",
+    "dificultad": 2,
+    "contexto": "El carbón contiene pequeñas cantidades de azufre. Al quemarlo, el azufre forma dióxido de azufre (SO₂), que en la atmósfera reacciona con oxígeno y agua y produce ácido sulfúrico (H₂SO₄), el cual cae con la lluvia. La lluvia sin contaminación es ligeramente ácida (pH ≈ 5,6) por el CO₂ del aire. Una corporación ambiental midió el pH de la lluvia en tres zonas de una región con una termoeléctrica que quema carbón.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "pH promedio de la lluvia en tres zonas (datos hipotéticos)",
+      "columnas": ["Zona", "Distancia a la termoeléctrica (km)", "pH promedio de la lluvia"],
+      "filas": [["Zona industrial", 2, "4,3"], ["Municipio cercano", 15, "5,0"], ["Zona rural alejada", 60, "5,6"]],
+      "nota": "Recuerde: cada unidad menos de pH significa 10 veces más acidez."
+    },
+    "enunciado": "¿Cuál medida atacaría la causa principal de la lluvia ácida en la zona industrial?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Reducir las emisiones de CO₂, porque el CO₂ es el que baja el pH de la lluvia hasta 4,3.",
+        "correcta": false,
+        "explicacion": "No responde. El CO₂ solo explica el pH ≈ 5,6 de la lluvia natural, como el de la zona rural. El descenso hasta 4,3 cerca de la planta se debe al SO₂ y al ácido sulfúrico.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Atribuye la lluvia ácida al CO₂ por asociarlo con toda la contaminación del aire."
+      },
+      {
+        "clave": "B",
+        "texto": "Agregar cal a los tanques de agua lluvia de la zona rural para neutralizar la acidez.",
+        "correcta": false,
+        "explicacion": "No responde. La zona rural tiene pH 5,6, el de la lluvia natural. Además, neutralizar el agua recogida trata un efecto y no la causa: el SO₂ seguiría emitiéndose.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "No identificó en la tabla cuál es la zona más afectada ni distinguió causa de efecto."
+      },
+      {
+        "clave": "C",
+        "texto": "Instalar en la termoeléctrica filtros que retengan el SO₂ o usar carbón con menos azufre, para que se forme menos ácido sulfúrico.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La acidez adicional (pH 4,3 frente a 5,6) proviene del SO₂ que se transforma en H₂SO₄. Si se retiene el SO₂ antes de salir por la chimenea o se quema carbón con menos azufre, se reduce la causa del problema.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "Construir chimeneas más altas para que los gases se dispersen lejos de la zona industrial.",
+        "correcta": false,
+        "explicacion": "No responde. Una chimenea más alta no reduce la cantidad de SO₂ emitido; solo lo lleva más lejos, y la lluvia ácida caería en otras zonas (por ejemplo, en la zona rural o en el municipio).",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Confundió alejar el problema con resolverlo."
+      }
+    ],
+    "explicacion": "LEER: el carbón con azufre produce SO₂ → H₂SO₄; pH de 4,3 (2 km), 5,0 (15 km) y 5,6 (60 km). COMPRENDER: se pide una medida contra la causa principal en la zona industrial. INTERPRETAR: la acidez aumenta cerca de la planta; 5,6 es el valor natural. REPRESENTAR: causa = SO₂ emitido; efecto = lluvia con pH bajo. RAZONAR: solo reducir el SO₂ ataca la causa. B dispersa el problema, C culpa al CO₂ y D actúa sobre un efecto en la zona que no está afectada. RESOLVER: la respuesta es A. VERIFICAR: la lluvia de pH 4,3 es unas 20 veces más ácida que la de pH 5,6 (10^1,3 ≈ 20), una diferencia que el CO₂ del aire no explica.",
+    "que_identificar": "Que el pH más bajo está cerca de la termoeléctrica y que la lluvia natural tiene pH ≈ 5,6.",
+    "que_revisar": "Lluvia ácida: óxidos de azufre y nitrógeno; escala de pH logarítmica; diferencia entre atacar causas y efectos.",
+    "refuerzo_ids": ["CIE-090", "CIE-020"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts", "lluvia acida", "contaminacion", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-098",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Comprende que a partir de la investigación científica se construyen explicaciones sobre el mundo natural",
+    "evidencia": "Evalúa la validez de una afirmación publicitaria sobre la degradación de bolsas plásticas contrastándola con datos experimentales en distintas condiciones",
+    "habilidad": "verificar",
+    "tema": "Plásticos y ambiente",
+    "subtema": "Degradación de bolsas convencionales, oxodegradables y compostables en distintos ambientes",
+    "dificultad": 3,
+    "contexto": "Una empresa anuncia: *\"Nuestra bolsa compostable desaparece en pocos meses en cualquier ambiente, así que se puede desechar en cualquier lugar\"*. Un grupo de investigación enterró o sumergió muestras de tres tipos de bolsas durante 6 meses y midió qué porcentaje de su masa se degradó.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Masa degradada de tres tipos de bolsas después de 6 meses (datos hipotéticos)",
+      "columnas": ["Tipo de bolsa", "Compostaje industrial (58 °C)", "Suelo de jardín", "Agua de mar"],
+      "filas": [["Convencional (polietileno)", "0 %", "0 %", "0 %"], ["Oxodegradable", "8 % (fragmentada en trozos pequeños)", "2 %", "1 %"], ["Compostable (a base de almidón)", "95 %", "30 %", "10 %"]],
+      "nota": "Degradada = convertida en agua, CO₂ y biomasa; los fragmentos que siguen siendo plástico no cuentan como degradados."
+    },
+    "enunciado": "¿Qué conclusión sobre la afirmación de la empresa está respaldada por los datos?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Está respaldada, porque en compostaje industrial la bolsa compostable se degradó en un 95 %.",
+        "correcta": false,
+        "explicacion": "No responde. Ese dato corresponde a una sola condición. La afirmación habla de \"cualquier ambiente\", y en el suelo (30 %) y en el mar (10 %) la bolsa no desaparece en 6 meses.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Generalizó a todos los ambientes el resultado de la condición más favorable."
+      },
+      {
+        "clave": "B",
+        "texto": "La mejor opción es la bolsa oxodegradable, porque en el compostaje se fragmenta en trozos pequeños.",
+        "correcta": false,
+        "explicacion": "No responde. Fragmentarse no es degradarse: según la nota, los trozos siguen siendo plástico (microplásticos). Solo el 8 % de su masa se degradó en compostaje, y casi nada en el suelo y en el mar.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde fragmentación (el plástico se rompe en pedazos) con degradación."
+      },
+      {
+        "clave": "C",
+        "texto": "Los datos demuestran que la bolsa compostable no causa ningún daño a los animales marinos.",
+        "correcta": false,
+        "explicacion": "No responde. El estudio midió masa degradada, no efectos sobre la fauna. Además, en el mar el 90 % de la bolsa sigue presente a los 6 meses, así que los datos no permiten afirmar que sea inofensiva.",
+        "tipo_error": "inferencia",
+        "diagnostico": "probable",
+        "razon_frecuente": "Saca una conclusión sobre una variable que el estudio no midió."
+      },
+      {
+        "clave": "D",
+        "texto": "No está respaldada: la bolsa compostable se degrada casi por completo solo en compostaje industrial; en el suelo y en el mar la mayor parte sigue presente después de 6 meses.",
+        "correcta": true,
+        "explicacion": "Es la correcta. La afirmación dice \"en cualquier ambiente\", pero los datos muestran 95 % en compostaje industrial, 30 % en el suelo y solo 10 % en el mar. La bolsa necesita condiciones específicas (temperatura alta, microorganismos del compostaje) para degradarse en pocos meses.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la afirmación (\"desaparece en cualquier ambiente\") y la tabla de degradación en tres condiciones. COMPRENDER: se pide si los datos respaldan la afirmación. INTERPRETAR: la bolsa compostable se degrada 95 % en compostaje industrial, 30 % en suelo y 10 % en mar; la nota distingue degradar de fragmentar. REPRESENTAR: afirmación general ↔ datos que dependen del ambiente. RAZONAR: basta un ambiente en el que no desaparezca para refutar \"en cualquier ambiente\". B generaliza, C confunde fragmentar con degradar y D va más allá de lo medido. RESOLVER: la respuesta es A. VERIFICAR: la conclusión se limita a lo que se midió (masa degradada en 6 meses) y usa las tres columnas de la tabla.",
+    "que_identificar": "La expresión \"en cualquier ambiente\" de la afirmación y los porcentajes de la bolsa compostable en cada condición.",
+    "que_revisar": "Evaluación de afirmaciones con evidencia; biodegradación y compostaje; microplásticos; no generalizar más allá de los datos.",
+    "refuerzo_ids": ["CIE-012", "CIE-036"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 150,
+    "etiquetas": ["cts", "plasticos", "evaluar afirmaciones", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-099",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C1",
+    "componente": "cts",
+    "afirmacion": "Identifica las características de algunos fenómenos de la naturaleza basándose en el análisis de información y conceptos propios del conocimiento científico",
+    "evidencia": "Interpreta el porcentaje en masa de nutrientes de un fertilizante para calcular la cantidad de nutriente que aporta",
+    "habilidad": "resolver",
+    "tema": "Fertilizantes y agricultura",
+    "subtema": "Porcentaje de nitrógeno en fertilizantes comerciales",
+    "dificultad": 1,
+    "contexto": "Un agricultor de papa en Boyacá compara fertilizantes nitrogenados. En la etiqueta de cada bulto aparece el porcentaje en masa de nitrógeno (N), es decir, cuántos kilogramos de nitrógeno hay por cada 100 kg de fertilizante.",
+    "estimulo": {
+      "tipo": "tabla",
+      "titulo": "Contenido de nitrógeno de algunos fertilizantes",
+      "columnas": ["Fertilizante", "Fórmula", "Nitrógeno (% en masa)", "Presentación"],
+      "filas": [["Urea", "CO(NH₂)₂", "46 %", "Bulto de 50 kg"], ["Nitrato de amonio", "NH₄NO₃", "34 %", "Bulto de 50 kg"], ["Sulfato de amonio", "(NH₄)₂SO₄", "21 %", "Bulto de 50 kg"]],
+      "nota": "Valores redondeados."
+    },
+    "enunciado": "¿Cuántos kilogramos de nitrógeno aporta un bulto de urea?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "23 kg, porque el 46 % de 50 kg es 0,46 × 50 = 23 kg.",
+        "correcta": true,
+        "explicacion": "Es la correcta. El 46 % en masa indica 46 kg de N por cada 100 kg de urea. En 50 kg: 50 × 46 ÷ 100 = 23 kg de nitrógeno.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "46 kg, porque la urea tiene 46 % de nitrógeno.",
+        "correcta": false,
+        "explicacion": "No responde. 46 % no significa 46 kg, sino 46 kg por cada 100 kg. Como el bulto tiene 50 kg (la mitad de 100), contiene la mitad: 23 kg.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó el porcentaje como si fuera una cantidad en kilogramos."
+      },
+      {
+        "clave": "C",
+        "texto": "50 kg, porque todo el bulto es fertilizante nitrogenado.",
+        "correcta": false,
+        "explicacion": "No responde. El fertilizante es un compuesto: además de nitrógeno contiene carbono, oxígeno e hidrógeno (CO(NH₂)₂). Solo el 46 % de su masa es nitrógeno.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confunde el compuesto (urea) con el elemento que aporta (nitrógeno)."
+      },
+      {
+        "clave": "D",
+        "texto": "Aproximadamente 109 kg, porque 50 ÷ 0,46 ≈ 109 kg.",
+        "correcta": false,
+        "explicacion": "No responde. Dividió en lugar de multiplicar. Un bulto de 50 kg no puede contener más de 50 kg de nitrógeno; 109 kg sería la cantidad de urea necesaria para obtener 50 kg de N.",
+        "tipo_error": "calculo",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó la operación inversa al calcular un porcentaje."
+      }
+    ],
+    "explicacion": "LEER: la urea tiene 46 % de N y viene en bultos de 50 kg. COMPRENDER: se pide la masa de nitrógeno en un bulto. INTERPRETAR: 46 % en masa = 46 kg de N por cada 100 kg de urea. REPRESENTAR: masa de N = 50 kg × 46/100. RAZONAR: B lee el porcentaje como kilogramos, C confunde compuesto con elemento y D divide. RESOLVER: 0,46 × 50 = 23 kg; la respuesta es A. VERIFICAR: 23 kg es menos que los 50 kg del bulto (debe serlo) y es justo la mitad de 46, porque 50 kg es la mitad de 100 kg.",
+    "que_identificar": "El porcentaje de nitrógeno de la urea y la masa del bulto.",
+    "que_revisar": "Porcentaje en masa (% m/m); diferencia entre compuesto y elemento; cálculo de porcentajes.",
+    "refuerzo_ids": ["CIE-100", "CIE-088"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": ["cts", "fertilizantes", "porcentaje en masa", "tabla", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  },
+  {
+    "id": "CIE-100",
+    "prueba": "ciencias_naturales",
+    "origen": "estilo",
+    "fuente": { "nombre": "Elaboración propia siguiendo la estructura de la Guía de orientación Saber 11 (ICFES)", "url": null, "anio": 2026 },
+    "competencia": "C3",
+    "componente": "cts",
+    "afirmacion": "Utiliza algunas habilidades de pensamiento y de procedimiento para evaluar predicciones",
+    "evidencia": "Diseña un procedimiento con un grupo control y variables controladas para poner a prueba una hipótesis sobre el efecto de los fertilizantes en el crecimiento de algas",
+    "habilidad": "razonar",
+    "tema": "Fertilizantes y ecosistemas acuáticos",
+    "subtema": "Eutrofización: diseño de un experimento sobre fertilizante y crecimiento de algas",
+    "dificultad": 2,
+    "contexto": "En una laguna cercana a unos cultivos de Cundinamarca, el agua se ha vuelto verde por el crecimiento excesivo de algas. Unos estudiantes plantean la hipótesis: *\"El fertilizante que llega a la laguna con el agua de lluvia (escorrentía) aumenta el crecimiento de las algas\"*. Cuentan con frascos transparentes iguales, agua de la laguna, fertilizante y un lugar iluminado con temperatura estable.",
+    "estimulo": null,
+    "enunciado": "¿Cuál de los siguientes diseños permite poner a prueba la hipótesis?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Llenar cuatro frascos con 0 g, 1 g, 2 g y 4 g de fertilizante, y ubicar los dos primeros al sol y los otros dos en la sombra.",
+        "correcta": false,
+        "explicacion": "No responde. Aquí cambian a la vez la cantidad de fertilizante y la luz. Si hay diferencias en las algas, no se puede saber si se deben al fertilizante o a la luz.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Incluyó distintas cantidades de fertilizante pero no controló la luz."
+      },
+      {
+        "clave": "B",
+        "texto": "Llenar cuatro frascos con el mismo volumen de agua de la laguna, agregar 0 g, 1 g, 2 g y 4 g de fertilizante, ubicarlos juntos en el mismo lugar iluminado y medir la cantidad de algas cada dos días.",
+        "correcta": true,
+        "explicacion": "Es la correcta. Solo cambia la cantidad de fertilizante (variable independiente); el volumen, el tipo de agua, la luz y la temperatura son iguales. El frasco sin fertilizante sirve como control para comparar. Si las algas crecen más a mayor cantidad de fertilizante, los datos apoyan la hipótesis.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "Llenar cuatro frascos con agua de la laguna y 2 g de fertilizante cada uno, y ubicar cada frasco con una cantidad distinta de luz.",
+        "correcta": false,
+        "explicacion": "No responde. En este diseño la variable que cambia es la luz, no el fertilizante. Serviría para estudiar el efecto de la luz, pero no para la hipótesis planteada.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Cambió una variable distinta de la que menciona la hipótesis."
+      },
+      {
+        "clave": "D",
+        "texto": "Llenar un solo frasco con agua de la laguna y fertilizante, y observar si las algas crecen.",
+        "correcta": false,
+        "explicacion": "No responde. Sin un frasco sin fertilizante para comparar, no se sabe si las algas habrían crecido igual por la luz y los nutrientes que ya tenía el agua. Falta un grupo control.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "No reconoce la necesidad de un grupo control para atribuir el efecto a la variable."
+      }
+    ],
+    "explicacion": "LEER: hipótesis \"el fertilizante aumenta el crecimiento de algas\" y materiales disponibles. COMPRENDER: se busca el diseño que la ponga a prueba. INTERPRETAR: variable independiente = cantidad de fertilizante; variable dependiente = cantidad de algas; variables a controlar = luz, temperatura, volumen y tipo de agua. REPRESENTAR: frascos iguales que solo difieren en el fertilizante, incluido uno con 0 g. RAZONAR: B cambia otra variable, C no tiene control y D mezcla dos variables. RESOLVER: la respuesta es A. VERIFICAR: en el diseño A cualquier diferencia entre frascos solo puede atribuirse al fertilizante; este es el mecanismo de la eutrofización, en el que los nutrientes (nitrógeno y fósforo) favorecen el crecimiento de algas.",
+    "que_identificar": "Cuál es la variable que menciona la hipótesis y cuáles deben mantenerse iguales.",
+    "que_revisar": "Diseño experimental: variable independiente, dependiente y controladas; grupo control; eutrofización.",
+    "refuerzo_ids": ["CIE-099", "CIE-011"],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": ["cts", "fertilizantes", "eutrofizacion", "diseno experimental", "afirmacion_por_verificar"],
+    "estado": "aprobada"
+  }
+]

@@ -1,0 +1,1426 @@
+[
+  {
+    "id": "ING-141",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Animales: bee (abeja)",
+    "dificultad": 1,
+    "contexto": "Description: **This small insect makes honey and lives in a hive with thousands of others.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "ant",
+        "correcta": false,
+        "explicacion": "Una \"ant\" (hormiga) es un insecto pequeño que vive en colonias, pero no produce miel. Quien elige esta opción se fijó en \"small insect\" y en que viven muchas juntas, pero no leyó la pista decisiva: \"makes honey\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Se quedó con \"small insect\" y \"thousands of others\" sin atender a \"makes honey\"."
+      },
+      {
+        "clave": "B",
+        "texto": "butterfly",
+        "correcta": false,
+        "explicacion": "Una \"butterfly\" (mariposa) es un insecto, pero no fabrica miel ni vive en una colmena (\"hive\"); vuela sola entre las flores. Quien elige esta opción asoció el insecto con las flores y no con la producción de miel.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Relacionó el insecto con las flores sin revisar \"honey\" ni \"hive\"."
+      },
+      {
+        "clave": "C",
+        "texto": "bee",
+        "correcta": true,
+        "explicacion": "Una \"bee\" (abeja) es el insecto que produce miel (\"makes honey\") y vive en una colmena (\"hive\") con miles de compañeras. Las tres pistas de la descripción (insecto pequeño, miel y colmena) corresponden exactamente a la abeja.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la descripción dice \"This small insect makes honey and lives in a hive with thousands of others\". COMPRENDER: se busca el nombre de ese insecto. INTERPRETAR: las pistas son \"makes honey\" (produce miel) y \"hive\" (colmena); la segunda solo se usa para abejas. REPRESENTAR: insecto + miel + colmena = abeja. RAZONAR: la hormiga vive en grupo pero no hace miel; la mariposa no hace miel ni vive en colmena; la abeja cumple las tres pistas. RESOLVER: la opción que dice \"bee\". VERIFICAR: \"Bees make honey in their hive\" es una oración natural que reúne las palabras de la descripción.",
+    "que_identificar": "Las pistas \"makes honey\" y \"lives in a hive\".",
+    "que_revisar": "Vocabulario de animales e insectos: bee, ant, butterfly, fly, spider; palabras asociadas: honey, hive, nest.",
+    "refuerzo_ids": [
+      "ING-101",
+      "ING-142"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "animales",
+      "insectos",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-142",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_1",
+    "afirmacion": "Reconoce vocabulario de uso frecuente relacionado con temas cotidianos",
+    "evidencia": "Asocia una descripción con la palabra que le corresponde",
+    "habilidad": "comprender",
+    "tema": "Vocabulario cotidiano",
+    "subtema": "Lugares de la ciudad: stadium",
+    "dificultad": 1,
+    "contexto": "Description: **A very large place with thousands of seats where people watch football matches and big concerts.**",
+    "estimulo": null,
+    "enunciado": "Which word matches the description?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "theatre",
+        "correcta": false,
+        "explicacion": "Un \"theatre\" (teatro) tiene asientos y espectáculos, pero es un espacio cerrado para obras y conciertos pequeños, no para partidos de fútbol ni para miles de personas. Quien elige esta opción se fijó en \"seats\" y \"concerts\" sin leer \"football matches\".",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Asoció \"seats\" y \"concerts\" con el teatro sin atender a \"football matches\"."
+      },
+      {
+        "clave": "B",
+        "texto": "stadium",
+        "correcta": true,
+        "explicacion": "Un \"stadium\" (estadio) es un lugar muy grande con miles de asientos donde se ven partidos de fútbol (\"football matches\") y también grandes conciertos. Las tres pistas de la descripción (tamaño, asientos y tipo de eventos) corresponden al estadio.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "museum",
+        "correcta": false,
+        "explicacion": "Un \"museum\" (museo) exhibe obras de arte u objetos históricos; no tiene miles de asientos ni acoge partidos de fútbol. Quien elige esta opción pudo guiarse solo por \"very large place\" sin revisar los eventos mencionados.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un lugar público grande sin comprobar los eventos de la descripción."
+      }
+    ],
+    "explicacion": "LEER: la descripción habla de un lugar muy grande, con miles de asientos, donde se ven partidos de fútbol y grandes conciertos. COMPRENDER: se busca el nombre de ese lugar. INTERPRETAR: las pistas clave son \"thousands of seats\" y \"football matches\"; los conciertos grandes también se hacen allí. REPRESENTAR: lugar enorme + fútbol + conciertos masivos = estadio. RAZONAR: el teatro es cerrado y no tiene fútbol; el museo no tiene asientos ni eventos deportivos; el estadio cumple todas las pistas. RESOLVER: la opción que dice \"stadium\". VERIFICAR: \"The concert was in the stadium, with forty thousand people\" es una oración natural y coherente con la descripción.",
+    "que_identificar": "Las pistas \"thousands of seats\" y \"football matches and big concerts\".",
+    "que_revisar": "Vocabulario de lugares de ocio: stadium, theatre, cinema, museum, gym, park; relacionar cada lugar con las actividades que se hacen allí.",
+    "refuerzo_ids": [
+      "ING-141",
+      "ING-122"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "lugares",
+      "deportes",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-143",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "interpretar",
+    "tema": "Avisos y letreros",
+    "subtema": "Ascensor: aviso de daño (out of order) con instrucción alternativa",
+    "dificultad": 2,
+    "contexto": "Notice next to the lift in an office building in Bucaramanga:\n\n**LIFT OUT OF ORDER. PLEASE USE THE STAIRS.\nWE APOLOGISE FOR THE INCONVENIENCE.**",
+    "estimulo": null,
+    "enunciado": "What does this notice mean?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The lift is not working, so people have to go up by the stairs.",
+        "correcta": true,
+        "explicacion": "\"Out of order\" significa dañado o fuera de servicio, y \"please use the stairs\" indica la alternativa: subir por las escaleras. La última frase pide disculpas por la molestia (\"inconvenience\"). La opción resume la situación y la instrucción del aviso.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "The stairs are closed, so everybody must take the lift.",
+        "correcta": false,
+        "explicacion": "Es lo contrario de lo que dice el aviso: lo que no funciona es el ascensor (\"lift out of order\"), y las escaleras son la alternativa recomendada. Quien elige esta opción intercambió el objeto dañado con la alternativa.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Invirtió los papeles del ascensor y las escaleras al leer el aviso."
+      },
+      {
+        "clave": "C",
+        "texto": "People should wait for the lift because it is slow today.",
+        "correcta": false,
+        "explicacion": "\"Out of order\" no significa lento sino que no funciona; además, el aviso pide usar las escaleras, no esperar. Quien elige esta opción no conocía la expresión \"out of order\" y la interpretó como un retraso.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"out of order\" como un problema de velocidad y no como un daño."
+      }
+    ],
+    "explicacion": "LEER: el aviso tiene tres frases: \"Lift out of order\", \"Please use the stairs\" y \"We apologise for the inconvenience\". COMPRENDER: se pregunta qué significa el aviso en conjunto. INTERPRETAR: \"out of order\" = dañado, fuera de servicio; \"use the stairs\" = la alternativa; \"apologise for the inconvenience\" = disculpas por la molestia. REPRESENTAR: ascensor dañado → usar escaleras → disculpas. RAZONAR: la opción sobre las escaleras cerradas invierte el aviso; la opción de esperar porque es lento no corresponde a \"out of order\" ni a \"use the stairs\"; la opción del ascensor dañado y las escaleras recoge la situación y la instrucción. RESOLVER: la opción que dice que el ascensor no funciona y hay que subir por las escaleras. VERIFICAR: las disculpas de la última frase tienen sentido solo si el ascensor está dañado.",
+    "que_identificar": "La expresión \"out of order\" y la instrucción \"please use the stairs\".",
+    "que_revisar": "Expresiones frecuentes en avisos: out of order, out of service, closed, under repair; fórmulas de disculpa: we apologise for the inconvenience.",
+    "refuerzo_ids": [
+      "ING-103",
+      "ING-144"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "edificio",
+      "instrucciones",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-144",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_2",
+    "afirmacion": "Comprende el propósito y el significado de avisos y letreros de uso cotidiano",
+    "evidencia": "Reconoce el significado de un aviso o letrero a partir de su contenido y su contexto",
+    "habilidad": "interpretar",
+    "tema": "Avisos y letreros",
+    "subtema": "Ubicar el lugar de un aviso: degustación gratuita (free samples)",
+    "dificultad": 1,
+    "contexto": "Sign on a small table:\n\n**TRY BEFORE YOU BUY!\nFREE SAMPLES OF OUR NEW CHEESE – TODAY ONLY, AISLE 6.**",
+    "estimulo": null,
+    "enunciado": "Where can you see this sign?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "At a cinema.",
+        "correcta": false,
+        "explicacion": "En un cine se venden boletas y comida rápida, pero no se ofrecen muestras de queso para probar antes de comprar, y no hay pasillos numerados de productos (\"aisle 6\"). Quien elige esta opción pudo asociar \"free\" y \"today only\" con una promoción de entretenimiento.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció la promoción con un lugar de ocio sin revisar el producto ni el pasillo."
+      },
+      {
+        "clave": "B",
+        "texto": "At a bank.",
+        "correcta": false,
+        "explicacion": "En un banco no se vende comida ni se dan muestras gratis de queso. Quien elige esta opción no procesó las palabras clave \"cheese\" y \"aisle\" y se guió por el tono de aviso comercial.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó \"cheese\", \"buy\" y \"aisle\" con una tienda de alimentos."
+      },
+      {
+        "clave": "C",
+        "texto": "At a supermarket.",
+        "correcta": true,
+        "explicacion": "El aviso ofrece muestras gratis (\"free samples\") de un queso nuevo para probarlo antes de comprarlo (\"try before you buy\") y ubica el producto en el pasillo 6 (\"aisle 6\"). Los pasillos numerados y la venta de quesos son propios de un supermercado.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el aviso dice \"Try before you buy! Free samples of our new cheese – today only, aisle 6\". COMPRENDER: se pregunta dónde puede verse el aviso. INTERPRETAR: \"samples\" = muestras; \"cheese\" = queso; \"buy\" = comprar; \"aisle\" = pasillo de una tienda. REPRESENTAR: probar queso gratis + comprar + pasillo 6 = tienda de alimentos. RAZONAR: en el cine y en el banco no se venden quesos ni hay pasillos numerados de productos; en el supermercado sí. RESOLVER: la opción que dice \"at a supermarket\". VERIFICAR: \"There is a cheese tasting in aisle 6 of the supermarket\" es una situación común y coherente con el aviso.",
+    "que_identificar": "Las palabras \"cheese\", \"buy\" y \"aisle 6\", que ubican el aviso en una tienda de alimentos.",
+    "que_revisar": "Vocabulario de compras: sample, aisle, offer, try, buy; relacionar el contenido de un aviso con el lugar donde aparece.",
+    "refuerzo_ids": [
+      "ING-143",
+      "ING-104"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "avisos",
+      "compras",
+      "lugar",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-145",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "En clase: responder a una petición con \"Could you lend me...?\"",
+    "dificultad": 1,
+    "contexto": "In a classroom in Neiva.\n\nJuan: **Could you lend me a pen, please? I left mine at home.**\n\nSofía: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Yes, I have a pen at home too.",
+        "correcta": false,
+        "explicacion": "Juan no pregunta si Sofía tiene un bolígrafo en su casa, sino si puede prestarle uno ahora. Hablar de un bolígrafo en casa no resuelve la petición. Quien elige esta opción repitió las palabras \"pen\" y \"home\" sin atender a la petición real.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Repitió palabras de la pregunta (pen, home) sin responder a la petición."
+      },
+      {
+        "clave": "B",
+        "texto": "Sure, here you are. Keep it.",
+        "correcta": true,
+        "explicacion": "\"Could you lend me a pen?\" es una petición cortés. \"Sure\" la acepta, \"here you are\" acompaña la entrega del objeto y \"keep it\" (quédatelo) añade generosidad. Es la respuesta natural de alguien que presta algo que le piden.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "No, I didn't leave it there.",
+        "correcta": false,
+        "explicacion": "Esta frase responde a una pregunta como \"Did you leave it at home?\", pero Juan habla de SU bolígrafo, no del de Sofía, y pide uno prestado. Quien elige esta opción respondió a la segunda oración de Juan como si fuera una pregunta.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la explicación de Juan (\"I left mine at home\") como si fuera una pregunta a Sofía."
+      }
+    ],
+    "explicacion": "LEER: Juan dice \"Could you lend me a pen, please? I left mine at home\". COMPRENDER: hay que elegir la respuesta natural de Sofía. INTERPRETAR: \"Could you lend me...?\" es una petición cortés; la segunda frase solo explica por qué pide el bolígrafo. REPRESENTAR: petición → aceptar y entregar (o negar con disculpa). RAZONAR: hablar de un bolígrafo en casa no entrega nada; \"I didn't leave it there\" responde a una pregunta que nadie hizo; \"Sure, here you are\" acepta y entrega. RESOLVER: la opción que acepta y entrega el bolígrafo. VERIFICAR: \"Could you lend me a pen? – Sure, here you are.\" es un intercambio típico de aula.",
+    "que_identificar": "La fórmula de petición \"Could you lend me...?\" y el objeto pedido (a pen).",
+    "que_revisar": "Peticiones corteses: Could you...? / Can I borrow...?; respuestas: Sure, here you are / Sorry, I only have one; diferencia entre lend y borrow.",
+    "refuerzo_ids": [
+      "ING-105",
+      "ING-146"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "colegio",
+      "peticiones",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-146",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_3",
+    "afirmacion": "Comprende intercambios comunicativos cortos en situaciones cotidianas",
+    "evidencia": "Selecciona la respuesta adecuada a un enunciado en una conversación corta según la intención comunicativa",
+    "habilidad": "interpretar",
+    "tema": "Conversaciones cortas",
+    "subtema": "En el bus: responder a \"Is this seat taken?\"",
+    "dificultad": 2,
+    "contexto": "On a bus in Barranquilla.\n\nWoman: **Excuse me, is this seat taken?**\n\nMan: **______**",
+    "estimulo": null,
+    "enunciado": "Choose the best answer to complete the conversation.",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "No, go ahead. Sit down, please.",
+        "correcta": true,
+        "explicacion": "\"Is this seat taken?\" significa \"¿está ocupado este asiento?\". Responder \"No\" indica que está libre, y \"go ahead, sit down\" invita a sentarse. Es la respuesta natural y cortés a esa pregunta en un bus.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Yes, I took it from the shop.",
+        "correcta": false,
+        "explicacion": "\"Taken\" aquí significa ocupado, no \"tomado de un lugar\". Decir que el asiento se tomó de una tienda no tiene sentido en un bus. Quien elige esta opción tradujo \"taken\" de forma literal como el pasado de \"take\" (llevar).",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Interpretó \"taken\" como \"llevado\" y no como \"ocupado\"."
+      },
+      {
+        "clave": "C",
+        "texto": "No, this bus goes downtown.",
+        "correcta": false,
+        "explicacion": "La mujer no pregunta por la ruta del bus sino por el asiento. Esta respuesta habla de otra cosa. Quien elige esta opción se fijó en el lugar (un bus) y respondió a una pregunta imaginaria sobre el destino.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Respondió al contexto (bus) en lugar de a la pregunta sobre el asiento."
+      }
+    ],
+    "explicacion": "LEER: la mujer pregunta \"Excuse me, is this seat taken?\". COMPRENDER: hay que elegir la respuesta natural del hombre. INTERPRETAR: \"taken\" significa ocupado; la pregunta es una forma cortés de pedir permiso para sentarse. REPRESENTAR: ¿asiento ocupado? → no, está libre, siéntese. RAZONAR: la respuesta sobre la tienda toma \"taken\" de forma literal; la del destino del bus no responde a la pregunta; \"No, go ahead. Sit down, please\" indica que el asiento está libre e invita a usarlo. RESOLVER: la opción que invita a sentarse. VERIFICAR: \"Is this seat taken? – No, go ahead.\" es un intercambio frecuente en transporte público.",
+    "que_identificar": "El significado de \"taken\" (ocupado) en la pregunta sobre el asiento.",
+    "que_revisar": "Expresiones en transporte público: Is this seat taken? / Is this seat free?; respuestas: Go ahead / Sorry, it's taken; significados de \"take\".",
+    "refuerzo_ids": [
+      "ING-145",
+      "ING-106"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "conversacion",
+      "transporte",
+      "cortesia",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-147",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Obligación: have to + infinitivo frente a modales sin \"to\"",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(1)**.\n\n**Subject: Weekend job at Café Aroma**\n\nHi Valentina,\n\nThanks for your message about the job. Yes, we still need a waiter or waitress for the weekends. The café is small, so you **(1) ______** to be friendly and fast, but you don't need experience: we will train you during the first week. We open at 7 a.m., and the first bus from your neighbourhood doesn't arrive until 7:15, so my sister **(2) ______** to pick you up on Saturdays. At the moment we don't have **(3) ______** free tables on Sunday mornings because many families come for breakfast, so that is our busiest time. If you are interested, come to the café on Friday afternoon and bring a copy of your ID.\n\nBest regards,\nCamilo Reyes, owner",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "must",
+        "correcta": false,
+        "explicacion": "\"Must\" expresa obligación, pero es un modal y va seguido del verbo sin \"to\": \"you must be friendly\". Como el texto ya tiene \"to be\", \"must to be\" es incorrecto. Quien elige esta opción pensó en el significado sin revisar la palabra que sigue al espacio.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el modal por su significado sin notar que \"to\" ya está en el texto."
+      },
+      {
+        "clave": "B",
+        "texto": "should",
+        "correcta": false,
+        "explicacion": "\"Should\" (debería) también es un modal y se usa sin \"to\": \"you should be friendly\". La frase \"you should to be\" no es gramatical. Además, el texto describe un requisito del trabajo, no un consejo.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó un modal seguido de \"to\" por influencia del español \"deberías ser\"."
+      },
+      {
+        "clave": "C",
+        "texto": "have",
+        "correcta": true,
+        "explicacion": "\"Have to + infinitivo\" expresa obligación y es la única opción que acepta el \"to\" que ya aparece en el texto: \"you have to be friendly and fast\". El dueño describe lo que exige el trabajo en un café pequeño, y el contraste \"but you don't need experience\" confirma que se trata de requisitos.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"The café is small, so you ______ to be friendly and fast, but you don't need experience\". COMPRENDER: hay que elegir la forma que expresa obligación y que funciona con el \"to\" que sigue. INTERPRETAR: el dueño explica un requisito del trabajo; el contraste \"but you don't need experience\" indica que antes se habla de lo que sí se necesita. REPRESENTAR: have to + verbo (con \"to\"); must / should + verbo (sin \"to\"). RAZONAR: \"must to\" y \"should to\" son incorrectos porque los modales no llevan \"to\"; \"have to be\" es la estructura correcta. RESOLVER: la opción que dice \"have\". VERIFICAR: \"you have to be friendly and fast, but you don't need experience\" es coherente y gramatical.",
+    "que_identificar": "La palabra \"to\" inmediatamente después del espacio y el sentido de requisito de la oración.",
+    "que_revisar": "Expresar obligación: have to / has to + infinitivo con \"to\"; must y should + verbo sin \"to\"; need to para necesidad.",
+    "refuerzo_ids": [
+      "ING-107",
+      "ING-148"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "modales",
+      "have_to",
+      "texto:ING-T25",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-148",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Futuro con be going to para planes",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(2)**.\n\n**Subject: Weekend job at Café Aroma**\n\nHi Valentina,\n\nThanks for your message about the job. Yes, we still need a waiter or waitress for the weekends. The café is small, so you **(1) ______** to be friendly and fast, but you don't need experience: we will train you during the first week. We open at 7 a.m., and the first bus from your neighbourhood doesn't arrive until 7:15, so my sister **(2) ______** to pick you up on Saturdays. At the moment we don't have **(3) ______** free tables on Sunday mornings because many families come for breakfast, so that is our busiest time. If you are interested, come to the café on Friday afternoon and bring a copy of your ID.\n\nBest regards,\nCamilo Reyes, owner",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "goes",
+        "correcta": false,
+        "explicacion": "\"Goes to pick you up\" describiría una rutina en presente simple, pero el texto habla de un plan para cuando Valentina empiece a trabajar, y el \"to\" que sigue forma parte de \"is going to\". \"My sister goes to pick you up\" no expresa un plan futuro.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó presente simple de tercera persona sin notar que se trata de un plan futuro."
+      },
+      {
+        "clave": "B",
+        "texto": "is going",
+        "correcta": true,
+        "explicacion": "\"Be going to + verbo\" expresa un plan o intención futura: \"my sister is going to pick you up on Saturdays\". El dueño ofrece una solución para el problema del bus, algo que ocurrirá cuando Valentina trabaje. \"Is\" concuerda con \"my sister\" (tercera persona singular).",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "went",
+        "correcta": false,
+        "explicacion": "\"Went\" es pasado simple: describiría algo que ya ocurrió. Pero Valentina aún no ha empezado a trabajar; el texto habla de lo que pasará los sábados. Además, \"went to pick you up\" rompe la relación con el problema del bus que se plantea justo antes.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Eligió el pasado sin revisar que la acción aún no ha ocurrido."
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"the first bus from your neighbourhood doesn't arrive until 7:15, so my sister ______ to pick you up on Saturdays\". COMPRENDER: hay que elegir la forma verbal que expresa lo que la hermana hará como solución. INTERPRETAR: el café abre a las 7 y el bus llega a las 7:15; la hermana recogerá a Valentina los sábados. Es un plan futuro. REPRESENTAR: be going to + verbo = plan; sujeto \"my sister\" → \"is going to\". RAZONAR: \"goes\" es una rutina presente y \"went\" un hecho pasado; ninguno expresa un plan para cuando empiece el trabajo. RESOLVER: la opción que dice \"is going\". VERIFICAR: \"my sister is going to pick you up on Saturdays\" resuelve el problema del bus y concuerda con el sujeto.",
+    "que_identificar": "El \"to\" después del espacio, el sujeto \"my sister\" y el sentido de plan futuro de la oración.",
+    "que_revisar": "Futuro con be going to para planes e intenciones; concordancia am / is / are con el sujeto; diferencia con presente simple (rutinas) y pasado simple.",
+    "refuerzo_ids": [
+      "ING-147",
+      "ING-149"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "futuro",
+      "going_to",
+      "texto:ING-T25",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-149",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_4",
+    "afirmacion": "Reconoce las estructuras gramaticales adecuadas para completar un texto",
+    "evidencia": "Selecciona la forma gramatical que completa correctamente un texto",
+    "habilidad": "verificar",
+    "tema": "Gramática en contexto",
+    "subtema": "Any en oraciones negativas con sustantivo plural",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the correct form for each gap. This question is about gap **(3)**.\n\n**Subject: Weekend job at Café Aroma**\n\nHi Valentina,\n\nThanks for your message about the job. Yes, we still need a waiter or waitress for the weekends. The café is small, so you **(1) ______** to be friendly and fast, but you don't need experience: we will train you during the first week. We open at 7 a.m., and the first bus from your neighbourhood doesn't arrive until 7:15, so my sister **(2) ______** to pick you up on Saturdays. At the moment we don't have **(3) ______** free tables on Sunday mornings because many families come for breakfast, so that is our busiest time. If you are interested, come to the café on Friday afternoon and bring a copy of your ID.\n\nBest regards,\nCamilo Reyes, owner",
+    "estimulo": null,
+    "enunciado": "Which form completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "any",
+        "correcta": true,
+        "explicacion": "En oraciones negativas se usa \"any\" con sustantivos plurales e incontables: \"we don't have any free tables\" (no tenemos ninguna mesa libre). La oración ya tiene la negación \"don't\", así que \"any\" es la forma adecuada.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "some",
+        "correcta": false,
+        "explicacion": "\"Some\" se usa en oraciones afirmativas (\"we have some free tables\") y en ofrecimientos. En una oración negativa con \"don't\" lo correcto es \"any\". Quien elige esta opción tradujo \"algunas\" sin revisar la negación.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Usó \"some\" en una negación por traducir \"algunas mesas\"."
+      },
+      {
+        "clave": "C",
+        "texto": "no",
+        "correcta": false,
+        "explicacion": "\"No\" delante de un sustantivo ya es negativo (\"we have no free tables\"), y el texto ya tiene \"don't\". Juntarlos crea una doble negación (\"don't have no\"), que no es correcta en inglés estándar. Quien elige esta opción duplicó la negación.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Creó una doble negación por calcar \"no tenemos ninguna\" del español."
+      }
+    ],
+    "explicacion": "LEER: la oración con el espacio es \"At the moment we don't have ______ free tables on Sunday mornings because many families come for breakfast\". COMPRENDER: hay que elegir el cuantificador adecuado para una oración negativa. INTERPRETAR: el verbo ya está negado con \"don't\" y el sustantivo \"tables\" es plural. REPRESENTAR: don't + verbo + any + plural. RAZONAR: \"some\" va en afirmativas; \"no\" duplicaría la negación con \"don't\"; \"any\" es la forma que acompaña a una negación. RESOLVER: la opción que dice \"any\". VERIFICAR: \"we don't have any free tables because many families come\" es coherente: muchas familias explican que no haya mesas.",
+    "que_identificar": "La negación \"don't\" antes del espacio y el sustantivo plural \"tables\" después.",
+    "que_revisar": "Some (afirmativas y ofrecimientos), any (negativas y preguntas), no (negativo sin otra negación); evitar la doble negación.",
+    "refuerzo_ids": [
+      "ING-147",
+      "ING-108"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "gramatica",
+      "some_any",
+      "texto:ING-T25",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-150",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "resolver",
+    "tema": "Comprensión de lectura",
+    "subtema": "Relacionar dos cifras explícitas: total y pago anticipado",
+    "dificultad": 2,
+    "contexto": "Read the email and answer the question.\n\n**Subject: Your booking at Casa del Viento Hostel – 3 to 6 July**\n\nDear Mr Castaño,\n\nThank you for choosing Casa del Viento in Santa Marta. Your booking is confirmed: one private room with a fan for two people, from Thursday 3 July to Sunday 6 July (three nights). The total is 270,000 pesos. You paid 90,000 pesos online; please pay the rest in cash or by card when you arrive.\n\nCheck-in starts at 2 p.m. If you arrive earlier, you can leave your bags in our luggage room for free and use the garden. Check-out is at 11 a.m.\n\nBreakfast (fruit, eggs, bread and coffee) is included and is served from 7 to 10 a.m. in the garden. Towels are provided, but we do not sell sun cream or beach umbrellas; you can rent an umbrella at the beach for about 10,000 pesos a day.\n\nWe organise a tour to Tayrona Park every Friday for 60,000 pesos per person, transport included. Book it at the reception the day before.\n\nIf you need to cancel, write to us at least 48 hours before your arrival to receive your money back.\n\nSee you soon,\nMarta Ríos, Casa del Viento",
+    "estimulo": null,
+    "enunciado": "How much does Mr Castaño still have to pay when he arrives?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "90,000 pesos, in cash only.",
+        "correcta": false,
+        "explicacion": "90,000 pesos es lo que YA pagó en línea (\"You paid 90,000 pesos online\"), no lo que falta. Además, el correo permite pagar en efectivo o con tarjeta, no solo en efectivo. Quien elige esta opción tomó la cifra del pago anticipado como saldo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la cantidad ya pagada con la que falta por pagar."
+      },
+      {
+        "clave": "B",
+        "texto": "180,000 pesos, in cash or by card.",
+        "correcta": true,
+        "explicacion": "El total es 270,000 pesos y el huésped ya pagó 90,000 en línea; \"please pay the rest\" se refiere a la diferencia: 270,000 − 90,000 = 180,000 pesos. El correo indica que ese resto se paga \"in cash or by card\" al llegar.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "270,000 pesos, the total price.",
+        "correcta": false,
+        "explicacion": "270,000 pesos es el precio total de las tres noches, pero el correo aclara que una parte ya fue pagada en línea. Pagar el total otra vez sería pagar dos veces. Quien elige esta opción no restó el pago anticipado.",
+        "tipo_error": "procedimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó el total sin descontar lo que ya se había pagado."
+      },
+      {
+        "clave": "D",
+        "texto": "60,000 pesos for the tour.",
+        "correcta": false,
+        "explicacion": "60,000 pesos es el precio por persona del tour a Tayrona, que es opcional y se reserva aparte en la recepción; no tiene relación con el saldo de la habitación. Quien elige esta opción mezcló dos párrafos distintos.",
+        "tipo_error": "distractor",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Tomó una cifra de otro párrafo (el tour) como saldo de la habitación."
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo da el total (270,000 pesos), lo ya pagado (90,000 en línea) y la instrucción \"please pay the rest in cash or by card when you arrive\". COMPRENDER: la pregunta pide cuánto falta por pagar al llegar. INTERPRETAR: \"the rest\" es la diferencia entre el total y lo pagado. REPRESENTAR: 270,000 − 90,000 = 180,000; forma de pago: efectivo o tarjeta. RAZONAR: 90,000 es lo ya pagado; 270,000 es el total; 60,000 es el tour opcional; solo 180,000 corresponde a \"the rest\". RESOLVER: la opción que dice 180,000 pesos en efectivo o con tarjeta. VERIFICAR: 90,000 + 180,000 = 270,000, que coincide con el total del correo.",
+    "que_identificar": "Las cifras del primer párrafo (270,000 total, 90,000 pagados) y la expresión \"pay the rest\".",
+    "que_revisar": "Vocabulario de pagos y reservas: total, paid online, the rest, in cash, by card; combinar datos numéricos de una misma oración.",
+    "refuerzo_ids": [
+      "ING-112",
+      "ING-151"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "cifras",
+      "pagos",
+      "texto:ING-T29",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-151",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "comprender",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una condición explícita con \"if you arrive earlier\"",
+    "dificultad": 1,
+    "contexto": "Read the email and answer the question.\n\n**Subject: Your booking at Casa del Viento Hostel – 3 to 6 July**\n\nDear Mr Castaño,\n\nThank you for choosing Casa del Viento in Santa Marta. Your booking is confirmed: one private room with a fan for two people, from Thursday 3 July to Sunday 6 July (three nights). The total is 270,000 pesos. You paid 90,000 pesos online; please pay the rest in cash or by card when you arrive.\n\nCheck-in starts at 2 p.m. If you arrive earlier, you can leave your bags in our luggage room for free and use the garden. Check-out is at 11 a.m.\n\nBreakfast (fruit, eggs, bread and coffee) is included and is served from 7 to 10 a.m. in the garden. Towels are provided, but we do not sell sun cream or beach umbrellas; you can rent an umbrella at the beach for about 10,000 pesos a day.\n\nWe organise a tour to Tayrona Park every Friday for 60,000 pesos per person, transport included. Book it at the reception the day before.\n\nIf you need to cancel, write to us at least 48 hours before your arrival to receive your money back.\n\nSee you soon,\nMarta Ríos, Casa del Viento",
+    "estimulo": null,
+    "enunciado": "What can guests do if they arrive before 2 p.m.?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Go into their room and have a shower.",
+        "correcta": false,
+        "explicacion": "El check-in empieza a las 2 p.m. (\"Check-in starts at 2 p.m.\"), así que antes de esa hora la habitación no está disponible. Quien elige esta opción ignoró la hora de entrada y supuso que podrían usar la habitación.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No relacionó \"check-in starts at 2 p.m.\" con la imposibilidad de entrar a la habitación antes."
+      },
+      {
+        "clave": "B",
+        "texto": "Have breakfast in the garden for free.",
+        "correcta": false,
+        "explicacion": "El desayuno está incluido, pero se sirve de 7 a 10 a.m. a los huéspedes alojados, y el correo no lo ofrece a quien llega temprano el día de entrada. Quien elige esta opción mezcló el párrafo del desayuno con el de la llegada.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Unió el desayuno gratuito con la situación de llegar antes del check-in."
+      },
+      {
+        "clave": "C",
+        "texto": "Pay 10,000 pesos to use the luggage room.",
+        "correcta": false,
+        "explicacion": "El cuarto de equipaje es gratuito (\"for free\"); los 10,000 pesos son el precio aproximado de alquilar una sombrilla en la playa, un dato de otro párrafo. Quien elige esta opción asignó una cifra al servicio equivocado.",
+        "tipo_error": "lectura_tabla",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Asoció un precio de otro párrafo con el cuarto de equipaje."
+      },
+      {
+        "clave": "D",
+        "texto": "Leave their bags and wait in the garden.",
+        "correcta": true,
+        "explicacion": "El segundo párrafo dice: \"If you arrive earlier, you can leave your bags in our luggage room for free and use the garden\". Las dos cosas permitidas antes de las 2 p.m. son dejar el equipaje y usar el jardín; la opción las recoge.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo habla del check-in: \"Check-in starts at 2 p.m. If you arrive earlier, you can leave your bags in our luggage room for free and use the garden\". COMPRENDER: la pregunta pide qué pueden hacer quienes llegan antes de las 2 p.m. INTERPRETAR: \"earlier\" = antes de las 2; las acciones permitidas son dejar las maletas (gratis) y usar el jardín. REPRESENTAR: llegada temprana → maletas en el cuarto de equipaje + jardín; habitación solo desde las 2. RAZONAR: entrar a la habitación contradice la hora de check-in; el desayuno es para huéspedes ya alojados; el cuarto de equipaje es gratis, no cuesta 10,000. RESOLVER: la opción que habla de dejar las maletas y esperar en el jardín. VERIFICAR: la opción reproduce \"leave your bags\" y \"use the garden\".",
+    "que_identificar": "La oración condicional \"If you arrive earlier, you can leave your bags... and use the garden\".",
+    "que_revisar": "Oraciones con \"if\" para condiciones; vocabulario de hostales: check-in, check-out, luggage room, provided, included.",
+    "refuerzo_ids": [
+      "ING-150",
+      "ING-110"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 90,
+    "etiquetas": [
+      "lectura",
+      "informacion_explicita",
+      "hotel",
+      "texto:ING-T29",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-152",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "verificar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Identificar lo NO incluido a partir de \"we do not sell\"",
+    "dificultad": 2,
+    "contexto": "Read the email and answer the question.\n\n**Subject: Your booking at Casa del Viento Hostel – 3 to 6 July**\n\nDear Mr Castaño,\n\nThank you for choosing Casa del Viento in Santa Marta. Your booking is confirmed: one private room with a fan for two people, from Thursday 3 July to Sunday 6 July (three nights). The total is 270,000 pesos. You paid 90,000 pesos online; please pay the rest in cash or by card when you arrive.\n\nCheck-in starts at 2 p.m. If you arrive earlier, you can leave your bags in our luggage room for free and use the garden. Check-out is at 11 a.m.\n\nBreakfast (fruit, eggs, bread and coffee) is included and is served from 7 to 10 a.m. in the garden. Towels are provided, but we do not sell sun cream or beach umbrellas; you can rent an umbrella at the beach for about 10,000 pesos a day.\n\nWe organise a tour to Tayrona Park every Friday for 60,000 pesos per person, transport included. Book it at the reception the day before.\n\nIf you need to cancel, write to us at least 48 hours before your arrival to receive your money back.\n\nSee you soon,\nMarta Ríos, Casa del Viento",
+    "estimulo": null,
+    "enunciado": "Which of these is NOT included in the price of the room?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Breakfast with coffee.",
+        "correcta": false,
+        "explicacion": "El tercer párrafo dice que el desayuno, con fruta, huevos, pan y café, está incluido (\"is included\"). Quien elige esta opción no leyó la palabra \"included\" o confundió la pregunta, que pide lo que NO está incluido.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Olvidó que la pregunta pide lo que NO está incluido."
+      },
+      {
+        "clave": "B",
+        "texto": "Towels.",
+        "correcta": false,
+        "explicacion": "El correo dice \"Towels are provided\", es decir, el hostal las entrega sin costo adicional. Quien elige esta opción pudo no conocer el verbo \"provide\" (suministrar) y pensó que había que llevarlas o pagarlas.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "No reconoció \"provided\" como \"suministradas por el hostal\"."
+      },
+      {
+        "clave": "C",
+        "texto": "A beach umbrella.",
+        "correcta": true,
+        "explicacion": "El tercer párrafo dice: \"we do not sell sun cream or beach umbrellas; you can rent an umbrella at the beach for about 10,000 pesos a day\". La sombrilla no la da ni la vende el hostal; hay que alquilarla aparte en la playa. Es lo único de la lista que no está incluido.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "A fan in the room.",
+        "correcta": false,
+        "explicacion": "La reserva confirmada es \"one private room with a fan\": el ventilador forma parte de la habitación. Quien elige esta opción no revisó la descripción de la habitación en el primer párrafo.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "No ubicó la descripción de la habitación con ventilador en el primer párrafo."
+      }
+    ],
+    "explicacion": "LEER: la pregunta pide lo que NO está incluido en el precio, así que hay que revisar cada opción contra el correo. COMPRENDER: \"included\", \"provided\" y \"with a fan\" indican cosas que sí vienen con la habitación; \"we do not sell\" y \"you can rent\" indican lo que no. INTERPRETAR: desayuno = included; toallas = provided; ventilador = parte de la habitación; sombrilla = no la venden, se alquila en la playa. REPRESENTAR: incluido: desayuno, toallas, ventilador; no incluido: sombrilla y bloqueador. RAZONAR: tres opciones aparecen con palabras de inclusión; solo la sombrilla aparece con \"do not sell\" y \"rent\". RESOLVER: la opción que dice \"a beach umbrella\". VERIFICAR: el correo da incluso el precio del alquiler aparte (10,000 pesos al día), lo que confirma que no está incluida.",
+    "que_identificar": "La negación \"we do not sell sun cream or beach umbrellas\" y las palabras \"included\", \"provided\" y \"with a fan\".",
+    "que_revisar": "Preguntas con NOT: verificar cada opción contra el texto; vocabulario: included, provided, rent, sell.",
+    "refuerzo_ids": [
+      "ING-113",
+      "ING-153"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "negacion",
+      "hotel",
+      "texto:ING-T29",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-153",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_5",
+    "afirmacion": "Comprende información específica e ideas principales en textos de mediana extensión sobre temas cotidianos",
+    "evidencia": "Identifica información explícita en un texto y la relaciona con la pregunta",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Ubicar una condición con plazo (at least 48 hours before)",
+    "dificultad": 2,
+    "contexto": "Read the email and answer the question.\n\n**Subject: Your booking at Casa del Viento Hostel – 3 to 6 July**\n\nDear Mr Castaño,\n\nThank you for choosing Casa del Viento in Santa Marta. Your booking is confirmed: one private room with a fan for two people, from Thursday 3 July to Sunday 6 July (three nights). The total is 270,000 pesos. You paid 90,000 pesos online; please pay the rest in cash or by card when you arrive.\n\nCheck-in starts at 2 p.m. If you arrive earlier, you can leave your bags in our luggage room for free and use the garden. Check-out is at 11 a.m.\n\nBreakfast (fruit, eggs, bread and coffee) is included and is served from 7 to 10 a.m. in the garden. Towels are provided, but we do not sell sun cream or beach umbrellas; you can rent an umbrella at the beach for about 10,000 pesos a day.\n\nWe organise a tour to Tayrona Park every Friday for 60,000 pesos per person, transport included. Book it at the reception the day before.\n\nIf you need to cancel, write to us at least 48 hours before your arrival to receive your money back.\n\nSee you soon,\nMarta Ríos, Casa del Viento",
+    "estimulo": null,
+    "enunciado": "What must a guest do to get a refund?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "Cancel in writing at least two days before arriving.",
+        "correcta": true,
+        "explicacion": "El último párrafo dice: \"If you need to cancel, write to us at least 48 hours before your arrival to receive your money back\". \"Write to us\" = por escrito; \"48 hours\" = dos días; \"your money back\" = reembolso. La opción traduce exactamente la condición.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "Call the reception the day before the booking.",
+        "correcta": false,
+        "explicacion": "Llamar a la recepción el día anterior es la forma de reservar el TOUR a Tayrona, no de cancelar la habitación. Además, el correo pide escribir (\"write to us\"), no llamar, y con 48 horas de anticipación. Quien elige esta opción mezcló dos párrafos.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la instrucción para reservar el tour con la de cancelación."
+      },
+      {
+        "clave": "C",
+        "texto": "Cancel at the reception when they check in.",
+        "correcta": false,
+        "explicacion": "Cancelar al llegar no cumple el plazo de 48 horas antes de la llegada. El correo no ofrece reembolso en ese caso. Quien elige esta opción no procesó \"at least 48 hours before your arrival\".",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró el plazo mínimo de 48 horas antes de la llegada."
+      },
+      {
+        "clave": "D",
+        "texto": "Send an email on the day of their arrival.",
+        "correcta": false,
+        "explicacion": "Escribir es la forma correcta, pero el día de la llegada ya es demasiado tarde: la condición exige al menos 48 horas de anticipación. Quien elige esta opción acertó el medio (escribir) pero no el plazo.",
+        "tipo_error": "comprension",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Reconoció \"write to us\" pero no el plazo de 48 horas."
+      }
+    ],
+    "explicacion": "LEER: el último párrafo del correo explica la cancelación: \"write to us at least 48 hours before your arrival to receive your money back\". COMPRENDER: la pregunta pide la condición para el reembolso (\"refund\" = money back). INTERPRETAR: hay dos requisitos: hacerlo por escrito y con al menos 48 horas (dos días) de anticipación. REPRESENTAR: escribir + ≥ 48 h antes → reembolso. RAZONAR: llamar el día anterior es la instrucción del tour; cancelar al llegar o escribir el mismo día no cumple el plazo; solo cancelar por escrito dos días antes cumple ambos requisitos. RESOLVER: la opción que dice cancelar por escrito al menos dos días antes. VERIFICAR: \"48 hours\" equivale a \"two days\" y \"write to us\" a \"in writing\".",
+    "que_identificar": "La oración \"write to us at least 48 hours before your arrival to receive your money back\".",
+    "que_revisar": "Condiciones con plazos: at least, before, in advance; equivalencias de tiempo (48 hours = two days); vocabulario: refund, money back, cancel.",
+    "refuerzo_ids": [
+      "ING-152",
+      "ING-133"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 100,
+    "etiquetas": [
+      "lectura",
+      "condicion",
+      "cancelacion",
+      "texto:ING-T29",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-154",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir el sentimiento inicial del autor a partir de detalles descriptivos",
+    "dificultad": 2,
+    "contexto": "Read the text and answer the question.\n\n**Review: La Cocina de Doña Ruth, Cali**\n\nI almost didn't write this review. When my cousin recommended this place, she said: \"Don't look at the walls, look at the plates.\" She was right about the walls: the paint is old, the fan makes a strange noise and the menu is a piece of cardboard written by hand. For a minute I wanted to leave.\n\nThen the food arrived. The sancocho was the best I have eaten outside my grandmother's house, and the portions were so generous that we took half of it home. Doña Ruth herself came to our table twice to ask if everything was all right, and when my little brother said he didn't like onions, she brought him a new plate without charging us.\n\nThere are some things to know before you go. They only accept cash, there are just seven tables, and on Sundays people start queuing outside at eleven. We arrived at one and waited forty minutes. The owner's son told us they are not planning to open a bigger place: \"If we grow, we lose the flavour,\" he said.\n\nWould I go back? I already have. Twice.",
+    "estimulo": null,
+    "enunciado": "How did the writer feel when she first entered the restaurant?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She was hungry and impatient because of the long queue.",
+        "correcta": false,
+        "explicacion": "La fila de los domingos se menciona en el tercer párrafo como información práctica; en el primero no se habla de hambre ni de impaciencia, sino de la pintura vieja, el ventilador ruidoso y el menú en cartón. Quien elige esta opción mezcló párrafos.",
+        "tipo_error": "distractor",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó la fila del tercer párrafo como explicación del sentimiento inicial."
+      },
+      {
+        "clave": "B",
+        "texto": "She was happy because the place looked like her grandmother's house.",
+        "correcta": false,
+        "explicacion": "La abuela aparece en el segundo párrafo para comparar el sabor del sancocho, no el aspecto del lugar. Al entrar, la autora describe defectos (\"the paint is old\", \"a strange noise\") y dice que quiso irse. No estaba feliz.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Trasladó la comparación con la abuela, que es sobre la comida, al aspecto del restaurante."
+      },
+      {
+        "clave": "C",
+        "texto": "She was surprised by how modern and clean the restaurant was.",
+        "correcta": false,
+        "explicacion": "Es lo contrario de la descripción: pintura vieja, ventilador con ruido extraño y menú escrito a mano en cartón. Nada indica modernidad ni limpieza destacada. Quien elige esta opción no leyó los detalles del primer párrafo.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó los detalles negativos de la descripción inicial."
+      },
+      {
+        "clave": "D",
+        "texto": "She was disappointed by the appearance of the place.",
+        "correcta": true,
+        "explicacion": "El primer párrafo describe paredes con pintura vieja, un ventilador ruidoso y un menú de cartón, y termina: \"For a minute I wanted to leave\" (por un momento quise irme). Querer irse por el aspecto del lugar es señal de decepción inicial, aunque luego la comida cambie su opinión.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el primer párrafo describe lo que vio la autora al entrar y termina con \"For a minute I wanted to leave\". COMPRENDER: la pregunta pide cómo se sintió al principio. INTERPRETAR: los detalles son negativos (pintura vieja, ruido extraño, menú de cartón) y la reacción es querer irse: decepción con el aspecto del lugar. REPRESENTAR: paredes feas → ganas de irse → luego la comida cambia todo. RAZONAR: la fila y la abuela pertenecen a otros párrafos; la modernidad contradice la descripción; la decepción por el aspecto coincide con los detalles y con \"I wanted to leave\". RESOLVER: la opción que habla de decepción por el aspecto del lugar. VERIFICAR: la advertencia de la prima, \"Don't look at the walls\", anticipa exactamente esa primera impresión negativa.",
+    "que_identificar": "Los detalles negativos del primer párrafo y la frase \"For a minute I wanted to leave\".",
+    "que_revisar": "Inferir sentimientos a partir de descripciones y reacciones; vocabulario: disappointed, impatient, surprised; estructura de una reseña (primera impresión, comida, consejos, conclusión).",
+    "refuerzo_ids": [
+      "ING-114",
+      "ING-155"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "sentimientos",
+      "texto:ING-T33",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-155",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "razonar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Inferir un rasgo de un personaje a partir de sus acciones",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Review: La Cocina de Doña Ruth, Cali**\n\nI almost didn't write this review. When my cousin recommended this place, she said: \"Don't look at the walls, look at the plates.\" She was right about the walls: the paint is old, the fan makes a strange noise and the menu is a piece of cardboard written by hand. For a minute I wanted to leave.\n\nThen the food arrived. The sancocho was the best I have eaten outside my grandmother's house, and the portions were so generous that we took half of it home. Doña Ruth herself came to our table twice to ask if everything was all right, and when my little brother said he didn't like onions, she brought him a new plate without charging us.\n\nThere are some things to know before you go. They only accept cash, there are just seven tables, and on Sundays people start queuing outside at eleven. We arrived at one and waited forty minutes. The owner's son told us they are not planning to open a bigger place: \"If we grow, we lose the flavour,\" he said.\n\nWould I go back? I already have. Twice.",
+    "estimulo": null,
+    "enunciado": "What can be inferred about Doña Ruth from the text?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "She rarely leaves the kitchen during the service.",
+        "correcta": false,
+        "explicacion": "El texto dice que Doña Ruth fue dos veces a la mesa (\"came to our table twice\"), lo que muestra que sí sale de la cocina. Quien elige esta opción supuso una rutina de cocinera típica sin revisar lo que ella hace en el relato.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "No procesó \"came to our table twice\" y supuso que la cocinera no sale de la cocina."
+      },
+      {
+        "clave": "B",
+        "texto": "She cares about her customers' satisfaction.",
+        "correcta": true,
+        "explicacion": "Doña Ruth fue dos veces a la mesa a preguntar si todo estaba bien y, cuando el niño dijo que no le gustaba la cebolla, le trajo un plato nuevo sin cobrar. Esas dos acciones muestran que le importa que sus clientes queden satisfechos, aunque el texto no lo diga con esas palabras.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "She charges extra for changes to the dishes.",
+        "correcta": false,
+        "explicacion": "Es lo contrario: el texto dice que trajo un plato nuevo \"without charging us\" (sin cobrarnos). Quien elige esta opción no procesó la negación de esa frase o la leyó al revés.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"charging us\" sin la palabra \"without\"."
+      },
+      {
+        "clave": "D",
+        "texto": "She wants to open a second restaurant soon.",
+        "correcta": false,
+        "explicacion": "Quien habla de crecer es el hijo del dueño, y dice que NO planean abrir un lugar más grande (\"they are not planning to open a bigger place\"). La inferencia contradice el texto y confunde a los personajes.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Atribuyó a Doña Ruth un plan que el texto niega y que menciona otro personaje."
+      }
+    ],
+    "explicacion": "LEER: el segundo párrafo cuenta dos acciones de Doña Ruth: fue dos veces a la mesa a preguntar si todo estaba bien y cambió el plato del niño sin cobrar. COMPRENDER: la pregunta pide una inferencia sobre ella, es decir, algo que el texto no dice literalmente pero que se concluye de sus actos. INTERPRETAR: preguntar por la comida y resolver una queja sin costo son muestras de interés por el cliente. REPRESENTAR: acciones (preguntar, cambiar el plato gratis) → rasgo (le importa la satisfacción del cliente). RAZONAR: quedarse en la cocina contradice \"came to our table\"; cobrar extra contradice \"without charging\"; el segundo restaurante lo descarta el hijo. RESOLVER: la opción sobre la satisfacción de los clientes. VERIFICAR: la conclusión del texto (la autora volvió dos veces) es coherente con un trato así.",
+    "que_identificar": "Las acciones \"came to our table twice to ask if everything was all right\" y \"brought him a new plate without charging us\".",
+    "que_revisar": "Inferir rasgos de personalidad a partir de acciones; procesar \"without + verbo-ing\"; distinguir qué personaje dice o hace cada cosa.",
+    "refuerzo_ids": [
+      "ING-154",
+      "ING-116"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "inferencia",
+      "personaje",
+      "texto:ING-T33",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-156",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Infiere información implícita a partir de los datos del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar una cita con sentido figurado (if we grow, we lose the flavour)",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Review: La Cocina de Doña Ruth, Cali**\n\nI almost didn't write this review. When my cousin recommended this place, she said: \"Don't look at the walls, look at the plates.\" She was right about the walls: the paint is old, the fan makes a strange noise and the menu is a piece of cardboard written by hand. For a minute I wanted to leave.\n\nThen the food arrived. The sancocho was the best I have eaten outside my grandmother's house, and the portions were so generous that we took half of it home. Doña Ruth herself came to our table twice to ask if everything was all right, and when my little brother said he didn't like onions, she brought him a new plate without charging us.\n\nThere are some things to know before you go. They only accept cash, there are just seven tables, and on Sundays people start queuing outside at eleven. We arrived at one and waited forty minutes. The owner's son told us they are not planning to open a bigger place: \"If we grow, we lose the flavour,\" he said.\n\nWould I go back? I already have. Twice.",
+    "estimulo": null,
+    "enunciado": "What does the owner's son mean by \"If we grow, we lose the flavour\"?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "The restaurant needs more tables to keep the food warm.",
+        "correcta": false,
+        "explicacion": "La frase no habla de la temperatura de la comida ni pide más mesas; al contrario, explica por qué NO quieren crecer. Quien elige esta opción tomó \"flavour\" (sabor) de manera literal y lo unió al dato de las siete mesas.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Leyó \"flavour\" como un problema físico de la comida y lo relacionó con las mesas."
+      },
+      {
+        "clave": "B",
+        "texto": "The family cannot afford to buy a bigger kitchen.",
+        "correcta": false,
+        "explicacion": "El texto no menciona dinero ni dificultades para pagar. El hijo da una razón de calidad, no económica. Quien elige esta opción supuso una causa común (falta de recursos) que el texto no sugiere.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Agregó una explicación económica sin apoyo en la cita."
+      },
+      {
+        "clave": "C",
+        "texto": "A bigger restaurant would make the food lose its quality.",
+        "correcta": true,
+        "explicacion": "El hijo explica por qué no piensan abrir un lugar más grande: si crecen, pierden \"el sabor\", es decir, la calidad y el carácter casero de la comida. \"Flavour\" se usa en sentido figurado para lo que hace especial al restaurante. La opción recoge esa idea.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "D",
+        "texto": "The customers would stop coming if prices went up.",
+        "correcta": false,
+        "explicacion": "La cita no menciona precios ni clientes; habla de crecer y de perder el sabor. Quien elige esta opción cambió el tema de la frase e introdujo una relación causa-efecto que no está en el texto.",
+        "tipo_error": "razonamiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Reemplazó la idea de calidad por una idea de precios que la cita no contiene."
+      }
+    ],
+    "explicacion": "LEER: en el tercer párrafo, el hijo del dueño explica que no planean abrir un lugar más grande y dice: \"If we grow, we lose the flavour\". COMPRENDER: se pide el significado de la frase, no su lectura literal. INTERPRETAR: \"grow\" = crecer, abrir algo más grande; \"lose the flavour\" = perder el sabor, en sentido figurado la calidad y el carácter de la comida casera. REPRESENTAR: restaurante pequeño → sabor especial; restaurante grande → pérdida de ese sabor. RAZONAR: las mesas y la temperatura son lecturas literales; el dinero y los precios no aparecen; la pérdida de calidad al crecer es lo que la frase expresa. RESOLVER: la opción que habla de que un restaurante más grande haría perder calidad a la comida. VERIFICAR: la frase justifica la decisión de no crecer, lo que es coherente con esa interpretación.",
+    "que_identificar": "La relación entre \"not planning to open a bigger place\" y la cita \"If we grow, we lose the flavour\".",
+    "que_revisar": "Interpretar citas con sentido figurado; condicionales con \"if\" para expresar consecuencias hipotéticas; vocabulario: flavour, grow, quality.",
+    "refuerzo_ids": [
+      "ING-117",
+      "ING-157"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "interpretacion",
+      "cita",
+      "texto:ING-T33",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-157",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I2",
+    "componente": "parte_6",
+    "afirmacion": "Comprende textos de mayor complejidad, identificando ideas principales, detalles y la opinión del autor o de las voces citadas",
+    "evidencia": "Identifica la opinión del autor y la relaciona con los detalles del texto",
+    "habilidad": "interpretar",
+    "tema": "Comprensión de lectura",
+    "subtema": "Interpretar la conclusión de una reseña a partir de una pregunta retórica",
+    "dificultad": 3,
+    "contexto": "Read the text and answer the question.\n\n**Review: La Cocina de Doña Ruth, Cali**\n\nI almost didn't write this review. When my cousin recommended this place, she said: \"Don't look at the walls, look at the plates.\" She was right about the walls: the paint is old, the fan makes a strange noise and the menu is a piece of cardboard written by hand. For a minute I wanted to leave.\n\nThen the food arrived. The sancocho was the best I have eaten outside my grandmother's house, and the portions were so generous that we took half of it home. Doña Ruth herself came to our table twice to ask if everything was all right, and when my little brother said he didn't like onions, she brought him a new plate without charging us.\n\nThere are some things to know before you go. They only accept cash, there are just seven tables, and on Sundays people start queuing outside at eleven. We arrived at one and waited forty minutes. The owner's son told us they are not planning to open a bigger place: \"If we grow, we lose the flavour,\" he said.\n\nWould I go back? I already have. Twice.",
+    "estimulo": null,
+    "enunciado": "What is the writer's final opinion of the restaurant?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "It is not worth the wait because of the uncomfortable conditions.",
+        "correcta": false,
+        "explicacion": "La autora menciona la espera de cuarenta minutos y los defectos del lugar, pero termina diciendo que ya volvió dos veces. Nadie vuelve a un lugar que no vale la pena. Quien elige esta opción dio más peso a las advertencias que a la conclusión.",
+        "tipo_error": "interpretacion",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tomó las advertencias prácticas del tercer párrafo como la opinión final."
+      },
+      {
+        "clave": "B",
+        "texto": "It is good, but she would only recommend it to her family.",
+        "correcta": false,
+        "explicacion": "El texto no limita la recomendación a la familia; de hecho, la reseña se escribe para el público en general y da consejos a cualquier visitante (\"before you go\"). Quien elige esta opción inventó una restricción que no aparece.",
+        "tipo_error": "inferencia",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Agregó una limitación a la recomendación que el texto no sugiere."
+      },
+      {
+        "clave": "C",
+        "texto": "It is too expensive for what it offers.",
+        "correcta": false,
+        "explicacion": "La autora no se queja del precio; al contrario, destaca las porciones generosas y que cambiaron un plato sin cobrar. El único comentario sobre dinero es que solo aceptan efectivo. Quien elige esta opción supuso un problema que no está en el texto.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió \"only accept cash\" con un problema de precio."
+      },
+      {
+        "clave": "D",
+        "texto": "It is so good that she has already returned more than once.",
+        "correcta": true,
+        "explicacion": "La reseña cierra con una pregunta retórica y su respuesta: \"Would I go back? I already have. Twice\" (¿Volvería? Ya lo hice. Dos veces). Volver dos veces es la prueba más fuerte de una opinión positiva, a pesar de las paredes viejas y la espera.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: la reseña termina con \"Would I go back? I already have. Twice\". COMPRENDER: la pregunta pide la opinión final de la autora. INTERPRETAR: la pregunta retórica \"¿Volvería?\" se responde con un hecho: ya volvió dos veces. Eso indica una valoración muy positiva, que pesa más que los defectos del lugar y la espera. REPRESENTAR: defectos (paredes, ruido, fila) < comida y atención → vuelve dos veces. RAZONAR: decir que no vale la pena contradice que haya vuelto; la limitación a la familia y el precio alto no aparecen en el texto. RESOLVER: la opción que dice que es tan bueno que ya volvió más de una vez. VERIFICAR: \"I already have. Twice\" equivale a \"has already returned more than once\".",
+    "que_identificar": "La pregunta retórica final y su respuesta: \"Would I go back? I already have. Twice\".",
+    "que_revisar": "Reconocer la conclusión de una reseña; preguntas retóricas; distinguir advertencias prácticas de la valoración global; presente perfecto con \"already\".",
+    "refuerzo_ids": [
+      "ING-156",
+      "ING-115"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 120,
+    "etiquetas": [
+      "lectura",
+      "opinion",
+      "conclusion",
+      "texto:ING-T33",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-158",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Earn vs. win / gain: ganar dinero con el trabajo",
+    "dificultad": 2,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(1)**.\n\n**Early Mornings at the Bakery**\n\nSince March I have had a part-time job at a bakery near my house in Duitama. I work on Saturdays and Sundays, and I **(1) ______** about 60,000 pesos a weekend, which I am saving for a new laptop. The hardest part is that I have to get up very **(2) ______**: the bread must be ready when the first customers arrive at six, so my alarm rings at a quarter to five. At the beginning I thought the work would be boring, but it is not. Mr Cárdenas, the baker, has taught me how to make pandebono and almojábanas, and the regular customers already know my name. The job is **(3) ______**, especially on Sunday afternoons when my legs hurt, but I like finishing the day with the smell of fresh bread on my clothes.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (1) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "earn",
+        "correcta": true,
+        "explicacion": "\"Earn\" significa ganar dinero a cambio de trabajo: \"I earn about 60,000 pesos a weekend\". El texto habla de un trabajo de fin de semana y de ahorrar ese dinero para un portátil, así que el verbo correcto para el salario es \"earn\".",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "B",
+        "texto": "win",
+        "correcta": false,
+        "explicacion": "\"Win\" significa ganar una competencia, un premio o un juego (\"win a match\", \"win the lottery\"), no recibir un salario. En español \"ganar\" sirve para ambos, pero en inglés son verbos distintos. Quien elige esta opción calcó el español.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"ganar dinero\" con \"win\" por influencia del español."
+      },
+      {
+        "clave": "C",
+        "texto": "gain",
+        "correcta": false,
+        "explicacion": "\"Gain\" significa obtener o aumentar algo (\"gain experience\", \"gain weight\"), y no se usa para el dinero que paga un empleo. Quien elige esta opción buscó un sinónimo de \"ganar\" sin conocer la colocación con salario.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "insuficiente",
+        "razon_frecuente": "Eligió un sinónimo general de \"obtener\" sin revisar la colocación con dinero."
+      }
+    ],
+    "explicacion": "LEER: el espacio (1) está en \"I work on Saturdays and Sundays, and I ______ about 60,000 pesos a weekend, which I am saving for a new laptop\". COMPRENDER: se busca el verbo que expresa recibir dinero por trabajar. INTERPRETAR: el contexto es un empleo de fin de semana y la cantidad es un pago que se ahorra. REPRESENTAR: trabajo + dinero = earn; competencia + premio = win; experiencia o peso = gain. RAZONAR: \"win\" es para premios y juegos; \"gain\" es para obtener cualidades o aumentar algo; solo \"earn\" se usa con un salario. RESOLVER: la opción que dice \"earn\". VERIFICAR: \"I earn about 60,000 pesos a weekend\" es natural y coherente con \"saving for a new laptop\".",
+    "que_identificar": "El contexto laboral (\"I work on Saturdays and Sundays\") y la cantidad de dinero que sigue al espacio.",
+    "que_revisar": "Tres traducciones de \"ganar\": earn (dinero por trabajo), win (competencias y premios), gain (experiencia, peso, tiempo).",
+    "refuerzo_ids": [
+      "ING-118",
+      "ING-159"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "earn_win",
+      "trabajo",
+      "texto:ING-T37",
+      "A2",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-159",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "comprender",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Adverbios de tiempo: early (temprano) vs. soon / fast",
+    "dificultad": 1,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(2)**.\n\n**Early Mornings at the Bakery**\n\nSince March I have had a part-time job at a bakery near my house in Duitama. I work on Saturdays and Sundays, and I **(1) ______** about 60,000 pesos a weekend, which I am saving for a new laptop. The hardest part is that I have to get up very **(2) ______**: the bread must be ready when the first customers arrive at six, so my alarm rings at a quarter to five. At the beginning I thought the work would be boring, but it is not. Mr Cárdenas, the baker, has taught me how to make pandebono and almojábanas, and the regular customers already know my name. The job is **(3) ______**, especially on Sunday afternoons when my legs hurt, but I like finishing the day with the smell of fresh bread on my clothes.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (2) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "fast",
+        "correcta": false,
+        "explicacion": "\"Fast\" significa rápido y describe la velocidad de una acción (\"run fast\"), no la hora a la que se hace. \"Get up very fast\" hablaría de levantarse rápidamente, pero el texto explica después que la alarma suena a las 4:45: se trata de la hora, no de la velocidad.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Confundió la hora de levantarse con la velocidad al hacerlo."
+      },
+      {
+        "clave": "B",
+        "texto": "soon",
+        "correcta": false,
+        "explicacion": "\"Soon\" significa pronto, dentro de poco tiempo a partir de ahora (\"I will call you soon\"), y no se usa para decir que alguien se levanta temprano de forma habitual. Quien elige esta opción tradujo \"temprano\" con un adverbio de futuro cercano.",
+        "tipo_error": "vocabulario",
+        "diagnostico": "probable",
+        "razon_frecuente": "Tradujo \"temprano\" como \"soon\" sin notar que se habla de una hora habitual."
+      },
+      {
+        "clave": "C",
+        "texto": "early",
+        "correcta": true,
+        "explicacion": "\"Early\" significa temprano, a una hora anterior a la habitual: \"I have to get up very early\". La explicación que sigue, que la alarma suena a las 4:45 porque el pan debe estar listo a las seis, confirma que la dificultad es la hora de levantarse.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      }
+    ],
+    "explicacion": "LEER: el espacio (2) está en \"The hardest part is that I have to get up very ______: the bread must be ready when the first customers arrive at six, so my alarm rings at a quarter to five\". COMPRENDER: se busca el adverbio que describe la hora de levantarse. INTERPRETAR: la explicación después de los dos puntos habla de una alarma a las 4:45 de la mañana, así que lo difícil es la hora, muy temprana. REPRESENTAR: levantarse a las 4:45 = levantarse temprano = early. RAZONAR: \"fast\" describe velocidad; \"soon\" indica un futuro cercano; \"early\" indica una hora temprana. RESOLVER: la opción que dice \"early\". VERIFICAR: \"get up very early... my alarm rings at a quarter to five\" es coherente y natural.",
+    "que_identificar": "La explicación después de los dos puntos: la alarma suena \"at a quarter to five\".",
+    "que_revisar": "Adverbios frecuentes: early (temprano), late (tarde), soon (pronto), fast / quickly (rápido); colocaciones con get up.",
+    "refuerzo_ids": [
+      "ING-158",
+      "ING-160"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 60,
+    "etiquetas": [
+      "vocabulario",
+      "adverbios",
+      "rutinas",
+      "texto:ING-T37",
+      "A1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  },
+  {
+    "id": "ING-160",
+    "prueba": "ingles",
+    "origen": "estilo",
+    "fuente": {
+      "nombre": "Elaboración propia siguiendo la Guía de orientación Saber 11 2026-2 (ICFES), prueba de Inglés",
+      "url": null,
+      "anio": 2026
+    },
+    "competencia": "I1",
+    "componente": "parte_7",
+    "afirmacion": "Reconoce el vocabulario adecuado para completar un texto corto según el contexto",
+    "evidencia": "Selecciona la palabra que completa coherentemente un texto corto",
+    "habilidad": "verificar",
+    "tema": "Vocabulario en contexto",
+    "subtema": "Adjetivos en -ing y -ed: tiring vs. tired",
+    "dificultad": 3,
+    "contexto": "Read the text and choose the word for each gap. This question is about gap **(3)**.\n\n**Early Mornings at the Bakery**\n\nSince March I have had a part-time job at a bakery near my house in Duitama. I work on Saturdays and Sundays, and I **(1) ______** about 60,000 pesos a weekend, which I am saving for a new laptop. The hardest part is that I have to get up very **(2) ______**: the bread must be ready when the first customers arrive at six, so my alarm rings at a quarter to five. At the beginning I thought the work would be boring, but it is not. Mr Cárdenas, the baker, has taught me how to make pandebono and almojábanas, and the regular customers already know my name. The job is **(3) ______**, especially on Sunday afternoons when my legs hurt, but I like finishing the day with the smell of fresh bread on my clothes.",
+    "estimulo": null,
+    "enunciado": "Which word completes gap (3) correctly?",
+    "opciones": [
+      {
+        "clave": "A",
+        "texto": "tired",
+        "correcta": false,
+        "explicacion": "\"Tired\" (cansado) describe cómo se siente una persona, no cómo es una actividad. El sujeto de la oración es \"the job\" (el trabajo), que no puede estar cansado; lo que hace es cansar. Quien elige esta opción confundió el adjetivo del sentimiento con el de la causa.",
+        "tipo_error": "conocimiento",
+        "diagnostico": "probable",
+        "razon_frecuente": "Aplicó el adjetivo del que siente (-ed) a la cosa que provoca el sentimiento."
+      },
+      {
+        "clave": "B",
+        "texto": "tiring",
+        "correcta": true,
+        "explicacion": "\"Tiring\" (agotador) describe algo que causa cansancio: \"The job is tiring\". El sujeto es \"the job\", y el texto añade \"especially on Sunday afternoons when my legs hurt\", que confirma que el trabajo cansa. Los adjetivos en -ing describen la causa; los en -ed, a quien lo siente.",
+        "tipo_error": null,
+        "diagnostico": null,
+        "razon_frecuente": null
+      },
+      {
+        "clave": "C",
+        "texto": "boring",
+        "correcta": false,
+        "explicacion": "\"Boring\" (aburrido) contradice el texto: el narrador dice que pensó que el trabajo sería aburrido \"but it is not\", y enumera las cosas que le gustan. Además, el dolor de piernas habla de cansancio, no de aburrimiento. Quien elige esta opción no conectó con la oración anterior.",
+        "tipo_error": "comprension",
+        "diagnostico": "probable",
+        "razon_frecuente": "Ignoró \"I thought the work would be boring, but it is not\"."
+      }
+    ],
+    "explicacion": "LEER: el espacio (3) está en \"The job is ______, especially on Sunday afternoons when my legs hurt, but I like finishing the day with the smell of fresh bread\". COMPRENDER: se busca el adjetivo que describe el trabajo. INTERPRETAR: el dolor de piernas indica cansancio físico; el sujeto es \"the job\", la causa del cansancio. REPRESENTAR: el trabajo (causa) = tiring; la persona (quien siente) = tired. RAZONAR: \"tired\" describe a la persona, no al trabajo; \"boring\" contradice \"but it is not\"; \"tiring\" describe la causa del cansancio. RESOLVER: la opción que dice \"tiring\". VERIFICAR: \"The job is tiring, especially when my legs hurt, but I like...\" es coherente: cansa, pero le gusta.",
+    "que_identificar": "El sujeto \"the job\" y la pista \"when my legs hurt\", además de la oración anterior sobre el aburrimiento.",
+    "que_revisar": "Adjetivos terminados en -ing (causa: tiring, boring, interesting) y en -ed (sentimiento: tired, bored, interested).",
+    "refuerzo_ids": [
+      "ING-159",
+      "ING-120"
+    ],
+    "recurso_ids": [],
+    "tiempo_sugerido_seg": 75,
+    "etiquetas": [
+      "vocabulario",
+      "adjetivos_ing_ed",
+      "texto:ING-T37",
+      "B1",
+      "afirmacion_por_verificar"
+    ],
+    "estado": "aprobada"
+  }
+]
