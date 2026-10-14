@@ -16,7 +16,7 @@ const COLOR_NIVEL = { 1: '#E53E3E', 2: '#F6AD55', 3: '#F6E05E', 4: '#48BB78', 'A
 const COLOR_INCORRECTAS = { verde: '#48BB78', amarillo: '#F6E05E', naranja: '#F6AD55', rojo: '#E53E3E', gris: '#A0AEC0' }
 const Simbolo = ({ s }) => (s ? <span className={`ml-1 font-semibold ${s === '▲' ? 'text-emerald-600' : s === '▼' ? 'text-red-500' : 'text-gray-400'}`}>{s}</span> : null)
 const Seccion = ({ titulo, children }) => (
-  <div className="rounded-xl border border-dark-600 overflow-hidden break-inside-avoid">
+  <div className="rounded-xl border border-dark-600 overflow-hidden">
     <div className="bg-dark-900 px-3 py-2 text-xs font-bold uppercase tracking-wide text-brand-navy">{titulo}</div>
     <div className="p-3">{children}</div>
   </div>
@@ -168,7 +168,7 @@ export function ReporteGrupo({ inf, grupo = null, docente = null, fechaAplicacio
                 <div>
                   <p className="text-xs font-semibold mb-1">Tabla {n}.1 Promedio y su desviación estándar en {p.nombre}</p>
                   <TablaPromedio filas={filas} />
-                  <LecturaResultados que={`el promedio obtenido en ${p.nombre}`} sp={p.comparacion_media} sd={p.comparacion_desviacion} nombre={nombreGrupo} />
+                  <LecturaResultados que={`el promedio en ${p.nombre}`} sp={p.comparacion_media} sd={p.comparacion_desviacion} nombre={nombreGrupo} />
                   <Nota>Promedio en escala de 0 a 100 puntos; la media de la escala en la primera aplicación (2014-2) se fijó en 50 puntos y su desviación estándar en 10.</Nota>
                 </div>
                 <div>
@@ -240,7 +240,7 @@ function LecturaResultados({ que, sp, sd, nombre }) {
     <div className="text-xs text-gray-400 mt-2 space-y-0.5">
       <p className="font-semibold text-gray-300">Lectura de resultados</p>
       {sp && <p>{que[0].toUpperCase() + que.slice(1)} obtenido por {nombre} es considerablemente <b>{textoComparacion[sp].toLowerCase()}</b> al de los establecimientos educativos de Colombia.</p>}
-      {sd && <p>La desviación estándar de {que} obtenida por {nombre} es considerablemente <b>{textoComparacion[sd].toLowerCase()}</b> a la de los establecimientos educativos de Colombia{sd === '▼' ? ' (resultados más homogéneos)' : sd === '▲' ? ' (resultados más dispersos: unos muy altos y otros muy bajos)' : ''}.</p>}
+      {sd && <p>La desviación estándar {que.replace(/^el /, 'del ')} obtenida por {nombre} es considerablemente <b>{textoComparacion[sd].toLowerCase()}</b> a la de los establecimientos educativos de Colombia{sd === '▼' ? ' (resultados más homogéneos)' : sd === '▲' ? ' (resultados más dispersos: unos muy altos y otros muy bajos)' : ''}.</p>}
     </div>
   )
 }
