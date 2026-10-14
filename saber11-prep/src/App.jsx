@@ -20,21 +20,28 @@ import Simulacros from './components/estudiante/Simulacros'
 import MisErrores from './components/estudiante/MisErrores'
 import MiProgreso from './components/estudiante/MiProgreso'
 import MiRuta from './components/estudiante/MiRuta'
-const Biblioteca = lazy(() => import('./components/Biblioteca'))
+// Carga perezosa con reintento: si una pantalla no se puede descargar (por ejemplo, la app se
+// actualizó y el navegador aún tenía la página anterior en caché), se recarga una sola vez.
+const cargar = (importar) => lazy(() => importar().catch((e) => {
+  const clave = 'recarga_por_trozo'
+  if (typeof sessionStorage !== 'undefined' && !sessionStorage.getItem(clave)) { sessionStorage.setItem(clave, '1'); window.location.reload(); return new Promise(() => {}) }
+  throw e
+}))
+const Biblioteca = cargar(() => import('./components/Biblioteca'))
 import Materias from './components/estudiante/Materias'
 import Materia from './components/estudiante/Materia'
 import Refuerzo from './components/estudiante/Refuerzo'
-const Historial = lazy(() => import('./components/estudiante/Historial'))
+const Historial = cargar(() => import('./components/estudiante/Historial'))
 import Carreras from './components/estudiante/Carreras'
-const MiFuturo = lazy(() => import('./components/estudiante/MiFuturo'))
-const Informe = lazy(() => import('./components/Informe'))
-const Guia = lazy(() => import('./components/Guia'))
-const PanelDocente = lazy(() => import('./components/docente/PanelDocente'))
-const Grupo = lazy(() => import('./components/docente/Grupo'))
-const EstudianteDetalle = lazy(() => import('./components/docente/EstudianteDetalle'))
-const Banco = lazy(() => import('./components/docente/Banco'))
-const Imprimir = lazy(() => import('./components/docente/Imprimir'))
-const Admin = lazy(() => import('./components/admin/Admin'))
+const MiFuturo = cargar(() => import('./components/estudiante/MiFuturo'))
+const Informe = cargar(() => import('./components/Informe'))
+const Guia = cargar(() => import('./components/Guia'))
+const PanelDocente = cargar(() => import('./components/docente/PanelDocente'))
+const Grupo = cargar(() => import('./components/docente/Grupo'))
+const EstudianteDetalle = cargar(() => import('./components/docente/EstudianteDetalle'))
+const Banco = cargar(() => import('./components/docente/Banco'))
+const Imprimir = cargar(() => import('./components/docente/Imprimir'))
+const Admin = cargar(() => import('./components/admin/Admin'))
 
 // El arranque se ejecuta una sola vez aunque React (en desarrollo, StrictMode)
 // monte el componente dos veces.
@@ -63,6 +70,7 @@ export default function App() {
   const setVistaEstudiante = (v) => { setVistaEstudianteRaw(v); try { localStorage.setItem('vista_estudiante', v ? '1' : '0') } catch {} ; ir('inicio') }
 
   useEffect(() => {
+    try { sessionStorage.removeItem('recarga_por_trozo') } catch {}
     arrancar().then(() => setListo(true)).catch(e => { console.error(e); setErrorArranque(e.message) })
   }, [])
 
