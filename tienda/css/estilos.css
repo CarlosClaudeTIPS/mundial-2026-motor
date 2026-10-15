@@ -465,3 +465,11 @@ main { min-height: calc(100vh - 64px); }
 .chips:empty { min-height: 34px; }
 #conteo:empty { min-height: 1.4em; display: inline-block; min-width: 90px; }
 .barra-resultados { min-height: 40px; }
+
+/* Stock y encuesta */
+.stock-txt { font-size: .78rem; font-weight: 700; color: var(--acento-oscuro); }
+.encuesta strong { font-size: 1.05rem; }
+.encuesta p { color: var(--texto-suave); font-size: .92rem; margin: .25rem 0 .7rem; }
+.encuesta-form { display: flex; gap: .5rem; flex-wrap: wrap; }
+.encuesta-form input { flex: 1; min-width: 200px; padding: .6rem .8rem; border: 1px solid var(--borde); border-radius: 999px; font: inherit; min-height: 42px; }
+.encuesta-form input:focus { outline: none; border-color: var(--primario); box-shadow: 0 0 0 3px var(--primario-claro); }

@@ -51,7 +51,7 @@
         <td><span class="orden-btns"><button data-mover="-1" title="Subir">▲</button><button data-mover="1" title="Bajar">▼</button></span></td>
         <td><span class="nombre"><img class="mini" src="${esc(T.imagenProducto(p))}" alt="">${esc(p.nombre)}</span><br><small style="color:var(--texto-tenue)">${esc(c ? c.nombre : 'Sin categoría')} · ${esc(p.id)}</small></td>
         <td>${T.formatoPrecio(p.precio)}${p.precioAnterior ? `<br><small style="text-decoration:line-through;color:var(--texto-tenue)">${T.formatoPrecio(p.precioAnterior)}</small>` : ''}</td>
-        <td><span class="etq ${p.disponible ? 'on' : 'off'}">${p.disponible ? 'Disponible' : 'Agotado'}</span><span class="etq ${p.visible !== false ? 'on' : 'off'}">${p.visible !== false ? 'Visible' : 'Oculto'}</span></td>
+        <td><span class="etq ${p.disponible ? 'on' : 'off'}">${p.disponible ? 'Disponible' + (p.stock != null ? ' · ' + p.stock + ' ud.' : '') : (T.vendido(p) ? 'Vendido' : 'Agotado')}</span><span class="etq ${p.visible !== false ? 'on' : 'off'}">${p.visible !== false ? 'Visible' : 'Oculto'}</span></td>
         <td>${p.nuevo ? '<span class="etq">Nuevo</span>' : ''}${p.oferta ? '<span class="etq">Oferta</span>' : ''}${p.destacado ? '<span class="etq">Destacado</span>' : ''}${p.popular ? '<span class="etq">Popular</span>' : ''}</td>
         <td><div class="acciones"><button data-editar>Editar</button><button data-ocultar>${p.visible === false ? 'Mostrar' : 'Ocultar'}</button><button data-enlace>Enlace</button><button data-eliminar class="peligro">Eliminar</button></div></td></tr>`;
     }).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--texto-suave)">No hay productos.</td></tr>';
@@ -93,6 +93,7 @@
         <div class="fila">${campo('id', 'ID / enlace (se genera solo)', 'text', p.id, { ayuda: 'Solo letras, números y guiones. Cambiarlo rompe enlaces ya compartidos.' })}
         <label>Categoría<select name="categoria">${catalogo.categorias.map(c => `<option value="${esc(c.id)}" ${c.id === p.categoria ? 'selected' : ''}>${esc(c.nombre)}</option>`).join('')}</select></label></div>
         <div class="fila fila-3">${campo('precio', 'Precio de venta (COP) *', 'number', p.precio, { attrs: 'min="0" step="100" required inputmode="numeric"' })}${campo('precioAnterior', 'Precio anterior (solo si es real)', 'number', p.precioAnterior || '', { attrs: 'min="0" step="100" inputmode="numeric"' })}${campo('fechaCreacion', 'Fecha de ingreso', 'date', p.fechaCreacion || hoy())}</div>
+        ${campo('stock', 'Unidades disponibles (opcional)', 'number', p.stock == null ? '' : p.stock, { ayuda: 'Si lo llenas, la tienda muestra «Quedan N unidades». Con 0 el producto queda como VENDIDO y muestra el botón «Quiero uno igual». Vacío = no se muestra.', attrs: 'min="0" step="1" inputmode="numeric"' })}
         ${campo('descripcionCorta', 'Descripción corta (1 frase)', 'text', p.descripcionCorta, { attrs: 'maxlength="120"' })}
         <div class="checks">${check('disponible', 'Disponible', p.disponible)}${check('visible', 'Visible en la tienda', p.visible !== false)}${check('nuevo', 'Etiqueta «Nuevo»', p.nuevo)}${check('oferta', 'Etiqueta «Oferta»', p.oferta)}${check('destacado', 'Destacado en inicio', p.destacado)}${check('popular', 'Popular', p.popular)}</div>
       </fieldset>
@@ -139,10 +140,11 @@
     const especificaciones = {}; leerLista('especificaciones').forEach(s => { const i = s.indexOf(':'); if (i > 0) especificaciones[s.slice(0, i).trim()] = s.slice(i + 1).trim(); });
     const variantes = leerLista('variantes').map(s => { const i = s.indexOf(':'); return i > 0 ? { nombre: s.slice(0, i).trim(), opciones: s.slice(i + 1).split(',').map(x => x.trim()).filter(Boolean) } : null; }).filter(x => x && x.opciones.length);
     const preguntas = leerLista('preguntas').map(s => { const [p, ...r] = s.split('|'); return r.length ? { p: p.trim(), r: r.join('|').trim() } : null; }).filter(Boolean);
+    const stock = v('stock') === '' ? null : Math.max(0, Math.round(Number(v('stock'))) || 0);
     return T.normalizarProducto({
-      id: idUnico(v('id') || v('nombre')), nombre: v('nombre'), categoria: v('categoria'), precio, precioAnterior,
+      id: idUnico(v('id') || v('nombre')), nombre: v('nombre'), categoria: v('categoria'), precio, precioAnterior, stock,
       fechaCreacion: v('fechaCreacion') || hoy(), descripcionCorta: v('descripcionCorta'), descripcion: v('descripcion'), problema: v('problema'),
-      disponible: c('disponible'), visible: c('visible'), nuevo: c('nuevo'), oferta: c('oferta'), destacado: c('destacado'), popular: c('popular'),
+      disponible: stock === 0 ? false : c('disponible'), visible: c('visible'), nuevo: c('nuevo'), oferta: c('oferta'), destacado: c('destacado'), popular: c('popular'),
       imagenes: leerLista('imagenes'), video: v('video'), beneficios: leerLista('beneficios'), especificaciones, incluye: leerLista('incluye'),
       instrucciones: leerLista('instrucciones'), precauciones: leerLista('precauciones'), preguntas, variantes,
       palabrasClave: v('palabrasClave').split(',').map(x => x.trim()).filter(Boolean), relacionados: v('relacionados').split(',').map(x => x.trim()).filter(Boolean),
@@ -269,6 +271,7 @@
         ${campo('whatsapp.mensajeProducto', 'Mensaje al pedir un producto', 'textarea', w.mensajeProducto, { ayuda: 'Variables: {nombre}, {precio}, {enlace}, {variantes}', rows: 3 })}
         ${campo('whatsapp.mensajeDisponibilidad', 'Mensaje al consultar disponibilidad', 'textarea', w.mensajeDisponibilidad, { rows: 2 })}
         ${campo('whatsapp.mensajeCarrito', 'Mensaje del carrito', 'textarea', w.mensajeCarrito, { ayuda: 'Variables: {items}, {total}', rows: 3 })}
+        <div class="fila">${campo('whatsapp.mensajeInteres', 'Mensaje «Quiero uno igual» (producto vendido)', 'textarea', w.mensajeInteres, { rows: 2 })}${campo('whatsapp.mensajeSugerencia', 'Mensaje de la encuesta «¿Qué te gustaría encontrar?»', 'textarea', w.mensajeSugerencia, { ayuda: 'Variable: {texto}', rows: 2 })}</div>
         <div class="fila fila-3">${campo('whatsapp.mensajeGeneral', 'Mensaje general', 'text', w.mensajeGeneral)}${campo('whatsapp.mensajeEnvios', 'Consulta de envíos', 'text', w.mensajeEnvios)}${campo('whatsapp.mensajePagos', 'Consulta de pagos', 'text', w.mensajePagos)}</div>
       </fieldset>
       <fieldset><legend>Redes sociales (URL completas; vacío = no se muestra)</legend>
@@ -328,7 +331,7 @@
   $('#gen-resultados').addEventListener('click', async (e) => { const b = e.target.closest('[data-copiar]'); if (!b) return; try { await navigator.clipboard.writeText($('#gen-' + b.dataset.copiar).textContent); T.toast('Texto copiado'); } catch (err) { T.toast('No se pudo copiar'); } });
 
   /* ---------- Importar / exportar ---------- */
-  const CSV_COLS = ['id', 'nombre', 'categoria', 'precio', 'precioAnterior', 'disponible', 'visible', 'nuevo', 'oferta', 'destacado', 'popular', 'orden', 'fechaCreacion', 'descripcionCorta', 'descripcion', 'problema', 'imagenes', 'video', 'beneficios', 'especificaciones', 'incluye', 'instrucciones', 'precauciones', 'preguntas', 'variantes', 'palabrasClave', 'relacionados'];
+  const CSV_COLS = ['id', 'nombre', 'categoria', 'precio', 'precioAnterior', 'stock', 'disponible', 'visible', 'nuevo', 'oferta', 'destacado', 'popular', 'orden', 'fechaCreacion', 'descripcionCorta', 'descripcion', 'problema', 'imagenes', 'video', 'beneficios', 'especificaciones', 'incluye', 'instrucciones', 'precauciones', 'preguntas', 'variantes', 'palabrasClave', 'relacionados'];
   const csvCelda = (v) => { v = v == null ? '' : String(v); return /[",\n;]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; };
   function exportarCSV() {
     const filas = catalogo.productos.map(p => CSV_COLS.map(c => {
@@ -366,7 +369,7 @@
       if (!o.nombre) return;
       const p = T.normalizarProducto({
         id: o.id || T.slug(o.nombre), nombre: o.nombre, categoria: o.categoria || 'otros', precio: Number(String(o.precio).replace(/[^\d.]/g, '')) || 0,
-        precioAnterior: o.precioAnterior ? Number(String(o.precioAnterior).replace(/[^\d.]/g, '')) : null,
+        precioAnterior: o.precioAnterior ? Number(String(o.precioAnterior).replace(/[^\d.]/g, '')) : null, stock: o.stock === '' || o.stock == null ? null : Number(o.stock),
         disponible: o.disponible === '' ? true : si(o.disponible), visible: o.visible === '' ? true : si(o.visible), nuevo: si(o.nuevo), oferta: si(o.oferta), destacado: si(o.destacado), popular: si(o.popular),
         orden: Number(o.orden) || 0, fechaCreacion: o.fechaCreacion || hoy(), descripcionCorta: o.descripcionCorta, descripcion: o.descripcion, problema: o.problema,
         imagenes: lista(o.imagenes), video: o.video, beneficios: lista(o.beneficios), incluye: lista(o.incluye), instrucciones: lista(o.instrucciones), precauciones: lista(o.precauciones),

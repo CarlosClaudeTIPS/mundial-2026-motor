@@ -43,7 +43,7 @@
       T.$('#titulo-catalogo').textContent = estado.q ? `Resultados para “${estado.q}”` : cat ? cat.nombre : ({ nuevos: 'Novedades', ofertas: 'Ofertas', destacados: 'Destacados', populares: 'Populares' })[estado.f] || 'Catálogo';
       T.$('#sub-catalogo').textContent = cat ? (cat.descripcion || '') : '';
       T.$('#conteo').textContent = `${lista.length} producto${lista.length === 1 ? '' : 's'}`;
-      T.renderGrid('#grid', lista, estado.q ? 'No encontramos productos con esa búsqueda. Prueba con otra palabra o <a href="catalogo.html">mira todo el catálogo</a>.' : 'No hay productos con estos filtros.');
+      T.renderGrid('#grid', lista, (estado.q ? 'No encontramos productos con esa búsqueda. Prueba con otra palabra o <a href="catalogo.html">mira todo el catálogo</a>.' : 'No hay productos con estos filtros.') + '<div style="margin-top:1.2rem;text-align:left">' + T.encuesta('¿Buscabas algo que no tenemos?') + '</div>');
       chips();
       if (estado.q) T.registrar('buscar', { q: estado.q.slice(0, 60) });
     };

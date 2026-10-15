@@ -40,6 +40,7 @@
         <div><strong>${T.esc(c.titulo)}</strong><span>${c.texto ? T.esc(c.texto) : '<em class="pendiente">Información pendiente de confirmar por el negocio.</em>'}</span></div></div>`).join('');
 
     T.renderVistos('#sec-vistos');
+    T.$('#encuesta-inicio').innerHTML = T.encuesta('¿Qué te gustaría encontrar en la tienda?');
     T.$('#pasos').innerHTML = (config.pasosCompra || []).map((p, i) => `<div class="paso aparece"><span class="paso-num">${i + 1}</span><strong>${T.esc(p.titulo)}</strong><span>${T.esc(p.texto)}</span></div>`).join('');
     if (!(config.pasosCompra || []).length) T.$('#sec-pasos').hidden = true;
     const faqs = T.faqs(); const dest = faqs.filter(q => q.destacada);

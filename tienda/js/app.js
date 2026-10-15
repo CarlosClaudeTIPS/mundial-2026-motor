@@ -82,9 +82,11 @@
     precioAnterior: null, disponible: true, nuevo: false, oferta: false, destacado: false, popular: false,
     visible: true, orden: 0, imagenes: [], video: '', descripcionCorta: '', descripcion: '', problema: '',
     beneficios: [], especificaciones: {}, incluye: [], instrucciones: [], precauciones: [], preguntas: [],
-    variantes: [], palabrasClave: [], relacionados: [], fechaCreacion: ''
-  }, p, { precio: Number(p.precio) || 0, precioAnterior: p.precioAnterior ? Number(p.precioAnterior) : null });
+    variantes: [], palabrasClave: [], relacionados: [], fechaCreacion: '', stock: null
+  }, p, { precio: Number(p.precio) || 0, precioAnterior: p.precioAnterior ? Number(p.precioAnterior) : null, stock: (p.stock === '' || p.stock == null) ? null : Math.max(0, Math.round(Number(p.stock)) || 0) });
 
+  T.vendido = (p) => !p.disponible && p.stock === 0;
+  T.textoStock = (p) => (p.disponible && p.stock != null && p.stock > 0) ? `Quedan ${p.stock} unidad${p.stock === 1 ? '' : 'es'}` : '';
   T.visibles = () => T.datos.catalogo.productos.filter(p => p.visible !== false).sort((a, b) => (a.orden || 0) - (b.orden || 0));
   T.categoria = (id) => T.datos.catalogo.categorias.find(c => c.id === id);
   T.producto = (id) => T.datos.catalogo.productos.find(p => p.id === id);
@@ -138,7 +140,7 @@
 
   T.mensajeProducto = (p, variantes, tipo, cantidad) => {
     const wa = T.datos.config.whatsapp || {};
-    const tpl = tipo === 'disponibilidad' ? wa.mensajeDisponibilidad : wa.mensajeProducto;
+    const tpl = tipo === 'interes' ? (wa.mensajeInteres || 'Hola, vi que el producto {nombre} ya se vendió. Me interesa si consiguen otro. {enlace}') : tipo === 'disponibilidad' ? wa.mensajeDisponibilidad : wa.mensajeProducto;
     let vTxt = variantes && Object.keys(variantes).length
       ? Object.entries(variantes).map(([k, v]) => `${k}: ${v}`).join(', ') + '\n' : '';
     if (cantidad && cantidad > 1) vTxt = `Cantidad: ${cantidad}\n` + vTxt;
@@ -146,6 +148,11 @@
       nombre: p.nombre, precio: T.formatoPrecio(p.precio), enlace: T.urlProducto(p, true), variantes: vTxt
     }).trim();
   };
+
+  T.mensajeSugerencia = (texto) => T.plantilla((T.datos.config.whatsapp || {}).mensajeSugerencia || 'Hola, me gustaría que tuvieran en la tienda: {texto}', { texto });
+  /* Cuadro "¿Qué te gustaría encontrar?" reutilizable */
+  T.encuesta = (titulo) => `<div class="encuesta"><strong>${T.esc(titulo || '¿Qué te gustaría encontrar en la tienda?')}</strong><p>Cuéntanos qué producto buscas y lo tenemos en cuenta para traerlo.</p><form class="encuesta-form"><label class="visualmente-oculto" for="enc-${Math.random().toString(36).slice(2, 7)}">Producto que te gustaría</label><input type="text" maxlength="140" placeholder="Ej.: audífonos inalámbricos, control de PS5…" required><button class="btn btn-whatsapp btn-sm" type="submit">${T.ico.wa} Enviar</button></form></div>`;
+  document.addEventListener('submit', (e) => { const f = e.target.closest('.encuesta-form'); if (!f || !T.datos) return; e.preventDefault(); const v = f.querySelector('input').value.trim(); if (!v) return; if (T.abrirWA(T.mensajeSugerencia(v), 'sugerencia', { texto: v.slice(0, 60) })) f.reset(); });
 
   T.abrirWA = (mensaje, evento, extra) => {
     if (!T.hayWA()) { T.toast('El número de WhatsApp aún no está configurado (admin → Configuración).'); return false; }
@@ -201,8 +208,10 @@
       const ex = this.items.find(i => i.clave === k);
       if (!p.disponible) { T.toast('Este producto está agotado por ahora.'); return; }
       cant = Math.min(MAX_CANT, Math.max(1, Math.round(Number(cant)) || 1));
-      if (ex) ex.cantidad = Math.min(MAX_CANT, ex.cantidad + cant);
-      else this.items.push({ clave: k, id: p.id, variantes: variantes || {}, cantidad: cant });
+      const tope = p.stock != null ? Math.min(MAX_CANT, p.stock) : MAX_CANT;
+      if (ex && ex.cantidad + cant > tope) { T.toast(`Solo hay ${tope} unidad${tope === 1 ? '' : 'es'} disponible${tope === 1 ? '' : 's'}.`); ex.cantidad = tope; this.guardar(); return; }
+      if (ex) ex.cantidad = Math.min(tope, ex.cantidad + cant);
+      else this.items.push({ clave: k, id: p.id, variantes: variantes || {}, cantidad: Math.min(tope, cant) });
       this.guardar(); T.registrar('add_to_cart', { producto: p.id });
       T.toast('Agregado al carrito');
     },
@@ -421,7 +430,7 @@
     const cat = T.categoria(p.categoria);
     const d = T.descuento(p);
     const etiquetas = [
-      !p.disponible && '<span class="etiqueta etiqueta-agotado">Agotado</span>',
+      !p.disponible && `<span class="etiqueta etiqueta-agotado">${T.vendido(p) ? 'Vendido' : 'Agotado'}</span>`,
       p.disponible && p.oferta && d > 0 && `<span class="etiqueta etiqueta-oferta">-${d}%</span>`,
       p.disponible && p.oferta && d === 0 && '<span class="etiqueta etiqueta-oferta">Oferta</span>',
       p.nuevo && '<span class="etiqueta etiqueta-nuevo">Nuevo</span>',
@@ -439,11 +448,12 @@
         <h3 class="tarjeta-titulo"><a href="${url}">${T.esc(p.nombre)}</a></h3>
         ${p.descripcionCorta ? `<p class="tarjeta-desc">${T.esc(p.descripcionCorta)}</p>` : ''}
         <div class="precio"><span class="precio-actual">${T.formatoPrecio(p.precio)}</span>${d > 0 ? `<span class="precio-anterior">${T.formatoPrecio(p.precioAnterior)}</span>` : ''}</div>
+        ${T.textoStock(p) ? `<span class="stock-txt">${T.textoStock(p)}</span>` : ''}
         <div class="tarjeta-acciones">
           ${p.disponible
             ? `<button class="btn btn-whatsapp" data-wa="${T.esc(p.id)}">${T.ico.wa} Pedir</button>
                <button class="icono-btn" data-carrito="${T.esc(p.id)}" aria-label="Agregar al carrito" title="Agregar al carrito">${T.ico.mas}</button>`
-            : `<button class="btn btn-suave" data-wa-disp="${T.esc(p.id)}">${T.ico.wa} Avísame</button>`}
+            : `<button class="btn btn-suave" data-wa-disp="${T.esc(p.id)}">${T.ico.wa} ${T.vendido(p) ? 'Quiero uno igual' : 'Avísame'}</button>`}
         </div>
       </div>
     </article>`;
@@ -465,7 +475,7 @@
       if (p.variantes && p.variantes.length) { location.href = T.urlProducto(p) + (T.datos.config.sitio.paginasEstaticas ? '?' : '&') + 'carrito=1'; return; }
       T.carrito.agregar(p, {}, 1);
     }
-    else if (b.dataset.waDisp) { const p = T.producto(b.dataset.waDisp); if (p) T.abrirWA(T.mensajeProducto(p, null, 'disponibilidad'), 'whatsapp_click', { producto: p.id, origen: 'disponibilidad' }); }
+    else if (b.dataset.waDisp) { const p = T.producto(b.dataset.waDisp); if (p) T.abrirWA(T.mensajeProducto(p, null, T.vendido(p) ? 'interes' : 'disponibilidad'), 'whatsapp_click', { producto: p.id, origen: T.vendido(p) ? 'interes' : 'disponibilidad' }); }
   });
 
   /* ---------- Búsqueda / filtros ---------- */
