@@ -73,7 +73,8 @@ export default function Inicio({ usuario }) {
       <TarjetaDiagnostico diagnostico={datos.diagnostico} usuario={usuario} />
       <RutaMejorar usuario={usuario} modo="hoy" />
 
-      <div className="grid grid-cols-5 gap-2">
+      {/* 3 columnas en celular (para que los nombres no se partan a la mitad), 5 en pantalla ancha */}
+      <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
         {materias.map(m => { const I = ICONO_PRUEBA[m.id]; const nivel = nivelDe[m.id]; return (
           <button key={m.id} onClick={() => ir('materia', { id: m.id })} className={`card !p-3 flex flex-col items-center gap-1.5 hover:-translate-y-0.5 transition-transform ${enModoCarrera && nivel === 'alta' ? 'border-brand-blue' : ''}`}>
             <span className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: m.fondo, color: m.color }}><I size={20} /></span>

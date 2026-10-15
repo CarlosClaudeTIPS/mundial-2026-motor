@@ -3,6 +3,7 @@ import { BookOpenCheck, Timer, LineChart, Calculator, BookOpen, Globe2, FlaskCon
 import { entrarLocal, entrarNube, pedirRecuperacion, registrarEstudiante, baseUsuario } from '../lib/sesion'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { USUARIOS_DEMO } from '../lib/demo'
+import BarraPortal from './BarraPortal'
 
 // ─── Portada pública + acceso ────────────────────────────────────────────────
 
@@ -28,6 +29,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-dark-800">
+      <BarraPortal />
       {/* Barra superior */}
       <header className="sticky top-0 z-30 bg-dark-800/95 backdrop-blur border-b border-dark-700">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">

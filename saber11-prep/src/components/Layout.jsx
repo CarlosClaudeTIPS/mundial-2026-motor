@@ -4,6 +4,7 @@ import { salir, solicitudesPendientes } from '../lib/sesion'
 import { useSync, sincronizar } from '../lib/sync'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { ir } from '../lib/nav'
+import BarraPortal from './BarraPortal'
 
 const MENU = {
   estudiante: [
@@ -41,15 +42,18 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
   const extra = EXTRA_ESCRITORIO[rol] ?? []
   const activo = (it) => ruta === it.ruta || (ruta === 'materia' && it.ruta === 'materias')
   const puedePrevisualizar = usuario.rol === 'admin' || usuario.rol === 'docente'
+  // El logo siempre lleva al inicio del rol que se está viendo.
+  const irInicio = () => { ir('inicio', rol === 'docente' ? { vista: 'docente' } : {}); window.scrollTo({ top: 0 }) }
+  const enInicio = ruta === 'inicio' || ruta === '' || ruta == null
 
   return (
     <div className="min-h-screen md:flex">
       {/* Barra lateral (escritorio) */}
       <aside className="no-print hidden md:flex md:flex-col w-60 shrink-0 border-r border-dark-700 bg-dark-800 p-4">
-        <div className="flex items-center gap-2 px-2 py-2 mb-4">
+        <button onClick={irInicio} className="flex items-center gap-2 px-2 py-2 mb-4 rounded-xl hover:bg-dark-900 text-left" title="Ir al inicio" aria-label="Ir al inicio">
           <img src="/icono.svg" alt="" className="w-9 h-9" />
           <span className="text-xl font-bold text-brand-blue">Saber<span className="text-brand-navy">11</span></span>
-        </div>
+        </button>
         <nav className="space-y-1">
           {[...items, ...extra].map(it => (
             <button key={it.ruta + it.nombre} onClick={() => ir(it.ruta, it.params)}
@@ -82,12 +86,13 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
             <button onClick={() => onVistaEstudiante?.(false)} className="font-semibold underline shrink-0">Salir de esta vista</button>
           </div>
         )}
+        {enInicio && <BarraPortal />}
         {/* Barra superior (móvil) */}
         <header className="no-print md:hidden sticky top-0 z-20 bg-dark-800/95 backdrop-blur border-b border-dark-700 px-4 py-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <button onClick={irInicio} className="flex items-center gap-2" title="Ir al inicio" aria-label="Ir al inicio">
             <img src="/icono.svg" alt="" className="w-7 h-7" />
             <span className="font-bold text-brand-blue">Saber<span className="text-brand-navy">11</span></span>
-          </div>
+          </button>
           <div className="flex items-center gap-3">
             {puedePrevisualizar && (
               <button onClick={() => onVistaEstudiante?.(!vistaEstudiante)} className="text-brand-blue" title={vistaEstudiante ? 'Volver a mi vista' : 'Ver como estudiante'}>{vistaEstudiante ? <EyeOff size={19} /> : <Eye size={19} />}</button>
