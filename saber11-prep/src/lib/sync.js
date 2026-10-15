@@ -58,7 +58,12 @@ export async function sincronizar() {
       try {
         const fila = aFilaNube(item.tabla, item.datos)
         const { error } = await supabase.from(destino.destino).upsert(fila, { onConflict: destino.clave })
-        if (error) throw new Error(`${item.tabla}: ${error.message}`)
+        if (error) {
+          // Si la fila ya existe en la nube y la regla de seguridad no deja modificarla (por ejemplo, un
+          // intento de otro estudiante reenviado desde la cuenta del docente), ya está subida: se descarta.
+          if (/row-level security/i.test(error.message) && await existeEnNube(destino, fila)) { await db.cola.delete(item.id); continue }
+          throw new Error(`${item.tabla}: ${error.message}`)
+        }
         await db.cola.delete(item.id)
         if (item.tabla === 'intentos') await db.intentos.update(item.datos.uid, { sincronizado: 1 })
       } catch (e) {
@@ -74,6 +79,11 @@ export async function sincronizar() {
     set({ sincronizando: false })
     await contarPendientes()
   }
+}
+
+async function existeEnNube(destino, fila) {
+  const { data } = await supabase.from(destino.destino).select(destino.clave).eq(destino.clave, fila[destino.clave]).maybeSingle()
+  return Boolean(data)
 }
 
 // Campos que no van a la nube o que cambian de forma.
