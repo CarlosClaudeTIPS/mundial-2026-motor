@@ -83,9 +83,14 @@ Otros pendientes: correr `supabase/migracion-005-ruta.sql`, `migracion-006-futur
   banda, ancho real del contenedor (no se encogen en celular), leyenda numerada para rótulos largos,
   decimales con coma. Prueba `tests/estimulo.test.js` revisa que todo gráfico del banco tenga números válidos.
 - **Logo → inicio** y **franja del portal** (`src/components/BarraPortal.jsx`, `src/lib/portal.js`): en la
-  portada y el inicio se ven las tres secciones (ICFES · Apoyo docente · Tienda). Si la app vive dentro del
-  portal (carpeta `icfes/`), los enlaces son relativos; si no, usa `VITE_PORTAL_URL` (sin ella enlaza a la
-  portada del portal de vista previa en claude.ai).
+  portada y el inicio se ven las tres secciones (ICFES · Apoyo docente · Tienda).
+- **Portal unido en el mismo sitio**: `public/portal/` contiene la portada («Tu Marca»), `docentes/` (Apoyo
+  docente) y `tienda/`, servidos en https://saber11-prep.vercel.app/portal/ . La barra común del portal
+  (`public/portal/shared/barra.js`) enlaza ICFES a la raíz del sitio, y la app enlaza a `/portal/...`.
+  Marca y textos: `public/portal/shared/portal.config.js`. La PWA no precarga ni intercepta `/portal/`.
+- **Actualización de versión**: además de recargar al activarse un service worker nuevo, la app busca
+  versión nueva al volver a la pestaña y cada 30 min (`src/main.jsx`). Si alguien ve la versión vieja:
+  cerrar la pestaña y abrir de nuevo.
 
 ### Super admin en las TRES páginas (pendiente, decisión de arquitectura)
 Hoy solo la app ICFES tiene cuentas (Supabase Auth). «Apoyo docente» y «Tienda» son sitios estáticos sin

@@ -1,13 +1,10 @@
 // ─── Portal: las tres secciones de la casa (ICFES, Apoyo docente, Tienda) ───
 // Esta app es la sección «ICFES». Desde su inicio se enlazan las otras dos.
 //
-// Dónde viven las otras secciones:
-//  - Si la app está publicada DENTRO del portal (carpeta icfes/), los enlaces
-//    son relativos (../docentes/, ../tienda/) y funcionan solos.
-//  - Si la app está en su propio dominio (saber11-prep.vercel.app), se usa
-//    VITE_PORTAL_URL (la dirección del portal). Si no está definida, se
-//    enlaza a la portada del portal de vista previa.
-const PORTAL_URL = (import.meta.env.VITE_PORTAL_URL || 'https://claude.ai/artifact/KtjAKB8wc9KLYsSEbMDA1m').replace(/\/+$/, '')
+// Dónde viven las otras secciones: el portal (portada, Apoyo docente y Tienda)
+// se publica como carpeta estática en /portal/ de este mismo sitio
+// (public/portal/). VITE_PORTAL_URL permite moverlo a otro dominio.
+const PORTAL_URL = (import.meta.env.VITE_PORTAL_URL || '/portal').replace(/\/+$/, '')
 
 export const MARCA = import.meta.env.VITE_PORTAL_MARCA || 'Tu Marca'
 
@@ -28,8 +25,5 @@ export function urlPortal() {
 
 export function urlSeccion(s) {
   if (s.actual) return null
-  if (dentroDelPortal()) return urlPortal() + s.carpeta
-  // Con un dominio propio del portal, el enlace va directo a la sección.
-  // Con la vista previa (claude.ai) solo se puede abrir la portada.
-  return /claude\.ai\/artifact/.test(PORTAL_URL) ? urlPortal() : urlPortal() + s.carpeta
+  return urlPortal() + s.carpeta
 }

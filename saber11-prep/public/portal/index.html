@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Marca · ICFES, apoyo docente y tienda</title>
+<meta name="description" content="Preparación para el ICFES, apoyo personalizado para docentes y tienda con pedidos por WhatsApp. Tres servicios, una sola casa.">
+<meta property="og:title" content="Tu Marca · ¿Qué estás buscando hoy?">
+<meta property="og:description" content="ICFES, apoyo docente y tienda. Entra por la puerta que te corresponde.">
+<link rel="icon" href="shared/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Source+Sans+3:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
+<style>
+:root{--bg:#FBFAF7;--fg:#1D2433;--muted:#5B6474;--line:#E4E2DA;--card:#fff;--font-head:'Nunito',system-ui,sans-serif;--font-body:'Source Sans 3',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:17px;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 40px}
+h1,h2,h3{font-family:var(--font-head);line-height:1.15;margin:0}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+.bar{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-family:var(--font-head);font-weight:900;font-size:1.15rem;display:flex;align-items:center;gap:8px;text-decoration:none;color:inherit}
+.brand i{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#2F4D8C,#1E9E7A)}
+.tabs{display:flex;gap:4px;margin-left:auto;background:var(--bg);padding:4px;border-radius:999px;border:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs a{font-family:var(--font-head);font-weight:800;font-size:.9rem;color:var(--muted);padding:8px 14px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.tabs a.on{background:var(--fg);color:var(--bg)}
+.tabs a:hover{color:var(--fg)}
+.hero{text-align:center;padding:44px 0 28px}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+.hero p{color:var(--muted);max-width:34rem;margin:10px auto 0}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.door{display:flex;flex-direction:column;gap:10px;padding:24px 22px;border-radius:20px;background:var(--card);border:1.5px solid var(--c,var(--line));text-align:left;color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.door:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,30,60,.12)}
+.door .pic{height:84px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 12%,#fff)}
+.door .pic svg{width:50px;height:50px;stroke:var(--c)}
+.door .who{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.door h2{font-size:1.35rem}
+.door p{margin:0;color:var(--muted);font-size:.98rem}
+.door .go{margin-top:auto;font-family:var(--font-head);font-weight:800;padding:10px 16px;border-radius:999px;color:#fff;text-align:center;background:color-mix(in srgb,var(--c) 70%,#000)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;margin-top:40px}
+@media (max-width:760px){.tabs{margin-left:0;width:100%}.tabs a{flex:1;text-align:center;padding:8px 6px;font-size:.82rem}.hero{padding:28px 0 20px}}
+@media (prefers-reduced-motion:reduce){.door{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="./"><i></i><span id="brandName">Tu Marca</span></a>
+  <nav class="tabs" id="tabs"><a class="on" href="./">Inicio</a></nav>
+</div></header>
+<main class="wrap">
+  <section class="hero"><h1 id="q">¿Qué estás buscando hoy?</h1><p id="lema"></p></section>
+  <div class="doors" id="doors"></div>
+  <footer id="foot"></footer>
+</main>
+<script src="shared/portal.config.js"></script>
+<script>
+(function(){
+  var c=window.PORTAL_CONFIG, I={
+    test:'<path d="M4 19V5a1 1 0 0 1 1-1h11l4 4v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/><path d="M8 12l2.5 2.5L16 9"/>',
+    calendar:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M8 15h3M13 15h3"/>',
+    bag:'<path d="M3 7h18l-1.5 12h-15z"/><path d="M8 7a4 4 0 0 1 8 0"/>',
+    star:'<path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/>'};
+  document.getElementById('brandName').textContent=c.marca.nombre; document.title=c.marca.nombre+' · '+c.secciones.map(function(s){return s.nombre}).join(', ');
+  document.getElementById('q').textContent=c.marca.pregunta; document.getElementById('lema').textContent=c.marca.lema;
+  document.getElementById('tabs').insertAdjacentHTML('beforeend',c.secciones.map(function(s){return '<a href="'+s.carpeta+'">'+s.nombre+'</a>'}).join(''));
+  document.getElementById('doors').innerHTML=c.secciones.map(function(s){return '<a class="door" href="'+s.carpeta+'" style="--c:'+s.color+'"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(I[s.icono]||I.star)+'</svg></div><span class="who">'+s.publico+'</span><h2>'+s.titulo+'</h2><p>'+s.texto+'</p><span class="go">'+s.boton+'</span></a>'}).join('');
+  document.getElementById('foot').textContent='© '+new Date().getFullYear()+' '+c.marca.nombre+'. Cada sección tiene su propio canal de contacto.';
+})();
+</script>
+</body>
+</html>

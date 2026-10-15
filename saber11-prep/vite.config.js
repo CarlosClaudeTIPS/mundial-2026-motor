@@ -45,8 +45,10 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
         // Los trozos del banco y del lector de PDF no se precargan: el banco queda en IndexedDB
         // tras la siembra y el PDF solo lo usa el docente al importar. Si se piden, se cachean.
-        globIgnores: ['**/banco-*.js', '**/pdf*.js', '**/pdf*.mjs'],
+        // El portal (/portal/: portada, Apoyo docente, Tienda) es estático y no es parte de la PWA.
+        globIgnores: ['**/banco-*.js', '**/pdf*.js', '**/pdf*.mjs', 'portal/**'],
         navigateFallback: '/index.html',
+        navigateFallbackDenylist: [/^\/portal(\/|$)/, /^\/api\//],
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [{ urlPattern: ({ url }) => /\/assets\/(banco-|pdf)/.test(url.pathname), handler: 'CacheFirst', options: { cacheName: 'trozos-bajo-demanda', expiration: { maxEntries: 40, maxAgeSeconds: 60 * 24 * 3600 } } }],
       },
