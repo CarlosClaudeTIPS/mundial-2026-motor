@@ -358,7 +358,7 @@
       r.tiktok && `<a href="${T.esc(r.tiktok)}" target="_blank" rel="noopener" aria-label="TikTok">${T.ico.tiktok}</a>`,
       r.marketplace && `<a href="${T.esc(r.marketplace)}" target="_blank" rel="noopener" aria-label="Facebook Marketplace">${T.ico.tienda}</a>`
     ].filter(Boolean).join('');
-    const cats = T.datos.catalogo.categorias.filter(c => c.visible !== false).map(c => `<li><a href="${T.ruta('catalogo.html?cat=' + encodeURIComponent(c.id))}">${T.esc(c.nombre)}</a></li>`).join('');
+    const cats = T.datos.catalogo.categorias.filter(c => c.visible !== false && T.visibles().some(p => p.categoria === c.id)).map(c => `<li><a href="${T.ruta('catalogo.html?cat=' + encodeURIComponent(c.id))}">${T.esc(c.nombre)}</a></li>`).join('');
     const contacto = [
       T.hayWA() ? `<li><a href="${T.enlaceWA((cfg.whatsapp || {}).mensajeGeneral)}" target="_blank" rel="noopener">WhatsApp: +${T.numeroWA()}</a></li>` : '<li class="pendiente">WhatsApp: pendiente de configurar</li>',
       n.ciudad ? `<li>${T.esc(n.ciudad)}</li>` : '',

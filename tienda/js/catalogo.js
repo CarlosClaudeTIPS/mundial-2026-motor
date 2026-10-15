@@ -9,7 +9,7 @@
     if (estado.f === 'nuevos') estado.nuevos = true;
     if (estado.f === 'ofertas') estado.ofertas = true;
 
-    const cats = catalogo.categorias.filter(c => c.visible !== false);
+    const cats = catalogo.categorias.filter(c => c.visible !== false && T.visibles().some(p => p.categoria === c.id));
     T.$('#f-categorias').innerHTML = `<label><input type="radio" name="cat" value="" ${!estado.cat ? 'checked' : ''}> Todas</label>` +
       cats.map(c => `<label><input type="radio" name="cat" value="${T.esc(c.id)}" ${estado.cat === c.id ? 'checked' : ''}> ${T.esc(c.nombre)}</label>`).join('');
     T.$('#f-nuevos').checked = estado.nuevos; T.$('#f-ofertas').checked = estado.ofertas;
