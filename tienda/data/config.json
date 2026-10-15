@@ -4,7 +4,7 @@
     "eslogan": "Productos útiles, novedosos y a buen precio",
     "descripcion": "Catálogo digital de productos para el hogar, tecnología, cuidado personal y más. Pedidos por WhatsApp.",
     "logo": "img/logo-ejemplo.svg",
-    "ciudad": "",
+    "ciudad": "Bogotá, Colombia",
     "horario": ""
   },
   "whatsapp": {
@@ -14,7 +14,9 @@
     "mensajeGeneral": "Hola, quiero más información sobre sus productos.",
     "mensajeEnvios": "Hola, ¿me pueden informar los costos y tiempos de envío?",
     "mensajePagos": "Hola, ¿qué métodos de pago aceptan?",
-    "mensajeCarrito": "Hola, quiero pedir estos productos:\n{items}\nTotal estimado: {total}\n¿Me confirman disponibilidad y costo de envío?"
+    "mensajeCarrito": "Hola, quiero pedir estos productos:\n{items}\nTotal estimado: {total}\n¿Me confirman disponibilidad y costo de envío?",
+    "mensajeInteres": "Hola, vi que el producto {nombre} ya se vendió. Me interesa si consiguen otro igual.\n{enlace}",
+    "mensajeSugerencia": "Hola, me gustaría que tuvieran en la tienda: {texto}"
   },
   "redes": {
     "facebook": "",
@@ -36,12 +38,12 @@
     {
       "icono": "svg:camion",
       "titulo": "Entregas",
-      "texto": ""
+      "texto": "Entrega personal en Bogotá o envío nacional con pago previo. Te cotizamos el envío antes de decidir."
     },
     {
       "icono": "svg:tarjeta",
       "titulo": "Pagos",
-      "texto": ""
+      "texto": "Efectivo en la entrega, llave Bre-B o Nequi. Pagas solo después de confirmar disponibilidad y total."
     },
     {
       "icono": "svg:chat",
@@ -50,10 +52,10 @@
     }
   ],
   "politicas": {
-    "entregas": "",
-    "pagos": "",
-    "cambios": "",
-    "garantia": "",
+    "entregas": "Entrega personal en Bogotá, en un punto de encuentro seguro en la Av. Américas con 68. Coordinamos día y hora por WhatsApp.\nEnvíos a otras zonas o ciudades por transportadora, únicamente con pago previo confirmado. El costo del envío lo asume el comprador y te lo cotizamos por WhatsApp antes de que decidas.",
+    "pagos": "Efectivo en la entrega personal, o transferencia por llave Bre-B o Nequi. Para envíos nacionales el pago se hace antes del despacho. Nunca te pediremos pagar sin antes confirmarte disponibilidad y valor total.",
+    "cambios": "No aplican cambios ni devoluciones por cambio de opinión. Revisa el producto en el momento de la entrega; si llega por transportadora, revísalo al recibirlo y escríbenos ese mismo día con fotos si presenta algún daño.",
+    "garantia": "Garantía del vendedor de 1 mes por defectos de fábrica, contada desde la entrega. No cubre golpes, caídas, humedad, mala manipulación, sobrecargas eléctricas, uso con cargadores o cables no adecuados, ni productos abiertos o intervenidos por terceros. Los productos nuevos y sellados conservan además la garantía del fabricante, que se gestiona directamente con él.",
     "privacidad": ""
   },
   "preguntasFrecuentes": [
@@ -93,7 +95,7 @@
     {
       "grupo": "Pagos y seguridad",
       "p": "¿Qué métodos de pago aceptan?",
-      "r": "Los métodos disponibles están en la página de Políticas y te los confirmamos por WhatsApp antes de pagar. Si tienes dudas sobre un método, pregúntanos: preferimos explicarte a que te quedes con la duda."
+      "r": "Efectivo en la entrega personal, o transferencia por llave Bre-B o Nequi. En envíos a otras ciudades el pago se hace antes del despacho, y siempre después de confirmarte disponibilidad y valor total por WhatsApp."
     },
     {
       "grupo": "Pagos y seguridad",
@@ -104,7 +106,7 @@
       "grupo": "Envíos y entregas",
       "destacada": true,
       "p": "¿Hacen envíos a mi ciudad y cuánto tarda?",
-      "r": "Consulta la cobertura y los tiempos en la página de Políticas o pregúntanos por WhatsApp con tu ciudad. Te confirmamos el costo y el tiempo estimado antes de que decidas."
+      "r": "En Bogotá hacemos entrega personal en un punto de encuentro seguro (Av. Américas con 68). A otras ciudades enviamos por transportadora con pago previo; el costo del envío lo asume el comprador y te lo cotizamos por WhatsApp junto con el tiempo estimado antes de que decidas."
     },
     {
       "grupo": "Envíos y entregas",
@@ -114,12 +116,12 @@
     {
       "grupo": "Envíos y entregas",
       "p": "¿Qué pasa si el producto llega dañado o no es lo que pedí?",
-      "r": "Escríbenos por WhatsApp apenas lo recibas, con fotos, y lo resolvemos según nuestra política de cambios. Revisa el paquete al recibirlo."
+      "r": "Revísalo al recibirlo y escríbenos ese mismo día por WhatsApp con fotos. Los defectos de fábrica los cubre la garantía de 1 mes; los golpes o daños por manipulación no están cubiertos."
     },
     {
       "grupo": "Cambios y garantías",
       "p": "¿Puedo cambiar o devolver un producto?",
-      "r": "Las condiciones de cambios, plazos y garantías están en la página de Políticas. Si tienes un caso puntual, cuéntanos por WhatsApp y buscamos la solución."
+      "r": "No aplican cambios ni devoluciones por cambio de opinión. Si el producto presenta un defecto de fábrica, aplica la garantía del vendedor de 1 mes (ver Políticas → Garantía)."
     },
     {
       "grupo": "Privacidad",
@@ -130,6 +132,11 @@
       "grupo": "Privacidad",
       "p": "¿Por qué no puedo pagar directamente en la página?",
       "r": "Preferimos atenderte persona a persona: así confirmamos existencias, resolvemos dudas y evitamos cobros por productos que no estén disponibles. Es más simple y más seguro para ti."
+    },
+    {
+      "grupo": "Cambios y garantías",
+      "p": "¿Qué cubre la garantía?",
+      "r": "Defectos de fábrica durante 1 mes desde la entrega. No cubre golpes, caídas, humedad, mala manipulación, sobrecargas eléctricas, cargadores o cables no adecuados, ni productos abiertos o intervenidos. Los productos nuevos y sellados conservan además la garantía del fabricante."
     }
   ],
   "analitica": {
@@ -139,7 +146,7 @@
   "sitio": {
     "moneda": "COP",
     "paginasEstaticas": false,
-    "avisoDemo": true
+    "avisoDemo": false
   },
   "pasosCompra": [
     {

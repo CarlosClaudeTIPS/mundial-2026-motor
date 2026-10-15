@@ -1,7 +1,7 @@
 (function () {
   const T = window.Tienda;
   T.iniciar('catalogo', ({ config }) => {
-    const id = window.PRODUCTO_ID || T.param('p');
+    const id = document.body.dataset.producto || T.param('p');
     const p = T.producto(id);
     const main = T.$('#producto');
     if (!p || p.visible === false) {
@@ -45,7 +45,7 @@
       <div class="producto-layout">
         <div>
           <div class="galeria-wrap">
-            <div class="etiquetas">${!p.disponible ? '<span class="etiqueta etiqueta-agotado">Agotado</span>' : ''}${p.oferta && d > 0 ? `<span class="etiqueta etiqueta-oferta">-${d}%</span>` : ''}${p.nuevo ? '<span class="etiqueta etiqueta-nuevo">Nuevo</span>' : ''}</div>
+            <div class="etiquetas">${!p.disponible ? `<span class="etiqueta etiqueta-agotado">${T.vendido(p) ? 'Vendido' : 'Agotado'}</span>` : ''}${p.oferta && d > 0 ? `<span class="etiqueta etiqueta-oferta">-${d}%</span>` : ''}${p.nuevo ? '<span class="etiqueta etiqueta-nuevo">Nuevo</span>' : ''}</div>
             <div class="galeria-principal" id="galeria" aria-label="Galería de imágenes">
               ${medios.map((m, i) => `<div class="slide" data-i="${i}">${m.tipo === 'video' ? `<video src="${T.esc(m.src)}" controls playsinline preload="metadata"></video>` : `<img src="${T.esc(m.src)}" alt="${T.esc(p.nombre)}${i ? ' ' + (i + 1) : ''}" width="800" height="800" ${i ? 'loading="lazy"' : ''}>`}</div>`).join('')}
             </div>
@@ -59,7 +59,8 @@
           <h1>${T.esc(p.nombre)}</h1>
           ${p.descripcionCorta ? `<p class="descripcion-corta">${T.esc(p.descripcionCorta)}</p>` : ''}
           <div class="precio"><span class="precio-actual">${T.formatoPrecio(p.precio)}</span>${d > 0 ? `<span class="precio-anterior">${T.formatoPrecio(p.precioAnterior)}</span><span class="precio-descuento">Ahorras ${T.formatoPrecio(p.precioAnterior - p.precio)}</span>` : ''}</div>
-          <span class="disponibilidad ${p.disponible ? '' : 'agotado'}">${p.disponible ? '● Disponible (sujeto a confirmación)' : '○ Agotado por ahora'}</span>
+          <span class="disponibilidad ${p.disponible ? '' : 'agotado'}">${p.disponible ? '● Disponible (sujeto a confirmación)' + (T.textoStock(p) ? ' · ' + T.textoStock(p) : '') : T.vendido(p) ? '○ Vendido' : '○ Agotado por ahora'}</span>
+          ${T.vendido(p) ? '<p class="aviso-pendiente" style="margin:.5rem 0 0">Este producto ya se vendió. Si te interesa, dinos y buscamos conseguir otro igual.</p>' : ''}
           ${p.variantes.length ? `<div class="variantes" id="variantes">${p.variantes.map(v => `<div class="variante"><label>${T.esc(v.nombre)}</label><div class="opciones" data-variante="${T.esc(v.nombre)}">${(v.opciones || []).map((o, i) => `<button type="button" class="opcion ${i === 0 ? 'activo' : ''}" data-opcion="${T.esc(o)}">${T.esc(o)}</button>`).join('')}</div></div>`).join('')}</div>` : ''}
           ${p.disponible ? `<div class="fila-cantidad"><span>Cantidad</span><div class="cantidad"><button type="button" id="cant-menos" aria-label="Menos">−</button><span id="cant-val">1</span><button type="button" id="cant-mas" aria-label="Más">+</button></div></div>` : ''}
           <div class="ficha-acciones">
@@ -67,7 +68,7 @@
               ? `<button class="btn btn-whatsapp" id="btn-pedir">${T.ico.wa} Pedir por WhatsApp</button>
                  <button class="btn btn-contorno" id="btn-consultar">Consultar disponibilidad</button>
                  <button class="btn btn-suave" id="btn-carrito-add">${T.ico.carrito} Agregar al carrito</button>`
-              : `<button class="btn btn-whatsapp" id="btn-consultar">${T.ico.wa} Avísame cuando esté disponible</button>`}
+              : `<button class="btn btn-whatsapp" id="btn-consultar">${T.ico.wa} ${T.vendido(p) ? 'Quiero uno igual' : 'Avísame cuando esté disponible'}</button>`}
           </div>
           ${config.negocio.horario ? `<p class="horario">${T.icoCat.reloj} Atención: ${T.esc(config.negocio.horario)}</p>` : ''}
           <div class="micro-confianza">
@@ -99,6 +100,7 @@
       ${T.faqs().length ? `<div class="bloque"><h2>Compra con tranquilidad</h2><p style="color:var(--texto-suave)">Respuestas a lo que más preguntan antes de pedir.</p>${T.renderFaq((T.faqs().filter(q => q.destacada).length ? T.faqs().filter(q => q.destacada) : T.faqs()).slice(0, 4))}<p style="margin:.8rem 0 0"><a href="${T.ruta('preguntas.html')}">Ver todas las preguntas frecuentes →</a></p></div>` : ''}
       ${relFinal.length ? `<section class="seccion"><div class="seccion-cabecera"><h2>Productos relacionados</h2></div><div class="grid-productos">${relFinal.slice(0, 4).map(T.tarjeta).join('')}</div></section>` : '<div style="height:1.5rem"></div>'}
 
+      <div class="bloque">${T.encuesta('¿Necesitas algo más? Cuéntanos')}</div>
       <section class="seccion" id="sec-vistos" hidden><div class="seccion-cabecera"><h2>Vistos recientemente</h2></div><div class="grid-productos"></div></section>
       <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada"><button type="button" id="lb-cerrar" aria-label="Cerrar">${T.ico.cerrar}</button><button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Anterior">‹</button><img src="" alt=""><button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Siguiente">›</button></div>
       ${p.disponible ? `<div class="barra-fija"><span class="precio-actual">${T.formatoPrecio(p.precio)}</span><button class="btn btn-whatsapp" id="btn-pedir-fijo">${T.ico.wa} Pedir por WhatsApp</button></div>` : ''}`;
@@ -132,7 +134,7 @@
 
     /* cantidad */
     let cantidad = 1;
-    const setCant = (n) => { cantidad = Math.max(1, Math.min(99, n)); const v = T.$('#cant-val'); if (v) v.textContent = cantidad; };
+    const setCant = (n) => { cantidad = Math.max(1, Math.min(p.stock != null ? Math.max(1, p.stock) : 99, n)); const v = T.$('#cant-val'); if (v) v.textContent = cantidad; };
     const cm = T.$('#cant-menos'), cp = T.$('#cant-mas');
     if (cm) cm.addEventListener('click', () => setCant(cantidad - 1));
     if (cp) cp.addEventListener('click', () => setCant(cantidad + 1));
@@ -156,7 +158,7 @@
 
     /* acciones */
     const pedir = () => T.abrirWA(T.mensajeProducto(p, seleccion, null, cantidad), 'whatsapp_click', { producto: p.id, origen: 'producto' });
-    const consultar = () => T.abrirWA(T.mensajeProducto(p, seleccion, 'disponibilidad'), 'whatsapp_click', { producto: p.id, origen: 'disponibilidad' });
+    const consultar = () => T.abrirWA(T.mensajeProducto(p, seleccion, T.vendido(p) ? 'interes' : 'disponibilidad'), 'whatsapp_click', { producto: p.id, origen: T.vendido(p) ? 'interes' : 'disponibilidad' });
     const on = (id, fn) => { const el = T.$(id); if (el) el.addEventListener('click', fn); };
     on('#btn-pedir', pedir); on('#btn-pedir-fijo', pedir); on('#btn-consultar', consultar);
     on('#btn-carrito-add', () => T.carrito.agregar(p, Object.assign({}, seleccion), cantidad));

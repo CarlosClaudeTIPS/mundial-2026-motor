@@ -11,6 +11,8 @@ Una portada con pestañas que reúne los proyectos del repositorio bajo un solo 
 
 Cada proyecto se sigue editando en su propia carpeta. El portal solo los **copia y construye** en `portal/dist/`.
 
+> **Publicación actual:** el sitio de Vercel `mundial-2026-motor.vercel.app` publica la rama `master` con `build-sitio.mjs` (en la raíz del repositorio), que arma este portal en `/` y añade el Motor Mundial en `/motor/`. No hace falta crear otro proyecto de Vercel salvo que quieras un dominio aparte.
+
 ## Armar el portal
 
 ```bash

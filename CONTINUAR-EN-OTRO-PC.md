@@ -12,20 +12,26 @@ git clone https://github.com/CarlosClaudeTIPS/mundial-2026-motor.git
 cd mundial-2026-motor
 ```
 
-## 2. Qué hay en cada rama
+## 2. Una sola rama: `master`
 
-| Rama | Qué contiene |
+Desde el 15 de octubre de 2026 **todo vive en la rama `master`** (y `main` es una copia idéntica):
+el portal de tres puertas, el ICFES (`saber11-prep/`), apoyo docente (`apoyo-docente/`), la tienda (`tienda/`)
+y el Motor Mundial. Vercel publica `master` en https://mundial-2026-motor.vercel.app con esta estructura:
+
+| Dirección | Carpeta |
 |---|---|
-| `main` | **La principal y la más completa.** Portal con las tres puertas + apoyo docente + tienda + ICFES (+ el Motor Mundial, que no se toca). Empieza por aquí. |
-| `claude/portal-unificado` | Copia de trabajo del portal; lo mismo que `main`. |
-| `claude/relaxed-ptolemy-h4qeca` | Solo la página de apoyo docente (`apoyo-docente/`). |
-| `claude/compassionate-euler-iilze8` | Solo la app del ICFES (`saber11-prep/`). |
-| `claude/gifted-clarke-y62a56` | Solo la tienda (`tienda/`). |
+| `/` | `portal/site/` (portada con las tres puertas) |
+| `/icfes/` | `saber11-prep/` |
+| `/docentes/` | `apoyo-docente/` |
+| `/tienda/` | `tienda/` |
+| `/motor/` | Motor Mundial 2026 (`src/`, sin cambios en su código) |
 
-Para ponerte en la rama del portal:
+Cada proyecto se sigue editando en su propia carpeta y en cualquier conversación de Claude Code;
+al hacer `git push` a `master`, Vercel reconstruye el sitio completo (`npm run build` ejecuta `build-sitio.mjs`).
+Las ramas `claude/*` antiguas quedan como historial; no trabajes en ellas.
 
 ```bash
-git checkout main
+git checkout master
 ```
 
 ## 3. Ver cada cosa en el navegador

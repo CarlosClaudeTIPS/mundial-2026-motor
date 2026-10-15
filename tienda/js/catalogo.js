@@ -9,7 +9,7 @@
     if (estado.f === 'nuevos') estado.nuevos = true;
     if (estado.f === 'ofertas') estado.ofertas = true;
 
-    const cats = catalogo.categorias.filter(c => c.visible !== false);
+    const cats = catalogo.categorias.filter(c => c.visible !== false && T.visibles().some(p => p.categoria === c.id));
     T.$('#f-categorias').innerHTML = `<label><input type="radio" name="cat" value="" ${!estado.cat ? 'checked' : ''}> Todas</label>` +
       cats.map(c => `<label><input type="radio" name="cat" value="${T.esc(c.id)}" ${estado.cat === c.id ? 'checked' : ''}> ${T.esc(c.nombre)}</label>`).join('');
     T.$('#f-nuevos').checked = estado.nuevos; T.$('#f-ofertas').checked = estado.ofertas;
@@ -43,7 +43,7 @@
       T.$('#titulo-catalogo').textContent = estado.q ? `Resultados para “${estado.q}”` : cat ? cat.nombre : ({ nuevos: 'Novedades', ofertas: 'Ofertas', destacados: 'Destacados', populares: 'Populares' })[estado.f] || 'Catálogo';
       T.$('#sub-catalogo').textContent = cat ? (cat.descripcion || '') : '';
       T.$('#conteo').textContent = `${lista.length} producto${lista.length === 1 ? '' : 's'}`;
-      T.renderGrid('#grid', lista, estado.q ? 'No encontramos productos con esa búsqueda. Prueba con otra palabra o <a href="catalogo.html">mira todo el catálogo</a>.' : 'No hay productos con estos filtros.');
+      T.renderGrid('#grid', lista, (estado.q ? 'No encontramos productos con esa búsqueda. Prueba con otra palabra o <a href="catalogo.html">mira todo el catálogo</a>.' : 'No hay productos con estos filtros.') + '<div style="margin-top:1.2rem;text-align:left">' + T.encuesta('¿Buscabas algo que no tenemos?') + '</div>');
       chips();
       if (estado.q) T.registrar('buscar', { q: estado.q.slice(0, 60) });
     };

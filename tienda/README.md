@@ -117,6 +117,26 @@ No incluido (y por qué):
 4. Catálogo de WhatsApp Business sincronizado a mano con el CSV exportado.
 5. Si el volumen crece: CMS gratuito (Decap CMS) sobre los mismos JSON para editar con usuario y contraseña y subir fotos desde el navegador.
 
+## 7a. Completar fichas con IA
+
+En el editor de producto hay un botón **✨ Completar con IA**. Con solo nombre, categoría y precio rellena descripción, problema, beneficios, especificaciones (marcando «Pendiente de confirmar» lo que no pueda saber), qué incluye, instrucciones, precauciones, preguntas y palabras clave. Nunca pisa lo que ya escribiste; tú revisas y guardas.
+
+Dos modos:
+
+1. **Automático** (sitio publicado en Netlify). La función `netlify/functions/completar-producto.mjs` llama a la API de Claude con tu clave, que nunca sale del servidor. Configura en Netlify → Site configuration → Environment variables:
+   - `ANTHROPIC_API_KEY`: clave creada en console.anthropic.com (requiere comprar créditos prepagados; el mínimo suele ser USD 5).
+   - `ADMIN_SECRET`: una contraseña que inventes. La escribes una vez en el panel (botón → «¿Prefieres que sea automático?») y queda guardada en tu navegador. Sin ella nadie puede usar la función ni gastar tus créditos.
+   Costo aproximado por producto con el modelo Claude Opus 5.5: USD 0,03 (unos 120 COP). 100 productos ≈ USD 3. Netlify Functions es gratis hasta 125 000 llamadas al mes.
+2. **Manual** (gratis, sin publicar). Si la función no está disponible, el botón muestra un prompt para copiar en ChatGPT, Claude o Gemini y un cuadro para pegar la respuesta JSON, que se aplica al formulario.
+
+También puedes pedirle a Claude Code en el chat: «agrega el producto X a $Y con esta foto» y él completa la ficha y la sube al repositorio.
+
+## 7b. Seguridad y despliegue
+
+- `_headers`: cabeceras de seguridad (CSP compatible con Google Fonts, GA4 y Meta Pixel) para Netlify y Cloudflare Pages.
+- `netlify.toml`: publica la carpeta, genera las páginas `p/` con la URL real y despliega la función de IA. El panel admin se publica (no puede modificar el sitio; la función de IA exige `ADMIN_SECRET`).
+- `AUDITORIA.md`: auditoría completa, métricas antes/después, pruebas y pendientes legales.
+
 ## 8. Prácticas de conversión aplicadas (basadas en investigación de usabilidad)
 
 - Barra de navegación inferior en móvil (Inicio, Catálogo, Buscar, Carrito, WhatsApp), como las apps de Mercado Libre y Amazon.
@@ -128,3 +148,25 @@ No incluido (y por qué):
 - Segunda foto al pasar el cursor sobre la tarjeta y descripción corta en la tarjeta.
 - Carruseles horizontales en la portada móvil y sección «Vistos recientemente».
 - Contenido completo visible en la ficha (sin esconderlo en subpáginas, un error frecuente en móvil según Baymard).
+
+## 9. Seguir trabajando desde otro computador
+
+El código vive en el repositorio `CarlosClaudeTIPS/mundial-2026-motor`, rama `claude/gifted-clarke-y62a56`, carpeta `tienda/`. En el otro PC:
+
+```bash
+git clone https://github.com/CarlosClaudeTIPS/mundial-2026-motor.git
+cd mundial-2026-motor
+git checkout claude/gifted-clarke-y62a56
+cd tienda
+python3 -m http.server 8080      # abre http://localhost:8080
+```
+
+Para guardar cambios:
+
+```bash
+git add tienda
+git commit -m "Describe el cambio"
+git push
+```
+
+Para moverla a su propio repositorio (recomendado cuando la publiques): crea un repositorio vacío en GitHub, copia la carpeta `tienda/` dentro, y ejecuta `git init && git add . && git commit -m "Tienda digital" && git branch -M main && git remote add origin URL && git push -u origin main`. No depende de ningún otro archivo del repositorio actual.

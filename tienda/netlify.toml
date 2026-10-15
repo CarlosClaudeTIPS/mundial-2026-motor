@@ -1,0 +1,9 @@
+# Despliegue en Netlify. El panel admin (admin.html) se publica pero no puede modificar el sitio:
+# solo edita borradores locales y, con la clave ADMIN_SECRET, usa la función de IA.
+[build]
+  publish = "."
+  command = "node generar-paginas.mjs ${URL}/"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

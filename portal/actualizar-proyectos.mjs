@@ -1,11 +1,13 @@
-/* Trae a esta rama la versión más reciente de cada proyecto desde su propia rama.
+/* YA NO ES NECESARIO: desde el 15/10/2026 todos los proyectos viven en la rama master.
+   Se conserva solo por si alguna conversación antigua vuelve a empujar a su rama claude/*.
+   Trae a esta rama la versión más reciente de cada proyecto desde su propia rama.
    Úsalo si editaste el ICFES, la tienda o apoyo docente en su conversación/rama
    y quieres que el portal los incluya. Luego: node portal/build.mjs
    Uso: node portal/actualizar-proyectos.mjs */
 import { execSync } from "node:child_process";
 const fuentes = [
   { carpeta: "apoyo-docente", rama: "claude/relaxed-ptolemy-h4qeca" },
-  { carpeta: "tienda",        rama: "claude/gifted-clarke-y62a56" },
+  { carpeta: "tienda",        rama: "master" },
   { carpeta: "saber11-prep",  rama: "claude/compassionate-euler-iilze8" },
 ];
 execSync("git fetch origin", { stdio: "inherit" });

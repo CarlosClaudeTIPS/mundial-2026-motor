@@ -82,9 +82,11 @@
     precioAnterior: null, disponible: true, nuevo: false, oferta: false, destacado: false, popular: false,
     visible: true, orden: 0, imagenes: [], video: '', descripcionCorta: '', descripcion: '', problema: '',
     beneficios: [], especificaciones: {}, incluye: [], instrucciones: [], precauciones: [], preguntas: [],
-    variantes: [], palabrasClave: [], relacionados: [], fechaCreacion: ''
-  }, p, { precio: Number(p.precio) || 0, precioAnterior: p.precioAnterior ? Number(p.precioAnterior) : null });
+    variantes: [], palabrasClave: [], relacionados: [], fechaCreacion: '', stock: null
+  }, p, { precio: Number(p.precio) || 0, precioAnterior: p.precioAnterior ? Number(p.precioAnterior) : null, stock: (p.stock === '' || p.stock == null) ? null : Math.max(0, Math.round(Number(p.stock)) || 0) });
 
+  T.vendido = (p) => !p.disponible && p.stock === 0;
+  T.textoStock = (p) => (p.disponible && p.stock != null && p.stock > 0) ? `Quedan ${p.stock} unidad${p.stock === 1 ? '' : 'es'}` : '';
   T.visibles = () => T.datos.catalogo.productos.filter(p => p.visible !== false).sort((a, b) => (a.orden || 0) - (b.orden || 0));
   T.categoria = (id) => T.datos.catalogo.categorias.find(c => c.id === id);
   T.producto = (id) => T.datos.catalogo.productos.find(p => p.id === id);
@@ -138,7 +140,7 @@
 
   T.mensajeProducto = (p, variantes, tipo, cantidad) => {
     const wa = T.datos.config.whatsapp || {};
-    const tpl = tipo === 'disponibilidad' ? wa.mensajeDisponibilidad : wa.mensajeProducto;
+    const tpl = tipo === 'interes' ? (wa.mensajeInteres || 'Hola, vi que el producto {nombre} ya se vendió. Me interesa si consiguen otro. {enlace}') : tipo === 'disponibilidad' ? wa.mensajeDisponibilidad : wa.mensajeProducto;
     let vTxt = variantes && Object.keys(variantes).length
       ? Object.entries(variantes).map(([k, v]) => `${k}: ${v}`).join(', ') + '\n' : '';
     if (cantidad && cantidad > 1) vTxt = `Cantidad: ${cantidad}\n` + vTxt;
@@ -146,6 +148,11 @@
       nombre: p.nombre, precio: T.formatoPrecio(p.precio), enlace: T.urlProducto(p, true), variantes: vTxt
     }).trim();
   };
+
+  T.mensajeSugerencia = (texto) => T.plantilla((T.datos.config.whatsapp || {}).mensajeSugerencia || 'Hola, me gustaría que tuvieran en la tienda: {texto}', { texto });
+  /* Cuadro "¿Qué te gustaría encontrar?" reutilizable */
+  T.encuesta = (titulo) => `<div class="encuesta"><strong>${T.esc(titulo || '¿Qué te gustaría encontrar en la tienda?')}</strong><p>Cuéntanos qué producto buscas y lo tenemos en cuenta para traerlo.</p><form class="encuesta-form"><label class="visualmente-oculto" for="enc-${Math.random().toString(36).slice(2, 7)}">Producto que te gustaría</label><input type="text" maxlength="140" placeholder="Ej.: audífonos inalámbricos, control de PS5…" required><button class="btn btn-whatsapp btn-sm" type="submit">${T.ico.wa} Enviar</button></form></div>`;
+  document.addEventListener('submit', (e) => { const f = e.target.closest('.encuesta-form'); if (!f || !T.datos) return; e.preventDefault(); const v = f.querySelector('input').value.trim(); if (!v) return; if (T.abrirWA(T.mensajeSugerencia(v), 'sugerencia', { texto: v.slice(0, 60) })) f.reset(); });
 
   T.abrirWA = (mensaje, evento, extra) => {
     if (!T.hayWA()) { T.toast('El número de WhatsApp aún no está configurado (admin → Configuración).'); return false; }
@@ -183,21 +190,34 @@
   };
 
   /* ---------- Carrito ---------- */
+  const MAX_CANT = 99;
   T.carrito = {
     items: T.leerLS(LS.carrito, []),
+    /* Sanea lo que venga del almacenamiento local: productos inexistentes/ocultos y cantidades fuera de rango */
+    sanear() {
+      if (!T.datos) return;
+      const antes = JSON.stringify(this.items);
+      this.items = (Array.isArray(this.items) ? this.items : []).filter(i => { const p = i && T.producto(i.id); return p && p.visible !== false && p.disponible; })
+        .map(i => ({ clave: i.clave || this.clave(i.id, i.variantes), id: i.id, variantes: (i.variantes && typeof i.variantes === 'object') ? i.variantes : {}, cantidad: Math.min(MAX_CANT, Math.max(1, Math.round(Number(i.cantidad)) || 1)) }));
+      if (JSON.stringify(this.items) !== antes) this.guardar();
+    },
     guardar() { T.guardarLS(LS.carrito, this.items); T.renderContador(); },
     clave(id, variantes) { return id + '|' + JSON.stringify(variantes || {}); },
     agregar(p, variantes, cant) {
       const k = this.clave(p.id, variantes);
       const ex = this.items.find(i => i.clave === k);
-      if (ex) ex.cantidad += (cant || 1);
-      else this.items.push({ clave: k, id: p.id, variantes: variantes || {}, cantidad: cant || 1 });
+      if (!p.disponible) { T.toast('Este producto está agotado por ahora.'); return; }
+      cant = Math.min(MAX_CANT, Math.max(1, Math.round(Number(cant)) || 1));
+      const tope = p.stock != null ? Math.min(MAX_CANT, p.stock) : MAX_CANT;
+      if (ex && ex.cantidad + cant > tope) { T.toast(`Solo hay ${tope} unidad${tope === 1 ? '' : 'es'} disponible${tope === 1 ? '' : 's'}.`); ex.cantidad = tope; this.guardar(); return; }
+      if (ex) ex.cantidad = Math.min(tope, ex.cantidad + cant);
+      else this.items.push({ clave: k, id: p.id, variantes: variantes || {}, cantidad: Math.min(tope, cant) });
       this.guardar(); T.registrar('add_to_cart', { producto: p.id });
       T.toast('Agregado al carrito');
     },
     cambiar(k, delta) {
       const it = this.items.find(i => i.clave === k); if (!it) return;
-      it.cantidad += delta; if (it.cantidad <= 0) this.items = this.items.filter(i => i.clave !== k);
+      it.cantidad = Math.min(MAX_CANT, it.cantidad + delta); if (it.cantidad <= 0) this.items = this.items.filter(i => i.clave !== k);
       this.guardar(); T.renderCarrito();
     },
     quitar(k) { this.items = this.items.filter(i => i.clave !== k); this.guardar(); T.renderCarrito(); },
@@ -246,8 +266,8 @@
     if (!c) return;
     c.classList.toggle('abierto', abrir); capa.classList.toggle('abierta', abrir);
     c.setAttribute('aria-hidden', abrir ? 'false' : 'true');
-    if (abrir) c.removeAttribute('inert'); else c.setAttribute('inert', '');
-    if (abrir) T.renderCarrito();
+    if (abrir) { c.removeAttribute('inert'); T.renderCarrito(); setTimeout(() => $('#cerrar-carrito').focus(), 50); }
+    else { c.setAttribute('inert', ''); const b = $('#btn-carrito'); if (b && c.contains(document.activeElement)) b.focus(); }
   };
 
   /* ---------- Iconos ---------- */
@@ -310,10 +330,15 @@
         <a href="${T.ruta('catalogo.html?f=nuevos')}" ${act('nuevos')}>Novedades</a>
         <a href="${T.ruta('preguntas.html')}" ${act('preguntas')}>Preguntas</a>`;
     const avisos = [];
-    if (!T.hayWA()) avisos.push(`<div class="aviso-config"><div class="contenedor">⚠️ Falta configurar el número de WhatsApp. Los botones de pedido no funcionarán hasta hacerlo en <a href="${T.ruta('admin.html')}">el panel de administración</a>.</div></div>`);
-    if (T.modoBorrador) avisos.push(`<div class="aviso-demo">👁️ Estás viendo el <strong>borrador local</strong> del panel admin. <a href="#" id="salir-preview">Salir de la vista previa</a></div>`);
-    else if ((cfg.sitio || {}).avisoDemo) avisos.push(`<div class="aviso-demo">Catálogo de demostración: los productos marcados (DEMO) son ejemplos. Reemplázalos desde el panel admin.</div>`);
-    el.innerHTML = `${avisos.join('')}
+    if (!T.hayWA()) avisos.push(`<div class="aviso-config" role="status"><span>Falta configurar el número de WhatsApp: los botones de pedido no funcionarán. Hazlo en <a href="${T.ruta('admin.html')}">el panel de administración</a>.</span></div>`);
+    if (T.modoBorrador) avisos.push(`<div class="aviso-demo" role="status"><span>Estás viendo el <strong>borrador local</strong> del panel admin. <a href="#" id="salir-preview">Salir de la vista previa</a></span></div>`);
+    else if ((cfg.sitio || {}).avisoDemo) avisos.push(`<div class="aviso-demo" role="status"><span>Catálogo de demostración: los productos marcados (DEMO) son ejemplos y no están a la venta.</span><button type="button" data-cerrar-aviso aria-label="Cerrar aviso">✕</button></div>`);
+    if (avisos.length && !T.leerLS('tienda_avisos_cerrados', false)) {
+      const caja = document.createElement('div'); caja.className = 'avisos-fijos'; caja.innerHTML = avisos.join('');
+      document.body.appendChild(caja);
+      caja.addEventListener('click', (e) => { if (e.target.closest('[data-cerrar-aviso]')) { e.target.closest('div').remove(); } });
+    }
+    el.innerHTML = `
       <div class="contenedor">
         <div class="encabezado-barra">
           <button class="icono-btn solo-movil" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">${T.ico.menu}</button>
@@ -342,7 +367,7 @@
       r.tiktok && `<a href="${T.esc(r.tiktok)}" target="_blank" rel="noopener" aria-label="TikTok">${T.ico.tiktok}</a>`,
       r.marketplace && `<a href="${T.esc(r.marketplace)}" target="_blank" rel="noopener" aria-label="Facebook Marketplace">${T.ico.tienda}</a>`
     ].filter(Boolean).join('');
-    const cats = T.datos.catalogo.categorias.filter(c => c.visible !== false).map(c => `<li><a href="${T.ruta('catalogo.html?cat=' + encodeURIComponent(c.id))}">${T.esc(c.nombre)}</a></li>`).join('');
+    const cats = T.datos.catalogo.categorias.filter(c => c.visible !== false && T.visibles().some(p => p.categoria === c.id)).map(c => `<li><a href="${T.ruta('catalogo.html?cat=' + encodeURIComponent(c.id))}">${T.esc(c.nombre)}</a></li>`).join('');
     const contacto = [
       T.hayWA() ? `<li><a href="${T.enlaceWA((cfg.whatsapp || {}).mensajeGeneral)}" target="_blank" rel="noopener">WhatsApp: +${T.numeroWA()}</a></li>` : '<li class="pendiente">WhatsApp: pendiente de configurar</li>',
       n.ciudad ? `<li>${T.esc(n.ciudad)}</li>` : '',
@@ -373,7 +398,7 @@
     if (!$('#carrito')) {
       const wrap = document.createElement('div');
       wrap.innerHTML = `<div class="capa" id="capa"></div>
-        <aside class="carrito" id="carrito" aria-hidden="true" aria-label="Carrito">
+        <aside class="carrito" id="carrito" aria-hidden="true" inert aria-label="Carrito">
           <div class="carrito-cabecera"><h2>Tu pedido</h2><button class="icono-btn" id="cerrar-carrito" aria-label="Cerrar">${T.ico.cerrar}</button></div>
           <div class="carrito-lista" id="carrito-lista"></div>
           <div class="carrito-pie">
@@ -405,7 +430,7 @@
     const cat = T.categoria(p.categoria);
     const d = T.descuento(p);
     const etiquetas = [
-      !p.disponible && '<span class="etiqueta etiqueta-agotado">Agotado</span>',
+      !p.disponible && `<span class="etiqueta etiqueta-agotado">${T.vendido(p) ? 'Vendido' : 'Agotado'}</span>`,
       p.disponible && p.oferta && d > 0 && `<span class="etiqueta etiqueta-oferta">-${d}%</span>`,
       p.disponible && p.oferta && d === 0 && '<span class="etiqueta etiqueta-oferta">Oferta</span>',
       p.nuevo && '<span class="etiqueta etiqueta-nuevo">Nuevo</span>',
@@ -423,11 +448,12 @@
         <h3 class="tarjeta-titulo"><a href="${url}">${T.esc(p.nombre)}</a></h3>
         ${p.descripcionCorta ? `<p class="tarjeta-desc">${T.esc(p.descripcionCorta)}</p>` : ''}
         <div class="precio"><span class="precio-actual">${T.formatoPrecio(p.precio)}</span>${d > 0 ? `<span class="precio-anterior">${T.formatoPrecio(p.precioAnterior)}</span>` : ''}</div>
+        ${T.textoStock(p) ? `<span class="stock-txt">${T.textoStock(p)}</span>` : ''}
         <div class="tarjeta-acciones">
           ${p.disponible
             ? `<button class="btn btn-whatsapp" data-wa="${T.esc(p.id)}">${T.ico.wa} Pedir</button>
                <button class="icono-btn" data-carrito="${T.esc(p.id)}" aria-label="Agregar al carrito" title="Agregar al carrito">${T.ico.mas}</button>`
-            : `<button class="btn btn-suave" data-wa-disp="${T.esc(p.id)}">${T.ico.wa} Avísame</button>`}
+            : `<button class="btn btn-suave" data-wa-disp="${T.esc(p.id)}">${T.ico.wa} ${T.vendido(p) ? 'Quiero uno igual' : 'Avísame'}</button>`}
         </div>
       </div>
     </article>`;
@@ -449,7 +475,7 @@
       if (p.variantes && p.variantes.length) { location.href = T.urlProducto(p) + (T.datos.config.sitio.paginasEstaticas ? '?' : '&') + 'carrito=1'; return; }
       T.carrito.agregar(p, {}, 1);
     }
-    else if (b.dataset.waDisp) { const p = T.producto(b.dataset.waDisp); if (p) T.abrirWA(T.mensajeProducto(p, null, 'disponibilidad'), 'whatsapp_click', { producto: p.id, origen: 'disponibilidad' }); }
+    else if (b.dataset.waDisp) { const p = T.producto(b.dataset.waDisp); if (p) T.abrirWA(T.mensajeProducto(p, null, T.vendido(p) ? 'interes' : 'disponibilidad'), 'whatsapp_click', { producto: p.id, origen: T.vendido(p) ? 'interes' : 'disponibilidad' }); }
   });
 
   /* ---------- Búsqueda / filtros ---------- */
@@ -531,18 +557,18 @@
   T.iniciar = async (activa, fn) => {
     try {
       await T.cargar();
+      T.carrito.sanear();
+      if (!$('link[rel="canonical"]')) { const l = document.createElement('link'); l.rel = 'canonical'; l.href = location.origin + location.pathname + (location.pathname.endsWith('producto.html') && T.param('p') ? '?p=' + encodeURIComponent(T.param('p')) : ''); document.head.appendChild(l); }
       T.renderEncabezado(activa);
       T.renderGlobales();
       T.renderBarraInferior(activa);
       T.autocompletar();
       if (fn) await fn(T.datos);
       T.renderPie();
-      document.documentElement.classList.remove('cargando');
     } catch (err) {
-      document.documentElement.classList.remove('cargando');
       console.error(err);
       const m = $('main') || document.body;
-      m.innerHTML = '<div class="contenedor"><div class="vacio" style="margin:2rem 0">No se pudo cargar el catálogo. Si abriste el archivo directamente (file://), usa un servidor local o publica la carpeta. Detalle: ' + T.esc(err.message) + '</div></div>';
+      m.innerHTML = '<div class="contenedor"><div class="vacio" style="margin:2rem 0"><h1 style="font-size:1.3rem">No pudimos cargar el catálogo</h1><p>Revisa tu conexión e inténtalo de nuevo. Si el problema continúa, escríbenos por WhatsApp.</p><button class="btn btn-primario" onclick="location.reload()">Reintentar</button><p class="nota-legal" style="margin-top:1rem">Detalle técnico: ' + T.esc(err.message) + (location.protocol === 'file:' ? ' (la tienda debe abrirse desde un servidor, no con doble clic)' : '') + '</p></div></div>';
     }
   };
 })();

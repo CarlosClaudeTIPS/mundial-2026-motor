@@ -67,3 +67,11 @@ body.admin { background: #f1f5f9; }
 .ayuda ol li, .ayuda ul li { margin-bottom: .3rem; }
 .color-fila { display: flex; gap: .5rem; align-items: center; }
 .color-fila input[type=color] { width: 48px; height: 40px; padding: 2px; border: 1px solid var(--borde); border-radius: 8px; background: #fff; }
+
+.dialogo { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); width: min(640px, calc(100% - 24px)); max-height: 90vh; overflow: auto; background: #fff; border-radius: var(--radio); padding: 1.25rem; z-index: 70; box-shadow: var(--sombra-alta); }
+.dialogo h2 { margin-top: 0; font-size: 1.15rem; }
+.dialogo-pie { display: flex; justify-content: flex-end; margin-top: 1rem; }
+.dialogo textarea { width: 100%; min-height: 140px; font: inherit; font-size: .85rem; padding: .6rem; border: 1px solid var(--borde); border-radius: var(--radio-sm); }
+.dialogo .paso-ia { display: grid; gap: .5rem; margin-bottom: 1rem; }
+.cargando { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--borde); border-top-color: var(--primario); border-radius: 50%; animation: girar .8s linear infinite; vertical-align: middle; margin-right: .4rem; }
+@keyframes girar { to { transform: rotate(360deg); } }
