@@ -114,7 +114,7 @@ function elegirVista(rol, ruta, params, usuario) {
       default: return <Inicio usuario={usuario} params={params} />
     }
   }
-  if (rol === 'docente' || rol === 'admin') {
+  if (rol === 'docente' || rol === 'admin' || rol === 'revisor') {
     switch (ruta) {
       case 'grupo': return <Grupo usuario={usuario} params={params} />
       case 'estudiante': return <EstudianteDetalle usuario={usuario} params={params} />

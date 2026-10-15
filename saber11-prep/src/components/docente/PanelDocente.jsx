@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { puedeEditar, veTodosLosGrupos } from '../../lib/roles'
 import { Plus, Users } from 'lucide-react'
 import { gruposDe, todosLosGrupos, crearGrupo, miembrosDe, intentosDeGrupo } from '../../lib/datos'
 import { listarCiclos, cicloActivo, estadoCiclo, programa } from '../../lib/ciclo'
@@ -14,7 +15,7 @@ export default function PanelDocente({ usuario }) {
   const [estadoC, setEstadoC] = useState(null)
 
   const cargar = async () => {
-    const lista = usuario.rol === 'admin' ? await todosLosGrupos() : await gruposDe(usuario.id)
+    const lista = veTodosLosGrupos(usuario) ? await todosLosGrupos() : await gruposDe(usuario.id)
     const conDatos = await Promise.all(lista.map(async g => {
       const { miembros, intentos } = await intentosDeGrupo(g.id)
       return { ...g, n: miembros.length, resumen: resumenGrupo(miembros, intentos) }
@@ -36,7 +37,7 @@ export default function PanelDocente({ usuario }) {
   return (
     <div className="space-y-4">
       <Titulo sub={estadoC ? (estadoC.estado === 'no_iniciado' ? `Ciclo activo: empieza en ${-estadoC.diasTranscurridos} día(s) · ${estadoC.semanasTotales} semanas` : `Ciclo activo: semana ${estadoC.semanaActual} de ${estadoC.semanasTotales} · ${estadoC.enPausa ? estadoC.pausaActual : (estadoC.fase?.nombre ?? '')}`) : null}
-        accion={<button className="btn-secondary" onClick={() => setNuevo({ nombre: '', colegio: '', curso: '', ciclo_id: ciclos.find(c => c.activo)?.id ?? '' })}><Plus size={16} /> Grupo</button>}>Mis grupos</Titulo>
+        accion={puedeEditar(usuario) && <button className="btn-secondary" onClick={() => setNuevo({ nombre: '', colegio: '', curso: '', ciclo_id: ciclos.find(c => c.activo)?.id ?? '' })}><Plus size={16} /> Grupo</button>}>{veTodosLosGrupos(usuario) ? 'Todos los grupos' : 'Mis grupos'}</Titulo>
 
       <Solicitudes usuario={usuario} grupos={grupos} onCambio={cargar} />
 

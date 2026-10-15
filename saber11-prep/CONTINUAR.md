@@ -68,3 +68,34 @@ Pendientes de ese sistema: notificaciones (falta decidir canal), vista de ruta/a
 Auditoría, plan e informe en `docs/17-mi-futuro.md`. Ruta `#/futuro`; lógica en `src/lib/futuro.js`; contenido en `content/futuro/*.json` (fuentes con fecha de verificación: revisarlas cada semestre); pruebas en `tests/futuro.test.js`. Migración opcional `supabase/migracion-006-futuro.sql`. Etapa 2 pendiente: catálogo de programas por ciudad, métricas antes/después. Sin asistente con IA (decisión del proyecto).
 
 Otros pendientes: correr `supabase/migracion-005-ruta.sql`, `migracion-006-futuro.sql` y `migracion-007-intentos-docente.sql` (reenvío de intentos registrados por el docente) (opcional, para que la ruta siga al estudiante entre dispositivos); guía ICFES solo tiene Antioquia y Eje Cafetero (faltan Bogotá, Caribe, Pacífico/sur, Oriente/Llanos; enlaces de `content/guia/*.json` aún sin verificar uno a uno); la migración `supabase/migracion-004-planes.sql` debe correrla Carlos en el SQL Editor de Supabase.
+
+## Roles, revisor y portal (hecho el 15-oct-2026)
+
+- **Roles** (`src/lib/roles.js`): `estudiante`, `docente`, `admin` (el jefe / super admin de la app ICFES) y
+  **`revisor`** (admin de solo lectura: ve todos los grupos, estudiantes, estadísticas, banco y biblioteca,
+  sin botones de crear/editar/aprobar/borrar). En la nube lo garantizan las políticas RLS de
+  `supabase/migracion-008-revisor.sql` (solo `for select`). Para dar revisor a alguien: Administración →
+  Usuarios → «Nuevo docente / admin / revisor» (modo local) o, en Supabase, invitar el correo y
+  `update perfiles set rol='revisor' where id='<uuid>'`. Usuario demo local: `revisor` / 1234.
+- **Banco → vista corrida**: botón de lista en el encabezado del Banco; muestra todas las preguntas seguidas
+  y numeradas (1, 2, 3…) con la correcta en verde, casilla «Con explicaciones», «Imprimir», por tandas de 100.
+- **Gráficos de las preguntas** (`src/components/Estimulo.jsx`): halo en los números, título del eje en su
+  banda, ancho real del contenedor (no se encogen en celular), leyenda numerada para rótulos largos,
+  decimales con coma. Prueba `tests/estimulo.test.js` revisa que todo gráfico del banco tenga números válidos.
+- **Logo → inicio** y **franja del portal** (`src/components/BarraPortal.jsx`, `src/lib/portal.js`): en la
+  portada y el inicio se ven las tres secciones (ICFES · Apoyo docente · Tienda). Si la app vive dentro del
+  portal (carpeta `icfes/`), los enlaces son relativos; si no, usa `VITE_PORTAL_URL` (sin ella enlaza a la
+  portada del portal de vista previa en claude.ai).
+
+### Super admin en las TRES páginas (pendiente, decisión de arquitectura)
+Hoy solo la app ICFES tiene cuentas (Supabase Auth). «Apoyo docente» y «Tienda» son sitios estáticos sin
+inicio de sesión (la tienda tiene un `admin.html` que genera archivos, no cuentas). Para un único super
+admin y revisores en las tres:
+1. Un solo proyecto Supabase para el portal, tabla `perfiles` con `rol` (`admin`, `revisor`, `docente`, …).
+2. Cada sección carga la misma sesión (misma `VITE_SUPABASE_URL`/anon key) y muestra su panel según el rol.
+3. Para docentes/tienda hay que crear primero lo que se administraría (pedidos, catálogo editable,
+   plantillas por docente); hoy no existe en servidor, solo en el navegador.
+Estimación: una etapa propia (portal con login + 2 paneles). Mientras tanto, el admin de ICFES ya es el
+jefe de esa app y el revisor es la cuenta «solo mirar».
+
+Migraciones pendientes de correr en Supabase (SQL Editor, en orden): 004, 005, 006, 007 y **008**.

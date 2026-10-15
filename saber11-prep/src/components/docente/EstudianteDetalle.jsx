@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { puedeEditar } from '../../lib/roles'
 import { db } from '../../lib/db'
 import { intentosDe, moverEstudiante } from '../../lib/datos'
 import { listarPreguntas } from '../../lib/banco'
@@ -48,7 +49,7 @@ export default function EstudianteDetalle({ params }) {
       {d.grupos.length > 1 && (
         <label className="card !py-2.5 flex items-center justify-between gap-2 text-sm">
           <span className="text-gray-400">Grupo</span>
-          <select className="input !w-auto !py-1.5 text-sm" value={e.grupo_id ?? ''} onChange={ev => cambiarGrupo(ev.target.value)}>
+          <select className="input !w-auto !py-1.5 text-sm" value={e.grupo_id ?? ''} disabled={!puedeEditar(usuario)} onChange={ev => cambiarGrupo(ev.target.value)}>
             {!e.grupo_id && <option value="">Sin grupo</option>}
             {d.grupos.map(g => <option key={g.id} value={g.id}>{g.nombre}</option>)}
           </select>
@@ -89,10 +90,10 @@ export default function EstudianteDetalle({ params }) {
           {d.errores.length === 0 && <p className="text-sm text-gray-500">Sin errores registrados.</p>}
         </div>
       </div>
-      <div className="card">
+      {puedeEditar(usuario) && <div className="card">
         <p className="font-medium mb-1">Restablecer PIN</p>
         <div className="flex gap-2"><input className="input" placeholder="Nuevo PIN" value={pinNuevo} onChange={e => setPinNuevo(e.target.value)} /><button className="btn-secondary shrink-0" onClick={cambiarPin}>Guardar</button></div>
-      </div>
+      </div>}
     </div>
   )
 }

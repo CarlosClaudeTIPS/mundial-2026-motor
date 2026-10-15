@@ -7,6 +7,7 @@ import { formatoFecha } from '../../lib/ciclo'
 import { listarPreguntas } from '../../lib/banco'
 import { resumenGrupo, estadisticasPreguntas } from '../../lib/analitica'
 import { generarIntentosDemo } from '../../lib/demo'
+import { puedeEditar } from '../../lib/roles'
 import { NUBE_DISPONIBLE } from '../../lib/supabase'
 import { ir } from '../../lib/nav'
 import { Titulo, Badge, FilaMetrica, Metrica, Vacio, fechaCorta } from '../ui'
@@ -17,6 +18,7 @@ import { taxonomia, nombrePrueba } from '../../lib/taxonomia'
 // preguntas más falladas, asignaciones e inscripción de estudiantes.
 
 export default function Grupo({ usuario, params }) {
+  const editable = puedeEditar(usuario)
   const [grupo, setGrupo] = useState(null)
   const [d, setD] = useState(null)
   const [pestana, setPestana] = useState('resumen')
@@ -84,7 +86,7 @@ export default function Grupo({ usuario, params }) {
       {pestana === 'resumen' && (
         <>
           <button className="btn-primary w-full" onClick={() => ir('informe', { grupo: grupo.id })}><FileBarChart size={16} /> Informe de mejoramiento del grupo (puntajes, niveles, percentiles)</button>
-          <PlanAcceso grupo={grupo} preguntas={Object.values(d.porId)} onCambio={cargar} />
+          <PlanAcceso grupo={grupo} preguntas={Object.values(d.porId)} onCambio={cargar} editable={editable} />
           <div className="grid grid-cols-3 gap-2">
             <Metrica etiqueta="Promedio" valor={r.promedio} sufijo="%" />
             <Metrica etiqueta="Activos" valor={`${r.n_activos}/${r.n_estudiantes}`} />
@@ -101,7 +103,7 @@ export default function Grupo({ usuario, params }) {
                   <p className="text-xs mt-1"><span className="text-gray-500">Dato observado:</span> <span className="text-gray-200">{a.dato}</span></p>
                   <p className="text-xs mt-1"><span className="text-gray-500">Sugerencia (reglas):</span> <span className="text-gray-300">{a.sugerencia}</span></p>
                   {a.estudiantes && <p className="text-xs text-gray-400 mt-1">{a.estudiantes.map(e => e.nombre).join(', ')}</p>}
-                  {a.accion && <button className="btn-secondary mt-2 !py-1.5 text-xs" onClick={() => asignarDesdeAccion(a)}><ClipboardList size={14} /> Asignar al grupo</button>}
+                  {editable && a.accion && <button className="btn-secondary mt-2 !py-1.5 text-xs" onClick={() => asignarDesdeAccion(a)}><ClipboardList size={14} /> Asignar al grupo</button>}
                 </div>
               ))}
             </div>
@@ -117,22 +119,22 @@ export default function Grupo({ usuario, params }) {
           {r.pruebas.length > 0 && <div className="card"><p className="font-medium mb-1">Por prueba</p>{r.pruebas.map(x => <FilaMetrica key={x.id} nombre={x.nombre} valor={x.precision} detalle={`${x.total}`} />)}</div>}
           {r.competencias.length > 0 && <div className="card"><p className="font-medium mb-1">Competencias (de más débil a más fuerte)</p>{r.competencias.slice(0, 10).map(x => <FilaMetrica key={x.id} nombre={x.nombre} valor={x.precision} detalle={`${x.total}`} />)}</div>}
           {r.habilidades.length > 0 && <div className="card"><p className="font-medium mb-1">Habilidades del eje transversal</p>{r.habilidades.map(x => <FilaMetrica key={x.id} nombre={x.nombre} valor={x.precision} detalle={`${x.total}`} />)}</div>}
-          {!NUBE_DISPONIBLE && r.total_intentos < 20 && (
+          {editable && !NUBE_DISPONIBLE && r.total_intentos < 20 && (
             <button className="btn-ghost w-full text-xs" onClick={async () => { const n = await generarIntentosDemo(grupo.id); alert(`Se generaron ${n} respuestas ficticias (solo demostración).`); cargar() }}>Generar respuestas de demostración para ver el panel con datos</button>
           )}
           <div className="flex gap-2">
             <button className="btn-secondary flex-1" onClick={() => ir('imprimir', { grupo: grupo.id })}><Printer size={16} /> Modo papel</button>
-            <button className="btn-secondary flex-1" onClick={() => { setPestana('asignaciones'); setAsig(nuevaAsig()) }}><ClipboardList size={16} /> Asignar</button>
+            {editable && <button className="btn-secondary flex-1" onClick={() => { setPestana('asignaciones'); setAsig(nuevaAsig()) }}><ClipboardList size={16} /> Asignar</button>}
           </div>
         </>
       )}
 
       {pestana === 'estudiantes' && (
         <>
-          <div className="flex gap-2">
+          {editable && <div className="flex gap-2">
             <button className="btn-secondary flex-1" onClick={() => setAlta({ modo: 'uno', nombre: '', usuario: '', pin: '' })}><UserPlus size={16} /> Agregar uno</button>
             <button className="btn-secondary flex-1" onClick={() => setAlta({ modo: 'lista', texto: '' })}>Importar lista</button>
-          </div>
+          </div>}
           {alta && (
             <div className="card space-y-2">
               {alta.modo === 'uno' ? (
@@ -197,7 +199,7 @@ export default function Grupo({ usuario, params }) {
 
       {pestana === 'asignaciones' && (
         <>
-          {!asig && <button className="btn-secondary w-full" onClick={() => setAsig(nuevaAsig())}><ClipboardList size={16} /> Nueva asignación</button>}
+          {editable && !asig && <button className="btn-secondary w-full" onClick={() => setAsig(nuevaAsig())}><ClipboardList size={16} /> Nueva asignación</button>}
           {asig && (
             <div className="card space-y-2">
               <div className="flex gap-2">{['diagnostico', 'mini', 'simulacro'].map(t => <button key={t} onClick={() => setAsig({ ...asig, tipo: t, titulo: t === 'diagnostico' && !asig.titulo ? 'Prueba diagnóstica' : asig.titulo })} className={`btn flex-1 ${asig.tipo === t ? 'bg-dark-600 text-white' : 'bg-dark-900 text-gray-400'}`}>{t === 'mini' ? 'Mini-prueba' : t === 'diagnostico' ? 'Diagnóstica' : 'Simulacro'}</button>)}</div>
@@ -254,7 +256,7 @@ function SesionesDocente({ grupo, usuario, porId, onAsignar }) {
         <p className="text-xs text-gray-500">Periodo desde {r.periodo_inicio} · {r.n_intentos} respuestas · {r.n_activos} estudiantes activos · promedio {r.promedio ?? '—'}%</p>
         {r.errores_frecuentes.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Errores del periodo</p>{r.errores_frecuentes.map(e => <p key={e.id}>{e.nombre}: {e.pct_estudiantes}% de los activos ({e.errores} errores)</p>)}</div>}
         {r.habilidades_debiles.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Habilidades problemáticas</p>{r.habilidades_debiles.map(h => <p key={h.id}>{h.nombre}: {h.precision}% en {h.total} preguntas</p>)}</div>}
-        {r.acciones.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Acciones sugeridas (reglas)</p>{r.acciones.slice(0, 3).map((a, i) => <div key={i} className="rounded bg-dark-900 p-2 mb-1"><p>{a.titulo}</p><p className="text-xs text-gray-400">{a.dato}</p>{a.accion && <button className="btn-ghost !py-0.5 text-xs mt-1" onClick={() => onAsignar(a)}>Asignar al grupo</button>}</div>)}</div>}
+        {r.acciones.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Acciones sugeridas (reglas)</p>{r.acciones.slice(0, 3).map((a, i) => <div key={i} className="rounded bg-dark-900 p-2 mb-1"><p>{a.titulo}</p><p className="text-xs text-gray-400">{a.dato}</p>{puedeEditar(usuario) && a.accion && <button className="btn-ghost !py-0.5 text-xs mt-1" onClick={() => onAsignar(a)}>Asignar al grupo</button>}</div>)}</div>}
         {r.preguntas_recomendadas.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Preguntas para trabajar en clase</p>{r.preguntas_recomendadas.map(q => <p key={q.id}><span className="font-mono text-xs text-gray-400">{q.id}</span> {porId[q.id]?.enunciado?.slice(0, 90)}… ({q.precision}%{q.distractor ? `, distractor ${q.distractor.clave}` : ''})</p>)}</div>}
         {r.recursos.length > 0 && <div><p className="font-medium text-xs uppercase tracking-wide text-gray-400">Material recomendado</p>{r.recursos.map(x => <p key={x.id}>{x.titulo}</p>)}</div>}
         {r.con_dificultad.length > 0 && <p className="text-xs text-gray-400">Con dificultades marcadas: {r.con_dificultad.join(', ')}</p>}
@@ -265,7 +267,7 @@ function SesionesDocente({ grupo, usuario, porId, onAsignar }) {
   return (
     <div className="space-y-3">
       <p className="text-xs text-gray-400">El programa sugiere una sesión de una hora con el grupo cada ~21 días (no es obligatorio). Cada sesión guarda un resumen del periodo para planear la clase.{proxima && ` Próxima sugerida: ${proxima.toLocaleDateString('es-CO', { day: 'numeric', month: 'long' })}.`}</p>
-      {!borrador && <button className="btn-secondary w-full" onClick={preparar}>Preparar sesión con los datos del periodo</button>}
+      {puedeEditar(usuario) && !borrador && <button className="btn-secondary w-full" onClick={preparar}>Preparar sesión con los datos del periodo</button>}
       {borrador && (
         <div className="card space-y-2">
           <input className="input" value={borrador.titulo} onChange={e => setBorrador({ ...borrador, titulo: e.target.value })} />
@@ -306,7 +308,7 @@ function AsignacionFila({ a, miembros }) {
 }
 
 // ─── Plan de acceso al banco: completo o mensual (lotes de LOTE_MENSUAL) ─────
-function PlanAcceso({ grupo, preguntas, onCambio }) {
+function PlanAcceso({ grupo, preguntas, onCambio, editable = true }) {
   const [editando, setEditando] = useState(false)
   const [form, setForm] = useState({ plan: grupo.plan ?? 'completo', plan_inicio: (grupo.plan_inicio ?? grupo.creado ?? '').slice(0, 10), plan_lote: grupo.plan_lote ?? LOTE_MENSUAL })
   const aprobadas = preguntas.filter(p => p.estado === 'aprobada')
@@ -328,7 +330,7 @@ function PlanAcceso({ grupo, preguntas, onCambio }) {
               : <>Los estudiantes ven las {aprobadas.length} preguntas aprobadas del banco.</>}
           </p>
         </div>
-        <button className="text-xs font-semibold text-brand-blue shrink-0" onClick={() => setEditando(v => !v)}>{editando ? 'Cerrar' : 'Cambiar'}</button>
+        {editable && <button className="text-xs font-semibold text-brand-blue shrink-0" onClick={() => setEditando(v => !v)}>{editando ? 'Cerrar' : 'Cambiar'}</button>}
       </div>
       {editando && (
         <div className="mt-3 space-y-2">

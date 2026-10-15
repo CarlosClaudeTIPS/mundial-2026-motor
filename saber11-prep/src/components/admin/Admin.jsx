@@ -102,14 +102,14 @@ function Usuarios({ admin }) {
   return (
     <div className="space-y-3">
       {NUBE_DISPONIBLE && <p className="text-xs text-gray-400">Con Supabase, las cuentas se crean desde el panel de Supabase (docentes) o al inscribir estudiantes en un grupo (función api/estudiantes.js).</p>}
-      <button className="btn-secondary w-full" onClick={() => setNuevo({ nombre: '', usuario: '', pin: '', rol: 'docente' })}>Nuevo docente / admin</button>
+      <button className="btn-secondary w-full" onClick={() => setNuevo({ nombre: '', usuario: '', pin: '', rol: 'docente' })}>Nuevo docente / admin / revisor</button>
       {nuevo && (
         <div className="card space-y-2">
           <input className="input" placeholder="Nombre" value={nuevo.nombre} onChange={e => setNuevo({ ...nuevo, nombre: e.target.value })} />
           <div className="grid grid-cols-3 gap-2">
             <input className="input" placeholder="usuario" value={nuevo.usuario} onChange={e => setNuevo({ ...nuevo, usuario: e.target.value })} />
             <input className="input" placeholder="PIN" value={nuevo.pin} onChange={e => setNuevo({ ...nuevo, pin: e.target.value })} />
-            <select className="input" value={nuevo.rol} onChange={e => setNuevo({ ...nuevo, rol: e.target.value })}><option value="docente">docente</option><option value="admin">admin</option></select>
+            <select className="input" value={nuevo.rol} onChange={e => setNuevo({ ...nuevo, rol: e.target.value })}><option value="docente">docente</option><option value="admin">admin (jefe)</option><option value="revisor">revisor (solo lectura)</option></select>
           </div>
           <div className="flex gap-2"><button className="btn-primary flex-1" onClick={guardar}>Crear</button><button className="btn-secondary flex-1" onClick={() => setNuevo(null)}>Cancelar</button></div>
         </div>

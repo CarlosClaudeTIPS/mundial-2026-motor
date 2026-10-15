@@ -5,6 +5,7 @@ import { useSync, sincronizar } from '../lib/sync'
 import { NUBE_DISPONIBLE } from '../lib/supabase'
 import { ir } from '../lib/nav'
 import BarraPortal from './BarraPortal'
+import { esRevisor } from '../lib/roles'
 
 const MENU = {
   estudiante: [
@@ -22,6 +23,12 @@ const MENU = {
     { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library },
     { ruta: 'imprimir', nombre: 'Papel', icono: Printer },
   ],
+  revisor: [
+    { ruta: 'inicio', nombre: 'Grupos', icono: Users },
+    { ruta: 'materias', nombre: 'Materias', icono: LayoutGrid },
+    { ruta: 'banco', nombre: 'Banco', icono: BookOpen },
+    { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library },
+  ],
   admin: [
     { ruta: 'admin', nombre: 'Admin', icono: Settings },
     { ruta: 'inicio', nombre: 'Grupos', icono: Users, params: { vista: 'docente' } },
@@ -34,6 +41,7 @@ const EXTRA_ESCRITORIO = {
   estudiante: [{ ruta: 'progreso', nombre: 'Progreso', icono: BarChart3 }, { ruta: 'biblioteca', nombre: 'Biblioteca', icono: Library }, { ruta: 'ruta', nombre: 'Mi ruta', icono: Map }, { ruta: 'carreras', nombre: 'Mi carrera', icono: Compass }, { ruta: 'futuro', nombre: 'Mi futuro', icono: Rocket }, { ruta: 'informe', nombre: 'Mi informe', icono: FileBarChart }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
   docente: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
   admin: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
+  revisor: [{ ruta: 'ruta', nombre: 'Programa', icono: Map }, { ruta: 'guia', nombre: 'Guía ICFES', icono: BookOpenCheck }],
 }
 
 export default function Layout({ usuario, rolVista, ruta, children, vistaEstudiante = false, onVistaEstudiante = null }) {
@@ -87,6 +95,9 @@ export default function Layout({ usuario, rolVista, ruta, children, vistaEstudia
           </div>
         )}
         {enInicio && <BarraPortal />}
+        {esRevisor(usuario) && (
+          <div className="no-print bg-sky-50 border-b border-sky-200 text-brand-navy text-xs px-4 py-1.5 flex items-center gap-2"><Eye size={14} /> Cuenta de revisión: puedes ver todo, pero no modificar nada.</div>
+        )}
         {/* Barra superior (móvil) */}
         <header className="no-print md:hidden sticky top-0 z-20 bg-dark-800/95 backdrop-blur border-b border-dark-700 px-4 py-2.5 flex items-center justify-between">
           <button onClick={irInicio} className="flex items-center gap-2" title="Ir al inicio" aria-label="Ir al inicio">

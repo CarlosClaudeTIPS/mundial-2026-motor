@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Plus, Upload, Download, Copy, Archive } from 'lucide-react'
+import { Plus, Upload, Download, Copy, Archive, List, LayoutList } from 'lucide-react'
+import { puedeEditar } from '../../lib/roles'
 import { listarPreguntas, guardarPregunta } from '../../lib/banco'
 import { db } from '../../lib/db'
 import { taxonomia, nombrePrueba, nombreCompetencia } from '../../lib/taxonomia'
@@ -18,11 +19,18 @@ export default function Banco({ usuario }) {
   const [edicion, setEdicion] = useState(null) // texto JSON
   const [error, setError] = useState('')
   const [importando, setImportando] = useState(false)
+  // 'tarjetas': una tarjeta por pregunta, se abre al tocarla.
+  // 'corrida': todas seguidas y numeradas (1, 2, 3…) para revisarlas de una ojeada.
+  const [vista, setVista] = useState(() => { try { return localStorage.getItem('banco_vista') || 'tarjetas' } catch { return 'tarjetas' } })
+  const [conExplicaciones, setConExplicaciones] = useState(false)
+  const [limite, setLimite] = useState(100) // la vista corrida se muestra por tandas para no cargar el celular
+  const cambiarVista = (v) => { setVista(v); try { localStorage.setItem('banco_vista', v) } catch {} }
+  const editable = puedeEditar(usuario)
   const tax = taxonomia()
 
 
   const cargar = async () => setLista(await listarPreguntas(f))
-  useEffect(() => { cargar() }, [JSON.stringify(f)])
+  useEffect(() => { cargar(); setLimite(100) }, [JSON.stringify(f)])
 
   const abrirEdicion = (p) => { setAbierta(p.id); setEdicion(JSON.stringify(p, null, 2)); setError('') }
 
@@ -73,7 +81,13 @@ export default function Banco({ usuario }) {
 
   return (
     <div className="space-y-4">
-      <Titulo sub={`${lista.length} preguntas`} accion={<div className="flex gap-1"><button className="btn-ghost !px-2" title="Exportar" aria-label="Exportar banco" onClick={exportar}><Download size={16} /></button><label className="btn-ghost !px-2 cursor-pointer" title="Importar JSON"><Upload size={16} /><input type="file" accept=".json" className="hidden" onChange={e => e.target.files[0] && importar(e.target.files[0])} /></label><button className="btn-secondary" onClick={() => setImportando(true)}><FileText size={16} /> Importar</button><button className="btn-secondary" onClick={nueva}><Plus size={16} /> Nueva</button></div>}>Banco de preguntas</Titulo>
+      <Titulo sub={`${lista.length} preguntas`} accion={<div className="flex gap-1 flex-wrap justify-end">
+        <button className="btn-ghost !px-2" title={vista === 'corrida' ? 'Ver como tarjetas' : 'Ver todas seguidas (1, 2, 3…)'} aria-label={vista === 'corrida' ? 'Ver como tarjetas' : 'Ver todas seguidas'} onClick={() => cambiarVista(vista === 'corrida' ? 'tarjetas' : 'corrida')}>{vista === 'corrida' ? <LayoutList size={16} /> : <List size={16} />}</button>
+        <button className="btn-ghost !px-2" title="Exportar" aria-label="Exportar banco" onClick={exportar}><Download size={16} /></button>
+        {editable && <label className="btn-ghost !px-2 cursor-pointer" title="Importar JSON"><Upload size={16} /><input type="file" accept=".json" className="hidden" onChange={e => e.target.files[0] && importar(e.target.files[0])} /></label>}
+        {editable && <button className="btn-secondary" onClick={() => setImportando(true)}><FileText size={16} /> Importar</button>}
+        {editable && <button className="btn-secondary" onClick={nueva}><Plus size={16} /> Nueva</button>}
+      </div>}>Banco de preguntas</Titulo>
 
       <div className="grid grid-cols-2 gap-2">
         <select className="input" value={f.prueba} onChange={e => setF({ ...f, prueba: e.target.value, competencia: '' })}><option value="">Todas las pruebas</option>{tax.pruebas.map(p => <option key={p.id} value={p.id}>{p.nombre}</option>)}</select>
@@ -96,7 +110,48 @@ export default function Banco({ usuario }) {
       )}
 
       {lista.length === 0 && <Vacio>Sin preguntas con esos filtros.</Vacio>}
-      <div className="space-y-2">
+
+      {vista === 'corrida' && lista.length > 0 && (
+        <div className="space-y-3">
+          <div className="card !py-2.5 flex flex-wrap items-center justify-between gap-2 text-sm no-print">
+            <span className="text-gray-400">Todas seguidas, numeradas. La respuesta correcta va marcada en verde.</span>
+            <div className="flex items-center gap-3">
+              <label className="flex items-center gap-1.5 cursor-pointer"><input type="checkbox" checked={conExplicaciones} onChange={e => setConExplicaciones(e.target.checked)} /> Con explicaciones</label>
+              <button className="btn-ghost !py-1 text-xs" onClick={() => window.print()}>Imprimir</button>
+            </div>
+          </div>
+          {lista.slice(0, limite).map((p, i) => (
+            <div key={p.id} id={`p-${p.id}`} className="card p-3 sm:p-4">
+              <div className="flex flex-wrap items-center gap-1.5 text-xs mb-2">
+                <span className="w-7 h-7 rounded-full bg-brand-navy text-[#ffffff] font-bold flex items-center justify-center shrink-0">{i + 1}</span>
+                <span className="font-mono text-gray-400">{p.id}</span>
+                <Badge tono="morado">{nombrePrueba(p.prueba)}</Badge>
+                <Badge>{nombreCompetencia(p.competencia)}</Badge>
+                <Badge tono="azul">dif. {p.dificultad}</Badge>
+                <Badge tono={p.estado === 'aprobada' ? 'verde' : p.estado === 'archivada' ? 'gris' : 'ambar'}>{p.estado}</Badge>
+                {(p.etiquetas ?? []).includes('revisar') && <Badge tono="rojo">revisar</Badge>}
+                {(p.etiquetas ?? []).includes('sin_clave') && <Badge tono="rojo">sin clave</Badge>}
+                {editable && <button className="ml-auto text-xs font-semibold text-brand-blue no-print" onClick={() => { cambiarVista('tarjetas'); abrirEdicion(p) }}>Editar</button>}
+              </div>
+              <PreguntaVista pregunta={p} elegida={null} modo="revisar" mostrarMeta={false} />
+              {conExplicaciones && (
+                <div className="text-xs text-gray-400 space-y-1 mt-2 border-t border-dark-700 pt-2">
+                  {p.opciones.map(o => <p key={o.clave}><span className="text-gray-200">{o.clave}{o.correcta ? ' ✔' : ''}:</span> {o.explicacion}{o.tipo_error ? ` (${o.tipo_error}, ${o.diagnostico})` : ''}</p>)}
+                  {p.explicacion && <p><span className="text-gray-200">Explicación:</span> {p.explicacion}</p>}
+                </div>
+              )}
+            </div>
+          ))}
+          {lista.length > limite && (
+            <div className="flex gap-2 no-print">
+              <button className="btn-secondary flex-1" onClick={() => setLimite(l => l + 100)}>Mostrar 100 más ({limite} de {lista.length})</button>
+              <button className="btn-ghost" onClick={() => setLimite(lista.length)}>Ver todas</button>
+            </div>
+          )}
+        </div>
+      )}
+
+      <div className={`space-y-2 ${vista === 'corrida' ? 'hidden' : ''}`}>
         {lista.map(p => (
           <div key={p.id} className="card p-3">
             <button className="w-full text-left" onClick={() => setAbierta(abierta === p.id && edicion == null ? null : p.id)}>
@@ -124,13 +179,13 @@ export default function Banco({ usuario }) {
                   <p><span className="text-gray-200">Evidencia:</span> {p.evidencia}</p>
                   <p><span className="text-gray-200">Fuente:</span> {p.fuente?.nombre}{p.fuente?.url ? ` · ${p.fuente.url}` : ''}</p>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                {editable && <div className="flex flex-wrap gap-2">
                   <button className="btn-secondary !py-1.5 text-xs" onClick={() => abrirEdicion(p)}>Editar</button>
                   <button className="btn-secondary !py-1.5 text-xs" onClick={() => duplicar(p)}><Copy size={14} /> Duplicar</button>
                   {p.estado !== 'aprobada' && <button className="btn-secondary !py-1.5 text-xs" onClick={() => cambiarEstado(p, 'aprobada')}>Aprobar</button>}
                   {p.estado !== 'archivada' && <button className="btn-ghost !py-1.5 text-xs" onClick={() => cambiarEstado(p, 'archivada')}><Archive size={14} /> Archivar</button>}
                   {p.estado === 'archivada' && <button className="btn-ghost !py-1.5 text-xs" onClick={() => cambiarEstado(p, 'pendiente')}>Restaurar</button>}
-                </div>
+                </div>}
               </div>
             )}
           </div>

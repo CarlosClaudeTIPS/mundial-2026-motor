@@ -12,15 +12,21 @@ import { NUBE_DISPONIBLE } from './supabase'
 export const USUARIOS_DEMO = [
   { nombre: 'Administración', usuario: 'admin', pin: '1234', rol: 'admin' },
   { nombre: 'Docente de prueba', usuario: 'docente', pin: '1234', rol: 'docente' },
+  { nombre: 'Revisión (solo lectura)', usuario: 'revisor', pin: '1234', rol: 'revisor' },
 ]
 
 const ESTUDIANTES_DEMO = ['Valentina Rojas', 'Juan Esteban Pérez', 'Sara Martínez', 'Kevin Rodríguez', 'Laura Gómez', 'Andrés Castro']
 
 export async function asegurarDatosIniciales() {
   if (NUBE_DISPONIBLE) return
-  if ((await db.usuarios.count()) > 0) return
+  if ((await db.usuarios.count()) > 0) {
+    // Instalaciones viejas: agregar los usuarios demo que falten (p. ej. el revisor).
+    for (const u of USUARIOS_DEMO) if (!(await db.usuarios.where('usuario').equals(u.usuario).first())) await crearUsuario({ ...u, demo: true })
+    return
+  }
   const admin = await crearUsuario({ ...USUARIOS_DEMO[0], demo: true })
   const docente = await crearUsuario({ ...USUARIOS_DEMO[1], demo: true })
+  for (const u of USUARIOS_DEMO.slice(2)) await crearUsuario({ ...u, demo: true })
   const grupo = await crearGrupo({ nombre: '11-02 (demo)', docente_id: docente.id, colegio: 'IED de prueba', curso: '11-02', ciclo_id: 'saber11-B-2027' })
   for (const [i, nombre] of ESTUDIANTES_DEMO.entries()) {
     await crearUsuario({ nombre, usuario: `est${i + 1}`, pin: '1234', rol: 'estudiante', grupo_id: grupo.id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id, demo: true })

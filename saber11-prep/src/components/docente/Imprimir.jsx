@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { veTodosLosGrupos } from '../../lib/roles'
 import { Printer } from 'lucide-react'
 import { elegirPreguntas, obtenerPregunta } from '../../lib/banco'
 import { db } from '../../lib/db'
@@ -23,7 +24,7 @@ export default function Imprimir({ usuario, params }) {
   const [reg, setReg] = useState({ codigo: '', estudiante_id: '', claves: '' })
   const [mensaje, setMensaje] = useState('')
 
-  useEffect(() => { (usuario.rol === 'admin' ? todosLosGrupos() : gruposDe(usuario.id)).then(setGrupos) }, [usuario.id])
+  useEffect(() => { (veTodosLosGrupos(usuario) ? todosLosGrupos() : gruposDe(usuario.id)).then(setGrupos) }, [usuario.id])
   useEffect(() => { if (grupoId) miembrosDe(grupoId).then(setMiembros) }, [grupoId])
 
   const generar = async () => {

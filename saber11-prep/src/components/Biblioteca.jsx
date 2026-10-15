@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { puedeEditar } from '../lib/roles'
 import { ExternalLink, Plus, Check, X } from 'lucide-react'
 import { listarRecursos, guardarRecurso, cambiarEstadoRecurso } from '../lib/datos'
 import { taxonomia, nombrePrueba, nombreTipoError, nombreHabilidad } from '../lib/taxonomia'
@@ -13,6 +14,7 @@ const VACIO = { titulo: '', tipo: 'enlace', url: '', descripcion: '', prueba: ''
 
 export default function Biblioteca({ usuario }) {
   const gestor = usuario.rol !== 'estudiante'
+  const editable = puedeEditar(usuario)
   const [recursos, setRecursos] = useState([])
   const [pestana, setPestana] = useState('aprobado')
   const [filtroPrueba, setFiltroPrueba] = useState('')
@@ -32,7 +34,7 @@ export default function Biblioteca({ usuario }) {
 
   return (
     <div className="space-y-4">
-      <Titulo sub="Recursos conectados a cada prueba, habilidad y tipo de error" accion={gestor && <button className="btn-secondary no-print" onClick={() => setNuevo({ ...VACIO })}><Plus size={16} /> Proponer</button>}>Biblioteca</Titulo>
+      <Titulo sub="Recursos conectados a cada prueba, habilidad y tipo de error" accion={editable && <button className="btn-secondary no-print" onClick={() => setNuevo({ ...VACIO })}><Plus size={16} /> Proponer</button>}>Biblioteca</Titulo>
 
       {gestor && (
         <div className="flex gap-1.5">
@@ -86,13 +88,13 @@ export default function Biblioteca({ usuario }) {
             {r.descripcion && <p className="text-sm text-gray-300 mt-1 whitespace-pre-line">{r.descripcion}</p>}
             {r.url && <a href={r.url} target="_blank" rel="noreferrer" className="text-brand-blue text-sm inline-flex items-center gap-1 mt-1">Abrir <ExternalLink size={12} /></a>}
             <p className="text-[11px] text-gray-500 mt-2">Fuente: {r.fuente?.nombre ?? '—'}{r.fuente?.institucion ? ` · ${r.fuente.institucion}` : ''}{r.fecha_incorporacion ? ` · incorporado ${fechaCorta(r.fecha_incorporacion)}` : ''} · v{r.version ?? 1}{r.aprobado_por ? ' · aprobado' : ''}</p>
-            {gestor && r.estado === 'pendiente' && (
+            {editable && r.estado === 'pendiente' && (
               <div className="flex gap-2 mt-2">
                 <button className="btn-secondary !py-1.5 text-xs" onClick={async () => { await cambiarEstadoRecurso(r.id, 'aprobado', usuario.id); cargar() }}><Check size={14} /> Aprobar</button>
                 <button className="btn-ghost !py-1.5 text-xs" onClick={async () => { await cambiarEstadoRecurso(r.id, 'rechazado', usuario.id); cargar() }}><X size={14} /> Rechazar</button>
               </div>
             )}
-            {gestor && r.estado === 'aprobado' && <button className="btn-ghost !py-1 text-xs mt-1" onClick={async () => { await cambiarEstadoRecurso(r.id, 'pendiente', usuario.id); cargar() }}>Enviar a revisión</button>}
+            {editable && r.estado === 'aprobado' && <button className="btn-ghost !py-1 text-xs mt-1" onClick={async () => { await cambiarEstadoRecurso(r.id, 'pendiente', usuario.id); cargar() }}>Enviar a revisión</button>}
           </div>
         ))}
       </div>
