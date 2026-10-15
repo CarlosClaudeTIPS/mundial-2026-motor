@@ -14,7 +14,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const raiz = dirname(fileURLToPath(import.meta.url));
-const urlBase = (process.argv[2] || '').replace(/\/?$/, '/');
+const urlBase = process.argv[2] ? process.argv[2].replace(/\/?$/, '/') : '';
 const catalogo = JSON.parse(readFileSync(join(raiz, 'data/catalogo.json'), 'utf8'));
 const config = JSON.parse(readFileSync(join(raiz, 'data/config.json'), 'utf8'));
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
