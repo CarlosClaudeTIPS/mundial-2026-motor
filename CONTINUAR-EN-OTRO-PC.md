@@ -12,23 +12,15 @@ git clone https://github.com/CarlosClaudeTIPS/mundial-2026-motor.git
 cd mundial-2026-motor
 ```
 
-## 2. Una sola rama: `master`
+## 2. Qué hay aquí y qué no
 
-Desde el 15 de octubre de 2026 **todo vive en la rama `master`** (y `main` es una copia idéntica):
-el portal de tres puertas, el ICFES (`saber11-prep/`), apoyo docente (`apoyo-docente/`), la tienda (`tienda/`)
-y el Motor Mundial. Vercel publica `master` en https://mundial-2026-motor.vercel.app con esta estructura:
+Este repositorio contiene **solo el Motor Mundial 2026** (rama `master`; `main` es copia) y, en su rama
+`claude/motorcycle-maintenance-app-bbrofj`, la app de mantenimiento de motos.
 
-| Dirección | Carpeta |
-|---|---|
-| `/` | `portal/site/` (portada con las tres puertas) |
-| `/icfes/` | `saber11-prep/` |
-| `/docentes/` | `apoyo-docente/` |
-| `/tienda/` | `tienda/` |
-| `/motor/` | Motor Mundial 2026 (`src/`, sin cambios en su código) |
+Los emprendimientos (portal de tres puertas, ICFES, apoyo docente y tienda) se mudaron el 16 de octubre de 2026
+al repositorio **`CarlosClaudeTIPS/Emprendimientos`**, con su propio sitio en Vercel. No se mezclan con esto.
 
-Cada proyecto se sigue editando en su propia carpeta y en cualquier conversación de Claude Code;
-al hacer `git push` a `master`, Vercel reconstruye el sitio completo (`npm run build` ejecuta `build-sitio.mjs`).
-Las ramas `claude/*` antiguas quedan como historial; no trabajes en ellas.
+Vercel publica `master` de este repositorio en https://mundial-2026-motor.vercel.app (el motor en la raíz).
 
 ```bash
 git checkout master

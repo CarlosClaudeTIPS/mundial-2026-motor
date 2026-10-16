@@ -6,10 +6,9 @@
   "scripts": {
     "test": "vitest run",
     "dev": "vite",
-    "build": "node build-sitio.mjs",
+    "build": "vite build",
     "preview": "vite preview",
-    "betano": "node scripts/betano-relay.mjs",
-    "build:motor": "vite build"
+    "betano": "node scripts/betano-relay.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
@@ -18,8 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
-    "recharts": "^2.10.0",
-    "zod": "^4.6.5"
+    "recharts": "^2.10.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
