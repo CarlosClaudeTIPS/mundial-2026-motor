@@ -6,15 +6,16 @@ import { listarPreguntas } from '../../lib/banco'
 import { sesionesDe } from '../../lib/pruebas'
 import { resumen, evolucionSemanal } from '../../lib/analitica'
 import { recomendar, reglasVigentes } from '../../lib/reglas'
-import { hashPin } from '../../lib/sesion'
+import { cambiarPinEstudiante } from '../../lib/sesion'
 import { ir } from '../../lib/nav'
 import { Titulo, FilaMetrica, Metrica, Badge, fechaCorta, formatoTiempo } from '../ui'
 import { nombrePrueba, nombreTipoError, nombreDiagnostico } from '../../lib/taxonomia'
 import { carreraPorId } from '../../lib/carreras'
 
-export default function EstudianteDetalle({ params }) {
+export default function EstudianteDetalle({ usuario, params }) {
   const [d, setD] = useState(null)
   const [pinNuevo, setPinNuevo] = useState('')
+  const [cambiandoPin, setCambiandoPin] = useState(false)
   const cargar = async () => {
     const e = await db.usuarios.get(params.id)
     if (!e) return
@@ -36,8 +37,10 @@ export default function EstudianteDetalle({ params }) {
 
   const cambiarPin = async () => {
     if (!/^\d{4,6}$/.test(pinNuevo)) return alert('El PIN debe tener 4 a 6 dígitos')
-    await db.usuarios.update(e.id, { pin_hash: await hashPin(pinNuevo) })
-    setPinNuevo(''); alert('PIN actualizado')
+    setCambiandoPin(true)
+    try { await cambiarPinEstudiante(e, pinNuevo); setPinNuevo(''); alert(`PIN de ${e.nombre} actualizado. Ya puede entrar con el nuevo PIN.`) }
+    catch (err) { alert('No se cambió el PIN: ' + err.message) }
+    finally { setCambiandoPin(false) }
   }
 
   return (
@@ -92,7 +95,7 @@ export default function EstudianteDetalle({ params }) {
       </div>
       {puedeEditar(usuario) && <div className="card">
         <p className="font-medium mb-1">Restablecer PIN</p>
-        <div className="flex gap-2"><input className="input" placeholder="Nuevo PIN" value={pinNuevo} onChange={e => setPinNuevo(e.target.value)} /><button className="btn-secondary shrink-0" onClick={cambiarPin}>Guardar</button></div>
+        <div className="flex gap-2"><input className="input" placeholder="Nuevo PIN" value={pinNuevo} onChange={e => setPinNuevo(e.target.value)} /><button className="btn-secondary shrink-0" disabled={cambiandoPin} onClick={cambiarPin}>{cambiandoPin ? 'Guardando…' : 'Guardar'}</button></div>
       </div>}
     </div>
   )

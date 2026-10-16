@@ -197,3 +197,24 @@ export async function crearUsuario({ nombre, usuario, pin, rol = 'estudiante', g
   await encolar('usuarios', u)
   return u
 }
+
+// Cambiar el PIN de un estudiante (lo hace su docente o el admin).
+//  - Modo local: se guarda el hash en IndexedDB.
+//  - Modo nube: el PIN es la contraseña de Supabase Auth; la cambia la
+//    función de servidor api/pin.js (necesita SUPABASE_SERVICE_ROLE_KEY en Vercel).
+export async function cambiarPinEstudiante(estudiante, pin) {
+  const limpio = String(pin ?? '').trim()
+  if (!/^\d{4,6}$/.test(limpio)) throw new Error('El PIN debe tener 4 a 6 dígitos')
+  if (!NUBE_DISPONIBLE) {
+    await db.usuarios.update(estudiante.id, { pin_hash: await hashPin(limpio) })
+    return
+  }
+  const { data } = await supabase.auth.getSession()
+  if (!data.session) throw new Error('Inicia sesión en la nube para cambiar el PIN')
+  let r
+  try {
+    r = await fetch('/api/pin', { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${data.session.access_token}` }, body: JSON.stringify({ estudiante_id: estudiante.id, pin: limpio }) })
+  } catch { throw new Error('Sin conexión: el PIN se cambia en línea') }
+  const cuerpo = await r.json().catch(() => ({}))
+  if (!r.ok) throw new Error(cuerpo.error ?? `No se pudo cambiar el PIN (${r.status})`)
+}

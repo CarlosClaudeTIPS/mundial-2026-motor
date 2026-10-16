@@ -9,6 +9,8 @@
 import { createClient } from '@supabase/supabase-js'
 
 const DOMINIO = 'estudiantes.saber11.local'
+// Debe coincidir con claveDePin() en src/lib/sesion.js
+const claveDePin = (pin) => `${String(pin ?? '').trim()}#saber11`
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Método no permitido' })
@@ -38,7 +40,7 @@ export default async function handler(req, res) {
     const usuario = String(e.usuario ?? '').trim().toLowerCase().replace(/[^a-z0-9._-]/g, '')
     const pin = String(e.pin ?? '').trim()
     if (!e.nombre || !usuario || pin.length < 4) { errores.push(`${e.nombre ?? '?'}: datos incompletos`); continue }
-    const { data, error } = await admin.auth.admin.createUser({ email: `${usuario}@${DOMINIO}`, password: pin, email_confirm: true, user_metadata: { nombre: e.nombre, rol: 'estudiante' } })
+    const { data, error } = await admin.auth.admin.createUser({ email: `${usuario}@${DOMINIO}`, password: claveDePin(pin), email_confirm: true, user_metadata: { nombre: e.nombre, rol: 'estudiante' } })
     if (error) { errores.push(`${e.nombre}: ${error.message}`); continue }
     const fila = { id: data.user.id, rol: 'estudiante', nombre: e.nombre, usuario, grupo_id, colegio: grupo.colegio, curso: grupo.curso, ciclo_id: grupo.ciclo_id }
     const { error: errPerfil } = await admin.from('perfiles').upsert(fila)

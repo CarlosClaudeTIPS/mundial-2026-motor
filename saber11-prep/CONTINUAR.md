@@ -108,4 +108,11 @@ admin y revisores en las tres:
 Estimación: una etapa propia (portal con login + 2 paneles). Mientras tanto, el admin de ICFES ya es el
 jefe de esa app y el revisor es la cuenta «solo mirar».
 
+- **Cambio de PIN de un estudiante** (`api/pin.js` + `cambiarPinEstudiante` en `src/lib/sesion.js`): en la nube
+  el PIN es la contraseña de Supabase Auth, así que la cambia una función de servidor con la clave de servicio.
+  Requiere en Vercel → proyecto → Settings → Environment Variables la variable `SUPABASE_SERVICE_ROLE_KEY`
+  (Supabase → Project Settings → API → service_role). Sin ella el botón avisa que falta.
+- **Tienda**: Carlos no edita el panel; dice qué cambiar y se edita `public/portal/tienda/data/catalogo.json`
+  (productos) y `config.json` (WhatsApp, textos) desde aquí, y se publica.
+
 Migraciones pendientes de correr en Supabase (SQL Editor, en orden): 004, 005, 006, 007 y **008**.
