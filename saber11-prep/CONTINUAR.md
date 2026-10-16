@@ -88,6 +88,11 @@ Otros pendientes: correr `supabase/migracion-005-ruta.sql`, `migracion-006-futur
   docente) y `tienda/`, servidos en https://saber11-prep.vercel.app/portal/ . La barra común del portal
   (`public/portal/shared/barra.js`) enlaza ICFES a la raíz del sitio, y la app enlaza a `/portal/...`.
   Marca y textos: `public/portal/shared/portal.config.js`. La PWA no precarga ni intercepta `/portal/`.
+- **Panel de la tienda = herramienta privada**: no se publica. Está en `herramientas/tienda-admin/` y se abre
+  con `npm run tienda-admin` → http://localhost:5555/admin.html . Al terminar, descargar `catalogo.json` y
+  `config.json` desde el panel, reemplazarlos en `public/portal/tienda/data/` y publicar. Comprar un dominio
+  no cambia esto: solo cambia la dirección.
+- **Visitas**: etiqueta de Vercel Analytics en todas las páginas; activar en Vercel → proyecto → Analytics.
 - **Actualización de versión**: además de recargar al activarse un service worker nuevo, la app busca
   versión nueva al volver a la pestaña y cada 30 min (`src/main.jsx`). Si alguien ve la versión vieja:
   cerrar la pestaña y abrir de nuevo.

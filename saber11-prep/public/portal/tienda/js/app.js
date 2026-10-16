@@ -310,7 +310,7 @@
         <a href="${T.ruta('catalogo.html?f=nuevos')}" ${act('nuevos')}>Novedades</a>
         <a href="${T.ruta('preguntas.html')}" ${act('preguntas')}>Preguntas</a>`;
     const avisos = [];
-    if (!T.hayWA()) avisos.push(`<div class="aviso-config"><div class="contenedor">⚠️ Falta configurar el número de WhatsApp. Los botones de pedido no funcionarán hasta hacerlo en <a href="${T.ruta('admin.html')}">el panel de administración</a>.</div></div>`);
+    if (!T.hayWA()) avisos.push(`<div class="aviso-config"><div class="contenedor">⚠️ Falta configurar el número de WhatsApp. Los botones de pedido no funcionarán hasta configurarlo en el panel de administración (herramienta local).</div></div>`);
     if (T.modoBorrador) avisos.push(`<div class="aviso-demo">👁️ Estás viendo el <strong>borrador local</strong> del panel admin. <a href="#" id="salir-preview">Salir de la vista previa</a></div>`);
     else if ((cfg.sitio || {}).avisoDemo) avisos.push(`<div class="aviso-demo">Catálogo de demostración: los productos marcados (DEMO) son ejemplos. Reemplázalos desde el panel admin.</div>`);
     el.innerHTML = `${avisos.join('')}
